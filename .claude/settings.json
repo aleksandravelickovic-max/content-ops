@@ -4,6 +4,7 @@
       "Read(**)",
       "Grep(**)",
       "WebFetch(**)",
+      "WebSearch(**)",
       "Bash(git status)",
       "Bash(git diff *)",
       "Bash(ls *)",
