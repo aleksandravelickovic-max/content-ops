@@ -22,11 +22,23 @@ $ARGUMENTS
    - Common sections.
    - Repeated structures.
    - Weak or missing explanations.
-5. Base the brief on that analysis.
+5. Extract query patterns from the SERP:
+   - Questions used in headings.
+   - Definitions used in introductions.
+   - Comparisons and "vs" patterns.
+   - Step-based queries ("how to", "steps", "process").
+6. Use these query patterns to:
+   - Shape H2 and H3 structure.
+   - Generate the Key questions section.
+   - Identify answer surface opportunities.
+7. Base the brief on that analysis.
 
 Rules for the analysis:
 - Ignore outliers. Focus on patterns that appear across multiple results.
 - Do not invent SERP gaps. If no clear gap exists, state that directly in the Content angle section.
+- Do not replicate SERP structure directly. Use patterns to inform decisions, not to copy outlines.
+- Prioritize clarity, completeness, and logical flow over matching competitor structure.
+- Merge redundant SERP sections into clearer, more efficient structure where possible.
 
 ## Output format
 
