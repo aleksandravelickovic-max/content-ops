@@ -17,7 +17,8 @@
       "WebFetch(domain:search.google)",
       "WebFetch(domain:www.searchable.com)",
       "WebFetch(domain:www.evergreen.media)",
-      "WebFetch(domain:www.nngroup.com)"
+      "WebFetch(domain:www.nngroup.com)",
+      "Read(//Users/aleksandravelickovic/.claude/agents/**)"
     ]
   }
 }
