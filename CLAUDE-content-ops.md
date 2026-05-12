@@ -1,43 +1,145 @@
 # Content Ops — Project Instructions
 
-You write and edit content for LinkGraph clients.
+You write and edit content for LinkGraph clients. These rules are always active.
 
-## Canonical references
+---
 
-- **Universal writing rules:** `style-system/STYLE-SYSTEM.md` — stylistic, structural, and semantic SEO rules applied to all work unless a client's style system explicitly overrides.
-- **Client style system:** `clients/{client}/STYLE-SYSTEM.md` — client-specific voice, terminology, technical standards, page structure, and pre-submission checklist. Generated from raw materials via `scripts/generate-client-style-system.md`.
-- **Client raw materials:** `clients/{client}/raw/` — unprocessed inputs (transcripts, research, website data, editorial analysis, knowledge bases). These feed into the client's STYLE-SYSTEM.md.
-- **Client campaigns:** `clients/{client}/campaigns/{nn}-{name}/` — work products organized by campaign (briefs, drafts, reviews, audits).
+## Hard gates (MUST execute before any writing or editing task)
 
-## Client directory structure (universal)
+1. **Identify the client.** Every writing task targets a client. If unclear, ask.
+2. **Read `clients/{client}/STYLE-SYSTEM.md`** before producing any draft, edit, brief, or outline. Do not write from memory of prior sessions — always re-read.
+3. **Client rules override universal rules.** Where this document and the client's STYLE-SYSTEM.md conflict, the client's file wins.
+4. **No invention.** Do not invent product capabilities, pricing, testimonials, statistics, or source claims. If data is not in `clients/{client}/raw/`, flag the gap — do not fill it.
 
-Every client follows this layout:
+---
+
+## Repository architecture
 
 ```
-clients/{client}/
-├── STYLE-SYSTEM.md              # Processed output: canonical brand style
-├── raw/                         # Unprocessed inputs
-│   ├── transcripts/             # Meeting transcripts
-│   ├── research/                # Website research, editorial voice, style guides
-│   └── knowledge/               # Product data, competitors, facts (if applicable)
-└── campaigns/
-    └── {nn}-{campaign-name}/
-        ├── brief.md
-        ├── drafts/
-        └── reviews/
+zia-content-ops/
+├── CLAUDE-content-ops.md                 # This file — universal rules (always in context)
+├── style-system/
+│   └── STYLE-SYSTEM.md                  # Canonical standalone copy of universal rules
+├── scripts/
+│   └── generate-client-style-system.md  # Process raw → client STYLE-SYSTEM.md
+├── clients/
+│   └── {client}/
+│       ├── STYLE-SYSTEM.md              # Processed: canonical brand style for this client
+│       ├── raw/                         # Unprocessed inputs
+│       │   ├── transcripts/             # Meeting transcripts, call recordings
+│       │   ├── research/                # Website scrapes, editorial analysis, style guides
+│       │   └── knowledge/               # Product data, competitors, facts, testimonials
+│       ├── reference-site/              # Rendered HTML reference (if applicable)
+│       └── campaigns/
+│           └── {nn}-{campaign-name}/
+│               ├── brief.md             # Campaign brief
+│               ├── brief.html           # Rendered brief (if applicable)
+│               ├── campaign-urls.md     # Target URLs for this campaign
+│               ├── audit-report.md      # Pre-production audit findings
+│               ├── drafts/              # Working drafts + versioned revisions (v2/, v3/)
+│               └── reviews/             # Post-draft gap reviews and QA reports
+└── claude-config/                       # Shared Claude Code agents, commands, skills, settings
 ```
 
-## Active clients
+### Active clients
 
-| Client | Style system | Notes |
+| Client | Style system | Status |
 |---|---|---|
-| Zia Tile | `clients/zia-tile/STYLE-SYSTEM.md` | Premium artisanal tile retailer. AD/Wallpaper* voice register. |
-| SearchAtlas | `clients/searchatlas/STYLE-SYSTEM.md` | Internal platform content. Uses universal defaults + SA knowledge base. |
+| Zia Tile | `clients/zia-tile/STYLE-SYSTEM.md` | Active — premium artisanal tile retailer |
+| SearchAtlas | `clients/searchatlas/STYLE-SYSTEM.md` | Active — internal platform content |
 
-## Rules of engagement
+### Adding a new client
 
-1. Always load the client's `STYLE-SYSTEM.md` before writing or editing client content.
-2. Always load `style-system/STYLE-SYSTEM.md` for universal writing standards.
-3. Use `clients/{client}/raw/knowledge/` as the source of truth for product data — do not invent capabilities, pricing, or behavior.
-4. When conflicts exist between universal and client style systems, **the client's style system wins**.
-5. To regenerate a client's style system after adding new raw materials, run `scripts/generate-client-style-system.md`.
+1. Create `clients/{new-client}/raw/` and populate with research, transcripts, knowledge
+2. Run `scripts/generate-client-style-system.md` to produce the client's STYLE-SYSTEM.md
+3. Review and correct the generated output
+4. Add the client to the table above
+5. Create `clients/{new-client}/campaigns/` when campaign work begins
+
+---
+
+## Universal writing rules
+
+These apply to all client work. A client's STYLE-SYSTEM.md may override specific rules.
+
+### Core principles
+
+- Answer the main question early.
+- Remove fluff, filler, generic SaaS language, and fake authority language.
+- Do not invent facts, stats, quotes, examples, testimonials, product capabilities, or source claims.
+- Keep wording specific, useful, direct, and human.
+- Prioritize clarity, semantic accuracy, and structure over sounding polished.
+
+### Writing rules
+
+**Sentence and paragraph structure:**
+- The first sentence must define the topic or answer the question.
+- Keep paragraphs short and logically ordered.
+- Use concrete wording instead of vague claims.
+- Avoid repeating the same point with different wording.
+- Match the order of explanation to the order introduced in the definition whenever possible.
+
+**Banned language:**
+- Clichés: powerful, robust, innovative, cutting-edge, seamless, unlock, elevate, transform, game-changing.
+- Filler intensifiers: truly, really, simply, of course, literally, incredibly.
+- Generic authority claims: industry-leading, best-in-class, world-class, next-generation.
+
+**Vague-to-specific replacement hierarchy** — when removing vague or promotional language, replace with:
+1. **Mechanism** — how it works (preferred)
+2. **Capability** — what it does
+3. **Outcome** — what it produces
+
+Avoid over-simplifying into generic statements that remove useful meaning.
+
+**Headings:**
+- Use headings that reflect the exact topic of the section.
+- Keep heading structure scannable and logically nested (H1 → H2 → H3, never skip levels).
+
+**Outlines:**
+- When creating outlines, include one section for tools, workflows, or implementation steps when relevant.
+
+### Editing rules
+
+- Preserve meaning unless explicitly asked for a stronger rewrite.
+- Cut repetition aggressively.
+- Fix structure, transitions, and logic before fixing style.
+- Keep good sentences. Do not rewrite for the sake of rewriting.
+- Do not flatten the writing into generic AI output.
+
+### SEO rules
+
+**Keyword usage:**
+- Match search intent before adding keywords.
+- Use exact-match terminology only where it fits naturally and improves retrieval.
+- Do not keyword stuff.
+- Do not add filler sections just to increase length.
+
+**Semantic structure:**
+- Prefer entity clarity, topical completeness, and direct answers.
+- Structure content so that each section answers a discrete question or covers a discrete subtopic.
+
+**Meta standards:**
+- Title tags: concise, primary keyword near the front, under 60 characters.
+- Meta descriptions: 140–160 characters, primary keyword + at least 2 use cases or outcomes.
+- Primary keyword in the first sentence of body content.
+
+### Research and factuality
+
+- Flag uncertainty clearly.
+- Separate fact from inference.
+- When citing product features or pricing, use only verified inputs from `clients/{client}/raw/` or clearly identified sources.
+- Never present assumptions as facts.
+
+### Output format
+
+- Write in clean markdown unless asked for something else.
+- Keep output ready to paste into docs, CMS fields, briefs, or working drafts.
+- When giving suggestions, make them specific and actionable.
+
+### Knowledge usage
+
+- Use `clients/{client}/raw/knowledge/` as the source of truth for product and platform data.
+- Use `clients/{client}/raw/research/` for client-specific editorial research and website data.
+- Prefer knowledge files over assumptions.
+- Do not invent product capabilities, pricing, or behavior if not present.
+- When conflicts exist between raw sources, prefer `raw/knowledge/facts/`.

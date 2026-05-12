@@ -1,6 +1,6 @@
 # Stylometric SEO Writing System
 
-Canonical source of all stylistic, structural, and semantic SEO rules for content production. Referenced by CLAUDE.md and applied to all client work unless a client's BRAND-VOICE.md explicitly overrides a specific rule.
+Canonical source of all stylistic, structural, and semantic SEO rules for content production. Referenced by CLAUDE-content-ops.md and applied to all client work unless a client's STYLE-SYSTEM.md explicitly overrides a specific rule.
 
 ## 1. Core principles
 
@@ -84,4 +84,4 @@ Prefer mechanism over outcome when both are possible. Avoid over-simplifying int
 - Use information from `clients/{client}/raw/` as the source of truth for client-specific research and inputs.
 - Prefer knowledge files over assumptions.
 - Do not invent product capabilities, pricing, or behavior if not present.
-- When conflicts exist, prefer facts in `/knowledge/facts/`.
+- When conflicts exist, prefer facts in `clients/{client}/raw/knowledge/facts/`.
