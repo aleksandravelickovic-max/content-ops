@@ -1,0 +1,5 @@
+DATABASE_URL=postgresql+asyncpg://contentops:contentops@localhost:5432/contentops
+CONTENT_ROOT=../clients
+ADMIN_PASSWORD=changeme-in-production
+SECRET_KEY=change-this-secret-key
+BASE_URL=http://localhost:8000

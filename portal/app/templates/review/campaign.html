@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}{{ registry.client | replace("-", " ") | title }} — Campaign Review{% endblock %}
+{% block body_class %}review-page{% endblock %}
+
+{% block body %}
+<header class="review-header">
+  <div class="header-inner">
+    <div class="brand">
+      <div class="brand-icon">{{ registry.client[:2] | upper }}</div>
+      <div>
+        <h1>{{ link.label or (registry.client | replace("-", " ") | title) }}</h1>
+        <p class="subtitle">{{ registry.campaign | replace("-", " ") | title }} &middot; {{ registry.totalFiles }} files</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="campaign-main">
+  <div class="welcome-banner">
+    <h2>Content Review Portal</h2>
+    <p>Browse the content below and click any item to review. You can leave comments and feedback on each piece.</p>
+  </div>
+
+  {% for type_key, entries in groups.items() %}
+  <section class="content-group">
+    <div class="group-header">
+      <h3>{{ type_labels.get(type_key, type_key | replace("-", " ") | title) }}</h3>
+      <span class="group-count">{{ entries | length }}</span>
+    </div>
+    <div class="content-grid">
+      {% for entry in entries %}
+      <a href="/review/{{ token }}/{{ entry.path }}" class="content-card">
+        <div class="card-top">
+          <span class="card-type type-{{ type_key }}">{{ entry.type | replace("-", " ") }}</span>
+          {% if comment_counts.get(entry.path, 0) > 0 %}
+          <span class="card-comments">{{ comment_counts[entry.path] }} comment{{ 's' if comment_counts[entry.path] != 1 }}</span>
+          {% endif %}
+        </div>
+        <h4 class="card-title">{{ entry.displayName }}</h4>
+        <div class="card-meta">
+          <span>{{ entry.sizeHuman }}</span>
+          <span>{{ entry.lastModified }}</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+</main>
+
+<footer class="review-footer">
+  <p>Content Ops Review Portal &middot; Powered by LinkGraph</p>
+</footer>
+{% endblock %}

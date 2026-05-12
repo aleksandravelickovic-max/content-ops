@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+{% block title %}{{ entry.displayName }} — Review{% endblock %}
+{% block body_class %}content-page{% endblock %}
+
+{% block body %}
+<header class="review-header">
+  <div class="header-inner">
+    <a href="/review/{{ token }}" class="back-link">&larr; Back to campaign</a>
+    <div class="content-nav">
+      {% if prev_entry %}
+      <a href="/review/{{ token }}/{{ prev_entry.path }}" class="nav-btn">&larr; Prev</a>
+      {% else %}
+      <span class="nav-btn disabled">&larr; Prev</span>
+      {% endif %}
+      <span class="nav-pos">{{ nav_position }}</span>
+      {% if next_entry %}
+      <a href="/review/{{ token }}/{{ next_entry.path }}" class="nav-btn">Next &rarr;</a>
+      {% else %}
+      <span class="nav-btn disabled">Next &rarr;</span>
+      {% endif %}
+    </div>
+  </div>
+</header>
+
+<div class="content-layout">
+  <main class="content-main">
+    <div class="content-header">
+      <h1>{{ entry.displayName }}</h1>
+      <div class="content-meta">
+        <span class="card-type type-{{ entry.type }}">{{ entry.type | replace("-", " ") }}</span>
+        <span>{{ entry.sizeHuman }}</span>
+        <span>{{ entry.lastModified }}</span>
+      </div>
+    </div>
+    <div class="rendered-content">
+      {{ content_html | safe }}
+    </div>
+  </main>
+
+  <aside class="comment-sidebar">
+    <div class="sidebar-header">
+      <h3>Feedback</h3>
+      <span class="comment-count">{{ comments | length }}</span>
+    </div>
+
+    <form class="comment-form" id="commentForm">
+      <input type="text" name="author_name" placeholder="Your name" required class="form-input">
+      <input type="email" name="author_email" placeholder="Email (optional)" class="form-input">
+      <textarea name="body" placeholder="Leave your feedback on this content..." required class="form-textarea" rows="3"></textarea>
+      <button type="submit" class="btn btn-primary">Submit Feedback</button>
+    </form>
+
+    <div class="comments-list" id="commentsList">
+      {% for comment in comments %}
+      <div class="comment {% if comment.resolved %}resolved{% endif %}" data-id="{{ comment.id }}">
+        <div class="comment-header">
+          <strong>{{ comment.author_name }}</strong>
+          <time>{{ comment.created_at.strftime('%b %d, %Y %I:%M %p') }}</time>
+        </div>
+        {% if comment.highlight_text %}
+        <blockquote class="highlight">"{{ comment.highlight_text }}"</blockquote>
+        {% endif %}
+        <div class="comment-body">{{ comment.body }}</div>
+        {% if comment.resolved %}
+        <span class="resolved-badge">Resolved</span>
+        {% endif %}
+
+        {% if replies_map.get(comment.id) %}
+        <div class="replies">
+          {% for reply in replies_map[comment.id] %}
+          <div class="comment reply">
+            <div class="comment-header">
+              <strong>{{ reply.author_name }}</strong>
+              <time>{{ reply.created_at.strftime('%b %d, %Y %I:%M %p') }}</time>
+            </div>
+            <div class="comment-body">{{ reply.body }}</div>
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        <button class="btn-reply" onclick="toggleReplyForm({{ comment.id }})">Reply</button>
+        <form class="reply-form" id="replyForm-{{ comment.id }}" style="display:none">
+          <input type="hidden" name="parent_id" value="{{ comment.id }}">
+          <input type="text" name="author_name" placeholder="Your name" required class="form-input">
+          <textarea name="body" placeholder="Reply..." required class="form-textarea" rows="2"></textarea>
+          <button type="submit" class="btn btn-small">Reply</button>
+        </form>
+      </div>
+      {% endfor %}
+
+      {% if not comments %}
+      <div class="empty-state">
+        <p>No feedback yet. Be the first to leave a comment.</p>
+      </div>
+      {% endif %}
+    </div>
+  </aside>
+</div>
+
+<script>
+const TOKEN = "{{ token }}";
+const CONTENT_PATH = "{{ content_path }}";
+
+document.getElementById('commentForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const form = e.target;
+  const data = {
+    author_name: form.author_name.value,
+    author_email: form.author_email.value || null,
+    body: form.body.value,
+  };
+  const res = await fetch(`/api/review/${TOKEN}/comments/${CONTENT_PATH}`, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(data),
+  });
+  if (res.ok) {
+    location.reload();
+  } else {
+    const err = await res.json();
+    alert(err.detail || 'Failed to submit comment');
+  }
+});
+
+document.querySelectorAll('.reply-form').forEach(form => {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = {
+      author_name: form.author_name.value,
+      body: form.body.value,
+      parent_id: parseInt(form.parent_id.value),
+    };
+    const res = await fetch(`/api/review/${TOKEN}/comments/${CONTENT_PATH}`, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(data),
+    });
+    if (res.ok) {
+      location.reload();
+    } else {
+      const err = await res.json();
+      alert(err.detail || 'Failed to submit reply');
+    }
+  });
+});
+
+function toggleReplyForm(commentId) {
+  const form = document.getElementById('replyForm-' + commentId);
+  form.style.display = form.style.display === 'none' ? 'block' : 'none';
+}
+</script>
+{% endblock %}

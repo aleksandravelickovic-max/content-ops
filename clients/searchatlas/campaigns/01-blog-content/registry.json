@@ -1,0 +1,34 @@
+{
+  "client": "searchatlas",
+  "campaign": "01-blog-content",
+  "generatedAt": "2026-05-12T14:44:22",
+  "totalFiles": 2,
+  "entries": [
+    {
+      "id": "what-is-google-ai-mode",
+      "filename": "what-is-google-ai-mode.md",
+      "displayName": "What is Google AI Mode",
+      "type": "draft",
+      "category": "draft",
+      "status": "delivered",
+      "version": 1,
+      "path": "drafts/what-is-google-ai-mode.md",
+      "sizeBytes": 39328,
+      "sizeHuman": "38.4 KB",
+      "lastModified": "2026-05-12"
+    },
+    {
+      "id": "what-is-google-ai-mode",
+      "filename": "what-is-google-ai-mode.md",
+      "displayName": "Brief: What is Google AI Mode",
+      "type": "brief",
+      "category": "brief",
+      "status": "delivered",
+      "version": 1,
+      "path": "briefs/what-is-google-ai-mode.md",
+      "sizeBytes": 6128,
+      "sizeHuman": "6.0 KB",
+      "lastModified": "2026-05-12"
+    }
+  ]
+}

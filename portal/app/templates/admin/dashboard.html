@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% block title %}Admin — Content Review Portal{% endblock %}
+{% block body_class %}admin-page{% endblock %}
+
+{% block body %}
+<header class="admin-header">
+  <div class="header-inner">
+    <h1>Content Review Portal <span class="header-tag">Admin</span></h1>
+    <nav class="admin-nav">
+      <a href="/admin/" class="nav-link active">Share Links</a>
+      <a href="/admin/comments" class="nav-link">Comments</a>
+    </nav>
+  </div>
+</header>
+
+<main class="admin-main">
+  <section class="admin-section">
+    <div class="section-header">
+      <h2>Create Share Link</h2>
+    </div>
+    <form action="/admin/share-links" method="POST" class="create-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Client</label>
+          <select name="client_slug" id="clientSelect" class="form-input" required>
+            <option value="">Select client...</option>
+            {% for client in clients %}
+            <option value="{{ client }}">{{ client | replace("-", " ") | title }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Campaign</label>
+          <select name="campaign_slug" id="campaignSelect" class="form-input" required>
+            <option value="">Select campaign...</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Label (optional)</label>
+          <input type="text" name="label" placeholder="e.g. Zia Tile Q2 Content" class="form-input">
+        </div>
+        <div class="form-group" style="align-self:end">
+          <button type="submit" class="btn btn-primary">Create Link</button>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <section class="admin-section">
+    <div class="section-header">
+      <h2>Active Share Links</h2>
+      <span class="count-badge">{{ links | length }}</span>
+    </div>
+    <div class="links-table-wrap">
+      <table class="links-table">
+        <thead>
+          <tr>
+            <th>Label</th>
+            <th>Client / Campaign</th>
+            <th>Status</th>
+            <th>Comments</th>
+            <th>Views</th>
+            <th>Created</th>
+            <th>Share URL</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for link in links %}
+          <tr class="{% if not link.is_active %}inactive-row{% endif %}">
+            <td class="label-cell">{{ link.label or '—' }}</td>
+            <td>
+              <span class="client-tag">{{ link.client_slug }}</span>
+              <span class="campaign-tag">{{ link.campaign_slug }}</span>
+            </td>
+            <td>
+              {% if link.is_active %}
+              <span class="status-badge active">Active</span>
+              {% else %}
+              <span class="status-badge revoked">Revoked</span>
+              {% endif %}
+            </td>
+            <td>
+              {% set total = comment_counts.get(link.token, 0) %}
+              {% set unresolved = unresolved_counts.get(link.token, 0) %}
+              <span>{{ total }}</span>
+              {% if unresolved > 0 %}
+              <span class="unresolved-badge">{{ unresolved }} open</span>
+              {% endif %}
+            </td>
+            <td>{{ link.access_count }}</td>
+            <td>{{ link.created_at.strftime('%b %d, %Y') }}</td>
+            <td>
+              <div class="share-url-cell">
+                <input type="text" readonly value="{{ base_url }}/review/{{ link.token }}" class="url-input" id="url-{{ link.token }}">
+                <button class="btn btn-small btn-copy" onclick="copyUrl('url-{{ link.token }}')">Copy</button>
+              </div>
+            </td>
+            <td>
+              <form action="/admin/share-links/{{ link.token }}/toggle" method="POST" style="display:inline">
+                <button type="submit" class="btn btn-small {% if link.is_active %}btn-danger{% else %}btn-success{% endif %}">
+                  {{ 'Revoke' if link.is_active else 'Reactivate' }}
+                </button>
+              </form>
+              {% if comment_counts.get(link.token, 0) > 0 %}
+              <a href="/admin/comments?token={{ link.token }}" class="btn btn-small">View Comments</a>
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+          {% if not links %}
+          <tr><td colspan="8" class="empty-state">No share links created yet.</td></tr>
+          {% endif %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<script>
+const CAMPAIGNS = {{ campaigns_by_client | tojson }};
+
+document.getElementById('clientSelect').addEventListener('change', function() {
+  const select = document.getElementById('campaignSelect');
+  select.innerHTML = '<option value="">Select campaign...</option>';
+  const campaigns = CAMPAIGNS[this.value] || [];
+  campaigns.forEach(c => {
+    const opt = document.createElement('option');
+    opt.value = c;
+    opt.textContent = c.replace(/^\d+-/, '').replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    select.appendChild(opt);
+  });
+});
+
+function copyUrl(inputId) {
+  const input = document.getElementById(inputId);
+  input.select();
+  navigator.clipboard.writeText(input.value);
+  const btn = input.nextElementSibling;
+  btn.textContent = 'Copied!';
+  setTimeout(() => btn.textContent = 'Copy', 2000);
+}
+</script>
+{% endblock %}

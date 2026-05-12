@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block title %}Comments — Admin{% endblock %}
+{% block body_class %}admin-page{% endblock %}
+
+{% block body %}
+<header class="admin-header">
+  <div class="header-inner">
+    <h1>Content Review Portal <span class="header-tag">Admin</span></h1>
+    <nav class="admin-nav">
+      <a href="/admin/" class="nav-link">Share Links</a>
+      <a href="/admin/comments" class="nav-link active">Comments</a>
+    </nav>
+  </div>
+</header>
+
+<main class="admin-main">
+  <section class="admin-section">
+    <div class="section-header">
+      <h2>Client Feedback</h2>
+      <div class="filter-bar">
+        <select id="filterLink" class="form-input" onchange="filterByLink(this.value)" style="width:auto">
+          <option value="">All campaigns</option>
+          {% for link in all_links %}
+          <option value="{{ link.token }}" {% if selected_token == link.token | string %}selected{% endif %}>
+            {{ link.label or (link.client_slug + ' / ' + link.campaign_slug) }}
+          </option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+
+    <div class="comments-admin-list">
+      {% for comment in comments %}
+      <div class="comment-card {% if comment.resolved %}resolved{% endif %}">
+        <div class="comment-card-header">
+          <div class="comment-source">
+            {% set link = links_map.get(comment.share_link_token) %}
+            {% if link %}
+            <span class="client-tag">{{ link.client_slug }}</span>
+            <span class="campaign-tag">{{ link.campaign_slug }}</span>
+            {% endif %}
+            <span class="content-path-tag">{{ comment.content_path }}</span>
+          </div>
+          <time>{{ comment.created_at.strftime('%b %d, %Y %I:%M %p') }}</time>
+        </div>
+        <div class="comment-card-body">
+          <div class="comment-author">
+            <strong>{{ comment.author_name }}</strong>
+            {% if comment.author_email %}
+            <span class="author-email">{{ comment.author_email }}</span>
+            {% endif %}
+          </div>
+          {% if comment.highlight_text %}
+          <blockquote class="highlight">"{{ comment.highlight_text }}"</blockquote>
+          {% endif %}
+          <p>{{ comment.body }}</p>
+        </div>
+        <div class="comment-card-footer">
+          {% set replies = reply_counts.get(comment.id, 0) %}
+          {% if replies > 0 %}
+          <span class="reply-count">{{ replies }} repl{{ 'ies' if replies != 1 else 'y' }}</span>
+          {% endif %}
+          <form action="/admin/comments/{{ comment.id }}/resolve" method="POST" style="display:inline">
+            <button type="submit" class="btn btn-small {% if comment.resolved %}btn-success{% else %}btn-primary{% endif %}">
+              {{ 'Unresolve' if comment.resolved else 'Mark Resolved' }}
+            </button>
+          </form>
+          {% if comment.resolved %}
+          <span class="resolved-badge">Resolved {{ comment.resolved_at.strftime('%b %d') if comment.resolved_at }}</span>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+
+      {% if not comments %}
+      <div class="empty-state" style="padding:40px;text-align:center">
+        <p>No comments yet.</p>
+      </div>
+      {% endif %}
+    </div>
+  </section>
+</main>
+
+<script>
+function filterByLink(token) {
+  const url = new URL(window.location);
+  if (token) {
+    url.searchParams.set('token', token);
+  } else {
+    url.searchParams.delete('token');
+  }
+  window.location = url;
+}
+</script>
+{% endblock %}
