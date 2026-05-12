@@ -18,6 +18,11 @@ You write and edit content for LinkGraph clients. These rules are always active.
 ```
 zia-content-ops/
 ├── CLAUDE.md                             # This file — universal rules (always in context)
+├── content-toolkit/                      # Agents, commands, and settings (symlinked as .claude/)
+│   ├── agents/                          # AI writing agents (editor, fact-checker, humanizer, etc.)
+│   ├── commands/                        # Slash commands (/brief, /draft, /ship, etc.)
+│   └── settings-content-ops.json        # Permission allowlists
+├── .claude -> content-toolkit/           # Symlink — Claude Code auto-discovers from here
 ├── universal-rules/
 │   └── UNIVERSAL-RULES.md               # Canonical standalone copy of universal rules
 ├── scripts/
@@ -38,7 +43,6 @@ zia-content-ops/
 │               ├── audit-report.md      # Pre-production audit findings
 │               ├── drafts/              # Working drafts + versioned revisions (v2/, v3/)
 │               └── reviews/             # Post-draft gap reviews and QA reports
-└── claude-config/                       # Shared Claude Code agents, commands, skills, settings
 ```
 
 ### Active clients
