@@ -11,14 +11,51 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from ..database import get_db
 from ..models import ShareLink, Comment
 from .. import content as content_svc
-from ..config import BASE_URL
+from ..config import ALLOWED_DOMAINS, BASE_URL
+from .auth import is_oauth_configured
 
 router = APIRouter(prefix="/admin")
 templates = Jinja2Templates(directory="app/templates")
 
 
+def _get_user_or_none(request: Request) -> dict | None:
+    """Return session user dict if present and domain-valid, else None."""
+    user = request.session.get("user")
+    if not user:
+        return None
+    email = user.get("email", "")
+    if "@" not in email:
+        return None
+    domain = email.rsplit("@", 1)[1].lower()
+    if domain not in ALLOWED_DOMAINS:
+        return None
+    return user
+
+
+async def require_admin(request: Request) -> dict | None:
+    """Dependency that enforces Google OAuth on admin routes.
+
+    When OAuth is not configured (dev mode), access is unrestricted and
+    returns None. When configured, redirects unauthenticated users to login.
+    """
+    if not is_oauth_configured():
+        return None
+
+    user = _get_user_or_none(request)
+    if user is None:
+        raise HTTPException(
+            status_code=307,
+            headers={"Location": "/auth/login"},
+        )
+    return user
+
+
 @router.get("/", response_class=HTMLResponse)
-async def admin_dashboard(request: Request, db: AsyncSession = Depends(get_db)):
+async def admin_dashboard(
+    request: Request,
+    db: AsyncSession = Depends(get_db),
+    user: dict | None = Depends(require_admin),
+):
     links_q = await db.execute(
         select(ShareLink).order_by(desc(ShareLink.created_at))
     )
@@ -51,6 +88,7 @@ async def admin_dashboard(request: Request, db: AsyncSession = Depends(get_db)):
         "clients": clients,
         "campaigns_by_client": campaigns_by_client,
         "base_url": BASE_URL,
+        "user": user,
     })
 
 
@@ -61,6 +99,7 @@ async def create_share_link(
     campaign_slug: str = Form(...),
     label: str = Form(""),
     db: AsyncSession = Depends(get_db),
+    user: dict | None = Depends(require_admin),
 ):
     # Verify campaign exists
     registry = content_svc.load_registry(client_slug, campaign_slug)
@@ -82,7 +121,9 @@ async def create_share_link(
 @router.post("/share-links/{token}/toggle")
 async def toggle_share_link(
     token: uuid.UUID,
+    request: Request,
     db: AsyncSession = Depends(get_db),
+    user: dict | None = Depends(require_admin),
 ):
     result = await db.execute(select(ShareLink).where(ShareLink.token == token))
     link = result.scalar_one_or_none()
@@ -100,6 +141,7 @@ async def admin_comments(
     request: Request,
     token: str | None = None,
     db: AsyncSession = Depends(get_db),
+    user: dict | None = Depends(require_admin),
 ):
     query = select(Comment).where(Comment.parent_id.is_(None)).order_by(desc(Comment.created_at))
     if token:
@@ -131,13 +173,16 @@ async def admin_comments(
         "reply_counts": reply_counts,
         "all_links": all_links,
         "selected_token": token,
+        "user": user,
     })
 
 
 @router.post("/comments/{comment_id}/resolve")
 async def admin_resolve_comment(
     comment_id: int,
+    request: Request,
     db: AsyncSession = Depends(get_db),
+    user: dict | None = Depends(require_admin),
 ):
     from datetime import datetime, timezone
 

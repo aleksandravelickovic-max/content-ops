@@ -9,3 +9,5 @@ markdown==3.8
 python-multipart==0.0.20
 passlib[bcrypt]==1.7.4
 httpx==0.28.1
+authlib==1.6.0
+itsdangerous==2.2.0

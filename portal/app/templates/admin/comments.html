@@ -10,6 +10,12 @@
       <a href="/admin/" class="nav-link">Share Links</a>
       <a href="/admin/comments" class="nav-link active">Comments</a>
     </nav>
+    {% if user %}
+    <div class="user-info">
+      <span class="user-email">{{ user.email }}</span>
+      <a href="/auth/logout" class="nav-link logout-link">Sign out</a>
+    </div>
+    {% endif %}
   </div>
 </header>
 

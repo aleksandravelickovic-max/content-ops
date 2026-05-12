@@ -92,17 +92,19 @@ body {
 /* ── Tab Bar ── */
 .tab-bar {
   display: flex;
-  gap: 2px;
-  border-bottom: 1px solid var(--border);
+  gap: 0;
+  border-bottom: 2px solid var(--border);
   margin-bottom: 0;
   overflow-x: auto;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
+  background: var(--bg);
+  padding: 0 4px;
 }
 .tab-bar::-webkit-scrollbar { display: none; }
 
 .tab-btn {
-  padding: 10px 16px;
+  padding: 13px 18px 11px;
   border: none;
   background: none;
   font-size: 13px;
@@ -111,24 +113,31 @@ body {
   cursor: pointer;
   white-space: nowrap;
   border-bottom: 2px solid transparent;
-  margin-bottom: -1px;
-  transition: color 0.12s, border-color 0.12s;
+  margin-bottom: -2px;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 7px;
+  border-radius: 6px 6px 0 0;
+  position: relative;
 }
-.tab-btn:hover { color: var(--text); }
-.tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+.tab-btn:hover { color: var(--text); background: var(--bg-alt); }
+.tab-btn.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  font-weight: 600;
+}
 
 .tab-count {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
-  background: var(--border);
+  background: var(--bg-alt);
   color: var(--text-muted);
-  padding: 0 6px;
-  border-radius: 8px;
-  min-width: 18px;
+  padding: 1px 7px;
+  border-radius: 10px;
+  min-width: 20px;
   text-align: center;
+  line-height: 1.4;
 }
 .tab-btn.active .tab-count { background: var(--accent-light); color: var(--accent); }
 
@@ -137,20 +146,23 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0;
+  padding: 12px 20px;
+  background: var(--bg);
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
 }
 
 .filter-pills {
   display: flex;
-  gap: 4px;
-  background: var(--bg);
+  gap: 2px;
+  background: var(--bg-alt);
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 3px;
 }
 
 .filter-pill {
-  padding: 4px 12px;
+  padding: 5px 14px;
   border: none;
   border-radius: 6px;
   font-size: 12px;
@@ -158,14 +170,20 @@ body {
   cursor: pointer;
   background: transparent;
   color: var(--text-muted);
-  transition: background 0.12s, color 0.12s;
+  transition: background 0.15s, color 0.15s, box-shadow 0.15s;
 }
-.filter-pill:hover { background: var(--bg-hover); color: var(--text); }
-.filter-pill.active { background: var(--accent-light); color: var(--accent); }
+.filter-pill:hover { background: var(--bg); color: var(--text); }
+.filter-pill.active {
+  background: var(--bg);
+  color: var(--accent);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  font-weight: 600;
+}
 
 .visible-count {
   font-size: 12px;
   color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
 }
 
 /* ── Tab Panels ── */
@@ -174,8 +192,8 @@ body {
   background: var(--bg);
   border: 1px solid var(--border);
   border-top: none;
-  border-radius: 0 0 var(--radius) var(--radius);
-  box-shadow: var(--shadow);
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.03);
   overflow: hidden;
 }
 .tab-panel.active { display: block; }
@@ -569,6 +587,21 @@ body {
 }
 .nav-link:hover { background: var(--bg-hover); color: var(--text); }
 .nav-link.active { background: var(--accent-light); color: var(--accent); }
+
+.user-info {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+}
+.user-email {
+  color: var(--text-muted);
+}
+.logout-link {
+  color: var(--text-muted);
+  font-size: 12px;
+}
 
 /* ── Admin Main ── */
 .admin-main {
