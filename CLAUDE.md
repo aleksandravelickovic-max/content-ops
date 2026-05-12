@@ -63,7 +63,7 @@ zia-content-ops/
 │               ├── registry.json        # Auto-generated content index for this campaign
 │               ├── gdocs-content/       # Google Docs exports (collection-pages/, product-pages/)
 │               ├── drafts/              # Working drafts + versioned revisions (v2/, v3/)
-│               └── html/               # Build output from build-html-before-after.py (gitignored)
+│               └── html/               # Before/after HTML comparisons (original/ + revised/)
 ```
 
 ### App — Content Review Portal (`portal/`)
