@@ -17,7 +17,7 @@ download_date: 2026-05-12
 
 # Bathroom Tiles
 
-Bathroom tile has to do a lot of work. It sheds water, handles humidity, and needs to hold up underfoot while still setting the tone for a room that often runs small and low on natural light. Color matters here more than in most spaces. A lighter palette opens a compact bath. A darker one gives a larger room weight and presence. At Zia, our bathroom tile options draw from our full range of collections, including handmade zellige and encaustic cement.
+Bathroom tile has to do a lot of work. It sheds water, handles humidity, and needs to hold up underfoot while still setting the tone for a room that often runs small and low on natural light. Color matters here more than in most spaces. A lighter palette opens a compact bath. A darker one gives a larger room weight and presence. At Zia, bathroom tile options draw from the full range of collections, including handmade zellige and encaustic cement.
 
 \[PRODUCT IMAGES\]
 
@@ -27,11 +27,11 @@ Bathroom tile has to do a lot of work. It sheds water, handles humidity, and nee
 
 ### What is DCOF, and why does it matter in a bathroom?
 
-DCOF stands for Dynamic Coefficient of Friction. It measures how much resistance a tile surface provides underfoot when wet. The higher the rating, the more traction the tile provides. In bathrooms, particularly on shower floors and wet room floors, DCOF matters because a low rating increases the risk of slipping on a wet surface. 
+DCOF stands for Dynamic Coefficient of Friction. It measures how much resistance a tile surface provides underfoot when wet. The higher the rating, the more traction the tile provides. In bathrooms, particularly on shower floors and wet room floors, DCOF matters because a low rating increases the risk of slipping on a wet surface.
 
-### How should one clean bathroom tile?
+### How should bathroom tile be cleaned?
 
-All Zia tiles should be cleaned with a pH-neutral cleaner such as Miracle Tile and Stone Cleaner. For heavier stains, Miracle Sealants Heavy Duty Cleaner (Acid Substitute) works well. For more specific guidance, reach out at info@ziatile.com.
+All Zia tiles should be cleaned with a pH-neutral cleaner such as Miracle Tile and Stone Cleaner. For heavier stains, Miracle Sealants Heavy Duty Cleaner (Acid Substitute) works well. For more specific guidance, contact our team at info@ziatile.com or 310-844-1170.
 
 ### Which tile is best for bathroom installations?
 
@@ -51,11 +51,11 @@ Yes. The hand-glazed surface handles water well, and the variation from tile to 
 
 ### What is the best marble for a bathroom?
 
-The best marble for a bathroom decision comes down to palette and maintenance preference. Carrara has classic white and grey veining and works across most palettes. Grigio Carnico carries cooler grey tones. Nero Marquina is black with bold white veining. Every marble bathroom tile needs 511 Porous Plus before and after grouting, plus periodic resealing. 
+The choice of marble for a bathroom comes down to palette and maintenance preference. Carrara has classic white and grey veining and works across most palettes. Grigio Carnico carries cooler grey tones. Nero Marquina is black with bold white veining. Every marble bathroom tile needs 511 Porous Plus before and after grouting, plus periodic resealing.
 
-### Can I use the same tile on bathroom walls and floors?
+### Can the same tile be used on bathroom walls and floors?
 
-Yes, in most cases. The main consideration is slip resistance on the floor. A tile that works beautifully on a wall may not carry a high enough DCOF rating for a wet floor. Check the DCOF rating of the specific tile before specifying it for both surfaces. On any wet floor, hold a minimum ⅛" grout joint and apply an anti-slip treatment after installation.
+Yes, in most cases. The main consideration is slip resistance on the floor. A tile that works well on a wall may not carry a high enough DCOF rating for a wet floor. Check the DCOF rating of the specific tile before specifying it for both surfaces. On any wet floor, hold a minimum ⅛" grout joint and apply an anti-slip treatment after installation.
 
 ### What is the difference between glazed and unglazed tile in a bathroom?
 
@@ -63,4 +63,4 @@ Glazed tile has a layer of glass-like coating applied before firing, which makes
 
 ### Can I order samples of bathroom tiles?
 
-Yes, Zia offers samples across the bathroom tile collection. Add them directly from any product page, selecting color and size before adding to cart. Orders typically ship within two to three business days via UPS or FedEx ground. Questions? Email info@ziatile.com.
+Yes, Zia offers samples across the bathroom tile collection. Add them directly from any product page, selecting color and size before adding to cart. Orders typically ship within two to three business days via UPS or FedEx ground. For questions, contact info@ziatile.com or 310-844-1170.

@@ -23,7 +23,7 @@ Some installations call for geometry that goes beyond the grid. Special shape ti
 
 ## Frequently Asked Questions
 
-### How do you choose the right special shape tile for your space?
+### How do you choose the right special shape tile for a space?
 
 Choosing the right special shape tile starts with identifying whether the shape should read as a field or a feature. A hexagon tile works well as a field tile across larger surfaces. Trapezoid suits backsplashes, niches, and accent surfaces where the angular geometry is the focal point. For formats like Stars and Cross, Oaxaca, and Toltec, which produce a pattern through the interlocking of multiple tile units, confirming the layout and scale of the pattern before specifying is essential.
 
@@ -49,8 +49,12 @@ Yes, special shape tiles can be mixed with standard formats. Combining a geometr
 
 ### Can special shape tiles be used in a shower?
 
-Yes, special shape tiles can be used in a shower. Suitability depends on the material rather than the format. For shower floors specifically, slip resistance can be increased by keeping grout joints open to a minimum of 1/8" and/or applying an anti-slip treatment after installation is complete. For material-specific guidance on a particular special shape tile, contact our team at info@ziatile.com before work begins.
+Yes, special shape tiles can be used in a shower. Suitability depends on the material rather than the format. For shower floors, slip resistance can be increased by keeping grout joints open to a minimum of 1/8" and/or applying an anti-slip treatment after installation is complete. For material-specific guidance on a particular special shape tile, contact our team at info@ziatile.com or 310-844-1170 before work begins.
 
 ### What special shape tiles does Zia offer?
 
-Zia's special shape tile collection includes hexagon, trapezoid, Durango, Oaxaca, Stars and Cross, Toltec, Tornillo, and Zocalo. Each format produces a distinct geometric result and is available across multiple materials and colorways. For a full overview of available shapes, materials, and colorways, browse the collection at ziatile.com or contact our team at info@ziatile.com.
+Zia's special shape tile collection includes hexagon, trapezoid, Durango, Oaxaca, Stars and Cross, Toltec, Tornillo, and Zocalo. Each format produces a distinct geometric result and is available across multiple materials and colorways. For a full overview of available shapes, materials, and colorways, browse the collection at ziatile.com or contact our team at info@ziatile.com or 310-844-1170.
+
+### How much overage is needed for specialty shape tile?
+
+For specialty multi-tile patterns like the Durango, Stars and Cross, and Oaxaca, plan for 20 to 25% overage across the full order, as edge cuts can affect the number of pieces needed. For simpler special shapes like hexagon and trapezoid, 15 to 20% overage is the standard recommendation. For project-specific quantity guidance, contact our team at info@ziatile.com or 310-844-1170.

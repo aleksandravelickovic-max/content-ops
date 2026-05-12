@@ -17,7 +17,7 @@ download_date: 2026-05-12
 
 # Purple Tile
 
-Purple tile is often placed in a backsplash, a niche, or a single wall. It brings a clear point of contrast without relying on pattern or layout to do the work. At Zia, purple appears in cement, terrazzo, and zellige, and the choice between them usually comes down to how much surface area you want to cover and how the tile fits into the rest of the palette.
+Purple tile is often placed in a backsplash, a niche, or a single wall. It brings a clear point of contrast without relying on pattern or layout to do the work. At Zia, purple appears in cement, terrazzo, and zellige, and the choice between them usually comes down to how much surface area needs to be covered and how the tile fits into the rest of the palette.
 
 \[PRODUCT LIST\]
 
@@ -27,7 +27,7 @@ Purple tile is often placed in a backsplash, a niche, or a single wall. It bring
 
 ### How do you choose between warm purples and cool purples?
 
-Choosing between warm and cool purple tile starts with the undertone. Warm purples carry red and pink in the base, which pulls the color toward plum and aubergine. Cool purples carry blue, which pushes them toward lavender and violet. The surrounding materials in the room shift the perception further, so order samples and evaluate them in the actual installation space under both natural and artificial light before deciding.
+Choosing between warm and cool purple tile starts with the undertone. Warm purples carry red and pink in the base, which pulls the color toward plum and aubergine. Cool purples carry blue, which pushes them toward lavender and violet. The surrounding materials in the room shift the perception further, so ordering samples and evaluating them in the actual installation space under both natural and artificial light before deciding is recommended.
 
 ### Why does purple zellige tile shift under different lighting?
 
@@ -41,6 +41,10 @@ Yes, purple tile works well on accent walls and backsplashes. These applications
 
 Yes, when the material is suited for floor use. Cement tile and terrazzo are both approved for interior floors. On high-traffic or wet floors, hold a minimum ⅛" grout joint and seal every one to two years, more often in shower, pool, and spa environments.
 
-### Can I order samples of purple tile?
+### Can samples of purple tile be ordered?
 
-Yes, you can add samples from any product page by selecting the color and size before adding them to your cart. Orders are limited to ten samples, with five complimentary. Most sample orders ship within two to three business days via UPS or FedEx ground. It's best to review samples in the installation space so you can see how the color reads in your lighting. For questions, contact <info@ziatile.com>. 
+Yes, samples can be added from any product page by selecting the color and size before adding to the cart. Orders are limited to ten samples, with five complimentary. Most sample orders ship within two to three business days via UPS or FedEx ground. Reviewing samples in the installation space before finalizing is recommended. For questions, contact info@ziatile.com or 310-844-1170.
+
+### How much purple tile is needed for a project?
+
+Start by measuring each surface individually. Multiply the length by the width in feet to get the square footage, then add all surfaces together for the total. Add a minimum of 15% overage to account for cuts and variation. For handmade materials like zellige, 15 to 20% overage is recommended, with 25% for a more uniform result. For project-specific guidance, contact our team at info@ziatile.com or 310-844-1170.

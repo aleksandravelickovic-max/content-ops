@@ -17,7 +17,7 @@ download_date: 2026-05-12
 
 # Green Tile
 
-Green colorway is a range of tones across clay, glaze, and pigment, from Sage and Eucalyptus to Kelp Forest. At Zia, green appears across collections: green zellige tile with visible chips, pits, and crazing, ceramic tile from Japan, and green cement tile formed with hand-poured pigments. Each material produces a distinct range of green tones and suits a range of applications, from a green tile backsplash to kitchen floors.
+Green tile is a range of tones across clay, glaze, and pigment, from Sage and Eucalyptus to Kelp Forest. At Zia, green appears across collections: green zellige tile with visible chips, pits, and crazing; ceramic tile from Japan; and green cement tile formed with hand-poured pigments. Each material produces a distinct range of green tones and suits a range of applications, from a green tile backsplash to kitchen floors.
 
 \[PRODUCT LIST\]
 
@@ -31,7 +31,7 @@ Green tiles are suitable for both kitchens and bathrooms when the material is ap
 
 ### How do you choose the right shade of green tile?
 
-Choosing the right shade of green tile starts with the undertone. Some greens lean warm and earthy, while others read cooler or more blue. You can order samples and evaluate them in the actual installation space, since green shifts depending on natural and artificial light.
+Choosing the right shade of green tile starts with the undertone. Some greens lean warm and earthy, while others read cooler or more blue. Order samples and evaluate them in the actual installation space, since green shifts depending on natural and artificial light.
 
 ### Do green tiles vary in tone or shade?
 
@@ -43,4 +43,12 @@ Green tile works across all three areas, but performance depends on the material
 
 ### How do you clean and maintain green tile?
 
-You clean and maintain green tile with routine sweeping and pH-neutral products. Sweep or vacuum high-traffic areas before grit scratches the surface. Clean with a pH-neutral cleaner and avoid bleach, vinegar, and acidic products, which etch glazes and damage stone. Seal cement and zellige every one to two years, and more often in shower, pool, and spa environments. Matte green ceramic requires sealing with 511 Porous Plus as a grout release before grouting.
+Cleaning and maintaining green tile requires routine sweeping and pH-neutral products. Sweep or vacuum high-traffic areas before grit scratches the surface. Clean with a pH-neutral cleaner and avoid bleach, vinegar, and acidic products, which etch glazes and damage stone. Seal cement and zellige every one to two years, and more often in shower, pool, and spa environments. Matte green ceramic requires sealing with 511 Porous Plus as a grout release before grouting.
+
+### How much green tile is needed for a project?
+
+Start by measuring each surface individually. Multiply the length by the width in feet to get the square footage, then add all surfaces together for the total. Add a minimum of 15% overage to account for cuts and variation. For handmade materials like zellige, 15 to 20% overage is recommended, with 25% for a more uniform result. For project-specific guidance, contact our team at info@ziatile.com or 310-844-1170.
+
+### Can green tile samples be ordered?
+
+Yes, samples can be added directly from any product page by selecting the color and size. Up to ten samples may be ordered, with the first five complimentary. Orders typically ship within two to three business days. For additional questions, contact info@ziatile.com or 310-844-1170.

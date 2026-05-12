@@ -59,7 +59,7 @@ The images shown represent a sample of this tile and may not display the full ra
   - Blend tiles from multiple boxes before installation to distribute tonal shifts evenly across the layout.
   - Set out a full dry layout before committing to placement. For continuous wall installations and backsplashes, assess how the tone flows across the field before setting begins.
   - Plan for 10-15% overage to accommodate cuts and layout adjustments.
-  - Satin finish ceramics must be sealed before grouting using 511 Porous Plus as a grout release to prevent haze and staining. Allow the sealer to cure fully before proceeding to grouting.
+  - Unlike matte ceramics, satin finish tiles do not require pre-grout sealing as a grout release. Standard grout application procedures apply.
 
 #### Installation and Finishing
 
@@ -90,7 +90,7 @@ Our Sequoia 4x4 satin finish ceramic suits both residential and commercial proje
   - **Pools + Spas:** Suitable for pools and spas, including saltwater and chlorine environments. Sealing is recommended for this use.
   - **Fireplace Surround:** Suited to fireplace surrounds. These tiles are not for use inside the firebox.
   - **Radiant Heating Compatible:** Compatible with radiant heating systems.
-  - **Sealing Required:** Satin finish ceramics must be sealed before grouting using 511 Porous Plus as a grout release. After grouting, reseal every 1-2 years. Refer to the Zia Tile Ceramics Installation Guide for recommended sealers.
+  - **Sealing Required:** Satin finish ceramics do not require pre-grout sealing as a grout release. For wet applications, seal tile and grout lines after grouting to protect against continuous moisture exposure. Reseal every 1-2 years. Refer to the Zia Tile Ceramics Installation Guide for recommended sealers.
 
 ### Commercial Usage
 
@@ -104,7 +104,7 @@ Our Sequoia 4x4 satin finish ceramic suits both residential and commercial proje
   - **Pools + Spas:** Suitable for commercial saltwater and chlorine pools and spas. Sealing is recommended for this use.
   - **Fireplace Surround:** Suited to decorative fireplace surrounds in lobbies and hospitality spaces. Not for use inside a firebox.
   - **Radiant Heating Compatible:** Compatible with commercial radiant heating systems.
-  - **Sealing Required:** Satin finish ceramics must be sealed before grouting using 511 Porous Plus as a grout release. After grouting, reseal every 1-2 years. Refer to the Zia Tile Ceramics Installation Guide for recommended sealers.
+  - **Sealing Required:** Satin finish ceramics do not require pre-grout sealing as a grout release. For wet applications, seal tile and grout lines after grouting to protect against continuous moisture exposure. Reseal every 1-2 years. Refer to the Zia Tile Ceramics Installation Guide for recommended sealers.
 
   
 
@@ -169,7 +169,7 @@ Ceramic tile is a long-term architectural material that can last 50 years or mor
 
 ### How does Sequoia compare to matte and glossy ceramic tiles?
 
-Sequoia's satin finish sits between matte and gloss in both appearance and performance. Like matte ceramics, satin requires pre-grout sealing with 511 Porous Plus as a grout release to prevent haze and staining — a step glossy finishes do not require. Gloss reflects more light, amplifies color depth, and can magnify water spots and everyday wear. Satin produces a soft luster that reads as composed without the high reflectivity of gloss, which makes Sequoia a versatile choice for both wall and floor applications.
+Sequoia's satin finish sits between matte and gloss in both appearance and performance. Matte absorbs light, reads as more restrained, and requires pre-grout sealing to prevent staining. Gloss reflects more light, amplifies color depth, and can magnify water spots and everyday wear. Satin — like gloss — does not require pre-grout sealing as a grout release, and produces a soft luster that reads as composed without the high reflectivity of gloss, which makes Sequoia a versatile choice for both wall and floor applications.
 
 ### Can Sequoia 4x4 be mixed with other ceramic colors in the collection?
 

@@ -27,20 +27,28 @@ Orange tile at Zia comes from clay, glaze, pigment, and stone. Terra cotta, zell
 
 ### How do you clean and maintain orange tile?
 
-Routine sweeping and pH-neutral products cover most of it. Sweep or vacuum high-traffic areas before grit scratches the surface. Avoid bleach, vinegar, and acidic products, which etch glazes and damage stone. Seal terra cotta and zellige every one to two years, and more often in shower, pool, and spa environments. Orange clay materials develop a natural patina with use, which is a characteristic of the material.
+Cleaning and maintaining orange tile requires routine sweeping and pH-neutral products. Sweep or vacuum high-traffic areas before grit scratches the surface. Avoid bleach, vinegar, and acidic products, which etch glazes and damage stone. Seal terra cotta and zellige every one to two years, and more often in shower, pool, and spa environments. Orange clay materials develop a natural patina with use, which is a characteristic of the material.
 
-### Can you use orange bathroom tile in a shower?
+### Can orange bathroom tile be used in a shower?
 
 Yes, when the material is suited for wet areas. Glazed zellige works on shower walls, but at a DCOF of 0.16, it is best avoided on shower floors. Cotto handles both shower walls and floors with proper sealing and a minimum ⅛" grout joint. On shower floors, specify a matte or textured finish and apply an anti-slip treatment after installation for additional traction.
 
 ### What is the difference between orange zellige, terra cotta, and cement tile?
 
-The difference between orange zellige, terra cotta, and cement tile comes down to how each is made. Orange zellige is hand-pressed and hand-glazed, with chips, pits, and crazing as inherent characteristics of each tile. The glaze produces variation in tone and surface from tile to tile. Terra cotta is unglazed handmade clay with natural orange-rust tones and rustic surface variation. Cement tile is hydraulically pressed and never fired, which gives it a matte surface and a character that develops with use. 
+The difference between orange zellige, terra cotta, and cement tile comes down to how each is made. Orange zellige is hand-pressed and hand-glazed, with chips, pits, and crazing as inherent characteristics of each tile. The glaze produces variation in tone and surface from tile to tile. Terra cotta is unglazed handmade clay with natural orange-rust tones and rustic surface variation. Cement tile is hydraulically pressed and never fired, which gives it a matte surface and a character that develops with use.
 
 ### How do I choose an orange tile?
 
-Start with the application, then narrow by tone and material. For floors, Cotto and cement tile carry orange in an unglazed or matte surface that develops with use. For walls and backsplashes, zellige and ceramic open up new colorway options. Within each material, the tone reads differently depending on the light in the room. Order samples of the ones you are considering and evaluate them in the actual installation space before deciding.
+Start with the application, then narrow by tone and material. For floors, Cotto and cement tile carry orange in an unglazed or matte surface that develops with use. For walls and backsplashes, zellige and ceramic open up additional colorway options. Within each material, the tone reads differently depending on the light in the room. Order samples and evaluate them in the actual installation space before deciding.
 
 ### Do handmade orange tiles vary in color?
 
-Yes, handmade orange tiles vary in color from piece to piece. In zellige, the variation comes from the hand-applied glaze and the uneven heat of the earthen kiln, which produces shifts in tone and surface across each tile. In terra cotta, the clay composition and the firing process determine the final color, and no two tiles come out identical. Chips, pits, and crazing are inherent characteristics of both materials. 
+Yes, handmade orange tiles vary in color from piece to piece. In zellige, the variation comes from the hand-applied glaze and the uneven heat of the earthen kiln, which produces shifts in tone and surface across each tile. In terra cotta, the clay composition and the firing process determine the final color, and no two tiles come out identical. Chips, pits, and crazing are inherent characteristics of both materials.
+
+### How much orange tile is needed for a project?
+
+Start by measuring each surface individually. Multiply the length by the width in feet to get the square footage, then add all surfaces together for the total. Add a minimum of 15% overage to account for cuts and variation. For handmade materials like zellige and terra cotta, 15 to 20% overage is recommended, with 25% for a more uniform result. For project-specific guidance, contact our team at info@ziatile.com or 310-844-1170.
+
+### Can orange tile samples be ordered?
+
+Yes, samples can be added directly from any product page by selecting the color and size. Up to ten samples may be ordered, with the first five complimentary. Orders typically ship within two to three business days. For additional questions, contact info@ziatile.com or 310-844-1170.

@@ -25,13 +25,13 @@ Brown tile at Zia moves through clay, cement, stone, and glaze, so the color cha
 
 ## Frequently Asked Questions
 
-### Can you use brown bathroom tile in a shower?
+### Can brown bathroom tile be used in a shower?
 
 Yes, brown bathroom tile can be used in a shower when the material is suited for wet areas. Glazed brown zellige tile works on shower walls but carries a DCOF of 0.16, so it is best kept off shower floors. Cotto Allende handles both shower walls and floors with proper sealing and a minimum ⅛" grout joint. Matte ceramic with a DCOF of 0.74 suits both walls and floors. Seal all of these materials after grouting and reseal every one to two years, more often in shower environments.
 
 ### How do you clean and maintain brown tile?
 
-To clean and maintain brown tile, start by keeping grit off the surface. Regular sweeping or vacuuming does more to protect the tile than heavy cleaning later. When you do clean, use a pH-neutral solution and avoid acidic products like vinegar or bleach, which can damage glaze and natural stone. Some materials, including cotto, Cotto Allende, cantera, and zellige, need to be sealed. Follow the schedule in the installation guidelines, and plan on more frequent sealing in showers and other wet areas.
+Cleaning and maintaining brown tile starts with keeping grit off the surface. Regular sweeping or vacuuming does more to protect the tile than heavy cleaning later. Use a pH-neutral solution and avoid acidic products like vinegar or bleach, which can damage glaze and natural stone. Some materials, including cotto, Cotto Allende, cantera, and zellige, need to be sealed. Follow the schedule in the installation guidelines, and plan on more frequent sealing in showers and other wet areas.
 
 ### Where can brown tiles be used in a home?
 
@@ -41,6 +41,10 @@ Brown tiles can be used across floors and walls, depending on the material. Cott
 
 Yes, brown tiles vary in tone or texture, but the level of variation depends on the material. Zellige shows the most movement, with shifts in tone and surface, along with chips, pits, and crazing. Cotto and cantera vary based on the clay or stone itself, so color can shift across a batch. Cement and terrazzo are more controlled but still show subtle differences. Texture follows the same pattern, from the uneven surface of handmade tile to the smoother finish of ceramic.
 
-### Should I order samples before choosing brown tile?
+### Should samples be ordered before choosing brown tile?
 
-Yes, you can order samples before placing a full order. Brown tile can read differently depending on the material and the lighting in your space. Viewing samples in the installation area helps you understand tone, texture, and variation before committing. Samples can be added from any product page by selecting the color and size. For additional questions, contact info@ziatile.com.
+Yes, ordering samples before placing a full order is recommended. Brown tile can read differently depending on the material and the lighting in the space. Viewing samples in the installation area helps confirm tone, texture, and variation before committing. Samples can be added from any product page by selecting the color and size. For additional questions, contact info@ziatile.com or 310-844-1170.
+
+### How much brown tile is needed for a project?
+
+Start by measuring each surface individually. Multiply the length by the width in feet to get the square footage, then add all surfaces together for the total. Add a minimum of 15% overage to account for cuts and variation. For handmade materials like zellige and cotto, 15 to 20% overage is recommended, with 25% for a more uniform result. For project-specific guidance, contact our team at info@ziatile.com or 310-844-1170.

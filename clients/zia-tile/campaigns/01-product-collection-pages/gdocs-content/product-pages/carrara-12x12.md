@@ -33,11 +33,11 @@ Zia's Carrara is a white Italian marble quarried from solid stone and finished b
 
   
 
-Minor variations in size, color, shade, and surface texture are natural characteristics of this marble and should be expected across your order. The images shown are representative but may not capture the full range of veining and tonal shifts present in a complete shipment.
+Minor variations in size, color, shade, and surface texture are natural characteristics of this marble and should be expected across the order. The images shown are representative but may not capture the full range of veining and tonal shifts present in a complete shipment.
 
   
 
-We recommend a 15-20% overage to curate the installation and account for any cuts needed. For a more uniform look with less pronounced veining variation, we recommend 25% overage so you can set aside pieces that fall outside your preferred pattern range.
+We recommend a 15-20% overage to curate the installation and account for any cuts needed. For a more uniform look with less pronounced veining variation, increase to 25% overage to allow setting aside pieces that fall outside the preferred pattern range.
 
   
 

@@ -41,15 +41,15 @@ Yes, large format tile can be used in a small room. Fewer grout joints reduce vi
 
 ### Does large format tile perform in exterior and freeze/thaw climates?
 
-Whether large format tile is suitable for exterior and freeze/thaw applications depends on the material. Terrazzo and marble are not suitable for any exterior floor application, regardless of climate. Limestone and cantera may be used on exterior floors in non-freeze/thaw climates only. Because suitability varies by material, confirming the specific tile's use cases before specifying for any outdoor application is essential. For guidance, contact our team at info@ziatile.com.
+Whether large format tile is suitable for exterior and freeze/thaw applications depends on the material. Terrazzo and marble are not suitable for any exterior floor application, regardless of climate. Limestone and cantera may be used on exterior floors in non-freeze/thaw climates only. Because suitability varies by material, confirming the specific tile's use cases before specifying for any outdoor application is essential. For guidance, contact our team at info@ziatile.com or 310-844-1170.
 
 ### What large format tile does Zia offer?
 
-Zia's large format tile collection includes terrazzo, cotto, cantera, marble, and limestone. Each material carries its own use cases, variation characteristics, and installation requirements. For a full overview of available formats and colorways, browse the collection or contact our team at <info@ziatile.com>.
+Zia's large format tile collection includes terrazzo, cotto, cantera, marble, and limestone. Each material carries its own use cases, variation characteristics, and installation requirements. For a full overview of available formats and colorways, browse the collection or contact our team at info@ziatile.com or 310-844-1170.
 
-### How do I calculate how much large format tile I need?
+### How much large format tile is needed for a project?
 
-To calculate how much large format tile you need, start by measuring the length and width of the surface in feet and multiplying them to get the total square footage. For a floor, measure the room. For a wall, measure each section separately and add them together. Once you have the total square footage, add overage to account for cuts, natural variation, and any tiles set aside during installation. For most large format tile materials, we recommend a minimum of 15% overage. For materials with higher natural variation, such as cotto and cantera, 15 to 20% overage is recommended. If you are unsure about quantities for your specific project, contact our team at info@ziatile.com before placing your order.
+Start by measuring the total surface in feet, multiplying length by width to get the square footage. For a wall, measure each section separately and add them together. Once the total square footage is established, add overage to account for cuts, natural variation, and any tiles set aside during installation. For most large format tile materials, a minimum of 15% overage is recommended. For materials with higher natural variation such as cotto and cantera, 15 to 20% overage is recommended. For project-specific quantity guidance, contact our team at info@ziatile.com or 310-844-1170 before placing the order.
 
 ### What is the difference between 12x24 and 24x24 tile?
 

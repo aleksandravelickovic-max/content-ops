@@ -34,7 +34,7 @@ Quarried near Fez, Morocco, Zia's Buff Honed Limestone 4x12 reflects a centuries
 
 ## Details 
 
-We recommend 15-20% overage to properly curate your installation and account for any cuts needed. Your limestone installation will develop a natural patina over time. This is characteristic of the material, not a sign of wear.
+We recommend 15-20% overage to properly curate the installation and account for any cuts needed. Limestone installations develop a natural patina over time. This is characteristic of the material, not a sign of wear.
 
   
 
@@ -129,7 +129,7 @@ The tiles then undergo the honing process. The surface is mechanically ground wi
 
   - All standard full orders ship throughout the US and Canada using an LTL carrier service with curbside pallet delivery.
   - We will ship the entire order together once all tiles are in stock.
-  - LTL carriers provide estimated delivery ranges and will contact you to schedule a specific delivery window once the shipment arrives at their local terminal.
+  - LTL carriers provide estimated delivery ranges and will confirm a delivery window once the shipment arrives at their local terminal.
   - Clients in Alaska, Hawaii, Canada, or international locations should email our team for a custom shipping quote.
 
 ### Warehouse Pickup & Support

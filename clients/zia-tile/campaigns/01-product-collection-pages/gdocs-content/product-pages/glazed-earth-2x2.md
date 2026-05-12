@@ -158,7 +158,7 @@ The final stage is the kiln. Earthen kilns do not distribute heat evenly, and th
 
 ### What are the characteristics of Glazed Earth zellige?
 
-Glazed Earth zellige is a 2x2 handcrafted Moroccan tile defined by its neutral palette and highly varied surface. The surface includes chips, pits, and crazing, which are inherent characteristics of handmade zellige rather than defects. Irregular edges and tonal movement across each tile produce a grounded, layered surface consistent with traditional Moroccan tilemaking.
+Glazed Earth zellige is a 2x2 handcrafted Moroccan tile defined by its neutral palette and highly varied surface. The surface includes chips, pits, and crazing, which are inherent characteristics of handmade zellige. Irregular edges and tonal movement across each tile produce a grounded, layered surface consistent with traditional Moroccan tilemaking.
 
 ### Is Glazed Earth zellige good for floors?
 

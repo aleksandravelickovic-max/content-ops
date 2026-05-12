@@ -24,7 +24,7 @@ Zia's Bungalow 12x12 is a cement terrazzo tile with a neutral ivory base and ear
 
 
 
-Our Bungalow 12x12 terrazzo tile includes minor variations in size, color, tone, and aggregate mix, which are natural characteristics of terrazzo tile and should be expected across your order. Images shown are representative of a sample of this tile but may not display all potential variation.
+Bungalow 12x12 terrazzo tile includes minor variations in size, color, tone, and aggregate mix, which are natural characteristics of terrazzo tile and should be expected across the order. Images shown are representative of a sample of this tile but may not display all potential variation.
 
 
 
@@ -38,7 +38,7 @@ A 1/8" grout joint is recommended. Installers will need to slightly adjust grout
 
 
 
-We recommend 15-20% overage to properly curate your installation and account for any cuts needed.
+We recommend 15-20% overage to properly curate the installation and account for any cuts needed.
 
 
 

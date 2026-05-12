@@ -127,7 +127,7 @@ Over time, the stone develops a natural patina. This is an expected characterist
 
   - All standard full orders ship throughout the US and Canada using an LTL carrier service with curbside pallet delivery.
   - We will ship the entire order together once all tiles are in stock.
-  - LTL carriers provide estimated delivery ranges and will contact you to schedule a specific delivery window once the shipment arrives at their local terminal.
+  - LTL carriers provide estimated delivery ranges and will confirm a delivery window once the shipment arrives at their local terminal.
   - Clients in Alaska, Hawaii, Canada, or international locations should email our team for a custom shipping quote.
 
 ### Warehouse Pickup & Support

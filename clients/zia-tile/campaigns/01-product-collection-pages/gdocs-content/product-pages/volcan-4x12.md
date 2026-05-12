@@ -30,11 +30,11 @@ Quarried and cut in Mexico, Zia's Volcan 4x12 is a warm brown cantera stone form
 
   
 
-Zia's Volcan 4x12 Cantera includes inherent variations in color, shade, and aggregate. These are natural characteristics of volcanic stone and should be expected throughout your order. The images shown are representative, but may not capture the full range of tones and surface markings present in a complete shipment.
+Zia's Volcan 4x12 Cantera includes inherent variations in color, shade, and aggregate. These are natural characteristics of volcanic stone and should be expected throughout the order. The images shown are representative, but may not capture the full range of tones and surface markings present in a complete shipment.
 
   
 
-We recommend 15–20% overage to properly curate your installation and account for any cuts needed. For a more uniform look, we recommend 25% overage.
+A 15–20% overage provides sufficient material to curate the installation and account for any cuts needed. For a more uniform look, increase to 25% overage.
 
   
 
@@ -45,21 +45,21 @@ We recommend 15–20% overage to properly curate your installation and account f
 ### Inherent Variation
 
   - Zia's Volcan 4x12 presents a warm brown tone across each tile, with a honed surface that reveals the stone's natural aggregate and mineral inclusions.
-  - Each Volcan tile carries its own one-of-a-kind presentation of aggregate within the warm brown range, and that variation defines the line's charm.
-  - You should expect significant variation in color, shade, aggregate distribution, and surface texture across your order. No two Volcan tiles will share identical markings.
+  - Each Volcan tile carries its own one-of-a-kind presentation of aggregate within the warm brown range, and that variation defines the line's character.
+  - Significant variation in color, shade, aggregate distribution, and surface texture should be expected across the order. No two Volcan tiles share identical markings.
 
 ### Preparation and Curation
 
   - Blend tiles from multiple boxes before setting to distribute color and tonal variation evenly across the installation.
   - Lay out the full composition before committing to placement, paying particular attention to how aggregate distribution reads across the field.
-  - We recommend 15–20% overage on all tile orders. For a more uniform look, we recommend 25% overage.
+  - A 15–20% overage provides sufficient material to curate the installation. For a more uniform look, increase to 25% overage.
 
 ### Installation and Finishing
 
   - Installers must always wear protective face and eye coverings when working with cantera, mortar, sealants, and grout in accordance with California Prop 65.
   - We recommend installing floor-to-ceiling or bringing the drywall flush with the finished tile surface. For exposed edges, miter at 45 degrees or use Schluter strips if trim is required.
-  - Always seal Zia's Volcan 4x12 in areas exposed to moisture, including shower walls and floors.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - Always seal Zia's Volcan 4x12 according to the installation instructions, whether in dry spaces or in areas exposed to moisture, such as shower walls and floors. For interior applications, finish with Fila Matte Wax as a final coat. For exterior applications, apply a second coat of 511 Porous Plus in place of wax — UV exposure causes wax to discolor outdoors.
+  - For installation questions, contact our team at info@ziatile.com or 310-844-1170.
 
   
 
@@ -85,7 +85,7 @@ Zia's Volcan 4x12 Cantera suits both residential and commercial projects. The re
   - **Pools + Spas:** Not suitable for pools or spas.
   - **Fireplace Surround:** Suited to fireplace surrounds. These tiles are not for use inside the firebox.
   - **Radiant Heating Compatible:** Compatible with radiant heating systems.
-  - **Sealing Required:** Sealing is required for shower installations and all moisture-exposed areas. Refer to the Zia Tile Installation Guide for recommended sealers and application instructions.
+  - **Sealing Required:** Sealing is required for all installations, including dry spaces. Always seal Volcan 4x12 according to the installation instructions, whether in dry spaces or in areas exposed to moisture, such as showers. Refer to the Zia Tile Installation Guide for recommended sealers and application instructions.
 
 ### Commercial Usage
 
@@ -96,11 +96,10 @@ Zia's Volcan 4x12 Cantera suits both residential and commercial projects. The re
   - **Interior Walls:** Suited to reception areas, commercial bathrooms, and feature wall applications.
   - **Exterior Walls:** Suitable for exterior commercial wall surfaces in non-freeze/thaw climates.
   - **Shower Walls + Floors:** Suited to shower walls, shower floors, and steam showers. We recommend sealing the tile for this use. Slip resistance can be increased by sizing grout joints to a minimum of ⅛" and/or applying an anti-slip product after installation.
-  - Pools + Spas: Not suitable for pools or spas.
   - **Pools + Spas:** Not suitable for pools or spas.
   - **Fireplace Surround:** Suited to decorative fireplace surrounds in lobbies and hospitality spaces. Not for use inside a firebox.
   - **Radiant Heating Compatible:** Compatible with commercial radiant heating systems.
-  - **Sealing Required:** Sealing is required for shower installations and all moisture-exposed areas. Refer to the Zia Tile Installation Guide for recommended sealers and application instructions.
+  - **Sealing Required:** Sealing is required for all installations, including dry spaces. Always seal Volcan 4x12 according to the installation instructions, whether in dry spaces or in areas exposed to moisture, such as showers. Refer to the Zia Tile Installation Guide for recommended sealers and application instructions.
 
   
 
@@ -132,14 +131,14 @@ Because each tile comes from a naturally formed volcanic rock, no two pieces car
 
   - All standard full orders ship throughout the US and Canada using an LTL carrier service with curbside pallet delivery.
   - We will ship the entire order together once all tiles are in stock.
-  - LTL carriers provide estimated delivery ranges and will contact you to schedule a specific delivery window once the shipment arrives at their local terminal.
+  - LTL carriers provide estimated delivery ranges and will confirm a delivery window once the shipment arrives at their local terminal.
   - Clients in Alaska, Hawaii, Canada, or international locations should email our team for a custom shipping quote.
 
 ### Warehouse Pickup & Support
 
   - We offer free full order pickup at our Los Angeles area warehouse.
   - Our team will contact you when your order is ready so you may schedule your pickup. Warehouse pickup is available by confirmed appointment only.
-  - For additional questions regarding your Volcan 4x12 Cantera order, please reach out to us at info@ziatile.com.
+  - For additional questions regarding the Volcan 4x12 Cantera order, contact our team at info@ziatile.com or 310-844-1170.
 
   
 

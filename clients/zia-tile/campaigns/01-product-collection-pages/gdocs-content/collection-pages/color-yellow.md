@@ -23,7 +23,7 @@ Yellow sits in a wide tonal range, from pale straw to deep ochre to mustard, and
 
 ### Is a yellow tile a good choice for kitchens and backsplashes?
 
-Yes, yellow tile performs well in kitchens, particularly as a yellow backsplash tile. Lighter tones work well with under-cabinet lighting and natural daylight. Deeper hues, such as mustard yellow tile, pair with white or natural wood cabinetry. Glazed ceramic and handcrafted zellige hold up in high-use cooking zones when properly installed, sealed where required, and grouted.
+Yes, yellow tile performs well in kitchens, particularly as a yellow backsplash tile. Lighter tones work well with under-cabinet lighting and natural daylight. Deeper hues, such as mustard yellow tile, pair with white or natural wood cabinetry. Glazed ceramic and handcrafted zellige hold up in high-use cooking zones when properly installed, sealed where required, and grouted. Zellige brings inherent variation, including chips, pits, and crazing, while ceramic offers a more controlled surface.
 
 ### Does yellow subway tile work in modern interiors?
 
@@ -35,12 +35,20 @@ Yes, yellow bathroom tile works on shower walls and floors when the material is 
 
 ### Can yellow tile make a space feel brighter?
 
-Yes, yellow tile can make a space feel brighter and warmer. The tone stays present across different lighting conditions and times of day, which makes it an interesting design choice rather than a reactive one.
+Yes, yellow tile adds warmth and brightness to a space. The tone stays present across different lighting conditions and times of day, which makes it an active design choice rather than a neutral one.
 
 ### What grout color works best with yellow tile?
 
-The right grout color depends on how much definition you want between tiles. A closely matched grout produces a continuous surface, particularly with yellow subway tile and large-format yellow floor tile. A soft white or warm grey introduces subtle definition without competing with the color. A high-contrast grout makes the grid visible and puts the layout front and center.
+The right grout color depends on how much definition is desired between tiles. A closely matched grout produces a continuous surface, particularly with yellow subway tile and large-format yellow floor tile. A soft white or warm grey introduces subtle definition without competing with the color. A high-contrast grout makes the grid visible and puts the layout front and center.
 
 ### What is the difference between yellow and orange tile?
 
-The difference between yellow and orange tile comes down to undertone and base pigment. Yellow tile sits in the citrus-to-ochre range, while orange tile pulls toward red, which gives it more heat and less brightness. In handmade materials like zellige and terra cotta, the line between the two can blur depending on the glaze, the firing, and the light in the room. The material and the context impact the perception as much as the color itself.
+The difference between yellow and orange tile comes down to undertone and base pigment. Yellow tile sits in the citrus-to-ochre range, while orange tile pulls toward red, which gives it more heat and less brightness. In handmade materials like zellige and terra cotta, the line between the two can blur depending on the glaze, the firing, and the light in the room.
+
+### How much yellow tile is needed for a project?
+
+Start by measuring each surface individually. Multiply the length by the width in feet to get the square footage, then add all surfaces together for the total. Add a minimum of 15% overage to account for cuts and variation. For zellige, 15 to 20% overage is recommended, with 25% for a more uniform result. For project-specific guidance, contact our team at info@ziatile.com or 310-844-1170.
+
+### Can yellow tile samples be ordered?
+
+Yes, samples can be added directly from any product page by selecting the color and size. Up to ten samples may be ordered, with the first five complimentary. Orders typically ship within two to three business days. For additional questions, contact info@ziatile.com or 310-844-1170.

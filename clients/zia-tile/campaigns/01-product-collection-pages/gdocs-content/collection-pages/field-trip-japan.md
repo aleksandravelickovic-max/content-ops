@@ -18,9 +18,7 @@ download_date: 2026-05-12
 
 ## Tradition on Trend
 
-Journey with us to Nagoya, Japan, where craftspeople working across centuries have shaped the world's finest artisan-made ceramics. This line travels beyond our core ceramics collection, introducing three distinct finishes: flat, furrowed, and etched. The fine-tuned colors and distinct textures evoke vibrant landscapes, with each tile reflecting generations of practice and precision.
-
-Field Trip: Japan is a collection of extruded ceramic tiles designed in Los Angeles and produced in a historic pottery region. Each tile is formed through a die-cut mold, hand-glazed, and single-fired at high temperatures to achieve consistent sizing and controlled surface behavior across every piece in the collection.
+Field Trip: Japan is a collection of extruded ceramic tiles designed in Los Angeles and produced in a historic pottery region outside Nagoya, Japan. The region has one of the longest continuous ceramic traditions in the world. The collection builds on this lineage through a modern production system shaped by traditional expertise and contemporary design direction. Three distinct finishes are available: flat, furrowed, and etched. Each tile is formed through a die-cut mold, hand-glazed, and single-fired at high temperatures to achieve consistent sizing and controlled surface behavior across every piece.
 
 \[PRODUCT LIST\]
 
@@ -30,11 +28,11 @@ Field Trip: Japan is a collection of extruded ceramic tiles designed in Los Ange
 
 ### Where do Zia's ceramic tiles and Field Trip: Japan come from?
 
-Field Trip: Japan is designed in Los Angeles and produced in a potter's village outside Nagoya, Japan. The region has one of the longest continuous ceramic traditions in the world, with functional ceramic forms first emerging in Japan during the Jōmon period between 10,500 and 300 BC. Field Trip: Japan builds on this lineage through a modern production system shaped by traditional expertise and contemporary design direction from Los Angeles.
+Field Trip: Japan is designed in Los Angeles and produced in a potter's village outside Nagoya, Japan. The region has one of the longest continuous ceramic traditions in the world, with functional ceramic forms first emerging in Japan during the Jōmon period between 10,500 and 300 BC. Field Trip: Japan builds on this lineage through a modern production system shaped by traditional expertise and contemporary design direction.
 
 ### How is Field Trip: Japan made?
 
-Field Trip: Japan is produced using an extruded ceramic process. Clay is passed through a die-cut mold, cut into individual tile forms, hand-glazed, and single-fired at high temperatures. This process maintains consistent sizing across the collection, while variation appears primarily through glaze movement and finish selection. Three finishes are available for this Japanese ceramic tile: flat, furrowed, and etched, each producing a distinct surface appearance and light behavior.
+Field Trip: Japan is produced using an extruded ceramic process. Clay is passed through a die-cut mold, cut into individual tile forms, hand-glazed, and single-fired at high temperatures. This process maintains consistent sizing across the collection, while variation appears primarily through glaze movement and finish selection. Three finishes are available: flat, furrowed, and etched, each producing a distinct surface appearance and light behavior.
 
 ### Does Field Trip: Japan need special care?
 
@@ -62,14 +60,20 @@ For grouting:
 
 Installers must wear protective face and eye coverings when working with tile, mortar, sealants, and grout in accordance with California Prop 65. For complete step-by-step instructions, refer to the [Field Trip: Japan Installation Guide](https://ziatile.com/pages/japanese-brick-ceramics-installation-guide).
 
+For installation questions, contact our team at info@ziatile.com or 310-844-1170.
+
 ### What is Field Trip: Japan used for?
 
 Field Trip: Japan is specified for surfaces where finish and texture carry design intent. Common applications include kitchen backsplashes, bathroom walls, shower walls and floors, and fireplace surrounds. The collection is approved for pools and spas. It is not suitable for high-traffic interior floors or any exterior floor application.
 
 ### Can Field Trip: Japan be used in a shower?
 
-Yes, Field Trip: Japan can be used on shower walls and shower floors. Sealing is required for matte finishes before grouting. For shower floors, slip resistance can be increased by keeping grout joints open to a minimum of ⅛" and applying an anti-slip treatment after installation is complete. For wet area applications, waterproofing must be completed before installation begins. For material-specific guidance, contact our team at info@ziatile.com before work begins.
+Yes, Field Trip: Japan can be used on shower walls and shower floors. Sealing is required for matte finishes before grouting. For shower floors, slip resistance can be increased by keeping grout joints open to a minimum of ⅛" and applying an anti-slip treatment after installation is complete. For wet area applications, waterproofing must be completed before installation begins. For material-specific guidance, contact our team at info@ziatile.com or 310-844-1170 before work begins.
 
 ### What finishes and colors does Field Trip: Japan offer?
 
-Field Trip: Japan is available in three distinct finishes: flat, furrowed, and etched. Flat surfaces produce a clean, continuous wall reading. Furrowed tiles introduce linear relief across the surface. Etched finishes create subtle depth through surface interruption. For a full overview of available finishes and colorways, browse the collection or contact our team at info@ziatile.com.
+Field Trip: Japan is available in three distinct finishes: flat, furrowed, and etched. Flat surfaces produce a clean, continuous wall reading. Furrowed tiles introduce linear relief across the surface. Etched finishes create subtle depth through surface interruption. For a full overview of available finishes and colorways, browse the collection or contact our team at info@ziatile.com or 310-844-1170.
+
+### How much Field Trip: Japan tile is needed for a project?
+
+Start by measuring each surface individually. Multiply the length by the width in feet to get the square footage, then add all surfaces together for the total. Add a minimum of 15% overage to account for cuts and variation. For project-specific quantity guidance, contact our team at info@ziatile.com or 310-844-1170 before placing the order.

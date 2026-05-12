@@ -41,10 +41,18 @@ Patterned tile is most often used in kitchens as a backsplash or as a defined fl
 
 Moroccan pattern tile, often referred to as zellige or zellij, originates in Fes, Morocco. The craft developed over centuries, with artisans creating geometric patterns such as stars, polygons, and interlocking shapes for architectural surfaces. Zia's zellige is produced using traditional hand-cutting and hand-setting methods.
 
-### What's the best grout color for patterned tile?
+### What is the best grout color for patterned tile?
 
-Grout color affects how the pattern reads once installed. A lighter or neutral grout keeps the pattern continuous across the surface. Darker grout increases contrast and outlines individual tiles. With cement tile, lighter grout is often used to reduce the risk of pigment transfer during installation. 
+Grout color affects how the pattern reads once installed. A lighter or neutral grout keeps the pattern continuous across the surface. Darker grout increases contrast and outlines individual tiles. With cement tile, lighter grout is often used to reduce the risk of pigment transfer during installation.
 
-### Can you use pattern tile outdoors?
+### Can pattern tile be used outdoors?
 
 Pattern tile can be used outdoors when the material is suitable for the climate. Cement tile can be installed on exterior floors and walls in non-freeze/thaw conditions with proper sealing. Zellige can be used on exterior walls in non-freeze/thaw climates. For installations exposed to freeze/thaw conditions, a material rated for that environment is required.
+
+### How much patterned tile is needed for a project?
+
+Start by measuring the total square footage of the surface. Add a minimum of 15% overage to account for cuts and alignment. For patterned cement tile, plan for 20 to 25% overage to allow for pattern matching and any tiles set aside during installation. For project-specific quantity guidance, contact our team at info@ziatile.com or 310-844-1170.
+
+### Can patterned tile samples be ordered?
+
+Yes, samples can be added directly from any product page by selecting the color and size. Up to ten samples may be ordered, with the first five complimentary. Orders typically ship within two to three business days. For additional questions, contact info@ziatile.com or 310-844-1170.

@@ -14,11 +14,11 @@ download_date: 2026-05-12
 
 # Roman Mosaics
 
-### The Timelessness of Tesserae
+## The Timelessness of Tesserae
 
-From Hellenistic Greece to the Roman Empire, marble mosaics have defined the art of detail for thousands of years. Zia's Roman mosaics are sourced from marble quarries in Italy and Spain and finished in Italy, where each block is hand-clipped by artisans into 5/8-inch tesserae tile squares using traditional tooling methods that preserve the natural integrity of the stone. 
+From Hellenistic Greece to the Roman Empire, marble mosaics have defined the art of detail for thousands of years. Zia's Roman mosaics are sourced from marble quarries in Italy and Spain and finished in Italy, where each block is hand-clipped by artisans into 5/8-inch tesserae tile squares using traditional tooling methods that preserve the natural integrity of the stone.
 
-Each tessera carries the irregularity of the cutting process, producing edges that are slightly organic rather than mechanically uniform. Set on mesh in solids, fans, and checks, these small-format mosaics are refined, graphic, and totally timeless. 
+Each tessera carries the irregularity of the cutting process, producing edges that are slightly organic rather than mechanically uniform. Set on mesh in solids, fans, and checks, these small-format mosaics are refined, graphic, and enduringly versatile.
 
 \[PRODUCT LIST\]
 
@@ -57,7 +57,7 @@ During installation:
   - Use a high-quality medium-bed thinset mortar for floor applications
   - Wet the back of each sheet before setting
   - Apply thinset in a consistent direction to avoid air pockets
-  - Press sheets into place using only the palm of your hand
+  - Press sheets into place using only the palm of the hand
   - Install in sections no larger than 2x2 and clean excess thinset immediately
 
 After placement:
@@ -68,6 +68,8 @@ After placement:
   - Apply Fila Matte Wax as a final coat after the grout has cured
 
 All cuts must be made with a water-cooled tile saw. For exposed edges, miter at 45 degrees or finish with Schluter strips. Bring drywall flush with the finished stone surface where applicable. Installers must wear proper protective equipment in accordance with California Prop 65 guidelines. For detailed instructions, refer to the [Roman Mosaics Installation Guide](https://ziatile.com/pages/roman-mosaics-installation-guide).
+
+For installation questions, contact our team at info@ziatile.com or 310-844-1170.
 
 ### How long do Roman mosaic tiles last?
 
@@ -85,16 +87,16 @@ Zia's Roman mosaic tiles are available in seven marble colorways, each sourced f
   - Verde Alpi
   - Rosso Alicante
 
-Roman mosaics are available in solid, fan, and checkerboard layouts. For a full overview of available colorways and layouts, browse the collection or contact our team at info@ziatile.com.
+Roman mosaics are available in solid, fan, and checkerboard layouts. For a full overview of available colorways and layouts, browse the collection or contact our team at info@ziatile.com or 310-844-1170.
 
 ### Do Roman mosaic tiles require sealing?
 
 Yes, Roman mosaic tiles require sealing as part of installation and as part of ongoing maintenance. The material is natural marble, which is porous and absorbs moisture without proper protection. Apply 511 Porous Plus as a penetrating sealer before grouting and allow it to fully cure. Always use pH-neutral products for cleaning to avoid etching or dulling the surface.
 
-### How much Roman mosaic tile do I need for my project?
+### How much Roman mosaic tile is needed for a project?
 
-Calculating how much Roman mosaic tile you need starts with the total square footage of the surface. Measure the length and width of each surface in feet and multiply them together, then add all sections for walls or multiple floors. From that total, add a minimum of 15 to 20% overage to account for cuts, natural variation, and any sheets set aside during installation. For a more uniform look, increase overage to 20 to 25%. If you are unsure about quantities for your specific project, contact our team at info@ziatile.com before placing your order.
+Calculating how much Roman mosaic tile is needed starts with the total square footage of the surface. Measure the length and width of each surface in feet and multiply them together, then add all sections for walls or multiple floors. From that total, add a minimum of 15 to 20% overage to account for cuts, natural variation, and any sheets set aside during installation. For a more uniform look, increase overage to 20 to 25%. For project-specific quantity guidance, contact our team at info@ziatile.com or 310-844-1170 before placing the order.
 
 ### What is the difference between Roman mosaic tile and marble tile?
 
-Roman and marble mosaic tiles are both sourced from natural marble but differ in format, production method, and installation approach. Marble tile is cut from solid stone blocks into larger formats such as 4x4, 12x12, or 24x24, with each tile displaying the full veining and tonal range of the block. Roman mosaic tile is hand-clipped into 5/8-inch tesserae and assembled on mesh-backed sheets, distributing veining and tonal variation across many small pieces rather than a single large surface. 
+Roman mosaic tiles and marble tiles are both sourced from natural marble but differ in format, production method, and installation approach. Marble tile is cut from solid stone blocks into larger formats such as 4x4, 12x12, or 24x24, with each tile displaying the full veining and tonal range of the block. Roman mosaic tile is hand-clipped into 5/8-inch tesserae and assembled on mesh-backed sheets, distributing veining and tonal variation across many small pieces rather than a single large surface.

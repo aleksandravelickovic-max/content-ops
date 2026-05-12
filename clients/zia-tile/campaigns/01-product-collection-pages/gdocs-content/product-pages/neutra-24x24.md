@@ -78,7 +78,7 @@ Our Neutra 24x24 terrazzo suits both residential and commercial projects. The la
   - **Exterior Floors, Non-Freeze or Thaw:** This terrazzo tile may be installed on exterior flooring surfaces in stable climates when properly sealed, maintaining performance in covered patios and sheltered outdoor zones.
   - **Interior Walls:** The neutral aggregate field of Neutra 24x24 supports terrazzo tile bathroom walls, kitchen backsplashes, and interior feature walls where material continuity and tonal restraint are required.
   - **Exterior Walls:** Suitable for exterior wall cladding in non-freeze/thaw climates when properly sealed, supporting architectural facades that require a durable cement terrazzo surface.
-  - **Shower Walls + Floors:** Neutra 24x24 is suitable for shower walls, shower floors, and steam showers when properly sealed, making it a reliable surface solution.
+  - **Shower Walls + Floors:** Neutra 24x24 is suitable for shower walls, shower floors, and steam showers when properly sealed. Slip resistance can be increased by sizing grout joints to a minimum of 1/8" and/or applying an anti-slip treatment after installation.
   - **Pools + Spas:** Not suitable for pools or spas, including saltwater and chlorine environments.
   - **Fireplace Surround:** Suitable for fireplace surrounds as a non-combustible decorative surface. Tiles cannot be used inside fireboxes.
   - **Radiant Heating Compatible:** Compatible with radiant heating systems and in-floor heating assemblies when installed over appropriate substrates.
@@ -92,7 +92,7 @@ Our Neutra 24x24 terrazzo suits both residential and commercial projects. The la
   - **Exterior Floors, Non-Freeze or Thaw:** Suitable for exterior commercial walkways, courtyards, and entry zones in stable climates when properly sealed.
   - **Interior Walls:** Suitable for commercial interiors, including restrooms, lobbies, and feature installations where large-format terrazzo tile creates a cohesive wall surface.
   - **Exterior Walls:** Suitable for exterior cladding in non-freeze/thaw climates when installed with proper sealing systems to support long-term performance.
-  - **Shower Walls + Floors:** Suitable for commercial shower facilities, spa environments, and wellness spaces where terrazzo tile bathroom applications require both durability and water resistance.
+  - **Shower Walls + Floors:** Suitable for commercial shower facilities, spa environments, and wellness spaces. Sealing is required for this use. Slip resistance can be increased by sizing grout joints to a minimum of 1/8" and/or applying an anti-slip treatment after installation.
   - **Pools + Spas:** Not suitable for pools or spa installations, including chemically treated water environments.
   - **Fireplace Surround:** Suitable for decorative commercial fireplace surrounds. Tiles are not rated for firebox interior use.
   - **Radiant Heating Compatible:** Compatible with commercial radiant heating systems when installed over approved substrates.
@@ -132,7 +132,7 @@ Since each production cycle is influenced by aggregate placement, pressure distr
 
   - All standard full orders ship throughout the US and Canada using an LTL carrier service with curbside pallet delivery.
   - We will ship the entire order together once all tiles are in stock.
-  - LTL carriers provide estimated delivery ranges and will contact you to schedule a specific delivery window once the shipment arrives at their local terminal.
+  - LTL carriers provide estimated delivery ranges and will confirm a delivery window once the shipment arrives at their local terminal.
   - Clients in Alaska, Hawaii, Canada, or international locations should email our team for a custom shipping quote.
 
 ### Warehouse Pickup & Support
