@@ -24,16 +24,16 @@ To find the world's best ceramic tiles, Zia traveled to Japan. Our Linen 2x8 is 
 
 ## Details
 
-Zia's Linen 2x8 Matte Finish ceramic includes minor variation in size, color, tone, and surface texture. These are natural characteristics of ceramic tile and should be expected across your order.
+Zia's Linen 2x8 Matte Finish ceramic includes minor variation in size, color, tone, and surface texture. These are natural characteristics of ceramic tile and should be expected across the order.
 
-The images shown are representative of a sample of this tile but may not display all potential variations. We recommend 15–20% overage to properly curate your installation and account for any cuts needed.
+The images shown are representative of a sample of this tile but may not display all potential variations. We recommend 15–20% overage to properly curate the installation and account for any cuts needed.
 
 ## About — \[ACCORDION\]
 
 ### Color and Surface
 
   - Zia's Linen 2x8 presents a true ivory tone across each tile, with a matte finish that produces a non-reflective surface.
-  - Each tile exhibits minor variation in color, tone, and surface texture. These are natural characteristics of ceramic tile and should be expected across your order.
+  - Each tile exhibits minor variation in color, tone, and surface texture. These are natural characteristics of ceramic tile and should be expected across the order.
   - The variation in this collection is subtle. Linen reads as a consistent, neutral surface at installation scale, with the handcrafted quality most visible up close.
 
 ### Preparation and Curation
@@ -47,7 +47,8 @@ The images shown are representative of a sample of this tile but may not display
 
   - Installers must always wear protective face and eye coverings when working with ceramic tile, thinset, sealants, and grout in accordance with California Prop 65.
   - For finishing, ceramic tiles can be mitered on the edge or finished with Schluter strips.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - For installation questions, contact our team at info@ziatile.com or 310-844-1170.
+  - Always seal Linen 2x8 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
 *⚠ WARNING: Cancer and Reproductive Harm.* [*Learn more about Proposition 65 Warnings.*](https://www.ziatile.com/proposition-65-warnings)
 
@@ -57,7 +58,7 @@ Zia's Linen 2x8 Matte Finish ceramic suits both residential and commercial proje
 
 ### Residential Usage
 
-  - **Interior Floors – High Traffic:** Handles daily use in kitchens, entryways, hallways, and primary bathrooms. The matte surface provides better traction than a glossy finish. If installed on a flooring surface in a wet area, slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete.
+  - **Interior Floors – High Traffic:** Handles daily use in kitchens, entryways, hallways, and primary bathrooms. The matte surface provides better traction than a glossy finish.
   - **Interior Floors – Low Traffic:** Performs well in guest bedrooms, secondary bathrooms, and quieter living spaces.
   - **Exterior Floors – Freeze or Thaw:** Ceramic tile is not suitable for exterior floor installations in freeze/thaw climates.
   - **Exterior Floors – Non-Freeze or Thaw:** Ceramic tile is not suitable for exterior floor installations.
@@ -71,7 +72,7 @@ Zia's Linen 2x8 Matte Finish ceramic suits both residential and commercial proje
 
 ### Commercial Usage
 
-  - **Interior Floors – High Traffic:** Suited to high-traffic commercial environments. The matte surface reduces glare and provides better traction than a glossy finish. If installed on a flooring surface in a wet area, slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete.
+  - **Interior Floors – High Traffic:** Suited to high-traffic commercial environments. The matte surface reduces glare and provides better traction than a glossy finish.
   - **Interior Floors – Low Traffic:** Suited to offices, meeting rooms, and boutique interiors.
   - **Exterior Floors – Freeze or Thaw:** Ceramic tile is not suitable for exterior floor installations in freeze/thaw climates.
   - **Exterior Floors – Non Freeze or Thaw:** Ceramic tile is not suitable for exterior floor installations.
@@ -99,7 +100,7 @@ Minor shifts in tone and surface texture emerge during firing, giving each tile 
   - Select the "Add Sample to Cart" button to add Linen 2x8 to your cart.
   - Each client may order up to ten samples total, with a limit of four per each unique tile.
   - We offer five complimentary samples; additional samples begin at $3 each.
-  - Your sample order will ship via FedEx or UPS ground.
+  - Sample orders ship via FedEx or UPS ground.
 
 ### Full Orders
 
@@ -111,8 +112,8 @@ Minor shifts in tone and surface texture emerge during firing, giving each tile 
 ### Warehouse Pickup & Support
 
   - We offer free full order pickup at our Los Angeles area warehouse.
-  - Our team will contact you when your order is ready so you may schedule your pickup. Warehouse pickup is available by confirmed appointment only.
-  - For additional questions regarding your Linen 2x8 order, please reach out to us at info@ziatile.com.
+  - Our team will contact you when the order is ready to schedule a pickup. Warehouse pickup is available by confirmed appointment only.
+  - For additional questions, contact our team at info@ziatile.com or 310-844-1170.
 
 ## Installation Guide — \[ACCORDION\]
 
@@ -136,10 +137,10 @@ Yes, the Linen 2x8 is a matte finish ceramic and must be sealed before grouting 
 
 The difference between ceramic and porcelain tile comes down to density, water absorption, and the conditions each material is suited for. Ceramic tile is high-fired from natural clay and is well-suited to interior walls and floors, including wet areas and pools. Porcelain tile is fired at higher temperatures using denser clay, resulting in lower water absorption, which allows it to perform in exterior floor applications and more demanding environments.
 
-### How do I clean matte ceramic tile?
+### How is matte ceramic tile cleaned?
 
-To clean matte ceramic tile, use a pH-neutral cleaner and warm water for routine maintenance. Sweep or vacuum regularly to remove abrasive debris that can scratch the surface. Avoid acidic or abrasive cleaning products, as these can affect the matte glaze over time. For heavier staining, Miracle Sealants Heavy Duty Cleaner (Acid Substitute) is the recommended product.
+For routine maintenance, use a pH-neutral cleaner and warm water. Sweep or vacuum regularly to remove abrasive debris that can scratch the surface. Avoid acidic or abrasive cleaning products, as these can affect the matte glaze over time. For heavier staining, Miracle Sealants Heavy Duty Cleaner (Acid Substitute) is the recommended product.
 
 ### How does the 2x8 format work in an installation?
 
-The 2x8 format is an elongated subway tile that introduces a strong directional quality to the surface. Installed horizontally, it emphasizes the width of the surface and works well on backsplashes and lower wall applications. Installed vertically, it draws the eye upward and is commonly used in shower enclosures and floor-to-ceiling wall applications. The format also lends itself to herringbone and stacked arrangements, each of which changes how the tile reads across the surface. Agreeing on orientation and pattern with your installer before laying out the tile is an important step in the preparation process.
+The 2x8 format is an elongated subway tile that introduces a strong directional quality to the surface. Installed horizontally, it emphasizes the width of the surface and works well on backsplashes and lower wall applications. Installed vertically, it draws the eye upward and is commonly used in shower enclosures and floor-to-ceiling wall applications. The format also lends itself to herringbone and stacked arrangements, each of which changes how the tile reads across the surface. Confirming orientation and pattern with the installer before laying out the tile is an important step in the preparation process.

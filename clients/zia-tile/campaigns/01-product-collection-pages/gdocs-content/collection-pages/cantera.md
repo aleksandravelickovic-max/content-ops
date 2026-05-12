@@ -16,9 +16,9 @@ download_date: 2026-05-12
 
 ## From Fire Comes Finery
 
-Cantera is a stone that has been celebrated in the art and architecture of Mesoamerica for millennia. From ancient Aztec structures to cathedrals in San Miguel de Allende and landmarks in Mexico City, this rock appears in buildings where material, designstructure, and permanence intersect. Our collection preserves this heritage through cantera stone tile cut from volcanic rock quarried in Mexico and hand-finished to preserve its natural surface identity.
+Cantera is a stone that has been celebrated in the art and architecture of Mesoamerica for millennia. From ancient Aztec structures to cathedrals in San Miguel de Allende and landmarks in Mexico City, this rock appears in buildings where material, design, structure, and permanence intersect. The collection preserves this heritage through Cantera stone tile cut from volcanic rock quarried in Mexico and hand-finished to preserve its natural surface identity.
 
-CanteraThe stone tile is formed from volcanic ash and mineral deposits that compress over time into a porous, lightweight stone with visible aggregate and inherent variation. The Zia Tile Ccantera collection reveals this structure through eight earthy hues, ranging from soft neutral tones to deeper mineral-rich colors, reflecting the geological composition of the quarry. 
+The stone tile is formed from volcanic ash and mineral deposits that compress over time into a porous, lightweight stone with visible aggregate and inherent variation. Zia Tile's Cantera collection reveals this structure through eight earthy hues, ranging from soft neutral tones to deeper mineral-rich colors, reflecting the geological composition of the quarry.
 
 \[PRODUCT LIST\]
 
@@ -28,59 +28,61 @@ CanteraThe stone tile is formed from volcanic ash and mineral deposits that comp
 
 ### Where do cantera tiles come from?
 
-Zia's Ccantera tile is sourced from quarries in Mexico, particularly around San Miguel de Allende, where volcanic stone has been extracted and used in local and South American architecture for centuries. Cantera is a naturally porous volcanic stone formed from compressed volcanic ash and mineral deposits, resulting in a stone with visible mineral structure and natural aggregate that defines its surface character. Cantera is known for its earthy texture and organic color variation, as if nature itself had formed aggregate-speckled terrazzo.
+Zia's Cantera tile is sourced from quarries in Mexico, particularly around San Miguel de Allende, where volcanic stone has been extracted and used in local and Central American architecture for centuries. Cantera is a naturally porous volcanic stone formed from compressed volcanic ash and mineral deposits, resulting in a stone with visible mineral structure and natural aggregate that defines its surface character. Cantera is known for its earthy texture and organic color variation.
 
-### How are Zia's Ccantera tiles made?
+### How are Zia's Cantera tiles made?
 
-Zia's Ccantera stone tile is cut directly from solid blocks of volcanic rock and then hand-finished to reveal its naturally textured surface. This process preserves the stone's inherent variation rather than refining it away. Because Ccantera is a natural material, no two tiles are exactly alike—expect visible aggregate, mineral inclusions, and subtle imperfections that give each piece its own unique personality.
+Zia's Cantera stone tile is cut directly from solid blocks of volcanic rock and then hand-finished to reveal its naturally textured surface. This process preserves the stone's inherent variation rather than refining it away. Because Cantera is a natural material, no two tiles are exactly alike — expect visible aggregate, mineral inclusions, and subtle surface movement that give each piece its own distinct character.
 
-### Does Ccantera tile need special care?
+### Does Cantera tile need special care?
 
 Yes, cantera is a porous stone and must be sealed before and after grouting to protect its surface against moisture and staining. Apply 511 Porous Plus as a penetrating sealer before grouting and apply Fila Matte Protective Wax as a final protective coat for interior applications. For exterior applications, apply an additional coat of 511 Porous Plus instead of wax, as UV exposure causes wax to discolor over time. Reseal regularly based on traffic levels and moisture exposure, and always use pH-neutral cleaners to avoid altering or damaging the stone.
 
-### How do you clean Ccantera tile?
+### How do you clean Cantera tile?
 
-Cleaning Ccantera tile correctly starts with regular sweeping, dusting, or vacuuming to remove grit and debris that can scratch the surface. For routine cleaning, use a pH-neutral cleaner with a soft mop or cloth. Avoid acidic or abrasive cleaners, which can etch or alter the natural finish. Clean spills promptly to reduce the risk of absorption and staining.
+Cleaning Cantera tile correctly starts with regular sweeping, dusting, or vacuuming to remove grit and debris that can scratch the surface. For routine cleaning, use a pH-neutral cleaner with a soft mop or cloth. Avoid acidic or abrasive cleaners, which can etch or alter the natural finish. Clean spills promptly to reduce the risk of absorption and staining.
 
-### How do I install Ccantera tile?
+### How do I install Cantera tile?
 
-We recommend having an experienced natural stone tiler Iinstallnstallling Ccantera tile, requires an experienced natural stone installer with expertise and careful attention to the layout, curing, and sealing stages.
+Installing Cantera tile requires an experienced natural stone installer with careful attention to the layout, curing, and sealing stages.
 
-Before installation:,
+Before installation:
 
-  - B blend tiles from all boxes to evenly distribute natural variation evenly
+  - Blend tiles from all boxes to distribute natural variation evenly
 
 During installation:
 
-  - Use a medium-bed thinset and lightly dampen the back of each tile before placingsetting
+  - Use a medium-bed thinset and lightly dampen the back of each tile before setting
   - Set tiles and gently compact with a rubber mallet to achieve a level surface
   - Allow the thinset to fully cure before sealing and grouting
 
 For sealing and grouting:
 
   - Apply 511 Porous Plus before grouting once the surface is fully cured
-  - Grout in small 2'x'2 sections using Mapei Flexcolor CQ and wipe clean as you go
+  - Grout in small sections using Mapei Flexcolor CQ and wipe clean as you go
   - Apply Fila Matte Protective Wax as a final coat for interior applications
   - For exterior installations, apply an additional coat of 511 Porous Plus instead of wax
 
-For full installation instructionstechnical requirements, refer to the [Cantera Installation Guide](https://ziatile.com/pages/cantera-installation-guide).
+For full technical requirements, refer to the [Cantera Installation Guide](https://ziatile.com/pages/cantera-installation-guide).
 
-### What is the meaning of the word Ccantera?
+For installation questions, contact our team at info@ziatile.com or 310-844-1170.
 
-Cantera comes from Spanish and translates directly to "quarry" or "stone pit." In the context of building materials, Ccantera stone tile refers to volcanic stone extracted from natural quarries, traditionally used in Mexican and Central American designarchitecture. In an architectural context, Ccantera identifies stone that is cut directly from the earth rather than manufactured or cast.
+### What is the meaning of the word Cantera?
 
-### What is Ccantera stone used for?
+Cantera comes from Spanish and translates directly to "quarry" or "stone pit." In the context of building materials, Cantera stone tile refers to volcanic stone extracted from natural quarries, traditionally used in Mexican and Central American architecture. In an architectural context, Cantera identifies stone that is cut directly from the earth rather than manufactured or cast.
 
-Cantera stone tile is used across a wide range of residential and commercial applications. Common interior uses include floors in entryways, living areas, and kitchens, fireplace surrounds, and more. For exterior applications, Ccantera is used for facades, patio surfaces, and exterior wall cladding in non-freeze/thaw climates. Cantera is compatible with underfloor radiant heating systems, though. It is not suitable for pools or spas due to its porosity.
+### What is Cantera stone used for?
 
-### What kind of stone is Ccantera?
+Cantera stone tile is used across a wide range of residential and commercial applications. Common interior uses include floors in entryways, living areas, and kitchens, fireplace surrounds, and more. For exterior applications, Cantera is used for facades, patio surfaces, and exterior wall cladding in non-freeze/thaw climates. Cantera is compatible with underfloor radiant heating systems. It is not suitable for pools or spas due to its porosity.
 
-Cantera is a type of volcanic tuff, formed from compressed volcanic ash, dust, and mineral deposits. This geological formation produces a stone that is lightweight, porous, and naturally varied in tone and texture. The composition includes visible mineral inclusions and small air pockets, which contribute to its characteristic specklingsurface movement and earthy color range.
+### What kind of stone is Cantera?
 
-### What colors and formats does Zia's Ccantera collection offer?
+Cantera is a type of volcanic tuff, formed from compressed volcanic ash, dust, and mineral deposits. This geological formation produces a stone that is lightweight, porous, and naturally varied in tone and texture. The composition includes visible mineral inclusions and small air pockets, which contribute to its characteristic surface movement and earthy color range.
 
-Zia's Ccantera tile collection is available in earthy hues that reflect the geological composition of the quarry, ranging from soft neutral lightstones like Mesa, to earthy beiges like Sierra, to deeper mineral-rich colors like Volcan. Yuma and Sedona add two shades of pink, showcasing the brilliant range of the earth. Formats include standard squares and rectangles: 6x6, 2x12, 4x12, 12x12, 12x24, and 24x24.4x12. For To view thea full rangeoverview of available colors and sizesformats, browse [the collection](https://ziatile.com/collections/cantera-tile) or contact our team at <info@ziatile.com> with any questions.
+### What colors and formats does Zia's Cantera collection offer?
 
-### How much Ccantera tile do I need for my project?
+Zia's Cantera tile collection is available in earthy hues that reflect the geological composition of the quarry, ranging from soft neutral tones like Mesa, to earthy beiges like Sierra, to deeper mineral-rich colors like Volcan. Yuma and Sedona add two shades of pink, reflecting the range of the earth's mineral palette. Formats include standard squares and rectangles: 6x6, 2x12, 4x12, 12x12, 12x24, and 24x24. For a full overview of available colors and formats, browse [the collection](https://ziatile.com/collections/cantera-tile) or contact our team at info@ziatile.com with any questions.
 
-Calculating how much Ccantera stone tiletile you need starts with the total square footage of the surface(s). Measure the length and width of each surface in feet and multiply them together for the area, then add all sections for walls or multiple floors. From that total, add a minimum of 15 to 20% overage to account for cuts, excessivenatural variation, if anyand any tiles are set aside during installation. If you are unsure about quantities for your specific project, contact our team at info@ziatile.com or 310-844-1170 Ext. 1 before placing your order.
+### How much Cantera tile do I need for a project?
+
+Calculating the amount of Cantera stone tile needed starts with the total square footage of the surface. Measure the length and width of each surface in feet and multiply them together for the area, then add all sections for walls or multiple floors. From that total, add a minimum of 15 to 20% overage to account for cuts, natural variation, and any tiles set aside during installation. For project-specific quantity guidance, contact our team at info@ziatile.com or 310-844-1170 Ext. 1 before placing the order.

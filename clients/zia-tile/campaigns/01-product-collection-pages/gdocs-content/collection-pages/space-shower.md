@@ -17,7 +17,7 @@ download_date: 2026-05-12
 
 # Shower Tiles
 
-The shower holds more design potential than most spaces its size. Whether it reflects the rest of the bathroom or becomes its own moment entirely, the surfaces carry the room. At Zia, shower tile runs through handmade zellige, honed marble, matte ceramic, encaustic cement, limestone, glass mosaic, and other collections. 
+The shower holds more design potential than most spaces its size. Whether it reflects the rest of the bathroom or becomes its own moment entirely, the surfaces carry the room. At Zia, shower tile runs through handmade zellige, honed marble, matte ceramic, encaustic cement, limestone, glass mosaic, and other collections.
 
 \[PRODUCT LIST\]
 
@@ -56,20 +56,16 @@ A shower niche is typically finished with the same tile as the wall or with a co
 
 ### Should a shower floor match the walls?
 
-It can go either way. Using the same tile on the floor and walls creates a more continuous look, especially in smaller showers. Switching materials or formats on the floor adds definition and helps separate the two surfaces.
+Either approach works. Using the same tile on the floor and walls creates a more continuous look, especially in smaller showers. Switching materials or formats on the floor adds definition and helps separate the two surfaces.
 
 ### What grout color works best in a shower?
 
-Grout changes how the tile reads once it's installed. A close match keeps things looking more seamless. A contrasting grout makes the layout more visible. If you want something in between, a mid-tone softens the lines without fully blending them out.
+Grout changes how the tile reads once installed. A close match keeps things looking more continuous. A contrasting grout makes the layout more visible. A mid-tone softens the lines without fully blending them out.
 
 ### How much tile do I need for a shower?
 
-Start by measuring each surface separately. Multiply height by width for each wall, subtract any openings, then add the floor area. Once you have the total, add 15–20% extra to cover cuts and waste. For handmade materials like zellige, it's safer to stay closer to 20%, and up to 25% if you want a more consistent layout.
-
-  
+Start by measuring each surface separately. Multiply height by width for each wall, subtract any openings, then add the floor area. Once the total is established, add 15–20% extra to cover cuts and waste. For handmade materials like zellige, staying closer to 20% is recommended, with up to 25% for a more consistent layout. For project-specific guidance, contact our team at info@ziatile.com or 310-844-1170.
 
 ### How do I order shower tile samples from Zia?
 
-You can add samples directly from any product page by selecting the color and size before adding them to your cart. Orders are limited to ten samples. Most sample orders ship within two to three business days via UPS or FedEx ground. For additional questions, contact info@ziatile.com
-
-.
+Samples can be added directly from any product page by selecting the color and size before adding to the cart. Orders are limited to ten samples. Most sample orders ship within two to three business days via UPS or FedEx ground. For additional questions, contact info@ziatile.com or 310-844-1170.

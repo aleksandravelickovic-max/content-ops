@@ -39,7 +39,7 @@ We recommend 15–20% overage for standard installation planning. For installati
 ### Color and Surface
 
   - Our Neutra 24x24 is a large format terrazzo tile with a soft neutral base ranging from warm off-white to light grey, with tonal shifts influenced by aggregate exposure and polishing intensity.
-  - Each terrazzo tile remains wholly unique, and this innate variation defines the line's charm.
+  - Each terrazzo tile remains wholly unique, and this innate variation defines the line's character.
   - Expect natural variation in color, tone, thickness, chip density, and surface texture across the layout. Aggregate distribution varies tile to tile, producing a balanced mix of marble, granite, and quartz chips that define the visual structure of the surface rather than decorate it.
 
 ### Preparation and Curation
@@ -55,7 +55,7 @@ We recommend 15–20% overage for standard installation planning. For installati
   - Press tiles into place using palm pressure only. Do not use a rubber mallet, as the impact can create hairline cracks in the cement matrix over time.
   - Seal Neutra 24x24 with 511 Porous Plus before and after grouting. Interior installations require a Fila Matte Wax finish as a final coat; exterior installations should receive a second application of 511 Porous Plus in place of wax.
   - For finishing, bring the drywall flush with the finished tile surface, miter exposed edges at 45 degrees, or complete the edge with Schluter strips.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - For installation questions, contact our team at info@ziatile.com or 310-844-1170.
 
   
 
@@ -74,29 +74,29 @@ Our Neutra 24x24 terrazzo suits both residential and commercial projects. The la
 
   - **Interior Floors, High Traffic:** Neutra 24x24 performs as a durable terrazzo floor tile in kitchens, primary bathrooms, entryways, and hallways where daily wear demands a stable cement-based surface. Slip resistance can be increased by increasing grout joint size to a minimum of 1/8" and/or applying an anti-slip treatment after installation is complete, especially in high-use circulation areas.
   - **Interior Floors, Low Traffic:** This format functions as a refined terrazzo flooring tile in guest bathrooms, bedrooms, and secondary living spaces where a softer material presence supports low-impact residential environments without sacrificing durability.
-  - **Exterior Floors, Freeze or Thaw:** The Neutra 24x24 exterior terrazzo tile freeze/thaw climates where temperature cycling can compromise cement integrity over time.
+  - **Exterior Floors, Freeze or Thaw:** Terrazzo is not suitable for outdoor installations in freeze/thaw climates, where temperature cycling can compromise cement integrity over time.
   - **Exterior Floors, Non-Freeze or Thaw:** This terrazzo tile may be installed on exterior flooring surfaces in stable climates when properly sealed, maintaining performance in covered patios and sheltered outdoor zones.
   - **Interior Walls:** The neutral aggregate field of Neutra 24x24 supports terrazzo tile bathroom walls, kitchen backsplashes, and interior feature walls where material continuity and tonal restraint are required.
   - **Exterior Walls:** Suitable for exterior wall cladding in non-freeze/thaw climates when properly sealed, supporting architectural facades that require a durable cement terrazzo surface.
-  - **Shower Walls + Floors:** Neutra 24x24 is suitable for shower walls, shower floors, and steam showers when properly sealed, making it a reliable surface solution. Slip resistance can be increased by increasing grout joint size to a minimum of 1/8" and/or applying an anti-slip treatment after installation is complete.
+  - **Shower Walls + Floors:** Neutra 24x24 is suitable for shower walls, shower floors, and steam showers when properly sealed, making it a reliable surface solution.
   - **Pools + Spas:** Not suitable for pools or spas, including saltwater and chlorine environments.
   - **Fireplace Surround:** Suitable for fireplace surrounds as a non-combustible decorative surface. Tiles cannot be used inside fireboxes.
   - **Radiant Heating Compatible:** Compatible with radiant heating systems and in-floor heating assemblies when installed over appropriate substrates.
-  - **Sealing Required:** Sealing is required for all moisture-exposed installations to preserve tile integrity. Refer to the Zia Tile Terrazzo Installation Guide for detailed guidance. 
+  - **Sealing Required:** Sealing is required for all installations, including dry spaces. Always seal Neutra 24x24 according to the installation instructions, whether in dry spaces or in areas exposed to moisture, such as showers. Refer to the Zia Tile Terrazzo Installation Guide for detailed guidance.
 
 ### Commercial Usage
 
-  - **Interior Floors, High Traffic:** Neutra 24x24 supports high-traffic commercial environments such as retail spaces, hospitality interiors, and public corridors where a durable terrazzo floor tile system is required. Slip resistance can be increased by increasing grout joint size to a minimum of 1/8" and/or applying an anti-slip treatment after installation is complete.
+  - **Interior Floors, High Traffic:** Neutra 24x24 supports high-traffic commercial environments such as retail spaces, hospitality interiors, and public corridors where a durable terrazzo floor tile system is required.
   - **Interior Floors, Low Traffic:** Suitable for offices, meeting rooms, galleries, and boutique commercial interiors where terrazzo tile flooring is used to establish a continuous neutral architectural surface.
   - **Exterior Floors, Freeze or Thaw:** Not suitable for exterior commercial flooring in freeze/thaw climates due to material sensitivity to temperature cycling.
   - **Exterior Floors, Non-Freeze or Thaw:** Suitable for exterior commercial walkways, courtyards, and entry zones in stable climates when properly sealed.
   - **Interior Walls:** Suitable for commercial interiors, including restrooms, lobbies, and feature installations where large-format terrazzo tile creates a cohesive wall surface.
   - **Exterior Walls:** Suitable for exterior cladding in non-freeze/thaw climates when installed with proper sealing systems to support long-term performance.
-  - **Shower Walls + Floors:** Suitable for commercial shower facilities, spa environments, and wellness spaces where terrazzo tile bathroom applications require both durability and water resistance. Slip resistance can be increased by increasing grout joint size to a minimum of 1/8" and/or applying an anti-slip treatment after installation is complete.
+  - **Shower Walls + Floors:** Suitable for commercial shower facilities, spa environments, and wellness spaces where terrazzo tile bathroom applications require both durability and water resistance.
   - **Pools + Spas:** Not suitable for pools or spa installations, including chemically treated water environments.
   - **Fireplace Surround:** Suitable for decorative commercial fireplace surrounds. Tiles are not rated for firebox interior use.
   - **Radiant Heating Compatible:** Compatible with commercial radiant heating systems when installed over approved substrates.
-  - **Sealing Required:** Sealing is required for all moisture-exposed commercial installations to maintain tile performance. Refer to the Zia Tile Terrazzo Installation Guide for detailed guidance. 
+  - **Sealing Required:** Sealing is required for all installations, including dry spaces. Always seal Neutra 24x24 according to the installation instructions, whether in dry spaces or in areas exposed to moisture, such as showers. Refer to the Zia Tile Terrazzo Installation Guide for detailed guidance.
 
 ## How It's Made
 

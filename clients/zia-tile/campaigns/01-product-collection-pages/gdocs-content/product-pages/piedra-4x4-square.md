@@ -41,15 +41,15 @@ We recommend a 15% overage to curate the installation and account for any cuts n
 ### Color and Surface
 
   - Our Piedra 4x4 is a blue-grey cotto Allende tile with a moody palette that shifts between cool slate and softened charcoal across the installation, shaped by the interaction of glaze and clay during firing.
-  - Each handmade Cotto Allende tile remains wholly unique, and this innate variation defines the line's charm.
+  - Each handmade Cotto Allende tile remains wholly unique, and this innate variation defines the line's character.
   - Expect natural variation in color, tone, thickness, and surface texture across the layout, along with subtle crazing, chips, and pits that develop during the firing and glazing process.
 
 ### Preparation and Curation
 
-  - Mix the contents of each box in your shipment before setting to distribute tone, glaze response, and surface character evenly across the installation.
+  - Before installation, open and mix the contents of each box to distribute tone, glaze response, and surface character evenly across the layout.
   - Arrange a full dry layout before committing to placement to evaluate tonal sequencing, grout joint alignment, and glaze movement across the field.
   - Disperse any crazing, chips, and tonal shifts evenly across the layout rather than concentrating them in isolated areas.
-  - We suggest a 15% overage on all Cotto Allende orders. For a more uniform appearance, increase to 25% overage.
+  - We suggest a 15–20% overage on all Cotto Allende orders to account for curation and cuts. For a more uniform appearance, increase to 25% overage.
 
 ### Installation and Finishing
 
@@ -57,7 +57,8 @@ We recommend a 15% overage to curate the installation and account for any cuts n
   - For finishing, bring the drywall flush with the finished surface of the tile, miter exposed edges at 45 degrees, or complete the edge with Schluter strips.
   - Seal Piedra 4x4 with 511 Porous Plus before and after grouting. Fila Matte Wax is not recommended for Cotto Allende; use 511 Porous Plus as the sole sealer.
   - Match grout color closely to the tile to integrate the crazing into the composition. Contrasting grout can stain the glazed surface and emphasizes crazing, and should be avoided across the full field.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - Always seal Piedra 4x4 according to the Zia Tile Installation Guide, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
+  - Reach out to the team at info@ziatile.com or 310-844-1170 with any specific installation questions.
 
 
 
@@ -128,15 +129,15 @@ Chips, pits, and crazing form during drying and firing and remain visible in the
 ### Full Orders
 
   - Full orders ship throughout the US and Canada via LTL carrier with curbside pallet delivery.
-  - All tiles in your order ship together once everything is in stock.
-  - Your LTL carrier will provide an estimated delivery range and contact you to confirm a delivery window once the shipment reaches their local terminal.
-  - We deliver to almost any location around the world. Clients in Alaska, Hawaii, Canada, or international locations should contact our team for a custom shipping quote.
+  - All tiles ship together once everything is in stock.
+  - The LTL carrier will provide an estimated delivery range and confirm a delivery window once the shipment reaches their local terminal.
+  - We deliver to almost any location around the world. Clients in Alaska, Hawaii, Canada, or international locations should email our team at info@ziatile.com for a custom shipping quote.
 
 ### Warehouse Pickup & Support
 
   - We offer free full-order pickup at our Los Angeles area warehouse to help local customers save on shipping costs.
-  - We will contact you once your order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
-  - For additional questions regarding your Piedra Cotto Allende order, please reach out to us at <info@ziatile.com>.
+  - The team will be in touch once the order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
+  - For additional questions regarding a Piedra Cotto Allende order, reach out at info@ziatile.com or 310-844-1170.
 
 
 
@@ -167,3 +168,7 @@ Yes, terra cotta tile is easy to clean when installed and sealed correctly, thou
 ### How long does terra cotta floor tile last?
 
 Terra cotta floor tile typically lasts for decades when properly installed, sealed, and maintained. Piedra 4x4 develops a natural patina over time while maintaining its structural integrity under normal residential and commercial use. Long-term performance depends on consistent cleaning, correct sealing with 511 Porous Plus at each stage of installation, and adherence to the care guidelines for glazed terra cotta tile.
+
+### Can Piedra 4x4 be mixed with other Cotto Allende colorways?
+
+Piedra 4x4 can be combined with other colorways in the Cotto Allende collection. Each colorway shares the same clay body and firing process, so tiles carry consistent thickness, format, and surface character across the range. The moody blue-grey of Piedra works well alongside warmer colorways such as Cacao and Condesa, where the contrast between cool and warm tones creates a layered composition. Contact info@ziatile.com or 310-844-1170 to discuss colorway pairings before placing an order.

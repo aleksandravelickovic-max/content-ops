@@ -27,16 +27,16 @@ Zia traveled to Japan to source the world's most refined ceramic tile, and our E
 
 ## Details
 
-The satin finish sits between matte and gloss, producing a gentle luster that reflects light without mirroring it. Each Eucalyptus 2x8 includes minor variation in size, color, tone, and surface texture, which are natural characteristics of handcrafted ceramic tile and should be expected across your order.
+The satin finish sits between matte and gloss, producing a gentle luster that reflects light without mirroring it. Each Eucalyptus 2x8 includes minor variation in size, color, tone, and surface texture, which are natural characteristics of handcrafted ceramic tile and should be expected across the order.
 
-The images shown represent a sample of this tile and may not display the full range of tonal variation present in a complete order. We recommend 10–15% overage to curate your installation and account for any cuts needed.
+The images shown represent a sample of this tile and may not display the full range of tonal variation present in a complete order. We recommend 10–15% overage to curate the installation and account for any cuts needed.
 
 ## About
 
 ### Color and Surface
 
   - Our Eucalyptus 2x8 presents a serene green tone across each tile, with a satin glaze that produces a soft, low-sheen surface.
-  - Each tile carries minor variation in color, tone, and surface texture. These are natural characteristics of handcrafted ceramic tile and should be expected across your order.
+  - Each tile carries minor variation in color, tone, and surface texture. These are natural characteristics of handcrafted ceramic tile and should be expected across the order.
   - The variation in this collection reads as subtle. Eucalyptus holds as a consistent, composed surface at installation scale, with the handcrafted character most visible up close.
 
 ### Preparation and Curation
@@ -50,7 +50,8 @@ The images shown represent a sample of this tile and may not display the full ra
 
   - Installers must always wear protective face and eye coverings when working with ceramic tile, thinset, sealants, and grout in accordance with California Prop 65.
   - For finishing, ceramic tiles can be mitered on the edge or completed with Schluter strips.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - For installation questions, contact our team at info@ziatile.com or 310-844-1170.
+  - Always seal Eucalyptus 2x8 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
 *⚠ WARNING: Cancer and Reproductive Harm.* [*Learn more about Proposition 65 Warnings.*](https://www.ziatile.com/proposition-65-warnings)
 
@@ -107,15 +108,15 @@ Subtle shifts in tone and surface texture develop during firing, giving each til
 ### Full Orders
 
   - Full orders ship throughout the US and Canada via LTL carrier with curbside pallet delivery.
-  - All tiles in your order ship together once everything is in stock.
-  - Your LTL carrier will provide an estimated delivery range and contact you to confirm a delivery window once the shipment reaches their local terminal.
-  - We deliver to almost any location around the world. Clients in Alaska, Hawaii, Canada, or international locations should contact our team for a custom shipping quote.
+  - All tiles ship together once everything is in stock.
+  - LTL carriers provide an estimated delivery range and will confirm a delivery window once the shipment reaches their local terminal.
+  - Clients in Alaska, Hawaii, Canada, or international locations should email our team at info@ziatile.com for a custom shipping quote.
 
 ### Warehouse Pickup & Support
 
   - We offer free full-order pickup at our Los Angeles area warehouse to help local customers save on shipping costs.
-  - We will contact you once your order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
-  - For additional questions regarding your Eucalyptus 2x8 order, please reach out to us at info@ziatile.com.
+  - Our team will contact you when the order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
+  - For additional questions, contact our team at info@ziatile.com or 310-844-1170.
 
 ## Installation Guide
 
@@ -137,12 +138,12 @@ Eucalyptus 2x8 works particularly well on kitchen backsplashes, bathroom walls, 
 
 ### How does the 2x8 format work in an installation?
 
-The 2x8 format is an elongated subway tile that introduces a clear directional quality to the surface. Installed horizontally, the format emphasizes the width of a wall and works well on backsplashes and lower wall applications. Installed vertically, it draws the eye upward and performs particularly well in shower enclosures and floor-to-ceiling wall installations. Herringbone and stacked arrangements each change how the format reads, and confirming the orientation with your installer before the dry layout is an important preparation step.
+The 2x8 format is an elongated subway tile that introduces a clear directional quality to the surface. Installed horizontally, the format emphasizes the width of a wall and works well on backsplashes and lower wall applications. Installed vertically, it draws the eye upward and performs particularly well in shower enclosures and floor-to-ceiling wall installations. Herringbone and stacked arrangements each change how the format reads, and confirming the orientation with the installer before the dry layout is an important preparation step.
 
-### How do I clean Eucalyptus 2x8 ceramic tile?
+### How is Eucalyptus 2x8 ceramic tile cleaned?
 
-To clean Eucalyptus 2x8, use a pH-neutral cleaner with warm water and a soft cloth or mop for routine maintenance. Sweep or vacuum regularly to remove abrasive debris that can scratch the satin glaze over time. Avoid acidic or abrasive cleaning products, which can affect the glaze and dull the surface. For heavier staining, Miracle Sealants Heavy Duty Cleaner (Acid Substitute) is the recommended product.
+For routine maintenance, use a pH-neutral cleaner with warm water and a soft cloth or mop. Sweep or vacuum regularly to remove abrasive debris that can scratch the satin glaze over time. Avoid acidic or abrasive cleaning products, which can affect the glaze and dull the surface. For heavier staining, Miracle Sealants Heavy Duty Cleaner (Acid Substitute) is the recommended product.
 
-### Can I mix Eucalyptus 2x8 with other ceramic colors in your collection?
+### Can Eucalyptus 2x8 be mixed with other ceramic colors in the collection?
 
-Yes, you can mix Eucalyptus 2x8 with other colors and finishes in Zia's ceramic collection. Each tile is produced using the same Japanese production methods and shares consistent thickness, format, and surface character across the range. Eucalyptus pairs particularly well with warm neutrals like Linen and softer whites in the collection, where the serene green reads as a considered point of color against a quieter surrounding palette.
+Eucalyptus 2x8 mixes well with other colors and finishes in Zia's ceramic collection. Each tile is produced using the same Japanese production methods and shares consistent thickness, format, and surface character across the range. Eucalyptus pairs particularly well with warm neutrals like Linen and softer whites in the collection, where the serene green reads as a considered point of color against a quieter surrounding palette.

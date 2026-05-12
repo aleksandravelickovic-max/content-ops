@@ -1,5 +1,6 @@
 """Client-facing review routes. No auth required — the UUID token IS the auth."""
 
+import json
 import uuid
 from datetime import datetime, timezone
 
@@ -42,13 +43,24 @@ async def campaign_review(
         t = entry.get("type", "other")
         groups.setdefault(t, []).append(entry)
 
-    # Count comments per content path
+    # Count comments per content path (total and unresolved)
     comment_counts_q = await db.execute(
         select(Comment.content_path, func.count(Comment.id))
         .where(Comment.share_link_token == token, Comment.parent_id.is_(None))
         .group_by(Comment.content_path)
     )
     comment_counts = dict(comment_counts_q.all())
+
+    unresolved_counts_q = await db.execute(
+        select(Comment.content_path, func.count(Comment.id))
+        .where(
+            Comment.share_link_token == token,
+            Comment.parent_id.is_(None),
+            Comment.resolved.is_(False),
+        )
+        .group_by(Comment.content_path)
+    )
+    unresolved_counts = dict(unresolved_counts_q.all())
 
     type_labels = {
         "product-page": "Product Pages",
@@ -59,16 +71,42 @@ async def campaign_review(
         "audit": "Audit Reports",
         "campaign-urls": "URL Maps",
         "blog": "Blog Posts",
+        "html-revised": "Revised HTML",
+        "html-original": "Original HTML",
+        "html-index": "HTML Index",
         "other": "Other",
     }
+
+    tab_order = [
+        "product-page", "collection-page", "draft", "draft-v3",
+        "html-revised", "html-original",
+        "brief", "audit", "campaign-urls", "blog", "html-index", "other",
+    ]
+    ordered_tabs = []
+    for t in tab_order:
+        if t in groups:
+            ordered_tabs.append({
+                "key": t,
+                "label": type_labels.get(t, t.replace("-", " ").title()),
+                "count": len(groups[t]),
+            })
+    for t in groups:
+        if t not in tab_order:
+            ordered_tabs.append({
+                "key": t,
+                "label": type_labels.get(t, t.replace("-", " ").title()),
+                "count": len(groups[t]),
+            })
 
     return templates.TemplateResponse("review/campaign.html", {
         "request": request,
         "link": link,
         "registry": registry,
         "groups": groups,
+        "tabs": ordered_tabs,
         "type_labels": type_labels,
         "comment_counts": comment_counts,
+        "unresolved_counts": unresolved_counts,
         "token": str(token),
     })
 
@@ -127,6 +165,24 @@ async def content_review(
     prev_entry = same_type[current_idx - 1] if current_idx > 0 else None
     next_entry = same_type[current_idx + 1] if current_idx < len(same_type) - 1 else None
 
+    comments_json = json.dumps([
+        {
+            "id": c.id,
+            "author_name": c.author_name,
+            "body": c.body,
+            "highlight_text": c.highlight_text,
+            "anchor_prefix": c.anchor_prefix,
+            "anchor_suffix": c.anchor_suffix,
+            "anchor_start_offset": c.anchor_start_offset,
+            "anchor_end_offset": c.anchor_end_offset,
+            "anchor_heading": c.anchor_heading,
+            "anchor_paragraph_index": c.anchor_paragraph_index,
+            "resolved": c.resolved,
+            "created_at": c.created_at.isoformat() if c.created_at else None,
+        }
+        for c in comments
+    ])
+
     return templates.TemplateResponse("review/content.html", {
         "request": request,
         "link": link,
@@ -134,6 +190,7 @@ async def content_review(
         "content_html": rendered_html,
         "comments": comments,
         "replies_map": replies_map,
+        "comments_json": comments_json,
         "token": str(token),
         "content_path": content_path,
         "prev_entry": prev_entry,

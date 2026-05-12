@@ -52,15 +52,15 @@ The images shown represent the tile's general appearance and may not capture the
 ### Inherent Variation
 
   - Our Cacao 4x4 is a cool blue-brown glazed terra cotta tile, with a glistening glaze that finds depth against the earthy clay body beneath.
-  - Each handmade Cotto Allende tile remains wholly unique, and this innate variation defines the line's charm.
+  - Each handmade Cotto Allende tile remains wholly unique, and this innate variation defines the line's character.
   - Expect natural variation in color, shape, and thickness across the layout, along with subtle crazing, tonal shifts, and speckling inherent to the glazed terra cotta surface.
 
 ### Preparation and Curation
 
-  - Before starting your project, mix the contents of each box in your shipment to distribute tonal variation evenly across the installation.
-  - Lay out the tiles before setting them to confirm the variation is distributed to your liking.
+  - Before installation, open and mix the contents of each box to distribute tonal variation evenly across the layout.
+  - Lay out the tiles before setting to confirm variation is distributed evenly.
   - Disperse any crazing, tonal variation, and surface character evenly across the layout.
-  - We suggest a 15% overage on all Cotto Allende orders. For specialty cuts or complex layouts, consider increasing overage before placing your order.
+  - We suggest a 15–20% overage on all Cotto Allende orders to account for curation and cuts. For specialty cuts or complex layouts, plan for 20–25%.
 
 ### Installation and Finishing
 
@@ -68,7 +68,8 @@ The images shown represent the tile's general appearance and may not capture the
   - For finishing, bring the drywall flush with the finished surface of the tile, miter exposed edges at 45 degrees, or complete the edge with Schluter strips.
   - Seal Cacao 4x4 with 511 Porous Plus before and after grouting. Fila Matte Wax is not recommended for Cotto Allende; use 511 Porous Plus only.
   - Match grout color closely to the tile to minimize the visual prominence of crazing. Contrasting grout accentuates surface character and should be avoided.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - Always seal Cacao 4x4 according to the Zia Tile Installation Guide, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
+  - Reach out to the team at info@ziatile.com or 310-844-1170 with any specific installation questions.
 
   
 
@@ -142,15 +143,15 @@ Crazing is part of the process. As the glaze settles across the clay body during
 ### Full Orders
 
   - Full orders ship throughout the US and Canada via LTL carrier with curbside pallet delivery.
-  - All tiles in your order ship together once everything is in stock.
-  - Your LTL carrier will provide an estimated delivery range and contact you to confirm a delivery window once the shipment reaches their local terminal.
-  - We deliver to almost any location around the world. Clients in Alaska, Hawaii, Canada, or international locations should contact our team for a custom shipping quote.
+  - All tiles ship together once everything is in stock.
+  - The LTL carrier will provide an estimated delivery range and confirm a delivery window once the shipment reaches their local terminal.
+  - We deliver to almost any location around the world. Clients in Alaska, Hawaii, Canada, or international locations should email our team at info@ziatile.com for a custom shipping quote.
 
 ### Warehouse Pickup & Support
 
   - We offer free full-order pickup at our Los Angeles area warehouse to help local customers save on shipping costs.
-  - We will contact you once your order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
-  - For additional questions regarding your Cacao Cotto Allende order, please reach out to us at info@ziatile.com.
+  - The team will be in touch once the order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
+  - For additional questions regarding a Cacao Cotto Allende order, reach out at info@ziatile.com or 310-844-1170.
 
   
 
@@ -182,10 +183,10 @@ Fine surface lines on Cacao, known as crazing, occur naturally during the firing
 
 To seal Cacao Cotto Allende, apply 511 Porous Plus in thin layers before grouting until the tile is fully saturated, wiping off any excess before it dries. Allow the sealer to cure fully before proceeding to grout. After the grout has cured, apply a second coat of 511 Porous Plus to protect both the tile and the grout lines. Do not use Fila Matte Wax on Cotto Allende; 511 Porous Plus is the only recommended finish for this line.
 
-### Can I mix Cacao with other Cotto Allende colorways?
+### Can Cacao be mixed with other Cotto Allende colorways?
 
-Yes, you can mix Cacao 4x4 with other colorways in the Cotto Allende collection. Each colorway is produced using the same clay body and firing process, so tiles share consistent thickness, format, and surface character across the range. Mixing Cacao with warmer colorways produces a layered composition where the cool blue-brown sits in deliberate contrast against the earthier tones of the line.
+Cacao 4x4 can be mixed with other colorways in the Cotto Allende collection. Each colorway is produced using the same clay body and firing process, so tiles share consistent thickness, format, and surface character across the range. Mixing Cacao with warmer colorways produces a layered composition where the cool blue-brown sits in deliberate contrast against the earthier tones of the line.
 
-### How do I clean Cacao Cotto Allende?
+### How is Cacao Cotto Allende cleaned?
 
-To clean Cacao Cotto Allende, use a pH-neutral cleaner such as Miracle Sealants Tile and Stone Cleaner with warm water and a soft cloth or mop. Sweep or vacuum regularly to remove abrasive debris that can affect the glazed surface over time. Avoid acidic or abrasive cleaners, which can damage the glaze and make crazing more visible. For heavier staining, Miracle Sealants Heavy Duty Cleaner (Acid Substitute) is the recommended product
+Clean Cacao Cotto Allende with a pH-neutral cleaner such as Miracle Sealants Tile and Stone Cleaner, warm water, and a soft cloth or mop. Sweep or vacuum regularly to remove abrasive debris that can affect the glazed surface over time. Avoid acidic or abrasive cleaners, which can damage the glaze and make crazing more visible. For heavier staining, Miracle Sealants Heavy Duty Cleaner (Acid Substitute) is recommended.

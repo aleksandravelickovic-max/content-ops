@@ -32,11 +32,11 @@ The Linen 4x4 comes from the same Nagoya, Japan ceramic tradition that defines Z
 
 
 
-Zia's Linen 4x4 Matte Ceramic includes minor variation in size, color, tone, and surface texture. These are natural characteristics of ceramic tile and should be expected across your order. The images shown are representative of a sample of this tile but may not display all potential variations.
+Zia's Linen 4x4 Matte Ceramic includes minor variation in size, color, tone, and surface texture. These are natural characteristics of ceramic tile and should be expected across the order. The images shown are representative of a sample of this tile but may not display all potential variations.
 
 
 
-We recommend 15-20% overage to properly curate your installation and account for any cuts needed.
+We recommend 15-20% overage to properly curate the installation and account for any cuts needed. For projects aiming for a more uniform appearance, plan for 25% overage.
 
 
 
@@ -45,21 +45,23 @@ We recommend 15-20% overage to properly curate your installation and account for
 ### Color and Surface
 
   - Zia's Linen 4x4 presents a true ivory tone across each tile, with a matte surface that produces a non-reflective finish.
-  - Each tile exhibits minor variation in color and tone, a natural characteristic of the high-fired production process that should be expected across your order.
+  - Each tile exhibits minor variation in color and tone, a natural characteristic of the high-fired production process that should be expected across the order.
   - Linen reads as a consistent, neutral surface at installation scale, with the handcrafted quality of the production process most visible up close.
 
 ### Preparation and Curation
 
   - Blend tiles from multiple boxes before installation to distribute any tonal variation evenly across the surface.
   - Arrange a preliminary layout before setting to assess the overall composition.
-  - Plan for 15-20% overage to accommodate cuts and layout adjustments.
+  - Plan for 15-20% overage to accommodate cuts and layout adjustments. For a more uniform visual result, increase to 25% overage.
   - Matte finish ceramics must be sealed before grouting using 511 Porous Plus as a grout release to prevent haze and staining. Allow the sealer to cure fully before proceeding to grouting.
 
 ### Installation and Finishing
 
   - Installers must always wear protective face and eye coverings when working with ceramic tile, thinset, sealants, and grout in accordance with California Prop 65.
   - For finishing, ceramic tiles can be mitered on the edge or finished with Schluter strips.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - Bring drywall flush with the finished tile surface to ensure clean transitions at edges.
+  - For installation questions, contact our team at info@ziatile.com or 310-844-1170.
+  - Always seal Linen 4x4 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
 
 
@@ -73,13 +75,13 @@ Zia's Linen 4x4 Matte Ceramic suits both residential and commercial projects. Th
 
 ### Residential Usage
 
-  - **Interior Floors – High Traffic:** Handles daily use in kitchens, entryways, hallways, and primary bathrooms. The matte finish has a DCOF rating of 0.74, providing good traction across floor applications. If installed on a flooring surface in a wet area, slip resistance can be increased by increasing grout joint size to a minimum of 1/8" and/or applying an anti-slip treatment after installation is complete.
+  - **Interior Floors – High Traffic:** Handles daily use in kitchens, entryways, hallways, and primary bathrooms. The matte finish has a DCOF rating of 0.74, providing good traction across floor applications.
   - **Interior Floors – Low Traffic:** Performs well in guest bedrooms, secondary bathrooms, and quieter living spaces.
   - **Exterior Floors – Freeze or Thaw:** Ceramic tile is not suitable for exterior floor installations in freeze/thaw climates.
   - **Exterior Floors – Non-Freeze or Thaw:** Ceramic tile is not suitable for exterior floor installations.
   - **Interior Walls:** Suited to kitchen backsplashes, bathroom walls, and feature surfaces where a clean ivory neutral is the goal.
   - **Exterior Walls:** Suitable for exterior wall applications in non-freeze/thaw climates.
-  - **Shower Walls + Floors:** Suited to shower walls, shower floors, and steam showers. Sealing is required for this use. Slip resistance can be increased by increasing grout joint size to a minimum of 1/8" and/or applying an anti-slip treatment after installation is complete.
+  - **Shower Walls + Floors:** Suited to shower walls, shower floors, and steam showers. Sealing is required for this use.
   - **Pools + Spas:** Suitable for pools and spas, including saltwater and chlorine environments. Sealing is required for this use.
   - **Fireplace Surround:** Suited to fireplace surrounds. These tiles are not for use inside the firebox.
   - **Radiant Heating Compatible:** Compatible with radiant heating systems.
@@ -87,13 +89,13 @@ Zia's Linen 4x4 Matte Ceramic suits both residential and commercial projects. Th
 
 ### Commercial Usage
 
-  - **Interior Floors – High Traffic:** Suited to high-traffic commercial environments. The matte finish has a DCOF rating of 0.74, providing good traction. If installed on a flooring surface in a wet area, slip resistance can be increased by increasing grout joint size to a minimum of 1/8" and/or applying an anti-slip treatment after installation is complete.
+  - **Interior Floors – High Traffic:** Suited to high-traffic commercial environments. The matte finish has a DCOF rating of 0.74, providing good traction.
   - **Interior Floors – Low Traffic:** Suited to offices, meeting rooms, and boutique interiors.
   - **Exterior Floors – Freeze or Thaw:** Ceramic tile is not suitable for exterior floor installations in freeze/thaw climates.
   - **Exterior Floors – Non-Freeze or Thaw:** Ceramic tile is not suitable for exterior floor installations.
   - **Interior Walls:** Suited to commercial kitchen walls, restroom walls, and feature installations where a clean, neutral surface is the goal.
   - **Exterior Walls:** Suitable for commercial exterior wall applications in non-freeze/thaw climates.
-  - **Shower Walls + Floors:** Suited to commercial shower walls, shower floors, and steam showers. Sealing is required for this use. Slip resistance can be increased by increasing grout joint size to a minimum of 1/8" and/or applying an anti-slip treatment after installation is complete.
+  - **Shower Walls + Floors:** Suited to commercial shower walls, shower floors, and steam showers. Sealing is required for this use.
   - **Pools + Spas:** Suitable for commercial pools and spas, including saltwater and chlorine environments. Sealing is required for this use.
   - **Fireplace Surround:** Suited to decorative fireplace surrounds in commercial settings. Not for use inside a firebox.
   - **Radiant Heating Compatible:** Compatible with commercial radiant heating systems.
@@ -135,8 +137,8 @@ Minor tonal shifts emerge during firing. Those shifts are most apparent up close
 ### Warehouse Pickup & Support
 
   - We offer free full order pickup at our Los Angeles area warehouse.
-  - Our team will contact you when your order is ready so you may schedule your pickup. Warehouse pickup is available by confirmed appointment only.
-  - For additional questions regarding your Linen 4x4 order, please reach out to us at info@ziatile.com.
+  - Our team will contact you when the order is ready to schedule a pickup. Warehouse pickup is available by confirmed appointment only.
+  - For additional questions, contact our team at info@ziatile.com or 310-844-1170.
 
 
 
@@ -174,6 +176,6 @@ Yes, the Linen 4x4 Matte Ceramic is suitable for pools and spas, including saltw
 
 Yes, the Linen 4x4 and the Linen 2x8 can be mixed within the same installation. Mixing the two formats is a common approach for installations that combine a uniform field tile with a more directional surface, such as a 4x4 floor paired with a 2x8 wall, or a 4x4 backsplash field with a 2x8 border or accent band.
 
-### How do I calculate square footage for a square tile installation?
+### How is square footage calculated for a square tile installation?
 
-To calculate square footage for a square tile installation, measure the length and width of the surface in feet and multiply the two numbers together. For irregular surfaces, break the area into smaller rectangles, calculate each section separately, and add the totals together. Once you have the total square footage, add 15-20% overage to account for cuts, layout adjustments, and any tiles outside your preferred range. For additional guidance, reach out to our team at info@ziatile.com.
+Measure the length and width of the surface in feet and multiply the two numbers together. For irregular surfaces, break the area into smaller rectangles, calculate each section separately, and add the totals together. Once the total square footage is established, add 15-20% overage to account for cuts, layout adjustments, and any tiles outside the preferred tonal range. For additional guidance, contact our team at info@ziatile.com or 310-844-1170.

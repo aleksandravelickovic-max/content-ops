@@ -21,13 +21,13 @@ download_date: 2026-05-12
 
 Zia's Jade 4x4 zellige reflects centuries of craftsmanship. While artisans historically installed these tiles in mosaics featuring decorative geometric and floral shapes within elaborately designed palaces, our curated selection includes a wide spectrum of colors, shapes, and sizes for homes and commercial spaces around the globe. Inspired by nature, the Jade glaze shimmers and shines in deep iridescent green, shifting between saturated jade and darker mineral tones depending on glaze thickness and kiln position.
 
-Our zellige tiles include inherent variation in size, color, and tone. Each tile features chips, pits, and crazing, characteristics innate to this handcrafted Moroccan art form. The images shown represent the tile's general appearance and may not capture the full range of dynamic tones present in a complete order.
+Our zellige tiles include inherent variation in size, color, and tone. Each tile features chips, pits, and crazing, characteristics innate to this handcrafted Moroccan art form. The images shown represent the tile's general appearance and may not capture the full range of dynamic glazes present in a complete order.
 
 \[INSERT IMAGE: SIZE/THICKNESS\]
 
 ## Details
 
-We recommend a 15–20% overage for each project. This additional quantity allows you or your installer to properly curate the installation and account for any tiles with color variation or characteristic chips and pits outside of your preferred range. For a more uniform look, we recommend 25% overage.
+We recommend a 15–20% overage for each project. This additional quantity allows the installer to properly curate the installation and account for any tiles with color variation or characteristic chips, pits, and crazing outside of the preferred range. For a more uniform look, we recommend 25% overage.
 
 Zellige installation is a hands-on process. Thickness, edge, and size vary from piece to piece, so allow two to three times the installation window of a standard ceramic tile and use wedge spacers to keep spacing consistent and edges protected throughout.
 
@@ -36,22 +36,22 @@ Zellige installation is a hands-on process. Thickness, edge, and size vary from 
 ### Inherent Variation
 
   - Our Jade 4x4 is a deep iridescent green zellige with a glaze inspired by nature that shimmers and shifts under changing light, moving between saturated jade and darker mineral tones.
-  - Each handcrafted green zellige tile remains wholly unique, and this innate variation defines the line's charm.
+  - Each handcrafted green zellige tile remains wholly unique, and this innate variation defines the line's character.
   - Expect natural variation in color, shape, and thickness across the layout, alongside characteristic chips, pits, and crazing.
 
 ### Preparation and Curation
 
-  - Mix the contents of each box in your shipment before beginning your project to distribute tonal and surface variation evenly across the full layout.
+  - Mix the contents of each box in the shipment before beginning the project to distribute tonal and surface variation evenly across the full layout.
   - Lay out the full installation area in advance to evaluate how the iridescent glaze and tonal shifts interact across the field before setting begins.
-  - Disperse any chips, pits, and color variation evenly across the layout rather than clustering them in isolated areas.
+  - Disperse any chips, pits, and crazing evenly across the layout rather than clustering them in isolated areas.
   - We suggest a 15–20% overage on all tile orders. For a more uniform look, we recommend 25% overage.
 
 ### Installation and Finishing
 
   - Installers must always wear protective face and eye coverings when working with zellige, thinset, sealants, and grout in accordance with California Prop 65.
-  - While traditional trim and edge pieces do not exist for zellige, we recommend bringing the drywall flush with the finished surface of the tile or finishing your project with mitered edges or Schluter strips.
-  - Always seal Jade zellige 4x4 in areas exposed to moisture, such as pools, spas, and showers.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - While traditional trim and edge pieces do not exist for zellige, we recommend bringing the drywall flush with the finished surface of the tile or finishing the project with mitered edges or Schluter strips.
+  - Always seal Jade 4x4 Square Zellige according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
+  - Reach out to our team directly at info@ziatile.com or 310-844-1170 with any specific installation questions.
 
 *⚠ WARNING: Cancer and Reproductive Harm.* [*Learn more about Proposition 65 Warnings.*](https://www.ziatile.com/proposition-65-warnings)
 
@@ -67,11 +67,11 @@ Our Jade zellige in a 4x4 format brings its iridescent green glaze to kitchen ba
   - **Exterior Floors, Non-Freeze or Thaw:** Suitable for exterior residential floors in climates without snow or ice, where installation conditions remain stable year-round.
   - **Interior Walls:** Commonly used as a zellige tile backsplash, bathroom wall, or feature wall where the jade green surface introduces tonal variation and reflective glaze movement across vertical applications.
   - **Exterior Walls:** Zellige tiles can be used on exterior wall surfaces in non-freeze/thaw climates where protected installation conditions are maintained.
-  - **Shower Walls + Floors:** Suitable for Zellige tile shower walls, floors, and steam showers. Sealing is required in all wet applications. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip product after installation is complete.
+  - **Shower Walls + Floors:** Suitable for Zellige tile shower walls, floors, and steam showers. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete. Sealing is required in all wet applications. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip product after installation is complete.
   - **Pools + Spas:** Suitable for saltwater and chlorine environments in pools and spas. Sealing is required for all submerged applications.
   - **Fireplace Surround:** Suitable for decorative fireplace surrounds. Not for use inside the firebox.
   - **Radiant Heating Compatible:** Compatible with radiant heating systems when installed over properly prepared substrates.
-  - **Sealing Required:** Sealing is required in moisture-exposed applications, including showers, pools, and spas. Refer to the Zia Tile zellige Installation Guide for full specifications.
+  - **Sealing Required:** Always seal Jade 4x4 Square Zellige according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
 ### Commercial Usage
 
@@ -81,11 +81,11 @@ Our Jade zellige in a 4x4 format brings its iridescent green glaze to kitchen ba
   - **Exterior Floors, Non-Freeze or Thaw:** Suitable for exterior commercial flooring in stable climates without freeze/thaw exposure.
   - **Interior Walls:** Frequently used in hospitality and retail environments as a zellige tile pattern installation for feature walls, reception areas, and interior facades.
   - **Exterior Walls:** Zellige tiles may be installed on exterior commercial walls in non-freeze/thaw climates where environmental exposure remains controlled.
-  - **Shower Walls + Floors:** Suitable for commercial shower walls, shower floors, and steam showers. Sealing is required for all wet applications. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip product after installation is complete.
+  - **Shower Walls + Floors:** Suitable for commercial shower walls, shower floors, and steam showers. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete. Sealing is required for all wet applications. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip product after installation is complete.
   - **Pools + Spas:** Suitable for commercial pools and spa environments exposed to saltwater or chlorine. Sealing is required for submerged applications.
   - **Fireplace Surround:** Suitable for decorative commercial fireplace surrounds in hospitality and public spaces. Not for use inside the firebox.
   - **Radiant Heating Compatible:** Compatible with commercial radiant heating systems when installed according to substrate requirements.
-  - **Sealing Required:** Sealing is required for all moisture-exposed commercial installations, including pools, spas, and showers. Refer to the Zia Tile zellige Installation Guide for full technical instructions.
+  - **Sealing Required:** Always seal Jade 4x4 Square Zellige according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
 ## How It's Made
 
@@ -115,8 +115,8 @@ The tiles are fired in traditional earthen kilns where heat distribution is inte
 ### Warehouse Pickup & Support
 
   - We offer free full order pickup at our Los Angeles area warehouse to help local customers save on shipping costs.
-  - Our team will reach out when your order is ready so you may schedule a time for your pickup appointment. Order pickups are available only with a confirmed appointment.
-  - For additional questions regarding your Jade zellige order, please reach out to us at <info@ziatile.com>.
+  - For additional questions regarding your Jade 4x4 Square Zellige order, please reach out to us at info@ziatile.com or 310-844-1170.
+  - Our team will reach out when the order is ready so to schedule a time for a pickup appointment. Order pickups are available only with a confirmed appointment.
 
 ## Installation Guide
 

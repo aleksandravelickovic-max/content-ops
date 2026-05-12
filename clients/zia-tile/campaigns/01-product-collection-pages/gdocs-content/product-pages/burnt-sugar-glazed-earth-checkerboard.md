@@ -50,7 +50,7 @@ Zellige tile installation is labor-intensive and aligns more closely with masonr
 ### Inherent Variation
 
   - Our Burnt Sugar + Glazed Earth Checkerboard is a two-tone checkerboard zellige mosaic that combines a deep Burnt Sugar brown with a lighter Glazed Earth, producing a layered surface where dark tonal depth contrasts with warmer clay-forward tones.
-  - Each handcrafted zellige tile remains wholly unique, and this innate variation defines the line's charm.
+  - Each handcrafted zellige tile remains wholly unique, and this innate variation defines the line's character.
   - Expect natural variation in color, shape, and thickness across both colorways, alongside characteristic chips, pits, and crazing.
 
 ### Preparation and Curation
@@ -83,11 +83,11 @@ The Burnt Sugar + Glazed Earth Checkerboard works across residential and commerc
   - **Exterior Floors, Non-Freeze or Thaw:** Suitable for exterior floors in climates without snow or ice exposure.
   - **Interior Walls:** Commonly installed as a Zellige tile backsplash or bathroom wall surface where the checkerboard pattern creates tonal depth.
   - **Exterior Walls:** May be used in non-freeze/thaw climates where exterior wall exposure is stable.
-  - **Shower Walls + Floors:** Suitable for shower walls, shower floors, and steam showers. Seal after installation. Slip resistance can be increased by increasing grout joint size to a minimum of 1/8 inch and/or applying an anti-slip treatment after installation is complete.
+  - **Shower Walls + Floors:** Suitable for shower walls, shower floors, and steam showers. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete. Seal after installation. Slip resistance can be increased by increasing grout joint size to a minimum of 1/8 inch and/or applying an anti-slip treatment after installation is complete.
   - **Pools + Spas:** Suitable for saltwater and chlorine environments. Seal after installation.
   - **Fireplace Surround:** Suitable for decorative surrounds only; not for use inside the firebox.
   - **Radiant Heating Compatible:** Supports radiant heating systems.
-  - **Sealing Required:** Required in all moisture-exposed applications, including Zellige tile shower applications, pools, and spas. Refer to the Zia Tile Zellige Installation Guide for detailed instructions. 
+  - **Sealing Required:** Always seal Burnt Sugar + Glazed Earth Checkerboard zellige according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
 ### Commercial Usage
 
@@ -97,11 +97,11 @@ The Burnt Sugar + Glazed Earth Checkerboard works across residential and commerc
   - **Exterior Floors, Non-Freeze or Thaw:** Suitable for covered or exposed exterior flooring in stable climates.
   - **Interior Walls:** Common in restaurant interiors, hospitality corridors, feature walls, and Zellige tile kitchen applications to add tonal grounding.
   - **Exterior Walls:** Suitable in non-freeze/thaw climates.
-  - **Shower Walls + Floors:** Suitable for commercial showers and steam rooms. Seal after installation. Slip resistance can be increased by increasing grout joint size to a minimum of 1/8 inch and/or applying an anti-slip treatment after installation is complete.
+  - **Shower Walls + Floors:** Suitable for commercial showers and steam rooms. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete. Seal after installation. Slip resistance can be increased by increasing grout joint size to a minimum of 1/8 inch and/or applying an anti-slip treatment after installation is complete.
   - **Pools + Spas:** Suitable for commercial pool and spa environments. Seal after installation.
   - **Fireplace Surround:** Suitable for decorative commercial installations; not for firebox use.
   - **Radiant Heating Compatible:** Compatible with commercial radiant heating systems.
-  - **Sealing Required:** Required for all wet and submerged applications. Refer to the Zia Tile Zellige Installation Guide for detailed instructions. 
+  - **Sealing Required:** Always seal Burnt Sugar + Glazed Earth Checkerboard zellige according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
 ## How It's Made
 
@@ -131,8 +131,8 @@ Firing takes place in earthen kilns where heat distribution is intentionally une
 ### Warehouse Pickup & Support
 
   - We offer free full order pickup at our Los Angeles area warehouse to help local customers save on shipping costs.
-  - Our team will reach out when your order is ready so you may schedule a time for your pickup appointment. Order pickups are available only with a confirmed appointment.
-  - For additional questions regarding your Burnt Sugar + Glazed Earth Checkerboard order, please reach out to us at info@ziatile.com.
+  - For additional questions regarding the Burnt Sugar + Glazed Earth Checkerboard zellige order, please reach out to us at info@ziatile.com or 310-844-1170.
+  - Our team will reach out when the order is ready so to schedule a time for a pickup appointment. Order pickups are available only with a confirmed appointment.
 
   
 

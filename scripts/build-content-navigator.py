@@ -44,6 +44,12 @@ def slug_to_display(slug):
 
 def detect_type(rel_path):
     p = str(rel_path).lower()
+    if "html/revised/" in p:
+        return "html-revised"
+    if "html/original/" in p:
+        return "html-original"
+    if p == "html/index.html":
+        return "html-index"
     if "product-pages/" in p:
         return "product-page"
     if "collection-pages/" in p:
@@ -116,16 +122,25 @@ def detect_category(rel_path, file_type):
     return file_type
 
 
+PLACEHOLDER_TITLES = {"product name", "collection name", "page title", "title", "untitled"}
+
+
 def extract_title(path):
     try:
         with open(path, "r", encoding="utf-8", errors="replace") as f:
             for line in f:
                 line = line.strip()
                 if line.startswith("# "):
-                    return line[2:].strip()
+                    title = line[2:].strip()
+                    if title.lower() not in PLACEHOLDER_TITLES:
+                        return title
+                    return None
                 m = re.match(r"^title:\s*(.+)", line, re.IGNORECASE)
                 if m:
-                    return m.group(1).strip().strip('"').strip("'")
+                    title = m.group(1).strip().strip('"').strip("'")
+                    if title.lower() not in PLACEHOLDER_TITLES:
+                        return title
+                    return None
         return None
     except Exception:
         return None
@@ -593,7 +608,6 @@ body.preview-open .container {{ padding-right: calc(var(--preview-width) + 28px)
   <div class="preview-header">
     <div class="preview-top">
       <div class="preview-title" id="previewTitle"></div>
-      <button class="ann-toggle" id="annToggle" onclick="window._annToggleMode()" title="Toggle annotation mode">&#128172; Annotate</button>
       <button class="close-btn" onclick="closePreview()" title="Close (Esc)">&times;</button>
     </div>
     <div class="preview-meta" id="previewMeta"></div>
@@ -604,15 +618,7 @@ body.preview-open .container {{ padding-right: calc(var(--preview-width) + 28px)
       <button class="nav-btn" id="nextBtn" onclick="navPreview(1)">Next &rarr;</button>
     </div>
   </div>
-  <div class="ann-offline" id="annOffline">Annotation server not running. Start it with: python scripts/annotation-api.py</div>
-  <div class="ann-banner" id="annBanner">Click or highlight text to add a comment</div>
   <div class="preview-body" id="previewBody"></div>
-  <div class="ann-sidebar-toggle" id="annSidebarToggle" onclick="window._annToggleSidebar()" style="display:none">
-    <span>Annotations</span>
-    <span class="ann-count">0</span>
-    <span class="ann-chev">&#9660;</span>
-  </div>
-  <div class="ann-sidebar" id="annotationSidebar"></div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
@@ -1071,23 +1077,6 @@ buildUI();
 </script>
 </body>
 </html>"""
-
-    # Inject annotation UI assets
-    scripts_dir = Path(__file__).resolve().parent
-    ann_css_path = scripts_dir / "annotation-ui.css"
-    ann_js_path = scripts_dir / "annotation-ui.js"
-    if ann_css_path.exists() and ann_js_path.exists():
-        ann_css = ann_css_path.read_text(encoding="utf-8")
-        ann_js = ann_js_path.read_text(encoding="utf-8")
-        html = html.replace(
-            "</body>",
-            "<style>\n" + ann_css + "\n</style>\n"
-            + "<script>\n" + ann_js + "\n</script>\n"
-            + "</body>",
-        )
-        print("  Annotation UI injected")
-    else:
-        print("  Annotation UI assets not found, skipping")
 
     REPORTS_DIR.mkdir(exist_ok=True)
     out_path = REPORTS_DIR / "content-navigator.html"

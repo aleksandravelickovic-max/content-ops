@@ -24,24 +24,24 @@ Zia's Toltec + Red Clay is a handmade terra cotta tile produced in San Miguel de
 
 ## Details
 
-Each Toltec tile includes moderate variation in color, tone, size, and surface texture, consistent with handmade terra cotta production. Chips, pits, and crazing develop as natural characteristics of hand-forming, sun-drying, and high-firing. The images shown represent the tile's general appearance and may not capture the full range of tonal variation present in a complete order.
+Each Toltec tile includes moderate variation in tone, shape, edge profile, and thickness, consistent with handmade terra cotta production. The images shown represent the tile's general appearance and may not capture the full range of tonal variation present in a complete order.
 
-We recommend a 15% overage to curate the installation and account for any cuts needed on the patterned cotto tile. Because Toltec is a specialty shape, the additional cuts required during layout often warrant increasing overage further, consider 20% or more before placing your order.
+We recommend a 15–20% overage to account for curation and cuts. Because Toltec is a specialty shape, the additional cuts required during layout often warrant increasing overage to 20% or more.
 
 ## About
 
 ### Color and Surface
 
   - Our Toltec + Red Clay is a red terra cotta tile in a specialty geometric format, with a warm palette that moves between red-brown, brick, and clay-orange tones across the installation.
-  - Each handmade red terra cotta tile remains wholly unique, and this innate variation defines the line's charm.
-  - Expect natural variation in tone, shape, thickness, and surface texture across the layout, along with the soft, irregular edges inherent to unglazed cotto. Chips, pits, and crazing appear as part of the firing process.
+  - Each handmade red terra cotta tile remains wholly unique, and this innate variation defines the line's character.
+  - Expect natural variation in tone, shape, edge profile, and thickness across the layout, along with the soft, irregular edges inherent to unglazed cotto.
 
 ### Preparation and Curation
 
-  - Mix the contents of each box in your shipment before setting to distribute tonal and surface variation evenly across the installation.
+  - Before installation, open and mix the contents of each box to distribute tonal and surface variation evenly across the layout.
   - Dry-lay the Toltec pattern before setting to understand how the geometry interacts with natural color variation across adjacent pieces, and to confirm that the pattern resolves cleanly at the edges of the installation.
   - Disperse any tonal and surface variation evenly across the layout rather than concentrating darker or lighter pieces in isolated areas.
-  - We suggest a 15% overage on all cotto orders. For the Toltec specialty shape, the additional cuts required warrant increasing overage to 20% or more.
+  - We suggest a 15–20% overage on all cotto orders to account for curation and cuts. For the Toltec specialty shape, the additional cuts required warrant increasing overage to 20% or more.
 
 ### Installation and Finishing
 
@@ -49,7 +49,8 @@ We recommend a 15% overage to curate the installation and account for any cuts n
   - For finishing, bring the drywall flush with the finished tile surface, miter exposed edges at 45 degrees, or complete the edge with Schluter strips.
   - Seal Toltec + Red Clay with 511 Porous Plus before and after grouting. For interior applications, finish with Fila Matte Wax as a final coat. For exterior applications, apply a second coat of 511 Porous Plus in place of wax.
   - Use 1/8" tile spacers and plan the layout carefully. The Toltec geometry depends on precise orientation during the dry layout stage to resolve across the full field.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - Always seal Toltec + Red Clay according to the Zia Tile Installation Guide, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
+  - Reach out to the team at info@ziatile.com or 310-844-1170 with any specific installation questions.
 
 *⚠ WARNING: Cancer and Reproductive Harm.* [*Learn more about Proposition 65 Warnings.*](https://www.ziatile.com/proposition-65-warnings)
 
@@ -106,15 +107,15 @@ The tiles are then high-fired in earthen kilns where uneven heat distribution pr
 ### Full Orders
 
   - Full orders ship throughout the US and Canada via LTL carrier with curbside pallet delivery.
-  - All tiles in your order ship together once everything is in stock.
-  - Your LTL carrier will provide an estimated delivery range and contact you to confirm a delivery window once the shipment reaches their local terminal.
-  - We deliver to almost any location around the world. Clients in Alaska, Hawaii, Canada, or international locations should contact our team for a custom shipping quote.
+  - All tiles ship together once everything is in stock.
+  - The LTL carrier will provide an estimated delivery range and confirm a delivery window once the shipment reaches their local terminal.
+  - We deliver to almost any location around the world. Clients in Alaska, Hawaii, Canada, or international locations should email our team at info@ziatile.com for a custom shipping quote.
 
 ### Pickup & Support
 
   - We offer free full-order pickup at our Los Angeles area warehouse to help local customers save on shipping costs.
-  - We will contact you once your order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
-  - For additional questions regarding your Toltec + Red Clay order, please reach out to us at <info@ziatile.com>.
+  - The team will be in touch once the order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
+  - For additional questions regarding a Toltec + Red Clay order, reach out at info@ziatile.com or 310-844-1170.
 
 ## Installation Guide
 
@@ -124,19 +125,19 @@ The tiles are then high-fired in earthen kilns where uneven heat distribution pr
 
 ### What is a terra cotta tile?
 
-Terra cotta is a clay-based material formed from natural earth and kiln-fired at high temperatures to create a dense but porous surface. Zia's Toltec + Red Clay is an unglazed terra cotta tile, which means the color and texture come directly from the clay body and firing process rather than an applied surface coating. Each tile carries inherent variation in tone, thickness, and surface condition, including chips, pits, and crazing as natural characteristics of fired earth.
+Terra cotta is a clay-based material formed from natural earth and kiln-fired at high temperatures to create a dense but porous surface. Zia's Toltec + Red Clay is an unglazed terra cotta tile, which means the color and texture come directly from the clay body and firing process rather than an applied surface coating. Each tile carries inherent variation in tone, shape, edge profile, and thickness — natural characteristics of fired earth.
 
-### Is Toltec + Red Clay terra cotta good for a bathroom floor?
+### Is Toltec + Red Clay terra cotta suitable for a bathroom floor?
 
-Yes, Toltec + Red Clay is suitable for a bathroom floor when installed and sealed correctly. The unglazed surface offers natural traction, and for wet floor applications, sizing grout joints to a minimum of ⅛" and/or applying an anti-slip treatment after installation is recommended. Sealing is required before and after grouting to protect the porous clay body from moisture absorption and staining.
+Yes, Toltec + Red Clay is suitable for a bathroom floor when installed and sealed correctly. The unglazed surface offers natural traction, and for wet floor applications, grout joints should be sized to a minimum of ⅛" and an anti-slip treatment applied after installation. Sealing is required before and after grouting to protect the porous clay body from moisture absorption and staining.
 
-### Do terra cotta tiles need sealing?
+### Does cotto tile need sealing?
 
-Yes, cotto tile needs sealing because the material is porous and will absorb moisture, oils, and surface contaminants without protection. Toltec + Red Clay must be sealed before grouting and again after installation to stabilize the surface. For interior installations, finish with Fila Matte Wax as a final coat; for exterior installations, apply a second coat of 511 Porous Plus in place of wax. Ongoing resealing is required in high-traffic or wet environments to maintain performance.
+Yes, cotto tile requires sealing because the material is porous and will absorb moisture, oils, and surface contaminants without protection. Toltec + Red Clay must be sealed before grouting and again after installation to stabilize the surface. For interior installations, finish with Fila Matte Wax as a final coat; for exterior installations, apply a second coat of 511 Porous Plus in place of wax. Ongoing resealing is required in high-traffic or wet environments to maintain performance.
 
 ### How long do terracotta tiles last?
 
-Cotto tile can last for decades when installed, sealed, and maintained correctly. Toltec + Red Clay develops a natural patina over time rather than wearing thin, which supports long-term performance in flooring applications. Longevity depends on consistent sealing cycles, proper substrate preparation at installation, and routine cleaning with pH-neutral products.
+Cotto tile can last for decades when installed, sealed, and maintained correctly. Toltec + Red Clay develops a natural patina with use rather than wearing thin, which supports long-term performance in flooring applications. Longevity depends on consistent sealing cycles, proper substrate preparation at installation, and routine cleaning with pH-neutral products.
 
 ### How does Toltec differ from Stars & Cross?
 

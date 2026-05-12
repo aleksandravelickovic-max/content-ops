@@ -42,7 +42,7 @@ We recommend a minimum of 15–20% overage to account for cuts, layout adjustmen
 ### Color and Surface
 
   - Our Monument 4x12 is a grey honed limestone tile with a muted palette and balanced warm and cool undertones that shift subtly under different lighting conditions.
-  - Each grey honed limestone tile remains wholly unique, and this innate variation defines the line's charm.
+  - Each grey honed limestone tile remains wholly unique, and this innate variation defines the line's character.
   - Expect natural variation in color, tone, and surface texture across the layout, including subtle fossilization and mineral movement typical of sedimentary stone. The honed finish reads as a matte field with edge irregularity visible up close.
 
 ### Preparation and Curation
@@ -58,7 +58,7 @@ We recommend a minimum of 15–20% overage to account for cuts, layout adjustmen
   - Install Monument 4x12 using a medium-bed thinset on a fully prepared substrate. In dry interior conditions, wall applications may be installed directly over stable, properly prepared drywall.
   - Seal the tile with 511 Porous Plus before and after grouting. Interior installations require a Fila Matte Wax finish as a final coat; exterior installations should receive a second application of 511 Porous Plus in place of wax.
   - For finishing, bring the drywall flush with the finished tile surface, miter exposed edges at 45 degrees, or complete the edge with Schluter strips.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - For installation questions, contact our team at info@ziatile.com or 310-844-1170.
 
   
 
@@ -84,7 +84,7 @@ Our Monument 4x12 honed limestone suits both residential and commercial projects
   - **Pools + Spas:** Not suitable for pools or spas.
   - **Fireplace Surround:** Suited to decorative fireplace surrounds. These tiles are not for use inside the firebox.
   - **Radiant Heating Compatible:** Compatible with radiant heating systems. Limestone conducts and retains heat efficiently across the installation.
-  - **Sealing Required:** Sealing is required before and after grouting using 511 Porous Plus. Indoors, finish with Fila Matte Wax. Outdoors, apply a second coat of 511 Porous Plus. Refer to the Zia Tile Installation Guide for detailed instructions.
+  - **Sealing Required:** Sealing is required for all installations, including dry spaces. Always seal Monument 4x12 according to the installation instructions, whether in dry spaces or in areas exposed to moisture, such as showers. Refer to the Zia Tile Installation Guide for detailed instructions.
 
 ### Commercial Usage
 
@@ -98,7 +98,7 @@ Our Monument 4x12 honed limestone suits both residential and commercial projects
   - **Pools + Spas:** Not suitable for pools or spas.
   - **Fireplace Surround:** Suited to decorative fireplace surrounds in lobbies and hospitality spaces. Not for use inside a firebox.
   - **Radiant Heating Compatible:** Compatible with commercial radiant heating systems.
-  - **Sealing Required:** Sealing is required before and after grouting using 511 Porous Plus. Indoors, finish with Fila Matte Wax. Outdoors, apply a second coat of 511 Porous Plus. Refer to the Zia Tile Installation Guide for detailed instructions.
+  - **Sealing Required:** Sealing is required for all installations, including dry spaces. Always seal Monument 4x12 according to the installation instructions, whether in dry spaces or in areas exposed to moisture, such as showers. Refer to the Zia Tile Installation Guide for detailed instructions.
 
   
 
@@ -133,15 +133,15 @@ The surface is then mechanically honed, a process that reduces surface reflectiv
 ### Full Orders
 
   - Full orders ship throughout the US and Canada via LTL carrier with curbside pallet delivery.
-  - All tiles in your order ship together once everything is in stock.
-  - Your LTL carrier will provide an estimated delivery range and contact you to confirm a delivery window once the shipment reaches their local terminal.
+  - All tiles ship together once everything is in stock.
+  - The LTL carrier will provide an estimated delivery range and confirm a delivery window once the shipment reaches the local terminal.
   - We deliver to almost any location around the world. Clients in Alaska, Hawaii, Canada, or international locations should contact our team for a custom shipping quote.
 
 ### Warehouse Pickup & Support
 
   - We offer free full-order pickup at our Los Angeles area warehouse to help local customers save on shipping costs.
   - We will contact you once your order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
-  - For additional questions regarding your Monument 4x12 order, please reach out to us at info@ziatile.com.
+  - For additional questions regarding the Monument 4x12 order, contact our team at info@ziatile.com or 310-844-1170.
 
   
 
@@ -157,7 +157,7 @@ The surface is then mechanically honed, a process that reduces surface reflectiv
 
 Yes, Monument 4x12 limestone tile is suitable for interior flooring applications, including installations in kitchens, hallways, and bathrooms when properly sealed and installed with correct substrate preparation.
 
-### Is Monument 4x4 honed limestone suitable for shower walls and floors?
+### Is Monument 4x12 honed limestone suitable for shower walls and floors?
 
 Yes, Monument 4x12 can be used as a shower tile for walls and floors when sealed before and after grouting to protect against moisture absorption. For shower floor applications, slip resistance can be increased by sizing grout joints to a minimum of ⅛" and/or applying an anti-slip treatment after installation. Periodic resealing is recommended to maintain long-term performance under continuous water exposure.
 

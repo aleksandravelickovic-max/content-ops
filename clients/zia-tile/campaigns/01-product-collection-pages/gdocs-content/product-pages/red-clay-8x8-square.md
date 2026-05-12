@@ -30,6 +30,8 @@ Cotto (derived from the Italian 'terra cotta', or 'baked earth') is a handmade t
 
 \[IMAGE: SIZE/THICKNESS DIAGRAM\]
 
+<!-- EDITOR NOTE: The following 6 sections require content before this page can be published. Each section must conform to the Cotto Unglazed template. Key rules: variation language = tone, shape, edge profile, thickness (NO crazing). Sealing = 511 Porous Plus before grouting + Fila Matte Wax interior / 511 Porous Plus exterior. Pool/spa = not suitable. Freeze/thaw = suitable for any climate including freeze/thaw. Contact info must include both info@ziatile.com and 310-844-1170. -->
+
 ##### Order Details + Installation \[Template Pending\]
 
   
@@ -58,9 +60,13 @@ Cotto (derived from the Italian 'terra cotta', or 'baked earth') is a handmade t
 
   
 
+*⚠ WARNING: Cancer and Reproductive Harm. [Learn more about Proposition 65 Warnings.](https://www.ziatile.com/proposition-65-warnings)*
+
+  
+
 ## Frequently Asked Questions 
 
-### What kind of variation should I expect across the Red Clay 8×8 tiles?
+### What kind of variation should be expected across the Red Clay 8×8 tiles?
 
 Red Clay 8×8 Cotto carries the natural variation that defines all [handmade Cotto tile](https://ziatile.com/collections/cotto). Subtle differences in tone, shape, edge profile, and thickness from tile to tile are all part of its character. Before installation, open and mix tiles from all boxes, and dry-lay the entire installation to ensure variation is distributed evenly throughout the design.
 
@@ -74,9 +80,9 @@ Yes. The Red Clay Cotto 8×8 tiles are suitable for shower floors and wet areas,
 
 ### What's the sealing protocol for Red Clay 8×8 tiles?
 
-Red Clay 8×8 tiles require a two-step sealing process. Before grouting, apply 511 Porous Plus Penetrating Sealer in thin coats until the tile reaches full saturation, then allow one to two days for curing. This initial application also acts as a grout release. After grouting, interior installations should be finished with Fila Matte Finish Protective Wax, while exterior applications require a second coat of 511 Porous Plus, since Fila Matte Wax discolors under UV exposure. Full instructions are available in[ Zia's Installation Guides](https://ziatile.com/pages/cotto-installation-guide), and the Zia team is available at <info@ziatile.com> or or 310-844-1170.
+Red Clay 8×8 tiles require a two-step sealing process. Before grouting, apply 511 Porous Plus Penetrating Sealer in thin coats until the tile reaches full saturation, then allow one to two days for curing. This initial application also acts as a grout release. After grouting, interior installations should be finished with Fila Matte Finish Protective Wax, while exterior applications require a second coat of 511 Porous Plus, since Fila Matte Wax discolors under UV exposure. Full instructions are available in[ Zia's Installation Guides](https://ziatile.com/pages/cotto-installation-guide), and the Zia team is available at <info@ziatile.com> or 310-844-1170.
 
-### Can I mix the Red Clay 8×8 with other Cotto colorways and formats?
+### Can Red Clay 8×8 be mixed with other Cotto colorways and formats?
 
 Yes. Red Clay Cotto can be combined with other colorways and formats throughout the Cotto collection. Each Cotto tile is formed from the same San Miguel de Allende clay body and fired through the same kiln process, creating consistency across the line. Red Clay pairs naturally with traditional hues such as Adobe and Fired Earth, while contrasting with the unexpected tones of Blanco, Madera, and Oscura. Please note there will be some variation in size and shape across any of our handmade tiles, though the colorway will not affect the sizing. When incorporating specialty geometric formats, increase overage to 20 to 25%, as perimeter cuts typically require additional material.
 

@@ -18,11 +18,11 @@ download_date: 2026-05-12
 
 ## Our Take on Terra Cotta
 
-Zia's Cotto is a clay-based terra cotta tile crafted in San Miguel de Allende, Mexico. Each handmade terra cotta tile is visibly unique, with inherent variation in tone, shape, and texture that adds dimension to every design.
+Zia's Cotto is a clay-based terra cotta tile crafted in San Miguel de Allende, Mexico. Each handmade terra cotta tile is visibly unique, with inherent variation in tone, shape, edge profile, and thickness that adds dimension to every design.
 
 Shapes vary from traditional squares and rectangles to specialty geometric forms. Available in six core colors, the palette includes traditional, warm neutrals alongside matte black Oscura, whitewashed Blanco, and cocoa-colored Madera. These charming unglazed pieces add an earthy aesthetic to indoor and outdoor areas alike, well-suited for any climate.
 
-\[PRODUCT LIST\]
+[PRODUCT LIST]
 
   
 
@@ -42,7 +42,7 @@ Cotto comes in six core colorways: three traditional terra cotta hues and three 
   - Fired Earth, the mid-range classic. Wood ash applied to the surface during firing produces the distinctive coloration and textural variation that sets it apart from the other traditional hues
   - Red Clay, the deepest red, closest to the raw material itself
 
-The contemporary range extends the collection beyond what most terra cotta producers offer:
+The collection also includes three additional unexpected tones:
 
   - Blanco, a whitewashed finish that brightens and softens the body's natural tone
   - Madera, a deep cocoa, one of the few dark brown terra cotta tiles produced anywhere
@@ -60,11 +60,11 @@ Standard squares (4x4, 8x8, 13x13) and rectangles (2x6, 6.5x13) anchor the line,
 
 ### How are Zia Cotto tiles made?
 
-Our Cotto begins with natural Mexican clay from San Miguel de Allende, hand-pressed into molds, then sun-dried in open courtyards for one to two weeks and high-fired in traditional kilns. This process produces a dense clay body with visible variation in tone and texture. Cotto is left unglazed, resulting in a matte, earthy surface with softer edges and natural tonal variation that deepens over time.
+Our Cotto begins with natural Mexican clay from San Miguel de Allende, hand-pressed into molds, then sun-dried in open courtyards for one to two weeks and high-fired in traditional kilns. This process produces a dense clay body with visible variation in tone, shape, edge profile, and thickness. Cotto is left unglazed, resulting in a matte, earthy surface with softer edges and natural tonal variation that deepens over time.
 
 ### Does Cotto tile need special care?
 
-Yes, Cotto tile requires sealing to protect against moisture and staining. This applies to all installations, including dry interiors, high-traffic areas, and wet environments.
+Yes, Cotto tile requires sealing to protect against moisture and staining. This applies to all installations, including dry interiors, high-traffic areas, and wet environments. Cotto is suitable for outdoor installations in any climate, including freeze/thaw environments, but is not suitable for pools or spas.
 
 For proper care:
 
@@ -75,6 +75,8 @@ For proper care:
   - Avoid acidic or abrasive cleaners that can damage the surface
 
 Over time, the unglazed surface develops a natural patina that reflects use and age.
+
+*⚠ WARNING: Cancer and Reproductive Harm. [Learn more about Proposition 65 Warnings.](https://www.ziatile.com/proposition-65-warnings)*
 
 ### How to clean Cotto tile
 

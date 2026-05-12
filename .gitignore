@@ -16,3 +16,8 @@
 
 # Ruff
 .ruff_cache/
+
+# Fetched HTML (large, regenerated via scripts/build-html-before-after.py)
+clients/*/campaigns/*/html/original/
+clients/*/campaigns/*/html/revised/
+__pycache__/

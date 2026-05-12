@@ -34,11 +34,11 @@ To find the world's best ceramic tiles, Zia traveled to Japan. Our Kelp Forest 2
 
   
 
-Zia's Kelp Forest 2x8 Glossy Ceramic includes minor variation in size, color, tone, and surface texture. These are natural characteristics of ceramic tile and should be expected across your order. The images shown are representative of a sample of this tile but may not display all potential variations.
+Zia's Kelp Forest 2x8 Glossy Ceramic includes minor variation in size, color, tone, and surface texture. These are natural characteristics of ceramic tile and should be expected across the order. The images shown are representative of a sample of this tile but may not display all potential variations.
 
   
 
-We recommend 15–20% overage to curate your installation and account for any cuts needed properly.
+We recommend 15–20% overage to curate the installation and account for any cuts needed.
 
   
 
@@ -49,7 +49,7 @@ We recommend 15–20% overage to curate your installation and account for any cu
 ### Color and Surface
 
   - Zia's Kelp Forest 2x8 presents a vibrant green tone across each tile, with a glossy surface.
-  - Each tile exhibits minor variation in color and tone. These are natural characteristics of the high-fired production process and should be expected across your order.
+  - Each tile exhibits minor variation in color and tone. These are natural characteristics of the high-fired production process and should be expected across the order.
   - The variation in this collection is subtle. Kelp Forest reads as a consistent, color-forward surface at installation scale.
 
 ### Preparation and Curation
@@ -62,7 +62,8 @@ We recommend 15–20% overage to curate your installation and account for any cu
 
   - Installers must always wear protective face and eye coverings when working with ceramic tile, thinset, sealants, and grout in accordance with California Prop 65.
   - For finishing, ceramic tiles can be mitered on the edge or finished with Schluter strips.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - For installation questions, contact our team at info@ziatile.com or 310-844-1170.
+  - Always seal Kelp Forest 2x8 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
   
 
@@ -140,20 +141,16 @@ Minor tonal shifts emerge during firing, giving each tile a measured degree of v
 ### Warehouse Pickup & Support
 
   - We offer free full order pickup at our Los Angeles area warehouse.
-  - Our team will contact you when your order is ready so you may schedule your pickup. Warehouse pickup is available by confirmed appointment only.
-  - For additional questions regarding your Kelp Forest 2x8 order, please reach out to us at info@ziatile.com.
+  - Our team will contact you when the order is ready to schedule a pickup. Warehouse pickup is available by confirmed appointment only.
+  - For additional questions, contact our team at info@ziatile.com or 310-844-1170.
 
   
 
   
 
-## Installation Guide — \[ACCORDION\] 
+## Installation Guide — \[ACCORDION\]
 
 \[KEEP\]
-
-## 
-
-  
 
 ## Frequently Asked Questions — \[ACCORDION\]  
 

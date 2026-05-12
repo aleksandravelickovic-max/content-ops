@@ -32,11 +32,11 @@ Zia's Molasses 2x8 Glossy Ceramic comes from the same ceramic tradition that bro
 
   
 
-The 2x8 format works across a range of layout approaches, from stacked to herringbone, and suits both residential and commercial installations. Zia's Molasses includes minor variation in size, color, tone, and surface texture. These are natural characteristics of ceramic tile and should be expected across your order. The images shown are representative of a sample of this tile but may not display all potential variations.
+The 2x8 format works across a range of layout approaches, from stacked to herringbone, and suits both residential and commercial installations. Zia's Molasses includes minor variation in size, color, tone, and surface texture. These are natural characteristics of ceramic tile and should be expected across the order. The images shown are representative of a sample of this tile but may not display all potential variations.
 
   
 
-We recommend 15-20% overage to properly curate your installation and account for any cuts needed.
+We recommend 15-20% overage to properly curate the installation and account for any cuts needed.
 
   
 
@@ -47,7 +47,7 @@ We recommend 15-20% overage to properly curate your installation and account for
 ### Color and Surface
 
   - Zia's Molasses 2x8 presents a brown tone across each tile, with a glossy surface.
-  - Each tile exhibits minor variation in color and tone, a natural characteristic of the high-fired production process that should be expected across your order.
+  - Each tile exhibits minor variation in color and tone, a natural characteristic of the high-fired production process that should be expected across the order.
   - Molasses reads as a consistent, grounded surface at installation scale.
 
 ### Preparation and Curation
@@ -60,7 +60,9 @@ We recommend 15-20% overage to properly curate your installation and account for
 
   - Installers must always wear protective face and eye coverings when working with ceramic tile, thinset, sealants, and grout in accordance with California Prop 65.
   - For finishing, ceramic tiles can be mitered on the edge or finished with Schluter strips.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - Bring drywall flush with the finished tile surface to ensure clean transitions at edges.
+  - For installation questions, contact our team at info@ziatile.com or 310-844-1170.
+  - Always seal Molasses 2x8 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
   
 
@@ -82,7 +84,7 @@ Zia's Molasses 2x8 Glossy Ceramic suits both residential and commercial projects
   - **Exterior Floors -- Non-Freeze or Thaw:** Ceramic tile is not suitable for exterior floor installations.
   - **Interior Walls:** Suited to kitchen backsplashes, bathroom walls, and feature surfaces where the brown gloss introduces a warm, grounded tone.
   - **Exterior Walls:** Suitable for exterior wall applications in non-freeze/thaw climates.
-  - **Shower Walls + Floors:** Suited to shower walls, shower floors, and steam showers. Sealing is required for this use. Slip resistance can be increased by increasing grout joint size to a minimum of 1/8" and/or applying an anti-slip treatment after installation is complete.
+  - **Shower Walls + Floors:** Suited to shower walls, shower floors, and steam showers. Sealing is required for this use.
   - **Pools + Spas:** Suitable for pools and spas, including saltwater and chlorine environments. Sealing is required for this use.
   - **Fireplace Surround:** Suited to fireplace surrounds. These tiles are not for use inside the firebox.
   - **Radiant Heating Compatible:** Compatible with radiant heating systems.
@@ -96,7 +98,7 @@ Zia's Molasses 2x8 Glossy Ceramic suits both residential and commercial projects
   - **Exterior Floors -- Non-Freeze or Thaw:** Ceramic tile is not suitable for exterior floor installations.
   - **Interior Walls:** Suited to commercial kitchen walls, restroom walls, and feature installations where the Molasses glaze introduces a warm, grounded tone.
   - **Exterior Walls:** Suitable for commercial exterior wall applications in non-freeze/thaw climates.
-  - **Shower Walls + Floors:** Suited to commercial shower walls, shower floors, and steam showers. Sealing is required for this use. Slip resistance can be increased by increasing grout joint size to a minimum of 1/8" and/or applying an anti-slip treatment after installation is complete.
+  - **Shower Walls + Floors:** Suited to commercial shower walls, shower floors, and steam showers. Sealing is required for this use.
   - **Pools + Spas:** Suitable for commercial pools and spas, including saltwater and chlorine environments. Sealing is required for this use.
   - **Fireplace Surround:** Suited to decorative fireplace surrounds in commercial settings. Not for use inside a firebox.
   - **Radiant Heating Compatible:** Compatible with commercial radiant heating systems.
@@ -126,7 +128,7 @@ Minor tonal shifts emerge during firing, giving each tile a measured degree of v
   - Select the "Add Sample to Cart" button to add Molasses 2x8 to your cart.
   - Each client may order up to ten samples total, with a limit of four per each unique tile.
   - We offer five complimentary samples; additional samples begin at $3 each.
-  - Your sample order will ship via FedEx or UPS ground.
+  - Sample orders ship via FedEx or UPS ground.
 
 ### Full Orders
 
@@ -138,8 +140,8 @@ Minor tonal shifts emerge during firing, giving each tile a measured degree of v
 ### Warehouse Pickup & Support
 
   - We offer free full order pickup at our Los Angeles area warehouse.
-  - Our team will contact you when your order is ready so you may schedule your pickup. Warehouse pickup is available by confirmed appointment only.
-  - For additional questions regarding your Molasses 2x8 order, please reach out to us at info@ziatile.com.
+  - Our team will contact you when the order is ready to schedule a pickup. Warehouse pickup is available by confirmed appointment only.
+  - For additional questions, contact our team at info@ziatile.com or 310-844-1170.
 
   
 
@@ -171,9 +173,9 @@ Ceramic tile is fired from natural clay and is well-suited to interior walls and
 
 Yes, ceramic tile can be cut on site using a water-cooled tile saw with a diamond edge blade or a snap tile cutter. If extensive cutting is required, work outdoors or in a well-ventilated area in accordance with California Prop 65 safety guidelines.
 
-### Which direction should I run the Molasses 2x8 -- horizontal or vertical?
+### Horizontal or vertical: which direction works best for Molasses 2x8?
 
-A horizontal layout emphasizes the width of the surface and suits backsplashes and lower wall applications. A vertical layout draws the eye upward and works well in shower enclosures and floor-to-ceiling installations. The orientation should be agreed upon with your installer before laying out the tile, as it affects how cuts are planned at the perimeter.
+A horizontal layout emphasizes the width of the surface and suits backsplashes and lower wall applications. A vertical layout draws the eye upward and works well in shower enclosures and floor-to-ceiling installations. The orientation should be confirmed with the installer before laying out the tile, as it affects how cuts are planned at the perimeter.
 
 ### What is the difference between glossy and matte ceramic tile?
 
@@ -184,10 +186,3 @@ The difference between glossy and matte ceramic tile comes down to surface finis
   
   
 
-## Writer's Notes: 
-
-  - The FAQ addresses colorway-specific and format-specific concerns unique to the Molasses 2x8, including design style suitability, material pairings, layout orientation, and how the glossy finish differs from matte. 
-  - The ceramic versus porcelain FAQ answer serves those who are comparing material specifications.
-  - Added "Subway Ceramic Tile" to the meta title, like similar pages. 
-  - "Brown" is used as the confirmed descriptor throughout the page.
-  - "Herringbone" appears in the About section and Tile Usage intro, capturing high-intent search queries from users planning specific layout patterns for a rectangular format tile.

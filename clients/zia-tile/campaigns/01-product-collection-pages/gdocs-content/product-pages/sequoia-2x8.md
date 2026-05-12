@@ -7,7 +7,7 @@ download_date: 2026-05-12
 
 **URL:** <https://ziatile.com/products/sequoia-2x8-ceramic-tile> 
 
-**Meta title**: Sequoia 2x8 Subway Ceramic Tile | | Zia Tile  
+**Meta title**: Sequoia 2x8 Subway Ceramic Tile | Zia Tile  
 **Meta description**: Shop Zia's Sequoia 2x8 ceramic. A saturated evergreen satin subway tile for kitchen backsplashes, bathroom walls, and shower installations.
 
 **Keywords:** Sequoia 2x8, Green ceramic subway tile, green satin tile
@@ -32,9 +32,9 @@ To find the world's best ceramic tiles, Zia traveled to Japan. Our Sequoia 2x8 i
 
 ## Details 
 
-Zia's Sequoia 2x8 ceramic includes minor variation in size, color, tone, glaze movement, and surface texture. These are natural characteristics of ceramic tile and should be expected across your order.
+Zia's Sequoia 2x8 ceramic includes minor variation in size, color, tone, glaze movement, and surface texture. These are natural characteristics of ceramic tile and should be expected across the order.
 
-The images shown are representative of a sample of this tile but may not display all potential variations. We recommend 15-20% overage to properly curate your installation and account for any cuts needed. For a more uniform visual result, we recommend 25% overage.
+The images shown are representative of a sample of this tile but may not display all potential variations. We recommend 15-20% overage to properly curate the installation and account for any cuts needed. For a more uniform visual result, we recommend 25% overage.
 
   
   
@@ -45,7 +45,7 @@ The images shown are representative of a sample of this tile but may not display
 ### Color and Surface
 
   - Zia's Sequoia 2x8 presents a saturated evergreen tone across each tile, with a satin finish that produces a low-sheen, grounded surface.
-  - Each green ceramic subway tile exhibits minor variation in color, tone, and surface texture. These are natural characteristics of ceramic tile and should be expected across your order.
+  - Each green ceramic subway tile exhibits minor variation in color, tone, and surface texture. These are natural characteristics of ceramic tile and should be expected across the order.
   - The variation in this collection is subtle. Sequoia reads as a continuous evergreen field at installation scale, with the handcrafted quality most visible up close.
 
 ### Preparation and Curation
@@ -60,7 +60,9 @@ The images shown are representative of a sample of this tile but may not display
   - Installers must always wear protective face and eye coverings when working with ceramic tile, thinset, sealants, and grout in accordance with California Prop 65.
   - Substrates must be structurally sound, clean, and fully prepared. Cement board or equivalent backer board is required for wet-area installations.
   - For finishing, ceramic tiles can be mitered on the edge or finished with Schluter strips.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - Bring drywall flush with the finished tile surface to ensure clean transitions at edges.
+  - For installation questions, contact our team at info@ziatile.com or 310-844-1170.
+  - Always seal Sequoia 2x8 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
   
 
@@ -128,8 +130,8 @@ The satin glaze is applied before firing and reacts to kiln heat to produce a sm
 ### Warehouse Pickup & Support
 
   - We offer free full order pickup at our Los Angeles area warehouse.
-  - Our team will contact you when your order is ready so you may schedule your pickup. Warehouse pickup is available by confirmed appointment only.
-  - For additional questions regarding your Sequoia 2x8 order, please reach out to us at info@ziatile.com.
+  - Our team will contact you when the order is ready to schedule a pickup. Warehouse pickup is available by confirmed appointment only.
+  - For additional questions, contact our team at info@ziatile.com or 310-844-1170.
 
   
 

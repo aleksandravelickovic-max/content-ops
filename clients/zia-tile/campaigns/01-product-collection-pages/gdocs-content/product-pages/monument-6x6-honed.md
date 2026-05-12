@@ -49,7 +49,7 @@ We recommend a 15–20% overage to curate the installation and account for any c
 ### Inherent Variation
 
   - Our Monument 6x6 is a honed limestone tile in a soft neutral grey, with a flat matte surface and gently smoothed finish that preserves the stone's natural mineral structure.
-  - Each handcrafted limestone tile remains wholly unique, and this inherent variation defines the line's charm.
+  - Each handcrafted limestone tile remains wholly unique, and this inherent variation defines the line's character.
   - Expect moderate variation in color, tone, and surface texture across the layout, along with subtle fossilization patterns and the edge irregularity typical of sedimentary stone.
 
 ### Preparation and Curation
@@ -65,7 +65,7 @@ We recommend a 15–20% overage to curate the installation and account for any c
   - For finishing, bring the drywall flush with the finished stone surface, miter exposed edges at 45 degrees, or complete the edge with Schluter strips.
   - Seal Monument 6x6 with 511 Porous Plus before and after grouting. For interior applications, finish with Fila Matte Wax as a final coat. For exterior applications, apply a second coat of 511 Porous Plus in place of wax.
   - Grout in small sections no larger than 2'x2' and wipe away excess immediately. Limestone stains readily if grout is left to sit on the surface.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - For installation questions, contact our team at info@ziatile.com or 310-844-1170.
 
   
 
@@ -92,7 +92,7 @@ Our Monument 6x6 honed limestone suits both residential and commercial projects.
   - **Pools + Spas:** Not suitable for pools or spas.
   - **Fireplace Surround:** Suited to decorative fireplace surrounds. These tiles are not for use inside the firebox.
   - **Radiant Heating Compatible:** Compatible with radiant heating systems.
-  - **Sealing Required:** Sealing is required before and after grouting using 511 Porous Plus. Indoors, finish with Fila Matte Wax. Outdoors, apply a second coat of 511 Porous Plus. Refer to the Zia Tile Installation Guide for detailed instructions.
+  - **Sealing Required:** Sealing is required for all installations, including dry spaces. Always seal Monument 6x6 according to the installation instructions, whether in dry spaces or in areas exposed to moisture, such as showers. Refer to the Zia Tile Installation Guide for detailed instructions.
 
 ### Commercial Usage
 
@@ -106,7 +106,7 @@ Our Monument 6x6 honed limestone suits both residential and commercial projects.
   - **Pools + Spas:** Not suitable for pools or spas.
   - **Fireplace Surround:** Suited to decorative fireplace surrounds in lobbies and hospitality spaces. Not for use inside a firebox.
   - **Radiant Heating Compatible:** Compatible with commercial radiant heating systems.
-  - **Sealing Required:** Sealing is required before and after grouting using 511 Porous Plus. Indoors, finish with Fila Matte Wax. Outdoors, apply a second coat of 511 Porous Plus. Refer to the Zia Tile Installation Guide for detailed instructions.
+  - **Sealing Required:** Sealing is required for all installations, including dry spaces. Always seal Monument 6x6 according to the installation instructions, whether in dry spaces or in areas exposed to moisture, such as showers. Refer to the Zia Tile Installation Guide for detailed instructions.
 
   
   
@@ -142,15 +142,15 @@ Each tile retains moderate variation in tone and texture because the stone is no
 ### Full Orders
 
   - Full orders ship throughout the US and Canada via LTL carrier with curbside pallet delivery.
-  - All tiles in your order ship together once everything is in stock.
-  - Your LTL carrier will provide an estimated delivery range and contact you to confirm a delivery window once the shipment reaches their local terminal.
+  - All tiles ship together once everything is in stock.
+  - The LTL carrier will provide an estimated delivery range and confirm a delivery window once the shipment reaches the local terminal.
   - We deliver to almost any location around the world. Clients in Alaska, Hawaii, Canada, or international locations should contact our team for a custom shipping quote.
 
 ### Warehouse Pickup & Support
 
   - We offer free full-order pickup at our Los Angeles area warehouse to help local customers save on shipping costs.
   - We will contact you once your order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
-  - For additional questions regarding your Monument limestone order, please reach out to us at <info@ziatile.com>.
+  - For additional questions regarding the Monument 6x6 order, contact our team at info@ziatile.com or 310-844-1170.
 
   
 

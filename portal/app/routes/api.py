@@ -21,6 +21,12 @@ class CommentCreate(BaseModel):
     body: str
     highlight_text: str | None = None
     parent_id: int | None = None
+    anchor_prefix: str | None = None
+    anchor_suffix: str | None = None
+    anchor_start_offset: int | None = None
+    anchor_end_offset: int | None = None
+    anchor_heading: str | None = None
+    anchor_paragraph_index: int | None = None
 
 
 class CommentResolve(BaseModel):
@@ -58,6 +64,12 @@ async def create_comment(
         body=payload.body.strip(),
         highlight_text=payload.highlight_text,
         parent_id=payload.parent_id,
+        anchor_prefix=payload.anchor_prefix,
+        anchor_suffix=payload.anchor_suffix,
+        anchor_start_offset=payload.anchor_start_offset,
+        anchor_end_offset=payload.anchor_end_offset,
+        anchor_heading=payload.anchor_heading,
+        anchor_paragraph_index=payload.anchor_paragraph_index,
     )
     db.add(comment)
     await db.commit()

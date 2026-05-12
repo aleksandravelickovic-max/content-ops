@@ -36,15 +36,15 @@ The images shown represent the tile's general appearance and may not capture the
 ### Inherent Variation
 
   - Our Puebla 4x4 is a speckled white glazed terra cotta tile, with a satin glaze that references the hand-fired pottery tradition of central Mexico.
-  - Each speckled terra cotta tile remains wholly unique, and this innate variation defines the line's charm.
+  - Each speckled terra cotta tile remains wholly unique, and this innate variation defines the line's character.
   - Expect natural variation in tone, shape, and thickness, alongside the speckling, subtle crazing, and surface shifts that emerge during firing.
 
 ### Preparation and Curation
 
-  - Mix the contents of each box in your shipment before setting to distribute speckling and tonal variation evenly across the installation.
+  - Before installation, open and mix the contents of each box to distribute speckling and tonal variation evenly across the layout.
   - Arrange a dry layout before committing to placement to assess how the speckled surface reads across the full field.
   - Disperse more pronounced speckling, crazing, and tonal shifts evenly rather than allowing them to cluster in one area.
-  - We suggest a 15% overage on all Cotto Allende orders. For specialty cuts or complex geometric layouts, consider increasing overage before placing your order.
+  - We suggest a 15–20% overage on all Cotto Allende orders to account for curation and cuts. For specialty cuts or complex geometric layouts, plan for 20–25%.
 
 ### Installation and Finishing
 
@@ -52,7 +52,8 @@ The images shown represent the tile's general appearance and may not capture the
   - For finishing, bring the drywall flush with the finished surface of the tile, miter exposed edges at 45 degrees, or complete the edge with Schluter strips.
   - Seal Puebla 4x4 with 511 Porous Plus before and after grouting. Fila Matte Wax is not recommended for Cotto Allende; use 511 Porous Plus as the sole sealer.
   - Match grout color closely to the tile to integrate the crazing and speckling into the composition. Contrasting grout can stain the glazed surface and emphasizes crazing.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - Always seal Puebla 4x4 according to the Zia Tile Installation Guide, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
+  - Reach out to the team at info@ziatile.com or 310-844-1170 with any specific installation questions.
 
 *⚠ WARNING: Cancer and Reproductive Harm.* [*Learn more about Proposition 65 Warnings.*](https://www.ziatile.com/proposition-65-warnings)
 
@@ -109,15 +110,15 @@ Crazing is part of the process. As the glaze settles across the clay body during
 ### Full Orders
 
   - Full orders ship throughout the US and Canada via LTL carrier with curbside pallet delivery.
-  - All tiles in your order ship together once everything is in stock.
-  - Your LTL carrier will provide an estimated delivery range and contact you to confirm a delivery window once the shipment reaches their local terminal.
-  - We deliver to almost any location around the world. Clients in Alaska, Hawaii, Canada, or international locations should contact our team for a custom shipping quote.
+  - All tiles ship together once everything is in stock.
+  - The LTL carrier will provide an estimated delivery range and confirm a delivery window once the shipment reaches their local terminal.
+  - We deliver to almost any location around the world. Clients in Alaska, Hawaii, Canada, or international locations should email our team at info@ziatile.com for a custom shipping quote.
 
 ### Warehouse Pickup & Support
 
   - We offer free full-order pickup at our Los Angeles area warehouse to help local customers save on shipping costs.
-  - We will contact you once your order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
-  - For additional questions regarding your Puebla Cotto Allende order, please reach out to us at info@ziatile.com.
+  - The team will be in touch once the order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
+  - For additional questions regarding a Puebla Cotto Allende order, reach out at info@ziatile.com or 310-844-1170.
 
 ## Installation Guide
 
@@ -141,10 +142,10 @@ Yes, Puebla 4x4 is suitable for saltwater and chlorine pool and spa installation
 
 To seal Puebla Cotto Allende, apply 511 Porous Plus in thin layers before grouting until the tile is fully saturated, wiping off any excess before it dries. Allow the sealer to cure fully, then grout in sections no larger than 2'x2' and wipe away excess immediately. Once the grout has cured, apply a second coat of 511 Porous Plus. Do not use Fila Matte Wax on Cotto Allende; 511 Porous Plus is the only recommended finish for this line.
 
-### Can I mix Puebla with warmer Cotto Allende colorways?
+### Can Puebla be mixed with warmer Cotto Allende colorways?
 
-Yes, you can mix Puebla 4x4 with warmer colorways in the Cotto Allende line. Each colorway is produced using the same clay body and firing process, so tiles share consistent thickness, format, and surface character across the range. Mixing the speckled white of Puebla with the warmer, more saturated colorways produces a layered composition where the satin surface reads as a lighter counterpoint against the earthier tones.
+Puebla 4x4 can be mixed with warmer colorways in the Cotto Allende line. Each colorway is produced using the same clay body and firing process, so tiles share consistent thickness, format, and surface character across the range. Mixing the speckled white of Puebla with the warmer, more saturated colorways produces a layered composition where the satin surface reads as a lighter counterpoint against the earthier tones.
 
-### How do I clean Puebla Cotto Allende?
+### How is Puebla Cotto Allende cleaned?
 
-To clean Puebla Cotto Allende, use a pH-neutral cleaner such as Miracle Sealants Tile and Stone Cleaner with warm water and a soft cloth or mop. Sweep or vacuum regularly to remove abrasive debris that can wear down the satin surface over time. Avoid acidic or abrasive cleaners, which can damage the glaze and make crazing more visible. For heavier staining, Miracle Sealants Heavy Duty Cleaner (Acid Substitute) is the recommended product.
+Clean Puebla Cotto Allende with a pH-neutral cleaner such as Miracle Sealants Tile and Stone Cleaner, warm water, and a soft cloth or mop. Sweep or vacuum regularly to remove abrasive debris that can wear down the satin surface over time. Avoid acidic or abrasive cleaners, which can damage the glaze and make crazing more visible. For heavier staining, Miracle Sealants Heavy Duty Cleaner (Acid Substitute) is recommended.

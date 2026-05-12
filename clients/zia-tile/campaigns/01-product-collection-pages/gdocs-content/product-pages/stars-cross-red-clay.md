@@ -31,9 +31,9 @@ Zia's Stars & Cross + Red Clay is a handmade terra cotta tile produced in San Mi
 
 ## Details 
 
-Each Stars & Cross tile includes moderate variation in color, tone, size, and surface texture, consistent with handmade terra cotta production. Chips, pits, and crazing develop as natural characteristics of hand-forming, sun-drying, and high-firing. The images shown represent the tile's general appearance and may not capture the full range of tonal variation present in a complete order.
+Each Stars & Cross tile includes moderate variation in tone, shape, edge profile, and thickness, consistent with handmade terra cotta production. The images shown represent the tile's general appearance and may not capture the full range of tonal variation present in a complete order.
 
-We recommend a 15% overage to curate the installation and account for any cuts needed. Because Stars & Cross is a specialty shape, the additional cuts required during layout often warrant increasing overage further; consider 20% or more before placing your order.
+We recommend a 15–20% overage to account for curation and cuts. Because Stars & Cross is a specialty shape, the additional cuts required during layout often warrant increasing overage to 20% or more.
 
   
 
@@ -42,23 +42,24 @@ We recommend a 15% overage to curate the installation and account for any cuts n
 ### Color and Surface
 
   - Our Stars & Cross + Red Clay is a red terra cotta tile in an interlocking specialty shape, with a warm palette that moves between deep red-brown, brick, and clay-orange tones across the installation.
-  - Each handmade cotto tile remains wholly unique, and this innate variation defines the line's charm.
-  - Expect natural variation in tone, shape, thickness, and surface texture across the layout, along with the soft, irregular edges inherent to unglazed cotto. Chips, pits, and crazing appear as part of the firing process.
+  - Each handmade cotto tile remains wholly unique, and this innate variation defines the line's character.
+  - Expect natural variation in tone, shape, edge profile, and thickness across the layout, along with the soft, irregular edges inherent to unglazed cotto.
 
 ### Preparation and Curation
 
-  - Mix the contents of each box in your shipment before setting to distribute tonal and surface variation evenly across the installation.
+  - Before installation, open and mix the contents of each box to distribute tonal and surface variation evenly across the layout.
   - Lay out a full dry pattern before setting to establish spacing, alignment, and tile interaction within the Stars & Cross geometry. The pattern depends on consistent orientation to resolve correctly across the field.
   - Disperse any tonal and surface variation evenly across the layout rather than concentrating darker or lighter pieces in isolated areas.
-  - We suggest a 15% overage on all cotto orders. For the Stars & Cross specialty shape, the additional cuts required warrant increasing overage to 20% or more.
+  - We suggest a 15–20% overage on all cotto orders to account for curation and cuts. For the Stars & Cross specialty shape, the additional cuts required warrant increasing overage to 20% or more.
 
 ### Installation and Finishing
 
   - All installers must wear protective face and eye coverings when working with cotto, thinset, sealants, and grout in accordance with California Prop 65.
   - For finishing, bring the drywall flush with the finished tile surface, miter exposed edges at 45 degrees, or complete the edge with Schluter strips.
   - Seal Stars & Cross + Red Clay with 511 Porous Plus before and after grouting. For interior applications, finish with Fila Matte Wax as a final coat. For exterior applications, apply a second coat of 511 Porous Plus in place of wax.
-  - Use 1/8" tile spacers and plan the layout carefully. The Stars & Cross geometry depends on precise orientation during the dry layout stage to resolve across the full field.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - Plan the layout carefully. The Stars & Cross geometry depends on precise orientation during the dry layout stage to resolve across the full field. Grout joints should be sized to a minimum of 1/8".
+  - Always seal Stars & Cross + Red Clay according to the Zia Tile Installation Guide, whether in dry spaces or in areas exposed to moisture, such as showers. Note that Stars & Cross + Red Clay is not suitable for pools or spas.
+  - Reach out to the team at info@ziatile.com or 310-844-1170 with any specific installation questions.
 
   
 
@@ -132,15 +133,15 @@ The tiles are kept unglazed to preserve the raw clay surface, which is what allo
 ### Full Orders
 
   - Full orders ship throughout the US and Canada via LTL carrier with curbside pallet delivery.
-  - All tiles in your order ship together once everything is in stock.
-  - Your LTL carrier will provide an estimated delivery range and contact you to confirm a delivery window once the shipment reaches their local terminal.
-  - We deliver to almost any location around the world. Clients in Alaska, Hawaii, Canada, or international locations should contact our team for a custom shipping quote.
+  - All tiles ship together once everything is in stock.
+  - The LTL carrier will provide an estimated delivery range and confirm a delivery window once the shipment reaches their local terminal.
+  - We deliver to almost any location around the world. Clients in Alaska, Hawaii, Canada, or international locations should email our team at info@ziatile.com for a custom shipping quote.
 
 ### Warehouse Pickup & Support
 
   - We offer free full-order pickup at our Los Angeles area warehouse to help local customers save on shipping costs.
-  - We will contact you once your order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
-  - For additional questions regarding your Stars & Cross + Red Clay order, please reach out to us at info@ziatile.com.
+  - The team will be in touch once the order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
+  - For additional questions regarding a Stars & Cross + Red Clay order, reach out at info@ziatile.com or 310-844-1170.
 
   
 
@@ -166,7 +167,7 @@ Yes, Stars & Cross + Red Clay can be used in a kitchen for both floors and walls
 
 ### What are the characteristics of terra cotta tiles? 
 
-Zia terra cotta is formed from natural clay that is shaped, dried, and kiln-fired, producing visible variation in tone, texture, and edge definition. Each handmade tile carries inherent differences in color and surface density, and these differences become more pronounced across a full installation. Chips, pits, and crazing are natural characteristics of the firing process and define the material's surface behavior rather than indicating defects.
+Zia terra cotta is formed from natural clay that is shaped, dried, and kiln-fired, producing visible variation in tone, shape, edge profile, and thickness. Each handmade tile carries inherent differences in color and surface density, and these differences become more pronounced across a full installation. This variation defines the material's surface behavior rather than indicating defects.
 
 ### How to seal terra cotta tile?
 

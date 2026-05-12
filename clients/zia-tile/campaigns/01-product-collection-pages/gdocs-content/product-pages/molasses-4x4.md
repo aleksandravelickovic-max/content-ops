@@ -35,11 +35,11 @@ Zia traveled to Japan to source the world's most refined ceramic tile, and our M
 
 ## Details 
 
-Each Molasses 4x4 includes minor variation in size, color, tone, and surface texture, which are natural characteristics of handcrafted ceramic tile and should be expected across your order. Occasional crazing may also appear as a result of the firing process.
+Each Molasses 4x4 includes minor variation in size, color, tone, and surface texture, which are natural characteristics of handcrafted ceramic tile and should be expected across the order. Occasional crazing may also appear as a result of the firing process.
 
   
 
-The images shown represent a sample of this tile and may not display the full range of tonal variation present in a complete order. We recommend 10–15% overage to curate your installation and account for any cuts needed.
+The images shown represent a sample of this tile and may not display the full range of tonal variation present in a complete order. We recommend 10–15% overage to curate the installation and account for any cuts needed.
 
   
 
@@ -63,7 +63,8 @@ The images shown represent a sample of this tile and may not display the full ra
   - Installers must always wear protective face and eye coverings when working with ceramic tile, thinset, sealants, and grout in accordance with California Prop 65.
   - For finishing, ceramic tiles can be mitered on the edge or completed with Schluter strips.
   - Maintain a 3/16" grout joint, with a minimum of 1/8" where tighter layouts are specified by the installer.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - For installation questions, contact our team at info@ziatile.com or 310-844-1170.
+  - Always seal Molasses 4x4 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
   
 
@@ -79,7 +80,7 @@ Our Molasses 4x4 glossy finish ceramic tile suits both residential and commercia
 
 ### Residential Usage
 
-  - **Interior Floors – High Traffic:** Handles daily use in kitchens, entryways, hallways, and primary bathrooms. In wet floor applications, slip resistance can be increased by sizing grout joints to a minimum of ⅛" and/or applying an anti-slip product after installation. Glossy ceramic tile has a lower DCOF rating than matte finishes; confirm slip requirements with your installer for high-traffic wet areas.
+  - **Interior Floors – High Traffic:** Handles daily use in kitchens, entryways, hallways, and primary bathrooms. In wet floor applications, slip resistance can be increased by sizing grout joints to a minimum of ⅛" and/or applying an anti-slip product after installation. Glossy ceramic tile has a lower DCOF rating than matte finishes; confirm slip requirements with the installer for high-traffic wet areas.
   - **Interior Floors – Low Traffic:** Performs well in guest bedrooms, secondary bathrooms, and quieter living spaces.
   - **Exterior Floors – Freeze or Thaw:** Ceramic tile is not suitable for exterior floor installations in freeze/thaw climates.
   - **Exterior Floors – Non Freeze or Thaw:** Ceramic tile is not suitable for exterior floor installations.
@@ -93,7 +94,7 @@ Our Molasses 4x4 glossy finish ceramic tile suits both residential and commercia
 
 ### Commercial Usage
 
-  - **Interior Floors – High Traffic:** Suited to high-traffic commercial environments. In wet floor applications, slip resistance can be increased by sizing grout joints to a minimum of ⅛" and/or applying an anti-slip product after installation. Confirm slip requirements for commercial wet areas with your installer.
+  - **Interior Floors – High Traffic:** Suited to high-traffic commercial environments. In wet floor applications, slip resistance can be increased by sizing grout joints to a minimum of ⅛" and/or applying an anti-slip product after installation. Confirm slip requirements for commercial wet areas with the installer.
   - **Interior Floors – Low Traffic:** Suited to offices, meeting rooms, and boutique retail interiors.
   - **Exterior Floors – Freeze or Thaw:** Ceramic tile is not suitable for exterior floor installations in freeze/thaw climates.
   - **Exterior Floors – Non Freeze or Thaw:** Ceramic tile is not suitable for exterior floor installations.
@@ -136,15 +137,15 @@ Minor differences in tone, glaze flow, and surface texture develop during firing
 ### Full Orders
 
   - Full orders ship throughout the US and Canada via LTL carrier with curbside pallet delivery.
-  - All tiles in your order ship together once everything is in stock.
-  - Your LTL carrier will provide an estimated delivery range and contact you to confirm a delivery window once the shipment reaches their local terminal.
+  - All tiles ship together once everything is in stock.
+  - The LTL carrier will provide an estimated delivery range and confirm a delivery window once the shipment reaches their local terminal.
   - We deliver to almost any location around the world. Clients in Alaska, Hawaii, Canada, or international locations should contact our team for a custom shipping quote.
 
 ### Warehouse Pickup & Support
 
   - We offer free full-order pickup at our Los Angeles area warehouse to help local customers save on shipping costs.
-  - We will contact you once your order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
-  - For additional questions regarding your Molasses 4x4 order, please reach out to us at info@ziatile.com.
+  - Our team will contact you when the order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
+  - For additional questions, contact our team at info@ziatile.com or 310-844-1170.
 
   
 
@@ -166,7 +167,7 @@ To clean Molasses ceramic tile, use warm water and a pH-neutral cleaner applied 
 
 ### Is Molasses 4x4 suitable for a bathroom floor?
 
-Yes, Molasses 4x4 is suitable for a bathroom floor in low- to moderate-traffic areas such as guest bathrooms and vanity spaces. When installed on a bathroom floor, slip resistance can be increased by sizing grout joints to a minimum of ⅛" and/or applying an anti-slip treatment after installation. Because gloss has a lower DCOF rating than matte finishes, confirm slip requirements with your installer for primary or heavily used bathrooms.
+Molasses 4x4 is suitable for a bathroom floor in low- to moderate-traffic areas such as guest bathrooms and vanity spaces. Slip resistance can be increased by sizing grout joints to a minimum of ⅛" and/or applying an anti-slip treatment after installation. Because gloss has a lower DCOF rating than matte finishes, confirm slip requirements with the installer for primary or heavily used bathrooms.
 
 ### Does Molasses 4x4 require sealing?
 
@@ -180,6 +181,6 @@ The best grout color for Molasses 4x4 depends on how the installation should rea
 
 Yes, Molasses 4x4 can be used in a pool or spa, including saltwater and chlorine environments. Sealing the grout joints after installation is recommended to maintain long-term performance under continuous water exposure. For pool installations specifically, epoxy grout is often specified for its durability and chemical resistance.
 
-### Can I mix Molasses 4x4 with other ceramic colors in your collection?
+### Can Molasses 4x4 be mixed with other ceramic colors in the collection?
 
-Yes, you can mix Molasses 4x4 with other colors and finishes in Zia's ceramic collection. Each tile is produced using the same Japanese production methods and shares consistent thickness, format, and surface character across the range. Molasses pairs particularly well with warm neutrals, off-whites, and deeper colorways in the collection, where the red-brown undertones sit in deliberate counterpoint against lighter fields or extend a warm palette through a fuller composition.
+Molasses 4x4 mixes well with other colors and finishes in Zia's ceramic collection. Each tile is produced using the same Japanese production methods and shares consistent thickness, format, and surface character across the range. Molasses pairs particularly well with warm neutrals, off-whites, and deeper colorways in the collection, where the red-brown undertones sit in deliberate counterpoint against lighter fields or extend a warm palette through a fuller composition.

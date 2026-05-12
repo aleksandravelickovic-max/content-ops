@@ -19,7 +19,7 @@ download_date: 2026-05-12
 
   
 
-Zia's Glazed Earth traditional zellige reflects centuries of craftsmanship.e. Each tile features chips, pits, and crazing, which are characteristics of this handcrafted Moroccan art form. While images represent the tile's general appearance, they may not display the full range of dynamic tones present in a complete order.
+Zia's Glazed Earth traditional zellige reflects centuries of craftsmanship. Each tile features chips, pits, and crazing, which are characteristics of this handcrafted Moroccan art form. While images represent the tile's general appearance, they may not display the full range of dynamic glazes present in a complete order.
 
   
 
@@ -32,7 +32,7 @@ Moroccan artisans historically installed these tiles in mosaics featuring decora
 
 ## Details 
 
-Our Glazed Earth zellige includes inherent variation in precise size, color, and tone. We recommend a 15–20% overage for each project. This additional quantity allows you or your installer to curate the installation and account for tiles that fall outside your desired range. For a more uniform look, we recommend increasing your overage to 25%.
+Our Glazed Earth zellige includes inherent variation in precise size, color, and tone. We recommend a 15–20% overage for each project. This additional quantity allows the installer to curate the installation and account for tiles that fall outside the desired range. For a more uniform look, we recommend increasing overage to 25%.
 
 Zellige requires more hands-on attention than standard ceramic tile. Each piece varies in thickness, edge, and size, so plan for two to three times the installation window of a precision-cut tile. We recommend wedge spacers to manage irregular edges, maintain a consistent layout, and protect tile edges throughout.
 
@@ -41,22 +41,22 @@ Zellige requires more hands-on attention than standard ceramic tile. Each piece 
 ### Inherent Variation
 
   - Our Glazed Earth 4x4 is a beige zellige that moves across a wide tonal range, with a glaze that shifts from tile to tile and with changing light.
-  - Each handcrafted zellige tile remains unique, and this inherent variation defines the line's charm.
-  - You should expect variation in color, shape, and thickness, alongside characteristic chips, pits, and crazing.
+  - Each handcrafted zellige tile remains unique, and this inherent variation defines the line's character.
+  - Expect variation in color, shape, and thickness, alongside characteristic chips, pits, and crazing.
 
 ### Preparation and Curation
 
-  - We recommend mixing each box in your shipment before beginning your project.
-  - You should arrange an ideal layout before installation to ensure the variation remains balanced.
-  - Any chips, pits, and color variation should be evenly dispersed across the installation.
-  - We suggest a 15–20% overage on all tile orders to provide enough material to curate your layout. For a more uniform look, we recommend 25% overage.
+  - We recommend mixing each box in the shipment before beginning the project.
+  - Arrange an ideal layout before installation to ensure the variation is distributed evenly.
+  - Any chips, pits, and crazing should be evenly dispersed across the installation.
+  - We suggest a 15–20% overage on all tile orders to provide enough material to curate the layout. For a more uniform look, we recommend 25% overage.
 
 ### Installation and Finishing
 
   - Installers must wear protective face and eye coverings when working with zellige, thin set, sealants, and grout in accordance with California Prop 65.
   - For finishing, bring the drywall flush with the finished surface of the tile, or complete the edge using mitered edges or Schluter strips.
-  - Always seal Glazed Earth zellige 4x4 in areas exposed to moisture, such as pools, spas, and showers.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - Always seal Glazed Earth zellige 4x4 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
+  - Reach out to our team directly at info@ziatile.com or 310-844-1170 with any specific installation questions.
 
   
 
@@ -68,31 +68,31 @@ Our Glazed Earth 4x4 zellige suits both residential and commercial projects. At 
 
 ### Residential Usage
 
-  - **Interior Floors – High Traffic:** Suitable for high-traffic areas such as kitchens, primary bathrooms, and entryways. If installed on a flooring surface in a wet area, slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip product after installation is complete.
+  - **Interior Floors – High Traffic:** Suitable for high-traffic areas such as kitchens, primary bathrooms, and entryways.
   - **Interior Floors – Low Traffic:** Suitable for low-traffic areas such as guest bathrooms and bedrooms.
   - **Exterior Floors – Freeze or Thaw:** Zellige is not suitable for an outdoor installation in a freeze/thaw climate.
   - **Exterior Floors – Non Freeze or Thaw:** May be used on outdoor surfaces that do not experience snow or ice.
   - **Interior Walls:** Suitable for interior wall applications such as kitchen backsplashes and bathroom walls.
   - **Exterior Walls:** Zellige tiles may be used on exterior walls, such as retaining walls, in non-freeze/thaw climates.
-  - **Shower Walls + Floors:** Suitable for shower walls, shower floors, and steam showers. We recommend sealing the tile for this use. Slip resistance can be improved by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip product after installation is complete.
+  - **Shower Walls + Floors:** Suitable for shower walls, shower floors, and steam showers. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete. Always seal Glazed Earth zellige 4x4 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
   - **Pools + Spas:** Suitable for saltwater and chlorine environments. Sealing is required for this use.
   - **Fireplace Surround:** Suitable for fireplace surrounds. Tiles cannot be used inside the firebox.
   - **Radiant Heating Compatible:** Compatible with radiant heating systems.
-  - **Sealing Required:** We recommend sealing Glazed Earth zellige 4x4 when installing in pools, spas, and showers. Please refer to the Zellige Installation Guide for recommended sealers.
+  - **Sealing Required:** Always seal Glazed Earth zellige 4x4 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
 ### Commercial Usage
 
-  - **Interior Floors – High Traffic:** Suitable for high-traffic commercial spaces such as restaurant kitchens, retail floors, and office entryways. If installed on a flooring surface in a wet area, slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip product after installation is complete.
+  - **Interior Floors – High Traffic:** Suitable for high-traffic commercial spaces such as restaurant kitchens, retail floors, and office entryways.
   - **Interior Floors – Low Traffic:** Suitable for lower-traffic commercial interiors.
   - **Exterior Floors – Freeze or Thaw:** Zellige is not suitable for outdoor surfaces that may experience snow or ice.
-  - **Exterior Floors – Non Freeze or Thaw:** Zellige is not suitable for an outdoor installation in a freeze/thaw climate.
+  - **Exterior Floors – Non Freeze or Thaw:** Suitable for exterior commercial floors in climates without snow or ice.
   - **Interior Walls:** Suitable for commercial kitchen backsplashes and bathroom walls.
   - **Exterior Walls:** Zellige tiles may be used on exterior commercial walls, such as retaining walls, in non-freeze/thaw climates.
-  - **Shower Walls + Floors:** Suitable for commercial shower walls, shower floors, and steam showers. We recommend sealing the tile for this use. Slip resistance can be improved by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip product after installation is complete.
+  - **Shower Walls + Floors:** Suitable for commercial shower walls, shower floors, and steam showers. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete. Always seal Glazed Earth zellige 4x4 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
   - **Pools + Spas:** Suitable for commercial saltwater and chlorine pools. Sealing is required for this use.
   - **Fireplace Surround:** Suitable for commercial fireplace surrounds. Tiles cannot be used inside the firebox.
   - **Radiant Heating Compatible:** Compatible with commercial radiant heating systems.
-  - **Sealing Required:** We recommend sealing Glazed Earth zellige 4x4 when installing in pools, spas, and showers. Please refer to the Zellige Installation Guide for recommended sealers.
+  - **Sealing Required:** Always seal Glazed Earth zellige 4x4 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
 ## How It's Made — \[ACCORDION\]
 
@@ -112,8 +112,8 @@ The tiles are then hand-dipped in glaze and placed in an earthen kiln. Heat dist
 
 ### Sample Orders
 
-  - Our in-stock Glazed Earth zellige 4x4 samples typically ship from our Los Angeles warehouse within two business days of receiving your order.
-  - Use the "Add Sample to Cart" button to include Glazed Earth 4x4 samples in your order.
+  - Our in-stock Glazed Earth zellige 4x4 samples typically ship from our Los Angeles warehouse within two business days of receiving the order.
+  - Use the "Add Sample to Cart" button to include Glazed Earth 4x4 samples in the order.
   - Each client may order up to ten samples total, with a limit of four per each unique tile.
   - We provide five complimentary samples, with additional samples starting at $3 each.
   - Sample orders ship via FedEx or UPS ground.
@@ -122,16 +122,16 @@ The tiles are then hand-dipped in glaze and placed in an earthen kiln. Heat dist
 
   - All standard full orders ship across the US and Canada via LTL carrier with curbside pallet delivery.
   - Orders will ship together once all tiles are available.
-  - LTL carriers provide estimated delivery windows and will contact you to schedule delivery once your shipment reaches the local terminal.
+  - LTL carriers provide estimated delivery windows and will contact you to schedule delivery once the shipment reaches the local terminal.
   - We ship to most locations worldwide. Clients in Alaska, Hawaii, Canada, or international regions should contact our team for a custom shipping quote.
 
 ### Warehouse Pickup & Support
 
   - We offer complimentary pickup for full orders at our Los Angeles area warehouse.
-  - Our team will notify you once your order is ready so you can schedule a pickup time. All pickups require a confirmed appointment.
-  - For questions regarding your Glazed Earth zellige order, please contact info@ziatile.com
+  - For additional questions regarding the Glazed Earth zellige 4x4 order, please reach out to us at info@ziatile.com or 310-844-1170.
+  - Our team will notify you once the order is ready so you can schedule a pickup time. All pickups require a confirmed appointment.
+  - For questions regarding the Glazed Earth zellige order, please contact info@ziatile.com
 
-.
 
   
 

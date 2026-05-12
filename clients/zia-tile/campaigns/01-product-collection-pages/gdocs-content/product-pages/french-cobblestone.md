@@ -41,7 +41,7 @@ We recommend a minimum of 15% overage to account for cuts, layout adjustments, a
 ### Color and Surface
 
   - Our French Cobblestone is a Bordeaux limestone tile with a neutral palette that moves between soft ivory, warm beige, light taupe, and muted grey tones, with fossil traces and mineral movement visible across each piece.
-  - Each limestone tile remains wholly unique, and this innate variation defines the line's charm.
+  - Each limestone tile remains wholly unique, and this innate variation defines the line's character.
   - Expect natural variation in color, surface texture, fossil marking, tone, and length across the layout, with no two pieces sharing identical geological composition.
 
 ### Preparation and Curation
@@ -57,7 +57,7 @@ We recommend a minimum of 15% overage to account for cuts, layout adjustments, a
   - Install French Cobblestone using a medium-bed thinset on a fully prepared substrate. In dry interior conditions, wall applications may be installed directly over stable, properly prepared drywall.
   - Seal the tile with 511 Porous Plus before and after grouting. Interior installations require a Fila Matte Wax finish as a final coat; exterior installations should receive a second application of 511 Porous Plus in place of wax.
   - For finishing, bring the drywall flush with the finished tile surface, miter exposed edges at 45 degrees, or complete the edge with Schluter strips.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - For installation questions, contact our team at info@ziatile.com or 310-844-1170.
 
   
 
@@ -82,7 +82,7 @@ Zia's French Cobblestone Limestone Tile is a natural stone surface suitable for 
   - **Pools + Spas:** Suitable for pools and spas, including saltwater and chlorine environments. Sealing is required for this use.
   - **Fireplace Surround:** Suited to decorative fireplace surrounds. These tiles are not for use inside the firebox.
   - **Radiant Heating Compatible:** Compatible with radiant heating systems. Limestone conducts and retains heat efficiently across the installation.
-  - **Sealing Required:** Sealing is required before and after grouting using 511 Porous Plus. Indoors, finish with Fila Matte Wax. Outdoors, apply a second coat of 511 Porous Plus. Refer to the Zia Tile Installation Guide for detailed instructions.
+  - **Sealing Required:** Sealing is required for all installations, including dry spaces. Always seal French Cobblestone according to the installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers. Refer to the Zia Tile Installation Guide for detailed instructions.
 
 ### Commercial Usage
 
@@ -96,7 +96,7 @@ Zia's French Cobblestone Limestone Tile is a natural stone surface suitable for 
   - **Pools + Spas:** Suitable for commercial pools and spas, including saltwater and chlorine environments. Sealing is required for this use.
   - **Fireplace Surround:** Suited to decorative commercial fireplace surrounds. Not for use inside a firebox.
   - **Radiant Heating Compatible:** Compatible with commercial radiant heating systems.
-  - **Sealing Required:** Sealing is required before and after grouting using 511 Porous Plus. Indoors, finish with Fila Matte Wax. Outdoors, apply a second coat of 511 Porous Plus. Refer to the Zia Tile Installation Guide for detailed instructions.
+  - **Sealing Required:** Sealing is required for all installations, including dry spaces. Always seal French Cobblestone according to the installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers. Refer to the Zia Tile Installation Guide for detailed instructions.
 
   
 
@@ -133,14 +133,14 @@ No artificial finishes or coatings are applied. The color, fossil markings, and 
 
   - Full orders ship throughout the US and Canada via LTL carrier with curbside pallet delivery. French Cobblestone is shipped in crates of 200 square feet.
   - Full orders ship within two business days of the noted lead time.
-  - Your LTL carrier will provide an estimated delivery range and contact you to confirm a delivery window once the shipment reaches their local terminal.
+  - The LTL carrier will provide an estimated delivery range and confirm a delivery window once the shipment reaches the local terminal.
   - We deliver to almost any location around the world. Clients in Alaska, Hawaii, Canada, or international locations should contact our team for a custom shipping quote.
 
 ### Warehouse Pickup & Support
 
   - We offer free full-order pickup at our Los Angeles area warehouse to help local customers save on shipping costs.
   - We will contact you once your order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
-  - For additional questions regarding your French Cobblestone order, please reach out to us at info@ziatile.com.
+  - For additional questions regarding the French Cobblestone order, contact our team at info@ziatile.com or 310-844-1170.
 
   
 

@@ -16,39 +16,134 @@
 </header>
 
 <main class="campaign-main">
-  <div class="welcome-banner">
-    <h2>Content Review Portal</h2>
-    <p>Browse the content below and click any item to review. You can leave comments and feedback on each piece.</p>
+  <!-- Tabs for content types -->
+  <div class="tab-bar">
+    {% for tab in tabs %}
+    <button class="tab-btn{% if loop.first %} active{% endif %}" data-tab="{{ tab.key }}">
+      {{ tab.label }}
+      <span class="tab-count">{{ tab.count }}</span>
+    </button>
+    {% endfor %}
   </div>
 
-  {% for type_key, entries in groups.items() %}
-  <section class="content-group">
-    <div class="group-header">
-      <h3>{{ type_labels.get(type_key, type_key | replace("-", " ") | title) }}</h3>
-      <span class="group-count">{{ entries | length }}</span>
+  <!-- Feedback filter (within active tab) -->
+  <div class="sub-filter-bar">
+    <div class="filter-pills">
+      <button class="filter-pill active" data-filter="all">All</button>
+      <button class="filter-pill" data-filter="has-comments">Has feedback</button>
+      <button class="filter-pill" data-filter="no-comments">No feedback</button>
     </div>
-    <div class="content-grid">
-      {% for entry in entries %}
-      <a href="/review/{{ token }}/{{ entry.path }}" class="content-card">
-        <div class="card-top">
-          <span class="card-type type-{{ type_key }}">{{ entry.type | replace("-", " ") }}</span>
-          {% if comment_counts.get(entry.path, 0) > 0 %}
-          <span class="card-comments">{{ comment_counts[entry.path] }} comment{{ 's' if comment_counts[entry.path] != 1 }}</span>
-          {% endif %}
-        </div>
-        <h4 class="card-title">{{ entry.displayName }}</h4>
-        <div class="card-meta">
-          <span>{{ entry.sizeHuman }}</span>
-          <span>{{ entry.lastModified }}</span>
-        </div>
-      </a>
-      {% endfor %}
-    </div>
-  </section>
+    <span class="visible-count" id="visibleCount"></span>
+  </div>
+
+  <!-- One table per type, shown/hidden by tabs -->
+  {% for tab in tabs %}
+  <div class="tab-panel{% if loop.first %} active{% endif %}" data-panel="{{ tab.key }}">
+    <table class="content-table">
+      <thead>
+        <tr>
+          <th class="th-title">Name</th>
+          <th class="th-size">Size</th>
+          <th class="th-date">Modified</th>
+          <th class="th-feedback">Feedback</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for entry in groups[tab.key] %}
+        {% set total = comment_counts.get(entry.path, 0) %}
+        {% set unresolved = unresolved_counts.get(entry.path, 0) %}
+        {% set resolved = total - unresolved %}
+        <tr class="content-row" data-comments="{{ total }}" onclick="window.location='/review/{{ token }}/{{ entry.path }}'">
+          <td class="col-title">
+            <span class="row-title">{{ entry.displayName }}</span>
+            <span class="row-path">{{ entry.path }}</span>
+          </td>
+          <td class="col-size">{{ entry.sizeHuman }}</td>
+          <td class="col-date">{{ entry.lastModified }}</td>
+          <td class="col-feedback">
+            {% if total > 0 %}
+            <span class="feedback-indicator">
+              {% if unresolved > 0 %}
+              <span class="feedback-open">{{ unresolved }} open</span>
+              {% endif %}
+              {% if resolved > 0 %}
+              <span class="feedback-resolved">{{ resolved }} resolved</span>
+              {% endif %}
+            </span>
+            {% else %}
+            <span class="feedback-none">&mdash;</span>
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
   {% endfor %}
 </main>
 
 <footer class="review-footer">
   <p>Content Ops Review Portal &middot; Powered by LinkGraph</p>
 </footer>
+
+<script>
+(function() {
+  const tabs = document.querySelectorAll('.tab-btn');
+  const panels = document.querySelectorAll('.tab-panel');
+  const pills = document.querySelectorAll('.filter-pill');
+  const countEl = document.getElementById('visibleCount');
+
+  function activePanel() {
+    return document.querySelector('.tab-panel.active');
+  }
+
+  function updateVisibleCount() {
+    const panel = activePanel();
+    if (!panel) return;
+    const all = panel.querySelectorAll('.content-row');
+    const visible = panel.querySelectorAll('.content-row:not([style*="display: none"])');
+    countEl.textContent = visible.length === all.length
+      ? `${all.length} items`
+      : `${visible.length} of ${all.length}`;
+  }
+
+  function applyFilter(filter) {
+    const panel = activePanel();
+    if (!panel) return;
+    panel.querySelectorAll('.content-row').forEach(r => {
+      const has = parseInt(r.dataset.comments) > 0;
+      if (filter === 'all') r.style.display = '';
+      else if (filter === 'has-comments') r.style.display = has ? '' : 'none';
+      else if (filter === 'no-comments') r.style.display = has ? 'none' : '';
+    });
+    updateVisibleCount();
+  }
+
+  function currentFilter() {
+    const active = document.querySelector('.filter-pill.active');
+    return active ? active.dataset.filter : 'all';
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      panels.forEach(p => p.classList.remove('active'));
+      const panel = document.querySelector(`[data-panel="${tab.dataset.tab}"]`);
+      if (panel) panel.classList.add('active');
+      applyFilter(currentFilter());
+    });
+  });
+
+  pills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      pills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      applyFilter(pill.dataset.filter);
+    });
+  });
+
+  updateVisibleCount();
+})();
+</script>
 {% endblock %}

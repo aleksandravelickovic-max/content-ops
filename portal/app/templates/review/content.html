@@ -1,11 +1,13 @@
 {% extends "base.html" %}
 {% block title %}{{ entry.displayName }} — Review{% endblock %}
 {% block body_class %}content-page{% endblock %}
+{% block head %}<link rel="stylesheet" href="/static/annotation.css">{% endblock %}
 
 {% block body %}
 <header class="review-header">
   <div class="header-inner">
     <a href="/review/{{ token }}" class="back-link">&larr; Back to campaign</a>
+    <button class="ann-toggle" id="annToggle" onclick="toggleAnnotationMode()">&#128172; Annotate</button>
     <div class="content-nav">
       {% if prev_entry %}
       <a href="/review/{{ token }}/{{ prev_entry.path }}" class="nav-btn">&larr; Prev</a>
@@ -32,6 +34,7 @@
         <span>{{ entry.lastModified }}</span>
       </div>
     </div>
+    <div class="ann-banner" id="annBanner">Highlight text in the content to pin your feedback to a specific passage</div>
     <div class="rendered-content">
       {{ content_html | safe }}
     </div>
@@ -44,6 +47,10 @@
     </div>
 
     <form class="comment-form" id="commentForm">
+      <div class="selection-quote" id="selectionQuote">
+        <span id="quoteText"></span>
+        <button type="button" class="clear-sel" onclick="clearTextSelection()" title="Clear selection">&times;</button>
+      </div>
       <input type="text" name="author_name" placeholder="Your name" required class="form-input">
       <input type="email" name="author_email" placeholder="Email (optional)" class="form-input">
       <textarea name="body" placeholder="Leave your feedback on this content..." required class="form-textarea" rows="3"></textarea>
@@ -101,27 +108,7 @@
 <script>
 const TOKEN = "{{ token }}";
 const CONTENT_PATH = "{{ content_path }}";
-
-document.getElementById('commentForm').addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const form = e.target;
-  const data = {
-    author_name: form.author_name.value,
-    author_email: form.author_email.value || null,
-    body: form.body.value,
-  };
-  const res = await fetch(`/api/review/${TOKEN}/comments/${CONTENT_PATH}`, {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify(data),
-  });
-  if (res.ok) {
-    location.reload();
-  } else {
-    const err = await res.json();
-    alert(err.detail || 'Failed to submit comment');
-  }
-});
+const COMMENTS_DATA = {{ comments_json | safe }};
 
 document.querySelectorAll('.reply-form').forEach(form => {
   form.addEventListener('submit', async (e) => {
@@ -150,4 +137,5 @@ function toggleReplyForm(commentId) {
   form.style.display = form.style.display === 'none' ? 'block' : 'none';
 }
 </script>
+<script src="/static/annotation.js"></script>
 {% endblock %}

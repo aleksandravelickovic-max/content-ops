@@ -8,7 +8,7 @@ download_date: 2026-05-12
 **URL:** https://ziatile.com/products/unglazed-natural-2x6-zellige-tile
 
 **Meta title**: Unglazed Natural 2x6 Bejmat Zellige | Zia Tile
-**Meta description**: Explore Zia's Unglazed Natural 2x6 zellige. A Bejmat tile for kitchen backsplashes, bathroom walls, and shower installations.
+**Meta description**: Shop Zia's Unglazed Natural 2x6 Bejmat zellige. A matte, unglazed Moroccan clay tile for kitchen backsplashes, bathroom walls, shower walls, and floors in non-freeze/thaw climates.
 
 **Keywords:** Unglazed natural zellige, Unglazed zellige tile, bejmat tile
 
@@ -49,25 +49,26 @@ Zellige tile installation is labor-intensive, and each tile requires individual 
 ### Inherent Variation
 
   - Our Unglazed Natural 2x6 is an unglazed zellige tile with moving tones across the installation.
-  - Each handcrafted bejmat tile remains wholly unique, and this innate variation defines the line's charm.
+  - Each handcrafted bejmat tile remains wholly unique, and this innate variation defines the line's character.
   - Expect natural variation in color, shape, and thickness across the layout, alongside characteristic chips, pits, and crazing.
 
 ### Preparation and Curation
 
-  - Mix the contents of each box in your shipment before beginning your project to distribute tonal and surface variation evenly across the full layout.
+  - Before installation, open and mix the contents of each box to distribute tonal and surface variation evenly across the full layout.
   - Arrange a full dry layout before installation to establish balance between color flow, edge variation, and directional alignment of the Bejmat format.
-  - Disperse any chips, pits, and color variation evenly across the layout rather than clustering them in isolated areas.
+  - Disperse any chips, pits, and crazing evenly across the layout rather than clustering them in isolated areas.
   - We suggest a 15-20% overage on all tile orders. For a more uniform look, we recommend 25% overage.
   - Unlike glazed zellige, Unglazed Natural should not be soaked in water before installation. Keep tiles dry until setting.
 
 ### Installation and Finishing
 
   - Installers must always wear protective face and eye coverings when working with zellige, thinset, sealants, and grout in accordance with California Prop 65.
-  - While traditional trim and edge pieces do not exist for zellige, we recommend bringing the drywall flush with the finished surface of the tile or finishing your project with mitered edges or Schluter strips.
+  - While traditional trim and edge pieces do not exist for zellige, bring the drywall flush with the finished surface of the tile or finish the edge with mitered corners or Schluter strips.
   - Seal Unglazed Natural 2x6 with 511 Porous Plus before grouting to protect the clay body from grout staining. This is a required step for this colorway.
   - For interior applications, apply Fila Matte Wax as a final coat after grouting. For exterior applications, apply a second coat of 511 Porous Plus in place of wax, as UV exposure causes wax to discolor over time.
   - Use Mapei Flexcolor CQ grout for Unglazed Natural, rather than the Ultracolor Plus FA used for glazed zellige.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - Always seal Unglazed Natural 2x6 according to the Zia Tile Installation Guide, whether in dry spaces or in areas exposed to moisture, such as showers.
+  - Reach out to the team at info@ziatile.com or 310-844-1170 with any specific installation questions.
 
 
 
@@ -87,11 +88,11 @@ Our Unglazed Natural 2x6 Zellige tile supports a wide range of residential and c
   - **Exterior Floors – Non Freeze or Thaw:** Accommodates outdoor surfaces in climates without snow or ice.
   - **Interior Walls:** Suits a Bejmat-style kitchen backsplash, bathroom wall, or shower wall where the matte terracotta surface introduces warmth and texture.
   - **Exterior Walls:** Zellige tiles may be used on exterior walls in non-freeze/thaw climates.
-  - **Shower Walls + Floors:** Suited to shower walls, shower floors, and steam showers. Sealing before grouting and after installation is required. Slip resistance can be improved by sizing grout joints to a minimum of 1/8" and/or applying an anti-slip treatment after installation is complete.
+  - **Shower Walls + Floors:** Suited to shower walls, shower floors, and steam showers. Sealing before grouting and after installation is required. Slip resistance can be increased by sizing grout joints to a minimum of 1/8" and/or applying an anti-slip treatment after installation.
   - **Pools + Spas:** Not suitable for pool or spa applications. The unglazed clay body is not approved for continuous submersion.
   - **Fireplace Surround:** Creates a decorative fireplace surround; not for use inside the firebox.
   - **Radiant Heating Compatible:** Supports all radiant-heating and heated-floor elements.
-  - **Sealing Required:** Sealing is required before grouting using 511 Porous Plus, and again after grouting with Fila Matte Wax indoors or a second coat of 511 Porous Plus outdoors. Refer to the Zellige Installation Guide for detailed instructions.
+  - **Sealing Required:** Always seal Unglazed Natural 2x6 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
 ### Commercial Usage
 
@@ -101,11 +102,11 @@ Our Unglazed Natural 2x6 Zellige tile supports a wide range of residential and c
   - **Exterior Floors – Non Freeze or Thaw:** Integrates into exterior commercial floors in climates without snow or ice.
   - **Interior Walls:** Establishes a grounded backdrop for commercial kitchen, restaurant, and hospitality wall features where the unglazed terracotta palette introduces an earthy, handcrafted tone.
   - **Exterior Walls:** Zellige tiles may be used on exterior commercial walls in non-freeze/thaw climates.
-  - **Shower Walls + Floors:** Suited to commercial shower walls, shower floors, and steam showers. Sealing before grouting and after installation is required. Slip resistance can be improved by sizing grout joints to a minimum of 1/8" and/or applying an anti-slip treatment after installation is complete.
+  - **Shower Walls + Floors:** Suited to commercial shower walls, shower floors, and steam showers. Sealing before grouting and after installation is required. Slip resistance can be increased by sizing grout joints to a minimum of 1/8" and/or applying an anti-slip treatment after installation.
   - **Pools + Spas:** Not suitable for pool or spa applications.
   - **Fireplace Surround:** Serves as a decorative surround in commercial lobbies; not for use inside a firebox.
   - **Radiant Heating Compatible:** Works with commercial radiant heating systems.
-  - **Sealing Required:** Sealing is required before grouting using 511 Porous Plus, and again after grouting with Fila Matte Wax indoors or a second coat of 511 Porous Plus outdoors. Refer to the Zellige Installation Guide for detailed instructions.
+  - **Sealing Required:** Always seal Unglazed Natural 2x6 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
 
 
@@ -132,15 +133,15 @@ These tiles remain unglazed, leaving the clay body exposed. Each piece is fired 
 ### Full Orders
 
   - Full orders ship throughout the US and Canada via LTL carrier with curbside pallet delivery.
-  - All tiles in your order ship together once everything is in stock.
-  - Your LTL carrier will provide an estimated delivery range and contact you to confirm a delivery window once the shipment reaches their local terminal.
-  - We deliver to almost any location around the world. Clients in Alaska, Hawaii, Canada, or international locations should contact our team for a custom shipping quote.
+  - All tiles ship together once everything is in stock.
+  - The LTL carrier will provide an estimated delivery range and confirm a delivery window once the shipment reaches their local terminal.
+  - We deliver to almost any location around the world. Clients in Alaska, Hawaii, Canada, or international locations should email our team at info@ziatile.com for a custom shipping quote.
 
 ### Warehouse Pickup & Support
 
   - We offer free full-order pickup at our Los Angeles area warehouse to help local customers save on shipping costs.
-  - We will contact you once your order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
-  - For additional questions regarding your Unglazed Natural zellige order, please reach out to us at <info@ziatile.com>.
+  - The team will be in touch once the order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
+  - For additional questions regarding an Unglazed Natural zellige order, reach out at info@ziatile.com or 310-844-1170.
 
 
 

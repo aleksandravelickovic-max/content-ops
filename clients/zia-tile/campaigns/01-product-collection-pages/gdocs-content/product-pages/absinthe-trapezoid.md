@@ -23,13 +23,13 @@ download_date: 2026-05-12
 
 Zia's Absinthe Trapezoid zellige reflects centuries of craftsmanship. While artisans historically installed these tiles in mosaics featuring decorative geometric and floral shapes within elaborately designed palaces, our curated selection includes a wide spectrum of colors, shapes, and sizes for homes and commercial spaces around the globe. The Absinthe Trapezoid brings that heritage into a geometric format with an aqua-hued glaze that shifts between soft mint and deeper, water-toned greens depending on light conditions across the installation.
 
-Our zellige tiles include inherent variation in size, color, and tone. Each tile features chips, pits, and crazing, characteristics innate to this handcrafted Moroccan art form. The images shown represent the tile's general appearance and may not capture the full range of dynamic tones present in a complete order.
+Our zellige tiles include inherent variation in size, color, and tone. Each tile features chips, pits, and crazing, characteristics innate to this handcrafted Moroccan art form. The images shown represent the tile's general appearance and may not capture the full range of dynamic glazes present in a complete order.
 
 \[INSERT IMAGE: SIZE/THICKNESS\]
 
 ## Details 
 
-We recommend a 15-20% overage for each project. This additional quantity allows you or your installer to properly curate the installation and account for any tiles with color variation or characteristic chips and pits outside of your preferred range. For a more uniform look, we recommend 25% overage.
+We recommend a 15-20% overage for each project. This additional quantity allows the installer to properly curate the installation and account for any tiles with color variation or characteristic chips, pits, and crazing outside of the preferred range. For a more uniform look, we recommend 25% overage.
 
 Zellige installation is a hands-on process. Thickness, edge, and size vary from piece to piece, and the trapezoid geometry requires precise orientation across the field. Allow two to three times the installation window of a standard ceramic tile, and use 1/16" spacers where needed to regulate alignment across the irregular edges inherent to the format.
 
@@ -40,24 +40,27 @@ Zellige installation is a hands-on process. Thickness, edge, and size vary from 
 ### Inherent Variation
 
   - Our Absinthe Trapezoid is an aqua-hued zellige with a semi-transparent glaze that shifts between soft mint and deeper, water-toned greens depending on light conditions.
-  - Each handcrafted blue-green zellige tile remains wholly unique, and this innate variation defines the line's charm.
+  - Each handcrafted blue-green zellige tile remains wholly unique, and this innate variation defines the line's character.
   - Expect natural variation in color, shape, and thickness across the layout, alongside characteristic chips, pits, and crazing.
 
 ### Preparation and Curation
 
-  - Mix the contents of each box in your shipment before beginning your project to distribute tonal and surface variation evenly across the full layout.
+  - Mix the contents of each box in the shipment before beginning the project to distribute tonal and surface variation evenly across the full layout.
   - Lay out the full installation area in advance to control flow, contrast, and placement across the trapezoid geometry. The specialty shape depends on precise orientation to resolve correctly across the field.
-  - Disperse any chips, pits, and color variation evenly across the layout rather than clustering them in isolated areas.
+  - Disperse any chips, pits, and crazing evenly across the layout rather than clustering them in isolated areas.
   - We suggest a 15-20% overage on all tile orders. For a more uniform look, we recommend 25% overage.
 
 ### Installation and Finishing
 
   - Installers must always wear protective face and eye coverings when working with zellige, thinset, sealants, and grout in accordance with California Prop 65.
-  - While traditional trim and edge pieces do not exist for zellige, we recommend bringing the drywall flush with the finished surface of the tile or finishing your project with mitered edges or Schluter strips.
-  - Always seal Absinthe Trapezoid zellige in areas exposed to moisture, such as pools, spas, and showers.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - While traditional trim and edge pieces do not exist for zellige, we recommend bringing the drywall flush with the finished surface of the tile or finishing the project with mitered edges or Schluter strips.
+  - Always seal Absinthe Trapezoid zellige according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
+  - Reach out to our team directly at info@ziatile.com or 310-844-1170 with any specific installation questions.
 
-*⚠ WARNING: Cancer and Reproductive Harm.*[ *Learn more about Proposition 65 Warnings.*](https://www.ziatile.com/proposition-65-warnings)
+
+
+
+*⚠ WARNING: Cancer and Reproductive Harm.* [*Learn more about Proposition 65 Warnings.*](https://www.ziatile.com/proposition-65-warnings)
 
 ## Tile Usage
 
@@ -65,31 +68,31 @@ Our Absinthe Trapezoid zellige brings its aqua-hued glaze and geometric format t
 
 ### Residential Usage
 
-  - **Interior Floors -- High Traffic:** Serves high-traffic areas such as kitchens, primary bathrooms, and entryways. If installed on a flooring surface in a wet area, slip resistance can be increased by increasing grout joint size to a minimum of 1/8" and/or applying an anti-slip treatment after installation is complete.
+  - **Interior Floors -- High Traffic:** Serves high-traffic areas such as kitchens, primary bathrooms, and entryways.
   - **Interior Floors -- Low Traffic:** Performs well in lower-traffic spaces such as guest bathrooms and bedrooms, where the trapezoid pattern reads as a handcrafted feature rather than a high-wear surface.
   - **Exterior Floors -- Freeze or Thaw:** Zellige is not suitable for an outdoor installation in a freeze/thaw climate.
   - **Exterior Floors -- Non Freeze or Thaw:** Accommodates outdoor surfaces that do not experience snow or ice.
   - **Interior Walls:** Defines the aesthetic for kitchen backsplashes, bathroom walls, and feature surfaces where the aqua glaze and geometric format lead the design direction of the space.
   - **Exterior Walls:** Zellige tiles may be used on exterior walls in non-freeze/thaw climates.
-  - **Shower Walls + Floors:** Enhances shower walls, shower floors, and steam showers. We recommend sealing the tile for this use. Slip resistance can be increased by increasing grout joint size to a minimum of 1/8" and/or applying an anti-slip treatment after installation is complete.
-  - **Pools + Spas:** Functions reliably in saltwater and chlorine environments. We recommend sealing the tile for this use.
+  - **Shower Walls + Floors:** Enhances shower walls, shower floors, and steam showers. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete. Always seal Absinthe Trapezoid zellige according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
+  - **Pools + Spas:** Functions reliably in saltwater and chlorine environments. Always seal Absinthe Trapezoid zellige according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
   - **Fireplace Surround:** Creates a decorative fireplace surround, though these tiles are not for use inside the firebox.
   - **Radiant Heating Compatible:** Supports all radiant heating and heated floor elements.
-  - **Sealing Required:** We recommend sealing our Absinthe Trapezoid when installing in moisture-exposed areas such as pools, spas, and showers. Please consult the Zellige Installation Guide for detailed instructions.
+  - **Sealing Required:** Always seal Absinthe Trapezoid zellige according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
 ### Commercial Usage
 
-  - **Interior Floors -- High Traffic:** Offers a durable surface for high-traffic commercial spaces such as restaurant kitchens, hospitality entryways, and retail circulation zones. If installed on a flooring surface in a wet area, slip resistance can be increased by increasing grout joint size to a minimum of 1/8" and/or applying an anti-slip treatment after installation is complete.
+  - **Interior Floors -- High Traffic:** Offers a durable surface for high-traffic commercial spaces such as restaurant kitchens, hospitality entryways, and retail circulation zones.
   - **Interior Floors -- Low Traffic:** Suits lower-traffic commercial interiors where the trapezoid geometry introduces a distinct architectural layer.
   - **Exterior Floors -- Freeze or Thaw:** Zellige is not suitable for an outdoor installation in a freeze/thaw climate.
   - **Exterior Floors -- Non Freeze or Thaw:** Integrates into exterior floors in climates without snow or ice.
   - **Interior Walls:** Suited to commercial kitchens, hospitality interiors, and retail wall installations where the aqua glaze and geometric format establish a signature surface.
   - **Exterior Walls:** Zellige tiles may be used on exterior walls in non-freeze/thaw climates.
-  - **Shower Walls + Floors:** Suited to commercial shower and steam shower installations. We recommend sealing the tile for use in any wet spaces. Slip resistance can be improved by increasing grout joint size to a minimum of 1/8" and/or applying an anti-slip treatment after installation is complete.
-  - **Pools + Spas:** Maintains integrity in commercial saltwater or chlorine pools. We recommend sealing the tile for this use.
+  - **Shower Walls + Floors:** Suited to commercial shower and steam shower installations. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete. We recommend sealing the tile for use in any wet spaces. Slip resistance can be improved by increasing grout joint size to a minimum of 1/8" and/or applying an anti-slip treatment after installation is complete.
+  - **Pools + Spas:** Maintains integrity in commercial saltwater or chlorine pools. Always seal Absinthe Trapezoid zellige according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
   - **Fireplace Surround:** Serves as a decorative commercial fireplace surround, though it is not for use inside a firebox.
   - **Radiant Heating Compatible:** Works with commercial radiant heating systems.
-  - **Sealing Required:** We recommend sealing our Absinthe Trapezoid when installing in moisture-exposed areas such as pools, spas, and showers. Please consult the Zellige Installation Guide for detailed instructions.
+  - **Sealing Required:** Always seal Absinthe Trapezoid zellige according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
 ## How It's Made
 
@@ -127,8 +130,8 @@ The final stage is the kiln. Tiles are fired in earthen kilns where heat moves u
 ### Warehouse Pickup & Support
 
   - We offer free full order pickup at our Los Angeles area warehouse to help local customers save on shipping costs.
-  - Our team will reach out when your order is ready so you may schedule a time for your pickup appointment. Order pickups are available only with a confirmed appointment.
-  - For additional questions regarding your Absinthe Trapezoid order, please reach out to us at <info@ziatile.com>.
+  - For additional questions regarding the Absinthe Trapezoid zellige order, please reach out to us at info@ziatile.com or 310-844-1170.
+  - Our team will reach out when the order is ready so to schedule a time for a pickup appointment. Order pickups are available only with a confirmed appointment.
 
   
 
@@ -151,7 +154,7 @@ Yes, Absinthe Trapezoid can be used in a kitchen, particularly as a backsplash w
 
 ### What color grout is best for the Absinthe Zellige tile?
 
-The best grout color for the Absinthe Zellige tile depends on how you want the installation to read. A tonal grout that aligns with the green glaze creates a continuous surface, allowing the variation within each tile to lead. A contrasting grout, such as a warm neutral or soft beige, emphasizes the trapezoid shape and defines the Zellige tile pattern more clearly. Grout selection also affects how chips, pits, and surface variation integrate into the finished layout.
+The best grout color for the Absinthe Zellige tile depends on how you want the installation to read. A tonal grout that aligns with the green glaze creates a continuous surface, allowing the variation within each tile to lead. A contrasting grout, such as a warm neutral or soft beige, emphasizes the trapezoid shape and defines the Zellige tile pattern more clearly. Grout selection also affects how chips, pits, and crazing integrate into the finished layout.
 
 ### What floors go with the Absinthe Zellige tile?
 

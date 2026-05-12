@@ -48,20 +48,20 @@ We recommend 15-20% overage to properly curate your installation and account for
 
   - Zia's Bungalow 12x12 presents a neutral ivory base with earth-toned aggregate whose size, distribution, and tone vary across each tile.
   - Each tile is wholly unique, and the variation in aggregate placement and surface texture defines the character of a terrazzo installation.
-  - You should expect natural variation in color, thickness, and surface texture as inherent qualities of the handmade cement-based process.
+  - Natural variation in color, thickness, and surface texture is inherent to the handmade cement-based process and should be expected across the installation.
 
 ### Preparation and Curation
 
-  - Mix each box in your shipment before installation to ensure an even distribution of aggregate and color across the surface.
+  - Mix tiles from all boxes before installation to ensure an even distribution of aggregate and color across the surface.
   - Lay out the tiles in advance to establish a balanced composition before setting begins.
-  - We recommend 15-20% overage to curate your installation and account for any cuts needed properly.
+  - We recommend 15-20% overage to curate the installation and account for any cuts needed.
 
 ### Installation and Finishing
 
   - Installers must always wear protective face and eye coverings when working with terrazzo, mortar, sealants, and grout in accordance with California Prop 65.
   - We recommend installing floor-to-ceiling or bringing the drywall flush with the finished tile surface. For exposed edges, miter at 45 degrees or use Schluter strips if trim is required.
   - Sealing is required to protect the surface, particularly in showers and other moisture-exposed areas.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - For installation questions, contact our team at info@ziatile.com or 310-844-1170.
 
 
 
@@ -81,11 +81,11 @@ Zia's Bungalow 12x12 terrazzo suits both residential and commercial projects. Th
   - **Exterior Floors – Non Freeze or Thaw:** May be installed on exterior surfaces in climates without freezing conditions when properly sealed.
   - **Interior Walls:** Suited to kitchen backsplashes, bathroom walls, and feature surfaces where the aggregate composition creates a structured, considered surface.
   - **Exterior Walls:** Suitable for exterior wall applications in non-freeze/thaw climates.
-  - **Shower Walls + Floors:** Suited to shower walls, shower floors, and steam showers. Sealing is required for this use. Slip resistance can be increased by increasing grout joint size to a minimum of 1/8" and/or applying an anti-slip treatment after installation is complete.
+  - **Shower Walls + Floors:** Suited to shower walls, shower floors, and steam showers. Sealing is required for this use.
   - **Pools + Spas:** Not suitable for pools or spas.
   - **Fireplace Surround:** Suited to decorative fireplace surrounds. These tiles are not for use inside the firebox.
   - **Radiant Heating Compatible:** Compatible with radiant heating systems and heated floor elements.
-  - **Sealing Required:** Sealing is required for shower installations and all moisture-exposed areas. Refer to the Zia Tile Installation Guide for recommended sealers and application instructions.
+  - **Sealing Required:** Sealing is required for all installations, including dry spaces. Always seal Bungalow 12x12 according to the installation instructions, whether in dry spaces or in areas exposed to moisture, such as showers. Refer to the Zia Tile Installation Guide for recommended sealers and application instructions.
 
 ### Commercial Usage
 
@@ -95,17 +95,17 @@ Zia's Bungalow 12x12 terrazzo suits both residential and commercial projects. Th
   - **Exterior Floors – Non Freeze or Thaw:** May be installed on exterior commercial surfaces in mild climates when properly sealed.
   - **Interior Walls:** Suited to commercial kitchen walls, restrooms, and feature installations.
   - **Exterior Walls:** Suitable for commercial exterior wall applications in non-freeze/thaw climates.
-  - **Shower Walls + Floors:** Suited to commercial shower walls, shower floors, and steam showers. Sealing is required for this use. Slip resistance can be increased by increasing grout joint size to a minimum of 1/8" and/or applying an anti-slip treatment after installation is complete.
+  - **Shower Walls + Floors:** Suited to commercial shower walls, shower floors, and steam showers. Sealing is required for this use.
   - **Pools + Spas:** Not suitable for pools or spas.
   - **Fireplace Surround:** Suited to decorative fireplace surrounds in commercial settings. Not for use inside a firebox.
   - **Radiant Heating Compatible:** Compatible with commercial radiant heating systems.
-  - **Sealing Required:** Sealing is required for shower installations and all moisture-exposed areas. Refer to the Zia Tile Installation Guide for recommended sealers and application instructions.
+  - **Sealing Required:** Sealing is required for all installations, including dry spaces. Always seal Bungalow 12x12 according to the installation instructions, whether in dry spaces or in areas exposed to moisture, such as showers. Refer to the Zia Tile Installation Guide for recommended sealers and application instructions.
 
 
 
 ## How It's Made — \[ACCORDION\]
 
-Cement terrazzo tiles are made by hand, one at a time. The process begins with mineral pigments applied individually into a handmade brass mold. Each color is placed separately, by hand, before the aggregate mix and cement base are added.
+Cement terrazzo tiles are made by hand, one at a time. The process begins with crushed marble and stone aggregates combined with mineral pigments placed into a steel mold. Each component is added separately, by hand, before the cement base is introduced.
 
 
 
@@ -131,14 +131,14 @@ Once the press cycle is complete, tiles cure on drying racks before the surface 
 
   - All standard full orders ship throughout the US and Canada using an LTL carrier service with curbside pallet delivery.
   - We will ship the entire order together once all tiles are in stock.
-  - LTL carriers provide estimated delivery ranges and will contact you to schedule a specific delivery window once the shipment arrives at their local terminal.
+  - LTL carriers provide estimated delivery ranges and will contact the recipient to schedule a specific delivery window once the shipment arrives at their local terminal.
   - Clients in Alaska, Hawaii, Canada, or international locations should email our team for a custom shipping quote.
 
 ### Warehouse Pickup & Support
 
   - We offer free full order pickup at our Los Angeles area warehouse.
   - Our team will contact you when your order is ready so you may schedule your pickup. Warehouse pickup is available by confirmed appointment only.
-  - For additional questions regarding your Bungalow 12x12 Terrazzo order, please reach out to us at info@ziatile.com.
+  - For additional questions regarding the Bungalow 12x12 Terrazzo order, contact our team at info@ziatile.com or 310-844-1170.
 
 
 

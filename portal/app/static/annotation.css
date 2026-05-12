@@ -1,0 +1,104 @@
+/* ── Annotation & Text-Anchored Comments ──────────────────────── */
+
+/* Annotation mode cursor */
+body.annotation-mode .rendered-content { cursor: crosshair; }
+body.annotation-mode .rendered-content ::selection {
+  background: rgba(37, 99, 235, 0.25);
+}
+
+/* Banner shown when annotation mode is on */
+.ann-banner {
+  display: none; padding: 8px 16px; background: #dbeafe; color: #2563eb;
+  font-size: 13px; font-weight: 500; text-align: center;
+  border: 1px solid #bfdbfe; border-radius: 6px; margin-bottom: 12px;
+}
+.ann-banner.visible { display: block; }
+
+/* Toggle button */
+.ann-toggle {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 6px 14px; border: 1px solid #e2e4e8; border-radius: 6px;
+  background: #fff; font-size: 13px; cursor: pointer; color: #6b7280;
+  transition: all 0.15s; white-space: nowrap;
+}
+.ann-toggle:hover { background: #f3f4f6; color: #1a1a1a; }
+.ann-toggle.active {
+  background: #2563eb; color: #fff; border-color: #2563eb;
+}
+
+/* Inline highlights on anchored text */
+.ann-highlight {
+  background: rgba(251, 191, 36, 0.22);
+  border-bottom: 2px solid #f59e0b;
+  cursor: pointer; position: relative;
+  border-radius: 2px; transition: background 0.15s;
+}
+.ann-highlight:hover { background: rgba(251, 191, 36, 0.40); }
+.ann-highlight.resolved {
+  background: rgba(5, 150, 105, 0.12);
+  border-bottom-color: #059669;
+}
+.ann-highlight.resolved:hover { background: rgba(5, 150, 105, 0.25); }
+
+.ann-highlight .ann-num {
+  font-size: 9px; font-weight: 700; color: #fff;
+  background: #f59e0b; border-radius: 50%;
+  width: 15px; height: 15px; display: inline-flex;
+  align-items: center; justify-content: center;
+  margin-left: 2px; vertical-align: super; line-height: 1;
+}
+.ann-highlight.resolved .ann-num { background: #059669; }
+
+/* Selection tooltip */
+.ann-sel-tooltip {
+  position: absolute; z-index: 300;
+  background: #2563eb; color: #fff;
+  padding: 5px 12px; border-radius: 4px;
+  font-size: 12px; font-weight: 500; cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  white-space: nowrap; user-select: none;
+  transform: translateX(-50%);
+  animation: annFadeIn 0.12s ease;
+}
+.ann-sel-tooltip::after {
+  content: ''; position: absolute; bottom: -5px; left: 50%;
+  transform: translateX(-50%);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #2563eb;
+}
+
+@keyframes annFadeIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(4px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* Selection quote shown in the comment form */
+.selection-quote {
+  display: none; padding: 8px 12px; margin-bottom: 10px;
+  background: #f0f9ff; border-left: 3px solid #2563eb;
+  border-radius: 0 4px 4px 0; position: relative;
+  font-size: 13px; color: #374151; font-style: italic;
+  line-height: 1.4; max-height: 80px; overflow: hidden;
+}
+.selection-quote.visible { display: block; }
+.selection-quote .clear-sel {
+  position: absolute; top: 4px; right: 6px;
+  background: none; border: none; font-size: 16px;
+  cursor: pointer; color: #9ca3af; line-height: 1;
+}
+.selection-quote .clear-sel:hover { color: #374151; }
+
+/* Highlight flash when scrolling to annotation */
+.ann-flash {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+  transition: outline-color 1.5s ease;
+}
+
+/* Comment card highlight link */
+.comment .goto-highlight {
+  font-size: 11px; color: #2563eb; cursor: pointer;
+  background: none; border: none; padding: 0; margin-left: 8px;
+}
+.comment .goto-highlight:hover { text-decoration: underline; }

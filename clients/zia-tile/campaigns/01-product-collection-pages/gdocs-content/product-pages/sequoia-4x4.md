@@ -35,12 +35,12 @@ Zia traveled to Japan to source the world's most refined ceramic tile, and our S
 
   
 
-Each Sequoia 4x4 includes low to moderate variation in size, color, tone, and surface texture, which are natural characteristics of handcrafted ceramic tile and should be expected across your order. Subtle crazing may also occur as a result of the firing process, which is consistent with Japanese ceramic production standards and does not affect the structural integrity of the tile.
+Each Sequoia 4x4 includes low to moderate variation in size, color, tone, and surface texture, which are natural characteristics of handcrafted ceramic tile and should be expected across the order. Subtle crazing may also occur as a result of the firing process, which is consistent with Japanese ceramic production standards and does not affect the structural integrity of the tile.
 
   
   
 
-The images shown represent a sample of this tile and may not display the full range of tonal variation present in a complete order. We recommend 10-15% overage to curate your installation and account for any cuts needed.
+The images shown represent a sample of this tile and may not display the full range of tonal variation present in a complete order. We recommend 10-15% overage to curate the installation and account for any cuts needed.
 
   
 
@@ -59,7 +59,7 @@ The images shown represent a sample of this tile and may not display the full ra
   - Blend tiles from multiple boxes before installation to distribute tonal shifts evenly across the layout.
   - Set out a full dry layout before committing to placement. For continuous wall installations and backsplashes, assess how the tone flows across the field before setting begins.
   - Plan for 10-15% overage to accommodate cuts and layout adjustments.
-  - Unlike matte ceramics, satin finish tiles do not require pre-grout sealing as a grout release. Standard grout application procedures apply.
+  - Satin finish ceramics must be sealed before grouting using 511 Porous Plus as a grout release to prevent haze and staining. Allow the sealer to cure fully before proceeding to grouting.
 
 #### Installation and Finishing
 
@@ -67,7 +67,8 @@ The images shown represent a sample of this tile and may not display the full ra
   - For finishing, ceramic tiles can be mitered on the edge or completed with Schluter strips.
   - Bring drywall flush with the finished tile surface to preserve clean architectural transitions at edges.
   - For shower installations, confirm the waterproof membrane is in place before setting tile, and follow all sealing protocols during and after installation.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - For installation questions, contact our team at info@ziatile.com or 310-844-1170.
+  - Always seal Sequoia 4x4 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
   
 
@@ -89,7 +90,7 @@ Our Sequoia 4x4 satin finish ceramic suits both residential and commercial proje
   - **Pools + Spas:** Suitable for pools and spas, including saltwater and chlorine environments. Sealing is recommended for this use.
   - **Fireplace Surround:** Suited to fireplace surrounds. These tiles are not for use inside the firebox.
   - **Radiant Heating Compatible:** Compatible with radiant heating systems.
-  - **Sealing Required:** Satin finish ceramics do not require pre-grout sealing as a grout release. For wet applications, seal tile and grout lines after grouting to protect against continuous moisture exposure. Reseal every 1-2 years.
+  - **Sealing Required:** Satin finish ceramics must be sealed before grouting using 511 Porous Plus as a grout release. After grouting, reseal every 1-2 years. Refer to the Zia Tile Ceramics Installation Guide for recommended sealers.
 
 ### Commercial Usage
 
@@ -103,7 +104,7 @@ Our Sequoia 4x4 satin finish ceramic suits both residential and commercial proje
   - **Pools + Spas:** Suitable for commercial saltwater and chlorine pools and spas. Sealing is recommended for this use.
   - **Fireplace Surround:** Suited to decorative fireplace surrounds in lobbies and hospitality spaces. Not for use inside a firebox.
   - **Radiant Heating Compatible:** Compatible with commercial radiant heating systems.
-  - **Sealing Required:** Satin finish ceramics do not require pre-grout sealing as a grout release. For wet applications, seal tile and grout lines after grouting to protect against continuous moisture exposure. Reseal every 1-2 years.
+  - **Sealing Required:** Satin finish ceramics must be sealed before grouting using 511 Porous Plus as a grout release. After grouting, reseal every 1-2 years. Refer to the Zia Tile Ceramics Installation Guide for recommended sealers.
 
   
 
@@ -134,15 +135,15 @@ Subtle shifts in heat exposure across the kiln produce minor tonal differences f
 ### Full Orders
 
   - Full orders ship throughout the US and Canada via LTL carrier with curbside pallet delivery.
-  - All tiles in your order ship together once everything is in stock.
+  - All tiles ship together once everything is in stock.
   - Your LTL carrier will provide an estimated delivery range and contact you to confirm a delivery window once the shipment reaches their local terminal.
   - We deliver to almost any location around the world. Clients in Alaska, Hawaii, Canada, or international locations should contact our team for a custom shipping quote.
 
 ### Warehouse Pickup & Support
 
   - We offer free full-order pickup at our Los Angeles area warehouse to help local customers save on shipping costs.
-  - We will contact you once your order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
-  - For additional questions regarding your Sequoia 4x4 order, please reach out to us at info@ziatile.com.
+  - Our team will contact you when the order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
+  - For additional questions, contact our team at info@ziatile.com or 310-844-1170.
 
   
 
@@ -168,8 +169,8 @@ Ceramic tile is a long-term architectural material that can last 50 years or mor
 
 ### How does Sequoia compare to matte and glossy ceramic tiles?
 
-Sequoia's satin finish sits between matte and gloss in both appearance and performance. Matte absorbs light, reads as more restrained, and requires pre-grout sealing to prevent staining. Gloss reflects more light, amplifies color depth, and can magnify water spots and everyday wear. Satin produces a soft luster that reads as composed without the maintenance demands of matte or the high reflectivity of gloss, which makes Sequoia a versatile choice for both wall and floor applications.
+Sequoia's satin finish sits between matte and gloss in both appearance and performance. Like matte ceramics, satin requires pre-grout sealing with 511 Porous Plus as a grout release to prevent haze and staining — a step glossy finishes do not require. Gloss reflects more light, amplifies color depth, and can magnify water spots and everyday wear. Satin produces a soft luster that reads as composed without the high reflectivity of gloss, which makes Sequoia a versatile choice for both wall and floor applications.
 
-### Can I mix Sequoia 4x4 with other ceramic colors in your collection?
+### Can Sequoia 4x4 be mixed with other ceramic colors in the collection?
 
-Yes, you can mix Sequoia 4x4 with other colors and finishes in Zia's ceramic collection. Each tile is produced using the same Japanese production methods and shares consistent thickness, format, and surface character across the range. Sequoia pairs particularly well with warm neutrals and softer whites in the collection, where the tranquil green reads as a considered anchor against a quieter surrounding palette.
+Sequoia 4x4 mixes well with other colors and finishes in Zia's ceramic collection. Each tile is produced using the same Japanese production methods and shares consistent thickness, format, and surface character across the range. Sequoia pairs particularly well with warm neutrals and softer whites in the collection, where the tranquil green reads as a considered anchor against a quieter surrounding palette.

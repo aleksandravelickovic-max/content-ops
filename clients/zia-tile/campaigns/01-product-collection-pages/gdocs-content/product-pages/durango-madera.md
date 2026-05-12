@@ -8,7 +8,7 @@ download_date: 2026-05-12
 **URL:** https://ziatile.com/products/durango-madera
 
 **Meta title**: Durango + Madera Terra Cotta Tile | Zia Tile
-**Meta description**: Explore Zia Tile Durango + Madera Cotto, a handcrafted Mexican terra cotta tile defined by rich earthy tones and natural variation
+**Meta description**: Shop Zia's Durango + Madera Cotto. A handcrafted Mexican terra cotta specialty shape tile in a rust-brown palette for kitchen floors, outdoor patios, and feature walls in any climate.
 
 **Keywords:** Durango + Madera cotto, brown terra cotta tile, Specialty shape cotto tile
 
@@ -24,21 +24,21 @@ Zia's Durango + Madera is a handmade terra cotta tile produced in San Miguel de 
 
 
 
-Each Durango + Madera tile includes inherent variation in tone, shape, and surface texture, along with the soft, irregular edges that define unglazed cotto. The images shown represent the tile's general appearance and may not capture the full range of dynamic tones present in a complete order.
+Each Durango + Madera tile includes inherent variation in tone, shape, edge profile, and thickness, along with the soft, irregular edges that define unglazed cotto. The images shown represent the tile's general appearance and may not capture the full range of dynamic tones present in a complete order.
 
 
 
-\[INSERT IMAGE: SIZE/THICKNESS\]
+[INSERT IMAGE: SIZE/THICKNESS]
 
 ## Details
 
 
 
-We recommend a 15% overage to curate the installation and account for any cuts needed. Because the Durango is a specialty shape, the additional cuts required during layout often warrant increasing overage beyond the standard minimum; consider 20% or more before placing your order.
+We recommend a 15–20% overage to account for curation and cuts. Because the Durango is a specialty shape, the additional cuts required during layout often warrant increasing overage to 20% or more.
 
 
 
-Cotto installation requires a skilled installer experienced with porous clay materials and specialty shape layouts. Each Durango piece varies in thickness, edge profile, and tone, and the interlocking geometry depends on consistent orientation across the field. Plan the installation around a full dry layout, and protect the surface with sealing before and after grouting.
+Cotto installation requires a skilled installer experienced with porous clay materials and specialty shape layouts. Each Durango piece varies in tone, shape, edge profile, and thickness, and the interlocking geometry depends on consistent orientation across the field. Plan the installation around a full dry layout, and protect the surface with sealing before and after grouting.
 
 
 
@@ -47,23 +47,24 @@ Cotto installation requires a skilled installer experienced with porous clay mat
 ### Color and Surface
 
   - Our Durango + Madera is a rust-brown terra cotta tile with a matte, unglazed surface that grounds the Durango specialty shape in the earthy tonal range of natural Mexican clay.
-  - Each handmade brown terra cotta tile remains wholly unique, and this innate variation defines the line's charm.
-  - Expect natural variation in tone, shape, thickness, and surface texture across the layout, along with the soft, irregular edges inherent to unglazed cotto. Chips, pits, and crazing may appear as part of the firing process.
+  - Each handmade brown terra cotta tile remains wholly unique, and this innate variation defines the line's character.
+  - Expect natural variation in tone, shape, edge profile, and thickness across the layout, along with the soft, irregular edges inherent to unglazed cotto.
 
 ### Preparation and Curation
 
-  - Mix the contents of each box in your shipment before setting to distribute tonal and surface variation evenly across the installation.
+  - Before installation, open and mix the contents of each box to distribute tonal and surface variation evenly across the layout.
   - Complete a full dry layout before committing to placement. The Durango specialty shape only resolves correctly when each piece is oriented as intended, so confirm the alignment of the interlocking geometry before setting begins.
   - Disperse any tonal and surface variation evenly across the layout rather than allowing darker or lighter pieces to cluster in isolated areas.
-  - We suggest a 15% overage on all cotto orders. For the Durango specialty shape, the additional cuts required warrant increasing overage to 20% or more.
+  - We suggest a 15–20% overage on all cotto orders to account for curation and cuts. For the Durango specialty shape, the additional cuts required warrant increasing overage to 20% or more.
 
 ### Installation and Finishing
 
   - All installers must wear protective face and eye coverings when working with cotto, thinset, sealants, and grout in accordance with California Prop 65.
   - For finishing, bring the drywall flush with the finished tile surface, miter exposed edges at 45 degrees, or complete the edge with Schluter strips.
   - Seal Durango + Madera with 511 Porous Plus before and after grouting. For interior applications, finish with Fila Matte Wax as a final coat. For exterior applications, apply a second coat of 511 Porous Plus in place of wax.
-  - Use 1/8" tile spacers and plan the layout carefully. The Durango geometry depends on precise orientation during the dry layout stage to resolve across the full field.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - Plan the layout carefully. The Durango geometry depends on precise orientation during the dry layout stage to resolve across the full field. Grout joints should be sized to a minimum of 1/8".
+  - Always seal Durango + Madera according to the Zia Tile Installation Guide, whether in dry spaces or in areas exposed to moisture, such as showers. Note that Madera Cotto is not suitable for pools or spas.
+  - Reach out to the team at info@ziatile.com or 310-844-1170 with any specific installation questions.
 
 
 
@@ -132,15 +133,15 @@ The tiles are fired in traditional kilns at high temperatures, where heat distri
 ### Full Orders
 
   - Full orders ship throughout the US and Canada via LTL carrier with curbside pallet delivery.
-  - All tiles in your order ship together once everything is in stock.
-  - Your LTL carrier will provide an estimated delivery range and contact you to confirm a delivery window once the shipment reaches their local terminal.
-  - We deliver to almost any location around the world. Clients in Alaska, Hawaii, Canada, or international locations should contact our team for a custom shipping quote.
+  - All tiles ship together once everything is in stock.
+  - The LTL carrier will provide an estimated delivery range and confirm a delivery window once the shipment reaches their local terminal.
+  - We deliver to almost any location around the world. Clients in Alaska, Hawaii, Canada, or international locations should email our team at info@ziatile.com for a custom shipping quote.
 
 ### Warehouse Pickup & Support
 
   - We offer free full-order pickup at our Los Angeles area warehouse to help local customers save on shipping costs.
-  - We will contact you once your order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
-  - For additional questions regarding your Durango + Madera order, please reach out to us at <info@ziatile.com>.
+  - The team will be in touch once the order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
+  - For additional questions regarding a Durango + Madera order, reach out at info@ziatile.com or 310-844-1170.
 
 
 
@@ -154,7 +155,7 @@ The tiles are fired in traditional kilns at high temperatures, where heat distri
 
 ### What is the Durango + Madera cotto made of?
 
-The Durango + Madera cotto is made from natural Mexican clay sourced near San Miguel de Allende, Mexico. The clay is refined, mixed with water, and hand-pressed into the Durango specialty mold before drying for one to two weeks. Each tile is then kiln-fired, and the heat variation and mineral interaction during firing produce the rust-brown tonal range and surface character of the finished tile. Chips, pits, and crazing develop during this process and are inherent to the material.
+The Durango + Madera cotto is made from natural Mexican clay sourced near San Miguel de Allende, Mexico. The clay is refined, mixed with water, and hand-pressed into the Durango specialty mold before drying for one to two weeks. Each tile is then kiln-fired, and the heat variation and mineral interaction during firing produce the rust-brown tonal range and surface character of the finished tile. Natural variation in tone, shape, edge profile, and thickness is inherent to the material.
 
 ### What paint colors pair well with Durango + Madera?
 
@@ -172,6 +173,6 @@ To clean terra cotta tile, use a pH-neutral cleaner with warm water and avoid ac
 
 The Durango specialty shape is a curved, sculptural format that interlocks with adjacent pieces to build an architectural composition across the surface. Because the geometry depends on consistent orientation, a full dry layout before installation is essential to confirm how the shape resolves across the field. The shape also requires more cuts than a standard square or rectangle, which is why increasing overage beyond the standard 15% is recommended for Durango orders.
 
-### Can I mix Durango + Madera with other cotto colorways?
+### Can Durango + Madera be mixed with other cotto colorways?
 
-Yes, you can mix Durango + Madera with other cotto colorways in Zia's collection. Each colorway is produced using the same clay body and firing process, so tiles share consistent surface character across the range. The rust-brown Madera works particularly well alongside lighter cotto colorways such as Blanco or the warmer traditional terra cotta tones, where the tonal contrast creates a layered composition across the sculptural Durango field.
+Durango + Madera can be mixed with other cotto colorways in the Zia collection. Each colorway is produced using the same clay body and firing process, so tiles share consistent surface character across the range. The rust-brown Madera works particularly well alongside lighter cotto colorways such as Blanco or the warmer classic tones, where the tonal contrast creates a layered composition across the sculptural Durango field.

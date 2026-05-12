@@ -24,7 +24,7 @@ Zia's Burnt Sugar zellige is the result of a centuries-old Moroccan tradition st
 
 
 
-Expect inherent variation in size, color, and tone, alongside the chips, pits, and crazing innate to all handmade Moroccan zellige. These features are what give the tile its perfectly imperfect look. Images shown reflect a sample of the tile and may not represent the full range of dynamic tones present across a complete order.
+Expect inherent variation in size, color, and tone, alongside the chips, pits, and crazing innate to all handmade Moroccan zellige. These features are what give the tile its perfectly imperfect look. Images shown reflect a sample of the tile and may not represent the full range of dynamic glazes present across a complete order.
 
 
 
@@ -34,11 +34,11 @@ Expect inherent variation in size, color, and tone, alongside the chips, pits, a
 
 **Order Details + Installation**
 
-A 15-20% overage is recommended on each Burnt Sugar order, giving you or your installer the material needed to curate the layout and account for tiles that fall outside your preferred range. Before installation begins, unpack and mix all boxes to plan the composition.
+A 15-20% overage is recommended on each Burnt Sugar order, giving the installer the material needed to curate the layout and account for tiles that fall outside the preferred range. Before installation begins, unpack and mix all boxes to plan the composition.
 
 
 
-Zellige tile installation is labor-intensive, often likened more to masonry than traditional tiling due to the irregular nature of the handmade material. Traditionally, zellige is installed edge-to-edge with minimal to no grout spacing; however, we recommend wedge spacers to adjust the spacing between irregular tiles to maintain a consistent layout and protect the tiles' edges. Plan for an installation 2-3 times longer than standard ceramic tile, accounting for extra time to sort, soak, arrange, and manually adjust each piece for size variations.
+Zellige tile installation is labor-intensive, often likened more to masonry than traditional tiling due to the irregular nature of the handmade material. Traditionally, zellige is installed edge-to-edge with minimal to no grout joints; however, we recommend wedge spacers to adjust the spacing between irregular tiles to maintain a consistent layout and protect the tiles' edges. Plan for an installation 2-3 times longer than standard ceramic tile, accounting for extra time to sort, soak, arrange, and manually adjust each piece for size variations.
 
 
 
@@ -46,23 +46,23 @@ Zellige tile installation is labor-intensive, often likened more to masonry than
 
 ### Inherent Variation
 
-  - Our Burnt Sugar is a warm brown zellige boasting dynamic tones that read differently across the surface depending on lighting conditions.
-  - Each handcrafted zellige tile remains wholly its own, and this innate variation defines the line's charm.
+  - Our Burnt Sugar is a warm brown zellige boasting dynamic glazes that read differently across the surface depending on lighting conditions.
+  - Each handcrafted zellige tile remains wholly its own, and this innate variation defines the line's character.
   - Expect variation in color, shape, and thickness, alongside characteristic chips, pits, and crazing.
 
 ### Preparation and Curation
 
-  - Mix all boxes in your shipment before beginning your project to ensure a balanced distribution of color and tone.
+  - Mix all boxes in the shipment before beginning the project to ensure a balanced distribution of color and tone.
   - Lay out the full installation on a flat surface ahead of setting, so the composition reads the way you want.
-  - Any chips, pits, and color variation should be evenly dispersed across the field.
+  - Any chips, pits, and crazing should be evenly dispersed across the field.
   - A 15-20% overage on all zellige tile orders gives you enough material to curate the mix to your preference. For an even more uniform look, we recommend 25% overage.
 
 ### Installation and Finishing
 
   - Installers must always wear protective face and eye coverings when working with zellige, thinset, sealants, and grout in accordance with California Prop 65.
-  - While traditional trim and edge pieces do not exist for zellige, we recommend bringing the drywall flush with the finished surface of the tile or finishing your project with mitered edges or Schluter strips.
-  - Always seal Burnt Sugar zellige 4x4 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
-  - You may reach out to our team directly at info@ziatile.com with any material or installation questions.
+  - While traditional trim and edge pieces do not exist for zellige, we recommend bringing the drywall flush with the finished surface of the tile or finishing the project with mitered edges or Schluter strips.
+  - Always seal Burnt Sugar 4x4 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
+  - Reach out to our team directly at info@ziatile.com or 310-844-1170 with any material or installation questions.
 
 
 
@@ -82,11 +82,11 @@ Our Burnt Sugar 4x4 zellige offers a versatile square format suited to residenti
   - **Exterior Floors – Non Freeze or Thaw:** Well-suited to outdoor surfaces in climates that do not experience snow or ice.
   - **Interior Walls:** Suitable for any interior wall application, including kitchen backsplashes and bathroom walls.
   - **Exterior Walls:** Burnt Sugar zellige may be installed on exterior walls in non-freeze/thaw climates.
-  - **Shower Walls + Floors:** Burnt Sugar brings warmth and dimension to shower walls, shower floors, and steam showers in this square format. The tile and grout should always be sealed.
+  - **Shower Walls + Floors:** Burnt Sugar brings warmth and dimension to shower walls, shower floors, and steam showers in this square format. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete. The tile and grout should always be sealed.
   - **Pools + Spas:** Often specified in and around pools, in both saltwater and chlorine environments. The tile should always be sealed according to our installation instructions.
   - **Fireplace Surround:** Burnt Sugar squares produce a warm, decorative fireplace surround, though the tiles are not approved for use inside the firebox.
   - **Radiant Heating Compatible:** Compatible with radiant heating and heated floor systems.
-  - **Sealing Required:** Burnt Sugar zellige 4x4 should always be sealed according to our installation instructions, to protect both the tile and the grout. Please consult the [Zellige Installation Guide](https://ziatile.com/pages/zellige-installation-guide) for detailed instructions.
+  - **Sealing Required:** Always seal Burnt Sugar 4x4 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
 ### Commercial Usage
 
@@ -96,11 +96,11 @@ Our Burnt Sugar 4x4 zellige offers a versatile square format suited to residenti
   - **Exterior Floors – Non Freeze or Thaw:** Well-suited to outdoor commercial surfaces in climates that do not experience snow or ice.
   - **Interior Walls:** Suitable for commercial interior walls, including commercial kitchen backsplashes and bar walls.
   - **Exterior Walls:** Burnt Sugar zellige may be installed on exterior commercial walls in non-freeze/thaw climates.
-  - **Shower Walls + Floors:** Burnt Sugar brings warmth and dimension to commercial shower walls, shower floors, and steam showers. The tile and grout should always be sealed.
+  - **Shower Walls + Floors:** Burnt Sugar brings warmth and dimension to commercial shower walls, shower floors, and steam showers. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete. The tile and grout should always be sealed.
   - **Pools + Spas:** Often specified for commercial pools, in both saltwater and chlorine environments. The tile should always be sealed according to our installation instructions.
   - **Fireplace Surround:** Burnt Sugar squares produce a warm, decorative commercial fireplace surround, though the tiles are not approved for use inside the firebox.
   - **Radiant Heating Compatible:** Compatible with commercial radiant heating systems, including heated floor elements.
-  - **Sealing Required:** Burnt Sugar zellige 4x4 should always be sealed according to our installation instructions, to protect both the tile and the grout. Please consult the [Zellige Installation Guide](https://ziatile.com/pages/zellige-installation-guide) for detailed instructions.
+  - **Sealing Required:** Always seal Burnt Sugar 4x4 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
 
 
@@ -118,7 +118,7 @@ The tiles are dipped individually in glaze and placed into an earthen kiln, wher
 
 
 
-Each Burnt Sugar 4x4 carries the marks of the artisan's day at the kiln; the irregular edges, the shifts in tone, the chips and pits that make handmade tile what it is.
+Each Burnt Sugar 4x4 carries the marks of the artisan's day at the kiln; the irregular edges, the shifts in tone, the chips, pits, and crazing that make handmade tile what it is.
 
 ## Order & Shipping — \[ACCORDION\]
 
@@ -140,8 +140,8 @@ Each Burnt Sugar 4x4 carries the marks of the artisan's day at the kiln; the irr
 ### Warehouse Pickup & Support
 
   - Free full order pickup is offered at our Los Angeles area warehouse to help local customers save on shipping costs.
-  - Our team will reach out when your order is ready so you may schedule a pickup appointment. Order pickups are available only with a confirmed appointment, Monday through Friday from 8 am-3 pm.
-  - For additional questions regarding your Burnt Sugar zellige order, please reach out to us at info@ziatile.com.
+  - For additional questions regarding the Burnt Sugar 4x4 order, please reach out to us at info@ziatile.com or 310-844-1170.
+  - Our team will reach out when the order is ready so to schedule a pickup appointment. Order pickups are available only with a confirmed appointment, Monday through Friday from 8 am-3 pm.
 
 
 
@@ -155,7 +155,7 @@ Each Burnt Sugar 4x4 carries the marks of the artisan's day at the kiln; the irr
 
 ### Why do some Burnt Sugar 4x4 tiles have fine lines on the surface?
 
-Fine lines on the glazed surface of Burnt Sugar zellige, known as *crazing*, occur naturally during the kiln firing process. These characteristic marks, along with occasional chips and pits, are innate to handmade Moroccan tile and do not affect the structural integrity of the tile.
+Fine lines on the glazed surface of Burnt Sugar zellige, known as *crazing*, occur naturally during the kiln firing process. These characteristic marks, along with occasional chips, pits, and crazing, are innate to handmade Moroccan tile and do not affect the structural integrity of the tile.
 
 ### How do I clean Burnt Sugar zellige once installation is complete?
 
@@ -167,7 +167,7 @@ No, each Burnt Sugar 4x4 is shaped by hand, which produces variation in thicknes
 
 ### What is a Zellige tile backsplash?
 
-A zellige tile backsplash is a wall installation, commonly specified in kitchens and bathrooms, that uses handcrafted Moroccan tiles to create a textured, light-reflective surface. The dynamic tones and inherent variation in each tile allow the backsplash to shift across the day, adding depth and movement to the traditional zellige aesthetic.
+A zellige tile backsplash is a wall installation, commonly specified in kitchens and bathrooms, that uses handcrafted Moroccan tiles to create a textured, light-reflective surface. The dynamic glazes and inherent variation in each tile allow the backsplash to shift across the day, adding depth and movement to the traditional zellige aesthetic.
 
 ### How do I finish a zellige tile edge?
 
@@ -175,4 +175,4 @@ Zellige tile edges are typically finished using mitered edges or Schluter strips
 
 ### Can I mix Burnt Sugar zellige with other colors in the collection?
 
-Yes, you can mix Burnt Sugar zellige with other colors in Zia's handcrafted zellige collection. Artisans use the same traditional Moroccan methods for each shade, allowing you to combine Burnt Sugar 4x4 tiles with other tones to create a custom installation that showcases the full range of available dynamic tones.
+Yes, you can mix Burnt Sugar zellige with other colors in Zia's handcrafted zellige collection. Artisans use the same traditional Moroccan methods for each shade, allowing you to combine Burnt Sugar 4x4 tiles with other tones to create a custom installation that showcases the full range of available dynamic glazes.

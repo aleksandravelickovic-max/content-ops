@@ -26,23 +26,23 @@ download_date: 2026-05-12
   
   
 
-To find the world's best ceramic tiles, Zia traveled to Japan. Our Moonlight 2x8 is produced outside Nagoya, in a region with over 1,000 years of ceramic tradition. Each tile is high-fired and formed in the elongated 2x8 subway format, producing a dreamy light blue surface that brings a calming presence to indoor and outdoor installations.
+To find the world's best ceramic tiles, Zia traveled to Japan. Our Moonlight 2x8 is produced outside Nagoya, in a region with over 1,000 years of ceramic tradition. Each tile is high-fired and formed in the elongated 2x8 subway format, producing a pale blue surface with cool grey undertones and a soft satin sheen.
 
 \[INSERT IMAGE: SIZE/THICKNESS\]
 
 ## Details 
 
-Zia's Moonlight 2x8 ceramic includes minor variation in size, color, tone, and surface texture. These are natural characteristics of ceramic tile and should be expected across your order.
+Zia's Moonlight 2x8 ceramic includes minor variation in size, color, tone, and surface texture. These are natural characteristics of ceramic tile and should be expected across the order.
 
-The images shown are representative of a sample of this tile but may not display all potential variations. We recommend 15-20% overage to properly curate your installation and account for any cuts needed.
+The images shown are representative of a sample of this tile but may not display all potential variations. We recommend 15-20% overage to properly curate the installation and account for any cuts needed.
 
 ## About
 
 ### Color & Surface
 
-  - Zia's Moonlight 2x8 presents a dreamy light blue across each tile, with a smooth satin finish that produces a low-sheen, elevated surface.
+  - Zia's Moonlight 2x8 presents a pale blue with cool grey undertones across each tile, with a smooth satin finish that produces a low-sheen, elevated surface.
   - Each blue ceramic tile reflects controlled production variation inherent to high-fired ceramic manufacturing, where glaze interaction and kiln temperature produce subtle tonal depth without disrupting overall uniformity.
-  - The variation in this collection is subtle. Moonlight reads as a consistent, calming light-blue field at installation scale, with the handcrafted quality most visible up close.
+  - The variation in this collection is subtle. Moonlight reads as a consistent, quiet light-blue field at installation scale, with the handcrafted quality most visible up close.
 
 ### Preparation and Curation
 
@@ -57,8 +57,8 @@ The images shown are representative of a sample of this tile but may not display
   - Substrates must be structurally sound, clean, and fully prepared with cement board or equivalent backer board before installation 
   - All installations must maintain a drywall flush condition prior to setting tile to ensure proper plane alignment across finished surfaces.
   - Finishing options include mitered edges or Schluter strips for clean transitions across exposed tile edges.
-  - Sealing is required in all wet environments, including ceramic shower tile applications, pools, and spas, and must be completed according to installation specifications before and after grouting, where applicable.
-  - For installation support or technical questions, contact <info@ziatile.com>.
+  - Always seal Moonlight 2x8 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
+  - For installation support or technical questions, contact info@ziatile.com or 310-844-1170.
 
   
 
@@ -139,7 +139,7 @@ As tiles move through temperature zones during firing, subtle shifts emerge in g
   - Warehouse pickup is available from our Los Angeles facility by confirmed appointment only. 
   - Clients are contacted once the order is ready to schedule a pickup time with our warehouse team.
   - Orders must be fully processed and prepared before release to ensure accuracy across all materials.
-  - For order support or delivery questions, contact info@ziatile.com.
+  - For order support or delivery questions, contact info@ziatile.com or 310-844-1170.
 
   
 
@@ -157,7 +157,7 @@ As tiles move through temperature zones during firing, subtle shifts emerge in g
 
 ### What is the color of Moonlight ceramic tile?
 
-Moonlight ceramic is a dreamy light blue with a smooth satin finish that brings a calming presence to the installation. Each tile is part of a controlled production process that maintains tonal consistency while allowing subtle, handcrafted variation to come through across walls and floors. The overall effect at installation scale is quiet, atmospheric, and elevated rather than a saturated color statement.
+Moonlight ceramic is a pale blue with cool grey undertones with a smooth satin finish that brings a quiet presence to the installation. Each tile is part of a controlled production process that maintains tonal consistency while allowing subtle, handcrafted variation to come through across walls and floors. The overall effect at installation scale is quiet, atmospheric, and elevated rather than a saturated color statement.
 
 ### Is the Moonlight 2x8 ceramic tile good for the kitchen?
 

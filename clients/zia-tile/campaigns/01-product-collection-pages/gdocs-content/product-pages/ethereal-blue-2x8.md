@@ -37,16 +37,16 @@ Zia traveled to Japan to find the world's best ceramic tiles. Our Ethereal Blue 
 
   
 
-Our Ethereal Blue 2x8 ceramic includes minor variation in size, color, tone, and surface texture. These are natural characteristics of ceramic tile and should be expected across your order.
+Our Ethereal Blue 2x8 ceramic includes minor variation in size, color, tone, and surface texture. These are natural characteristics of ceramic tile and should be expected across the order.
 
-The images shown are representative of a sample of this tile but may not display all potential variations. We recommend 15–20% overage to properly curate your installation and account for any cuts needed. For large-scale installations seeking a more uniform field, we recommend 25% overage.
+The images shown are representative of a sample of this tile but may not display all potential variations. We recommend 15–20% overage to properly curate the installation and account for any cuts needed. For large-scale installations seeking a more uniform field, we recommend 25% overage.
 
 ## About
 
 ### Color and Surface
 
   - Zia's Ethereal Blue 2x8 presents a deep blue glaze with a glossy finish that reflects light and introduces depth across the installation.
-  - Each blue ceramic subway tile exhibits minor variation in color, tone, and surface texture. These are natural characteristics of ceramic tile and should be expected across your order.
+  - Each blue ceramic subway tile exhibits minor variation in color, tone, and surface texture. These are natural characteristics of ceramic tile and should be expected across the order.
   - The variation in this glossy blue tile collection is subtle. Ethereal Blue reads as a continuous blue field at installation scale, with the handcrafted quality and glaze movement most visible up close.
 
 ### Preparation and Curation
@@ -60,7 +60,8 @@ The images shown are representative of a sample of this tile but may not display
   - Installers must always wear protective face and eye coverings when working with ceramic tile, thinset, sealants, and grout in accordance with California Prop 65.
   - Substrates must be structurally sound, clean, and fully prepared. Cement board or equivalent backer board is required for wet-area installations.
   - For finishing, ceramic tiles can be mitered on the edge or finished with Schluter strips.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - For installation questions, contact our team at info@ziatile.com or 310-844-1170.
+  - Always seal Ethereal Blue 2x8 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
   
 
@@ -83,11 +84,10 @@ Zia's Ethereal Blue 2x8 Glossy Finish ceramic suits both residential and commerc
   - **Interior Walls:** Suitable for vertical installations, including decorative features and full-surface ceramic tile walls. The glossy glaze amplifies light movement, making it effective in narrow or low-light interior conditions.
   - **Exterior Walls:** Suitable for exterior wall applications in non-freeze/thaw climates where a reflective ceramic surface is specified for architectural cladding or accent zones.
   - **Shower Walls + Floors:** Suitable for ceramic shower tile applications, including walls, floors, and steam showers. Sealing is required for installation. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete.
-  - **Pools + Spas****  
-    ** Suitable for pools and spas, including saltwater and chlorine environments. Sealing is required for this use.
+  - **Pools + Spas:** Suitable for pools and spas, including saltwater and chlorine environments. Sealing is required for this use.
   - **Fireplace Surround:** Suitable for fireplace surround applications. Not for use inside the firebox.
   - **Radiant Heating Compatible:** Compatible with radiant heating systems when installed over appropriate substrates.
-  - **Sealing Required:** Sealing is required before grouting, depending on the installation method. Refer to the Zia Tile Ceramics Installation Guide for approved sealers and application timing.
+  - **Sealing Required:** Glossy finish ceramics do not require pre-grout sealing as a grout release. For wet applications, seal tile and grout lines after grouting to protect against continuous moisture exposure. Reseal every 1–2 years. Refer to the Zia Tile Ceramics Installation Guide for approved sealers.
 
 ### Commercial Usage
 
@@ -101,7 +101,7 @@ Zia's Ethereal Blue 2x8 Glossy Finish ceramic suits both residential and commerc
   - **Pools + Spas:** Suitable for commercial pools and spas, including saltwater and chlorine exposure. Sealing is required for this use.
   - **Fireplace Surround:** Suitable for decorative commercial fireplace surrounds. Not for use inside the firebox.
   - **Radiant Heating Compatible:** Compatible with commercial radiant heating systems when installed according to substrate requirements.
-  - **Sealing Required:** Sealing is required before grouting. Refer to the Zia Tile Ceramics Installation Guide for approved sealers and maintenance intervals.
+  - **Sealing Required:** Glossy finish ceramics do not require pre-grout sealing as a grout release. For wet applications, seal tile and grout lines after grouting to protect against continuous moisture exposure. Reseal every 1–2 years. Refer to the Zia Tile Ceramics Installation Guide for approved sealers.
 
   
 
@@ -139,8 +139,8 @@ During kiln firing, controlled heat variation produces the final surface behavio
 ### Warehouse Pickup & Support
 
   - We offer free full order pickup at our Los Angeles area warehouse.
-  - Our team will contact you when your order is ready so you may schedule your pickup. Warehouse pickup is available by confirmed appointment only.
-  - For additional questions regarding your Ethereal Blue 2x8 order, please reach out to us at <info@ziatile.com>.
+  - Our team will contact you when the order is ready to schedule a pickup. Warehouse pickup is available by confirmed appointment only.
+  - For additional questions, contact our team at info@ziatile.com or 310-844-1170.
 
   
 
@@ -162,11 +162,11 @@ Ethereal Blue ceramic is a deep, saturated blue with glaze shifts that move betw
 
   
 
-### Can I use the Ethereal Blue ceramic tile in the kitchen?
+### Is Ethereal Blue ceramic tile suitable for the kitchen?
 
-Yes, Ethereal Blue is well-suited to kitchen installations, particularly as a backsplash where the glossy surface reflects light and defines the vertical plane behind cooking areas. The elongated 2x8 subway format supports horizontal running bond, vertical stack, and herringbone arrangements, each of which changes how the color reads across the space. For kitchen floor applications, slip resistance should be confirmed with an installer based on project conditions.
+Ethereal Blue is well-suited to kitchen installations, particularly as a backsplash where the glossy surface reflects light and defines the vertical plane behind cooking areas. The elongated 2x8 subway format supports horizontal running bond, vertical stack, and herringbone arrangements, each of which changes how the color reads across the space. For kitchen floor applications, slip resistance should be confirmed with the installer based on project conditions.
 
-### Can I install ceramic tile flooring in the bathroom?
+### Is Ethereal Blue ceramic tile suitable for bathroom floors?
 
 Yes, Ethereal Blue can be installed in a bathroom, including on shower walls, shower floors, and as a vanity backsplash. The glossy glaze stands up well to moisture exposure when properly installed and sealed. For shower floor applications, slip resistance can be increased by sizing grout joints to a minimum of ⅛" and/or applying an anti-slip treatment after installation to improve traction in wet conditions.
 

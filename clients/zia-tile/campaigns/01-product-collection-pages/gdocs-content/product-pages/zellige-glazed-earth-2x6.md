@@ -8,7 +8,7 @@ download_date: 2026-05-12
 **URL:** <https://ziatile.com/products/glazed-earth-2x6-zellige-tile>
 
 **Meta title**: Glazed Earth 2x6 Bejmat Zellige | Zia Tile
-**Meta description**: Shop Zia's Glazed Earth 2x6 zellige. These handcrafted Moroccan clay tiles feature dynamic tones and inherent variation for kitchen backsplashes, shower walls, and more.
+**Meta description**: Shop Zia's Glazed Earth 2x6 zellige. These handcrafted Moroccan clay tiles feature dynamic glazes and inherent variation for kitchen backsplashes, shower walls, and more.
 
 
 
@@ -24,7 +24,7 @@ Zia's Glazed Earth 2x6 is a traditional zellige produced in Morocco using method
 
 
 
-Our Glazed Earth zellige includes inherent variation in precise size, color, and tone. Each handcrafted tile features characteristic chips, pits, and crazing, which are innate to this traditional Moroccan art form. While the images shown represent the tile's general appearance, they may not display the full range of dynamic tones present in a complete order.
+Our Glazed Earth zellige includes inherent variation in precise size, color, and tone. Each handcrafted tile features characteristic chips, pits, and crazing, which are innate to this traditional Moroccan art form. While the images shown represent the tile's general appearance, they may not display the full range of dynamic glazes present in a complete order.
 
 \[INSERT IMAGE: SIZE/THICKNESS\]
 
@@ -32,7 +32,7 @@ Our Glazed Earth zellige includes inherent variation in precise size, color, and
 
 
 
-We recommend a 15–20% overage for each project. This additional quantity allows you or your installer to curate the layout and account for any tiles that fall outside your preferred range. For a more uniform look, we recommend increasing your overage to 25%.
+We recommend a 15–20% overage for each project. This additional quantity allows the installer to curate the layout and account for any tiles that fall outside the preferred range. For a more uniform look, we recommend increasing your overage to 25%.
 
 
 
@@ -45,12 +45,12 @@ Working with zellige takes more time than standard ceramic tile because each pie
 ### Inherent Variation
 
   - Our Glazed Earth 2x6 is a beige zellige that moves across a wide tonal range, with a glaze that shifts from tile to tile and with changing light.
-  - Each handcrafted Glazed Earth 2x6 tile remains wholly unique, and this innate variation defines the line's charm.
-  - You should expect variation in color, shape, and thickness, alongside characteristic chips, pits, and crazing.
+  - Each handcrafted Glazed Earth 2x6 tile remains wholly unique, and this innate variation defines the line's character.
+  - Expect variation in color, shape, and thickness, alongside characteristic chips, pits, and crazing.
 
 ### Preparation and Curation
 
-  - Mix tiles from all boxes in your shipment before beginning installation to ensure balanced color and glaze variation.
+  - Mix tiles from all boxes in the shipment before beginning installation to ensure balanced color and glaze variation.
   - Arrange an ideal layout before installation to assess how the variation reads across the surface before setting begins.
   - We recommend a 15–20% overage on all orders to curate the installation and account for any cuts needed. For a more uniform look, we recommend 25% overage.
 
@@ -58,8 +58,8 @@ Working with zellige takes more time than standard ceramic tile because each pie
 
   - Installers should always wear protective face and eye coverings when working with zellige, mortar, sealants, grout, and other installation materials in accordance with California Prop 65.
   - For finishing, bring the drywall flush with the finished surface of the tile, or complete the edge using mitered edges or Schluter strips.
-  - Always seal Glazed Earth 2x6 zellige in areas exposed to moisture, such as pools, spas, and showers.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - Always seal Zellige Glazed Earth 2x6 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
+  - Reach out to our team directly at info@ziatile.com or 310-844-1170 with any specific installation questions.
 
 
 
@@ -73,31 +73,31 @@ Zia's Glazed Earth 2x6 zellige offers a long, narrow format suited for residenti
 
 ### Residential Usage
 
-  - **Interior Floors – High Traffic:** Suitable for high-traffic areas such as kitchens, primary bathrooms, and entryways. If installed on a flooring surface in a wet area, slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip product after installation is complete.
+  - **Interior Floors – High Traffic:** Suitable for high-traffic areas such as kitchens, primary bathrooms, and entryways.
   - **Interior Floors – Low Traffic:** Performs well in guest bathrooms, closets, and other low-impact areas.
   - **Exterior Floors – Freeze or Thaw:** Zellige is not suitable for an outdoor installation in a freeze/thaw climate.
   - **Exterior Floors – Non Freeze or Thaw:** Integrates into outdoor surfaces in climates without freeze and thaw cycles.
   - **Interior Walls:** Suited to kitchen backsplashes, bathroom walls, and feature surfaces where the beige glaze introduces a neutral, considered tone.
   - **Exterior Walls:** Zellige tiles may be used on exterior walls in non-freeze/thaw climates.
-  - **Shower Walls + Floors:** Suitable for shower walls, shower floors, and steam showers. We recommend sealing the tile for this use. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip product after installation is complete.
-  - **Pools + Spas:** Suitable for saltwater and chlorine environments. We recommend sealing the tile for this use.
+  - **Shower Walls + Floors:** Suitable for shower walls, shower floors, and steam showers. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete. Always seal Zellige Glazed Earth 2x6 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip product after installation is complete.
+  - **Pools + Spas:** Suitable for saltwater and chlorine environments. Always seal Zellige Glazed Earth 2x6 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
   - **Fireplace Surround:** Suitable for decorative fireplace surrounds. These tiles are not for use inside the firebox.
   - **Radiant Heating Compatible:** Supports all heated floor systems for consistent thermal performance.
-  - **Sealing Required:** We recommend sealing Glazed Earth 2x6 zellige when installing in pools, spas, and showers. Please refer to the Zellige Installation Guide for recommended sealers.
+  - **Sealing Required:** Always seal Zellige Glazed Earth 2x6 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
 ### Commercial Usage
 
-  - **Interior Floors – High Traffic:** Suitable for high-traffic commercial spaces. If installed on a flooring surface in a wet area, slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip product after installation is complete.
+  - **Interior Floors – High Traffic:** Suitable for high-traffic commercial spaces.
   - **Interior Floors – Low Traffic:** Suits lower-traffic commercial interiors.
   - **Exterior Floors – Freeze or Thaw:** Zellige is not suitable for an outdoor installation in a freeze/thaw climate.
   - **Exterior Floors – Non Freeze or Thaw:** Suitable for commercial exterior floors in non-freezing climates.
   - **Interior Walls:** Suited to commercial kitchen walls, restroom walls, and feature installations where the beige glaze introduces a neutral surface.
   - **Exterior Walls:** Zellige tiles may be used on exterior commercial walls in non-freeze/thaw climates.
-  - **Shower Walls + Floors:** Suitable for commercial shower walls, shower floors, and steam showers. We recommend sealing the tile for this use. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip product after installation is complete.
-  - **Pools + Spas:** Suitable for commercial saltwater and chlorine pools. We recommend sealing the tile for this use.
+  - **Shower Walls + Floors:** Suitable for commercial shower walls, shower floors, and steam showers. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete. Always seal Zellige Glazed Earth 2x6 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip product after installation is complete.
+  - **Pools + Spas:** Suitable for commercial saltwater and chlorine pools. Always seal Zellige Glazed Earth 2x6 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
   - **Fireplace Surround:** Suitable for commercial decorative fireplace surrounds. These tiles are not for use inside the firebox.
   - **Radiant Heating Compatible:** Works with commercial radiant heating systems for uniform heat distribution.
-  - **Sealing Required:** We recommend sealing Glazed Earth 2x6 zellige when installing in pools, spas, and showers. Please refer to the Zellige Installation Guide for recommended sealers.
+  - **Sealing Required:** Always seal Zellige Glazed Earth 2x6 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
 
 
@@ -135,8 +135,8 @@ Once dry, each tile is hand-dipped individually in glaze. The beige glaze settle
 ### Warehouse Pickup & Support
 
   - We offer free full order pickup at our Los Angeles area warehouse to help local customers save on shipping costs.
-  - Our team will contact you when your order is ready, so you may schedule your pickup. Warehouse pickup is available by confirmed appointment only.
-  - For additional questions regarding your Glazed Earth 2x6 zellige order, please reach out to us at info@ziatile.com.
+  - For additional questions regarding your Zellige Glazed Earth 2x6 order, please reach out to us at info@ziatile.com or 310-844-1170.
+  - Our team will contact you when the order is ready, so to schedule your pickup. Warehouse pickup is available by confirmed appointment only.
 
 
 
@@ -162,7 +162,7 @@ No, the 2x6 Bejmat format does not require a specific layout pattern. Common lay
 
 Yes, you can use Glazed Earth 2x6 zellige for a full-height wall installation. Variation across the surface can become more visible at scale, so layout planning and box mixing before installation is recommended.
 
-### Can I install Glazed Earth 2x6 zellige with minimal grout spacing?
+### Can I install Glazed Earth 2x6 zellige with minimal grout joints?
 
 Yes, you can install Glazed Earth 2x6 zellige with minimal grout joints. For wet floor applications, grout joints should be increased to a minimum of ⅛" to improve slip resistance.
 

@@ -48,7 +48,7 @@ We recommend a 15-20% overage to curate the installation and account for any cut
 ### Inherent Variation
 
   - Our Carrara 12x12 is a white Italian marble with soft grey veining that shifts in direction and density from tile to tile.
-  - Each Carrara tile carries its own geological history, and this inherent variation defines the line's charm.
+  - Each Carrara tile carries its own geological history, and this inherent variation defines the line's character.
   - Expect significant variation in veining pattern, tonal shift, and surface character across the layout, along with the minor imperfections that are natural to quarried stone.
 
 ### Preparation and Curation
@@ -64,7 +64,7 @@ We recommend a 15-20% overage to curate the installation and account for any cut
   - For finishing, bring the drywall flush with the finished surface of the stone, miter exposed edges at 45 degrees, or complete the edge with Schluter strips.
   - Seal Carrara 12x12 with 511 Porous Plus before and after grouting. For interior applications, finish with Fila Matte Wax as a final coat. For exterior applications, apply a second coat of 511 Porous Plus in place of wax.
   - Grout in small sections no larger than 2'x2' and wipe away excess immediately. Marble stains readily if grout is left to sit on the surface.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - For installation questions, contact our team at info@ziatile.com or 310-844-1170.
 
   
 
@@ -83,29 +83,29 @@ Our Carrara 12x12 marble suits both residential and commercial projects. The squ
 
   - **Interior Floors -- High Traffic:** Handles daily use in kitchens, entryways, hallways, and primary bathrooms. In wet floor applications, slip resistance can be increased by sizing grout joints to a minimum of 1/8" and/or applying an anti-slip product after installation. Marble DCOF varies by type: 0.28-0.62.
   - **Interior Floors -- Low Traffic:** Suits guest bedrooms, secondary bathrooms, and living spaces where the 12x12 format establishes a balanced rhythm across the floor.
-  - **Exterior Floors -- Freeze or Thaw:** Marble is not suitable for exterior floor installations.
-  - **Exterior Floors -- Non Freeze or Thaw:** Marble is not suitable for exterior floor installations.
+  - **Exterior Floors -- Freeze or Thaw:** Marble is not suitable for exterior floor installations in freeze/thaw climates.
+  - **Exterior Floors -- Non Freeze or Thaw:** Suitable for exterior floor surfaces in stable climates without freeze/thaw conditions when properly sealed.
   - **Interior Walls:** Suited to bathroom walls, fireplace walls, and feature surfaces where the soft grey veining introduces movement and depth.
   - **Exterior Walls:** Suitable for exterior wall applications in non-freeze/thaw climates.
   - **Shower Walls + Floors:** Suited to shower walls, shower floors, and steam showers. Sealing is required for this use. Slip resistance can be increased by sizing grout joints to a minimum of 1/8" and/or applying an anti-slip product after installation.
   - **Pools + Spas:** Suitable for pools and spas, including saltwater and chlorine environments. Sealing is required for this use.
   - **Fireplace Surround:** Suited to decorative fireplace surrounds. These tiles are not for use inside the firebox.
   - **Radiant Heating Compatible:** Compatible with radiant heating systems.
-  - **Sealing Required:** Sealing is required before and after grouting using 511 Porous Plus. Indoors, finish with Fila Matte Wax. Outdoors, apply a second coat of 511 Porous Plus. Refer to the Zia Tile Installation Guide for detailed instructions.
+  - **Sealing Required:** Sealing is required for all installations, including dry spaces. Always seal Carrara 12x12 according to the installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers. Refer to the Zia Tile Installation Guide for detailed instructions.
 
 ### Commercial Usage
 
   - **Interior Floors -- High Traffic:** Suited to hotel lobbies, retail floors, restaurant entries, and office corridors. In wet floor applications, slip resistance can be increased by sizing grout joints to a minimum of 1/8" and/or applying an anti-slip product after installation. Marble DCOF varies by type: 0.28-0.62.
   - **Interior Floors -- Low Traffic:** Appropriate for offices, meeting rooms, and boutique interiors where the 12x12 format anchors the floor without dominating the surrounding palette.
-  - **Exterior Floors -- Freeze or Thaw:** Marble is not suitable for exterior floor installations.
-  - **Exterior Floors -- Non Freeze or Thaw:** Marble is not suitable for exterior floor installations.
+  - **Exterior Floors -- Freeze or Thaw:** Marble is not suitable for exterior floor installations in freeze/thaw climates.
+  - **Exterior Floors -- Non Freeze or Thaw:** Suitable for exterior floor surfaces in stable climates without freeze/thaw conditions when properly sealed.
   - **Interior Walls:** Suited to reception areas, hospitality features, commercial bathrooms, and feature walls where the natural veining of Italian marble carries its own visual weight.
   - **Exterior Walls:** Suitable for exterior commercial wall surfaces in non-freeze/thaw climates.
   - **Shower Walls + Floors:** Suited to commercial shower walls, shower floors, and steam showers. Sealing is required for this use. Slip resistance can be increased by sizing grout joints to a minimum of 1/8" and/or applying an anti-slip product after installation.
   - **Pools + Spas:** Suitable for commercial saltwater and chlorine pools and spas. Sealing is required for this use.
   - **Fireplace Surround:** Suited to decorative fireplace surrounds in lobbies and hospitality spaces. Not for use inside a firebox.
   - **Radiant Heating Compatible:** Compatible with commercial radiant heating systems.
-  - **Sealing Required:** Sealing is required before and after grouting using 511 Porous Plus. Indoors, finish with Fila Matte Wax. Outdoors, apply a second coat of 511 Porous Plus. Refer to the Zia Tile Installation Guide for detailed instructions.
+  - **Sealing Required:** Sealing is required for all installations, including dry spaces. Always seal Carrara 12x12 according to the installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers. Refer to the Zia Tile Installation Guide for detailed instructions.
 
   
 
@@ -136,15 +136,15 @@ The minor variations in size, tone, and surface texture present in each shipment
 ### Full Orders
 
   - Full orders ship throughout the US and Canada via LTL carrier with curbside pallet delivery.
-  - All tiles in your order ship together once everything is in stock.
-  - Your LTL carrier will provide an estimated delivery range and contact you to confirm a delivery window once the shipment reaches their local terminal.
+  - All tiles ship together once everything is in stock.
+  - The LTL carrier will provide an estimated delivery range and confirm a delivery window once the shipment reaches the local terminal.
   - We deliver to almost any location around the world. Clients in Alaska, Hawaii, Canada, or international locations should contact our team for a custom shipping quote.
 
 ### Warehouse Pickup & Support
 
   - We offer free full-order pickup at our Los Angeles area warehouse to help local customers save on shipping costs.
   - We will contact you once your order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
-  - For additional questions regarding your Carrara marble order, please reach out to us at info@ziatile.com.
+  - For additional questions regarding the Carrara marble order, contact our team at info@ziatile.com or 310-844-1170.
 
   
 

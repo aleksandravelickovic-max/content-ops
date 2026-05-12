@@ -85,11 +85,11 @@ The Carbon Black 4x4 zellige functions across residential and commercial project
   - **Exterior Floors, Non-Freeze or Thaw:** Suitable for exterior living areas in stable climates without freeze exposure.
   - **Interior Walls:** Commonly used in Zellige tile backsplash applications, and feature walls where **decorative geometric and floral shapes** influence design composition.
   - **Exterior Walls:** May be installed on exterior wall surfaces only in non-freeze/thaw climates where environmental stability is maintained.
-  - **Shower Walls + Floors:** Zellige tile shower designs support wet environments when properly sealed. Slip resistance improves with ⅛" grout joints and/or anti-slip treatment after installation.
+  - **Shower Walls + Floors:** Zellige tile shower designs support wet environments when properly sealed. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete. Slip resistance improves with ⅛" grout joints and/or anti-slip treatment after installation.
   - **Pools + Spas:** Performs in submerged environments, including pools and spas. Sealing is required before exposure.
   - **Fireplace Surround:** Suitable for exterior fireplace surrounds only and not for direct firebox contact.
   - **Radiant Heating Compatible:** Compatible with embedded radiant heating systems across interior floor applications.
-  - **Sealing Required:** Required for all moisture-exposed installations, including pools, spas, and showers. Refer to the Zia Tile Zellige Installation Guide for detailed guidance. 
+  - **Sealing Required:** Always seal Carbon Black zellige 4x4 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
 ### Commercial Usage
 
@@ -99,11 +99,11 @@ The Carbon Black 4x4 zellige functions across residential and commercial project
   - **Exterior Floors, Non-Freeze or Thaw:** Suitable for outdoor commercial flooring in stable climates without freeze exposure.
   - **Interior Walls:** Used in hotels, restaurants, and retail environments where material texture contributes to architectural identity.
   - **Exterior Walls:** Permitted in non-freeze/thaw climates for façade and exterior feature applications.
-  - **Shower Walls + Floors:** Suitable for spa, hotel, and gym environments when sealed appropriately. Slip resistance increases with ⅛" grout joints and/or anti-slip treatment after installation.
+  - **Shower Walls + Floors:** Suitable for spa, hotel, and gym environments when sealed appropriately. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete. Slip resistance increases with ⅛" grout joints and/or anti-slip treatment after installation.
   - **Pools + Spas:** Suitable for commercial aquatic environments with required sealing before use.
   - **Fireplace Surround:** Suitable for decorative commercial applications only.
   - **Radiant Heating Compatible:** Supports commercial radiant heating systems.
-  - **Sealing Required:** Required for all commercial moisture-exposed environments. Refer to the Zia Tile Zellige Installation Guide for detailed guidance. 
+  - **Sealing Required:** Always seal Carbon Black zellige 4x4 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
 ## How It's Made
 
@@ -137,8 +137,8 @@ The final result is a surface system defined by controlled irregularity, where e
 ### Warehouse Pickup & Support
 
   - We offer free full order pickup at our Los Angeles area warehouse to help local customers save on shipping costs.
-  - Our team will reach out when your order is ready so you may schedule a time for your pickup appointment. Order pickups are available only with a confirmed appointment.
-  - For additional questions regarding your Carbon Black zellige order, please reach out to us at info@ziatile.com.
+  - For additional questions regarding the Carbon Black zellige 4x4 order, please reach out to us at info@ziatile.com or 310-844-1170.
+  - Our team will reach out when the order is ready so to schedule a time for a pickup appointment. Order pickups are available only with a confirmed appointment.
 
 ## Installation Guide — \[ACCORDION\] 
 

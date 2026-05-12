@@ -32,16 +32,16 @@ To find the world's best ceramic tiles, Zia traveled to Japan. Our Kelp Forest 4
 
 ## Details 
 
-Zia's Kelp Forest 4x4 ceramic includes minor variation in size, color, tone, and surface texture. These are natural characteristics of ceramic tile and should be expected across your order.
+Zia's Kelp Forest 4x4 ceramic includes minor variation in size, color, tone, and surface texture. These are natural characteristics of ceramic tile and should be expected across the order.
 
-The images shown are representative of a sample of this tile but may not display all potential variations. We recommend 15–20% overage to properly curate your installation and account for any cuts needed.
+The images shown are representative of a sample of this tile but may not display all potential variations. We recommend 15–20% overage to properly curate the installation and account for any cuts needed.
 
 ## About
 
 ### Color and Surface
 
   - Zia's Kelp Forest 4x4 presents a vibrant green tone across each tile, with a glossy finish that reflects light and introduces depth across the installation.
-  - Each green ceramic tile exhibits minor variation in color, tone, and surface texture. These are natural characteristics of ceramic tile and should be expected across your order.
+  - Each green ceramic tile exhibits minor variation in color, tone, and surface texture. These are natural characteristics of ceramic tile and should be expected across the order.
   - The variation in this collection is subtle. Kelp Forest reads as a continuous green field at installation scale, with the handcrafted quality and glaze movement most visible up close.
 
 ### Preparation and Curation
@@ -55,7 +55,8 @@ The images shown are representative of a sample of this tile but may not display
   - Installers must always wear protective face and eye coverings when working with ceramic tile, thinset, sealants, and grout in accordance with California Prop 65.
   - Substrates must be structurally sound, clean, and fully prepared. Cement board or equivalent backer board is required for wet-area installations.
   - For finishing, ceramic tiles can be mitered on the edge or finished with Schluter strips.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - For installation questions, contact our team at info@ziatile.com or 310-844-1170.
+  - Always seal Kelp Forest 4x4 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
   
 
@@ -86,7 +87,7 @@ Zia's Kelp Forest 4x4 performs across residential and commercial environments. D
 ### Commercial Usage
 
   - **Interior Floors, High Traffic:** Suitable for hospitality, retail, and public interiors where a reflective and glossy green ceramic tile floor is required under heavy use conditions.
-  - I**nterior Floors Low Traffic:** Suitable for offices and boutique commercial interiors.
+  - **Interior Floors, Low Traffic:** Suitable for offices and boutique commercial interiors.
   - **Exterior Floors, Freeze or Thaw:** Not suitable for freeze/thaw exterior floor conditions.
   - **Exterior Floors, Non-Freeze or Thaw:** Not suitable for exterior flooring applications.
   - **Interior Walls:** Suitable for ceramic tile backsplash installations in commercial kitchens, restrooms, and feature wall applications.
@@ -139,8 +140,8 @@ The firing process defines the final surface quality of the Kelp Forest ceramic 
 ### Warehouse Pickup & Support
 
   - We offer free full order pickup at our Los Angeles area warehouse.
-  - Our team will contact you when your order is ready so you may schedule your pickup. Warehouse pickup is available by confirmed appointment only.
-  - For additional questions regarding your Kelp Forest 4x4 order, please reach out to us at info@ziatile.com.
+  - Our team will contact you when the order is ready to schedule a pickup. Warehouse pickup is available by confirmed appointment only.
+  - For additional questions, contact our team at info@ziatile.com or 310-844-1170.
 
   
 
@@ -160,19 +161,19 @@ The firing process defines the final surface quality of the Kelp Forest ceramic 
 
 Kelp Forest ceramic is a vibrant green with a serene tonal depth that shifts between the lit and shadowed planes of an installation. The glossy surface reflects light across varying angles, which is what gives the tile its dimensional quality at scale. Each tile carries a subtle variation in tone, and that variation becomes more visible once installed across a full wall or floor field.
 
-### Can I use the Kelp Forest 4x4 ceramic tile in the bathroom?
+### Is the Kelp Forest 4x4 ceramic tile suitable for the bathroom?
 
-Yes, the Kelp Forest 4x4 ceramic tile is suitable for bathroom walls, including wet areas such as shower walls. It performs well as a ceramic tile for bathroom applications, especially on vertical surfaces where moisture exposure is controlled through proper sealing and installation methods. It is commonly used as a ceramic shower tile and for full-height wall installations where reflective glaze and tonal depth are desired.
+The Kelp Forest 4x4 ceramic tile is suitable for bathroom walls, including wet areas such as shower walls. It performs well as a ceramic tile for bathroom applications, especially on vertical surfaces where moisture exposure is controlled through proper sealing and installation methods. It is commonly used as a ceramic shower tile and for full-height wall installations where reflective glaze and tonal depth are desired.
 
-### Can I mix Kelp Forest with other ceramic colorways?
+### Can Kelp Forest be mixed with other ceramic colorways?
 
-Yes, Kelp Forest 4x4 can be mixed with other colorways in Zia's ceramic collection. All tiles in the line share the same clay body, firing process, and 4x4 format, which makes the surface character consistent across the range. Pairing the vibrant green of Kelp Forest with warmer neutrals such as Linen, broader accents such as Cosmic Black, or complementary earth tones introduces contrast while preserving the architectural continuity of the line.
+Kelp Forest 4x4 can be mixed with other colorways in Zia's ceramic collection. All tiles in the line share the same clay body, firing process, and 4x4 format, which makes the surface character consistent across the range. Pairing the vibrant green of Kelp Forest with warmer neutrals such as Linen, broader accents such as Cosmic Black, or complementary earth tones introduces contrast while preserving the architectural continuity of the line.
 
   
 
-### Is the Kelp Forest ceramic tile good for the entryway floor?
+### Is the Kelp Forest ceramic tile suitable for entryway floors?
 
-Yes, the Kelp Forest 4x4 ceramic tile can be used in entryway settings as part of flooring applications. The variation in tone helps disguise surface dust and wear patterns, which makes it functional in transitional spaces. This green ceramic tile floor installation will provide visual depth while maintaining the durability expected from high-fired ceramic.
+The Kelp Forest 4x4 ceramic tile works well in entryway settings as part of flooring applications. The variation in tone helps disguise surface dust and wear patterns, which makes it functional in transitional spaces. This green ceramic tile floor installation will provide visual depth while maintaining the durability expected from high-fired ceramic.
 
 ### How to clean ceramic tile floors?
 

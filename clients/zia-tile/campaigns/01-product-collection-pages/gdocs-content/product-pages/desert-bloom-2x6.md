@@ -19,7 +19,7 @@ download_date: 2026-05-12
 
 \[INSERT CART MODULE HERE\]
 
-Zia's Desert Bloom traditional zellige is produced in a rectangular Bejmat format that brings warm pink tones to kitchens, bathrooms, and commercial interiors. Each tile includes inherent variation in size, color, and tone, alongside chips, pits, and crazing, characteristics innate to this handcrafted Moroccan art form. The pink zellige tile images shown represent the tile's general appearance and may not capture the full range of dynamic tones present in a complete order.
+Zia's Desert Bloom traditional zellige is produced in a rectangular Bejmat format that brings warm pink tones to kitchens, bathrooms, and commercial interiors. Each tile includes inherent variation in size, color, and tone, alongside chips, pits, and crazing, characteristics innate to this handcrafted Moroccan art form. The pink zellige tile images shown represent the tile's general appearance and may not capture the full range of dynamic glazes present in a complete order.
 
 Your zellige installation will include variation in color, tone, and surface, including chips, pits, and crazing. Working with these material characteristics, rather than around them, produces a more intentional installation.
 
@@ -27,7 +27,7 @@ Your zellige installation will include variation in color, tone, and surface, in
 
 ## Details
 
-We recommend a 15–20% overage for each project, which gives you and your installer enough material to curate the installation and set aside any tiles that fall outside your desired range. For a more uniform look, 25% overage is the better starting point.
+We recommend a 15–20% overage for each project, which gives the installer enough material to curate the installation and set aside any tiles that fall outside the desired range. For a more uniform look, 25% overage is the better starting point.
 
 Zellige installation requires more hands-on attention than standard ceramic tile. Each piece varies in thickness, edge profile, and size, so the process involves sorting, soaking, arranging, and manually adjusting tiles to distribute variation evenly across the surface. Plan for two to three times the installation window you would allow for a precision-cut tile of the same square footage. Traditionally laid edge-to-edge with little or no grout joint, we recommend using wedge spacers to manage irregular edges, maintain a consistent layout, and protect the tile edges throughout the installation.
 
@@ -35,15 +35,15 @@ Zellige installation requires more hands-on attention than standard ceramic tile
 
 ### Inherent Variation
 
-  - Our Desert Bloom 2x6 is a warm pink Bejmat zellige with dynamic tones that shift depending on light and viewing angle.
-  - Each handcrafted zellige tile remains wholly unique, and this innate variation defines the line's charm.
+  - Our Desert Bloom 2x6 is a warm pink Bejmat zellige with dynamic glazes that shift depending on light and viewing angle.
+  - Each handcrafted zellige tile remains wholly unique, and this innate variation defines the line's character.
   - Expect natural variation in color, shape, and thickness across the layout, alongside characteristic chips, pits, and crazing.
 
 ### Preparation and Curation
 
-  - Before starting your project, mix the contents of each box in your shipment.
-  - Lay out the tiles before setting them to confirm the variation is distributed to your liking.
-  - Disperse any chips, pits, and color variation evenly across the layout.
+  - Before starting the project, mix the contents of each box in the shipment.
+  - Lay out the tiles before setting them to confirm the variation is distributed evenly.
+  - Disperse any chips, pits, and crazing evenly across the layout.
   - We suggest a 15–20% overage on all tile orders. For a more uniform look, we recommend 25% overage.
 
 ### Installation and Finishing
@@ -51,7 +51,7 @@ Zellige installation requires more hands-on attention than standard ceramic tile
   - All installers must wear protective face and eye coverings when working with zellige, thin set, sealants, and grout in accordance with California Prop 65.
   - Traditional trim and edge pieces do not exist for zellige. For finishing, bring the drywall flush with the finished surface of the tile or complete the edge with mitered edges or Schluter strips.
   - Always seal Desert Bloom zellige 2x6 in moisture-exposed areas, including pools, spas, and showers.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - Reach out to our team directly at info@ziatile.com or 310-844-1170 with any specific installation questions.
 
 *⚠ WARNING: Cancer and Reproductive Harm.* [*Learn more about Proposition 65 Warnings.*](https://www.ziatile.com/proposition-65-warnings)
 
@@ -61,31 +61,31 @@ Our Desert Bloom 2x6 Bejmat zellige suits both residential and commercial projec
 
 ### Residential Usage
 
-  - **Interior Floors – High Traffic:** Suits high-traffic areas such as a kitchen, primary bathroom, or entryway. If installed on a flooring surface in a wet area, slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip product after installation is complete.
+  - **Interior Floors – High Traffic:** Suits high-traffic areas such as a kitchen, primary bathroom, or entryway.
   - **Interior Floors – Low Traffic:** Performs well in low-traffic areas, such as guest bathrooms and bedrooms.
   - **Exterior Floors – Freeze or Thaw:** Zellige is not suitable for outdoor installations in a freeze/thaw climate.
   - **Exterior Floors – Non Freeze or Thaw:** Accommodates outdoor surfaces in climates without snow or ice.
   - **Interior Walls:** Suits a subway-style kitchen backsplash, bathroom wall, or shower wall where the warm pink tones introduce color and depth.
   - **Exterior Walls:** Zellige tiles may be used on exterior walls in non-freeze/thaw climates.
-  - **Shower Walls + Floors:** Suited to shower walls, shower floors, and steam showers. We recommend sealing the tile for this use. Slip resistance can be improved by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete.
-  - **Pools + Spas:** Functions reliably in saltwater and chlorine environments. We recommend sealing the tile for this use.
+  - **Shower Walls + Floors:** Suited to shower walls, shower floors, and steam showers. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete. Always seal Desert Bloom 2x6 Bejmat Zellige according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
+  - **Pools + Spas:** Functions reliably in saltwater and chlorine environments. Always seal Desert Bloom 2x6 Bejmat Zellige according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
   - **Fireplace Surround:** Creates a decorative fireplace surround; not for use inside the firebox.
   - **Radiant Heating Compatible:** Supports all radiant-heating and heated-floor elements.
-  - **Sealing Required:** We recommend sealing our Desert Bloom zellige 2x6 tiles when installing in moisture-exposed areas such as pools, spas, and showers. Please consult the Zellige Installation Guide for detailed instructions.
+  - **Sealing Required:** Always seal Desert Bloom 2x6 Bejmat Zellige according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
 ### Commercial Usage
 
-  - **Interior Floors – High Traffic:** Suits high-traffic commercial spaces. If installed on a flooring surface in a wet area, slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip product after installation is complete.
+  - **Interior Floors – High Traffic:** Suits high-traffic commercial spaces.
   - **Interior Floors – Low Traffic:** Suits lower-traffic commercial interiors with this 2x6 rectangular format.
   - **Exterior Floors – Freeze or Thaw:** Zellige is not suitable for an outdoor installation in a freeze/thaw climate.
   - **Exterior Floors – Non Freeze or Thaw:** Integrates into exterior floors in climates without snow or ice.
   - **Interior Walls:** Establishes a considered backdrop for commercial hotel, restaurant, and hospitality wall features where the warm pink tones introduce a distinct color direction.
   - **Exterior Walls:** Zellige tiles may be used on exterior walls in non-freeze/thaw climates.
-  - **Shower Walls + Floors:** Suited to commercial shower walls, shower floors, and steam showers. We recommend sealing the tile for all wet applications. Slip resistance can be improved by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete.
-  - **Pools + Spas:** Maintains structural integrity in high-use commercial saltwater or chlorine pools. We recommend sealing the tile for this use.
+  - **Shower Walls + Floors:** Suited to commercial shower walls, shower floors, and steam showers. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete. We recommend sealing the tile for all wet applications.
+  - **Pools + Spas:** Maintains structural integrity in high-use commercial saltwater or chlorine pools. Always seal Desert Bloom 2x6 Bejmat Zellige according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
   - **Fireplace Surround:** Serves as a decorative surround in commercial lobbies; not for use inside a firebox.
   - **Radiant Heating Compatible:** Works with commercial radiant heating systems.
-  - **Sealing Required:** We recommend sealing our Desert Bloom zellige 2x6 tiles when installing in moisture-exposed areas such as pools, spas, and showers. Please consult the Zellige Installation Guide for detailed instructions.
+  - **Sealing Required:** Always seal Desert Bloom 2x6 Bejmat Zellige according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
 ## How It's Made
 
@@ -108,15 +108,15 @@ The final stage is the kiln. Earthen kilns do not distribute heat evenly, and th
 ### Full Orders
 
   - Full orders ship throughout the US and Canada via LTL carrier with curbside pallet delivery.
-  - All tiles in your order ship together once everything is in stock.
+  - All tiles in the order ship together once everything is in stock.
   - Your LTL carrier will provide an estimated delivery range and contact you to confirm a delivery window once the shipment reaches their local terminal.
   - We deliver to almost any location around the world. Clients in Alaska, Hawaii, Canada, or international locations should contact our team for a custom shipping quote.
 
 ### Warehouse Pickup & Support
 
   - We offer free full-order pickup at our Los Angeles area warehouse to help local customers save on shipping costs.
-  - We will contact you once your order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
-  - For additional questions regarding your Desert Bloom zellige order, please reach out to us at info@ziatile.com.
+  - For additional questions regarding your Desert Bloom 2x6 Bejmat Zellige order, please reach out to us at info@ziatile.com or 310-844-1170.
+  - We will contact you once the order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
 
 ## Installation Guide
 

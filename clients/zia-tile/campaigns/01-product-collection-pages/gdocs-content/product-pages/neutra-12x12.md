@@ -51,7 +51,7 @@ A 1/8" grout joint is recommended for alignment and visual consistency. Installe
 ### Tile Character
 
   - Our Neutra 12x12 is a beige terrazzo tile with small grey stone aggregates embedded in a neutral cement field, producing a continuous but non-repetitive composition across the installation.
-  - Each handmade cement terrazzo tile remains wholly unique, and this inherent variation in aggregate placement defines the line's charm.
+  - Each handmade cement terrazzo tile remains wholly unique, and this inherent variation in aggregate placement defines the line's character.
   - Expect natural variation in color, tone, and aggregate distribution across the layout, along with the chips, pits, and crazing that may develop during the curing process.
 
 ### Preparation and Curation
@@ -68,7 +68,7 @@ A 1/8" grout joint is recommended for alignment and visual consistency. Installe
   - Install over a fully cured substrate using high-quality medium-bed thinset mortar. Maintain 1/8" grout joints and use wedge spacers or shims to preserve alignment across the field.
   - Seal Neutra 12x12 with 511 Porous Plus before and after grouting. For interior applications, finish with Fila Matte Wax as a final coat. For exterior applications, apply a second coat of 511 Porous Plus in place of wax.
   - Press tiles into place using palm pressure only. Do not use a rubber mallet, which can create small cracks in the terrazzo body.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - For installation questions, contact our team at info@ziatile.com or 310-844-1170.
 
   
 
@@ -93,7 +93,7 @@ Our Neutra 12x12 terrazzo suits both residential and commercial projects. The 12
   - **Pools + Spas:** Not suitable for pools or spas.
   - **Fireplace Surround:** Suited to decorative fireplace surrounds. These tiles are not for use inside the firebox.
   - **Radiant Heating Compatible:** Compatible with radiant heating systems.
-  - **Sealing Required:** Sealing is required before and after grouting using 511 Porous Plus. Indoors, finish with Fila Matte Wax. Outdoors, apply a second coat of 511 Porous Plus. Refer to the Zia Tile Installation Guide for detailed instructions.
+  - **Sealing Required:** Sealing is required for all installations, including dry spaces. Always seal Neutra 12x12 according to the installation instructions, whether in dry spaces or in areas exposed to moisture, such as showers. Refer to the Zia Tile Installation Guide for detailed instructions.
 
 ### Commercial Usage
 
@@ -107,7 +107,7 @@ Our Neutra 12x12 terrazzo suits both residential and commercial projects. The 12
   - **Pools + Spas:** Not suitable for pools or spas.
   - **Fireplace Surround:** Suited to decorative fireplace surrounds in lobbies and hospitality spaces. Not for use inside a firebox.
   - **Radiant Heating Compatible:** Compatible with commercial radiant heating systems.
-  - **Sealing Required:** Sealing is required before and after grouting using 511 Porous Plus. Indoors, finish with Fila Matte Wax. Outdoors, apply a second coat of 511 Porous Plus. Refer to the Zia Tile Installation Guide for detailed instructions.
+  - **Sealing Required:** Sealing is required for all installations, including dry spaces. Always seal Neutra 12x12 according to the installation instructions, whether in dry spaces or in areas exposed to moisture, such as showers. Refer to the Zia Tile Installation Guide for detailed instructions.
 
   
 
@@ -138,15 +138,15 @@ Once pressed, each tile cures until it reaches full strength. The surface is the
 ### Full Orders
 
   - Full orders ship throughout the US and Canada via LTL carrier with curbside pallet delivery.
-  - All tiles in your order ship together once everything is in stock.
-  - Your LTL carrier will provide an estimated delivery range and contact you to confirm a delivery window once the shipment reaches their local terminal.
+  - All tiles ship together once everything is in stock.
+  - The LTL carrier will provide an estimated delivery range and confirm a delivery window once the shipment reaches the local terminal.
   - We deliver to almost any location around the world. Clients in Alaska, Hawaii, Canada, or international locations should contact our team for a custom shipping quote.
 
 ### Warehouse Pickup & Support
 
   - We offer free full-order pickup at our Los Angeles area warehouse to help local customers save on shipping costs.
   - We will contact you once your order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
-  - For additional questions regarding your Neutra terrazzo order, please reach out to us at <info@ziatile.com>.
+  - For additional questions regarding the Neutra 12x12 order, contact our team at info@ziatile.com or 310-844-1170.
 
   
 

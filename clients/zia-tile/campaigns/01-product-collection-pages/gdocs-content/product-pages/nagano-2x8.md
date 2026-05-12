@@ -31,16 +31,16 @@ To find the world's best ceramic tiles, Zia traveled to Japan. Our Nagano 2x8 is
 
 ## Details 
 
-Zia's Nagano 2x8 ceramic includes minor variation in size, color, tone, and surface texture. These are natural characteristics of ceramic tile and should be expected across your order.
+Zia's Nagano 2x8 ceramic includes minor variation in size, color, tone, and surface texture. These are natural characteristics of ceramic tile and should be expected across the order.
 
-The images shown are representative of a sample of this tile but may not display all potential variations. We recommend 15-20% overage to properly curate your installation and account for any cuts needed. For applications requiring tighter visual alignment, we recommend 25% overage.
+The images shown are representative of a sample of this tile but may not display all potential variations. We recommend 15-20% overage to properly curate the installation and account for any cuts needed. For applications requiring tighter visual alignment, we recommend 25% overage.
 
 ## About
 
 ### Color and Surface
 
   - Zia's Nagano 2x8 presents an aqua tone across each tile, with a glossy finish that reflects light and introduces depth across the installation.
-  - Each aqua ceramic subway tile exhibits minor variation in color, tone, and surface texture. These are natural characteristics of ceramic tile and should be expected across your order.
+  - Each aqua ceramic subway tile exhibits minor variation in color, tone, and surface texture. These are natural characteristics of ceramic tile and should be expected across the order.
   - The variation in this glossy aqua tile collection is subtle. Nagano reads as a continuous aqua field at installation scale, with the handcrafted quality and glaze movement most visible up close.
 
 ### Preparation and Curation
@@ -55,7 +55,8 @@ The images shown are representative of a sample of this tile but may not display
   - Substrates must be structurally sound, clean, and fully prepared. Cement board or equivalent backer board is required for wet-area installations.
   - Install in sections no larger than 2'x2' to maintain alignment across vertical wall applications.
   - For finishing, ceramic tiles can be mitered on the edge or finished with Schluter strips.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - For installation questions, contact our team at info@ziatile.com or 310-844-1170.
+  - Always seal Nagano 2x8 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
   
 
@@ -133,8 +134,8 @@ These shifts are controlled but present, reflecting the nature of traditional Ja
 ### Warehouse Pickup & Support
 
   - We offer free full order pickup at our Los Angeles area warehouse.
-  - Our team will contact you when your order is ready so you may schedule your pickup. Warehouse pickup is available by confirmed appointment only.
-  - For additional questions regarding your Nagano 2x8 order, please reach out to us at <info@ziatile.com>.
+  - Our team will contact you when the order is ready to schedule a pickup. Warehouse pickup is available by confirmed appointment only.
+  - For additional questions, contact our team at info@ziatile.com or 310-844-1170.
 
   
 
@@ -156,9 +157,9 @@ Nagano ceramic is an aqua tone with a glossy, reflective finish that shifts subt
 
 The best grout color depends on the intended visual contrast. Light grey or soft white grout is commonly used for a cohesive surface that softens the grid of a 2x8 subway layout while maintaining definition. Stark white grout creates a sharper contrast that highlights each tile edge, while darker grey or charcoal grout produces a more graphic effect across backsplash installations. A closely matched aqua or blue-grey grout produces the most continuous field.
 
-### Can I use Nagano ceramic tile in the kitchen?
+### Is Nagano ceramic tile suitable for the kitchen?
 
-Yes, Nagano 2x8 is well-suited to kitchen applications, particularly as a backsplash. The glossy surface is resistant to moisture and easy to clean, which makes it appropriate for cooking areas where splashes and heat exposure occur. The elongated subway format also works on adjacent wall surfaces to maintain continuity in modern kitchen layouts, where the aqua palette can read as a color-forward feature against neutral cabinetry.
+Nagano 2x8 is well-suited to kitchen applications, particularly as a backsplash. The glossy surface is resistant to moisture and easy to clean, which makes it appropriate for cooking areas where splashes and heat exposure occur. The elongated subway format also works on adjacent wall surfaces to maintain continuity in modern kitchen layouts, where the aqua palette can read as a color-forward feature against neutral cabinetry.
 
 ### Can Nagano 2x8 be used in a pool or spa?
 
@@ -167,3 +168,7 @@ Yes, Nagano 2x8 is suitable for pools and spas, including saltwater and chlorine
 ### How long does ceramic tile last?
 
 High-quality ceramic tile can last for decades with proper installation and regular care. Longevity depends on substrate preparation, traffic levels, and maintenance of the grout joints. When correctly installed, ceramic tile on walls and floors maintains its performance for decades without structural degradation. What typically requires refreshing over time is the grout rather than the tile itself.
+
+### Does Nagano 2x8 require sealing?
+
+Glossy finish ceramics do not require pre-grout sealing as a grout release. For wet applications — showers, pools, and spas — seal the tile and grout lines after grouting to protect against continuous moisture exposure. Reseal every 1–2 years. Refer to the Zia Tile Ceramics Installation Guide for recommended sealers and application timing.

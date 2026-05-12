@@ -7,7 +7,7 @@ download_date: 2026-05-12
 
 **URL:** https://ziatile.com/products/8x9-hex-red-clay-cotto-tile
 
-**Meta title**: 8x9 Hex + Red Clay Terracotta Tile | Zia Tile  
+**Meta title**: 8x9 Hex + Red Clay Terra Cotta Tile | Zia Tile  
 **Meta description**: Shop Zia's 8x9 Hex + Red Clay cotto. A red hexagon terra cotta tile for kitchen floors, outdoor patios, and bathroom wall installations.
 
 **Keywords:** 8x9 Hex Red Clay, Hexagon terra cotta tile, Red cotto tile
@@ -34,7 +34,7 @@ Zia's Red Clay 8x9 Hex is a handmade terra cotta tile produced in San Miguel de 
 
   
 
-Each tile includes moderate to high variation in color, tone, thickness, and edge definition. Chips, pits, and crazing develop as natural characteristics of hand-forming, sun-drying, and high-firing. The images shown represent the tile's general appearance and may not capture the full range of tonal variation present in a complete order.
+Each tile includes moderate to high variation in tone, shape, edge profile, and thickness, consistent with handmade terra cotta production. The images shown represent the tile's general appearance and may not capture the full range of tonal variation present in a complete order.
 
   
   
@@ -50,23 +50,24 @@ We recommend a 15% overage to curate the installation and account for any cuts n
 ### Color and Surface
 
   - Our 8x9 Hex + Red Clay is a red hexagon terra cotta tile with a grounded palette that moves between deep red, brick, and burnt-orange tones across the installation.
-  - Each handmade cotto tile remains wholly unique, and this innate variation defines the line's charm.
-  - Expect natural variation in tone, shape, thickness, and surface texture across the layout, along with the soft, irregular edges inherent to unglazed cotto. Chips, pits, and crazing appear as part of the firing process.
+  - Each handmade cotto tile remains wholly unique, and this innate variation defines the line's character.
+  - Expect natural variation in tone, shape, edge profile, and thickness across the layout, along with the soft, irregular edges inherent to unglazed cotto.
 
 ### Preparation and Curation
 
-  - Mix the contents of each box in your shipment before setting to distribute tonal and surface variation evenly across the installation.
+  - Before installation, open and mix the contents of each box to distribute tonal and surface variation evenly across the layout.
   - Lay out a full dry arrangement before setting to evaluate how the red, brick, and burnt-orange tones shift across adjacent tiles in hexagonal alignment.
   - Disperse any tonal and surface variation evenly across the layout rather than concentrating darker or lighter pieces in isolated areas.
-  - We suggest a 15% overage on all cotto orders. For the 8x9 hex format, the additional cuts required at edges and transitions may warrant increasing overage to 20% or more.
+  - We suggest a 15–20% overage on all cotto orders to account for curation and cuts. For the 8x9 hex format, the additional cuts required at edges and transitions often warrant increasing overage to 20% or more.
 
 ### Installation and Finishing
 
   - All installers must wear protective face and eye coverings when working with cotto, thinset, sealants, and grout in accordance with California Prop 65.
   - For finishing, bring the drywall flush with the finished tile surface, miter exposed edges at 45 degrees, or complete the edge with Schluter strips.
   - Seal the 8x9 Hex + Red Clay with 511 Porous Plus before and after grouting. For interior applications, finish with Fila Matte Wax as a final coat. For exterior applications, apply a second coat of 511 Porous Plus in place of wax.
-  - Use 1/8" tile spacers and plan the layout carefully. The hexagonal geometry depends on precise alignment during the dry layout stage to resolve across the full field.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - Plan the layout carefully. The hexagonal geometry depends on precise alignment during the dry layout stage to resolve across the full field. Grout joints should be sized to a minimum of 1/8".
+  - Always seal the 8x9 Hex + Red Clay according to the Zia Tile Installation Guide, whether in dry spaces or in areas exposed to moisture, such as showers. Note that Red Clay Cotto is not suitable for pools or spas.
+  - Reach out to the team at info@ziatile.com or 310-844-1170 with any specific installation questions.
 
   
 
@@ -141,15 +142,15 @@ The tiles are kept unglazed to preserve the raw clay surface, which is what allo
 ### Full Orders
 
   - Full orders ship throughout the US and Canada via LTL carrier with curbside pallet delivery.
-  - All tiles in your order ship together once everything is in stock.
-  - Your LTL carrier will provide an estimated delivery range and contact you to confirm a delivery window once the shipment reaches their local terminal.
-  - We deliver to almost any location around the world. Clients in Alaska, Hawaii, Canada, or international locations should contact our team for a custom shipping quote.
+  - All tiles ship together once everything is in stock.
+  - The LTL carrier will provide an estimated delivery range and confirm a delivery window once the shipment reaches their local terminal.
+  - We deliver to almost any location around the world. Clients in Alaska, Hawaii, Canada, or international locations should email our team at info@ziatile.com for a custom shipping quote.
 
 ### Warehouse Pickup & Support
 
   - We offer free full-order pickup at our Los Angeles area warehouse to help local customers save on shipping costs.
-  - We will contact you once your order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
-  - For additional questions regarding your 8x9 Hex + Red Clay order, please reach out to us at <info@ziatile.com>.
+  - The team will be in touch once the order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
+  - For additional questions regarding an 8x9 Hex + Red Clay order, reach out at info@ziatile.com or 310-844-1170.
 
   
 
@@ -163,11 +164,11 @@ The tiles are kept unglazed to preserve the raw clay surface, which is what allo
 
 ### What is cotto tile?
 
-Cotto is a handmade terra cotta tile made from high-fired, unglazed clay that preserves the natural behavior of fired earth. Each tile is formed from mineral-rich clay and kiln-fired without a surface coating, which produces the visible tonal movement, matte texture, and inherent variation in color and edge definition that define the material. The surface develops chips, pits, and crazing as natural characteristics of production, and these features reflect traditional terra cotta methods rather than indicating defects.
+Cotto is a handmade terra cotta tile made from high-fired, unglazed clay that preserves the natural behavior of fired earth. Each tile is formed from mineral-rich clay and kiln-fired without a surface coating, which produces the visible tonal movement, matte texture, and inherent variation in tone, shape, edge profile, and thickness that define the material. These characteristics reflect traditional terra cotta methods rather than indicating defects.
 
 ### What are the characteristics of the 8x9 Hex + Red Clay?
 
-The 8x9 Hex + Red Clay is a hexagon terra cotta tile with deep red, burnt orange, and clay-based tonal variation produced through kiln exposure and mineral composition. Each tile measures 8" x 9" in a hexagonal geometry with a 5/8" thickness, designed for durable floor and wall installations. The unglazed surface produces natural texture variation across each installation, and chips, pits, and crazing appear as expected material characteristics.
+The 8x9 Hex + Red Clay is a hexagon terra cotta tile with deep red, burnt orange, and clay-based tonal variation produced through kiln exposure and mineral composition. Each tile measures 8" x 9" in a hexagonal geometry with a 5/8" thickness, designed for durable floor and wall installations. The unglazed surface produces natural variation in tone, shape, edge profile, and thickness across each installation — characteristics inherent to handmade cotto.
 
 ### Is the 8x9 Hex + Red Clay good for flooring?
 
@@ -180,3 +181,7 @@ Yes, a hexagon terra cotta tile layout can visually expand a space by breaking u
 ### How do I care for terra cotta floor tiles?
 
 Caring for terra cotta floor tiles requires pH-neutral cleaning products and consistent maintenance that protects the porous clay body. Routine cleaning should include dry sweeping or vacuuming, followed by damp mopping with a non-acidic solution. Avoid abrasive or acidic cleaners, which can affect sealed surfaces and interrupt patina development. Periodic resealing is required to maintain resistance against moisture and staining, particularly in high-use installations such as kitchens and entryways. Over time, the surface evolves naturally into a patina that is characteristic of fired clay rather than a sign of wear.
+
+### Can the 8x9 Hex + Red Clay be mixed with other cotto colorways?
+
+The 8x9 Hex + Red Clay can be combined with other colorways in the Cotto collection. Each colorway is produced using the same clay body and firing process, so tiles share consistent thickness and surface character across the range. The deep red of Red Clay pairs naturally with the classic Adobe and Fired Earth tones, or contrasts effectively against the unexpected tones of Blanco, Madera, and Oscura. Contact info@ziatile.com or 310-844-1170 with any questions about mixing colorways.

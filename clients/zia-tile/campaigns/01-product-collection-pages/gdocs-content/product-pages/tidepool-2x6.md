@@ -18,13 +18,13 @@ download_date: 2026-05-12
 
 Zia's Tidepool 2x6 is a handcrafted Moroccan art form with centuries of craft behind it. The colorway moves across blue-green tones that shift from tile to tile depending on the glaze and the kiln conditions of that production run. Artisans historically installed these tiles in mosaics featuring decorative geometric and floral shapes within elaborately designed palaces. The bejmat format suits stacked, herringbone, and chevron layouts, and brings that tonal range into kitchens, bathrooms, and commercial spaces around the globe.
 
-Our Tidepool zellige includes inherent variation in size, color, and tone. Each tile features characteristic chips, pits, and crazing, which are innate to this handcrafted Moroccan art form. These elements create the perfectly imperfect aesthetic that defines traditional zellige. While the images shown represent the tile's general appearance, they may not capture the full range of dynamic tones present in a complete order.
+Our Tidepool zellige includes inherent variation in size, color, and tone. Each tile features characteristic chips, pits, and crazing, which are innate to this handcrafted Moroccan art form. These elements create the perfectly imperfect aesthetic that defines traditional zellige. While the images shown represent the tile's general appearance, they may not capture the full range of dynamic glazes present in a complete order.
 
 \[INSERT IMAGE: SIZE/THICKNESS\]
 
 ## Details
 
-We recommend a 15–20% overage for each project. This additional quantity allows you or your installer to properly curate the installation and account for any tiles with color variation or characteristic chips and pits outside of your preferred range. For a more uniform look, we recommend 25% overage.
+We recommend a 15–20% overage for each project. This additional quantity allows the installer to properly curate the installation and account for any tiles with color variation or characteristic chips, pits, and crazing outside of the preferred range. For a more uniform look, we recommend 25% overage.
 
 Thickness, edge, and size vary from tile to tile in zellige. Plan for two to three times the installation window of a precision-cut tile and use wedge spacers to maintain consistent spacing and protect edges across the surface.
 
@@ -32,23 +32,23 @@ Thickness, edge, and size vary from tile to tile in zellige. Plan for two to thr
 
 ### Inherent Variation
 
-  - Our Tidepool is a blue-green zellige with a fluid glaze that shifts with changing light.
-  - Each handcrafted zellige tile remains wholly unique, and this innate variation defines the line's charm.
-  - You should expect natural variation in color, shape, and thickness, alongside characteristic chips, pits, and crazing.
+  - Our Tidepool is a blue-green zellige with dynamic glazes that shift with changing light.
+  - Each handcrafted zellige tile remains wholly unique, and this innate variation defines the line's character.
+  - Expect natural variation in color, shape, and thickness, alongside characteristic chips, pits, and crazing.
 
 ### Preparation and Curation
 
-  - Mix each box in your shipment before beginning your project to ensure a balanced distribution of color and tone.
-  - Arrange an ideal layout before installation to ensure the variation remains balanced to your liking.
-  - Any chips, pits, and color variation should be evenly dispersed.
-  - We suggest a 15–20% overage on all tile orders to provide enough material to curate your unique mix. For a more uniform look, we recommend 25% overage.
+  - Mix each box in the shipment before beginning the project to ensure a balanced distribution of color and tone.
+  - Arrange an ideal layout before installation to ensure the variation remains balanced evenly.
+  - Any chips, pits, and crazing should be evenly dispersed.
+  - We suggest a 15–20% overage on all tile orders to provide enough material to curate a curated mix. For a more uniform look, we recommend 25% overage.
 
 ### Installation and Finishing
 
   - Installers must always wear protective face and eye coverings when working with zellige, thinset, sealants, and grout in accordance with California Prop 65.
-  - While traditional trim and edge pieces do not exist for zellige, we recommend bringing the drywall flush with the finished surface of the tile or finishing your project with mitered edges or Schluter strips.
-  - Always seal Tidepool zellige 2x6 in areas exposed to moisture, such as pools, spas, and showers.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - While traditional trim and edge pieces do not exist for zellige, we recommend bringing the drywall flush with the finished surface of the tile or finishing the project with mitered edges or Schluter strips.
+  - Always seal Tidepool 2x6 Bejmat Zellige according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
+  - Reach out to our team directly at info@ziatile.com or 310-844-1170 with any specific installation questions.
 
 *⚠ WARNING: Cancer and Reproductive Harm.* [*Learn more about Proposition 65 Warnings.*](https://www.ziatile.com/proposition-65-warnings)
 
@@ -58,31 +58,31 @@ The Tidepool 2x6 zellige suits both residential and commercial projects. The rec
 
 ### Residential Usage
 
-  - **Interior Floors – High Traffic:** Serves high-traffic areas such as kitchens, primary bathrooms, and entryways. If installed on a flooring surface in a wet area, slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete.
+  - **Interior Floors – High Traffic:** Serves high-traffic areas such as kitchens, primary bathrooms, and entryways.
   - **Interior Floors – Low Traffic:** Performs well in lower-traffic spaces such as guest bathrooms and bedrooms.
   - **Exterior Floors – Freeze or Thaw:** Zellige is not suitable for an outdoor installation in a freeze/thaw climate.
   - **Exterior Floors – Non Freeze or Thaw:** Accommodates outdoor surfaces that do not experience snow or ice.
   - **Interior Walls:** Suited to kitchen backsplashes and bathroom walls, where the 2x6 format introduces direction and the blue-green glaze shifts across the surface with changing light.
   - **Exterior Walls:** Zellige tiles may be used on exterior walls in non-freeze/thaw climates.
-  - **Shower Walls + Floors:** Enhances shower walls, shower floors, and steam showers. We recommend sealing the tile for this use. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete.
-  - **Pools + Spas:** Functions reliably in saltwater and chlorine environments. We recommend sealing the tile for this use.
+  - **Shower Walls + Floors:** Enhances shower walls, shower floors, and steam showers. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete. Always seal Tidepool 2x6 Bejmat Zellige according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
+  - **Pools + Spas:** Functions reliably in saltwater and chlorine environments. Always seal Tidepool 2x6 Bejmat Zellige according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
   - **Fireplace Surround:** Creates a decorative fireplace surround, though these tiles are not for use inside the firebox.
   - **Radiant Heating Compatible:** Supports all radiant heating and heated floor elements.
-  - **Sealing Required:** We recommend sealing our Tidepool zellige 2x6 tiles when installing in moisture-exposed areas such as pools, spas, and showers. Please consult the Zellige Installation Guide for detailed instructions.
+  - **Sealing Required:** Always seal Tidepool 2x6 Bejmat Zellige according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
 ### Commercial Usage
 
-  - **Interior Floors – High Traffic:** Offers a durable surface for high-traffic commercial spaces. If installed on a flooring surface in a wet area, slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete.
+  - **Interior Floors – High Traffic:** Offers a durable surface for high-traffic commercial spaces.
   - **Interior Floors – Low Traffic:** Suits lower-traffic commercial interiors.
   - **Exterior Floors – Freeze or Thaw:** Zellige is not suitable for an outdoor installation in a freeze/thaw climate.
   - **Exterior Floors – Non Freeze or Thaw:** Integrates into exterior floors in climates without snow or ice.
   - **Interior Walls:** Establishes a directional, color-shifting surface for commercial kitchen and bathroom walls where the 2x6 format introduces pattern and movement.
   - **Exterior Walls:** May be used on exterior commercial wall surfaces in non-freeze/thaw climates.
-  - **Shower Walls + Floors:** Suited to commercial shower and steam shower installations. We recommend sealing the tile for use in any wet spaces. Slip resistance can be improved by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete.
-  - **Pools + Spas:** Maintains integrity in commercial saltwater or chlorine pools. We recommend sealing the tile for this use.
+  - **Shower Walls + Floors:** Suited to commercial shower and steam shower installations. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete. We recommend sealing the tile for use in any wet spaces.
+  - **Pools + Spas:** Maintains integrity in commercial saltwater or chlorine pools. Always seal Tidepool 2x6 Bejmat Zellige according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
   - **Fireplace Surround:** Serves as a decorative commercial fireplace surround, though it is not for use inside a firebox.
   - **Radiant Heating Compatible:** Works with commercial radiant heating systems.
-  - **Sealing Required:** We recommend sealing our Tidepool zellige 2x6 tiles when installing in moisture-exposed areas such as pools, spas, and showers. Please consult the Zellige Installation Guide for detailed instructions.
+  - **Sealing Required:** Always seal Tidepool 2x6 Bejmat Zellige according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
 ## How It's Made — \[ACCORDION\]
 
@@ -112,8 +112,8 @@ The kiln is the final stage, and earthen kilns do not distribute heat evenly, wh
 ### Warehouse Pickup & Support
 
   - We offer free full order pickup at our Los Angeles area warehouse to help local customers save on shipping costs.
-  - Our team will reach out when your order is ready so you may schedule a time for your pickup appointment. Order pickups are available only with a confirmed appointment.
-  - For additional questions regarding your Tidepool zellige 2x6 order, please reach out to us at info@ziatile.com.
+  - For additional questions regarding your Tidepool 2x6 Bejmat Zellige order, please reach out to us at info@ziatile.com or 310-844-1170.
+  - Our team will reach out when the order is ready so to schedule a time for a pickup appointment. Order pickups are available only with a confirmed appointment.
 
 ## Installation Guide — \[ACCORDION\]
 
@@ -123,7 +123,7 @@ The kiln is the final stage, and earthen kilns do not distribute heat evenly, wh
 
 ### Does the Tidepool colorway vary between orders?
 
-Yes, the Tidepool colorway can vary between production runs. Each batch of zellige is produced by hand, and the clay, glaze, and kiln conditions shift from one run to the next. Tiles from separate orders may differ in tone and surface character. If your project requires tiles from multiple orders, ordering the full quantity at once gives the most consistent result.
+Yes, the Tidepool colorway can vary between production runs. Each batch of zellige is produced by hand, and the clay, glaze, and kiln conditions shift from one run to the next. Tiles from separate orders may differ in tone and surface character. If the project requires tiles from multiple orders, ordering the full quantity at once gives the most consistent result.
 
 ### How does Tidepool zellige compare to Aegean zellige?
 

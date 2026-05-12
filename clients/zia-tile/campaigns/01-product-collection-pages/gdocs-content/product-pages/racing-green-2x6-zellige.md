@@ -18,13 +18,13 @@ download_date: 2026-05-12
 
 Zia's Racing Green 2x6 is a handcrafted Moroccan art form with centuries of craft behind it. Artisans historically installed these tiles in mosaics featuring decorative geometric and floral shapes within elaborately designed palaces. The 2x6 rectangular format suits a range of layout approaches, including stacked, herringbone, and chevron, and brings the deep green glaze into kitchens, bathrooms, and commercial spaces around the globe.
 
-Our Racing Green 2x6 zellige includes inherent variation in size, color, and tone. Each tile features characteristic chips, pits, and crazing, which are innate to this handcrafted Moroccan art form. These elements create the perfectly imperfect aesthetic that defines traditional zellige. While the images shown represent the tile's general appearance, they may not capture the full range of dynamic tones present in a complete order.
+Our Racing Green 2x6 zellige includes inherent variation in size, color, and tone. Each tile features characteristic chips, pits, and crazing, which are innate to this handcrafted Moroccan art form. These elements create the perfectly imperfect aesthetic that defines traditional zellige. While the images shown represent the tile's general appearance, they may not capture the full range of dynamic glazes present in a complete order.
 
 \[INSERT IMAGE: SIZE/THICKNESS\]
 
 ## Details
 
-We recommend a 15–20% overage for each project. This additional quantity allows you or your installer to properly curate the installation and account for any tiles with color variation or characteristic chips and pits outside of your preferred range. For a more uniform look, we recommend 25% overage.
+We recommend a 15–20% overage for each project. This additional quantity allows the installer to properly curate the installation and account for any tiles with color variation or characteristic chips, pits, and crazing outside of the preferred range. For a more uniform look, we recommend 25% overage.
 
 Thickness, edge, and size vary across every zellige tile, so the installation process involves more hands-on adjustment than ceramic alternatives. Allow two to three times the standard installation window and use wedge spacers to keep the layout consistent and edges protected.
 
@@ -33,22 +33,22 @@ Thickness, edge, and size vary across every zellige tile, so the installation pr
 ### Inherent Variation
 
   - Our Racing Green is a deep green zellige with a glaze that shifts with changing light.
-  - Each handcrafted zellige tile remains wholly unique, and this innate variation defines the line's charm.
-  - You should expect natural variation in color, shape, and thickness, alongside characteristic chips, pits, and crazing.
+  - Each handcrafted zellige tile remains wholly unique, and this innate variation defines the line's character.
+  - Expect natural variation in color, shape, and thickness, alongside characteristic chips, pits, and crazing.
 
 ### Preparation and Curation
 
-  - Mix each box in your shipment before beginning your project to ensure a balanced distribution of color and tone.
-  - Arrange an ideal layout before installation to ensure the variation remains balanced to your liking.
-  - Any chips, pits, and color variation should be evenly dispersed.
-  - We suggest a 15–20% overage on all tile orders to provide enough material to curate your unique mix. For a more uniform look, we recommend 25% overage.
+  - Mix each box in the shipment before beginning the project to ensure a balanced distribution of color and tone.
+  - Arrange an ideal layout before installation to ensure the variation remains balanced evenly.
+  - Any chips, pits, and crazing should be evenly dispersed.
+  - We suggest a 15–20% overage on all tile orders to provide enough material to curate a curated mix. For a more uniform look, we recommend 25% overage.
 
 ### Installation and Finishing
 
   - Installers must always wear protective face and eye coverings when working with zellige, thinset, sealants, and grout in accordance with California Prop 65.
-  - While traditional trim and edge pieces do not exist for zellige, we recommend bringing the drywall flush with the finished surface of the tile or finishing your project with mitered edges or Schluter strips.
-  - Always seal Racing Green zellige 2x6 in areas exposed to moisture, such as pools, spas, and showers.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - While traditional trim and edge pieces do not exist for zellige, we recommend bringing the drywall flush with the finished surface of the tile or finishing the project with mitered edges or Schluter strips.
+  - Always seal Racing Green 2x6 Bejmat Zellige according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
+  - Reach out to our team directly at info@ziatile.com or 310-844-1170 with any specific installation questions.
 
 *⚠ WARNING: Cancer and Reproductive Harm.* [*Learn more about Proposition 65 Warnings.*](https://www.ziatile.com/proposition-65-warnings)
 
@@ -58,31 +58,31 @@ Our Racing Green 2x6 zellige suits both residential and commercial projects. The
 
 ### Residential Usage
 
-  - **Interior Floors – High Traffic:** Serves high-traffic areas such as kitchens, primary bathrooms, and entryways. If installed on a flooring surface in a wet area, slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete.
+  - **Interior Floors – High Traffic:** Serves high-traffic areas such as kitchens, primary bathrooms, and entryways.
   - **Interior Floors – Low Traffic:** Performs well in lower-traffic spaces such as guest bathrooms and bedrooms.
   - **Exterior Floors – Freeze or Thaw:** Zellige is not suitable for an outdoor installation in a freeze/thaw climate.
   - **Exterior Floors – Non Freeze or Thaw:** Accommodates outdoor surfaces that do not experience snow or ice.
   - **Interior Walls:** Suited to kitchen backsplashes, bathroom walls, and shower niches, where the deep green tones interact with light across the surface.
   - **Exterior Walls:** Zellige tiles may be used on exterior walls in non-freeze/thaw climates.
-  - **Shower Walls + Floors:** Enhances shower walls, shower floors, and steam showers. We recommend sealing the tile for this use. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete.
-  - **Pools + Spas:** Functions reliably in saltwater and chlorine environments. We recommend sealing the tile for this use.
+  - **Shower Walls + Floors:** Enhances shower walls, shower floors, and steam showers. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete. Always seal Racing Green 2x6 Bejmat Zellige according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
+  - **Pools + Spas:** Functions reliably in saltwater and chlorine environments. Always seal Racing Green 2x6 Bejmat Zellige according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
   - **Fireplace Surround:** Creates a decorative fireplace surround, though these tiles are not for use inside the firebox.
   - **Radiant Heating Compatible:** Supports all radiant heating and heated floor elements.
-  - **Sealing Required:** We recommend sealing our Racing Green zellige 2x6 tiles when installing in moisture-exposed areas such as pools, spas, and showers. Please consult the Zellige Installation Guide for detailed instructions.
+  - **Sealing Required:** Always seal Racing Green 2x6 Bejmat Zellige according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
 ### Commercial Usage
 
-  - **Interior Floors – High Traffic:** Offers a durable surface for high-traffic commercial spaces such as restaurant kitchens and entryways. If installed on a flooring surface in a wet area, slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete.
+  - **Interior Floors – High Traffic:** Offers a durable surface for high-traffic commercial spaces such as restaurant kitchens and entryways.
   - **Interior Floors – Low Traffic:** Suits lower-traffic commercial interiors.
   - **Exterior Floors – Freeze or Thaw:** Zellige is not suitable for an outdoor installation in a freeze/thaw climate.
   - **Exterior Floors – Non Freeze or Thaw:** Integrates into exterior floors in climates without snow or ice.
   - **Interior Walls:** Establishes a deep, color-forward backdrop for commercial kitchen and bathroom walls, reception areas, and bar fronts.
   - **Exterior Walls:** May be used on exterior commercial wall surfaces in non-freeze/thaw climates.
-  - **Shower Walls + Floors:** Suited to commercial shower and steam shower installations. We recommend sealing the tile for use in any wet spaces. Slip resistance can be improved by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete.
-  - **Pools + Spas:** Maintains integrity in commercial saltwater or chlorine pools. We recommend sealing the tile for this use.
+  - **Shower Walls + Floors:** Suited to commercial shower and steam shower installations. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete. We recommend sealing the tile for use in any wet spaces.
+  - **Pools + Spas:** Maintains integrity in commercial saltwater or chlorine pools. Always seal Racing Green 2x6 Bejmat Zellige according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
   - **Fireplace Surround:** Serves as a decorative commercial fireplace surround, though it is not for use inside a firebox.
   - **Radiant Heating Compatible:** Works with commercial radiant heating systems.
-  - **Sealing Required:** We recommend sealing our Racing Green zellige 2x6 tiles when installing in moisture-exposed areas such as pools, spas, and showers. Please consult the Zellige Installation Guide for detailed instructions.
+  - **Sealing Required:** Always seal Racing Green 2x6 Bejmat Zellige according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
 ## How It's Made — \[ACCORDION\]
 
@@ -112,8 +112,8 @@ Firing takes place in earthen kilns, where heat moves unevenly through the chamb
 ### Warehouse Pickup & Support
 
   - We offer free full order pickup at our Los Angeles area warehouse to help local customers save on shipping costs.
-  - Our team will reach out when your order is ready so you may schedule a time for your pickup appointment. Order pickups are available only with a confirmed appointment.
-  - For additional questions regarding your Racing Green zellige 2x6 order, please reach out to us at info@ziatile.com.
+  - For additional questions regarding your Racing Green 2x6 Bejmat Zellige order, please reach out to us at info@ziatile.com or 310-844-1170.
+  - Our team will reach out when the order is ready so to schedule a time for a pickup appointment. Order pickups are available only with a confirmed appointment.
 
 ## Installation Guide — \[ACCORDION\]
 

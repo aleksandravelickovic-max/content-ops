@@ -10,7 +10,7 @@ download_date: 2026-05-12
 **URL:** <https://ziatile.com/products/condesa-4x4> 
 
 **Meta title**: Condesa 4x4 Square Cotto Allende | Zia Tile  
-**Meta description**: Zia Tile Condesa 4x4 Square Cotto Allende brings glazed terra cotta tile craftsmanship with deep brown tones, matte surface, and natural variation. 
+**Meta description**: Shop Zia's Condesa 4x4 Cotto Allende. A deep brown glazed terra cotta tile for kitchen backsplashes, bathroom walls, shower installations, and pool surrounds in non-freeze/thaw climates.
 
 **Keywords:** Condesa 4x4, Brown cotto Allende tile, Dark brown terra cotta tile
 
@@ -41,15 +41,15 @@ We recommend a 15% overage to curate the installation and account for any cuts n
 ### Color and Surface
 
   - Our Condesa 4x4 is a brown Cotto Allende tile with a deep earthy palette ranging from warm dark brown to near-black tonal depth, shaped by the interaction of glaze and clay during firing.
-  - Each handmade dark brown terra cotta tile remains wholly unique, and this innate variation defines the line's charm.
+  - Each handmade dark brown terra cotta tile remains wholly unique, and this innate variation defines the line's character.
   - Expect natural variation in color, tone, thickness, and surface texture across the layout, along with subtle crazing, chips, and pits that develop during the firing and glazing process.
 
 ### Preparation & Curation
 
-  - Mix the contents of each box in your shipment before setting to distribute tonal variation, glaze response, and surface character evenly across the installation.
+  - Before installation, open and mix the contents of each box to distribute tonal variation, glaze response, and surface character evenly across the layout.
   - Arrange a full dry layout before committing to placement to evaluate tonal sequencing, edge variation, and glaze movement across the field.
   - Disperse any crazing, chips, and tonal shifts evenly across the layout rather than concentrating them in isolated areas.
-  - We suggest a 15% overage on all Cotto Allende orders. For specialty cuts or complex layouts, increase to 25% overage for expanded selection during curation.
+  - We suggest a 15–20% overage on all Cotto Allende orders to account for curation and cuts. For specialty cuts or complex layouts, increase to 25% overage.
 
 ### Installation & Finishing
 
@@ -57,7 +57,8 @@ We recommend a 15% overage to curate the installation and account for any cuts n
   - For finishing, bring the drywall flush with the finished surface of the tile, miter exposed edges at 45 degrees, or complete the edge with Schluter strips.
   - Seal Condesa 4x4 with 511 Porous Plus before and after grouting. Fila Matte Wax is not recommended for Cotto Allende; use 511 Porous Plus as the sole sealer.
   - Match grout color closely to the tile to integrate the crazing into the composition. Contrasting grout can stain the glazed surface and emphasizes crazing, and should be avoided across the full field.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - Always seal Condesa 4x4 according to the Zia Tile Installation Guide, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
+  - Reach out to the team at info@ziatile.com or 310-844-1170 with any specific installation questions.
 
   
 
@@ -128,15 +129,15 @@ Crazing, chips, and subtle surface movement develop during this process and rema
 ### Full Orders
 
   - Full orders ship throughout the US and Canada via LTL carrier with curbside pallet delivery.
-  - All tiles in your order ship together once everything is in stock.
-  - Your LTL carrier will provide an estimated delivery range and contact you to confirm a delivery window once the shipment reaches their local terminal.
-  - We deliver to almost any location around the world. Clients in Alaska, Hawaii, Canada, or international locations should contact our team for a custom shipping quote.
+  - All tiles ship together once everything is in stock.
+  - The LTL carrier will provide an estimated delivery range and confirm a delivery window once the shipment reaches their local terminal.
+  - We deliver to almost any location around the world. Clients in Alaska, Hawaii, Canada, or international locations should email our team at info@ziatile.com for a custom shipping quote.
 
 ### Warehouse Pickup & Support
 
   - We offer free full-order pickup at our Los Angeles area warehouse to help local customers save on shipping costs.
-  - We will contact you once your order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
-  - For additional questions regarding your Condesa Cotto Allende order, please reach out to us at info@ziatile.com.
+  - The team will be in touch once the order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
+  - For additional questions regarding a Condesa Cotto Allende order, reach out at info@ziatile.com or 310-844-1170.
 
   
 
@@ -173,3 +174,7 @@ To clean Cotto Allende, use a pH-neutral cleaner with warm water and a soft clot
 ### How long do terra cotta tiles last?
 
 Terracotta tile lasts for decades when installed and maintained correctly. Cotto Allende develops a natural patina over time while maintaining its structural integrity under regular use. Long-term performance depends on proper substrate preparation, consistent maintenance, and adherence to sealing requirements at each stage of installation.
+
+### Can Condesa 4x4 be mixed with other Cotto Allende colorways?
+
+Condesa 4x4 can be combined with other colorways in the Cotto Allende collection. Each colorway is produced using the same clay body and firing process, so tiles share consistent thickness, format, and surface character across the range. The deep brown of Condesa pairs well against lighter colorways such as Puebla or Cacao to create contrast across the field. Contact info@ziatile.com or 310-844-1170 to discuss colorway combinations before ordering.

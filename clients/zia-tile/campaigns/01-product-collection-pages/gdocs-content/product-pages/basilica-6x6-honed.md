@@ -64,8 +64,8 @@ We recommend a 15–20% overage to curate the installation and account for any c
   - All installers must use proper protective face and eye equipment when working with limestone and installation materials under California Prop 65 requirements.
   - Drywall must be brought flush to the finished tile plane to maintain clean transitions at edges.
   - Finish exposed terminations using mitered edges or Schluter strips.
-  - Seal all limestone before and after grouting in moisture-exposed environments, including showers.
-  - Installation questions can be directed to info@ziatile.com for detailed guidance.
+  - Seal all limestone before and after grouting for all installations, whether in dry spaces or in areas exposed to moisture, such as showers.
+  - For installation questions, contact our team at info@ziatile.com or 310-844-1170.
 
   
 
@@ -87,7 +87,7 @@ Our Basilica 6x6 honed limestone suits both residential and commercial projects.
   - **Pools + Spas:** Not suitable for pools or spas.
   - **Fireplace Surround:** Suited to decorative fireplace surrounds. These tiles are not for use inside the firebox.
   - **Radiant Heating Compatible:** Compatible with radiant heating systems.
-  - **Sealing Required:** Sealing is required before and after grouting using 511 Porous Plus. Indoors, finish with Fila Matte Wax. Outdoors, apply a second coat of 511 Porous Plus. Refer to the Zia Tile Installation Guide for detailed instructions.
+  - **Sealing Required:** Sealing is required for all installations, including dry spaces. Always seal Basilica 6x6 according to the installation instructions, whether in dry spaces or in areas exposed to moisture, such as showers. Refer to the Zia Tile Installation Guide for detailed instructions.
 
 ### Commercial Usage
 
@@ -101,7 +101,7 @@ Our Basilica 6x6 honed limestone suits both residential and commercial projects.
   - **Pools + Spas:** Not suitable for pools or spas.
   - **Fireplace Surround:** Suited to decorative fireplace surrounds in lobbies and hospitality spaces. Not for use inside a firebox.
   - **Radiant Heating Compatible:** Compatible with commercial radiant heating systems.
-  - **Sealing Required:** Sealing is required before and after grouting using 511 Porous Plus. Indoors, finish with Fila Matte Wax. Outdoors, apply a second coat of 511 Porous Plus. Refer to the Zia Tile Installation Guide for detailed instructions.
+  - **Sealing Required:** Sealing is required for all installations, including dry spaces. Always seal Basilica 6x6 according to the installation instructions, whether in dry spaces or in areas exposed to moisture, such as showers. Refer to the Zia Tile Installation Guide for detailed instructions.
 
   
 
@@ -139,7 +139,7 @@ Moderate variation in tone, fossil markings, and subtle veining remains across e
   - Local pickup is available from our Los Angeles warehouse at no additional cost.
   - All pickups require a confirmed appointment scheduled by our team once the order is ready for release.
   - Customers are notified directly when orders are prepared for pickup and provided with scheduling instructions.
-  - For all sample or freight-related questions, contact info@ziatile.com.
+  - For all sample or freight-related questions, contact info@ziatile.com or 310-844-1170.
 
 ## Installation Guide
 

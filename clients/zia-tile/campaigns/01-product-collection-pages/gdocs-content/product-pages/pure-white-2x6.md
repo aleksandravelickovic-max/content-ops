@@ -25,7 +25,7 @@ Zia's Pure White 2x6 zellige draws from a centuries-old Moroccan tradition still
 
   
 
-You should expect inherent variation in size, color, and tone, alongside the chips, pits, and crazing that define this handcrafted Moroccan art form. These features are the source of zellige's perfectly imperfect character. Images shown reflect a sample of the tile and may not capture the full range of dynamic tones present across a complete order.
+Expect inherent variation in size, color, and tone, alongside the chips, pits, and crazing that define this handcrafted Moroccan art form. These features are the source of zellige's perfectly imperfect character. Images shown reflect a sample of the tile and may not capture the full range of dynamic glazes present across a complete order.
 
   
   
@@ -34,7 +34,7 @@ You should expect inherent variation in size, color, and tone, alongside the chi
 
 **Order Details + Installation**
 
-We recommend a 15–20% overage for each project. This additional quantity allows you or your installer to curate the installation and account for tiles that fall outside your desired range. 
+We recommend a 15–20% overage for each project. This additional quantity allows the installer to curate the installation and account for tiles that fall outside the desired range. 
 
   
 
@@ -50,23 +50,23 @@ Setting zellige is closer to masonry than to ordinary tile work, given how much 
 
 ### Inherent Variation
 
-  - Our Pure White 2x6 is a soft white Bejmat zellige boasting dynamic tones that read differently across the surface depending on lighting conditions.
-  - Each handcrafted Bejmat tile carries the marks of its firing, including shifts in surface texture, edge character, and depth, and this innate variation defines the line's charm.
-  - You should expect variation in color, shape, and thickness, alongside characteristic chips, pits, and crazing.
+  - Our Pure White 2x6 is a soft white Bejmat zellige boasting dynamic glazes that read differently across the surface depending on lighting conditions.
+  - Each handcrafted Bejmat tile carries the marks of its firing, including shifts in surface texture, edge character, and depth, and this innate variation defines the line's character.
+  - Expect variation in color, shape, and thickness, alongside characteristic chips, pits, and crazing.
 
 ### Preparation and Curation
 
-  - Mix all boxes in your shipment before beginning your project to ensure a balanced distribution of color and tone.
+  - Mix all boxes in the shipment before beginning the project to ensure a balanced distribution of color and tone.
   - Lay out the full installation on a flat surface ahead of setting, so the layout pattern and tile variation read the way you want.
-  - Any chips, pits, and color variation should be evenly dispersed across the field.
+  - Any chips, pits, and crazing should be evenly dispersed across the field.
   - A 15–20% overage on all zellige tile orders gives you enough material to curate the mix to your preference. For an even more uniform look, we recommend 25% overage.
 
 ### Installation and Finishing
 
   - Installers must always wear protective face and eye coverings when working with zellige, thinset, sealants, and grout in accordance with California Prop 65.
-  - While traditional trim and edge pieces do not exist for zellige, we recommend bringing the drywall flush with the finished surface of the tile or finishing your project with mitered edges or Schluter strips.
-  - Always seal Pure White 2x6 zellige according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
-  - You may reach out to our team directly at info@ziatile.com with any material or installation questions.
+  - While traditional trim and edge pieces do not exist for zellige, we recommend bringing the drywall flush with the finished surface of the tile or finishing the project with mitered edges or Schluter strips.
+  - Always seal Pure White zellige 2x6 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
+  - Reach out to our team directly at info@ziatile.com or 310-844-1170 with any material or installation questions.
 
   
 
@@ -88,11 +88,11 @@ Our Pure White 2x6 Bejmat zellige offers a versatile rectangular format suited t
   - **Exterior Floors – Non Freeze or Thaw:** Well-suited to outdoor surfaces in climates that do not experience snow or ice.
   - **Interior Walls:** Suitable for any interior wall application, including kitchen backsplashes and bathroom walls.
   - **Exterior Walls:** Pure White 2x6 zellige may be installed on exterior walls in non-freeze/thaw climates.
-  - **Shower Walls + Floors:** Pure White 2x6 brings a clean, dimensional surface to shower walls, shower floors, and steam showers in this Bejmat format. The tile and grout should always be sealed.
+  - **Shower Walls + Floors:** Pure White 2x6 brings a clean, dimensional surface to shower walls, shower floors, and steam showers in this Bejmat format. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete. The tile and grout should always be sealed.
   - **Pools + Spas:** Often specified in and around pools, in both saltwater and chlorine environments. The tile should always be sealed according to our installation instructions.
   - **Fireplace Surround:** Pure White 2x6 produces a refined fireplace surround, though the tiles are not approved for use inside the firebox.
   - **Radiant Heating Compatible:** Compatible with radiant heating and heated floor systems.
-  - **Sealing Required:** Pure White 2x6 zellige should always be sealed according to our installation instructions, to protect both the tile and the grout. Please consult the [Zellige Installation Guide](https://ziatile.com/pages/zellige-installation-guide) for detailed instructions.
+  - **Sealing Required:** Always seal Pure White zellige 2x6 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
 ### Commercial Usage
 
@@ -102,11 +102,11 @@ Our Pure White 2x6 Bejmat zellige offers a versatile rectangular format suited t
   - **Exterior Floors – Non Freeze or Thaw:** Well-suited to outdoor commercial surfaces in climates that do not experience snow or ice.
   - **Interior Walls:** Suitable for commercial interior walls, including commercial kitchen backsplashes and bar walls.
   - **Exterior Walls:** Pure White 2x6 zellige may be installed on exterior commercial walls in non-freeze/thaw climates.
-  - **Shower Walls + Floors:** Pure White 2x6 brings a clean, dimensional surface to commercial shower walls, shower floors, and steam showers. The tile and grout should always be sealed.
+  - **Shower Walls + Floors:** Pure White 2x6 brings a clean, dimensional surface to commercial shower walls, shower floors, and steam showers. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete. The tile and grout should always be sealed.
   - **Pools + Spas:** Often specified for commercial pools, in both saltwater and chlorine environments. The tile should always be sealed according to our installation instructions.
   - **Fireplace Surround:** Pure White 2x6 produces a refined commercial fireplace surround, though the tiles are not approved for use inside the firebox.
   - **Radiant Heating Compatible:** Compatible with commercial radiant heating systems, including heated floor elements.
-  - **Sealing Required:** Pure White 2x6 zellige should always be sealed according to our installation instructions, to protect both the tile and the grout. Please consult the [Zellige Installation Guide](https://ziatile.com/pages/zellige-installation-guide) for detailed instructions.
+  - **Sealing Required:** Always seal Pure White zellige 2x6 according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
   
 
@@ -142,8 +142,8 @@ The tiles are dipped individually in glaze and placed into an earthen kiln, wher
 ### Warehouse Pickup & Support
 
   - Free full order pickup is offered at our Los Angeles area warehouse to help local customers save on shipping costs.
-  - Our team will reach out when your order is ready so you may schedule a pickup appointment. Order pickups are available only with a confirmed appointment, Monday through Friday from 8 am–3 pm.
-  - For additional questions regarding your Pure White 2x6 zellige order, please reach out to us at info@ziatile.com.
+  - For additional questions regarding the Pure White zellige 2x6 order, please reach out to us at info@ziatile.com or 310-844-1170.
+  - Our team will reach out when the order is ready so to schedule a pickup appointment. Order pickups are available only with a confirmed appointment, Monday through Friday from 8 am–3 pm.
 
   
 
@@ -171,11 +171,11 @@ Zia's Pure White Bejmat zellige tile pairs well with natural and refined materia
 
 ### Why do some Pure White 2x6 tiles have fine lines on the surface?
 
-Fine lines on the glazed surface of Pure White 2x6 zellige, known as crazing, occur naturally during the earthen kiln firing process. These characteristic marks, along with occasional chips and pits, are innate to handmade Moroccan tile and do not affect the structural integrity of the tile.
+Fine lines on the glazed surface of Pure White 2x6 zellige, known as crazing, occur naturally during the earthen kiln firing process. These characteristic marks, along with occasional chips, pits, and crazing, are innate to handmade Moroccan tile and do not affect the structural integrity of the tile.
 
 ### Can I mix Pure White 2x6 zellige with other colors in the collection?
 
-Yes, you can mix Pure White 2x6 zellige with other colors in Zia's handcrafted zellige collection. Artisans use the same traditional Moroccan methods for each shade, allowing you to combine Pure White 2x6 tiles with other tones to create a custom installation that showcases the full range of available dynamic tones.
+Yes, you can mix Pure White 2x6 zellige with other colors in Zia's handcrafted zellige collection. Artisans use the same traditional Moroccan methods for each shade, allowing you to combine Pure White 2x6 tiles with other tones to create a custom installation that showcases the full range of available dynamic glazes.
 
 ### Is Pure White Bejmat zellige high maintenance?
 

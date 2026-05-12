@@ -22,7 +22,7 @@ download_date: 2026-05-12
 
   
 
-Zia's Buff Honed Limestone 12x24 is a natural sedimentary stone with moderate variation in color, tone, and surface texture across each tile. These are inherent qualities of the material and should be expected throughout your order. The images shown are representative, but may not capture the full range of tones present in a complete shipment.
+Zia's Buff Honed Limestone 12x24 is a natural sedimentary stone with moderate variation in color, tone, and surface texture across each tile. These are inherent qualities of the material and should be expected throughout the order. The images shown are representative, but may not capture the full range of tones present in a complete shipment.
 
   
 
@@ -47,20 +47,21 @@ A minimum of 15–20% overage is recommended to allow for cuts, layout adjustmen
 ### Inherent Variation
 
   - Zia's Buff Honed 12x24 presents a buff tone across each tile with a smooth, flat matte surface.
-  - No two tiles are identical. Variation in color, tone, and surface texture is inherent to this stone and defines the line's charm.
-  - You should expect natural variation in color, tone, and surface texture across your order. No two tiles will share identical markings.
+  - No two tiles are identical. Variation in color, tone, and surface texture is inherent to this stone and defines the line's character.
+  - Natural variation in color, tone, and surface texture should be expected across the order. No two tiles share identical markings.
 
 ### Preparation and Curation
 
   - Blend tiles from multiple boxes before setting to distribute tonal variation evenly across the installation.
   - Lay out the full composition before committing to placement. With a large format tile, tonal balance across the field is especially important to assess before setting begins.
-  - A 15–20% overage gives your installer sufficient material to curate the layout and account for cuts.
+  - A 15–20% overage gives the installer sufficient material to curate the layout and account for cuts.
 
 ### Installation and Finishing
 
   - Installers must always wear protective face and eye coverings when working with limestone, thinset, sealants, and grout in accordance with California Prop 65.
-  - Seal Zia's Buff Honed Limestone 12x24 wherever the tile is exposed to moisture, including shower walls and floors.
-  - Direct installation questions to our team at <info@ziatile.com>.
+  - For finishing, bring the drywall flush with the finished tile surface, miter exposed edges at 45 degrees, or complete the edge with Schluter strips.
+  - Always seal Zia's Buff Honed Limestone 12x24 according to the installation instructions, whether in dry spaces or in areas exposed to moisture, such as showers.
+  - For installation questions, contact our team at info@ziatile.com or 310-844-1170.
 
   
 
@@ -86,7 +87,7 @@ Zia's Buff Honed Limestone 12x24 suits a wide range of residential and commercia
   - **Pools + Spas:** Not suitable for pools or spas.
   - **Fireplace Surround:** Suited to fireplace surrounds. These tiles are not for use inside the firebox.
   - **Radiant Heating Compatible:** Compatible with radiant heating systems. Limestone conducts and retains heat efficiently.
-  - **Sealing Required:** We recommend sealing for shower installations. Refer to the Zia Tile Installation Guide for recommended sealers and application instructions.
+  - **Sealing Required:** Sealing is required for all installations, including dry spaces. Always seal Buff Honed Limestone 12x24 according to the installation instructions, whether in dry spaces or in areas exposed to moisture, such as showers. Refer to the Zia Tile Installation Guide for recommended sealers and application instructions.
 
 ### Commercial Usage
 
@@ -100,7 +101,7 @@ Zia's Buff Honed Limestone 12x24 suits a wide range of residential and commercia
   - **Pools + Spas:** Not suitable for pools or spas.
   - **Fireplace Surround:** Suited to decorative fireplace surrounds in lobbies and hospitality spaces. Not for use inside a firebox.
   - **Radiant Heating Compatible:** Compatible with commercial radiant heating systems.
-  - **Sealing Required:** We recommend sealing for shower installations. Refer to the Zia Tile Installation Guide for recommended sealers and application instructions.
+  - **Sealing Required:** Sealing is required for all installations, including dry spaces. Always seal Buff Honed Limestone 12x24 according to the installation instructions, whether in dry spaces or in areas exposed to moisture, such as showers. Refer to the Zia Tile Installation Guide for recommended sealers and application instructions.
 
   
 
@@ -139,7 +140,7 @@ Over time, foot traffic and exposure will develop a soft patina on the surface. 
 
   - We offer free full order pickup at our Los Angeles area warehouse.
   - Our team will contact you when your order is ready so you may schedule your pickup. Warehouse pickup is available by confirmed appointment only.
-  - For additional questions regarding your Buff Honed Limestone 12x24 order, please reach out to us at info@ziatile.com.
+  - For additional questions regarding the Buff Honed Limestone 12x24 order, contact our team at info@ziatile.com or 310-844-1170.
 
   
 

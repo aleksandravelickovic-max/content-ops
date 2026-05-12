@@ -20,9 +20,13 @@ These gates apply to **every content path** — direct prompting, agent invocati
 
 ## Repository architecture
 
+This repo has two distinct halves: **content** (client writing, campaigns, style systems) and **app** (the review portal). They are designed to be separable — the app reads content via a configurable `CONTENT_ROOT` path and can eventually live in its own repo.
+
+### Content (this repo's primary purpose)
+
 ```
 zia-content-ops/
-├── CLAUDE.md                             # This file — universal rules (always in context)
+├── CLAUDE.md                             # This file — project rules (always in context)
 ├── content-toolkit/                      # Agents, commands, and settings (symlinked as .claude/)
 │   ├── agents/                          # AI writing agents (editor, fact-checker, humanizer, etc.)
 │   ├── commands/                        # Slash commands (/brief, /draft, /ship, etc.)
@@ -30,11 +34,17 @@ zia-content-ops/
 ├── .claude -> content-toolkit/           # Symlink — Claude Code auto-discovers from here
 ├── universal-rules/
 │   └── UNIVERSAL-RULES.md               # Canonical standalone copy of universal rules
-├── scripts/
-│   └── generate-client-style-system.md  # Process raw → client STYLE-SYSTEM.md
+├── scripts/                             # Content build tools (not app code)
+│   ├── generate-client-style-system.md  # Process raw → client STYLE-SYSTEM.md
+│   ├── build-content-navigator.py       # Generates content-navigator.html + registry.json files
+│   └── build-html-before-after.py       # Generates before/after HTML comparisons from drafts
+├── reports/                             # Generated output from build scripts
+│   ├── content-navigator.html           # Standalone content browser (no server needed)
+│   └── *.html                           # Audit reports, comparisons
 ├── clients/
 │   └── {client}/
 │       ├── STYLE-SYSTEM.md              # Processed: canonical brand style for this client
+│       ├── registry.json                # Auto-generated content index for this client
 │       ├── raw/                         # Unprocessed inputs
 │       │   ├── transcripts/             # Meeting transcripts, call recordings
 │       │   ├── research/                # Website scrapes, editorial analysis, style guides
@@ -46,9 +56,46 @@ zia-content-ops/
 │               ├── brief.html           # Rendered brief (if applicable)
 │               ├── campaign-urls.md     # Target URLs for this campaign
 │               ├── audit-report.md      # Pre-production audit findings
+│               ├── registry.json        # Auto-generated content index for this campaign
+│               ├── gdocs-content/       # Google Docs exports (collection-pages/, product-pages/)
 │               ├── drafts/              # Working drafts + versioned revisions (v2/, v3/)
 │               └── reviews/             # Post-draft gap reviews and QA reports
 ```
+
+### App — Content Review Portal (`portal/`)
+
+A standalone FastAPI application for shareable content review with commenting. Designed to be hosted independently — reads content from the filesystem via `CONTENT_ROOT` env var.
+
+```
+portal/
+├── Dockerfile                           # Python 3.12-slim, uvicorn
+├── docker-compose.yml                   # Postgres + app, mounts ../clients as read-only volume
+├── requirements.txt                     # Python dependencies (fastapi, sqlalchemy, etc.)
+├── manage.py                            # CLI: init-db, create/list/revoke share links, list comments
+├── env-example.txt                      # Template for .env
+├── app/
+│   ├── main.py                          # FastAPI app setup, routes, static files
+│   ├── config.py                        # Env-based config (DATABASE_URL, CONTENT_ROOT, secrets)
+│   ├── database.py                      # Async SQLAlchemy (Postgres in prod, SQLite for dev)
+│   ├── models.py                        # ShareLink, Comment models
+│   ├── content.py                       # Reads campaign content from filesystem via registry.json
+│   ├── routes/
+│   │   ├── admin.py                     # Dashboard, share link management, comment moderation
+│   │   ├── review.py                    # Client-facing review pages (accessed via share links)
+│   │   └── api.py                       # JSON API for comments (create, resolve)
+│   ├── static/
+│   │   ├── styles.css
+│   │   └── app.js
+│   └── templates/
+│       └── base.html                    # Jinja2 base template
+```
+
+**Running the portal:**
+- Dev: `cd portal && uvicorn app.main:app --reload` (uses SQLite, reads `../clients`)
+- Prod: `cd portal && docker compose up` (uses Postgres, mounts `../clients` read-only)
+- Key env vars: `CONTENT_ROOT`, `DATABASE_URL`, `ADMIN_PASSWORD`, `SECRET_KEY`, `BASE_URL`
+
+**Content ↔ App boundary:** The portal never writes to content files. It reads them via `CONTENT_ROOT` (defaults to `../clients`). In Docker, `../clients` is mounted as a read-only volume. This means the portal can be moved to its own repo and pointed at any content directory.
 
 ### Active clients
 

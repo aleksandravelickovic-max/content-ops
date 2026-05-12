@@ -44,7 +44,7 @@ We recommend a minimum of 15–20% overage to accommodate cutting, layout adjust
 ### Inherent Variation
 
   - Our Basilica 12x24 is a grey limestone tile with a muted palette and gradual tonal shifts that become more or less visible depending on light direction and surface absorption.
-  - Each grey limestone tile remains wholly unique, and this innate variation defines the line's charm.
+  - Each grey limestone tile remains wholly unique, and this innate variation defines the line's character.
   - Expect natural variation in color, tone, fossil trace, mineral density, thickness, and edge behavior across the layout. Chips, pits, and crazing appear as natural characteristics of sedimentary stone.
 
 ### Preparation and Curation
@@ -60,7 +60,7 @@ We recommend a minimum of 15–20% overage to accommodate cutting, layout adjust
   - Install Basilica 12x24 using a medium-bed thinset on a fully prepared substrate. In dry interior conditions, wall applications may be installed directly over stable, properly prepared drywall.
   - Seal the tile with 511 Porous Plus before and after grouting. Interior installations require a Fila Matte Wax finish as a final coat; exterior installations should receive a second application of 511 Porous Plus in place of wax.
   - For finishing, bring the drywall flush with the finished tile surface, miter exposed edges at 45 degrees, or complete the edge with Schluter strips.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - For installation questions, contact our team at info@ziatile.com or 310-844-1170.
 
   
 
@@ -86,7 +86,7 @@ Basilica 12x24 + Honed Limestone is designed for interior and exterior environme
   - **Pools + Spas:** Not suitable due to chemical exposure and constant submersion conditions.
   - **Fireplace Surround:** Suitable for exterior-facing fireplace surrounds, excluding firebox interiors.
   - **Radiant Heating Compatible:** Compatible with radiant heating systems when installed over approved substrates.
-  - **Sealing Required:** Required for all moisture-exposed installations, as per the Zia Tiles Limestone Installation Guide. 
+  - **Sealing Required:** Sealing is required for all installations, including dry spaces, per the Zia Tile Limestone Installation Guide. Always seal Basilica 12x24 according to the installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
 ### Commercial Usage
 
@@ -100,7 +100,7 @@ Basilica 12x24 + Honed Limestone is designed for interior and exterior environme
   - **Pools + Spas:** Not suitable for submerged or chemically treated water environments.
   - **Fireplace Surround:** Suitable for decorative limestone tile fireplace surrounds, excluding firebox interiors.
   - **Radiant Heating Compatible:** Compatible with commercial radiant heating systems.
-  - **Sealing Required:** Required for all moisture-exposed applications. Refer to the Zia Tile Limestone Installation Guide for detailed instructions. 
+  - **Sealing Required:** Sealing is required for all installations, including dry spaces. Always seal Basilica 12x24 according to the installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers. Refer to the Zia Tile Limestone Installation Guide for detailed instructions.
 
 ## How It's Made
 
@@ -129,15 +129,15 @@ Because the color and character come from the stone itself, the palette remains 
 ### Full Orders
 
   - Full orders ship throughout the US and Canada via LTL carrier with curbside pallet delivery.
-  - All tiles in your order ship together once everything is in stock to maintain consistent batching and tonal alignment.
-  - Your LTL carrier will provide an estimated delivery range and contact you to confirm a delivery window once the shipment reaches their local terminal.
+  - All tiles ship together once everything is in stock to maintain consistent batching and tonal alignment.
+  - The LTL carrier will provide an estimated delivery range and confirm a delivery window once the shipment reaches the local terminal.
   - We deliver to almost any location around the world. Clients in Alaska, Hawaii, Canada, or international locations should contact our team for a custom shipping quote.
 
 ### Warehouse Pickup & Support
 
   - We offer free full-order pickup at our Los Angeles area warehouse to help local customers save on shipping costs.
   - We will contact you once your order is ready to schedule a pickup appointment. A confirmed appointment is required for all warehouse pickups.
-  - For additional questions regarding your Basilica 12x24 order, please reach out to us at info@ziatile.com.
+  - For additional questions regarding the Basilica 12x24 order, contact our team at info@ziatile.com or 310-844-1170.
 
   
 
