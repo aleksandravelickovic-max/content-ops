@@ -80,8 +80,8 @@ Prefer mechanism over outcome when both are possible. Avoid over-simplifying int
 
 ## 7. Knowledge usage
 
-- Use information from `/knowledge/` as the shared source of truth for SearchAtlas platform data.
-- Use information from `clients/{client}/` as the source of truth for client-specific data.
+- Use information from `clients/{client}/raw/knowledge/` as the source of truth for product and platform data.
+- Use information from `clients/{client}/raw/` as the source of truth for client-specific research and inputs.
 - Prefer knowledge files over assumptions.
 - Do not invent product capabilities, pricing, or behavior if not present.
 - When conflicts exist, prefer facts in `/knowledge/facts/`.
