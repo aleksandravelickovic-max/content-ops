@@ -1,5 +1,14 @@
 Generate a full article from a content brief, following `CLAUDE.md` rules exactly.
 
+## Client context protocol (mandatory — execute before writing)
+
+1. **Identify the client** from the file path, campaign context, or user instruction. If the input is a file path under `clients/{client}/`, infer the client from the path. If unclear, ask before proceeding.
+2. **Read `clients/{client}/STYLE-SYSTEM.md`** — the canonical style authority. Apply its voice, terminology, banned phrases, technical accuracy rules, and page structure requirements throughout the draft.
+3. **Read `universal-rules/UNIVERSAL-RULES.md`** for base writing standards.
+4. Client rules override universal rules and generic SEO patterns where they conflict.
+5. Do not invent product capabilities, pricing, or claims not found in `clients/{client}/raw/`.
+6. Use `clients/{client}/raw/knowledge/` as the source of truth for product data when available.
+
 ## Input
 
 Accept one of:

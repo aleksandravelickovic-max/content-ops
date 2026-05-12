@@ -3,7 +3,13 @@ description: Manage the knowledge/ directory. Subcommands: init, add, query, aud
 argument-hint: <init | add "<content>" | query "<topic>" | audit>
 ---
 
-Manage the `knowledge/` directory as the source of truth for product facts, proof points, competitor notes, and testimonials. Follow `CLAUDE.md` rules.
+Manage the client's knowledge directory as the source of truth for product facts, proof points, competitor notes, and testimonials. Follow `CLAUDE.md` rules.
+
+## Client context protocol (mandatory)
+
+1. **Identify the client** from the file path, campaign context, or user instruction. If unclear, ask.
+2. Knowledge files live at `clients/{client}/raw/knowledge/`. All init, add, query, and audit operations target this client-specific directory.
+3. **Read `clients/{client}/STYLE-SYSTEM.md`** when auditing — cross-reference product claims against the style system's technical accuracy rules.
 
 ## Input
 $ARGUMENTS

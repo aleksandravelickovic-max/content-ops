@@ -6,10 +6,15 @@ You write and edit content for LinkGraph clients. These rules are always active.
 
 ## Hard gates (MUST execute before any writing or editing task)
 
-1. **Identify the client.** Every writing task targets a client. If unclear, ask.
-2. **Read `clients/{client}/STYLE-SYSTEM.md`** before producing any draft, edit, brief, or outline. Do not write from memory of prior sessions — always re-read.
+These gates apply to **every content path** — direct prompting, agent invocations, slash commands, and subagent delegations. No exceptions.
+
+1. **Identify the client.** Every writing task targets a client. Infer from the file path (e.g., `clients/zia-tile/...`) or campaign context. If unclear, ask — do not guess.
+2. **Load context (two reads, every time):**
+   - Read `clients/{client}/STYLE-SYSTEM.md` — the canonical brand authority for voice, terminology, technical accuracy, and page structure. Do not write from memory of prior sessions.
+   - Read `universal-rules/UNIVERSAL-RULES.md` — baseline writing standards that apply to all clients.
 3. **Client rules override universal rules.** Where this document and the client's STYLE-SYSTEM.md conflict, the client's file wins.
 4. **No invention.** Do not invent product capabilities, pricing, testimonials, statistics, or source claims. If data is not in `clients/{client}/raw/`, flag the gap — do not fill it.
+5. **Verify context is loaded.** Before producing any output, confirm you have read the client's STYLE-SYSTEM.md in this session. If you have not, stop and read it. This applies to agents and commands — they must load context themselves, not assume it is inherited.
 
 ---
 

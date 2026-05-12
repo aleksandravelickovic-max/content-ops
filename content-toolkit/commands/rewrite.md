@@ -5,6 +5,13 @@ argument-hint: <text to rewrite>
 
 Rewrite the text below following the rules in `CLAUDE.md`.
 
+## Client context protocol (mandatory — execute before rewriting)
+
+1. **Identify the client** from the file path, campaign context, or user instruction. If unclear, ask.
+2. **Read `clients/{client}/STYLE-SYSTEM.md`** — apply the client's voice, terminology, and banned phrases during the rewrite.
+3. Do not rewrite INTO banned terminology or voice patterns that violate the client's style system.
+4. Preserve client-required terms exactly (do not replace them with synonyms).
+
 ## Input
 $ARGUMENTS
 
@@ -12,6 +19,7 @@ $ARGUMENTS
 - Keep the original meaning intact.
 - Make the text clearer, more direct, and more specific.
 - Remove unnecessary words without removing useful information.
+- Align terminology and voice with the client's STYLE-SYSTEM.md.
 
 ## Rules
 

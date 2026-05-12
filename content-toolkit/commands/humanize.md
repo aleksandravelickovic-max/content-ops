@@ -5,6 +5,13 @@ argument-hint: <text to humanize>
 
 Humanize the text below following the rules in `CLAUDE.md`.
 
+## Client context protocol (mandatory — execute before humanizing)
+
+1. **Identify the client** from the file path, campaign context, or user instruction. If unclear, ask.
+2. **Read `clients/{client}/STYLE-SYSTEM.md`** — humanizing must stay within the client's voice register and terminology rules.
+3. Do not humanize INTO banned phrases, casual register, or terminology that violates the client's style system.
+4. Preserve required terms exactly (e.g., "grout joints" not "grout spacing," "each" not "every").
+
 ## Input
 $ARGUMENTS
 
@@ -13,6 +20,7 @@ $ARGUMENTS
 - Remove AI-style phrasing patterns.
 - Improve flow and readability without adding fluff.
 - Preserve the original meaning exactly.
+- Stay within the client's voice register (e.g., editorial, not casual).
 
 ## Rules
 

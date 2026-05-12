@@ -5,6 +5,12 @@ argument-hint: <draft text, page, or file path>
 
 Run a final pre-publish QA pass on the content below, following `CLAUDE.md`.
 
+## Client context protocol (mandatory — execute before QA)
+
+1. **Identify the client** from the file path, campaign context, or user instruction. If unclear, ask.
+2. **Read `clients/{client}/STYLE-SYSTEM.md`** — use it as the compliance standard for the style and terminology checks below.
+3. **Read `universal-rules/UNIVERSAL-RULES.md`** for base writing standards.
+
 ## Input
 $ARGUMENTS
 
@@ -13,6 +19,7 @@ $ARGUMENTS
 - Check the content as final output, not as a draft in progress.
 - Flag only real problems, not stylistic preferences.
 - Keep the review practical and decision-oriented.
+- Verify compliance with the client's STYLE-SYSTEM.md.
 
 ## Checks
 
@@ -66,7 +73,18 @@ Review for:
 
 Do not make a legal claim. Flag only editorial plagiarism risk or originality risk.
 
-### 5. Final publishability check
+### 5. Style system compliance check
+Check the content against the client's STYLE-SYSTEM.md.
+
+Review for:
+- banned phrases or terminology from the client's avoidance list
+- missing required terminology
+- voice and tone mismatches (too casual, too marketing-heavy, wrong register)
+- technical accuracy errors (product capabilities, climate claims, application claims)
+- page structure violations (missing required sections, wrong section order)
+- SEO format violations (meta title format, meta description length, keyword placement)
+
+### 6. Final publishability check
 Check whether the page is ready to publish as-is.
 
 Review for:
@@ -76,6 +94,7 @@ Review for:
 - formatting issues
 - inconsistent heading hierarchy
 - weak or generic sections that still need rewriting
+- style system violations flagged in check 5
 
 ## Output format
 
@@ -103,6 +122,11 @@ Include:
 - **Schema type:**
 - **Why it fits:**
 - **Missing fields or risks:** only if relevant
+
+### Style system compliance
+- State whether compliance with client STYLE-SYSTEM.md is: **Full**, **Minor violations**, or **Major violations**.
+- List specific violations found (banned terms used, missing required sections, technical accuracy errors).
+- If major violations, this is a ship blocker.
 
 ### Plagiarism-risk notes
 - State whether editorial plagiarism risk is low, medium, or high.

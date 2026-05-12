@@ -5,6 +5,13 @@ argument-hint: <topic or keyword>
 
 Create a content brief for the topic or keyword below, following `CLAUDE.md` rules.
 
+## Client context protocol (mandatory — execute before writing the brief)
+
+1. **Identify the client** from the file path, campaign context, or user instruction. If unclear, ask before proceeding.
+2. **Read `clients/{client}/STYLE-SYSTEM.md`** — incorporate client-specific SEO terms, required terminology, voice register, and technical accuracy constraints into the brief.
+3. **Read `universal-rules/UNIVERSAL-RULES.md`** for base writing standards.
+4. The brief must reflect the client's brand context so downstream drafts inherit the correct voice and constraints.
+
 ## Input
 $ARGUMENTS
 
@@ -12,7 +19,8 @@ $ARGUMENTS
 - No fluff. No "comprehensive guide" phrasing. No templated SEO language.
 - Every section must have a reason to exist. If a section cannot be filled with specific, defensible content, remove it.
 - Flag unverifiable claims and missing inputs instead of inventing.
-- When describing anything, follow the mechanism → capability → outcome hierarchy from CLAUDE.md.
+- When describing anything, follow the mechanism -> capability -> outcome hierarchy from CLAUDE.md.
+- Incorporate the client's required key terms and SEO guidance from STYLE-SYSTEM.md into the entity coverage and structure.
 
 ## Process (required before writing the brief)
 1. Use WebSearch to identify top-ranking pages for the query.

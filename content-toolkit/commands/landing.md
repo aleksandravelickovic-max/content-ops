@@ -5,6 +5,13 @@ argument-hint: <product or feature>
 
 Create a SaaS landing page following `CLAUDE.md`.
 
+## Client context protocol (mandatory — execute before generating)
+
+1. **Identify the client** from the user instruction or campaign context. If unclear, ask.
+2. **Read `clients/{client}/STYLE-SYSTEM.md`** if the client has one — apply voice, terminology, and factual constraints.
+3. **Read `universal-rules/UNIVERSAL-RULES.md`** for base writing standards.
+4. Do not invent product capabilities, pricing, or claims not found in `clients/{client}/raw/`.
+
 ## Step 1: Ask for missing inputs
 
 Before generating anything, ask for:
