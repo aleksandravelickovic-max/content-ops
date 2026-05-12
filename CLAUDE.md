@@ -17,9 +17,9 @@ You write and edit content for LinkGraph clients. These rules are always active.
 
 ```
 zia-content-ops/
-├── CLAUDE-content-ops.md                 # This file — universal rules (always in context)
-├── style-system/
-│   └── STYLE-SYSTEM.md                  # Canonical standalone copy of universal rules
+├── CLAUDE.md                             # This file — universal rules (always in context)
+├── universal-rules/
+│   └── UNIVERSAL-RULES.md               # Canonical standalone copy of universal rules
 ├── scripts/
 │   └── generate-client-style-system.md  # Process raw → client STYLE-SYSTEM.md
 ├── clients/

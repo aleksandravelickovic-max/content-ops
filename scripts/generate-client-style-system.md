@@ -18,7 +18,7 @@ claude -p "$(cat scripts/generate-client-style-system.md)" --arg client=zia-tile
 Given a client directory at `clients/{client}/`, this script:
 
 1. **Reads all raw materials** in `clients/{client}/raw/` — transcripts, research, website data, editorial research, style guides, meeting notes, channel recaps
-2. **Reads the universal style system** at `style-system/STYLE-SYSTEM.md` as the base writing rules
+2. **Reads the universal style system** at `universal-rules/UNIVERSAL-RULES.md` as the base writing rules
 3. **Extracts and synthesizes** the following into a single canonical output:
 
 ### What gets extracted from raw materials
@@ -54,7 +54,7 @@ The generated STYLE-SYSTEM.md follows this structure:
 
 Generated: {date}
 Sources: {list of raw files consumed}
-Base rules: style-system/STYLE-SYSTEM.md
+Base rules: universal-rules/UNIVERSAL-RULES.md
 
 ## 1. Brand & Audience
 ## 2. Voice & Tone

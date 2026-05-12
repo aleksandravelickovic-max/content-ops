@@ -1,6 +1,6 @@
-# Stylometric SEO Writing System
+# Universal Rules
 
-Canonical source of all stylistic, structural, and semantic SEO rules for content production. Referenced by CLAUDE-content-ops.md and applied to all client work unless a client's STYLE-SYSTEM.md explicitly overrides a specific rule.
+Canonical source of all stylistic, structural, and semantic SEO rules for content production. Referenced by CLAUDE.md and applied to all client work unless a client's STYLE-SYSTEM.md explicitly overrides a specific rule.
 
 ## 1. Core principles
 

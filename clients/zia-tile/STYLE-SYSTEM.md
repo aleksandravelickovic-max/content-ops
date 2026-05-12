@@ -1,7 +1,7 @@
 # Zia Tile — Style System
 
 Generated: 2026-05-12
-Base rules: style-system/STYLE-SYSTEM.md
+Base rules: universal-rules/UNIVERSAL-RULES.md
 Sources: raw/research/style-guide-v2.md, raw/research/editorial-voice-research-2026-05-04.md, raw/research/website-research-2026-05-04.md, raw/research/website-research.md, raw/research/installation-guides-research.md, raw/research/clickup-channel-recap.md
 
 Canonical source of truth for all Zia Tile content. Where prior sources conflict, **client revisions take precedence**. This document supersedes all earlier style guides; raw materials live in `raw/`.

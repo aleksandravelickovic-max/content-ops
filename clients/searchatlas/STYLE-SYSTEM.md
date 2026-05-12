@@ -1,7 +1,7 @@
 # SearchAtlas — Style System
 
 Generated: 2026-05-12
-Base rules: style-system/STYLE-SYSTEM.md
+Base rules: universal-rules/UNIVERSAL-RULES.md
 Sources: raw/knowledge/products/, raw/knowledge/facts/, raw/knowledge/proof/, raw/knowledge/competitors/, raw/knowledge/testimonials/
 
 Canonical source of truth for all SearchAtlas platform content. Uses universal style-system defaults with the overrides below.
