@@ -17,6 +17,9 @@
 # Ruff
 .ruff_cache/
 
+# Claude Code agent worktrees (ephemeral, auto-created)
+content-toolkit/worktrees/
+
 # Fetched HTML (large, regenerated via scripts/build-html-before-after.py)
 clients/*/campaigns/*/html/original/
 clients/*/campaigns/*/html/revised/

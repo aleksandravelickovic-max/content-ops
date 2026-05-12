@@ -27,39 +27,43 @@ This repo has two distinct halves: **content** (client writing, campaigns, style
 ```
 zia-content-ops/
 ├── CLAUDE.md                             # This file — project rules (always in context)
+├── README.md / README.html               # Project overview (HTML version for stakeholders)
 ├── content-toolkit/                      # Agents, commands, and settings (symlinked as .claude/)
 │   ├── agents/                          # AI writing agents (editor, fact-checker, humanizer, etc.)
 │   ├── commands/                        # Slash commands (/brief, /draft, /ship, etc.)
-│   └── settings-content-ops.json        # Permission allowlists
+│   ├── settings-content-ops.json        # Permission allowlists
+│   ├── codebase-map.md                  # Auto-generated — do not edit
+│   └── codebase-map-meta.json           # Auto-generated — do not edit
 ├── .claude -> content-toolkit/           # Symlink — Claude Code auto-discovers from here
 ├── universal-rules/
 │   └── UNIVERSAL-RULES.md               # Canonical standalone copy of universal rules
 ├── scripts/                             # Content build tools (not app code)
-│   ├── generate-client-style-system.md  # Process raw → client STYLE-SYSTEM.md
+│   ├── generate-client-style-system.md  # LLM prompt/procedure — not an executable script
 │   ├── build-content-navigator.py       # Generates content-navigator.html + registry.json files
 │   └── build-html-before-after.py       # Generates before/after HTML comparisons from drafts
 ├── reports/                             # Generated output from build scripts
 │   ├── content-navigator.html           # Standalone content browser (no server needed)
+│   ├── SPEC-client-annotations.md       # Annotation system specification
 │   └── *.html                           # Audit reports, comparisons
 ├── clients/
 │   └── {client}/
 │       ├── STYLE-SYSTEM.md              # Processed: canonical brand style for this client
 │       ├── registry.json                # Auto-generated content index for this client
-│       ├── raw/                         # Unprocessed inputs
+│       ├── raw/                         # Unprocessed inputs (subdirs created as needed)
 │       │   ├── transcripts/             # Meeting transcripts, call recordings
 │       │   ├── research/                # Website scrapes, editorial analysis, style guides
 │       │   └── knowledge/               # Product data, competitors, facts, testimonials
 │       ├── reference-site/              # Rendered HTML reference (if applicable)
 │       └── campaigns/
 │           └── {nn}-{campaign-name}/
-│               ├── brief.md             # Campaign brief
+│               ├── brief.md             # Campaign brief (or briefs/ directory for multi-brief campaigns)
 │               ├── brief.html           # Rendered brief (if applicable)
 │               ├── campaign-urls.md     # Target URLs for this campaign
 │               ├── audit-report.md      # Pre-production audit findings
 │               ├── registry.json        # Auto-generated content index for this campaign
 │               ├── gdocs-content/       # Google Docs exports (collection-pages/, product-pages/)
 │               ├── drafts/              # Working drafts + versioned revisions (v2/, v3/)
-│               └── reviews/             # Post-draft gap reviews and QA reports
+│               └── html/               # Build output from build-html-before-after.py (gitignored)
 ```
 
 ### App — Content Review Portal (`portal/`)
@@ -84,10 +88,20 @@ portal/
 │   │   ├── review.py                    # Client-facing review pages (accessed via share links)
 │   │   └── api.py                       # JSON API for comments (create, resolve)
 │   ├── static/
-│   │   ├── styles.css
-│   │   └── app.js
+│   │   ├── styles.css                   # Portal layout and styling
+│   │   ├── app.js                       # Comment UI, review interactions
+│   │   ├── annotation.css               # Inline annotation highlighting and sidebar
+│   │   └── annotation.js               # Text selection → annotation creation, highlight rendering
 │   └── templates/
-│       └── base.html                    # Jinja2 base template
+│       ├── base.html                    # Jinja2 base template
+│       ├── auth/
+│       │   └── login.html               # Admin login page
+│       ├── admin/
+│       │   ├── dashboard.html           # Admin overview — share links, stats
+│       │   └── comments.html            # Comment moderation view
+│       └── review/
+│           ├── campaign.html            # Campaign-level content listing
+│           └── content.html             # Single content piece with annotation sidebar
 ```
 
 **Running the portal:**
@@ -107,7 +121,7 @@ portal/
 ### Adding a new client
 
 1. Create `clients/{new-client}/raw/` and populate with research, transcripts, knowledge
-2. Run `scripts/generate-client-style-system.md` to produce the client's STYLE-SYSTEM.md
+2. Follow the LLM prompt in `scripts/generate-client-style-system.md` to produce the client's STYLE-SYSTEM.md
 3. Review and correct the generated output
 4. Add the client to the table above
 5. Create `clients/{new-client}/campaigns/` when campaign work begins
