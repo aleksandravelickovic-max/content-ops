@@ -1,14 +1,14 @@
 # Codebase Map: zia-content-ops
 
-> Auto-generated: 2026-05-12 14:07 | Commit: 65ef9d8e | Branch: main
-> 51 files | 2 code files | 6 functions/classes indexed
+> Auto-generated: 2026-05-12 14:15 | Commit: eac578ac | Branch: main
+> 46 files | 2 code files | 6 functions/classes indexed
 
 ## Git Info
 - Remote: https://forge.internal.searchatlas.com/search-atlas-group/content-team/content-ops.git
-- Last commit: 65ef9d8 refactor: rename to CLAUDE.md and universal-rules for clarity
+- Last commit: eac578a refactor: rename .claude/ to content-toolkit/ with symlink, remove dead claude-config/
 
 ## File Distribution
-- `.md`: 28 files
+- `.md`: 23 files
 - `.html`: 14 files
 - `.json`: 2 files
 - `.tag`: 1 files
@@ -18,18 +18,13 @@
 
 ## Directory Structure
 ```
-claude/
-claude-config/
-  agents/
-  commands/
-  settings/
-  skills/
-  agents/
-  commands/
 clients/
   searchatlas/
   zia-tile/
     reference-site/
+content-toolkit/
+  agents/
+  commands/
 ruff_cache/
   0.15.12/
 scripts/

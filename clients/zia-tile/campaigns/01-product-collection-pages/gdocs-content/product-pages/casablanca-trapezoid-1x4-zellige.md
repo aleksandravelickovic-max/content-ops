@@ -1,0 +1,197 @@
+---
+title: "Casablanca Trapezoid 1x4 Zellige - Product Page"
+google_doc_id: "1liqmYDcF7OcesEG81qy6kwESoT6Sdi899lH0ybRmXhE"
+page_type: product
+download_date: 2026-05-12
+---
+
+**URL:** <https://ziatile.com/products/casablanca-white-trapezoid-zellige-tile> 
+
+**Meta title**: Casablanca 1x4 Trapezoid Zellige | Zia Tile  
+**Meta description**: Shop Casablanca Trapezoid 1x4 zellige. A light neutral handcrafted Moroccan tile with inherent variation, suited for kitchen backsplashes, shower walls, and more.
+
+  
+
+## Zellige
+
+# Casablanca Trapezoid 1x4
+
+\[INSERT CART MODULE HERE\]
+
+  
+
+Our Casablanca Trapezoid zellige includes inherent variation in size, color, and tone. Each tile features characteristic chips, pits, and crazing, which are innate to this handcrafted Moroccan art form. These elements create the perfectly imperfect aesthetic that defines traditional zellige. While the images shown represent the tile's general appearance, they may not capture the full range of dynamic tones present in a complete order.
+
+  
+
+Artisans historically installed these tiles in mosaics featuring decorative geometric and floral shapes within elaborately designed palaces. Our curated selection brings this heritage into homes and commercial spaces around the globe. The trapezoid format introduces a geometric logic to the surface that square and rectangular formats do not produce.
+
+  
+
+\[INSERT IMAGE: SIZE/THICKNESS\]
+
+## Details 
+
+  
+
+We recommend a 15–20% overage for each project. This additional quantity allows you or your installer to properly curate the installation and account for any tiles with color variation or characteristic chips and pits outside of your preferred range. For a more uniform look, we recommend 25% overage.
+
+  
+
+Because each zellige tile varies in thickness, edge, and size, the installation process involves more hands-on adjustment than standard ceramic. Allow two to three times the usual installation window and use wedge spacers to maintain consistent spacing and protect tile edges throughout.
+
+  
+
+  
+
+## About — \[ACCORDION\]
+
+### Inherent Variation
+
+  - Our Casablanca Trapezoid is a light neutral zellige with a glaze that shifts subtly with changing light.
+  - Each handcrafted zellige tile remains wholly unique, and this innate variation defines the line's charm.
+  - You should expect natural variation in color, shape, and thickness, alongside characteristic chips, pits, and crazing.
+
+### Preparation and Curation
+
+  - Mix each box in your shipment before beginning your project to ensure a balanced distribution of color and tone.
+  - Arrange an ideal layout before installation to ensure the variation remains balanced and the trapezoid pattern reads as intended.
+  - Any chips, pits, and color variation should be evenly dispersed.
+  - We suggest a 15–20% overage on all tile orders to provide enough material to curate your unique mix. For a more uniform look, we recommend 25% overage.
+
+### Installation and Finishing
+
+  - Installers must always wear protective face and eye coverings when working with zellige, thinset, sealants, and grout in accordance with California Prop 65.
+  - While traditional trim and edge pieces do not exist for zellige, we recommend bringing the drywall flush with the finished surface of the tile or finishing your project with mitered edges or Schluter strips.
+  - Always seal Casablanca Trapezoid zellige in areas exposed to moisture, such as pools, spas, and showers.
+  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+
+  
+
+*⚠ WARNING: Cancer and Reproductive Harm.* [*Learn more about Proposition 65 Warnings.*](https://www.ziatile.com/proposition-65-warnings)
+
+  
+
+  
+
+## Tile Usage — \[ACCORDION\]
+
+Our Casablanca Trapezoid 1x4 zellige introduces a geometric format that suits both residential and commercial projects. Kitchen backsplashes, bathroom walls, and shower enclosures are among the most common applications, where the trapezoid shape creates visual movement across the surface.
+
+### Residential Usage
+
+  - **Interior Floors – High Traffic:** Serves high-traffic areas such as kitchens, primary bathrooms, and entryways. If installed on a flooring surface in a wet area, slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete.
+  - **Interior Floors – Low Traffic:** Performs well in lower-traffic spaces such as guest bathrooms and bedrooms.
+  - **Exterior Floors – Freeze or Thaw:** Zellige is not suitable for an outdoor installation in a freeze/thaw climate.
+  - **Exterior Floors – Non Freeze or Thaw:** Accommodates outdoor surfaces that do not experience snow or ice.
+  - **Interior Walls:** Defines the aesthetic for kitchen backsplashes and bathroom walls, where the trapezoid format introduces pattern and movement.
+  - **Exterior Walls:** Zellige tiles may be used on exterior walls in non-freeze/thaw climates.
+  - **Shower Walls + Floors:** Enhances shower walls, shower floors, and steam showers. We recommend sealing the tile for this use. Slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete.
+  - **Pools + Spas:** Functions reliably in saltwater and chlorine environments. We recommend sealing the tile for this use.
+  - **Fireplace Surround:** Creates a decorative fireplace surround, though these tiles are not for use inside the firebox.
+  - **Radiant Heating Compatible:** Supports all radiant heating and heated floor elements.
+  - **Sealing Required:** We recommend sealing our Casablanca Trapezoid zellige tiles when installing in moisture-exposed areas such as pools, spas, and showers. Please consult the Zellige Installation Guide for detailed instructions.
+
+### Commercial Usage
+
+  - **Interior Floors – High Traffic:** Offers a durable surface for high-traffic commercial spaces. If installed on a flooring surface in a wet area, slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete.
+  - **Interior Floors – Low Traffic:** Suits lower-traffic commercial interiors.
+  - **Exterior Floors – Freeze or Thaw:** Zellige is not suitable for an outdoor installation in a freeze/thaw climate.
+  - **Exterior Floors – Non Freeze or Thaw:** Integrates into exterior floors in climates without snow or ice.
+  - **Interior Walls:** Suited to commercial kitchen walls, restroom walls, and feature installations where the trapezoid format introduces a geometric pattern to the surface.
+  - **Exterior Walls:** May be used on exterior commercial wall surfaces in non-freeze/thaw climates.
+  - **Shower Walls + Floors:** Suited to commercial shower and steam shower installations. We recommend sealing the tile for use in any wet spaces. Slip resistance can be improved by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete.
+  - **Pools + Spas:** Maintains integrity in commercial saltwater or chlorine pools. We recommend sealing the tile for this use.
+  - **Fireplace Surround:** Serves as a decorative commercial fireplace surround, though it is not for use inside a firebox.
+  - **Radiant Heating Compatible:** Works with commercial radiant heating systems.
+  - **Sealing Required:** We recommend sealing our Casablanca Trapezoid zellige tiles when installing in moisture-exposed areas such as pools, spas, and showers. Please consult the Zellige Installation Guide for detailed instructions.
+
+  
+
+## How It's Made — \[ACCORDION\]
+
+Production starts at ground level. Artisans source raw clay from local Moroccan hillsides, soak it in water, and filter it for impurities until it reaches a consistency suitable for hand-pressing into molds.
+
+  
+
+The pressed tiles are set out to dry in the Moroccan sun. Once dry, each piece is shaped by hand into the 1x4 trapezoid form before being dipped individually in glaze. The Casablanca glaze settles differently on each tile, producing the tonal range that defines the colorway. No two dips produce identical results.
+
+  
+
+The glazed tiles are arranged in earthen kilns and fired. Heat distributes unevenly through the chamber, and that unevenness is what produces the chips, pits, crazing, and tonal shifts that make each Casablanca Trapezoid entirely its own.
+
+  
+
+## Order & Shipping — \[ACCORDION\]
+
+### Sample Orders
+
+  - Our in-stock Casablanca Trapezoid zellige samples typically ship from our Los Angeles warehouse within two business days of order receipt.
+  - Select the "Add Sample to Cart" button to add the Casablanca Trapezoid 1x4 to your cart.
+  - Each client may order up to ten samples total, with a limit of four per each unique tile.
+  - We offer five complimentary samples; additional samples begin at $3 each.
+  - Your sample order will ship via FedEx or UPS ground.
+
+### Full Orders
+
+  - All standard full orders ship throughout the US and Canada using an LTL carrier service with curbside pallet delivery.
+  - We will ship the entire order together once all tiles are in stock.
+  - LTL carriers provide estimated delivery ranges and will contact you to schedule a specific delivery window once the shipment arrives at their local terminal.
+  - Clients in Alaska, Hawaii, Canada, or international locations should email our team for a custom shipping quote.
+
+### Warehouse Pickup & Support
+
+  - We offer free full order pickup at our Los Angeles area warehouse to help local customers save on shipping costs.
+  - Our team will reach out when your order is ready so you may schedule a time for your pickup appointment. Order pickups are available only with a confirmed appointment.
+  - For additional questions regarding your Casablanca Trapezoid zellige order, please reach out to us at info@ziatile.com.
+
+  
+
+  
+
+## Installation Guide — \[ACCORDION\] 
+
+\[KEEP\]
+
+## 
+
+  
+
+## Frequently Asked Questions — \[ACCORDION\]  
+
+### How do I install zellige in a trapezoid pattern?
+
+To install zellige in a trapezoid pattern, lay out the full composition before setting any tile. The 1x4 trapezoid format is typically installed in a repeating pattern where alternating tiles are flipped to create an interlocking geometric surface. Blend tiles from all boxes before beginning to distribute color and tonal variation evenly across the installation.
+
+### Can the Casablanca Trapezoid be used as a field tile alongside other zellige formats?
+
+Yes, the Casablanca Trapezoid 1x4 can be used alongside other zellige formats in the same installation. Each format in Zia's zellige collection is produced using the same traditional methods and shares consistent material character. The trapezoid works well as a field tile paired with square or rectangular zellige, where it introduces geometric detail without competing with the surrounding surface.
+
+### Can the Casablanca Trapezoid be installed vertically and horizontally?
+
+Yes, the Casablanca Trapezoid 1x4 can be installed in both vertical and horizontal orientations. The direction of installation affects how the geometric pattern reads across the surface. A horizontal layout tends to widen a surface visually, while a vertical layout draws the eye upward. 
+
+### Why is Moroccan zellige tile made by hand?
+
+Moroccan zellige tile is made by hand because the process itself is the source of its defining qualities. Machine production cannot replicate the variation in color, thickness, and surface texture that results from hand-pressing, sun-drying, hand-dipping in glaze, and earthen kiln firing. Each step introduces the chips, pits, and crazing that give zellige its character. 
+
+### Does zellige tile require sealing?
+
+Yes, zellige tile requires sealing in moisture-exposed applications, including showers, pools, and spas. Apply 511 Porous Plus to all tiles and grout lines exposed to continuous moisture after grouting is complete. 
+
+### How do I cut trapezoid zellige on site?
+
+To cut trapezoid zellige on site, use a water-cooled tile saw fitted with a diamond edge blade. The trapezoid format requires careful measurement before cutting, as the angled edges mean cuts at the perimeter of an installation will not be straight across. Work with your installer to plan cuts in advance so the pattern reads correctly at the edges.
+
+  
+  
+
+### Writer's Notes
+
+  - Integrated target keywords naturally, primarily **Casablanca trapezoid Zellige**, without keyword stuffing or disrupting brand voice
+  - Strengthened product storytelling by reinforcing handcrafted Moroccan origins, artisan process, and material authenticity
+  - The trapezoid installation FAQ answer is format-specific and addresses the interlocking pattern installation method, which is a practical concern unique to this format and not covered on square or rectangular pages.
+  - The on-site cutting FAQ answer addresses the specific challenge of cutting angled tiles at the perimeter, which is a format-specific concern that differentiates this page from standard zellige pages and captures users searching for trapezoid tile installation guidance.
+  - Improved scannability by introducing structured formatting, including bullet points where appropriate and consistent section hierarchy
+  - Added a **Frequently Asked Questions (FAQs) section** aligned with People Also Ask (PAA) queries to improve visibility for Google question-based searches
+  - "Light neutral" is used consistently as the confirmed color descriptor throughout the page

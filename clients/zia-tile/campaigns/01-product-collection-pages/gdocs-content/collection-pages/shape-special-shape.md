@@ -1,0 +1,56 @@
+---
+title: "Shape Special Shape"
+google_doc_id: "1f4Znr8HEiAjatt2Dw9d5ly8L2BZqgKD05Hqj1fJlibE"
+page_type: collection
+download_date: 2026-05-12
+---
+
+**URL:** <https://ziatile.com/en-ca/collections/all?shape=special+shape>
+
+**Meta Title**: Special Shape Tile: Unique Formats | Zia Tile
+
+**Meta Description**: Shop special shape tile at Zia Tile. Hexagon, trapezoid, Durango, Stars and Cross, and more across multiple materials and colorways.
+
+**Keywords:** special shape tile, trapezoid tile, zellige trapezoid tile, Stars and Cross tile
+
+# Special Shape Tile
+
+Some installations call for geometry that goes beyond the grid. Special shape tile introduces formats that standard square and rectangular tile cannot produce, from the six-sided structure of a hexagon floor to the interlocking pattern of a Stars and Cross installation to the arched profile of a Durango. At Zia, these formats are available across multiple materials and colorways, suited to floors, walls, shower surfaces, and feature installations of all kinds.
+
+\[PRODUCT LIST\]
+
+
+
+## Frequently Asked Questions
+
+### How do you choose the right special shape tile for your space?
+
+Choosing the right special shape tile starts with identifying whether the shape should read as a field or a feature. A hexagon tile works well as a field tile across larger surfaces. Trapezoid suits backsplashes, niches, and accent surfaces where the angular geometry is the focal point. For formats like Stars and Cross, Oaxaca, and Toltec, which produce a pattern through the interlocking of multiple tile units, confirming the layout and scale of the pattern before specifying is essential.
+
+### What are the advantages of using special shape tiles?
+
+The advantages of special shape tile are primarily visual. Formats like hexagon and trapezoid introduce geometry that a square or rectangular field cannot produce, adding pattern and depth without requiring a decorative motif on the tile itself. They also define zones naturally, making them well-suited to shower floors, niches, and accent walls where a change in geometry signals a change in space.
+
+### How do I clean special-shaped tile after installation?
+
+Cleaning special shape tile follows the same material-based rules as any other format. Use a pH-neutral cleaner and avoid acidic or abrasive products that damage glazes, strip sealers, or etch natural stone. The more numerous and angled grout joints of special shape formats mean more surface area to seal and maintain in wet applications, so sealing on a schedule appropriate to traffic and moisture exposure is particularly important.
+
+### What is a trapezoid tile?
+
+A trapezoid tile is a four-sided geometric format in which one pair of opposite sides is parallel, and the other is not, producing an angular, asymmetric shape that creates movement and pattern when tiles are set together. Zellige trapezoid tile is well-suited to kitchen backsplashes, shower walls, and accent surfaces where the geometry contributes to the design without requiring a decorative motif on the tile itself.
+
+### What is the Stars and Cross tile pattern?
+
+The Stars and Cross is a geometric tile pattern rooted in traditional Moroccan and Islamic architectural design, produced by combining star-shaped and cross-shaped tile units that interlock to create a continuous geometric field. At Zia, the Stars and Cross pattern is available as a specialty shape tile and can be installed as a standalone field or used as an accent within a larger installation.
+
+### Can special shape tiles be mixed with standard formats?
+
+Yes, special shape tiles can be mixed with standard formats. Combining a geometric specialty tile with a square or rectangular field tile is a common approach in both residential and commercial installations, particularly where the special shape is used to define a specific zone such as a shower floor, niche, or backsplash. The practical requirement is that both formats are laid out dry before setting to confirm the junction between shapes reads as intentional, and that grout joint widths are consistent across the transition.
+
+### Can special shape tiles be used in a shower?
+
+Yes, special shape tiles can be used in a shower. Suitability depends on the material rather than the format. For shower floors specifically, slip resistance can be increased by keeping grout joints open to a minimum of 1/8" and/or applying an anti-slip treatment after installation is complete. For material-specific guidance on a particular special shape tile, contact our team at info@ziatile.com before work begins.
+
+### What special shape tiles does Zia offer?
+
+Zia's special shape tile collection includes hexagon, trapezoid, Durango, Oaxaca, Stars and Cross, Toltec, Tornillo, and Zocalo. Each format produces a distinct geometric result and is available across multiple materials and colorways. For a full overview of available shapes, materials, and colorways, browse the collection at ziatile.com or contact our team at info@ziatile.com.
