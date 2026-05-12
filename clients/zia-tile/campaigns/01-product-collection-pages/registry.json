@@ -1,7 +1,7 @@
 {
   "client": "zia-tile",
   "campaign": "01-product-collection-pages",
-  "generatedAt": "2026-05-12T14:59:45",
+  "generatedAt": "2026-05-12T15:35:12",
   "totalFiles": 306,
   "entries": [
     {
@@ -2665,7 +2665,7 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/product-pages/bungalow-12x12-terrazzo.md",
-      "sizeBytes": 12179,
+      "sizeBytes": 12173,
       "sizeHuman": "11.9 KB",
       "lastModified": "2026-05-12"
     },
@@ -2756,7 +2756,7 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/product-pages/carrara-12x12.md",
-      "sizeBytes": 13174,
+      "sizeBytes": 13173,
       "sizeHuman": "12.9 KB",
       "lastModified": "2026-05-12"
     },
@@ -2795,8 +2795,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/product-pages/casablanca-4x4-zellige.md",
-      "sizeBytes": 12150,
-      "sizeHuman": "11.9 KB",
+      "sizeBytes": 12120,
+      "sizeHuman": "11.8 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -2821,7 +2821,7 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/product-pages/ceramics-eucalyptus-2x8.md",
-      "sizeBytes": 12501,
+      "sizeBytes": 12477,
       "sizeHuman": "12.2 KB",
       "lastModified": "2026-05-12"
     },
@@ -2834,8 +2834,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/product-pages/ceramics-linen-2x8.md",
-      "sizeBytes": 11642,
-      "sizeHuman": "11.4 KB",
+      "sizeBytes": 11614,
+      "sizeHuman": "11.3 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -2899,7 +2899,7 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/product-pages/ethereal-blue-2x8.md",
-      "sizeBytes": 13430,
+      "sizeBytes": 13427,
       "sizeHuman": "13.1 KB",
       "lastModified": "2026-05-12"
     },
@@ -2951,7 +2951,7 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/product-pages/glazed-earth-2x2.md",
-      "sizeBytes": 13462,
+      "sizeBytes": 13442,
       "sizeHuman": "13.1 KB",
       "lastModified": "2026-05-12"
     },
@@ -3029,7 +3029,7 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/product-pages/limestone-buff-honed-12x12.md",
-      "sizeBytes": 11603,
+      "sizeBytes": 11578,
       "sizeHuman": "11.3 KB",
       "lastModified": "2026-05-12"
     },
@@ -3042,8 +3042,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/product-pages/limestone-buff-honed-12x24.md",
-      "sizeBytes": 12141,
-      "sizeHuman": "11.9 KB",
+      "sizeBytes": 12116,
+      "sizeHuman": "11.8 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3055,7 +3055,7 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/product-pages/limestone-buff-honed-4x12.md",
-      "sizeBytes": 11597,
+      "sizeBytes": 11562,
       "sizeHuman": "11.3 KB",
       "lastModified": "2026-05-12"
     },
@@ -3068,7 +3068,7 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/product-pages/limestone-buff-honed-6x6.md",
-      "sizeBytes": 11465,
+      "sizeBytes": 11440,
       "sizeHuman": "11.2 KB",
       "lastModified": "2026-05-12"
     },
@@ -3081,8 +3081,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/product-pages/linen-4x4.md",
-      "sizeBytes": 11257,
-      "sizeHuman": "11.0 KB",
+      "sizeBytes": 11197,
+      "sizeHuman": "10.9 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3094,7 +3094,7 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/product-pages/molasses-2x8.md",
-      "sizeBytes": 10851,
+      "sizeBytes": 10847,
       "sizeHuman": "10.6 KB",
       "lastModified": "2026-05-12"
     },
@@ -3133,8 +3133,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/product-pages/monument-6x6-honed.md",
-      "sizeBytes": 12517,
-      "sizeHuman": "12.2 KB",
+      "sizeBytes": 12586,
+      "sizeHuman": "12.3 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3159,7 +3159,7 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/product-pages/nagano-2x8.md",
-      "sizeBytes": 12975,
+      "sizeBytes": 12973,
       "sizeHuman": "12.7 KB",
       "lastModified": "2026-05-12"
     },
@@ -3172,8 +3172,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/product-pages/neutra-12x12.md",
-      "sizeBytes": 13417,
-      "sizeHuman": "13.1 KB",
+      "sizeBytes": 13474,
+      "sizeHuman": "13.2 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3185,8 +3185,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/product-pages/neutra-24x24.md",
-      "sizeBytes": 13920,
-      "sizeHuman": "13.6 KB",
+      "sizeBytes": 14307,
+      "sizeHuman": "14.0 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3211,8 +3211,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/product-pages/pomelo-bone-8x8.md",
-      "sizeBytes": 13463,
-      "sizeHuman": "13.1 KB",
+      "sizeBytes": 13523,
+      "sizeHuman": "13.2 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3224,7 +3224,7 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/product-pages/puebla-4x4.md",
-      "sizeBytes": 13394,
+      "sizeBytes": 13375,
       "sizeHuman": "13.1 KB",
       "lastModified": "2026-05-12"
     },
@@ -3341,8 +3341,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/product-pages/sequoia-4x4.md",
-      "sizeBytes": 12859,
-      "sizeHuman": "12.6 KB",
+      "sizeBytes": 12976,
+      "sizeHuman": "12.7 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3419,7 +3419,7 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/product-pages/toltec-red-clay.md",
-      "sizeBytes": 13564,
+      "sizeBytes": 13556,
       "sizeHuman": "13.2 KB",
       "lastModified": "2026-05-12"
     },
@@ -3445,8 +3445,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/product-pages/volcan-4x12.md",
-      "sizeBytes": 11033,
-      "sizeHuman": "10.8 KB",
+      "sizeBytes": 11503,
+      "sizeHuman": "11.2 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3484,8 +3484,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/product-pages/zellige-glazed-earth-4x4.md",
-      "sizeBytes": 11555,
-      "sizeHuman": "11.3 KB",
+      "sizeBytes": 11244,
+      "sizeHuman": "11.0 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3497,8 +3497,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/product-pages/zellige-racing-green-4x4.md",
-      "sizeBytes": 12736,
-      "sizeHuman": "12.4 KB",
+      "sizeBytes": 12554,
+      "sizeHuman": "12.3 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3549,8 +3549,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/collection-pages/color-black.md",
-      "sizeBytes": 3288,
-      "sizeHuman": "3.2 KB",
+      "sizeBytes": 3778,
+      "sizeHuman": "3.7 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3562,8 +3562,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/collection-pages/color-blue.md",
-      "sizeBytes": 3741,
-      "sizeHuman": "3.7 KB",
+      "sizeBytes": 4279,
+      "sizeHuman": "4.2 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3575,8 +3575,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/collection-pages/color-brown.md",
-      "sizeBytes": 3637,
-      "sizeHuman": "3.6 KB",
+      "sizeBytes": 4121,
+      "sizeHuman": "4.0 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3588,8 +3588,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/collection-pages/color-green.md",
-      "sizeBytes": 3122,
-      "sizeHuman": "3.0 KB",
+      "sizeBytes": 3908,
+      "sizeHuman": "3.8 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3601,8 +3601,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/collection-pages/color-grey.md",
-      "sizeBytes": 3508,
-      "sizeHuman": "3.4 KB",
+      "sizeBytes": 3976,
+      "sizeHuman": "3.9 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3614,8 +3614,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/collection-pages/color-orange.md",
-      "sizeBytes": 3441,
-      "sizeHuman": "3.4 KB",
+      "sizeBytes": 4253,
+      "sizeHuman": "4.2 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3627,8 +3627,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/collection-pages/color-pattern.md",
-      "sizeBytes": 3234,
-      "sizeHuman": "3.2 KB",
+      "sizeBytes": 3965,
+      "sizeHuman": "3.9 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3640,8 +3640,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/collection-pages/color-pink.md",
-      "sizeBytes": 3261,
-      "sizeHuman": "3.2 KB",
+      "sizeBytes": 3714,
+      "sizeHuman": "3.6 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3653,8 +3653,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/collection-pages/color-purple.md",
-      "sizeBytes": 3099,
-      "sizeHuman": "3.0 KB",
+      "sizeBytes": 3571,
+      "sizeHuman": "3.5 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3666,8 +3666,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/collection-pages/color-red.md",
-      "sizeBytes": 3492,
-      "sizeHuman": "3.4 KB",
+      "sizeBytes": 4070,
+      "sizeHuman": "4.0 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3679,8 +3679,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/collection-pages/color-tan.md",
-      "sizeBytes": 3181,
-      "sizeHuman": "3.1 KB",
+      "sizeBytes": 3586,
+      "sizeHuman": "3.5 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3692,8 +3692,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/collection-pages/color-white.md",
-      "sizeBytes": 4756,
-      "sizeHuman": "4.6 KB",
+      "sizeBytes": 5577,
+      "sizeHuman": "5.4 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3705,8 +3705,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/collection-pages/color-yellow.md",
-      "sizeBytes": 3427,
-      "sizeHuman": "3.3 KB",
+      "sizeBytes": 4228,
+      "sizeHuman": "4.1 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3718,8 +3718,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/collection-pages/cotto-allende.md",
-      "sizeBytes": 7373,
-      "sizeHuman": "7.2 KB",
+      "sizeBytes": 7433,
+      "sizeHuman": "7.3 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3731,7 +3731,7 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/collection-pages/cotto.md",
-      "sizeBytes": 8815,
+      "sizeBytes": 8781,
       "sizeHuman": "8.6 KB",
       "lastModified": "2026-05-12"
     },
@@ -3744,8 +3744,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/collection-pages/field-trip-japan.md",
-      "sizeBytes": 5880,
-      "sizeHuman": "5.7 KB",
+      "sizeBytes": 6254,
+      "sizeHuman": "6.1 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3770,8 +3770,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/collection-pages/homepage.md",
-      "sizeBytes": 8199,
-      "sizeHuman": "8.0 KB",
+      "sizeBytes": 6976,
+      "sizeHuman": "6.8 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3809,8 +3809,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/collection-pages/roman-mosaics.md",
-      "sizeBytes": 7479,
-      "sizeHuman": "7.3 KB",
+      "sizeBytes": 7576,
+      "sizeHuman": "7.4 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3822,8 +3822,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/collection-pages/shape-hexagon.md",
-      "sizeBytes": 5886,
-      "sizeHuman": "5.7 KB",
+      "sizeBytes": 6439,
+      "sizeHuman": "6.3 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3835,8 +3835,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/collection-pages/shape-large-format.md",
-      "sizeBytes": 4878,
-      "sizeHuman": "4.8 KB",
+      "sizeBytes": 4809,
+      "sizeHuman": "4.7 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3861,8 +3861,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/collection-pages/shape-special-shape.md",
-      "sizeBytes": 4991,
-      "sizeHuman": "4.9 KB",
+      "sizeBytes": 5449,
+      "sizeHuman": "5.3 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3887,8 +3887,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/collection-pages/shape-subway.md",
-      "sizeBytes": 5947,
-      "sizeHuman": "5.8 KB",
+      "sizeBytes": 6607,
+      "sizeHuman": "6.5 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3900,7 +3900,7 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/collection-pages/space-bathroom.md",
-      "sizeBytes": 5079,
+      "sizeBytes": 5110,
       "sizeHuman": "5.0 KB",
       "lastModified": "2026-05-12"
     },
@@ -3913,8 +3913,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/collection-pages/space-kitchen.md",
-      "sizeBytes": 6137,
-      "sizeHuman": "6.0 KB",
+      "sizeBytes": 5992,
+      "sizeHuman": "5.9 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3926,7 +3926,7 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/collection-pages/space-outdoor.md",
-      "sizeBytes": 5510,
+      "sizeBytes": 5497,
       "sizeHuman": "5.4 KB",
       "lastModified": "2026-05-12"
     },
@@ -3939,8 +3939,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/collection-pages/space-shower.md",
-      "sizeBytes": 5042,
-      "sizeHuman": "4.9 KB",
+      "sizeBytes": 5098,
+      "sizeHuman": "5.0 KB",
       "lastModified": "2026-05-12"
     },
     {
@@ -3965,8 +3965,8 @@
       "status": "delivered",
       "version": 1,
       "path": "gdocs-content/collection-pages/trade-program.md",
-      "sizeBytes": 3252,
-      "sizeHuman": "3.2 KB",
+      "sizeBytes": 3205,
+      "sizeHuman": "3.1 KB",
       "lastModified": "2026-05-12"
     },
     {
