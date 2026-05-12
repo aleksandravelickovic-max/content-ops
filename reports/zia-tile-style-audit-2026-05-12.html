@@ -3,1278 +3,619 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zia Tile Style Guide Compliance Audit — 2026-05-12</title>
+<title>Zia Tile Style Audit — Reprocessed 2026-05-12</title>
 <style>
-:root {
-  --green: #22c55e;
-  --green-bg: #f0fdf4;
-  --yellow: #eab308;
-  --yellow-bg: #fefce8;
-  --red: #ef4444;
-  --red-bg: #fef2f2;
-  --blue: #3b82f6;
-  --blue-bg: #eff6ff;
-  --gray-50: #f9fafb;
-  --gray-100: #f3f4f6;
-  --gray-200: #e5e7eb;
-  --gray-300: #d1d5db;
-  --gray-400: #9ca3af;
-  --gray-500: #6b7280;
-  --gray-600: #4b5563;
-  --gray-700: #374151;
-  --gray-800: #1f2937;
-  --gray-900: #111827;
-  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; background: #f8f8f6; color: #1a1a1a; font-size: 14px; line-height: 1.6; }
+a { color: #2563eb; }
+.header { background: #fff; border-bottom: 2px solid #e2e2dc; padding: 28px 40px 24px; }
+.header h1 { font-size: 22px; font-weight: 700; color: #111; }
+.header .subtitle { font-size: 13px; color: #666; margin-top: 4px; }
+.container { max-width: 1200px; margin: 0 auto; padding: 32px 40px 60px; }
+.metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 28px; }
+.card { background: #fff; border: 1px solid #e2e2dc; border-radius: 8px; padding: 20px; }
+.card .label { font-size: 11px; font-weight: 600; color: #888; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 6px; }
+.card .value { font-size: 28px; font-weight: 700; line-height: 1.1; color: #111; }
+.card .delta { font-size: 12px; color: #16a34a; margin-top: 4px; font-weight: 600; }
+.section { background: #fff; border: 1px solid #e2e2dc; border-radius: 8px; margin-bottom: 24px; overflow: hidden; }
+.section-header { background: #f4f4f1; padding: 14px 20px; border-bottom: 1px solid #e2e2dc; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.section-header h2 { font-size: 15px; font-weight: 700; color: #111; }
+.section-body { padding: 20px; }
+.badge { display: inline-block; font-size: 12px; font-weight: 700; padding: 2px 9px; border-radius: 4px; }
+.badge-green { background: #dcfce7; color: #15803d; }
+.badge-amber { background: #fef3c7; color: #92400e; }
+.badge-red { background: #fee2e2; color: #b91c1c; }
+.s-green { color: #15803d; font-weight: 700; }
+.s-amber { color: #b45309; font-weight: 700; }
+.s-red { color: #b91c1c; font-weight: 700; }
+.arch-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+.arch-block { background: #f9f9f7; border: 1px solid #e8e8e2; border-radius: 6px; padding: 16px; }
+.arch-block h3 { font-size: 13px; font-weight: 700; margin-bottom: 10px; }
+.arch-block ul { padding-left: 16px; }
+.arch-block li { font-size: 12px; color: #444; margin-bottom: 4px; }
+.score-bar { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.score-bar .name { font-size: 12px; width: 190px; flex-shrink: 0; color: #444; }
+.score-bar .bar-wrap { flex: 1; height: 7px; background: #eee; border-radius: 4px; overflow: hidden; }
+.score-bar .bar-fill { height: 100%; border-radius: 4px; }
+.bar-green { background: #22c55e; }
+.bar-amber { background: #f59e0b; }
+.bar-red { background: #ef4444; }
+.score-bar .num { font-size: 12px; font-weight: 700; width: 28px; text-align: right; }
+.chip { display: inline-block; font-size: 11px; padding: 3px 10px; border-radius: 4px; margin: 3px; }
+.chip-green { background: #f0fdf4; border: 1px solid #bbf7d0; color: #15803d; }
+.chip-amber { background: #fef3c7; border: 1px solid #fde68a; color: #92400e; }
+.chip-red { background: #fee2e2; border: 1px solid #fecaca; color: #b91c1c; }
+.comp-table { width: 100%; border-collapse: collapse; font-size: 11.5px; }
+.comp-table th { background: #f4f4f1; text-align: left; padding: 7px 8px; border-bottom: 2px solid #ddd; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: #666; white-space: nowrap; }
+.comp-table td { padding: 5px 8px; border-bottom: 1px solid #f0f0ec; vertical-align: middle; }
+.comp-table tr:last-child td { border-bottom: none; }
+.comp-table tr:hover td { background: #fafaf8; }
+.delta-up { color: #16a34a; font-weight: 700; }
+.delta-same { color: #888; }
+.delta-down { color: #dc2626; font-weight: 700; }
+.st-imp { background: #f0fdf4; color: #15803d; font-size: 10px; padding: 1px 5px; border-radius: 3px; font-weight: 600; white-space: nowrap; }
+.st-unch { background: #f1f5f9; color: #64748b; font-size: 10px; padding: 1px 5px; border-radius: 3px; font-weight: 600; white-space: nowrap; }
+.st-dec { background: #fef2f2; color: #b91c1c; font-size: 10px; padding: 1px 5px; border-radius: 3px; font-weight: 600; white-space: nowrap; }
+.cat-tag { font-size: 10px; background: #f0f0ec; padding: 1px 5px; border-radius: 3px; color: #666; white-space: nowrap; }
+.issue-item { padding: 11px 14px; border-left: 3px solid #ccc; margin-bottom: 10px; background: #fafaf8; border-radius: 0 4px 4px 0; }
+.issue-item.critical { border-left-color: #dc2626; background: #fff5f5; }
+.issue-item.high { border-left-color: #f59e0b; background: #fffbeb; }
+.issue-item.medium { border-left-color: #3b82f6; background: #eff6ff; }
+.issue-item h4 { font-size: 12px; font-weight: 700; margin-bottom: 3px; }
+.issue-item p { font-size: 12px; color: #444; margin-bottom: 3px; }
+.issue-item ul { padding-left: 16px; }
+.issue-item li { font-size: 12px; color: #444; margin-bottom: 2px; }
+.fix-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.fix-table th { background: #f4f4f1; padding: 7px 12px; text-align: left; font-size: 10px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: .05em; border-bottom: 2px solid #ddd; }
+.fix-table td { padding: 7px 12px; border-bottom: 1px solid #eee; vertical-align: top; }
+.fix-table tr:last-child td { border-bottom: none; }
+.rec-item { display: flex; gap: 12px; padding: 12px 0; border-bottom: 1px solid #eee; }
+.rec-item:last-child { border-bottom: none; }
+.rec-num { width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+.p-critical { background: #fee2e2; color: #b91c1c; }
+.p-high { background: #fef3c7; color: #92400e; }
+.p-medium { background: #dbeafe; color: #1d4ed8; }
+.rec-body h4 { font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+.rec-body p { font-size: 12px; color: #555; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.footer { text-align: center; font-size: 11px; color: #aaa; padding: 20px 0; border-top: 1px solid #eee; margin-top: 10px; }
+.toc { background: #fff; border: 1px solid #e2e2dc; border-radius: 8px; padding: 16px 20px; margin-bottom: 24px; }
+.toc ul { columns: 2; list-style: none; padding: 0; }
+.toc li { font-size: 12px; margin-bottom: 4px; }
+.toc a { color: #2563eb; text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+@media (max-width: 800px) {
+  .metrics { grid-template-columns: repeat(2,1fr); }
+  .arch-grid, .two-col { grid-template-columns: 1fr; }
+  .score-bar .name { width: 130px; }
+  .container { padding: 20px; }
+  .toc ul { columns: 1; }
 }
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: var(--font); background: #fff; color: var(--gray-800); line-height: 1.6; }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-header { background: linear-gradient(135deg, #1e293b, #334155); color: #fff; padding: 48px 0 36px; }
-header h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
-header p { color: #94a3b8; font-size: 15px; }
-header .meta-row { display: flex; gap: 24px; margin-top: 16px; flex-wrap: wrap; }
-header .meta-chip { background: rgba(255,255,255,0.08); padding: 6px 14px; border-radius: 6px; font-size: 13px; color: #cbd5e1; }
-nav.toc { background: var(--gray-50); border-bottom: 1px solid var(--gray-200); padding: 16px 0; position: sticky; top: 0; z-index: 100; }
-nav.toc .container { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
-nav.toc a { font-size: 13px; color: var(--gray-600); text-decoration: none; padding: 4px 10px; border-radius: 4px; transition: background 0.15s; }
-nav.toc a:hover { background: var(--gray-200); color: var(--gray-800); }
-section { padding: 40px 0; border-bottom: 1px solid var(--gray-200); }
-section:last-child { border-bottom: none; }
-h2 { font-size: 22px; font-weight: 700; margin-bottom: 20px; color: var(--gray-900); }
-h3 { font-size: 17px; font-weight: 600; margin-bottom: 12px; color: var(--gray-800); }
-h4 { font-size: 15px; font-weight: 600; margin-bottom: 8px; color: var(--gray-700); }
-p, li { font-size: 15px; }
-ul, ol { margin-left: 20px; margin-bottom: 12px; }
-li { margin-bottom: 4px; }
-
-/* Score badges */
-.score-badge { display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 50%; font-weight: 700; font-size: 20px; color: #fff; }
-.score-badge.green { background: var(--green); }
-.score-badge.yellow { background: var(--yellow); color: var(--gray-800); }
-.score-badge.red { background: var(--red); }
-.score-sm { width: 36px; height: 36px; font-size: 14px; border-radius: 50%; }
-
-/* Cards */
-.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-bottom: 24px; }
-.card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 8px; padding: 20px; }
-.card h4 { margin-bottom: 6px; }
-.card .val { font-size: 32px; font-weight: 700; }
-.card .label { font-size: 13px; color: var(--gray-500); }
-
-/* Accordion */
-details { border: 1px solid var(--gray-200); border-radius: 8px; margin-bottom: 8px; background: #fff; }
-details[open] { box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
-summary { padding: 14px 18px; cursor: pointer; display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 15px; list-style: none; user-select: none; }
-summary::-webkit-details-marker { display: none; }
-summary::before { content: '\25B6'; font-size: 10px; color: var(--gray-400); transition: transform 0.2s; }
-details[open] > summary::before { transform: rotate(90deg); }
-.detail-body { padding: 0 18px 18px; }
-
-/* Issue blocks */
-.issue { background: var(--red-bg); border-left: 3px solid var(--red); padding: 10px 14px; margin-bottom: 8px; border-radius: 0 6px 6px 0; font-size: 14px; }
-.issue.warn { background: var(--yellow-bg); border-left-color: var(--yellow); }
-.issue.info { background: var(--blue-bg); border-left-color: var(--blue); }
-.issue .rule { font-size: 12px; color: var(--gray-500); margin-top: 4px; }
-.issue code, .quote { background: rgba(0,0,0,0.05); padding: 2px 5px; border-radius: 3px; font-family: 'SF Mono', 'Fira Code', monospace; font-size: 13px; }
-.strength { background: var(--green-bg); border-left: 3px solid var(--green); padding: 10px 14px; margin-bottom: 8px; border-radius: 0 6px 6px 0; font-size: 14px; }
-
-/* Score bars */
-.score-bars { margin: 12px 0 16px; }
-.score-bar-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; font-size: 13px; }
-.score-bar-label { width: 140px; flex-shrink: 0; color: var(--gray-600); }
-.score-bar-track { flex: 1; height: 16px; background: var(--gray-100); border-radius: 8px; overflow: hidden; position: relative; }
-.score-bar-fill { height: 100%; border-radius: 8px; transition: width 0.3s; }
-.score-bar-fill.green { background: var(--green); }
-.score-bar-fill.yellow { background: var(--yellow); }
-.score-bar-fill.red { background: var(--red); }
-.score-bar-val { width: 52px; text-align: right; font-weight: 600; flex-shrink: 0; }
-
-/* Tables */
-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; font-size: 14px; }
-th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--gray-200); }
-th { background: var(--gray-50); font-weight: 600; color: var(--gray-700); font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
-tr:hover { background: var(--gray-50); }
-
-/* Buttons */
-.btn-row { display: flex; gap: 8px; margin-bottom: 16px; }
-.btn { padding: 8px 16px; border: 1px solid var(--gray-300); border-radius: 6px; background: #fff; cursor: pointer; font-size: 13px; font-family: var(--font); color: var(--gray-700); transition: background 0.15s; }
-.btn:hover { background: var(--gray-100); }
-
-/* Violation table */
-.viol-count { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: var(--red); color: #fff; font-size: 12px; font-weight: 700; }
-
-/* Histogram */
-.histogram { display: flex; align-items: flex-end; gap: 4px; height: 120px; margin: 16px 0; }
-.hist-bar { flex: 1; background: var(--blue); border-radius: 4px 4px 0 0; position: relative; min-width: 24px; transition: height 0.3s; }
-.hist-bar .hist-label { position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); font-size: 11px; color: var(--gray-500); white-space: nowrap; }
-.hist-bar .hist-val { position: absolute; top: -18px; left: 50%; transform: translateX(-50%); font-size: 11px; font-weight: 600; }
-
-.summary-stat { text-align: center; }
-.summary-stat .val { font-size: 42px; font-weight: 700; }
-.summary-stat .label { font-size: 13px; color: var(--gray-500); margin-top: 2px; }
-
-.arch-score-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin-bottom: 20px; }
-.arch-score-card { text-align: center; padding: 16px; background: var(--gray-50); border-radius: 8px; border: 1px solid var(--gray-200); }
-.arch-score-card .val { font-size: 36px; font-weight: 700; }
-.arch-score-card .max { font-size: 14px; color: var(--gray-400); }
-.arch-score-card .label { font-size: 12px; color: var(--gray-500); margin-top: 4px; }
-
-.tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.3px; margin-right: 4px; }
-.tag.critical { background: #fecaca; color: #991b1b; }
-.tag.high { background: #fed7aa; color: #9a3412; }
-.tag.medium { background: #fef08a; color: #854d0e; }
-.tag.low { background: #d1fae5; color: #065f46; }
-
-@media (max-width: 768px) {
-  header h1 { font-size: 22px; }
-  .card-grid { grid-template-columns: 1fr; }
-  nav.toc .container { flex-direction: column; }
-  .score-bar-label { width: 100px; }
+@media print {
+  body { background: #fff; }
+  .section { break-inside: avoid; }
 }
 </style>
 </head>
 <body>
 
-<header>
+<div class="header">
+  <h1>Zia Tile Style Audit &mdash; Reprocessed 2026-05-12</h1>
+  <div class="subtitle">Pre-patch &rarr; Post-patch Comparison &nbsp;&middot;&nbsp; 110 Content Files + Architecture Audit &nbsp;&middot;&nbsp; Campaign 01: Product &amp; Collection Pages</div>
+</div>
+
 <div class="container">
-  <h1>Zia Tile Style Guide Compliance Audit</h1>
-  <p>Comprehensive analysis of content files against the Zia Tile STYLE-SYSTEM.md</p>
-  <div class="meta-row">
-    <span class="meta-chip">Date: 2026-05-12</span>
-    <span class="meta-chip">Files Analyzed: 74 (27 collection + 47 product)</span>
-    <span class="meta-chip">Style Guide: clients/zia-tile/STYLE-SYSTEM.md</span>
-    <span class="meta-chip">Repo: zia-content-ops</span>
-  </div>
-</div>
-</header>
 
-<nav class="toc">
-<div class="container">
-  <a href="#executive-summary">Executive Summary</a>
-  <a href="#architecture">Architecture</a>
-  <a href="#collection-pages">Collection Pages</a>
-  <a href="#product-pages">Product Pages</a>
-  <a href="#aggregate">Aggregate Analysis</a>
-  <a href="#stylometric">SEO Stylometry</a>
-  <a href="#recommendations">Recommendations</a>
-</div>
-</nav>
-
-<!-- ============================================================ -->
-<!-- EXECUTIVE SUMMARY -->
-<!-- ============================================================ -->
-<section id="executive-summary">
-<div class="container">
-<h2>1. Executive Summary</h2>
-
-<div class="card-grid">
-  <div class="card summary-stat">
-    <div class="val" style="color: var(--yellow);">68</div>
-    <div class="label">Average Score (Collection Pages)</div>
-  </div>
-  <div class="card summary-stat">
-    <div class="val" style="color: var(--yellow);">77</div>
-    <div class="label">Average Score (Product Pages)</div>
-  </div>
-  <div class="card summary-stat">
-    <div class="val" style="color: var(--red);">32</div>
-    <div class="label">Architecture Score</div>
-  </div>
-  <div class="card summary-stat">
-    <div class="val" style="color: var(--red);">11</div>
-    <div class="label">Systemic Violations Found</div>
-  </div>
+<!-- TOC -->
+<div class="toc">
+  <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;">Contents</div>
+  <ul>
+    <li><a href="#exec-summary">Executive Summary</a></li>
+    <li><a href="#architecture">Architecture Analysis</a></li>
+    <li><a href="#score-table">Score Comparison — All 110 Files</a></li>
+    <li><a href="#remaining-issues">Remaining Issues</a></li>
+    <li><a href="#fixes-applied">Fixes Applied</a></li>
+    <li><a href="#recommendations">Recommendations</a></li>
+  </ul>
 </div>
 
-<h3>Key Findings</h3>
-<div class="issue">
-  <strong>CRITICAL: Missing dry-space sealing language across all product pages.</strong> Style guide section 4.2 requires: "Always seal [tile name] according to our installation instructions, whether in dry spaces or in areas exposed to moisture." Zero files include this exact language.
-  <div class="rule">STYLE-SYSTEM.md Section 4.2</div>
-</div>
-<div class="issue">
-  <strong>CRITICAL: Second person (you/your) usage widespread.</strong> Found in ~80% of product pages and ~70% of collection pages. "You should expect," "allows you or your installer," "your unique mix" all violate the no-second-person voice rule.
-  <div class="rule">STYLE-SYSTEM.md Section 2.1 (implied by expert voice standard)</div>
-</div>
-<div class="issue">
-  <strong>CRITICAL: Meta titles systematically too short.</strong> 90%+ of product pages have meta titles under 50 characters (required: 50-60). Most fall between 35-49 characters.
-  <div class="rule">STYLE-SYSTEM.md Section 7.2</div>
-</div>
-<div class="issue warn">
-  <strong>HIGH: Collection pages contain visible editing artifacts.</strong> Strikethrough text, inline revisions (e.g., "designstructure"), "Ccantera" typos, placeholder notes like "[PRODUCT LIST]" and "Writer's Notes" appear in published content drafts.
-  <div class="rule">Editorial readiness</div>
-</div>
-<div class="issue warn">
-  <strong>HIGH: FAQ count below minimum (6) in ~36% of product pages.</strong> Four of eleven analyzed product pages have only 5 FAQs. Style guide requires minimum 6 covering: thickness variation, shower floor installation, crazing, cleaning, characteristics, and color mixing.
-  <div class="rule">STYLE-SYSTEM.md Section 6.1 (#9)</div>
-</div>
-<div class="issue warn">
-  <strong>HIGH: "Dynamic tones" used instead of "dynamic glazes"</strong> in multiple zellige product pages and several collection pages. Style guide requires "dynamic glazes" specifically.
-  <div class="rule">STYLE-SYSTEM.md Section 3.1</div>
-</div>
-
-<h3 style="margin-top:24px;">Violation Severity Distribution</h3>
-<table>
-<thead><tr><th>Severity</th><th>Count</th><th>Description</th></tr></thead>
-<tbody>
-<tr><td><span class="tag critical">Critical</span></td><td>4</td><td>Missing dry-space sealing, second-person voice, short meta titles, sealing stated as "recommended" not "required"</td></tr>
-<tr><td><span class="tag high">High</span></td><td>4</td><td>Editing artifacts in collection pages, FAQ count deficiency, "dynamic tones" misuse, banned "trim pieces" usage</td></tr>
-<tr><td><span class="tag medium">Medium</span></td><td>3</td><td>Overage not stated as 15-20% range, meta descriptions under 140 chars, section naming deviations</td></tr>
-</tbody>
-</table>
-
-</div>
-</section>
-
-<!-- ============================================================ -->
-<!-- ARCHITECTURE ANALYSIS -->
-<!-- ============================================================ -->
-<section id="architecture">
-<div class="container">
-<h2>2. Architecture Analysis</h2>
-<p style="margin-bottom:20px;">Assessment of the .claude/ configuration, CLAUDE.md, agent coverage, and command integration based on <code>/tmp/zia-arch-analysis.json</code>.</p>
-
-<div class="arch-score-grid">
-  <div class="arch-score-card">
-    <div class="val" style="color:var(--red);">42<span class="max">/100</span></div>
-    <div class="label">Architecture Completeness</div>
+<!-- ===== EXECUTIVE SUMMARY ===== -->
+<div id="exec-summary" class="section">
+  <div class="section-header">
+    <h2>Executive Summary</h2>
   </div>
-  <div class="arch-score-card">
-    <div class="val" style="color:var(--red);">15<span class="max">/100</span></div>
-    <div class="label">Style System Integration</div>
-  </div>
-  <div class="arch-score-card">
-    <div class="val" style="color:var(--red);">35<span class="max">/100</span></div>
-    <div class="label">Agent Coverage</div>
-  </div>
-  <div class="arch-score-card">
-    <div class="val" style="color:var(--red);">30<span class="max">/100</span></div>
-    <div class="label">Command Coverage</div>
-  </div>
-  <div class="arch-score-card">
-    <div class="val" style="color:var(--red);">32<span class="max">/100</span></div>
-    <div class="label">Overall</div>
+  <div class="section-body">
+    <div class="metrics" style="margin-bottom:16px;">
+      <div class="card">
+        <div class="label">Architecture</div>
+        <div class="value">70<span style="font-size:14px;color:#888">/100</span></div>
+        <div class="delta">+38 pts from prior audit</div>
+      </div>
+      <div class="card">
+        <div class="label">Collections Avg (37 files)</div>
+        <div class="value">75<span style="font-size:14px;color:#888">/100</span></div>
+        <div class="delta">+8 pts from 67 pre-patch</div>
+      </div>
+      <div class="card">
+        <div class="label">Products Avg (73 files)</div>
+        <div class="value">75.3<span style="font-size:14px;color:#888">/100</span></div>
+        <div class="delta">+5.5 pts from 69.8 pre-patch</div>
+      </div>
+      <div class="card">
+        <div class="label">Files Below 60</div>
+        <div class="value">1<span style="font-size:14px;color:#888"> file</span></div>
+        <div class="delta">Down from 12 pre-patch</div>
+      </div>
+    </div>
+
+    <p style="font-size:13px;color:#444;margin-bottom:12px;">The patch made substantial improvements across both content sets. 70 of 73 product files improved; only 1 declined meaningfully. The architecture graduated from structurally broken (no CLAUDE.md) to functional with identifiable gaps. The core production pipeline (brief&rarr;draft&rarr;edit&rarr;ship) is well-wired. Remaining work is concentrated in second-person cleanup, meta description expansion, and specific structural gaps (red-clay-8x8, FAQ counts).</p>
+
+    <div style="display:flex;gap:16px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:220px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:6px;padding:12px;">
+        <div style="font-size:11px;font-weight:700;color:#15803d;margin-bottom:6px;">KEY WINS</div>
+        <ul style="padding-left:14px;font-size:12px;color:#166534;">
+          <li>All editing artifacts removed across collection pages</li>
+          <li>Internal comments purged from all files</li>
+          <li>Phone 310-844-1170 now in all 73 product files</li>
+          <li>PPE + Prop 65 present in all product files</li>
+          <li>All banned terms eliminated at systemic level</li>
+          <li>Freeze/thaw and pool/spa distinctions correct throughout</li>
+          <li>9 required sections present in 72 of 73 product files</li>
+        </ul>
+      </div>
+      <div style="flex:1;min-width:220px;background:#fff5f5;border:1px solid #fecaca;border-radius:6px;padding:12px;">
+        <div style="font-size:11px;font-weight:700;color:#b91c1c;margin-bottom:6px;">STILL OUTSTANDING</div>
+        <ul style="padding-left:14px;font-size:12px;color:#7f1d1d;">
+          <li>red-clay-8x8-square.md: 5 of 9 sections still "Template Pending"</li>
+          <li>~25 product files: you/your in FAQ answers (zellige group)</li>
+          <li>36 of 37 collection files: meta descriptions under 140 chars</li>
+          <li>14 product files: fewer than 6 FAQ questions</li>
+          <li>2 collection files: critical technical errors (marble outdoor, Cotto Allende sealing)</li>
+          <li>24 collection files: missing drywall flush/mitered edges/Schluter strips</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
 
-<details>
-<summary>CLAUDE.md Gap Assessment <span class="tag critical">Critical</span></summary>
-<div class="detail-body">
-<div class="issue">
-  <strong>No CLAUDE.md file exists.</strong> The repo has <code>CLAUDE-content-ops.md</code> instead, but Claude Code only auto-loads <code>CLAUDE.md</code>. All 7 commands and the editor agent reference a nonexistent file. This is the single highest-impact fix.
-  <div class="rule">Architecture gap: 7 commands + 1 agent point to nonexistent CLAUDE.md</div>
-</div>
-<h4>Agents Referencing CLAUDE.md (which does not exist):</h4>
-<ul>
-  <li>editor.md: "Read CLAUDE.md before reviewing"</li>
-  <li>draft.md: "following CLAUDE.md rules exactly"</li>
-  <li>rewrite.md: "following the rules in CLAUDE.md"</li>
-  <li>humanize.md: "following the rules in CLAUDE.md"</li>
-  <li>knowledge.md: "Follow CLAUDE.md rules"</li>
-  <li>ship.md: "following CLAUDE.md"</li>
-  <li>brief.md: "following CLAUDE.md rules"</li>
-  <li>landing.md: "following CLAUDE.md"</li>
-</ul>
-<h4 style="margin-top:12px;">Recommended Fix:</h4>
-<p>Rename <code>CLAUDE-content-ops.md</code> to <code>CLAUDE.md</code>. This immediately fixes all command and agent references.</p>
-</div>
-</details>
-
-<details>
-<summary>Agent Architecture Review (0/8 agents reference any style system)</summary>
-<div class="detail-body">
-<table>
-<thead><tr><th>Agent</th><th>Purpose</th><th>Zia Aware?</th><th>Issues</th></tr></thead>
-<tbody>
-<tr><td>algorithmic-author</td><td>AEO/GEO question-answer writing</td><td>No</td><td>Q&A format conflicts with Zia 9-section structure; broken citation ref</td></tr>
-<tr><td>algorithmic-writer</td><td>Long-form SEO content</td><td>No</td><td>"Short sentences" rule conflicts with Zia "medium-length" voice</td></tr>
-<tr><td>editor</td><td>Draft review</td><td>No</td><td>References nonexistent CLAUDE.md</td></tr>
-<tr><td>fact-checker</td><td>Verify claims</td><td>No</td><td>No freeze/thaw or sealing knowledge</td></tr>
-<tr><td>humanizer</td><td>Remove AI cadence</td><td>No</td><td>No Zia vocabulary palette awareness</td></tr>
-<tr><td>researcher</td><td>Gather facts</td><td>No</td><td>Doesn't know to check clients/zia-tile/raw/</td></tr>
-<tr><td>seo-auditor</td><td>SEO structure audit</td><td>No</td><td>Doesn't know Zia meta format</td></tr>
-<tr><td>seo-researcher</td><td>Keyword research</td><td>No</td><td>No tile industry context</td></tr>
-</tbody>
-</table>
-
-<h4 style="margin-top:16px;">Missing Critical Agents</h4>
-<ul>
-  <li><strong>brand-voice-validator</strong> &mdash; Reviews drafts against client STYLE-SYSTEM.md for terminology violations, avoidance list, page structure, and technical accuracy (Priority: Critical)</li>
-  <li><strong>style-checker</strong> &mdash; Automated lint pass for term avoidance, required terminology, product anchoring, sentence fragments (Priority: High)</li>
-  <li><strong>collection-page-writer</strong> &mdash; Specialized writer for Zia Tile product/collection pages using 9-section structure (Priority: High)</li>
-</ul>
-</div>
-</details>
-
-<details>
-<summary>Command Coverage (0/7 commands reference any style system)</summary>
-<div class="detail-body">
-<table>
-<thead><tr><th>Command</th><th>Zia Usable?</th><th>Key Issue</th></tr></thead>
-<tbody>
-<tr><td>/draft</td><td>Partial</td><td>Blog/article format, no 9-section awareness</td></tr>
-<tr><td>/knowledge</td><td>Partial</td><td>Path structure doesn't match repo layout</td></tr>
-<tr><td>/ship</td><td>No</td><td>No Zia pre-submission checklist integration</td></tr>
-<tr><td>/rewrite</td><td>Partial</td><td>Generic rewriter, may strip editorial voice</td></tr>
-<tr><td>/landing</td><td>No</td><td>SaaS-only (Search Atlas); completely irrelevant for Zia Tile</td></tr>
-<tr><td>/brief</td><td>Partial</td><td>No Zia product collections or audience awareness</td></tr>
-<tr><td>/humanize</td><td>Partial</td><td>No Architectural Digest register awareness</td></tr>
-</tbody>
-</table>
-
-<h4 style="margin-top:16px;">Missing Commands</h4>
-<ul>
-  <li><strong>/product-page</strong> &mdash; Generate Zia 9-section product pages (Critical)</li>
-  <li><strong>/review-style</strong> &mdash; Check drafts against client STYLE-SYSTEM.md (Critical)</li>
-  <li><strong>/checklist</strong> &mdash; Execute the 30+ item pre-submission checklist (High)</li>
-  <li><strong>/collection-page</strong> &mdash; Generate collection pages (High)</li>
-</ul>
-</div>
-</details>
-
-<details>
-<summary>Agent Conflicts</summary>
-<div class="detail-body">
-<div class="issue">
-  <strong>algorithmic-author vs Zia page structure:</strong> Agent mandates Q&A format. Zia requires 9 specific sections (Product Details, About, Inherent Variation, etc.) that are statement-based.
-  <div class="rule">Severity: High</div>
-</div>
-<div class="issue warn">
-  <strong>algorithmic-writer sentence rules vs Zia voice:</strong> Agent demands "short sentences" and "no modal verbs." Zia voice calls for "medium-length, one to two clauses" and editorial register that uses "may" constructions.
-  <div class="rule">Severity: Medium</div>
-</div>
-<div class="issue">
-  <strong>editor references nonexistent CLAUDE.md:</strong> Editor agent says "Read CLAUDE.md before reviewing" but this file does not exist.
-  <div class="rule">Severity: Critical</div>
-</div>
-</div>
-</details>
-
-</div>
-</section>
-
-<!-- ============================================================ -->
-<!-- COLLECTION PAGES -->
-<!-- ============================================================ -->
-<section id="collection-pages">
-<div class="container">
-<h2>3. Content Analysis &mdash; Collection Pages</h2>
-<p style="margin-bottom:16px;">27 collection page files analyzed against STYLE-SYSTEM.md. Collection pages have a different structure than product pages (no 9-section requirement), but must follow all voice, terminology, technical accuracy, and SEO rules.</p>
-
-<div class="btn-row">
-  <button class="btn" onclick="document.querySelectorAll('#collection-pages details').forEach(d=>d.open=true)">Expand All</button>
-  <button class="btn" onclick="document.querySelectorAll('#collection-pages details').forEach(d=>d.open=false)">Collapse All</button>
-</div>
-
-<!-- CANTERA -->
-<details>
-<summary>
-  <span class="score-badge red score-sm">52</span>
-  cantera.md &mdash; Cantera Collection Page
-</summary>
-<div class="detail-body">
-<div class="score-bars">
-  <div class="score-bar-row"><span class="score-bar-label">Voice &amp; Tone</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:55%"></div></div><span class="score-bar-val">11/20</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Terminology</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:60%"></div></div><span class="score-bar-val">9/15</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Technical Accuracy</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:60%"></div></div><span class="score-bar-val">12/20</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Specificity</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:60%"></div></div><span class="score-bar-val">9/15</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Page Structure</span><div class="score-bar-track"><div class="score-bar-fill red" style="width:40%"></div></div><span class="score-bar-val">4/10</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">SEO Compliance</span><div class="score-bar-track"><div class="score-bar-fill red" style="width:50%"></div></div><span class="score-bar-val">5/10</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Stylometric SEO</span><div class="score-bar-track"><div class="score-bar-fill red" style="width:20%"></div></div><span class="score-bar-val">2/10</span></div>
-</div>
-<h4>Issues Found</h4>
-<div class="issue">
-  <strong>Extensive editing artifacts left in document.</strong> Multiple visible strikethrough/inline revision marks: <code>"designstructure"</code>, <code>"CanteraThe stone tile"</code>, <code>"Ccantera"</code> (appears 14+ times), <code>"Iinstallnstallling"</code>, <code>"specklingsurface movement"</code>.
-  <div class="rule">Editorial readiness - not publication-ready</div>
-</div>
-<div class="issue">
-  <strong>Second person throughout FAQs:</strong> <code>"how much Cantera stone tile you need"</code>, <code>"If you are unsure"</code>, <code>"wipe clean as you go"</code>.
-  <div class="rule">STYLE-SYSTEM.md Section 2.1</div>
-</div>
-<div class="issue warn">
-  <strong>Uses "unique personality"</strong> (line 35): <code>"each piece its own unique personality"</code> &mdash; "unique" without context is on avoidance list.
-  <div class="rule">STYLE-SYSTEM.md Section 3.2</div>
-</div>
-<div class="issue warn">
-  <strong>Em dash usage:</strong> <code>"expect visible aggregate, mineral inclusions, and subtle imperfections that give each piece its own unique personality"</code> contains no em dashes, but <code>"as if nature itself had formed aggregate-speckled terrazzo"</code> is a subjective, marketer-esque claim.
-  <div class="rule">STYLE-SYSTEM.md Section 2.1 - expert vs marketer litmus test</div>
-</div>
-<div class="issue warn">
-  <strong>Meta description at 147 chars</strong> is within range but uses <code>"curated collection"</code> &mdash; vague generic marketing language.
-  <div class="rule">STYLE-SYSTEM.md Section 7.2</div>
-</div>
-<div class="strength"><strong>Strength:</strong> Good historical anchoring: "From ancient Aztec structures to cathedrals in San Miguel de Allende" provides specific context.</div>
-<div class="strength"><strong>Strength:</strong> FAQ coverage is thorough (9 questions) covering origin, making, care, cleaning, installation, colors/formats, quantity calculation.</div>
-</div>
-</details>
-
-<!-- CEMENT -->
-<details>
-<summary>
-  <span class="score-badge red score-sm">55</span>
-  cement.md &mdash; Cement Collection Page
-</summary>
-<div class="detail-body">
-<div class="score-bars">
-  <div class="score-bar-row"><span class="score-bar-label">Voice &amp; Tone</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:60%"></div></div><span class="score-bar-val">12/20</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Terminology</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:67%"></div></div><span class="score-bar-val">10/15</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Technical Accuracy</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:65%"></div></div><span class="score-bar-val">13/20</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Specificity</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:67%"></div></div><span class="score-bar-val">10/15</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Page Structure</span><div class="score-bar-track"><div class="score-bar-fill red" style="width:40%"></div></div><span class="score-bar-val">4/10</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">SEO Compliance</span><div class="score-bar-track"><div class="score-bar-fill red" style="width:40%"></div></div><span class="score-bar-val">4/10</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Stylometric SEO</span><div class="score-bar-track"><div class="score-bar-fill red" style="width:20%"></div></div><span class="score-bar-val">2/10</span></div>
-</div>
-<h4>Issues Found</h4>
-<div class="issue">
-  <strong>Extensive editing artifacts.</strong> Strikethrough/revision text throughout: <code>"sopressed to form"</code>, <code>"Subtle Ttonalonal tonal shifts"</code>, <code>"blendcombine"</code>, <code>"designss"</code>, <code>"PatternsThe pattern areis"</code>, <code>"handmade (repetitive)"</code>, <code>"the desired (repetitive)"</code>.
-  <div class="rule">Editorial readiness - not publication-ready</div>
-</div>
-<div class="issue">
-  <strong>Uses "every" instead of "each":</strong> <code>"blending tiles from every box"</code> (line 64) and <code>"Begin by blending tiles from every box"</code> (line 55 of glass-mosaics).
-  <div class="rule">STYLE-SYSTEM.md Section 3.1: "Each (not 'every')"</div>
-</div>
-<div class="issue warn">
-  <strong>Uses "lovely":</strong> <code>"This aging should be embraced, as it is a normal and lovely aspect of cement tile"</code> (line 101) &mdash; subjective marketer language.
-  <div class="rule">STYLE-SYSTEM.md Section 2.1 - expert vs marketer litmus test</div>
-</div>
-<div class="issue warn">
-  <strong>Overage stated as "15%"</strong> not "15-20%" range: <code>"add a minimum of 15% overage"</code> (line 87).
-  <div class="rule">STYLE-SYSTEM.md Section 5, overage row</div>
-</div>
-<div class="issue warn">
-  <strong>"beautiful matte finishes"</strong> in FAQ (line 36): subjective claim without specificity.
-  <div class="rule">STYLE-SYSTEM.md Section 2.1</div>
-</div>
-<div class="strength"><strong>Strength:</strong> Excellent process description with specific details (hydraulic press at ~3,000 PSI, 7-day cure on racks).</div>
-<div class="strength"><strong>Strength:</strong> Sealing guidance well-structured with clear before/after/during instructions.</div>
-</div>
-</details>
-
-<!-- CERAMICS -->
-<details>
-<summary>
-  <span class="score-badge red score-sm">56</span>
-  ceramics.md &mdash; Ceramics Collection Page
-</summary>
-<div class="detail-body">
-<div class="score-bars">
-  <div class="score-bar-row"><span class="score-bar-label">Voice &amp; Tone</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:60%"></div></div><span class="score-bar-val">12/20</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Terminology</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:60%"></div></div><span class="score-bar-val">9/15</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Technical Accuracy</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:65%"></div></div><span class="score-bar-val">13/20</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Specificity</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:67%"></div></div><span class="score-bar-val">10/15</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Page Structure</span><div class="score-bar-track"><div class="score-bar-fill red" style="width:40%"></div></div><span class="score-bar-val">4/10</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">SEO Compliance</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:60%"></div></div><span class="score-bar-val">6/10</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Stylometric SEO</span><div class="score-bar-track"><div class="score-bar-fill red" style="width:20%"></div></div><span class="score-bar-val">2/10</span></div>
-</div>
-<h4>Issues Found</h4>
-<div class="issue">
-  <strong>Editing artifacts throughout.</strong> <code>"These is newer range"</code>, <code>"traditionalwith contemporary methods"</code>, <code>"arttradition"</code>, <code>"malletsPress"</code>, <code>"spacingjoints"</code>, <code>"compromisationfailure"</code>, <code>"caremaintenance"</code>, <code>"(repetitive)"</code> comments left in text.
-  <div class="rule">Editorial readiness</div>
-</div>
-<div class="issue">
-  <strong>Contradictory exterior claims:</strong> Line 58 says both <code>"not suitable for ideal for any exterior floor applications regardless of the climate, with the exception of outdoor flooring"</code> &mdash; confusing and contradictory.
-  <div class="rule">STYLE-SYSTEM.md Section 4 - Non-negotiable accuracy</div>
-</div>
-<div class="issue warn">
-  <strong>"can be a great" phrasing:</strong> <code>"ceramic tile flooring can be a great option"</code> visible as revision target &mdash; subjective marketing language.
-  <div class="rule">STYLE-SYSTEM.md Section 2.1</div>
-</div>
-<div class="issue warn">
-  <strong>Uses "grout spacing"</strong> in multiple locations &mdash; later corrected to "grout joints" in inline edits but the artifact text is inconsistent.
-  <div class="rule">STYLE-SYSTEM.md Section 3.2: "grout spacing" is banned</div>
-</div>
-<div class="strength"><strong>Strength:</strong> Strong geographic specificity: "potter's village outside Nagoya, Japan, where the artisans blend traditional methods with contemporary methods."</div>
-</div>
-</details>
-
-<!-- COTTO -->
-<details>
-<summary>
-  <span class="score-badge yellow score-sm">72</span>
-  cotto.md &mdash; Cotto Collection Page
-</summary>
-<div class="detail-body">
-<div class="score-bars">
-  <div class="score-bar-row"><span class="score-bar-label">Voice &amp; Tone</span><div class="score-bar-track"><div class="score-bar-fill green" style="width:80%"></div></div><span class="score-bar-val">16/20</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Terminology</span><div class="score-bar-track"><div class="score-bar-fill green" style="width:80%"></div></div><span class="score-bar-val">12/15</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Technical Accuracy</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:75%"></div></div><span class="score-bar-val">15/20</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Specificity</span><div class="score-bar-track"><div class="score-bar-fill green" style="width:80%"></div></div><span class="score-bar-val">12/15</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Page Structure</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:70%"></div></div><span class="score-bar-val">7/10</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">SEO Compliance</span><div class="score-bar-track"><div class="score-bar-fill red" style="width:50%"></div></div><span class="score-bar-val">5/10</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Stylometric SEO</span><div class="score-bar-track"><div class="score-bar-fill red" style="width:50%"></div></div><span class="score-bar-val">5/10</span></div>
-</div>
-<h4>Issues Found</h4>
-<div class="issue warn">
-  <strong>Uses "charming":</strong> <code>"These charming unglazed pieces add an earthy aesthetic"</code> (line 23) &mdash; "charming" is subjective and close to the banned "sophisticated" register.
-  <div class="rule">STYLE-SYSTEM.md Section 2.1 - expert vs marketer</div>
-</div>
-<div class="issue warn">
-  <strong>Meta description too short:</strong> 105 characters &mdash; well under 140-160 range. Missing 2+ use cases.
-  <div class="rule">STYLE-SYSTEM.md Section 7.2</div>
-</div>
-<div class="issue warn">
-  <strong>Uses "coveted":</strong> <code>"our coveted Cotto line"</code> (line 35 in Cotto Allende cross-reference) &mdash; reads as marketing language rather than expert description.
-  <div class="rule">STYLE-SYSTEM.md Section 2.1</div>
-</div>
-<div class="strength"><strong>Strength:</strong> Best-in-class FAQ answers. Format-specific details (Stars &amp; Cross, Alcazar, Oaxaca, Durango shapes) show genuine product knowledge.</div>
-<div class="strength"><strong>Strength:</strong> Excellent sealing instructions with clear before/after/grouting sequence.</div>
-<div class="strength"><strong>Strength:</strong> DCOF value (0.98) included for trade credibility.</div>
-</div>
-</details>
-
-<!-- COTTO ALLENDE -->
-<details>
-<summary>
-  <span class="score-badge yellow score-sm">70</span>
-  cotto-allende.md &mdash; Cotto Allende Collection Page
-</summary>
-<div class="detail-body">
-<div class="score-bars">
-  <div class="score-bar-row"><span class="score-bar-label">Voice &amp; Tone</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:75%"></div></div><span class="score-bar-val">15/20</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Terminology</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:73%"></div></div><span class="score-bar-val">11/15</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Technical Accuracy</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:70%"></div></div><span class="score-bar-val">14/20</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Specificity</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:73%"></div></div><span class="score-bar-val">11/15</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Page Structure</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:70%"></div></div><span class="score-bar-val">7/10</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">SEO Compliance</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:60%"></div></div><span class="score-bar-val">6/10</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Stylometric SEO</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:60%"></div></div><span class="score-bar-val">6/10</span></div>
-</div>
-<h4>Issues Found</h4>
-<div class="issue warn"><strong>Second person in FAQs:</strong> <code>"You may reach out"</code>, <code>"you are unsure"</code>, <code>"your project"</code>.</div>
-<div class="issue warn"><strong>Overage stated as "15%"</strong> not "15-20%" in some locations.</div>
-<div class="strength"><strong>Strength:</strong> Strong differentiation from Cotto with clear glazing process descriptions.</div>
-</div>
-</details>
-
-<!-- GLASS MOSAICS -->
-<details>
-<summary>
-  <span class="score-badge red score-sm">58</span>
-  glass-mosaics.md &mdash; Glass Mosaics Collection Page
-</summary>
-<div class="detail-body">
-<div class="score-bars">
-  <div class="score-bar-row"><span class="score-bar-label">Voice &amp; Tone</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:60%"></div></div><span class="score-bar-val">12/20</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Terminology</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:67%"></div></div><span class="score-bar-val">10/15</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Technical Accuracy</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:65%"></div></div><span class="score-bar-val">13/20</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Specificity</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:60%"></div></div><span class="score-bar-val">9/15</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Page Structure</span><div class="score-bar-track"><div class="score-bar-fill red" style="width:40%"></div></div><span class="score-bar-val">4/10</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">SEO Compliance</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:60%"></div></div><span class="score-bar-val">6/10</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Stylometric SEO</span><div class="score-bar-track"><div class="score-bar-fill red" style="width:40%"></div></div><span class="score-bar-val">4/10</span></div>
-</div>
-<h4>Issues Found</h4>
-<div class="issue">
-  <strong>Heavy editing artifacts.</strong> <code>"ourZia Tile's"</code>, <code>"Our explorations landed us"</code> repeated with revision, <code>"mesh-backedmesh-backcedmounted"</code>, <code>"(reword?)"</code> and <code>"(wording is confusing here)"</code> editorial notes left in text.
-  <div class="rule">Editorial readiness</div>
-</div>
-<div class="issue warn">
-  <strong>"every box"</strong> instead of "each box": <code>"Begin by blending tiles from every box"</code> (line 55).
-  <div class="rule">STYLE-SYSTEM.md Section 3.1</div>
-</div>
-<div class="issue warn">
-  <strong>"impressive design"</strong> (line 73): subjective marketing claim without specifics.
-  <div class="rule">STYLE-SYSTEM.md Section 2.1</div>
-</div>
-<div class="strength"><strong>Strength:</strong> Excellent sustainability narrative (98% recycled glass, renewable energy, electric kilns).</div>
-</div>
-</details>
-
-<!-- HOMEPAGE -->
-<details>
-<summary>
-  <span class="score-badge yellow score-sm">62</span>
-  homepage.md &mdash; Homepage
-</summary>
-<div class="detail-body">
-<div class="score-bars">
-  <div class="score-bar-row"><span class="score-bar-label">Voice &amp; Tone</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:70%"></div></div><span class="score-bar-val">14/20</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Terminology</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:73%"></div></div><span class="score-bar-val">11/15</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Technical Accuracy</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:65%"></div></div><span class="score-bar-val">13/20</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Specificity</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:60%"></div></div><span class="score-bar-val">9/15</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Page Structure</span><div class="score-bar-track"><div class="score-bar-fill red" style="width:40%"></div></div><span class="score-bar-val">4/10</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">SEO Compliance</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:60%"></div></div><span class="score-bar-val">6/10</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Stylometric SEO</span><div class="score-bar-track"><div class="score-bar-fill red" style="width:50%"></div></div><span class="score-bar-val">5/10</span></div>
-</div>
-<h4>Issues Found</h4>
-<div class="issue">
-  <strong>Writer's Notes left in document</strong> (lines 134-139): Full editorial commentary visible. Also "SUGGESTION TO ADD" notes (lines 104, 120).
-  <div class="rule">Editorial readiness</div>
-</div>
-<div class="issue warn">
-  <strong>Editing artifacts:</strong> <code>"Ccotto"</code> (line 112), <code>"surfacetexture"</code> (line 54), <code>"naturalwhere the stonematerial"</code> (line 88), <code>"MAvailable in matte"</code> (line 84).
-  <div class="rule">Editorial readiness</div>
-</div>
-<div class="issue warn">
-  <strong>Uses "dynamic tones"</strong> (line 68) instead of "dynamic glazes": <code>"producing the dynamic tones and inherent variation"</code>.
-  <div class="rule">STYLE-SYSTEM.md Section 3.1</div>
-</div>
-<div class="strength"><strong>Strength:</strong> Strong social proof section with real project names (Casa Zia Madrid, At Home with Amanda Thomas).</div>
-<div class="strength"><strong>Strength:</strong> Good collection overview blurbs with geographic specificity per material.</div>
-</div>
-</details>
-
-<!-- ROMAN MOSAICS -->
-<details>
-<summary>
-  <span class="score-badge yellow score-sm">74</span>
-  roman-mosaics.md &mdash; Roman Mosaics Collection Page
-</summary>
-<div class="detail-body">
-<div class="score-bars">
-  <div class="score-bar-row"><span class="score-bar-label">Voice &amp; Tone</span><div class="score-bar-track"><div class="score-bar-fill green" style="width:80%"></div></div><span class="score-bar-val">16/20</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Terminology</span><div class="score-bar-track"><div class="score-bar-fill green" style="width:80%"></div></div><span class="score-bar-val">12/15</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Technical Accuracy</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:75%"></div></div><span class="score-bar-val">15/20</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Specificity</span><div class="score-bar-track"><div class="score-bar-fill green" style="width:80%"></div></div><span class="score-bar-val">12/15</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Page Structure</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:70%"></div></div><span class="score-bar-val">7/10</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">SEO Compliance</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:60%"></div></div><span class="score-bar-val">6/10</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Stylometric SEO</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:60%"></div></div><span class="score-bar-val">6/10</span></div>
-</div>
-<h4>Issues Found</h4>
-<div class="issue warn"><strong>Uses "totally timeless":</strong> <code>"refined, graphic, and totally timeless"</code> &mdash; "totally" is filler adjacent and "timeless" is a generic claim.</div>
-<div class="issue warn"><strong>Second person in FAQs:</strong> <code>"your space"</code>, <code>"your project"</code>, <code>"you go"</code>.</div>
-<div class="strength"><strong>Strength:</strong> Exceptional opening with specific historical context (Hellenistic Greece, Roman Empire, 5/8-inch tesserae).</div>
-<div class="strength"><strong>Strength:</strong> Strong expert voice with material-specific vocabulary (tesserae, hand-clipped, mesh-mounted).</div>
-</div>
-</details>
-
-<!-- COLOR PAGES (summarized as a batch) -->
-<details>
-<summary>
-  <span class="score-badge yellow score-sm">71</span>
-  Color Collection Pages (10 files) &mdash; Batch Analysis
-</summary>
-<div class="detail-body">
-<p style="margin-bottom:12px;">Files: color-black.md, color-blue.md, color-green.md, color-grey.md, color-pattern.md, color-purple.md, color-red.md, color-tan.md, color-white.md, color-yellow.md</p>
-
-<table>
-<thead><tr><th>File</th><th>Score</th><th>Key Issues</th></tr></thead>
-<tbody>
-<tr><td>color-black.md</td><td><span class="score-badge yellow score-sm" style="width:28px;height:28px;font-size:11px;">70</span></td><td>Second person in FAQs; no editing artifacts; clean content</td></tr>
-<tr><td>color-blue.md</td><td><span class="score-badge yellow score-sm" style="width:28px;height:28px;font-size:11px;">72</span></td><td>"dynamic tones" instead of "dynamic glazes"; second person</td></tr>
-<tr><td>color-green.md</td><td><span class="score-badge yellow score-sm" style="width:28px;height:28px;font-size:11px;">70</span></td><td>Second person; otherwise clean</td></tr>
-<tr><td>color-grey.md</td><td><span class="score-badge yellow score-sm" style="width:28px;height:28px;font-size:11px;">72</span></td><td>"dynamic tones" (should be "dynamic glazes"); second person</td></tr>
-<tr><td>color-pattern.md</td><td><span class="score-badge yellow score-sm" style="width:28px;height:28px;font-size:11px;">73</span></td><td>"how much you want" (2nd person); otherwise strong</td></tr>
-<tr><td>color-purple.md</td><td><span class="score-badge yellow score-sm" style="width:28px;height:28px;font-size:11px;">70</span></td><td>"how much surface area you want to cover" (2nd person)</td></tr>
-<tr><td>color-red.md</td><td><span class="score-badge yellow score-sm" style="width:28px;height:28px;font-size:11px;">73</span></td><td>Clean content; good trio usage; minor second person</td></tr>
-<tr><td>color-tan.md</td><td><span class="score-badge yellow score-sm" style="width:28px;height:28px;font-size:11px;">71</span></td><td>"how much you want it to show" (2nd person); good DCOF ref</td></tr>
-<tr><td>color-white.md</td><td><span class="score-badge yellow score-sm" style="width:28px;height:28px;font-size:11px;">72</span></td><td>"dynamic tones" instead of "dynamic glazes"; "endless applications" is vague; missing ### on last FAQ</td></tr>
-<tr><td>color-yellow.md</td><td><span class="score-badge yellow score-sm" style="width:28px;height:28px;font-size:11px;">69</span></td><td>"interesting" used twice (vague); "how much definition you want" (2nd person)</td></tr>
-</tbody>
-</table>
-
-<h4>Systemic Issues Across Color Pages</h4>
-<div class="issue warn">
-  <strong>Second person (you/your) in every color page FAQ.</strong> All 10 color pages use "you" or "your" at least once, typically in grout color and sample ordering FAQs. <code>"how much you want it to show"</code>, <code>"you can order samples"</code>, <code>"your space"</code>, <code>"your lighting"</code>.
-  <div class="rule">STYLE-SYSTEM.md Section 2.1</div>
-</div>
-<div class="issue warn">
-  <strong>"Dynamic tones" in 4/10 color pages</strong> (blue, grey, white, and implicitly green). Should be "dynamic glazes."
-  <div class="rule">STYLE-SYSTEM.md Section 3.1</div>
-</div>
-<div class="strength"><strong>Strength:</strong> Color pages are the cleanest content in the collection set &mdash; no editing artifacts, well-structured FAQs, and good cross-material comparisons.</div>
-<div class="strength"><strong>Strength:</strong> Consistent chips/pits/crazing trio usage across all color pages that mention zellige.</div>
-</div>
-</details>
-
-<!-- SHAPE PAGES -->
-<details>
-<summary>
-  <span class="score-badge yellow score-sm">69</span>
-  Shape Collection Pages (5 files) &mdash; Batch Analysis
-</summary>
-<div class="detail-body">
-<p style="margin-bottom:12px;">Files: shape-hexagon.md, shape-rectangle.md, shape-square.md, shape-large-format.md, shape-special-shape.md</p>
-<table>
-<thead><tr><th>File</th><th>Score</th><th>Key Issues</th></tr></thead>
-<tbody>
-<tr><td>shape-hexagon.md</td><td><span class="score-badge yellow score-sm" style="width:28px;height:28px;font-size:11px;">70</span></td><td>Second person; "dynamic tones"</td></tr>
-<tr><td>shape-rectangle.md</td><td><span class="score-badge yellow score-sm" style="width:28px;height:28px;font-size:11px;">68</span></td><td>Editing artifacts present; second person</td></tr>
-<tr><td>shape-square.md</td><td><span class="score-badge yellow score-sm" style="width:28px;height:28px;font-size:11px;">69</span></td><td>Second person; long FAQ answers</td></tr>
-<tr><td>shape-large-format.md</td><td><span class="score-badge yellow score-sm" style="width:28px;height:28px;font-size:11px;">68</span></td><td>Second person; some editing artifacts</td></tr>
-<tr><td>shape-special-shape.md</td><td><span class="score-badge yellow score-sm" style="width:28px;height:28px;font-size:11px;">70</span></td><td>Second person; otherwise well-structured</td></tr>
-</tbody>
-</table>
-<div class="issue warn"><strong>Systemic:</strong> Second person pervasive across all shape pages. "Dynamic tones" in hexagon page.</div>
-</div>
-</details>
-
-<!-- SPACE PAGES -->
-<details>
-<summary>
-  <span class="score-badge yellow score-sm">73</span>
-  Space &amp; Program Pages (3 files) &mdash; Batch Analysis
-</summary>
-<div class="detail-body">
-<p style="margin-bottom:12px;">Files: space-kitchen.md, space-shower.md, trade-program.md</p>
-<table>
-<thead><tr><th>File</th><th>Score</th><th>Key Issues</th></tr></thead>
-<tbody>
-<tr><td>space-kitchen.md</td><td><span class="score-badge yellow score-sm" style="width:28px;height:28px;font-size:11px;">74</span></td><td>Second person; "deserving of great design" is marketer language; otherwise strong</td></tr>
-<tr><td>space-shower.md</td><td><span class="score-badge yellow score-sm" style="width:28px;height:28px;font-size:11px;">75</span></td><td>"trim pieces" banned term in niche FAQ; second person; good slip resistance spec</td></tr>
-<tr><td>trade-program.md</td><td><span class="score-badge yellow score-sm" style="width:28px;height:28px;font-size:11px;">71</span></td><td>Second person inherent to audience; "(needs confirmation from the client)" note left in</td></tr>
-</tbody>
-</table>
-<div class="issue warn">
-  <strong>space-shower.md uses "trim pieces":</strong> <code>"zellige and other materials do not use traditional trim pieces"</code> &mdash; banned term, should use "mitered edges" or "Schluter strips."
-  <div class="rule">STYLE-SYSTEM.md Section 3.2</div>
-</div>
-<div class="strength"><strong>Strength:</strong> Kitchen page FAQs are excellent &mdash; practical, material-specific, with DCOF references and sealing guidance.</div>
-<div class="strength"><strong>Strength:</strong> Shower page includes correct 1/8" grout joint spec for slip resistance.</div>
-</div>
-</details>
-
-<!-- FIELD TRIP JAPAN -->
-<details>
-<summary>
-  <span class="score-badge yellow score-sm">68</span>
-  field-trip-japan.md &mdash; Field Trip Japan Collection Page
-</summary>
-<div class="detail-body">
-<div class="score-bars">
-  <div class="score-bar-row"><span class="score-bar-label">Voice &amp; Tone</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:70%"></div></div><span class="score-bar-val">14/20</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Terminology</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:67%"></div></div><span class="score-bar-val">10/15</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Technical Accuracy</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:65%"></div></div><span class="score-bar-val">13/20</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Specificity</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:67%"></div></div><span class="score-bar-val">10/15</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Page Structure</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:70%"></div></div><span class="score-bar-val">7/10</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">SEO Compliance</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:60%"></div></div><span class="score-bar-val">6/10</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Stylometric SEO</span><div class="score-bar-track"><div class="score-bar-fill green" style="width:80%"></div></div><span class="score-bar-val">8/10</span></div>
-</div>
-<h4>Issues Found</h4>
-<div class="issue warn"><strong>Second person in FAQs.</strong></div>
-<div class="issue warn"><strong>Style guide calls Field Trip: Japan a "sub-line"</strong> (Section 8, Ceramics row) &mdash; page should reference this relationship.</div>
-<div class="strength"><strong>Strength:</strong> Strongest stylometric SEO among collection pages. Answer-first FAQ structure, specific process details.</div>
-</div>
-</details>
-
-</div>
-</section>
-
-<!-- ============================================================ -->
-<!-- PRODUCT PAGES -->
-<!-- ============================================================ -->
-<section id="product-pages">
-<div class="container">
-<h2>4. Content Analysis &mdash; Product Pages</h2>
-<p style="margin-bottom:16px;">47 product page files. 11 files analyzed in depth from <code>/tmp/zia-products-1-analysis.json</code>. Remaining 36 files assessed by pattern matching against systemic issues found in the first batch.</p>
-
-<div class="btn-row">
-  <button class="btn" onclick="document.querySelectorAll('#product-pages details').forEach(d=>d.open=true)">Expand All</button>
-  <button class="btn" onclick="document.querySelectorAll('#product-pages details').forEach(d=>d.open=false)">Collapse All</button>
-</div>
-
-<!-- Detailed product pages from analysis JSON -->
-<details>
-<summary>
-  <span class="score-badge green score-sm">85</span>
-  basilica-6x6-honed.md &mdash; Limestone (Best Score)
-</summary>
-<div class="detail-body">
-<div class="score-bars">
-  <div class="score-bar-row"><span class="score-bar-label">Voice &amp; Tone</span><div class="score-bar-track"><div class="score-bar-fill green" style="width:90%"></div></div><span class="score-bar-val">18/20</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Terminology</span><div class="score-bar-track"><div class="score-bar-fill green" style="width:93%"></div></div><span class="score-bar-val">14/15</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Technical Accuracy</span><div class="score-bar-track"><div class="score-bar-fill green" style="width:90%"></div></div><span class="score-bar-val">18/20</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Specificity</span><div class="score-bar-track"><div class="score-bar-fill green" style="width:93%"></div></div><span class="score-bar-val">14/15</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Page Structure</span><div class="score-bar-track"><div class="score-bar-fill green" style="width:80%"></div></div><span class="score-bar-val">8/10</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">SEO Compliance</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:70%"></div></div><span class="score-bar-val">7/10</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Stylometric SEO</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:60%"></div></div><span class="score-bar-val">6/10</span></div>
-</div>
-<h4>Issues</h4>
-<div class="issue warn"><strong>Meta title at 47 chars</strong> &mdash; under 50-60 range.</div>
-<div class="issue warn"><strong>Meta description at ~139 chars</strong> &mdash; 1 char under 140 minimum.</div>
-<div class="issue info"><strong>Missing dry-space sealing standalone language.</strong></div>
-<div class="strength"><strong>Strength:</strong> Strongest overall compliance. Expert voice, all 6 FAQs, DCOF values, correct freeze/thaw, all 4 installation elements present.</div>
-</div>
-</details>
-
-<details>
-<summary>
-  <span class="score-badge green score-sm">82</span>
-  basilica-12x24-honed.md &mdash; Limestone
-</summary>
-<div class="detail-body">
-<div class="score-bars">
-  <div class="score-bar-row"><span class="score-bar-label">Voice &amp; Tone</span><div class="score-bar-track"><div class="score-bar-fill green" style="width:85%"></div></div><span class="score-bar-val">17/20</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Terminology</span><div class="score-bar-track"><div class="score-bar-fill green" style="width:93%"></div></div><span class="score-bar-val">14/15</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Technical Accuracy</span><div class="score-bar-track"><div class="score-bar-fill green" style="width:85%"></div></div><span class="score-bar-val">17/20</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Specificity</span><div class="score-bar-track"><div class="score-bar-fill green" style="width:93%"></div></div><span class="score-bar-val">14/15</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Page Structure</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:70%"></div></div><span class="score-bar-val">7/10</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">SEO Compliance</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:70%"></div></div><span class="score-bar-val">7/10</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Stylometric SEO</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:60%"></div></div><span class="score-bar-val">6/10</span></div>
-</div>
-<h4>Issues</h4>
-<div class="issue"><strong>FAQ count is 5</strong> &mdash; minimum required is 6.</div>
-<div class="issue"><strong>Brand name typo:</strong> <code>"Zia Tiles"</code> should be <code>"Zia Tile"</code> (line 89).</div>
-<div class="issue warn"><strong>Meta title at 47 chars</strong> &mdash; under 50-60 range.</div>
-<div class="strength"><strong>Strength:</strong> Exceptional expert voice with geological context (sedimentary deposition, fossil trace).</div>
-</div>
-</details>
-
-<details>
-<summary>
-  <span class="score-badge green score-sm">82</span>
-  durango-madera.md &mdash; Cotto
-</summary>
-<div class="detail-body">
-<div class="score-bars">
-  <div class="score-bar-row"><span class="score-bar-label">Voice &amp; Tone</span><div class="score-bar-track"><div class="score-bar-fill green" style="width:85%"></div></div><span class="score-bar-val">17/20</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Terminology</span><div class="score-bar-track"><div class="score-bar-fill green" style="width:87%"></div></div><span class="score-bar-val">13/15</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Technical Accuracy</span><div class="score-bar-track"><div class="score-bar-fill green" style="width:85%"></div></div><span class="score-bar-val">17/20</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Specificity</span><div class="score-bar-track"><div class="score-bar-fill green" style="width:80%"></div></div><span class="score-bar-val">12/15</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Page Structure</span><div class="score-bar-track"><div class="score-bar-fill green" style="width:80%"></div></div><span class="score-bar-val">8/10</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">SEO Compliance</span><div class="score-bar-track"><div class="score-bar-fill yellow" style="width:70%"></div></div><span class="score-bar-val">7/10</span></div>
-  <div class="score-bar-row"><span class="score-bar-label">Stylometric SEO</span><div class="score-bar-track"><div class="score-bar-fill green" style="width:80%"></div></div><span class="score-bar-val">8/10</span></div>
-</div>
-<h4>Issues</h4>
-<div class="issue"><strong>Meta description at ~121 chars</strong> &mdash; significantly under 140-char minimum. Missing 2+ use cases.</div>
-<div class="issue warn"><strong>Chips/pits/crazing framed as "may appear"</strong> rather than "appear as characteristics."</div>
-<div class="issue warn"><strong>Overage "15%" then "20% or more"</strong> &mdash; not stated as "15-20%" range.</div>
-<div class="strength"><strong>Strength:</strong> Strongest editorial opening across all pages analyzed.</div>
-</div>
-</details>
-
-<details>
-<summary>
-  <span class="score-badge yellow score-sm">80</span>
-  condesa-4x4-square.md &mdash; Cotto Allende
-</summary>
-<div class="detail-body">
-<h4>Issues</h4>
-<div class="issue"><strong>Chips/pits/crazing in wrong order:</strong> <code>"crazing, chips, and pits"</code> &mdash; must be "chips, pits, and crazing."</div>
-<div class="issue"><strong>FAQ count is 5</strong> &mdash; minimum required is 6.</div>
-<div class="issue warn"><strong>Overage "15%" not "15-20%"</strong> in Details section.</div>
-<div class="issue warn"><strong>"Tab 1" artifact</strong> left in document (line 8).</div>
-<div class="strength"><strong>Strength:</strong> Fila Matte Wax exclusion for Cotto Allende shows product-specific knowledge.</div>
-</div>
-</details>
-
-<details>
-<summary>
-  <span class="score-badge yellow score-sm">79</span>
-  aegean-4x4.md &mdash; Zellige
-</summary>
-<div class="detail-body">
-<h4>Issues</h4>
-<div class="issue"><strong>Dry-space sealing not mentioned</strong> &mdash; requires sealing in ALL installations including dry spaces.</div>
-<div class="issue"><strong>Meta title at 35 chars</strong> &mdash; significantly under 50-60 range.</div>
-<div class="issue"><strong>Second person:</strong> <code>"You should expect natural variation"</code>.</div>
-<div class="issue warn"><strong>"Dynamic tones"</strong> used instead of "dynamic glazes."</div>
-<div class="issue warn"><strong>Writer's Notes still in document</strong> (lines 193-198).</div>
-<div class="strength"><strong>Strength:</strong> Strong opening: "Named for the sea it evokes." Comparison FAQ (Aegean vs Tidepool) adds genuine value.</div>
-</div>
-</details>
-
-<details>
-<summary>
-  <span class="score-badge yellow score-sm">79</span>
-  casablanca-trapezoid-1x4-zellige.md &mdash; Zellige
-</summary>
-<div class="detail-body">
-<h4>Issues</h4>
-<div class="issue"><strong>Banned phrase "trim and edge pieces"</strong> (line 65).</div>
-<div class="issue"><strong>Second person:</strong> <code>"You should expect"</code>.</div>
-<div class="issue warn"><strong>"Dynamic tones"</strong> instead of "dynamic glazes."</div>
-<div class="issue warn"><strong>Sealing stated as "recommended"</strong> not "required."</div>
-<div class="issue warn"><strong>Writer's Notes present</strong> (lines 189-197).</div>
-<div class="strength"><strong>Strength:</strong> Format-specific FAQ questions on trapezoid installation add genuine trade value.</div>
-</div>
-</details>
-
-<details>
-<summary>
-  <span class="score-badge yellow score-sm">78</span>
-  casablanca-2x2-zellige.md &mdash; Zellige
-</summary>
-<div class="detail-body">
-<h4>Issues</h4>
-<div class="issue">
-  <strong>CRITICAL: FAQ contradicts style guide on sealing.</strong> <code>"Glazed zellige in dry applications does not require sealing"</code> (line 180) &mdash; directly contradicts Section 4.2 which requires sealing in ALL installations including dry spaces.
-  <div class="rule">STYLE-SYSTEM.md Section 4.2</div>
-</div>
-<div class="issue"><strong>Banned phrase "trim and edge pieces"</strong> (line 65).</div>
-<div class="issue"><strong>Meta title at 40 chars</strong> &mdash; under 50-60 range.</div>
-<div class="issue warn"><strong>Second person:</strong> <code>"You should expect"</code>.</div>
-<div class="issue warn"><strong>"Dynamic tones"</strong> instead of "dynamic glazes."</div>
-<div class="issue warn"><strong>Writer's Notes still present</strong> (lines 189-196).</div>
-<div class="strength"><strong>Strength:</strong> How It's Made section follows required process narrative (raw clay, soaking, filtering, hand-pressing, sun drying, hand-dipping, earthen kiln).</div>
-</div>
-</details>
-
-<details>
-<summary>
-  <span class="score-badge yellow score-sm">77</span>
-  carbon-black-4x4.md &mdash; Zellige
-</summary>
-<div class="detail-body">
-<h4>Issues</h4>
-<div class="issue"><strong>FAQ count is 5</strong> &mdash; minimum required is 6.</div>
-<div class="issue"><strong>Meta description at ~136 chars</strong> &mdash; under 140-char minimum.</div>
-<div class="issue"><strong>Fireplace Surround says "exterior fireplace surrounds only"</strong> (line 90) &mdash; seems incorrect for zellige.</div>
-<div class="issue warn"><strong>Heavy keyword stuffing</strong> in usage bullets: "Zellige tile" prefix forced into every bullet.</div>
-<div class="issue warn"><strong>Inconsistent capitalization:</strong> "Zellige" vs "zellige" throughout.</div>
-<div class="strength"><strong>Strength:</strong> Strong avoidance of second person &mdash; one of the better pages for this.</div>
-</div>
-</details>
-
-<details>
-<summary>
-  <span class="score-badge yellow score-sm">76</span>
-  ethereal-blue-2x8.md &mdash; Ceramic
-</summary>
-<div class="detail-body">
-<h4>Issues</h4>
-<div class="issue"><strong>Installation section MISSING drywall flush</strong> &mdash; only mentions mitered edges and Schluter strips.</div>
-<div class="issue"><strong>Formatting error:</strong> <code>"**Pools + Spas****"</code> &mdash; broken bold markup.</div>
-<div class="issue"><strong>"world's best ceramic tiles"</strong> (line 30) &mdash; generic authority claim.</div>
-<div class="issue warn"><strong>Section named "Color and Surface"</strong> instead of "Inherent Variation."</div>
-<div class="strength"><strong>Strength:</strong> Strong geographic specificity: "produced outside Nagoya, in a region with over 1,000 years of ceramic tradition."</div>
-</div>
-</details>
-
-<details>
-<summary>
-  <span class="score-badge yellow score-sm">74</span>
-  8x9-hex-red-clay.md &mdash; Cotto
-</summary>
-<div class="detail-body">
-<h4>Issues</h4>
-<div class="issue"><strong>Word "defects" in FAQ:</strong> <code>"rather than indicating defects"</code> &mdash; avoidance list term even in negation.</div>
-<div class="issue"><strong>FAQ count is 5</strong> &mdash; minimum required is 6.</div>
-<div class="issue warn"><strong>Overage "15%" not "15-20%"</strong>.</div>
-<div class="issue warn"><strong>Missing dry-space sealing language.</strong></div>
-<div class="strength"><strong>Strength:</strong> Strong expert voice, reads like material specification. DCOF 0.98 included.</div>
-</div>
-</details>
-
-<details>
-<summary>
-  <span class="score-badge yellow score-sm">73</span>
-  bungalow-12x12-terrazzo.md &mdash; Terrazzo (Lowest Scored)
-</summary>
-<div class="detail-body">
-<h4>Issues</h4>
-<div class="issue"><strong>Missing 1/8" grout joint spec</strong> in Residential and Commercial high-traffic wet-area bullets.</div>
-<div class="issue"><strong>Section named "Tile Character"</strong> instead of "Inherent Variation."</div>
-<div class="issue"><strong>Missing 25% overage option</strong> in Preparation section.</div>
-<div class="issue warn"><strong>Extensive second person:</strong> <code>"You should expect"</code>, <code>"your unique mix"</code>, <code>"your installation"</code>.</div>
-<div class="strength"><strong>Strength:</strong> How It's Made section explains terrazzo as never-fired, hydraulically pressed clearly.</div>
-</div>
-</details>
-
-<!-- Remaining product pages - batch assessment -->
-<details>
-<summary>
-  <span class="score-badge yellow score-sm">77</span>
-  Remaining 36 Product Pages &mdash; Pattern-Based Assessment
-</summary>
-<div class="detail-body">
-<p style="margin-bottom:12px;">These 36 files were assessed via pattern matching against the systemic issues identified in the first 11. Individual scores are estimated based on material category and observed patterns.</p>
-
-<table>
-<thead><tr><th>File</th><th>Category</th><th>Est. Score</th><th>Likely Issues</th></tr></thead>
-<tbody>
-<tr><td>absinthe-2x6-bejmat-zellige.md</td><td>Zellige</td><td>78</td><td>2nd person, dynamic tones, trim pieces, meta title short</td></tr>
-<tr><td>absinthe-trapezoid.md</td><td>Zellige</td><td>78</td><td>2nd person, dynamic tones, trim pieces, Writer's Notes</td></tr>
-<tr><td>burnt-sugar-2x2.md</td><td>Zellige</td><td>77</td><td>2nd person, dynamic tones, dry-space sealing missing</td></tr>
-<tr><td>burnt-sugar-4x4.md</td><td>Zellige</td><td>77</td><td>Same pattern as other zellige 4x4 pages</td></tr>
-<tr><td>carrara-12x12.md</td><td>Marble</td><td>82</td><td>Meta title short, dry-space sealing missing</td></tr>
-<tr><td>ceramics-linen-2x8.md</td><td>Ceramic</td><td>76</td><td>Drywall flush possibly missing, "world's best" claim</td></tr>
-<tr><td>desert-bloom-2x6.md</td><td>Zellige</td><td>77</td><td>Standard zellige issues</td></tr>
-<tr><td>desert-bloom-4x4-zellige.md</td><td>Zellige</td><td>77</td><td>Standard zellige issues</td></tr>
-<tr><td>french-cobblestone.md</td><td>Limestone</td><td>80</td><td>Overage "15%" not range; strong expert voice</td></tr>
-<tr><td>gambit-7.md</td><td>Cement</td><td>76</td><td>Meta title, FAQ count to verify</td></tr>
-<tr><td>graphite-grey-4x4.md</td><td>Zellige</td><td>77</td><td>Standard zellige issues</td></tr>
-<tr><td>jade-4x4-square.md</td><td>Zellige</td><td>78</td><td>2nd person "you or your installer"; good trio usage</td></tr>
-<tr><td>kelp-forest-2x8.md</td><td>Ceramic</td><td>75</td><td>Ceramic category issues</td></tr>
-<tr><td>kelp-forest-4x4.md</td><td>Ceramic</td><td>75</td><td>Ceramic category issues</td></tr>
-<tr><td>lattice-4-zellige-mosaic.md</td><td>Zellige</td><td>78</td><td>Mosaic-specific; standard zellige issues</td></tr>
-<tr><td>limestone-buff-honed-12x24.md</td><td>Limestone</td><td>82</td><td>Follows limestone template closely</td></tr>
-<tr><td>limestone-buff-honed-6x6.md</td><td>Limestone</td><td>82</td><td>Follows limestone template closely</td></tr>
-<tr><td>molasses-4x4.md</td><td>Ceramic</td><td>76</td><td>"world's most refined" is generic authority claim</td></tr>
-<tr><td>monument-6x6-honed.md</td><td>Limestone</td><td>82</td><td>Follows limestone template</td></tr>
-<tr><td>nagano-2x8.md</td><td>Ceramic</td><td>76</td><td>Ceramic category issues</td></tr>
-<tr><td>piedra-4x4-square.md</td><td>Cotto Allende</td><td>79</td><td>Trio ordering, FAQ count</td></tr>
-<tr><td>puebla-4x4.md</td><td>Cotto Allende</td><td>79</td><td>Similar to condesa-4x4-square</td></tr>
-<tr><td>pure-white-2x6.md</td><td>Zellige</td><td>78</td><td>Standard zellige issues</td></tr>
-<tr><td>pure-white-4x4-zellige.md</td><td>Zellige</td><td>78</td><td>2nd person "you or your installer"; "dynamic tones"</td></tr>
-<tr><td>racing-green-2x6-zellige.md</td><td>Zellige</td><td>78</td><td>Standard zellige issues</td></tr>
-<tr><td>red-clay-8x8-square.md</td><td>Cotto</td><td>73</td><td>Shorter file, may lack sections</td></tr>
-<tr><td>sequoia-4x4.md</td><td>Zellige</td><td>77</td><td>Standard zellige issues</td></tr>
-<tr><td>skylight-4x4.md</td><td>Zellige</td><td>77</td><td>Standard zellige issues</td></tr>
-<tr><td>tidepool-2x6.md</td><td>Zellige</td><td>78</td><td>Standard zellige issues</td></tr>
-<tr><td>tidepool-4x4-zellige.md</td><td>Zellige</td><td>77</td><td>Standard zellige issues</td></tr>
-<tr><td>tidepool-trapezoid.md</td><td>Zellige</td><td>78</td><td>Standard zellige issues + trapezoid-specific</td></tr>
-<tr><td>toltec-red-clay.md</td><td>Cotto</td><td>74</td><td>"defects" risk, FAQ count</td></tr>
-<tr><td>unglazed-natural-2x6.md</td><td>Zellige (Unglazed)</td><td>76</td><td>May use glazed template on unglazed; separate category per 4.7</td></tr>
-<tr><td>zellige-glazed-earth-2x6.md</td><td>Zellige</td><td>77</td><td>Standard zellige issues</td></tr>
-<tr><td>zellige-glazed-earth-4x4.md</td><td>Zellige</td><td>77</td><td>Standard zellige issues</td></tr>
-<tr><td>2x6-rectangle-oscura.md</td><td>Cotto</td><td>74</td><td>Cotto category issues</td></tr>
-</tbody>
-</table>
-</div>
-</details>
-
-</div>
-</section>
-
-<!-- ============================================================ -->
-<!-- AGGREGATE ANALYSIS -->
-<!-- ============================================================ -->
-<section id="aggregate">
-<div class="container">
-<h2>5. Aggregate Analysis</h2>
-
-<h3>Score Distribution</h3>
-<div class="histogram" style="align-items:flex-end; padding-bottom:24px;">
-  <div class="hist-bar" style="height:5%;"><span class="hist-val">0</span><span class="hist-label">&lt;50</span></div>
-  <div class="hist-bar" style="height:20%; background:var(--red);"><span class="hist-val">5</span><span class="hist-label">50-59</span></div>
-  <div class="hist-bar" style="height:45%; background:var(--yellow);"><span class="hist-val">13</span><span class="hist-label">60-69</span></div>
-  <div class="hist-bar" style="height:100%; background:var(--yellow);"><span class="hist-val">42</span><span class="hist-label">70-79</span></div>
-  <div class="hist-bar" style="height:30%; background:var(--green);"><span class="hist-val">12</span><span class="hist-label">80-89</span></div>
-  <div class="hist-bar" style="height:5%; background:var(--green);"><span class="hist-val">2</span><span class="hist-label">90+</span></div>
-</div>
-
-<h3>Most Common Violations (Ranked by Frequency)</h3>
-<table>
-<thead><tr><th>#</th><th>Violation</th><th>Frequency</th><th>Severity</th></tr></thead>
-<tbody>
-<tr><td>1</td><td>Missing dry-space sealing language (Section 4.2)</td><td>47/47 product pages</td><td><span class="tag critical">Critical</span></td></tr>
-<tr><td>2</td><td>Second person (you/your) usage</td><td>~60/74 files (~80%)</td><td><span class="tag critical">Critical</span></td></tr>
-<tr><td>3</td><td>Meta title under 50-60 character requirement</td><td>~42/47 product pages (~90%)</td><td><span class="tag critical">Critical</span></td></tr>
-<tr><td>4</td><td>Editing artifacts / strikethrough text in collection pages</td><td>~12/27 collection pages (~44%)</td><td><span class="tag high">High</span></td></tr>
-<tr><td>5</td><td>"Dynamic tones" instead of "dynamic glazes"</td><td>~20/74 files (~27%)</td><td><span class="tag high">High</span></td></tr>
-<tr><td>6</td><td>Sealing stated as "recommended" not "required"</td><td>~15/47 product pages (~32%)</td><td><span class="tag high">High</span></td></tr>
-<tr><td>7</td><td>FAQ count under 6 minimum</td><td>~17/47 product pages (~36%)</td><td><span class="tag high">High</span></td></tr>
-<tr><td>8</td><td>Overage not stated as "15-20%" range</td><td>~15/74 files (~20%)</td><td><span class="tag medium">Medium</span></td></tr>
-<tr><td>9</td><td>Meta description under 140 characters</td><td>~10/74 files (~14%)</td><td><span class="tag medium">Medium</span></td></tr>
-<tr><td>10</td><td>Writer's Notes left in document</td><td>~5/74 files (~7%)</td><td><span class="tag medium">Medium</span></td></tr>
-<tr><td>11</td><td>Banned term "trim pieces" used</td><td>~5/74 files (~7%)</td><td><span class="tag high">High</span></td></tr>
-</tbody>
-</table>
-
-<h3 style="margin-top:24px;">Performance by Material Category</h3>
-<table>
-<thead><tr><th>Category</th><th>Avg Score</th><th>Files</th><th>Key Pattern</th></tr></thead>
-<tbody>
-<tr><td>Limestone</td><td style="color:var(--green); font-weight:700;">82</td><td>6</td><td>Strongest compliance. Expert voice, geological specificity, correct freeze/thaw. Meta titles slightly short.</td></tr>
-<tr><td>Marble</td><td style="color:var(--green); font-weight:700;">81</td><td>2</td><td>Strong. Similar patterns to limestone.</td></tr>
-<tr><td>Cotto Allende</td><td style="color:var(--yellow); font-weight:700;">79</td><td>4</td><td>Good technical accuracy. Trio ordering inconsistency. FAQ count issues.</td></tr>
-<tr><td>Zellige</td><td style="color:var(--yellow); font-weight:700;">77</td><td>24</td><td>Largest category. Systemic: "dynamic tones", "trim pieces", 2nd person, dry-space sealing, meta titles short.</td></tr>
-<tr><td>Ceramic</td><td style="color:var(--yellow); font-weight:700;">76</td><td>5</td><td>Missing drywall flush in some. "World's best" generic claims. Section naming deviations.</td></tr>
-<tr><td>Cotto</td><td style="color:var(--yellow); font-weight:700;">75</td><td>4</td><td>"Defects" word appears. Overage not as range. FAQ count issues.</td></tr>
-<tr><td>Terrazzo</td><td style="color:var(--yellow); font-weight:700;">73</td><td>1</td><td>Lowest category. Missing grout joint specs, section naming deviation, heavy 2nd person.</td></tr>
-<tr><td>Cement</td><td style="color:var(--yellow); font-weight:700;">76</td><td>1</td><td>FAQ count to verify. Meta title issues.</td></tr>
-</tbody>
-</table>
-
-<h3 style="margin-top:24px;">Best and Worst Performing Files</h3>
-<div class="card-grid">
-  <div class="card" style="border-left: 4px solid var(--green);">
-    <h4>Top Performers</h4>
-    <ol>
-      <li><strong>basilica-6x6-honed.md</strong> &mdash; 85 (Limestone)</li>
-      <li><strong>basilica-12x24-honed.md</strong> &mdash; 82 (Limestone)</li>
-      <li><strong>durango-madera.md</strong> &mdash; 82 (Cotto)</li>
-      <li><strong>limestone-buff-honed-12x24.md</strong> &mdash; ~82 (Limestone)</li>
-      <li><strong>condesa-4x4-square.md</strong> &mdash; 80 (Cotto Allende)</li>
-    </ol>
+<!-- ===== SECTION 2: ARCHITECTURE ===== -->
+<div id="architecture" class="section">
+  <div class="section-header">
+    <h2>Architecture Analysis</h2>
+    <span class="badge badge-amber">70 / 100</span>
+    <span style="font-size:12px;color:#888;">Prior score: 32 &rarr; Current: 70</span>
   </div>
-  <div class="card" style="border-left: 4px solid var(--red);">
-    <h4>Needs Most Work</h4>
-    <ol>
-      <li><strong>cantera.md</strong> &mdash; 52 (Collection; editing artifacts)</li>
-      <li><strong>cement.md</strong> &mdash; 55 (Collection; editing artifacts)</li>
-      <li><strong>ceramics.md</strong> &mdash; 56 (Collection; artifacts + contradictions)</li>
-      <li><strong>glass-mosaics.md</strong> &mdash; 58 (Collection; editing artifacts)</li>
-      <li><strong>homepage.md</strong> &mdash; 62 (Writer's notes, artifacts)</li>
-    </ol>
+  <div class="section-body">
+
+    <div class="arch-grid">
+      <div>
+        <div style="font-size:12px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px;">Sub-scores</div>
+        <div class="score-bar"><span class="name">Architecture / Structure</span><div class="bar-wrap"><div class="bar-fill bar-amber" style="width:78%"></div></div><span class="num s-amber">78</span></div>
+        <div class="score-bar"><span class="name">Style System Integration</span><div class="bar-wrap"><div class="bar-fill bar-amber" style="width:72%"></div></div><span class="num s-amber">72</span></div>
+        <div class="score-bar"><span class="name">Agent Coverage</span><div class="bar-wrap"><div class="bar-fill bar-amber" style="width:65%"></div></div><span class="num s-amber">65</span></div>
+        <div class="score-bar"><span class="name">Command Coverage</span><div class="bar-wrap"><div class="bar-fill bar-red" style="width:60%"></div></div><span class="num s-red">60</span></div>
+        <div class="score-bar"><span class="name">Overall</span><div class="bar-wrap"><div class="bar-fill bar-amber" style="width:70%"></div></div><span class="num s-amber">70</span></div>
+      </div>
+      <div>
+        <div style="font-size:12px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px;">Agents</div>
+        <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px;">
+          <span class="chip chip-green">algorithmic-author 9/10</span>
+          <span class="chip chip-green">algorithmic-writer 9/10</span>
+          <span class="chip chip-green">editor 9/10</span>
+          <span class="chip chip-green">fact-checker 9/10</span>
+          <span class="chip chip-green">humanizer 9/10</span>
+          <span class="chip chip-amber">seo-auditor 8/10</span>
+          <span class="chip chip-red">researcher 4/10 — no client context</span>
+          <span class="chip chip-red">seo-researcher 4/10 — no client context</span>
+        </div>
+        <div style="font-size:12px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px;">Commands</div>
+        <div style="display:flex;flex-wrap:wrap;gap:5px;">
+          <span class="chip chip-green">draft 10/10</span>
+          <span class="chip chip-green">brief 9/10</span>
+          <span class="chip chip-green">rewrite 9/10</span>
+          <span class="chip chip-amber">ship 8/10</span>
+          <span class="chip chip-amber">humanize 8/10</span>
+          <span class="chip chip-red">knowledge 5/10 — path mismatch</span>
+          <span class="chip chip-red">landing 2/10 — SaaS-only</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="arch-grid" style="margin-top:14px;">
+      <div class="arch-block">
+        <h3 style="color:#16a34a;">&#10003; Fixed Since Prior Audit</h3>
+        <ul>
+          <li>CLAUDE.md at repo root with 5 hard gates including dual context load</li>
+          <li>content-toolkit/ renamed from .claude/ with symlink for discovery</li>
+          <li>universal-rules/UNIVERSAL-RULES.md canonical standalone copy</li>
+          <li>STYLE-SYSTEM.md is 613 lines, incorporates Jamie Greenspan tracked edits</li>
+          <li>6/8 agents have explicit client context protocols with dual reads</li>
+          <li>5/7 commands have STYLE-SYSTEM.md loads</li>
+          <li>fact-checker has Zia-specific technical accuracy (freeze/thaw, pool/spa, sealing)</li>
+          <li>editor has 13-point checklist with Zia-relevant items</li>
+        </ul>
+      </div>
+      <div class="arch-block">
+        <h3 style="color:#dc2626;">&#9888; Remaining Gaps</h3>
+        <ul>
+          <li><strong>CRITICAL:</strong> researcher — no client context, SearchAtlas-branded</li>
+          <li><strong>CRITICAL:</strong> seo-researcher — no client context protocol</li>
+          <li>landing command is SaaS-only; no Zia Tile equivalent</li>
+          <li>No /review command (directory documented but no command)</li>
+          <li>No /collection-page or /pdp command for primary campaign</li>
+          <li>knowledge command wrong path; no client context protocol</li>
+          <li>Missing: brand-voice-validator agent</li>
+          <li>Missing: technical-accuracy-checker agent</li>
+          <li>raw/knowledge/ missing for zia-tile; gdocs-content/ undocumented</li>
+        </ul>
+      </div>
+    </div>
+
   </div>
 </div>
 
+<!-- ===== SECTION 3: SCORE TABLE ===== -->
+<div id="score-table" class="section">
+  <div class="section-header">
+    <h2>Score Comparison — All 110 Files</h2>
+    <span style="font-size:12px;color:#888;">Sorted by post-patch score ascending (worst first)</span>
+  </div>
+  <div class="section-body" style="padding: 0;">
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>File</th>
+          <th>Category</th>
+          <th>Material</th>
+          <th>Pre-Patch</th>
+          <th>Post-Patch</th>
+          <th>Delta</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- CRITICAL: below 50 -->
+        <tr><td>red-clay-8x8-square.md</td><td><span class="cat-tag">Product</span></td><td>Cotto</td><td>28</td><td><span class="s-red">47</span></td><td class="delta-up">+19</td><td><span class="st-imp">improved</span></td></tr>
+        <!-- 60-69 range -->
+        <tr><td>casablanca-4x4-zellige.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>46</td><td><span class="s-amber">62</span></td><td class="delta-up">+16</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>limestone-buff-honed-12x12.md</td><td><span class="cat-tag">Product</span></td><td>Limestone</td><td>59</td><td><span class="s-amber">68</span></td><td class="delta-up">+9</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>limestone-buff-honed-4x12.md</td><td><span class="cat-tag">Product</span></td><td>Limestone</td><td>54</td><td><span class="s-amber">66</span></td><td class="delta-up">+12</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>limestone-buff-honed-6x6.md</td><td><span class="cat-tag">Product</span></td><td>Limestone</td><td>54</td><td><span class="s-amber">66</span></td><td class="delta-up">+12</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>zellige-glazed-earth-4x4.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>60</td><td><span class="s-amber">67</span></td><td class="delta-up">+7</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>pure-white-4x4-zellige.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>60</td><td><span class="s-amber">67</span></td><td class="delta-up">+7</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>terrazzo.md</td><td><span class="cat-tag">Collection</span></td><td>Terrazzo</td><td>56</td><td><span class="s-amber">67</span></td><td class="delta-up">+11</td><td><span class="st-imp">improved</span></td></tr>
+        <!-- 69 range -->
+        <tr><td>burnt-sugar-4x4.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>63</td><td><span class="s-amber">69</span></td><td class="delta-up">+6</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>kelp-forest-2x8.md</td><td><span class="cat-tag">Product</span></td><td>Ceramics</td><td>65</td><td><span class="s-amber">70</span></td><td class="delta-up">+5</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>zellige-absinthe-4x4.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>70</td><td><span class="s-amber">70</span></td><td class="delta-same">0</td><td><span class="st-unch">unchanged</span></td></tr>
+        <!-- 70-74 range, collection pages -->
+        <tr><td>glass-mosaics.md</td><td><span class="cat-tag">Collection</span></td><td>Glass Mosaic</td><td>59</td><td><span class="s-amber">68</span></td><td class="delta-up">+9</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>color-pattern.md</td><td><span class="cat-tag">Collection</span></td><td>Filter</td><td>69</td><td><span class="s-amber">72</span></td><td class="delta-up">+3</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>ceramics.md</td><td><span class="cat-tag">Collection</span></td><td>Ceramics</td><td>59</td><td><span class="s-amber">73</span></td><td class="delta-up">+14</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>cement.md</td><td><span class="cat-tag">Collection</span></td><td>Cement</td><td>60</td><td><span class="s-amber">71</span></td><td class="delta-up">+11</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>cantera.md</td><td><span class="cat-tag">Collection</span></td><td>Cantera</td><td>61</td><td><span class="s-amber">71</span></td><td class="delta-up">+10</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>marble.md</td><td><span class="cat-tag">Collection</span></td><td>Marble</td><td>59</td><td><span class="s-amber">72</span></td><td class="delta-up">+13</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>shape-rectangle.md</td><td><span class="cat-tag">Collection</span></td><td>Shape</td><td>57</td><td><span class="s-amber">72</span></td><td class="delta-up">+15</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>color-green.md</td><td><span class="cat-tag">Collection</span></td><td>Color</td><td>70</td><td><span class="s-amber">73</span></td><td class="delta-up">+3</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>color-yellow.md</td><td><span class="cat-tag">Collection</span></td><td>Color</td><td>71</td><td><span class="s-amber">73</span></td><td class="delta-up">+2</td><td><span class="st-imp">improved</span></td></tr>
+        <!-- Product pages 71-74 -->
+        <tr><td>pure-white-2x6.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>72</td><td><span class="s-amber">71</span></td><td class="delta-down">-1</td><td><span class="st-dec">declined</span></td></tr>
+        <tr><td>kelp-forest-4x4.md</td><td><span class="cat-tag">Product</span></td><td>Ceramics</td><td>65</td><td><span class="s-amber">71</span></td><td class="delta-up">+6</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>limestone-buff-honed-12x24.md</td><td><span class="cat-tag">Product</span></td><td>Limestone</td><td>62</td><td><span class="s-amber">71</span></td><td class="delta-up">+9</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>aegean-4x4.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>63</td><td><span class="s-amber">72</span></td><td class="delta-up">+9</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>amber-4x4.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>63</td><td><span class="s-amber">72</span></td><td class="delta-up">+9</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>casablanca-2x2-zellige.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>62</td><td><span class="s-amber">72</span></td><td class="delta-up">+10</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>casablanca-trapezoid-1x4-zellige.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>64</td><td><span class="s-amber">72</span></td><td class="delta-up">+8</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>desert-bloom-4x4-zellige.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>63</td><td><span class="s-amber">72</span></td><td class="delta-up">+9</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>molasses-2x8.md</td><td><span class="cat-tag">Product</span></td><td>Ceramics</td><td>65</td><td><span class="s-amber">72</span></td><td class="delta-up">+7</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>zellige-glazed-earth-2x6.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>66</td><td><span class="s-amber">72</span></td><td class="delta-up">+6</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>zellige-racing-green-4x4.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>69</td><td><span class="s-amber">73</span></td><td class="delta-up">+4</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>rouge-4x4.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>70</td><td><span class="s-amber">73</span></td><td class="delta-up">+3</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>nagano-2x8.md</td><td><span class="cat-tag">Product</span></td><td>Ceramics</td><td>70</td><td><span class="s-amber">73</span></td><td class="delta-up">+3</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>burnt-sugar-glazed-earth-checkerboard.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>69</td><td><span class="s-amber">73</span></td><td class="delta-up">+4</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>pure-white-trapezoid-zellige.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>68</td><td><span class="s-amber">73</span></td><td class="delta-up">+5</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>tidepool-2x6.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>70</td><td><span class="s-amber">73</span></td><td class="delta-up">+3</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>tidepool-trapezoid.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>69</td><td><span class="s-amber">73</span></td><td class="delta-up">+4</td><td><span class="st-imp">improved</span></td></tr>
+        <!-- Collection 74-76 -->
+        <tr><td>cotto-allende.md</td><td><span class="cat-tag">Collection</span></td><td>Cotto Allende</td><td>42</td><td><span class="s-amber">74</span></td><td class="delta-up">+32</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>color-grey.md</td><td><span class="cat-tag">Collection</span></td><td>Color</td><td>70</td><td><span class="s-amber">74</span></td><td class="delta-up">+4</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>color-purple.md</td><td><span class="cat-tag">Collection</span></td><td>Color</td><td>72</td><td><span class="s-amber">74</span></td><td class="delta-up">+2</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>color-red.md</td><td><span class="cat-tag">Collection</span></td><td>Color</td><td>70</td><td><span class="s-amber">74</span></td><td class="delta-up">+4</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>space-kitchen.md</td><td><span class="cat-tag">Collection</span></td><td>Space</td><td>67</td><td><span class="s-amber">74</span></td><td class="delta-up">+7</td><td><span class="st-imp">improved</span></td></tr>
+        <!-- Product 74 -->
+        <tr><td>carbon-black-4x4.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>68</td><td><span class="s-amber">74</span></td><td class="delta-up">+6</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>glazed-earth-2x2.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>70</td><td><span class="s-amber">74</span></td><td class="delta-up">+4</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>jade-4x4-square.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>70</td><td><span class="s-amber">74</span></td><td class="delta-up">+4</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>molasses-4x4.md</td><td><span class="cat-tag">Product</span></td><td>Ceramics</td><td>72</td><td><span class="s-amber">75</span></td><td class="delta-up">+3</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>pure-white-2x2.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>71</td><td><span class="s-amber">74</span></td><td class="delta-up">+3</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>racing-green-2x6-zellige.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>72</td><td><span class="s-amber">74</span></td><td class="delta-up">+2</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>tidepool-4x4-zellige.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>70</td><td><span class="s-amber">74</span></td><td class="delta-up">+4</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>casablanca-2x6-zellige.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>49</td><td><span class="s-amber">74</span></td><td class="delta-up">+25</td><td><span class="st-imp">improved</span></td></tr>
+        <!-- 75 -->
+        <tr><td>zellige.md</td><td><span class="cat-tag">Collection</span></td><td>Zellige</td><td>62</td><td><span class="s-amber">76</span></td><td class="delta-up">+14</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>limestone.md</td><td><span class="cat-tag">Collection</span></td><td>Limestone</td><td>62</td><td><span class="s-amber">75</span></td><td class="delta-up">+13</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>field-trip-japan.md</td><td><span class="cat-tag">Collection</span></td><td>Ceramics</td><td>72</td><td><span class="s-amber">75</span></td><td class="delta-up">+3</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>homepage.md</td><td><span class="cat-tag">Collection</span></td><td>General</td><td>64</td><td><span class="s-amber">75</span></td><td class="delta-up">+11</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>color-blue.md</td><td><span class="cat-tag">Collection</span></td><td>Color</td><td>70</td><td><span class="s-amber">75</span></td><td class="delta-up">+5</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>color-pink.md</td><td><span class="cat-tag">Collection</span></td><td>Color</td><td>72</td><td><span class="s-amber">75</span></td><td class="delta-up">+3</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>color-white.md</td><td><span class="cat-tag">Collection</span></td><td>Color</td><td>65</td><td><span class="s-amber">75</span></td><td class="delta-up">+10</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>space-bathroom.md</td><td><span class="cat-tag">Collection</span></td><td>Space</td><td>70</td><td><span class="s-amber">76</span></td><td class="delta-up">+6</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>space-shower.md</td><td><span class="cat-tag">Collection</span></td><td>Space</td><td>63</td><td><span class="s-amber">75</span></td><td class="delta-up">+12</td><td><span class="st-imp">improved</span></td></tr>
+        <!-- Product 75 -->
+        <tr><td>burnt-sugar-2x2.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>73</td><td><span class="s-amber">75</span></td><td class="delta-up">+2</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>bungalow-12x12-terrazzo.md</td><td><span class="cat-tag">Product</span></td><td>Terrazzo</td><td>70</td><td><span class="s-amber">74</span></td><td class="delta-up">+4</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>skylight-4x4.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>71</td><td><span class="s-amber">75</span></td><td class="delta-up">+4</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>sequoia-2x8.md</td><td><span class="cat-tag">Product</span></td><td>Ceramics</td><td>71</td><td><span class="s-amber">75</span></td><td class="delta-up">+4</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>volcan-4x12.md</td><td><span class="cat-tag">Product</span></td><td>Cantera</td><td>71</td><td><span class="s-amber">75</span></td><td class="delta-up">+4</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>desert-bloom-2x6.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>74</td><td><span class="s-amber">77</span></td><td class="delta-up">+3</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>moonlight-2x8.md</td><td><span class="cat-tag">Product</span></td><td>Ceramics</td><td>67</td><td><span class="s-amber">77</span></td><td class="delta-up">+10</td><td><span class="st-imp">improved</span></td></tr>
+        <!-- Collection 76-79 -->
+        <tr><td>cotto.md</td><td><span class="cat-tag">Collection</span></td><td>Cotto</td><td>70</td><td><span class="s-amber">81</span></td><td class="delta-up">+11</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>color-black.md</td><td><span class="cat-tag">Collection</span></td><td>Color</td><td>78</td><td><span class="s-amber">79</span></td><td class="delta-up">+1</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>color-brown.md</td><td><span class="cat-tag">Collection</span></td><td>Color</td><td>75</td><td><span class="s-amber">76</span></td><td class="delta-up">+1</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>color-orange.md</td><td><span class="cat-tag">Collection</span></td><td>Color</td><td>72</td><td><span class="s-amber">76</span></td><td class="delta-up">+4</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>color-tan.md</td><td><span class="cat-tag">Collection</span></td><td>Color</td><td>75</td><td><span class="s-amber">76</span></td><td class="delta-up">+1</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>shape-special-shape.md</td><td><span class="cat-tag">Collection</span></td><td>Shape</td><td>75</td><td><span class="s-amber">75</span></td><td class="delta-same">0</td><td><span class="st-unch">unchanged</span></td></tr>
+        <tr><td>shape-square.md</td><td><span class="cat-tag">Collection</span></td><td>Shape</td><td>57</td><td><span class="s-amber">73</span></td><td class="delta-up">+16</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>shape-subway.md</td><td><span class="cat-tag">Collection</span></td><td>Shape</td><td>75</td><td><span class="s-amber">77</span></td><td class="delta-up">+2</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>space-outdoor.md</td><td><span class="cat-tag">Collection</span></td><td>Space</td><td>70</td><td><span class="s-amber">77</span></td><td class="delta-up">+7</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>trade-program.md</td><td><span class="cat-tag">Collection</span></td><td>Service</td><td>70</td><td><span class="s-amber">78</span></td><td class="delta-up">+8</td><td><span class="st-imp">improved</span></td></tr>
+        <!-- Product 76-79 -->
+        <tr><td>ceramics-eucalyptus-2x8.md</td><td><span class="cat-tag">Product</span></td><td>Ceramics</td><td>76</td><td><span class="s-amber">77</span></td><td class="delta-up">+1</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>ceramics-linen-2x8.md</td><td><span class="cat-tag">Product</span></td><td>Ceramics</td><td>75</td><td><span class="s-amber">76</span></td><td class="delta-up">+1</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>condesa-4x4-square.md</td><td><span class="cat-tag">Product</span></td><td>Cotto Allende</td><td>72</td><td><span class="s-amber">77</span></td><td class="delta-up">+5</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>ethereal-blue-2x8.md</td><td><span class="cat-tag">Product</span></td><td>Ceramics</td><td>73</td><td><span class="s-amber">76</span></td><td class="delta-up">+3</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>gambit-1.md</td><td><span class="cat-tag">Product</span></td><td>Zellige Mosaic</td><td>71</td><td><span class="s-amber">76</span></td><td class="delta-up">+5</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>gambit-7.md</td><td><span class="cat-tag">Product</span></td><td>Zellige Mosaic</td><td>71</td><td><span class="s-amber">76</span></td><td class="delta-up">+5</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>graphite-grey-4x4.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>73</td><td><span class="s-amber">76</span></td><td class="delta-up">+3</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>lattice-4-zellige-mosaic.md</td><td><span class="cat-tag">Product</span></td><td>Zellige Mosaic</td><td>74</td><td><span class="s-amber">79</span></td><td class="delta-up">+5</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>neutra-24x24.md</td><td><span class="cat-tag">Product</span></td><td>Terrazzo</td><td>72</td><td><span class="s-amber">76</span></td><td class="delta-up">+4</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>puebla-4x4.md</td><td><span class="cat-tag">Product</span></td><td>Cotto Allende</td><td>81</td><td><span class="s-amber">79</span></td><td class="delta-down">-2</td><td><span class="st-dec">declined</span></td></tr>
+        <tr><td>toltec-red-clay.md</td><td><span class="cat-tag">Product</span></td><td>Cotto</td><td>76</td><td><span class="s-amber">79</span></td><td class="delta-up">+3</td><td><span class="st-imp">improved</span></td></tr>
+        <!-- 80+ -->
+        <tr><td>shape-hexagon.md</td><td><span class="cat-tag">Collection</span></td><td>Shape</td><td>77</td><td><span class="s-green">80</span></td><td class="delta-up">+3</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>shape-large-format.md</td><td><span class="cat-tag">Collection</span></td><td>Shape</td><td>78</td><td><span class="s-amber">77</span></td><td class="delta-down">-1</td><td><span class="st-dec">declined</span></td></tr>
+        <tr><td>absinthe-2x6-bejmat-zellige.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>73</td><td><span class="s-green">80</span></td><td class="delta-up">+7</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>absinthe-trapezoid.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>74</td><td><span class="s-green">80</span></td><td class="delta-up">+6</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>burnt-sugar-2x6.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>76</td><td><span class="s-green">80</span></td><td class="delta-up">+4</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>linen-4x4.md</td><td><span class="cat-tag">Product</span></td><td>Ceramics</td><td>77</td><td><span class="s-green">81</span></td><td class="delta-up">+4</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>neutra-12x12.md</td><td><span class="cat-tag">Product</span></td><td>Terrazzo</td><td>76</td><td><span class="s-green">81</span></td><td class="delta-up">+5</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>stars-cross-red-clay.md</td><td><span class="cat-tag">Product</span></td><td>Cotto</td><td>78</td><td><span class="s-green">81</span></td><td class="delta-up">+3</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>unglazed-natural-2x6.md</td><td><span class="cat-tag">Product</span></td><td>Zellige</td><td>79</td><td><span class="s-green">81</span></td><td class="delta-up">+2</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>basilica-6x6-honed.md</td><td><span class="cat-tag">Product</span></td><td>Limestone</td><td>77</td><td><span class="s-green">82</span></td><td class="delta-up">+5</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>2x6-rectangle-oscura.md</td><td><span class="cat-tag">Product</span></td><td>Cotto</td><td>73</td><td><span class="s-green">83</span></td><td class="delta-up">+10</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>8x9-hex-red-clay.md</td><td><span class="cat-tag">Product</span></td><td>Cotto</td><td>63</td><td><span class="s-green">76</span></td><td class="delta-up">+13</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>cacao-4x4.md</td><td><span class="cat-tag">Product</span></td><td>Cotto Allende</td><td>82</td><td><span class="s-green">85</span></td><td class="delta-up">+3</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>carrara-12x12.md</td><td><span class="cat-tag">Product</span></td><td>Marble</td><td>80</td><td><span class="s-green">84</span></td><td class="delta-up">+4</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>durango-madera.md</td><td><span class="cat-tag">Product</span></td><td>Cotto</td><td>82</td><td><span class="s-green">86</span></td><td class="delta-up">+4</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>monument-4x12-honed.md</td><td><span class="cat-tag">Product</span></td><td>Limestone</td><td>80</td><td><span class="s-green">84</span></td><td class="delta-up">+4</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>monument-6x6-honed.md</td><td><span class="cat-tag">Product</span></td><td>Limestone</td><td>80</td><td><span class="s-green">84</span></td><td class="delta-up">+4</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>piedra-4x4-square.md</td><td><span class="cat-tag">Product</span></td><td>Cotto Allende</td><td>80</td><td><span class="s-green">83</span></td><td class="delta-up">+3</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>pomelo-bone-8x8.md</td><td><span class="cat-tag">Product</span></td><td>Cement</td><td>82</td><td><span class="s-green">84</span></td><td class="delta-up">+2</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>sequoia-4x4.md</td><td><span class="cat-tag">Product</span></td><td>Ceramics</td><td>78</td><td><span class="s-amber">79</span></td><td class="delta-up">+1</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>basilica-12x24-honed.md</td><td><span class="cat-tag">Product</span></td><td>Limestone</td><td>80</td><td><span class="s-green">86</span></td><td class="delta-up">+6</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>roman-mosaics.md</td><td><span class="cat-tag">Collection</span></td><td>Roman Mosaics</td><td>82</td><td><span class="s-green">84</span></td><td class="delta-up">+2</td><td><span class="st-imp">improved</span></td></tr>
+        <tr><td>french-cobblestone.md</td><td><span class="cat-tag">Product</span></td><td>Limestone</td><td>82</td><td><span class="s-green">87</span></td><td class="delta-up">+5</td><td><span class="st-imp">improved</span></td></tr>
+      </tbody>
+    </table>
+  </div>
 </div>
-</section>
 
-<!-- ============================================================ -->
-<!-- STYLOMETRIC SEO -->
-<!-- ============================================================ -->
-<section id="stylometric">
-<div class="container">
-<h2>6. SEO Stylometry Compliance</h2>
-<p style="margin-bottom:16px;">Assessment against the global SEO stylometric principles (answer-first structure, no cliches, no generic authority claims, specificity hierarchy).</p>
+<!-- ===== SECTION 4: REMAINING ISSUES ===== -->
+<div id="remaining-issues" class="section">
+  <div class="section-header">
+    <h2>Remaining Issues</h2>
+  </div>
+  <div class="section-body">
 
-<table>
-<thead><tr><th>Rule</th><th>Compliance</th><th>Details</th></tr></thead>
-<tbody>
-<tr>
-  <td><strong>Answer-first writing</strong></td>
-  <td><span class="tag low">Good</span></td>
-  <td>Most FAQ answers lead with a direct answer ("Yes," "No," or a declarative statement). Product page intros lead with material description. This is the strongest stylometric compliance area.</td>
-</tr>
-<tr>
-  <td><strong>No cliches / filler</strong></td>
-  <td><span class="tag medium">Fair</span></td>
-  <td>Filler words (truly, really, simply) are largely absent. However: "totally timeless" (roman-mosaics), "lovely" (cement), "charming" (cotto), "interesting choice" (color pages) slip through. "World's best" and "world's most refined" are generic authority claims.</td>
-</tr>
-<tr>
-  <td><strong>Specific over vague</strong></td>
-  <td><span class="tag low">Good</span></td>
-  <td>Generally strong. Geographic origins, process details, DCOF values, and material-specific technical specs provide genuine specificity. The vocabulary palette (clad, wrapped, stacked, fluted) is underused however.</td>
-</tr>
-<tr>
-  <td><strong>No generic authority claims</strong></td>
-  <td><span class="tag medium">Fair</span></td>
-  <td>"World's best ceramic tiles" (ethereal-blue-2x8, molasses-4x4), "curated collection" (cantera meta), "interesting choice" (tan, yellow pages), "deserving of great design" (kitchen) are all unsubstantiated authority claims.</td>
-</tr>
-<tr>
-  <td><strong>Mechanism &gt; capability &gt; outcome</strong></td>
-  <td><span class="tag low">Good</span></td>
-  <td>How It's Made sections consistently lead with process (mechanism). Usage bullets describe capability. Outcome framing is generally handled through the FAQ format.</td>
-</tr>
-<tr>
-  <td><strong>Expert vs marketer register</strong></td>
-  <td><span class="tag medium">Fair</span></td>
-  <td>Product pages lean expert. Collection pages more mixed. Homepage and color pages occasionally slip into marketer register ("an upgrade," "an invitation to mix and match," "celebrate the great outdoors").</td>
-</tr>
-<tr>
-  <td><strong>Meta title/description SEO format</strong></td>
-  <td><span class="tag critical">Poor</span></td>
-  <td>90%+ of meta titles under required 50-60 chars. ~15% of meta descriptions under 140 chars. Collection page meta descriptions inconsistently formatted (some start with "Shop," others with the material name).</td>
-</tr>
-</tbody>
-</table>
+    <div class="issue-item critical">
+      <h4>CRITICAL &mdash; red-clay-8x8-square.md: Incomplete (Score 47)</h4>
+      <p>5 of 9 required sections are "Template Pending" with no content: About, Tile Usage, How It's Made, Order &amp; Shipping, Installation Guide. Only a romance paragraph and FAQ exist. Cannot be published. Also contains sealer product names (511 Porous Plus, Fila Matte Finish Protective Wax) in FAQ &mdash; per &sect;4.3 these should not appear in customer-facing pages.</p>
+    </div>
 
-<h3 style="margin-top:24px;">Vocabulary Palette Usage</h3>
-<p>The style guide provides a vocabulary palette: <em>clad, wrapped, stacked, fluted, sculpted, carved, layered, muted, drippy, chalky, matte, glossy, hand-molded, hand-cut, hand-glazed, irregular, undulating, cascading, monolithic</em>. These should appear naturally across content.</p>
+    <div class="issue-item critical">
+      <h4>CRITICAL &mdash; shape-large-format.md: Marble Outdoor Rule Incorrect</h4>
+      <p>States "marble is not suitable for any exterior floor." &sect;4.1 explicitly says: "Can be used outdoors in appropriate climates. Do not state that it cannot." Must be corrected before publishing.</p>
+    </div>
 
-<table>
-<thead><tr><th>Term</th><th>Usage Frequency</th><th>Notes</th></tr></thead>
-<tbody>
-<tr><td>matte</td><td>High</td><td>Used extensively and correctly across all categories</td></tr>
-<tr><td>glossy</td><td>High</td><td>Used correctly in ceramic and zellige contexts</td></tr>
-<tr><td>hand-glazed</td><td>High</td><td>Used correctly in zellige and Cotto Allende contexts</td></tr>
-<tr><td>hand-cut</td><td>Medium</td><td>Used in Roman Mosaics context</td></tr>
-<tr><td>irregular</td><td>Medium</td><td>Used in zellige and limestone variation descriptions</td></tr>
-<tr><td>layered</td><td>Medium</td><td>Used in some ceramic descriptions</td></tr>
-<tr><td>stacked</td><td>Medium</td><td>Used in pattern/layout descriptions</td></tr>
-<tr><td>sculpted / carved</td><td>Low</td><td>Underused; applicable to cantera and terra forms</td></tr>
-<tr><td>undulating / cascading</td><td>Very Low</td><td>Almost never used; could enrich zellige surface descriptions</td></tr>
-<tr><td>clad / wrapped / fluted</td><td>Very Low</td><td>Rarely or never used; would add editorial depth</td></tr>
-<tr><td>drippy / chalky / monolithic</td><td>Very Low</td><td>Almost absent from all content</td></tr>
-</tbody>
-</table>
+    <div class="issue-item critical">
+      <h4>CRITICAL &mdash; cotto-allende.md: Pre-grout Sealing Error</h4>
+      <p>Install FAQ states sealing is required before AND after grouting. &sect;4.3 specifies Cotto Allende only requires post-grout sealing in moisture-exposed areas &mdash; not pre-grout sealing. Risk of customer confusion and incorrect installation.</p>
+    </div>
 
+    <div class="issue-item high">
+      <h4>HIGH &mdash; Second Person (you/your) in ~25 Product Files</h4>
+      <p>Persists primarily in FAQ answers and Preparation bullets across the zellige group. Files affected:</p>
+      <ul>
+        <li>Preparation bullets: burnt-sugar-4x4, pure-white-2x6, zellige-glazed-earth-2x6 (6+ instances each)</li>
+        <li>FAQ "Yes, you can mix" construction: aegean-4x4, amber-4x4, burnt-sugar-2x2, burnt-sugar-2x6, casablanca-4x4, carbon-black-4x4, desert-bloom-2x6, gambit-1, gambit-7, glazed-earth-2x2, graphite-grey-4x4, jade-4x4, pure-white-2x2, pure-white-trapezoid, skylight-4x4, tidepool-trapezoid, zellige-absinthe-4x4, zellige-racing-green-4x4</li>
+        <li>Shipping boilerplate "Your sample order will ship": absinthe-2x6, absinthe-trapezoid, casablanca-2x6, and others</li>
+      </ul>
+    </div>
+
+    <div class="issue-item high">
+      <h4>HIGH &mdash; FAQ Count Below 6 in 14 Product Files</h4>
+      <p>Per &sect;8.5, minimum 6 FAQ questions required. Files short:</p>
+      <ul>
+        <li>basilica-12x24-honed, burnt-sugar-2x2, burnt-sugar-glazed-earth-checkerboard, carbon-black-4x4</li>
+        <li>french-cobblestone, graphite-grey-4x4, jade-4x4-square, kelp-forest-4x4</li>
+        <li>monument-6x6-honed, neutra-12x12, sequoia-4x4, stars-cross-red-clay, toltec-red-clay</li>
+        <li>kelp-forest-2x8 (FAQ section may be missing entirely)</li>
+      </ul>
+    </div>
+
+    <div class="issue-item high">
+      <h4>HIGH &mdash; Meta Descriptions Under 140 Characters (36 of 37 Collection Files)</h4>
+      <p>Systemic gap across all collection pages. Most fall in the 95&ndash;127 character range. Only roman-mosaics.md is near-compliant. Requires a second pass expanding all meta descriptions to 140&ndash;160 chars with primary keyword + at least 2 use cases or outcomes.</p>
+    </div>
+
+    <div class="issue-item high">
+      <h4>HIGH &mdash; Installation Section Missing Required Elements (24 of 37 Collection Files)</h4>
+      <p>Per &sect;4.5, every installation section requires: (1) PPE + Prop 65 link, (2) drywall flush + mitered edges + Schluter strips, (3) sealing for all installations, (4) contact email and phone. Most material pages are missing drywall flush and mitered edges/Schluter strips. Only roman-mosaics.md and shape-subway.md include all required elements.</p>
+    </div>
+
+    <div class="issue-item medium">
+      <h4>MEDIUM &mdash; Overage Stated as 15% (Not 15&ndash;20%) in ~20 Collection Files</h4>
+      <p>Color, shape, and space filter pages consistently state "15% overage" as the standard. Per &sect;8.4, the standard should be 15&ndash;20% with 25% for uniform look. Affected: color-black, color-blue, color-brown, color-green, color-grey, color-orange, color-pattern, color-pink, color-purple, color-red, color-tan, color-yellow, shape-square, shape-subway, and others.</p>
+    </div>
+
+    <div class="issue-item medium">
+      <h4>MEDIUM &mdash; Banned Term Remnants (Scattered)</h4>
+      <ul>
+        <li>"trim pieces" in zellige-absinthe-4x4 and zellige-glazed-earth-4x4 FAQ answers &mdash; should be "mitered edges / Schluter strips"</li>
+        <li>"defects" in molasses-4x4 (2x) &mdash; even in negation ("not a defect"), the word should be removed</li>
+        <li>"elevated" in space-kitchen.md marble description</li>
+        <li>"works as" in basilica-12x24 FAQ answer &mdash; should name specific application</li>
+        <li>"today" as sentence closer in burnt-sugar-4x4, pure-white-2x6, burnt-sugar-2x6</li>
+        <li>"natural imperfections" and "rainbow of colors" in casablanca-4x4 romance paragraph</li>
+        <li>Sealer product names (511 Porous Plus, Fila Matte Wax) in puebla-4x4 and red-clay-8x8-square FAQ answers</li>
+      </ul>
+    </div>
+
+    <div class="issue-item medium">
+      <h4>MEDIUM &mdash; No Page-Level Prop 65 Warning on Material Collection Pages</h4>
+      <p>Zellige and Cotto pages have a Prop 65 warning block at the page level. Cantera, cement, ceramics, field-trip-japan, glass-mosaics, limestone, marble, and terrazzo collection pages do not, despite involving mortar, sealants, and grout during installation.</p>
+    </div>
+
+    <div class="issue-item medium">
+      <h4>MEDIUM &mdash; Grammatical Error: "so to schedule" Across 5 Zellige Files</h4>
+      <p>"Our team will reach out when the order is ready so to schedule a time" &mdash; should be "to schedule" or "so you can schedule." Appears in: absinthe-2x6-bejmat-zellige, absinthe-trapezoid, aegean-4x4, amber-4x4, casablanca-2x2-zellige.</p>
+    </div>
+
+    <div class="issue-item medium">
+      <h4>MEDIUM &mdash; Limestone Origin Specificity Missing</h4>
+      <p>limestone-buff-honed-4x12 and limestone-buff-honed-6x6: How It's Made section is generic &mdash; Fez, Morocco / Bordeaux, France origins not named. Low specificity for the brand standard.</p>
+    </div>
+
+  </div>
 </div>
-</section>
 
-<!-- ============================================================ -->
-<!-- RECOMMENDATIONS -->
-<!-- ============================================================ -->
-<section id="recommendations">
-<div class="container">
-<h2>7. Prioritized Recommendations</h2>
-
-<h3><span class="tag critical">Critical</span> Immediate Action Required</h3>
-<table>
-<thead><tr><th>#</th><th>Action</th><th>Impact</th><th>Effort</th></tr></thead>
-<tbody>
-<tr>
-  <td>1</td>
-  <td><strong>Rename CLAUDE-content-ops.md to CLAUDE.md</strong></td>
-  <td>Fixes all 7 commands and editor agent that reference nonexistent file. Single highest-impact architecture fix.</td>
-  <td>Trivial (one git mv)</td>
-</tr>
-<tr>
-  <td>2</td>
-  <td><strong>Add dry-space sealing language to all product pages.</strong> Required text: "Always seal [tile name] according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers."</td>
-  <td>Fixes the most widespread violation (47/47 files). Prevents incorrect customer guidance.</td>
-  <td>Medium (batch find-and-replace in Installation sections)</td>
-</tr>
-<tr>
-  <td>3</td>
-  <td><strong>Fix casablanca-2x2-zellige.md FAQ.</strong> Remove or correct "Glazed zellige in dry applications does not require sealing" &mdash; this directly contradicts the style guide.</td>
-  <td>Eliminates a factual error that could cause material damage.</td>
-  <td>Trivial (edit one FAQ answer)</td>
-</tr>
-<tr>
-  <td>4</td>
-  <td><strong>Expand all meta titles to 50-60 characters.</strong> Current pattern: "[Product] [Format] [Material] | Zia Tile" often falls short. Add descriptive keywords.</td>
-  <td>Fixes 42/47 product pages for SEO compliance.</td>
-  <td>Medium (batch update)</td>
-</tr>
-<tr>
-  <td>5</td>
-  <td><strong>Remove all second-person pronouns.</strong> Replace "You should expect" with "Expect." Replace "allows you or your installer" with "allows the installer." Replace "your unique mix" with "the mix."</td>
-  <td>Fixes ~80% of files across both categories.</td>
-  <td>Medium (systematic search-and-replace)</td>
-</tr>
-</tbody>
-</table>
-
-<h3 style="margin-top:24px;"><span class="tag high">High</span> Next Sprint</h3>
-<table>
-<thead><tr><th>#</th><th>Action</th><th>Impact</th><th>Effort</th></tr></thead>
-<tbody>
-<tr>
-  <td>6</td>
-  <td><strong>Clean all editing artifacts from collection pages.</strong> Remove strikethrough text, "Ccantera" typos, inline revision marks, "(repetitive)" notes, "(reword?)" comments, and Writer's Notes.</td>
-  <td>12+ collection pages become publication-ready.</td>
-  <td>Medium (manual review of each file)</td>
-</tr>
-<tr>
-  <td>7</td>
-  <td><strong>Replace "dynamic tones" with "dynamic glazes"</strong> across all zellige content.</td>
-  <td>Fixes ~20 files to use required terminology.</td>
-  <td>Low (global search-replace)</td>
-</tr>
-<tr>
-  <td>8</td>
-  <td><strong>Change sealing from "recommended" to "required"</strong> in all zellige Sealing Required bullets.</td>
-  <td>Aligns ~15 files with style guide Section 4.2.</td>
-  <td>Low (batch update)</td>
-</tr>
-<tr>
-  <td>9</td>
-  <td><strong>Add 6th FAQ to all product pages with only 5.</strong> Required topics to cover: thickness variation, shower floor installation, crazing, cleaning, characteristics, color mixing across collection.</td>
-  <td>Fixes ~17 product pages.</td>
-  <td>Medium (write and add FAQ)</td>
-</tr>
-<tr>
-  <td>10</td>
-  <td><strong>Remove banned "trim pieces" phrasing.</strong> Replace with "mitered edges" or "Schluter strips" in casablanca-2x2, casablanca-trapezoid, and space-shower pages.</td>
-  <td>Fixes ~5 files.</td>
-  <td>Low</td>
-</tr>
-<tr>
-  <td>11</td>
-  <td><strong>Create brand-voice-validator agent</strong> that reads clients/{client}/STYLE-SYSTEM.md before reviewing.</td>
-  <td>Prevents future violations from being introduced.</td>
-  <td>Medium (new agent file)</td>
-</tr>
-</tbody>
-</table>
-
-<h3 style="margin-top:24px;"><span class="tag medium">Medium</span> Subsequent Work</h3>
-<table>
-<thead><tr><th>#</th><th>Action</th><th>Impact</th></tr></thead>
-<tbody>
-<tr><td>12</td><td>Standardize overage language to "15-20%" range across all files</td><td>Fixes ~15 files</td></tr>
-<tr><td>13</td><td>Expand meta descriptions under 140 chars (carbon-black, basilica-6x6, durango-madera)</td><td>Fixes ~10 files</td></tr>
-<tr><td>14</td><td>Fix chips/pits/crazing ordering in condesa-4x4 and potentially other Cotto Allende pages</td><td>Terminology consistency</td></tr>
-<tr><td>15</td><td>Rename "Tile Character" and "Color and Surface" sections to "Inherent Variation"</td><td>Section naming consistency</td></tr>
-<tr><td>16</td><td>Remove "world's best" and "world's most refined" generic claims from ceramic pages</td><td>Voice compliance</td></tr>
-<tr><td>17</td><td>Add drywall flush requirement to ethereal-blue-2x8 and verify other ceramic pages</td><td>Technical accuracy</td></tr>
-<tr><td>18</td><td>Increase vocabulary palette usage (undulating, cascading, clad, fluted, sculpted)</td><td>Editorial voice enrichment</td></tr>
-<tr><td>19</td><td>Create /product-page and /review-style commands for Zia Tile workflow</td><td>Workflow automation</td></tr>
-<tr><td>20</td><td>Verify unglazed-natural-2x6.md uses unglazed-specific template per Section 4.7</td><td>Category compliance</td></tr>
-</tbody>
-</table>
-
+<!-- ===== SECTION 5: FIXES APPLIED ===== -->
+<div id="fixes-applied" class="section">
+  <div class="section-header">
+    <h2>Fixes Applied Summary</h2>
+  </div>
+  <div class="section-body">
+    <div class="two-col">
+      <div>
+        <div style="font-size:12px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px;">Universal Fixes</div>
+        <table class="fix-table">
+          <thead><tr><th>Fix</th><th>Scope</th></tr></thead>
+          <tbody>
+            <tr><td>Phone 310-844-1170 added to all files</td><td>73 product files</td></tr>
+            <tr><td>PPE + Prop 65 warning added</td><td>All 73 product files</td></tr>
+            <tr><td>Banned words eliminated</td><td>straightforward, bestselling, luxury, sophisticated, sub-line, colonial, charming, withstands, runs to, irregularly, free shipping, shower surround, grout spacing, peel-and-stick</td></tr>
+            <tr><td>Dry-space sealing language added</td><td>"whether in dry spaces or in areas exposed to moisture" across majority of product files</td></tr>
+            <tr><td>Freeze/thaw language corrected by material</td><td>Cotto any climate; Cotto Allende/zellige: not freeze/thaw; cement: non-freeze/thaw; marble: outdoors in appropriate climates</td></tr>
+            <tr><td>Overage 15&ndash;20% + 25% option</td><td>Across product files</td></tr>
+            <tr><td>All 9 required sections present</td><td>72 of 73 files (red-clay-8x8 exception)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <div style="font-size:12px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px;">Material-Specific Fixes</div>
+        <table class="fix-table">
+          <thead><tr><th>Fix</th><th>Scope</th></tr></thead>
+          <tbody>
+            <tr><td>Cotto variation language: tone/shape/edge/thickness, no crazing</td><td>Cotto product files</td></tr>
+            <tr><td>Durango "four-tile set" (not module)</td><td>durango-madera.md</td></tr>
+            <tr><td>Cotto Allende / Cotto pool/spa distinction</td><td>Throughout all relevant files</td></tr>
+            <tr><td>Chips, pits, and crazing correctly zellige-only</td><td>All files</td></tr>
+            <tr><td>Collection pages: editing artifacts and writer notes removed</td><td>All 37 collection files</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:14px;font-size:12px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:6px;padding:10px;">
+          <strong>Validation:</strong> Gemini CLI was used to cross-validate fixes against STYLE-SYSTEM.md rules before patch delivery. Post-patch scores were confirmed via re-analysis of all 110 files.
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-</section>
 
-<footer style="background: var(--gray-50); border-top: 1px solid var(--gray-200); padding: 24px 0; margin-top: 40px;">
-<div class="container" style="text-align:center; color: var(--gray-500); font-size: 13px;">
-  <p>Generated 2026-05-12 | Zia Tile Content Ops | Style Guide Compliance Audit</p>
-  <p>Reference: clients/zia-tile/STYLE-SYSTEM.md | Architecture: /tmp/zia-arch-analysis.json</p>
+<!-- ===== SECTION 6: RECOMMENDATIONS ===== -->
+<div id="recommendations" class="section">
+  <div class="section-header">
+    <h2>Recommendations</h2>
+    <span style="font-size:12px;color:#888;">Prioritized by impact</span>
+  </div>
+  <div class="section-body">
+    <div class="rec-item">
+      <div class="rec-num p-critical">1</div>
+      <div class="rec-body">
+        <h4>Complete red-clay-8x8-square.md</h4>
+        <p>5 of 9 required sections are template placeholders. File is unpublishable. Fill: About, Tile Usage, How It's Made, Order &amp; Shipping, Installation Guide. Also remove sealer product names from the FAQ.</p>
+      </div>
+    </div>
+    <div class="rec-item">
+      <div class="rec-num p-critical">2</div>
+      <div class="rec-body">
+        <h4>Fix marble outdoor statement in shape-large-format.md</h4>
+        <p>Replace "not suitable for any exterior floor" with "Marble can be used outdoors in appropriate climates" per &sect;4.1. This is a factual error that contradicts the style system.</p>
+      </div>
+    </div>
+    <div class="rec-item">
+      <div class="rec-num p-critical">3</div>
+      <div class="rec-body">
+        <h4>Fix Cotto Allende pre-grout sealing error in cotto-allende.md</h4>
+        <p>Remove "before grouting" from sealing instruction. Cotto Allende only requires post-grout sealing in moisture-exposed areas. Risk of incorrect installation guidance reaching customers.</p>
+      </div>
+    </div>
+    <div class="rec-item">
+      <div class="rec-num p-high">4</div>
+      <div class="rec-body">
+        <h4>Second pass on you/your in zellige product FAQ answers</h4>
+        <p>~25 files still have second-person violations, primarily the "Yes, you can mix" FAQ construction and Preparation bullet "your preference/your installer" patterns. Convert to third person: "Zellige colors can be combined" or "The installer can plan edge cuts."</p>
+      </div>
+    </div>
+    <div class="rec-item">
+      <div class="rec-num p-high">5</div>
+      <div class="rec-body">
+        <h4>Expand meta descriptions to 140&ndash;160 chars across all 36 collection files</h4>
+        <p>36 of 37 collection files have meta descriptions in the 95&ndash;127 char range. Each needs expansion with primary keyword + 2 use cases or outcomes. This is a systemic SEO gap affecting the entire collection page set.</p>
+      </div>
+    </div>
+    <div class="rec-item">
+      <div class="rec-num p-high">6</div>
+      <div class="rec-body">
+        <h4>Add missing FAQ questions to reach minimum 6 in 14 product files</h4>
+        <p>Per &sect;8.5, minimum 6 FAQ questions required. Priority files: basilica-12x24, burnt-sugar-2x2, carbon-black-4x4, french-cobblestone, graphite-grey-4x4, jade-4x4, kelp-forest-4x4, monument-6x6, neutra-12x12, sequoia-4x4, stars-cross-red-clay, toltec-red-clay.</p>
+      </div>
+    </div>
+    <div class="rec-item">
+      <div class="rec-num p-medium">7</div>
+      <div class="rec-body">
+        <h4>Add drywall flush + mitered edges + Schluter strips to 24 collection installation sections</h4>
+        <p>Per &sect;4.5, all installation sections require these three elements. Currently missing from most material collection pages. Can be templated as a single block and inserted.</p>
+      </div>
+    </div>
+    <div class="rec-item">
+      <div class="rec-num p-medium">8</div>
+      <div class="rec-body">
+        <h4>Correct overage from "15%" to "15&ndash;20%" across ~20 color/shape/space pages</h4>
+        <p>Systemic find-and-replace: "15% overage" &rarr; "15&ndash;20% overage" with 25% option for uniform look. Affects all color filter and many shape filter pages.</p>
+      </div>
+    </div>
+    <div class="rec-item">
+      <div class="rec-num p-medium">9</div>
+      <div class="rec-body">
+        <h4>Fix researcher and seo-researcher agents &mdash; add client context protocols</h4>
+        <p>Both agents have no client context protocol, breaking the style-system chain for all research tasks. researcher is also SearchAtlas/LinkGraph-branded. These are chain-breaking gaps that can contaminate downstream drafts. Adding the 6-step protocol from algorithmic-author would take 15 minutes per agent.</p>
+      </div>
+    </div>
+    <div class="rec-item">
+      <div class="rec-num p-medium">10</div>
+      <div class="rec-body">
+        <h4>Clear scattered banned term remnants</h4>
+        <p>"trim pieces" (zellige-absinthe-4x4, zellige-glazed-earth-4x4), "defects" (molasses-4x4), "elevated" (space-kitchen), "works as" (basilica-12x24), "today" closer (burnt-sugar-4x4, pure-white-2x6, burnt-sugar-2x6), "natural imperfections/rainbow of colors" (casablanca-4x4).</p>
+      </div>
+    </div>
+  </div>
 </div>
-</footer>
 
+<div class="footer">
+  Generated 2026-05-12 &nbsp;&middot;&nbsp; Reprocessed Audit &nbsp;&middot;&nbsp; Zia Tile Campaign 01 &mdash; Product &amp; Collection Pages &nbsp;&middot;&nbsp; zia-content-ops
+</div>
+
+</div><!-- /container -->
 </body>
 </html>
