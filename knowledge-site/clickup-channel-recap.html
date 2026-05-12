@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ClickUp Channel Recap — Zia Tile Knowledge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+<div class="layout">
+<aside class="sidebar">
+<div class="brand">
+<div class="brand-mark">Zia Tile</div>
+<div class="brand-sub">Knowledge Base</div>
+</div>
+<nav>
+<ul>
+<li><a href="index.html">Overview</a></li>
+<li class="nav-section">Editorial</li>
+<li><a href="style-guide-v3.html">Style Guide v3.0</a></li>
+<li><a href="style-guide.html">Style Guide v2.0</a></li>
+<li><a href="editorial-voice.html">Editorial Voice</a></li>
+<li><a href="jamie-feedback.html">Jamie Feedback Highlights</a></li>
+<li class="nav-section">Reference</li>
+<li><a href="website-research-2026-05-04.html">Website Research (May 2026)</a></li>
+<li><a href="website-research-original.html">Website Research (Original)</a></li>
+<li><a href="installation-guides.html">Installation Guides</a></li>
+<li class="nav-section">Reference Content</li>
+<li><a href="blog-4-cotto.html">Blog Post #4 — Cotto</a></li>
+<li><a href="collection-cotto.html">Cotto Collection Page</a></li>
+<li><a href="product-red-clay-8x8.html">Red Clay 8x8 Product Page</a></li>
+<li class="nav-section">Account State</li>
+<li><a href="clickup-channel-recap.html" class="active">ClickUp Channel Recap</a></li>
+<li><a href="workspace.html">Workspace README</a></li>
+</ul>
+</nav>
+<div class="meta">Last updated 2026-05-12</div>
+</aside>
+<main>
+<div class="page-header">
+<div class="eyebrow">Account State</div>
+<h1 class="page-title">Zia Tile — ClickUp Channel Recap</h1>
+<p class="subtitle">Full history Mar 9 – May 12, 2026 · 202 top-level messages · 87 threaded discussions</p>
+</div>
+<article class="prose">
+
+<h2>0. Executive summary (read this first)</h2>
+<p>Zia Tile is a $50K MRR brand-sensitive Shopify client now finishing month two. The first two months have produced extensive output — a complete technical SEO audit, 31 March product pages drafted, 60+ April pieces queued, OTTO metadata deployments live (alt text + meta keywords), the December 2025 blog URL migration recovery planned, and a manual-mode link-building program with ~95 placements/month — but no customer-facing content has been published to Jamie's satisfaction yet. The first content delivery (Mar 27) came back with hard feedback. The second round (Apr 24) surfaced factual errors. A third, fully rebuilt round of three reference pieces (Blog #4 Cotto, Cotto product page, Cotto collection page) went to Jamie on <strong>May 12</strong>. <strong>Jamie returned feedback the morning of May 13 on all three — actionable, focused, and trending positive.</strong></p>
+<p>Internally, the editorial system has been rebuilt — Content Production Toolkit, Writing Guide v3 (May 12, post-Jamie-feedback), 35-point QA Checklist, dual editor review by Aleksandra + Emanuel before Alex sees anything — and the technical workstreams have continued in parallel under Andrés Mora (technical lead since May 7), Steffen Ploeger (audit/SEO), Finn Samsing (OTTO), and Dayanna Pinzon (link building).</p>
+<p>The risk is not the work being done. The risk is that after nine weeks, Jamie still has nothing on her live site she is proud of, and Alex's Apr 29 note — <em>"running out of runway"</em> — accurately characterizes where client confidence sits. Month three begins now. The May 12 reference docs are the moment the engagement either gets a second wind or enters a recovery conversation.</p>
+
+<h2>1. Account snapshot</h2>
+<h3>Client</h3>
+<ul>
+<li><strong>Company:</strong> Zia Tile — premium tile retailer (zellige, marble, cement, terracotta/cotto, ceramic, terrazzo, cantera, limestone, glass mosaic, Roman mosaic)</li>
+<li><strong>Platform:</strong> Shopify (constrains nearly every technical decision in this engagement)</li>
+<li><strong>MRR:</strong> $50,000</li>
+<li><strong>Service level:</strong> Auto-implementations enabled — customer-facing changes route to Jamie for approval; technical changes route to Devyn</li>
+<li><strong>Public showroom:</strong> None (local SEO not in scope)</li>
+</ul>
+
+<h3>Client contacts</h3>
+<table>
+<thead><tr><th>Name</th><th>Role</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>Jamie Greenspan</td><td>Primary contact / content approver</td><td>Highly brand-sensitive. Owns final sign-off on all customer-facing content (titles, metas, OG tags, body copy). Patient, professional, but losing patience as of Apr 29. Returned constructive feedback on the three May 12 reference docs the morning of May 13.</td></tr>
+<tr><td>Devyn</td><td>Developer / access owner</td><td>Owns Shopify access provisioning. Multiple permission rounds required across April–May.</td></tr>
+<tr><td>Danny</td><td>Executive</td><td>Sees Friday weekly updates.</td></tr>
+<tr><td>Mike</td><td>Executive</td><td>Sees Friday weekly updates.</td></tr>
+</tbody>
+</table>
+
+<h3>Internal team</h3>
+<table>
+<thead><tr><th>Name</th><th>Role on this account</th></tr></thead>
+<tbody>
+<tr><td>Alex Bélanger</td><td>CSM / day-to-day owner — primary client-facing communicator</td></tr>
+<tr><td>Henry Whitfield</td><td>Account lead — strategic oversight, factual QA on content</td></tr>
+<tr><td>Ryan McGovern</td><td>CSM / billing-side support</td></tr>
+<tr><td>Manuel Rodriguez</td><td>PM / coordinator — owns link-building workflow and OTTO rollback decisions</td></tr>
+<tr><td>Aleksandra Velickovic</td><td>Editorial — final content sign-off, toolkit owner, voice enforcement</td></tr>
+<tr><td>Emanuel de Macêdo</td><td>Content lead — second editor layer on all pieces</td></tr>
+<tr><td>Mina Jahangir</td><td>Lead writer (assigned Apr 6 after Jamie's first-round feedback)</td></tr>
+<tr><td>Andresa Araujo</td><td>Writer (on loan from Roto-Rooter team)</td></tr>
+<tr><td>Steffen Ploeger</td><td>Technical SEO / audit lead</td></tr>
+<tr><td>Finn Samsing</td><td>OTTO operator</td></tr>
+<tr><td>Andrés Mora</td><td>ENT tech / Shopify integration lead (took technical lead May 7)</td></tr>
+<tr><td>Marissa Hill-Whitson</td><td>Web/dev</td></tr>
+<tr><td>Dayanna Pinzon</td><td>Link building lead</td></tr>
+<tr><td>Sophia Deluz-Bhan</td><td>Added to account in onboarding phase</td></tr>
+<tr><td>Paul Lovell</td><td>Content strategy support (added mid-April)</td></tr>
+<tr><td>Diego Rivera-Diaz</td><td>Product (SearchAtlas side)</td></tr>
+<tr><td>Lucas Zarochinski</td><td>Produced Apr 7 "Zia Tile rescue plan" HTML report</td></tr>
+<tr><td>Gianfranco Peñalba</td><td>Competitor analysis (Fireclay Tile updated Apr 1)</td></tr>
+<tr><td>Wendy Alinor</td><td>Billing — Bill.com / Stripe</td></tr>
+</tbody>
+</table>
+
+<h2>2. Timeline of the engagement</h2>
+
+<h3>Week 1 — March 9–15 (onboarding)</h3>
+<ul>
+<li><strong>Mar 9–11:</strong> Kickoff prep. Henry reviewed and improved the kickoff deck. Marissa added to the onboarding call as a "show of force" appropriate for $50K MRR.</li>
+<li><strong>Mar 11:</strong> Kickoff. Steffen flagged one product URL with a missing category in the slug (<code>/products/rouge-2x6</code>); the rest of the site URL structure validated.</li>
+<li><strong>Mar–Mar 27:</strong> QP subscription created. First invoice flow established via Bill.com / Stripe / Wendy Alinor. Internal-link checklist for collection→product crosslinks raised by Steffen but not formalized.</li>
+</ul>
+
+<h3>Week 2 — March 16–22</h3>
+<ul>
+<li>Tech audit scoped; redirect cleanup task spun up; redirect map sheet built.</li>
+<li>Internal team alignment on auto-implementation routing.</li>
+<li>Sophia Deluz-Bhan added to the account.</li>
+</ul>
+
+<h3>Week 3 — March 23–29 (first content delivery)</h3>
+<ul>
+<li><strong>Mar 27:</strong> First three test pieces sent to Jamie — Casablanca 4x4 PDP, Casablanca 2x6 PDP, Pure White 4x4 PDP. First writing guide produced by Alex.</li>
+<li>Onboarding effectively complete. Engagement enters delivery phase.</li>
+</ul>
+
+<h3>Week 4 — March 30 – April 5</h3>
+<ul>
+<li><strong>Apr 1:</strong> Gianfranco updated competitor analysis with Fireclay Tile.</li>
+<li><strong>Apr 2:</strong> Manuel rolled back ten unapproved OTTO title-tag deployments. Established standing rule: customer-facing changes require Jamie's pre-approval, full stop.</li>
+</ul>
+
+<h3>Week 5 — April 6–12 (first feedback shock)</h3>
+<ul>
+<li><strong>Apr 6–7:</strong> Jamie's feedback on the three pilot PDPs landed hard — "too AI," tone misses, audience misses, several factual issues. Internal response:
+  <ul>
+  <li>Mina Jahangir becomes lead writer</li>
+  <li>Emanuel adds a second editing pass</li>
+  <li>The custom agent build is paused — no agent until full feedback is processed</li>
+  <li>Aleksandra builds the <strong>Content Production Toolkit</strong> — Product Brief Template + Master AI Prompt + 35-point QA Checklist</li>
+  <li>Lucas Z. delivers a "Zia Tile rescue plan" HTML report</li>
+  </ul>
+</li>
+<li><strong>Apr 8:</strong> Client call. Underperforming product link targets replaced.</li>
+<li><strong>Apr 9–10:</strong> Link-building content quality issues surface — broken Forbes/Healthline links (404s) inside AI-generated link content, Healthline misused as a source for tile tips, uncapitalized keywords. Decision: regenerate all queued LB content with the new prompt; nothing publishes until clean. Aleksandra builds the QA agent. New prompt deployed to production Apr 21.</li>
+</ul>
+
+<h3>Week 6 — April 13–19</h3>
+<ul>
+<li><strong>Apr 14:</strong> Henry flags missing performance reporting dashboard — should have been a Month 1 + 2 deliverable.</li>
+<li><strong>Apr 14:</strong> Steffen frames the March visibility shift narrative for client reporting: <em>"Search visibility became more selective, but performance improved where it counts."</em></li>
+<li><strong>Apr 14–16:</strong> Onboarding-style follow-up with Devyn. PDPs confirmed to be built in Shopify Liquid + Accentuate metafields + Shopify meta objects. Many updates publish live with no staging — Marissa: <em>"mandatory QA on this in a timely manner will be essential."</em></li>
+<li><strong>Apr 16:</strong> Jamie messages Ryan questioning value vs. proposal targets. Alex's reply spells out: March = 33/95 LB published + content drafting; April = 28/95 LB + drafting. Internal note from Alex: <em>"Make sure to mention that the audits and strategy are also high-value, not just throwaway items."</em> Henry: <em>"the content/LB velocity these next two weeks isn't going to have us on track and ahead of month 3."</em></li>
+<li><strong>Apr 16:</strong> Link-building automation misfire — Zia content auto-approved into wrong-category placements (<code>linguistsmagazine.com</code>). Decision: automation OFF for Zia, manual assignment only.</li>
+<li><strong>Apr 17:</strong> Status sent to Jamie. March: 31/31 product pages drafted; 19 core + 10 blogs ready for review. April: 60+ pieces in queue Apr 17–30. Brand vault updated with editorial guidelines.</li>
+<li><strong>Apr 17:</strong> Finn flags Domain Knowledge Network (DKN) conflicts with the writing guidelines. <strong>No resolution in channel.</strong></li>
+<li><strong>Apr 17:</strong> Paul Lovell brought onto the account for content strategy support.</li>
+</ul>
+
+<h3>Week 7 — April 20–26 (second feedback round)</h3>
+<ul>
+<li><strong>Apr 21:</strong> Marissa's team can't make collection-page changes. Devyn issues first permission update in twenty minutes — doesn't unblock her use case.</li>
+<li><strong>Apr 23:</strong> Working session with core team.</li>
+<li><strong>Apr 24:</strong> Page-by-page feedback from Jamie's call lands. 15+ factual flags across the 16 collection-page templates:
+  <ul>
+  <li>Wrong installation guide URL on seven templates</li>
+  <li>Canada missing from shipping line on two</li>
+  <li>Roman Mosaics title still says "Product Name"</li>
+  <li>Glass Mosaics "Sealing Required" cell blank — needs client decision</li>
+  </ul>
+</li>
+<li><strong>Apr 24 PM:</strong> Writing Guide v2 issued from Jamie's call. Aleksandra + Emanuel start rework. OTTO credits added (first top-up).</li>
+<li><strong>Apr 24:</strong> Marissa shares access screenshot; Devyn issues "LinkGraph" custom role with App development access.</li>
+<li><strong>Apr 24 mid-cycle LB status:</strong> 122 posted, 21 pending submission, 44 awaiting publish, 3 rejected.</li>
+<li><strong>Apr 24:</strong> Friday weekly campaign update reframed to deliver value clearly to Danny + Mike, not only Jamie.</li>
+</ul>
+
+<h3>Week 8 — April 27 – May 3 (third pass)</h3>
+<ul>
+<li><strong>Apr 27:</strong> Updated product page formatting goes live on the Zia site matching internal templates. Sixteen product category templates + one blog post shared.</li>
+<li><strong>Apr 27:</strong> Henry locks the voice rule: <em>"we/our"</em> when speaking to the reader; <em>"Zia"</em> when stating product/company facts.</li>
+<li><strong>Apr 27:</strong> Jamie emails about discomfort with the internal team making decisions in her name. Henry's counter: <em>"They pay us $50k a month to tell them what we're doing and our decisions, not to defer to them on small things like redirect mapping. We can share our plan, but it needs to come from a place of authority."</em></li>
+<li><strong>Apr 28:</strong> Casablanca + Pure White rewrites run through Claude with new feedback. Henry catches factual errors that had survived earlier rounds — the Red Clay 8x8 product page actually shows a 13x13 square; the "hand-pressed" claim (Zia doesn't hand-press) was removed.</li>
+<li><strong>Apr 28:</strong> Steffen issues the final blog URL migration recovery position — keep <code>/blogs/resources/</code>, 1:1 301 redirect all 92 old URLs, expected ~85% historical traffic recovery, revisit after 30 days only if Zia wants to. The earlier "revert to /blog" recommendation is withdrawn. Pilot path (5–10 posts via 302s) tabled in favor of full 301 rollout.</li>
+<li><strong>Apr 29:</strong> Tech audit deliverables shipped — Technical SEO Audit PDF + Zia Tile Tech Audit Fix Ownership PDF (clean ownership split between Zia dev, LinkGraph webdev, and OTTO).</li>
+<li><strong>Apr 29:</strong> Alex characterization to internal team: <em>"She's patient and reasonable but running out of runway. Still in the partnership and rooting for it to work, but two months in with nothing she's proud to show on the site is starting to wear on her. The next piece we send her needs to land (Updated blog #4)."</em></li>
+<li><strong>Apr 30:</strong> OTTO status report — 101 alt texts deployed, 363 meta keywords deployed (rising to 4,940 week-of), 60 Twitter descriptions (Zia has no Twitter, flagged as wasted), 0 OTTO-deployed JSON-LD schema live. Second OTTO credit top-up.</li>
+<li><strong>Apr 30:</strong> Steffen raises a new collection question — split matte ceramic into its own landing page (260/mo US, 720/mo global), merge satin into glossy (satin has zero search volume) but keep glossy as H1. Asks if collection URLs change or just internal categorization. <strong>No answer in channel.</strong></li>
+<li><strong>Apr 30:</strong> Steffen also raises: who owns Merchant Center feed + product schema updates? <strong>No answer in channel.</strong></li>
+</ul>
+
+<h3>Week 9 — May 4–10</h3>
+<ul>
+<li><strong>May 1:</strong> Andrés discovers Shopify's January 2026 platform change. The Dev Dashboard now requires org-level access, distinct from store-level permissions. The "LinkGraph" custom role works at store level but Zia Tile doesn't appear in the Dev Dashboard for <code>projects3@linkgraph.io</code>. SearchAtlas ↔ Shopify integration build blocked.</li>
+<li><strong>May 1:</strong> Finn ships OG Title + OG Description Refine Prompts. Installed.</li>
+<li><strong>May 4:</strong> Henry produces the reworked Blog #4 — adds back all six colorways named (Adobe, Fired Earth, Red Clay, Blanco, Madera, Oscura), all eight signature shapes, the Cotto Allende sub-line, DCOF 0.98 / 0.42 specs, sealer-as-grout-release callout, 15–20% overage guidance. Henry: <em>"may go TOO far but I'd rather Jamie ask us to pull back."</em></li>
+<li><strong>May 5:</strong> Third OTTO credit top-up.</li>
+<li><strong>May 5:</strong> Andrés sends the consolidated Dev Dashboard access ask to Devyn — "the last, complete request": assign org-level "App developer" role to <code>projects3@linkgraph.io</code> + expand the LinkGraph store role to include App development, Content, Online store, Apps and channels. Alex framing: <em>"This is the last ask. We're starting to look disorganized."</em></li>
+<li><strong>May 5:</strong> Henry flags an open content question — does the Durango Blanco special-order time apply to all Durango or only Blanco?</li>
+<li><strong>May 7:</strong> Marissa pings Andrés — her team was able to make and modify collections. The collection-page edit block is likely lifted (the SearchAtlas-app connection block status remains separate).</li>
+<li><strong>May 7:</strong> Andrés formally takes the technical lead role (ENT org change).</li>
+<li><strong>May 7:</strong> 1:30pm ET weekly Zia call cancelled in favor of 3:30pm ET Henry sync.</li>
+<li><strong>May 7:</strong> Jamie confirms she does NOT want a Saltillo blog (Saltillo isn't a Zia product). Alex adds replacement blog topic to the slate: <em>"Terra Cotta in Every Tone, A Guide to Zia's Cotto Colors."</em></li>
+</ul>
+
+<h3>Week 10 — May 11–13 (current)</h3>
+<ul>
+<li><strong>May 11:</strong> Jamie reviews 100 OTTO sample title/meta examples. Light notes for consideration, green-lit. Deployment unblocked — alt text (~5,800 remaining of ~14K identified) and approved titles/metas resume.</li>
+<li><strong>May 11:</strong> Alex requests full ALT-text deployment spreadsheet from Finn.</li>
+<li><strong>May 12:</strong> Three final reference docs sent to Jamie for sign-off — Blog #4 (Cotto), Cotto product page, Cotto collection page.</li>
+<li><strong>May 12, 2:21pm ET:</strong> Alex's action request to Aleksandra + Emanuel — produce a written action plan for rolling Blog #4 / Cotto styling out across all March + April content.</li>
+<li><strong>May 12, 8:35–8:38pm ET:</strong> Henry's "Review all inputs for ZIA Content" message — directs the editorial pair to pull all Jamie feedback, meeting transcripts, and repository data into a single side-by-side review surface for Manick to use ahead of a scheduled call. The hosted knowledge site (this site) is the agreed delivery surface.</li>
+<li><strong>May 12:</strong> May link-building order #24404 created and going live (Jamie's target approval landed that morning).</li>
+<li><strong>May 13 AM:</strong> Jamie returns feedback on all three reference docs. Alex's three asks to the editorial pair:
+  <ol>
+  <li>Review and implement the feedback this morning</li>
+  <li>Notify Alex when complete so she can re-share with Jamie for final review</li>
+  <li>Start the game plan for updating the existing content using these three pieces and the updated editorial guide</li>
+  </ol>
+</li>
+</ul>
+
+<h2>3. Workstream deep-dive</h2>
+
+<h3>3.1 Content — the central workstream</h3>
+<p><strong>Status:</strong> Paused. All March and April content rewrites are on hold pending Jamie's response on the May 12 reference docs (returned May 13, now being implemented).</p>
+
+<p><strong>Volume in the rewrite + new-content queue (Henry's May 12 framing):</strong></p>
+<table>
+<thead><tr><th>Cohort</th><th>Collection pages</th><th>Product pages</th><th>Blog pages</th><th>Cohort total</th></tr></thead>
+<tbody>
+<tr><td>March (rewrite)</td><td>19</td><td>31</td><td>10</td><td>60</td></tr>
+<tr><td>April (rewrite)</td><td>18</td><td>42</td><td>10</td><td>70</td></tr>
+<tr><td>May (new content)</td><td>14</td><td>42</td><td>14</td><td>70</td></tr>
+<tr><td><strong>Total in play</strong></td><td><strong>51</strong></td><td><strong>115</strong></td><td><strong>34</strong></td><td><strong>200</strong></td></tr>
+</tbody>
+</table>
+
+<p><strong>Editorial system rebuild (Apr 7 → May 12):</strong></p>
+<ul>
+<li><strong>Content Production Toolkit</strong> (Aleksandra, Apr 7):
+  <ul>
+  <li>Product Brief Template — captures voice, audience, factual constraints, must-include items per piece</li>
+  <li>Master AI Prompt — Aleksandra: <em>"The most important step. Bad input is the root cause of most of what the client was correcting."</em></li>
+  <li>35-point QA Checklist — applied before content reaches Alex</li>
+  </ul>
+</li>
+<li><strong>Writing process:</strong> Brief → AI draft → Editor pass (Emanuel) → Editor pass (Aleksandra) → Alex review → Jamie</li>
+<li><strong>Writing Guide v1</strong> (Alex, Mar 27) → <strong>Writing Guide v2</strong> (Apr 24, post-Jamie-call) → <strong>Writing Guide v3</strong> (May 12, merging Jamie's tracked edits across the three reference docs)</li>
+</ul>
+
+<p><strong>Locked editorial standards (16 hard rules):</strong></p>
+<table>
+<thead><tr><th>Rule</th><th>Source</th></tr></thead>
+<tbody>
+<tr><td>Banned words: luxury, sophisticated, "you should," unique (unqualified), matrix, filler, metaphors</td><td>Writing Guide v3</td></tr>
+<tr><td>Voice: "we/our" for reader address, "Zia" for product/company facts</td><td>Henry, Apr 27</td></tr>
+<tr><td>FAQs must include the question in the answer for LLM visibility</td><td>Henry / Aleksandra</td></tr>
+<tr><td>Keyword highlighting: list once at top, no mid-paragraph bolding</td><td>Writing Guide v2/v3</td></tr>
+<tr><td>All factual specs sourced from Zia's own installation guides, not paraphrased</td><td>Henry, Apr 28</td></tr>
+<tr><td>Roman Mosaics → Marble category</td><td>Apr 24 feedback</td></tr>
+<tr><td>Field Trip: Japan → Ceramics category</td><td>Apr 24 feedback</td></tr>
+<tr><td>Saltillo is NOT a Zia product; remove from any topic list (frame to favor Cotto if mentioned)</td><td>Jamie via Alex, May 7; Jamie May 13</td></tr>
+<tr><td>Cotto colorways to name: Adobe, Fired Earth, Red Clay, Blanco, Madera, Oscura</td><td>Henry, May 4</td></tr>
+<tr><td>Cotto signature shapes (all 8): Stars & Cross, Alcazar, Big Alcazar, Oaxaca, Durango, Tornillo, Toltec, Zocalo</td><td>Henry, May 4</td></tr>
+<tr><td>Cotto Allende sub-line — write as "glazed terra cotta tile" not "sub-line"</td><td>Jamie tracked edit, May 13</td></tr>
+<tr><td>DCOF specs: 0.98 / 0.42</td><td>Henry, May 4</td></tr>
+<tr><td>Sealer-as-grout-release callout (Cotto)</td><td>Henry, May 4</td></tr>
+<tr><td>15–20% overage standard, 20–25% for specialty formats</td><td>Henry, May 4 + Jamie May 13</td></tr>
+<tr><td>Red Clay 8x8 page actually displays a 13x13 tile (fix on imagery side, not copy)</td><td>Henry, Apr 28</td></tr>
+<tr><td>Zia does NOT hand-press tile — claim removed everywhere</td><td>Henry, Apr 28</td></tr>
+<tr><td>Sentence-ending prepositions banned — restructure the sentence</td><td>Jamie, May 13</td></tr>
+<tr><td>Second person (you/your) banned — rewrite in third person</td><td>Jamie, May 13 (consistent flag)</td></tr>
+<tr><td>'Printed' banned from handmade-tile context — meaningless</td><td>Jamie, May 13</td></tr>
+<tr><td>'Module' replaced with 'set'</td><td>Jamie, May 13</td></tr>
+<tr><td>'Runs to 18' → 'features eighteen' (write numbers out)</td><td>Jamie, May 13</td></tr>
+<tr><td>Contact line (info@ziatile.com, 310-844-1170) required in every piece without being asked</td><td>Jamie, May 13</td></tr>
+</tbody>
+</table>
+
+<p><strong>Open factual questions for Jamie (bundle into one follow-up):</strong></p>
+<ol>
+<li>Glass Mosaics — sealing required? Yes/No (cell blank since Apr 24)</li>
+<li>Durango Blanco special-order time — applies to all Durango or only Blanco? (Henry, May 5)</li>
+<li>Underfloor heating FAQ — keep or cut? (Blog #4, May 4 review)</li>
+<li>Slip-resistance FAQ — keep or cut? (Blog #4, May 4 review)</li>
+</ol>
+
+<p><strong>What's owed inside the team:</strong></p>
+<ul>
+<li>Aleksandra + Emanuel → rewrite action plan to Alex + Henry (requested May 12, 2:21pm ET)</li>
+<li>Aleksandra + Emanuel → implement Jamie's May 13 tracked edits across the three reference docs (requested May 13 AM)</li>
+<li>Content team → brief and writer for the "Terra Cotta in Every Tone" Cotto-colors blog (replaces Saltillo)</li>
+</ul>
+
+<p><strong>Key risk:</strong> If Jamie pushes back materially on the resubmitted reference docs, the 200-piece rewrite + new-content slate slips and month 3 enters with no published content the client is proud of.</p>
+
+<h3>3.2 OTTO / SearchAtlas — metadata live, schema stalled</h3>
+<p><strong>Status by category (as of May 13):</strong></p>
+<table>
+<thead><tr><th>Category</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>Image alt text</td><td>101 deployed initial, ~5,800 remaining of ~14K identified, deployment resumed after May 11 Jamie green-light</td></tr>
+<tr><td>Meta keywords</td><td>4,940 deployed (week of Apr 17)</td></tr>
+<tr><td>Meta titles</td><td>100 examples reviewed and green-lit by Jamie May 11; deployment in motion</td></tr>
+<tr><td>Meta descriptions</td><td>Same path as titles — green-lit May 11</td></tr>
+<tr><td>Twitter descriptions</td><td>60 deployed; flagged wasted (Zia has no Twitter); deployment halted</td></tr>
+<tr><td>Twitter site</td><td>Auto-removed</td></tr>
+<tr><td>OG title / OG description</td><td>Refine prompts shipped by Finn May 1, installed</td></tr>
+<tr><td>Schema (JSON-LD)</td><td><strong>0 OTTO-deployed.</strong> Product schema currently from Shopify theme on ~848 pages; missing priceValidUntil, aggregateRating, review. Implementation paused pending Andrés/Paul/Steffen finalized type-and-target list.</td></tr>
+</tbody>
+</table>
+
+<p><strong>Credits:</strong></p>
+<ul>
+<li>Topped up three times: Apr 24, Apr 30, May 5</li>
+<li>Henry flagged a credit-to-deployment efficiency question: 100K credits used but ~15K visible deployments. <strong>No resolution in channel.</strong> Renewal-conversation concern.</li>
+</ul>
+
+<p><strong>Standing rule:</strong> Anything customer-facing requires Jamie pre-approval. Established Apr 2 after Manuel's rollback of ten unapproved title-tag deployments.</p>
+
+<p><strong>Structural constraint:</strong> OTTO can only deploy partial customizations sitewide on Shopify. Fully custom schema requires Custom HTML on a per-page basis. SA MCP can inject custom HTML page-by-page programmatically — once the schema type-and-target list is finalized.</p>
+
+<h3>3.3 Technical SEO</h3>
+<p><strong>Status:</strong> Audit complete and delivered (Apr 29). Recovery plan locked. Ongoing items in flight.</p>
+
+<p><strong>Delivered:</strong></p>
+<ul>
+<li>Technical SEO Audit PDF (Apr 29)</li>
+<li>Zia Tile Tech Audit Fix Ownership PDF (Apr 29) — clean split between Zia's dev team, LinkGraph webdev, and OTTO</li>
+<li>Redirect cleanup task in flight</li>
+<li>Redirect map sheet built (April 2026)</li>
+<li>Competitor analysis updated with Fireclay Tile (Apr 1, Gianfranco)</li>
+<li>March visibility narrative framed for Jamie ("more selective, performance improved where it counts," Apr 14)</li>
+</ul>
+
+<p><strong>Locked decisions:</strong></p>
+<ul>
+<li><strong>Blog URL migration recovery</strong> (Dec 2025 issue): Keep <code>/blogs/resources/</code> (Shopify default). 1:1 301 redirect all 92 old URLs. Expected ~85% historical traffic recovery. The earlier "revert to /blog" recommendation withdrawn.
+  <ul>
+  <li>Underlying numbers: 92 of 110 old URLs now 404 or redirect to homepage; ~96% of pre-migration clicks (~14K/28 days) at risk.</li>
+  </ul>
+</li>
+<li><strong>PDP URL structure:</strong> Stays <code>/products/</code>. No <code>/collections/{cat}/products/{slug}</code> — Shopify auto-canonicalizes, changing would force another redirect cycle (Andrés, May 11).</li>
+<li><strong>Schema:</strong> Custom HTML per-page approach, deployed via SA MCP, once the type-and-target list is finalized.</li>
+</ul>
+
+<p><strong>Breadcrumb schema implementation:</strong> Tracked separately, in pipeline.</p>
+
+<p><strong>Open questions to client:</strong></p>
+<ul>
+<li>Matte ceramic split-out (260/mo US, 720/mo global) — collection URL change or internal recategorization? (Steffen, Apr 30, no answer)</li>
+<li>Satin/glossy merge logistics (satin has zero search volume) — same question. (Steffen, Apr 30, no answer)</li>
+<li>Merchant Center feed ownership — who? (Steffen, Apr 30, no answer)</li>
+<li>Product schema ownership — who? (Steffen, Apr 30, no answer)</li>
+</ul>
+
+<h3>3.4 Link building</h3>
+<p><strong>Status:</strong> Manual mode, May order live.</p>
+<p><strong>Volume:</strong></p>
+<ul>
+<li>March: 95-link order</li>
+<li>April: 95-link order</li>
+<li>May: 95-link order (#24404, created May 12, going live, target list approved by Jamie May 12 AM)</li>
+</ul>
+
+<p><strong>Apr 24 mid-cycle status:</strong> 122 posted, 21 pending submission, 44 awaiting publish, 3 rejected.</p>
+
+<p><strong>Key decisions:</strong></p>
+<ul>
+<li><strong>Automation OFF</strong> for Zia. Manual assignment only. Triggered by the Apr 16 misfire where automation bulk-approved Zia content into wrong-category placements.</li>
+<li><strong>Publisher allowlist:</strong> home / design / lifestyle verticals only. Filters: &gt;70% indexation rate, &lt;14 day publish time, flag anything &gt;$80. <code>homebriefings.com</code> blocked. Zia flagged VIP across the system.</li>
+<li><strong>Content fixes (Apr 9–10):</strong> broken Forbes/Healthline 404s inside generated content, Healthline misused as a source for tile tips, uncapitalized keywords. All queued content regenerated with new prompt. Nothing publishes until clean.</li>
+<li>New prompt deployed to production Apr 21 after Aleksandra-built QA agent iterations.</li>
+<li>Underperforming product link targets replaced during Apr 8 client call.</li>
+</ul>
+
+<h3>3.5 Shopify access / dev unlock</h3>
+<p><strong>Status:</strong> Partially resolved. Two parallel access issues, one likely closed, one open.</p>
+
+<p><strong>Issue 1: Marissa's team — collection-page edit access</strong> (likely resolved)</p>
+<ul>
+<li>Apr 21: Flagged blocked. First permission update from Devyn in 20 minutes — insufficient.</li>
+<li>Apr 24: Devyn issues "LinkGraph" custom role with App development access.</li>
+<li>May 7: Marissa confirms her team was able to make and modify collections. Block likely lifted.</li>
+</ul>
+
+<p><strong>Issue 2: Andrés' Dev Dashboard access — SearchAtlas ↔ Shopify integration build</strong> (open)</p>
+<ul>
+<li>May 1: Andrés discovers Shopify's January 2026 platform change. The Dev Dashboard requires org-level access; the existing store-level "LinkGraph" role is insufficient.</li>
+<li>May 5: Andrés drafts the consolidated "last, complete" access ask to Devyn — assign org-level "App developer" role + expand LinkGraph store role.</li>
+<li>May 5: Alex framing: <em>"This is the last ask. We're starting to look disorganized."</em></li>
+<li>May 12: Status unconfirmed in channel.</li>
+</ul>
+
+<h3>3.6 Reporting & client communication</h3>
+<p><strong>Cadences:</strong></p>
+<ul>
+<li>Friday weekly campaign updates (owner: Alex) — established mid-April</li>
+<li>1:30pm ET weekly Zia call — cancelled May 7 in favor of 3:30pm ET Henry sync</li>
+<li>Real-time Slack/ClickUp coordination</li>
+</ul>
+
+<p><strong>Connections:</strong> GSC + GA4 — Alex coordinating with Jamie.</p>
+
+<p><strong>Gap (open since Apr 14):</strong> Performance reporting dashboard. Henry flagged this as missing from Month 1 + 2 deliverables. No asset built. This is the easiest lever for Jamie to question value — and she has questioned value twice (Apr 16, Apr 27). It needs to stand up before the Month 3 review.</p>
+
+<h3>3.7 Onboarding & billing — complete</h3>
+<ul>
+<li>Window: Mar 9 – Mar 27</li>
+<li>Kickoff deck reviewed and improved by Henry</li>
+<li>QP subscription created</li>
+<li>First invoice flow via Bill.com / Stripe / Wendy Alinor</li>
+<li>Marissa added for $50K MRR "show of force"</li>
+<li>Sophia Deluz-Bhan added to team</li>
+<li>Auto-implementation routing confirmed: customer-facing → Jamie, technical → Devyn</li>
+<li>First payment received early-to-mid April</li>
+</ul>
+
+<h2>4. Client relationship — running record</h2>
+<table>
+<thead><tr><th>Date</th><th>Event</th><th>Signal</th></tr></thead>
+<tbody>
+<tr><td>Mar 27</td><td>First three PDPs sent</td><td>Engagement enters delivery</td></tr>
+<tr><td>Apr 6–7</td><td>Jamie's first feedback</td><td>Hard. "Too AI." Lead writer change, dual-editor system installed, toolkit built</td></tr>
+<tr><td>Apr 16</td><td>Jamie messages Ryan questioning value vs. proposal</td><td>First value-doubt signal. Alex's reply emphasizes audits + strategy alongside LB + content</td></tr>
+<tr><td>Apr 24</td><td>Page-by-page factual feedback</td><td>15+ flags. Writing Guide v2. Aleksandra + Emanuel into rework mode</td></tr>
+<tr><td>Apr 27</td><td>Updated PDP formatting goes live on Zia's site</td><td>First customer-facing visible delivery</td></tr>
+<tr><td>Apr 27</td><td>Jamie emails about discomfort with internal team deciding in her name</td><td>Trust micro-friction. Henry's counter on operational authority.</td></tr>
+<tr><td>Apr 28</td><td>Henry catches factual errors that had survived earlier rounds</td><td>Reinforces dual-editor QA is non-negotiable</td></tr>
+<tr><td>Apr 29</td><td>Alex characterization: <em>"running out of runway"</em></td><td>Internal acknowledgment that confidence is fragile</td></tr>
+<tr><td>May 7</td><td>Jamie kills Saltillo blog</td><td>Constructive — sharpens the slate</td></tr>
+<tr><td>May 11</td><td>Jamie green-lights 100 OTTO title/meta examples</td><td>First "yes" of the engagement on customer-facing content</td></tr>
+<tr><td>May 12</td><td>Three reference docs sent</td><td>Make-or-break submission</td></tr>
+<tr><td>May 13 AM</td><td>Jamie returns feedback on all three docs</td><td>Constructive, focused tracked edits — Style Guide v3 captures all rules</td></tr>
+</tbody>
+</table>
+
+<h3>Key quotes</h3>
+<blockquote>Alex, Apr 29: <em>"She's patient and reasonable but running out of runway. Still in the partnership and rooting for it to work, but two months in with nothing she's proud to show on the site is starting to wear on her. The next piece we send her needs to land."</em></blockquote>
+
+<blockquote>Henry, Apr 27: <em>"They pay us $50k a month to tell them what we're doing and our decisions, not to defer to them on small things like redirect mapping. We can share our plan, but it needs to come from a place of authority."</em></blockquote>
+
+<blockquote>Aleksandra, Apr 7: <em>"The most important step. Bad input is the root cause of most of what the client was correcting."</em></blockquote>
+
+<blockquote>Henry, May 4: <em>"kept the polished sentence style + structure, added back: All 6 colorways named and grouped... I'd rather Jamie ask us to pull back a bit if needed."</em></blockquote>
+
+<blockquote>Alex, May 12: <em>"Now let's start thinking updating all March and April's content and using these 3 as our core examples/templates. Can you both come up with an action plan/approach for how content team will tackle these edits and let me and Henry know the plan/schedule?"</em></blockquote>
+
+<blockquote>Henry, May 12 8:35pm: <em>"Review all inputs for ZIA Content. Pull all comments / feedback from Jamie on content. Pull all calls / meeting transcripts. Pull the repository data. Make it available to so we can review side by side our most recent content + versus what the feedback is."</em></blockquote>
+
+<h2>5. Open items registry</h2>
+
+<h3>Owed internally</h3>
+<table>
+<thead><tr><th>Item</th><th>Owner</th><th>Requested</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>Written rewrite action plan for March + April content + May new content (200 pieces)</td><td>Aleksandra + Emanuel → Alex/Henry</td><td>May 12, 2:21pm ET</td><td>Owed now</td></tr>
+<tr><td>Implement Jamie's May 13 tracked edits on three reference docs</td><td>Aleksandra + Emanuel → Alex</td><td>May 13 AM</td><td>In progress</td></tr>
+<tr><td>Side-by-side review surface for account review (this site)</td><td>Aleksandra + Emanuel + Alex</td><td>May 12 8:35pm</td><td>In progress</td></tr>
+<tr><td>Schema type-and-target list</td><td>Andrés + Paul + Steffen → Finn</td><td>Ongoing</td><td>Owed</td></tr>
+<tr><td>Full ALT-text deployment spreadsheet</td><td>Finn → Alex</td><td>May 11</td><td>Owed</td></tr>
+<tr><td>Brief + writer for "Terra Cotta in Every Tone" Cotto-colors blog</td><td>Content team</td><td>May 7</td><td>Not assigned</td></tr>
+<tr><td>Performance reporting dashboard</td><td>Open</td><td>Apr 14 (Henry)</td><td>No asset built — month-old gap</td></tr>
+<tr><td>DKN ↔ writing-guidelines conflict resolution</td><td>Finn / content team</td><td>Apr 17</td><td>Stale, no resolution</td></tr>
+<tr><td>Internal-link checklist for collection→product crosslinks</td><td>Content team</td><td>Mar 11 (Steffen)</td><td>Not formalized</td></tr>
+</tbody>
+</table>
+
+<h3>Owed to client (bundle into one Jamie follow-up)</h3>
+<table>
+<thead><tr><th>Item</th><th>Owner</th><th>Flagged</th></tr></thead>
+<tbody>
+<tr><td>Glass Mosaics "sealing required" Yes/No</td><td>Alex → Jamie</td><td>Apr 24</td></tr>
+<tr><td>Durango Blanco special-order time scope</td><td>Alex → Jamie</td><td>May 5 (Henry)</td></tr>
+<tr><td>Underfloor heating FAQ — keep or cut</td><td>Alex → Jamie</td><td>May 4</td></tr>
+<tr><td>Slip-resistance FAQ — keep or cut</td><td>Alex → Jamie</td><td>May 4</td></tr>
+<tr><td>Matte ceramic split-out — collection URL change or internal recategorization</td><td>Steffen → Jamie via Alex</td><td>Apr 30</td></tr>
+<tr><td>Satin/glossy merge logistics</td><td>Steffen → Jamie via Alex</td><td>Apr 30</td></tr>
+<tr><td>Merchant Center feed ownership</td><td>Steffen → Jamie via Alex</td><td>Apr 30</td></tr>
+<tr><td>Product schema ownership</td><td>Steffen → Jamie via Alex</td><td>Apr 30</td></tr>
+<tr><td>SearchAtlas ↔ Shopify Dev Dashboard access</td><td>Andrés → Devyn</td><td>May 5 ("last ask"), status unconfirmed</td></tr>
+</tbody>
+</table>
+
+<h3>Risks</h3>
+<ol>
+<li><strong>Content sign-off slip.</strong> If Jamie pushes back on the resubmitted May 13 reference docs, the 200-piece slate slips. Single biggest risk in the account.</li>
+<li><strong>OTTO credit efficiency.</strong> 100K credits used, ~15K visible deployments. Needs clean accounting before any renewal or upsell conversation.</li>
+<li><strong>App connection still blocked.</strong> SearchAtlas ↔ Shopify integration gated on Devyn's response to the May 5 org-level access request.</li>
+<li><strong>Reporting dashboard gap.</strong> A month past the flag. Easiest lever for the client to question value, and Jamie has questioned value twice already.</li>
+<li><strong>Throughput sustainability.</strong> At full rewrite + new-content volume (200 pieces) with Mina as lead writer, Andresa supporting, and Aleksandra + Emanuel double-editing every piece, the system isn't sustainable. The May 12 action plan must address throughput, not just quality.</li>
+<li><strong>Decision-authority friction.</strong> Henry's Apr 27 position is correct but generates friction with Jamie. The team needs an agreed lane for "small operational decisions vs. items requiring Jamie approval" or this will recur.</li>
+</ol>
+
+<h2>6. Discussion points for the account review</h2>
+<ol>
+<li><strong>Content sign-off contingency.</strong> If Jamie sends Blog #4 back this week, what does month 3 look like? Are we comfortable holding the 200-piece slate while we iterate again, or do we need a parallel scope/timeline reset with Henry?</li>
+<li><strong>OTTO credit usage.</strong> Walk through the 100K credit / ~15K deployment ratio. Either there's a reasonable explanation (alt-text identification work, regenerations from feedback cycles, Twitter descriptions burned before pause) or we need one before the next reporting moment.</li>
+<li><strong>Reporting dashboard.</strong> A month overdue per Henry's Apr 14 note. Whose plate is it on, what does standing it up look like, and can we have it before the Month 3 review with Danny + Mike?</li>
+<li><strong>Resource allocation under full slate load.</strong> Current model — Mina + Andresa writing, Emanuel + Aleksandra double-editing — works at low volume. At 200 pieces it bottlenecks on editorial. The May 12 action plan must answer: scale the writer pool? Use AI more aggressively per the toolkit? Split editing responsibilities by content type? Or accept a longer rewrite timeline and tell the client?</li>
+<li><strong>Decision authority with Jamie.</strong> Henry's Apr 27 stance on operational authority is right. Operationalizing it without generating friction needs a shared playbook: which categories of decisions move forward by default (redirect mapping, link target swaps, schema implementation), which require pre-approval (titles, metas, body copy, OG tags, topic kills), and how we communicate the boundary back to her.</li>
+<li><strong>Account-health checkpoint.</strong> $50K MRR, month 3 starting, no published content the client is proud of yet, OTTO metadata partly live, audit delivered, link building tracking. What's the playbook for re-anchoring exec-level confidence with Danny + Mike before any retention conversation surfaces? Recommend: the Friday update reframes (Henry approved April 24) plus a tightened Month 3 deliverable view, plus the dashboard standing up, plus a confident "here's what publishes this month" content commitment once Blog #4 lands.</li>
+<li><strong>Andrés's elevation to technical lead</strong> (May 7) — is this a permanent move on this account, and what does it imply for Steffen's scope going forward?</li>
+<li><strong>DKN ↔ writing-guidelines conflict.</strong> Stale since Apr 17. Either it's resolved off-channel and the channel didn't capture it, or it's a live constraint on what content the system can produce.</li>
+<li><strong>Future shape of the engagement.</strong> If Jamie greenlights the May 13 reference docs, what does month 4 look like? Rewrite execution + net-new content + breadcrumb/schema rollout + integration unlock + reporting dashboard live. If she doesn't, what's the recovery shape?</li>
+</ol>
+
+<h2>7. Appendix</h2>
+
+<h3>A. Source material referenced inside the channel</h3>
+<ul>
+<li>Zia Tile Tech Audit PDF (Apr 29)</li>
+<li>Zia Tile Tech Audit Fix Ownership PDF (Apr 29)</li>
+<li>Zia Tile Rescue Plan HTML (Lucas Z., Apr 7)</li>
+<li>Content Production Toolkit — Product Brief Template / Master AI Prompt / 35-point QA Checklist (Aleksandra, Apr 7)</li>
+<li>Writing Guide v1 (Alex, Mar 27)</li>
+<li>Writing Guide v2 (post Jamie call, Apr 24; updated May 4)</li>
+<li>Writing Guide v3 (May 12, merges all tracked edits)</li>
+<li>16 collection-page templates (Apr 27)</li>
+<li>Blog #4 Cotto rework (Henry, May 4)</li>
+<li>Three reference docs to Jamie (May 12): Blog #4, Cotto product page, Cotto collection page (Jamie returned with tracked edits May 13 AM)</li>
+</ul>
+
+<h3>B. Channel metadata</h3>
+<ul>
+<li><strong>Channel ID:</strong> <code>8chy2nm-1547731</code></li>
+<li><strong>Workspace ID:</strong> <code>9011399348</code> (LinkGraph)</li>
+<li><strong>URL:</strong> https://app.clickup.com/9011399348/chat/r/8chy2nm-1547731</li>
+<li><strong>Date range covered:</strong> Mar 9, 2026 – May 13, 2026</li>
+<li><strong>Volume:</strong> 202 top-level messages, 87 threaded discussions</li>
+</ul>
+
+<h3>C. Key dates calendar</h3>
+<table>
+<thead><tr><th>Date</th><th>Event</th></tr></thead>
+<tbody>
+<tr><td>Mar 11</td><td>Kickoff</td></tr>
+<tr><td>Mar 27</td><td>First three PDPs to Jamie</td></tr>
+<tr><td>Apr 2</td><td>Manuel rollback of unapproved title-tag deployments — standing pre-approval rule established</td></tr>
+<tr><td>Apr 6–7</td><td>Jamie's first feedback. Toolkit built. Mina becomes lead writer</td></tr>
+<tr><td>Apr 14</td><td>Performance reporting dashboard flagged missing (Henry)</td></tr>
+<tr><td>Apr 16</td><td>Jamie questions value (1st time). LB automation misfire — automation OFF</td></tr>
+<tr><td>Apr 17</td><td>March 31/31 PDPs drafted. April 60+ queued. DKN conflict flagged</td></tr>
+<tr><td>Apr 21</td><td>New LB prompt to production. Marissa flags collection-edit block</td></tr>
+<tr><td>Apr 24</td><td>Jamie's page-by-page feedback. Writing Guide v2. OTTO credits top-up #1</td></tr>
+<tr><td>Apr 27</td><td>Updated PDP formatting goes live. Jamie's "decisions in her name" email. Voice rule locked</td></tr>
+<tr><td>Apr 28</td><td>Casablanca + Pure White rewrites. Factual catches. Blog migration final position</td></tr>
+<tr><td>Apr 29</td><td>Tech audit PDF delivered. Alex's "running out of runway" note</td></tr>
+<tr><td>Apr 30</td><td>OTTO status report. Schema questions raised. Credits top-up #2</td></tr>
+<tr><td>May 1</td><td>Shopify Jan 2026 dev dashboard issue discovered. OG refine prompts shipped</td></tr>
+<tr><td>May 4</td><td>Henry's Blog #4 rework with all colorways/shapes/specs</td></tr>
+<tr><td>May 5</td><td>Andrés "last ask" to Devyn. Durango Blanco scope question. Credits top-up #3</td></tr>
+<tr><td>May 7</td><td>Marissa unblocked. Andrés takes technical lead. Saltillo blog killed. Cotto-colors blog added</td></tr>
+<tr><td>May 11</td><td>Jamie green-lights 100 title/meta examples. ALT-text spreadsheet requested</td></tr>
+<tr><td>May 12</td><td>Three reference docs to Jamie. Rewrite action plan requested. May LB order live. Henry's "Review all inputs" directive</td></tr>
+<tr><td>May 13</td><td>Jamie returns tracked-edit feedback on all three docs. Editorial pair implements + drafts game plan</td></tr>
+</tbody>
+</table>
+
+</article>
+</main>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>

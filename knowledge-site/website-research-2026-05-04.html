@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Research — May 2026 — Zia Tile Knowledge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+<div class="layout">
+<aside class="sidebar">
+<div class="brand">
+<div class="brand-mark">Zia Tile</div>
+<div class="brand-sub">Knowledge Base</div>
+</div>
+<nav>
+<ul>
+<li><a href="index.html">Overview</a></li>
+<li class="nav-section">Editorial</li>
+<li><a href="style-guide-v3.html">Style Guide v3.0</a></li>
+<li><a href="style-guide.html">Style Guide v2.0</a></li>
+<li><a href="editorial-voice.html">Editorial Voice</a></li>
+<li><a href="jamie-feedback.html">Jamie Feedback Highlights</a></li>
+<li class="nav-section">Reference</li>
+<li><a href="website-research-2026-05-04.html" class="active">Website Research (May 2026)</a></li>
+<li><a href="website-research-original.html">Website Research (Original)</a></li>
+<li><a href="installation-guides.html">Installation Guides</a></li>
+<li class="nav-section">Reference Content</li>
+<li><a href="blog-4-cotto.html">Blog Post #4 — Cotto</a></li>
+<li><a href="collection-cotto.html">Cotto Collection Page</a></li>
+<li><a href="product-red-clay-8x8.html">Red Clay 8x8 Product Page</a></li>
+<li class="nav-section">Account State</li>
+<li><a href="clickup-channel-recap.html">ClickUp Channel Recap</a></li>
+<li><a href="workspace.html">Workspace README</a></li>
+</ul>
+</nav>
+<div class="meta">Last updated 2026-05-12</div>
+</aside>
+<main>
+<div class="page-header">
+<div class="eyebrow">Reference</div>
+<h1 class="page-title">Website Research — May 2026</h1>
+<p class="subtitle">Verbatim hero copy, colorways, shapes, finishes for every collection.</p>
+</div>
+<article class="prose">
+<p>Comprehensive verbatim reference for the 16 collection templates. Confirmed live URLs, captured hero copy, colorways, shapes/sizes/finishes, origin notes, and care language. Installation guide structures captured for material-specific accuracy.</p>
+<h2>Collection slug map (confirmed)</h2>
+<table>
+<thead>
+<tr>
+<th>Template file</th>
+<th>Live URL</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01-zellige</td>
+<td>/collections/zellige</td>
+<td>Confirmed</td>
+</tr>
+<tr>
+<td>02-zellige-mosaic</td>
+<td>/collections/zellige-mosaic</td>
+<td>404 — no separate live collection. Treated as subset within Zellige. Separate installation guide exists at /pages/zellige-mosaics-installation-guide</td>
+</tr>
+<tr>
+<td>03-unglazed-natural-zellige</td>
+<td>/collections/unglazed-natural-zellige</td>
+<td>404 — subset within Zellige (one of the colorway groups: "Unglazed Natural")</td>
+</tr>
+<tr>
+<td>04-unglazed-natural-zellige-mosaic</td>
+<td>/collections/unglazed-natural-zellige-mosaic</td>
+<td>404 — does not exist as a live collection</td>
+</tr>
+<tr>
+<td>05-ceramics-matte</td>
+<td>/collections/ceramics</td>
+<td>Confirmed (live name is "Ceramics" — no "matte" qualifier in URL or title)</td>
+</tr>
+<tr>
+<td>06-field-trip-japan</td>
+<td>/collections/field-trip-japan</td>
+<td>Confirmed as a separate live collection (NOT redirected to Ceramics — project memory note appears outdated). However, all Field Trip: Japan products also appear inside the main Ceramics collection.</td>
+</tr>
+<tr>
+<td>07-cotto</td>
+<td>/collections/cotto</td>
+<td>Confirmed</td>
+</tr>
+<tr>
+<td>08-cotto-allende</td>
+<td>/collections/cotto-tile-allende</td>
+<td>Confirmed (note slug uses "cotto-tile-allende", not "cotto-allende")</td>
+</tr>
+<tr>
+<td>09-glass-mosaics</td>
+<td>/collections/glass-mosaics</td>
+<td>Confirmed</td>
+</tr>
+<tr>
+<td>10-terrazzo</td>
+<td>/collections/terrazzo</td>
+<td>Confirmed</td>
+</tr>
+<tr>
+<td>11-marble-solids</td>
+<td>/collections/marble-tile</td>
+<td>Confirmed (live name is "Marble"; slug uses "marble-tile")</td>
+</tr>
+<tr>
+<td>12-marble-patterns</td>
+<td>/collections/marble-patterns</td>
+<td>Confirmed exists, but page rendered via JS — product list could not be fully scraped via fetch</td>
+</tr>
+<tr>
+<td>13-cantera</td>
+<td>/collections/cantera-tile</td>
+<td>Confirmed (live name "Cantera"; slug "cantera-tile")</td>
+</tr>
+<tr>
+<td>14-limestone</td>
+<td>/collections/limestone-tile</td>
+<td>Confirmed (live name "Limestone"; slug "limestone-tile")</td>
+</tr>
+<tr>
+<td>15-cement</td>
+<td>/collections/cement-tile</td>
+<td>Confirmed (live name "Cement"; slug "cement-tile")</td>
+</tr>
+<tr>
+<td>16-roman-mosaics</td>
+<td>/collections/roman-mosaics</td>
+<td>Confirmed as a separate live collection (NOT redirected to Marble — project memory note appears outdated)</td>
+</tr>
+</tbody>
+</table>
+<p>Top-nav order on live site (Material section): Zellige, Ceramics, Cotto, Cotto Allende, Glass Mosaics, Terrazzo, Marble, Roman Mosaics, Cantera, Limestone, Cement, Field Trip: Japan.</p>
+<p>Homepage tagline: <strong>"A Modern Home for an Ancient Art"</strong></p>
+<p>Featured collection on homepage: <strong>Second Nature</strong> with tagline "A MATERIAL EXPLORATION OF THE NATURAL WORLD" (not in our 16 templates — flag for editor)</p>
+<hr>
+<h2>Zellige</h2>
+<p><strong>Live URL:</strong> https://ziatile.com/collections/zellige</p>
+<p><strong>Hero copy (verbatim):</strong></p>
+<blockquote>
+<h6>HANDS. HEAT. HISTORY.</h6>
+<p>Welcome to the world's best-curated collection of handmade zellige tile. Made in Morocco, Zia's zellige is crafted by artisans using traditional techniques refined over 800 years and passed down through generations. Subtle variations in each piece reflect the material's deep history and hand-formed nature.</p>
+<p>A staple in Moroccan architecture and now embraced worldwide, zellige is coveted for its rich surface texture and inviting sheen. Suitable for bathrooms, kitchens, showers, pools, and backsplashes, the collection holds over 200 tiles to explore across colors, shapes, and mesh-backed mosaics.</p>
+</blockquote>
+<p><strong>Colorways (verbatim names):</strong>
+Glazed Earth, Unglazed Natural, Casablanca, Pure White, Desert Bloom, Pietro Pink, Nana's Lipstick, Terra Rosa, Rouge, Burnt Sugar, Brownstone, Amber, Prairie Green, Racing Green, Jade, Tidepool, Absinthe, Tulum, Aegean, Glacier Blue, Portuguese Blue, Night Blue, Skylight, Plum, Purple Iris, Cayenne, Sumac</p>
+<p><strong>Shapes:</strong> 4x4 Squares, 2x6 Bejmat, 2x2 Squares, 2x2 Checkerboard, 3.5 Hex, Mosaics, Trapezoid
+<strong>Sizes:</strong> 4x4, 2x6, 2x2, 3.5" hex
+<strong>Finishes:</strong> Glazed, Unglazed
+<strong>Origin/craft:</strong> Made in Morocco; "traditional techniques refined over 800 years and passed down through generations"
+<strong>Care:</strong> From installation guide — "Vacuum regularly; use pH-neutral cleaners like Miracle Sealants products for glazed tiles." Glazed tiles soak 1-2 minutes pre-install; "DO NOT soak Unglazed Natural zellige." Re-seal unglazed and glazed-in-wet-areas every 1-2 years.
+<strong>Indoor/outdoor:</strong> "Suitable for bathrooms, kitchens, showers, pools, and backsplashes"
+<strong>Unique-to-Zia callouts:</strong> "World's best-curated collection of handmade zellige tile"; "over 200 tiles"; tagline "HANDS. HEAT. HISTORY."</p>
+<p><strong>Voice notes:</strong> Heading is three single words with periods (HANDS. HEAT. HISTORY.). Lead is welcome statement, not feature pitch. "Subtle variations" framed as a feature, tied to material's "deep history and hand-formed nature." Uses "coveted" and "staple" without it sounding promotional because tied to specific use cases.</p>
+<hr>
+<h2>Zellige Mosaic (subset within Zellige collection)</h2>
+<p><strong>Live URL:</strong> No standalone collection — represented within /collections/zellige and via PDP shapes (Mosaics, 2x2 Checkerboard, 3.5 Hex). Separate installation guide exists.</p>
+<p><strong>Installation guide URL:</strong> https://ziatile.com/pages/zellige-mosaics-installation-guide</p>
+<p><strong>Notes:</strong> Mesh-backed format. Variable spacing due to hand placement. Same colorway palette as parent Zellige line.</p>
+<hr>
+<h2>Unglazed Natural Zellige (subset within Zellige collection)</h2>
+<p><strong>Live URL:</strong> No standalone collection. Represented as colorway "Unglazed Natural" within /collections/zellige.</p>
+<p><strong>Key facts (from Zellige installation guide):</strong>
+- "DO NOT soak Unglazed Natural zellige, as soaking unglazed tiles can lead to efflorescence that is difficult to remove."
+- Requires 511 Porous Plus pre-grout seal + Fila Matte Wax post-grout (per Zellige Mosaics guide).
+- Re-seal every 1-2 years.</p>
+<hr>
+<h2>Unglazed Natural Zellige Mosaic (subset)</h2>
+<p><strong>Live URL:</strong> Does not exist as a standalone collection. Treat as cross-product of Unglazed Natural colorway + mosaic shapes within Zellige.</p>
+<hr>
+<h2>Ceramics</h2>
+<p><strong>Live URL:</strong> https://ziatile.com/collections/ceramics</p>
+<p><strong>Hero copy (verbatim):</strong></p>
+<blockquote>
+<p>Zia's architectural-grade ceramic tiles are shaped by more than 1,000 years of tradition and artistry. This newer range of high-fired ceramics was developed in a potters' village outside Nagoya, Japan, offering a more uniform shape while remaining deeply rooted in tradition. Precision is key, and the beauty here lies in clean lines, symmetry, and restraint.</p>
+</blockquote>
+<p><strong>Colorways (verbatim):</strong>
+Oxblood + Flat, Oxblood + Etched, Oxblood + Furrowed, Wild Fig, Field Thistle, Pink Dahlia, Pecan, Sakura + Flat, Sakura + Etched, Sakura + Furrowed, Peach Blossom, Feather + Flat, Feather + Etched, Feather + Furrowed, Wool, Linen, Alabaster White, Alpha White, Pale Ochre, Birch, Earl Grey, Yuzu, Toast + Flat, Toast + Etched, Toast + Furrowed, Citron, Tangelo, Sepia, Biscuit, Barley, Cypress, Spanish Moss, Kelp Forest, Ponderosa, Eucalyptus, Sequoia, Frogtown + Flat, Frogtown + Etched, Frogtown + Furrowed, Vetiver, Fraser, Patina, Nagano, Morning Light + Flat, Morning Light + Etched</p>
+<p><strong>Shapes:</strong> Rectangle, Square
+<strong>Sizes:</strong> 2x8 Rectangle, 4x4 Square, 2x4 Rectangle
+<strong>Finishes:</strong> "Available in matte, satin, glossy, and textured finishes" (Flat / Etched / Furrowed are the textured variants from Field Trip: Japan)
+<strong>Origin/craft:</strong> "Developed in a potters' village outside Nagoya, Japan"; "shaped by more than 1,000 years of tradition and artistry"
+<strong>Care:</strong> From install guide — pH neutral cleaners only; matte finishes get 511 Porous Plus pre-grout seal; recommended Miracle Sealants pH Neutral Tile and Stone Cleaner.
+<strong>Indoor/outdoor:</strong> "Suited for both interior and exterior use and perform across climates."
+<strong>Unique-to-Zia callouts:</strong> "Architectural-grade ceramics"; "high-fired"; "Precision is key"; "beauty here lies in clean lines, symmetry, and restraint"</p>
+<p><strong>Voice notes:</strong> Lead leans on duration ("more than 1,000 years") and place ("Nagoya, Japan"). Sentence "Precision is key, and the beauty here lies in clean lines, symmetry, and restraint" is the brand's design-philosophy line for this material — direct, not hyperbolic.</p>
+<hr>
+<h2>Field Trip: Japan</h2>
+<p><strong>Live URL:</strong> https://ziatile.com/collections/field-trip-japan</p>
+<p><strong>Hero copy (verbatim):</strong></p>
+<blockquote>
+<p>Journey with us to Nagoya, Japan, where centuries of craftspeople have shaped the world's finest artisan-made ceramics. This line travels beyond our core ceramics collection, introducing three distinct finishes: flat, furrowed, and etched. The fine-tuned colors and distinct textures evoke vibrant landscapes, with each tile reflecting generations of practice and precision.</p>
+</blockquote>
+<p><strong>Colorways (verbatim):</strong>
+Feather + Flat, Feather + Etched, Feather + Furrowed, Toast + Flat, Toast + Etched, Toast + Furrowed, Sakura + Flat, Sakura + Etched, Sakura + Furrowed, Oxblood + Flat, Oxblood + Etched, Oxblood + Furrowed, Morning Light + Flat, Morning Light + Etched, Morning Light + Furrowed, Frogtown + Flat, Frogtown + Etched, Frogtown + Furrowed, Buckeye + Flat, Buckeye + Etched, Buckeye + Furrowed</p>
+<p><strong>Shapes:</strong> Rectangular (described as planks/wafers in PDPs)
+<strong>Sizes:</strong> Not explicitly listed at collection level (overlap with Ceramics 2x8 / 4x4 / 2x4)
+<strong>Finishes:</strong> Flat, Etched, Furrowed (three distinct named finishes — these are unique to this line)
+<strong>Origin/craft:</strong> "Designed in Los Angeles and crafted in a potter's village outside of Nagoya, Japan"; extruded, single-fire glazing
+<strong>Care:</strong> Sealing required before grouting; pH-neutral cleaner; reseal every 1-2 years
+<strong>Indoor/outdoor:</strong> Indoor only on this line per page (no outdoor designation)
+<strong>Unique-to-Zia callouts:</strong> "$28.85 / ft²" uniform pricing; three finish names (flat / furrowed / etched) are the differentiator from the parent Ceramics line</p>
+<p><strong>Voice notes:</strong> "Journey with us to Nagoya, Japan" — second-person invitation. "Travels beyond our core ceramics collection" positions it as an extension, not a replacement. Pattern: place + duration + craft + precision.</p>
+<hr>
+<h2>Cotto</h2>
+<p><strong>Live URL:</strong> https://ziatile.com/collections/cotto</p>
+<p><strong>Hero copy (verbatim):</strong></p>
+<blockquote>
+<p>Straight from the earth to your home, our clay-based Cotto line is the most rustic tile in our collection. Each handmade piece of terra cotta tile is visibly unique, adding dimension to every design. These charming pieces add an earthy aesthetic to indoor and outdoor spaces alike, well suited for any climate.</p>
+</blockquote>
+<p><strong>Colorways (verbatim):</strong>
+Red Clay, Fired Earth, Adobe, Blanco, Madera, Oscura</p>
+<p><strong>Shapes:</strong> Square, Rectangle, Hexagon, plus special shapes (Big Alcazar, Oaxaca, Durango, Tornillo, Zocalo, Toltec, Stars &amp; Cross, Alcazar)
+<strong>Sizes:</strong> 2x6, 4x4, 6.5x13, 8x8, 8x9 Hex, 13x13
+<strong>Finishes:</strong> No explicit finish label on collection page (matte by material default; PDPs are sold without glaze on Cotto core line — the glazed line is Cotto Allende)
+<strong>Origin/craft:</strong> "Designed in Los Angeles and crafted by artisans around the globe." Per PDP (Stars &amp; Cross Oscura): clay sourced near San Miguel de Allende, Mexico. "Hand-crafted... individually formed and fired by modern artisans. The clay is mixed with water to ideal consistency, pressed in molds, and dried 1-2 weeks before firing."
+<strong>Care:</strong> From install guide — pH neutral cleaners; pre-grout AND top-coat seal required; Fila Matte Wax for interior, 511 Porous Plus only for exterior.
+<strong>Indoor/outdoor:</strong> "Indoor and outdoor spaces alike, well suited for any climate"
+<strong>Unique-to-Zia callouts:</strong> "Now offered in six core colors"; "the most rustic tile in our collection"</p>
+<p><strong>Note for editor:</strong> The local templates may reference "White Cocoa" and "Matte Black" as Cotto-unique colorways. These do <strong>not</strong> appear on the live Cotto collection page. Live core colors are: Red Clay, Fired Earth, Adobe, Blanco, Madera, Oscura. Verify before publishing.</p>
+<hr>
+<h2>Cotto Allende</h2>
+<p><strong>Live URL:</strong> https://ziatile.com/collections/cotto-tile-allende</p>
+<p><strong>Hero copy (verbatim):</strong></p>
+<blockquote>
+<p>Named for the historic city of San Miguel de Allende where we produce these hand-hewn tiles, our new line of glazed terra cotta marks the evolution of our coveted Cotto line. Allende also means 'beyond', which is a fitting description of these wholly unique and completely captivating tiles. Starting with a clay base, the tiles are hand-formed and high fired, before they meet their glazes. Each colorway is specially designed with varying glossiness and speckling, showcasing the artistry in each piece.</p>
+</blockquote>
+<p><strong>Colorways (verbatim):</strong>
+Arroyo, Baja, Albar, Puebla, Posada, Lupe, Dorado, Creosote, Sayulita, Valverde, Primavera, Peyote, Azul, Piedra, Pedregal, Roca, Condesa, Cacao</p>
+<p><strong>Shapes:</strong> 4x4 Square, 4x8 Rectangle, Mini Bar (1.5x8), Triangle
+<strong>Sizes:</strong> 4x4, 4x8, 1.5x8, Triangle
+<strong>Finishes:</strong> Matte, Glossy, Smooth (per page); "varying glossiness and speckling" per colorway
+<strong>Origin/craft:</strong> San Miguel de Allende, Mexico; clay base, hand-formed, high-fired, then glazed
+<strong>Care:</strong> From install guide — "extreme variations in color, shape and thickness" expected; pH neutral cleaner; re-seal wet installations annually
+<strong>Indoor/outdoor:</strong> Not explicitly stated on collection page
+<strong>Unique-to-Zia callouts:</strong> "Glazed terra cotta"; "Allende also means 'beyond'" wordplay; "evolution of our coveted Cotto line"; pricing $24.85/ft²</p>
+<p><strong>Voice notes:</strong> Brand wordplay: "Allende also means 'beyond'." Lead structure: place + product type + claim. Specific descriptors ("hand-hewn," "high fired") instead of generic "premium."</p>
+<hr>
+<h2>Glass Mosaics</h2>
+<p><strong>Live URL:</strong> https://ziatile.com/collections/glass-mosaics</p>
+<p><strong>Hero copy (verbatim):</strong></p>
+<blockquote>
+<p>OLD GLASS. NEW TRICKS. This collection marks Zia's first foray into glass tiles, with our most sustainable line to date. Our explorations landed us in Northern Spain, where the process is as important as the product. Crafted in a facility that relies primarily on renewable wind and solar energy and fired in electric kilns, our glass mosaics marry craft and consciousness. The tiles are made from 98% recycled glass. The resulting 12x12 grids of mosaic tiles feature especially vibrant colors and repeatable designs that maximize the capabilities of the small format material. Zia's design team created seven intentional patterns, drawing inspiration from artworks, fashion textiles, and locations like Los Angeles's own Union Station.</p>
+</blockquote>
+<p><strong>Colorways (verbatim) — solids:</strong> Tulip, Roma, Kumquat, Canary, Rye, Milk, Paperwhite, Kiwi, Clover, Jasper, Piscine, Damascus, Vespertine, Marmot, Jet Black</p>
+<p><strong>Pattern names:</strong> Vaso, Union, d'Orsay, Ells, Tesserae, Murano, Cheque (seven designed patterns)</p>
+<p><strong>Shapes:</strong> Square (1x1 individual tiles in 12x12 grids)
+<strong>Sizes:</strong> 12x12 sheets; 1x1 individual tiles
+<strong>Finishes:</strong> Not explicitly stated; "vibrant colors"
+<strong>Origin/craft:</strong> Northern Spain; renewable wind + solar facility; electric kilns; 98% recycled glass
+<strong>Care (verbatim):</strong> "Sweep or vacuum glass mosaic tile regularly to prevent surface abrasion, and promptly clean up any spills or liquids... wiped or mopped with warm, clean water... pH-neutral cleaner like Miracle Sealants pH Neutral Tile and Stone Cleaner. For heavier stains, opt for Miracle Sealants Heavy Duty Cleaner."
+<strong>Indoor/outdoor:</strong> Not explicitly stated
+<strong>Unique-to-Zia callouts:</strong> Tagline "OLD GLASS. NEW TRICKS."; "98% recycled glass"; "seven intentional patterns"; inspiration from "Los Angeles's own Union Station"; "No need to seal!" callout; "Zia's first foray into glass tiles"</p>
+<p><strong>Voice notes:</strong> Tagline pattern matches Zellige (three words / dual phrase). "Marry craft and consciousness" is the sustainability hook line. Names cite specific places (Union Station) rather than generic inspiration claims.</p>
+<hr>
+<h2>Terrazzo</h2>
+<p><strong>Live URL:</strong> https://ziatile.com/collections/terrazzo</p>
+<p><strong>Hero copy (verbatim):</strong></p>
+<blockquote>
+<p>Terrazzo has shaped architecture and design for over 500 years — from historic Italian interiors to the sunlit modernism of Palm Springs.</p>
+</blockquote>
+<p>(Live page uses an em dash here. Editor note: per CLAUDE.md style rules, do not replicate em dashes in our drafts even though the live site uses them.)</p>
+<p><strong>Colorways (sample, verbatim):</strong>
+Neutra, Mirage, Bungalow, Tamarisk, Sputnik, Draper Dune, Gemini, Sunnylands, Las Palmas, Apollo, Artemis, Jacinto, Sunmor, Indio, Red Rocks, Mesquite, Tahquitz, Bossa Nova Saguaro, Desert Oasis, Salt Bush, Savoye, Smoketree, Parker, Idyllwild, Deepwell, Andromeda, Gaia, Flagstaff, Thunderbird, Calypso, Alexander, Ace, Moon Rock, Oscar, Date Palm, Nocino, Petrichor, Guava</p>
+<p><strong>Pattern lines:</strong> Highball (Jaipur Pink, Rust, Cadmium), Collins (Rust, Saguaro, Ash), Constellation (Bone+White, Bone+Ginger, Terra Cotta+Ballet Slipper, Bone+Aubergine), Draper Saguaro, Moxie Saguaro, Trellick Ash, Bossa Nova Ash+White</p>
+<p><strong>Shapes:</strong> Square
+<strong>Sizes:</strong> 12x12, 24x24
+<strong>Finishes:</strong> Polished (ground and polished surface revealing stone aggregates)
+<strong>Origin/craft:</strong> "Originated in Venice"; "old-world craftsmanship to modern spaces"
+<strong>Care (verbatim):</strong> "Terrazzo tiles are porous and require specific care. To protect the tiles, they must be sealed before and after grouting." Re-seal every 1-2 years minimum. Interior: 511 Porous Plus + Fila Matte Wax. Exterior: 511 Porous Plus only.
+<strong>Indoor/outdoor:</strong> Both supported with different sealing protocols
+<strong>Unique-to-Zia callouts:</strong> "500+ years"; "Equally at home in Classic, Mid-Century Modern, and contemporary minimalist interiors"; named pattern series (Highball, Collins, Constellation)</p>
+<p><strong>Voice notes:</strong> Lead names duration + two place anchors (historic Italian + Palm Springs). Pattern series have proper nouns that read like cocktail/film references.</p>
+<hr>
+<h2>Marble</h2>
+<p><strong>Live URL:</strong> https://ziatile.com/collections/marble-tile</p>
+<p><strong>Hero copy (verbatim):</strong></p>
+<blockquote>
+<p>A NEW CHIP OFF AN OLD BLOCK</p>
+<p>Nothing can match the classic charm of marble. An ancient stone seen in architecture and art from The Duomo to the Statue of David, Italy has played a leading role in the evolution of the iconic material and marks the origin of our collection.</p>
+<p>Zia's Italian and Spanish marble tile is offered in a small format, inspiring innovative color combinations and unique patterns. Anchored in Carrara, patterned offerings feature complements of Nero Marquina, Grigio Carnico, Rosso Alicante, Giallo Reale, and Verdi Alpi, perfectly paired for ready-to-go installations that are equally timely and timeless.</p>
+</blockquote>
+<p><strong>Colorways (verbatim):</strong> Carrara, Nero Marquina, Grigio Carnico, Rosso Alicante, Giallo Reale, Verdi Alpi, Bardiglio Imperiale</p>
+<p><strong>Shapes:</strong> Square, Rectangle, Hexagon
+<strong>Sizes:</strong> 3x12, 6x6, 6x12, 12x12, 12x24, 24x24, 5/8
+<strong>Finishes:</strong> Honed, Polished
+<strong>Origin/craft:</strong> Italy and Spain; "designed in Los Angeles and crafted by artisans around the globe"
+<strong>Care:</strong> From install guide — pH neutral cleaners ONLY; "Use of acidic cleaners will damage marble." Pre-grout seal required; "Do not use a rubber hammer or mallet"; "DO NOT use Fila Matte Finish Protective Wax in outdoor applications as UV rays can cause discoloration"; small 2'x2' grout sections.
+<strong>Indoor/outdoor:</strong> Both, with outdoor sealer restrictions noted above
+<strong>Unique-to-Zia callouts:</strong> Tagline "A NEW CHIP OFF AN OLD BLOCK"; small-format marble; "ready-to-go installations"</p>
+<p><strong>Voice notes:</strong> Punny tagline. Lead pairs The Duomo + Statue of David as two specific anchors. "Anchored in Carrara" is a usable phrase. "Equally timely and timeless" is the close.</p>
+<p><strong>Project memory note:</strong> Marble can be used outdoors per live site (with sealer caveats). Honed (not polished) is preferred per editorial guide — confirmed available finish.</p>
+<hr>
+<h2>Marble Patterns</h2>
+<p><strong>Live URL:</strong> https://ziatile.com/collections/marble-patterns</p>
+<p><strong>Status:</strong> Page exists but rendered fully via JavaScript and could not be scraped for full product list. Confirm tomorrow with a browser session. Filter UI shows the same color, shape, design dimensions as parent Marble collection. Likely contains: basketweave, herringbone, hexagon, fish scale, mosaic patterns made from the seven core marble colorways.</p>
+<p><strong>Hero copy:</strong> Generic page copy seen — "Experience the entire Zia collection in one place. Find your favorites and our newest releases, all designed in Los Angeles and crafted by artisans around the globe." (This may be a fallback; confirm whether dedicated hero exists.)</p>
+<hr>
+<h2>Roman Mosaics</h2>
+<p><strong>Live URL:</strong> https://ziatile.com/collections/roman-mosaics</p>
+<p><strong>Status:</strong> Confirmed standalone collection (does NOT redirect to Marble despite project memory note).</p>
+<p><strong>Hero copy (verbatim):</strong></p>
+<blockquote>
+<p>From Hellenistic Greece to the Roman Empire, marble mosaics have defined the art of detail for thousands of years. For Zia's Roman mosaics, we go straight to the source, with quarries in Italy and Spain. The finishing touches happen in Italy, where the marble is chiseled into 5/8-inch squares, each piece carrying the marks of traditional craftsmanship. Set on mesh in solids, fans, and checks, these small-format mosaics are refined, graphic, and totally timeless.</p>
+</blockquote>
+<p><strong>Colorways (verbatim):</strong>
+Carrara 5/8, Ventaglio in Carrara, Giallo Reale 5/8, Ventaglio in Giallo Reale, Check in Carrara + Giallo Reale, Mini Check in Carrara + Giallo Reale, Rosso Alicante 5/8, Ventaglio in Rosso Alicante, Check in Carrara + Rosso Alicante, Mini Check in Carrara + Rosso Alicante, Verde Alpi 5/8, Ventaglio in Verde Alpi, Check in Carrara + Verde Alpi, Mini Check in Carrara + Verde Alpi, Bardiglio Imperiale 5/8, Ventaglio in Bardiglio Imperiale, Check in Carrara + Bardiglio Imperiale, Mini Check in Carrara + Bardiglio Imperiale, Grigio Carnico 5/8, Ventaglio in Grigio Carnico, Check in Carrara + Grigio Carnico, Mini Check in Carrara + Grigio Carnico, Nero Marquina 5/8, Ventaglio in Nero Marquina, Check in Carrara + Nero Marquina, Mini Check in Carrara + Nero Marquina</p>
+<p><strong>Shapes:</strong> Solids, Fans (Ventaglio), Checks, Mini Checks
+<strong>Sizes:</strong> 5/8-inch squares; 12x12 standard sheet format
+<strong>Finishes:</strong> Honed/natural marble finish
+<strong>Origin/craft:</strong> Quarried in Italy and Spain; finished in Italy; "chiseled into 5/8-inch squares"
+<strong>Care (verbatim):</strong> "Marble is a porous stone that must be sealed before and after grouting. Stick to pH-neutral products and plan to reseal regularly, especially in wet or high-traffic areas."
+<strong>Indoor/outdoor:</strong> Indoor (no outdoor designation on page)
+<strong>Unique-to-Zia callouts:</strong> "Set on mesh"; "we go straight to the source"; "refined, graphic, and totally timeless"</p>
+<p><strong>Voice notes:</strong> Place + craft step + format. "Refined, graphic, and totally timeless" is the close — three adjectives, comma series.</p>
+<hr>
+<h2>Cantera</h2>
+<p><strong>Live URL:</strong> https://ziatile.com/collections/cantera-tile</p>
+<p><strong>Hero copy (verbatim):</strong></p>
+<blockquote>
+<p>FROM FIRE COMES FINERY</p>
+<p>Cantera is a stone that has been celebrated in the art and architecture of Mesoamerica for millenia. From ancient Aztec structures to cathedrals in San Miguel de Allende and landmarks in Mexico City, this rock can be found in the buildings that matter most.</p>
+<p>Cantera stone tile features naturally formed, volcanic aggregates in eight earthy hues, showcasing nature's finest shades in a range of square and rectangle sizes.</p>
+</blockquote>
+<p>(Note: live site spells "millenia" — typo on their end. Use "millennia" in our drafts.)</p>
+<p><strong>Colorways (verbatim):</strong> Mesa, Caldera, Acacia, Sierra, Yuma, Sedona, Badlands, Volcan</p>
+<p><strong>Shapes:</strong> Square, Rectangle
+<strong>Sizes:</strong> 6x6, 4x12, 2x12, 12x12, 12x24, 24x24
+<strong>Finishes:</strong> Honed (natural textured finish with visible aggregate and mineral inclusions)
+<strong>Origin/craft:</strong> Quarried in Mexico, particularly around San Miguel de Allende; volcanic stone
+<strong>Care (verbatim):</strong> "Cantera is a porous stone tile and must be sealed before and after grouting... re-seal periodically, depending on foot traffic and exposure to moisture... use only pH-neutral cleaners to avoid damaging the surface... promptly clean up spills to prevent stains." From install guide: "There is a face and an underside to cantera, they are not reversible."
+<strong>Indoor/outdoor:</strong> Not specified on collection page (install guide includes outdoor section)
+<strong>Unique-to-Zia callouts:</strong> Tagline "FROM FIRE COMES FINERY"; "eight earthy hues"; "buildings that matter most"; pricing uniform $19.85/ft²</p>
+<p><strong>Voice notes:</strong> Place anchors are specific (Aztec structures + cathedrals in San Miguel de Allende + landmarks in Mexico City). Tagline alliteration (Fire / Finery).</p>
+<hr>
+<h2>Limestone</h2>
+<p><strong>Live URL:</strong> https://ziatile.com/collections/limestone-tile</p>
+<p><strong>Hero copy (verbatim):</strong></p>
+<blockquote>
+<p>Strong by nature, quiet by design. Zia celebrates the timelessness of limestone through two distinct lines, quarried and cut in France and Morocco.</p>
+</blockquote>
+<p><strong>Colorways (verbatim):</strong>
+- French Limestone 12 x Varying Lengths
+- French Limestone 20 x Varying Lengths
+- French Cobblestone
+- Buff (6x6, 4x12, 12x12, 12x24 — all Honed)
+- Monument (6x6, 4x12, 12x12, 12x24 — all Honed)
+- Basilica (6x6, 4x12, 12x12, 12x24 — Honed; 4x12 also in Bush Hammered)</p>
+<p><strong>Shapes:</strong> Square, Rectangle, Large Format, Cobblestones
+<strong>Sizes:</strong> 6x6, 4x12, 12x12, 12x24, 12 x Varying Lengths, 20 x Varying Lengths
+<strong>Finishes:</strong> Honed, Bush-Hammered
+<strong>Origin/craft:</strong> "Quarried near Fez, Morocco, and Bordeaux, France"
+<strong>Care (verbatim):</strong> "Limestone is porous and should always be sealed before and after grouting. Use only pH-neutral cleaners to avoid etching the surface, and re-seal as needed—especially in high-traffic or wet areas. Expect a natural patina to develop over time."
+<strong>Indoor/outdoor:</strong> Not explicitly specified on page
+<strong>Unique-to-Zia callouts:</strong> "Strong by nature, quiet by design"; "No two pieces are alike—each tile is shaped by time and technique."; pricing range $18.85–$25.85/ft²; named SKU lines (Buff, Monument, Basilica)</p>
+<p><strong>Voice notes:</strong> Lead is two paired adjectives ("Strong by nature, quiet by design"). Two-place pairing again (France and Morocco). Honed is the dominant finish.</p>
+<hr>
+<h2>Cement</h2>
+<p><strong>Live URL:</strong> https://ziatile.com/collections/cement-tile</p>
+<p><strong>Hero copy (verbatim):</strong></p>
+<blockquote>
+<p>POUR. PRESS. PATINA. Zia's encaustic cement tiles are handmade and topped with high-quality pigments, a process honed and perfected by artisans with techniques dating back to French and Catalan craftspeople of the 1850s. Each tile is individually hand-poured and pressed, forming our expansive and ever-growing collection of color options in both classic and distinctive shapes and patterns. The naturally matte surface and subtle color variations speak to the handmade nature of the material. Suitable for most surfaces, these cement tiles age with character and develop a celebrated patina over time.</p>
+</blockquote>
+<p><strong>Colorways/patterns (sample):</strong>
+Kepler Set Three, Colorama Tyrian, Currents Aubergine + Tyrian, Pomelo Jaipur Pink, San Juan Delta Moon, Samba Canyon, Flora 8x8 Set Mustard + Lemongrass, Madrid Terra Cotta + Rust, Arco Protea + Canyon</p>
+<p><strong>Shapes:</strong> Square, Rectangle, Subway
+<strong>Sizes:</strong> 2x8, 4x4, 4x8, 8x8
+<strong>Finishes:</strong> "Naturally matte surface" (per collection page hero — important: this is the verbatim phrase)
+<strong>Origin/craft:</strong> "Techniques dating back to French and Catalan craftspeople of the 1850s"; "individually hand-poured and pressed"; encaustic process
+<strong>Care:</strong> From install guide — pH-neutral cleaners; 511 Porous Plus pre-grout; Fila Matte Wax (interior) or 511 only (exterior); re-seal every 1-2 years.
+<strong>Indoor/outdoor:</strong> "Suitable for most surfaces"; install guide covers both
+<strong>Unique-to-Zia callouts:</strong> Tagline "POUR. PRESS. PATINA."; "develop a celebrated patina over time"; encaustic process; 1850s heritage</p>
+<p><strong>Voice notes:</strong> Three-word tagline (matches Zellige and Glass Mosaics tagline pattern). "Naturally matte" is the live finish phrase — useful for our drafts since the editorial guide specifies cement is matte not polished. "Age with character" instead of "natural wear."</p>
+<hr>
+<h2>Cross-collection patterns</h2>
+<h3>Lead structures (5 representative quoted leads)</h3>
+<blockquote>
+<p>"Welcome to the world's best-curated collection of handmade zellige tile. Made in Morocco, Zia's zellige is crafted by artisans using traditional techniques refined over 800 years and passed down through generations." (Zellige)</p>
+<p>"Zia's architectural-grade ceramic tiles are shaped by more than 1,000 years of tradition and artistry." (Ceramics)</p>
+<p>"Straight from the earth to your home, our clay-based Cotto line is the most rustic tile in our collection." (Cotto)</p>
+<p>"Nothing can match the classic charm of marble. An ancient stone seen in architecture and art from The Duomo to the Statue of David, Italy has played a leading role in the evolution of the iconic material..." (Marble)</p>
+<p>"Strong by nature, quiet by design. Zia celebrates the timelessness of limestone through two distinct lines, quarried and cut in France and Morocco." (Limestone)</p>
+</blockquote>
+<h3>Recurring lead patterns</h3>
+<ol>
+<li><strong>Tagline above lead:</strong> Three-word punchy tagline, often alliterative or paired (HANDS. HEAT. HISTORY. / OLD GLASS. NEW TRICKS. / POUR. PRESS. PATINA. / FROM FIRE COMES FINERY / A NEW CHIP OFF AN OLD BLOCK)</li>
+<li><strong>Place + duration anchor in opening sentence:</strong> Morocco + 800 years / Nagoya + 1,000 years / France + Morocco / Italy + 500 years / Mexico + millennia</li>
+<li><strong>Specific landmark or place anchor (not generic):</strong> "The Duomo to the Statue of David" / "Aztec structures... cathedrals in San Miguel de Allende... Mexico City" / "Los Angeles's own Union Station" / "from historic Italian interiors to the sunlit modernism of Palm Springs"</li>
+<li><strong>Closer pattern:</strong> Often three-adjective comma series ("refined, graphic, and totally timeless") or paired phrase ("equally timely and timeless" / "age with character")</li>
+</ol>
+<h3>Recurring vocabulary palette (live site)</h3>
+<ul>
+<li>handmade, hand-formed, hand-hewn, hand-poured, hand-finished, hand-crafted</li>
+<li>artisans, craftspeople, potters</li>
+<li>crafted by artisans around the globe (signature signoff)</li>
+<li>designed in Los Angeles (signature provenance phrase)</li>
+<li>patina, natural wear, variation, subtle variations</li>
+<li>timeless, timely and timeless, totally timeless</li>
+<li>coveted, celebrated, embraced</li>
+<li>rooted in tradition, traditional techniques, generations</li>
+<li>old-world, ancient, historic</li>
+<li>naturally matte, naturally formed</li>
+<li>inviting sheen, rich surface texture, vibrant colors</li>
+</ul>
+<h3>Banned-word check (live site usage)</h3>
+<p>The following words from the editorial guide do <strong>not</strong> appear on the live site collection pages reviewed:
+- matrix — not used
+- systems — not used in collection copy
+- full sequencing — not used
+- technical requirements — not used
+- vertical surfaces — not used (live site uses "wall installations")
+- spaces — appears once in Cotto ("indoor and outdoor spaces alike") — flag for editorial decision
+- production process — not used
+- stock vs. curated — "best-curated" appears once in Zellige</p>
+<p>Live site is generally consistent with our editorial banned-word list. The phrase "spaces" appears occasionally in product context. The signature signoff "designed in Los Angeles and crafted by artisans around the globe" repeats across Cotto, Marble, and a fallback collection page header.</p>
+<h3>Installation guide structure (cross-material pattern)</h3>
+<p>The site uses one canonical installation guide structure across hard-surface natural materials, with material-specific deviations:</p>
+<p><strong>Standard 17-section structure (Cotto, Marble, Cantera, Cotto Allende, Roman Mosaics):</strong>
+1. REVIEWING YOUR ORDER
+2. BEFORE BEGINNING YOUR INSTALLATION
+3. INSTALLATION
+4. REQUIRED MATERIAL (or LAYING TILES first, then REQUIRED MATERIAL)
+5. LAYING TILES / LAYING MARBLE / LAYING CANTERA
+6. FOR FLOOR INSTALLATIONS
+7. FOR WALL INSTALLATIONS
+8. FOR COMMERCIAL AND/OR WET AREAS
+9. PRE-GROUT SEALING
+10. GROUTING
+11. TOP-COAT SEALER (or TOP COAT SEALER)
+12. FOR INTERIOR INSTALLATIONS
+13. FOR OUTDOOR INSTALLATIONS
+14. TRIM
+15. ONGOING MAINTENANCE
+16. CLEANING
+17. RE-SEALING
+18. INSTALLATION SAFETY</p>
+<p><strong>Compressed structure (Cement — 9 sections):</strong> REVIEWING YOUR ORDER, BEFORE BEGINNING YOUR INSTALLATION, INSTALLATION, LAYING TILES, PRE-GROUT SEALING, GROUTING, TOP COAT SEALER, TRIM, ONGOING MAINTENANCE.</p>
+<p><strong>Glass Mosaics structure (9 sections):</strong> REVIEWING YOUR ORDER, BEFORE BEGINNING YOUR INSTALLATION, INSTALLATION, LAYING TILES, GROUTING, ONGOING MAINTENANCE, CLEANING, INSTALLATION SAFETY, VARIATION SCALE.</p>
+<p><strong>Zellige Mosaics structure (17 sections):</strong> Adds ZELLIGE IN WET AREAS and OPTIONAL GROUT SEALING sections.</p>
+<p><strong>Limestone structure (6 sections — most compressed):</strong> REVIEWING YOUR ORDER, BEFORE BEGINNING YOUR INSTALLATION, INSTALLATION, TRIM, ONGOING MAINTENANCE, INSTALLATION SAFETY.</p>
+<p><strong>Ceramics structure (8 sections):</strong> REVIEWING YOUR ORDER, INSTALLATION, REQUIRED MATERIAL, Tile Finishes, TRIM, ONGOING MAINTENANCE, CLEANING, INSTALLATION SAFETY.</p>
+<h3>Universal install rules across materials</h3>
+<ul>
+<li>Blend tiles from all boxes before starting</li>
+<li>15-20% overage minimum (Marble, Cotto)</li>
+<li>Work in 2'x2' sections maximum</li>
+<li>48 hours thin-set cure before sealing/grouting</li>
+<li>1/8" tile spacers (cement uses 1/16")</li>
+<li>pH-neutral cleaners only — acidic cleaners damage every material</li>
+<li>Mapei Ultracolor Plus FA (glazed) or Flexcolor CQ (unglazed/stone) grout</li>
+<li>511 Porous Plus pre-grout sealer for natural stone, terrazzo, cement, unglazed zellige</li>
+<li>Fila Matte Finish Protective Wax for interior top coat (NOT outdoor — UV discolors it)</li>
+<li>Re-seal every 1-2 years for porous materials in wet/high-traffic areas</li>
+</ul>
+<hr>
+<h2>Collections I could not fully capture</h2>
+<ol>
+<li><strong>/collections/zellige-mosaic</strong> — 404. Subset within Zellige.</li>
+<li><strong>/collections/unglazed-natural-zellige</strong> — 404. Colorway within Zellige.</li>
+<li><strong>/collections/unglazed-natural-zellige-mosaic</strong> — 404. Does not exist as separate collection.</li>
+<li><strong>/collections/marble-patterns</strong> — Page exists but JS-rendered; product list not captured. Confirm in browser tomorrow.</li>
+<li><strong>/pages/about</strong>, <strong>/pages/our-story</strong>, <strong>/pages/about-us</strong>, <strong>/pages/about-zia-tile</strong>, <strong>/pages/zia-story</strong>, <strong>/pages/our-team</strong>, <strong>/pages/who-we-are</strong> — all 404. Live site does not appear to have a public About page; brand voice context must come from collection hero copy and the Casa Zia blog (also 404 on direct fetch). Per third-party sources, Zia Tile founded 2015 in Los Angeles, founders' love of travel + appreciation for global artistry, Madrid-inspired aesthetic.</li>
+<li><strong>PDPs</strong> — most of the slug guesses 404'd. Only successful PDP was Stars &amp; Cross Cotto Oscura; pull additional PDPs in browser tomorrow.</li>
+</ol>
+<h2>Notes on source quality</h2>
+<ul>
+<li>All collection page hero copy and colorway lists captured verbatim from live ziatile.com (May 2026).</li>
+<li>Project memory entries flagging "Roman Mosaics → Marble" and "Field Trip Japan → Ceramics" appear outdated as of this scrape — both are live as standalone collections. Confirm with stakeholder before applying that mapping.</li>
+<li>Cantera typo "millenia" is on the live site; correct in our drafts.</li>
+<li>Local templates referencing "White Cocoa" and "Matte Black" as Cotto-unique colorways do not match the current Cotto live colorway set (Red Clay, Fired Earth, Adobe, Blanco, Madera, Oscura). Verify with brand before publishing.</li>
+<li>About page is missing on live site; brand voice rules will need to come from collection hero patterns documented in this file plus the existing Zia editorial guide.</li>
+</ul>
+</article>
+</main>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>
