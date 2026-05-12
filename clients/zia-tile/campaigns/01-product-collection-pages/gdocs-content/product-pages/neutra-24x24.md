@@ -139,7 +139,7 @@ Since each production cycle is influenced by aggregate placement, pressure distr
 
   - We offer free full order pickup at our Los Angeles area warehouse to help local customers save on shipping costs.
   - Our team will contact you when your order is ready so you may schedule a pickup appointment. Warehouse pickup is available by confirmed appointment only.
-  - For additional questions regarding your Neutra 24x24 order, please reach out to us at info@ziatile.com.
+  - For additional questions regarding the Neutra 24x24 order, contact our team at info@ziatile.com or 310-844-1170.
 
   
 

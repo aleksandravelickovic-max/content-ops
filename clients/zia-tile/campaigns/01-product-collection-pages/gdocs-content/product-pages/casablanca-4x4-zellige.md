@@ -175,7 +175,7 @@ Clean zellige tiles with pH-neutral products to maintain the tiles' glaze. Regul
 
 ### What are the characteristic features of each Casablanca 4x4 tile?
 
-Our Casablanca zellige 4x4 tile features variation in color, shape, and thickness. Each tile exhibits unique characteristics such as chips, pits, and crazing. These elements are not defects; rather, they are traditional characteristics of handmade Moroccan tile that create a perfectly imperfect aesthetic.
+Our Casablanca zellige 4x4 tile features variation in color, shape, and thickness. Each tile exhibits unique characteristics such as chips, pits, and crazing. These elements are traditional characteristics of handmade Moroccan tile that create a perfectly imperfect aesthetic.
 
 ### Can Casablanca 4x4 be mixed with other colors in the collection?
 

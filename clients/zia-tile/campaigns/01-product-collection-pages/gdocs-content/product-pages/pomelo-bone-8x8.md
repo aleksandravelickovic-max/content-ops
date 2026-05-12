@@ -53,7 +53,7 @@ The images shown are representative of the pattern and colorway, but may not cap
 ### Color, Pattern, and Surface
 
   - Our Pomelo Bone 8x8 is a patterned cement tile with beige curved shapes set against a white ground, producing a symmetrical geometric composition across the field.
-  - Each handmade encaustic cement tile carries subtle variation in color saturation, edge definition, and surface texture. These are natural characteristics of the hand-pour process and define the line's charm.
+  - Each handmade encaustic cement tile carries subtle variation in color saturation, edge definition, and surface texture. These are natural characteristics of the hand-pour process and define the line's character.
   - Individual tiles read as discrete units at close range. The full pattern resolves at installation scale, where the curves connect across tile edges to form a continuous repeat.
 
 ### Preparation and Curation
@@ -68,7 +68,7 @@ The images shown are representative of the pattern and colorway, but may not cap
   - For finishing, bring the drywall flush with the finished surface of the tile, miter exposed edges at 45 degrees, or complete the edge with Schluter strips.
   - Seal Pomelo Bone 8x8 with 511 Porous Plus before and after grouting. For interior applications, finish with Fila Matte Wax as a final coat. For exterior applications, apply a second coat of 511 Porous Plus in place of wax.
   - Use 1/16" tile spacers and match grout color closely to the white ground. Contrasting or dark grout can stain the cement surface and should be avoided across the full field.
-  - You may reach out to our team directly at info@ziatile.com with any specific installation questions.
+  - For installation questions, contact our team at info@ziatile.com or 310-844-1170.
 
   
 
@@ -95,7 +95,7 @@ Our Pomelo Bone 8x8 cement tile suits both residential and commercial projects. 
   - **Pools + Spas:** Not suitable for pools or spas.
   - **Fireplace Surround:** Suited to decorative fireplace surrounds. These tiles are not for use inside the firebox.
   - **Radiant Heating Compatible:** Compatible with radiant heating systems.
-  - **Sealing Required:** Sealing is required before and after grouting using 511 Porous Plus. Indoors, finish with Fila Matte Wax. Outdoors, apply a second coat of 511 Porous Plus. Refer to the Zia Tile Installation Guide for detailed instructions.
+  - **Sealing Required:** Sealing is required for all installations, including dry spaces. Always seal Pomelo Bone 8x8 according to the installation instructions, whether in dry spaces or in areas exposed to moisture, such as showers. Refer to the Zia Tile Installation Guide for detailed instructions.
 
 ### Commercial Usage
 
@@ -109,7 +109,7 @@ Our Pomelo Bone 8x8 cement tile suits both residential and commercial projects. 
   - **Pools + Spas:** Not suitable for pools or spas.
   - **Fireplace Surround:** Suited to decorative fireplace surrounds in lobbies and hospitality spaces. Not for use inside a firebox.
   - **Radiant Heating Compatible:** Compatible with commercial radiant heating systems.
-  - **Sealing Required:** Sealing is required before and after grouting using 511 Porous Plus. Indoors, finish with Fila Matte Wax. Outdoors, apply a second coat of 511 Porous Plus. Refer to the Zia Tile Installation Guide for detailed instructions.
+  - **Sealing Required:** Sealing is required for all installations, including dry spaces. Always seal Pomelo Bone 8x8 according to the installation instructions, whether in dry spaces or in areas exposed to moisture, such as showers. Refer to the Zia Tile Installation Guide for detailed instructions.
 
   
 

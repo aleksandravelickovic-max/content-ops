@@ -168,7 +168,7 @@ Ethereal Blue is well-suited to kitchen installations, particularly as a backspl
 
 ### Is Ethereal Blue ceramic tile suitable for bathroom floors?
 
-Yes, Ethereal Blue can be installed in a bathroom, including on shower walls, shower floors, and as a vanity backsplash. The glossy glaze stands up well to moisture exposure when properly installed and sealed. For shower floor applications, slip resistance can be increased by sizing grout joints to a minimum of ⅛" and/or applying an anti-slip treatment after installation to improve traction in wet conditions.
+Ethereal Blue can be installed in a bathroom, including on shower walls, shower floors, and as a vanity backsplash. The glossy glaze stands up well to moisture exposure when properly installed and sealed. For shower floor applications, slip resistance can be increased by sizing grout joints to a minimum of ⅛" and/or applying an anti-slip treatment after installation to improve traction in wet conditions.
 
 ### How long will ceramic tiles last?
 
