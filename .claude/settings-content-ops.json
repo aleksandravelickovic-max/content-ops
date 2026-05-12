@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(**)",
+      "Grep(**)",
+      "Bash(git status)",
+      "Bash(git diff *)",
+      "Bash(ls *)",
+      "Bash(find *)",
+      "Bash(cat *)",
+      "Bash(open -R /tmp/ai-marketing-agent.docx)",
+      "Bash(git add *)",
+      "WebFetch(domain:blog.google)",
+      "WebFetch(domain:en.wikipedia.org)",
+      "WebFetch(domain:www.conductor.com)",
+      "WebFetch(domain:neilpatel.com)",
+      "WebFetch(domain:search.google)",
+      "WebFetch(domain:www.searchable.com)",
+      "WebFetch(domain:www.evergreen.media)",
+      "WebFetch(domain:www.nngroup.com)",
+      "Read(//Users/aleksandravelickovic/.claude/agents/**)"
+    ]
+  }
+}

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zia Tile — 16 Template Rewrite Prep (2026-05-04)</title>
+
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --muted: #555;
+    --border: #e5e5e5;
+    --accent: #1a1a1a;
+    --bg: #fdfdfd;
+    --code-bg: #f5f5f4;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: 'Charter','Iowan Old Style','Georgia',serif;
+    color: var(--ink);
+    background: var(--bg);
+    max-width: 780px;
+    margin: 2rem auto;
+    padding: 0 1.5rem 4rem;
+    line-height: 1.65;
+    font-size: 17px;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Inter','Helvetica Neue',Arial,sans-serif;
+    color: var(--ink);
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+  h1 { font-size: 2rem; margin: 0 0 1.5rem; padding-bottom: .5rem; border-bottom: 2px solid var(--ink); }
+  h2 { font-size: 1.45rem; margin: 2.5rem 0 1rem; padding-bottom: .25rem; border-bottom: 1px solid var(--border); }
+  h3 { font-size: 1.15rem; margin: 1.75rem 0 .75rem; }
+  h4 { font-size: 1rem; margin: 1.25rem 0 .5rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+  p { margin: 0 0 1rem; }
+  ul, ol { margin: 0 0 1rem; padding-left: 1.5rem; }
+  li { margin-bottom: .35rem; }
+  li > ul, li > ol { margin: .35rem 0 0; }
+  blockquote {
+    margin: 1rem 0;
+    padding: .25rem 0 .25rem 1rem;
+    border-left: 3px solid var(--ink);
+    color: var(--muted);
+    font-style: italic;
+  }
+  code {
+    font-family: 'JetBrains Mono','SF Mono',Menlo,monospace;
+    font-size: .85em;
+    background: var(--code-bg);
+    padding: .1em .35em;
+    border-radius: 3px;
+  }
+  pre {
+    background: var(--code-bg);
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-size: .85rem;
+  }
+  pre code { background: none; padding: 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 1.5rem;
+    font-size: .94rem;
+    font-family: 'Inter','Helvetica Neue',Arial,sans-serif;
+  }
+  th, td {
+    border-bottom: 1px solid var(--border);
+    padding: .55rem .75rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: #f9f8f6;
+    font-weight: 600;
+    border-bottom: 2px solid var(--ink);
+  }
+  tr:hover td { background: #fafaf8; }
+  hr { border: none; border-top: 1px solid var(--border); margin: 2.5rem 0; }
+  a { color: var(--ink); text-decoration: underline; text-underline-offset: 2px; }
+  a:hover { text-decoration-thickness: 2px; }
+  strong { font-weight: 600; }
+  em { font-style: italic; }
+  @media print {
+    body { font-size: 11pt; max-width: none; margin: 0; padding: 0 .5in; }
+    h1, h2, h3 { page-break-after: avoid; }
+    table, blockquote, pre { page-break-inside: avoid; }
+  }
+</style>
+
+</head>
+<body>
+<h1 id="zia-tile-16-template-rewrite-prep">Zia Tile — 16 Template Rewrite Prep</h1>
+<p><strong>Working session:</strong> 2026-05-05 (tomorrow)
+<strong>Scope:</strong> 16 PDP templates in <code>drafts/zia-tile-samples/</code>. Blog Post 4 (Cotto) is separate work — not in this scope.
+<strong>Bar:</strong> Architectural Digest / Wallpaper* / Remodelista voice. Material as protagonist. Specific over generic.</p>
+<h2 id="source-files">Source files</h2>
+<ul>
+<li>Audit (this brief is the synthesis): <code>drafts/zia-tile-samples/AUDIT-REPORT.md</code></li>
+<li>Site data (verbatim from ziatile.com, 2026-05-04): <code>knowledge/products/zia-tile/website-research-2026-05-04.md</code></li>
+<li>Voice cheat-sheet: <code>knowledge/products/zia-tile/editorial-voice-research-2026-05-04.md</code></li>
+<li>Editorial guide: <code>~/.claude/projects/-Users-aleksandravelickovic-content-ops/memory/feedback_zia_editorial_guide.md</code></li>
+<li>Existing PDP style guide: <code>knowledge/products/zia-tile/style-guide-v2.md</code></li>
+</ul>
+<hr />
+<h2 id="1-universal-fixes-apply-to-all-16">1. Universal fixes (apply to all 16)</h2>
+<p>These propagate from one master template change. Do these first.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Fix</th>
+<th>Where</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>"Compatible with all heating <strong>systems</strong>" → "Compatible with all heated floors"</td>
+<td>Residential + Commercial usage charts (32 hits)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Add a real conclusion paragraph after Order &amp; Shipping</td>
+<td>All 16 — they currently fade out</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Strip cross-template phrase repetition: "wholly unique," "innate variation defines the line's charm" (verbatim across 01–04); "visibly unique" (07, 08); generic "imperfections" (01, 11, 12, 13, 14)</td>
+<td>Replace with material-specific: "drippy translucent glazes," "defiance of uniformity," "no two… exactly the same," "subtle variations"</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Confirm/install §4.2 verbatim sealing wording per use case</td>
+<td>All 16 — flagged in original audit</td>
+</tr>
+<tr>
+<td>5</td>
+<td>25% overage option present (not just 15–20%)</td>
+<td>Confirm in 5–10, 12–15</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Slip-resistance ⅛" + anti-slip language inline (not only in FAQ placeholder)</td>
+<td>All 16 — flagged in original audit</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Affirmative freeze/thaw prose in body, not only the chart</td>
+<td>All 16 — flagged in original audit</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Ensure no em dashes anywhere (already clean per audit — verify on each pass)</td>
+<td>All 16</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-open-questions-resolve-with-alexjamie-before-tomorrows-publish">2. Open questions — resolve with Alex/Jamie before tomorrow's publish</h2>
+<ol>
+<li><strong>Cotto colorways.</strong> Live site shows: Red Clay, Fired Earth, Adobe, Blanco, Madera, Oscura. Editorial guide memory says "white cocoa + matte black are unique to Zia." These names do not appear on live Cotto. Ask Alex which set is current. Likely mapping: Blanco = white cocoa, Oscura = matte black.</li>
+<li><strong>Zellige freeze/thaw.</strong> Style Guide v2 §4.1 says no exterior freeze. Live site lists zellige as compatible. Templates currently mark ✗. Resolve direction.</li>
+<li><strong>Cantera colorways.</strong> Style guide says 7 (Mesa, Caldera, Acacia, Sierra, Yuma, Sedona, Badlands). Live site shows 8 (adds Volcan). Confirm.</li>
+<li><strong>Field Trip: Japan pools/spas.</strong> Templates mark ✓. Live PDP for Feather Flat says "not recommended; installation guide limits use to listed applications only." Resolve.</li>
+<li><strong>Cement crazing language.</strong> Templates say "minor crazing is normal" (L9, L21). Jamie's rule is "cement is matte, no glaze language." Crazing is borderline glaze terminology. Confirm with Alex whether install guide actually documents crazing for cement.</li>
+<li><strong>Roman Mosaics + Field Trip Japan as standalone collections.</strong> Project memory says these redirect to Marble / Ceramics. Live site has both as standalone. Confirm with Alex which structure is current.</li>
+<li><strong>Blog Post 4 (Cotto).</strong> Lives in Google Docs (id <code>1u8myu9XAwKVFGpQcyAvjOVPb76QbS40WEMrMqxmCPZE</code>). Local <code>07-cotto.md</code> is a PDP template, not the blog. Tomorrow's blog work is on the Doc, not the local file.</li>
+</ol>
+<hr />
+<h2 id="3-voice-playbook-condensed">3. Voice playbook (condensed)</h2>
+<h3 id="sentence-formula-the-design-forward-signature">Sentence formula (the design-forward signature)</h3>
+<p><strong>[Specific actor] + [verb of making/placement] + [named material with origin] + [physical/spatial detail].</strong></p>
+<blockquote>
+<p>"Hand-chiseled in Fez, each zellige tile carries a chamfered edge that catches light unevenly across a wall."</p>
+</blockquote>
+<h3 id="lead-pattern-for-the-opening-variable-per-sku-paragraph">Lead pattern (for the opening "Variable per SKU" paragraph)</h3>
+<ul>
+<li>Three-word tagline above (Zia convention: HANDS. HEAT. HISTORY. / POUR. PRESS. PATINA. / FROM FIRE COMES FINERY).</li>
+<li>First sentence: place + duration anchor (Morocco + 800 years; Nagoya + 1,000 years; France + Morocco; Italy + 500 years; Mexico + millennia).</li>
+<li>Second sentence: physical move on the tile itself (chiseled, hand-poured, fluted, knapped).</li>
+<li>Third sentence: cite a specific landmark, era, or use case — never generic.</li>
+</ul>
+<h3 id="verbs-to-use-vocabulary-palette">Verbs to use (vocabulary palette)</h3>
+<ul>
+<li><strong>Making:</strong> chiseled, hand-poured, hand-molded, hand-glazed, salvaged, fired, extruded, sculpted, cast, layered, pressed.</li>
+<li><strong>Placement:</strong> clad, wrapped, carried, threaded, enveloping, stacked, cascading.</li>
+<li><strong>Texture:</strong> drippy, chalky, matte, glossy, undulating, shimmering, fluted, honed, knapped, ridged.</li>
+<li><strong>Color hedges:</strong> tone-on-tone, muted, dusty, sun-baked, ochre, blackened.</li>
+<li><strong>Imperfection:</strong> defiance of uniformity, no two… are exactly the same, subtle variations, beautifully nuanced.</li>
+<li><strong>Time:</strong> patina over time, centuries-old, handed down through generations, antique, salvaged.</li>
+</ul>
+<h3 id="wordspatterns-to-avoid">Words/patterns to avoid</h3>
+<ul>
+<li><strong>Banned (Jamie's list):</strong> matrix, systems, full sequencing, technical requirements, vertical surfaces, spaces (use "rooms"), production process (use "craft" or "method"), straightforward maintenance, stock vs. curated.</li>
+<li><strong>Generic intensifiers:</strong> stunning, luxurious, powerful, robust, premium, elevate, transform, unlock, seamless.</li>
+<li><strong>Rule-of-three openers:</strong> "Bold, beautiful, and timeless…" — zero instances in AD/Wallpaper/Remodelista.</li>
+<li><strong>Em dashes for rhetorical pivot</strong> ("it's not just tile — it's a statement"). Avoid. Em dashes appear only as parenthetical asides in editorial pubs.</li>
+<li><strong>CTA closers</strong> ("Explore our collection," "Transform your space"). Editorial pubs never invite the reader to shop.</li>
+<li><strong>Generic provenance</strong> ("made overseas," "sourced globally"). Always Fez, Catalonia, Sausalito, San Miguel de Allende, Bordeaux.</li>
+</ul>
+<h3 id="three-rewrites-do-this-not-this">Three rewrites (do-this / not-this)</h3>
+<table>
+<thead>
+<tr>
+<th>Generic SaaS-SEO (current)</th>
+<th>Design-forward rewrite</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Our beautiful zellige tiles add timeless luxury to any space.</td>
+<td>Hand-chiseled in Fez, each zellige tile carries a chamfered edge that catches light unevenly across a wall.</td>
+</tr>
+<tr>
+<td>Cantera is offered in eight earthy colorways, each with a distinct mineral composition.</td>
+<td>Cantera arrives in eight quarried colorways — Mesa, Caldera, Acacia, Sierra, Yuma, Sedona, Badlands, and Volcan — each shaped by the volcanic rock it was cut from.</td>
+</tr>
+<tr>
+<td>Perhaps the most versatile tile Zia produces, with endless colorways, patterns, and shapes, our terrazzo line offers a curated mix…</td>
+<td>Terrazzo has shaped architecture for over 500 years, from historic Italian interiors to the sunlit modernism of Palm Springs. Zia's line covers solids (Neutra, Mirage, Savoye) and pattern series (Highball, Collins, Constellation), each ground and polished to surface its decorative aggregates.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-per-template-fix-queue-priority-ranked">4. Per-template fix queue (priority-ranked)</h2>
+<p>Worst → lightest. Word-count band is consistent (980–1,101 across all 16). Audit captured zero em dashes everywhere — that rule already holds.</p>
+<h3 id="tier-1-significant-editorial-work">Tier 1 — significant editorial work</h3>
+<p><strong>10 — Terrazzo</strong> <em>(989 words, About paragraph at L19, How It's Made at L63–65)</em>
+- L65: "cement <strong>matrix</strong>" → banned word. Replace: "Cement and aggregate together define what terrazzo is."
+- L19: drops third-to-first person mid-sentence ("Zia produces" → "our terrazzo line"). Pick one and hold.
+- L19: "Perhaps the most versatile tile Zia produces, with endless colorways" — hedged superlative + "endless." Replace with named pattern series (Highball, Collins, Constellation, plus solids Neutra, Mirage, Savoye).
+- L63: "Zia's terrazzo tiles are formed within a steel mold" — only template using third person; align to first-person plural.
+- Add real conclusion paragraph.</p>
+<p><strong>14 — Limestone</strong> <em>(995 words, About at L61)</em>
+- L61: "our line carries that legacy into modern <strong>spaces</strong>" — banned word. Replace "spaces" → "rooms."
+- L61: "Strong by nature and quiet by design, our line carries that legacy" — verbatim brand tagline; can stay if the rest of the paragraph names actual SKU lines (Buff, Monument, Basilica, French Limestone, French Cobblestone) and finishes (Honed, Bush-Hammered).
+- Confirm origin pairing "Fez, Morocco, and Bordeaux, France" present.
+- Add real conclusion paragraph.</p>
+<p><strong>11 — Marble Solids</strong> <em>(1,040 words, About at L61)</em>
+- L61: "Great design is forever, and marble is a prime example of the lasting power of the world's most iconic natural material" — adjective-stack authority claim. Cut. Replace with the named varieties (Carrara, Nero Marquina, Grigio Carnico, Rosso Alicante, Giallo Reale, Verde Alpi, Bardiglio Imperiale) and the "Anchored in Carrara" phrase from the live site.
+- Honed-only: confirm no "polished" reference (audit says clean — verify).
+- Origin: Italy and Spain, designed in LA — already correct.
+- Add real conclusion paragraph.</p>
+<h3 id="tier-2-jamie-specific-colorway-naming-gaps">Tier 2 — Jamie-specific colorway naming gaps</h3>
+<p><strong>07 — Cotto</strong> <em>(996 words)</em>
+- Locked About / How It's Made names zero colorways. Add: Red Clay, Fired Earth, Adobe, Blanco, Madera, Oscura (per live site). If Alex confirms "white cocoa = Blanco, matte black = Oscura," flag the unique-to-Zia callout in copy.
+- L7: "each piece is <strong>visibly unique</strong>" — generic intensifier. Replace with material-specific imperfection language ("each piece carries the marks of its mold," "subtle variations across colorways").
+- L65: "With proper sealing, cotto handles indoor floors, exterior floors in any climate, and freeze/thaw exposure" — keep affirmative phrasing.
+- Add real conclusion paragraph.</p>
+<p><strong>08 — Cotto Allende</strong> <em>(1,017 words)</em>
+- Locked sections name zero of 18 colorways. Add at least 6–8 representative names (Arroyo, Baja, Albar, Puebla, Posada, Lupe, Dorado, Creosote, Sayulita, Valverde, Primavera, Peyote, Azul, Piedra, Pedregal, Roca, Condesa, Cacao).
+- Use "Allende also means 'beyond'" wordplay from live hero (already in voice register).
+- L7 crazing parenthetical is good — keep.
+- L65: "Each colorway is specially designed with varying glossiness and speckling" — fine, but tighten to "matte, glossy, and smooth finishes vary by colorway."
+- Add real conclusion paragraph.</p>
+<p><strong>13 — Cantera</strong> <em>(980 words, How It's Made at L63)</em>
+- L63: "eight earthy colorways" — name them: Mesa, Caldera, Acacia, Sierra, Yuma, Sedona, Badlands, Volcan. (Resolve 7 vs 8 with Alex first.)
+- Live tagline "FROM FIRE COMES FINERY" can sit above.
+- Add real conclusion paragraph.</p>
+<h3 id="tier-3-narrow-per-file-edits">Tier 3 — narrow per-file edits</h3>
+<p><strong>09 — Glass Mosaics</strong> <em>(983 words)</em>
+- L61: "strong sustainability <strong>credentials</strong>" — generic. Replace with mechanism: "98% recycled glass, fired in electric kilns powered by wind and solar in Northern Spain" (verbatim from live site).
+- L65: "subtle artisan quality despite the consistency of each individual tile" — slightly self-contradictory. Tighten.
+- Name pattern set (Vaso, Union, d'Orsay, Ells, Tesserae, Murano, Cheque) and color palette (Tulip, Roma, Kumquat, Canary, Rye, Milk, Paperwhite, Kiwi, Clover, Jasper, Piscine, Damascus, Vespertine, Marmot, Jet Black).
+- Add real conclusion paragraph.</p>
+<p><strong>05 — Ceramics Matte</strong> <em>(988 words)</em>
+- L21 "Architectural-grade and 1,000 years of tradition in the making" — adjective-stack tagline. Cut, or pair with mechanism: "high-fired in a potters' village outside Nagoya, where precision is the design philosophy."
+- Add named colorways (Linen, Wool, Alabaster White, Alpha White — sample from the 39).
+- Add real conclusion paragraph.</p>
+<p><strong>15 — Cement</strong> <em>(1,026 words)</em>
+- Verify cement crazing claim with Alex (L9, L21). If retained, frame as a documented behavior of hydraulic-press cement, not a glaze defect.
+- Add named patterns: Kepler Set Three, Colorama Tyrian, Currents, Pomelo, San Juan, Samba, Flora, Madrid, Arco.
+- "POUR. PRESS. PATINA." live tagline already correct register.
+- "Naturally matte" is the live phrase — use for finish reference.
+- Add real conclusion paragraph.</p>
+<p><strong>01 — Zellige</strong> / <strong>02 — Zellige Mosaic</strong> / <strong>03 — Unglazed Natural Zellige</strong> / <strong>04 — Unglazed Natural Zellige Mosaic</strong> <em>(1,071 / 1,075 / 1,101 / 1,084 words)</em>
+- Cross-template repetition: "wholly unique" (L19) + "innate variation defines the line's charm" — verbatim across all four. Differentiate.
+- Resolve freeze/thaw chart contradiction with Alex first.
+- 03/04 specifically: keep "DO NOT soak Unglazed Natural" install warning in body prose — it's a real differentiator.
+- Add named colorways (Glazed Earth, Casablanca, Pure White, Desert Bloom, Pietro Pink, Terra Rosa, Rouge, Tulum, Aegean — sample from the 27).
+- Live hero tagline "HANDS. HEAT. HISTORY." can sit above.
+- Add real conclusion paragraph.</p>
+<p><strong>06 — Field Trip: Japan</strong> <em>(1,030 words)</em>
+- Resolve pools/spas chart conflict with Alex.
+- Add named colorways (Feather, Toast, Sakura, Oxblood, Morning Light, Frogtown, Buckeye) × 3 finishes (Flat, Etched, Furrowed).
+- L65 "an installation that reads as designed" — borderline. Replace with a specific "blend across boxes" line.
+- Add real conclusion paragraph.</p>
+<p><strong>12 — Marble Patterns</strong> <em>(999 words, How It's Made at L61)</em>
+- L61 names 4 of 9 patterns (Etna, Verona, Piazza, Diamante). Add Lorenzo, Lucca, Piazzetta, Lombardy, Isola.
+- Otherwise clean per audit.
+- Add real conclusion paragraph.</p>
+<p><strong>16 — Roman Mosaics</strong> <em>(1,006 words)</em>
+- L63 names "solids, fans, and checkerboard" — partial. Use live names: Solids, Ventaglio (fan), Check, Mini Check.
+- Stone options not named in locked copy — add Carrara, Giallo Reale, Rosso Alicante, Verde Alpi, Bardiglio Imperiale, Grigio Carnico, Nero Marquina.
+- L23 install guide URL slug already correct (per audit).
+- L65 "Tesserae mosaics have been used in pool surrounds, bath complexes, and palaces since antiquity" — good editorial closer; keep, expand into a real conclusion paragraph.</p>
+<hr />
+<h2 id="5-material-data-quick-reference">5. Material data quick-reference</h2>
+<p>One-line per collection. Use the website-research file for verbatim hero copy.</p>
+<table>
+<thead>
+<tr>
+<th>Collection</th>
+<th>Live tagline</th>
+<th>Place anchor</th>
+<th>Finish</th>
+<th>Unique-to-Zia callout</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zellige</td>
+<td>HANDS. HEAT. HISTORY.</td>
+<td>Morocco / 800 years</td>
+<td>Glazed, Unglazed</td>
+<td>"world's best-curated collection of handmade zellige tile"; 200+ tiles</td>
+</tr>
+<tr>
+<td>Ceramics</td>
+<td>(no tagline)</td>
+<td>Nagoya / 1,000 years</td>
+<td>Matte, Satin, Glossy, Textured</td>
+<td>"architectural-grade"; "precision is key"</td>
+</tr>
+<tr>
+<td>Field Trip: Japan</td>
+<td>(no tagline)</td>
+<td>Nagoya</td>
+<td>Flat, Etched, Furrowed</td>
+<td>three named textured finishes unique to this line</td>
+</tr>
+<tr>
+<td>Cotto</td>
+<td>(no tagline)</td>
+<td>San Miguel de Allende</td>
+<td>Matte</td>
+<td>"the most rustic tile in our collection"; six core colors</td>
+</tr>
+<tr>
+<td>Cotto Allende</td>
+<td>(no tagline)</td>
+<td>San Miguel de Allende</td>
+<td>Matte, Glossy, Smooth</td>
+<td>"Allende also means 'beyond'"; glazed terra cotta</td>
+</tr>
+<tr>
+<td>Glass Mosaics</td>
+<td>OLD GLASS. NEW TRICKS.</td>
+<td>Northern Spain</td>
+<td>(vibrant)</td>
+<td>98% recycled glass; renewable kilns; 7 patterns</td>
+</tr>
+<tr>
+<td>Terrazzo</td>
+<td>(no tagline)</td>
+<td>Venice / 500+ years; Palm Springs</td>
+<td>Polished</td>
+<td>named pattern series (Highball, Collins, Constellation)</td>
+</tr>
+<tr>
+<td>Marble</td>
+<td>A NEW CHIP OFF AN OLD BLOCK</td>
+<td>Italy + Spain (Carrara)</td>
+<td>Honed, Polished</td>
+<td>"Anchored in Carrara"; small-format</td>
+</tr>
+<tr>
+<td>Marble Patterns</td>
+<td>(no tagline)</td>
+<td>Italy + Spain</td>
+<td>Honed</td>
+<td>9 named patterns</td>
+</tr>
+<tr>
+<td>Roman Mosaics</td>
+<td>(no tagline)</td>
+<td>Italy quarried, Italy finished</td>
+<td>Honed</td>
+<td>5/8" chiseled; "we go straight to the source"</td>
+</tr>
+<tr>
+<td>Cantera</td>
+<td>FROM FIRE COMES FINERY</td>
+<td>Mexico (San Miguel de Allende)</td>
+<td>Honed (with aggregate)</td>
+<td>volcanic stone; "buildings that matter most"</td>
+</tr>
+<tr>
+<td>Limestone</td>
+<td>(no tagline)</td>
+<td>Fez + Bordeaux</td>
+<td>Honed, Bush-Hammered</td>
+<td>"Strong by nature, quiet by design"</td>
+</tr>
+<tr>
+<td>Cement</td>
+<td>POUR. PRESS. PATINA.</td>
+<td>French/Catalan / 1850s; made in Vietnam</td>
+<td>Naturally matte</td>
+<td>encaustic; hydraulic press; 7-day cure</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-workflow-tomorrow">6. Workflow tomorrow</h2>
+<ol>
+<li>Read this brief end-to-end before any editing.</li>
+<li>Resolve the seven open questions (section 2) with Alex or Aleksandra. Don't edit until you have the answers — several rewrites depend on them.</li>
+<li>Apply universal fixes (section 1) at the master-template level if possible; otherwise propagate across all 16.</li>
+<li>Work the Tier 1 → Tier 3 queue (section 4) in order. One template at a time. Save between each.</li>
+<li>Each rewrite must:
+   - Open with a place + duration anchor in the first sentence.
+   - Name actual SKUs/colorways/patterns somewhere in About or How It's Made.
+   - Use a verb of making or placement (chiseled, hand-poured, fluted, clad).
+   - End with a real conclusion paragraph that closes on a material observation, not a CTA.</li>
+<li>Final sign-off pass against the editorial guide before sending anywhere.</li>
+</ol>
+<h2 id="7-whats-not-in-scope-here">7. What's NOT in scope here</h2>
+<ul>
+<li><strong>Blog Post 4 (Cotto).</strong> Tomorrow's blog work, separate file (Google Doc).</li>
+<li><strong>Other March/April blog posts.</strong> Halted until Cotto is signed off.</li>
+<li><strong>Collection pages.</strong> Held until Jamie reviews Cotto blog.</li>
+<li><strong>OTTO credit / schema / redirect / Brand Vault items.</strong> Operational, not editorial.</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zia Tile — Content Intelligence Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f8f7f4;
+  --surface: #ffffff;
+  --ink: #1a1a1a;
+  --ink-soft: #555;
+  --ink-muted: #888;
+  --border: #e2ddd4;
+  --accent: #8a3324;
+  --accent-light: #f3ebe6;
+  --green: #2d7a3a;
+  --green-bg: #eaf5ec;
+  --red: #b33030;
+  --red-bg: #fceaea;
+  --yellow: #9a7b1a;
+  --yellow-bg: #fdf6e3;
+  --blue: #2563eb;
+  --blue-bg: #eff6ff;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); font-size: 15px; line-height: 1.6; color: var(--ink); background: var(--bg); }
+
+.header { background: var(--ink); color: #fff; padding: 40px 48px 32px; }
+.header h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 6px; }
+.header .subtitle { font-size: 14px; color: #bbb; font-weight: 400; }
+
+.tabs { display: flex; gap: 0; background: var(--ink); padding: 0 48px; border-bottom: 3px solid var(--accent); }
+.tab { padding: 12px 24px; font-size: 13px; font-weight: 600; color: #999; cursor: pointer; border: none; background: transparent; letter-spacing: 0.04em; text-transform: uppercase; transition: all 0.15s; position: relative; }
+.tab:hover { color: #ccc; }
+.tab.active { color: #fff; }
+.tab.active::after { content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 3px; background: var(--accent); }
+
+.tab-content { display: none; padding: 40px 48px 80px; max-width: 1100px; }
+.tab-content.active { display: block; }
+
+h2 { font-size: 22px; font-weight: 700; margin: 40px 0 16px; color: var(--ink); letter-spacing: -0.01em; }
+h2:first-child { margin-top: 0; }
+h3 { font-size: 16px; font-weight: 700; margin: 28px 0 10px; color: var(--ink); }
+h4 { font-size: 14px; font-weight: 600; margin: 20px 0 8px; color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; }
+
+p { margin-bottom: 14px; }
+ul, ol { margin: 0 0 16px 20px; }
+li { margin: 4px 0; }
+
+blockquote { margin: 16px 0; padding: 12px 20px; border-left: 3px solid var(--accent); background: var(--accent-light); font-style: italic; color: var(--ink-soft); font-size: 14px; }
+
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 20px 24px; margin: 16px 0; }
+.card h3 { margin-top: 0; }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin: 16px 0; }
+
+.stat { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 20px; text-align: center; }
+.stat .number { font-size: 36px; font-weight: 700; color: var(--accent); line-height: 1; }
+.stat .label { font-size: 12px; color: var(--ink-muted); margin-top: 6px; text-transform: uppercase; letter-spacing: 0.08em; }
+
+.tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; text-transform: uppercase; letter-spacing: 0.05em; }
+.tag-red { background: var(--red-bg); color: var(--red); }
+.tag-green { background: var(--green-bg); color: var(--green); }
+.tag-yellow { background: var(--yellow-bg); color: var(--yellow); }
+.tag-blue { background: var(--blue-bg); color: var(--blue); }
+
+table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+th { text-align: left; font-weight: 600; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); padding: 12px 16px; border-bottom: 2px solid var(--border); background: #faf9f6; }
+td { padding: 12px 16px; border-bottom: 1px solid var(--border); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+
+.verdict { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; }
+.verdict-pass { color: var(--green); }
+.verdict-fail { color: var(--red); }
+.verdict-partial { color: var(--yellow); }
+
+.section-intro { font-size: 16px; color: var(--ink-soft); margin-bottom: 24px; line-height: 1.7; }
+
+.rule-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0; }
+.rule { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 16px 20px; }
+.rule .do-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; }
+.rule .do-label.good { color: var(--green); }
+.rule .do-label.bad { color: var(--red); }
+.rule .example { font-size: 13px; color: var(--ink-soft); line-height: 1.5; }
+
+.timeline-item { border-left: 3px solid var(--border); padding: 0 0 24px 20px; margin-left: 12px; position: relative; }
+.timeline-item::before { content: ''; position: absolute; left: -7px; top: 4px; width: 11px; height: 11px; border-radius: 50%; border: 2px solid var(--accent); background: var(--surface); }
+.timeline-item .date { font-size: 12px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.04em; }
+.timeline-item .event { font-size: 14px; margin-top: 4px; }
+
+.score-bar { height: 8px; background: #eee; border-radius: 4px; overflow: hidden; margin: 6px 0; }
+.score-fill { height: 100%; border-radius: 4px; }
+.score-fill.high { background: var(--green); }
+.score-fill.mid { background: var(--yellow); }
+.score-fill.low { background: var(--red); }
+
+.toc { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 20px 24px; margin-bottom: 32px; }
+.toc h4 { margin-top: 0; }
+.toc ul { list-style: none; margin: 0; padding: 0; }
+.toc li { margin: 4px 0; }
+.toc a { color: var(--accent); text-decoration: none; font-size: 14px; }
+.toc a:hover { text-decoration: underline; }
+
+@media (max-width: 768px) {
+  .header, .tabs, .tab-content { padding-left: 20px; padding-right: 20px; }
+  .grid-2, .grid-3, .rule-grid { grid-template-columns: 1fr; }
+  .tab { padding: 10px 14px; font-size: 11px; }
+  h2 { font-size: 20px; }
+}
+@media print {
+  .tabs { display: none; }
+  .tab-content { display: block !important; page-break-before: always; }
+  .header { background: #333; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Zia Tile — Content Intelligence Report</h1>
+  <div class="subtitle">Prepared May 12, 2026 &middot; Synthesized from 9 transcripts, 4 knowledge base documents, 24 content drafts, and Jamie Greenspan's tracked edits</div>
+</div>
+
+<div class="tabs">
+  <button class="tab active" onclick="switchTab('tab1')">Brand Voice &amp; Requirements</button>
+  <button class="tab" onclick="switchTab('tab2')">Client Feedback Analysis</button>
+  <button class="tab" onclick="switchTab('tab3')">Content Alignment Audit</button>
+</div>
+
+<!-- ============================================================ -->
+<!-- TAB 1: BRAND VOICE & REQUIREMENTS                             -->
+<!-- ============================================================ -->
+<div id="tab1" class="tab-content active">
+
+<p class="section-intro">Everything a writer needs to know about Zia Tile's brand voice, editorial requirements, terminology rules, and technical accuracy standards — synthesized from the Style Guide v2 and v3, Editorial Voice Research, Jamie's tracked edits, and nine weeks of meeting transcripts.</p>
+
+<div class="grid-3">
+  <div class="stat"><div class="number">4</div><div class="label">Brand Pillars</div></div>
+  <div class="stat"><div class="number">28</div><div class="label">Banned Words/Phrases</div></div>
+  <div class="stat"><div class="number">9</div><div class="label">Required Page Sections</div></div>
+</div>
+
+<h2>1. Brand Identity</h2>
+
+<div class="card">
+  <h3>Who Zia Tile Is</h3>
+  <p>Los Angeles-based retailer of handmade artisanal tile and stone, shipping worldwide. Collections span Morocco, Vietnam, Japan, Mexico, Italy, Spain, and France. 13 material collections, 200+ individual tiles.</p>
+  <p><strong>Homepage tagline:</strong> "A Modern Home for an Ancient Art"</p>
+  <p><strong>$50K MRR client.</strong> High-touch, high-value. Zero tolerance for casual or generic language.</p>
+</div>
+
+<h3>Two Audiences (Both Must Be Respected)</h3>
+<table>
+  <thead><tr><th>Audience</th><th>Who</th><th>What They Need</th><th>Revenue Share</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Trade</strong></td><td>Architects, designers, contractors, installers managing $20K–$80K+ projects</td><td>Technical precision. Correct terminology. No hand-holding.</td><td>55–60%</td></tr>
+    <tr><td><strong>Homeowners</strong></td><td>Affluent first-time buyers, ages 30–60, making a considered design investment</td><td>Clear guidance. Confidence-building detail. Enough technical context without overwhelm.</td><td>40–45%</td></tr>
+  </tbody>
+</table>
+
+<h3>Four Brand Pillars</h3>
+<table>
+  <thead><tr><th>Pillar</th><th>What It Means in Copy</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Authoritative</strong></td><td>Speak as the definitive expert. Authority through specificity and correct terminology, never through adjectives.</td></tr>
+    <tr><td><strong>Artisanal</strong></td><td>Foreground the maker, the material, and the method. Romanticize through detail, not stacked descriptors.</td></tr>
+    <tr><td><strong>Approachable</strong></td><td>Polished, not precious. Clear, not casual. A trusted senior design editor who makes complex things accessible.</td></tr>
+    <tr><td><strong>Inspirational</strong></td><td>Atmosphere through precise detail. Show quality; never claim it.</td></tr>
+  </tbody>
+</table>
+
+<h2>2. The Editorial Benchmark</h2>
+
+<blockquote>"Copy should read closer to Architectural Digest than an AI content dump. A useful test: paste a paragraph into ChatGPT, prompt it to rewrite as Architectural Digest editorial. That should be closer than what was submitted. That is the floor, not the ceiling." — Jamie Greenspan</blockquote>
+
+<h3>Target Publications (Voice Models)</h3>
+<table>
+  <thead><tr><th>Publication</th><th>Voice Signature</th><th>Key Vocabulary</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Architectural Digest</strong></td><td>Person + place anchors; designer quotes carry authority; quiet endings</td><td>old-world, depth, character, considered, layered, rooted in</td></tr>
+    <tr><td><strong>Wallpaper*</strong></td><td>Long architectural sentences; technical vocab untranslated; specific suppliers named</td><td>clad, wrapped, fluted, monolithic, sculpted, cascading, anodised</td></tr>
+    <tr><td><strong>Remodelista</strong></td><td>Conversational hooks; short to medium plain syntax; colon-delivered punchlines</td><td>drippy, chalky, dusty, salvaged, irregular, undulating, antique</td></tr>
+    <tr><td><strong>Domino</strong></td><td>Setup-and-pivot with "but"; designer's choice phrasing</td><td>glossy, matte, riffing on, enveloping, tone-on-tone, earthy</td></tr>
+    <tr><td><strong>Cl&eacute; Tile</strong></td><td>Origin-story leads; long embedded clauses; terminology preserved</td><td>chiseled, undulating, shimmering, patina, defiance, chamfered</td></tr>
+  </tbody>
+</table>
+
+<h3>The Design-Forward Sentence Formula</h3>
+<div class="card">
+  <p><strong>[Specific actor] + [verb of making/placement] + [named material with origin] + [physical/spatial detail]</strong></p>
+  <div class="rule-grid" style="margin-top:12px">
+    <div class="rule">
+      <div class="do-label bad">Avoid (SaaS-SEO)</div>
+      <div class="example">"Our beautiful zellige tiles add timeless luxury to any space."</div>
+    </div>
+    <div class="rule">
+      <div class="do-label good">Use (Design-Forward)</div>
+      <div class="example">"Hand-chiseled in Fez, each zellige tile carries a chamfered edge that catches light unevenly across a wall."</div>
+    </div>
+  </div>
+</div>
+
+<h2>3. Voice Rules</h2>
+
+<table>
+  <thead><tr><th>Rule</th><th>Do This</th><th>Not This</th></tr></thead>
+  <tbody>
+    <tr><td>Register</td><td>Polished and confident without being stiff or corporate</td><td>Warm and aspirational, like a lifestyle or luxury brand</td></tr>
+    <tr><td>Authority</td><td>Earned through specificity and accurate technical detail</td><td>Claimed through adjectives: stunning, beautiful, exquisite, charming</td></tr>
+    <tr><td>Atmosphere</td><td>Created by precise nouns and active verbs</td><td>Created by stacking descriptors before a noun</td></tr>
+    <tr><td>Sentences</td><td>Short to medium. One idea per sentence. Active voice.</td><td>Long, clause-heavy constructions that bury the point</td></tr>
+    <tr><td>Fragments</td><td>Never. Complete sentences only throughout body copy.</td><td>Standalone fragments for rhythm or stylistic effect</td></tr>
+    <tr><td>Prepositions</td><td>Restructure to avoid ending on a preposition</td><td>"the place it came from" &rarr; rewrite as "from which it came"</td></tr>
+    <tr><td>Person</td><td>No second person (you/your). Choose first or third and hold it.</td><td>Switching between "our Cotto" and "Zia's Cotto" in the same piece</td></tr>
+    <tr><td>Emotional register</td><td>Matter-of-fact appreciation of craft; let detail carry feeling</td><td>Sentimental overlay on top of practical information</td></tr>
+    <tr><td>Purposeful test</td><td>If removing the sentence loses nothing, cut it.</td><td>Padding clauses, restated ideas, generic qualifications</td></tr>
+  </tbody>
+</table>
+
+<h2>4. Terminology — Required and Banned</h2>
+
+<h3>Required Terms</h3>
+<table>
+  <thead><tr><th>Term</th><th>Usage</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Inherent / innate variation</strong></td><td>Frame variation as a defining characteristic, never as inconsistency</td></tr>
+    <tr><td><strong>Dynamic glazes</strong></td><td>Zellige only — how color and sheen shift with light</td></tr>
+    <tr><td><strong>Chips, pits, and crazing</strong></td><td>Always as a trio for zellige. These are features. Never apply to Cotto (unglazed).</td></tr>
+    <tr><td><strong>Each (not "every")</strong></td><td>"Each tile" — more considered and specific</td></tr>
+    <tr><td><strong>Our [Product] / Zia's [Product]</strong></td><td>Always anchor product name. Never a colorway alone as subject.</td></tr>
+    <tr><td><strong>Mitered edges + Schluter strips</strong></td><td>Correct edge finishing terms. Never "trim pieces."</td></tr>
+    <tr><td><strong>Shower wall / shower tile</strong></td><td>Never "shower surround"</td></tr>
+    <tr><td><strong>Grout joints</strong></td><td>Never "grout spacing"</td></tr>
+    <tr><td><strong>15–20% overage + 25% option</strong></td><td>Both numbers, always, with context for each</td></tr>
+    <tr><td><strong>Drywall flush</strong></td><td>Required in every Installation section</td></tr>
+    <tr><td><strong>Curation and cuts</strong></td><td>Correct overage rationale. Not "natural variation inherent to handmade tile."</td></tr>
+    <tr><td><strong>Open and mix</strong></td><td>Correct prep instruction. Not "blend."</td></tr>
+    <tr><td><strong>Lived-in character</strong></td><td>For aging clay surfaces in commercial contexts</td></tr>
+    <tr><td><strong>Classic range / unexpected tones</strong></td><td>For Cotto colorway groups. Avoid "traditional" + "contemporary" in same passage.</td></tr>
+  </tbody>
+</table>
+
+<h3>Banned Words and Phrases (28 total)</h3>
+<table>
+  <thead><tr><th>Banned</th><th>Use Instead</th><th>Reason</th></tr></thead>
+  <tbody>
+    <tr><td>Luxury</td><td>Show quality through craft narrative</td><td>Show it, don't say it</td></tr>
+    <tr><td>Sophisticated</td><td>Describe the design specifically</td><td>Show it, don't say it</td></tr>
+    <tr><td>Charming</td><td>Specific detail about what makes it appealing</td><td>Too precious for this brand</td></tr>
+    <tr><td>Unique (without context)</td><td>Name the variation: color, sheen, thickness</td><td>Meaningless without a noun</td></tr>
+    <tr><td>Truly / really / simply / of course</td><td>Remove entirely</td><td>Filler</td></tr>
+    <tr><td>Defects</td><td>Chips, pits, and crazing</td><td>Characteristics, not errors</td></tr>
+    <tr><td>Slightly different</td><td>Describe the actual range</td><td>Understates a celebrated quality</td></tr>
+    <tr><td>Shower surround</td><td>Shower walls and floors</td><td>Wrong industry term</td></tr>
+    <tr><td>Trim pieces</td><td>Mitered edges / Schluter strips</td><td>Wrong industry term</td></tr>
+    <tr><td>Grout spacing</td><td>Grout joints</td><td>Wrong industry term</td></tr>
+    <tr><td>Works as</td><td>Name the specific application</td><td>Too vague</td></tr>
+    <tr><td>Printed</td><td>Remove entirely</td><td>Meaningless in handmade context</td></tr>
+    <tr><td>Module</td><td>Set</td><td>Jamie's direct substitution</td></tr>
+    <tr><td>Sub-line</td><td>Glazed terra cotta tile / glazed line</td><td>Jamie's direct substitution</td></tr>
+    <tr><td>Colonial courtyard</td><td>Spanish courtyard</td><td>Jamie's direct substitution</td></tr>
+    <tr><td>Straightforward</td><td>Simple, consistent, requires care</td><td>Appeared four versions in a row</td></tr>
+    <tr><td>Bestselling / best seller</td><td>Omit or mention without ranking</td><td>Jamie removed from multiple pieces</td></tr>
+    <tr><td>Second person (you/your)</td><td>Third person or general guidance</td><td>Consistent flag across all reviews</td></tr>
+    <tr><td>Sentence-ending prepositions</td><td>Restructure</td><td>Direct rule from Jamie</td></tr>
+    <tr><td>Special order / lead-time callouts</td><td>Omit or minimize</td><td>Zia prefers not to draw attention</td></tr>
+    <tr><td>Free shipping / returns / peel-and-stick</td><td>Omit</td><td>Business exclusions</td></tr>
+    <tr><td>Withstands (for freeze/thaw)</td><td>"Is not suitable for freeze/thaw climates"</td><td>Factual error for zellige</td></tr>
+    <tr><td>Matrix</td><td>Describe the composition directly</td><td>Technical jargon for this audience</td></tr>
+    <tr><td>Transform your space / elevate</td><td>Name the physical move</td><td>Zero instances in any target publication</td></tr>
+    <tr><td>Rule-of-three openers</td><td>Lead with person, place, or material detail</td><td>"Bold, beautiful, and timeless" — zero in AD/Wallpaper</td></tr>
+    <tr><td>CTA closers</td><td>End on material observation or quote</td><td>"Explore our collection" — magazines never invite shopping</td></tr>
+    <tr><td>Generic provenance</td><td>Always Fez, Catalonia, San Miguel de Allende</td><td>"Made overseas" is never acceptable</td></tr>
+    <tr><td>Today (as sentence closer)</td><td>Remove</td><td>Jamie removed from origin FAQ</td></tr>
+  </tbody>
+</table>
+
+<h2>5. Technical Accuracy Standards</h2>
+
+<h3>5.1 Freeze/Thaw Rules (Material-Specific)</h3>
+<table>
+  <thead><tr><th>Material</th><th>Rule</th><th>Severity</th></tr></thead>
+  <tbody>
+    <tr><td>Zellige (glazed)</td><td>NOT suitable for outdoor freeze/thaw. State plainly and affirmatively.</td><td><span class="tag tag-red">Hard limit</span></td></tr>
+    <tr><td>Unglazed Cotto</td><td>Suitable for any climate including freeze/thaw. This is a selling point.</td><td><span class="tag tag-green">Promote</span></td></tr>
+    <tr><td>Cotto Allende (glazed)</td><td>NOT suitable for outdoor freeze/thaw.</td><td><span class="tag tag-red">Hard limit</span></td></tr>
+    <tr><td>Marble</td><td>Can be used outdoors in appropriate climates. Do not state it cannot.</td><td><span class="tag tag-yellow">Context-dependent</span></td></tr>
+    <tr><td>Cement</td><td>Exterior use in non-freeze/thaw climates only.</td><td><span class="tag tag-red">Hard limit</span></td></tr>
+  </tbody>
+</table>
+
+<h3>5.2 Pool/Spa Rule (Cotto vs. Cotto Allende)</h3>
+<div class="card">
+  <p><strong>Unglazed Cotto:</strong> NOT for pools or spas (full submersion). Suitable for outdoor floors, patios, courtyards in any climate.</p>
+  <p><strong>Cotto Allende (glazed):</strong> Approved for pools and spas. NOT for outdoor freeze/thaw.</p>
+  <blockquote>"Cotto tiles are suited for exterior floors in any climate, but not for applications where they are fully submerged in water, like pools or spas. Glazed Cotto Allende tile is approved for pools and spas, but should not be installed outdoors in freeze/thaw climates." — Jamie's corrected version</blockquote>
+</div>
+
+<h3>5.3 Sealing Standards</h3>
+<ul>
+  <li>Cotto and Cotto Allende have <strong>different sealing protocols</strong>. Never combine into one bullet list.</li>
+  <li>Sealing applies in <strong>all installations, including dry spaces</strong>.</li>
+  <li>Never name specific sealer products on product pages (511 Porous Plus, Fila Matte Wax belong on install guides only).</li>
+  <li><strong>Required phrase:</strong> "Always seal [tile name] according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers."</li>
+</ul>
+
+<h3>5.4 Contact Line — Required on Every Piece</h3>
+<div class="card">
+  <p><strong>Email:</strong> info@ziatile.com &nbsp;&middot;&nbsp; <strong>Phone:</strong> 310-844-1170</p>
+  <p>Both must appear in the closing section and in FAQ answers. Jamie keeps having to add this herself.</p>
+</div>
+
+<h3>5.5 Variation Language by Material</h3>
+<table>
+  <thead><tr><th>Material</th><th>Variation Language</th><th>Do NOT Apply</th></tr></thead>
+  <tbody>
+    <tr><td>Zellige (glazed)</td><td>Chips, pits, and crazing (trio)</td><td>—</td></tr>
+    <tr><td>Cotto (unglazed)</td><td>Tone, shape, edge profile, thickness</td><td>No chips/pits/crazing (that's zellige only)</td></tr>
+    <tr><td>Marble</td><td>Color, tone, veining, surface texture</td><td>—</td></tr>
+    <tr><td>Terrazzo</td><td>Aggregate distribution, color, crazing, edges</td><td>—</td></tr>
+  </tbody>
+</table>
+
+<h2>6. Required Page Structure (Product Pages)</h2>
+
+<p>All 9 sections, in this exact order:</p>
+<ol>
+  <li><strong>Product Details</strong> — variation framing; 15–20% overage + 25% uniform option</li>
+  <li><strong>About</strong> — craft heritage; artisan sourcing; historical context; color spectrum</li>
+  <li><strong>Inherent Variation</strong> — 3 bullets: color/tone specifics, uniqueness/charm, full variation list</li>
+  <li><strong>Preparation and Curation</strong> — mix boxes; dry layout; disperse variation; overage numbers</li>
+  <li><strong>Installation and Finishing</strong> — PPE/Prop 65; drywall flush + mitered edges + Schluter; sealing; contact email</li>
+  <li><strong>Tile Usage</strong> — Residential + Commercial; accurate freeze/thaw; inline sealing; slip-resistance spec</li>
+  <li><strong>How It's Made</strong> — origin, process, what makes variation happen</li>
+  <li><strong>Order &amp; Shipping</strong> — samples, full orders, pickup (appointment required), contact</li>
+  <li><strong>FAQ</strong> — minimum 6 questions covering required topics</li>
+</ol>
+
+<h2>7. Vocabulary Palette</h2>
+
+<div class="grid-2">
+  <div class="card">
+    <h4>Verbs of Making</h4>
+    <p>chiseled, hand-poured, hand-molded, hand-glazed, salvaged, fired, extruded, sculpted, cast, layered, pressed</p>
+  </div>
+  <div class="card">
+    <h4>Verbs of Placement</h4>
+    <p>clad, wrapped, carried, threaded, enveloping, stacked, cascading</p>
+  </div>
+  <div class="card">
+    <h4>Texture Descriptors</h4>
+    <p>drippy, chalky, matte, glossy, undulating, shimmering, fluted, honed, polished, knapped, ridged</p>
+  </div>
+  <div class="card">
+    <h4>Time &amp; Imperfection</h4>
+    <p>patina over time, centuries-old, handed down through generations, defiance of uniformity, no two are exactly the same, subtle variations</p>
+  </div>
+</div>
+
+</div>
+
+<!-- ============================================================ -->
+<!-- TAB 2: CLIENT FEEDBACK ANALYSIS                                -->
+<!-- ============================================================ -->
+<div id="tab2" class="tab-content">
+
+<p class="section-intro">A comprehensive analysis of every piece of client feedback from Jamie Greenspan across nine weeks of the engagement — from the first content delivery on March 27 through the May 12 reference doc submissions. Organized by theme, severity, and pattern.</p>
+
+<div class="grid-3">
+  <div class="stat"><div class="number">3</div><div class="label">Feedback Rounds</div></div>
+  <div class="stat"><div class="number">5</div><div class="label">Core Themes</div></div>
+  <div class="stat"><div class="number">15+</div><div class="label">Factual Corrections</div></div>
+</div>
+
+<h2>1. Feedback Timeline</h2>
+
+<div class="timeline-item">
+  <div class="date">March 27, 2026 — First Delivery</div>
+  <div class="event">Three pilot PDPs sent (Casablanca 4x4, Casablanca 2x6, Pure White 4x4). No specific feedback documented in ClickUp at this stage.</div>
+</div>
+<div class="timeline-item">
+  <div class="date">April 6–7, 2026 — First Feedback Shock</div>
+  <div class="event"><strong>Jamie's verdict: "too AI."</strong> Tone misses, audience misses, factual issues. Internal response: new lead writer assigned (Mina Jahangir), second editing pass added (Emanuel), Content Production Toolkit built (Aleksandra), custom agent build paused.</div>
+</div>
+<div class="timeline-item">
+  <div class="date">April 24, 2026 — Second Feedback Round</div>
+  <div class="event"><strong>15+ factual flags</strong> across the 16 collection-page templates. Wrong installation guide URLs on 7 templates, Canada missing from shipping, Roman Mosaics title still said "Product Name," Glass Mosaics sealing cell blank. Writing Guide v2 issued from the call.</div>
+</div>
+<div class="timeline-item">
+  <div class="date">April 28, 2026 — Internal Catch</div>
+  <div class="event">Henry catches factual errors that survived earlier rounds: Red Clay 8x8 page shows a 13x13 tile; "hand-pressed" claim removed (Zia doesn't hand-press); "zellige mosaic likened to masonry" analogy flagged unacceptable April 24.</div>
+</div>
+<div class="timeline-item">
+  <div class="date">April 29, 2026 — The "Runway" Warning</div>
+  <div class="event"><strong>Alex's characterization:</strong> "She's patient and reasonable but running out of runway. Still rooting for it to work, but two months in with nothing she's proud to show on the site is starting to wear on her."</div>
+</div>
+<div class="timeline-item">
+  <div class="date">May 4, 2026 — Henry's Reworked Blog #4</div>
+  <div class="event">Complete rework with all six colorways, eight shapes, Cotto Allende sub-line, DCOF specs, sealer-as-grout-release callout. Henry: "may go TOO far but I'd rather Jamie ask us to pull back."</div>
+</div>
+<div class="timeline-item">
+  <div class="date">May 11–13, 2026 — Jamie's Tracked Edits</div>
+  <div class="event">Jamie reviewed three reference docs with tracked changes. <strong>The most detailed feedback of the engagement.</strong> Resulted in Style Guide v3.0 and the Jamie Feedback Highlights document.</div>
+</div>
+
+<h2>2. The Five Themes Jamie's Edits Cluster Around</h2>
+
+<div class="card">
+  <h3>Theme 1: Plainer Than Aspirational <span class="tag tag-red">Most frequent</span></h3>
+  <p>Lifestyle marketing phrases replaced with declarative, fact-grounded sentences. Jamie consistently moved copy away from emotional/atmospheric language toward plain, specific prose.</p>
+  <table>
+    <thead><tr><th>Jamie Removed</th><th>Jamie Replaced With</th></tr></thead>
+    <tbody>
+      <tr><td>"where families have been pressing clay into molds and firing it the same way for generations"</td><td>"which is hand-pressed into molds, sun-dried, and high-fired using traditional techniques"</td></tr>
+      <tr><td>"is one of those materials that looks better the longer it is in place"</td><td>"ages beautifully"</td></tr>
+      <tr><td>"add to the room rather than date it"</td><td>"enhances the room"</td></tr>
+      <tr><td>"benefit from the visible aging of clay surfaces"</td><td>"benefit from the lived-in character of aging clay surfaces"</td></tr>
+      <tr><td>"build atmosphere and authenticity over time"</td><td>"build atmosphere and character"</td></tr>
+      <tr><td>"reads as handmade rather than printed"</td><td>"reads as handmade" (drop "printed" — meaningless)</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="card">
+  <h3>Theme 2: Anti-Filler <span class="tag tag-yellow">High frequency</span></h3>
+  <p>Words and clauses that don't earn their place get cut. Jamie applies the "purposeful test" rigorously: if removing the sentence loses nothing, it shouldn't be there.</p>
+  <ul>
+    <li>"To something truly special" — removed. The sentence before it was strong on its own.</li>
+    <li>"These charming unglazed pieces add an earthy aesthetic" — appeared twice on same page. Cut.</li>
+    <li>"The local clay and traditional process introduce history in each unique piece" — meaningless. Cut.</li>
+    <li>"Well-suited for any climate, with sealing before and after grouting" — filler opener. Deleted.</li>
+    <li>"Today" as a sentence closer — removed from origin FAQ.</li>
+    <li>"Straightforward" for care/maintenance — banned after appearing four versions in a row.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3>Theme 3: Technical Precision Over Softness <span class="tag tag-red">Critical</span></h3>
+  <p>Vague guidance replaced with specifics. "Consult your installer" is never sufficient. Jamie expects numbers, measurements, and named products.</p>
+  <ul>
+    <li>"Larger grout joints" &rarr; <strong>"minimum 1/8" grout joints"</strong></li>
+    <li>Slip resistance: must include DCOF rating + grout joint spec + anti-slip treatment</li>
+    <li>Sealing: separate instructions for Cotto and Cotto Allende, never combined</li>
+    <li>Freeze/thaw: material-by-material, stated affirmatively in prose (not just a chart symbol)</li>
+    <li>Overage: two numbers (15–20% standard + 20–25% specialty) with context for each</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3>Theme 4: Material Accuracy <span class="tag tag-red">Critical</span></h3>
+  <p>Wrong claims corrected; product distinctions enforced everywhere. Jamie doesn't tolerate borrowing language from one material and applying it to another.</p>
+  <ul>
+    <li><strong>Chips/pits/crazing on Cotto:</strong> Wrong. That's zellige only. Cotto variation = tone, shape, edge, thickness.</li>
+    <li><strong>"Hand-pressed" where Zia doesn't hand-press:</strong> Removed (Henry caught Apr 28).</li>
+    <li><strong>Light exposure deepens patina:</strong> Wrong. Patina is driven by use and time, not light.</li>
+    <li><strong>Specific kiln types (wood-fired, gas-fired):</strong> Not approved without written confirmation.</li>
+    <li><strong>Cotto vs. Cotto Allende confusion:</strong> Different materials with different application rules. Never conflate.</li>
+    <li><strong>Red Clay 8x8 page shows a 13x13 tile:</strong> Imagery mismatch flagged.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3>Theme 5: Operational Ownership <span class="tag tag-yellow">Recurring</span></h3>
+  <p>Things Zia keeps doing — adding the contact line, killing Saltillo references, removing special-order callouts — Jamie wants the team to own without being asked.</p>
+  <ul>
+    <li><strong>Contact line:</strong> Jamie has been adding it herself every time. Email + phone on every piece.</li>
+    <li><strong>Saltillo framing:</strong> "Why would we want someone to leave our site and go elsewhere for a tile we do not produce?" Never position Saltillo as a quality tile.</li>
+    <li><strong>Special-order callouts:</strong> Omit or minimize. Zia prefers not to draw attention.</li>
+    <li><strong>Cotto Allende as "sub-line":</strong> Call it "glazed terra cotta tile" or "glazed line."</li>
+  </ul>
+</div>
+
+<h2>3. What Jamie Likes (Positive Signals)</h2>
+
+<div class="card">
+  <p>Jamie's edits weren't only corrections. Several patterns show what she approves of:</p>
+  <table>
+    <thead><tr><th>Signal</th><th>Evidence</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Jamie's approved blog opener</strong></td><td>"Our Cotto begins with natural Mexican clay from San Miguel de Allende, which is hand-pressed into molds, sun-dried, and high-fired using traditional techniques." — She rewrote the first sentence but kept the second and third. Fix the entry point, keep what works.</td></tr>
+      <tr><td><strong>Specific colorway descriptions</strong></td><td>Jamie added "traditional" before "deepest red" for Red Clay, added "brightens and" for Blanco, added "puzzle" for Zocalo. She actively enriches when the detail is right.</td></tr>
+      <tr><td><strong>Collection introduction early</strong></td><td>Jamie placed the full colorway intro into "What Is Cotto Tile?" rather than waiting for a dedicated section. She wants the reader to see the product early.</td></tr>
+      <tr><td><strong>Patina as desirable</strong></td><td>"Expect the tone to deepen over time — that patina is the point." She reframed aging as intentional and celebratory.</td></tr>
+      <tr><td><strong>OTTO metadata</strong></td><td>May 11: Jamie reviewed 100 title/meta examples with only light notes. Green-lit deployment. This workstream is meeting her bar.</td></tr>
+      <tr><td><strong>Material specificity</strong></td><td>She responds positively to named colorways, DCOF numbers, specific sealer protocols. Precision signals competence.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>4. The Client's Current Emotional State</h2>
+
+<div class="card">
+  <p><strong>Patient but running out of patience.</strong> Nine weeks into a $50K/month engagement with nothing on the live site she's proud of. Three rounds of content have been submitted. The May 12 reference docs are the make-or-break moment.</p>
+  <p><strong>Key internal quotes about Jamie's state:</strong></p>
+  <ul>
+    <li>"She's patient and reasonable but running out of runway." — Alex, Apr 29</li>
+    <li>"Still in the partnership and rooting for it to work." — Alex, Apr 29</li>
+    <li>"The next piece we send her needs to land." — Alex, Apr 29</li>
+    <li>"May go TOO far but I'd rather Jamie ask us to pull back." — Henry, May 4 (correct instinct)</li>
+  </ul>
+</div>
+
+<h2>5. Verbatim Feedback — The Critical Quotes</h2>
+
+<blockquote>"My concern is that Saltillo is positioned as a fine tile that we do not sell. Shouldn't we steer this a bit more generic/mass/negative, in order to comment on why we don't sell it? Why would we want someone to leave our site and go elsewhere for a tile we do not produce?" — Jamie on Saltillo framing</blockquote>
+
+<blockquote>"Copy should read closer to Architectural Digest than an AI content dump." — Jamie, the editorial benchmark</blockquote>
+
+<blockquote>"Cotto tiles are suited for exterior floors in any climate, but not for applications where they are fully submerged in water, like pools or spas. Glazed Cotto Allende tile is approved for pools and spas, but should not be installed outdoors in freeze/thaw climates." — Jamie's corrected FAQ answer</blockquote>
+
+<blockquote>"Zia's Cotto line was born from our three traditional tones: Adobe, Fired Earth, and Red Clay, while our newer whitewashed Blanco, deep brown Madera, and matte black Oscura round out the earthy palette." — Jamie's added collection introduction</blockquote>
+
+</div>
+
+<!-- ============================================================ -->
+<!-- TAB 3: CONTENT ALIGNMENT AUDIT                                 -->
+<!-- ============================================================ -->
+<div id="tab3" class="tab-content">
+
+<p class="section-intro">A systematic review of all 24 produced content drafts (16 original PDP templates + 8 v3 rewrites) against Zia's brand voice requirements, Jamie's feedback, and the Style Guide v3. Each violation is categorized by severity and mapped to the specific rule it breaks.</p>
+
+<div class="grid-3">
+  <div class="stat"><div class="number">24</div><div class="label">Drafts Reviewed</div></div>
+  <div class="stat"><div class="number">6</div><div class="label">Critical Violations (all 16)</div></div>
+  <div class="stat"><div class="number">8</div><div class="label">v3 Rewrites (improved)</div></div>
+</div>
+
+<h2>1. Cross-Template Violations (All 16 Original Drafts)</h2>
+
+<p>These issues appear in every single original template. They represent systematic failures in the template design, not individual writer errors.</p>
+
+<table>
+  <thead><tr><th>#</th><th>Violation</th><th>Rule Broken</th><th>Severity</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td><strong>Page structure wrong.</strong> All 16 collapse 9 required sections into 6. Missing: Inherent Variation, Preparation and Curation, Installation and Finishing as named sections. Installation content buried inside About.</td><td>Style Guide &sect;6.1</td><td><span class="tag tag-red">Critical</span></td></tr>
+    <tr><td>2</td><td><strong>25% overage option missing.</strong> Every template recommends only 15–20%. The 25% uniform-look option is a checklist-mandatory item.</td><td>Style Guide &sect;3.1, &sect;5</td><td><span class="tag tag-red">Critical</span></td></tr>
+    <tr><td>3</td><td><strong>Inline sealing guidance missing.</strong> All 16 rely on a single "Sealing Required ✓" row at the table footer. Style guide requires inline guidance per use case (shower, pool, spa).</td><td>Style Guide &sect;4.2</td><td><span class="tag tag-red">Critical</span></td></tr>
+    <tr><td>4</td><td><strong>Dry-spaces sealing wording missing.</strong> Only Docs 1-2 (glazed Zellige) have the approved &sect;4.2 phrase. The other 14 omit it or replace with product names that belong on install guides only.</td><td>Style Guide &sect;4.2</td><td><span class="tag tag-red">Critical</span></td></tr>
+    <tr><td>5</td><td><strong>Slip-resistance spec missing.</strong> Every template marks Showers + Pools as ✓ but omits the &frac18;" minimum grout joint + anti-slip language.</td><td>Style Guide &sect;4.3</td><td><span class="tag tag-red">Critical</span></td></tr>
+    <tr><td>6</td><td><strong>No affirmative freeze/thaw prose.</strong> All 16 charts mark Exterior Freeze/Thaw rows but no body copy states the position. For zellige, this is non-negotiable.</td><td>Style Guide &sect;4.1</td><td><span class="tag tag-red">Critical</span></td></tr>
+    <tr><td>7</td><td><strong>Standardized shipping copy paraphrased.</strong> "Full orders ship together" instead of verbatim "We will ship the entire order together." Hyphenation and time formatting also deviate.</td><td>Style Guide &sect;8.2</td><td><span class="tag tag-yellow">Major</span></td></tr>
+    <tr><td>8</td><td><strong>FAQ placeholder too loose.</strong> Templates say "4-7 questions" but style guide mandates minimum 6 covering specific required topics.</td><td>Style Guide &sect;6.1</td><td><span class="tag tag-yellow">Major</span></td></tr>
+    <tr><td>9</td><td><strong>"Wholly unique" used as filler.</strong> Appears across Zellige templates (01–04) verbatim. "Unique" without context is on the banned list.</td><td>Style Guide &sect;3.2, Jamie ban</td><td><span class="tag tag-yellow">Major</span></td></tr>
+    <tr><td>10</td><td><strong>No real conclusion paragraph.</strong> All 16 templates fade out after Order &amp; Shipping with no closing statement.</td><td>Style Guide v3 &sect;6.3</td><td><span class="tag tag-yellow">Major</span></td></tr>
+  </tbody>
+</table>
+
+<h2>2. Per-Template Voice and Accuracy Analysis</h2>
+
+<h3>01 — Zellige</h3>
+<table>
+  <thead><tr><th>Aspect</th><th>Verdict</th><th>Detail</th></tr></thead>
+  <tbody>
+    <tr><td>Brand voice</td><td><span class="verdict verdict-partial">Partial</span></td><td>"Each handcrafted zellige tile is wholly unique, and this innate variation defines the line's charm" — generic. No named colorways (200+ available). "Wholly unique" is filler. "Charm" borders on "charming" (banned).</td></tr>
+    <tr><td>Technical accuracy</td><td><span class="verdict verdict-partial">Partial</span></td><td>Editor note correctly flags freeze/thaw contradiction. "Zellige installation is often closer to masonry" — analogy flagged unacceptable by Henry Apr 24.</td></tr>
+    <tr><td>Terminology</td><td><span class="verdict verdict-fail">Fail</span></td><td>"Grout spacing" appears — banned term. "Pits and chips" — incomplete trio (missing crazing).</td></tr>
+    <tr><td>Structure</td><td><span class="verdict verdict-fail">Fail</span></td><td>6 sections instead of 9. Installation in About. Missing Inherent Variation, Preparation, Installation sections.</td></tr>
+  </tbody>
+</table>
+
+<h3>07 — Cotto</h3>
+<table>
+  <thead><tr><th>Aspect</th><th>Verdict</th><th>Detail</th></tr></thead>
+  <tbody>
+    <tr><td>Brand voice</td><td><span class="verdict verdict-partial">Partial</span></td><td>"each piece is visibly unique" — generic intensifier. No colorways named (Red Clay, Fired Earth, Adobe, Blanco, Madera, Oscura all absent from About/How It's Made). Second person "your" appears.</td></tr>
+    <tr><td>Technical accuracy</td><td><span class="verdict verdict-partial">Partial</span></td><td>Pools + Spas marked ✓ — but unglazed Cotto is NOT approved for pools/spas. This is a factual error per Jamie's May 11 corrections. Special-order lead-time callout present — Jamie wants these minimized.</td></tr>
+    <tr><td>Terminology</td><td><span class="verdict verdict-pass">Pass</span></td><td>Uses correct terms: grout joints, mitered edges, Schluter strips, drywall flush.</td></tr>
+    <tr><td>Structure</td><td><span class="verdict verdict-fail">Fail</span></td><td>6 sections instead of 9. No conclusion paragraph.</td></tr>
+  </tbody>
+</table>
+
+<h3>10 — Terrazzo (Original)</h3>
+<table>
+  <thead><tr><th>Aspect</th><th>Verdict</th><th>Detail</th></tr></thead>
+  <tbody>
+    <tr><td>Brand voice</td><td><span class="verdict verdict-fail">Fail</span></td><td>"Perhaps the most versatile tile Zia produces, with endless colorways" — hedged superlative + "endless" (generic). No named patterns (Highball, Collins, Constellation absent). Person shifts mid-sentence ("Zia produces" &rarr; "our terrazzo line").</td></tr>
+    <tr><td>Technical accuracy</td><td><span class="verdict verdict-partial">Partial</span></td><td>"Cement matrix" — banned word. Usage chart correct. Slip resistance spec in FAQ placeholder but not inline.</td></tr>
+    <tr><td>Terminology</td><td><span class="verdict verdict-fail">Fail</span></td><td>"Matrix" — banned. "Heated floor systems" instead of "heated floors."</td></tr>
+    <tr><td>Structure</td><td><span class="verdict verdict-fail">Fail</span></td><td>6 sections instead of 9. No conclusion.</td></tr>
+  </tbody>
+</table>
+
+<h3>11 — Marble Solids</h3>
+<table>
+  <thead><tr><th>Aspect</th><th>Verdict</th><th>Detail</th></tr></thead>
+  <tbody>
+    <tr><td>Brand voice</td><td><span class="verdict verdict-partial">Partial</span></td><td>"Great design is forever, and marble is a prime example of the lasting power of the world's most iconic natural material" — adjective-stack authority claim. Generic superlative. But correctly uses "Anchored in Carrara" and names all six varieties.</td></tr>
+    <tr><td>Technical accuracy</td><td><span class="verdict verdict-pass">Pass</span></td><td>Origin correct (Italy and Spain). Sealing protocols present. "Marble develops natural patina with use, which is part of how the material ages" — Jamie changed this to "bringing beauty to the material's aging process."</td></tr>
+    <tr><td>Terminology</td><td><span class="verdict verdict-pass">Pass</span></td><td>Correct terms used throughout.</td></tr>
+    <tr><td>Structure</td><td><span class="verdict verdict-fail">Fail</span></td><td>6 sections instead of 9.</td></tr>
+  </tbody>
+</table>
+
+<h2>3. V3 Rewrites — Improvement Assessment</h2>
+
+<p>Eight templates were rewritten as v3 drafts. Here's how they compare:</p>
+
+<table>
+  <thead><tr><th>Template</th><th>Original Score</th><th>V3 Score</th><th>Key Improvements</th><th>Remaining Gaps</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>10 — Terrazzo</strong></td>
+      <td><div class="score-bar"><div class="score-fill low" style="width:35%"></div></div>35%</td>
+      <td><div class="score-bar"><div class="score-fill high" style="width:85%"></div></div>85%</td>
+      <td>9-section structure restored. Named pattern series (Constellation, Highball, Bossa Nova Saguaro). "Matrix" removed. Inline sealing + slip-resistance specs. Person consistency fixed.</td>
+      <td>"Cement matrix" replaced but "cement and aggregate" phrasing could be tighter. Still uses "heated floor systems."</td>
+    </tr>
+    <tr>
+      <td><strong>11 — Marble</strong></td>
+      <td><div class="score-bar"><div class="score-fill mid" style="width:50%"></div></div>50%</td>
+      <td><div class="score-bar"><div class="score-fill high" style="width:80%"></div></div>80%</td>
+      <td>All seven varieties named. Structure expanded. Patina language improved.</td>
+      <td>"Great design is forever" line may survive in some form. Verify Jamie's position.</td>
+    </tr>
+    <tr>
+      <td><strong>09 — Glass Mosaics</strong></td>
+      <td><div class="score-bar"><div class="score-fill low" style="width:40%"></div></div>40%</td>
+      <td><div class="score-bar"><div class="score-fill high" style="width:80%"></div></div>80%</td>
+      <td>"Sustainability credentials" &rarr; "98% recycled glass, fired in electric kilns powered by wind and solar." Pattern names added.</td>
+      <td>Edge finishing guidance still thin (Glass Mosaics install guide lacks it).</td>
+    </tr>
+    <tr>
+      <td><strong>13 — Cantera</strong></td>
+      <td><div class="score-bar"><div class="score-fill mid" style="width:45%"></div></div>45%</td>
+      <td><div class="score-bar"><div class="score-fill high" style="width:78%"></div></div>78%</td>
+      <td>All 8 colorways named. Tagline added. Structure improved.</td>
+      <td>7 vs. 8 colorway question still unresolved (pending Alex confirmation).</td>
+    </tr>
+    <tr>
+      <td><strong>14 — Limestone</strong></td>
+      <td><div class="score-bar"><div class="score-fill mid" style="width:45%"></div></div>45%</td>
+      <td><div class="score-bar"><div class="score-fill high" style="width:78%"></div></div>78%</td>
+      <td>"Spaces" &rarr; "rooms." SKU lines named (Buff, Monument, Basilica). Origin pairing confirmed.</td>
+      <td>Conclusion paragraph quality varies.</td>
+    </tr>
+    <tr>
+      <td><strong>12 — Marble Patterns</strong></td>
+      <td><div class="score-bar"><div class="score-fill mid" style="width:50%"></div></div>50%</td>
+      <td><div class="score-bar"><div class="score-fill high" style="width:75%"></div></div>75%</td>
+      <td>All 9 pattern names added. Otherwise clean.</td>
+      <td>Hero copy may use fallback generic from live site.</td>
+    </tr>
+    <tr>
+      <td><strong>15 — Cement</strong></td>
+      <td><div class="score-bar"><div class="score-fill mid" style="width:45%"></div></div>45%</td>
+      <td><div class="score-bar"><div class="score-fill high" style="width:75%"></div></div>75%</td>
+      <td>Named patterns added. "Naturally matte" phrase from live site. Tagline included.</td>
+      <td>Crazing claim still unresolved (pending Alex).</td>
+    </tr>
+    <tr>
+      <td><strong>16 — Roman Mosaics</strong></td>
+      <td><div class="score-bar"><div class="score-fill mid" style="width:45%"></div></div>45%</td>
+      <td><div class="score-bar"><div class="score-fill high" style="width:75%"></div></div>75%</td>
+      <td>Live shape names used (Ventaglio, Check, Mini Check). All 7 stone options named.</td>
+      <td>Collection vs. Marble grouping question unresolved.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>4. Alignment Summary by Category</h2>
+
+<table>
+  <thead><tr><th>Category</th><th>Original 16</th><th>V3 Rewrites</th><th>Key Finding</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Page Structure</strong></td><td><span class="tag tag-red">Fail</span></td><td><span class="tag tag-green">Pass</span></td><td>V3 restores the 9-section structure. Originals all use 6.</td></tr>
+    <tr><td><strong>Brand Voice</strong></td><td><span class="tag tag-yellow">Partial</span></td><td><span class="tag tag-green">Mostly aligned</span></td><td>V3 removes generic intensifiers and names specific products. Some hedged superlatives may persist.</td></tr>
+    <tr><td><strong>Terminology</strong></td><td><span class="tag tag-yellow">Partial</span></td><td><span class="tag tag-green">Pass</span></td><td>V3 fixes "matrix," "grout spacing," and other banned terms. Originals have 3–5 terminology violations each.</td></tr>
+    <tr><td><strong>Technical Accuracy</strong></td><td><span class="tag tag-red">Fail</span></td><td><span class="tag tag-green">Mostly pass</span></td><td>V3 adds inline sealing, slip-resistance specs, affirmative freeze/thaw prose. Originals omit all three.</td></tr>
+    <tr><td><strong>Named Products</strong></td><td><span class="tag tag-red">Fail</span></td><td><span class="tag tag-green">Pass</span></td><td>V3 names colorways, patterns, and SKU lines. Originals are generic across the board.</td></tr>
+    <tr><td><strong>Conclusion Paragraphs</strong></td><td><span class="tag tag-red">Missing</span></td><td><span class="tag tag-yellow">Present but variable</span></td><td>All originals fade out. V3 adds conclusions but quality varies.</td></tr>
+    <tr><td><strong>Cotto Pool/Spa Rule</strong></td><td><span class="tag tag-red">Fail</span></td><td><span class="tag tag-yellow">Not in v3 scope</span></td><td>Original Cotto template (07) marks pools ✓ — factually wrong for unglazed Cotto.</td></tr>
+    <tr><td><strong>Person Consistency</strong></td><td><span class="tag tag-yellow">Inconsistent</span></td><td><span class="tag tag-green">Fixed</span></td><td>V3 holds first-person consistently. Originals shift between first and third.</td></tr>
+  </tbody>
+</table>
+
+<h2>5. Templates Still Needing V3 Rewrites</h2>
+
+<p>Eight original templates have not yet been rewritten to v3:</p>
+
+<table>
+  <thead><tr><th>Template</th><th>Priority</th><th>Key Issues</th></tr></thead>
+  <tbody>
+    <tr><td><strong>07 — Cotto</strong></td><td><span class="tag tag-red">High</span></td><td>Pools/spas marked ✓ (wrong for unglazed). No colorways named. Special-order callout present. "Visibly unique" generic.</td></tr>
+    <tr><td><strong>08 — Cotto Allende</strong></td><td><span class="tag tag-red">High</span></td><td>Zero of 18 colorways named. Missing "Allende means beyond" wordplay.</td></tr>
+    <tr><td><strong>01 — Zellige</strong></td><td><span class="tag tag-red">High</span></td><td>"Grout spacing" (banned). Masonry analogy (rejected). "Wholly unique" filler. Cross-template phrase duplication with 02–04.</td></tr>
+    <tr><td><strong>02 — Zellige Mosaic</strong></td><td><span class="tag tag-yellow">Medium</span></td><td>Same issues as 01. Verbatim phrase duplication.</td></tr>
+    <tr><td><strong>03 — Unglazed Natural Zellige</strong></td><td><span class="tag tag-yellow">Medium</span></td><td>Same duplication. Missing "DO NOT soak" differentiator in body prose.</td></tr>
+    <tr><td><strong>04 — Unglazed Zellige Mosaic</strong></td><td><span class="tag tag-yellow">Medium</span></td><td>Same duplication.</td></tr>
+    <tr><td><strong>05 — Ceramics</strong></td><td><span class="tag tag-yellow">Medium</span></td><td>"Architectural-grade" adjective-stack tagline. No named colorways.</td></tr>
+    <tr><td><strong>06 — Field Trip: Japan</strong></td><td><span class="tag tag-yellow">Medium</span></td><td>Pools/spas chart conflict unresolved. No named colorways.</td></tr>
+  </tbody>
+</table>
+
+<h2>6. Recommendations</h2>
+
+<div class="card">
+  <h3>Immediate (Before Next Jamie Submission)</h3>
+  <ol>
+    <li><strong>Fix the Cotto pool/spa error</strong> in template 07. Unglazed Cotto is NOT approved for pools/spas. This is a factual error that will erode trust.</li>
+    <li><strong>Resolve the 7 open questions</strong> (Cotto colorways, zellige freeze/thaw, Cantera count, Field Trip pools, cement crazing, Roman Mosaics standalone, Blog #4 location) before any further editing.</li>
+    <li><strong>Apply the v3 structure to all remaining templates</strong> — the 9-section format is now table stakes after Jamie's review.</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3>Systematic (Process Changes)</h3>
+  <ol>
+    <li><strong>Name products.</strong> Every About and How It's Made section must include at least 3–5 specific colorways, patterns, or SKU names. Generic descriptions are the single most frequent voice failure.</li>
+    <li><strong>Run a banned-word scan</strong> against the 28-item list before any submission. Automated check would catch "matrix," "grout spacing," "charming," "unique" without context.</li>
+    <li><strong>Separate Cotto and Cotto Allende</strong> in every context — sealing instructions, pool/spa rules, freeze/thaw, variation language. These are different products with different rules.</li>
+    <li><strong>Include the contact line (email + phone) by default</strong> in every template. Jamie adding it herself signals the team isn't reading her feedback.</li>
+    <li><strong>Word frequency audit</strong> before submission. Repeated adjectives and phrases are a consistent flag. Run a simple count.</li>
+  </ol>
+</div>
+
+</div>
+
+<script>
+function switchTab(tabId) {
+  document.querySelectorAll('.tab-content').forEach(function(el) { el.classList.remove('active'); });
+  document.querySelectorAll('.tab').forEach(function(el) { el.classList.remove('active'); });
+  document.getElementById(tabId).classList.add('active');
+  var tabs = document.querySelectorAll('.tab');
+  var index = tabId === 'tab1' ? 0 : tabId === 'tab2' ? 1 : 2;
+  tabs[index].classList.add('active');
+  window.scrollTo(0, 0);
+}
+</script>
+
+</body>
+</html>
