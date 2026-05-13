@@ -80,8 +80,7 @@ async def admin_dashboard(
     for c in clients:
         campaigns_by_client[c] = content_svc.list_campaigns(c)
 
-    return templates.TemplateResponse("admin/dashboard.html", {
-        "request": request,
+    return templates.TemplateResponse(request, "admin/dashboard.html", {
         "links": links,
         "comment_counts": comment_counts,
         "unresolved_counts": unresolved_counts,
@@ -167,8 +166,7 @@ async def admin_comments(
     all_links_q = await db.execute(select(ShareLink).order_by(desc(ShareLink.created_at)))
     all_links = all_links_q.scalars().all()
 
-    return templates.TemplateResponse("admin/comments.html", {
-        "request": request,
+    return templates.TemplateResponse(request, "admin/comments.html", {
         "comments": comments,
         "links_map": links_map,
         "reply_counts": reply_counts,
@@ -326,8 +324,7 @@ async def admin_campaigns(
     for camp in client_campaigns:
         campaigns_by_client.setdefault(camp["client_slug"], []).append(camp)
 
-    return templates.TemplateResponse("admin/campaigns.html", {
-        "request": request,
+    return templates.TemplateResponse(request, "admin/campaigns.html", {
         "clients": clients,
         "campaigns_by_client": campaigns_by_client,
         "user": user,
@@ -394,8 +391,9 @@ async def admin_campaign_detail(
         )
         unresolved_counts = dict(uc_q.all())
 
-    return templates.TemplateResponse("admin/campaign_detail.html", {
-        "request": request,
+    compare_pairs = content_svc.get_compare_pairs(registry)
+
+    return templates.TemplateResponse(request, "admin/campaign_detail.html", {
         "registry": registry,
         "groups": groups,
         "tabs": tabs,
@@ -405,6 +403,7 @@ async def admin_campaign_detail(
         "active_link": active_link,
         "comment_counts": comment_counts,
         "unresolved_counts": unresolved_counts,
+        "compare_pairs": compare_pairs,
         "base_url": BASE_URL,
         "user": user,
     })
@@ -435,6 +434,79 @@ async def admin_campaign_create_share_link(
         url=f"/admin/campaigns/{client_slug}/{campaign_slug}",
         status_code=303,
     )
+
+
+@router.get("/campaigns/{client_slug}/{campaign_slug}/raw/{content_path:path}", response_class=HTMLResponse)
+async def admin_raw_html(
+    request: Request,
+    client_slug: str,
+    campaign_slug: str,
+    content_path: str,
+    user: dict | None = Depends(require_admin),
+):
+    html = content_svc.get_content_html(client_slug, campaign_slug, content_path)
+    if html is None:
+        raise HTTPException(status_code=404)
+    return HTMLResponse(content=html)
+
+
+@router.get("/campaigns/{client_slug}/{campaign_slug}/compare/{filename:path}", response_class=HTMLResponse)
+async def admin_compare_view(
+    request: Request,
+    client_slug: str,
+    campaign_slug: str,
+    filename: str,
+    db: AsyncSession = Depends(get_db),
+    user: dict | None = Depends(require_admin),
+):
+    registry = content_svc.load_registry(client_slug, campaign_slug)
+    if not registry:
+        raise HTTPException(status_code=404)
+
+    original_path = f"html/original/{filename}"
+    revised_path = f"html/revised/{filename}"
+
+    original_entry = next((e for e in registry.get("entries", []) if e["path"] == original_path), None)
+    if not original_entry:
+        raise HTTPException(status_code=404, detail="Original HTML not found.")
+
+    has_revised = any(e["path"] == revised_path for e in registry.get("entries", []))
+
+    pairs = content_svc.get_compare_pairs(registry)
+    current_idx = next((i for i, p in enumerate(pairs) if p["filename"] == filename), 0)
+    prev_pair = pairs[current_idx - 1] if current_idx > 0 else None
+    next_pair = pairs[current_idx + 1] if current_idx < len(pairs) - 1 else None
+
+    draft_info = content_svc.find_draft_for_html(client_slug, campaign_slug, filename)
+    draft_html = draft_info["html"] if draft_info else None
+    draft_path = draft_info["path"] if draft_info else None
+
+    links_q = await db.execute(
+        select(ShareLink)
+        .where(
+            ShareLink.client_slug == client_slug,
+            ShareLink.campaign_slug == campaign_slug,
+            ShareLink.is_active.is_(True),
+        )
+        .limit(1)
+    )
+    active_link = links_q.scalar_one_or_none()
+
+    return templates.TemplateResponse(request, "admin/compare.html", {
+        "client_slug": client_slug,
+        "campaign_slug": campaign_slug,
+        "filename": filename,
+        "display_name": filename.replace("--", " / ").replace(".html", "").replace("-", " ").title(),
+        "original_path": original_path,
+        "revised_path": revised_path if has_revised else None,
+        "draft_html": draft_html,
+        "draft_path": draft_path,
+        "prev_pair": prev_pair,
+        "next_pair": next_pair,
+        "nav_position": f"{current_idx + 1} of {len(pairs)}",
+        "active_link": active_link,
+        "user": user,
+    })
 
 
 @router.get("/campaigns/{client_slug}/{campaign_slug}/{content_path:path}", response_class=HTMLResponse)
@@ -502,8 +574,7 @@ async def admin_content_detail(
     prev_entry = same_type[current_idx - 1] if current_idx > 0 else None
     next_entry = same_type[current_idx + 1] if current_idx < len(same_type) - 1 else None
 
-    return templates.TemplateResponse("admin/content_detail.html", {
-        "request": request,
+    return templates.TemplateResponse(request, "admin/content_detail.html", {
         "entry": entry,
         "content_html": rendered_html,
         "comments": comments,

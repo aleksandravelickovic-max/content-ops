@@ -58,14 +58,12 @@ async def login_page(request: Request, error: str | None = None):
         return RedirectResponse(url="/admin/", status_code=302)
 
     if not is_oauth_configured():
-        return templates.TemplateResponse("auth/login.html", {
-            "request": request,
+        return templates.TemplateResponse(request, "auth/login.html", {
             "error": error,
             "oauth_disabled": True,
         })
 
-    return templates.TemplateResponse("auth/login.html", {
-        "request": request,
+    return templates.TemplateResponse(request, "auth/login.html", {
         "error": error,
         "oauth_disabled": False,
     })

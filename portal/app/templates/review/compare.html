@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% block title %}{{ display_name }} — Before / After{% endblock %}
 {% block body_class %}compare-page{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="/static/annotation.css?v=3">
+<link rel="stylesheet" href="/static/pin-comments.css?v=1">
+{% endblock %}
 
 {% block body %}
 <header class="review-header">
@@ -22,31 +26,71 @@
   </div>
 </header>
 
+<div class="compare-feedback-bar">
+  <div class="compare-feedback-hint">
+    <span class="ann-instruction-icon">&#9998;</span>
+    Click anywhere on a pane to pin feedback, or select text in the Draft to annotate
+  </div>
+  {% if pin_comment_count > 0 %}
+  <span class="compare-feedback-count">{{ pin_comment_count }} comment{{ 's' if pin_comment_count != 1 else '' }}</span>
+  {% endif %}
+</div>
+
 <div class="compare-toolbar">
   <h1 class="compare-title">{{ display_name }}</h1>
   <div class="compare-controls">
     <button class="compare-mode-btn active" data-mode="split">Split</button>
     <button class="compare-mode-btn" data-mode="original">Original Only</button>
+    {% if draft_html %}
+    <button class="compare-mode-btn" data-mode="draft">Draft Only</button>
+    {% endif %}
     {% if revised_path %}
     <button class="compare-mode-btn" data-mode="revised">Revised Only</button>
     {% endif %}
   </div>
 </div>
 
-<div class="compare-panes" id="comparePanes" data-mode="split">
+<div class="compare-panes {% if draft_html %}has-draft{% endif %}" id="comparePanes" data-mode="split">
   <div class="compare-pane pane-original">
-    <div class="pane-label">Original</div>
+    <div class="pane-label pane-label--original">Original</div>
     <iframe src="/review/{{ token }}/raw/{{ original_path }}" class="compare-frame" id="frameOriginal"></iframe>
   </div>
+
+  {% if draft_html %}
+  <div class="compare-pane pane-draft">
+    <div class="pane-label pane-label--draft">
+      Draft
+      {% if draft_path %}
+      <span class="pane-label-path">{{ draft_path }}</span>
+      {% endif %}
+    </div>
+    <div class="draft-content rendered-content">
+      {{ draft_html | safe }}
+    </div>
+  </div>
+  {% endif %}
+
   {% if revised_path %}
   <div class="compare-pane pane-revised">
     <div class="pane-label pane-label--revised">Revised</div>
     <iframe src="/review/{{ token }}/raw/{{ revised_path }}" class="compare-frame" id="frameRevised"></iframe>
   </div>
   {% else %}
-  <div class="compare-pane pane-revised pane-empty">
-    <div class="pane-label">Revised</div>
-    <div class="pane-placeholder">No revised version yet</div>
+  <div class="compare-pane pane-revised pane-empty pane-not-processed">
+    <div class="pane-label pane-label--not-processed">
+      Revised
+      <span class="processing-status-badge">Not Processed</span>
+    </div>
+    <div class="pane-placeholder-content">
+      <div class="not-processed-icon">&#9881;</div>
+      <h3>Content Not Yet Processed</h3>
+      <p>The original HTML has not been processed into a revised version yet. Click below to generate the revised HTML from the draft content.</p>
+      <button class="btn btn-primary process-btn" id="processBtn" data-filename="{{ filename }}">
+        <span class="process-btn-label">Process Content</span>
+        <span class="process-btn-loading" style="display:none">Processing...</span>
+      </button>
+      <div class="process-result" id="processResult" style="display:none"></div>
+    </div>
   </div>
   {% endif %}
 </div>
@@ -61,6 +105,59 @@
       panes.dataset.mode = btn.dataset.mode;
     });
   });
+
+  var processBtn = document.getElementById('processBtn');
+  if (processBtn) {
+    processBtn.addEventListener('click', function() {
+      var label = processBtn.querySelector('.process-btn-label');
+      var loading = processBtn.querySelector('.process-btn-loading');
+      var resultEl = document.getElementById('processResult');
+      processBtn.disabled = true;
+      label.style.display = 'none';
+      loading.style.display = 'inline';
+
+      fetch('/api/process/{{ token }}/compare/{{ filename }}', { method: 'POST' })
+        .then(function(res) { return res.json().then(function(data) { return { ok: res.ok, data: data }; }); })
+        .then(function(resp) {
+          if (resp.ok) {
+            resultEl.className = 'process-result process-success';
+            resultEl.textContent = 'Content processed successfully. Reloading...';
+            resultEl.style.display = 'block';
+            setTimeout(function() { location.reload(); }, 1500);
+          } else {
+            resultEl.className = 'process-result process-error';
+            resultEl.textContent = resp.data.detail || 'Processing failed.';
+            resultEl.style.display = 'block';
+            processBtn.disabled = false;
+            label.style.display = 'inline';
+            loading.style.display = 'none';
+          }
+        })
+        .catch(function() {
+          resultEl.className = 'process-result process-error';
+          resultEl.textContent = 'Network error — check your connection.';
+          resultEl.style.display = 'block';
+          processBtn.disabled = false;
+          label.style.display = 'inline';
+          loading.style.display = 'none';
+        });
+    });
+  }
 })();
 </script>
+{% if draft_html %}
+<script>
+var TOKEN = "{{ token }}";
+var CONTENT_PATH = "compare:{{ filename }}";
+var COMMENTS_DATA = [];
+var REVIEWER_NAME = "{{ link.recipient_name or '' }}";
+</script>
+<script src="/static/annotation.js?v=3"></script>
+{% endif %}
+<script>
+var PIN_TOKEN = "{{ token }}";
+var PIN_FILENAME = "{{ filename }}";
+var PIN_REVIEWER_NAME = "{{ link.recipient_name or '' }}";
+</script>
+<script src="/static/pin-comments.js?v=1"></script>
 {% endblock %}

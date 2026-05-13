@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+{% block title %}{{ display_name }} — Before / After{% endblock %}
+{% block body_class %}compare-page admin-page{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="/static/annotation.css?v=3">
+<link rel="stylesheet" href="/static/pin-comments.css?v=1">
+{% endblock %}
+
+{% block body %}
+<header class="admin-header">
+  <div class="header-inner">
+    <h1>Content Review Portal <span class="header-tag">Admin</span></h1>
+    <nav class="admin-nav">
+      <a href="/admin/campaigns" class="nav-link active">Campaigns</a>
+      <a href="/admin/" class="nav-link">Share Links</a>
+      <a href="/admin/comments" class="nav-link">Comments</a>
+    </nav>
+    {% if user %}
+    <div class="user-info">
+      <span class="user-email">{{ user.email }}</span>
+      <a href="/auth/logout" class="nav-link logout-link">Sign out</a>
+    </div>
+    {% endif %}
+  </div>
+</header>
+
+<main class="admin-main">
+  <div class="compare-nav-bar">
+    <a href="/admin/campaigns/{{ client_slug }}/{{ campaign_slug }}" class="back-link">&larr; Back to campaign</a>
+    <div class="content-nav">
+      {% if prev_pair %}
+      <a href="/admin/campaigns/{{ client_slug }}/{{ campaign_slug }}/compare/{{ prev_pair.filename }}" class="nav-btn">&larr; Prev</a>
+      {% else %}
+      <span class="nav-btn disabled">&larr; Prev</span>
+      {% endif %}
+      <span class="nav-pos">{{ nav_position }}</span>
+      {% if next_pair %}
+      <a href="/admin/campaigns/{{ client_slug }}/{{ campaign_slug }}/compare/{{ next_pair.filename }}" class="nav-btn">Next &rarr;</a>
+      {% else %}
+      <span class="nav-btn disabled">Next &rarr;</span>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="compare-toolbar">
+    <h2 class="compare-title">{{ display_name }}</h2>
+    <div class="compare-controls">
+      <button class="compare-mode-btn active" data-mode="split">Split</button>
+      <button class="compare-mode-btn" data-mode="original">Original Only</button>
+      {% if draft_html %}
+      <button class="compare-mode-btn" data-mode="draft">Draft Only</button>
+      {% endif %}
+      {% if revised_path %}
+      <button class="compare-mode-btn" data-mode="revised">Revised Only</button>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="compare-panes {% if draft_html %}has-draft{% endif %}" id="comparePanes" data-mode="split">
+    <div class="compare-pane pane-original">
+      <div class="pane-label pane-label--original">Original</div>
+      <iframe src="/admin/campaigns/{{ client_slug }}/{{ campaign_slug }}/raw/{{ original_path }}" class="compare-frame" id="frameOriginal"></iframe>
+    </div>
+
+    {% if draft_html %}
+    <div class="compare-pane pane-draft">
+      <div class="pane-label pane-label--draft">
+        Draft
+        {% if draft_path %}
+        <span class="pane-label-path">{{ draft_path }}</span>
+        {% endif %}
+      </div>
+      <div class="draft-content rendered-content">
+        {{ draft_html | safe }}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if revised_path %}
+    <div class="compare-pane pane-revised">
+      <div class="pane-label pane-label--revised">Revised</div>
+      <iframe src="/admin/campaigns/{{ client_slug }}/{{ campaign_slug }}/raw/{{ revised_path }}" class="compare-frame" id="frameRevised"></iframe>
+    </div>
+    {% else %}
+    <div class="compare-pane pane-revised pane-empty pane-not-processed">
+      <div class="pane-label pane-label--not-processed">
+        Revised
+        <span class="processing-status-badge">Not Processed</span>
+      </div>
+      <div class="pane-placeholder-content">
+        <div class="not-processed-icon">&#9881;</div>
+        <h3>Content Not Yet Processed</h3>
+        <p>The original HTML has not been processed into a revised version yet.</p>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</main>
+
+<script>
+(function() {
+  const panes = document.getElementById('comparePanes');
+  document.querySelectorAll('.compare-mode-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.compare-mode-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      panes.dataset.mode = btn.dataset.mode;
+    });
+  });
+})();
+</script>
+{% if active_link and draft_html %}
+<script>
+var TOKEN = "{{ active_link.token }}";
+var CONTENT_PATH = "compare:{{ filename }}";
+var COMMENTS_DATA = [];
+var REVIEWER_NAME = "Admin";
+</script>
+<script src="/static/annotation.js?v=3"></script>
+{% endif %}
+{% if active_link %}
+<script>
+var PIN_TOKEN = "{{ active_link.token }}";
+var PIN_FILENAME = "{{ filename }}";
+var PIN_REVIEWER_NAME = "Admin";
+</script>
+<script src="/static/pin-comments.js?v=1"></script>
+{% endif %}
+{% endblock %}

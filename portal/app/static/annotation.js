@@ -80,7 +80,13 @@
         badge.className = "ann-num";
         badge.textContent = String(idx);
 
-        range.surroundContents(span);
+        // surroundContents fails on cross-element selections; use extractContents as fallback
+        try {
+          range.surroundContents(span);
+        } catch (crossErr) {
+          span.appendChild(range.extractContents());
+          range.insertNode(span);
+        }
         span.appendChild(badge);
 
         span.addEventListener("click", (function (id) {
@@ -117,11 +123,11 @@
 
   // ── Anchor extraction from selection ─────────────────────────
 
-  function extractAnchor(range) {
+  function extractAnchor(range, container) {
     var exact = range.toString();
     if (!exact.trim()) return null;
 
-    var container = document.querySelector(".rendered-content");
+    if (!container) container = document.querySelector(".rendered-content");
     var fullText = container.textContent;
 
     var walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT);
@@ -140,18 +146,18 @@
 
     var heading = null;
     var paragraphIndex = 0;
-    var node = range.startContainer;
-    while (node && node !== container) {
-      if (node.previousElementSibling) {
-        var sib = node.previousElementSibling;
-        while (sib) {
-          if (/^H[1-6]$/.test(sib.tagName)) { heading = sib.textContent.trim(); break; }
-          if (sib.tagName === "P") paragraphIndex++;
-          sib = sib.previousElementSibling;
-        }
-        if (heading) break;
+    var blockNode = range.startContainer;
+    while (blockNode && blockNode !== container && blockNode.nodeType !== 1) blockNode = blockNode.parentNode;
+    var cur = blockNode;
+    while (cur && cur !== container) {
+      var sib = cur.previousElementSibling;
+      while (sib) {
+        if (/^H[1-6]$/.test(sib.tagName)) { heading = sib.textContent.trim(); break; }
+        if (sib.tagName === "P") paragraphIndex++;
+        sib = sib.previousElementSibling;
       }
-      node = node.parentNode;
+      if (heading) break;
+      cur = cur.parentNode;
     }
 
     return {
@@ -167,12 +173,12 @@
 
   // ── Inline comment popover ──────────────────────────────────
 
-  function showPopover(rect, anchor) {
+  function showPopover(rect, anchor, container) {
     hidePopover();
     pendingAnchor = anchor;
 
-    popoverEl = document.createElement("div");
-    popoverEl.className = "ann-popover";
+    popoverEl = document.createElement(“div”);
+    popoverEl.className = “ann-popover”;
 
     var displayText = anchor.highlight_text;
     if (displayText.length > 100) displayText = displayText.substring(0, 100) + “…”;
@@ -193,7 +199,7 @@
         '</div>' +
       '</form>';
 
-    var container = document.querySelector(".rendered-content");
+    if (!container) container = document.querySelector(“.rendered-content”);
     var containerRect = container.getBoundingClientRect();
 
     var left = rect.left + rect.width / 2 - containerRect.left;
@@ -269,9 +275,11 @@
 
   function onDocumentMouseUp(e) {
     if (e.target.closest(".ann-popover")) return;
+    if (e.target.closest(".pin-popover")) return;
 
-    var container = document.querySelector(".rendered-content");
-    if (!container) return;
+    // Support multiple rendered-content containers (content page + compare draft pane)
+    var containers = document.querySelectorAll(".rendered-content");
+    if (!containers.length) return;
 
     var sel = window.getSelection();
     if (!sel || sel.isCollapsed || !sel.toString().trim()) {
@@ -280,13 +288,20 @@
     }
 
     var range = sel.getRangeAt(0);
-    if (!container.contains(range.commonAncestorContainer)) return;
+    var matchedContainer = null;
+    for (var ci = 0; ci < containers.length; ci++) {
+      if (containers[ci].contains(range.commonAncestorContainer)) {
+        matchedContainer = containers[ci];
+        break;
+      }
+    }
+    if (!matchedContainer) return;
 
-    var anchor = extractAnchor(range);
+    var anchor = extractAnchor(range, matchedContainer);
     if (!anchor) return;
 
     hidePopover();
-    showPopover(range.getBoundingClientRect(), anchor);
+    showPopover(range.getBoundingClientRect(), anchor, matchedContainer);
   }
 
   // Dismiss popover on click outside

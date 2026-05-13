@@ -100,8 +100,7 @@ async def campaign_review(
 
     compare_pairs = content_svc.get_compare_pairs(registry)
 
-    return templates.TemplateResponse("review/campaign.html", {
-        "request": request,
+    return templates.TemplateResponse(request, "review/campaign.html", {
         "link": link,
         "registry": registry,
         "groups": groups,
@@ -111,6 +110,87 @@ async def campaign_review(
         "unresolved_counts": unresolved_counts,
         "compare_pairs": compare_pairs,
         "token": str(token),
+    })
+
+
+@router.get("/review/{token}/raw/{content_path:path}", response_class=HTMLResponse)
+async def raw_html(
+    request: Request,
+    token: uuid.UUID,
+    content_path: str,
+    db: AsyncSession = Depends(get_db),
+):
+    result = await db.execute(select(ShareLink).where(ShareLink.token == token))
+    link = result.scalar_one_or_none()
+    if not link or not link.is_active:
+        raise HTTPException(status_code=404)
+
+    html = content_svc.get_content_html(link.client_slug, link.campaign_slug, content_path)
+    if html is None:
+        raise HTTPException(status_code=404)
+    return HTMLResponse(content=html)
+
+
+@router.get("/review/{token}/compare/{filename:path}", response_class=HTMLResponse)
+async def compare_view(
+    request: Request,
+    token: uuid.UUID,
+    filename: str,
+    db: AsyncSession = Depends(get_db),
+):
+    result = await db.execute(select(ShareLink).where(ShareLink.token == token))
+    link = result.scalar_one_or_none()
+    if not link or not link.is_active:
+        raise HTTPException(status_code=404)
+
+    registry = content_svc.load_registry(link.client_slug, link.campaign_slug)
+    if not registry:
+        raise HTTPException(status_code=404)
+
+    original_path = f"html/original/{filename}"
+    revised_path = f"html/revised/{filename}"
+
+    original_entry = next((e for e in registry.get("entries", []) if e["path"] == original_path), None)
+    if not original_entry:
+        raise HTTPException(status_code=404, detail="Original HTML not found.")
+
+    has_revised = any(e["path"] == revised_path for e in registry.get("entries", []))
+
+    pairs = content_svc.get_compare_pairs(registry)
+    current_idx = next((i for i, p in enumerate(pairs) if p["filename"] == filename), 0)
+    prev_pair = pairs[current_idx - 1] if current_idx > 0 else None
+    next_pair = pairs[current_idx + 1] if current_idx < len(pairs) - 1 else None
+
+    draft_info = content_svc.find_draft_for_html(
+        link.client_slug, link.campaign_slug, filename
+    )
+    draft_html = draft_info["html"] if draft_info else None
+    draft_path = draft_info["path"] if draft_info else None
+
+    content_path = f"compare:{filename}"
+    pin_count_q = await db.execute(
+        select(func.count(Comment.id))
+        .where(
+            Comment.share_link_token == token,
+            Comment.content_path == content_path,
+            Comment.parent_id.is_(None),
+        )
+    )
+    pin_comment_count = pin_count_q.scalar() or 0
+
+    return templates.TemplateResponse(request, "review/compare.html", {
+        "link": link,
+        "token": str(token),
+        "filename": filename,
+        "display_name": filename.replace("--", " / ").replace(".html", "").replace("-", " ").title(),
+        "original_path": original_path,
+        "revised_path": revised_path if has_revised else None,
+        "draft_html": draft_html,
+        "draft_path": draft_path,
+        "prev_pair": prev_pair,
+        "next_pair": next_pair,
+        "nav_position": f"{current_idx + 1} of {len(pairs)}",
+        "pin_comment_count": pin_comment_count,
     })
 
 
@@ -186,8 +266,7 @@ async def content_review(
         for c in comments
     ])
 
-    return templates.TemplateResponse("review/content.html", {
-        "request": request,
+    return templates.TemplateResponse(request, "review/content.html", {
         "link": link,
         "entry": entry,
         "content_html": rendered_html,
@@ -200,66 +279,4 @@ async def content_review(
         "next_entry": next_entry,
         "nav_position": f"{current_idx + 1} of {len(same_type)}",
         "reviewer_name": link.recipient_name or "",
-    })
-
-
-@router.get("/review/{token}/raw/{content_path:path}", response_class=HTMLResponse)
-async def raw_html(
-    request: Request,
-    token: uuid.UUID,
-    content_path: str,
-    db: AsyncSession = Depends(get_db),
-):
-    result = await db.execute(select(ShareLink).where(ShareLink.token == token))
-    link = result.scalar_one_or_none()
-    if not link or not link.is_active:
-        raise HTTPException(status_code=404)
-
-    html = content_svc.get_content_html(link.client_slug, link.campaign_slug, content_path)
-    if html is None:
-        raise HTTPException(status_code=404)
-    return HTMLResponse(content=html)
-
-
-@router.get("/review/{token}/compare/{filename:path}", response_class=HTMLResponse)
-async def compare_view(
-    request: Request,
-    token: uuid.UUID,
-    filename: str,
-    db: AsyncSession = Depends(get_db),
-):
-    result = await db.execute(select(ShareLink).where(ShareLink.token == token))
-    link = result.scalar_one_or_none()
-    if not link or not link.is_active:
-        raise HTTPException(status_code=404)
-
-    registry = content_svc.load_registry(link.client_slug, link.campaign_slug)
-    if not registry:
-        raise HTTPException(status_code=404)
-
-    original_path = f"html/original/{filename}"
-    revised_path = f"html/revised/{filename}"
-
-    original_entry = next((e for e in registry.get("entries", []) if e["path"] == original_path), None)
-    if not original_entry:
-        raise HTTPException(status_code=404, detail="Original HTML not found.")
-
-    has_revised = any(e["path"] == revised_path for e in registry.get("entries", []))
-
-    pairs = content_svc.get_compare_pairs(registry)
-    current_idx = next((i for i, p in enumerate(pairs) if p["filename"] == filename), 0)
-    prev_pair = pairs[current_idx - 1] if current_idx > 0 else None
-    next_pair = pairs[current_idx + 1] if current_idx < len(pairs) - 1 else None
-
-    return templates.TemplateResponse("review/compare.html", {
-        "request": request,
-        "link": link,
-        "token": str(token),
-        "filename": filename,
-        "display_name": filename.replace("--", " / ").replace(".html", "").replace("-", " ").title(),
-        "original_path": original_path,
-        "revised_path": revised_path if has_revised else None,
-        "prev_pair": prev_pair,
-        "next_pair": next_pair,
-        "nav_position": f"{current_idx + 1} of {len(pairs)}",
     })

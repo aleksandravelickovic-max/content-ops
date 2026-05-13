@@ -71,12 +71,23 @@
   <section class="admin-section" style="overflow:visible">
     <!-- Tabs -->
     <div class="tab-bar">
+      {% if compare_pairs %}
+      <button class="tab-btn active" data-tab="compare">
+        Before / After
+        <span class="tab-count">{{ compare_pairs | length }}</span>
+      </button>
+      {% endif %}
       {% for tab in tabs %}
-      <button class="tab-btn{% if loop.first %} active{% endif %}" data-tab="{{ tab.key }}">
+      <button class="tab-btn{% if not compare_pairs and loop.first %} active{% endif %}" data-tab="{{ tab.key }}">
         {{ tab.label }}
         <span class="tab-count">{{ tab.count }}</span>
       </button>
       {% endfor %}
+      {% if active_link %}
+      <button class="tab-btn" data-tab="client-preview">
+        Client Preview
+      </button>
+      {% endif %}
     </div>
 
     <!-- Feedback filter -->
@@ -89,9 +100,58 @@
       <span class="visible-count" id="visibleCount"></span>
     </div>
 
+    <!-- Before / After comparison tab -->
+    {% if compare_pairs %}
+    <div class="tab-panel active" data-panel="compare">
+      <table class="content-table">
+        <thead>
+          <tr>
+            <th class="th-title">Page</th>
+            <th class="th-size">Type</th>
+            <th class="th-feedback">Status</th>
+            <th class="th-date">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for pair in compare_pairs %}
+          <tr class="content-row" data-comments="0" onclick="window.location='/admin/campaigns/{{ client_slug }}/{{ campaign_slug }}/compare/{{ pair.filename }}'">
+            <td class="col-title">
+              <span class="row-title">{{ pair.display_name }}</span>
+              <span class="row-path">{{ pair.filename }}</span>
+            </td>
+            <td class="col-size">{{ pair.page_type | title }}</td>
+            <td class="col-feedback">
+              {% if pair.has_revised %}
+              <span class="feedback-resolved">Ready to compare</span>
+              {% else %}
+              <span class="feedback-none">Original only</span>
+              {% endif %}
+            </td>
+            <td class="col-date">
+              <a href="/admin/campaigns/{{ client_slug }}/{{ campaign_slug }}/compare/{{ pair.filename }}" class="compare-link">Compare &rarr;</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% endif %}
+
+    <!-- Client Preview tab (iframe of the share link review page) -->
+    {% if active_link %}
+    <div class="tab-panel" data-panel="client-preview">
+      <div style="background:#f8f6f0; border:1px solid #d9cfb9; border-radius:6px; padding:12px 16px; margin-bottom:12px; font-size:13px; display:flex; align-items:center; gap:12px;">
+        <span>Showing what the client sees at</span>
+        <code style="background:#efe6d2; padding:2px 8px; border-radius:3px;">{{ base_url }}/review/{{ active_link.token }}</code>
+        <a href="/review/{{ active_link.token }}" target="_blank" style="color:#8a3324; font-weight:600;">Open in new tab &rarr;</a>
+      </div>
+      <iframe src="/review/{{ active_link.token }}" style="width:100%; height:calc(100vh - 320px); border:1px solid #d9cfb9; border-radius:6px; background:#fff;"></iframe>
+    </div>
+    {% endif %}
+
     <!-- Tab panels -->
     {% for tab in tabs %}
-    <div class="tab-panel{% if loop.first %} active{% endif %}" data-panel="{{ tab.key }}">
+    <div class="tab-panel{% if not compare_pairs and loop.first %} active{% endif %}" data-panel="{{ tab.key }}">
       <table class="content-table">
         <thead>
           <tr>

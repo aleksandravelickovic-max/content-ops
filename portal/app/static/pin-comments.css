@@ -1,0 +1,323 @@
+/* ── Pin Comment Bubbles ──────────────────────────────────── */
+
+.pin-bubble {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 50;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.35);
+  border: 2px solid #fff;
+  transition: transform 0.15s, box-shadow 0.15s;
+  user-select: none;
+}
+
+.pin-bubble:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.5);
+}
+
+.pin-bubble.resolved {
+  background: #059669;
+  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.35);
+}
+
+.pin-bubble.pin-flash {
+  animation: pinFlash 1.5s ease;
+}
+
+@keyframes pinFlash {
+  0%, 100% { box-shadow: 0 2px 8px rgba(37, 99, 235, 0.35); }
+  25%, 75% { box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.3); transform: translate(-50%, -50%) scale(1.3); }
+  50% { box-shadow: 0 0 0 10px rgba(37, 99, 235, 0.15); transform: translate(-50%, -50%) scale(1.4); }
+}
+
+/* ── Pin Popover Form ────────────────────────────────────── */
+
+.pin-popover {
+  position: absolute;
+  z-index: 200;
+  width: 300px;
+  transform: translateX(-50%);
+  background: #fff;
+  border: 1px solid #e2e4e8;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+  animation: pinPopIn 0.15s ease;
+}
+
+@keyframes pinPopIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(-6px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.pin-popover-header {
+  padding: 10px 14px;
+  font-size: 12px;
+  color: #6b7280;
+  border-bottom: 1px solid #f3f4f6;
+  background: #fafbfc;
+  border-radius: 10px 10px 0 0;
+}
+
+.pin-popover-form {
+  padding: 12px 14px;
+}
+
+.pin-popover-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 7px 10px;
+  border: 1px solid #e2e4e8;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-bottom: 8px;
+  outline: none;
+}
+
+.pin-popover-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.12);
+}
+
+.pin-popover-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 7px 10px;
+  border: 1px solid #e2e4e8;
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 60px;
+  outline: none;
+  margin-bottom: 8px;
+}
+
+.pin-popover-textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.12);
+}
+
+.pin-popover-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.pin-popover-cancel {
+  padding: 6px 14px;
+  border: 1px solid #e2e4e8;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 13px;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.pin-popover-cancel:hover { background: #f3f4f6; }
+
+.pin-popover-submit {
+  padding: 6px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.pin-popover-submit:hover { background: #1d4ed8; }
+.pin-popover-submit:disabled { opacity: 0.6; cursor: default; }
+
+/* ── Feedback Sidebar ────────────────────────────────────── */
+
+.pin-sidebar {
+  position: fixed;
+  top: 0;
+  right: -380px;
+  width: 360px;
+  height: 100vh;
+  background: #fff;
+  border-left: 1px solid #e2e4e8;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.08);
+  z-index: 300;
+  transition: right 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.pin-sidebar.open {
+  right: 0;
+}
+
+.pin-sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e2e4e8;
+  flex-shrink: 0;
+}
+
+.pin-sidebar-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pin-sidebar-badge {
+  background: #dbeafe;
+  color: #2563eb;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.pin-sidebar-close {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #6b7280;
+  line-height: 1;
+  padding: 4px;
+}
+
+.pin-sidebar-close:hover { color: #1a1a1a; }
+
+.pin-sidebar-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pin-sidebar-empty {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 13px;
+  padding: 32px 16px;
+  border: 1px dashed #e2e4e8;
+  border-radius: 8px;
+}
+
+.pin-sidebar-comment {
+  padding: 12px;
+  background: #f8f9fa;
+  border: 1px solid #e2e4e8;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+
+.pin-sidebar-comment:hover { background: #f0f1f3; }
+.pin-sidebar-comment.resolved { opacity: 0.6; }
+
+.pin-sidebar-comment-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.pin-sidebar-num {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pin-sidebar-comment.resolved .pin-sidebar-num {
+  background: #059669;
+}
+
+.pin-sidebar-pane {
+  margin-left: auto;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #6b7280;
+  background: #f3f4f6;
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+.pin-sidebar-comment-body {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #1a1a1a;
+}
+
+.pin-sidebar-resolved {
+  display: inline-block;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #d1fae5;
+  color: #059669;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+/* ── Toggle Button (floating) ────────────────────────────── */
+
+.pin-sidebar-toggle {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 250;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 999px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.35);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.pin-sidebar-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
+}
+
+.pin-sidebar-toggle .pin-sidebar-badge {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+/* ── Compare pane click hint ─────────────────────────────── */
+
+.compare-pane:not(.pane-empty):not(.pane-not-processed) {
+  cursor: crosshair;
+}

@@ -27,6 +27,9 @@ class CommentCreate(BaseModel):
     anchor_end_offset: int | None = None
     anchor_heading: str | None = None
     anchor_paragraph_index: int | None = None
+    pin_x_percent: float | None = None
+    pin_y_percent: float | None = None
+    pin_pane: str | None = None
 
 
 class CommentResolve(BaseModel):
@@ -70,6 +73,9 @@ async def create_comment(
         anchor_end_offset=payload.anchor_end_offset,
         anchor_heading=payload.anchor_heading,
         anchor_paragraph_index=payload.anchor_paragraph_index,
+        pin_x_percent=payload.pin_x_percent,
+        pin_y_percent=payload.pin_y_percent,
+        pin_pane=payload.pin_pane,
     )
     db.add(comment)
     await db.commit()
@@ -100,3 +106,84 @@ async def resolve_comment(
     await db.commit()
 
     return {"id": comment.id, "resolved": comment.resolved}
+
+
+@router.post("/process/{token}/compare/{filename:path}")
+async def process_content(
+    token: uuid.UUID,
+    filename: str,
+    db: AsyncSession = Depends(get_db),
+):
+    """Trigger HTML processing for a specific page (runs build-html-before-after.py)."""
+    import asyncio
+    from pathlib import Path
+
+    from ..config import CONTENT_ROOT
+
+    result = await db.execute(select(ShareLink).where(ShareLink.token == token))
+    link = result.scalar_one_or_none()
+    if not link or not link.is_active:
+        raise HTTPException(status_code=404, detail="Invalid share link.")
+
+    scripts_dir = Path(CONTENT_ROOT).parent / "scripts"
+    script = scripts_dir / "build-html-before-after.py"
+    if not script.exists():
+        raise HTTPException(status_code=500, detail="Build script not found.")
+
+    campaign_dir = Path(CONTENT_ROOT) / link.client_slug / "campaigns" / link.campaign_slug
+
+    proc = await asyncio.create_subprocess_exec(
+        "python3", str(script),
+        cwd=str(campaign_dir.parent.parent.parent),
+        stdout=asyncio.subprocess.PIPE,
+        stderr=asyncio.subprocess.PIPE,
+    )
+    stdout, stderr = await proc.communicate()
+
+    if proc.returncode != 0:
+        return JSONResponse(
+            {"status": "error", "detail": stderr.decode(errors="replace")[:2000]},
+            status_code=500,
+        )
+
+    return {"status": "processed", "filename": filename}
+
+
+@router.get("/review/{token}/compare-comments/{filename:path}")
+async def get_compare_comments(
+    token: uuid.UUID,
+    filename: str,
+    db: AsyncSession = Depends(get_db),
+):
+    """Get all pin comments for a compare view page."""
+    result = await db.execute(select(ShareLink).where(ShareLink.token == token))
+    link = result.scalar_one_or_none()
+    if not link or not link.is_active:
+        raise HTTPException(status_code=404, detail="Invalid share link.")
+
+    content_path = f"compare:{filename}"
+    comments_q = await db.execute(
+        select(Comment)
+        .where(
+            Comment.share_link_token == token,
+            Comment.content_path == content_path,
+            Comment.parent_id.is_(None),
+        )
+        .order_by(Comment.created_at.asc())
+    )
+    comments = comments_q.scalars().all()
+
+    return [
+        {
+            "id": c.id,
+            "author_name": c.author_name,
+            "body": c.body,
+            "pin_x_percent": c.pin_x_percent,
+            "pin_y_percent": c.pin_y_percent,
+            "pin_pane": c.pin_pane,
+            "highlight_text": c.highlight_text,
+            "resolved": c.resolved,
+            "created_at": c.created_at.isoformat() if c.created_at else None,
+        }
+        for c in comments
+    ]

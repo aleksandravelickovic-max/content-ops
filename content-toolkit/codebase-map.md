@@ -1,11 +1,11 @@
 # Codebase Map: zia-content-ops
 
-> Auto-generated: 2026-05-13 01:56 | Commit: 1586ab2c | Branch: main
-> 96 files | 19 code files | 106 functions/classes indexed
+> Auto-generated: 2026-05-13 02:03 | Commit: ae98ec64 | Branch: main
+> 96 files | 19 code files | 109 functions/classes indexed
 
 ## Git Info
 - Remote: https://forge.internal.searchatlas.com/search-atlas-group/content-team/content-ops.git
-- Last commit: 1586ab2 Merge branch 'worktree-agent-a2caf43aff80c9696'
+- Last commit: ae98ec6 docs: rebuild Zia Tile content HTML and update portal with annotation support
 
 ## File Distribution
 - `.md`: 26 files
@@ -64,6 +64,7 @@ universal-rules/
   def get_content_raw(client_slug: str, campaign_slug: str, content_path: str)
   def list_campaigns(client_slug: str)
   def get_compare_pairs(registry: dict)
+  def find_draft_for_html
   def list_clients()
 
 ### portal/app/database.py
@@ -92,6 +93,8 @@ universal-rules/
   def admin_campaigns
   def admin_campaign_detail
   def admin_campaign_create_share_link
+  def admin_raw_html
+  def admin_compare_view
   def admin_content_detail
 
 ### portal/app/routes/api.py
@@ -110,9 +113,9 @@ universal-rules/
 
 ### portal/app/routes/review.py
   def campaign_review
-  def content_review
   def raw_html
   def compare_view
+  def content_review
 
 ### portal/app/static/annotation.js
   function findTextInDom(container, exact, prefix, suffix)

@@ -971,6 +971,14 @@ body {
 
 /* ── Before / After comparison view ── */
 
+.compare-nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  border-bottom: 1px solid var(--border);
+}
+
 .compare-toolbar {
   display: flex;
   align-items: center;
@@ -1012,6 +1020,8 @@ body {
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
+/* ── Three-pane layout (Original | Draft | Revised) ── */
+
 .compare-panes {
   display: flex;
   flex: 1;
@@ -1020,9 +1030,28 @@ body {
   background: var(--border);
 }
 
+/* Two-pane fallback: no draft -> each pane is 50% */
+.compare-panes:not(.has-draft) .pane-original,
+.compare-panes:not(.has-draft) .pane-revised { flex: 1; }
+
+/* Three-pane: each pane ~33% */
+.compare-panes.has-draft .pane-original,
+.compare-panes.has-draft .pane-draft,
+.compare-panes.has-draft .pane-revised { flex: 1; }
+
+/* Mode: Original Only */
 .compare-panes[data-mode="original"] .pane-revised { display: none; }
+.compare-panes[data-mode="original"] .pane-draft { display: none; }
 .compare-panes[data-mode="original"] .pane-original { flex: 1; }
+
+/* Mode: Draft Only */
+.compare-panes[data-mode="draft"] .pane-original { display: none; }
+.compare-panes[data-mode="draft"] .pane-revised { display: none; }
+.compare-panes[data-mode="draft"] .pane-draft { flex: 1; }
+
+/* Mode: Revised Only */
 .compare-panes[data-mode="revised"] .pane-original { display: none; }
+.compare-panes[data-mode="revised"] .pane-draft { display: none; }
 .compare-panes[data-mode="revised"] .pane-revised { flex: 1; }
 
 .compare-pane {
@@ -1042,10 +1071,40 @@ body {
   color: var(--text-muted);
   background: var(--bg-alt);
   border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pane-label--original {
+  color: var(--text-muted);
+}
+
+.pane-label--draft {
+  color: var(--accent);
 }
 
 .pane-label--revised {
   color: #2d5a27;
+}
+
+.pane-label-path {
+  font-size: 10px;
+  font-weight: 400;
+  font-family: 'SF Mono', ui-monospace, 'Cascadia Code', monospace;
+  color: var(--text-muted);
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+/* Draft center pane: inline rendered markdown, not an iframe */
+.draft-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px 28px;
+  background: var(--bg);
+  font-size: 14px;
+  line-height: 1.7;
 }
 
 .compare-frame {
@@ -1079,4 +1138,127 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
+}
+
+/* ── Compare Feedback Bar ── */
+
+.compare-feedback-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 24px;
+  background: #fef9c3;
+  border-bottom: 1px solid #fde68a;
+}
+
+.compare-feedback-hint {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #854d0e;
+}
+
+.compare-feedback-count {
+  font-size: 12px;
+  font-weight: 600;
+  color: #2563eb;
+  background: #dbeafe;
+  padding: 3px 10px;
+  border-radius: 10px;
+}
+
+/* ── Not Processed indicator ── */
+
+.pane-not-processed {
+  background: var(--bg-alt);
+}
+
+.pane-label--not-processed {
+  color: var(--orange);
+}
+
+.processing-status-badge {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: var(--orange-light);
+  color: var(--orange);
+  letter-spacing: 0.03em;
+}
+
+.pane-placeholder-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 32px;
+  text-align: center;
+  gap: 12px;
+}
+
+.not-processed-icon {
+  font-size: 48px;
+  color: var(--orange);
+  opacity: 0.6;
+  line-height: 1;
+}
+
+.pane-placeholder-content h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+}
+
+.pane-placeholder-content p {
+  font-size: 14px;
+  color: var(--text-muted);
+  max-width: 320px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.process-btn {
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.process-btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.process-result {
+  font-size: 13px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  margin-top: 8px;
+}
+
+.process-success {
+  background: var(--green-light);
+  color: var(--green);
+}
+
+.process-error {
+  background: var(--red-light);
+  color: var(--red);
+}
+
+/* Responsive: stack panes vertically on narrow screens */
+@media (max-width: 1100px) {
+  .compare-panes {
+    flex-direction: column;
+    height: auto;
+  }
+  .compare-pane {
+    min-height: 50vh;
+  }
 }

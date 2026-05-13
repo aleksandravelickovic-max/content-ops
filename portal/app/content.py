@@ -100,6 +100,94 @@ def get_compare_pairs(registry: dict) -> list[dict]:
     return pairs
 
 
+def find_draft_for_html(
+    client_slug: str, campaign_slug: str, filename: str
+) -> dict | None:
+    """Map an HTML filename to its corresponding markdown draft.
+
+    Returns ``{"path": "<relative-path>", "html": "<rendered-html>"}`` or
+    ``None`` when no matching draft can be found.
+
+    Resolution strategy:
+      1. Extract the page type (``products`` / ``collections``) and URL slug
+         from *filename* (e.g. ``products--burnt-sugar-zellige-tile.html``).
+      2. Scan ``gdocs-content/{product,collection}-pages/*.md`` for a file
+         whose ``**URL:**`` field contains the slug.
+      3. Fallback for collections: scan ``drafts/*.md`` where the draft
+         filename (minus numeric prefix) matches the collection name.
+    """
+    camp_path = get_campaign_path(client_slug, campaign_slug)
+    if not camp_path:
+        return None
+
+    # Determine page type and slug from the HTML filename
+    base = filename.replace(".html", "")
+    if base.startswith("products--"):
+        page_type = "product"
+        slug = base[len("products--"):]
+    elif base.startswith("collections--"):
+        page_type = "collection"
+        slug = base[len("collections--"):]
+    else:
+        return None
+
+    # --- Strategy 1: match via **URL:** field in gdocs-content ---
+    if page_type == "product":
+        search_dirs = [camp_path / "gdocs-content" / "product-pages"]
+    else:
+        search_dirs = [camp_path / "gdocs-content" / "collection-pages"]
+
+    for search_dir in search_dirs:
+        if not search_dir.is_dir():
+            continue
+        for md_file in sorted(search_dir.glob("*.md")):
+            try:
+                md_file.resolve().relative_to(camp_path.resolve())
+            except ValueError:
+                continue
+            text = md_file.read_text(encoding="utf-8", errors="replace")
+            # Look for **URL:** line that ends with our slug
+            for line in text.splitlines()[:30]:  # URL is always near the top
+                if "**URL:**" in line or "**url:**" in line.lower():
+                    # Extract the URL path portion after the domain
+                    # Handles both <https://...> and bare https://... formats
+                    cleaned = line.replace("<", "").replace(">", "").strip()
+                    # Match exact final path segment to avoid partial matches
+                    # e.g. slug "cotto" must match "/cotto" at end, not "/cotto-tile-allende"
+                    cleaned = cleaned.rstrip()
+                    if cleaned.endswith(f"/{slug}"):
+                        rel_path = str(md_file.relative_to(camp_path))
+                        _md.reset()
+                        rendered = _md.convert(text)
+                        return {"path": rel_path, "html": rendered}
+                    break  # Only check the first URL line per file
+
+    # --- Strategy 2 (collections only): match drafts/*.md by material name ---
+    if page_type == "collection":
+        drafts_dir = camp_path / "drafts"
+        if drafts_dir.is_dir():
+            for md_file in sorted(drafts_dir.glob("*.md")):
+                try:
+                    md_file.resolve().relative_to(camp_path.resolve())
+                except ValueError:
+                    continue
+                # Draft filenames: 01-zellige.md, 07-cotto.md, etc.
+                stem = md_file.stem  # e.g. "01-zellige"
+                # Strip numeric prefix (digits + dash)
+                material = stem.lstrip("0123456789").lstrip("-")  # e.g. "zellige"
+                if not material:
+                    continue
+                # The slug might be "zellige", "cotto", "glass-mosaics", etc.
+                if material == slug or slug.startswith(material) or material.startswith(slug):
+                    text = md_file.read_text(encoding="utf-8", errors="replace")
+                    rel_path = str(md_file.relative_to(camp_path))
+                    _md.reset()
+                    rendered = _md.convert(text)
+                    return {"path": rel_path, "html": rendered}
+
+    return None
+
+
 def list_clients() -> list[str]:
     root = Path(CONTENT_ROOT)
     if not root.is_dir():
