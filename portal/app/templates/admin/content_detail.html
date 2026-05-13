@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% block title %}{{ entry.displayName }} — Admin{% endblock %}
+{% block body_class %}admin-page content-page{% endblock %}
+
+{% block body %}
+<header class="admin-header">
+  <div class="header-inner">
+    <a href="/admin/campaigns/{{ client_slug }}/{{ campaign_slug }}" class="back-link">&larr; Back to campaign</a>
+    <nav class="admin-nav">
+      <a href="/admin/campaigns" class="nav-link active">Campaigns</a>
+      <a href="/admin/" class="nav-link">Share Links</a>
+      <a href="/admin/comments" class="nav-link">Comments</a>
+    </nav>
+    <div class="content-nav">
+      {% if prev_entry %}
+      <a href="/admin/campaigns/{{ client_slug }}/{{ campaign_slug }}/{{ prev_entry.path }}" class="nav-btn">&larr; Prev</a>
+      {% else %}
+      <span class="nav-btn disabled">&larr; Prev</span>
+      {% endif %}
+      <span class="nav-pos">{{ nav_position }}</span>
+      {% if next_entry %}
+      <a href="/admin/campaigns/{{ client_slug }}/{{ campaign_slug }}/{{ next_entry.path }}" class="nav-btn">Next &rarr;</a>
+      {% else %}
+      <span class="nav-btn disabled">Next &rarr;</span>
+      {% endif %}
+    </div>
+    {% if user %}
+    <div class="user-info">
+      <span class="user-email">{{ user.email }}</span>
+      <a href="/auth/logout" class="nav-link logout-link">Sign out</a>
+    </div>
+    {% endif %}
+  </div>
+</header>
+
+<div class="content-layout">
+  <main class="content-main">
+    <div class="content-header">
+      <h1>{{ entry.displayName }}</h1>
+      <div class="content-meta">
+        <span class="client-tag">{{ client_slug }}</span>
+        <span class="campaign-tag">{{ campaign_slug }}</span>
+        <span class="card-type type-{{ entry.type }}">{{ entry.type | replace("-", " ") }}</span>
+        <span>{{ entry.sizeHuman }}</span>
+        <span>{{ entry.lastModified }}</span>
+      </div>
+    </div>
+    <div class="rendered-content">
+      {{ content_html | safe }}
+    </div>
+  </main>
+
+  <aside class="comment-sidebar">
+    <div class="sidebar-header">
+      <h3>Feedback</h3>
+      <span class="comment-count">{{ comments | length }}</span>
+    </div>
+
+    <div class="comments-list">
+      {% for comment in comments %}
+      <div class="comment {% if comment.resolved %}resolved{% endif %}" data-id="{{ comment.id }}">
+        <div class="comment-header">
+          <strong>{{ comment.author_name }}</strong>
+          <time>{{ comment.created_at.strftime('%b %d, %Y %I:%M %p') }}</time>
+        </div>
+        {% if comment.highlight_text %}
+        <blockquote class="highlight">"{{ comment.highlight_text }}"</blockquote>
+        {% endif %}
+        <div class="comment-body">{{ comment.body }}</div>
+
+        <div class="comment-admin-actions">
+          <form action="/admin/comments/{{ comment.id }}/resolve" method="POST" style="display:inline">
+            <input type="hidden" name="redirect" value="/admin/campaigns/{{ client_slug }}/{{ campaign_slug }}/{{ content_path }}">
+            <button type="submit" class="btn btn-small {% if comment.resolved %}btn-success{% else %}btn-primary{% endif %}">
+              {{ 'Unresolve' if comment.resolved else 'Resolve' }}
+            </button>
+          </form>
+          {% if comment.resolved %}
+          <span class="resolved-badge">Resolved {{ comment.resolved_at.strftime('%b %d') if comment.resolved_at }}</span>
+          {% endif %}
+        </div>
+
+        {% if replies_map.get(comment.id) %}
+        <div class="replies">
+          {% for reply in replies_map[comment.id] %}
+          <div class="comment reply">
+            <div class="comment-header">
+              <strong>{{ reply.author_name }}</strong>
+              <time>{{ reply.created_at.strftime('%b %d, %Y %I:%M %p') }}</time>
+            </div>
+            <div class="comment-body">{{ reply.body }}</div>
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+
+      {% if not comments %}
+      <div class="empty-state">
+        <p>No feedback on this content yet.</p>
+      </div>
+      {% endif %}
+    </div>
+  </aside>
+</div>
+{% endblock %}
