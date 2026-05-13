@@ -27,6 +27,7 @@ Edited files in this directory:
 | X7 | "Distinctive" coloration (Fired Earth description) | Corrected to "distinct" | STYLE-SYSTEM §5.2 Cotto colorway table — Jamie's specific correction |
 | X8 | Saltillo framing tilted toward describing it as a competing product | Reframed to position Cotto as the stronger choice; removed negative product descriptors ("efflorescence," "staining," "surface wear") that go further than needed; kept the dimensional / process distinctions that explain why Cotto performs differently | STYLE-SYSTEM §5.5 + Jamie's direct comment quoted there |
 | X9 | "Special order" / "lead-time callout" given prominent placement | Kept in Order & Shipping only; minimized elsewhere | STYLE-SYSTEM §3.2 avoidance list |
+| X10 | Em-dash overuse (29 / 18 / 34 in the first edit pass). STYLE-SYSTEM §2.5 specifically bans em-dash *rhetorical pivots* ("it's not just tile — it's a statement"), but heavy non-pivot use still triggers the AI-cadence tell flagged by anti-slop heuristics. | Reduction pass: bullet labels `**X** — desc` → `**X:** desc`; sized bullets `**Name** (size) — desc` → `**Name** (size), desc`; prose parenthetical pairs converted to parentheses, commas, or split sentences. Kept the single em-dash in Jamie's verbatim approved patina framing: *"Use and time deepen the tone — the installation is a starting point, not a forever state."* (§2.2 / §6.5). Final body counts: blog 1 / collection 0 / product 0. | STYLE-SYSTEM §2.5 + anti-slop cadence rule |
 
 ---
 

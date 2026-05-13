@@ -30,25 +30,25 @@ Our Cotto tiles are made near San Miguel de Allende, Mexico, one of the most his
 
 Cotto comes in six core colorways: three classic terra cotta hues and three unexpected tones. The classic range carries the warm palette that has defined terra cotta for centuries:
 
-- **Adobe** — the lightest, a soft, sun-bleached tone
-- **Fired Earth** — the mid-range classic. Wood ash applied to the surface during firing produces the distinct textured coloration that sets it apart from the other classic hues
-- **Red Clay** — the traditional, deepest red, closest to the raw material itself
+- **Adobe:** the lightest, a soft, sun-bleached tone
+- **Fired Earth:** the mid-range classic. Wood ash applied to the surface during firing produces the distinct textured coloration that sets it apart from the other classic hues
+- **Red Clay:** the traditional, deepest red, closest to the raw material itself
 
 The unexpected tones extend the collection beyond what most terra cotta producers offer:
 
-- **Blanco** — a whitewashed finish that brightens and softens the body's natural tone
-- **Madera** — a deep cocoa, one of the few dark brown terra cotta tiles produced anywhere
-- **Oscura** — a matte black terra cotta, rare in unglazed clay
+- **Blanco:** a whitewashed finish that brightens and softens the body's natural tone
+- **Madera:** a deep cocoa, one of the few dark brown terra cotta tiles produced anywhere
+- **Oscura:** a matte black terra cotta, rare in unglazed clay
 
 Standard squares (4×4, 8×8, 13×13) and rectangles (2×6, 6.5×13) anchor the line, alongside an 8×9 hexagon and a set of signature shapes drawn from Spanish-colonial and Mesoamerican design traditions:
 
-- **Stars & Cross** — an eight-pointed star paired with a cross, the two shapes interlocking into a Moorish pattern
-- **Alcazar** (6×6) and **Big Alcazar** (13×13) — geometric interlocking shapes named for the alcázar, the Spanish-Moorish fortress
-- **Oaxaca** — an hourglass form paired with rounded octagons
-- **Durango** — a four-tile set that builds an abstract geometric pattern
-- **Tornillo** — long, narrow parallelograms set in a staggered, overlapping layout; tornillo is Spanish for "screw"
-- **Toltec** — named for the pre-Aztec Mesoamerican civilization centered at Tula
-- **Zocalo** — two asymmetrical pieces that come together to create a unified rectangular design
+- **Stars & Cross:** an eight-pointed star paired with a cross, the two shapes interlocking into a Moorish pattern
+- **Alcazar** (6×6) and **Big Alcazar** (13×13), geometric interlocking shapes named for the alcázar, the Spanish-Moorish fortress
+- **Oaxaca:** an hourglass form paired with rounded octagons
+- **Durango:** a four-tile set that builds an abstract geometric pattern
+- **Tornillo:** long, narrow parallelograms set in a staggered, overlapping layout; tornillo is Spanish for "screw"
+- **Toltec:** named for the pre-Aztec Mesoamerican civilization centered at Tula
+- **Zocalo:** two asymmetrical pieces that come together to create a unified rectangular design
 
 ### How are Zia Cotto tiles made?
 
@@ -56,7 +56,7 @@ Our Cotto begins with natural Mexican clay from San Miguel de Allende, hand-pres
 
 ### Does Cotto tile need special care?
 
-Yes. Always seal Cotto according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers. The sealing protocol calls for two applications — once before grouting and once after the grout has cured. Reseal regularly, more frequently in high-traffic or moisture-exposed areas. Use only pH-neutral cleaning products, and avoid acidic or abrasive cleaners that can damage the surface.
+Yes. Always seal Cotto according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers. The sealing protocol calls for two applications: once before grouting, and once after the grout has cured. Reseal regularly, more frequently in high-traffic or moisture-exposed areas. Use only pH-neutral cleaning products, and avoid acidic or abrasive cleaners that can damage the surface.
 
 Over time, the unglazed surface develops a natural patina that reflects use and age.
 
@@ -90,6 +90,6 @@ Cotto and zellige are both handmade clay-based tiles, though the two lines diffe
 
 ### How do I seal Cotto tile?
 
-Sealing Cotto correctly requires two separate applications: once before grouting in thin layers until the tiles are fully saturated, and once again after the grout has cured. Allow the pre-grout sealer to fully cure before proceeding to grouting — the pre-grout application also acts as a grout release.
+Sealing Cotto correctly requires two separate applications: once before grouting in thin layers until the tiles are fully saturated, and once again after the grout has cured. Allow the pre-grout sealer to fully cure before proceeding to grouting. The pre-grout application also acts as a grout release.
 
 Interior and exterior installations use different finish coats. Full instructions are available in the [Cotto Installation Guide](https://ziatile.com/pages/cotto-installation-guide), and the Zia team is available at info@ziatile.com or 310-844-1170 for project-specific questions.

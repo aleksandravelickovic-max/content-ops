@@ -43,29 +43,29 @@ Cotto comes in two colorway groups: three classic terra cotta hues and three une
 
 The classic range carries the warm palette that has defined terra cotta for centuries:
 
-- **Adobe** — the lightest of the three, a soft, sun-bleached tone
-- **Fired Earth** — the mid-range classic warm terra cotta. Wood ash applied to the surface during firing produces the distinct textured coloration that sets it apart from the other classic hues
-- **Red Clay** — the traditional, deepest red, closest to the raw material itself
+- **Adobe:** the lightest of the three, a soft, sun-bleached tone
+- **Fired Earth:** the mid-range classic warm terra cotta. Wood ash applied to the surface during firing produces the distinct textured coloration that sets it apart from the other classic hues
+- **Red Clay:** the traditional, deepest red, closest to the raw material itself
 
 The unexpected tones extend the collection beyond what most expect from terra cotta:
 
-- **Blanco** — a whitewashed finish that brightens and softens the body's natural tone
-- **Madera** — a deep cocoa, one of the few dark brown terra cotta tiles produced anywhere
-- **Oscura** — a matte black terra cotta, rare in unglazed clay
+- **Blanco:** a whitewashed finish that brightens and softens the body's natural tone
+- **Madera:** a deep cocoa, one of the few dark brown terra cotta tiles produced anywhere
+- **Oscura:** a matte black terra cotta, rare in unglazed clay
 
 The range of Cotto shapes and sizes is part of why the line lands in a contemporary kitchen as comfortably as in a Spanish courtyard. Standard squares (4×4, 8×8, 13×13) and rectangles (2×6, 6.5×13) anchor the line, alongside an 8×9 hexagon and a set of signature shapes drawn from Spanish-colonial and Mesoamerican design traditions:
 
-- **Stars & Cross** (6×6) — an eight-pointed star paired with a cross, the two shapes interlocking into a Moorish pattern found in courtyards from Granada to Puebla
-- **Alcazar** (6×6) and **Big Alcazar** (13×13) — geometric interlocking shapes with curved and straight edges, named for the alcázar, the Spanish-Moorish fortress, offered in two sizes
-- **Oaxaca** (7.5×13) — an hourglass shape paired with rounded octagons; named for the Mexican state
-- **Durango** (10×10.5) — a four-tile set that builds an abstract geometric pattern across a floor; named for the silver-mining country of northern Mexico
-- **Tornillo** (3.25×13) — long, narrow parallelograms set in a staggered overlapping layout; tornillo is Spanish for "screw"
-- **Toltec** (8×13) — a trapezoid format recalling a yin and yang, named for the pre-Aztec Mesoamerican civilization centered at Tula
-- **Zocalo** (6.5×13) — a striking asymmetrical puzzle design, with two pieces forming a unified rectangle
+- **Stars & Cross** (6×6), an eight-pointed star paired with a cross, the two shapes interlocking into a Moorish pattern found in courtyards from Granada to Puebla
+- **Alcazar** (6×6) and **Big Alcazar** (13×13), geometric interlocking shapes with curved and straight edges, named for the alcázar, the Spanish-Moorish fortress, offered in two sizes
+- **Oaxaca** (7.5×13), an hourglass shape paired with rounded octagons; named for the Mexican state
+- **Durango** (10×10.5), a four-tile set that builds an abstract geometric pattern across a floor; named for the silver-mining country of northern Mexico
+- **Tornillo** (3.25×13), long, narrow parallelograms set in a staggered overlapping layout; tornillo is Spanish for "screw"
+- **Toltec** (8×13), a trapezoid format recalling a yin and yang, named for the pre-Aztec Mesoamerican civilization centered at Tula
+- **Zocalo** (6.5×13), a striking asymmetrical puzzle design, with two pieces forming a unified rectangle
 
 ### Saltillo
 
-Saltillo is a clay tile produced in Saltillo, Coahuila, in northern Mexico — a different region and a different process from Cotto. Saltillo is largely sun-dried with limited kiln finishing, producing a lighter, more porous body that absorbs moisture readily and shows more variation in tone and dimension from piece to piece.
+Saltillo is a clay tile produced in Saltillo, Coahuila, a different region in northern Mexico with a different production process from Cotto. Saltillo is largely sun-dried with limited kiln finishing, producing a lighter, more porous body that absorbs moisture readily and shows more variation in tone and dimension from piece to piece.
 
 These characteristics are why Saltillo is generally reserved for decorative or low-traffic interior applications, while Cotto holds up across kitchens, entryways, commercial floors, freeze/thaw exterior installations, and properly sealed showers.
 
@@ -73,7 +73,7 @@ These characteristics are why Saltillo is generally reserved for decorative or l
 
 Cotto Allende is Zia's glazed terra cotta tile, beginning with the same clay foundation as Cotto, hand-hewn and high-fired, then hand-glazed. The line takes its name from where it is produced near San Miguel de Allende, Mexico, though Allende also means "beyond," as the glazes introduce color and texture beyond the spectrum of natural clay. Finishes range from matte to glossy, with speckling that varies by colorway and subtle crazing and color shifts.
 
-The collection features eighteen colorways, with names that reference the geography and flora of the line's Mexican origin: Sayulita (the Pacific surf town), Cacao, Creosote and Peyote (the desert plant and the cactus), Arroyo (a dry creek), Condesa (the Mexico City neighborhood), Pedregal (rocky ground). Four shapes ground the line: 4×4 square, 4×8 rectangle, triangle, and the 1.5×8 mini bar — the narrowest format, useful for linear or stack-bond layouts.
+The collection features eighteen colorways, with names that reference the geography and flora of the line's Mexican origin: Sayulita (the Pacific surf town), Cacao, Creosote and Peyote (the desert plant and the cactus), Arroyo (a dry creek), Condesa (the Mexico City neighborhood), Pedregal (rocky ground). Four shapes ground the line: 4×4 square, 4×8 rectangle, triangle, and the 1.5×8 mini bar, the narrowest format, useful for linear or stack-bond layouts.
 
 ## Where Cotto Belongs
 
@@ -81,7 +81,7 @@ Terra cotta performs best in spaces where warmth, texture, and natural aging are
 
 ### Interior Floors
 
-Interior floors are where Cotto is most at home. Larger formats — 13×13 squares, the 8×9 hexagon, or the bolder Big Alcazar — anchor open layouts; Stars & Cross and the smaller 6×6 Alcazar work in compact rooms where the interlocking patterns read at scale. Foot traffic deepens the tone and softens the surface over time, and living rooms, kitchens, and entryways all benefit. The material anchors the architecture without competing with anything else in the room.
+Interior floors are where Cotto is most at home. Larger formats like the 13×13 squares, the 8×9 hexagon, or the bolder Big Alcazar anchor open layouts. Stars & Cross and the smaller 6×6 Alcazar work in compact rooms where the interlocking patterns read at scale. Foot traffic deepens the tone and softens the surface over time, and living rooms, kitchens, and entryways all benefit. The material anchors the architecture without competing with anything else in the room.
 
 ### Walls and Backsplashes
 
@@ -89,11 +89,11 @@ On vertical surfaces, the tonal variation within the clay becomes the main event
 
 ### Bathrooms and Showers
 
-Cotto is suitable for shower walls and floors in bathrooms and requires proper sealing. Smaller formats — 4×4 squares or the 6×6 Alcazar — build more grout joints into the floor, which is useful for slip resistance. Always seal Cotto according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
+Cotto is suitable for shower walls and floors in bathrooms and requires proper sealing. Smaller formats like the 4×4 squares or 6×6 Alcazar build more grout joints into the floor, which is useful for slip resistance. Always seal Cotto according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.
 
 ### Exterior Floors and Outdoor Spaces
 
-This is one of unglazed Cotto's real advantages: it performs in any climate, including freeze/thaw regions. Patios, courtyards, garden paths, and outdoor kitchens all work — Big Alcazar and Stars & Cross suit larger expanses, while standard 8×8 or 13×13 squares anchor more contained outdoor rooms.
+This is one of unglazed Cotto's real advantages: it performs in any climate, including freeze/thaw regions. Patios, courtyards, garden paths, and outdoor kitchens all work. Big Alcazar and Stars & Cross suit larger expanses, while standard 8×8 or 13×13 squares anchor more contained outdoor rooms.
 
 One application unglazed Cotto cannot handle is full submersion. For pools and spas, Cotto Allende is the right choice within the line, as the glaze seals the surface to a level the unglazed body cannot reach. Cotto Allende itself is not suitable for outdoor freeze/thaw installations, so the two products divide the outdoor landscape cleanly: unglazed Cotto for cold-climate exteriors and patios, Cotto Allende for pools and spas.
 
@@ -117,7 +117,7 @@ Maintaining Cotto is simple, but consistency is what keeps the surface performin
 
 ## How to Install Cotto Tile
 
-Good installation comes down to preparation and sequencing. The pre-grout sealer is doing two jobs at once — protecting the porous clay and acting as a grout release. Skipping it or rushing it pulls stain into the body of the tile permanently.
+Good installation comes down to preparation and sequencing. The pre-grout sealer is doing two jobs at once: protecting the porous clay and acting as a grout release. Skipping it or rushing it pulls stain into the body of the tile permanently.
 
 Before anything goes down, open and mix tiles from all boxes and lay them out dry across the surface. Cotto varies in tone and size from piece to piece, and distributing that variation before setting is what makes the finished floor read as considered rather than random.
 
@@ -138,7 +138,7 @@ For project-specific installation questions, the Zia team is available at info@z
 
 Cotto ages beautifully. The tone deepens, the surface softens, and the patina builds in ways that enhance the room.
 
-Zia's Cotto is produced near San Miguel de Allende, Mexico, from natural Mexican clay hand-pressed into molds, sun-dried, and high-fired. Available in six colorways — Adobe, Fired Earth, Red Clay, Blanco, Madera, and Oscura — across squares, rectangles, hexagons, and a set of signature shapes, it suits floors, walls, and outdoor surfaces in any climate. Plan on 15–20% overage to account for curation and cuts; for projects that incorporate specialty formats, plan for 20 to 25% across the full order.
+Zia's Cotto is produced near San Miguel de Allende, Mexico, from natural Mexican clay hand-pressed into molds, sun-dried, and high-fired. Available in six colorways (Adobe, Fired Earth, Red Clay, Blanco, Madera, and Oscura) across squares, rectangles, hexagons, and a set of signature shapes, it suits floors, walls, and outdoor surfaces in any climate. Plan on 15–20% overage to account for curation and cuts; for projects that incorporate specialty formats, plan for 20 to 25% across the full order.
 
 Explore the Cotto collection, order samples, or reach out to the Zia team at info@ziatile.com or 310-844-1170 to find the right fit for any project.
 
@@ -166,6 +166,6 @@ Yes. Bathroom floors, walls, and showers all suit Cotto when sealed correctly. F
 
 ### Can Cotto be mixed with other Cotto colorways?
 
-Yes. Each Cotto tile is formed from the same San Miguel de Allende clay body and fired through the same kiln process, creating consistency across the line. Classic hues — Adobe, Fired Earth, Red Clay — pair naturally, while the unexpected tones of Blanco, Madera, and Oscura introduce contrast. When mixing colorways or incorporating specialty formats, plan for 20 to 25% overage to account for perimeter cuts and pattern balancing.
+Yes. Each Cotto tile is formed from the same San Miguel de Allende clay body and fired through the same kiln process, creating consistency across the line. Classic hues (Adobe, Fired Earth, Red Clay) pair naturally, while the unexpected tones of Blanco, Madera, and Oscura introduce contrast. When mixing colorways or incorporating specialty formats, plan for 20 to 25% overage to account for perimeter cuts and pattern balancing.
 
 For project-specific questions, the Zia team is available at info@ziatile.com or 310-844-1170.
