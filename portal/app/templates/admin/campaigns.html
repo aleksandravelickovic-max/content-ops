@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}Campaigns — Admin{% endblock %}
+{% block body_class %}admin-page{% endblock %}
+
+{% block body %}
+<header class="admin-header">
+  <div class="header-inner">
+    <h1>Content Review Portal <span class="header-tag">Admin</span></h1>
+    <nav class="admin-nav">
+      <a href="/admin/campaigns" class="nav-link active">Campaigns</a>
+      <a href="/admin/" class="nav-link">Share Links</a>
+      <a href="/admin/comments" class="nav-link">Comments</a>
+    </nav>
+    {% if user %}
+    <div class="user-info">
+      <span class="user-email">{{ user.email }}</span>
+      <a href="/auth/logout" class="nav-link logout-link">Sign out</a>
+    </div>
+    {% endif %}
+  </div>
+</header>
+
+<main class="admin-main">
+  {% for client_slug in clients %}
+  <section class="admin-section">
+    <div class="section-header">
+      <h2>
+        <span class="client-tag">{{ client_slug }}</span>
+        {{ client_slug | replace("-", " ") | title }}
+      </h2>
+      {% set camps = campaigns_by_client.get(client_slug, []) %}
+      <span class="count-badge">{{ camps | length }} campaign{{ 's' if camps | length != 1 }}</span>
+    </div>
+
+    {% if camps %}
+    <div class="campaign-grid">
+      {% for camp in camps %}
+      <a href="/admin/campaigns/{{ camp.client_slug }}/{{ camp.campaign_slug }}" class="campaign-card">
+        <div class="campaign-card-top">
+          <span class="campaign-card-name">{{ camp.campaign_slug | replace("-", " ") | title }}</span>
+          <span class="campaign-card-slug">{{ camp.campaign_slug }}</span>
+        </div>
+        <div class="campaign-card-stats">
+          <div class="campaign-stat">
+            <span class="campaign-stat-value">{{ camp.file_count }}</span>
+            <span class="campaign-stat-label">Files</span>
+          </div>
+          <div class="campaign-stat">
+            {% if camp.link_count > 0 %}
+            <span class="status-badge active">Active link</span>
+            {% else %}
+            <span class="status-badge no-link">No link</span>
+            {% endif %}
+          </div>
+          <div class="campaign-stat">
+            <span class="campaign-stat-value">{{ camp.comment_count }}</span>
+            <span class="campaign-stat-label">Comments</span>
+          </div>
+          {% if camp.unresolved_count > 0 %}
+          <div class="campaign-stat">
+            <span class="unresolved-badge">{{ camp.unresolved_count }} open</span>
+          </div>
+          {% endif %}
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-state" style="padding:32px;text-align:center">
+      <p>No campaigns found for this client.</p>
+    </div>
+    {% endif %}
+  </section>
+  {% endfor %}
+
+  {% if not clients %}
+  <section class="admin-section">
+    <div class="empty-state" style="padding:40px;text-align:center">
+      <p>No clients found. Check that CONTENT_ROOT is configured correctly.</p>
+    </div>
+  </section>
+  {% endif %}
+</main>
+{% endblock %}

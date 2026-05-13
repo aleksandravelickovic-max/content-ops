@@ -36,5 +36,5 @@ app.include_router(admin.router)
 
 @app.get("/")
 async def root():
-    return RedirectResponse(url="/admin/")
+    return RedirectResponse(url="/admin/campaigns")
 

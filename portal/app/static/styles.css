@@ -802,6 +802,128 @@ body {
   gap: 8px;
 }
 
+/* ── Campaign Overview (Admin) ── */
+.campaign-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 0;
+}
+
+.campaign-card {
+  display: block;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--text);
+  transition: background 0.1s;
+}
+.campaign-card:last-child { border-bottom: none; }
+.campaign-card:hover { background: var(--bg-hover); }
+
+.campaign-card-top {
+  margin-bottom: 10px;
+}
+
+.campaign-card-name {
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.campaign-card-slug {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-family: 'SF Mono', ui-monospace, monospace;
+}
+
+.campaign-card-stats {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.campaign-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.campaign-stat-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.campaign-stat-label {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.status-badge.no-link {
+  background: var(--bg-alt);
+  color: var(--text-muted);
+}
+
+/* ── Campaign Detail Header ── */
+.campaign-detail-header {
+  margin-bottom: 16px;
+}
+
+.campaign-detail-header .back-link {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.campaign-detail-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.campaign-detail-title h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* ── Share Link Bar ── */
+.share-link-bar {
+  margin-bottom: 16px;
+}
+
+.share-link-bar-inner {
+  padding: 12px 20px;
+}
+
+.share-link-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.share-link-divider {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.url-input-wide {
+  width: 360px;
+}
+
+/* ── Admin Content Detail ── */
+.comment-admin-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
 /* ── Footer ── */
 .review-footer {
   text-align: center;
@@ -818,7 +940,7 @@ body {
   .comment-sidebar { max-height: none; position: static; border-left: none; border-top: 1px solid var(--border); }
   .form-row { grid-template-columns: 1fr; }
   .header-inner { flex-wrap: wrap; }
-  .url-input { width: 180px; }
+  .url-input, .url-input-wide { width: 180px; }
   .col-size, .col-date, .th-size, .th-date { display: none; }
   .content-row td { padding: 8px 12px; }
   .tab-bar { gap: 0; }
