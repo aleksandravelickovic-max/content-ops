@@ -78,13 +78,19 @@ async def create_comment(
     return JSONResponse({"id": comment.id, "status": "created"}, status_code=201)
 
 
-@router.patch("/comments/{comment_id}/resolve")
+@router.patch("/review/{token}/comments/{comment_id}/resolve")
 async def resolve_comment(
+    token: uuid.UUID,
     comment_id: int,
     payload: CommentResolve,
     db: AsyncSession = Depends(get_db),
 ):
-    result = await db.execute(select(Comment).where(Comment.id == comment_id))
+    result = await db.execute(select(ShareLink).where(ShareLink.token == token))
+    link = result.scalar_one_or_none()
+    if not link or not link.is_active:
+        raise HTTPException(status_code=404, detail="Invalid share link.")
+
+    result = await db.execute(select(Comment).where(Comment.id == comment_id, Comment.share_link_token == token))
     comment = result.scalar_one_or_none()
     if not comment:
         raise HTTPException(status_code=404, detail="Comment not found.")

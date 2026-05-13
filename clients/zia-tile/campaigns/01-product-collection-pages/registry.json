@@ -1,8 +1,8 @@
 {
   "client": "zia-tile",
   "campaign": "01-product-collection-pages",
-  "generatedAt": "2026-05-12T15:35:12",
-  "totalFiles": 306,
+  "generatedAt": "2026-05-13T01:43:37",
+  "totalFiles": 398,
   "entries": [
     {
       "id": "audit-report",
@@ -392,7 +392,7 @@
       "path": "html/index.html",
       "sizeBytes": 38340,
       "sizeHuman": "37.4 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "collections--cantera-tile",
@@ -403,9 +403,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/collections--cantera-tile.html",
-      "sizeBytes": 644262,
-      "sizeHuman": "629.2 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 647411,
+      "sizeHuman": "632.2 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "collections--cement-tile",
@@ -416,9 +416,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/collections--cement-tile.html",
-      "sizeBytes": 979476,
-      "sizeHuman": "956.5 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 985298,
+      "sizeHuman": "962.2 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "collections--ceramics",
@@ -429,9 +429,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/collections--ceramics.html",
-      "sizeBytes": 919342,
-      "sizeHuman": "897.8 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 924745,
+      "sizeHuman": "903.1 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "collections--cotto-tile-allende",
@@ -442,9 +442,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/collections--cotto-tile-allende.html",
-      "sizeBytes": 857229,
-      "sizeHuman": "837.1 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 861900,
+      "sizeHuman": "841.7 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "collections--cotto",
@@ -455,9 +455,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/collections--cotto.html",
-      "sizeBytes": 1047409,
-      "sizeHuman": "1022.9 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 1053604,
+      "sizeHuman": "1.0 MB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "collections--field-trip-japan",
@@ -468,9 +468,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/collections--field-trip-japan.html",
-      "sizeBytes": 367397,
-      "sizeHuman": "358.8 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 368607,
+      "sizeHuman": "360.0 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "collections--glass-mosaics",
@@ -481,9 +481,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/collections--glass-mosaics.html",
-      "sizeBytes": 568892,
-      "sizeHuman": "555.6 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 571430,
+      "sizeHuman": "558.0 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "collections--limestone-tile",
@@ -494,9 +494,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/collections--limestone-tile.html",
-      "sizeBytes": 385707,
-      "sizeHuman": "376.7 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 387033,
+      "sizeHuman": "378.0 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "collections--marble-tile",
@@ -507,9 +507,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/collections--marble-tile.html",
-      "sizeBytes": 747747,
-      "sizeHuman": "730.2 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 751534,
+      "sizeHuman": "733.9 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "collections--roman-mosaics",
@@ -520,9 +520,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/collections--roman-mosaics.html",
-      "sizeBytes": 447882,
-      "sizeHuman": "437.4 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 449170,
+      "sizeHuman": "438.6 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "collections--terrazzo",
@@ -533,9 +533,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/collections--terrazzo.html",
-      "sizeBytes": 693550,
-      "sizeHuman": "677.3 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 696677,
+      "sizeHuman": "680.3 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "collections--zellige",
@@ -546,9 +546,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/collections--zellige.html",
-      "sizeBytes": 1181789,
+      "sizeBytes": 1189318,
       "sizeHuman": "1.1 MB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--2x6-rectangle-oscura",
@@ -559,9 +559,35 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--2x6-rectangle-oscura.html",
-      "sizeBytes": 453881,
-      "sizeHuman": "443.2 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 455658,
+      "sizeHuman": "445.0 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--4x4-square-fired-earth-cotto-tile",
+      "filename": "products--4x4-square-fired-earth-cotto-tile.html",
+      "displayName": "Products  4X4 Square Fired Earth Cotto Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--4x4-square-fired-earth-cotto-tile.html",
+      "sizeBytes": 462143,
+      "sizeHuman": "451.3 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--4x4-square-red-clay-cotto-tile",
+      "filename": "products--4x4-square-red-clay-cotto-tile.html",
+      "displayName": "Products  4X4 Square Red Clay Cotto Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--4x4-square-red-clay-cotto-tile.html",
+      "sizeBytes": 462061,
+      "sizeHuman": "451.2 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--6x6-stars-and-cross-red-clay-cotto-tile",
@@ -572,9 +598,22 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--6x6-stars-and-cross-red-clay-cotto-tile.html",
-      "sizeBytes": 469086,
-      "sizeHuman": "458.1 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 470959,
+      "sizeHuman": "459.9 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--8x8-square-madera",
+      "filename": "products--8x8-square-madera.html",
+      "displayName": "Products  8X8 Square Madera",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--8x8-square-madera.html",
+      "sizeBytes": 456249,
+      "sizeHuman": "445.6 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--8x8-square-red-clay-cotto-tile",
@@ -585,9 +624,22 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--8x8-square-red-clay-cotto-tile.html",
-      "sizeBytes": 461244,
-      "sizeHuman": "450.4 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 463069,
+      "sizeHuman": "452.2 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--8x9-hex-fired-earth-cotto-tile",
+      "filename": "products--8x9-hex-fired-earth-cotto-tile.html",
+      "displayName": "Products  8X9 Hex Fired Earth Cotto Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--8x9-hex-fired-earth-cotto-tile.html",
+      "sizeBytes": 460481,
+      "sizeHuman": "449.7 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--8x9-hex-red-clay-cotto-tile",
@@ -598,9 +650,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--8x9-hex-red-clay-cotto-tile.html",
-      "sizeBytes": 462068,
-      "sizeHuman": "451.2 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 463893,
+      "sizeHuman": "453.0 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--absinthe-2x6-zellige-tile",
@@ -611,9 +663,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--absinthe-2x6-zellige-tile.html",
-      "sizeBytes": 397982,
-      "sizeHuman": "388.7 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 399267,
+      "sizeHuman": "389.9 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--absinthe-trapezoid-zellige-tile",
@@ -624,9 +676,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--absinthe-trapezoid-zellige-tile.html",
-      "sizeBytes": 409565,
-      "sizeHuman": "400.0 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 410940,
+      "sizeHuman": "401.3 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--absinthe-zellige-tile",
@@ -637,9 +689,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--absinthe-zellige-tile.html",
-      "sizeBytes": 445093,
-      "sizeHuman": "434.7 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 446780,
+      "sizeHuman": "436.3 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--aegean-zellige-tile",
@@ -650,9 +702,74 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--aegean-zellige-tile.html",
-      "sizeBytes": 509481,
-      "sizeHuman": "497.5 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 511714,
+      "sizeHuman": "499.7 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--alabaster-white-4x4-ceramic-tile",
+      "filename": "products--alabaster-white-4x4-ceramic-tile.html",
+      "displayName": "Products  Alabaster White 4X4 Ceramic Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--alabaster-white-4x4-ceramic-tile.html",
+      "sizeBytes": 492404,
+      "sizeHuman": "480.9 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--alcazar-madera",
+      "filename": "products--alcazar-madera.html",
+      "displayName": "Products  Alcazar Madera",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--alcazar-madera.html",
+      "sizeBytes": 463792,
+      "sizeHuman": "452.9 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--alpha-white-2x4-ceramic-tile",
+      "filename": "products--alpha-white-2x4-ceramic-tile.html",
+      "displayName": "Products  Alpha White 2X4 Ceramic Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--alpha-white-2x4-ceramic-tile.html",
+      "sizeBytes": 464084,
+      "sizeHuman": "453.2 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--alpha-white-2x8-ceramic-tile",
+      "filename": "products--alpha-white-2x8-ceramic-tile.html",
+      "displayName": "Products  Alpha White 2X8 Ceramic Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--alpha-white-2x8-ceramic-tile.html",
+      "sizeBytes": 500896,
+      "sizeHuman": "489.2 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--alpha-white-4x4-ceramic-tile",
+      "filename": "products--alpha-white-4x4-ceramic-tile.html",
+      "displayName": "Products  Alpha White 4X4 Ceramic Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--alpha-white-4x4-ceramic-tile.html",
+      "sizeBytes": 493285,
+      "sizeHuman": "481.7 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--amber-zellige-tile",
@@ -663,9 +780,35 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--amber-zellige-tile.html",
-      "sizeBytes": 513300,
-      "sizeHuman": "501.3 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 515569,
+      "sizeHuman": "503.5 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--apollo-12x12",
+      "filename": "products--apollo-12x12.html",
+      "displayName": "Products  Apollo 12X12",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--apollo-12x12.html",
+      "sizeBytes": 510780,
+      "sizeHuman": "498.8 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--atomic-4x4-cement-tile",
+      "filename": "products--atomic-4x4-cement-tile.html",
+      "displayName": "Products  Atomic 4X4 Cement Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--atomic-4x4-cement-tile.html",
+      "sizeBytes": 433800,
+      "sizeHuman": "423.6 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--basilica-12x24-honed-limestone-tile",
@@ -676,9 +819,22 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--basilica-12x24-honed-limestone-tile.html",
-      "sizeBytes": 443665,
-      "sizeHuman": "433.3 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 445478,
+      "sizeHuman": "435.0 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--basilica-4x12-honed-limestone-tile",
+      "filename": "products--basilica-4x12-honed-limestone-tile.html",
+      "displayName": "Products  Basilica 4X12 Honed Limestone Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--basilica-4x12-honed-limestone-tile.html",
+      "sizeBytes": 446555,
+      "sizeHuman": "436.1 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--basilica-6x6-honed",
@@ -689,9 +845,87 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--basilica-6x6-honed.html",
-      "sizeBytes": 444698,
-      "sizeHuman": "434.3 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 446523,
+      "sizeHuman": "436.1 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--black-cement-tile",
+      "filename": "products--black-cement-tile.html",
+      "displayName": "Products  Black Cement Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--black-cement-tile.html",
+      "sizeBytes": 516467,
+      "sizeHuman": "504.4 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--bone-2x8-cement-tile",
+      "filename": "products--bone-2x8-cement-tile.html",
+      "displayName": "Products  Bone 2X8 Cement Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--bone-2x8-cement-tile.html",
+      "sizeBytes": 525268,
+      "sizeHuman": "513.0 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--bone-hex-cement-tile",
+      "filename": "products--bone-hex-cement-tile.html",
+      "displayName": "Products  Bone Hex Cement Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--bone-hex-cement-tile.html",
+      "sizeBytes": 285943,
+      "sizeHuman": "279.2 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--brighton-hyannis-cement-tile",
+      "filename": "products--brighton-hyannis-cement-tile.html",
+      "displayName": "Products  Brighton Hyannis Cement Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--brighton-hyannis-cement-tile.html",
+      "sizeBytes": 285943,
+      "sizeHuman": "279.2 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--brownstone-zellige-tile",
+      "filename": "products--brownstone-zellige-tile.html",
+      "displayName": "Products  Brownstone Zellige Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--brownstone-zellige-tile.html",
+      "sizeBytes": 509467,
+      "sizeHuman": "497.5 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--buckeye-flat",
+      "filename": "products--buckeye-flat.html",
+      "displayName": "Products  Buckeye Flat",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--buckeye-flat.html",
+      "sizeBytes": 443311,
+      "sizeHuman": "432.9 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--buff-12x12-honed-limestone-tile",
@@ -702,9 +936,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--buff-12x12-honed-limestone-tile.html",
-      "sizeBytes": 442926,
-      "sizeHuman": "432.5 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 444703,
+      "sizeHuman": "434.3 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--buff-12x24-honed-limestone-tile",
@@ -715,9 +949,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--buff-12x24-honed-limestone-tile.html",
-      "sizeBytes": 436969,
-      "sizeHuman": "426.7 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 438698,
+      "sizeHuman": "428.4 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--buff-4x12-honed-limestone-tile",
@@ -728,9 +962,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--buff-4x12-honed-limestone-tile.html",
-      "sizeBytes": 450200,
-      "sizeHuman": "439.6 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 452025,
+      "sizeHuman": "441.4 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--buff-6x6-honed-limestone-tile",
@@ -741,9 +975,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--buff-6x6-honed-limestone-tile.html",
-      "sizeBytes": 450062,
-      "sizeHuman": "439.5 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 451887,
+      "sizeHuman": "441.3 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--bungalow-12x12",
@@ -754,9 +988,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--bungalow-12x12.html",
-      "sizeBytes": 512380,
-      "sizeHuman": "500.4 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 514709,
+      "sizeHuman": "502.6 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--burnt-sugar-2x2-zellige-tile",
@@ -767,9 +1001,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--burnt-sugar-2x2-zellige-tile.html",
-      "sizeBytes": 456295,
-      "sizeHuman": "445.6 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 458078,
+      "sizeHuman": "447.3 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--burnt-sugar-2x6-zellige-tile",
@@ -780,9 +1014,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--burnt-sugar-2x6-zellige-tile.html",
-      "sizeBytes": 429518,
-      "sizeHuman": "419.5 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 431085,
+      "sizeHuman": "421.0 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--burnt-sugar-glazed-earth-2x2",
@@ -793,9 +1027,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--burnt-sugar-glazed-earth-2x2.html",
-      "sizeBytes": 361779,
-      "sizeHuman": "353.3 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 362776,
+      "sizeHuman": "354.3 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--burnt-sugar-zellige-tile",
@@ -806,9 +1040,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--burnt-sugar-zellige-tile.html",
-      "sizeBytes": 437765,
-      "sizeHuman": "427.5 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 439392,
+      "sizeHuman": "429.1 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--cacao-4x4",
@@ -819,9 +1053,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--cacao-4x4.html",
-      "sizeBytes": 477347,
-      "sizeHuman": "466.2 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 479352,
+      "sizeHuman": "468.1 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--carbon-black-zellige-tile",
@@ -832,9 +1066,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--carbon-black-zellige-tile.html",
-      "sizeBytes": 503879,
-      "sizeHuman": "492.1 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 506064,
+      "sizeHuman": "494.2 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--carrara-12x12",
@@ -845,9 +1079,22 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--carrara-12x12.html",
-      "sizeBytes": 450395,
-      "sizeHuman": "439.8 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 452226,
+      "sizeHuman": "441.6 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--carrara-6x6",
+      "filename": "products--carrara-6x6.html",
+      "displayName": "Products  Carrara 6X6",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--carrara-6x6.html",
+      "sizeBytes": 449888,
+      "sizeHuman": "439.3 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--casablanca-white-2x2-zellige-tile",
@@ -858,9 +1105,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--casablanca-white-2x2-zellige-tile.html",
-      "sizeBytes": 533865,
-      "sizeHuman": "521.4 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 536266,
+      "sizeHuman": "523.7 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--casablanca-white-2x6-zellige-tile",
@@ -871,9 +1118,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--casablanca-white-2x6-zellige-tile.html",
-      "sizeBytes": 509281,
-      "sizeHuman": "497.3 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 511466,
+      "sizeHuman": "499.5 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--casablanca-white-trapezoid-zellige-tile",
@@ -884,9 +1131,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--casablanca-white-trapezoid-zellige-tile.html",
-      "sizeBytes": 477714,
-      "sizeHuman": "466.5 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 479635,
+      "sizeHuman": "468.4 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--casablanca-white-zellige-tile",
@@ -897,9 +1144,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--casablanca-white-zellige-tile.html",
-      "sizeBytes": 522568,
-      "sizeHuman": "510.3 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 524849,
+      "sizeHuman": "512.5 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--condesa-4x4",
@@ -910,9 +1157,61 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--condesa-4x4.html",
-      "sizeBytes": 478950,
-      "sizeHuman": "467.7 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 480967,
+      "sizeHuman": "469.7 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--constellation-bone-white-24x24",
+      "filename": "products--constellation-bone-white-24x24.html",
+      "displayName": "Products  Constellation Bone White 24X24",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--constellation-bone-white-24x24.html",
+      "sizeBytes": 494973,
+      "sizeHuman": "483.4 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--cotto-zocalo-red-clay-cotto-tile",
+      "filename": "products--cotto-zocalo-red-clay-cotto-tile.html",
+      "displayName": "Products  Cotto Zocalo Red Clay Cotto Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--cotto-zocalo-red-clay-cotto-tile.html",
+      "sizeBytes": 461955,
+      "sizeHuman": "451.1 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--delta-moon-pink-cement-tile",
+      "filename": "products--delta-moon-pink-cement-tile.html",
+      "displayName": "Products  Delta Moon Pink Cement Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--delta-moon-pink-cement-tile.html",
+      "sizeBytes": 285943,
+      "sizeHuman": "279.2 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--desert-bloom-2x6-zellige-tile",
+      "filename": "products--desert-bloom-2x6-zellige-tile.html",
+      "displayName": "Products  Desert Bloom 2X6 Zellige Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--desert-bloom-2x6-zellige-tile.html",
+      "sizeBytes": 503793,
+      "sizeHuman": "492.0 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--desert-bloom-zellige-tile",
@@ -923,9 +1222,35 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--desert-bloom-zellige-tile.html",
-      "sizeBytes": 510253,
-      "sizeHuman": "498.3 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 512486,
+      "sizeHuman": "500.5 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--desert-grey-2x8-cement-tile",
+      "filename": "products--desert-grey-2x8-cement-tile.html",
+      "displayName": "Products  Desert Grey 2X8 Cement Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--desert-grey-2x8-cement-tile.html",
+      "sizeBytes": 513935,
+      "sizeHuman": "501.9 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--durango-fired-earth",
+      "filename": "products--durango-fired-earth.html",
+      "displayName": "Products  Durango Fired Earth",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--durango-fired-earth.html",
+      "sizeBytes": 457205,
+      "sizeHuman": "446.5 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--durango-madera",
@@ -936,9 +1261,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--durango-madera.html",
-      "sizeBytes": 455641,
-      "sizeHuman": "445.0 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 457472,
+      "sizeHuman": "446.8 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--ethereal-blue-2x8-ceramic-tile",
@@ -949,9 +1274,22 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--ethereal-blue-2x8-ceramic-tile.html",
-      "sizeBytes": 493813,
-      "sizeHuman": "482.2 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 496070,
+      "sizeHuman": "484.4 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--etna-in-carrara-verde-alpi",
+      "filename": "products--etna-in-carrara-verde-alpi.html",
+      "displayName": "Products  Etna In Carrara Verde Alpi",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--etna-in-carrara-verde-alpi.html",
+      "sizeBytes": 382087,
+      "sizeHuman": "373.1 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--eucalyptus-2x8-ceramic-tile",
@@ -962,9 +1300,22 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--eucalyptus-2x8-ceramic-tile.html",
-      "sizeBytes": 425711,
-      "sizeHuman": "415.7 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 427398,
+      "sizeHuman": "417.4 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--feather-flat",
+      "filename": "products--feather-flat.html",
+      "displayName": "Products  Feather Flat",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--feather-flat.html",
+      "sizeBytes": 448478,
+      "sizeHuman": "438.0 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--french-cobble-stone",
@@ -975,9 +1326,22 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--french-cobble-stone.html",
-      "sizeBytes": 438648,
-      "sizeHuman": "428.4 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 440401,
+      "sizeHuman": "430.1 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--frogtown-flat",
+      "filename": "products--frogtown-flat.html",
+      "displayName": "Products  Frogtown Flat",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--frogtown-flat.html",
+      "sizeBytes": 376916,
+      "sizeHuman": "368.1 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--gambit-1",
@@ -988,9 +1352,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--gambit-1.html",
-      "sizeBytes": 464802,
-      "sizeHuman": "453.9 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 466645,
+      "sizeHuman": "455.7 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--gambit-7",
@@ -1001,9 +1365,35 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--gambit-7.html",
-      "sizeBytes": 401975,
-      "sizeHuman": "392.6 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 403296,
+      "sizeHuman": "393.8 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--gambit-8",
+      "filename": "products--gambit-8.html",
+      "displayName": "Products  Gambit 8",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--gambit-8.html",
+      "sizeBytes": 396155,
+      "sizeHuman": "386.9 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--glacier-blue-zellige-tile",
+      "filename": "products--glacier-blue-zellige-tile.html",
+      "displayName": "Products  Glacier Blue Zellige Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--glacier-blue-zellige-tile.html",
+      "sizeBytes": 509075,
+      "sizeHuman": "497.1 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--glazed-earth-2x2-zellige-tile",
@@ -1014,9 +1404,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--glazed-earth-2x2-zellige-tile.html",
-      "sizeBytes": 520840,
-      "sizeHuman": "508.6 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 523157,
+      "sizeHuman": "510.9 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--glazed-earth-2x6-zellige-tile",
@@ -1027,9 +1417,22 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--glazed-earth-2x6-zellige-tile.html",
-      "sizeBytes": 508487,
-      "sizeHuman": "496.6 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 510660,
+      "sizeHuman": "498.7 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--glazed-earth-trapezoid-zellige-tile",
+      "filename": "products--glazed-earth-trapezoid-zellige-tile.html",
+      "displayName": "Products  Glazed Earth Trapezoid Zellige Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--glazed-earth-trapezoid-zellige-tile.html",
+      "sizeBytes": 474180,
+      "sizeHuman": "463.1 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--glazed-earth-zellige-tile",
@@ -1040,9 +1443,22 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--glazed-earth-zellige-tile.html",
-      "sizeBytes": 512040,
-      "sizeHuman": "500.0 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 514261,
+      "sizeHuman": "502.2 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--graphite-grey-2x6-zellige-tile",
+      "filename": "products--graphite-grey-2x6-zellige-tile.html",
+      "displayName": "Products  Graphite Grey 2X6 Zellige Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--graphite-grey-2x6-zellige-tile.html",
+      "sizeBytes": 502419,
+      "sizeHuman": "490.6 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--graphite-grey-zellige-tile",
@@ -1053,9 +1469,74 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--graphite-grey-zellige-tile.html",
-      "sizeBytes": 505533,
-      "sizeHuman": "493.7 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 507754,
+      "sizeHuman": "495.9 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--grigio-carnico-12x24",
+      "filename": "products--grigio-carnico-12x24.html",
+      "displayName": "Products  Grigio Carnico 12X24",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--grigio-carnico-12x24.html",
+      "sizeBytes": 441337,
+      "sizeHuman": "431.0 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--high-line-hyannis-4x8-cement-tile",
+      "filename": "products--high-line-hyannis-4x8-cement-tile.html",
+      "displayName": "Products  High Line Hyannis 4X8 Cement Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--high-line-hyannis-4x8-cement-tile.html",
+      "sizeBytes": 451071,
+      "sizeHuman": "440.5 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--iconic-blue-2x8-ceramic-tile",
+      "filename": "products--iconic-blue-2x8-ceramic-tile.html",
+      "displayName": "Products  Iconic Blue 2X8 Ceramic Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--iconic-blue-2x8-ceramic-tile.html",
+      "sizeBytes": 503043,
+      "sizeHuman": "491.3 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--iconic-blue-4x4-ceramic-tile",
+      "filename": "products--iconic-blue-4x4-ceramic-tile.html",
+      "displayName": "Products  Iconic Blue 4X4 Ceramic Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--iconic-blue-4x4-ceramic-tile.html",
+      "sizeBytes": 498368,
+      "sizeHuman": "486.7 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--jade-2x6-zellige-tile",
+      "filename": "products--jade-2x6-zellige-tile.html",
+      "displayName": "Products  Jade 2X6 Zellige Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--jade-2x6-zellige-tile.html",
+      "sizeBytes": 440189,
+      "sizeHuman": "429.9 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--jade-zellige-tile",
@@ -1066,9 +1547,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--jade-zellige-tile.html",
-      "sizeBytes": 442793,
-      "sizeHuman": "432.4 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 444480,
+      "sizeHuman": "434.1 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--kelp-forest-2x8-ceramic-tile",
@@ -1079,9 +1560,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--kelp-forest-2x8-ceramic-tile.html",
-      "sizeBytes": 428367,
-      "sizeHuman": "418.3 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 430078,
+      "sizeHuman": "420.0 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--kelp-forest-4x4-ceramic-tile",
@@ -1092,9 +1573,22 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--kelp-forest-4x4-ceramic-tile.html",
-      "sizeBytes": 423492,
-      "sizeHuman": "413.6 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 425167,
+      "sizeHuman": "415.2 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--l5402-grey-4x4",
+      "filename": "products--l5402-grey-4x4.html",
+      "displayName": "Products  L5402 Grey 4X4",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--l5402-grey-4x4.html",
+      "sizeBytes": 423227,
+      "sizeHuman": "413.3 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--lattice-4",
@@ -1105,9 +1599,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--lattice-4.html",
-      "sizeBytes": 461447,
-      "sizeHuman": "450.6 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 463254,
+      "sizeHuman": "452.4 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--linen-2x8-ceramic-tile",
@@ -1118,9 +1612,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--linen-2x8-ceramic-tile.html",
-      "sizeBytes": 496715,
-      "sizeHuman": "485.1 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 498984,
+      "sizeHuman": "487.3 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--linen-4x4-ceramic-tile",
@@ -1131,9 +1625,22 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--linen-4x4-ceramic-tile.html",
-      "sizeBytes": 498639,
-      "sizeHuman": "487.0 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 500920,
+      "sizeHuman": "489.2 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--maya-blue-zellige-tile",
+      "filename": "products--maya-blue-zellige-tile.html",
+      "displayName": "Products  Maya Blue Zellige Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--maya-blue-zellige-tile.html",
+      "sizeBytes": 509835,
+      "sizeHuman": "497.9 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--molasses-2x8",
@@ -1144,9 +1651,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--molasses-2x8.html",
-      "sizeBytes": 482233,
-      "sizeHuman": "470.9 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 484442,
+      "sizeHuman": "473.1 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--molasses-4x4",
@@ -1157,9 +1664,35 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--molasses-4x4.html",
-      "sizeBytes": 489115,
-      "sizeHuman": "477.7 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 491372,
+      "sizeHuman": "479.9 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--montana-cement-tile",
+      "filename": "products--montana-cement-tile.html",
+      "displayName": "Products  Montana Cement Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--montana-cement-tile.html",
+      "sizeBytes": 285943,
+      "sizeHuman": "279.2 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--monument-12x12-honed-limestone-tile",
+      "filename": "products--monument-12x12-honed-limestone-tile.html",
+      "displayName": "Products  Monument 12X12 Honed Limestone Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--monument-12x12-honed-limestone-tile.html",
+      "sizeBytes": 443724,
+      "sizeHuman": "433.3 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--monument-4x12-honed-limestone-tile",
@@ -1170,9 +1703,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--monument-4x12-honed-limestone-tile.html",
-      "sizeBytes": 443265,
-      "sizeHuman": "432.9 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 445078,
+      "sizeHuman": "434.6 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--monument-6x6-honed-limestone-tile",
@@ -1183,9 +1716,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--monument-6x6-honed-limestone-tile.html",
-      "sizeBytes": 443578,
-      "sizeHuman": "433.2 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 445391,
+      "sizeHuman": "435.0 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--moonlight-2x8-ceramic-tile",
@@ -1196,9 +1729,48 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--moonlight-2x8-ceramic-tile.html",
-      "sizeBytes": 491321,
-      "sizeHuman": "479.8 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 493566,
+      "sizeHuman": "482.0 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--moonrock-12x12",
+      "filename": "products--moonrock-12x12.html",
+      "displayName": "Products  Moonrock 12X12",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--moonrock-12x12.html",
+      "sizeBytes": 506772,
+      "sizeHuman": "494.9 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--morning-light-furrowed",
+      "filename": "products--morning-light-furrowed.html",
+      "displayName": "Products  Morning Light Furrowed",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--morning-light-furrowed.html",
+      "sizeBytes": 446945,
+      "sizeHuman": "436.5 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--moroccan-blue-zellige-tile",
+      "filename": "products--moroccan-blue-zellige-tile.html",
+      "displayName": "Products  Moroccan Blue Zellige Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--moroccan-blue-zellige-tile.html",
+      "sizeBytes": 506872,
+      "sizeHuman": "495.0 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--nagano-2x8",
@@ -1209,9 +1781,22 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--nagano-2x8.html",
-      "sizeBytes": 486417,
-      "sizeHuman": "475.0 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 488638,
+      "sizeHuman": "477.2 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--nero-marquina-12x24",
+      "filename": "products--nero-marquina-12x24.html",
+      "displayName": "Products  Nero Marquina 12X24",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--nero-marquina-12x24.html",
+      "sizeBytes": 439289,
+      "sizeHuman": "429.0 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--neutra-12x12",
@@ -1222,9 +1807,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--neutra-12x12.html",
-      "sizeBytes": 508482,
-      "sizeHuman": "496.6 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 510799,
+      "sizeHuman": "498.8 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--neutra-24x24",
@@ -1235,9 +1820,100 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--neutra-24x24.html",
-      "sizeBytes": 484323,
-      "sizeHuman": "473.0 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 486472,
+      "sizeHuman": "475.1 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--night-blue-zellige-tile",
+      "filename": "products--night-blue-zellige-tile.html",
+      "displayName": "Products  Night Blue Zellige Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--night-blue-zellige-tile.html",
+      "sizeBytes": 506441,
+      "sizeHuman": "494.6 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--nile-2x8-cement-tile",
+      "filename": "products--nile-2x8-cement-tile.html",
+      "displayName": "Products  Nile 2X8 Cement Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--nile-2x8-cement-tile.html",
+      "sizeBytes": 450206,
+      "sizeHuman": "439.7 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--nouveau-alluvian-cement-tile",
+      "filename": "products--nouveau-alluvian-cement-tile.html",
+      "displayName": "Products  Nouveau Alluvian Cement Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--nouveau-alluvian-cement-tile.html",
+      "sizeBytes": 453603,
+      "sizeHuman": "443.0 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--nova-black-cement-tile",
+      "filename": "products--nova-black-cement-tile.html",
+      "displayName": "Products  Nova Black Cement Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--nova-black-cement-tile.html",
+      "sizeBytes": 440255,
+      "sizeHuman": "429.9 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--oslo-white-cement-tile",
+      "filename": "products--oslo-white-cement-tile.html",
+      "displayName": "Products  Oslo White Cement Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--oslo-white-cement-tile.html",
+      "sizeBytes": 285943,
+      "sizeHuman": "279.2 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--pacific-blue-2x8-ceramic-tile",
+      "filename": "products--pacific-blue-2x8-ceramic-tile.html",
+      "displayName": "Products  Pacific Blue 2X8 Ceramic Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--pacific-blue-2x8-ceramic-tile.html",
+      "sizeBytes": 495453,
+      "sizeHuman": "483.8 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--peyote-4x4",
+      "filename": "products--peyote-4x4.html",
+      "displayName": "Products  Peyote 4X4",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--peyote-4x4.html",
+      "sizeBytes": 417738,
+      "sizeHuman": "407.9 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--piedra-4x4",
@@ -1248,9 +1924,35 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--piedra-4x4.html",
-      "sizeBytes": 484096,
-      "sizeHuman": "472.8 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 486137,
+      "sizeHuman": "474.7 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--pietro-pink-zellige-tile",
+      "filename": "products--pietro-pink-zellige-tile.html",
+      "displayName": "Products  Pietro Pink Zellige Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--pietro-pink-zellige-tile.html",
+      "sizeBytes": 506433,
+      "sizeHuman": "494.6 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--pink-dahlia-4x4-ceramic-tile",
+      "filename": "products--pink-dahlia-4x4-ceramic-tile.html",
+      "displayName": "Products  Pink Dahlia 4X4 Ceramic Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--pink-dahlia-4x4-ceramic-tile.html",
+      "sizeBytes": 492627,
+      "sizeHuman": "481.1 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--pomelo-bone-cement-tile",
@@ -1261,9 +1963,61 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--pomelo-bone-cement-tile.html",
-      "sizeBytes": 458270,
-      "sizeHuman": "447.5 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 460095,
+      "sizeHuman": "449.3 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--ponderosa-2x8",
+      "filename": "products--ponderosa-2x8.html",
+      "displayName": "Products  Ponderosa 2X8",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--ponderosa-2x8.html",
+      "sizeBytes": 426358,
+      "sizeHuman": "416.4 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--portuguese-blue-zellige-tile",
+      "filename": "products--portuguese-blue-zellige-tile.html",
+      "displayName": "Products  Portuguese Blue Zellige Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--portuguese-blue-zellige-tile.html",
+      "sizeBytes": 507224,
+      "sizeHuman": "495.3 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--prairie-green-hex-zellige-tile",
+      "filename": "products--prairie-green-hex-zellige-tile.html",
+      "displayName": "Products  Prairie Green Hex Zellige Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--prairie-green-hex-zellige-tile.html",
+      "sizeBytes": 435267,
+      "sizeHuman": "425.1 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--prismatic-1",
+      "filename": "products--prismatic-1.html",
+      "displayName": "Products  Prismatic 1",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--prismatic-1.html",
+      "sizeBytes": 463443,
+      "sizeHuman": "452.6 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--puebla-4x4",
@@ -1274,9 +2028,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--puebla-4x4.html",
-      "sizeBytes": 486285,
-      "sizeHuman": "474.9 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 488326,
+      "sizeHuman": "476.9 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--pure-white-2x2-zellige-tile",
@@ -1287,9 +2041,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--pure-white-2x2-zellige-tile.html",
-      "sizeBytes": 529980,
-      "sizeHuman": "517.6 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 532369,
+      "sizeHuman": "519.9 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--pure-white-2x6-zellige-tile",
@@ -1300,9 +2054,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--pure-white-2x6-zellige-tile.html",
-      "sizeBytes": 511340,
-      "sizeHuman": "499.4 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 513561,
+      "sizeHuman": "501.5 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--pure-white-trapezoid-zellige-tile",
@@ -1313,9 +2067,35 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--pure-white-trapezoid-zellige-tile.html",
-      "sizeBytes": 476993,
-      "sizeHuman": "465.8 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 478926,
+      "sizeHuman": "467.7 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--pure-white-zellige-tile",
+      "filename": "products--pure-white-zellige-tile.html",
+      "displayName": "Products  Pure White Zellige Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--pure-white-zellige-tile.html",
+      "sizeBytes": 521010,
+      "sizeHuman": "508.8 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--racing-green-2x2-zellige-tile",
+      "filename": "products--racing-green-2x2-zellige-tile.html",
+      "displayName": "Products  Racing Green 2X2 Zellige Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--racing-green-2x2-zellige-tile.html",
+      "sizeBytes": 457507,
+      "sizeHuman": "446.8 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--racing-green-2x6-zellige-tile",
@@ -1326,9 +2106,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--racing-green-2x6-zellige-tile.html",
-      "sizeBytes": 441610,
-      "sizeHuman": "431.3 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 443261,
+      "sizeHuman": "432.9 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--racing-green-zellige-tile",
@@ -1339,9 +2119,22 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--racing-green-zellige-tile.html",
-      "sizeBytes": 446962,
-      "sizeHuman": "436.5 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 448649,
+      "sizeHuman": "438.1 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--red-rocks-12x12",
+      "filename": "products--red-rocks-12x12.html",
+      "displayName": "Products  Red Rocks 12X12",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--red-rocks-12x12.html",
+      "sizeBytes": 507953,
+      "sizeHuman": "496.0 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--rouge-zellige-tile",
@@ -1352,9 +2145,113 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--rouge-zellige-tile.html",
-      "sizeBytes": 434096,
-      "sizeHuman": "423.9 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 435711,
+      "sizeHuman": "425.5 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--rubric-4",
+      "filename": "products--rubric-4.html",
+      "displayName": "Products  Rubric 4",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--rubric-4.html",
+      "sizeBytes": 390832,
+      "sizeHuman": "381.7 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--rust-2x8",
+      "filename": "products--rust-2x8.html",
+      "displayName": "Products  Rust 2X8",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--rust-2x8.html",
+      "sizeBytes": 515076,
+      "sizeHuman": "503.0 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--sage-2x8-cement-tile",
+      "filename": "products--sage-2x8-cement-tile.html",
+      "displayName": "Products  Sage 2X8 Cement Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--sage-2x8-cement-tile.html",
+      "sizeBytes": 456026,
+      "sizeHuman": "445.3 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--sage-4x4-cement-tile",
+      "filename": "products--sage-4x4-cement-tile.html",
+      "displayName": "Products  Sage 4X4 Cement Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--sage-4x4-cement-tile.html",
+      "sizeBytes": 442646,
+      "sizeHuman": "432.3 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--sage-cement-tile",
+      "filename": "products--sage-cement-tile.html",
+      "displayName": "Products  Sage Cement Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--sage-cement-tile.html",
+      "sizeBytes": 449190,
+      "sizeHuman": "438.7 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--salt-bush-12x12",
+      "filename": "products--salt-bush-12x12.html",
+      "displayName": "Products  Salt Bush 12X12",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--salt-bush-12x12.html",
+      "sizeBytes": 443503,
+      "sizeHuman": "433.1 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--sedona-12x12",
+      "filename": "products--sedona-12x12.html",
+      "displayName": "Products  Sedona 12X12",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--sedona-12x12.html",
+      "sizeBytes": 458267,
+      "sizeHuman": "447.5 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--sepia-4x4",
+      "filename": "products--sepia-4x4.html",
+      "displayName": "Products  Sepia 4X4",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--sepia-4x4.html",
+      "sizeBytes": 484489,
+      "sizeHuman": "473.1 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--sequoia-2x8-ceramic-tile",
@@ -1365,9 +2262,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--sequoia-2x8-ceramic-tile.html",
-      "sizeBytes": 435472,
-      "sizeHuman": "425.3 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 437231,
+      "sizeHuman": "427.0 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--sequoia-4x4-ceramic-tile",
@@ -1378,9 +2275,22 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--sequoia-4x4-ceramic-tile.html",
-      "sizeBytes": 429127,
-      "sizeHuman": "419.1 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 430838,
+      "sizeHuman": "420.7 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--sierra-12x12",
+      "filename": "products--sierra-12x12.html",
+      "displayName": "Products  Sierra 12X12",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--sierra-12x12.html",
+      "sizeBytes": 464892,
+      "sizeHuman": "454.0 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--sky-light-zellige-tile",
@@ -1391,9 +2301,126 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--sky-light-zellige-tile.html",
-      "sizeBytes": 512509,
-      "sizeHuman": "500.5 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 514766,
+      "sizeHuman": "502.7 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--slate-cement-tile",
+      "filename": "products--slate-cement-tile.html",
+      "displayName": "Products  Slate Cement Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--slate-cement-tile.html",
+      "sizeBytes": 516489,
+      "sizeHuman": "504.4 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--slate-grey-2x6-zellige-tile",
+      "filename": "products--slate-grey-2x6-zellige-tile.html",
+      "displayName": "Products  Slate Grey 2X6 Zellige Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--slate-grey-2x6-zellige-tile.html",
+      "sizeBytes": 504094,
+      "sizeHuman": "492.3 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--slate-grey-zellige-tile",
+      "filename": "products--slate-grey-zellige-tile.html",
+      "displayName": "Products  Slate Grey Zellige Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--slate-grey-zellige-tile.html",
+      "sizeBytes": 508489,
+      "sizeHuman": "496.6 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--stars-cross-blanco",
+      "filename": "products--stars-cross-blanco.html",
+      "displayName": "Products  Stars Cross Blanco",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--stars-cross-blanco.html",
+      "sizeBytes": 467124,
+      "sizeHuman": "456.2 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--stone-2x8-cement-tile",
+      "filename": "products--stone-2x8-cement-tile.html",
+      "displayName": "Products  Stone 2X8 Cement Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--stone-2x8-cement-tile.html",
+      "sizeBytes": 285943,
+      "sizeHuman": "279.2 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--superior-blue-zellige-tile",
+      "filename": "products--superior-blue-zellige-tile.html",
+      "displayName": "Products  Superior Blue Zellige Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--superior-blue-zellige-tile.html",
+      "sizeBytes": 506862,
+      "sizeHuman": "495.0 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--taupe-cement-tile",
+      "filename": "products--taupe-cement-tile.html",
+      "displayName": "Products  Taupe Cement Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--taupe-cement-tile.html",
+      "sizeBytes": 516103,
+      "sizeHuman": "504.0 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--terra-rosa-zellige-tile",
+      "filename": "products--terra-rosa-zellige-tile.html",
+      "displayName": "Products  Terra Rosa Zellige Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--terra-rosa-zellige-tile.html",
+      "sizeBytes": 507268,
+      "sizeHuman": "495.4 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--terracotta-2x8-cement-tile",
+      "filename": "products--terracotta-2x8-cement-tile.html",
+      "displayName": "Products  Terracotta 2X8 Cement Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--terracotta-2x8-cement-tile.html",
+      "sizeBytes": 532320,
+      "sizeHuman": "519.8 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--tidepool-2x6-zellige-tile",
@@ -1404,9 +2431,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--tidepool-2x6-zellige-tile.html",
-      "sizeBytes": 441225,
-      "sizeHuman": "430.9 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 442864,
+      "sizeHuman": "432.5 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--tidepool-trapezoid-zellige-tile",
@@ -1417,9 +2444,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--tidepool-trapezoid-zellige-tile.html",
-      "sizeBytes": 409096,
-      "sizeHuman": "399.5 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 410471,
+      "sizeHuman": "400.9 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--tidepool-zellige-tile",
@@ -1430,9 +2457,35 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--tidepool-zellige-tile.html",
-      "sizeBytes": 450212,
-      "sizeHuman": "439.7 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 451923,
+      "sizeHuman": "441.3 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--toast-flat",
+      "filename": "products--toast-flat.html",
+      "displayName": "Products  Toast Flat",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--toast-flat.html",
+      "sizeBytes": 443985,
+      "sizeHuman": "433.6 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--toast-furrowed",
+      "filename": "products--toast-furrowed.html",
+      "displayName": "Products  Toast Furrowed",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--toast-furrowed.html",
+      "sizeBytes": 445505,
+      "sizeHuman": "435.1 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--toltec-red-clay-cotto-tile",
@@ -1443,9 +2496,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--toltec-red-clay-cotto-tile.html",
-      "sizeBytes": 462036,
-      "sizeHuman": "451.2 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 463873,
+      "sizeHuman": "453.0 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--unglazed-natural-2x6-zellige-tile",
@@ -1456,9 +2509,74 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--unglazed-natural-2x6-zellige-tile.html",
-      "sizeBytes": 505770,
-      "sizeHuman": "493.9 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 507943,
+      "sizeHuman": "496.0 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--unglazed-natural-zellige-tile",
+      "filename": "products--unglazed-natural-zellige-tile.html",
+      "displayName": "Products  Unglazed Natural Zellige Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--unglazed-natural-zellige-tile.html",
+      "sizeBytes": 520647,
+      "sizeHuman": "508.4 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--valverde-4x4",
+      "filename": "products--valverde-4x4.html",
+      "displayName": "Products  Valverde 4X4",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--valverde-4x4.html",
+      "sizeBytes": 423433,
+      "sizeHuman": "413.5 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--volcan-12x12",
+      "filename": "products--volcan-12x12.html",
+      "displayName": "Products  Volcan 12X12",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--volcan-12x12.html",
+      "sizeBytes": 460667,
+      "sizeHuman": "449.9 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--volcan-12x24",
+      "filename": "products--volcan-12x24.html",
+      "displayName": "Products  Volcan 12X24",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--volcan-12x24.html",
+      "sizeBytes": 463547,
+      "sizeHuman": "452.7 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--volcan-24x24",
+      "filename": "products--volcan-24x24.html",
+      "displayName": "Products  Volcan 24X24",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--volcan-24x24.html",
+      "sizeBytes": 456252,
+      "sizeHuman": "445.6 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--volcan-4x12",
@@ -1469,9 +2587,87 @@
       "status": "delivered",
       "version": 1,
       "path": "html/original/products--volcan-4x12.html",
-      "sizeBytes": 464162,
-      "sizeHuman": "453.3 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 466017,
+      "sizeHuman": "455.1 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--white-2x8-cement-tile",
+      "filename": "products--white-2x8-cement-tile.html",
+      "displayName": "Products  White 2X8 Cement Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--white-2x8-cement-tile.html",
+      "sizeBytes": 520996,
+      "sizeHuman": "508.8 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--white-4x4-cement-tile",
+      "filename": "products--white-4x4-cement-tile.html",
+      "displayName": "Products  White 4X4 Cement Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--white-4x4-cement-tile.html",
+      "sizeBytes": 519509,
+      "sizeHuman": "507.3 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--white-cement-tile-cement-tile",
+      "filename": "products--white-cement-tile-cement-tile.html",
+      "displayName": "Products  White Cement Tile Cement Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--white-cement-tile-cement-tile.html",
+      "sizeBytes": 521057,
+      "sizeHuman": "508.8 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--white-stars-cross-cement-tile",
+      "filename": "products--white-stars-cross-cement-tile.html",
+      "displayName": "Products  White Stars Cross Cement Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--white-stars-cross-cement-tile.html",
+      "sizeBytes": 460589,
+      "sizeHuman": "449.8 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--zinc-hex-zellige-tile",
+      "filename": "products--zinc-hex-zellige-tile.html",
+      "displayName": "Products  Zinc Hex Zellige Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--zinc-hex-zellige-tile.html",
+      "sizeBytes": 497875,
+      "sizeHuman": "486.2 KB",
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "products--zocalo-fired-earth-cotto-tile",
+      "filename": "products--zocalo-fired-earth-cotto-tile.html",
+      "displayName": "Products  Zocalo Fired Earth Cotto Tile",
+      "type": "html-original",
+      "category": "html-original",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/original/products--zocalo-fired-earth-cotto-tile.html",
+      "sizeBytes": 467541,
+      "sizeHuman": "456.6 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "collections--cantera-tile",
@@ -1482,9 +2678,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/collections--cantera-tile.html",
-      "sizeBytes": 571557,
-      "sizeHuman": "558.2 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 574924,
+      "sizeHuman": "561.4 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "collections--cement-tile",
@@ -1495,9 +2691,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/collections--cement-tile.html",
-      "sizeBytes": 871114,
-      "sizeHuman": "850.7 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 877121,
+      "sizeHuman": "856.6 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "collections--ceramics",
@@ -1508,9 +2704,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/collections--ceramics.html",
-      "sizeBytes": 817068,
-      "sizeHuman": "797.9 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 822667,
+      "sizeHuman": "803.4 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "collections--cotto-tile-allende",
@@ -1521,9 +2717,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/collections--cotto-tile-allende.html",
-      "sizeBytes": 764265,
-      "sizeHuman": "746.4 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 769132,
+      "sizeHuman": "751.1 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "collections--cotto",
@@ -1534,9 +2730,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/collections--cotto.html",
-      "sizeBytes": 933196,
-      "sizeHuman": "911.3 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 939599,
+      "sizeHuman": "917.6 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "collections--field-trip-japan",
@@ -1547,9 +2743,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/collections--field-trip-japan.html",
-      "sizeBytes": 324315,
-      "sizeHuman": "316.7 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 325570,
+      "sizeHuman": "317.9 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "collections--glass-mosaics",
@@ -1560,9 +2756,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/collections--glass-mosaics.html",
-      "sizeBytes": 505859,
-      "sizeHuman": "494.0 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 508500,
+      "sizeHuman": "496.6 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "collections--limestone-tile",
@@ -1573,9 +2769,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/collections--limestone-tile.html",
-      "sizeBytes": 338674,
-      "sizeHuman": "330.7 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 340103,
+      "sizeHuman": "332.1 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "collections--marble-tile",
@@ -1586,9 +2782,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/collections--marble-tile.html",
-      "sizeBytes": 666717,
-      "sizeHuman": "651.1 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 670642,
+      "sizeHuman": "654.9 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "collections--roman-mosaics",
@@ -1599,9 +2795,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/collections--roman-mosaics.html",
-      "sizeBytes": 403582,
-      "sizeHuman": "394.1 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 404915,
+      "sizeHuman": "395.4 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "collections--terrazzo",
@@ -1612,9 +2808,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/collections--terrazzo.html",
-      "sizeBytes": 617810,
-      "sizeHuman": "603.3 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 621063,
+      "sizeHuman": "606.5 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "collections--zellige",
@@ -1625,9 +2821,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/collections--zellige.html",
-      "sizeBytes": 1050073,
+      "sizeBytes": 1057844,
       "sizeHuman": "1.0 MB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--2x6-rectangle-oscura",
@@ -1638,9 +2834,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--2x6-rectangle-oscura.html",
-      "sizeBytes": 387795,
-      "sizeHuman": "378.7 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 389633,
+      "sizeHuman": "380.5 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--6x6-stars-and-cross-red-clay-cotto-tile",
@@ -1651,9 +2847,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--6x6-stars-and-cross-red-clay-cotto-tile.html",
-      "sizeBytes": 401295,
-      "sizeHuman": "391.9 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 403389,
+      "sizeHuman": "393.9 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--8x8-square-red-clay-cotto-tile",
@@ -1664,9 +2860,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--8x8-square-red-clay-cotto-tile.html",
-      "sizeBytes": 404069,
-      "sizeHuman": "394.6 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 394665,
+      "sizeHuman": "385.4 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--8x9-hex-red-clay-cotto-tile",
@@ -1677,9 +2873,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--8x9-hex-red-clay-cotto-tile.html",
-      "sizeBytes": 395266,
-      "sizeHuman": "386.0 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 397260,
+      "sizeHuman": "387.9 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--absinthe-2x6-zellige-tile",
@@ -1690,9 +2886,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--absinthe-2x6-zellige-tile.html",
-      "sizeBytes": 330568,
-      "sizeHuman": "322.8 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 331909,
+      "sizeHuman": "324.1 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--absinthe-trapezoid-zellige-tile",
@@ -1703,9 +2899,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--absinthe-trapezoid-zellige-tile.html",
-      "sizeBytes": 343119,
-      "sizeHuman": "335.1 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 344534,
+      "sizeHuman": "336.5 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--absinthe-zellige-tile",
@@ -1716,9 +2912,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--absinthe-zellige-tile.html",
-      "sizeBytes": 372189,
-      "sizeHuman": "363.5 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 373930,
+      "sizeHuman": "365.2 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--aegean-zellige-tile",
@@ -1729,9 +2925,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--aegean-zellige-tile.html",
-      "sizeBytes": 429405,
-      "sizeHuman": "419.3 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 431687,
+      "sizeHuman": "421.6 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--amber-zellige-tile",
@@ -1742,9 +2938,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--amber-zellige-tile.html",
-      "sizeBytes": 432268,
-      "sizeHuman": "422.1 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 434586,
+      "sizeHuman": "424.4 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--basilica-12x24-honed-limestone-tile",
@@ -1755,9 +2951,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--basilica-12x24-honed-limestone-tile.html",
-      "sizeBytes": 378696,
-      "sizeHuman": "369.8 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 380465,
+      "sizeHuman": "371.5 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--basilica-6x6-honed",
@@ -1768,9 +2964,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--basilica-6x6-honed.html",
-      "sizeBytes": 378797,
-      "sizeHuman": "369.9 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 380674,
+      "sizeHuman": "371.8 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--buff-12x12-honed-limestone-tile",
@@ -1781,9 +2977,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--buff-12x12-honed-limestone-tile.html",
-      "sizeBytes": 377029,
-      "sizeHuman": "368.2 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 379005,
+      "sizeHuman": "370.1 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--buff-12x24-honed-limestone-tile",
@@ -1794,9 +2990,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--buff-12x24-honed-limestone-tile.html",
-      "sizeBytes": 372448,
-      "sizeHuman": "363.7 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 374338,
+      "sizeHuman": "365.6 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--buff-4x12-honed-limestone-tile",
@@ -1807,9 +3003,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--buff-4x12-honed-limestone-tile.html",
-      "sizeBytes": 382739,
-      "sizeHuman": "373.8 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 384745,
+      "sizeHuman": "375.7 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--buff-6x6-honed-limestone-tile",
@@ -1820,9 +3016,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--buff-6x6-honed-limestone-tile.html",
-      "sizeBytes": 383108,
-      "sizeHuman": "374.1 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 385056,
+      "sizeHuman": "376.0 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--bungalow-12x12",
@@ -1833,9 +3029,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--bungalow-12x12.html",
-      "sizeBytes": 438247,
-      "sizeHuman": "428.0 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 440590,
+      "sizeHuman": "430.3 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--burnt-sugar-2x2-zellige-tile",
@@ -1846,9 +3042,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--burnt-sugar-2x2-zellige-tile.html",
-      "sizeBytes": 381816,
-      "sizeHuman": "372.9 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 383618,
+      "sizeHuman": "374.6 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--burnt-sugar-2x6-zellige-tile",
@@ -1859,9 +3055,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--burnt-sugar-2x6-zellige-tile.html",
-      "sizeBytes": 358944,
-      "sizeHuman": "350.5 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 360666,
+      "sizeHuman": "352.2 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--burnt-sugar-glazed-earth-2x2",
@@ -1872,9 +3068,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--burnt-sugar-glazed-earth-2x2.html",
-      "sizeBytes": 300597,
-      "sizeHuman": "293.6 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 301606,
+      "sizeHuman": "294.5 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--burnt-sugar-zellige-tile",
@@ -1885,9 +3081,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--burnt-sugar-zellige-tile.html",
-      "sizeBytes": 365889,
-      "sizeHuman": "357.3 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 367519,
+      "sizeHuman": "358.9 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--cacao-4x4",
@@ -1898,9 +3094,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--cacao-4x4.html",
-      "sizeBytes": 409268,
-      "sizeHuman": "399.7 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 411287,
+      "sizeHuman": "401.6 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--carbon-black-zellige-tile",
@@ -1911,9 +3107,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--carbon-black-zellige-tile.html",
-      "sizeBytes": 425443,
-      "sizeHuman": "415.5 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 427632,
+      "sizeHuman": "417.6 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--carrara-12x12",
@@ -1924,9 +3120,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--carrara-12x12.html",
-      "sizeBytes": 383784,
-      "sizeHuman": "374.8 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 385571,
+      "sizeHuman": "376.5 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--casablanca-white-2x2-zellige-tile",
@@ -1937,9 +3133,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--casablanca-white-2x2-zellige-tile.html",
-      "sizeBytes": 451195,
-      "sizeHuman": "440.6 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 453645,
+      "sizeHuman": "443.0 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--casablanca-white-2x6-zellige-tile",
@@ -1950,9 +3146,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--casablanca-white-2x6-zellige-tile.html",
-      "sizeBytes": 429712,
-      "sizeHuman": "419.6 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 431904,
+      "sizeHuman": "421.8 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--casablanca-white-trapezoid-zellige-tile",
@@ -1963,9 +3159,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--casablanca-white-trapezoid-zellige-tile.html",
-      "sizeBytes": 403080,
-      "sizeHuman": "393.6 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 405058,
+      "sizeHuman": "395.6 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--casablanca-white-zellige-tile",
@@ -1976,9 +3172,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--casablanca-white-zellige-tile.html",
-      "sizeBytes": 441699,
-      "sizeHuman": "431.3 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 443582,
+      "sizeHuman": "433.2 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--condesa-4x4",
@@ -1989,9 +3185,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--condesa-4x4.html",
-      "sizeBytes": 411540,
-      "sizeHuman": "401.9 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 413823,
+      "sizeHuman": "404.1 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--desert-bloom-zellige-tile",
@@ -2002,9 +3198,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--desert-bloom-zellige-tile.html",
-      "sizeBytes": 430328,
-      "sizeHuman": "420.2 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 432610,
+      "sizeHuman": "422.5 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--durango-madera",
@@ -2015,9 +3211,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--durango-madera.html",
-      "sizeBytes": 389028,
-      "sizeHuman": "379.9 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 391169,
+      "sizeHuman": "382.0 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--ethereal-blue-2x8-ceramic-tile",
@@ -2028,9 +3224,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--ethereal-blue-2x8-ceramic-tile.html",
-      "sizeBytes": 424474,
-      "sizeHuman": "414.5 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 426798,
+      "sizeHuman": "416.8 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--eucalyptus-2x8-ceramic-tile",
@@ -2041,9 +3237,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--eucalyptus-2x8-ceramic-tile.html",
-      "sizeBytes": 364153,
-      "sizeHuman": "355.6 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 365895,
+      "sizeHuman": "357.3 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--french-cobble-stone",
@@ -2054,9 +3250,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--french-cobble-stone.html",
-      "sizeBytes": 374815,
-      "sizeHuman": "366.0 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 376538,
+      "sizeHuman": "367.7 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--gambit-1",
@@ -2067,9 +3263,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--gambit-1.html",
-      "sizeBytes": 392944,
-      "sizeHuman": "383.7 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 394819,
+      "sizeHuman": "385.6 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--gambit-7",
@@ -2080,9 +3276,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--gambit-7.html",
-      "sizeBytes": 336587,
-      "sizeHuman": "328.7 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 337939,
+      "sizeHuman": "330.0 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--glazed-earth-2x2-zellige-tile",
@@ -2093,9 +3289,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--glazed-earth-2x2-zellige-tile.html",
-      "sizeBytes": 440633,
-      "sizeHuman": "430.3 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 442985,
+      "sizeHuman": "432.6 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--glazed-earth-2x6-zellige-tile",
@@ -2106,9 +3302,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--glazed-earth-2x6-zellige-tile.html",
-      "sizeBytes": 429152,
-      "sizeHuman": "419.1 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 431401,
+      "sizeHuman": "421.3 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--glazed-earth-zellige-tile",
@@ -2119,9 +3315,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--glazed-earth-zellige-tile.html",
-      "sizeBytes": 432135,
-      "sizeHuman": "422.0 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 434529,
+      "sizeHuman": "424.3 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--graphite-grey-zellige-tile",
@@ -2132,9 +3328,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--graphite-grey-zellige-tile.html",
-      "sizeBytes": 426335,
-      "sizeHuman": "416.3 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 428592,
+      "sizeHuman": "418.5 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--jade-zellige-tile",
@@ -2145,9 +3341,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--jade-zellige-tile.html",
-      "sizeBytes": 371043,
-      "sizeHuman": "362.3 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 372781,
+      "sizeHuman": "364.0 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--kelp-forest-2x8-ceramic-tile",
@@ -2158,9 +3354,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--kelp-forest-2x8-ceramic-tile.html",
-      "sizeBytes": 365593,
-      "sizeHuman": "357.0 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 367409,
+      "sizeHuman": "358.8 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--kelp-forest-4x4-ceramic-tile",
@@ -2171,9 +3367,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--kelp-forest-4x4-ceramic-tile.html",
-      "sizeBytes": 362608,
-      "sizeHuman": "354.1 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 364388,
+      "sizeHuman": "355.8 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--lattice-4",
@@ -2184,9 +3380,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--lattice-4.html",
-      "sizeBytes": 390098,
-      "sizeHuman": "381.0 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 392021,
+      "sizeHuman": "382.8 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--linen-2x8-ceramic-tile",
@@ -2197,9 +3393,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--linen-2x8-ceramic-tile.html",
-      "sizeBytes": 427118,
-      "sizeHuman": "417.1 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 429483,
+      "sizeHuman": "419.4 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--linen-4x4-ceramic-tile",
@@ -2210,9 +3406,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--linen-4x4-ceramic-tile.html",
-      "sizeBytes": 428580,
-      "sizeHuman": "418.5 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 431123,
+      "sizeHuman": "421.0 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--molasses-2x8",
@@ -2223,9 +3419,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--molasses-2x8.html",
-      "sizeBytes": 413520,
-      "sizeHuman": "403.8 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 415923,
+      "sizeHuman": "406.2 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--molasses-4x4",
@@ -2236,9 +3432,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--molasses-4x4.html",
-      "sizeBytes": 419841,
-      "sizeHuman": "410.0 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 422191,
+      "sizeHuman": "412.3 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--monument-4x12-honed-limestone-tile",
@@ -2249,9 +3445,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--monument-4x12-honed-limestone-tile.html",
-      "sizeBytes": 378382,
-      "sizeHuman": "369.5 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 380151,
+      "sizeHuman": "371.2 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--monument-6x6-honed-limestone-tile",
@@ -2262,9 +3458,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--monument-6x6-honed-limestone-tile.html",
-      "sizeBytes": 378010,
-      "sizeHuman": "369.2 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 379735,
+      "sizeHuman": "370.8 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--moonlight-2x8-ceramic-tile",
@@ -2275,9 +3471,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--moonlight-2x8-ceramic-tile.html",
-      "sizeBytes": 423040,
-      "sizeHuman": "413.1 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 425234,
+      "sizeHuman": "415.3 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--nagano-2x8",
@@ -2288,9 +3484,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--nagano-2x8.html",
-      "sizeBytes": 418613,
-      "sizeHuman": "408.8 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 420901,
+      "sizeHuman": "411.0 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--neutra-12x12",
@@ -2301,9 +3497,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--neutra-12x12.html",
-      "sizeBytes": 436211,
-      "sizeHuman": "426.0 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 438443,
+      "sizeHuman": "428.2 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--neutra-24x24",
@@ -2314,9 +3510,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--neutra-24x24.html",
-      "sizeBytes": 414826,
-      "sizeHuman": "405.1 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 416938,
+      "sizeHuman": "407.2 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--piedra-4x4",
@@ -2327,9 +3523,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--piedra-4x4.html",
-      "sizeBytes": 416251,
-      "sizeHuman": "406.5 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 418441,
+      "sizeHuman": "408.6 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--pomelo-bone-cement-tile",
@@ -2340,9 +3536,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--pomelo-bone-cement-tile.html",
-      "sizeBytes": 393196,
-      "sizeHuman": "384.0 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 394969,
+      "sizeHuman": "385.7 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--puebla-4x4",
@@ -2353,9 +3549,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--puebla-4x4.html",
-      "sizeBytes": 418437,
-      "sizeHuman": "408.6 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 420629,
+      "sizeHuman": "410.8 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--pure-white-2x2-zellige-tile",
@@ -2366,9 +3562,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--pure-white-2x2-zellige-tile.html",
-      "sizeBytes": 448736,
-      "sizeHuman": "438.2 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 451196,
+      "sizeHuman": "440.6 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--pure-white-2x6-zellige-tile",
@@ -2379,9 +3575,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--pure-white-2x6-zellige-tile.html",
-      "sizeBytes": 432212,
-      "sizeHuman": "422.1 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 434427,
+      "sizeHuman": "424.2 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--pure-white-trapezoid-zellige-tile",
@@ -2392,9 +3588,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--pure-white-trapezoid-zellige-tile.html",
-      "sizeBytes": 402726,
-      "sizeHuman": "393.3 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 404717,
+      "sizeHuman": "395.2 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--racing-green-2x6-zellige-tile",
@@ -2405,9 +3601,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--racing-green-2x6-zellige-tile.html",
-      "sizeBytes": 369290,
-      "sizeHuman": "360.6 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 371005,
+      "sizeHuman": "362.3 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--racing-green-zellige-tile",
@@ -2418,9 +3614,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--racing-green-zellige-tile.html",
-      "sizeBytes": 373829,
-      "sizeHuman": "365.1 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 375425,
+      "sizeHuman": "366.6 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--rouge-zellige-tile",
@@ -2431,9 +3627,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--rouge-zellige-tile.html",
-      "sizeBytes": 362475,
-      "sizeHuman": "354.0 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 364154,
+      "sizeHuman": "355.6 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--sequoia-2x8-ceramic-tile",
@@ -2444,9 +3640,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--sequoia-2x8-ceramic-tile.html",
-      "sizeBytes": 372455,
-      "sizeHuman": "363.7 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 374411,
+      "sizeHuman": "365.6 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--sequoia-4x4-ceramic-tile",
@@ -2457,9 +3653,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--sequoia-4x4-ceramic-tile.html",
-      "sizeBytes": 367256,
-      "sizeHuman": "358.6 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 369076,
+      "sizeHuman": "360.4 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--sky-light-zellige-tile",
@@ -2470,9 +3666,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--sky-light-zellige-tile.html",
-      "sizeBytes": 432514,
-      "sizeHuman": "422.4 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 434805,
+      "sizeHuman": "424.6 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--tidepool-2x6-zellige-tile",
@@ -2483,9 +3679,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--tidepool-2x6-zellige-tile.html",
-      "sizeBytes": 369483,
-      "sizeHuman": "360.8 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 371186,
+      "sizeHuman": "362.5 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--tidepool-trapezoid-zellige-tile",
@@ -2496,9 +3692,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--tidepool-trapezoid-zellige-tile.html",
-      "sizeBytes": 342515,
-      "sizeHuman": "334.5 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 343922,
+      "sizeHuman": "335.9 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--tidepool-zellige-tile",
@@ -2509,9 +3705,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--tidepool-zellige-tile.html",
-      "sizeBytes": 376642,
-      "sizeHuman": "367.8 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 378407,
+      "sizeHuman": "369.5 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--toltec-red-clay-cotto-tile",
@@ -2522,9 +3718,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--toltec-red-clay-cotto-tile.html",
-      "sizeBytes": 395545,
-      "sizeHuman": "386.3 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 397472,
+      "sizeHuman": "388.2 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--unglazed-natural-2x6-zellige-tile",
@@ -2535,9 +3731,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--unglazed-natural-2x6-zellige-tile.html",
-      "sizeBytes": 427902,
-      "sizeHuman": "417.9 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 430307,
+      "sizeHuman": "420.2 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "products--volcan-4x12",
@@ -2548,9 +3744,9 @@
       "status": "delivered",
       "version": 1,
       "path": "html/revised/products--volcan-4x12.html",
-      "sizeBytes": 396096,
-      "sizeHuman": "386.8 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 398203,
+      "sizeHuman": "388.9 KB",
+      "lastModified": "2026-05-13"
     },
     {
       "id": "2x6-rectangle-oscura",

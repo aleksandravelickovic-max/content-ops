@@ -13,6 +13,7 @@ Usage:
 import json
 import os
 import re
+import subprocess
 from pathlib import Path
 from datetime import datetime
 
@@ -157,6 +158,109 @@ def read_content(path):
         return "(Unable to read file)"
 
 
+# ── Git-based comparison helpers ─────────────────────────────────────
+
+PRE_PATCH_COMMIT = "520d22e"  # commit before style patches
+PATCH_COMMIT = "2ee3699"  # the style-audit patch commit
+
+
+def get_changed_files():
+    """Get set of files changed in the style patch commit."""
+    try:
+        result = subprocess.run(
+            ["git", "diff", "--name-only", f"{PRE_PATCH_COMMIT}..{PATCH_COMMIT}", "--", "clients/"],
+            capture_output=True, text=True, cwd=str(ROOT),
+        )
+        if result.returncode == 0 and result.stdout.strip():
+            return set(result.stdout.strip().split("\n"))
+        return set()
+    except Exception:
+        return set()
+
+
+def get_pre_patch_content(rel_path):
+    """Get file content from before the style patches were applied."""
+    try:
+        result = subprocess.run(
+            ["git", "show", f"{PRE_PATCH_COMMIT}:{rel_path}"],
+            capture_output=True, text=True, cwd=str(ROOT),
+        )
+        if result.returncode == 0:
+            content = result.stdout
+            if len(content) > MAX_CONTENT_CHARS:
+                return content[:MAX_CONTENT_CHARS] + TRUNCATION_NOTE
+            return content
+        return None
+    except Exception:
+        return None
+
+
+# ── URL / HTML Mapping ──────────────────────────────────────────────
+
+def extract_url_from_content(path):
+    """Extract the URL field from markdown content."""
+    try:
+        with open(path, "r", encoding="utf-8", errors="replace") as f:
+            for line in f:
+                m = re.search(r'\*\*URL:\*\*\s*<?([^>\s]+)>?', line)
+                if m:
+                    return m.group(1).strip()
+    except Exception:
+        pass
+    return None
+
+
+def url_to_html_filename(url):
+    """Convert a ziatile.com URL to the HTML filename used in html/original/ and html/revised/."""
+    path = url.split("//", 1)[-1]
+    path = path.split("?")[0]  # Strip query params
+    path = path.replace("ziatile.com/", "").replace("en-ca/", "")
+    path = path.strip("/").replace("/", "--")
+    return (path or "homepage") + ".html"
+
+
+def build_html_mapping():
+    """Build a mapping from markdown content paths to their original/revised HTML counterparts."""
+    html_dir = CLIENTS_DIR / "zia-tile" / "campaigns" / "01-product-collection-pages" / "html"
+    original_dir = html_dir / "original"
+    revised_dir = html_dir / "revised"
+
+    if not original_dir.exists():
+        return {}
+
+    available_originals = {f.name for f in original_dir.iterdir() if f.suffix == ".html"}
+    available_revised = {f.name for f in revised_dir.iterdir() if f.suffix == ".html"} if revised_dir.exists() else set()
+
+    mapping = {}
+    gdocs_dir = CLIENTS_DIR / "zia-tile" / "campaigns" / "01-product-collection-pages" / "gdocs-content"
+
+    if not gdocs_dir.exists():
+        return mapping
+
+    for md_file in gdocs_dir.rglob("*.md"):
+        url = extract_url_from_content(md_file)
+        if not url:
+            continue
+        html_name = url_to_html_filename(url)
+
+        # Build the content store key for this markdown file
+        rel_from_campaign = md_file.relative_to(CLIENTS_DIR / "zia-tile" / "campaigns" / "01-product-collection-pages")
+        store_key = f"clients/zia-tile/campaigns/01-product-collection-pages/{rel_from_campaign}"
+
+        # Relative paths from reports/ directory (where the navigator HTML lives)
+        html_rel_base = "../clients/zia-tile/campaigns/01-product-collection-pages/html"
+
+        entry = {"siteUrl": url}
+        if html_name in available_originals:
+            entry["htmlOriginalPath"] = f"{html_rel_base}/original/{html_name}"
+        if html_name in available_revised:
+            entry["htmlRevisedPath"] = f"{html_rel_base}/revised/{html_name}"
+
+        mapping[store_key] = entry
+
+    return mapping
+
+
 # ── Registry Generation ──────────────────────────────────────────────
 
 def scan_directory(base_path, rel_root, allowed_exts=None):
@@ -275,6 +379,9 @@ def generate_all_registries():
 
 def build_content_store(registries):
     store = {}
+    changed_files = get_changed_files()
+    comparison_count = 0
+
     for client_name, data in registries.items():
         client_dir = CLIENTS_DIR / client_name
         for entry in data["client"]["entries"]:
@@ -292,6 +399,12 @@ def build_content_store(registries):
                     "content": read_content(fpath),
                     "isHtml": ext == ".html",
                 }
+                if ext == ".md" and key in changed_files:
+                    original = get_pre_patch_content(key)
+                    if original and original != store[key]["content"]:
+                        store[key]["originalContent"] = original
+                        store[key]["hasComparison"] = True
+                        comparison_count += 1
         for camp_reg in data["campaigns"]:
             camp_name = camp_reg["campaign"]
             camp_dir = client_dir / "campaigns" / camp_name
@@ -310,6 +423,26 @@ def build_content_store(registries):
                         "content": read_content(fpath),
                         "isHtml": ext == ".html",
                     }
+                    if ext == ".md" and key in changed_files:
+                        original = get_pre_patch_content(key)
+                        if original and original != store[key]["content"]:
+                            store[key]["originalContent"] = original
+                            store[key]["hasComparison"] = True
+                            comparison_count += 1
+
+    if comparison_count:
+        print(f"  {comparison_count} files have before/after comparisons")
+
+    # Attach HTML original/revised paths
+    html_map = build_html_mapping()
+    matched = 0
+    for key, meta in html_map.items():
+        if key in store:
+            store[key].update(meta)
+            matched += 1
+    if matched:
+        print(f"  {matched} files mapped to site HTML (original/revised)")
+
     return store
 
 
@@ -566,6 +699,82 @@ body.preview-open .container {{ padding-right: calc(var(--preview-width) + 28px)
 /* Raw preview (HTML files or no marked.js) */
 .raw-preview {{ font-family: 'SF Mono', 'Fira Code', monospace; font-size: 12px; white-space: pre-wrap; word-wrap: break-word; line-height: 1.5; color: var(--text); }}
 
+/* ── Preview Tabs ── */
+.preview-tabs {{
+  display: flex; border-bottom: 1px solid var(--border);
+  background: var(--bg); flex-shrink: 0;
+}}
+.preview-tab-btn {{
+  padding: 8px 16px; font-size: 12px; font-weight: 500;
+  color: var(--text-muted); border: none; background: none;
+  cursor: pointer; border-bottom: 2px solid transparent;
+  white-space: nowrap; transition: color 0.15s;
+}}
+.preview-tab-btn:hover {{ color: var(--text); }}
+.preview-tab-btn.active {{ color: var(--accent); border-bottom-color: var(--accent); }}
+.preview-tab-btn .change-dot {{
+  display: inline-block; width: 6px; height: 6px;
+  background: var(--orange); border-radius: 50%; margin-left: 4px; vertical-align: middle;
+}}
+.md-source {{
+  font-family: 'SF Mono', 'Fira Code', monospace; font-size: 12px;
+  white-space: pre-wrap; word-wrap: break-word; line-height: 1.6;
+  color: var(--text); background: var(--bg-alt); padding: 16px;
+  border-radius: var(--radius);
+}}
+
+/* ── Preview Actions (HTML page links) ── */
+.preview-actions {{
+  display: flex; gap: 8px; padding: 10px 20px; border-bottom: 1px solid var(--border);
+  background: var(--bg-alt); flex-shrink: 0; flex-wrap: wrap; align-items: center;
+}}
+.page-link-btn {{
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 6px 14px; border: 1px solid var(--border); border-radius: var(--radius);
+  background: var(--bg); font-size: 12px; font-weight: 500; color: var(--text);
+  cursor: pointer; text-decoration: none; transition: all 0.15s;
+}}
+.page-link-btn:hover {{ border-color: var(--accent); color: var(--accent); box-shadow: var(--shadow); }}
+.page-link-btn.original {{ border-left: 3px solid var(--orange); }}
+.page-link-btn.revised {{ border-left: 3px solid var(--green); }}
+.page-link-btn.not-revised {{
+  border-left: 3px solid var(--red); color: var(--text-muted);
+  cursor: default; font-style: italic;
+}}
+.page-link-btn .icon {{ font-size: 14px; }}
+.revise-btn {{
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 6px 14px; border: 1px solid var(--accent); border-radius: var(--radius);
+  background: var(--accent); font-size: 12px; font-weight: 600; color: #fff;
+  cursor: pointer; transition: all 0.15s; margin-left: auto;
+}}
+.revise-btn:hover {{ background: #1d4ed8; }}
+.actions-label {{
+  font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px;
+  color: var(--text-muted); font-weight: 600; margin-right: 4px;
+}}
+.revision-modal {{
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5); z-index: 1000;
+  display: flex; align-items: center; justify-content: center;
+}}
+.revision-modal-content {{
+  background: var(--bg); border-radius: var(--radius); padding: 24px;
+  max-width: 600px; width: 90%; box-shadow: var(--shadow-lg);
+}}
+.revision-modal h3 {{ font-size: 16px; margin-bottom: 12px; }}
+.revision-modal p {{ font-size: 13px; color: var(--text-muted); margin-bottom: 12px; }}
+.revision-modal pre {{
+  background: #1e293b; color: #e2e8f0; padding: 12px; border-radius: var(--radius);
+  font-size: 12px; white-space: pre-wrap; word-break: break-all; margin-bottom: 16px;
+}}
+.revision-modal .btn-row {{ display: flex; gap: 8px; justify-content: flex-end; }}
+.revision-modal button {{
+  padding: 6px 16px; border-radius: var(--radius); font-size: 13px; cursor: pointer;
+}}
+.revision-modal .copy-btn {{ background: var(--accent); color: #fff; border: none; font-weight: 600; }}
+.revision-modal .close-modal-btn {{ background: var(--bg-alt); border: 1px solid var(--border); color: var(--text); }}
+
 /* ── Empty state ── */
 .empty {{ padding: 40px; text-align: center; color: var(--text-muted); font-size: 13px; }}
 
@@ -618,6 +827,8 @@ body.preview-open .container {{ padding-right: calc(var(--preview-width) + 28px)
       <button class="nav-btn" id="nextBtn" onclick="navPreview(1)">Next &rarr;</button>
     </div>
   </div>
+  <div class="preview-actions" id="previewActions" style="display:none"></div>
+  <div class="preview-tabs" id="previewTabs" style="display:none"></div>
   <div class="preview-body" id="previewBody"></div>
 </div>
 
@@ -990,18 +1201,58 @@ function openPreview(key) {{
   // Nav
   updateNav();
 
-  // Content
+  // Content & tabs
   const body = document.getElementById('previewBody');
-  if (!data) {{
-    body.innerHTML = '<div class="empty">Content not available for preview.</div>';
-  }} else if (data.isHtml) {{
-    body.innerHTML = '<pre class="raw-preview">' + escapeHtml(data.content) + '</pre>';
-  }} else {{
-    try {{
-      body.innerHTML = marked.parse(data.content);
-    }} catch(e) {{
-      body.innerHTML = '<pre class="raw-preview">' + escapeHtml(data.content) + '</pre>';
+  const tabBar = document.getElementById('previewTabs');
+  const actionsBar = document.getElementById('previewActions');
+
+  window._previewData = data;
+  window._previewKey = key;
+
+  // Build actions bar (HTML page links)
+  if (data && (data.htmlOriginalPath || data.htmlRevisedPath || data.siteUrl)) {{
+    let actHtml = '<span class="actions-label">Site Pages</span>';
+
+    if (data.htmlOriginalPath) {{
+      actHtml += '<a class="page-link-btn original" href="' + data.htmlOriginalPath + '" target="_blank" title="Open original site page"><span class="icon">&#127760;</span> Original HTML</a>';
     }}
+
+    if (data.htmlRevisedPath) {{
+      actHtml += '<a class="page-link-btn revised" href="' + data.htmlRevisedPath + '" target="_blank" title="Open revised site page"><span class="icon">&#9989;</span> Revised HTML</a>';
+    }} else if (data.htmlOriginalPath) {{
+      actHtml += '<span class="page-link-btn not-revised"><span class="icon">&#9888;</span> Not Yet Revised</span>';
+      actHtml += '<button class="revise-btn" onclick="showRevisionModal()"><span class="icon">&#9881;</span> Create Revision</button>';
+    }}
+
+    actionsBar.innerHTML = actHtml;
+    actionsBar.style.display = 'flex';
+  }} else {{
+    actionsBar.style.display = 'none';
+  }}
+
+  // Preview tabs for markdown content
+  if (!data) {{
+    tabBar.style.display = 'none';
+    body.innerHTML = '<div class="empty">Content not available for preview.</div>';
+  }} else if (data.hasComparison) {{
+    // 3-tab view: Original | Markdown | Revised
+    tabBar.style.display = 'flex';
+    tabBar.innerHTML =
+      '<button class="preview-tab-btn active" onclick="switchPreviewTab(\\'original\\')">Original</button>' +
+      '<button class="preview-tab-btn" onclick="switchPreviewTab(\\'markdown\\')">Markdown</button>' +
+      '<button class="preview-tab-btn" onclick="switchPreviewTab(\\'revised\\')">Revised<span class="change-dot"></span></button>';
+    switchPreviewTab('original');
+  }} else if (!data.isHtml) {{
+    // 2-tab view: Markdown | Rendered
+    tabBar.style.display = 'flex';
+    tabBar.innerHTML =
+      '<button class="preview-tab-btn" onclick="switchPreviewTab(\\'markdown\\')">Markdown</button>' +
+      '<button class="preview-tab-btn active" onclick="switchPreviewTab(\\'revised\\')">Rendered</button>';
+    switchPreviewTab('revised');
+  }} else {{
+    // HTML file — single view, no tabs
+    tabBar.style.display = 'none';
+    body.innerHTML = '<pre class="raw-preview">' + escapeHtml(data.content) + '</pre>';
   }}
   body.scrollTop = 0;
 
@@ -1013,6 +1264,71 @@ function closePreview() {{
   document.getElementById('previewPane').classList.remove('open');
   document.body.classList.remove('preview-open');
   if (activeFileEl) {{ activeFileEl.classList.remove('active'); activeFileEl = null; }}
+}}
+
+function switchPreviewTab(tab) {{
+  const body = document.getElementById('previewBody');
+  const tabBar = document.getElementById('previewTabs');
+  const data = window._previewData;
+
+  // Update active tab button
+  tabBar.querySelectorAll('.preview-tab-btn').forEach(btn => {{
+    btn.classList.toggle('active', btn.textContent.toLowerCase().startsWith(tab));
+  }});
+
+  if (!data) return;
+
+  if (tab === 'original') {{
+    const content = data.originalContent || data.content;
+    try {{
+      body.innerHTML = marked.parse(content);
+    }} catch(e) {{
+      body.innerHTML = '<pre class="raw-preview">' + escapeHtml(content) + '</pre>';
+    }}
+  }} else if (tab === 'markdown') {{
+    body.innerHTML = '<pre class="md-source">' + escapeHtml(data.content) + '</pre>';
+  }} else if (tab === 'revised') {{
+    try {{
+      body.innerHTML = marked.parse(data.content);
+    }} catch(e) {{
+      body.innerHTML = '<pre class="raw-preview">' + escapeHtml(data.content) + '</pre>';
+    }}
+  }}
+  body.scrollTop = 0;
+}}
+
+function showRevisionModal() {{
+  const data = window._previewData;
+  if (!data) return;
+
+  const key = window._previewKey;
+  const cmd = 'python3 scripts/build-html-before-after.py --skip-fetch';
+
+  const modal = document.createElement('div');
+  modal.className = 'revision-modal';
+  modal.onclick = function(e) {{ if (e.target === modal) modal.remove(); }};
+
+  const content = document.createElement('div');
+  content.className = 'revision-modal-content';
+  content.innerHTML =
+    '<h3>Create Revised HTML</h3>' +
+    '<p>Run this command in your terminal to generate the revised HTML version with your markdown content applied to the original site page.</p>' +
+    '<pre id="revisionCmd">' + escapeHtml(cmd) + '</pre>' +
+    '<p style="font-size:11px;color:var(--text-muted)">Source: ' + escapeHtml(key) + '</p>' +
+    '<div class="btn-row">' +
+    '<button class="copy-btn" onclick="copyRevisionCmd(this)">Copy Command</button>' +
+    '</div>';
+
+  modal.appendChild(content);
+  document.body.appendChild(modal);
+}}
+
+function copyRevisionCmd(btn) {{
+  const cmd = document.getElementById('revisionCmd').textContent;
+  navigator.clipboard.writeText(cmd).then(function() {{
+    btn.textContent = 'Copied!';
+    setTimeout(function() {{ btn.textContent = 'Copy Command'; }}, 2000);
+  }});
 }}
 
 function navPreview(delta) {{

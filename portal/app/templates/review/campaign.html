@@ -18,8 +18,14 @@
 <main class="campaign-main">
   <!-- Tabs for content types -->
   <div class="tab-bar">
+    {% if compare_pairs %}
+    <button class="tab-btn active" data-tab="compare">
+      Before / After
+      <span class="tab-count">{{ compare_pairs | length }}</span>
+    </button>
+    {% endif %}
     {% for tab in tabs %}
-    <button class="tab-btn{% if loop.first %} active{% endif %}" data-tab="{{ tab.key }}">
+    <button class="tab-btn{% if not compare_pairs and loop.first %} active{% endif %}" data-tab="{{ tab.key }}">
       {{ tab.label }}
       <span class="tab-count">{{ tab.count }}</span>
     </button>
@@ -36,9 +42,46 @@
     <span class="visible-count" id="visibleCount"></span>
   </div>
 
+  <!-- Before / After comparison tab -->
+  {% if compare_pairs %}
+  <div class="tab-panel active" data-panel="compare">
+    <table class="content-table">
+      <thead>
+        <tr>
+          <th class="th-title">Page</th>
+          <th class="th-size">Type</th>
+          <th class="th-feedback">Status</th>
+          <th class="th-date">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for pair in compare_pairs %}
+        <tr class="content-row" data-comments="0" onclick="window.location='/review/{{ token }}/compare/{{ pair.filename }}'">
+          <td class="col-title">
+            <span class="row-title">{{ pair.display_name }}</span>
+            <span class="row-path">{{ pair.filename }}</span>
+          </td>
+          <td class="col-size">{{ pair.page_type | title }}</td>
+          <td class="col-feedback">
+            {% if pair.has_revised %}
+            <span class="feedback-resolved">Ready to compare</span>
+            {% else %}
+            <span class="feedback-none">Original only</span>
+            {% endif %}
+          </td>
+          <td class="col-date">
+            <a href="/review/{{ token }}/compare/{{ pair.filename }}" class="compare-link">Compare &rarr;</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% endif %}
+
   <!-- One table per type, shown/hidden by tabs -->
   {% for tab in tabs %}
-  <div class="tab-panel{% if loop.first %} active{% endif %}" data-panel="{{ tab.key }}">
+  <div class="tab-panel{% if not compare_pairs and loop.first %} active{% endif %}" data-panel="{{ tab.key }}">
     <table class="content-table">
       <thead>
         <tr>
@@ -83,7 +126,7 @@
 </main>
 
 <footer class="review-footer">
-  <p>Content Ops Review Portal &middot; Powered by LinkGraph</p>
+  Content Ops Review Portal &middot; Powered by LinkGraph
 </footer>
 
 <script>

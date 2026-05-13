@@ -78,6 +78,28 @@ def list_campaigns(client_slug: str) -> list[str]:
     return sorted(d.name for d in camp_dir.iterdir() if d.is_dir() and not d.name.startswith("."))
 
 
+def get_compare_pairs(registry: dict) -> list[dict]:
+    originals = {
+        e["path"].split("/")[-1]: e
+        for e in registry.get("entries", [])
+        if e.get("type") == "html-original"
+    }
+    revised_set = {
+        e["path"].split("/")[-1]
+        for e in registry.get("entries", [])
+        if e.get("type") == "html-revised"
+    }
+    pairs = []
+    for filename, entry in sorted(originals.items()):
+        pairs.append({
+            "filename": filename,
+            "display_name": filename.replace("--", " / ").replace(".html", "").replace("-", " ").title(),
+            "has_revised": filename in revised_set,
+            "page_type": "collection" if filename.startswith("collections") else "product",
+        })
+    return pairs
+
+
 def list_clients() -> list[str]:
     root = Path(CONTENT_ROOT)
     if not root.is_dir():

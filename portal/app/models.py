@@ -18,6 +18,7 @@ class ShareLink(Base):
     client_slug: Mapped[str] = mapped_column(String(100), nullable=False, index=True)
     campaign_slug: Mapped[str] = mapped_column(String(200), nullable=False)
     label: Mapped[str] = mapped_column(String(300), nullable=True)
+    recipient_name: Mapped[str | None] = mapped_column(String(200), nullable=True)
     is_active: Mapped[bool] = mapped_column(Boolean, default=True)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
     last_accessed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)

@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block title %}{{ display_name }} — Before / After{% endblock %}
+{% block body_class %}compare-page{% endblock %}
+
+{% block body %}
+<header class="review-header">
+  <div class="header-inner">
+    <a href="/review/{{ token }}" class="back-link">&larr; Back to campaign</a>
+    <div class="content-nav">
+      {% if prev_pair %}
+      <a href="/review/{{ token }}/compare/{{ prev_pair.filename }}" class="nav-btn">&larr; Prev</a>
+      {% else %}
+      <span class="nav-btn disabled">&larr; Prev</span>
+      {% endif %}
+      <span class="nav-pos">{{ nav_position }}</span>
+      {% if next_pair %}
+      <a href="/review/{{ token }}/compare/{{ next_pair.filename }}" class="nav-btn">Next &rarr;</a>
+      {% else %}
+      <span class="nav-btn disabled">Next &rarr;</span>
+      {% endif %}
+    </div>
+  </div>
+</header>
+
+<div class="compare-toolbar">
+  <h1 class="compare-title">{{ display_name }}</h1>
+  <div class="compare-controls">
+    <button class="compare-mode-btn active" data-mode="split">Split</button>
+    <button class="compare-mode-btn" data-mode="original">Original Only</button>
+    {% if revised_path %}
+    <button class="compare-mode-btn" data-mode="revised">Revised Only</button>
+    {% endif %}
+  </div>
+</div>
+
+<div class="compare-panes" id="comparePanes" data-mode="split">
+  <div class="compare-pane pane-original">
+    <div class="pane-label">Original</div>
+    <iframe src="/review/{{ token }}/raw/{{ original_path }}" class="compare-frame" id="frameOriginal"></iframe>
+  </div>
+  {% if revised_path %}
+  <div class="compare-pane pane-revised">
+    <div class="pane-label pane-label--revised">Revised</div>
+    <iframe src="/review/{{ token }}/raw/{{ revised_path }}" class="compare-frame" id="frameRevised"></iframe>
+  </div>
+  {% else %}
+  <div class="compare-pane pane-revised pane-empty">
+    <div class="pane-label">Revised</div>
+    <div class="pane-placeholder">No revised version yet</div>
+  </div>
+  {% endif %}
+</div>
+
+<script>
+(function() {
+  const panes = document.getElementById('comparePanes');
+  document.querySelectorAll('.compare-mode-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.compare-mode-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      panes.dataset.mode = btn.dataset.mode;
+    });
+  });
+})();
+</script>
+{% endblock %}

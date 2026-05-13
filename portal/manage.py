@@ -32,7 +32,7 @@ async def init_db():
     print("Database tables created.")
 
 
-async def create_link(client: str, campaign: str, label: str | None = None):
+async def create_link(client: str, campaign: str, label: str | None = None, recipient: str | None = None):
     registry = content_svc.load_registry(client, campaign)
     if not registry:
         print(f"Campaign not found: {client}/{campaign}")
@@ -43,6 +43,7 @@ async def create_link(client: str, campaign: str, label: str | None = None):
             client_slug=client,
             campaign_slug=campaign,
             label=label or f"{client} / {campaign}",
+            recipient_name=recipient,
         )
         db.add(link)
         await db.commit()
@@ -53,6 +54,8 @@ async def create_link(client: str, campaign: str, label: str | None = None):
     print(f"  Token:    {link.token}")
     print(f"  Client:   {link.client_slug}")
     print(f"  Campaign: {link.campaign_slug}")
+    if link.recipient_name:
+        print(f"  Recipient: {link.recipient_name}")
     print(f"  URL:      {BASE_URL}/review/{link.token}")
 
 
@@ -127,6 +130,7 @@ def main():
     create.add_argument("--client", required=True)
     create.add_argument("--campaign", required=True)
     create.add_argument("--label")
+    create.add_argument("--recipient", help="Reviewer name (pre-fills comment author)")
 
     sub.add_parser("list-links", help="List all share links")
 
@@ -141,7 +145,7 @@ def main():
     if args.command == "init-db":
         asyncio.run(init_db())
     elif args.command == "create-link":
-        asyncio.run(create_link(args.client, args.campaign, args.label))
+        asyncio.run(create_link(args.client, args.campaign, args.label, args.recipient))
     elif args.command == "list-links":
         asyncio.run(list_links())
     elif args.command == "revoke-link":

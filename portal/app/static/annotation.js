@@ -1,11 +1,10 @@
-/* ── Annotation system for Content Review Portal ─────────────── */
+/* ── Inline annotation system for Content Review Portal ────── */
 (function () {
   "use strict";
 
-  var annotationMode = false;
-  var pendingAnchor = null;
-  var tooltipEl = null;
   var commentsData = window.COMMENTS_DATA || [];
+  var popoverEl = null;
+  var pendingAnchor = null;
 
   // ── Re-anchoring: find quoted text in rendered content ────────
 
@@ -90,9 +89,7 @@
             scrollToComment(id);
           };
         })(c.id));
-      } catch (e) {
-        // surroundContents fails if range crosses element boundaries
-      }
+      } catch (e) {}
     }
   }
 
@@ -168,134 +165,135 @@
     };
   }
 
-  // ── Selection tooltip ────────────────────────────────────────
+  // ── Inline comment popover ──────────────────────────────────
 
-  function showTooltip(rect) {
-    hideTooltip();
-    tooltipEl = document.createElement("div");
-    tooltipEl.className = "ann-sel-tooltip";
-    tooltipEl.textContent = "Add Comment";
+  function showPopover(rect, anchor) {
+    hidePopover();
+    pendingAnchor = anchor;
+
+    popoverEl = document.createElement("div");
+    popoverEl.className = "ann-popover";
+
+    var displayText = anchor.highlight_text;
+    if (displayText.length > 100) displayText = displayText.substring(0, 100) + “…”;
+
+    var reviewerName = window.REVIEWER_NAME || “”;
+    var nameField = reviewerName
+      ? '<input type=”hidden” name=”author_name” value=”' + escapeHtml(reviewerName) + '”>'
+      : '<input type=”text” name=”author_name” placeholder=”Your name” required class=”ann-popover-input”>';
+
+    popoverEl.innerHTML =
+      '<div class=”ann-popover-quote”>”' + escapeHtml(displayText) + '”</div>' +
+      '<form class=”ann-popover-form”>' +
+        nameField +
+        '<textarea name=”body” placeholder=”Your feedback…” required class=”ann-popover-textarea” rows=”3”></textarea>' +
+        '<div class=”ann-popover-actions”>' +
+          '<button type=”button” class=”ann-popover-cancel”>Cancel</button>' +
+          '<button type=”submit” class=”ann-popover-submit”>Submit</button>' +
+        '</div>' +
+      '</form>';
 
     var container = document.querySelector(".rendered-content");
     var containerRect = container.getBoundingClientRect();
 
-    tooltipEl.style.left = (rect.left + rect.width / 2 - containerRect.left) + "px";
-    tooltipEl.style.top = (rect.top - containerRect.top - 35 + container.scrollTop) + "px";
+    var left = rect.left + rect.width / 2 - containerRect.left;
+    var top = rect.bottom - containerRect.top + container.scrollTop + 8;
+
+    var popoverWidth = 320;
+    var maxLeft = container.offsetWidth - popoverWidth / 2 - 8;
+    var minLeft = popoverWidth / 2 + 8;
+    if (left > maxLeft) left = maxLeft;
+    if (left < minLeft) left = minLeft;
+
+    popoverEl.style.left = left + "px";
+    popoverEl.style.top = top + "px";
 
     container.style.position = "relative";
-    container.appendChild(tooltipEl);
+    container.appendChild(popoverEl);
 
-    tooltipEl.addEventListener("mousedown", function (e) {
+    popoverEl.querySelector(".ann-popover-cancel").addEventListener("click", hidePopover);
+
+    popoverEl.querySelector(".ann-popover-form").addEventListener("submit", function (e) {
       e.preventDefault();
-      e.stopPropagation();
-      applySelectionToForm();
+      submitInlineComment(this);
+    });
+
+    // Prevent clicks inside popover from dismissing it
+    popoverEl.addEventListener("mousedown", function (e) { e.stopPropagation(); });
+
+    setTimeout(function () {
+      var input = popoverEl && popoverEl.querySelector('input[name="author_name"]');
+      if (input) input.focus();
+    }, 50);
+  }
+
+  function hidePopover() {
+    if (popoverEl && popoverEl.parentNode) popoverEl.parentNode.removeChild(popoverEl);
+    popoverEl = null;
+    pendingAnchor = null;
+  }
+
+  function escapeHtml(str) {
+    var div = document.createElement("div");
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  function submitInlineComment(form) {
+    var data = {
+      author_name: form.author_name.value,
+      body: form.body.value,
+    };
+    if (pendingAnchor) Object.assign(data, pendingAnchor);
+
+    var submitBtn = form.querySelector(".ann-popover-submit");
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = "Saving…"; }
+
+    fetch("/api/review/" + TOKEN + "/comments/" + CONTENT_PATH, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    }).then(function (res) {
+      if (res.ok) { location.reload(); }
+      else {
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = "Submit"; }
+        res.json().then(function (err) { alert(err.detail || "Failed to submit"); });
+      }
+    }).catch(function () {
+      if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = "Submit"; }
+      alert("Network error — check your connection.");
     });
   }
 
-  function hideTooltip() {
-    if (tooltipEl && tooltipEl.parentNode) tooltipEl.parentNode.removeChild(tooltipEl);
-    tooltipEl = null;
-  }
+  // ── Selection handler (always active, document-level) ────────
 
-  // ── Wire selection into existing comment form ────────────────
+  function onDocumentMouseUp(e) {
+    if (e.target.closest(".ann-popover")) return;
 
-  function applySelectionToForm() {
-    hideTooltip();
-    if (!pendingAnchor) return;
-
-    var quoteEl = document.getElementById("selectionQuote");
-    var quoteText = document.getElementById("quoteText");
-    if (quoteEl && quoteText) {
-      var displayText = pendingAnchor.highlight_text;
-      if (displayText.length > 120) displayText = displayText.substring(0, 120) + "...";
-      quoteText.textContent = '"' + displayText + '"';
-      quoteEl.classList.add("visible");
-    }
-
-    window._pendingAnchor = pendingAnchor;
-
-    var textarea = document.querySelector('.comment-form textarea[name="body"]');
-    if (textarea) textarea.focus();
-  }
-
-  window.clearTextSelection = function () {
-    var quoteEl = document.getElementById("selectionQuote");
-    if (quoteEl) quoteEl.classList.remove("visible");
-    window._pendingAnchor = null;
-    pendingAnchor = null;
-  };
-
-  // ── Annotation mode toggle ───────────────────────────────────
-
-  window.toggleAnnotationMode = function () {
-    annotationMode = !annotationMode;
-    var btn = document.getElementById("annToggle");
-    var banner = document.getElementById("annBanner");
-    if (annotationMode) {
-      btn.classList.add("active");
-      if (banner) banner.classList.add("visible");
-      document.body.classList.add("annotation-mode");
-    } else {
-      btn.classList.remove("active");
-      if (banner) banner.classList.remove("visible");
-      document.body.classList.remove("annotation-mode");
-      hideTooltip();
-      window.clearTextSelection();
-    }
-  };
-
-  // ── Selection handler ────────────────────────────────────────
-
-  function onContentMouseUp(e) {
-    if (!annotationMode) return;
-    if (e.target.closest(".ann-sel-tooltip")) return;
-    hideTooltip();
+    var container = document.querySelector(".rendered-content");
+    if (!container) return;
 
     var sel = window.getSelection();
-    if (!sel || sel.isCollapsed || !sel.toString().trim()) return;
+    if (!sel || sel.isCollapsed || !sel.toString().trim()) {
+      if (popoverEl && !e.target.closest(".ann-popover")) hidePopover();
+      return;
+    }
 
     var range = sel.getRangeAt(0);
-    var container = document.querySelector(".rendered-content");
     if (!container.contains(range.commonAncestorContainer)) return;
 
-    pendingAnchor = extractAnchor(range);
-    if (!pendingAnchor) return;
+    var anchor = extractAnchor(range);
+    if (!anchor) return;
 
-    showTooltip(range.getBoundingClientRect());
+    hidePopover();
+    showPopover(range.getBoundingClientRect(), anchor);
   }
 
-  // ── Patch comment form submission to include anchor data ─────
-
-  function patchCommentForm() {
-    var form = document.getElementById("commentForm");
-    if (!form) return;
-
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      var data = {
-        author_name: form.author_name.value,
-        author_email: form.author_email.value || null,
-        body: form.body.value,
-      };
-
-      if (window._pendingAnchor) {
-        Object.assign(data, window._pendingAnchor);
-      }
-
-      fetch("/api/review/" + TOKEN + "/comments/" + CONTENT_PATH, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      }).then(function (res) {
-        if (res.ok) { location.reload(); }
-        else { res.json().then(function (err) { alert(err.detail || "Failed to submit comment"); }); }
-      });
-    }, { once: true });
-
-    // Remove the original listener by preventing double-bind
-    // The template's inline script also binds — we stop its propagation
-    form.dataset.annotationPatched = "true";
+  // Dismiss popover on click outside
+  function onDocumentMouseDown(e) {
+    if (popoverEl && !popoverEl.contains(e.target)) {
+      hidePopover();
+    }
   }
 
   // ── "Jump to highlight" links on comment cards ───────────────
@@ -332,10 +330,10 @@
     renderHighlights();
     addJumpLinks();
 
-    var content = document.querySelector(".rendered-content");
-    if (content) content.addEventListener("mouseup", onContentMouseUp);
-
-    patchCommentForm();
+    document.addEventListener("mouseup", function (e) {
+      setTimeout(function () { onDocumentMouseUp(e); }, 10);
+    });
+    document.addEventListener("mousedown", onDocumentMouseDown);
   }
 
   if (document.readyState === "loading") {
