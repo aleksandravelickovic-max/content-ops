@@ -118,6 +118,7 @@ portal/
 | Zia Tile | `clients/zia-tile/STYLE-SYSTEM.md` | Active — premium artisanal tile retailer |
 | SearchAtlas | `clients/searchatlas/STYLE-SYSTEM.md` | Active — internal platform content |
 | Altify | `clients/altify/STYLE-SYSTEM.md` | Active — enterprise account planning AI platform (Salesforce-native) |
+| 5Gstore | `clients/5gstore/STYLE-SYSTEM.md` | Active — specialized 4G/5G networking equipment retailer |
 
 ### Adding a new client
 
