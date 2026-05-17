@@ -54,6 +54,12 @@ PAGES = [
         "draft": "04-strategic-account-planning.md",
         "label": "Strategic Account Planning for Enterprise Sales",
     },
+    {
+        "slug": "05-revenue-execution-salesforce",
+        "url": "",
+        "draft": "05-revenue-execution-salesforce.md",
+        "label": "Revenue Execution in Salesforce: Enterprise Guide",
+    },
 ]
 
 
@@ -509,7 +515,7 @@ a:hover {{ text-decoration: underline; }}
     <span class="badge">Draft</span>
     <h1>Altify — Content Optimization</h1>
   </div>
-  <p class="subtitle">Campaign: 01 May 2026 · Generated {ts} · CSM: Arianna Trabanino</p>
+  <p class="subtitle">Campaign: 01 May 2026 · Generated {ts} · CSM: Chanakya Thakkar</p>
   <div class="stats">
     <div class="stat"><div class="stat-num">4</div><div class="stat-label">Pieces</div></div>
     <div class="stat"><div class="stat-num">{revised_count}</div><div class="stat-label">Revised</div></div>
@@ -521,7 +527,7 @@ a:hover {{ text-decoration: underline; }}
   </div>
   <table>
     <thead>
-      <tr><th></th><th>Slug</th><th>Page</th><th>Live URL</th><th>Original</th><th>Revised</th></tr>
+      <tr><th></th><th>Topic</th><th>Page</th><th>Live URL</th><th>Original</th><th>Revised</th></tr>
     </thead>
     <tbody>{"".join(rows)}</tbody>
   </table>
