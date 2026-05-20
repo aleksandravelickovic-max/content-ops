@@ -1,0 +1,25 @@
+{
+  "piece_slug": "collection-cotto-allende",
+  "client": "zia-tile",
+  "content_type": "collection",
+  "material": "cotto-allende",
+  "topic": "Cotto Allende glazed terra cotta collection page",
+  "stages": [
+    {"name": "brief", "status": "completed", "note": "structure inherited from golden reference collection-cotto.md"},
+    {"name": "draft", "status": "completed", "note": "drafted from STYLE-SYSTEM §5.4 + materials/cotto-allende.md"},
+    {"name": "material-guard", "status": "completed", "note": "PASS: freeze/thaw not_suitable, pools suitable, no combined sealing, no crazing-trio misuse; Cotto vs Cotto Allende assignment correct"},
+    {"name": "terminology-lint", "status": "completed", "note": "PASS: no banned terms; 'eighteen' written out; no 'sub-line'; terra cotta lowercase"},
+    {"name": "claims-grounding", "status": "completed", "note": "PASS: colorways/shapes/finishes trace to §5.4; no kiln type; no light-exposure patina"},
+    {"name": "person-consistency", "status": "completed", "note": "PASS: first person held; no second person in answers"},
+    {"name": "contact-line-check", "status": "completed", "note": "PASS: email+phone in install FAQ and overage FAQ"},
+    {"name": "humanize", "status": "completed", "note": "advisory; cadence acceptable"},
+    {"name": "ship", "status": "completed", "note": "Ship after minor fixes -> fixed: added install-guide markdown link"},
+    {"name": "voice-judge", "status": "completed", "note": "86/100 PASS (>=80)"},
+    {"name": "koray-judge", "status": "completed", "note": "84/100 PASS (>=80)"}
+  ],
+  "verify_with_alex": [
+    "cotto-allende confidence is high; no draft/verify-gated material rules used",
+    "[PRODUCT LIST] placeholder is intentional (collection pages render the product grid dynamically)"
+  ],
+  "updated": "2026-05-19"
+}
