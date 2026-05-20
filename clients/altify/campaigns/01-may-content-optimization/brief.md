@@ -1,7 +1,7 @@
 # Campaign Brief — Altify May 2026 Content Optimization
 
 **Client:** Altify
-**CSM:** Arianna Trabanino
+**CSM:** Chanakya Thakkar
 **Campaign:** 01 — May Content Optimization
 **Goal:** Optimize four existing pages for LLM citability, structured authority, and conversion depth
 
