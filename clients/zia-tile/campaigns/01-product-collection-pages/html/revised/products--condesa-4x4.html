@@ -906,7 +906,101 @@ first.parentNode.insertBefore(script, first);
     document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
 })();</script>
 <script data-application="storefront-renderer" data-monorail-region="shop_domain" data-page-type="product" data-render-region="gcp-us-west1" data-resource-timing-sampling-rate="10" data-shop-id="53494415553" data-shs="true" data-shs-beacon="true" data-shs-beacon-endpoint="https://ziatile.com/api/collect" data-shs-export-with-fetch="true" data-shs-logs-sample-rate="1" data-theme-instance-id="177444159681" data-theme-name="H&amp;M" data-theme-version="15.2.0" defer="" src="https://ziatile.com/cdn/shopifycloud/perf-kit/shopify-perf-kit-3.3.1.min.js"></script>
-</link></head>
+</link>
+<style id="zt-edit-mode">
+.zt-edit-badge {
+  position: fixed;
+  top: 48px;
+  right: 16px;
+  background: #8a3324;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 3px;
+  z-index: 99999;
+  pointer-events: none;
+  user-select: none;
+}
+[contenteditable="true"] { cursor: text; transition: outline 0.1s; }
+[contenteditable="true"]:hover  { outline: 2px dashed #c47a52 !important; outline-offset: 3px !important; }
+[contenteditable="true"]:focus  { outline: 2px solid #8a3324 !important; outline-offset: 3px !important; }
+
+/* FAQ accordion */
+.zt-faq { max-width: 1200px; margin: 48px auto 64px; padding: 0 24px; }
+.zt-faq__title {
+  font-family: Georgia, serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: #1c1a17;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d9cfb9;
+}
+.zt-ac-item {
+  background: #fbf7ee;
+  border: 1px solid #d9cfb9;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.zt-ac-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  user-select: none;
+}
+.zt-ac-trigger:hover { background: #f0ebe0; }
+.zt-ac-q {
+  flex: 1;
+  font-family: Georgia, serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #1c1a17;
+  cursor: text;
+  border-radius: 2px;
+}
+.zt-ac-q:hover { outline: 1px dashed #c47a52; outline-offset: 2px; }
+.zt-ac-q:focus { outline: 2px solid #8a3324; outline-offset: 2px; }
+.zt-ac-icon {
+  font-size: 22px;
+  font-weight: 300;
+  color: #8a3324;
+  flex-shrink: 0;
+  line-height: 1;
+  transition: transform 0.2s;
+  pointer-events: none;
+  user-select: none;
+}
+.zt-ac-item.open .zt-ac-icon { transform: rotate(45deg); }
+.zt-ac-body {
+  display: none;
+  padding: 4px 20px 20px;
+  border-top: 1px solid #d9cfb9;
+}
+.zt-ac-item.open .zt-ac-body { display: block; }
+.zt-ac-body p {
+  margin: 12px 0 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* FAQ modal open state */
+.product-content-modal--faq.active { display: block !important; }
+</style>
+</head>
 <body class="gradient animate--hover-default template- template-product" data-page-template="product">
 <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       Skip to content
@@ -2320,7 +2414,7 @@ To ensure proper installation based on your unique site conditions, clients are 
 <div class="product-content-modal__overlay info-toggle"></div>
 <div class="product-content-modal__inner"><button class="product-content-modal__close info-toggle body body--small body--regular">Close</button>
 <h2 class="product-content-modal__title label label--bold">How It's Made</h2>
-<div class="product-content-modal__content text-wrapper body body--regular"><p>Our Condesa 4x4 begins with natural Mexican clay drawn from the hills around San Miguel de Allende, where terracotta production has carried on for centuries. The clay is refined through soaking and filtering to preserve its mineral composition while achieving a workable consistency for forming. Each tile is then hand-pressed into a square mold, where the geometry takes shape based on material response rather than mechanical uniformity.</p>
+<div class="product-content-modal__content text-wrapper body body--regular" contenteditable="true"><p>Our Condesa 4x4 begins with natural Mexican clay drawn from the hills around San Miguel de Allende, where terracotta production has carried on for centuries. The clay is refined through soaking and filtering to preserve its mineral composition while achieving a workable consistency for forming. Each tile is then hand-pressed into a square mold, where the geometry takes shape based on material response rather than mechanical uniformity.</p>
 <p>After forming, each tile is left to dry in open-air conditions for one to two weeks. This gradual drying releases moisture slowly and stabilizes the structure before firing. Glaze is then applied before the tile enters the kiln, where it interacts with the clay body during high-temperature firing. Variations in kiln heat and airflow produce the shifts in tone, glaze density, and surface texture that give Condesa its deep, earthy range.</p>
 <p>Crazing, chips, and subtle surface movement develop during this process and remain part of the finished tile rather than a condition to be corrected. Because the palette is shaped by the clay and the firing rather than a uniform surface treatment, no two Condesa 4x4 tiles carry the same tonal profile, and that variation is what distinguishes handmade Cotto Allende from manufactured alternatives.</p></div></div>
 </div>
@@ -2328,7 +2422,7 @@ To ensure proper installation based on your unique site conditions, clients are 
 <div class="product-content-modal__overlay about-toggle"></div>
 <div class="product-content-modal__inner"><button class="product-content-modal__close about-toggle body body--small body--regular">Close</button>
 <h2 class="product-content-modal__title label label--bold">About</h2>
-<div class="product-content-modal__content text-wrapper body body--regular"><h3>Color and Surface</h3>
+<div class="product-content-modal__content text-wrapper body body--regular" contenteditable="true"><h3>Color and Surface</h3>
 <ul>
 <li>Our Condesa 4x4 is a brown Cotto Allende tile with a deep earthy palette ranging from warm dark brown to near-black tonal depth, shaped by the interaction of glaze and clay during firing.</li>
 <li>Each handmade dark brown terra cotta tile remains wholly unique, and this innate variation defines the line's character.</li>
@@ -2356,7 +2450,7 @@ To ensure proper installation based on your unique site conditions, clients are 
 <div class="product-content-modal__overlay order-toggle"></div>
 <div class="product-content-modal__inner"><button class="product-content-modal__close order-toggle body body--small body--regular">Close</button>
 <h2 class="product-content-modal__title label label--bold">Order &amp; Shipping</h2>
-<div class="product-content-modal__content text-wrapper body body--regular"><h3>Sample Orders</h3>
+<div class="product-content-modal__content text-wrapper body body--regular" contenteditable="true"><h3>Sample Orders</h3>
 <ul>
 <li>Our in-stock Condesa 4x4 Cotto Allende samples typically ship from our Los Angeles warehouse within two business days of order receipt.</li>
 <li>Select the "Add Sample to Cart" button to add the Condesa 4x4 to your cart.</li>
@@ -2382,9 +2476,16 @@ To ensure proper installation based on your unique site conditions, clients are 
 <div class="product-content-modal__overlay install-toggle"></div>
 <div class="product-content-modal__inner"><button class="product-content-modal__close install-toggle body body--small body--regular">Close</button>
 <h2 class="product-content-modal__title label label--bold">Installation Guide</h2>
-<div class="product-content-modal__content text-wrapper body body--regular"><p>[KEEP]</p></div></div>
+<div class="product-content-modal__content text-wrapper body body--regular" contenteditable="true"><p>[KEEP]</p></div></div>
+</div>
+<div class="product-content-modal product-content-modal--faq">
+<div class="product-content-modal__overlay" onclick="this.closest('.product-content-modal--faq').classList.remove('active')"></div>
+<div class="product-content-modal__inner"><button class="product-content-modal__close body body--small body--regular" onclick="this.closest('.product-content-modal--faq').classList.remove('active')">Close</button>
+<h2 class="product-content-modal__title label label--bold">Frequently Asked Questions</h2>
+<div class="product-content-modal__content text-wrapper body body--regular" contenteditable="true"><p>[KEEP]</p></div></div>
 </div>
 </div>
+
 <div class="product__carousel__cta-wrapper">
 <button class="product__carousel__cta">
 <p class="body body--small-desktop body--regular">
@@ -2447,6 +2548,11 @@ To ensure proper installation based on your unique site conditions, clients are 
 </svg>
 </button><button class="product-details__toggle install-toggle body body--small-desktop body--bold">
           Installation Guide
+          <svg height="4.699" viewbox="0 0 7.984 4.699" width="7.984">
+<path d="m-1724.792-21856 3.639 3.639 3.639-3.639" fill="none" stroke="currentColor" transform="translate(1725.145 21856.354)"></path>
+</svg>
+</button><button class="product-details__toggle body body--small-desktop body--bold" onclick="document.querySelector('.product-content-modal--faq').classList.toggle('active')">
+          Frequently Asked Questions
           <svg height="4.699" viewbox="0 0 7.984 4.699" width="7.984">
 <path d="m-1724.792-21856 3.639 3.639 3.639-3.639" fill="none" stroke="currentColor" transform="translate(1725.145 21856.354)"></path>
 </svg>
@@ -4694,6 +4800,10 @@ To ensure proper installation based on your unique site conditions, clients are 
     }
 
   </script>
-</div></body>
+</div>
+<script id="zt-ac-js">
+function ztAc(btn) { btn.parentElement.classList.toggle('open'); }
+</script>
+</body>
 <script async="" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=WfHbHg" type="text/javascript"></script>
 </html>

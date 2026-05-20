@@ -906,7 +906,101 @@ first.parentNode.insertBefore(script, first);
     document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
 })();</script>
 <script data-application="storefront-renderer" data-monorail-region="shop_domain" data-page-type="product" data-render-region="gcp-us-west1" data-resource-timing-sampling-rate="10" data-shop-id="53494415553" data-shs="true" data-shs-beacon="true" data-shs-beacon-endpoint="https://ziatile.com/api/collect" data-shs-export-with-fetch="true" data-shs-logs-sample-rate="1" data-theme-instance-id="177444159681" data-theme-name="H&amp;M" data-theme-version="15.2.0" defer="" src="https://ziatile.com/cdn/shopifycloud/perf-kit/shopify-perf-kit-3.3.1.min.js"></script>
-</link></head>
+</link>
+<style id="zt-edit-mode">
+.zt-edit-badge {
+  position: fixed;
+  top: 48px;
+  right: 16px;
+  background: #8a3324;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 3px;
+  z-index: 99999;
+  pointer-events: none;
+  user-select: none;
+}
+[contenteditable="true"] { cursor: text; transition: outline 0.1s; }
+[contenteditable="true"]:hover  { outline: 2px dashed #c47a52 !important; outline-offset: 3px !important; }
+[contenteditable="true"]:focus  { outline: 2px solid #8a3324 !important; outline-offset: 3px !important; }
+
+/* FAQ accordion */
+.zt-faq { max-width: 1200px; margin: 48px auto 64px; padding: 0 24px; }
+.zt-faq__title {
+  font-family: Georgia, serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: #1c1a17;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d9cfb9;
+}
+.zt-ac-item {
+  background: #fbf7ee;
+  border: 1px solid #d9cfb9;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.zt-ac-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  user-select: none;
+}
+.zt-ac-trigger:hover { background: #f0ebe0; }
+.zt-ac-q {
+  flex: 1;
+  font-family: Georgia, serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #1c1a17;
+  cursor: text;
+  border-radius: 2px;
+}
+.zt-ac-q:hover { outline: 1px dashed #c47a52; outline-offset: 2px; }
+.zt-ac-q:focus { outline: 2px solid #8a3324; outline-offset: 2px; }
+.zt-ac-icon {
+  font-size: 22px;
+  font-weight: 300;
+  color: #8a3324;
+  flex-shrink: 0;
+  line-height: 1;
+  transition: transform 0.2s;
+  pointer-events: none;
+  user-select: none;
+}
+.zt-ac-item.open .zt-ac-icon { transform: rotate(45deg); }
+.zt-ac-body {
+  display: none;
+  padding: 4px 20px 20px;
+  border-top: 1px solid #d9cfb9;
+}
+.zt-ac-item.open .zt-ac-body { display: block; }
+.zt-ac-body p {
+  margin: 12px 0 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* FAQ modal open state */
+.product-content-modal--faq.active { display: block !important; }
+</style>
+</head>
 <body class="gradient animate--hover-default template- template-product" data-page-template="product">
 <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       Skip to content
@@ -2052,7 +2146,7 @@ To ensure proper installation based on your unique site conditions, clients are 
 <div class="product-content-modal__overlay info-toggle"></div>
 <div class="product-content-modal__inner"><button class="product-content-modal__close info-toggle body body--small body--regular">Close</button>
 <h2 class="product-content-modal__title label label--bold">How It's Made</h2>
-<div class="product-content-modal__content text-wrapper body body--regular"><p>Our Pomelo Bone 8x8 is produced in Vietnam using the encaustic cement tile technique, refined in France and Catalonia in the 1850s. The process is hand-executed from start to finish, and the tile itself is never fired. What gives cement tile its durability and character is the combination of material composition, hydraulic pressure, and time.</p>
+<div class="product-content-modal__content text-wrapper body body--regular" contenteditable="true"><p>Our Pomelo Bone 8x8 is produced in Vietnam using the encaustic cement tile technique, refined in France and Catalonia in the 1850s. The process is hand-executed from start to finish, and the tile itself is never fired. What gives cement tile its durability and character is the combination of material composition, hydraulic pressure, and time.</p>
 <p>Production begins with a steel mold fitted with a handmade metal frame that defines the pattern. Artisans fill the frame with natural pigments one section at a time, pouring the beige and white colors that make up the Pomelo Bone composition into their designated areas of the mold. A powdered concrete base is then added on top, and the full assembly is hydraulically pressed at three thousand pounds per square inch. The pressure fuses the pigment layer to the concrete body so that the pattern runs through the surface rather than sitting on top of it.</p>
 <p>After pressing, each tile is soaked in water to activate the concrete, then cured on drying racks for seven days. No kiln, no firing. The final tile carries the subtle color variation and surface texture inherent to a hand-poured material, and it continues to develop a celebrated patina over time as it responds to use and environment.</p></div></div>
 </div>
@@ -2060,7 +2154,7 @@ To ensure proper installation based on your unique site conditions, clients are 
 <div class="product-content-modal__overlay about-toggle"></div>
 <div class="product-content-modal__inner"><button class="product-content-modal__close about-toggle body body--small body--regular">Close</button>
 <h2 class="product-content-modal__title label label--bold">About</h2>
-<div class="product-content-modal__content text-wrapper body body--regular"><h3>Color, Pattern, and Surface</h3>
+<div class="product-content-modal__content text-wrapper body body--regular" contenteditable="true"><h3>Color, Pattern, and Surface</h3>
 <ul>
 <li>Our Pomelo Bone 8x8 is a patterned cement tile with beige curved shapes set against a white ground, producing a symmetrical geometric composition across the field.</li>
 <li>Each handmade encaustic cement tile carries subtle variation in color saturation, edge definition, and surface texture. These are natural characteristics of the hand-pour process and define the line's character.</li>
@@ -2086,7 +2180,7 @@ To ensure proper installation based on your unique site conditions, clients are 
 <div class="product-content-modal__overlay order-toggle"></div>
 <div class="product-content-modal__inner"><button class="product-content-modal__close order-toggle body body--small body--regular">Close</button>
 <h2 class="product-content-modal__title label label--bold">Order &amp; Shipping</h2>
-<div class="product-content-modal__content text-wrapper body body--regular"><h3>Sample Orders</h3>
+<div class="product-content-modal__content text-wrapper body body--regular" contenteditable="true"><h3>Sample Orders</h3>
 <ul>
 <li>Our in-stock Pomelo Bone 8x8 cement tile samples typically ship from our Los Angeles warehouse within two business days of order receipt.</li>
 <li>Select the "Add Sample to Cart" button to add the Pomelo Bone 8x8 to your cart.</li>
@@ -2112,9 +2206,16 @@ To ensure proper installation based on your unique site conditions, clients are 
 <div class="product-content-modal__overlay install-toggle"></div>
 <div class="product-content-modal__inner"><button class="product-content-modal__close install-toggle body body--small body--regular">Close</button>
 <h2 class="product-content-modal__title label label--bold">Installation Guide</h2>
-<div class="product-content-modal__content text-wrapper body body--regular"><p>[KEEP]</p></div></div>
+<div class="product-content-modal__content text-wrapper body body--regular" contenteditable="true"><p>[KEEP]</p></div></div>
+</div>
+<div class="product-content-modal product-content-modal--faq">
+<div class="product-content-modal__overlay" onclick="this.closest('.product-content-modal--faq').classList.remove('active')"></div>
+<div class="product-content-modal__inner"><button class="product-content-modal__close body body--small body--regular" onclick="this.closest('.product-content-modal--faq').classList.remove('active')">Close</button>
+<h2 class="product-content-modal__title label label--bold">Frequently Asked Questions</h2>
+<div class="product-content-modal__content text-wrapper body body--regular" contenteditable="true"><p>[KEEP]</p></div></div>
 </div>
 </div>
+
 <div class="product__carousel__cta-wrapper">
 <button class="product__carousel__cta">
 <p class="body body--small-desktop body--regular">
@@ -2133,7 +2234,7 @@ To ensure proper installation based on your unique site conditions, clients are 
 </div>
 <div class="product-details__content"><div class="product-details__info"><div class="product-details__content__cell">
 <div class="body body--small-desktop body--regular text-wrapper">
-<div class="metafield-rich_text_field"><p>Zia’s encaustic cement tiles are meticulously handmade and finished with high-quality pigments, crafted using time-honored techniques dating back to French and Catalan artisans since the 1850s. Long favored in European cafés, hotels, and public spaces, these matte tiles introduce color, pattern, and endless charm. Each piece is individually hand-poured and pressed, forming part of our expansive and ever-evolving collection of classic and distinctive designs.<br/>
+<div class="metafield-rich_text_field" contenteditable="true"><p>Zia’s encaustic cement tiles are meticulously handmade and finished with high-quality pigments, crafted using time-honored techniques dating back to French and Catalan artisans since the 1850s. Long favored in European cafés, hotels, and public spaces, these matte tiles introduce color, pattern, and endless charm. Each piece is individually hand-poured and pressed, forming part of our expansive and ever-evolving collection of classic and distinctive designs.<br/>
 <br/>
 Subtle variations in color, tone, size, and thickness are inherent to the handmade process and contribute to the material’s appeal. Suitable for a wide range of applications, cement tiles are quite versatile though do patina over time, exuding depth and character with age. Please note that images are representative samples and may not capture the full range of variation.</p><p><br/>
 </p></div>
@@ -2154,7 +2255,7 @@ Subtle variations in color, tone, size, and thickness are inherent to the handma
 </div><div class="product-details__details">
 <h2 class="body body--small-desktop body--bold">Order Details + Installation</h2>
 <div class="body body--small-desktop body--regular text-wrapper">
-<div class="metafield-rich_text_field"><p>We recommend a 15-20% overage to best curate a cement installation, allowing for sufficient tiles within the desired range and any edge cuts. Before installation, unpack and mix all boxes to plan the layout.<br/>
+<div class="metafield-rich_text_field" contenteditable="true"><p>We recommend a 15-20% overage to best curate a cement installation, allowing for sufficient tiles within the desired range and any edge cuts. Before installation, unpack and mix all boxes to plan the layout.<br/>
 <br/>
 Cement tile is a porous, handmade material, which reacts to moisture and requires care that differs from other lines. Installation is a multistep process that requires significant drying and curing time, so please allow at least 3-5 days from laying the tile through sealing. Even with proper sealing, oils and liquids can penetrate the tiles' surface, causing stains or etching. Embrace this aging aesthetic or buff and reseal the tiles periodically to maintain the original finish. If more consistent longterm appearance is desired, consider ceramics, Cotto Allende, glass mosaics, or zellige.</p></div>
 </div>
@@ -2181,6 +2282,11 @@ Cement tile is a porous, handmade material, which reacts to moisture and requi
 </svg>
 </button><button class="product-details__toggle install-toggle body body--small-desktop body--bold">
           Installation Guide
+          <svg height="4.699" viewbox="0 0 7.984 4.699" width="7.984">
+<path d="m-1724.792-21856 3.639 3.639 3.639-3.639" fill="none" stroke="currentColor" transform="translate(1725.145 21856.354)"></path>
+</svg>
+</button><button class="product-details__toggle body body--small-desktop body--bold" onclick="document.querySelector('.product-content-modal--faq').classList.toggle('active')">
+          Frequently Asked Questions
           <svg height="4.699" viewbox="0 0 7.984 4.699" width="7.984">
 <path d="m-1724.792-21856 3.639 3.639 3.639-3.639" fill="none" stroke="currentColor" transform="translate(1725.145 21856.354)"></path>
 </svg>
@@ -4428,6 +4534,10 @@ Cement tile is a porous, handmade material, which reacts to moisture and requi
   }
 </script>
 <!-- END app snippet -->
-</div></body>
+</div>
+<script id="zt-ac-js">
+function ztAc(btn) { btn.parentElement.classList.toggle('open'); }
+</script>
+</body>
 <script async="" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=WfHbHg" type="text/javascript"></script>
 </html>

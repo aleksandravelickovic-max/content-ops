@@ -906,7 +906,101 @@ first.parentNode.insertBefore(script, first);
     document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
 })();</script>
 <script data-application="storefront-renderer" data-monorail-region="shop_domain" data-page-type="product" data-render-region="gcp-us-west1" data-resource-timing-sampling-rate="10" data-shop-id="53494415553" data-shs="true" data-shs-beacon="true" data-shs-beacon-endpoint="https://ziatile.com/api/collect" data-shs-export-with-fetch="true" data-shs-logs-sample-rate="1" data-theme-instance-id="177444159681" data-theme-name="H&amp;M" data-theme-version="15.2.0" defer="" src="https://ziatile.com/cdn/shopifycloud/perf-kit/shopify-perf-kit-3.3.1.min.js"></script>
-</link></head>
+</link>
+<style id="zt-edit-mode">
+.zt-edit-badge {
+  position: fixed;
+  top: 48px;
+  right: 16px;
+  background: #8a3324;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 3px;
+  z-index: 99999;
+  pointer-events: none;
+  user-select: none;
+}
+[contenteditable="true"] { cursor: text; transition: outline 0.1s; }
+[contenteditable="true"]:hover  { outline: 2px dashed #c47a52 !important; outline-offset: 3px !important; }
+[contenteditable="true"]:focus  { outline: 2px solid #8a3324 !important; outline-offset: 3px !important; }
+
+/* FAQ accordion */
+.zt-faq { max-width: 1200px; margin: 48px auto 64px; padding: 0 24px; }
+.zt-faq__title {
+  font-family: Georgia, serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: #1c1a17;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d9cfb9;
+}
+.zt-ac-item {
+  background: #fbf7ee;
+  border: 1px solid #d9cfb9;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.zt-ac-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  user-select: none;
+}
+.zt-ac-trigger:hover { background: #f0ebe0; }
+.zt-ac-q {
+  flex: 1;
+  font-family: Georgia, serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #1c1a17;
+  cursor: text;
+  border-radius: 2px;
+}
+.zt-ac-q:hover { outline: 1px dashed #c47a52; outline-offset: 2px; }
+.zt-ac-q:focus { outline: 2px solid #8a3324; outline-offset: 2px; }
+.zt-ac-icon {
+  font-size: 22px;
+  font-weight: 300;
+  color: #8a3324;
+  flex-shrink: 0;
+  line-height: 1;
+  transition: transform 0.2s;
+  pointer-events: none;
+  user-select: none;
+}
+.zt-ac-item.open .zt-ac-icon { transform: rotate(45deg); }
+.zt-ac-body {
+  display: none;
+  padding: 4px 20px 20px;
+  border-top: 1px solid #d9cfb9;
+}
+.zt-ac-item.open .zt-ac-body { display: block; }
+.zt-ac-body p {
+  margin: 12px 0 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* FAQ modal open state */
+.product-content-modal--faq.active { display: block !important; }
+</style>
+</head>
 <body class="gradient animate--hover-default template- template-product" data-page-template="product">
 <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       Skip to content
@@ -2049,7 +2143,7 @@ To ensure proper installation based on your unique site conditions, clients are 
 <div class="product-content-modal__overlay info-toggle"></div>
 <div class="product-content-modal__inner"><button class="product-content-modal__close info-toggle body body--small body--regular">Close</button>
 <h2 class="product-content-modal__title label label--bold">How It's Made</h2>
-<div class="product-content-modal__content text-wrapper body body--regular"><p>Zia's Buff Honed Limestone 6x6 is quarried outside of Fez, Morocco, where local stone masons have worked this material for generations. Each block is formed over millennia from compressed sedimentary deposits, carrying color, tone, and surface variation that no cutting or finishing process removes.</p>
+<div class="product-content-modal__content text-wrapper body body--regular" contenteditable="true"><p>Zia's Buff Honed Limestone 6x6 is quarried outside of Fez, Morocco, where local stone masons have worked this material for generations. Each block is formed over millennia from compressed sedimentary deposits, carrying color, tone, and surface variation that no cutting or finishing process removes.</p>
 <p>Once quarried, blocks are cut into individual 6x6 tiles and brought to the finishing stage. Each surface is mechanically ground with progressively finer abrasives until it reaches a smooth, flat, matte result. The honing process does not seal the stone. It reveals it, leaving natural markings and tonal shifts intact</p>
 <p>Over time, foot traffic and exposure will develop a soft patina on the surface. This is expected behavior for limestone and is considered part of its character in a long-term installation.</p></div></div>
 </div>
@@ -2057,7 +2151,7 @@ To ensure proper installation based on your unique site conditions, clients are 
 <div class="product-content-modal__overlay about-toggle"></div>
 <div class="product-content-modal__inner"><button class="product-content-modal__close about-toggle body body--small body--regular">Close</button>
 <h2 class="product-content-modal__title label label--bold">About</h2>
-<div class="product-content-modal__content text-wrapper body body--regular"><h3>Inherent Variation</h3>
+<div class="product-content-modal__content text-wrapper body body--regular" contenteditable="true"><h3>Inherent Variation</h3>
 <ul>
 <li>Zia's Buff Honed 6x6 presents a buff tone across each tile with a smooth, flat matte surface</li>
 <li>No two tiles are identical. Variation in color, tone, and surface texture is inherent to this stone and defines the line's character.</li>
@@ -2082,7 +2176,7 @@ To ensure proper installation based on your unique site conditions, clients are 
 <div class="product-content-modal__overlay order-toggle"></div>
 <div class="product-content-modal__inner"><button class="product-content-modal__close order-toggle body body--small body--regular">Close</button>
 <h2 class="product-content-modal__title label label--bold">Order &amp; Shipping</h2>
-<div class="product-content-modal__content text-wrapper body body--regular"><h3>Sample Orders</h3>
+<div class="product-content-modal__content text-wrapper body body--regular" contenteditable="true"><h3>Sample Orders</h3>
 <ul>
 <li>Our in-stock Buff Honed Limestone 6x6 samples typically ship from our Los Angeles warehouse within two business days of order receipt.</li>
 <li>Select the "Add Sample to Cart" button to add Buff Honed Limestone 6x6 to your cart.</li>
@@ -2108,9 +2202,16 @@ To ensure proper installation based on your unique site conditions, clients are 
 <div class="product-content-modal__overlay install-toggle"></div>
 <div class="product-content-modal__inner"><button class="product-content-modal__close install-toggle body body--small body--regular">Close</button>
 <h2 class="product-content-modal__title label label--bold">Installation Guide</h2>
-<div class="product-content-modal__content text-wrapper body body--regular"><p>[KEEP]</p></div></div>
+<div class="product-content-modal__content text-wrapper body body--regular" contenteditable="true"><p>[KEEP]</p></div></div>
+</div>
+<div class="product-content-modal product-content-modal--faq">
+<div class="product-content-modal__overlay" onclick="this.closest('.product-content-modal--faq').classList.remove('active')"></div>
+<div class="product-content-modal__inner"><button class="product-content-modal__close body body--small body--regular" onclick="this.closest('.product-content-modal--faq').classList.remove('active')">Close</button>
+<h2 class="product-content-modal__title label label--bold">Frequently Asked Questions</h2>
+<div class="product-content-modal__content text-wrapper body body--regular" contenteditable="true"><p>[KEEP]</p></div></div>
 </div>
 </div>
+
 <div class="product__carousel__cta-wrapper">
 <button class="product__carousel__cta">
 <p class="body body--small-desktop body--regular">
@@ -2142,7 +2243,7 @@ To ensure proper installation based on your unique site conditions, clients are 
 <p class="product-details__measurements__right product-details__measurements__right--thickness body body--small-desktop body--regular">3/4”</p></div></div>
 </div><div class="product-details__details">
 <h2 class="body body--small-desktop body--bold">Details</h2>
-<div class="body body--small-desktop body--regular text-wrapper">
+<div class="body body--small-desktop body--regular text-wrapper" contenteditable="true">
 <p data-pasted="true">Limestone is a naturally occurring stone and moderate variations in size, color, tone, and surface texture are inherent qualities of this unique material and should be expected. Images shown are representative of a sample of this product, but may not display all potential variation.</p><p>We recommend 15-20% overage to properly curate your installation and account for any cuts needed.</p>
 </div>
 </div>
@@ -2168,6 +2269,11 @@ To ensure proper installation based on your unique site conditions, clients are 
 </svg>
 </button><button class="product-details__toggle install-toggle body body--small-desktop body--bold">
           Installation Guide
+          <svg height="4.699" viewbox="0 0 7.984 4.699" width="7.984">
+<path d="m-1724.792-21856 3.639 3.639 3.639-3.639" fill="none" stroke="currentColor" transform="translate(1725.145 21856.354)"></path>
+</svg>
+</button><button class="product-details__toggle body body--small-desktop body--bold" onclick="document.querySelector('.product-content-modal--faq').classList.toggle('active')">
+          Frequently Asked Questions
           <svg height="4.699" viewbox="0 0 7.984 4.699" width="7.984">
 <path d="m-1724.792-21856 3.639 3.639 3.639-3.639" fill="none" stroke="currentColor" transform="translate(1725.145 21856.354)"></path>
 </svg>
@@ -4415,6 +4521,10 @@ To ensure proper installation based on your unique site conditions, clients are 
   }
 </script>
 <!-- END app snippet -->
-</div></body>
+</div>
+<script id="zt-ac-js">
+function ztAc(btn) { btn.parentElement.classList.toggle('open'); }
+</script>
+</body>
 <script async="" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=WfHbHg" type="text/javascript"></script>
 </html>

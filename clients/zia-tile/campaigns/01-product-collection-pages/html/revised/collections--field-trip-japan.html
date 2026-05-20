@@ -869,7 +869,98 @@ first.parentNode.insertBefore(script, first);
     document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
 })();</script>
 <script data-application="storefront-renderer" data-monorail-region="shop_domain" data-page-type="collection" data-render-region="gcp-us-west1" data-resource-timing-sampling-rate="10" data-shop-id="53494415553" data-shs="true" data-shs-beacon="true" data-shs-beacon-endpoint="https://ziatile.com/api/collect" data-shs-export-with-fetch="true" data-shs-logs-sample-rate="1" data-theme-instance-id="177444159681" data-theme-name="H&amp;M" data-theme-version="15.2.0" data-treatment-ids="2064577" defer="" src="https://ziatile.com/cdn/shopifycloud/perf-kit/shopify-perf-kit-3.3.1.min.js"></script>
-</link></link></head>
+</link></link>
+<style id="zt-edit-mode">
+.zt-edit-badge {
+  position: fixed;
+  top: 48px;
+  right: 16px;
+  background: #8a3324;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 3px;
+  z-index: 99999;
+  pointer-events: none;
+  user-select: none;
+}
+[contenteditable="true"] { cursor: text; transition: outline 0.1s; }
+[contenteditable="true"]:hover  { outline: 2px dashed #c47a52 !important; outline-offset: 3px !important; }
+[contenteditable="true"]:focus  { outline: 2px solid #8a3324 !important; outline-offset: 3px !important; }
+
+/* FAQ accordion */
+.zt-faq { max-width: 1200px; margin: 48px auto 64px; padding: 0 24px; }
+.zt-faq__title {
+  font-family: Georgia, serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: #1c1a17;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d9cfb9;
+}
+.zt-ac-item {
+  background: #fbf7ee;
+  border: 1px solid #d9cfb9;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.zt-ac-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  user-select: none;
+}
+.zt-ac-trigger:hover { background: #f0ebe0; }
+.zt-ac-q {
+  flex: 1;
+  font-family: Georgia, serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #1c1a17;
+  cursor: text;
+  border-radius: 2px;
+}
+.zt-ac-q:hover { outline: 1px dashed #c47a52; outline-offset: 2px; }
+.zt-ac-q:focus { outline: 2px solid #8a3324; outline-offset: 2px; }
+.zt-ac-icon {
+  font-size: 22px;
+  font-weight: 300;
+  color: #8a3324;
+  flex-shrink: 0;
+  line-height: 1;
+  transition: transform 0.2s;
+  pointer-events: none;
+  user-select: none;
+}
+.zt-ac-item.open .zt-ac-icon { transform: rotate(45deg); }
+.zt-ac-body {
+  display: none;
+  padding: 4px 20px 20px;
+  border-top: 1px solid #d9cfb9;
+}
+.zt-ac-item.open .zt-ac-body { display: block; }
+.zt-ac-body p {
+  margin: 12px 0 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+}
+</style>
+</head>
 <body class="gradient animate--hover-default template-field-trip-japan template-collection" data-page-template="collection-field-trip-japan">
 <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       Skip to content
@@ -2170,7 +2261,7 @@ To ensure proper installation based on your unique site conditions, clients are 
     </button>
 </h2>
 <div class="ac-panel">
-<div aria-hidden="true" class="ac-text body body--medium body--regular text-wrapper" id="accordion-accordion_4JU9E9">
+<div contenteditable="true" aria-hidden="true" class="ac-text body body--medium body--regular text-wrapper" id="accordion-accordion_4JU9E9">
 <p>The first evidence of functional ceramic dates back to the Neolithic period (the Stone Age!). Earthenware was first seen in the early Jōmon period between 10,500–300 BC. Zia’s ceramic tiles are designed in Los Angeles and crafted in a potter’s village outside of Nagoya, Japan. The Japanese artisans behind the line are lauded for their attention to detail, blending Old-World methods with our modern-yet-timeless designs. </p>
 </div>
 </div>
@@ -2182,7 +2273,7 @@ To ensure proper installation based on your unique site conditions, clients are 
     </button>
 </h2>
 <div class="ac-panel">
-<div aria-hidden="true" class="ac-text body body--medium body--regular text-wrapper" id="accordion-accordion_zQa6TL">
+<div contenteditable="true" aria-hidden="true" class="ac-text body body--medium body--regular text-wrapper" id="accordion-accordion_zQa6TL">
 <p>Handcrafted in central Japan, where the art of ceramics has been embraced and improved over thousands of years, we present Zia’s take on ceramic tiles. Our core ceramics begin with clay, which is molded and dried ahead of glazing and high-temperature firing. Field Trip: Japan line is a collection of extruded tiles, where Japanese clay is passed through a die-cut mold, then cut to create individual tiles. The tiles are formed, hand-glazed, and fired only once. Precision is paramount in this art form, with both sizing and coloring quite consistent throughout the collection.</p>
 </div>
 </div>
@@ -2194,7 +2285,7 @@ To ensure proper installation based on your unique site conditions, clients are 
     </button>
 </h2>
 <div class="ac-panel">
-<div aria-hidden="true" class="ac-text body body--medium body--regular text-wrapper" id="accordion-accordion_kf3GrT">
+<div contenteditable="true" aria-hidden="true" class="ac-text body body--medium body--regular text-wrapper" id="accordion-accordion_kf3GrT">
 <p>Zia’s handmade ceramic tiles require special care to ensure they are maintained in their best state. All matte ceramic tiles must be sealed prior to grouting, using the 511 Porous Plus Sealer as a grout release to avoid grout haze and staining.</p><p>Using a pH-neutral cleaner and avoiding acidic or abrasive products will help preserve the material and prevent staining. Matte ceramics should be resealed at least every 1-2 years, or as often as needed depending on traffic and wear. For areas exposed to moisture, you may need to reseal more often. Always seal in accordance with the sealant manufacturer’s instructions.</p>
 </div>
 </div>
@@ -2206,7 +2297,7 @@ To ensure proper installation based on your unique site conditions, clients are 
     </button>
 </h2>
 <div class="ac-panel">
-<div aria-hidden="true" class="ac-text body body--medium body--regular text-wrapper" id="accordion-accordion_Nxakzx">
+<div contenteditable="true" aria-hidden="true" class="ac-text body body--medium body--regular text-wrapper" id="accordion-accordion_Nxakzx">
 <p>Sweep or vacuum ceramic tile regularly to prevent surface abrasion, and promptly clean up any liquid or messier spills. Floors and walls can be wiped or mopped with warm, clean water and a pH-neutral cleaner like Miracle Sealants pH Neutral Tile and Stone Cleaner. For heavier stains, we recommend Miracle Sealants Heavy Duty Cleaner (Acid Substitute). Avoid bleach, vinegar, or anything acidic, which can dull the tiles’ surface over time.</p>
 </div>
 </div>
@@ -2218,7 +2309,7 @@ To ensure proper installation based on your unique site conditions, clients are 
     </button>
 </h2>
 <div class="ac-panel">
-<div aria-hidden="true" class="ac-text body body--medium body--regular text-wrapper" id="accordion-accordion_fJ4at9">
+<div contenteditable="true" aria-hidden="true" class="ac-text body body--medium body--regular text-wrapper" id="accordion-accordion_fJ4at9">
 <p>We always recommend working with a professional installer who has experience with terrazzo tile, specifically. Here is an overview of the installation process:</p><ul><li>Start by blending tiles from every box to evenly distribute natural variation.</li><li>Use a high-quality medium-bed thinset and wet the back of each tile before setting.</li><li>Press tiles into place with the palm of your hand—no mallets, ever. </li><li>Let the thinset fully cure. </li><li>If installing matte ceramic tile, seal the tiles before grouting.</li><li>Grout in small sections using a high-quality sanded grout and wipe clean as you go.</li></ul><p>For detailed step-by-step instructions, please review our <a href="/en-ca/pages/ceramics-installation-guide" target="_blank" title="Ceramics Installation Guide">Ceramics Installation Guide.</a></p>
 </div>
 </div>
@@ -2267,7 +2358,52 @@ To ensure proper installation based on your unique site conditions, clients are 
         }]
     }
     </script>
-</section><section class="shopify-section section" id="shopify-section-template--24843298930881__2_up_image_component_yt4XYR">
+</section>
+<section class="zt-faq">
+  <h2 class="zt-faq__title">FAQ</h2>
+
+  <div class="zt-ac-item">
+    <button class="zt-ac-trigger" onclick="ztAc(this)">
+      <span class="zt-ac-q" contenteditable="true" onclick="event.stopPropagation()">Question</span>
+      <span class="zt-ac-icon">+</span>
+    </button>
+    <div class="zt-ac-body"><p contenteditable="true">Answer</p></div>
+  </div>
+
+  <div class="zt-ac-item">
+    <button class="zt-ac-trigger" onclick="ztAc(this)">
+      <span class="zt-ac-q" contenteditable="true" onclick="event.stopPropagation()">Question</span>
+      <span class="zt-ac-icon">+</span>
+    </button>
+    <div class="zt-ac-body"><p contenteditable="true">Answer</p></div>
+  </div>
+
+  <div class="zt-ac-item">
+    <button class="zt-ac-trigger" onclick="ztAc(this)">
+      <span class="zt-ac-q" contenteditable="true" onclick="event.stopPropagation()">Question</span>
+      <span class="zt-ac-icon">+</span>
+    </button>
+    <div class="zt-ac-body"><p contenteditable="true">Answer</p></div>
+  </div>
+
+  <div class="zt-ac-item">
+    <button class="zt-ac-trigger" onclick="ztAc(this)">
+      <span class="zt-ac-q" contenteditable="true" onclick="event.stopPropagation()">Question</span>
+      <span class="zt-ac-icon">+</span>
+    </button>
+    <div class="zt-ac-body"><p contenteditable="true">Answer</p></div>
+  </div>
+
+  <div class="zt-ac-item">
+    <button class="zt-ac-trigger" onclick="ztAc(this)">
+      <span class="zt-ac-q" contenteditable="true" onclick="event.stopPropagation()">Question</span>
+      <span class="zt-ac-icon">+</span>
+    </button>
+    <div class="zt-ac-body"><p contenteditable="true">Answer</p></div>
+  </div>
+
+</section>
+<section class="shopify-section section" id="shopify-section-template--24843298930881__2_up_image_component_yt4XYR">
 <div class="dual-image dual-image--has-spacing color-scheme-1 gradient"><h2 class="block-title label label--bold label--small label--neutral">
 <span class="block-title__inner">Browse Other Collections</span>
 </h2><div class="dual-image__inner">
@@ -3582,6 +3718,10 @@ To ensure proper installation based on your unique site conditions, clients are 
     }
 
   </script>
-</div></body>
+</div>
+<script id="zt-ac-js">
+function ztAc(btn) { btn.parentElement.classList.toggle('open'); }
+</script>
+</body>
 <script async="" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=WfHbHg" type="text/javascript"></script>
 </html>
