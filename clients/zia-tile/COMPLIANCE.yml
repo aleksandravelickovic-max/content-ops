@@ -1,0 +1,102 @@
+# Compliance config — Zia Tile
+#
+# Fail-closed rule set for the compliance-gate agent (and consulted by
+# material-guard + terminology-lint). Derived from STYLE-SYSTEM.md §3.2
+# (avoidance list), §4 (technical accuracy), and the business exclusions.
+#
+# This is the Zia instance of a per-client pattern. The same shape ports to
+# the other LinkGraph clients (Loti Labs, The Nash, 5Gstore, etc.) — each gets
+# its own clients/{slug}/COMPLIANCE.yml. severity: critical halts the pipeline
+# before /ship; warning is reported but does not halt.
+
+client: zia-tile
+schema_version: 1
+
+# Hard business exclusions — never appear in customer-facing copy (§3.2)
+banned_terms:
+  - term: "free shipping"
+    severity: critical
+    reason: "Business exclusion (§3.2). Pickup is free; shipping is not."
+  - term: "discount"
+    severity: critical
+    reason: "Business exclusion — no cheap/affordable/discount framing (§3.2)."
+  - term: "cheap"
+    severity: critical
+    reason: "Business exclusion (§3.2)."
+  - term: "affordable"
+    severity: critical
+    reason: "Business exclusion (§3.2)."
+  - term: "returns"
+    severity: critical
+    reason: "Business exclusion (§3.2)."
+  - term: "peel-and-stick"
+    severity: critical
+    reason: "Not a Zia category (§3.2)."
+  - term: "bestselling"
+    severity: warning
+    reason: "Jamie removed ranking language repeatedly (§3.2)."
+  - term: "best seller"
+    severity: warning
+    reason: "Jamie removed ranking language repeatedly (§3.2)."
+
+# Technical-accuracy guards — factual errors that fail QA (§4)
+technical_guards:
+  - rule: cotto_no_pools
+    severity: critical
+    check: "Unglazed Cotto must not be presented as pool/spa suitable."
+    source: "§4.2"
+  - rule: cotto_allende_no_freeze_thaw
+    severity: critical
+    check: "Cotto Allende must not be presented as outdoor freeze/thaw suitable."
+    source: "§4.1"
+  - rule: zellige_no_freeze_thaw
+    severity: critical
+    check: "Glazed zellige must not be presented as outdoor freeze/thaw suitable."
+    source: "§4.1"
+  - rule: cement_non_freeze_thaw_only
+    severity: critical
+    check: "Cement tile is exterior-suitable in non-freeze/thaw climates only."
+    source: "§11, §12"
+  - rule: no_combined_cotto_sealing
+    severity: critical
+    check: "Cotto and Cotto Allende sealing instructions must not be combined."
+    source: "§4.3"
+  - rule: no_crazing_on_unglazed
+    severity: critical
+    check: "Do not apply chips/pits/crazing to unglazed materials (Cotto)."
+    source: "§4.11"
+  - rule: no_kiln_type
+    severity: warning
+    check: "Do not specify kiln type (wood/gas-fired) without written confirmation."
+    source: "§4.10"
+  - rule: no_light_exposure_patina
+    severity: warning
+    check: "Patina references use and time only, not light/UV exposure."
+    source: "§4.10"
+  - rule: no_unsold_products
+    severity: critical
+    check: "Do not reference products Zia does not sell (e.g., Saltillo) without strategic reason confirmed by Alex; never position them favorably over Cotto."
+    source: "§5.5"
+
+# Voice exclusions — banned even though not a legal/factual risk (§2.1, §3.2)
+voice_bans:
+  - term: "luxury"
+    severity: warning
+  - term: "sophisticated"
+    severity: warning
+  - term: "charming"
+    severity: warning
+  - term: "defects"
+    severity: critical
+    reason: "Reframe as chips/pits/crazing characteristics (zellige) — never 'defects'."
+
+# Required-presence checks
+required_presence:
+  - rule: contact_block
+    severity: critical
+    check: "info@ziatile.com and 310-844-1170 must appear together in closing + relevant FAQ."
+    source: "§4.6"
+  - rule: person_consistency
+    severity: critical
+    check: "First or third person held throughout; no second person anywhere."
+    source: "§2.1, §6.4"
