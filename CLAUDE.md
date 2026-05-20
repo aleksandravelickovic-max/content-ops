@@ -214,3 +214,43 @@ Avoid over-simplifying into generic statements that remove useful meaning.
 - Prefer knowledge files over assumptions.
 - Do not invent product capabilities, pricing, or behavior if not present.
 - When conflicts exist between raw sources, prefer `raw/knowledge/facts/`.
+
+---
+
+## Orchestrated runs and quality gates
+
+The toolkit can run a piece end-to-end with mechanical enforcers and scored judges. Full runbook: `content-toolkit/PIPELINE.md`.
+
+### Per-client infrastructure
+
+For a client onboarded to the pipeline (Zia Tile is the reference), `clients/{client}/` carries:
+- `materials/{material}.md` — machine-readable rules (freeze/thaw, pools/spas, sealing, variation language). The `material-guard` agent enforces these. Schema: `materials/_SCHEMA.md`.
+- `page-templates/{collection,product,blog}.md` — approved section structure per content type.
+- `contact-block.md` — the required contact line (`contact-line-check` enforces presence).
+- `COMPLIANCE.yml` — fail-closed banned terms + technical guards. Ports to every client.
+
+### Agents (in addition to the writing/editing agents)
+
+Mechanical enforcers (haiku, run first, fail fast):
+- `material-guard` — technical claims must match the material config. A wrong freeze/thaw, pool, or sealing rule is a QA-failing factual error.
+- `terminology-lint` — required/banned terms per STYLE-SYSTEM §3.
+- `contact-line-check` — email + phone present where mandated.
+- `person-consistency` — one grammatical person held; no second person.
+
+Scored judges (sonnet, run last on a clean draft, gate at >=80):
+- `voice-judge` — editorial register vs the client benchmark (Zia: Architectural Digest / Wallpaper*).
+- `koray-judge` — 10-dimension semantic SEO score.
+- `claims-grounding` — every factual claim traces to `raw/` or STYLE-SYSTEM.
+
+### Commands
+
+- `/run-piece <client> <type> <material> <topic>` — full pipeline, state file, `--resume`.
+- `/draft-collection-page`, `/draft-product-page` — type-specific drafters with inline self-checks.
+- `/audit-fix <template> [--apply]` — apply campaign `audit-report.md` findings.
+- `/promote-v3 <v3-file> [--apply]` — gate a v3 revision for promotion.
+- `/sku-multiplier <client> <material> <campaign>` — one collection page into many SKU pages (max 5 per batch).
+- `/batch-review <glob>` — aggregate gate report across a backlog.
+
+### Hard rule for all generated content
+
+No invention. Every product fact comes from `STYLE-SYSTEM.md`, the material config, or `raw/`. Where a material rule is unconfirmed, the config marks it `verify` and the pipeline surfaces it for Alex rather than asserting it.
