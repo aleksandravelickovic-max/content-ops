@@ -906,7 +906,101 @@ first.parentNode.insertBefore(script, first);
     document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
 })();</script>
 <script data-application="storefront-renderer" data-monorail-region="shop_domain" data-page-type="product" data-render-region="gcp-us-west1" data-resource-timing-sampling-rate="10" data-shop-id="53494415553" data-shs="true" data-shs-beacon="true" data-shs-beacon-endpoint="https://ziatile.com/api/collect" data-shs-export-with-fetch="true" data-shs-logs-sample-rate="1" data-theme-instance-id="177444159681" data-theme-name="H&amp;M" data-theme-version="15.2.0" defer="" src="https://ziatile.com/cdn/shopifycloud/perf-kit/shopify-perf-kit-3.3.1.min.js"></script>
-</link></head>
+</link>
+<style id="zt-edit-mode">
+.zt-edit-badge {
+  position: fixed;
+  top: 48px;
+  right: 16px;
+  background: #8a3324;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 3px;
+  z-index: 99999;
+  pointer-events: none;
+  user-select: none;
+}
+[contenteditable="true"] { cursor: text; transition: outline 0.1s; }
+[contenteditable="true"]:hover  { outline: 2px dashed #c47a52 !important; outline-offset: 3px !important; }
+[contenteditable="true"]:focus  { outline: 2px solid #8a3324 !important; outline-offset: 3px !important; }
+
+/* FAQ accordion */
+.zt-faq { max-width: 1200px; margin: 48px auto 64px; padding: 0 24px; }
+.zt-faq__title {
+  font-family: Georgia, serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: #1c1a17;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d9cfb9;
+}
+.zt-ac-item {
+  background: #fbf7ee;
+  border: 1px solid #d9cfb9;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.zt-ac-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  user-select: none;
+}
+.zt-ac-trigger:hover { background: #f0ebe0; }
+.zt-ac-q {
+  flex: 1;
+  font-family: Georgia, serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #1c1a17;
+  cursor: text;
+  border-radius: 2px;
+}
+.zt-ac-q:hover { outline: 1px dashed #c47a52; outline-offset: 2px; }
+.zt-ac-q:focus { outline: 2px solid #8a3324; outline-offset: 2px; }
+.zt-ac-icon {
+  font-size: 22px;
+  font-weight: 300;
+  color: #8a3324;
+  flex-shrink: 0;
+  line-height: 1;
+  transition: transform 0.2s;
+  pointer-events: none;
+  user-select: none;
+}
+.zt-ac-item.open .zt-ac-icon { transform: rotate(45deg); }
+.zt-ac-body {
+  display: none;
+  padding: 4px 20px 20px;
+  border-top: 1px solid #d9cfb9;
+}
+.zt-ac-item.open .zt-ac-body { display: block; }
+.zt-ac-body p {
+  margin: 12px 0 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* FAQ modal open state */
+.product-content-modal--faq.active { display: block !important; }
+</style>
+</head>
 <body class="gradient animate--hover-default template- template-product" data-page-template="product">
 <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       Skip to content
@@ -2841,7 +2935,7 @@ To ensure proper installation based on your unique site conditions, clients are 
 <div class="product-content-modal__overlay info-toggle"></div>
 <div class="product-content-modal__inner"><button class="product-content-modal__close info-toggle body body--small body--regular">Close</button>
 <h2 class="product-content-modal__title label label--bold">How It's Made</h2>
-<div class="product-content-modal__content text-wrapper body body--regular"><p>Our Pure White 2x2 carries the legacy of Moroccan craftsmanship in a small 2x2 format, produced using the same traditional methods artisans have refined over centuries. The clay is pulled from the hillsides surrounding Fez, Morocco, soaked in water, and filtered for impurities before being worked by hand into the compact 2x2 molds that shape each element of the mosaic.</p>
+<div class="product-content-modal__content text-wrapper body body--regular" contenteditable="true"><p>Our Pure White 2x2 carries the legacy of Moroccan craftsmanship in a small 2x2 format, produced using the same traditional methods artisans have refined over centuries. The clay is pulled from the hillsides surrounding Fez, Morocco, soaked in water, and filtered for impurities before being worked by hand into the compact 2x2 molds that shape each element of the mosaic.</p>
 <p>After partial curing in the Moroccan sun, each tile is shaped again by hand to refine its edges. The edges remain intentionally irregular, which is what allows zellige to be set edge-to-edge or with minimal grout joints, depending on the layout. Artisans then hand-dip each piece in a pure white glaze. The glaze pools and settles differently across each element, producing the shifts from opaque white to softer, translucent areas where the clay body subtly influences tone.</p>
 <p>The final stage is the kiln. Earthen kilns do not distribute heat evenly, and the results of that unevenness are not incidental. Fine surface crazing develops as the glaze and clay body expand and contract at different rates during firing, and the chips, pits, and tonal shifts that emerge are what make each Pure White 2x2 mosaic its own.</p></div></div>
 </div>
@@ -2849,7 +2943,7 @@ To ensure proper installation based on your unique site conditions, clients are 
 <div class="product-content-modal__overlay about-toggle"></div>
 <div class="product-content-modal__inner"><button class="product-content-modal__close about-toggle body body--small body--regular">Close</button>
 <h2 class="product-content-modal__title label label--bold">About</h2>
-<div class="product-content-modal__content text-wrapper body body--regular"><h3>Inherent Variation</h3>
+<div class="product-content-modal__content text-wrapper body body--regular" contenteditable="true"><h3>Inherent Variation</h3>
 <ul>
 <li>Our Pure White 2x2 is a white zellige tile with a layered glaze surface that shifts between bright white, soft ivory, and subtle clay undertones depending on light and viewing angle.</li>
 <li>Each handcrafted white Moroccan tile remains wholly unique, and this innate variation defines the line's character.</li>
@@ -2876,7 +2970,7 @@ To ensure proper installation based on your unique site conditions, clients are 
 <div class="product-content-modal__overlay order-toggle"></div>
 <div class="product-content-modal__inner"><button class="product-content-modal__close order-toggle body body--small body--regular">Close</button>
 <h2 class="product-content-modal__title label label--bold">Order &amp; Shipping</h2>
-<div class="product-content-modal__content text-wrapper body body--regular"><h3>Sample Orders</h3>
+<div class="product-content-modal__content text-wrapper body body--regular" contenteditable="true"><h3>Sample Orders</h3>
 <ul>
 <li>Our in-stock Pure White 2x2 zellige samples typically ship from our Los Angeles warehouse within two business days of order receipt.</li>
 <li>Select the "Add Sample to Cart" button to add the Pure White 2x2 to your cart.</li>
@@ -2902,9 +2996,16 @@ To ensure proper installation based on your unique site conditions, clients are 
 <div class="product-content-modal__overlay install-toggle"></div>
 <div class="product-content-modal__inner"><button class="product-content-modal__close install-toggle body body--small body--regular">Close</button>
 <h2 class="product-content-modal__title label label--bold">Installation Guide</h2>
-<div class="product-content-modal__content text-wrapper body body--regular"><p>[KEEP]</p></div></div>
+<div class="product-content-modal__content text-wrapper body body--regular" contenteditable="true"><p>[KEEP]</p></div></div>
+</div>
+<div class="product-content-modal product-content-modal--faq">
+<div class="product-content-modal__overlay" onclick="this.closest('.product-content-modal--faq').classList.remove('active')"></div>
+<div class="product-content-modal__inner"><button class="product-content-modal__close body body--small body--regular" onclick="this.closest('.product-content-modal--faq').classList.remove('active')">Close</button>
+<h2 class="product-content-modal__title label label--bold">Frequently Asked Questions</h2>
+<div class="product-content-modal__content text-wrapper body body--regular" contenteditable="true"><p>[KEEP]</p></div></div>
 </div>
 </div>
+
 <div class="product__carousel__cta-wrapper">
 <button class="product__carousel__cta">
 <p class="body body--small-desktop body--regular">
@@ -2923,7 +3024,7 @@ To ensure proper installation based on your unique site conditions, clients are 
 </div>
 <div class="product-details__content"><div class="product-details__info"><div class="product-details__content__cell">
 <div class="body body--small-desktop body--regular text-wrapper">
-<div class="metafield-rich_text_field"><p>Zia’s zellige incorporates centuries of craftsmanship in every piece, a celebration of this handcrafted Moroccan art form. Historically installed in decorative geometric and floral shapes in the most elaborately designed palaces, our curated selection of handmade tile includes a rainbow of colors and a variety of shapes and sizes for homes and public spaces around the globe. With sun-baked clay to hand-applied glazes, no two zellige tiles are exactly alike.<br/>
+<div class="metafield-rich_text_field" contenteditable="true"><p>Zia’s zellige incorporates centuries of craftsmanship in every piece, a celebration of this handcrafted Moroccan art form. Historically installed in decorative geometric and floral shapes in the most elaborately designed palaces, our curated selection of handmade tile includes a rainbow of colors and a variety of shapes and sizes for homes and public spaces around the globe. With sun-baked clay to hand-applied glazes, no two zellige tiles are exactly alike.<br/>
 <br/>
 Expect significant variations in precise size, color, and tone, as well as pits and chips inherent in all handmade Moroccan zellige. These characteristics represent the natural imperfections of this zellige tile, creating the iconic “perfectly imperfect” look. Images shown are representative of a sample of this tile, but do not display all potential variations.</p></div>
 </div>
@@ -2948,7 +3049,7 @@ Expect significant variations in precise size, color, and tone, as well as pits 
 </div><div class="product-details__details">
 <h2 class="body body--small-desktop body--bold">Order Details + Installation</h2>
 <div class="body body--small-desktop body--regular text-wrapper">
-<div class="metafield-rich_text_field"><p>We recommend a 15-20% overage to best curate a zellige installation, allowing for sufficient tiles within the desired range. Before installation, unpack and mix all boxes to best plan the layout.<br/>
+<div class="metafield-rich_text_field" contenteditable="true"><p>We recommend a 15-20% overage to best curate a zellige installation, allowing for sufficient tiles within the desired range. Before installation, unpack and mix all boxes to best plan the layout.<br/>
 <br/>
 Zellige tile installation is labor-intensive, often likened more to masonry than traditional tiling due to the irregular nature of the handmade material. Traditionally, zellige is installed edge-to-edge with minimal to no grout spacing; however, we recommend wedge spacers to adjust the spacing between irregular tiles to maintain a consistent layout and protect the tiles’ edges. Plan for an installation 2-3 times longer than standard ceramic tile, accounting for extra time to sort, soak, arrange, and manually adjust each piece for size variations.</p></div>
 </div>
@@ -2975,6 +3076,11 @@ Zellige tile installation is labor-intensive, often likened more to masonry than
 </svg>
 </button><button class="product-details__toggle install-toggle body body--small-desktop body--bold">
           Installation Guide
+          <svg height="4.699" viewbox="0 0 7.984 4.699" width="7.984">
+<path d="m-1724.792-21856 3.639 3.639 3.639-3.639" fill="none" stroke="currentColor" transform="translate(1725.145 21856.354)"></path>
+</svg>
+</button><button class="product-details__toggle body body--small-desktop body--bold" onclick="document.querySelector('.product-content-modal--faq').classList.toggle('active')">
+          Frequently Asked Questions
           <svg height="4.699" viewbox="0 0 7.984 4.699" width="7.984">
 <path d="m-1724.792-21856 3.639 3.639 3.639-3.639" fill="none" stroke="currentColor" transform="translate(1725.145 21856.354)"></path>
 </svg>
@@ -5222,6 +5328,10 @@ Zellige tile installation is labor-intensive, often likened more to masonry than
 <script defer="defer" src="https://cdn.shopify.com/extensions/019e1bb1-5d5a-716f-a3b0-e109708e72c0/swym-relay-741/assets/swym-education-tooltip.js"></script>
 <script defer="defer" src="https://cdn.shopify.com/extensions/019e1bb1-5d5a-716f-a3b0-e109708e72c0/swym-relay-741/assets/swym-education.js"></script>
 <!-- END app snippet -->
-</div></body>
+</div>
+<script id="zt-ac-js">
+function ztAc(btn) { btn.parentElement.classList.toggle('open'); }
+</script>
+</body>
 <script async="" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=WfHbHg" type="text/javascript"></script>
 </html>

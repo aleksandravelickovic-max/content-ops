@@ -909,7 +909,98 @@ first.parentNode.insertBefore(script, first);
     document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
 })();</script>
 <script data-application="storefront-renderer" data-monorail-region="shop_domain" data-page-type="collection" data-render-region="gcp-us-west1" data-resource-timing-sampling-rate="10" data-shop-id="53494415553" data-shs="true" data-shs-beacon="true" data-shs-beacon-endpoint="https://ziatile.com/api/collect" data-shs-export-with-fetch="true" data-shs-logs-sample-rate="1" data-theme-instance-id="177444159681" data-theme-name="H&amp;M" data-theme-version="15.2.0" data-treatment-ids="2064577" defer="" src="https://ziatile.com/cdn/shopifycloud/perf-kit/shopify-perf-kit-3.3.1.min.js"></script>
-</link></link></head>
+</link></link>
+<style id="zt-edit-mode">
+.zt-edit-badge {
+  position: fixed;
+  top: 48px;
+  right: 16px;
+  background: #8a3324;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 3px;
+  z-index: 99999;
+  pointer-events: none;
+  user-select: none;
+}
+[contenteditable="true"] { cursor: text; transition: outline 0.1s; }
+[contenteditable="true"]:hover  { outline: 2px dashed #c47a52 !important; outline-offset: 3px !important; }
+[contenteditable="true"]:focus  { outline: 2px solid #8a3324 !important; outline-offset: 3px !important; }
+
+/* FAQ accordion */
+.zt-faq { max-width: 1200px; margin: 48px auto 64px; padding: 0 24px; }
+.zt-faq__title {
+  font-family: Georgia, serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: #1c1a17;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d9cfb9;
+}
+.zt-ac-item {
+  background: #fbf7ee;
+  border: 1px solid #d9cfb9;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.zt-ac-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  user-select: none;
+}
+.zt-ac-trigger:hover { background: #f0ebe0; }
+.zt-ac-q {
+  flex: 1;
+  font-family: Georgia, serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #1c1a17;
+  cursor: text;
+  border-radius: 2px;
+}
+.zt-ac-q:hover { outline: 1px dashed #c47a52; outline-offset: 2px; }
+.zt-ac-q:focus { outline: 2px solid #8a3324; outline-offset: 2px; }
+.zt-ac-icon {
+  font-size: 22px;
+  font-weight: 300;
+  color: #8a3324;
+  flex-shrink: 0;
+  line-height: 1;
+  transition: transform 0.2s;
+  pointer-events: none;
+  user-select: none;
+}
+.zt-ac-item.open .zt-ac-icon { transform: rotate(45deg); }
+.zt-ac-body {
+  display: none;
+  padding: 4px 20px 20px;
+  border-top: 1px solid #d9cfb9;
+}
+.zt-ac-item.open .zt-ac-body { display: block; }
+.zt-ac-body p {
+  margin: 12px 0 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+}
+</style>
+</head>
 <body class="gradient animate--hover-default template-collection-roman-mosaics template-collection" data-page-template="collection-collection-roman-mosaics">
 <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       Skip to content
@@ -2756,7 +2847,7 @@ To ensure proper installation based on your unique site conditions, clients are 
     </button>
 </h2>
 <div class="ac-panel">
-<div aria-hidden="true" class="ac-text body body--medium body--regular text-wrapper" id="accordion-accordion_yMtqYQ">
+<div contenteditable="true" aria-hidden="true" class="ac-text body body--medium body--regular text-wrapper" id="accordion-accordion_yMtqYQ">
 <p>Marble is an ancient natural stone formed under intense pressure and heat deep within the earth. Zia’s marble collection is quarried in Italy and Spain using only the highest quality stone. Revered art and architecture from The Duomo to the Statue of David, Italy has played a leading role in the evolution of this iconic material. With the finest Italian and Spanish stone in play, we set a foundation in classic Carrara combined with rust-toned Rosso Alicante and golden Giallo Reale, plus darker Nero, Grigio, and Verde hues.</p>
 </div>
 </div>
@@ -2768,7 +2859,7 @@ To ensure proper installation based on your unique site conditions, clients are 
     </button>
 </h2>
 <div class="ac-panel">
-<div aria-hidden="true" class="ac-text body body--medium body--regular text-wrapper" id="accordion-accordion_wDVGey">
+<div contenteditable="true" aria-hidden="true" class="ac-text body body--medium body--regular text-wrapper" id="accordion-accordion_wDVGey">
 <p>Zia marble tiles are cut from solid stone blocks and carefully finished by skilled stone masons. Each piece is selected for its color, veining, and surface quality, then honed or polished to bring out the stone’s natural beauty and depth.</p><p>No two tiles are exactly alike—each one features unique patterns created by mineral deposits and geological movement over time.</p>
 </div>
 </div>
@@ -2780,7 +2871,7 @@ To ensure proper installation based on your unique site conditions, clients are 
     </button>
 </h2>
 <div class="ac-panel">
-<div aria-hidden="true" class="ac-text body body--medium body--regular text-wrapper" id="accordion-accordion_rTKN93">
+<div contenteditable="true" aria-hidden="true" class="ac-text body body--medium body--regular text-wrapper" id="accordion-accordion_rTKN93">
 <p>Yes. Marble is a porous stone that must be sealed before and after grouting to protect against staining. It’s also sensitive to acids and abrasive cleaners—so stick to pH-neutral products and plan to reseal regularly, especially in wet or high-traffic areas.</p>
 </div>
 </div>
@@ -2792,7 +2883,7 @@ To ensure proper installation based on your unique site conditions, clients are 
     </button>
 </h2>
 <div class="ac-panel">
-<div aria-hidden="true" class="ac-text body body--medium body--regular text-wrapper" id="accordion-accordion_Vc39U9">
+<div contenteditable="true" aria-hidden="true" class="ac-text body body--medium body--regular text-wrapper" id="accordion-accordion_Vc39U9">
 <p>Use a soft cloth or mop with a pH-neutral cleaner designed for natural stone. Avoid anything acidic (like vinegar or citrus-based products) and never use abrasive scrubbers, as they can dull or etch the surface. Wipe up spills promptly to prevent staining.</p>
 </div>
 </div>
@@ -2804,7 +2895,7 @@ To ensure proper installation based on your unique site conditions, clients are 
     </button>
 </h2>
 <div class="ac-panel">
-<div aria-hidden="true" class="ac-text body body--medium body--regular text-wrapper" id="accordion-accordion_pqmnqi">
+<div contenteditable="true" aria-hidden="true" class="ac-text body body--medium body--regular text-wrapper" id="accordion-accordion_pqmnqi">
 <p>Marble installation requires patience and precision. Here's a quick overview:</p><ul><li>Blend tiles from all boxes before starting to balance color and veining.</li><li>Use a water-cooled tile saw for cuts and a high-quality medium-bed thin set.</li><li>Back-butter each tile and press into place using your hands only—no mallets.</li><li>Space tiles using 1/8” spacers and clean off excess thin set immediately.</li><li>Seal before and after grouting with 511 Porous Plus; for interiors, apply Fila Matte Wax as a final coat.</li><li>Grout in small sections and wipe clean as you go—marble stains easily if grout sits too long.</li></ul><p>For detailed step-by-step instructions, please review our <a href="/en-ca/pages/marble-installation-guide" title="Marble Installation Guide">Marble Installation Guide</a>.</p>
 </div>
 </div>
@@ -2853,7 +2944,52 @@ To ensure proper installation based on your unique site conditions, clients are 
         }]
     }
     </script>
-</section><section class="shopify-section section" id="shopify-section-template--24843300176065__2_up_image_component_yt4XYR">
+</section>
+<section class="zt-faq">
+  <h2 class="zt-faq__title">FAQ</h2>
+
+  <div class="zt-ac-item">
+    <button class="zt-ac-trigger" onclick="ztAc(this)">
+      <span class="zt-ac-q" contenteditable="true" onclick="event.stopPropagation()">Question</span>
+      <span class="zt-ac-icon">+</span>
+    </button>
+    <div class="zt-ac-body"><p contenteditable="true">Answer</p></div>
+  </div>
+
+  <div class="zt-ac-item">
+    <button class="zt-ac-trigger" onclick="ztAc(this)">
+      <span class="zt-ac-q" contenteditable="true" onclick="event.stopPropagation()">Question</span>
+      <span class="zt-ac-icon">+</span>
+    </button>
+    <div class="zt-ac-body"><p contenteditable="true">Answer</p></div>
+  </div>
+
+  <div class="zt-ac-item">
+    <button class="zt-ac-trigger" onclick="ztAc(this)">
+      <span class="zt-ac-q" contenteditable="true" onclick="event.stopPropagation()">Question</span>
+      <span class="zt-ac-icon">+</span>
+    </button>
+    <div class="zt-ac-body"><p contenteditable="true">Answer</p></div>
+  </div>
+
+  <div class="zt-ac-item">
+    <button class="zt-ac-trigger" onclick="ztAc(this)">
+      <span class="zt-ac-q" contenteditable="true" onclick="event.stopPropagation()">Question</span>
+      <span class="zt-ac-icon">+</span>
+    </button>
+    <div class="zt-ac-body"><p contenteditable="true">Answer</p></div>
+  </div>
+
+  <div class="zt-ac-item">
+    <button class="zt-ac-trigger" onclick="ztAc(this)">
+      <span class="zt-ac-q" contenteditable="true" onclick="event.stopPropagation()">Question</span>
+      <span class="zt-ac-icon">+</span>
+    </button>
+    <div class="zt-ac-body"><p contenteditable="true">Answer</p></div>
+  </div>
+
+</section>
+<section class="shopify-section section" id="shopify-section-template--24843300176065__2_up_image_component_yt4XYR">
 <div class="dual-image dual-image--has-spacing color-scheme-1 gradient"><h2 class="block-title label label--bold label--small label--neutral">
 <span class="block-title__inner">Browse Other Collections</span>
 </h2><div class="dual-image__inner">
@@ -4168,6 +4304,10 @@ To ensure proper installation based on your unique site conditions, clients are 
 
   </script>
 </div><div class="shopify-block shopify-app-block" id="shopify-block-AVmMvSlRLZkZxelVSe__7594718713064568544">
-</div></body>
+</div>
+<script id="zt-ac-js">
+function ztAc(btn) { btn.parentElement.classList.toggle('open'); }
+</script>
+</body>
 <script async="" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=WfHbHg" type="text/javascript"></script>
 </html>

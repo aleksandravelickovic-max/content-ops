@@ -1103,7 +1103,98 @@ first.parentNode.insertBefore(script, first);
     document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
 })();</script>
 <script data-application="storefront-renderer" data-monorail-region="shop_domain" data-page-type="collection" data-render-region="gcp-us-west1" data-resource-timing-sampling-rate="10" data-shop-id="53494415553" data-shs="true" data-shs-beacon="true" data-shs-beacon-endpoint="https://ziatile.com/api/collect" data-shs-export-with-fetch="true" data-shs-logs-sample-rate="1" data-theme-instance-id="177444159681" data-theme-name="H&amp;M" data-theme-version="15.2.0" data-treatment-ids="2064577" defer="" src="https://ziatile.com/cdn/shopifycloud/perf-kit/shopify-perf-kit-3.3.1.min.js"></script>
-</link></link></head>
+</link></link>
+<style id="zt-edit-mode">
+.zt-edit-badge {
+  position: fixed;
+  top: 48px;
+  right: 16px;
+  background: #8a3324;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 3px;
+  z-index: 99999;
+  pointer-events: none;
+  user-select: none;
+}
+[contenteditable="true"] { cursor: text; transition: outline 0.1s; }
+[contenteditable="true"]:hover  { outline: 2px dashed #c47a52 !important; outline-offset: 3px !important; }
+[contenteditable="true"]:focus  { outline: 2px solid #8a3324 !important; outline-offset: 3px !important; }
+
+/* FAQ accordion */
+.zt-faq { max-width: 1200px; margin: 48px auto 64px; padding: 0 24px; }
+.zt-faq__title {
+  font-family: Georgia, serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: #1c1a17;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d9cfb9;
+}
+.zt-ac-item {
+  background: #fbf7ee;
+  border: 1px solid #d9cfb9;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.zt-ac-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  user-select: none;
+}
+.zt-ac-trigger:hover { background: #f0ebe0; }
+.zt-ac-q {
+  flex: 1;
+  font-family: Georgia, serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #1c1a17;
+  cursor: text;
+  border-radius: 2px;
+}
+.zt-ac-q:hover { outline: 1px dashed #c47a52; outline-offset: 2px; }
+.zt-ac-q:focus { outline: 2px solid #8a3324; outline-offset: 2px; }
+.zt-ac-icon {
+  font-size: 22px;
+  font-weight: 300;
+  color: #8a3324;
+  flex-shrink: 0;
+  line-height: 1;
+  transition: transform 0.2s;
+  pointer-events: none;
+  user-select: none;
+}
+.zt-ac-item.open .zt-ac-icon { transform: rotate(45deg); }
+.zt-ac-body {
+  display: none;
+  padding: 4px 20px 20px;
+  border-top: 1px solid #d9cfb9;
+}
+.zt-ac-item.open .zt-ac-body { display: block; }
+.zt-ac-body p {
+  margin: 12px 0 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+}
+</style>
+</head>
 <body class="gradient animate--hover-default template-collection-cotto template-collection" data-page-template="collection-collection-cotto">
 <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       Skip to content
@@ -7751,7 +7842,7 @@ To ensure proper installation based on your unique site conditions, clients are 
     </button>
 </h2>
 <div class="ac-panel">
-<div aria-hidden="true" class="ac-text body body--medium body--regular text-wrapper" id="accordion-accordion_hHWrBN">
+<div contenteditable="true" aria-hidden="true" class="ac-text body body--medium body--regular text-wrapper" id="accordion-accordion_hHWrBN">
 <p>Our terra cotta Cotto tiles are made in San Miguel de Allende, Mexico—one of the most historically significant art centers in the Americas. This UNESCO World Heritage city is steeped in the tradition of art and ceramics, with centuries-old floors, walls, and rooftops that continue to inspire.<strong> </strong></p><p>Cotto Allende, a sub-category in this collection, begins with a clay terra cotta base and is finished with a pigmented glaze for a more colorful take on a classic material.</p>
 </div>
 </div>
@@ -7763,7 +7854,7 @@ To ensure proper installation based on your unique site conditions, clients are 
     </button>
 </h2>
 <div class="ac-panel">
-<div aria-hidden="true" class="ac-text body body--medium body--regular text-wrapper" id="accordion-accordion_cb3dXX">
+<div contenteditable="true" aria-hidden="true" class="ac-text body body--medium body--regular text-wrapper" id="accordion-accordion_cb3dXX">
 <p>Both Cotto and Cotto Allende tiles begin with natural Mexican clay that’s pressed into molds, then sun-dried and high-fired in kilns. Traditional Cotto is left unglazed, giving it a matte, earthy finish and softer edges. Cotto Allende is glazed before firing, resulting in a smoother surface with subtle crazing and enhanced tonal variation.</p>
 </div>
 </div>
@@ -7775,7 +7866,7 @@ To ensure proper installation based on your unique site conditions, clients are 
     </button>
 </h2>
 <div class="ac-panel">
-<div aria-hidden="true" class="ac-text body body--medium body--regular text-wrapper" id="accordion-accordion_N8xBBd">
+<div contenteditable="true" aria-hidden="true" class="ac-text body body--medium body--regular text-wrapper" id="accordion-accordion_N8xBBd">
 <p>Yes. Cotto and Cotto Allende are porous, so sealing is required before and after grouting. For high-traffic or wet areas, plan to reseal regularly. Stick to pH-neutral cleaners, and avoid anything acidic or abrasive. Expect both materials to develop a natural patina over time—it’s part of their charm.</p>
 </div>
 </div>
@@ -7787,7 +7878,7 @@ To ensure proper installation based on your unique site conditions, clients are 
     </button>
 </h2>
 <div class="ac-panel">
-<div aria-hidden="true" class="ac-text body body--medium body--regular text-wrapper" id="accordion-accordion_7M9GCP">
+<div contenteditable="true" aria-hidden="true" class="ac-text body body--medium body--regular text-wrapper" id="accordion-accordion_7M9GCP">
 <p>Sweep or vacuum regularly, and clean with warm water and a pH-neutral cleaner like Miracle Sealants Tile &amp; Stone Cleaner. For Cotto Allende, avoid harsh scrubbing tools that could damage the glaze or highlight surface crazing. If you're tackling stubborn stains, use a gentle product like Miracle Heavy Duty Cleaner (Acid Substitute).</p>
 </div>
 </div>
@@ -7799,7 +7890,7 @@ To ensure proper installation based on your unique site conditions, clients are 
     </button>
 </h2>
 <div class="ac-panel">
-<div aria-hidden="true" class="ac-text body body--medium body--regular text-wrapper" id="accordion-accordion_6NDC4V">
+<div contenteditable="true" aria-hidden="true" class="ac-text body body--medium body--regular text-wrapper" id="accordion-accordion_6NDC4V">
 <p>While we recommend professional installation for best results, here’s a high-level overview:</p><ul><li>Blend tiles from all boxes to balance natural variation.</li><li>Use a high-quality medium-bed thin set mortar.</li><li>Wet the backs of tiles before setting them to reduce suction.</li><li>For Cotto, seal with 511 Porous Plus before grouting and post grout, finish with Fila Matte Wax indoors or an additional coat of sealer for outdoor use.</li><li>For Cotto Allende, seal with 511 Porous Plus only—wax is not recommended.</li><li>Use 1/8" grout joints and MAPEI Flexcolor CQ grout.</li><li>Always seal again after grouting, especially in wet areas. </li></ul><p>For detailed step-by-step instructions, please review our<a href="https://www.ziatile.com/pages/terrazzo-install-guide"> </a>installation guides:</p><ul><li><a href="/en-ca/pages/cotto-installation-guide" title="Cotto Installation Guide">Cotto Installation Guide</a></li><li><a href="/en-ca/pages/cotto-allende-installation-guide" title="Cotto Allende Installation Guide">Cotto Allende Installation Guide</a></li></ul>
 </div>
 </div>
@@ -7848,7 +7939,52 @@ To ensure proper installation based on your unique site conditions, clients are 
         }]
     }
     </script>
-</section><section class="shopify-section section" id="shopify-section-template--24843298111681__2_up_image_component_yt4XYR">
+</section>
+<section class="zt-faq">
+  <h2 class="zt-faq__title">FAQ</h2>
+
+  <div class="zt-ac-item">
+    <button class="zt-ac-trigger" onclick="ztAc(this)">
+      <span class="zt-ac-q" contenteditable="true" onclick="event.stopPropagation()">Question</span>
+      <span class="zt-ac-icon">+</span>
+    </button>
+    <div class="zt-ac-body"><p contenteditable="true">Answer</p></div>
+  </div>
+
+  <div class="zt-ac-item">
+    <button class="zt-ac-trigger" onclick="ztAc(this)">
+      <span class="zt-ac-q" contenteditable="true" onclick="event.stopPropagation()">Question</span>
+      <span class="zt-ac-icon">+</span>
+    </button>
+    <div class="zt-ac-body"><p contenteditable="true">Answer</p></div>
+  </div>
+
+  <div class="zt-ac-item">
+    <button class="zt-ac-trigger" onclick="ztAc(this)">
+      <span class="zt-ac-q" contenteditable="true" onclick="event.stopPropagation()">Question</span>
+      <span class="zt-ac-icon">+</span>
+    </button>
+    <div class="zt-ac-body"><p contenteditable="true">Answer</p></div>
+  </div>
+
+  <div class="zt-ac-item">
+    <button class="zt-ac-trigger" onclick="ztAc(this)">
+      <span class="zt-ac-q" contenteditable="true" onclick="event.stopPropagation()">Question</span>
+      <span class="zt-ac-icon">+</span>
+    </button>
+    <div class="zt-ac-body"><p contenteditable="true">Answer</p></div>
+  </div>
+
+  <div class="zt-ac-item">
+    <button class="zt-ac-trigger" onclick="ztAc(this)">
+      <span class="zt-ac-q" contenteditable="true" onclick="event.stopPropagation()">Question</span>
+      <span class="zt-ac-icon">+</span>
+    </button>
+    <div class="zt-ac-body"><p contenteditable="true">Answer</p></div>
+  </div>
+
+</section>
+<section class="shopify-section section" id="shopify-section-template--24843298111681__2_up_image_component_yt4XYR">
 <div class="dual-image dual-image--has-spacing color-scheme-1 gradient"><h2 class="block-title label label--bold label--small label--neutral">
 <span class="block-title__inner">Browse Other Collections</span>
 </h2><div class="dual-image__inner">
@@ -9163,6 +9299,10 @@ To ensure proper installation based on your unique site conditions, clients are 
 
   </script>
 </div><div class="shopify-block shopify-app-block" id="shopify-block-AVmMvSlRLZkZxelVSe__7594718713064568544">
-</div></body>
+</div>
+<script id="zt-ac-js">
+function ztAc(btn) { btn.parentElement.classList.toggle('open'); }
+</script>
+</body>
 <script async="" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=WfHbHg" type="text/javascript"></script>
 </html>

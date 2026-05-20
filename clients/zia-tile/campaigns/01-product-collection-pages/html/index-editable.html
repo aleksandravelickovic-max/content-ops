@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zia Tile — Content Before & After (Editable)</title>
+<style>
+  :root { --bg: #f6f1e8; --paper: #fbf7ee; --ink: #1c1a17; --accent: #8a3324; --rule: #d9cfb9; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 40px 24px 80px; }
+  h1 { font-family: Georgia, serif; font-size: 36px; margin-bottom: 8px; }
+  .subtitle { color: #666; margin-bottom: 32px; font-size: 15px; }
+  .stats { display: flex; gap: 24px; margin-bottom: 32px; flex-wrap: wrap; }
+  .stat { background: var(--paper); border: 1px solid var(--rule); padding: 16px 24px; border-radius: 6px; }
+  .stat-num { font-size: 28px; font-weight: 700; color: var(--accent); }
+  .stat-label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: #888; }
+  h2 { font-family: Georgia, serif; font-size: 24px; margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--rule); }
+  table { width: 100%; border-collapse: collapse; background: var(--paper); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+  th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); padding: 12px 14px; border-bottom: 2px solid var(--rule); }
+  td { padding: 10px 14px; border-bottom: 1px solid var(--rule); font-size: 14px; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover { background: #f0ebe0; }
+  a { color: var(--accent); }
+  .instructions { background: var(--paper); border: 1px solid var(--rule); padding: 20px; margin-bottom: 32px; border-radius: 6px; font-size: 14px; }
+  .instructions code { background: #efe6d2; padding: 2px 6px; border-radius: 3px; font-size: 13px; }
+
+  /* ── Edit-mode indicators ── */
+  [contenteditable="true"] {
+    cursor: text;
+    border-radius: 2px;
+    transition: outline 0.1s;
+  }
+  [contenteditable="true"]:hover {
+    outline: 1px dashed #c47a52;
+    outline-offset: 3px;
+  }
+  [contenteditable="true"]:focus {
+    outline: 2px solid #8a3324;
+    outline-offset: 3px;
+  }
+
+  /* Edit badge */
+  .edit-badge {
+    position: fixed;
+    top: 14px;
+    right: 16px;
+    background: #8a3324;
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 3px;
+    z-index: 200;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  /* ── Status dropdown ── */
+  .status-select {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 4px 26px 4px 10px;
+    font-size: 12px;
+    font-family: inherit;
+    background-color: var(--paper);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23aaa'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    cursor: pointer;
+    min-width: 116px;
+    color: #777;
+  }
+  .status-select:focus { outline: 2px solid var(--accent); border-color: var(--accent); }
+  .status-select[data-status="in-progress"] { background-color: #fff8e1; border-color: #e6ac00; color: #7a5c00; }
+  .status-select[data-status="updated"]     { background-color: #e8f4fd; border-color: #4a9edd; color: #1a5a8a; }
+  .status-select[data-status="approved"]    { background-color: #e9f7ee; border-color: #4caf6e; color: #1f6b3a; }
+
+</style>
+</head>
+<body>
+<div class="edit-badge">Edit mode</div>
+<div class="container">
+  <h1 contenteditable="true">Zia Tile — Content Before & After</h1>
+  <p class="subtitle" contenteditable="true">Campaign: 01 Product & Collection Pages · Generated 2026-05-13 01:31</p>
+
+  <div class="stats">
+    <div class="stat"><div class="stat-num" contenteditable="true">72</div><div class="stat-label">Product Pages</div></div>
+    <div class="stat"><div class="stat-num" contenteditable="true">13</div><div class="stat-label">Collection Pages</div></div>
+    <div class="stat"><div class="stat-num" contenteditable="true">85</div><div class="stat-label">Total Revised</div></div>
+  </div>
+
+  <div class="instructions">
+    <strong>How to use:</strong> <span contenteditable="true">Click <em>Original</em> to see the page as it appears on ziatile.com today.
+    Click <em>Revised</em> to see the same page with campaign content updates applied.
+    Revised pages show a green banner at the top to confirm content has been swapped.</span>
+  </div>
+
+  <h2>Product Pages (72)</h2>
+  <table>
+    <thead><tr><th></th><th>Product</th><th>URL</th><th>Original</th><th>Revised</th><th>Status</th></tr></thead>
+    <tbody><tr>
+  <td>🟢</td>
+  <td><strong>2x6-rectangle-oscura</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/2x6-rectangle-oscura" target="_blank">2x6-rectangle-oscura</a></td>
+  <td><a href="original/products--2x6-rectangle-oscura.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--2x6-rectangle-oscura.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="2x6-rectangle-oscura"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>8x9-hex-red-clay</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/8x9-hex-red-clay-cotto-tile" target="_blank">8x9-hex-red-clay-cotto-tile</a></td>
+  <td><a href="original/products--8x9-hex-red-clay-cotto-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--8x9-hex-red-clay-cotto-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="8x9-hex-red-clay"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>absinthe-2x6-bejmat-zellige</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/absinthe-2x6-zellige-tile" target="_blank">absinthe-2x6-zellige-tile</a></td>
+  <td><a href="original/products--absinthe-2x6-zellige-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--absinthe-2x6-zellige-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="absinthe-2x6-bejmat-zellige"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>absinthe-trapezoid</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/absinthe-trapezoid-zellige-tile" target="_blank">absinthe-trapezoid-zellige-tile</a></td>
+  <td><a href="original/products--absinthe-trapezoid-zellige-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--absinthe-trapezoid-zellige-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="absinthe-trapezoid"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>aegean-4x4</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/aegean-zellige-tile" target="_blank">aegean-zellige-tile</a></td>
+  <td><a href="original/products--aegean-zellige-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--aegean-zellige-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="aegean-4x4"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>amber-4x4</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/amber-zellige-tile" target="_blank">amber-zellige-tile</a></td>
+  <td><a href="original/products--amber-zellige-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--amber-zellige-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="amber-4x4"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>basilica-12x24-honed</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/basilica-12x24-honed-limestone-tile" target="_blank">basilica-12x24-honed-limestone-tile</a></td>
+  <td><a href="original/products--basilica-12x24-honed-limestone-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--basilica-12x24-honed-limestone-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="basilica-12x24-honed"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>basilica-6x6-honed</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/basilica-6x6-honed" target="_blank">basilica-6x6-honed</a></td>
+  <td><a href="original/products--basilica-6x6-honed.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--basilica-6x6-honed.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="basilica-6x6-honed"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>bungalow-12x12-terrazzo</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/bungalow-12x12" target="_blank">bungalow-12x12</a></td>
+  <td><a href="original/products--bungalow-12x12.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--bungalow-12x12.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="bungalow-12x12-terrazzo"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>burnt-sugar-2x2</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/burnt-sugar-2x2-zellige-tile" target="_blank">burnt-sugar-2x2-zellige-tile</a></td>
+  <td><a href="original/products--burnt-sugar-2x2-zellige-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--burnt-sugar-2x2-zellige-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="burnt-sugar-2x2"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>burnt-sugar-2x6</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/burnt-sugar-2x6-zellige-tile" target="_blank">burnt-sugar-2x6-zellige-tile</a></td>
+  <td><a href="original/products--burnt-sugar-2x6-zellige-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--burnt-sugar-2x6-zellige-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="burnt-sugar-2x6"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>burnt-sugar-4x4</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/burnt-sugar-zellige-tile" target="_blank">burnt-sugar-zellige-tile</a></td>
+  <td><a href="original/products--burnt-sugar-zellige-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--burnt-sugar-zellige-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="burnt-sugar-4x4"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>burnt-sugar-glazed-earth-checkerboard</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/burnt-sugar-glazed-earth-2x2" target="_blank">burnt-sugar-glazed-earth-2x2</a></td>
+  <td><a href="original/products--burnt-sugar-glazed-earth-2x2.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--burnt-sugar-glazed-earth-2x2.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="burnt-sugar-glazed-earth-checkerboard"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>cacao-4x4</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/cacao-4x4" target="_blank">cacao-4x4</a></td>
+  <td><a href="original/products--cacao-4x4.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--cacao-4x4.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="cacao-4x4"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>carbon-black-4x4</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/carbon-black-zellige-tile" target="_blank">carbon-black-zellige-tile</a></td>
+  <td><a href="original/products--carbon-black-zellige-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--carbon-black-zellige-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="carbon-black-4x4"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>carrara-12x12</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/carrara-12x12" target="_blank">carrara-12x12</a></td>
+  <td><a href="original/products--carrara-12x12.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--carrara-12x12.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="carrara-12x12"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>casablanca-2x2-zellige</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/casablanca-white-2x2-zellige-tile" target="_blank">casablanca-white-2x2-zellige-tile</a></td>
+  <td><a href="original/products--casablanca-white-2x2-zellige-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--casablanca-white-2x2-zellige-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="casablanca-2x2-zellige"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>casablanca-2x6-zellige</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/casablanca-white-2x6-zellige-tile" target="_blank">casablanca-white-2x6-zellige-tile</a></td>
+  <td><a href="original/products--casablanca-white-2x6-zellige-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--casablanca-white-2x6-zellige-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="casablanca-2x6-zellige"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>casablanca-4x4-zellige</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/casablanca-white-zellige-tile" target="_blank">casablanca-white-zellige-tile</a></td>
+  <td><a href="original/products--casablanca-white-zellige-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--casablanca-white-zellige-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="casablanca-4x4-zellige"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>casablanca-trapezoid-1x4-zellige</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/casablanca-white-trapezoid-zellige-tile" target="_blank">casablanca-white-trapezoid-zellige-tile</a></td>
+  <td><a href="original/products--casablanca-white-trapezoid-zellige-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--casablanca-white-trapezoid-zellige-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="casablanca-trapezoid-1x4-zellige"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>ceramics-eucalyptus-2x8</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/eucalyptus-2x8-ceramic-tile" target="_blank">eucalyptus-2x8-ceramic-tile</a></td>
+  <td><a href="original/products--eucalyptus-2x8-ceramic-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--eucalyptus-2x8-ceramic-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="ceramics-eucalyptus-2x8"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>ceramics-linen-2x8</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/linen-2x8-ceramic-tile" target="_blank">linen-2x8-ceramic-tile</a></td>
+  <td><a href="original/products--linen-2x8-ceramic-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--linen-2x8-ceramic-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="ceramics-linen-2x8"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>condesa-4x4-square</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/condesa-4x4" target="_blank">condesa-4x4</a></td>
+  <td><a href="original/products--condesa-4x4.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--condesa-4x4.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="condesa-4x4-square"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>desert-bloom-2x6</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/cacao-4x4" target="_blank">cacao-4x4</a></td>
+  <td><a href="original/products--cacao-4x4.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--cacao-4x4.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="desert-bloom-2x6"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>desert-bloom-4x4-zellige</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/desert-bloom-zellige-tile" target="_blank">desert-bloom-zellige-tile</a></td>
+  <td><a href="original/products--desert-bloom-zellige-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--desert-bloom-zellige-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="desert-bloom-4x4-zellige"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>durango-madera</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/durango-madera" target="_blank">durango-madera</a></td>
+  <td><a href="original/products--durango-madera.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--durango-madera.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="durango-madera"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>ethereal-blue-2x8</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/ethereal-blue-2x8-ceramic-tile" target="_blank">ethereal-blue-2x8-ceramic-tile</a></td>
+  <td><a href="original/products--ethereal-blue-2x8-ceramic-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--ethereal-blue-2x8-ceramic-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="ethereal-blue-2x8"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>french-cobblestone</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/french-cobble-stone" target="_blank">french-cobble-stone</a></td>
+  <td><a href="original/products--french-cobble-stone.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--french-cobble-stone.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="french-cobblestone"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>gambit-1</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/gambit-1" target="_blank">gambit-1</a></td>
+  <td><a href="original/products--gambit-1.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--gambit-1.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="gambit-1"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>gambit-7</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/gambit-7" target="_blank">gambit-7</a></td>
+  <td><a href="original/products--gambit-7.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--gambit-7.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="gambit-7"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>glazed-earth-2x2</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/glazed-earth-2x2-zellige-tile" target="_blank">glazed-earth-2x2-zellige-tile</a></td>
+  <td><a href="original/products--glazed-earth-2x2-zellige-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--glazed-earth-2x2-zellige-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="glazed-earth-2x2"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>graphite-grey-4x4</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/graphite-grey-zellige-tile" target="_blank">graphite-grey-zellige-tile</a></td>
+  <td><a href="original/products--graphite-grey-zellige-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--graphite-grey-zellige-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="graphite-grey-4x4"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>jade-4x4-square</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/jade-zellige-tile" target="_blank">jade-zellige-tile</a></td>
+  <td><a href="original/products--jade-zellige-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--jade-zellige-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="jade-4x4-square"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>kelp-forest-2x8</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/kelp-forest-2x8-ceramic-tile" target="_blank">kelp-forest-2x8-ceramic-tile</a></td>
+  <td><a href="original/products--kelp-forest-2x8-ceramic-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--kelp-forest-2x8-ceramic-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="kelp-forest-2x8"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>kelp-forest-4x4</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/kelp-forest-4x4-ceramic-tile" target="_blank">kelp-forest-4x4-ceramic-tile</a></td>
+  <td><a href="original/products--kelp-forest-4x4-ceramic-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--kelp-forest-4x4-ceramic-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="kelp-forest-4x4"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>lattice-4-zellige-mosaic</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/lattice-4" target="_blank">lattice-4</a></td>
+  <td><a href="original/products--lattice-4.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--lattice-4.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="lattice-4-zellige-mosaic"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>limestone-buff-honed-12x12</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/buff-12x12-honed-limestone-tile" target="_blank">buff-12x12-honed-limestone-tile</a></td>
+  <td><a href="original/products--buff-12x12-honed-limestone-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--buff-12x12-honed-limestone-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="limestone-buff-honed-12x12"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>limestone-buff-honed-12x24</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/buff-12x24-honed-limestone-tile" target="_blank">buff-12x24-honed-limestone-tile</a></td>
+  <td><a href="original/products--buff-12x24-honed-limestone-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--buff-12x24-honed-limestone-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="limestone-buff-honed-12x24"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>limestone-buff-honed-4x12</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/buff-4x12-honed-limestone-tile" target="_blank">buff-4x12-honed-limestone-tile</a></td>
+  <td><a href="original/products--buff-4x12-honed-limestone-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--buff-4x12-honed-limestone-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="limestone-buff-honed-4x12"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>limestone-buff-honed-6x6</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/buff-6x6-honed-limestone-tile" target="_blank">buff-6x6-honed-limestone-tile</a></td>
+  <td><a href="original/products--buff-6x6-honed-limestone-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--buff-6x6-honed-limestone-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="limestone-buff-honed-6x6"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>linen-4x4</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/linen-4x4-ceramic-tile" target="_blank">linen-4x4-ceramic-tile</a></td>
+  <td><a href="original/products--linen-4x4-ceramic-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--linen-4x4-ceramic-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="linen-4x4"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>molasses-2x8</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/molasses-2x8" target="_blank">molasses-2x8</a></td>
+  <td><a href="original/products--molasses-2x8.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--molasses-2x8.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="molasses-2x8"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>molasses-4x4</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/molasses-4x4" target="_blank">molasses-4x4</a></td>
+  <td><a href="original/products--molasses-4x4.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--molasses-4x4.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="molasses-4x4"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>monument-4x12-honed</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/monument-4x12-honed-limestone-tile" target="_blank">monument-4x12-honed-limestone-tile</a></td>
+  <td><a href="original/products--monument-4x12-honed-limestone-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--monument-4x12-honed-limestone-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="monument-4x12-honed"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>monument-6x6-honed</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/monument-6x6-honed-limestone-tile" target="_blank">monument-6x6-honed-limestone-tile</a></td>
+  <td><a href="original/products--monument-6x6-honed-limestone-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--monument-6x6-honed-limestone-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="monument-6x6-honed"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>moonlight-2x8</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/moonlight-2x8-ceramic-tile" target="_blank">moonlight-2x8-ceramic-tile</a></td>
+  <td><a href="original/products--moonlight-2x8-ceramic-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--moonlight-2x8-ceramic-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="moonlight-2x8"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>nagano-2x8</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/nagano-2x8" target="_blank">nagano-2x8</a></td>
+  <td><a href="original/products--nagano-2x8.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--nagano-2x8.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="nagano-2x8"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>neutra-12x12</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/neutra-12x12" target="_blank">neutra-12x12</a></td>
+  <td><a href="original/products--neutra-12x12.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--neutra-12x12.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="neutra-12x12"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>neutra-24x24</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/neutra-24x24" target="_blank">neutra-24x24</a></td>
+  <td><a href="original/products--neutra-24x24.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--neutra-24x24.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="neutra-24x24"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>piedra-4x4-square</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/piedra-4x4" target="_blank">piedra-4x4</a></td>
+  <td><a href="original/products--piedra-4x4.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--piedra-4x4.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="piedra-4x4-square"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>pomelo-bone-8x8</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/pomelo-bone-cement-tile" target="_blank">pomelo-bone-cement-tile</a></td>
+  <td><a href="original/products--pomelo-bone-cement-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--pomelo-bone-cement-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="pomelo-bone-8x8"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>puebla-4x4</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/puebla-4x4" target="_blank">puebla-4x4</a></td>
+  <td><a href="original/products--puebla-4x4.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--puebla-4x4.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="puebla-4x4"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>pure-white-2x2</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/pure-white-2x2-zellige-tile" target="_blank">pure-white-2x2-zellige-tile</a></td>
+  <td><a href="original/products--pure-white-2x2-zellige-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--pure-white-2x2-zellige-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="pure-white-2x2"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>pure-white-2x6</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/pure-white-2x6-zellige-tile" target="_blank">pure-white-2x6-zellige-tile</a></td>
+  <td><a href="original/products--pure-white-2x6-zellige-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--pure-white-2x6-zellige-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="pure-white-2x6"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>pure-white-trapezoid-zellige</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/pure-white-trapezoid-zellige-tile" target="_blank">pure-white-trapezoid-zellige-tile</a></td>
+  <td><a href="original/products--pure-white-trapezoid-zellige-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--pure-white-trapezoid-zellige-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="pure-white-trapezoid-zellige"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>racing-green-2x6-zellige</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/racing-green-2x6-zellige-tile" target="_blank">racing-green-2x6-zellige-tile</a></td>
+  <td><a href="original/products--racing-green-2x6-zellige-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--racing-green-2x6-zellige-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="racing-green-2x6-zellige"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>red-clay-8x8-square</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/8x8-square-red-clay-cotto-tile" target="_blank">8x8-square-red-clay-cotto-tile</a></td>
+  <td><a href="original/products--8x8-square-red-clay-cotto-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--8x8-square-red-clay-cotto-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="red-clay-8x8-square"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>rouge-4x4</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/rouge-zellige-tile" target="_blank">rouge-zellige-tile</a></td>
+  <td><a href="original/products--rouge-zellige-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--rouge-zellige-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="rouge-4x4"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>sequoia-2x8</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/sequoia-2x8-ceramic-tile" target="_blank">sequoia-2x8-ceramic-tile</a></td>
+  <td><a href="original/products--sequoia-2x8-ceramic-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--sequoia-2x8-ceramic-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="sequoia-2x8"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>sequoia-4x4</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/sequoia-4x4-ceramic-tile" target="_blank">sequoia-4x4-ceramic-tile</a></td>
+  <td><a href="original/products--sequoia-4x4-ceramic-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--sequoia-4x4-ceramic-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="sequoia-4x4"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>skylight-4x4</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/sky-light-zellige-tile" target="_blank">sky-light-zellige-tile</a></td>
+  <td><a href="original/products--sky-light-zellige-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--sky-light-zellige-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="skylight-4x4"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>stars-cross-red-clay</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/6x6-stars-and-cross-red-clay-cotto-tile" target="_blank">6x6-stars-and-cross-red-clay-cotto-tile</a></td>
+  <td><a href="original/products--6x6-stars-and-cross-red-clay-cotto-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--6x6-stars-and-cross-red-clay-cotto-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="stars-cross-red-clay"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>tidepool-2x6</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/tidepool-2x6-zellige-tile" target="_blank">tidepool-2x6-zellige-tile</a></td>
+  <td><a href="original/products--tidepool-2x6-zellige-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--tidepool-2x6-zellige-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="tidepool-2x6"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>tidepool-4x4-zellige</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/tidepool-zellige-tile" target="_blank">tidepool-zellige-tile</a></td>
+  <td><a href="original/products--tidepool-zellige-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--tidepool-zellige-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="tidepool-4x4-zellige"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>tidepool-trapezoid</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/tidepool-trapezoid-zellige-tile" target="_blank">tidepool-trapezoid-zellige-tile</a></td>
+  <td><a href="original/products--tidepool-trapezoid-zellige-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--tidepool-trapezoid-zellige-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="tidepool-trapezoid"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>toltec-red-clay</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/toltec-red-clay-cotto-tile" target="_blank">toltec-red-clay-cotto-tile</a></td>
+  <td><a href="original/products--toltec-red-clay-cotto-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--toltec-red-clay-cotto-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="toltec-red-clay"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>unglazed-natural-2x6</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/unglazed-natural-2x6-zellige-tile" target="_blank">unglazed-natural-2x6-zellige-tile</a></td>
+  <td><a href="original/products--unglazed-natural-2x6-zellige-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--unglazed-natural-2x6-zellige-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="unglazed-natural-2x6"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>volcan-4x12</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/volcan-4x12" target="_blank">volcan-4x12</a></td>
+  <td><a href="original/products--volcan-4x12.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--volcan-4x12.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="volcan-4x12"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>zellige-absinthe-4x4</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/absinthe-zellige-tile" target="_blank">absinthe-zellige-tile</a></td>
+  <td><a href="original/products--absinthe-zellige-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--absinthe-zellige-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="zellige-absinthe-4x4"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>zellige-glazed-earth-2x6</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/glazed-earth-2x6-zellige-tile" target="_blank">glazed-earth-2x6-zellige-tile</a></td>
+  <td><a href="original/products--glazed-earth-2x6-zellige-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--glazed-earth-2x6-zellige-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="zellige-glazed-earth-2x6"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>zellige-glazed-earth-4x4</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/glazed-earth-zellige-tile" target="_blank">glazed-earth-zellige-tile</a></td>
+  <td><a href="original/products--glazed-earth-zellige-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--glazed-earth-zellige-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="zellige-glazed-earth-4x4"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>zellige-racing-green-4x4</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/products/racing-green-zellige-tile" target="_blank">racing-green-zellige-tile</a></td>
+  <td><a href="original/products--racing-green-zellige-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/products--racing-green-zellige-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="zellige-racing-green-4x4"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr></tbody>
+  </table>
+
+  <h2>Collection Pages (16)</h2>
+  <table>
+    <thead><tr><th></th><th>Collection</th><th>URL</th><th>Original</th><th>Revised</th><th>Status</th></tr></thead>
+    <tbody><tr>
+  <td>🟢</td>
+  <td><strong>01-zellige</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/en-ca/collections/zellige" target="_blank">zellige</a></td>
+  <td><a href="original/collections--zellige.html" target="_blank">Original</a></td>
+  <td><a href="revised/collections--zellige.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="01-zellige"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>⚪</td>
+  <td><strong>02-zellige-mosaic</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/en-ca/collections/zellige-mosaics" target="_blank">zellige-mosaics</a></td>
+  <td><span style="color:#999">—</span></td>
+  <td><span style="color:#999">—</span></td>
+  <td><select class="status-select" data-key="02-zellige-mosaic"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>⚪</td>
+  <td><strong>03-unglazed-natural-zellige</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/en-ca/collections/unglazed-natural-zellige" target="_blank">unglazed-natural-zellige</a></td>
+  <td><span style="color:#999">—</span></td>
+  <td><span style="color:#999">—</span></td>
+  <td><select class="status-select" data-key="03-unglazed-natural-zellige"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>⚪</td>
+  <td><strong>04-unglazed-natural-zellige-mosaic</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/en-ca/collections/unglazed-natural-zellige-mosaics" target="_blank">unglazed-natural-zellige-mosaics</a></td>
+  <td><span style="color:#999">—</span></td>
+  <td><span style="color:#999">—</span></td>
+  <td><select class="status-select" data-key="04-unglazed-natural-zellige-mosaic"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>05-ceramics-matte</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/en-ca/collections/ceramics" target="_blank">ceramics</a></td>
+  <td><a href="original/collections--ceramics.html" target="_blank">Original</a></td>
+  <td><a href="revised/collections--ceramics.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="05-ceramics-matte"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>06-field-trip-japan</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/en-ca/collections/field-trip-japan" target="_blank">field-trip-japan</a></td>
+  <td><a href="original/collections--field-trip-japan.html" target="_blank">Original</a></td>
+  <td><a href="revised/collections--field-trip-japan.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="06-field-trip-japan"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>07-cotto</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/en-ca/collections/cotto" target="_blank">cotto</a></td>
+  <td><a href="original/collections--cotto.html" target="_blank">Original</a></td>
+  <td><a href="revised/collections--cotto.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="07-cotto"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>08-cotto-allende</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/en-ca/collections/cotto-tile-allende" target="_blank">cotto-tile-allende</a></td>
+  <td><a href="original/collections--cotto-tile-allende.html" target="_blank">Original</a></td>
+  <td><a href="revised/collections--cotto-tile-allende.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="08-cotto-allende"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>09-glass-mosaics</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/en-ca/collections/glass-mosaics" target="_blank">glass-mosaics</a></td>
+  <td><a href="original/collections--glass-mosaics.html" target="_blank">Original</a></td>
+  <td><a href="revised/collections--glass-mosaics.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="09-glass-mosaics"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>10-terrazzo</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/en-ca/collections/terrazzo" target="_blank">terrazzo</a></td>
+  <td><a href="original/collections--terrazzo.html" target="_blank">Original</a></td>
+  <td><a href="revised/collections--terrazzo.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="10-terrazzo"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>11-marble-solids</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/en-ca/collections/marble-tile" target="_blank">marble-tile</a></td>
+  <td><a href="original/collections--marble-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/collections--marble-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="11-marble-solids"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>12-marble-patterns</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/en-ca/collections/marble-tile" target="_blank">marble-tile</a></td>
+  <td><a href="original/collections--marble-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/collections--marble-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="12-marble-patterns"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>13-cantera</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/en-ca/collections/cantera-tile" target="_blank">cantera-tile</a></td>
+  <td><a href="original/collections--cantera-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/collections--cantera-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="13-cantera"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>14-limestone</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/en-ca/collections/limestone-tile" target="_blank">limestone-tile</a></td>
+  <td><a href="original/collections--limestone-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/collections--limestone-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="14-limestone"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>15-cement</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/en-ca/collections/cement-tile" target="_blank">cement-tile</a></td>
+  <td><a href="original/collections--cement-tile.html" target="_blank">Original</a></td>
+  <td><a href="revised/collections--cement-tile.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="15-cement"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr><tr>
+  <td>🟢</td>
+  <td><strong>16-roman-mosaics</strong></td>
+  <td style="font-size:12px"><a href="https://ziatile.com/en-ca/collections/roman-mosaics" target="_blank">roman-mosaics</a></td>
+  <td><a href="original/collections--roman-mosaics.html" target="_blank">Original</a></td>
+  <td><a href="revised/collections--roman-mosaics.html" target="_blank">Revised</a></td>
+  <td><select class="status-select" data-key="16-roman-mosaics"><option value="">—</option><option value="in-progress">In Progress</option><option value="updated">Updated</option><option value="approved">Approved</option></select></td>
+</tr></tbody>
+  </table>
+
+
+</div>
+<script>
+(function () {
+  function applyStatus(sel) {
+    sel.setAttribute('data-status', sel.value);
+    if (sel.dataset.key) {
+      localStorage.setItem('zt-status-' + sel.dataset.key, sel.value);
+    }
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.status-select').forEach(function (sel) {
+      var saved = sel.dataset.key
+        ? localStorage.getItem('zt-status-' + sel.dataset.key)
+        : null;
+      if (saved) sel.value = saved;
+      applyStatus(sel);
+      sel.addEventListener('change', function () { applyStatus(this); });
+    });
+  });
+})();
+</script>
+</body>
+</html>
