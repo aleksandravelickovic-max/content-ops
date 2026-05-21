@@ -1,0 +1,127 @@
+---
+sku: 2x6-rectangle-oscura
+material: cotto
+url: https://ziatile.com/products/2x6-rectangle-oscura
+title_tag: Oscura 2x6 Rectangle Cotto | Zia Tile
+meta_description: Shop Zia's Oscura 2x6 Cotto. A matte black handmade terra cotta tile for kitchen backsplashes, bathroom walls, and outdoor patios in any climate.
+keywords: Oscura 2x6, Black Cotto tile, Black terra cotta tile
+draft_date: 2026-05-21
+---
+
+# 2x6 Rectangle \+ Oscura
+
+\[INSERT CART MODULE HERE\]
+
+Zia's Oscura is a matte black terra cotta tile in a rectangular 2x6 format. The black tone reads flat and unreflective across the field and the natural surface character that develops through hand production and high-temperature firing.
+
+Cotto (derived from the Italian 'terra cotta', or 'baked earth') is a handmade tile from San Miguel de Allende. The unglazed surface deepens into patina with use, bringing beauty to the material's aging process. Images shown represent a sample of this tile and do not display every potential variation.
+
+\[IMAGE: SIZE/THICKNESS DIAGRAM\]
+
+#### Order Details \+ Installation *\[Locked\]*
+
+We recommend 15 to 20% overage to account for cuts and tile-to-tile variation. Before installation, open and mix tiles from all boxes and arrange the layout dry to disperse variation evenly. Wash the tile immediately after cutting to prevent the cutting paste from drying on the surface.
+
+Cotto requires a two-stage sealing sequence: a pre-grout sealer applied as a grout release, and a post-grout top coat (a matte wax for interior installations, or a second pass of the pre-grout sealer for exterior, since UV exposure rules out wax outside). Use 1/8" tile spacers for the recommended grout joint. Subfloors must be fully cured (minimum 30 days) to prevent efflorescence from depositing on the tile surface.
+
+---
+
+## About
+
+Each Cotto tile is made from locally-sourced clays. Our handcrafted Cotto tiles are made just outside of historic San Miguel de Allende, Mexico.
+
+The tiles' clay formulation is mixed with water and blended to the ideal consistency, then pressed in a mold to dry for 1–2 weeks until the proper moisture level is achieved for firing. At this point, wood ash is added to the surface of our 'Fired Earth' tiles to give them their distinctive surface coloration.
+
+Installers must wear protective face and eye coverings when working with Cotto, thinset, sealants, and grout, in accordance with [California Prop 65](https://www.ziatile.com/proposition-65-warnings). Bring drywall flush with the finished surface of the tile, or finish exposed edges with mitered edges or Schluter strips.
+
+---
+
+## Tile Usage *\[Locked\]*
+
+### Residential Usage
+
+| Use Case | Status |
+| :---- | :---- |
+| **Interior Floors – High Traffic** *Ex: Kitchen, primary bathroom, entryway, mudroom* | **✓** |
+| **Interior Floors – Low Traffic** *Ex: Guest bathroom, powder room, bedroom* | **✓** |
+| **Exterior Floors – Freeze or Thaw** *Ex: Outdoor walkways, patios in cold climates* | **✓** |
+| **Exterior Floors – Non Freeze or Thaw** *Ex: Patio, courtyard, pool deck in mild climates* | **✓** |
+| **Interior Walls** *Ex: Kitchen backsplash, bathroom wall, accent wall, range hood* | **✓** |
+| **Exterior Walls** *Ex: Garden wall, courtyard wall in non-freeze/thaw climates* | **✓** |
+| **Shower Walls \+ Floors** *Ex: Walk-in shower, steam shower, tub surround* | **✓** |
+| **Pools \+ Spas** *Saltwater or chlorine* | **✗** |
+| **Fireplace Surround** *Ex: Living room fireplace, bedroom fireplace (not inside firebox)* | **✓** |
+| **Radiant Heating Compatible** *Compatible with all heated floor systems* | **✓** |
+| **Sealing Required** *See install guide for recommended sealers* | **✓** |
+
+### Commercial Usage
+
+| Use Case | Status |
+| :---- | :---- |
+| **Interior Floors – High Traffic** *Ex: Restaurant floors, hotel lobbies, retail entryways* | **✓** |
+| **Interior Floors – Low Traffic** *Ex: Boutique hotel guest rooms, private offices, gallery floors* | **✓** |
+| **Exterior Floors – Freeze or Thaw** *Ex: Hotel walkways, restaurant courtyards in cold climates* | **✓** |
+| **Exterior Floors – Non Freeze or Thaw** *Ex: Restaurant patios, hotel courtyards in mild climates* | **✓** |
+| **Interior Walls** *Ex: Restaurant feature walls, hotel bathroom walls, retail backsplashes* | **✓** |
+| **Exterior Walls** *Ex: Hospitality facade detail in non-freeze/thaw climates* | **✓** |
+| **Shower Walls \+ Floors** *Ex: Hotel showers, spa wet rooms, gym facilities* | **✓** |
+| **Pools \+ Spas** *Saltwater or chlorine* | **✗** |
+| **Fireplace Surround** *Ex: Restaurant fireplaces, hotel lobby fireplaces (not inside firebox)* | **✓** |
+| **Radiant Heating Compatible** *Compatible with all heated floor systems* | **✓** |
+| **Sealing Required** *See install guide for recommended sealers* | **✓** |
+
+---
+
+## How It's Made
+
+Cotto, derived from the Italian terra cotta or "baked earth," is part of a long lineage of fired clays that date back to the dawn of civilization itself. From Egyptian water jugs to Chinese roof tiles to Roman bricks, terra cotta has been part of the human story for as long as we've had an alphabet. The materials in Cotto tile haven't changed much over the millennia, while the firing process has evolved: from kiln furniture to mold designs to firing method, our handmade and high-fired Cotto is our modern take on an ancient tradition.
+
+Our Cotto is produced in San Miguel de Allende, Mexico, where natural clay is pressed into molds, sun-dried, and fired in kilns by local artisans. The unglazed surface is what gives Cotto its character at installation and over time. With proper sealing, Cotto handles indoor floors, exterior floors in any climate, and freeze/thaw exposure, and the surface wears like a natural stone product as use deepens its tone.
+
+---
+
+## Order & Shipping
+
+In-stock samples typically ship from our Los Angeles warehouse within two business days. Each client may order up to ten samples total, with a limit of four per each unique tile. The first five samples are complimentary; additional samples begin at $3 each. Sample orders ship via FedEx or UPS Ground.
+
+Full orders ship together once all tiles are in stock, throughout the United States and Canada via a third-party LTL carrier service. Pallets will be delivered curbside. LTL carriers provide estimated delivery ranges and will contact you to schedule a specific delivery window once the shipment arrives at their local terminal. Clients in Alaska, Hawaii, or international locations should email our team at [info@ziatile.com](mailto:info@ziatile.com) for a custom shipping quote.
+
+Free full order pickup is available at our Los Angeles area warehouse for local clients. Our team will reach out when an order is ready to schedule a pickup appointment. Pickups are available by confirmed appointment only, Monday through Friday from 8 am–3 pm. For any other questions, contact [info@ziatile.com](mailto:info@ziatile.com).
+
+---
+
+## Installation Guide
+
+\[KEEP\]
+
+---
+
+## Frequently Asked Questions
+
+### Which orientation is best for the Oscura 2x6 rectangle?
+
+The 2x6 rectangle can be installed in a horizontal running bond or a vertical stack. A horizontal layout creates a classic subway appearance that extends the visual width of a surface. A vertical stack draws the eye upward and suits floor-to-ceiling installations. The matte black surface reads consistently in either orientation.
+
+### Can Oscura 2x6 be used outdoors in a freeze/thaw climate?
+
+Yes. Oscura 2x6 is suited to exterior installations in any climate, including freeze/thaw regions — one of the characteristics that distinguishes unglazed Cotto from most other handmade tile materials in the Zia collection. For exterior applications, apply a second coat of the pre-grout sealer in place of a matte wax top coat, as UV exposure causes wax to discolor over time. Full exterior sealing instructions are in the [Cotto Installation Guide](https://ziatile.com/pages/cotto-installation-guide).
+
+### Is Oscura Cotto suitable for shower floors and wet areas?
+
+Yes, Oscura 2x6 is suited to shower walls, shower floors, and steam showers. The unglazed surface has a DCOF of 0.98, well above the slip-resistance threshold for level interior floors. For commercial wet floors, increase grout joints to a minimum of ⅛" and consider an anti-slip treatment after installation. Sealing is required for all wet applications; refer to the [Cotto Installation Guide](https://ziatile.com/pages/cotto-installation-guide) for instructions, and the Zia team is available at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+
+### Does Oscura Cotto require sealing?
+
+Yes. All Cotto tiles require a two-stage sealing sequence. Before grouting, apply a pre-grout sealer until the tile is fully saturated, then allow it to cure. After the grout has cured, apply a matte wax top coat for interior installations or a second coat of the pre-grout sealer for exterior applications.
+
+### What is the difference between Cotto and Cotto Allende?
+
+Cotto is Zia's unglazed terra cotta line. The surface is left raw from the kiln, which gives it the matte, porous character that develops a natural patina over time. Cotto is suited to exterior applications in any climate, including freeze/thaw regions, but is not appropriate for pools or spas. Cotto Allende is the glazed terra cotta line, and each tile receives a hand-applied glaze before firing. The glazed surface produces a different aesthetic and different application rules: Cotto Allende is not rated for freeze/thaw exposure but is approved for pools and spas.
+
+### Can Oscura be mixed with other Cotto colorways?
+
+Yes. Oscura 2x6 can be combined with other Cotto colorways in the same installation. Each colorway is produced from the same clay body and shares consistent thickness and format across the range. Mixing Oscura with warmer colorways — such as Red Clay, Adobe, or Fired Earth — creates a layered composition where the matte black reads in deliberate contrast against the earthier tones of the classic range.
+
+### How is Oscura Cotto cleaned?
+
+Clean Oscura Cotto with a pH-neutral cleaner, warm water, and a soft cloth or mop. Sweep or vacuum regularly to prevent abrasive particles from scratching the sealed surface. Avoid acidic or abrasive cleaners, which can damage the sealer and affect the matte finish. For heavier staining, use a heavy-duty pH-neutral stone cleaner.
