@@ -610,3 +610,32 @@ Answer yes to every item before submitting for Aleksandra's review. If any item 
 - [ ] Keywords appear naturally and do not disrupt brand voice
 - [ ] Meta description includes primary keyword + >=2 use cases
 - [ ] Meta title formatted correctly: `[Product Name] [Format] | Zia Tile`
+
+---
+
+## 13. Team Working Notes
+
+This section is the shared scratch space for per-operator rules that came out of real production work but are not yet promoted into the main style sections above. The rule is: **edit in place, attribute by name, scope by content type.** No branches, no separate files — additions land here in the same commit as the draft they came from, so future runs of the pipeline pick them up automatically.
+
+### Convention
+
+- Add a `### {Operator} — {scope}` subsection. Scope = `blog` / `product` / `collection` / `all`.
+- Lead with the rule, then a one-line **Why:** (the editorial source — Jamie comment, Aleksandra rejection, Emanuel run finding).
+- Use bullet points. Keep each note actionable for an agent reading the file in-session.
+- When a note has been reinforced across two or more pieces, **promote it** into the relevant numbered section (§3 terminology, §4 accuracy, §6/§7/§8 type-specific) and remove the note here. Do not let this section grow indefinitely.
+
+### Why this exists
+
+`STYLE-SYSTEM.md` is loaded into every pipeline run (per `CLAUDE.md` hard gate 2). Operator-specific notes have to live here, or the agent never sees them. Forking to a per-user file or working on a branch defeats the single-source-of-truth model and creates merge conflicts. The 2026-05-27 sync agreed: write here with attribution, promote when it's load-bearing.
+
+### Notes
+
+(Add notes below this line. Latest at the bottom.)
+
+### Andresa — blog
+
+_(reserved — Andresa will populate during blog-pipeline canary runs.)_
+
+### Emanuel — product
+
+_(reserved — Emanuel adds product/SKU-specific findings here as the May Zia delivery wraps.)_
