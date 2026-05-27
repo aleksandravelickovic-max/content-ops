@@ -1,57 +1,106 @@
 # Product page template (SKU) — Zia Tile
 
-Skeleton for a single-SKU product page. Nine sections, in this exact order (STYLE-SYSTEM.md §8.5). Do not collapse, reorder, or rename sections. Load the matching `materials/{material}.md` before writing — freeze/thaw, pool/spa, sealing, and variation language are all material-specific.
+Skeleton for a single-SKU product page. The **proven, signed-off pattern** is `clients/zia-tile/campaigns/01-product-collection-pages/drafts/product-pages/aegean-4x4.md` (Emanuel, 2026-05-21). Match it. This template summarizes the structure; the aegean SKU is the reference draft.
 
-Usage charts are standardized at the category level (§4.7). Do not write usage bullets from scratch per SKU. Substitute only SKU-specific details (format dimensions, orientation, finish notes) into the approved category template.
+Load `materials/{material}.md` and `raw/research/materials-reference.md` (Quick Reference matrix) before writing — freeze/thaw, pool/spa, sealing, and variation language are material-specific.
+
+Usage charts are standardized at the category level (§4.7). Do NOT write usage bullets from scratch per SKU. Inherit the approved category usage chart for this material. Substitute only SKU-specific details (format dimensions, orientation, finish notes).
 
 ---
 
-## 1. Product Details
-- Variation framing per material: chips/pits/crazing trio for zellige; tone/shape/edge/thickness for Cotto. (`variation_trio_applies` in the material config.)
-- Overage: 15-20% standard PLUS the 25% option for a uniform look. Both must appear together.
-- 2-4 sentence romance paragraph leading with what makes this colorway/format distinctive. Adjective order: "traditional, deep warm red" not "a deep, traditional warm red" (§8.1).
+## Frontmatter (match Emanuel's pattern)
 
-## 2. About
-- Craft heritage, artisan sourcing, specific historical context, color spectrum for residential + commercial.
-- This section is craft/history only. Installation guidance does NOT belong here (common audit failure).
+```yaml
+---
+sku: {colorway-format-slug}            # e.g. aegean-4x4
+material: {material-slug}              # matches materials/{material}.md
+url: https://ziatile.com/products/{slug}
+title_tag: "{Colorway} {Format} {Material} | Zia Tile"   # 50-60 chars
+meta_description: "Shop Zia's {colorway} {format} {material}. {one-line distinct value}. Suited for {2 use cases}."   # 140-160 chars
+draft_date: YYYY-MM-DD
+---
+```
 
-## 3. Inherent Variation
-Three bullets: (a) color/tone with specifics, (b) the uniqueness/character, (c) full variation list per material.
+## Body structure (6 H2 sections + top block)
 
-## 4. Preparation and Curation
-Mix boxes; lay out before installation; disperse variation evenly. Overage 15-20% + 25%. For Cotto use "open and mix" (not "blend") and "curation and cuts" rationale (§8.4).
+### Top block (before any H2)
 
-## 5. Installation and Finishing
-All four required (§4.5):
-1. PPE + Prop 65 warning, link ziatile.com/proposition-65-warnings
-2. Drywall flush + mitered edges + Schluter strips (never "trim pieces")
-3. Sealing per the material's `sealing_profile`, applied inline + for all installations including dry spaces
-4. Contact: info@ziatile.com and 310-844-1170 (see ../contact-block.md)
+```
+## {Material}     ← parent material indicator, H2
 
-## 6. Tile Usage
-- Residential and Commercial sub-sections, both as `###` H3 (uniform hierarchy).
-- Freeze/thaw per material config. Pool/spa per material config. Never guess.
-- Inline sealing wording inside each shower/pool/spa bullet, not only the section-end "Sealing Required" row.
-- Slip-resistance spec (minimum 1/8" grout joint + anti-slip product) inside the shower + wet-area bullets only (§4.8 placement accuracy).
+# {Colorway} {Format}     ← SKU name, H1
 
-## 7. How It's Made
-Material-appropriate production narrative. Do not specify kiln type without confirmation (§4.10). No light-exposure patina claims.
+[INSERT CART MODULE HERE]
 
-## 8. Order & Shipping
-Verbatim copy (§11.2):
-- Sample: ships within 2 business days, up to 10 total (max 4 per unique tile), first 5 complimentary.
+---
+
+{Romance paragraph 1: lead with what makes THIS colorway/format distinctive. Named maker, named color, named format use case. AD register. Avoid "stunning/charming/unique" without context.}
+
+{Romance paragraph 2: how this SKU is made + the material variation language for this material. 2-4 sentences.}
+
+[IMAGE: SIZE/THICKNESS DIAGRAM]
+
+#### Order Details + Installation [Locked]
+
+{Overage: 15-20% standard + 25% for uniform look. Both, in one sentence.}
+
+{Installation specifics for this material: hand-set vs mallet-tap, soaking, grout joint, etc. 1-2 paragraphs.}
+```
+
+### ## About
+
+Brief — 2-3 paragraphs. Variation framing + Prop 65 + drywall/mitered/Schluter + sealing direction + contact email. Keep to material-appropriate variation language from `materials/{material}.md`.
+
+### ## Tile Usage
+
+Two sub-sections, both as `###` H3 (uniform hierarchy):
+- `### Residential Usage` — 11-row usage chart with the approved bullets for this material's category
+- `### Commercial Usage` — same 11 rows, commercial context examples
+
+Both charts use the SAME bullets, only swapping the example context. Pull bullets from the approved category template, not from scratch.
+
+Each row's status (✓/✗) must come straight from `materials/{material}.md` frontmatter + the Materials Reference Guide v3 Quick Reference matrix. material-guard enforces this.
+
+### ## How It's Made
+
+Material-appropriate production narrative. 2-3 paragraphs. No kiln-type assertion without confirmation (§4.10). No light-exposure patina claims.
+
+### ## Order & Shipping
+
+Verbatim copy per §11.2:
+- Sample: 2-business-day ship, up to 10 total (max 4 per unique tile), first 5 complimentary, $3 each thereafter.
 - Full: "via a third party LTL carrier service. Pallets will be delivered curbside." + "We will ship the entire order together once all tiles are in stock."
-- Pickup: appointment required, "Monday through Friday from 8am-3pm" (confirm current hours with Alex).
-- International/AK/HI: "should email our team at info@ziatile.com for a custom shipping quote."
+- Pickup: free at LA warehouse, by appointment, "Monday through Friday, 8 am–3 pm" (confirm current hours with Alex).
+- International / AK / HI: "should email our team at info@ziatile.com for a custom shipping quote."
 
-## 9. Frequently Asked Questions
-Minimum 6 questions (§8.5 #9): thickness variation; shower floor installation; crazing (zellige) or patina (Cotto); cleaning; characteristic features; color mixing across the collection. Include the contact CTA in the overage and installation answers.
+### ## Installation Guide
+
+```
+[KEEP]
+```
+
+(The live installation guide is linked; the page reserves space for it.)
+
+### ## Frequently Asked Questions
+
+Minimum 6 questions. Required topics from §8.5 + Emanuel's pattern:
+1. The colorway / what color it is
+2. Application suitability for the main use case (bathroom / kitchen / pool — material-appropriate)
+3. Pool/spa suitability (per material config)
+4. Mixing with other colorways in the same collection
+5. Variation across orders / batch consistency
+6. **Comparison to sibling colorway** — pick the nearest colorway in the same collection and contrast them (Emanuel's aegean → Tidepool comparison is the model)
+
+First sentence of each answer responds to the question directly. Include the contact line (info@ziatile.com + 310-844-1170) in installation-adjacent answers.
 
 ---
-
-## Meta (§10.3)
-- Title: `[Product Name] [Format] | Zia Tile` — 50-60 chars.
-- Description: 140-160 chars; primary keyword + format + >=2 use cases.
 
 ## Pre-submission
-Run the §12 Pre-Submission Checklist (Product Pages block) before handoff. The pipeline gates this via material-guard, terminology-lint, contact-line-check, and person-consistency.
+
+Run §12 Pre-Submission Checklist (Product Pages block). The pipeline gates this via material-guard, terminology-lint, contact-line-check, person-consistency, claims-grounding. Final score via voice-judge + koray-judge (gate ≥80).
+
+## Reference
+
+- Proven SKU draft: `clients/zia-tile/campaigns/01-product-collection-pages/drafts/product-pages/aegean-4x4.md`
+- 4 other signed-off SKUs in the same folder: 2x6-rectangle-oscura, 8x9-hex-red-clay, absinthe-2x6-bejmat-zellige, absinthe-trapezoid
+- STYLE-SYSTEM.md §8.5 (the 9-section spec these compress into 6 visible H2 sections + top block)
