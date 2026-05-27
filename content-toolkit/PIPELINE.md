@@ -31,7 +31,7 @@ clients/zia-tile/
 
 To onboard another client, replicate this shape: write its STYLE-SYSTEM.md, its COMPLIANCE.yml, its contact-block.md, one material config per material it sells, and its page templates.
 
-## The eleven stages (`/run-piece`)
+## The twelve stages (`/run-piece`)
 
 | # | Stage | Tier | Gate |
 |---|---|---|---|
@@ -46,8 +46,11 @@ To onboard another client, replicate this shape: write its STYLE-SYSTEM.md, its 
 | 9 | `/ship` | sonnet | critical |
 | 10 | `voice-judge` | sonnet | gate >=80 |
 | 11 | `koray-judge` | sonnet | gate >=80 |
+| 12 | `/render-html` | haiku | mechanical (only runs after 11 passes) |
 
-Any critical failure halts and writes `BLOCKED.md`. Success writes the draft + `RUN-SUMMARY.md` + `state.json` under `campaigns/{campaign}/runs/{slug}/`.
+Any critical failure halts and writes `BLOCKED.md`. Success writes the MD draft + `{slug}.html` (the delivery artifact) + `RUN-SUMMARY.md` + `state.json` under `campaigns/{campaign}/runs/{slug}/`.
+
+**Delivery format note (2026-05-27):** HTML is the canonical delivery artifact. The MD remains the source of truth for re-runs and gate review, but everything that flows downstream (Google Doc import, CMS paste, client-share link) starts from the rendered HTML. The previous path — upload MD to Drive, let Drive auto-convert — is deprecated because the heading mapping was inconsistent and the convert step burned tokens on every re-upload.
 
 ## Common workflows
 

@@ -33,8 +33,9 @@ Orchestrate a single content piece from brief to scored draft. You are the orche
 | 9 | Ship QA | `/ship` | **critical**: "Not ready to ship" halts |
 | 10 | Voice judge | `voice-judge` | **gate**: score < 80 halts |
 | 11 | Koray judge | `koray-judge` | **gate**: score < 80 halts |
+| 12 | Render HTML | `/render-html` | mechanical: never halts on its own |
 
-Stages 3-7 are the mechanical enforcers (cheap, run first to fail fast). Stages 10-11 are the scored gates (run last on a clean draft).
+Stages 3-7 are the mechanical enforcers (cheap, run first to fail fast). Stages 10-11 are the scored gates (run last on a clean draft). Stage 12 is deterministic — it converts the gate-cleared MD into the canonical `.html` delivery artifact (decision: 2026-05-27). It runs only after all critical stages pass; a halted piece does not produce an `.html`.
 
 ## Halt protocol
 
@@ -47,17 +48,19 @@ On any critical/gate failure:
 
 On all stages passing:
 1. Write the final draft to `clients/{client}/campaigns/{campaign}/drafts/{piece-slug}.md`.
-2. Write `RUN-SUMMARY.md` next to it:
+2. Run stage 12: `/render-html clients/{client}/campaigns/{campaign}/drafts/{piece-slug}.md`. This produces `{piece-slug}.html` next to the MD. The HTML is the delivery artifact; the MD remains the source of truth for re-runs and gate review.
+3. Write `RUN-SUMMARY.md` next to it:
    ```
    # Run summary: {piece-slug}
    - Client / type / material: {...}
-   - Stages: all 11 passed
+   - Stages: all 12 passed
    - Voice score: {n}/100
    - Koray score: {n}/100
    - Verify-with-Alex items: {list from material-guard, or None}
-   - Model tiers used: opus (orchestrator), sonnet (draft/judges), haiku (enforcers)
+   - Delivery artifact: {piece-slug}.html
+   - Model tiers used: opus (orchestrator), sonnet (draft/judges), haiku (enforcers + render)
    ```
-3. Report the path + both scores to the user.
+4. Report the MD path, the HTML path, and both scores to the user.
 
 ## State file shape
 
@@ -82,4 +85,5 @@ On all stages passing:
 - Never skip material-guard. A material error is a QA-failing factual error.
 - Never auto-pass a `verify`-confidence material rule; surface it in RUN-SUMMARY for Alex.
 - Persist state after every stage so `--resume` always works.
+- Stage 12 (HTML render) only runs after stage 11 passes. A halted piece does not produce an HTML artifact.
 - Do not use em dashes anywhere.
