@@ -70,6 +70,12 @@ Any critical failure halts and writes `BLOCKED.md`. Success writes the MD draft 
 ```
 Fans out one Task() sub-agent per piece inside a single Claude Code session. Use this instead of running `/run-piece` in a loop — same plan, fraction of the wall time, no per-piece session burn. See `commands/parallel-pieces.md`.
 
+**Export a finished piece to Google Drive (CSM delivery)**
+```
+/export-gdrive clients/zia-tile/campaigns/01-product-collection-pages/runs/{slug}/draft.html --client zia-tile --campaign 01-product-collection-pages
+```
+Uploads the HTML as a Google Doc into the configured Drive folder and appends a row to the tracker sheet Alex Bellanger shares with the client. Operator-triggered (not part of `/run-piece` automatic flow) because it's irreversible and pieces sometimes need human review before reaching the CSM. Requires one-time setup (OAuth + `clients/{client}/delivery.yml`) — see `commands/export-gdrive.md`.
+
 **Promote a v3 revision (Stream A)**
 ```
 /promote-v3 clients/zia-tile/campaigns/01-product-collection-pages/drafts/v3/10-terrazzo.md
