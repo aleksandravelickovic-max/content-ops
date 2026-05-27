@@ -4,12 +4,12 @@ display_name: Zellige
 glazed: true
 origin: Morocco
 freeze_thaw: not_suitable
-pools_spas: verify
+pools_spas: suitable
 variation_trio_applies: true
 variation_language: [chips, pits, crazing, surface texture, sheen, dynamic glazes, innate variation]
 sealing_profile: zellige-glazed
 confidence: high
-source: STYLE-SYSTEM.md §3.1, §4.1, §4.5, §4.9, §4.11, §10.1, §11
+source: STYLE-SYSTEM.md §3.1, §4.1, §4.5, §4.9, §4.11, §10.1, §11; raw/research/materials-reference.md v3 Quick Reference (Emanuel, 2026-05-20, confirms pool/spa)
 ---
 
 # Zellige (glazed) — material rules
@@ -20,9 +20,9 @@ Handcrafted Moroccan clay tile, 800+ years of tradition. Glazed. This file cover
 
 NOT suitable for outdoor installation in freeze/thaw climates. State this plainly and affirmatively (§4.1). For zellige, affirmative-prose disclosure in the body is non-negotiable, not just the usage chart.
 
-## Pools & spas — VERIFY
+## Pools & spas — SUITABLE
 
-STYLE-SYSTEM does not state a pool/spa rule for zellige explicitly. Confirm with Alex before asserting pool/spa suitability. Do not auto-approve.
+Per the Materials Reference Guide v3 Quick Reference matrix: Zellige Pool/Spa = ✓. Glazed zellige is pool/spa approved. (Note: Unglazed Zellige is NOT — see `unglazed-zellige.md`. Do not transfer this rule.) Confirmed via the live Tile Usage chart precedence.
 
 ## Sealing — profile: zellige-glazed
 
