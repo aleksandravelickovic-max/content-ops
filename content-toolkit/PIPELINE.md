@@ -61,6 +61,12 @@ Any critical failure halts and writes `BLOCKED.md`. Success writes the draft + `
 /draft-product-page zia-tile cotto "Red Clay" 8x8
 ```
 
+**Batch of N pieces in parallel (THE speed lever)** — same Roto-Rooter pattern
+```
+/parallel-pieces zia-tile product cotto 12
+```
+Fans out one Task() sub-agent per piece inside a single Claude Code session. Use this instead of running `/run-piece` in a loop — same plan, fraction of the wall time, no per-piece session burn. See `commands/parallel-pieces.md`.
+
 **Promote a v3 revision (Stream A)**
 ```
 /promote-v3 clients/zia-tile/campaigns/01-product-collection-pages/drafts/v3/10-terrazzo.md
@@ -92,6 +98,10 @@ Any critical failure halts and writes `BLOCKED.md`. Success writes the draft + `
 
 ## Guarantees and limits
 
-- **No invention.** Material rules come from STYLE-SYSTEM + audited drafts. Unconfirmed rules are `verify`-gated and surfaced for Alex, never asserted.
-- **material-guard is the safety net** for the Cotto vs Cotto Allende trap (opposite pool + freeze/thaw rules). It treats a wrong material rule as a critical, QA-failing error.
+- **No invention.** Material rules come from STYLE-SYSTEM + `raw/research/materials-reference.md` (Emanuel's v3 Quick Reference matrix, live-site precedence). Unconfirmed rules are `verify`-gated and surfaced for Alex, never asserted.
+- **material-guard is the safety net** for three cross-product traps where same-family materials have OPPOSITE rules: Cotto vs Cotto Allende (pool/spa + freeze/thaw), Glazed vs Unglazed Zellige (pool/spa), Marble vs Roman Mosaics (pool/spa + Ext Non-F/T). Treats a wrong material rule as a critical, QA-failing error.
 - The gates do not replace editorial review. Aleksandra + Emanuel pair review and Jamie sign-off still apply; the gates raise the floor so review starts from a clean draft.
+
+## When the system gets a wrong draft past the gates
+
+That's input, not a failure. Read `IMPROVEMENT-LOOP.md` — the loop is: diagnose where the wrong claim came from (prompt, config, or knowledge gap), fix the source, re-run only the failed piece, commit. The 2026-05-25 material reconciliation (10 atomic commits flipping freeze/thaw and pool rules to match Emanuel's reference) is the canonical example of fixing the source instead of the symptom.
