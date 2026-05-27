@@ -1,0 +1,30 @@
+# Zia Tile delivery config — example. Copy to delivery.yml and fill in real IDs.
+#
+# Used by /export-gdrive (scripts/export-gdrive.py). Specifies where rendered
+# HTML drafts go in Google Drive (as auto-converted Google Docs) and where the
+# resulting links are logged for Alex Bellanger's client-share workflow.
+#
+# Do NOT commit a populated delivery.yml — the sheet and folder IDs are not
+# secret per se but live in Aleksandra's working Drive. Add delivery.yml to
+# .gitignore (or just .gitkeep this example file and create the real file
+# locally).
+
+# The Drive folder where uploaded Docs land. Get the ID from the folder URL:
+#   https://drive.google.com/drive/folders/<THIS_PART>
+drive_folder_id: "REPLACE_WITH_FOLDER_ID"
+
+# The tracking Sheet ID. Get from the sheet URL:
+#   https://docs.google.com/spreadsheets/d/<THIS_PART>/edit
+sheet_id: "REPLACE_WITH_SHEET_ID"
+
+# The tab name within the sheet where rows are appended.
+sheet_tab: "Deliveries"
+
+# Column letters per logical field. Append handles row insertion; the script
+# places each value at the configured letter. Leave a key out to skip it.
+columns:
+  date: "A"
+  piece: "B"
+  campaign: "C"
+  gdoc_link: "D"
+  source_html: "E"

@@ -14,6 +14,10 @@
 .env
 .env.local
 
+# Per-client Drive/Sheets delivery configs (carry Aleksandra's folder + sheet IDs).
+# The .example schema reference is checked in; the populated file is not.
+clients/*/delivery.yml
+
 # Ruff
 .ruff_cache/
 
