@@ -229,6 +229,11 @@ For a client onboarded to the pipeline (Zia Tile is the reference), `clients/{cl
 - `page-templates/{collection,product,blog}.md` — approved section structure per content type.
 - `contact-block.md` — the required contact line (`contact-line-check` enforces presence).
 - `COMPLIANCE.yml` — fail-closed banned terms + technical guards. Ports to every client.
+- `_approved/{blog,product,collection}/` — living library of client-approved exemplars. Judges sample from here to calibrate the voice and structural floor. See `_approved/README.md` for the add/provenance rules. Add to it whenever Jamie signs off a piece.
+
+### Team working notes (per-operator additions to STYLE-SYSTEM.md)
+
+Operator-specific rules go into `clients/{client}/STYLE-SYSTEM.md` §13 with `### {Operator} — {scope}` attribution. No branches, no separate files — the agent only sees what's in `STYLE-SYSTEM.md`. Promote a note into the main numbered sections once it's been reinforced by two or more pieces. Decided in the 2026-05-27 sync to resolve Andresa's merge-conflict concern without forking the source of truth.
 
 ### Agents (in addition to the writing/editing agents)
 
