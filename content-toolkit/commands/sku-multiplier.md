@@ -44,9 +44,15 @@ For each SKU:
 After all SKUs:
 - Write a `MULTIPLIER-SUMMARY.md` listing each SKU, its file, gate status, and any verify-with-Alex items.
 
-## Velocity breaker
+## Parallel execution (no velocity breaker)
 
-Generate at most 5 SKUs per batch. For larger sets, generate 5, write the summary, and tell the user to re-run for the next batch (mirrors the enterprise `sseo` rate pattern). This keeps review tractable and avoids runaway generation.
+Spawn one parallel sub-agent per SKU using the Task tool in a single response. The Roto-Rooter pipeline pattern runs N sub-agents inside one Claude Code session; this command does the same. The earlier "max 5 per batch" breaker was overly conservative and is removed — there is no enforced cap.
+
+Realistic limits to keep in mind (not enforced here, but governs how many you should request):
+- Claude Code Max plan session token budget. Rotate plans for very large batches.
+- The number of distinct review surfaces a human can hold (Aleksandra + Emanuel pair review).
+
+For larger sets, prefer one `/sku-multiplier` call that fans out all SKUs in parallel inside the same session over many serial small calls. That is the agentic-ops speed lever the team needs.
 
 ## Output format
 
@@ -69,5 +75,4 @@ Generate at most 5 SKUs per batch. For larger sets, generate 5, write the summar
 
 - Inherit the usage chart. Never write per-SKU charts from scratch.
 - Do not invent colorways, formats, or dimensions not in STYLE-SYSTEM.md or raw/.
-- Max 5 SKUs per run.
 - Do not use em dashes.
