@@ -245,12 +245,15 @@ Scored judges (sonnet, run last on a clean draft, gate at >=80):
 
 ### Commands
 
-- `/run-piece <client> <type> <material> <topic>` — full pipeline, state file, `--resume`.
+- `/parallel-pieces <client> <type> <material> <count|list>` — **the scale lever.** Fans out N pieces as parallel Task() sub-agents inside one Claude Code session. Same RR pattern. Use this instead of running `/run-piece` in a loop.
+- `/run-piece <client> <type> <material> <topic>` — single-piece pipeline, state file, `--resume`. Use for one careful piece.
 - `/draft-collection-page`, `/draft-product-page` — type-specific drafters with inline self-checks.
 - `/audit-fix <template> [--apply]` — apply campaign `audit-report.md` findings.
 - `/promote-v3 <v3-file> [--apply]` — gate a v3 revision for promotion.
-- `/sku-multiplier <client> <material> <campaign>` — one collection page into many SKU pages (max 5 per batch).
+- `/sku-multiplier <client> <material> <campaign>` — one collection page into many SKU pages (no cap; runs in parallel under the hood).
 - `/batch-review <glob>` — aggregate gate report across a backlog.
+
+When a gate fails or the team rejects a piece, follow `content-toolkit/IMPROVEMENT-LOOP.md`: fix the source (prompt, config, or knowledge), commit, then re-run only the failed pieces. Do not re-prompt the model harder.
 
 ### Hard rule for all generated content
 
