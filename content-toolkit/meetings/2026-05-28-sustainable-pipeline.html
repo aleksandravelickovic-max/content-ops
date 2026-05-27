@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>From Sprint to System — LG Ent Content Production Platform</title>
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --bg-card: #14141a;
+    --bg-elev: #1c1c24;
+    --border: #2a2a34;
+    --border-strong: #3a3a48;
+    --fg: #f4f4f6;
+    --fg-dim: #a3a3ad;
+    --fg-mute: #6b6b76;
+    --accent: #8b5cf6;
+    --accent-dim: #6d28d9;
+    --accent-bg: rgba(139, 92, 246, 0.10);
+    --pass: #10b981;
+    --pass-bg: rgba(16, 185, 129, 0.12);
+    --fail: #f43f5e;
+    --fail-bg: rgba(244, 63, 94, 0.12);
+    --warn: #f59e0b;
+    --warn-bg: rgba(245, 158, 11, 0.12);
+    --mono: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.5;
+    overflow: hidden;
+    font-feature-settings: 'cv11', 'ss01';
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---------- LAYOUT ---------- */
+  .app {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    height: 100vh;
+  }
+
+  /* ---------- SIDEBAR ---------- */
+  .sidebar {
+    background: #08080c;
+    border-right: 1px solid var(--border);
+    padding: 24px 18px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .brand {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .brand-sub {
+    font-size: 11px;
+    color: var(--fg-mute);
+    margin-bottom: 28px;
+  }
+  .nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+  }
+  .nav-list li {
+    font-size: 13px;
+    color: var(--fg-dim);
+    padding: 7px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    user-select: none;
+    transition: all .12s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .nav-list li:hover {
+    background: var(--bg-card);
+    color: var(--fg);
+  }
+  .nav-list li.active {
+    background: var(--accent-bg);
+    color: var(--fg);
+    font-weight: 500;
+  }
+  .nav-list li .num {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--fg-mute);
+    width: 16px;
+  }
+  .nav-list li.active .num { color: var(--accent); }
+  .nav-footer {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 11px;
+    color: var(--fg-mute);
+    line-height: 1.6;
+  }
+
+  /* ---------- MAIN ---------- */
+  main {
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+  }
+  .stage {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 56px 64px 80px;
+  }
+  .slide { display: none; animation: fadeIn .25s ease; }
+  .slide.active { display: block; }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ---------- HEADERS ---------- */
+  .slide-meta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 22px;
+  }
+  .slide-num {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--accent);
+    background: var(--accent-bg);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+  .slide-tag {
+    font-size: 11px;
+    color: var(--fg-mute);
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+  }
+  h1 {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+  h1.xl { font-size: 64px; }
+  h2 {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    margin: 32px 0 14px;
+  }
+  h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 22px 0 10px;
+    color: var(--fg);
+  }
+  .subtitle {
+    font-size: 18px;
+    color: var(--fg-dim);
+    margin-bottom: 24px;
+    max-width: 720px;
+  }
+  p { color: var(--fg-dim); margin-bottom: 14px; font-size: 15px; }
+  p strong { color: var(--fg); font-weight: 600; }
+  ul, ol { padding-left: 22px; color: var(--fg-dim); font-size: 15px; }
+  ul li, ol li { margin-bottom: 8px; }
+  ul li strong, ol li strong { color: var(--fg); }
+
+  /* ---------- COMPONENTS ---------- */
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 14px 0;
+  }
+  .card-accent {
+    border-color: var(--accent-dim);
+    background: linear-gradient(180deg, var(--accent-bg) 0%, var(--bg-card) 100%);
+  }
+  .pull-quote {
+    border-left: 3px solid var(--accent);
+    padding: 16px 22px;
+    background: var(--accent-bg);
+    border-radius: 0 8px 8px 0;
+    font-size: 18px;
+    color: var(--fg);
+    font-style: italic;
+    margin: 22px 0;
+    line-height: 1.5;
+  }
+  .pull-quote .who {
+    display: block;
+    font-style: normal;
+    font-size: 13px;
+    color: var(--fg-mute);
+    margin-top: 10px;
+  }
+
+  /* code blocks */
+  code, pre {
+    font-family: var(--mono);
+    font-size: 13px;
+  }
+  code.inline {
+    background: var(--bg-elev);
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    color: #c4b5fd;
+    font-size: 12.5px;
+  }
+  pre {
+    background: #06060a;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    overflow-x: auto;
+    color: #e4e4e7;
+    line-height: 1.5;
+    margin: 12px 0;
+  }
+  pre .c { color: #6b6b76; }       /* comment */
+  pre .k { color: #c4b5fd; }       /* keyword */
+  pre .s { color: #86efac; }       /* string */
+  pre .a { color: #fcd34d; }       /* arg */
+
+  /* grid layouts */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 16px 0;
+  }
+  .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+    margin: 16px 0;
+  }
+  .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin: 16px 0;
+  }
+
+  /* stat card */
+  .stat {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+    text-align: left;
+  }
+  .stat .n {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--accent);
+    font-family: var(--mono);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat .lbl {
+    font-size: 12px;
+    color: var(--fg-dim);
+    line-height: 1.4;
+  }
+
+  /* table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 13.5px;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  th {
+    color: var(--fg-mute);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    background: var(--bg-card);
+  }
+  td { color: var(--fg-dim); }
+  td strong { color: var(--fg); }
+  td code.inline { font-size: 12px; }
+
+  /* pills */
+  .pill {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    font-family: var(--mono);
+    letter-spacing: 0.02em;
+  }
+  .pill.pass { background: var(--pass-bg); color: var(--pass); }
+  .pill.fail { background: var(--fail-bg); color: var(--fail); }
+  .pill.warn { background: var(--warn-bg); color: var(--warn); }
+  .pill.info { background: var(--accent-bg); color: #c4b5fd; }
+
+  /* step list (vertical numbered) */
+  .steps { display: flex; flex-direction: column; gap: 12px; margin: 18px 0; }
+  .step {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 18px;
+  }
+  .step .n {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: white;
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .step h4 {
+    font-size: 15px; font-weight: 600; color: var(--fg); margin-bottom: 4px;
+  }
+  .step p { font-size: 13.5px; margin-bottom: 0; color: var(--fg-dim); }
+  .step .cmd {
+    margin-top: 8px;
+    font-family: var(--mono);
+    font-size: 12px;
+    background: #06060a;
+    border: 1px solid var(--border);
+    padding: 6px 10px;
+    border-radius: 4px;
+    color: #c4b5fd;
+    display: inline-block;
+  }
+
+  /* flow diagram */
+  .flow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 22px 0;
+    padding: 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+  }
+  .flow-node {
+    background: var(--bg-elev);
+    border: 1px solid var(--border-strong);
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 12.5px;
+    font-family: var(--mono);
+    color: var(--fg);
+    white-space: nowrap;
+  }
+  .flow-node.accent {
+    background: var(--accent-bg);
+    border-color: var(--accent);
+    color: #c4b5fd;
+  }
+  .flow-node.pass { background: var(--pass-bg); border-color: var(--pass); color: var(--pass); }
+  .flow-node.fail { background: var(--fail-bg); border-color: var(--fail); color: var(--fail); }
+  .flow-arrow {
+    color: var(--fg-mute);
+    font-size: 16px;
+    font-family: var(--mono);
+  }
+
+  /* serial vs parallel diagram */
+  .pattern-compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 22px 0;
+  }
+  .pattern-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+  }
+  .pattern-box.bad { border-color: rgba(244, 63, 94, 0.4); }
+  .pattern-box.good { border-color: rgba(16, 185, 129, 0.4); }
+  .pattern-title {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 10px;
+  }
+  .pattern-box.bad .pattern-title { color: var(--fail); }
+  .pattern-box.good .pattern-title { color: var(--pass); }
+  .pattern-blocks {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    margin: 12px 0;
+  }
+  .pblock {
+    width: 16px; height: 16px;
+    background: var(--bg-elev);
+    border-radius: 3px;
+    border: 1px solid var(--border-strong);
+  }
+  .pattern-box.bad .pblock { background: rgba(244, 63, 94, 0.3); }
+  .pattern-box.good .pblock { background: rgba(16, 185, 129, 0.3); }
+  .pattern-meta {
+    font-size: 12px;
+    color: var(--fg-dim);
+    margin-top: 10px;
+    font-family: var(--mono);
+  }
+  .pattern-meta strong { color: var(--fg); }
+
+  /* TOC / column lists */
+  .cols-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin: 16px 0;
+  }
+
+  /* tier cards (haiku/sonnet/opus) */
+  .tier {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+  }
+  .tier .label {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--fg-mute);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .tier h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--accent);
+  }
+  .tier p { font-size: 13px; margin-bottom: 6px; }
+  .tier ul { padding-left: 16px; font-size: 13px; }
+  .tier li { margin-bottom: 4px; }
+
+  /* anti-pattern row */
+  .anti {
+    display: grid;
+    grid-template-columns: 28px 1fr 1fr;
+    gap: 14px;
+    padding: 14px 18px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin: 10px 0;
+    align-items: start;
+  }
+  .anti .x { color: var(--fail); font-size: 18px; font-weight: 700; }
+  .anti .a-label { font-size: 11px; color: var(--fg-mute); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
+  .anti .a-bad { color: var(--fg); font-size: 14px; }
+  .anti .a-good { color: var(--pass); font-size: 14px; }
+  .anti .a-good::before { content: "→ "; color: var(--fg-mute); }
+
+  /* footer / controls */
+  .controls {
+    position: fixed;
+    bottom: 20px;
+    right: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 6px 10px;
+    z-index: 50;
+    backdrop-filter: blur(8px);
+  }
+  .controls button {
+    background: transparent;
+    border: none;
+    color: var(--fg-dim);
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all .12s;
+  }
+  .controls button:hover {
+    background: var(--bg-elev);
+    color: var(--fg);
+  }
+  .controls .counter {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--fg-mute);
+    padding: 0 8px;
+    min-width: 50px;
+    text-align: center;
+  }
+
+  .kbd-hint {
+    position: fixed;
+    bottom: 24px;
+    left: 285px;
+    font-size: 11px;
+    color: var(--fg-mute);
+    font-family: var(--mono);
+  }
+  .kbd-hint kbd {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    color: var(--fg-dim);
+  }
+
+  .closer {
+    text-align: center;
+    padding: 60px 0 20px;
+  }
+  .closer .big {
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+  }
+  .closer .sub {
+    font-size: 18px;
+    color: var(--fg-dim);
+    margin-bottom: 32px;
+  }
+
+  /* print */
+  @media print {
+    .sidebar, .controls, .kbd-hint { display: none; }
+    .slide { display: block !important; page-break-after: always; }
+    .app { display: block; }
+    main { overflow: visible; }
+    body { background: white; color: black; }
+  }
+</style>
+</head>
+<body>
+
+<div class="app">
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+    <div class="brand">LG Ent CPP</div>
+    <div class="brand-sub">Team meeting · May 28, 2026</div>
+    <ol class="nav-list" id="nav"></ol>
+    <div class="nav-footer">
+      Presenter: Lucas Z.<br>
+      Repo: <code>content-ops/main</code><br>
+      Live since 2026-05-19
+    </div>
+  </aside>
+
+  <!-- ===== STAGE ===== -->
+  <main>
+    <div class="stage" id="stage">
+
+      <!-- ============ SLIDE 1 — TITLE ============ -->
+      <section class="slide active" data-title="Title">
+        <div class="slide-meta">
+          <span class="slide-num">01 / 15</span>
+          <span class="slide-tag">Opening</span>
+        </div>
+        <h1 class="xl">From Sprint<br>to System.</h1>
+        <p class="subtitle" style="font-size:22px; max-width:780px;">
+          Making LG Ent content production <strong>sustainable</strong> and <strong>self-improving</strong>.
+          A walkthrough of how the pipeline actually scales, and how we keep getting better at it every batch.
+        </p>
+        <div class="grid-4" style="margin-top:48px;">
+          <div class="stat"><div class="n">15</div><div class="lbl">agents live<br>on content-ops</div></div>
+          <div class="stat"><div class="n">14</div><div class="lbl">commands<br>in the toolkit</div></div>
+          <div class="stat"><div class="n">13</div><div class="lbl">material configs<br>for Zia Tile</div></div>
+          <div class="stat"><div class="n">53+</div><div class="lbl">commits pushed<br>to Forge</div></div>
+        </div>
+        <p style="margin-top:36px; color:var(--fg-mute); font-size:13px;">
+          Audience: Aleksandra, Emanuel. (Henry / Manick if they join.)
+          Time: ~30 min. Goal: leave with a process the team can execute on Monday.
+        </p>
+      </section>
+
+      <!-- ============ SLIDE 2 — THE REFRAME ============ -->
+      <section class="slide" data-title="The reframe">
+        <div class="slide-meta">
+          <span class="slide-num">02 / 15</span>
+          <span class="slide-tag">Mental model</span>
+        </div>
+        <h1>One sentence to reset on.</h1>
+        <div class="pull-quote" style="margin-top:30px; font-size:22px;">
+          You don't need a separate Roto-Rooter-style app. The same pattern that produces 1,000+ RR pages
+          runs <strong>natively inside Claude Code</strong>: one session, one parallel command,
+          N pieces fan out as sub-agents at the same time. The repo already has it.
+          <span class="who">The agentic pivot, in plain English</span>
+        </div>
+
+        <div class="cols-2" style="margin-top:36px;">
+          <div>
+            <h3>What this is NOT</h3>
+            <ul>
+              <li>A web app the team needs to log into.</li>
+              <li>A black box that calls OpenRouter behind the scenes.</li>
+              <li>A separate codebase from what you're already using.</li>
+              <li>An AI that replaces the writers' judgment.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>What this IS</h3>
+            <ul>
+              <li>A <strong>toolkit of Claude Code commands</strong> the team runs.</li>
+              <li>A <strong>repo</strong> where rules + materials + voice live (and get edited).</li>
+              <li>A <strong>parallel fan-out pattern</strong> that scales without burning sessions.</li>
+              <li>A <strong>feedback loop</strong>: every editorial fix becomes a permanent rule.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SLIDE 3 — WHERE WE ARE ============ -->
+      <section class="slide" data-title="Where we are">
+        <div class="slide-meta">
+          <span class="slide-num">03 / 15</span>
+          <span class="slide-tag">Current state</span>
+        </div>
+        <h1>What's already live on content-ops.</h1>
+        <p class="subtitle">Snapshot as of today, May 27. Everything below is on <code class="inline">main</code> and the team has been using it.</p>
+
+        <div class="grid-3" style="margin-top:24px;">
+          <div class="card">
+            <h3 style="margin-top:0;">Per-client infrastructure</h3>
+            <p style="font-size:13px;">Everything Zia needs to be its own tenant in the toolkit:</p>
+            <ul style="font-size:13px;">
+              <li><code class="inline">STYLE-SYSTEM.md</code> &mdash; canonical voice</li>
+              <li><code class="inline">COMPLIANCE.yml</code> &mdash; fail-closed terms</li>
+              <li><code class="inline">contact-block.md</code> &mdash; required line</li>
+              <li>12 material configs + schema</li>
+              <li>3 page templates (collection, product, blog)</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 style="margin-top:0;">Mechanical enforcers · Haiku</h3>
+            <p style="font-size:13px;">Cheap gates that block factual errors before review:</p>
+            <ul style="font-size:13px;">
+              <li><code class="inline">material-guard</code></li>
+              <li><code class="inline">terminology-lint</code></li>
+              <li><code class="inline">contact-line-check</code></li>
+              <li><code class="inline">person-consistency</code></li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 style="margin-top:0;">Scored judges · Sonnet</h3>
+            <p style="font-size:13px;">Quality gates. Pieces must score ≥ 80:</p>
+            <ul style="font-size:13px;">
+              <li><code class="inline">voice-judge</code> &mdash; brand register</li>
+              <li><code class="inline">koray-judge</code> &mdash; SEO + entity</li>
+              <li><code class="inline">claims-grounding</code> &mdash; no invented facts</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>Commands</h3>
+        <div class="grid-2">
+          <div class="card">
+            <h4 style="font-size:13px; color:var(--fg-mute); margin-bottom:8px; text-transform:uppercase; letter-spacing:0.06em;">Drafting</h4>
+            <ul style="font-size:13.5px;">
+              <li><code class="inline">/run-piece</code> &mdash; single piece, full pipeline</li>
+              <li><code class="inline">/draft-collection-page</code></li>
+              <li><code class="inline">/draft-product-page</code></li>
+              <li><code class="inline">/sku-multiplier</code> &mdash; collection → SKUs</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4 style="font-size:13px; color:var(--fg-mute); margin-bottom:8px; text-transform:uppercase; letter-spacing:0.06em;">Scale + review</h4>
+            <ul style="font-size:13.5px;">
+              <li><code class="inline">/parallel-pieces</code> <span class="pill info">NEW</span> &mdash; THE scale lever</li>
+              <li><code class="inline">/batch-review</code> &mdash; read-only matrix</li>
+              <li><code class="inline">/promote-v3</code> &mdash; Stream A promote</li>
+              <li><code class="inline">/audit-fix</code> &mdash; Stream C fixer</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card card-accent" style="margin-top:18px;">
+          <strong>Verified end-to-end.</strong> A real <em>Cotto Allende</em> collection page was produced through the full pipeline on 2026-05-19. All 7 gates passed (voice 86, koray 84). Output committed under
+          <code class="inline">clients/zia-tile/campaigns/01-product-collection-pages/runs/collection-cotto-allende/</code>.
+        </div>
+      </section>
+
+      <!-- ============ SLIDE 4 — THE PROBLEM ============ -->
+      <section class="slide" data-title="The problem we hit">
+        <div class="slide-meta">
+          <span class="slide-num">04 / 15</span>
+          <span class="slide-tag">Diagnosis</span>
+        </div>
+        <h1>The speed complaint, diagnosed.</h1>
+        <p class="subtitle">Aleksandra surfaced what looked like one problem. Underneath it were three.</p>
+
+        <div class="pull-quote">
+          We've been utilizing the CC setup but the speed is the issue.
+          Yes, we've been running into usage blocks A LOT.
+          <span class="who">Aleksandra Velickovic, in DMs &mdash; the trigger for today's work</span>
+        </div>
+
+        <h2 style="margin-top:36px;">Three real gaps, not one</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="n">1</div>
+            <div>
+              <h4>No parallel orchestrator</h4>
+              <p>The team was running <code class="inline">/run-piece</code> serially &mdash; one piece per Claude Code session. That's the most expensive way to use the plan: every piece pays a fresh session token budget.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="n">2</div>
+            <div>
+              <h4>No documented improvement loop</h4>
+              <p>When a gate failed, the instinct was to re-prompt or hand-edit. That keeps the pipeline producing the same mistake on the next batch &mdash; the system never gets smarter.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="n">3</div>
+            <div>
+              <h4>Material configs had drifted</h4>
+              <p>Six material rule errors vs. Emanuel's Materials Reference Guide v3 (live-site truth). <code class="inline">material-guard</code> would have let factual mistakes pass on terrazzo, ceramics, limestone, cantera, marble, roman-mosaics.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-accent" style="margin-top:24px;">
+          <strong>All three are fixed as of today (17 commits, Wave 5).</strong>
+          The rest of this deck is how the team now operates around the fixes &mdash; the sustainable, self-improving process.
+        </div>
+      </section>
+
+      <!-- ============ SLIDE 5 — THE THREE PILLARS ============ -->
+      <section class="slide" data-title="Three pillars">
+        <div class="slide-meta">
+          <span class="slide-num">05 / 15</span>
+          <span class="slide-tag">Framework</span>
+        </div>
+        <h1>Three pillars of a sustainable pipeline.</h1>
+        <p class="subtitle">These are not features. They're <em>practices</em>. If we keep doing all three, the system compounds. If we drop any one, we slide back to manual writing with extra steps.</p>
+
+        <div class="grid-3" style="margin-top:24px;">
+          <div class="card card-accent">
+            <div style="font-family:var(--mono); font-size:11px; color:var(--accent); margin-bottom:8px; letter-spacing:0.08em;">PILLAR 01</div>
+            <h3 style="margin-top:0; font-size:22px;">Parallel execution</h3>
+            <p style="font-size:14px;">Stop running pieces one at a time. Fan out N pieces in one session as concurrent sub-agents. Same plan, fraction of the wall time.</p>
+            <p style="font-size:13px; color:var(--fg-mute); margin-bottom:0;">Tool: <code class="inline">/parallel-pieces</code></p>
+          </div>
+          <div class="card card-accent">
+            <div style="font-family:var(--mono); font-size:11px; color:var(--accent); margin-bottom:8px; letter-spacing:0.08em;">PILLAR 02</div>
+            <h3 style="margin-top:0; font-size:22px;">Self-improvement loop</h3>
+            <p style="font-size:14px;">Every gate failure or editorial rejection becomes a permanent rule. We fix the source (prompt, config, knowledge), not the symptom.</p>
+            <p style="font-size:13px; color:var(--fg-mute); margin-bottom:0;">Tool: <code class="inline">IMPROVEMENT-LOOP.md</code></p>
+          </div>
+          <div class="card card-accent">
+            <div style="font-family:var(--mono); font-size:11px; color:var(--accent); margin-bottom:8px; letter-spacing:0.08em;">PILLAR 03</div>
+            <h3 style="margin-top:0; font-size:22px;">Living knowledge base</h3>
+            <p style="font-size:14px;">The repo is the source of truth, not the model. Style, voice, compliance, material rules live in files. Git is the system's memory.</p>
+            <p style="font-size:13px; color:var(--fg-mute); margin-bottom:0;">Tool: <code class="inline">clients/{name}/</code></p>
+          </div>
+        </div>
+
+        <h3>Why all three matter together</h3>
+        <p>Parallel without improvement = fast bad content. Improvement without parallel = slow good content. Both without a living knowledge base = a system that forgets between sessions. Only with all three running do we get a pipeline that gets <strong>both faster and better</strong> over time.</p>
+      </section>
+
+      <!-- ============ SLIDE 6 — PILLAR 1: PARALLEL ============ -->
+      <section class="slide" data-title="Pillar 1 · Parallel">
+        <div class="slide-meta">
+          <span class="slide-num">06 / 15</span>
+          <span class="slide-tag">Pillar 01</span>
+        </div>
+        <h1>Parallel execution.</h1>
+        <p class="subtitle">The session is the bottleneck, not the work. The Max plan can comfortably orchestrate 20-50 pieces fanned out concurrently &mdash; same pattern Lucas runs on Roto-Rooter for 1,000+ pages.</p>
+
+        <div class="pattern-compare">
+          <div class="pattern-box bad">
+            <div class="pattern-title">✗ Serial · what we were doing</div>
+            <div class="pattern-blocks">
+              <div class="pblock"></div><div class="pblock"></div><div class="pblock"></div>
+              <div class="pblock"></div><div class="pblock"></div><div class="pblock"></div>
+              <div class="pblock"></div><div class="pblock"></div><div class="pblock"></div>
+              <div class="pblock"></div>
+            </div>
+            <p style="font-size:13px; color:var(--fg-dim); margin:0;">
+              10 pieces &times; 12-15 min &times; 1 fresh session each
+            </p>
+            <p class="pattern-meta">
+              <strong>10 sessions</strong> · ~2-3 hours wall time<br>
+              Rate limits hit constantly
+            </p>
+          </div>
+
+          <div class="pattern-box good">
+            <div class="pattern-title">✓ Parallel · what we do now</div>
+            <div style="display:flex; gap:6px; margin:12px 0;">
+              <div style="width:60px; height:8px; background:rgba(16,185,129,0.4); border-radius:3px;"></div>
+              <div style="width:60px; height:8px; background:rgba(16,185,129,0.4); border-radius:3px;"></div>
+              <div style="width:60px; height:8px; background:rgba(16,185,129,0.4); border-radius:3px;"></div>
+            </div>
+            <div style="display:flex; gap:6px; margin:6px 0;">
+              <div style="width:60px; height:8px; background:rgba(16,185,129,0.4); border-radius:3px;"></div>
+              <div style="width:60px; height:8px; background:rgba(16,185,129,0.4); border-radius:3px;"></div>
+              <div style="width:60px; height:8px; background:rgba(16,185,129,0.4); border-radius:3px;"></div>
+            </div>
+            <div style="display:flex; gap:6px; margin:6px 0;">
+              <div style="width:60px; height:8px; background:rgba(16,185,129,0.4); border-radius:3px;"></div>
+              <div style="width:60px; height:8px; background:rgba(16,185,129,0.4); border-radius:3px;"></div>
+              <div style="width:60px; height:8px; background:rgba(16,185,129,0.4); border-radius:3px;"></div>
+              <div style="width:60px; height:8px; background:rgba(16,185,129,0.4); border-radius:3px;"></div>
+            </div>
+            <p style="font-size:13px; color:var(--fg-dim); margin-top:10px; margin-bottom:0;">
+              All 10 pieces in one session, concurrent sub-agents
+            </p>
+            <p class="pattern-meta">
+              <strong>1 session</strong> · ~25-35 min wall time<br>
+              No rate-limit pressure
+            </p>
+          </div>
+        </div>
+
+        <h3>How to invoke it</h3>
+        <pre><span class="c"># 12 SKUs in the Cotto colorway, in parallel:</span>
+<span class="k">/parallel-pieces</span> <span class="a">zia-tile product cotto 12</span>
+
+<span class="c"># Explicit list (re-running specific failed pieces):</span>
+<span class="k">/parallel-pieces</span> <span class="a">zia-tile product cotto <span class="s">"red-clay-8x8,adobe-4x4"</span></span>
+
+<span class="c"># Derived from an approved collection:</span>
+<span class="k">/parallel-pieces</span> <span class="a">zia-tile product zellige 8 --from-collection zellige-collection</span></pre>
+
+        <h3>When to use what</h3>
+        <table>
+          <thead>
+            <tr><th>Situation</th><th>Use</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Producing 1 piece, careful single-shot</td><td><code class="inline">/run-piece</code></td></tr>
+            <tr><td>Promoting one approved v3 draft</td><td><code class="inline">/promote-v3</code></td></tr>
+            <tr><td>Multiplying SKUs off an approved collection</td><td><code class="inline">/sku-multiplier</code> <span class="pill info">now parallel</span></td></tr>
+            <tr><td><strong>Net-new batch of N pieces</strong></td><td><code class="inline">/parallel-pieces</code> <span class="pill pass">use this</span></td></tr>
+            <tr><td>Pure QA scan across an existing backlog</td><td><code class="inline">/batch-review</code></td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ============ SLIDE 7 — PILLAR 2: IMPROVEMENT LOOP ============ -->
+      <section class="slide" data-title="Pillar 2 · Improvement loop">
+        <div class="slide-meta">
+          <span class="slide-num">07 / 15</span>
+          <span class="slide-tag">Pillar 02</span>
+        </div>
+        <h1>The self-improvement loop.</h1>
+        <p class="subtitle">This is the most important practice. Without it, the pipeline is just a fancy bulk-writer. With it, the system gets measurably smarter every batch.</p>
+
+        <div class="flow">
+          <span class="flow-node accent">batch run</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-node fail">some pieces fail</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-node">diagnose where</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-node accent">fix the SOURCE</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-node">re-run only the failed</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-node pass">commit the fix</span>
+        </div>
+
+        <div class="card card-accent" style="margin-top:18px;">
+          <h3 style="margin-top:0;">The one rule that makes this work</h3>
+          <p style="font-size:17px; color:var(--fg); margin-bottom:0;">
+            <strong>The system's memory is git, not the model.</strong> When you find a recurring mistake,
+            fix it in the repo &mdash; not by re-prompting harder. Otherwise we re-discover the same issue every batch.
+          </p>
+        </div>
+
+        <h3>Three places to fix the source</h3>
+        <div class="grid-3" style="margin-top:12px;">
+          <div class="card">
+            <h4 style="margin-top:0; color:var(--accent);">The prompt</h4>
+            <p style="font-size:13px;">A drafter keeps producing weak leads on a material → update <code class="inline">draft-product-page.md</code> with an explicit lead-quality rubric. Commit.</p>
+          </div>
+          <div class="card">
+            <h4 style="margin-top:0; color:var(--accent);">The config</h4>
+            <p style="font-size:13px;">Material rule disagrees with Emanuel's v3 reference → reconcile <code class="inline">materials/{material}.md</code>. Commit, citing the source.</p>
+          </div>
+          <div class="card">
+            <h4 style="margin-top:0; color:var(--accent);">The knowledge</h4>
+            <p style="font-size:13px;">A claim has no source in <code class="inline">raw/</code> → add a fact file with the citation, OR remove the claim. Never invent.</p>
+          </div>
+        </div>
+
+        <h3>The reference example</h3>
+        <p>The 2026-05-25 reconciliation is the canonical case. Ten atomic commits, one per material, each citing the authoritative reference. Six rule flips on terrazzo, ceramics, limestone, cantera, marble, roman-mosaics. <code class="inline">material-guard</code> now blocks errors that would have shipped two weeks ago.</p>
+      </section>
+
+      <!-- ============ SLIDE 8 — PILLAR 3: KNOWLEDGE BASE ============ -->
+      <section class="slide" data-title="Pillar 3 · Living knowledge">
+        <div class="slide-meta">
+          <span class="slide-num">08 / 15</span>
+          <span class="slide-tag">Pillar 03</span>
+        </div>
+        <h1>The repo is the source of truth.</h1>
+        <p class="subtitle">Every rule, every voice constraint, every material fact lives in a file. The model never holds the system's memory &mdash; the repo does.</p>
+
+        <h3>The Zia client layout (the template for everyone else)</h3>
+        <pre><span class="c">clients/zia-tile/</span>
+├── <span class="k">STYLE-SYSTEM.md</span>          <span class="c"># canonical authority — voice, structure</span>
+├── <span class="k">COMPLIANCE.yml</span>           <span class="c"># fail-closed banned terms + tech guards</span>
+├── <span class="k">contact-block.md</span>         <span class="c"># required contact line</span>
+├── <span class="k">materials/</span>               <span class="c"># one config per material</span>
+│   ├── _SCHEMA.md
+│   ├── cotto.md  cotto-allende.md  zellige.md  unglazed-zellige.md
+│   ├── cement.md  marble.md  roman-mosaics.md  terrazzo.md
+│   └── glass-mosaics.md  limestone.md  ceramics.md  cantera.md
+├── <span class="k">page-templates/</span>
+│   ├── collection.md       <span class="c"># opener + [PRODUCT LIST] + FAQ</span>
+│   ├── product.md          <span class="c"># aegean-4x4-aligned spine</span>
+│   └── blog.md             <span class="c"># AD / Wallpaper editorial register</span>
+└── <span class="k">raw/research/</span>
+    └── materials-reference.md  <span class="c"># Emanuel's v3 Quick Reference matrix</span></pre>
+
+        <h3>Source-of-truth hierarchy &mdash; when sources disagree</h3>
+        <table>
+          <thead>
+            <tr><th>Source</th><th>Authoritative for</th><th>Wins over</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code class="inline">materials-reference.md</code></td>
+              <td>Live-site Tile Usage matrix</td>
+              <td>Everything for hard tile rules</td>
+            </tr>
+            <tr>
+              <td><code class="inline">materials/{name}.md</code></td>
+              <td>Mechanical rules (freeze/thaw, pool, sealing)</td>
+              <td>Drafts. Loses to reference doc.</td>
+            </tr>
+            <tr>
+              <td><code class="inline">STYLE-SYSTEM.md</code></td>
+              <td>Voice, structure, banned/required phrasing</td>
+              <td>Drafts</td>
+            </tr>
+            <tr>
+              <td><code class="inline">COMPLIANCE.yml</code></td>
+              <td>Fail-closed compliance flags</td>
+              <td>Everything if a flag fires</td>
+            </tr>
+            <tr>
+              <td>The piece itself</td>
+              <td>Nothing &mdash; it's under review</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="card card-accent">
+          <strong>Onboarding a new client = replicating this shape.</strong> Write their STYLE-SYSTEM, their COMPLIANCE.yml, their contact-block, one material config per category they sell, and their page templates. The pipeline picks them up automatically.
+        </div>
+      </section>
+
+      <!-- ============ SLIDE 9 — THE DAILY WORKFLOW ============ -->
+      <section class="slide" data-title="Daily workflow">
+        <div class="slide-meta">
+          <span class="slide-num">09 / 15</span>
+          <span class="slide-tag">How to run a day</span>
+        </div>
+        <h1>The daily workflow, step by step.</h1>
+        <p class="subtitle">This is what running a batch looks like end-to-end &mdash; from "we need 20 product pages this week" to "20 drafts in review."</p>
+
+        <div class="steps">
+          <div class="step">
+            <div class="n">1</div>
+            <div>
+              <h4>Pick the batch</h4>
+              <p>Decide what you're producing this session: client + content type + material + count. Keep batches scoped to one material at a time &mdash; the gates' reads amortize within a material.</p>
+              <div class="cmd">e.g. <em>"12 Cotto product SKUs"</em> or <em>"8 zellige blog posts"</em></div>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="n">2</div>
+            <div>
+              <h4>Run <code class="inline" style="font-size:13px;">/parallel-pieces</code></h4>
+              <p>One session, N sub-agents. Each one drafts a piece and runs the four mechanical gates inline. The orchestrator returns the matrix.</p>
+              <div class="cmd">/parallel-pieces zia-tile product cotto 12</div>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="n">3</div>
+            <div>
+              <h4>Read the matrix</h4>
+              <p>The orchestrator returns a per-piece grid: which gates passed, which failed, and where files landed. Don't open each draft yet &mdash; triage from the matrix.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="n">4</div>
+            <div>
+              <h4>Score the clean pieces</h4>
+              <p>For the pieces that passed mechanical gates, run <code class="inline">voice-judge</code> + <code class="inline">koray-judge</code> as a second parallel batch. Anything ≥ 80/80 goes to editorial review.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="n">5</div>
+            <div>
+              <h4>Triage the failures &mdash; ask "where?"</h4>
+              <p>For every failed piece, ask: did the prompt produce this mistake, or did the config let it through? <strong>Don't re-prompt.</strong> Open the source. (See slide 10's decision tree.)</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="n">6</div>
+            <div>
+              <h4>Fix the source &mdash; commit</h4>
+              <p>Edit the prompt, config, or knowledge file. One atomic commit per fix, message names the dimension. The git log is the audit trail.</p>
+              <div class="cmd">fix(zia): cantera freeze/thaw not_suitable — per Materials Reference Guide v3</div>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="n">7</div>
+            <div>
+              <h4>Re-run ONLY the failed pieces</h4>
+              <p>The parallel orchestrator accepts an explicit piece list. Use it. Don't re-run the whole batch &mdash; that's a waste of plan budget and review effort.</p>
+              <div class="cmd">/parallel-pieces zia-tile product cotto "red-clay-8x8,oscura-2x6"</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SLIDE 10 — DECISION TREE ============ -->
+      <section class="slide" data-title="Gate failure decision tree">
+        <div class="slide-meta">
+          <span class="slide-num">10 / 15</span>
+          <span class="slide-tag">Triage</span>
+        </div>
+        <h1>When a gate fails: where do you look?</h1>
+        <p class="subtitle">Six gates, six decision rules. Memorize these &mdash; this is what turns a failed batch into a system upgrade instead of a re-prompt session.</p>
+
+        <table>
+          <thead>
+            <tr><th style="width:160px;">Gate</th><th>What it caught</th><th>Where to fix</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="pill fail">material-guard</span></td>
+              <td>Wrong pool/spa, freeze/thaw, sealing, or variation rule on a material.</td>
+              <td>Open <code class="inline">materials/{material}.md</code>. Check against <code class="inline">materials-reference.md</code>. If config disagrees with reference → <strong>config wins gets flipped</strong>. If draft disagrees with config → fix the draft (or the drafter prompt).</td>
+            </tr>
+            <tr>
+              <td><span class="pill fail">terminology-lint</span></td>
+              <td>Banned term used, required term missing, second person in body.</td>
+              <td>If STYLE-SYSTEM §3.2 already banned it → fix the draft. If it's a judgment call → tighten <code class="inline">agents/terminology-lint.md</code> with the contextual rule.</td>
+            </tr>
+            <tr>
+              <td><span class="pill fail">person-consistency</span></td>
+              <td>Second person in body, or first/third person switching mid-piece.</td>
+              <td>Almost always a draft fix. Exception: if a new content type legitimately uses second person, update <code class="inline">page-templates/{type}.md</code>.</td>
+            </tr>
+            <tr>
+              <td><span class="pill fail">contact-line-check</span></td>
+              <td>Required contact line missing or wrong wording.</td>
+              <td>Fix the draft. If the contact line itself changed, update <code class="inline">contact-block.md</code> once.</td>
+            </tr>
+            <tr>
+              <td><span class="pill warn">voice-judge &lt; 80</span></td>
+              <td>Reads too marketer-y, weak lead, weak closer, generic register.</td>
+              <td>If one dimension tanks across many pieces → update the drafter prompt with concrete examples + emphasis. If only one piece tanks → fix that piece manually.</td>
+            </tr>
+            <tr>
+              <td><span class="pill warn">koray-judge &lt; 80</span></td>
+              <td>SEO structure, entity coverage, internal-link depth, schema readiness.</td>
+              <td>Dimension-by-dimension review. Most common pattern: weak internal-link depth → update drafter to always link the Installation Guide + sibling product.</td>
+            </tr>
+            <tr>
+              <td><span class="pill fail">claims-grounding</span></td>
+              <td>A claim has no source in <code class="inline">raw/</code>.</td>
+              <td>True but missing? → add a <code class="inline">raw/knowledge/facts/{slug}.md</code> with the citation. Unverifiable? → remove from draft. Never invent.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="card card-accent" style="margin-top:18px;">
+          <strong>The pattern across every row:</strong> the draft is never authoritative. It's always either the prompt, the config, or the knowledge base &mdash; one of which needs the permanent fix.
+        </div>
+      </section>
+
+      <!-- ============ SLIDE 11 — CADENCE ============ -->
+      <section class="slide" data-title="Cadence">
+        <div class="slide-meta">
+          <span class="slide-num">11 / 15</span>
+          <span class="slide-tag">Rhythm</span>
+        </div>
+        <h1>Cadence: how often we do what.</h1>
+        <p class="subtitle">Sustainability is a rhythm, not a one-time setup. Three nested loops &mdash; per batch, weekly, per new material.</p>
+
+        <div class="grid-3" style="margin-top:24px;">
+          <div class="card card-accent">
+            <div style="font-family:var(--mono); font-size:11px; color:var(--accent); margin-bottom:8px; letter-spacing:0.08em;">PER BATCH</div>
+            <h3 style="margin-top:0;">10-15 minutes after the matrix</h3>
+            <p style="font-size:13.5px;">Find the most common failure dimension in this batch. Fix it in the source. Commit. That's the daily improvement-loop pass.</p>
+            <ul style="font-size:13px;">
+              <li>Read the matrix</li>
+              <li>Cluster failures by dimension</li>
+              <li>Pick the top one</li>
+              <li>Fix + commit</li>
+              <li>Re-run only failed pieces</li>
+            </ul>
+          </div>
+
+          <div class="card card-accent">
+            <div style="font-family:var(--mono); font-size:11px; color:var(--accent); margin-bottom:8px; letter-spacing:0.08em;">WEEKLY</div>
+            <h3 style="margin-top:0;">Friday: re-read STYLE-SYSTEM</h3>
+            <p style="font-size:13.5px;">Compare it against everything Jamie / Aleksandra corrected this week. Anything that was an editorial fix but isn't in STYLE-SYSTEM yet is about to be missed again.</p>
+            <ul style="font-size:13px;">
+              <li>Scan the week's editorial edits</li>
+              <li>Identify repeated patterns</li>
+              <li>Promote them to rules</li>
+              <li>Update STYLE-SYSTEM + commit</li>
+            </ul>
+          </div>
+
+          <div class="card card-accent">
+            <div style="font-family:var(--mono); font-size:11px; color:var(--accent); margin-bottom:8px; letter-spacing:0.08em;">PER NEW MATERIAL</div>
+            <h3 style="margin-top:0;">Read first, produce second</h3>
+            <p style="font-size:13.5px;">Before producing the first batch on a new material, read <code class="inline">materials-reference.md</code> for that material end-to-end. The Quick Reference matrix is the cheapest place to find the next rule flip.</p>
+            <ul style="font-size:13px;">
+              <li>Read reference doc end-to-end</li>
+              <li>Cross-check against the config</li>
+              <li>Flip any disagreements</li>
+              <li>Commit before first batch</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>The compounding effect</h3>
+        <p>The first few batches surface 80% of the recurring rules. By batch 5-6 on a given material, the gates catch failures so well that editorial review starts from a clean draft. That's when the team flips from "writing" to "editing + QA," which was the whole point of this build.</p>
+      </section>
+
+      <!-- ============ SLIDE 12 — ANTI-PATTERNS ============ -->
+      <section class="slide" data-title="Anti-patterns">
+        <div class="slide-meta">
+          <span class="slide-num">12 / 15</span>
+          <span class="slide-tag">Avoid</span>
+        </div>
+        <h1>Anti-patterns &mdash; what to NOT do.</h1>
+        <p class="subtitle">These are the ways the system silently slides back into manual work. If you catch any of these happening, surface it &mdash; that's the real problem to solve.</p>
+
+        <div class="anti">
+          <div class="x">✗</div>
+          <div>
+            <div class="a-label">Anti-pattern</div>
+            <div class="a-bad">Re-prompting until the gate passes</div>
+          </div>
+          <div>
+            <div class="a-label">Do instead</div>
+            <div class="a-good">If a gate keeps failing on similar pieces, the prompt or config has the bug. Fix the source. Commit. Re-run.</div>
+          </div>
+        </div>
+
+        <div class="anti">
+          <div class="x">✗</div>
+          <div>
+            <div class="a-label">Anti-pattern</div>
+            <div class="a-bad">Loosening a gate to make a draft pass</div>
+          </div>
+          <div>
+            <div class="a-label">Do instead</div>
+            <div class="a-good">A wrong pool/spa rule is a factual error. Loosening material-guard ships that error to clients. Fix the draft.</div>
+          </div>
+        </div>
+
+        <div class="anti">
+          <div class="x">✗</div>
+          <div>
+            <div class="a-label">Anti-pattern</div>
+            <div class="a-bad">Editing one piece per session indefinitely</div>
+          </div>
+          <div>
+            <div class="a-label">Do instead</div>
+            <div class="a-good">That's not the pipeline &mdash; that's manual writing with extra steps. If the system isn't producing at scale, find the bottleneck (prompt, config, or knowledge gap) and fix that.</div>
+          </div>
+        </div>
+
+        <div class="anti">
+          <div class="x">✗</div>
+          <div>
+            <div class="a-label">Anti-pattern</div>
+            <div class="a-bad">Treating Aleksandra's edit as a one-off</div>
+          </div>
+          <div>
+            <div class="a-label">Do instead</div>
+            <div class="a-good">When she rewrites the same kind of sentence twice, that's a rule. Encode it in STYLE-SYSTEM or the relevant agent prompt.</div>
+          </div>
+        </div>
+
+        <div class="anti">
+          <div class="x">✗</div>
+          <div>
+            <div class="a-label">Anti-pattern</div>
+            <div class="a-bad">Forking prompts into v2 / v3 folders to "save the old version"</div>
+          </div>
+          <div>
+            <div class="a-label">Do instead</div>
+            <div class="a-good">Edit in place. Git history is the version control. Don't fork unless you actually need to run two versions side-by-side.</div>
+          </div>
+        </div>
+
+        <div class="anti">
+          <div class="x">✗</div>
+          <div>
+            <div class="a-label">Anti-pattern</div>
+            <div class="a-bad">Running <code class="inline" style="font-size:11px;">/run-piece</code> in a loop for a 20-piece batch</div>
+          </div>
+          <div>
+            <div class="a-label">Do instead</div>
+            <div class="a-good">Use <code class="inline">/parallel-pieces</code>. That's literally why it exists. One session, N sub-agents.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SLIDE 13 — ROADMAP ============ -->
+      <section class="slide" data-title="Roadmap">
+        <div class="slide-meta">
+          <span class="slide-num">13 / 15</span>
+          <span class="slide-tag">Forward</span>
+        </div>
+        <h1>From Zia Tile to 14 clients.</h1>
+        <p class="subtitle">Zia is the pilot. Once the team is fluent in the pattern here, replicating it for the other 13 LinkGraph clients is mostly per-client knowledge work, not engineering.</p>
+
+        <h3>Scope (from Aleksandra's 2026-05-11 scope doc)</h3>
+        <div class="grid-3">
+          <div class="card">
+            <h4 style="margin-top:0; color:var(--accent);">P1 · MVP focus</h4>
+            <p style="font-size:13px; margin-bottom:6px;"><strong>7 clients</strong> &mdash; urgent</p>
+            <ul style="font-size:12.5px;">
+              <li>Zia Tile <span class="pill info">pilot</span></li>
+              <li>Laser Center of Marin</li>
+              <li>Esthetics Center</li>
+              <li>Anne Therese</li>
+              <li>Altify</li>
+              <li>Loti Labs</li>
+              <li>Thera</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4 style="margin-top:0; color:var(--accent);">P2 · Soon</h4>
+            <p style="font-size:13px; margin-bottom:6px;"><strong>8 clients</strong></p>
+            <ul style="font-size:12.5px;">
+              <li>Cheqroom</li>
+              <li>Portugal Pathways</li>
+              <li>U.S. Storage</li>
+              <li>5Gstore</li>
+              <li>Axiom HRS</li>
+              <li>Liveops</li>
+              <li>The Nash</li>
+              <li>Pekas Smith</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4 style="margin-top:0; color:var(--accent);">P3 · Later</h4>
+            <p style="font-size:13px; margin-bottom:6px;"><strong>1 client</strong></p>
+            <ul style="font-size:12.5px;">
+              <li>A Plus Landscaping</li>
+            </ul>
+            <p style="font-size:11.5px; color:var(--fg-mute); margin-top:14px;">Total: ~175+ pieces/mo across the roster. Zia alone &asymp; 55/mo &mdash; if the system handles Zia, it handles everyone.</p>
+          </div>
+        </div>
+
+        <h3>The per-client onboarding template</h3>
+        <p>To bring a new client into the toolkit, the per-client checklist is identical &mdash; just substitute the content:</p>
+
+        <div class="steps">
+          <div class="step">
+            <div class="n">1</div>
+            <div>
+              <h4>Write <code class="inline" style="font-size:12px;">clients/{name}/STYLE-SYSTEM.md</code></h4>
+              <p>Voice, register, structure rules, banned and required phrasing. Source = the CSM's brand brief and the client's existing best content.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="n">2</div>
+            <div>
+              <h4>Write <code class="inline" style="font-size:12px;">COMPLIANCE.yml</code></h4>
+              <p>Fail-closed flags specific to this client's regulated context: medical, financial, peptide, gaming, federal, etc. This is the most important file for compliance-heavy clients.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="n">3</div>
+            <div>
+              <h4>Write <code class="inline" style="font-size:12px;">contact-block.md</code> + <code class="inline" style="font-size:12px;">page-templates/</code></h4>
+              <p>What every page must include (contact line, CTAs) and the spine of each content type. Adapt from Zia's templates &mdash; same structure, different content.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="n">4</div>
+            <div>
+              <h4>Add one material/category config per offering</h4>
+              <p>For tile clients, materials. For aesthetics clients, procedures. For software clients, product lines. Same schema &mdash; the gate logic ports unchanged.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="n">5</div>
+            <div>
+              <h4>Run one verification piece</h4>
+              <p>Use <code class="inline">/run-piece</code> on a single seed page. Confirm all gates pass. Then graduate to <code class="inline">/parallel-pieces</code> for the first real batch.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SLIDE 14 — ACTION ITEMS ============ -->
+      <section class="slide" data-title="Action items">
+        <div class="slide-meta">
+          <span class="slide-num">14 / 15</span>
+          <span class="slide-tag">Try Monday</span>
+        </div>
+        <h1>What to try Monday morning.</h1>
+        <p class="subtitle">Five concrete steps to validate the new pattern works in your hands, not just mine.</p>
+
+        <div class="steps">
+          <div class="step">
+            <div class="n">1</div>
+            <div>
+              <h4>Discovery check</h4>
+              <p>From <code class="inline">content-ops/</code>, run <code class="inline">claude</code> and confirm <code class="inline">/parallel-pieces</code>, <code class="inline">/run-piece</code>, <code class="inline">/promote-v3</code> autocomplete, and that <code class="inline">material-guard</code> shows up in the agents list.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="n">2</div>
+            <div>
+              <h4>Read the worked example</h4>
+              <p>Open <code class="inline" style="font-size:11px;">clients/zia-tile/campaigns/01-product-collection-pages/runs/collection-cotto-allende/</code>. The <code class="inline">draft.md</code> is a pipeline-produced page; <code class="inline">RUN-SUMMARY.md</code> shows the gate scores. This is what "passing all gates" looks like.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="n">3</div>
+            <div>
+              <h4>Run one parallel batch (start small: 3-5 pieces)</h4>
+              <div class="cmd">/parallel-pieces zia-tile product cotto "red-clay-8x8,adobe-4x4,fired-earth-13x13"</div>
+              <p style="margin-top:8px;">Watch the orchestrator fan out the sub-agents. Read the returned matrix. Don't open the drafts yet &mdash; learn to triage from the matrix.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="n">4</div>
+            <div>
+              <h4>Run the improvement-loop pass on the matrix</h4>
+              <p>Pick the most common failure dimension. Open <code class="inline">IMPROVEMENT-LOOP.md</code>, follow the decision tree for that gate. Make the source fix. Commit. Re-run only the failed pieces.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="n">5</div>
+            <div>
+              <h4>Post the matrix in Slack</h4>
+              <p>Paste the orchestrator's aggregate matrix into the LG channel. Lucas watches for failure patterns across batches and feeds them into the prompts. Closes the loop between team usage and pipeline improvement.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-accent" style="margin-top:24px;">
+          <h3 style="margin-top:0;">Reference docs to keep open</h3>
+          <ul style="font-size:14px; margin-top:8px;">
+            <li><code class="inline">content-toolkit/PIPELINE.md</code> &mdash; the runbook (full stage-by-stage reference)</li>
+            <li><code class="inline">content-toolkit/IMPROVEMENT-LOOP.md</code> &mdash; the decision tree (every gate, every fix-the-source path)</li>
+            <li><code class="inline">commands/parallel-pieces.md</code> &mdash; the fan-out command spec</li>
+            <li><code class="inline">clients/zia-tile/raw/research/materials-reference.md</code> &mdash; Emanuel's v3 truth doc</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ SLIDE 15 — CLOSING ============ -->
+      <section class="slide" data-title="Close">
+        <div class="slide-meta">
+          <span class="slide-num">15 / 15</span>
+          <span class="slide-tag">Close</span>
+        </div>
+
+        <div class="closer">
+          <div class="big">Sustainable.<br>Self-improving.<br>Already shipped.</div>
+          <div class="sub">The three pillars are in the repo. The team's job from here is to run the rhythm.</div>
+        </div>
+
+        <div class="grid-3" style="margin-top:24px;">
+          <div class="card">
+            <h3 style="margin-top:0; color:var(--accent);">If you remember one thing</h3>
+            <p style="font-size:14px;">When a gate fails, <strong>fix the source</strong>, not the symptom. The repo is the system's memory.</p>
+          </div>
+          <div class="card">
+            <h3 style="margin-top:0; color:var(--accent);">If you remember one command</h3>
+            <p style="font-size:14px;"><code class="inline">/parallel-pieces</code>. Never run <code class="inline">/run-piece</code> in a loop again.</p>
+          </div>
+          <div class="card">
+            <h3 style="margin-top:0; color:var(--accent);">If you remember one cadence</h3>
+            <p style="font-size:14px;">15 min after each batch, fix the top recurring failure. By batch 5 the gates catch it for free.</p>
+          </div>
+        </div>
+
+        <h2 style="margin-top:48px;">Questions to discuss now</h2>
+        <ol style="font-size:16px;">
+          <li>Which two of the P1 clients do we onboard first, after Zia? (Suggest: Loti Labs + Anne Therese &mdash; same CSM as Zia, similar compliance shape.)</li>
+          <li>Who runs the weekly STYLE-SYSTEM review? (Suggest: Emanuel, with Aleksandra's editorial input as the source signal.)</li>
+          <li>Do we want the orchestrator matrix auto-posted to a Slack channel after each batch? (Easy to add &mdash; 1 command extension.)</li>
+          <li>How do we want to model Max-plan rate limits with multiple operators running in parallel? (Lucas runs 2 alternating &mdash; replicate, or 1 plan per operator.)</li>
+        </ol>
+
+        <div class="card card-accent" style="margin-top:32px; text-align:center;">
+          <p style="font-size:15px; margin-bottom:0;">
+            <strong>Thanks.</strong> All docs referenced are on <code class="inline">content-ops/main</code>.
+            Lucas Zarochinski &middot; lucas.zarochinski@linkgraph.io
+          </p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</div>
+
+<div class="controls">
+  <button id="prev" title="Previous (←)">◀</button>
+  <span class="counter" id="counter">1 / 15</span>
+  <button id="next" title="Next (→)">▶</button>
+</div>
+
+<div class="kbd-hint">
+  <kbd>←</kbd> <kbd>→</kbd> navigate &middot; <kbd>F</kbd> fullscreen &middot; <kbd>Esc</kbd> exit
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const total = slides.length;
+  let current = 0;
+
+  const nav = document.getElementById('nav');
+  const counter = document.getElementById('counter');
+
+  // Build sidebar nav
+  slides.forEach((s, i) => {
+    const li = document.createElement('li');
+    li.innerHTML = `<span class="num">${String(i + 1).padStart(2, '0')}</span><span>${s.dataset.title || 'Slide ' + (i + 1)}</span>`;
+    li.dataset.idx = i;
+    if (i === 0) li.classList.add('active');
+    li.addEventListener('click', () => go(i));
+    nav.appendChild(li);
+  });
+
+  function go(i) {
+    if (i < 0 || i >= total) return;
+    slides[current].classList.remove('active');
+    nav.children[current].classList.remove('active');
+    current = i;
+    slides[current].classList.add('active');
+    nav.children[current].classList.add('active');
+    counter.textContent = `${current + 1} / ${total}`;
+    document.querySelector('main').scrollTop = 0;
+    // Update visible slide number badges
+    const badge = slides[current].querySelector('.slide-num');
+    if (badge) badge.textContent = `${String(current + 1).padStart(2, '0')} / ${String(total).padStart(2, '0')}`;
+  }
+
+  document.getElementById('prev').addEventListener('click', () => go(current - 1));
+  document.getElementById('next').addEventListener('click', () => go(current + 1));
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); go(current + 1); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); go(current - 1); }
+    else if (e.key === 'Home') { e.preventDefault(); go(0); }
+    else if (e.key === 'End') { e.preventDefault(); go(total - 1); }
+    else if (e.key === 'f' || e.key === 'F') {
+      if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+      else document.exitFullscreen();
+    }
+  });
+
+  // Init slide-num badges with total
+  slides.forEach((s, i) => {
+    const badge = s.querySelector('.slide-num');
+    if (badge) badge.textContent = `${String(i + 1).padStart(2, '0')} / ${String(total).padStart(2, '0')}`;
+  });
+</script>
+
+</body>
+</html>
