@@ -8,8 +8,8 @@ pools_spas: suitable
 variation_trio_applies: false
 variation_language: [color, sheen, hand-placement variation across the grid]
 sealing_profile: glass-none
-confidence: draft
-source: STYLE-SYSTEM.md §11; audited draft campaigns/01-product-collection-pages/drafts/v3/09-glass-mosaics.md
+confidence: high
+source: STYLE-SYSTEM.md §11; raw/research/materials-reference.md v3 Quick Reference (Emanuel, 2026-05-20, confirms freeze/thaw + pool)
 ---
 
 # Glass Mosaics — material rules
@@ -37,6 +37,6 @@ For shower floors and wet floors: use a minimum 1/8" grout joint and apply an an
 - Use: color, sheen, hand-placement variation across the grid.
 - Glass is not a fired clay or natural stone. Do NOT use the chips/pits/crazing trio or terra cotta variation language.
 
-## Confidence note
+## Reconciliation note (2026-05-25)
 
-Freeze/thaw, pool, and the optional-sealing rule come from the audited v3 draft. Confirm with Alex on first glass piece, then promote to `confidence: high`.
+Promoted from `draft` to `high` against Materials Reference Guide v3. All three rules (freeze/thaw OK, pool/spa OK, optional sealing) confirmed against the live Tile Usage matrix.
