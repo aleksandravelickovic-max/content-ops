@@ -11,6 +11,33 @@ batch run -> some pieces fail -> diagnose where (prompt, config, or fact) ->
 
 The most important rule: **the system memory is git, not the model.** When you find a recurring mistake, you fix it in the repo, not by re-prompting harder. Otherwise you re-discover the same issue every batch.
 
+## Where do new rules go? (the source-of-truth map)
+
+This is the single most common operator mistake: writing a Jamie correction into `raw/knowledge/zia-content-rules-and-error-log.md` (which is documentation / audit trail) without also porting it into the file the relevant agent actually loads at runtime. The error-log is the **audit trail**. The enforcer files are the **source of truth**. Every captured correction must reach both, or the next batch hits the same error.
+
+| Type of correction | Goes in (source of truth) | Read by | Also append to (audit trail) |
+|---|---|---|---|
+| New banned term (literal phrase, contextual) | `clients/{client}/STYLE-SYSTEM.md` §3.2 plus `clients/{client}/COMPLIANCE.yml` `banned_terms` or `voice_bans` | `terminology-lint` | `raw/knowledge/zia-content-rules-and-error-log.md` Part 3 |
+| New required term | `STYLE-SYSTEM.md` §3.1 | `terminology-lint` (required-term mode) | error-log Part 3 |
+| New material fact (freeze/thaw flip, pool/spa, sealing) | `clients/{client}/materials/{material}.md` frontmatter plus `STYLE-SYSTEM.md` §4 | `material-guard` | error-log Part 4 |
+| New colorway allowlist entry | `clients/{client}/materials/{material}.md` `allowed_colorways` field | `material-guard` (allowed_colorways check) | error-log Part 4.7 |
+| New section structure rule | `clients/{client}/page-templates/{content-type}.md` plus `STYLE-SYSTEM.md` §5/§6/§7/§8 | drafters self-check + B2 keyway contract | error-log Part 5/6 |
+| New voice nuance (register, framing pattern) | `content-toolkit/agents/voice-judge.md` dimension rubric or a new dedicated enforcer (`content-toolkit/agents/{new-check}.md`) | `voice-judge` plus the new agent | error-log Part 2/9/10 |
+| New compliance check (Prop 65 link, contact block, overage rate) | `clients/{client}/COMPLIANCE.yml` `technical_guards` plus a dedicated haiku agent if pattern is contextual | `terminology-lint` / `material-guard` / dedicated agent | error-log Part 4 |
+| Approved exemplar (Jamie signed off, final shipped) | `clients/{client}/_approved/{content-type}/{slug}.{md,html}` | `voice-judge` calibration band | none (`_approved/` is itself the trail) |
+| New Keyway invariant (what stage N must hand to N+1) | `content-toolkit/contracts/{Bn}-*.yml` `required_invariants` | `keyway-check` | error-log if the new invariant came from an editorial rejection |
+| Historical narrative, statistic, citation | `clients/{client}/raw/knowledge/facts/{slug}.md` | `claims-grounding` | the fact file is itself the audit trail; no separate entry |
+
+The principle: **the error-log records what happened; the enforcer files declare what must not happen again.** When Aleksandra logs a new Jamie correction in the error-log, the same commit (or an immediately following commit) lands it in whichever file the table above points to. Without that second commit, the rule is documentation, not enforcement.
+
+### Common mistakes the table prevents
+
+- "Andresa added a new banned phrase to the error-log; next batch hit the same phrase." -> The COMPLIANCE.yml + STYLE-SYSTEM §3.2 commit was missing. Terminology-lint never saw it.
+- "Aleksandra documented the §4.9 overage figure correction (10-15% -> 15-20%); next ceramic batch still shipped 10-15%." -> COMPLIANCE.yml `technical_guards` entry missing. The deterministic check did not get installed.
+- "Jamie flagged a new register rule (stay-positive framing); voice-judge kept scoring the same drafts at 84 anyway." -> voice-judge.md rubric was not updated. The Sonnet judge had no dimension to deduct on.
+
+When in doubt, check whether the rule would catch the next occurrence at runtime. If the answer is "only if the operator remembers to read the error-log," the rule is in the wrong place.
+
 ## When a piece fails a gate — decision tree
 
 ### 1. Material-guard FAIL
