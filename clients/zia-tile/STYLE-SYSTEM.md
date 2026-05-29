@@ -64,6 +64,9 @@ Jamie's most consistent correction was removing aspirational or vague language a
 | Patina framing | "which is part of how the material ages" | "bringing beauty to the material's aging process" |
 | Aging closer | "Expect tonal deepening over time. This is the material doing what it is supposed to do." | "Expect the tone to deepen over time -- that patina is the point." |
 | Light exposure patina | "Foot traffic and light exposure deepen the tone rather than diminish it" | "Use and time deepen the tone -- the installation is a starting point, not a forever state" (no light-exposure claim) |
+| Colorway description | "Adobe: soft tan, warm, and light." | "Adobe sits in the muted middle and pairs with plaster and wood without competing." |
+
+Physical properties (soft, warm, light) are not color descriptions — they are specs. A color description says how the tone reads in a room and against other materials. Jamie: "hate the word choice — think design, please."
 
 ### 2.3 The purposeful test
 
@@ -74,6 +77,10 @@ Cut:
 - Phrases that describe what the customer already knows
 - Adjectives that could apply to any product in the category
 - Qualifications that add no useful information
+
+This applies at the article level. Meta-sentences that announce what the piece will do ("Understanding the differences between zellige, cement, and ceramic options makes for a well-informed choice") deliver nothing — Jamie: "no." Open on the first piece of useful information, not a sentence about why the article exists.
+
+The same failure appears inside sections as report-style labels: "The practical summary: Cotto is the unglazed core line…" — Jamie: "strange word choice." Transition through content, not through labeling it.
 
 ### 2.4 Sentence formula (design-forward signature)
 
@@ -105,6 +112,17 @@ These patterns, drawn from Architectural Digest, Wallpaper*, Remodelista, and Do
 - No SEO-style headings ("10 Reasons to Love Zellige Tile").
 - No marketing hedges ("Some say...," "experts agree...").
 - No em-dash rhetorical pivots ("it's not just tile -- it's a statement").
+
+### 2.6 Positive framing — lead with what the material gives
+
+Frame material attributes in terms of what the tile brings to the room, not what it protects against, endures, or suffers from.
+
+| Avoid | Use |
+|---|---|
+| "protects against moisture, heat, and cooking splatters" | "suited to kitchen conditions including heat and moisture" |
+| chips, pits, and crazing framed as things the tile "overcomes" | chips, pits, and crazing framed as intentional characteristics |
+
+> Jamie: "not ideal to skew negative." (Blog #3, kitchen backsplash)
 
 ---
 
@@ -565,6 +583,9 @@ Answer yes to every item before submitting for Aleksandra's review. If any item 
 - [ ] Credible to senior designer; clear to first-time buyer
 - [ ] No sentence ends with a preposition
 - [ ] No second person (you/your) anywhere in the piece
+- [ ] No negative framing ("protects against X") — reframe as what the material suits or brings
+- [ ] Colorway descriptions use design language (how the tone reads in a room), not physical specs (soft, warm, light)
+- [ ] No meta sentences announcing what the piece will do; no report-style section labels ("The practical summary:", etc.)
 
 ### Terminology
 - [ ] "Each" not "every" for individual tiles

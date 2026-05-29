@@ -1,0 +1,129 @@
+---
+sku: volcan-4x12
+material: cantera
+url: https://ziatile.com/products/volcan-4x12
+title_tag: Volcan 4x12 Cantera Stone Tile | Zia Tile
+meta_description: Shop Zia's Volcan 4x12 Cantera. A warm brown volcanic stone tile cut by hand in Mexico, suited for interior floors and exterior wall applications.
+keywords: Volcan 4x12 cantera, Brown cantera stone tile, Volcanic stone tile
+draft_date: 2026-05-21
+---
+
+## Cantera
+
+# Volcan 4x12
+
+\[INSERT CART MODULE HERE\]
+
+---
+
+Quarried and cut in Mexico, Zia's Volcan 4x12 is a warm brown cantera stone formed over millions of years from volcanic rock and ash. Cantera has been a primary building material in Mexican and Central American architecture for thousands of years, and the Volcan colorway reflects the warm brown tones found naturally in the volcanic rock formations.
+
+Nature is responsible for the unmistakable character of Cantera stone. Expect variation in color, tone, and texture, as each tile comprises eons of our earth's richly layered history.
+
+\[IMAGE: SIZE/THICKNESS DIAGRAM\]
+
+#### Order Details \+ Installation \[Locked\]
+
+Cantera is a naturally formed volcanic stone, and significant variations in color, oxidation markings, inclusions, should be expected, along with more subtle differences in sizing. Images shown are representative of the line, but may not capture all potential variation. We recommend 15-20% overage to account for cuts and curation in the installation.
+
+To avoid color blocking, open and mix from all boxes to achieve an ideal layout. As a porous stone, Cantera tile should be sealed both before and after grouting. As it wears, the stone will develop a natural patina, growing richer in character through touch and time. Clean only with pH-neutral products, resealing periodically as needed.
+
+---
+
+## About
+
+Cantera is the volcanic stone that built colonial Mexico, used continuously for centuries in courtyards, fountains, and the carved facades of cathedrals and haciendas. Zia's Cantera line carries that material into a residential and commercial collection sized for both intimate rooms and broad public installations.
+
+The line is offered in eight earthy colorways, each carrying its own mineral signature: Mesa, Caldera, Acacia, Sierra, Yuma, Sedona, Badlands, and Volcan. Formats range from 6x6 and 4x12 mosaics to 12x12, 12x24, and 24x24 floor tiles, so a single Cantera scheme can run from a textured shower wall in a primary bathroom to a hotel courtyard or restaurant patio in the same colorway.
+
+Installers must wear protective face and eye coverings when working with cantera, thinset, sealants, and grout, in accordance with [California Prop 65](https://www.ziatile.com/proposition-65-warnings). Bring drywall flush with the finished surface of the tile, or finish exposed edges with mitered edges or Schluter strips.
+
+---
+
+## Tile Usage
+
+### Residential Usage
+
+| Use Case | Status |
+| :---- | :---- |
+| **Interior Floors – High Traffic** *Ex: Kitchen, primary bathroom, entryway, mudroom* | **✓** |
+| **Interior Floors – Low Traffic** *Ex: Guest bathroom, powder room, bedroom* | **✓** |
+| **Exterior Floors – Freeze or Thaw** *Outdoor surfaces that may get snow or ice* | **✗** |
+| **Exterior Floors – Non Freeze or Thaw** *Ex: Patio, courtyard, pool deck in mild climates* | **✓** |
+| **Interior Walls** *Ex: Kitchen backsplash, bathroom wall, accent wall, range hood* | **✓** |
+| **Exterior Walls** *Ex: Garden wall, courtyard wall in non-freeze/thaw climates* | **✓** |
+| **Shower Walls \+ Floors** *Ex: Walk-in shower, steam shower, tub surround* | **✓** |
+| **Pools \+ Spas** *Saltwater or chlorine* | **✗** |
+| **Fireplace Surround** *Ex: Living room fireplace, bedroom fireplace (not inside firebox)* | **✓** |
+| **Radiant Heating Compatible** *Compatible with all heated floor systems* | **✓** |
+| **Sealing Required** *See install guide for recommended sealers* | **✓** |
+
+### Commercial Usage
+
+| Use Case | Status |
+| :---- | :---- |
+| **Interior Floors – High Traffic** *Ex: Restaurant floors, hotel lobbies, retail entryways* | **✓** |
+| **Interior Floors – Low Traffic** *Ex: Boutique hotel guest rooms, private offices, gallery floors* | **✓** |
+| **Exterior Floors – Freeze or Thaw** *Outdoor surfaces that may get snow or ice* | **✗** |
+| **Exterior Floors – Non Freeze or Thaw** *Ex: Restaurant patios, hotel courtyards in mild climates* | **✓** |
+| **Interior Walls** *Ex: Restaurant feature walls, hotel bathroom walls, retail backsplashes* | **✓** |
+| **Exterior Walls** *Ex: Hospitality facade detail in non-freeze/thaw climates* | **✓** |
+| **Shower Walls \+ Floors** *Ex: Hotel showers, spa wet rooms, gym facilities* | **✓** |
+| **Pools \+ Spas** *Saltwater or chlorine* | **✗** |
+| **Fireplace Surround** *Ex: Restaurant fireplaces, hotel lobby fireplaces (not inside firebox)* | **✓** |
+| **Radiant Heating Compatible** *Compatible with all heated floor systems* | **✓** |
+| **Sealing Required** *See [install guide](https://ziatile.com/pages/cantera-installation-guide) for recommended sealers* | **✓** |
+
+---
+
+## How It's Made
+
+Cantera begins as a porous volcanic rock, formed over millions of years from cooled lava and ash. Solid blocks are pulled from quarries in Mexico, then sized down to the format dimensions of the line: 6x6 and 4x12 mosaics, 12x12 and 12x24 planks, and 24x24 large-format floor tiles.
+
+Each piece is honed and finished by hand at the source. The finishing approach intentionally preserves the visible aggregate, mineral inclusions, and oxidation markings of the volcanic chemistry, which is what gives each colorway its individual mineral signature rather than a surface treatment that would mask it.
+
+Once finished, the tiles are graded and packed for shipping. After installation, the stone continues to develop. Cantera takes on a soft patina with use, similar to marble or limestone, and the sealing protocol on the install guide protects the surface while still allowing the material to age into the room around it.
+
+---
+
+## Order & Shipping
+
+In-stock samples typically ship from our Los Angeles warehouse within two business days. Each client may order up to ten samples total, with a limit of four per each unique tile. The first five samples are complimentary; additional samples begin at $3 each. Sample orders ship via FedEx or UPS Ground.
+
+Full orders ship together once all tiles are in stock, throughout the United States and Canada via a third-party LTL carrier service. Pallets will be delivered curbside. LTL carriers provide estimated delivery ranges and will contact you to schedule a specific delivery window once the shipment arrives at their local terminal. Clients in Alaska, Hawaii, Canada, or international locations should email our team at [info@ziatile.com](mailto:info@ziatile.com) for a custom shipping quote.
+
+Free full order pickup is available at our Los Angeles area warehouse for local clients. Our team will reach out when an order is ready to schedule a pickup appointment. Pickups are available by confirmed appointment only, Monday through Friday from 8 am–3 pm. For any other questions, contact [info@ziatile.com](mailto:info@ziatile.com).
+
+---
+
+## Installation Guide
+
+\[KEEP\]
+
+---
+
+## Frequently Asked Questions
+
+### What is cantera stone?
+
+Cantera stone is a naturally occurring volcanic rock formed over millions of years from volcanic rock and ash. It is quarried and cut in Mexico, where the material occurs naturally and has been used in architecture for thousands of years. Each tile is cut directly from solid blocks, which is why no two tiles carry the same surface character, aggregate distribution, or tone.
+
+### What color is Volcan cantera?
+
+Volcan cantera is a warm brown volcanic stone. The tone shifts slightly from tile to tile due to natural variation in the volcanic rock itself, and each piece carries its own presentation of aggregate and mineral inclusions within that warm brown range.
+
+### How does cantera differ from other natural stones?
+
+Cantera is a volcanic stone, which distinguishes it from sedimentary stones like limestone and metamorphic stones like marble. The volcanic formation process produces visible aggregate, mineral inclusions, and high surface variation from tile to tile. Cantera is also relatively lightweight for a natural stone and has a porous surface that requires sealing before and after grouting.
+
+### Does Volcan 4x12 require sealing?
+
+Yes. Cantera tile requires sealing before and after grouting. Apply 511 Porous Plus in thin layers until the stone is fully saturated before grouting, wiping off any excess before it dries. For interior installations, finish with Fila Matte Finish Protective Wax as a top coat. For outdoor installations, apply a second coat of 511 Porous Plus in place of wax — UV exposure causes wax to discolor over time.
+
+### How do I clean cantera tile?
+
+To clean cantera tile, vacuum or sweep regularly to remove abrasive debris that can scratch the surface. For routine cleaning, use a pH-neutral cleaner such as Miracle Sealants pH Neutral Tile and Stone Cleaner. For heavier staining, Miracle Sealants Heavy Duty Cleaner (Acid Substitute) is the recommended product. Avoid acidic cleaners — including vinegar, lemon juice, and bleach — and blot spills promptly rather than wiping to prevent spreading.
+
+### Can the Volcan 4x12 be mixed with other cantera formats?
+
+Yes. The Volcan 4x12 can be mixed with other cantera formats within the same installation. All cantera formats in Zia's collection are cut from volcanic rock and share consistent material character across the range. Tonal balance across formats should be assessed during the layout stage, and tiles from all boxes should be blended before setting to distribute variation evenly.

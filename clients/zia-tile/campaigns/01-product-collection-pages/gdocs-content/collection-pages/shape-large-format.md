@@ -3,23 +3,24 @@ title: "Shape Large Format"
 google_doc_id: "1E_P04kg7iwrmB7I-DFavSaumkmPbJuntrAWcrO3WKns"
 page_type: collection
 download_date: 2026-05-12
+optimized_date: 2026-05-27
 ---
 
 **URL:** <https://ziatile.com/collections/all?shape=large+format>
 
-**Meta Title**: Large Format Tile for Floors and Walls | Zia Tile
+**Meta title**: Large Format Tile for Floors and Walls | Zia Tile
 
-**Meta Description**: Shop large format tile at Zia Tile for open floors, feature walls, and commercial installations in terrazzo, marble, limestone, cantera, and cotto.
+**Meta description**: Shop large format tile at Zia Tile for open floors, feature walls, and commercial installations in terrazzo, marble, limestone, cantera, and cotto.
 
 **Keywords:** large format tile, large format floor tile, large format wall tile, large format bathroom tile
 
 # Large Format Tile
 
-Large format tile produces fewer grout joints, a more continuous surface, and a material presence that smaller formats cannot achieve. At Zia, the collection spans terrazzo, cotto, cantera, marble, and limestone in formats from 12x12 to 24x24, including specialty shapes like the Durango, a cotto format with an arched profile.
+## Less Grid, More Material
+
+Large format tile produces fewer grout joints, a more continuous surface, and a material presence that smaller formats cannot achieve. At Zia, the collection spans terrazzo, cotto, cantera, marble, and limestone in formats from 12x12 to 24x24, including specialty shapes like the Durango, a cotto format.
 
 \[PRODUCT LIST\]
-
-
 
 ## Frequently Asked Questions
 
@@ -29,28 +30,28 @@ A large format tile is any tile with at least one edge measuring 12 inches or lo
 
 ### What are the best applications for large format tile?
 
-Large format floor tile performs best on open, expansive surfaces where a continuous, uninterrupted field is the design goal. Common applications include open-plan living area floors, primary bathroom floors, full-height feature walls, and commercial lobbies and reception areas. On walls, large format wall tile reduces the number of grout joints across the surface, making it well-suited to full-height installations where a cleaner, less interrupted surface is preferred.
+Large format floor tile performs best on open, expansive surfaces where a continuous, uninterrupted field is the design goal. Common applications include open-plan living area floors, primary bathroom floors, full-height feature walls, and commercial lobbies and reception areas. On walls, large format tile reduces the number of grout joints across the surface, making it well-suited to full-height installations where a cleaner, less interrupted surface is preferred.
 
 ### Is 12x24 considered a large format tile?
 
-Yes, 12x24 tile is considered a large format tile. The 12x24 proportion sits at the entry point of the large format category and is one of the most widely specified sizes in residential and commercial projects because it balances scale with practical handling during installation. At Zia, 12x24 tile is available in limestone and terrazzo.
+Yes, 12x24 tile is considered a large format tile. The 12x24 proportion sits at the entry point of the large format category and is one of the most widely specified sizes in residential and commercial projects because it balances scale with practical handling during installation. At Zia, 12x24 tile is available in limestone.
 
 ### Can large format tile be used in a small room?
 
-Yes, large format tile can be used in a small room. Fewer grout joints reduce visual interruption, which allows the floor or wall to read as a more continuous surface. The material's color, tone, and texture become the primary visual element rather than the grout grid. As with any format, the tile scale should be considered alongside the room's proportions and the overall design intent.
+Yes. Fewer grout joints reduce visual interruption, which allows the floor or wall to read as a more continuous surface. The material's color, tone, and texture become the primary visual element rather than the grout grid. As with any format, tile scale should be considered alongside the room's proportions and the overall design intent.
 
 ### Does large format tile perform in exterior and freeze/thaw climates?
 
-Whether large format tile is suitable for exterior and freeze/thaw applications depends on the material. Terrazzo and marble are not suitable for any exterior floor application, regardless of climate. Limestone and cantera may be used on exterior floors in non-freeze/thaw climates only. Because suitability varies by material, confirming the specific tile's use cases before specifying for any outdoor application is essential. For guidance, contact our team at info@ziatile.com or 310-844-1170.
+Suitability for exterior and freeze/thaw applications depends on the material. Terrazzo is not suitable for exterior floor applications in freeze/thaw climates; in non-freeze/thaw climates, exterior floor use is permitted. Marble may be used on exterior floors in appropriate climates. Limestone and cantera may be used on exterior floors in non-freeze/thaw climates. Cotto is suitable for exterior use in any climate, including freeze/thaw regions. Confirm the specific tile's use cases before specifying for any outdoor application. For guidance, contact the Zia team at info@ziatile.com or 310-844-1170.
 
 ### What large format tile does Zia offer?
 
-Zia's large format tile collection includes terrazzo, cotto, cantera, marble, and limestone. Each material carries its own use cases, variation characteristics, and installation requirements. For a full overview of available formats and colorways, browse the collection or contact our team at info@ziatile.com or 310-844-1170.
+Zia's large format tile collection includes terrazzo, cotto, cantera, marble, and limestone. Each material carries distinct use cases, variation characteristics, and installation requirements. To review available formats and colorways, browse the collection or contact the Zia team at info@ziatile.com or 310-844-1170.
 
 ### How much large format tile is needed for a project?
 
-Start by measuring the total surface in feet, multiplying length by width to get the square footage. For a wall, measure each section separately and add them together. Once the total square footage is established, add overage to account for cuts, natural variation, and any tiles set aside during installation. For most large format tile materials, a minimum of 15% overage is recommended. For materials with higher natural variation such as cotto and cantera, 15 to 20% overage is recommended. For project-specific quantity guidance, contact our team at info@ziatile.com or 310-844-1170 before placing the order.
+Measure the total surface in feet, multiplying length by width to get the square footage. For a wall, measure each section separately and add them together. Then add overage to account for cuts, natural variation, and any tiles set aside during installation. For most large format materials, a minimum of 15% overage is recommended. For materials with higher natural variation such as cotto and cantera, 15 to 20% is recommended. For project-specific quantity guidance, contact the Zia team at info@ziatile.com or 310-844-1170.
 
 ### What is the difference between 12x24 and 24x24 tile?
 
-The difference between 12x24 tile and 24x24 tile is primarily one of scale and grout line frequency. A 12x24 format produces a rectangular tile with a directional quality that guides the eye along the longer axis, similar to the effect of a rectangular floor plank. A 24x24 format is a square tile that distributes visual weight evenly across the surface, with fewer grout lines overall.
+The distinction is primarily one of scale and grout line frequency. A 12x24 format produces a rectangular tile with a directional quality that guides the eye along the longer axis, similar to the effect of a rectangular floor plank. A 24x24 format is a square tile that distributes visual weight evenly across the surface, with fewer grout lines overall.

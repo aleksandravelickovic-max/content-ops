@@ -3,23 +3,24 @@ title: "Shape Square - Core Page"
 google_doc_id: "1MomvFMQ_NAevU63BiiIfaQPkpcRuZ_aZ2ER_rZZ3vyM"
 page_type: collection
 download_date: 2026-05-12
+optimized_date: 2026-05-27
 ---
 
-**URL:** <https://ziatile.com/collections/all?shape=square> 
+**URL:** <https://ziatile.com/collections/all?shape=square>
 
-**Meta Title**: Square Tile in Zellige, Ceramic, Limestone & More | Zia Tile
+**Meta title**: Square Tile in Zellige, Ceramic, Limestone & More | Zia Tile
 
-**Meta Description**: Shop square tile at Zia Tile. Zellige, ceramic, cement, limestone, cantera, and more. Sizes from 2x2 to 24x24 for floors, walls, and wet areas.
+**Meta description**: Shop square tile at Zia Tile. Zellige, ceramic, cement, limestone, cantera, and more. Sizes from 2x2 to 24x24 for floors, walls, and wet areas.
 
 **Keywords:** square tile, square backsplash tile, square mosaic tile, 4x4 tile, 4x4 zellige, 12x12 tile, small square tile
 
 # Square Tile
 
-Square tile is one of the oldest and most enduring formats in architecture. At Zia, square tile spans the full range of the collection: handcrafted zellige, ceramic, cement, Cotto, terrazzo, marble, limestone, Cantera stone, and more, in sizes from 2x2 mosaics to large-format 24x24 field tiles. Whether the application calls for a handmade surface with innate variation or a consistent field at larger scale, there is a square format in the collection to suit it.
+## The Format That Endures
+
+Square tile is one of the oldest and most enduring formats in architecture. At Zia, square tile spans the full range of the collection: handcrafted zellige, ceramic, cement, Cotto, terrazzo, marble, limestone, Cantera stone, and more, in sizes from 2x2 mosaics to large-format 24x24 field tiles. Whether the application calls for a handmade surface with innate variation or a consistent field at larger scale, there is a square format to suit it.
 
 \[PRODUCT LIST\]
-
-  
 
 ## Frequently Asked Questions
 
@@ -29,17 +30,17 @@ A square tile is any tile whose length and width are equal. The format has been 
 
 ### Where can square tiles be used?
 
-Square tile works across nearly every residential and commercial application. Common uses include floors, bathroom walls, shower walls, fireplace surrounds, and kitchen backsplashes. For exterior floor applications, suitability depends on the material and climate. Not all square tile formats are approved for outdoor use or suitable for freeze/thaw climates. Smaller formats like the 2x2 or 4x4 suit shower floors and detail work. Larger formats like 12x12 and 24x24 anchor open floors and expansive walls.
+Square tile works across nearly every residential and commercial application. Common uses include floors, bathroom walls, shower walls, fireplace surrounds, and kitchen backsplashes. For exterior floors, suitability depends on the material and climate. Not all square tile formats are approved for outdoor use or suitable for freeze/thaw climates. Smaller formats like the 2x2 or 4x4 suit shower floors and detail work. Larger formats like 12x12 and 24x24 anchor open floors and expansive walls.
 
 ### Is square tile timeless, or does it read as a trend?
 
-Square tile is timeless because the format carries no inherent style. It appears in Roman bath complexes, Moroccan riads, and mid-century modernist interiors, across movements that otherwise share little in common. The format adapts to the room rather than defining it, which is why it endures across materials, periods, and design preferences.
+Square tile is timeless because the format carries no inherent style. It appears in Roman bath complexes, Moroccan riads, and mid-century modernist interiors, across movements that otherwise share little in common. The format adapts to the room rather than defining it, which is why it endures across materials, periods, and design eras.
 
 ### Square tile vs. rectangular tile: which is right for the space?
 
-Square tile versus rectangular tile is not a performance question. Both formats work equally well on floors and walls. Rectangular formats elongate a surface and direct the eye along the longer axis. Square formats distribute visual weight evenly and let the material's color and texture carry the room. The right choice depends on the proportions of the space and the desired visual effect.
+Square versus rectangular tile is not a performance question. Both work equally well on floors and walls. Rectangular formats elongate a surface and direct the eye along the longer axis. Square formats distribute visual weight evenly and let the material's color and texture carry the room. The right choice depends on the proportions of the space and the desired visual effect.
 
-### What should I know about using contrasting grout with square tile?
+### What should be known about using contrasting grout with square tile?
 
 Contrasting grout amplifies the grid. The effect ranges from a quiet tonal shift to a graphic pattern depending on how much contrast is chosen. On porous unglazed materials like Cotto and cement tile, contrasting grout carries a staining risk and should be applied carefully by hand or with a grout bag. On glazed surfaces, sealing before grouting is required in wet areas regardless of grout color. This applies to 4x4 zellige and all other glazed square formats in the collection.
 
@@ -49,16 +50,16 @@ A small square tile at or below 2x2 inches is called a square mosaic tile. When 
 
 ### Should square tiles be set in a grid or staggered?
 
-Whether to set a square tile grid-on-grid or staggered depends on the material and the space. Grid-on-grid suits contemporary interiors and emphasizes the regularity of the format. A staggered offset reads as more artisanal and helps distribute natural size variation in handmade materials. Regardless of pattern, blend tiles from multiple boxes and lay the full installation out dry before setting to assess the composition.
+The choice depends on the material and the space. Grid-on-grid suits contemporary interiors and emphasizes the regularity of the format. A staggered offset reads as more artisanal and helps distribute natural size variation in handmade materials. Regardless of pattern, blend tiles from multiple boxes and lay the full installation out dry before setting to assess the composition.
 
-### How do I choose the right square tile size for a space?
+### How do you choose the right square tile size for a space?
 
 Small square tile formats like 2x2 and 4x4 work well in compact spaces, on shower floors, and as detail or accent work. The smaller sizes are also easier to install on curved surfaces. Mid-range formats around 8x8 are versatile across floors and walls in both residential and commercial settings. Larger formats like 12x12 and 24x24 suit open floors and expansive walls, where fewer grout lines read as cleaner and more minimal. As a general rule, tile size should be proportional to the surface it covers.
 
 ### What square tile colors does Zia carry?
 
-Zia's square tile collection spans a wide range of colors across multiple materials. In zellige, square formats are available in a curated selection of colorways, including whites, greens, blues, earthy neutrals, and more, each producing a distinct result depending on the glaze and the light conditions of the space. In ceramics, the square collection includes matte, satin, and gloss finishes across a broad palette from clean whites and blacks to softer naturals and bolder accent colors. Cement tile squares are available in both solid colors and patterned designs. Stone formats, including Cantera and limestone, carry the natural neutral palette of the material itself. For the full current range of available materials, colors, and finishes, browse the [square tile collection](https://ziatile.com/collections/all?shape=square) or contact our team at info@ziatile.com with any questions.
+Zia's square tile collection spans a wide range of colors across multiple materials. In zellige, square formats are available in a curated selection of colorways, including whites, greens, blues, earthy neutrals, and more, each producing a distinct result depending on the glaze and the light conditions of the space. In ceramics, the square collection includes matte, satin, and gloss finishes across a broad palette from clean whites and blacks to softer naturals and bolder accent colors. Cement tile squares are available in both solid colors and patterned designs. Stone formats, including Cantera and limestone, carry the natural neutral palette of the material itself. For the full current range of available materials, colors, and finishes, browse the [square tile collection](https://ziatile.com/collections/all?shape=square) or contact the Zia team at info@ziatile.com or 310-844-1170.
 
-### How do I calculate how many square tiles I need?
+### How do you calculate how many square tiles are needed?
 
-Start by measuring the length and width of the surface in feet and multiplying to get the total square footage. For a floor, measure the room. For a wall, measure each section separately and add them together. Once the total square footage is established, add overage to account for cuts, natural variation, and any tiles set aside during installation. For most square tile materials, a minimum of 15% overage is recommended. For handmade materials like zellige, where variation in size and surface is inherent to the tile, 15 to 20% overage is recommended, with 25% for a more uniform result. For quantity guidance specific to a project, contact our team at info@ziatile.com or 310-844-1170 Ext 1 before placing the order.
+Measure the length and width of the surface in feet and multiply to get the total square footage. For a floor, measure the room. For a wall, measure each section separately and add them together. Then add overage to account for cuts, natural variation, and any tiles set aside during installation. For most square tile materials, a minimum of 15% overage is recommended. For handmade materials like zellige, where variation in size and surface is inherent to the tile, 15 to 20% overage is recommended, with 25% for a more uniform result. For quantity guidance specific to a project, contact the Zia team at info@ziatile.com or 310-844-1170.
