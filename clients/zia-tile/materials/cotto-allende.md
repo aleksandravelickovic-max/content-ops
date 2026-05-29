@@ -9,6 +9,9 @@ variation_trio_applies: false
 variation_language: [matte to glossy finish, speckling, subtle crazing, color shifts]
 sealing_profile: cotto-allende-glazed
 confidence: high
+allowed_colorways: [Sayulita, Cacao, Creosote, Peyote, Arroyo, Condesa, Pedregal]
+colorway_confidence: draft
+colorway_note: "STYLE-SYSTEM §5.4 names 7 of 18 colorways with 'and others.' Remaining 11 must be confirmed against the live catalog before assertion — material-guard flags any colorway not in this list."
 source: STYLE-SYSTEM.md §4.1, §4.2, §4.3, §5.4, §8.3, §11
 ---
 

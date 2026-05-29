@@ -9,6 +9,9 @@ variation_trio_applies: true
 variation_language: [chips, pits, crazing, surface texture, sheen, dynamic glazes, innate variation]
 sealing_profile: zellige-glazed
 confidence: high
+allowed_colorways: verify
+colorway_confidence: verify
+colorway_note: "STYLE-SYSTEM names 'Casablanca,' 'Pure White' and a few others in passing but does not lock the full catalog. Until Aleksandra/Emanuel confirm the master list, material-guard flags every colorway name with 'verify' rather than asserting. Aegean and Absinthe (zellige v2) were invented; this gate prevents recurrence."
 source: STYLE-SYSTEM.md §3.1, §4.1, §4.5, §4.9, §4.11, §10.1, §11; raw/research/materials-reference.md v3 Quick Reference (Emanuel, 2026-05-20, confirms pool/spa)
 ---
 

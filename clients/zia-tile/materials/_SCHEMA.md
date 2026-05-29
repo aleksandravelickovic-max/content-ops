@@ -19,6 +19,8 @@ These files are derived from `../STYLE-SYSTEM.md` and the audited v3 drafts in `
 | `sealing_profile` | slug | Which sealing instruction set applies. |
 | `confidence` | `high` / `draft` / `verify` | `high` = STYLE-SYSTEM explicit; `draft` = from an audited v3 draft; `verify` = unconfirmed. |
 | `source` | string | Exact STYLE-SYSTEM sections or draft paths the rules come from. |
+| `allowed_colorways` | list (or `verify`) | Colorway names that may be asserted in a draft. `material-guard` rejects any colorway not in this list. Use `verify` if the catalog is not yet locked. Added 2026-05-28 to catch invented colorways (Aegean, Absinthe were the May 2026 incidents). |
+| `colorway_confidence` | `high` / `draft` / `verify` | Source quality of `allowed_colorways`. `high` = STYLE-SYSTEM table; `draft` = audited v3 draft; `verify` = pending catalog confirmation. |
 
 ## Hard-rule semantics for material-guard
 

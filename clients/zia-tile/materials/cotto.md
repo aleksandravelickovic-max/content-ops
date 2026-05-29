@@ -9,7 +9,9 @@ variation_trio_applies: false
 variation_language: [tone, shape, edge profile, thickness]
 sealing_profile: cotto-unglazed
 confidence: high
-source: STYLE-SYSTEM.md §4.1, §4.2, §4.3, §4.11, §5, §11
+allowed_colorways: [Adobe, Fired Earth, Red Clay, Blanco, Madera, Oscura]
+colorway_confidence: high
+source: STYLE-SYSTEM.md §4.1, §4.2, §4.3, §4.11, §5, §5.2, §11
 ---
 
 # Cotto — material rules
