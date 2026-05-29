@@ -1,0 +1,80 @@
+# Keyway B1: /brief -> /draft-{content-type}
+#
+# Brief defines every premise the drafter cannot invent. A missing key forces
+# the drafter to fabricate one, which then passes mechanical gates but gets
+# rejected by Jamie. Catching the cause at B1 is dramatically cheaper than
+# catching the symptom at voice-judge.
+
+boundary: B1
+from_stage: brief
+to_stage: draft
+
+purpose: |
+  Verify that the brief produced by /brief carries every premise the drafter
+  needs. Missing premises cause the drafter to fabricate; fabricated premises
+  pass mechanical gates and get rejected editorially.
+
+required_invariants:
+  - id: topic_present
+    check: |
+      brief.md contains a non-empty "Topic" line or H2/H3 section. Reject
+      placeholder strings ("TBD topic", empty quotes).
+    severity: critical
+    tier: haiku
+    source: client brief template
+
+  - id: material_focus_present
+    check: |
+      brief.md names a specific material slug that exists at
+      clients/{client}/materials/{slug}.md. A brief that names "tile" or
+      "the line" without picking a material lets the drafter scope-creep.
+    severity: critical
+    tier: haiku
+    source: materials/_SCHEMA.md
+
+  - id: voice_reference_present
+    check: |
+      brief.md cites STYLE-SYSTEM.md §2 (or the client equivalent) AND
+      lists at least one specific exemplar path from clients/{client}/_approved/
+      if the folder has any files of the matching content-type. If the
+      _approved/ folder is empty for the content-type, accept the STYLE-SYSTEM
+      reference alone but emit a warning that calibration will be partial.
+    severity: critical
+    tier: haiku
+    source: STYLE-SYSTEM §2, _approved/README.md
+
+  - id: audience_segment_present
+    check: |
+      brief.md names the target audience: "Trade", "Consumer", or "Both".
+      Drafter must know the register; Trade copy is technical-first,
+      Consumer copy is confidence-building-first.
+    severity: critical
+    tier: haiku
+    source: STYLE-SYSTEM §1
+
+  - id: compliance_flags_surfaced
+    check: |
+      For any field in the material config marked confidence: verify or
+      pools_spas: verify or allowed_colorways: verify, brief.md must
+      acknowledge the verify-gated dimension and either route around it
+      or flag it for Alex. Silent omission causes the drafter to assert
+      or hedge inconsistently across the piece.
+    severity: warning
+    tier: sonnet
+    source: materials/{material}.md frontmatter
+
+  - id: page_template_matches_content_type
+    check: |
+      The brief's named content-type matches a real page-template at
+      clients/{client}/page-templates/{content-type}.md. Brief asking for
+      "landing page" when only blog/collection/product templates exist
+      is a contract miss caused by ambiguous campaign instructions.
+    severity: critical
+    tier: haiku
+    source: page-templates/
+
+operator_override:
+  allow_path: clients/{client}/campaigns/{campaign}/runs/{slug}/piece-spec.yml
+  override_keys:
+    - audience_segment_present  # allowed when campaign locks the audience
+    - voice_reference_present   # allowed only when piece-spec names an explicit override exemplar

@@ -1,0 +1,68 @@
+# Keyway B5: ship-summary -> /render-html
+#
+# RUN-SUMMARY must be complete and consistent before the canonical HTML
+# delivery artifact is produced. Once stage 15 runs, the .html is what
+# downstream operators (/export-gdrive, CSM, client) see — a faulty
+# RUN-SUMMARY caught after this point means the wrong piece reached the
+# client.
+
+boundary: B5
+from_stage: ship-summary
+to_stage: render-html
+
+purpose: |
+  Verify that the final draft and the RUN-SUMMARY are consistent before
+  the deterministic HTML render produces the delivery artifact. This is
+  the last gate before the piece leaves the pipeline's audit boundary.
+
+required_invariants:
+  - id: final_draft_path_exists
+    check: |
+      The MD path the orchestrator intends to render exists on disk and
+      is non-empty. The pipeline never renders an empty file.
+    severity: critical
+    tier: haiku
+
+  - id: run_summary_complete
+    check: |
+      RUN-SUMMARY.md exists with the required fields: client, content_type,
+      material, stages_passed, voice_score, koray_score, verify_items,
+      delivery_artifact path. A missing field means the orchestrator did
+      not finish bookkeeping; do not render until it does.
+    severity: critical
+    tier: haiku
+    source: commands/run-piece.md success output template
+
+  - id: state_json_marks_all_stages_completed
+    check: |
+      state.json reports status: "completed" for every stage 1-14. Any
+      stage in "pending", "failed", or "skipped" status halts B5.
+    severity: critical
+    tier: haiku
+
+  - id: frontmatter_will_strip_cleanly
+    check: |
+      The MD file's leading frontmatter block (between two --- lines) is
+      well-formed. render-html.py strips it; a malformed block would
+      either leak metadata into the visible HTML body or strip valid
+      content. Run a pre-strip test on the MD before invoking render-html.
+    severity: critical
+    tier: haiku
+    source: scripts/render-html.py strip_frontmatter
+
+  - id: verify_items_propagated
+    check: |
+      Any verify_items in state.json are also present in RUN-SUMMARY.md
+      under the "Verify-with-Alex items" line. The CSM needs to see
+      these on the delivery handoff; silent drop here means Alex Bellanger
+      gets an HTML that asserts what should have been verified.
+    severity: critical
+    tier: haiku
+    source: contracts/B3-enforcers-to-judges.yml verify_gated_items_surfaced
+
+operator_override:
+  allow_path: clients/{client}/campaigns/{campaign}/runs/{slug}/piece-spec.yml
+  override_keys: []
+  # No operator overrides at B5. This is a structural integrity gate; if
+  # any invariant fails, the pipeline is in a broken state and the fix
+  # is to debug the prior stages, not bypass the contract.

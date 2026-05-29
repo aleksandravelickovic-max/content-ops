@@ -1,0 +1,70 @@
+# Keyway B4: judges (stages 13-14) -> ship-summary
+#
+# Both voice and koray scores at floor (>=80) before the run is declared
+# successful and the canonical RUN-SUMMARY is written. Note: /ship at
+# stage 12 is a QA pass on the draft itself; this Keyway B4 is the
+# "do both scored judges agree this is publishable" boundary.
+
+boundary: B4
+from_stage: judges
+to_stage: ship-summary
+
+purpose: |
+  Verify that both scored judges returned a passing verdict. The judges
+  are the last line of editorial defense before the piece is declared
+  ready for CSM delivery. Below-floor scores mean the piece needs
+  rework, not paint-touching.
+
+required_invariants:
+  - id: voice_judge_floor
+    check: |
+      voice-judge returned a score >= 80 with verdict "On-register" or
+      "Acceptable". A score in 70-79 is "Below floor" and halts B4.
+    severity: critical
+    tier: haiku
+    source: agents/voice-judge.md output format
+
+  - id: koray_judge_floor
+    check: |
+      koray-judge returned a score >= 80. Below 80 halts B4 with the
+      lowest-scoring dimension surfaced for the next iteration.
+    severity: critical
+    tier: haiku
+    source: agents/koray-judge.md output format
+
+  - id: voice_judge_calibrated
+    check: |
+      If clients/{client}/_approved/{content-type}/ has fewer than 3
+      files, voice-judge runs uncalibrated and its score is informational
+      only. B4 surfaces this as a warning so the operator knows the gate
+      ran at reduced confidence.
+    severity: warning
+    tier: haiku
+    source: _approved/README.md calibration policy
+
+  - id: lowest_dimension_actionable
+    check: |
+      For both judges, the lowest-scoring dimension must be named with
+      a quoted passage and a direction. A judge that scored a piece 80
+      without naming its weakest dimension is a malformed report and
+      gives the operator nothing to act on.
+    severity: critical
+    tier: haiku
+    source: agents/{voice,koray}-judge.md output format
+
+  - id: rewrite_test_results_present
+    check: |
+      voice-judge requires a "Largest gaps" section quoting 2-3 passages
+      where the rewrite-test fails most. Empty section means the judge
+      did not engage the rubric; rerun rather than promote.
+    severity: warning
+    tier: haiku
+    source: agents/voice-judge.md output format
+
+operator_override:
+  allow_path: clients/{client}/campaigns/{campaign}/runs/{slug}/piece-spec.yml
+  override_keys:
+    - voice_judge_floor   # allowed ONLY when piece-spec sets target_register: "draft-share"
+    - koray_judge_floor   # allowed ONLY when piece-spec sets seo_review: "deferred"
+  # These overrides exist for pre-Jamie internal review drafts. They never
+  # apply to client-share deliverables; piece-spec must justify the lower bar.

@@ -1,0 +1,89 @@
+# Keyway B2: /draft-{type} -> enforcer cluster (stages 3-10)
+#
+# Draft must have the structural shape the enforcers assume. A draft missing
+# section 5 (Installation) lets material-guard "pass" — there is no claim
+# to contradict. The pipeline cannot use that PASS as evidence of correctness.
+
+boundary: B2
+from_stage: draft
+to_stage: enforcer-cluster
+
+purpose: |
+  Verify that the draft produced by /draft-{type} is structurally complete
+  enough for the enforcer cluster to do its job. A structurally broken draft
+  silently passes mechanical enforcers and surfaces as wrong-shape failure
+  many stages later.
+
+required_invariants:
+  - id: page_template_sections_present
+    check: |
+      For content-type product: all 9 sections from STYLE-SYSTEM §8.5 must
+      appear as H2 in order (Product Details, About, Inherent Variation,
+      Preparation and Curation, Installation and Finishing, Tile Usage,
+      How It's Made, Order and Shipping, FAQ). Missing or out-of-order
+      sections halt B2.
+      For content-type collection: opener + [PRODUCT LIST] marker + FAQ
+      must be present.
+      For content-type blog: opening paragraph + at least 3 H2 sections +
+      conclusion + contact block (per STYLE-SYSTEM §6).
+    severity: critical
+    tier: haiku
+    source: page-templates/{content-type}.md
+
+  - id: contact_block_present
+    check: |
+      The exact contact block from clients/{client}/contact-block.md (or
+      its equivalent — info@ziatile.com plus 310-844-1170 together) must
+      appear at least once in the closing section. Email-only is a critical
+      miss caught by contact-line-check, but at B2 we verify presence so
+      that contact-line-check is checking placement, not absence.
+    severity: critical
+    tier: haiku
+    source: contact-block.md, STYLE-SYSTEM §4.6
+
+  - id: no_placeholder_artifacts
+    check: |
+      Pre-flight scan for the placeholder patterns that placeholder-check
+      will examine in detail at stage 3. Bracketed slots, hedge-in-figure
+      ("pricing varies"), TODO/TBD markers. B2 fails fast so the more
+      expensive enforcer cluster does not waste a turn.
+    severity: critical
+    tier: haiku
+    source: agents/placeholder-check.md categories 1-3
+
+  - id: material_name_anchored
+    check: |
+      The draft anchors the named material in early body copy. For Zia:
+      "Our [Material]" or "Zia's [Material]" appears at least once in
+      the first 30% of the body (STYLE-SYSTEM §3.1 required term).
+      A draft that names the colorway as a sentence subject without
+      product anchor is a recurring May 2026 miss.
+    severity: warning
+    tier: haiku
+    source: STYLE-SYSTEM §3.1
+
+  - id: required_terms_for_material_present
+    check: |
+      For zellige: "handcrafted Moroccan art form" must appear in the
+      opening (STYLE-SYSTEM §10.1) and chips/pits/crazing as a trio at
+      least once. For Cotto: "open and mix" in the prep section, "tone,
+      shape, edge profile, thickness" as the variation list. Material-
+      specific required-presence checks per STYLE-SYSTEM §3.1.
+    severity: warning
+    tier: sonnet
+    source: STYLE-SYSTEM §3.1, §8
+
+  - id: frontmatter_present_and_parseable
+    check: |
+      Pipeline drafts carry a YAML frontmatter block (url, meta_title,
+      meta_description, source, generated_by). Missing or malformed
+      frontmatter breaks the rendered HTML provenance trail at stage 15.
+    severity: critical
+    tier: haiku
+    source: render-html.py strip_frontmatter contract
+
+operator_override:
+  allow_path: clients/{client}/campaigns/{campaign}/runs/{slug}/piece-spec.yml
+  override_keys:
+    - required_terms_for_material_present  # allowed when campaign brief explicitly opts out
+    - material_name_anchored                # allowed for translation pieces

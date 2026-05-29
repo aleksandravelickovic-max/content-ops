@@ -1,0 +1,71 @@
+# Keyway B3: enforcer cluster (stages 3-10) -> judges (stages 13-14)
+#
+# Every critical enforcer must have PASSED. Spending Sonnet judge budget on
+# a draft with an open critical failure wastes both the run and the operator's
+# review attention.
+
+boundary: B3
+from_stage: enforcer-cluster
+to_stage: judges
+
+purpose: |
+  Verify that every critical enforcer in stages 3-10 returned PASS. Sonnet
+  judges (voice-judge, koray-judge) are the most expensive stages in the
+  pipeline; they exist to score quality, not to triage critical errors that
+  the cheap enforcers already named.
+
+required_invariants:
+  - id: all_critical_enforcers_passed
+    check: |
+      state.json shows status: "completed" with verdict: "PASS" for each
+      of: placeholder-check, material-guard, terminology-lint,
+      claims-grounding, person-consistency, contact-line-check,
+      prop65-link-check. If any returned BLOCKED, B3 halts.
+    severity: critical
+    tier: haiku
+    source: agents/{name}.md verdict format
+
+  - id: positive_framing_within_budget
+    check: |
+      positive-framing-check is escalating: 3+ hits halts at stage 10 and
+      never reaches B3. Here we additionally require warnings <= 2 to cross
+      into the judges. A draft that needed 2 warnings is on the threshold;
+      voice-judge gets one informational hit allowance per warning.
+    severity: warning
+    tier: haiku
+    source: agents/positive-framing-check.md escalation rule
+
+  - id: humanize_advisory_acknowledged
+    check: |
+      Stage 11 (/humanize) is advisory. If /humanize produced edits the
+      orchestrator did not apply, the unapplied edit list must be recorded
+      in state.json so the operator can review what was discarded before
+      the judges score the final shape.
+    severity: warning
+    tier: haiku
+    source: commands/humanize.md
+
+  - id: ship_pre_check_clean
+    check: |
+      /ship at stage 12 runs before this keyway. Its verdict must be
+      "Ready to ship" or "Ship after minor fixes" — never "Not ready
+      to ship." This is the last critical gate before scored judges.
+    severity: critical
+    tier: haiku
+    source: commands/ship.md verdict format
+
+  - id: verify_gated_items_surfaced
+    check: |
+      Any "verify with Alex" items raised by material-guard must be
+      collected in state.json.verify_items so the judge stage and the
+      RUN-SUMMARY can carry them forward. Silent drop here means the
+      operator delivers a piece with unresolved verifications.
+    severity: critical
+    tier: haiku
+    source: agents/material-guard.md output format
+
+operator_override:
+  allow_path: clients/{client}/campaigns/{campaign}/runs/{slug}/piece-spec.yml
+  override_keys: []
+  # No operator overrides at B3 by design. If a critical enforcer failed,
+  # fix it before judges run. The point of the gate is to refuse cost.
