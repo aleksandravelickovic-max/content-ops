@@ -168,6 +168,22 @@ These patterns, drawn from Architectural Digest, Wallpaper*, Remodelista, and Do
 | Peel-and-stick | Omit | Not a Zia category |
 | Returns | Omit | Business exclusion |
 | Withstands (for freeze/thaw) | "Is not suitable for freeze/thaw climates" | Factual error for zellige and Cotto Allende |
+| Sources (as in "Zia sources the collection") | Produces / makes in partnership with | Jamie flagged repeatedly: Zia does not merely source -- the relationship is a production partnership |
+| Products (for tiles, collections, or materials) | Tiles / collections / materials | Jamie flagged repeatedly in customer-facing copy |
+| Laid (installation) | Set | Correct installation verb per Jamie |
+| Built (for how a material ages or performs) | Crafted / develops | "Built to age" was flagged as poor word choice |
+| Use (for patina and aging) | Wear | "Deepens with wear," not "deepens with use" |
+| Recessive (as a design descriptor) | Describe the actual design quality -- what does the tile do in the space? | Jamie: vague hedge that does not describe anything |
+| Muted (as a stand-alone design descriptor) | Describe the design register specifically -- "sits quieter," "recedes" | Jamie: needs the specific behavior in the room |
+| The correct choice | A great choice (or omit) | Jamie: never frame Zia's tile as the only or "correct" answer |
+| Most often specified / most popular / most specified | Name a specific use context without ranking | Jamie: "we never allude to best-sellers" |
+| Normal (for variation framing) | Inherent / characteristic of | "Inherent variation," never "slight variation is normal" |
+| Dynamic glazes (for any non-zellige material) | Material-specific framing | Zellige-only terminology -- applying to ceramics, Cotto, Cotto Allende is a category error |
+| Specific grout color names in recommendations (buff, warm grey, bright white) | Describe the approach: color-matching vs. contrasting | Jamie: describe the visual outcome, not the swatch |
+| "The practical summary:" / "In summary:" / "Practical summary:" as section labels | Direct editorial transition through content | Report-style labels are a structural tell that the writer ran out of connective tissue |
+| "Understanding the differences between..." opener | Lead with the first piece of useful information | Meta-setup sentences announcing what the article will do are filler |
+| Negative framing for tile attributes ("protects against," "endures," "withstands," "overcomes") | Lead with what the material gives the room | §2.10 -- stay positive; tile attributes are gifts to the space, not defenses against threats |
+| Physical-property colorway descriptions ("soft tan, warm, and light") | Describe how the tone reads in a room and against other materials | Specs are not color descriptions; "Adobe sits in the muted middle and pairs with plaster" |
 
 ---
 
