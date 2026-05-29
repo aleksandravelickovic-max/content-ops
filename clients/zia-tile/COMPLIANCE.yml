@@ -38,6 +38,38 @@ banned_terms:
   - term: "best seller"
     severity: warning
     reason: "Jamie removed ranking language repeatedly (§3.2)."
+  # May 2026 review additions — Jamie corrections that recurred across the cycle
+  - term: "sources"
+    severity: critical
+    reason: "Zia does not merely source — the relationship is a production partnership. Use 'produces' or 'makes in partnership with' (§3.2)."
+    context: production_attribution
+  - term: "products"
+    severity: critical
+    reason: "Use 'tiles' or 'collections' or 'materials' in customer-facing copy. Jamie flagged repeatedly (§3.2)."
+  - term: "laid"
+    severity: warning
+    reason: "Correct installation verb is 'set' per Jamie (§3.2)."
+  - term: "the correct choice"
+    severity: warning
+    reason: "Never frame Zia's tile as the only or 'correct' answer. Use 'a great choice' or omit (§3.2)."
+  - term: "most often specified"
+    severity: warning
+    reason: "Jamie: 'we never allude to best-sellers' (§3.2)."
+  - term: "most popular"
+    severity: warning
+    reason: "Jamie: 'we never allude to best-sellers' (§3.2)."
+  - term: "most specified"
+    severity: warning
+    reason: "Jamie: 'we never allude to best-sellers' (§3.2)."
+  - term: "The practical summary"
+    severity: warning
+    reason: "Report-style section label. Transition through content, not through labeling it (§3.2)."
+  - term: "Practical summary:"
+    severity: warning
+    reason: "Same pattern as 'The practical summary' (§3.2)."
+  - term: "Understanding the differences between"
+    severity: warning
+    reason: "Meta-setup opener. Lead with the first useful information (§3.2)."
 
 # Technical-accuracy guards — factual errors that fail QA (§4)
 technical_guards:
@@ -77,6 +109,28 @@ technical_guards:
     severity: critical
     check: "Do not reference products Zia does not sell (e.g., Saltillo) without strategic reason confirmed by Alex; never position them favorably over Cotto."
     source: "§5.5"
+  - rule: overage_rate_correct
+    severity: critical
+    check: "Overage must be stated as '15-20%' standard plus '25%' for specialty/uniform. Never '10-15%' (factually wrong, appeared on every ceramic page in May review)."
+    source: "§4.9 / §9"
+    pattern_reject: ["10-15%", "10 to 15%", "10–15%"]
+    pattern_require: ["15-20%", "25%"]
+  - rule: prop65_link_required
+    severity: critical
+    check: "Where 'Prop 65' or 'Proposition 65' text appears, the link ziatile.com/proposition-65-warnings must be present as a hyperlink (text reference alone is incomplete)."
+    source: "§4.5 / §4.8"
+  - rule: phone_present_with_email
+    severity: critical
+    check: "Where info@ziatile.com appears in a closing or contact context, the phone 310-844-1170 must appear in the same block. Email present without phone was a recurring May 2026 miss."
+    source: "§4.6"
+  - rule: colorway_verified
+    severity: critical
+    check: "Any colorway name asserted in a draft must appear in materials/{material}.md allowed_colorways or in STYLE-SYSTEM.md tables. Aegean and Absinthe (zellige v2) are flagged invented examples."
+    source: "§4.7"
+  - rule: production_step_verified
+    severity: critical
+    check: "Production-narrative verbs must come from STYLE-SYSTEM §4.6 verified steps. Zellige does not include 'chiseled' or 'manual chiseling' — use 'hand-shaped'."
+    source: "§4.6"
 
 # Voice exclusions — banned even though not a legal/factual risk (§2.1, §3.2)
 voice_bans:
@@ -89,6 +143,22 @@ voice_bans:
   - term: "defects"
     severity: critical
     reason: "Reframe as chips/pits/crazing characteristics (zellige) — never 'defects'."
+  # May 2026 — Jamie voice corrections (contextual; lint catches the literal but flags warning to allow legitimate uses)
+  - term: "recessive"
+    severity: warning
+    reason: "Vague hedge that does not describe anything. Use the specific design behavior in the room (§3.2)."
+  - term: "muted"
+    severity: warning
+    reason: "Stand-alone descriptor. Use the specific behavior — 'sits quieter,' 'recedes' (§3.2). Allowed when paired with a specific quality."
+  - term: "normal"
+    severity: warning
+    reason: "When describing variation. Use 'inherent' or 'characteristic of' (§3.2). Allowed in non-variation contexts."
+  - term: "built to"
+    severity: warning
+    reason: "Aging/performance framing. Use 'crafted' or 'develops' — 'built to age' is poor word choice (§3.2)."
+  - term: "deepens with use"
+    severity: warning
+    reason: "Patina framing. Use 'deepens with wear' (§3.2)."
 
 # Required-presence checks
 required_presence:
