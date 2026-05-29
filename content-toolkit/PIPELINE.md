@@ -31,22 +31,25 @@ clients/zia-tile/
 
 To onboard another client, replicate this shape: write its STYLE-SYSTEM.md, its COMPLIANCE.yml, its contact-block.md, one material config per material it sells, and its page templates.
 
-## The twelve stages (`/run-piece`)
+## The fifteen stages (`/run-piece`)
 
 | # | Stage | Tier | Gate |
 |---|---|---|---|
 | 1 | `/brief` | sonnet | advisory |
 | 2 | `/draft-{type}` | sonnet | advisory (self-checks) |
-| 3 | `material-guard` | haiku | critical |
-| 4 | `terminology-lint` | haiku | critical |
-| 5 | `claims-grounding` | sonnet | critical |
-| 6 | `person-consistency` | haiku | critical |
-| 7 | `contact-line-check` | haiku | critical |
-| 8 | `/humanize` | sonnet | advisory |
-| 9 | `/ship` | sonnet | critical |
-| 10 | `voice-judge` | sonnet | gate >=80 |
-| 11 | `koray-judge` | sonnet | gate >=80 |
-| 12 | `/render-html` | haiku | mechanical (only runs after 11 passes) |
+| 3 | `placeholder-check` | haiku | critical (runs first — broken input poisons later stages) |
+| 4 | `material-guard` | haiku | critical |
+| 5 | `terminology-lint` | haiku | critical |
+| 6 | `claims-grounding` | sonnet | critical |
+| 7 | `person-consistency` | haiku | critical |
+| 8 | `contact-line-check` | haiku | critical |
+| 9 | `prop65-link-check` | haiku | critical (Prop 65 mention without link is a compliance miss) |
+| 10 | `positive-framing-check` | haiku | escalating (3+ hits halts; 1-2 warnings) |
+| 11 | `/humanize` | sonnet | advisory |
+| 12 | `/ship` | sonnet | critical |
+| 13 | `voice-judge` | sonnet | gate >=80 |
+| 14 | `koray-judge` | sonnet | gate >=80 |
+| 15 | `/render-html` | haiku | mechanical (only runs after 14 passes) |
 
 Any critical failure halts and writes `BLOCKED.md`. Success writes the MD draft + `{slug}.html` (the delivery artifact) + `RUN-SUMMARY.md` + `state.json` under `campaigns/{campaign}/runs/{slug}/`.
 
