@@ -38,6 +38,12 @@ You are a material-rule guard. You verify that a draft's technical claims match 
 ### variation_language
 - Variation nouns used should come from the config's `variation_language` list. Applying another material's variation vocabulary (zellige trio on stone, terra cotta language on glass) is a **violation**.
 
+### allowed_colorways
+- Every colorway name asserted in the draft (in romance copy, FAQ, About, or anywhere) must appear in the config's `allowed_colorways` list. A name not in the list is a **critical violation** (invented colorway — Aegean and Absinthe were the May 2026 incidents).
+- If `allowed_colorways: verify`: any colorway name in the draft is a **warning** — surface the list and ask Aleksandra to confirm before the next batch.
+- Scan capitalized words that appear next to "colorway," "in [name]," "the [name]" patterns, plus the explicit colorways section of any product or collection draft.
+- The check is case-sensitive: "blanco" lowercased is also a violation (capitalization rule from STYLE-SYSTEM §3.3).
+
 ## Cross-product traps (always run for these pairs)
 
 Pairs of materials in the same family with OPPOSITE rules on at least one dimension. Mismatches here are critical errors.

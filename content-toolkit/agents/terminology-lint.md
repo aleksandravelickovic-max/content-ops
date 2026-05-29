@@ -11,7 +11,7 @@ You are a terminology linter. You do not interpret voice or judge quality. You m
 
 1. **Identify the client** from the file path. If unclear, ask.
 2. **Read `clients/{client}/STYLE-SYSTEM.md`** — extract the required-terms table (§3.1) and the strict-avoidance table (§3.2). For Zia these are large; load both fully.
-3. **Read `clients/{client}/COMPLIANCE.yml`** if present — merge its `banned_terms` and `voice_bans` into the avoidance set.
+3. **Read `clients/{client}/COMPLIANCE.yml`** if present — **load the full `banned_terms` and `voice_bans` lists, not just the quick-reference highlights below.** Every term with `severity: critical` is a halt; every term with `severity: warning` is a flag. Honor the `context` field where present (e.g., "muted" is allowed when paired with a specific behavior, but flagged stand-alone).
 
 ## What you check
 
@@ -33,6 +33,16 @@ Zia high-frequency banned terms and their substitutes (authoritative list is the
 - "runs to [number]" -> "features [number written out]"
 - "colonial courtyard" -> "Spanish courtyard"
 - "withstands" (freeze/thaw) -> "is not suitable for freeze/thaw climates"
+- "sources" (Zia + production) -> "produces" / "makes in partnership with"
+- "products" (for tiles/collections) -> "tiles" / "collections" / "materials"
+- "laid" (installation) -> "set"
+- "the correct choice" -> "a great choice" (or omit)
+- "most often specified" / "most popular" / "most specified" -> omit ranking language
+- "normal" (variation framing) -> "inherent" / "characteristic of"
+- "deepens with use" (patina) -> "deepens with wear"
+- "built to" (aging) -> "crafted to" / "develops"
+- "The practical summary:" / "Practical summary:" -> direct editorial transition
+- "Understanding the differences between..." -> lead with the first useful information
 
 ### Required terms (§3.1)
 Flag where a required term is expected but a wrong variant appears:
