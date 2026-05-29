@@ -17,6 +17,7 @@ Orchestrate a single content piece from brief to scored draft. You are the orche
 1. **Identify** client, content-type, material, topic.
 2. **Confirm context files exist:** `clients/{client}/STYLE-SYSTEM.md`, `clients/{client}/materials/{material}.md`, `clients/{client}/page-templates/{content-type}.md`, `clients/{client}/contact-block.md`. If any is missing, stop and report.
 3. **State file:** `clients/{client}/campaigns/{campaign}/runs/{piece-slug}/state.json`. On `--resume`, read it and skip completed stages. Otherwise create it with all stages `pending`.
+4. **Optional piece-spec:** if `clients/{client}/campaigns/{campaign}/runs/{piece-slug}/piece-spec.yml` exists, note its path; the Keyway boundaries will consult it for authorized invariant overrides.
 
 ## Pipeline (run in order, persist state after each)
 
@@ -42,11 +43,39 @@ Stages 3-10 are the mechanical enforcers (cheap, run first to fail fast). Stages
 
 **Why placeholder-check runs first (stage 3):** an unfilled placeholder breaks the input every later stage works on — material-guard might silently pass a draft that says "approved for [TBD]" because the literal claim is missing. Catch placeholders before any rule-checker reads the draft.
 
+## Keyway boundaries (mandatory hand-delivery validation)
+
+Between stages where the **semantics** of the artifact change, invoke `keyway-check` with the boundary id and the run directory. `keyway-check` reads the contract at `content-toolkit/contracts/{B-id}-*.yml` and validates the upstream output against the downstream stage's input contract. See `content-toolkit/CONTRACTS.md` for the design.
+
+| Keyway | After stage | Before stage | Contract file |
+|---|---|---|---|
+| **B1** | 1 (brief) | 2 (draft) | `B1-brief-to-draft.yml` |
+| **B2** | 2 (draft) | 3 (placeholder-check) | `B2-draft-to-enforcers.yml` |
+| **B3** | 10 (positive-framing) | 13 (voice-judge) — runs after 11/humanize and 12/ship | `B3-enforcers-to-judges.yml` |
+| **B4** | 14 (koray-judge) | RUN-SUMMARY write | `B4-judges-to-ship.yml` |
+| **B5** | RUN-SUMMARY write | 15 (render-html) | `B5-ship-to-render.yml` |
+
+At each boundary, invoke keyway-check as:
+
+```
+Task: keyway-check
+- boundary: B{n}
+- run_dir: clients/{client}/campaigns/{campaign}/runs/{piece-slug}/
+- piece_spec_path: clients/{client}/campaigns/{campaign}/runs/{piece-slug}/piece-spec.yml (if exists)
+```
+
+A BLOCKED verdict from keyway-check halts the pipeline at that boundary. The BLOCKED report names the failing invariant id and the upstream stage that produced the contract violation — the fix lives upstream, not in the stage you halted before.
+
+A PASS verdict records the boundary as crossed in `state.json` (`keyways.B{n}: { status: "passed", at: ISO-8601 }`) and lets the next stage run.
+
 ## Halt protocol
 
-On any critical/gate failure:
-1. Write the failure into `state.json` (stage, reason, findings).
-2. Write `clients/{client}/campaigns/{campaign}/runs/{piece-slug}/BLOCKED.md` with the failing stage, the specific findings, and the suggested fix (for judges: the lowest-scoring dimensions and their fixes).
+On any critical/gate failure (including a BLOCKED verdict from `keyway-check`):
+1. Write the failure into `state.json` (stage or keyway id, reason, findings).
+2. Write `clients/{client}/campaigns/{campaign}/runs/{piece-slug}/BLOCKED.md` with:
+   - The failing stage or keyway id.
+   - The specific findings (line numbers, quoted passages, failing invariant id if a keyway).
+   - The suggested fix (for judges: the lowest-scoring dimensions and their fixes; for keyways: the upstream stage that owns the contract violation).
 3. Stop. Do not proceed to later stages. Report the blocker to the user.
 
 ## Success output
@@ -81,6 +110,14 @@ On all stages passing:
     {"name": "brief", "status": "completed|pending|failed", "note": "..."},
     ...
   ],
+  "keyways": {
+    "B1": {"status": "passed|blocked|pending", "at": "ISO-8601", "note": "..."},
+    "B2": {"status": "...", "at": "...", "note": "..."},
+    "B3": {"status": "...", "at": "...", "note": "..."},
+    "B4": {"status": "...", "at": "...", "note": "..."},
+    "B5": {"status": "...", "at": "...", "note": "..."}
+  },
+  "verify_items": ["list of verify-with-Alex items surfaced by material-guard"],
   "updated": "ISO-8601"
 }
 ```

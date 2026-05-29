@@ -53,6 +53,20 @@ To onboard another client, replicate this shape: write its STYLE-SYSTEM.md, its 
 
 Any critical failure halts and writes `BLOCKED.md`. Success writes the MD draft + `{slug}.html` (the delivery artifact) + `RUN-SUMMARY.md` + `state.json` under `campaigns/{campaign}/runs/{slug}/`.
 
+## Keyway hand-delivery (where the semantics change)
+
+The 15 stages are bridged by 5 Keyway boundaries where the `keyway-check` agent validates an upstream-output / downstream-input contract before the next stage runs. Decision source: 2026-05-28 Lucas direction. Full design: `CONTRACTS.md`.
+
+| Keyway | Boundary | Why it exists |
+|---|---|---|
+| **B1** | brief -> draft | Missing premise in the brief forces the drafter to fabricate. |
+| **B2** | draft -> enforcer cluster | A draft missing a required section silently passes enforcers and surfaces wrong-shape failures at the judges. |
+| **B3** | enforcers -> judges | Spending Sonnet judge budget on a draft with an open critical failure is waste. |
+| **B4** | judges -> ship-summary | Both scores must be at floor before the run is declared successful. |
+| **B5** | ship-summary -> render-html | Final structural integrity gate before the canonical delivery artifact is produced. |
+
+A Keyway BLOCK names the failing invariant id and the upstream stage that owns the contract violation. The fix lives upstream of the boundary, not in the stage that was halted. This is what makes editorial rejections diagnosable instead of just scored.
+
 **Delivery format note (2026-05-27):** HTML is the canonical delivery artifact. The MD remains the source of truth for re-runs and gate review, but everything that flows downstream (Google Doc import, CMS paste, client-share link) starts from the rendered HTML. The previous path — upload MD to Drive, let Drive auto-convert — is deprecated because the heading mapping was inconsistent and the convert step burned tokens on every re-upload.
 
 ## Common workflows
