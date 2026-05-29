@@ -71,7 +71,15 @@ These apply to every content type: product pages, collection pages, blog posts, 
 **Error observed:** "What makes Zellige tile right for kitchen backsplashes?" as an H2.
 **Correct:** Declarative heading — "zellige in kitchen backsplashes"
 
-### 2.10 Semicolons vs. em-dashes
+### 2.10 Stay positive — lead with what the material gives
+- Frame material attributes in terms of what the tile brings to the room, not what it protects against, endures, or suffers from.
+- "A kitchen backsplash protects against moisture, heat, and cooking splatters" → reframe: "suited to kitchen conditions including heat and moisture."
+- Chips, pits, and crazing are always framed as intentional characteristics — never as problems the material overcomes.
+
+**Error observed (Blog #3, kitchen backsplash):** "protects against moisture, heat, and cooking splatters" — Jamie: "not ideal to skew negative."
+**Error observed (Blog #3, zellige section):** Listing chips, pits, and crazing framed as things the tile "overcomes" — Jamie: "again, stay positive."
+
+### 2.11 Semicolons vs. em-dashes
 - Parenthetical insertions use em-dashes, not semicolons.
 
 **Correct form:** "surface variation — chips, pits, and crazing — results directly from"
@@ -411,7 +419,13 @@ Writers explain what the material does. Jamie rewrites to describe what it feels
 - Submitted: "The dense clay body handles radiant heat."
 - Revised: "Cotto is a natural choice for a fireplace surround, playing off the warmth of the fire itself."
 
-The question to ask before every sentence: *What does this look like in the room?* Not: *What does the material do?*
+This extends to colorway descriptions. Physical properties ("soft tan, warm, and light") are not color descriptions — they are specs. A color description says how the tone reads in a room and against other materials.
+
+- Submitted: "Adobe: soft tan, warm, and light."
+- Direction from Jamie: "hate the word choice — think design, please."
+- Revised: "Adobe sits in the muted middle and pairs with plaster and wood without competing."
+
+The question to ask before every sentence: *What does this look like in the room?* Not: *What does the material do or measure?*
 
 ### 10.2 Writers are working from spec sheets, not from the room
 Colorway descriptions contain factual errors (Fired Earth described incorrectly). Grout recommendations name colors from a reference list rather than describing visual outcomes. This suggests writers are pulling from documents without understanding the materials they're writing about.
@@ -426,7 +440,14 @@ Fix: Make the claim or don't. If a colorway is right for a context, say why spec
 ### 10.4 Writers front-load sections with setup sentences
 "The names appear together often, and they describe distinct products" → "pointless" (Jamie). Writers ease into sections with an observation about what they're about to explain, rather than leading with the explanation.
 
-Fix: The first sentence of every section is the point of the section. Not the setup for it.
+This also applies at the article level. Meta-sentences that announce what the article will do ("Understanding the differences between zellige, cement, and ceramic options makes for a well-informed choice") are filler. Jamie flagged this as "no." The article opens on the first piece of useful information, not a sentence about why the article exists.
+
+The same pattern appears inside sections as report-style labels: "The practical summary: Cotto is the unglazed core line…" — transition through content, not through labeling it. "Practical summary" is a structural tell that the writer ran out of editorial connective tissue.
+
+**Error observed (Blog #3):** "Understanding the differences between zellige, cement, and ceramic options makes for a well-informed choice for a long-lasting installation." — Jamie: "no."
+**Error observed (Blog #1):** "The practical summary: Cotto is the unglazed core line, freeze/thaw rated…" — Jamie: "poor word choice" / "strange word choice."
+
+Fix: The first sentence of every section — and every piece — is the point. Not the setup for it. Not a label for what follows.
 
 ---
 
@@ -459,3 +480,7 @@ Fix: The first sentence of every section is the point of the section. Not the se
 | "vary slightly" pattern | Multiple | Minor |
 | "sources" used for Cotto production relationship | Blog 01 (terra cotta) | Critical |
 | "products" used for tiles/collections | Blog 01 (terra cotta) | Critical |
+| Negative framing ("protects against splatters") instead of positive | Blog 03 (backsplash) | Significant |
+| Colorway described in physical terms ("soft tan, warm, and light") not design terms | Blog 01 (terra cotta) | Significant |
+| Meta setup sentence announcing article intent instead of leading with content | Blog 03 (backsplash) | Significant |
+| Report-style section label ("The practical summary:") instead of direct editorial transition | Blog 01 (terra cotta) | Significant |
