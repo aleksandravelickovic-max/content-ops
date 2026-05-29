@@ -125,6 +125,7 @@ portal/
 | Axiom HRS | `clients/axiom-hrs/STYLE-SYSTEM.md` | Active — HCM/payroll platform, UKG partner; single-database rip-and-replace positioning |
 | Esthetics Center | `clients/esthetics-center/STYLE-SYSTEM.md` | Active — medical aesthetics + plastic surgery, Northern CA; led by Dr. Reginald Rice |
 | Thera | `clients/thera/STYLE-SYSTEM.md` | Active — VIP; specialized rehabilitation clinic, Midtown Manhattan (CSM: Wendy Alinor) |
+| Portugal Pathways | `clients/portugal-pathways/STYLE-SYSTEM.md` | Active — HNW relocation/residency advisory, Portugal; British English; strict financial promotion compliance (CSM: Arianna Trabanino) |
 
 ### Adding a new client
 

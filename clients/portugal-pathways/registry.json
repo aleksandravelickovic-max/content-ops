@@ -1,0 +1,88 @@
+{
+  "client": "portugal-pathways",
+  "scope": "client",
+  "generatedAt": "2026-05-29T00:00:00",
+  "totalFiles": 8,
+  "entries": [
+    {
+      "id": "style-system",
+      "filename": "STYLE-SYSTEM.md",
+      "displayName": "Portugal Pathways — Style System",
+      "type": "style-system",
+      "category": "style-system",
+      "status": "active",
+      "version": 1,
+      "path": "STYLE-SYSTEM.md"
+    },
+    {
+      "id": "compliance",
+      "filename": "COMPLIANCE.yml",
+      "displayName": "Portugal Pathways — Compliance Config",
+      "type": "compliance",
+      "category": "compliance",
+      "status": "active",
+      "version": 1,
+      "path": "COMPLIANCE.yml"
+    },
+    {
+      "id": "overview",
+      "filename": "overview.md",
+      "displayName": "Portugal Pathways — Client Overview",
+      "type": "knowledge",
+      "category": "knowledge",
+      "status": "active",
+      "version": 1,
+      "path": "raw/knowledge/overview.md"
+    },
+    {
+      "id": "website-faq",
+      "filename": "website-faq.md",
+      "displayName": "Portugal Pathways — Website FAQ & Knowledge Base",
+      "type": "knowledge",
+      "category": "knowledge",
+      "status": "active",
+      "version": 1,
+      "path": "raw/knowledge/website-faq.md"
+    },
+    {
+      "id": "approved-lisbon",
+      "filename": "lisbon.md",
+      "displayName": "Approved — Lisbon Location Page (April 2026)",
+      "type": "approved",
+      "category": "approved",
+      "status": "delivered",
+      "version": 1,
+      "path": "_approved/location-pages/lisbon.md"
+    },
+    {
+      "id": "approved-porto",
+      "filename": "porto.md",
+      "displayName": "Approved — Porto Location Page (April 2026)",
+      "type": "approved",
+      "category": "approved",
+      "status": "delivered",
+      "version": 1,
+      "path": "_approved/location-pages/porto.md"
+    },
+    {
+      "id": "approved-vilamoura",
+      "filename": "vilamoura.md",
+      "displayName": "Approved — Vilamoura Location Page (April 2026)",
+      "type": "approved",
+      "category": "approved",
+      "status": "delivered",
+      "version": 1,
+      "path": "_approved/location-pages/vilamoura.md"
+    },
+    {
+      "id": "approved-vale-do-lobo",
+      "filename": "vale-do-lobo.md",
+      "displayName": "Approved — Vale do Lobo Location Page (April 2026)",
+      "type": "approved",
+      "category": "approved",
+      "status": "delivered",
+      "version": 1,
+      "path": "_approved/location-pages/vale-do-lobo.md"
+    }
+  ]
+}

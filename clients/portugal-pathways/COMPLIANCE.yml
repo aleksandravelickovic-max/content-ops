@@ -1,0 +1,160 @@
+# Compliance config — Portugal Pathways
+#
+# Fail-closed rule set for the compliance-gate agent.
+# Derived from STYLE-SYSTEM.md §3.2 + §4, and old PR feedback in raw/knowledge/overview.md.
+# severity: critical halts the pipeline before /ship; warning is reported but does not halt.
+#
+# Background: A previous PR draft was rejected by a newsroom for financial promotion language,
+# superlative claims, and implied outcome guarantees. These rules codify that feedback.
+
+client: portugal-pathways
+schema_version: 1
+
+banned_terms:
+  # Financial promotion / investment advice risk
+  - term: "best funds"
+    severity: critical
+    reason: "Financial promotion risk. Never describe investment funds with superlative language (PR feedback #1, STYLE-SYSTEM §3.2)."
+  - term: "most attractive"
+    severity: critical
+    reason: "Promotional and unsubstantiated. Rejected by regulators and newsrooms (PR feedback #2, STYLE-SYSTEM §3.2)."
+  - term: "best investment"
+    severity: critical
+    reason: "Unsupported superlative — investment advice risk (STYLE-SYSTEM §3.2)."
+  - term: "tax optimisation"
+    severity: critical
+    reason: "Implies regulated tax advice. Portugal Pathways does not provide this (PR feedback #4, STYLE-SYSTEM §4.2)."
+  - term: "tax optimization"
+    severity: critical
+    reason: "Same — also American English spelling (STYLE-SYSTEM §3.2)."
+  - term: "wealth structuring"
+    severity: critical
+    reason: "Implies regulated financial advice (PR feedback #4, STYLE-SYSTEM §4.2)."
+  - term: "financial efficiency"
+    severity: critical
+    reason: "Implies regulated advice without disclaimer (PR feedback #4, STYLE-SYSTEM §4.2)."
+  - term: "portfolio construction"
+    severity: critical
+    reason: "Fund marketing language — investment advice risk (PR feedback #1)."
+  - term: "optimise your tax"
+    severity: critical
+    reason: "Implies regulated tax advice (STYLE-SYSTEM §4.2)."
+  - term: "optimize your tax"
+    severity: critical
+    reason: "Same — also American English spelling."
+
+  # Guaranteed outcome language
+  - term: "guaranteed residency"
+    severity: critical
+    reason: "Residency approval is discretionary — never imply a guarantee (PR feedback #3, STYLE-SYSTEM §4.1)."
+  - term: "gateway to EU residency"
+    severity: critical
+    reason: "Implies guaranteed residency and Schengen access (PR feedback #3, STYLE-SYSTEM §3.2)."
+  - term: "guaranteed"
+    severity: critical
+    reason: "No guarantees of outcomes, approvals, or returns (STYLE-SYSTEM §3.2)."
+  - term: "guarantee"
+    severity: critical
+    reason: "Same — any form is off-limits (STYLE-SYSTEM §3.2)."
+  - term: "certain to"
+    severity: warning
+    reason: "Flag certainty language — outcomes are discretionary."
+  - term: "will be approved"
+    severity: critical
+    reason: "Outcome guarantee — approval is discretionary (STYLE-SYSTEM §4.1)."
+
+  # Superlative and promotional language
+  - term: "best"
+    severity: warning
+    reason: "Unsubstantiated superlative — rejected by credible newsrooms (PR feedback #2). Flag for review."
+  - term: "world-class"
+    severity: warning
+    reason: "Vague promotional language (STYLE-SYSTEM §3.2)."
+  - term: "unrivalled"
+    severity: warning
+    reason: "Unsubstantiated superlative."
+  - term: "market-leading"
+    severity: warning
+    reason: "Unsubstantiated superlative."
+  - term: "industry-leading"
+    severity: warning
+    reason: "Unsubstantiated superlative."
+  - term: "cutting-edge"
+    severity: warning
+    reason: "Vague promotional language."
+  - term: "innovative"
+    severity: warning
+    reason: "Vague — describe what is actually new or different."
+  - term: "seamless"
+    severity: warning
+    reason: "Vague promotional language."
+  - term: "bespoke"
+    severity: warning
+    reason: "Overused in luxury copy — use specific descriptions instead."
+
+  # Scale claims
+  - term: "supports thousands of expats"
+    severity: critical
+    reason: "Unverifiable scale claim — rejected by journalists (PR feedback #7, STYLE-SYSTEM §3.2)."
+  - term: "thousands of clients"
+    severity: warning
+    reason: "Vague and potentially unverifiable — use verified stats only."
+
+  # American English (critical — British English required throughout)
+  - term: "recognize"
+    severity: warning
+    reason: "British English required. Use 'recognise' (STYLE-SYSTEM §3.1)."
+  - term: "organize"
+    severity: warning
+    reason: "Use 'organise' (STYLE-SYSTEM §3.1)."
+  - term: "optimize"
+    severity: warning
+    reason: "Use 'optimise' (STYLE-SYSTEM §3.1)."
+  - term: "maximize"
+    severity: warning
+    reason: "Use 'maximise' (STYLE-SYSTEM §3.1)."
+  - term: "analyze"
+    severity: warning
+    reason: "Use 'analyse' (STYLE-SYSTEM §3.1)."
+  - term: "color"
+    severity: warning
+    reason: "Use 'colour' (STYLE-SYSTEM §3.1)."
+  - term: "favor"
+    severity: warning
+    reason: "Use 'favour' (STYLE-SYSTEM §3.1)."
+
+technical_guards:
+  - rule: golden_visa_property_route
+    severity: critical
+    check: "Do not present property purchase as a qualifying Golden Visa investment route. It was removed in 2023. Qualifying route is CMVM-regulated alternative investment funds, minimum €500,000."
+    source: "STYLE-SYSTEM §4.1"
+  - rule: aima_not_sef
+    severity: critical
+    check: "Use AIMA as the immigration authority. SEF was dissolved. Do not use 'SEF'."
+    source: "STYLE-SYSTEM §4.1"
+  - rule: nhr_closed
+    severity: critical
+    check: "NHR is closed to new entrants as of 31 December 2023. Do not present NHR as available to new applicants. Reference IFICI for the current incentivised tax regime."
+    source: "STYLE-SYSTEM §4.1"
+  - rule: capital_appreciation_caveat
+    severity: critical
+    check: "Any reference to capital appreciation or price growth must include a caveat that returns are market-driven and not guaranteed."
+    source: "STYLE-SYSTEM §4.3 / PR feedback #5"
+  - rule: portugal_pathways_scope
+    severity: critical
+    check: "Content must not imply Portugal Pathways provides regulated investment, tax, or legal advice. Where these topics arise, reference licensed professionals and introductions."
+    source: "STYLE-SYSTEM §4.2"
+  - rule: stats_attributed
+    severity: warning
+    check: "Specific figures (cost of living, capital growth %) must be attributed to a named source (PMI Report, Portugal Pathways research, official statistics)."
+    source: "STYLE-SYSTEM §4.3"
+
+required_presence:
+  - rule: british_english
+    severity: critical
+    check: "All content must be written in British English. American English spellings fail this check."
+    source: "STYLE-SYSTEM §1"
+  - rule: no_financial_promotion
+    severity: critical
+    check: "Content must not constitute a financial promotion of investment products or funds."
+    source: "STYLE-SYSTEM §4.2 / PR feedback #1"
