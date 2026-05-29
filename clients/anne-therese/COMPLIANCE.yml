@@ -1,0 +1,74 @@
+# Compliance config — Anne Therese
+#
+# Fail-closed rule set for the compliance-gate agent.
+# Derived from STYLE-SYSTEM.md §3.2 (avoidance list) and §4 (technical accuracy).
+# severity: critical halts the pipeline before /ship; warning is reported but does not halt.
+
+client: anne-therese
+schema_version: 1
+
+banned_terms:
+  - term: "guaranteed results"
+    severity: critical
+    reason: "Cannot guarantee cosmetic outcomes (STYLE-SYSTEM §3.2)."
+  - term: "guarantee"
+    severity: critical
+    reason: "Any form of outcome guarantee is off-limits (STYLE-SYSTEM §3.2)."
+  - term: "guaranteed"
+    severity: critical
+    reason: "Any form of outcome guarantee is off-limits (STYLE-SYSTEM §3.2)."
+  - term: "dramatic transformation"
+    severity: critical
+    reason: "Exaggerated claim — patients seek subtle improvements, not dramatic changes (STYLE-SYSTEM §3.2)."
+  - term: "dramatic results"
+    severity: critical
+    reason: "Exaggerated claim (STYLE-SYSTEM §3.2)."
+  - term: "look younger"
+    severity: warning
+    reason: "Vague outcome promise — frame as a refreshed, natural-looking result instead (STYLE-SYSTEM §3.2)."
+  - term: "look 10 years younger"
+    severity: critical
+    reason: "Specific outcome promise — not medically responsible (STYLE-SYSTEM §3.2)."
+  - term: "eliminate"
+    severity: warning
+    reason: "Treatments improve or reduce — not eliminate (STYLE-SYSTEM §3.2)."
+  - term: "revolutionary"
+    severity: warning
+    reason: "Vague promotional language (STYLE-SYSTEM §3.2)."
+  - term: "cutting-edge"
+    severity: warning
+    reason: "Vague promotional language (STYLE-SYSTEM §3.2)."
+  - term: "best medspa"
+    severity: critical
+    reason: "Unsupported superlative (STYLE-SYSTEM §3.2)."
+  - term: "aggressive marketing"
+    severity: warning
+    reason: "Internal note — flag if copy reads as aggressive or pushy."
+
+voice_bans:
+  - term: "innovative"
+    severity: warning
+    reason: "Vague. Describe what is actually new or different."
+  - term: "world-class"
+    severity: warning
+    reason: "Unsupported superlative."
+  - term: "industry-leading"
+    severity: warning
+    reason: "Unsupported superlative."
+  - term: "transformative"
+    severity: warning
+    reason: "Exaggerated framing. Describe the actual change."
+
+required_presence:
+  - rule: no_competitor_claims
+    severity: critical
+    check: "Do not make comparative claims against named competitor practices."
+    source: "STYLE-SYSTEM §4"
+  - rule: location_accuracy
+    severity: critical
+    check: "Location-specific content must reference the correct location. Ohio (Lewis Center, Gahanna) and Florida (Cape Coral, Bonita Springs) content is not interchangeable."
+    source: "STYLE-SYSTEM §4"
+  - rule: staff_title_accuracy
+    severity: critical
+    check: "Match the correct staff title to the treatment described. Injectables require medical professionals; facials may be performed by estheticians."
+    source: "STYLE-SYSTEM §4"

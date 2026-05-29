@@ -1,0 +1,73 @@
+# Compliance config — Laser Center of Marin
+#
+# Fail-closed rule set for the compliance-gate agent.
+# Derived from STYLE-SYSTEM.md §3.2 (avoidance list) and §4 (technical accuracy).
+# severity: critical halts the pipeline before /ship; warning is reported but does not halt.
+
+client: laser-center-of-marin
+schema_version: 1
+
+banned_terms:
+  - term: "guaranteed results"
+    severity: critical
+    reason: "Cannot guarantee cosmetic outcomes (STYLE-SYSTEM §3.2)."
+  - term: "guarantee"
+    severity: critical
+    reason: "Any form of outcome guarantee is off-limits in medical aesthetics (STYLE-SYSTEM §3.2)."
+  - term: "guaranteed"
+    severity: critical
+    reason: "Any form of outcome guarantee is off-limits (STYLE-SYSTEM §3.2)."
+  - term: "dramatic results"
+    severity: critical
+    reason: "Exaggerated claim — implies more than is medically responsible (STYLE-SYSTEM §3.2)."
+  - term: "transform your appearance"
+    severity: critical
+    reason: "Exaggerated cosmetic claim (STYLE-SYSTEM §3.2)."
+  - term: "transform"
+    severity: warning
+    reason: "Usually exaggerated in cosmetic context — use specific descriptions instead."
+  - term: "look years younger"
+    severity: critical
+    reason: "Outcome promise — not medically responsible (STYLE-SYSTEM §3.2)."
+  - term: "eliminate"
+    severity: warning
+    reason: "Treatments improve or reduce — not eliminate (STYLE-SYSTEM §3.2)."
+  - term: "revolutionary"
+    severity: warning
+    reason: "Vague promotional language (STYLE-SYSTEM §3.2)."
+  - term: "best clinic"
+    severity: critical
+    reason: "Unsupported superlative (STYLE-SYSTEM §3.2)."
+  - term: "best laser center"
+    severity: critical
+    reason: "Unsupported superlative (STYLE-SYSTEM §3.2)."
+  - term: "affordable"
+    severity: warning
+    reason: "Premium positioning — avoid price-focused language (STYLE-SYSTEM §3.2)."
+
+voice_bans:
+  - term: "luxury spa"
+    severity: warning
+    reason: "Misframes the practice as a spa. This is a physician-supervised medical clinic (STYLE-SYSTEM §2)."
+  - term: "cutting-edge"
+    severity: warning
+    reason: "Vague promotional language. Describe the specific technology instead."
+  - term: "innovative"
+    severity: warning
+    reason: "Vague. Describe what is actually new or different."
+  - term: "world-class"
+    severity: warning
+    reason: "Unsupported superlative."
+  - term: "industry-leading"
+    severity: warning
+    reason: "Unsupported superlative."
+
+required_presence:
+  - rule: no_competitor_claims
+    severity: critical
+    check: "Do not make comparative claims against named competitor clinics."
+    source: "STYLE-SYSTEM §4"
+  - rule: physician_supervision_accurate
+    severity: critical
+    check: "Do not overclaim physician involvement (e.g., claiming a physician performs every treatment without confirmation)."
+    source: "STYLE-SYSTEM §4"

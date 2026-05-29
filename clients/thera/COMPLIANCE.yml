@@ -1,0 +1,81 @@
+# Compliance config — Thera
+#
+# Fail-closed rule set for the compliance-gate agent.
+# Derived from STYLE-SYSTEM.md §3.2 (avoidance list) and §4 (technical accuracy).
+# severity: critical halts the pipeline before /ship; warning is reported but does not halt.
+#
+# ⚠ VIP Client — apply extra care to all compliance checks.
+
+client: thera
+schema_version: 1
+
+banned_terms:
+  - term: "cure"
+    severity: critical
+    reason: "Therapy cannot claim to cure conditions (STYLE-SYSTEM §3.2)."
+  - term: "cured"
+    severity: critical
+    reason: "Same — rehabilitation improves function, not cures (STYLE-SYSTEM §3.2)."
+  - term: "guaranteed results"
+    severity: critical
+    reason: "Cannot guarantee rehabilitation outcomes (STYLE-SYSTEM §3.2)."
+  - term: "guarantee"
+    severity: critical
+    reason: "No outcome guarantees (STYLE-SYSTEM §3.2)."
+  - term: "eliminate"
+    severity: warning
+    reason: "Therapy reduces or improves conditions — not eliminates them (STYLE-SYSTEM §3.2)."
+  - term: "cutting-edge"
+    severity: warning
+    reason: "Vague promotional language. Describe the specific approach instead (STYLE-SYSTEM §3.2)."
+  - term: "innovative"
+    severity: warning
+    reason: "Vague. Describe what is actually specialized or different (STYLE-SYSTEM §3.2)."
+  - term: "revolutionary"
+    severity: warning
+    reason: "Vague promotional language (STYLE-SYSTEM §3.2)."
+  - term: "journey"
+    severity: warning
+    reason: "Overused, vague. Describe the actual recovery process (STYLE-SYSTEM §3.2)."
+  - term: "feel like yourself again"
+    severity: warning
+    reason: "Implied outcome promise — vague and potentially misleading. Describe what treatment does instead."
+  - term: "minimizing" (applied to patient difficulty)
+    severity: warning
+    reason: "Flag any language that minimizes how hard recovery is for patients. This audience deserves acknowledgment."
+
+voice_bans:
+  - term: "general physical therapy"
+    severity: warning
+    reason: "Thera provides specialized, not general, PT. Don't use 'general' as a category Thera belongs to."
+  - term: "world-class"
+    severity: warning
+    reason: "Unsupported superlative."
+  - term: "industry-leading"
+    severity: warning
+    reason: "Unsupported superlative."
+  - term: "transformative"
+    severity: warning
+    reason: "Vague. Describe the actual functional improvement."
+
+required_presence:
+  - rule: vip_tone_review
+    severity: warning
+    check: "VIP client — content must pass an extra tone review pass before submission. Content should be respectful, empathetic, and accurate."
+    source: "STYLE-SYSTEM §2, client notes"
+  - rule: no_outcome_promises
+    severity: critical
+    check: "Do not promise specific rehabilitation outcomes."
+    source: "STYLE-SYSTEM §4"
+  - rule: location_accurate
+    severity: critical
+    check: "Thera is in Midtown Manhattan. Do not imply other locations exist without CSM confirmation."
+    source: "STYLE-SYSTEM §4"
+  - rule: no_unconfirmed_credentials
+    severity: critical
+    check: "Do not claim therapist certifications (e.g., CLT — Certified Lymphedema Therapist) without CSM confirmation of who holds them."
+    source: "STYLE-SYSTEM §4"
+  - rule: audience_sensitivity
+    severity: critical
+    check: "Content must honor the patient audience — people actively navigating post-surgical recovery and cancer treatment. Do not minimize their experience."
+    source: "STYLE-SYSTEM §2"

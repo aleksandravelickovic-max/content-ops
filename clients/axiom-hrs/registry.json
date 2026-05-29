@@ -1,0 +1,38 @@
+{
+  "client": "axiom-hrs",
+  "scope": "client",
+  "generatedAt": "2026-05-29T00:00:00",
+  "totalFiles": 3,
+  "entries": [
+    {
+      "id": "style-system",
+      "filename": "STYLE-SYSTEM.md",
+      "displayName": "Axiom HRS — Style System",
+      "type": "style-system",
+      "category": "style-system",
+      "status": "active",
+      "version": 1,
+      "path": "STYLE-SYSTEM.md"
+    },
+    {
+      "id": "compliance",
+      "filename": "COMPLIANCE.yml",
+      "displayName": "Axiom HRS — Compliance Config",
+      "type": "compliance",
+      "category": "compliance",
+      "status": "active",
+      "version": 1,
+      "path": "COMPLIANCE.yml"
+    },
+    {
+      "id": "overview",
+      "filename": "overview.md",
+      "displayName": "Axiom HRS — Client Overview",
+      "type": "knowledge",
+      "category": "knowledge",
+      "status": "active",
+      "version": 1,
+      "path": "raw/knowledge/overview.md"
+    }
+  ]
+}

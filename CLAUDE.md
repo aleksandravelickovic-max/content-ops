@@ -119,6 +119,12 @@ portal/
 | SearchAtlas | `clients/searchatlas/STYLE-SYSTEM.md` | Active — internal platform content |
 | Altify | `clients/altify/STYLE-SYSTEM.md` | Active — enterprise account planning AI platform (Salesforce-native) |
 | 5Gstore | `clients/5gstore/STYLE-SYSTEM.md` | Active — specialized 4G/5G networking equipment retailer |
+| Laser Center of Marin | `clients/laser-center-of-marin/STYLE-SYSTEM.md` | Active — physician-supervised aesthetic clinic, Marin County CA (CSM: Wendy Alinor) |
+| Anne Therese | `clients/anne-therese/STYLE-SYSTEM.md` | Active — medical aesthetics practice, OH and FL locations (CSM: Wendy Alinor) |
+| Pekas Smith | `clients/pekas-smith/STYLE-SYSTEM.md` | Active — Arizona Social Security Disability law firm (CSM: Arianna Trabanino) |
+| Axiom HRS | `clients/axiom-hrs/STYLE-SYSTEM.md` | Active — HCM/payroll platform, UKG partner; single-database rip-and-replace positioning |
+| Esthetics Center | `clients/esthetics-center/STYLE-SYSTEM.md` | Active — medical aesthetics + plastic surgery, Northern CA; led by Dr. Reginald Rice |
+| Thera | `clients/thera/STYLE-SYSTEM.md` | Active — VIP; specialized rehabilitation clinic, Midtown Manhattan (CSM: Wendy Alinor) |
 
 ### Adding a new client
 

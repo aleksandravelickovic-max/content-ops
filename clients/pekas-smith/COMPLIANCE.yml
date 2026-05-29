@@ -1,0 +1,79 @@
+# Compliance config — Pekas Smith
+#
+# Fail-closed rule set for the compliance-gate agent.
+# Derived from STYLE-SYSTEM.md §3.2 (avoidance list) and §4 (technical accuracy).
+# severity: critical halts the pipeline before /ship; warning is reported but does not halt.
+
+client: pekas-smith
+schema_version: 1
+
+banned_terms:
+  - term: "administrative law judge"
+    severity: critical
+    reason: "Must always be capitalized: Administrative Law Judge. Lowercase is a hard error (STYLE-SYSTEM §3.2)."
+  - term: "we'll get you approved"
+    severity: critical
+    reason: "Cannot promise legal outcomes (STYLE-SYSTEM §3.2)."
+  - term: "guaranteed approval"
+    severity: critical
+    reason: "Cannot guarantee disability claim approval (STYLE-SYSTEM §3.2)."
+  - term: "guaranteed"
+    severity: critical
+    reason: "No outcome guarantees in legal representation (STYLE-SYSTEM §3.2)."
+  - term: "easy application"
+    severity: critical
+    reason: "Misleading — the disability application process is not easy (STYLE-SYSTEM §3.2)."
+  - term: "simple process"
+    severity: critical
+    reason: "Misleading — the SSA process is complex (STYLE-SYSTEM §3.2)."
+  - term: "fight for you"
+    severity: warning
+    reason: "Aggressive framing. Use 'represent' or 'advocate for' instead (STYLE-SYSTEM §3.2)."
+  - term: "win your case"
+    severity: critical
+    reason: "Cannot promise case outcomes (STYLE-SYSTEM §3.2)."
+  - term: "100% success rate"
+    severity: critical
+    reason: "Fabricated statistic — do not invent success rates (STYLE-SYSTEM §4)."
+
+formatting_guards:
+  - rule: no_dashes
+    severity: critical
+    check: "No dashes of any kind — not em dashes (—), not en dashes (–), not hyphen-dashes. Rewrite the sentence."
+    source: "STYLE-SYSTEM §5.1"
+  - rule: bold_first_sentence
+    severity: warning
+    check: "The first sentence of every paragraph must be bolded."
+    source: "STYLE-SYSTEM §5.1"
+  - rule: alj_capitalization
+    severity: critical
+    check: "Every instance of 'Administrative Law Judge' must be capitalized. Flag any lowercase occurrence."
+    source: "STYLE-SYSTEM §3.1"
+
+voice_bans:
+  - term: "innovative"
+    severity: warning
+    reason: "Vague. Describe what the firm actually does differently."
+  - term: "world-class"
+    severity: warning
+    reason: "Unsupported superlative."
+  - term: "best disability lawyer"
+    severity: critical
+    reason: "Unsupported superlative — and potentially a bar-rule concern."
+  - term: "simple" (describing SSA process)
+    severity: critical
+    reason: "The process is not simple — this undermines trust with the audience."
+
+required_presence:
+  - rule: ssdi_ssi_defined
+    severity: warning
+    check: "SSDI and SSI must be defined at first use. SSA must be defined at first use."
+    source: "STYLE-SYSTEM §3.1"
+  - rule: no_outcome_promises
+    severity: critical
+    check: "No implied or explicit promise of a favorable outcome for the claimant's case."
+    source: "STYLE-SYSTEM §4"
+  - rule: arizona_scope
+    severity: warning
+    check: "The firm serves Arizona. Do not imply national representation without CSM confirmation."
+    source: "STYLE-SYSTEM §4"

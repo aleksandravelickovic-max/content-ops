@@ -1,0 +1,48 @@
+{
+  "client": "esthetics-center",
+  "scope": "client",
+  "generatedAt": "2026-05-29T00:00:00",
+  "totalFiles": 4,
+  "entries": [
+    {
+      "id": "style-system",
+      "filename": "STYLE-SYSTEM.md",
+      "displayName": "Esthetics Center — Style System",
+      "type": "style-system",
+      "category": "style-system",
+      "status": "active",
+      "version": 1,
+      "path": "STYLE-SYSTEM.md"
+    },
+    {
+      "id": "compliance",
+      "filename": "COMPLIANCE.yml",
+      "displayName": "Esthetics Center — Compliance Config",
+      "type": "compliance",
+      "category": "compliance",
+      "status": "active",
+      "version": 1,
+      "path": "COMPLIANCE.yml"
+    },
+    {
+      "id": "contact-block",
+      "filename": "contact-block.md",
+      "displayName": "Esthetics Center — Contact Block",
+      "type": "reference",
+      "category": "reference",
+      "status": "active",
+      "version": 1,
+      "path": "contact-block.md"
+    },
+    {
+      "id": "overview",
+      "filename": "overview.md",
+      "displayName": "Esthetics Center — Client Overview",
+      "type": "knowledge",
+      "category": "knowledge",
+      "status": "active",
+      "version": 1,
+      "path": "raw/knowledge/overview.md"
+    }
+  ]
+}

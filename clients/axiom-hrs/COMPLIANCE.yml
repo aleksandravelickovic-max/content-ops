@@ -1,0 +1,83 @@
+# Compliance config — Axiom HRS
+#
+# Fail-closed rule set for the compliance-gate agent.
+# Derived from STYLE-SYSTEM.md §3.2 (avoidance list) and §4 (technical accuracy).
+# severity: critical halts the pipeline before /ship; warning is reported but does not halt.
+
+client: axiom-hrs
+schema_version: 1
+
+banned_terms:
+  - term: "Integrated HR and Payroll"
+    severity: critical
+    reason: "Client-rejected phrase. Use 'Unified HR and Payroll' or 'single-database HR solution' (STYLE-SYSTEM §3.2)."
+  - term: "integrated platform"
+    severity: critical
+    reason: "Client-rejected. Replace 'integrated' with 'unified' or 'single-database' (STYLE-SYSTEM §3.2)."
+  - term: "connects with your existing"
+    severity: critical
+    reason: "Implies add-on/connector model. Axiom is a rip-and-replace solution (STYLE-SYSTEM §3.2)."
+  - term: "works with your existing"
+    severity: critical
+    reason: "Same — implies integration with current systems (STYLE-SYSTEM §3.2)."
+  - term: "alongside your current system"
+    severity: critical
+    reason: "Contradicts single-database positioning (STYLE-SYSTEM §3.2)."
+  - term: "add-on"
+    severity: critical
+    reason: "Axiom is a full replacement — not an add-on (STYLE-SYSTEM §3.2)."
+  - term: "plug into"
+    severity: critical
+    reason: "Implies integration layer — contradicts rip-and-replace positioning."
+  - term: "integrate with"
+    severity: warning
+    reason: "Flag any integration language — review whether it contradicts single-database positioning."
+  - term: "robust"
+    severity: warning
+    reason: "Universal banned word — vague promotional language (UNIVERSAL-RULES.md)."
+  - term: "seamless"
+    severity: warning
+    reason: "Universal banned word (UNIVERSAL-RULES.md)."
+  - term: "cutting-edge"
+    severity: warning
+    reason: "Universal banned word (UNIVERSAL-RULES.md)."
+  - term: "revolutionary"
+    severity: warning
+    reason: "Universal banned word (UNIVERSAL-RULES.md)."
+  - term: "innovative"
+    severity: warning
+    reason: "Universal banned word — describe what is actually new instead."
+  - term: "industry-leading"
+    severity: warning
+    reason: "Unsupported superlative."
+  - term: "world-class"
+    severity: warning
+    reason: "Unsupported superlative."
+  - term: "streamline"
+    severity: warning
+    reason: "Universal banned word — describe what specifically gets simpler."
+
+voice_bans:
+  - term: "ecosystem"
+    severity: warning
+    reason: "Vague SaaS-speak. Use 'system,' 'platform,' or 'tools' instead."
+  - term: "leverage"
+    severity: warning
+    reason: "Universal banned word — use 'use' instead."
+  - term: "synergy"
+    severity: warning
+    reason: "Universal banned word — delete and rewrite."
+
+required_presence:
+  - rule: single_database_positioning
+    severity: critical
+    check: "Any content describing the Axiom platform must position it as a replacement, not an addition to existing systems."
+    source: "STYLE-SYSTEM §3.1, client feedback"
+  - rule: ukg_relationship_accurate
+    severity: critical
+    check: "UKG is described as the HCM software partner — not as a third-party tool or integration."
+    source: "STYLE-SYSTEM §4"
+  - rule: no_invented_features
+    severity: critical
+    check: "Feature claims must be sourced from raw/ or confirmed by the CSM. Do not invent module names or capabilities."
+    source: "STYLE-SYSTEM §4"
