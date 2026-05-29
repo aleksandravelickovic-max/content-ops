@@ -1,0 +1,117 @@
+# Ceramics Installation Guide
+
+Read this guide in full with your installer before beginning. Ceramic tile installation requires a skilled installer experienced with ceramic tile. Zia Tile is not responsible for installation, ongoing care, or issues arising after receipt and installation of the product.
+
+---
+
+## Safety
+
+Wear a dust mask and eye protection when unpacking, cutting, and installing, and when working with mortar, sealants, and grout.
+
+**⚠️ WARNING: Cancer and Reproductive Harm — www.P65Warnings.ca.gov** (California Prop 65)
+
+For extensive cutting, work outdoors or in a well-ventilated area. Wash hands with soap and water after handling tiles and before eating.
+
+---
+
+## Inspecting Your Order
+
+- Inspect all tiles upon receipt. Zia Tile cannot address issues with tiles that have already been installed.
+- Order 10–15% more than your measured area to account for cuts, pattern variation, and breakage.
+- 1×1 tiles arrive on mesh backing. Individual tiles can be separated and mixed to distribute variation before installation.
+
+---
+
+## Before You Begin
+
+1. **Blend the boxes.** Mix tiles from all boxes and lay them out across the full installation area. Verify even color and texture distribution before starting.
+2. **Clean the tiles.** Wipe away any dust or residue from shipping with a pH neutral cleaner. Allow tiles to dry fully before installing.
+
+---
+
+## What You'll Need
+
+**For installation:**
+- Sponge and bucket
+- 3/16" tile spacers
+- High-quality medium-bed thin set mortar
+- Trowel
+- High-quality sanded grout
+- Grout float
+- Water-cooled tile saw with diamond blade (or snap tile cutter)
+
+**For sealing (matte finish only):**
+- pH neutral cleaner (e.g., Miracle Sealants Heavy Duty Cleaner — Acid Substitute)
+- 511 Porous Plus Sealer (Miracle Sealants) — used as a grout release before grouting
+- Paint roller, paint tray, sponge, water bucket, lint-free cloth
+
+---
+
+## Finish Types and DCOF Ratings
+
+| Finish | DCOF Rating | Notes |
+|---|---|---|
+| Matte | 0.74 | Requires pre-grout sealing (grout release) |
+| Satin | 0.45 | No sealing required |
+| Gloss | 0.30 | No sealing required |
+
+Matte finishes: Agave, Citron, Iconic Blue, Ironwood, Linen, Pink Dahlia, Portland Grey
+
+---
+
+## Surface Requirements
+
+**Floors and walls:** Use a uniform, quality underlayment — cement board or backer board is standard. Waterproof underlayment is required in wet areas.
+
+**Commercial and wet areas:** Slip resistance can be increased by widening grout joints and/or applying an anti-slip product after installation. Consult a licensed installer on slip-specific requirements before starting.
+
+---
+
+## Installation Steps
+
+1. Make all required cuts with a water-cooled tile saw or snap cutter.
+2. Apply thin set evenly to the install surface using a trowel, working in one direction to prevent air pockets.
+3. Wet the back of each tile with a sponge, then apply thin set to the back as well.
+4. Work in sections no larger than 2'×2', using 3/16" spacers. Maintain a minimum joint spacing of 1/8".
+5. Press each tile firmly into place and keep all tiles perfectly flat.
+6. **Wipe off any residual thin set from the tile surface immediately.** Dried thin set is very difficult to remove without damaging the tile.
+7. After all tiles are laid, allow the thin set to cure for at least 48 hours before grouting.
+
+---
+
+## Pre-Grout Sealing — Matte Finish Only
+
+**Matte finish ceramics require sealing before grouting to act as a grout release. Satin and gloss finishes do not require sealing.**
+
+1. Apply 511 Porous Plus sealer in a thin, even layer. Wipe off any excess before it dries. Do not over-apply — thick coats dry unevenly and leave an unwanted waxy film.
+2. Allow the sealer to cure, typically 24–48 hours. Follow the sealant manufacturer's instructions.
+3. **Do not proceed to grouting until the sealer has fully cured.**
+
+---
+
+## Grouting
+
+1. Using a high-quality sanded grout, fill the gaps between tiles with a rubber grout float. Work in sections no larger than 2'×2'.
+2. **Do not grout the entire installation at once.** Excess grout is very difficult to remove and can stain tiles permanently.
+3. Wipe away excess grout immediately as you work.
+4. Allow the grout to fully cure, typically 48 hours.
+5. Clean the tiles with pH neutral detergent to remove any residual mortar or grout haze.
+6. Cover the tiles with durable paperboard during and after installation to protect them until construction is complete.
+
+---
+
+## Trim & Edges
+
+For exposed edges, miter the tile or finish with Schluter strips — available at www.schluter.com.
+
+---
+
+## Ongoing Care
+
+### Cleaning
+
+- Clean up spills promptly, especially oil and grease.
+- Wipe floors and walls with warm water and a pH neutral cleaner.
+- **Use only pH neutral cleaners.** Acidic cleaners damage ceramic tile.
+  - Regular cleaning: Miracle Sealants pH Neutral Tile and Stone Cleaner
+  - Heavy stains: Miracle Sealants Heavy Duty Cleaner (Acid Substitute)
