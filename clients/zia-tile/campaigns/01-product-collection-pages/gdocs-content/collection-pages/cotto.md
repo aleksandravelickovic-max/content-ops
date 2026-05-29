@@ -20,7 +20,7 @@ download_date: 2026-05-12
 
 Zia's Cotto is a clay-based terra cotta tile crafted in San Miguel de Allende, Mexico. Each handmade terra cotta tile is visibly distinct, with inherent variation in tone, shape, edge profile, and thickness that adds dimension to every design.
 
-Shapes vary from traditional squares and rectangles to specialty geometric forms. Available in six core colors, the palette includes three classic warm neutrals alongside matte black Oscura, whitewashed Blanco, and cocoa-colored Madera — three unexpected tones that expand the range of unglazed clay. These unglazed pieces bring an earthy character to indoor and outdoor areas alike, suited for any climate.
+Shapes range from traditional squares and rectangles to specialty geometric forms. Available in six core colors, the palette includes three classic warm neutrals alongside matte black Oscura, whitewashed Blanco, and cocoa-colored Madera, three unexpected tones that expand the range of unglazed clay. These unglazed pieces bring an earthy character to indoor and outdoor areas alike, suited for any climate.
 
 [PRODUCT LIST]
 
@@ -30,7 +30,7 @@ Shapes vary from traditional squares and rectangles to specialty geometric forms
 
 ### Where do Cotto tiles come from?
 
-Zia's Cotto tiles are made near San Miguel de Allende, Mexico, one of the most historically significant art centers in the Americas. This UNESCO World Heritage city has a long tradition of art and ceramic production, with centuries-old floors, walls, and rooftops that continue to inspire and inform how terra cotta tile is made and installed.
+Zia's Cotto tiles are made near San Miguel de Allende, Mexico, one of the most historically significant art centers in the Americas. This UNESCO World Heritage city has a long tradition of ceramic production, with centuries-old floors, walls, and rooftops that continue to inform how terra cotta tile is made and installed.
 
 [Cotto Allende](https://ziatile.com/en-ca/collections/cotto-tile-allende) begins with the same clay terra cotta base and is finished with pigmented glazes for a more colorful take on the classic material. The glazes range from near-matte to glossy, maintaining the tonal variation coveted in handmade tile.
 
@@ -68,8 +68,8 @@ Yes, Cotto tile requires sealing to protect against moisture and staining. This 
 
 For proper care:
 
-  - Seal Cotto before grouting with 511 Porous Plus Penetrating Sealer, applied in thin layers until the tile reaches full saturation
-  - Once the grout has cured, finish interior installations with Fila Matte Wax; for exterior installations, apply a second coat of 511 Porous Plus instead, as Fila Matte Wax discolors under UV exposure
+  - Seal Cotto before grouting with a penetrating sealer, applied in thin layers until the tile reaches full saturation
+  - Once the grout has cured, finish interior installations with a matte protective wax; for exterior installations, apply a second coat of penetrating sealer instead, as wax discolors under UV exposure
   - Reseal regularly, more frequently in high-traffic or moisture-exposed areas
   - Use only pH-neutral cleaning products
   - Avoid acidic or abrasive cleaners that can damage the surface
@@ -80,7 +80,7 @@ Over time, the unglazed surface develops a natural patina that reflects use and 
 
 ### How to clean Cotto tile
 
-Cleaning Cotto tile correctly starts with regular sweeping or vacuuming to remove debris that can wear down the surface.
+Sweep or vacuum regularly to remove debris that can wear down the surface.
 
 For deeper cleaning:
 
@@ -90,15 +90,15 @@ For deeper cleaning:
 
 ### How do I install Cotto tile?
 
-Installing Cotto tile requires a professional installer experienced with terra cotta. The process requires an eye for balancing tile variation and protecting the porous surface. Each tile has its own [installation guide](https://ziatile.com/pages/cotto-installation-guide), and for project-specific installation questions, the Zia team is available at info@ziatile.com or 310-844-1170.
+Cotto tile requires a professional installer experienced with terra cotta, with an eye for balancing tile variation and protecting the porous surface. Each tile has its own [installation guide](https://ziatile.com/pages/cotto-installation-guide). For project-specific installation questions, the Zia team is available at info@ziatile.com or 310-844-1170.
 
 ### How does Cotto tile hold up over time?
 
-Cotto tile is a dense, high-fired clay material that performs well under regular residential and commercial traffic. Cotto's DCOF rating of 0.98 sits well above the 0.42 threshold typically required for level interior floors. Careful installation, including consistent grout joints and a fully cured substrate, prevents movement that can lead to edge chipping. Sealing before and after grouting protects the porous surface from moisture absorption and staining. Over time, the surface develops a natural patina, a defining characteristic of the material.
+Cotto is a dense, high-fired clay material that performs well under regular residential and commercial traffic. Its DCOF rating of 0.98 sits well above the 0.42 threshold typically required for level interior floors. Careful installation, including consistent grout joints and a fully cured substrate, prevents movement that can lead to edge chipping. Sealing before and after grouting protects the porous surface from moisture absorption and staining. Over time, the surface develops a natural patina, a defining characteristic of the material.
 
 ### How much Cotto tile is needed for a project?
 
-Calculating how much Cotto tile is needed starts with the total square footage of the surface. Measure the length and width of each surface area in feet, then multiply them together. For walls or multi-surface floors, add all sections together to reach the total. From that total, add a minimum of 15 to 20% overage to account for curation and cuts. For a more uniform look or for specialty shape formats like the Durango, plan for 20 to 25% across the full order, given the nuance of the multi-tile pattern. For project-specific quantity questions, contact the Zia team at info@ziatile.com or 310-844-1170.
+Start with the total square footage: measure each surface in feet, multiply length by width, and add all sections together. Add a minimum of 15 to 20% overage to account for curation and cuts. For a more uniform look or for specialty shape formats like the Durango, plan for 20 to 25% across the full order, given the nuance of the multi-tile pattern. For project-specific quantity questions, contact the Zia team at info@ziatile.com or 310-844-1170.
 
 ### What is the difference between Cotto and zellige?
 
@@ -106,6 +106,6 @@ Cotto and zellige are both handmade clay-based tiles, though the two lines diffe
 
 ### How do I seal Cotto tile?
 
-Sealing Cotto tile correctly requires two separate applications. Before grouting, apply 511 Porous Plus Penetrating Sealer in thin layers until the tiles are fully saturated, wiping off any excess before it dries. Allow the sealer to fully cure before proceeding to grouting. The pre-grout application also acts as a grout release.
+Sealing Cotto tile correctly requires two separate applications. Before grouting, apply a penetrating sealer in thin layers until the tiles are fully saturated, wiping off any excess before it dries. Allow the sealer to fully cure before proceeding to grouting. The pre-grout application also acts as a grout release.
 
-For interior installations, finish with Fila Matte Wax applied in thin layers as a final protective coat. For exterior installations, apply an additional coat of 511 Porous Plus instead of wax, since Fila Matte Wax discolors under UV exposure.
+For interior installations, finish with a matte protective wax applied in thin layers as a final protective coat. For exterior installations, apply an additional coat of penetrating sealer instead of wax, as wax discolors under UV exposure. Refer to the [Cotto Installation Guide](https://ziatile.com/pages/cotto-installation-guide) for product selection and full sequencing.

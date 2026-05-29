@@ -3,25 +3,24 @@ title: "Color Red - Core Page"
 google_doc_id: "1O0qBOPrhr6CjcV8ibfh9x4g41AjlHl7ikOnj1Ml5DnY"
 page_type: collection
 download_date: 2026-05-12
+optimized_date: 2026-05-27
 ---
 
-**URL:** <https://ziatile.com/collections/all?color=red> 
+**URL:** <https://ziatile.com/collections/all?color=red>
 
-**Meta Title**: Red Tile for Floors, Backsplashes & Walls | Zia Tile
+**Meta title**: Red Tile for Floors, Backsplashes & Walls | Zia Tile
 
-**Meta Description**: Shop red tiles at Zia: handmade cotto, red zellige tile, and Rosso Alicante marble for kitchen floors, backsplashes, and feature walls.
+**Meta description**: Shop red tiles at Zia: handmade cotto, red zellige tile, and Rosso Alicante marble for kitchen floors, backsplashes, and feature walls.
 
 **Keywords:** red tiles, red zellige tile, red subway tile, rectangular red tile
 
-  
-
 # Red Tile
 
-Red tile at Zia ranges from clay-based terracotta to deeper burgundy tones across cotto, glazed Cotto Allende, marble, and zellige. The color comes from the material itself, and each surface reads differently once installed. Zellige shows variation in tone along with chips, pits, and crazing, while cotto and marble present a more grounded, matte surface. This range supports different applications, from backsplashes to interior floors.
+## Terra Cotta to Rosso Alicante
+
+Red tile at Zia ranges from clay-based terra cotta to deeper burgundy tones across Cotto, glazed Cotto Allende, marble, and zellige. The color comes from the material itself, and each surface reads differently once installed. Zellige shows variation in tone along with chips, pits, and crazing, while Cotto and marble present a more grounded, matte surface. This range supports different applications, from backsplashes to interior floors.
 
 \[PRODUCT LIST\]
-
-  
 
 ## Frequently Asked Questions
 
@@ -31,7 +30,7 @@ Rectangular red tiles are commonly installed in straight stack, running bond, or
 
 ### Do red tiles vary in tone or shade?
 
-Yes, red tiles can vary in tone depending on the material and production method. Zellige shows the widest range, with visible shifts in color from tile to tile. Terra cotta also varies due to natural clay composition and firing. Marble variation appears through veining, while ceramic tends to be more consistent. Reviewing samples helps confirm the expected range before installation.
+Yes, red tiles can vary in tone depending on the material and production method. Zellige shows the widest range, with visible shifts in color from tile to tile. Terra cotta also varies due to natural clay composition and firing. Marble variation appears through veining, while ceramic tends to be more consistent. Reviewing samples before installation helps confirm the expected range.
 
 ### What colors go well with red tiles?
 
@@ -43,12 +42,12 @@ Grout color affects how the tile reads once installed. A close match creates a m
 
 ### What is the difference between red zellige, marble, and terra cotta tile at Zia?
 
-Red zellige is hand-pressed and glazed, producing variation in tone along with chips, pits, and crazing. Red marble, such as Rosso Alicante, is a natural stone with veining and a honed or polished finish. Terracotta tile is unglazed clay with a matte surface and natural variation. Each material produces a different level of movement and texture.
+Red zellige is hand-pressed and glazed, producing variation in tone along with chips, pits, and crazing. Red marble, such as Rosso Alicante, is a natural stone with veining and a honed finish. Terra cotta tile is unglazed clay with a matte surface and natural variation. Each material produces a different level of movement and texture.
 
 ### How do you clean, seal, and maintain red tile?
 
-Red tile is maintained through regular removal of debris and the use of pH-neutral cleaners. Abrasive particles should be cleared before cleaning to prevent surface wear. Acidic products should be avoided, as they can damage glaze and stone. Sealing is required for materials such as terra cotta, marble, and zellige, and should be repeated according to the installation guidelines, with more frequent sealing in wet areas.
+Red tile is maintained through regular removal of debris and the use of pH-neutral cleaners. Abrasive particles should be cleared before cleaning to prevent surface wear. Acidic products should be avoided, as they can damage glaze and stone. Sealing is required for materials such as terra cotta, marble, and zellige, and should be repeated according to the installation guides, with more frequent sealing in wet areas.
 
 ### How much red tile is needed for a project?
 
-Start by measuring each surface individually. Multiply the length by the width in feet to get the square footage, then add all surfaces together for the total. Add a minimum of 15% overage to account for cuts and variation. For handmade materials like zellige and cotto, 15 to 20% overage is recommended, with 25% for a more uniform result. For project-specific guidance, contact our team at info@ziatile.com or 310-844-1170. On shower floors, hold a minimum 1/8" grout joint and apply an anti-slip treatment after installation.
+Measure each surface individually, multiply length by width in feet, and add all surfaces together for the total square footage. Add a minimum of 15% overage to account for cuts and variation. For handmade materials like zellige and cotto, 15 to 20% overage is recommended, with 25% for a more uniform result. For project-specific guidance, contact the Zia team at info@ziatile.com or 310-844-1170.

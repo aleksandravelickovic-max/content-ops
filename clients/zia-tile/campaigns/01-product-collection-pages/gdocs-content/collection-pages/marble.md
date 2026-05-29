@@ -3,6 +3,7 @@ title: "Marble"
 google_doc_id: "1Zk2tJQTF-TH_Jwk__no91yHzk6Amnr0kPUGAzDLY5Ok"
 page_type: collection
 download_date: 2026-05-12
+optimized_date: 2026-05-27
 ---
 
 **URL:** <https://ziatile.com/collections/marble-tile>
@@ -14,79 +15,83 @@ download_date: 2026-05-12
 
 # Marble
 
-## Cut from Solid Stone. Finished by Skilled Stone Masons
+## Cut from Solid Stone
 
-Nothing can match the enduring character of marble. Formed under immense geological pressure and refined over millennia, this natural stone has shaped the language of architecture and sculpture from the Duomo in Florence to Michelangelo's Statue of David. At Zia Tile, the Marble collection draws directly from this lineage, sourcing stone from Italy and Spain, where Carrara marble remains the benchmark for purity, strength, and timeless visual depth.
+Zia's marble tile is sourced from quarries in Italy and Spain, where Carrara has set the benchmark for architectural stone for centuries. Each tile is cut directly from solid stone blocks and finished by skilled stonemasons — honed for a smooth, matte surface, or polished to enhance reflectivity and highlight contrast within the veining. Since marble forms through natural geological movement, no two tiles are identical.
 
-Zia's Italian and Spanish marble tiles are offered in both single-colored tiles and patterned sets, allowing for precision and creativity in installations. Anchored in classic white Carrara marble, the collection expands into coordinated tonal variations including Nero Marquina, Grigio Carnico, Rosso Alicante, Giallo Reale, and Verdi Alpi. These combinations are intentionally curated to work as ready-to-go pattern systems or custom layouts.
+The collection is anchored in classic Carrara marble — known for its balanced white field and subtle gray veining — and expanded through coordinated stones including Nero Marquina, Grigio Carnico, Rosso Alicante, Giallo Reale, and Verdi Alpi. These materials work independently or as part of cohesive patterned sets, allowing for controlled variation across installations.
 
 \[PRODUCT LIST\]
+
+*⚠ WARNING: Cancer and Reproductive Harm. [Learn more about Proposition 65 Warnings.](https://www.ziatile.com/proposition-65-warnings)*
 
 ## Frequently Asked Questions
 
 ### Where do Zia's marble tiles come from?
 
-Marble is an ancient natural stone formed under intense heat and pressure, resulting in a dense, crystalline surface defined by natural veining. Zia Tile sources its marble tiles from quarries in Italy and Spain, regions with a long-established history of extracting and refining architectural stone. Italy, in particular, has shaped the global standard for marble through centuries of use in landmarks such as the Duomo and Michelangelo's Statue of David.
+Zia's marble tiles are sourced from quarries in Italy and Spain — regions with a long-established history of extracting and refining architectural stone. Italy has shaped the global standard for marble through centuries of use in landmarks including the Duomo and Michelangelo's Statue of David.
 
-The collection is grounded in Carrara marble, known for its balanced white field and subtle gray veining, and expanded through complementary stones including rust-toned Rosso Alicante, golden Giallo Reale, Nero Marquina, grey Grigio Carnico, and rich Verdi Alpi. Each material is selected to work independently or as part of a cohesive patterned system, allowing for controlled variation across installations.
+The collection is grounded in Carrara marble, known for its balanced white field and subtle gray veining, and expanded through complementary stones: rust-toned Rosso Alicante, golden Giallo Reale, Nero Marquina, gray Grigio Carnico, and rich Verdi Alpi. Each material works independently or as part of a cohesive patterned set, allowing for controlled variation across installations.
+
+### What colorways and formats does Zia's marble collection offer?
+
+Zia's marble collection is available in six named stones: Carrara, Nero Marquina, Grigio Carnico, Rosso Alicante, Giallo Reale, and Verdi Alpi. Finishes include honed and polished. For the full current range of available formats and configurations, browse the [collection](https://ziatile.com/collections/marble-tile) or contact the Zia team at info@ziatile.com or 310-844-1170.
 
 ### How are Zia marble tiles made?
 
-Zia's marble tiles are cut directly from solid stone blocks and finished by skilled stone masons to preserve the integrity of the material. Honed marble creates a smooth, matte surface with a softer, architectural presence. Polished marble enhances reflectivity and highlights contrast within the veining. Since marble forms through natural geological movement, no two tiles are identical. Mineral distribution and pressure patterns create variation in veining and tone that cannot be replicated, giving every installation a distinct composition.
+Zia's marble tiles are cut directly from solid stone blocks and finished by skilled stonemasons who preserve the integrity of the material. Honed marble is ground to a smooth, flat, matte surface that diffuses light with a softer, architectural presence. Polished marble is buffed to a high-gloss finish that enhances the depth and contrast of the veining. Mineral distribution and pressure patterns from natural geological formation create variation in veining and tone that cannot be replicated.
 
 ### Does marble tile need special care?
 
-Yes, marble tiles require consistent care to maintain their surface appearance and prevent staining. As a porous natural stone, marble must be sealed before and after grouting to protect against moisture and staining. Use a penetrating sealer such as 511 Porous Plus and apply Fila Matte Wax as a protective top coat for interior applications. Reseal periodically based on traffic levels and exposure to water. Marble is sensitive to acids, so ongoing maintenance must follow stone-safe practices.
+Marble requires consistent care to maintain its surface and prevent staining. As a porous natural stone, it must be sealed before and after grouting to protect against moisture and staining. Reseal periodically based on traffic levels and exposure to water. Marble is sensitive to acids, so ongoing maintenance must follow stone-safe practices using only pH-neutral products.
 
-### How do you clean marble tile?
+### How to clean marble tile
 
-Routine cleaning of marble tiles should preserve the finish without introducing surface damage. Use a soft cloth or mop with a pH-neutral cleaner specifically formulated for natural stone.
+Clean marble with a soft cloth or mop and a pH-neutral cleaner formulated for natural stone. Wipe spills immediately to prevent absorption and staining.
 
-Avoid the following at all times:
+Avoid:
 
   - Acidic cleaners, such as vinegar or citrus-based solutions
-  - Abrasive scrubbers or pads that can scratch or dull the tile's surface
+  - Abrasive scrubbers or pads that can scratch or dull the surface
 
-Wipe spills immediately to prevent absorption and staining. Consistent, gentle cleaning maintains the clarity of the stone while supporting long-term durability.
+Consistent, gentle cleaning maintains the clarity of the stone and supports long-term durability.
 
 ### How do I install marble tile?
 
-Installing marble tile requires precision, proper materials, and an understanding of how natural stone behaves during placement. Blend tiles from all boxes and dry-lay them to distribute variation and veining evenly before setting begins.
+Marble tile requires precision, proper materials, and an understanding of how natural stone behaves during placement. Blend tiles from all boxes and dry-lay to distribute variation and veining evenly before setting begins.
 
 During installation:
 
   - Cut using a water-cooled tile saw with a diamond blade to prevent chipping
-  - Wet the back of each stone before applying adhesive
+  - Wet the back of each tile before applying adhesive
   - Use a high-quality medium-bed thinset applied in a consistent direction
-  - Back-butter each tile and press into place by hand only to avoid stress fractures
-  - Maintain spacing with ⅛" spacers and remove excess thinset immediately
+  - Press each tile into place by hand only — avoid impact tools that can cause stress fractures
+  - Maintain spacing with 1/8" spacers and remove excess thinset immediately
 
-For sealing and grouting:
+Sealing and grouting:
 
   - Apply a penetrating sealer before grouting and allow full curing
   - Grout in small sections and wipe immediately to prevent staining
-  - Complete with Fila Matte Wax for interior applications or an additional coat of 511 Porous Plus for exterior use
+  - For interior installations, apply a matte protective wax as a final topcoat; for exterior installations, apply an additional coat of penetrating sealer
 
-For complete technical requirements, refer to the [Marble Installation Guide](https://ziatile.com/pages/marble-installation-guide) before beginning any project.
+For complete technical requirements, refer to the [Marble Installation Guide](https://ziatile.com/pages/marble-installation-guide). For project-specific installation questions, the Zia team is available at info@ziatile.com or 310-844-1170.
 
-For installation questions, contact our team at info@ziatile.com or 310-844-1170.
+### How does marble tile hold up over time?
 
-### How long does marble tile last?
+Marble tile is a long-lasting architectural material. Installation quality determines stability and prevents premature cracking or movement. Sealing before and after grouting protects the surface from moisture and staining, and regular maintenance with pH-neutral products preserves the finish and prevents etching. For detailed maintenance requirements, refer to the [Marble Installation Guide](https://ziatile.com/pages/marble-installation-guide).
 
-Marble tile is a long-lasting architectural material that wears well when properly installed and maintained. Installation quality determines stability and prevents premature cracking or movement. Sealing before and after grouting protects the surface from moisture penetration and staining. Regular maintenance with pH-neutral products preserves the finish and prevents etching or surface wear. For detailed installation and maintenance requirements, refer to the [Marble Installation Guide](https://ziatile.com/pages/marble-installation-guide).
+### Are marble tiles suitable for bathroom floors?
 
-### Are marble tiles good for bathroom floors?
-
-Yes, marble tiles are a good choice for bathroom floors. Installation and maintenance requirements should be carefully followed for best results. Sealing before and after grouting is required to protect against moisture and staining in wet environments. For shower floors, slip resistance can be increased by increasing grout joint size to a minimum of ⅛" and/or applying an anti-slip treatment after installation is complete. Marble can be used outdoors in appropriate climates — consult the installation guide for climate-specific guidance.
+Marble tiles perform well on bathroom floors when installation and care requirements are followed. Sealing before and after grouting is required to protect against moisture and staining in wet environments. For shower floors, slip resistance can be increased by widening grout joints to a minimum of 1/8" and applying an anti-slip treatment after installation. Marble can be used in appropriate outdoor applications in suitable climates.
 
 ### What color grout should I use with marble?
 
-Grout color for marble tile depends on whether the grout joints are meant to recede or read as part of the design. Light gray grout suits Carrara marble, aligning with the natural veining without drawing attention to the joint. White grout creates a clean, continuous surface, but requires more maintenance to keep its appearance. Beige or warm neutrals suit warmer stones like Rosso Alicante or Giallo Reale, maintaining tonal consistency across the installation. Use Mapei Flexcolor CQ to reduce staining risk and avoid abrasive grout types that can scratch polished marble surfaces. Test grout color against the stone before full installation to confirm the result aligns with the intended design.
+Grout color for marble tile depends on whether the grout joint is meant to recede or read as part of the design. Light gray suits Carrara marble, aligning with the natural veining without drawing attention to the joint. White creates a clean, continuous surface but requires more maintenance to keep it looking consistent. Beige or warm neutrals suit warmer stones like Rosso Alicante or Giallo Reale, maintaining tonal consistency across the installation. Test grout color against the stone before full installation to confirm the result aligns with the intended design.
+
+### How much marble tile is needed for a project?
+
+Start with the total square footage of the surface. Measure the length and width of each surface in feet and multiply them together; for walls or multi-surface floors, add all sections. Plan for a minimum of 15 to 20% overage to account for cuts, natural stone variation, and any tiles set aside during installation. For project-specific quantity guidance, contact the Zia team at info@ziatile.com or 310-844-1170.
 
 ### What is the difference between honed and polished marble?
 
-Honed and polished marble begin as the same stone but are finished differently, producing distinct surface appearances and maintenance considerations. Honed marble is ground to a smooth, flat, matte finish that diffuses light rather than reflecting it. Polished marble is buffed to a high-gloss finish that enhances the depth and contrast of the veining and reflects light directly. Both finishes require sealing before and after grouting and ongoing maintenance with pH-neutral products.
-
-### What is the difference between marble tile and terrazzo tile?
-
-Marble tile and terrazzo tile are both stone-based surfaces but differ fundamentally in how they are produced and what defines their visual character. Marble is a naturally occurring metamorphic stone cut directly from solid blocks, with veining and mineral composition determined entirely by geological formation. No two marble tiles are identical because the variation is geological rather than designed. Terrazzo is a composite material produced by embedding crushed marble and stone aggregates into a cement matrix, hydraulically pressing the tile, and grinding the surface to reveal the aggregate.
+Honed and polished marble begin as the same stone, finished differently. Honed marble is ground to a smooth, flat, matte surface that diffuses light. Polished marble is buffed to a high-gloss finish that enhances the depth and contrast of the veining and reflects light directly. Both finishes require sealing before and after grouting and ongoing maintenance with pH-neutral products.

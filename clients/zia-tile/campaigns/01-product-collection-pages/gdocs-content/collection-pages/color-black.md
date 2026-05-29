@@ -3,17 +3,20 @@ title: "Color Black - Core Page"
 google_doc_id: "1u5vAACHEdSk1ATEyCJBd1qeumOifbvOKQW1XS9dLFqg"
 page_type: collection
 download_date: 2026-05-12
+optimized_date: 2026-05-27
 ---
 
-**URL:** <https://ziatile.com/collections/all?color=black> 
+**URL:** <https://ziatile.com/collections/all?color=black>
 
-**Meta Title**: Black Tile for Floors, Walls & Backsplashes | Zia Tile
+**Meta title**: Black Tile for Floors, Walls & Backsplashes | Zia Tile
 
-**Meta Description**: Shop black tile at Zia Tile: handmade cotto, zellige, cement, terrazzo, Roman mosaic, and marble for kitchen floors, backsplashes, and bathroom walls.
+**Meta description**: Shop black tile at Zia Tile: handmade cotto, zellige, cement, terrazzo, Roman mosaic, and marble for kitchen floors, backsplashes, and bathroom walls.
 
 **Keywords:** black tiles, black marble tile, black zellige tile
 
 # Black Tile
+
+## Every Material Reads It Differently
 
 Black is not a fixed tone in tile. It can read as soft charcoal or near-true ebony depending on the material, the finish, and how the surface reflects light. At Zia, black appears in cotto, zellige, cement, terrazzo, Roman mosaic, and marble. Each material produces a distinct surface, and that difference determines where the tile works best.
 
@@ -39,8 +42,8 @@ Black tile takes on the undertone of what surrounds it. Next to a warm white, it
 
 ### Does Zia have samples of black tile?
 
-Yes, Zia offers samples of black tile across all materials in the collection. Samples can be added directly from any product page by selecting the color and size. The first five samples are complimentary, with a ten-sample limit per order. Most orders leave the warehouse within two to three business days via UPS or FedEx ground. For additional questions, contact info@ziatile.com or 310-844-1170.
+Yes, Zia offers samples of black tile across all materials in the collection. Samples can be added directly from any product page by selecting the color and size. The first five samples are complimentary, with a ten-sample limit per order. Most orders leave the warehouse within two to three business days via UPS or FedEx ground. For additional questions, contact the Zia team at info@ziatile.com or 310-844-1170.
 
 ### How much black tile is needed for a project?
 
-Start by measuring each surface individually. Multiply the length by the width in feet to get the square footage, then add all surfaces together for the total. Add a minimum of 15% overage to account for cuts and variation. For handmade materials like zellige and cotto, 15 to 20% overage is recommended, with 25% for a more uniform result. For project-specific guidance, contact our team at info@ziatile.com or 310-844-1170.
+Measure each surface individually, multiply length by width in feet, and add all surfaces together for the total square footage. Add a minimum of 15% overage to account for cuts and variation. For handmade materials like zellige and cotto, 15 to 20% overage is recommended, with 25% for a more uniform result. For project-specific guidance, contact the Zia team at info@ziatile.com or 310-844-1170.

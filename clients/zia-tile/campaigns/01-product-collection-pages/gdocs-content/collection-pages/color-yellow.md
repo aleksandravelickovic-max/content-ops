@@ -3,17 +3,20 @@ title: "Color Yellow"
 google_doc_id: "1XM-kcWQc5ZeHmB8FRwF_j4Pq5mGrXQ04Rs-j_NT2j7I"
 page_type: collection
 download_date: 2026-05-12
+optimized_date: 2026-05-27
 ---
 
 **URL:** <https://ziatile.com/collections/all?color=yellow>
 
-**Meta Title**: Yellow Tile for Kitchens, Baths & Feature Walls | Zia Tile
+**Meta title**: Yellow Tile for Kitchens, Baths & Feature Walls | Zia Tile
 
-**Meta Description**: Shop yellow tile at Zia Tile: handmade zellige, marble, cement, ceramic, and more for kitchen backsplashes, bathroom walls, and floors.
+**Meta description**: Shop yellow tile at Zia Tile: handmade zellige, marble, cement, ceramic, and more for kitchen backsplashes, bathroom walls, and floors.
 
 **Keywords:** yellow tiles, yellow floor tile, yellow subway tile, mustard yellow tile, yellow backsplash tile, yellow bathroom tile
 
 # Yellow Tile
+
+## Straw to Ochre to Mustard
 
 Yellow sits in a wide tonal range, from pale straw to deep ochre to mustard, and each material carries it differently. At Zia, yellow runs through zellige, ceramic, cement, terrazzo, Cotto Allende, and marble. The glaze, the mineral composition, and the finish determine where each tile lands within that range and how it reads in a room.
 
@@ -21,7 +24,7 @@ Yellow sits in a wide tonal range, from pale straw to deep ochre to mustard, and
 
 ## Frequently Asked Questions
 
-### Is a yellow tile a good choice for kitchens and backsplashes?
+### Is yellow tile a good choice for kitchens and backsplashes?
 
 Yes, yellow tile performs well in kitchens, particularly as a yellow backsplash tile. Lighter tones work well with under-cabinet lighting and natural daylight. Deeper hues, such as mustard yellow tile, pair with white or natural wood cabinetry. Glazed ceramic and handcrafted zellige hold up in high-use cooking zones when properly installed, sealed where required, and grouted. Zellige brings inherent variation, including chips, pits, and crazing, while ceramic offers a more controlled surface.
 
@@ -31,7 +34,7 @@ Yes, yellow subway tile works in modern interiors. A stacked vertical layout rea
 
 ### Is yellow bathroom tile suitable for showers?
 
-Yes, yellow bathroom tile works on shower walls and floors when the material is suited for wet areas. Glazed ceramic, zellige, marble, and Cotto Allende can each be installed in showers with proper waterproofing and sealing. Seal all of these materials after grouting and reseal them every one to two years. On shower floors, hold a minimum ⅛" grout joint and apply an anti-slip treatment after installation for additional traction.
+Yes, yellow bathroom tile works on shower walls and floors when the material is suited for wet areas. Glazed ceramic, zellige, marble, and Cotto Allende can each be installed in showers with proper waterproofing and sealing. Seal all of these materials after grouting and reseal every one to two years. On shower floors, hold a minimum 1/8" grout joint and apply an anti-slip treatment after installation for additional traction.
 
 ### Can yellow tile make a space feel brighter?
 
@@ -47,8 +50,8 @@ The difference between yellow and orange tile comes down to undertone and base p
 
 ### How much yellow tile is needed for a project?
 
-Start by measuring each surface individually. Multiply the length by the width in feet to get the square footage, then add all surfaces together for the total. Add a minimum of 15% overage to account for cuts and variation. For zellige, 15 to 20% overage is recommended, with 25% for a more uniform result. For project-specific guidance, contact our team at info@ziatile.com or 310-844-1170.
+Measure each surface individually, multiply length by width in feet, and add all surfaces together for the total square footage. Add a minimum of 15% overage to account for cuts and variation. For zellige, 15 to 20% overage is recommended, with 25% for a more uniform result. For project-specific guidance, contact the Zia team at info@ziatile.com or 310-844-1170.
 
 ### Can yellow tile samples be ordered?
 
-Yes, samples can be added directly from any product page by selecting the color and size. Up to ten samples may be ordered, with the first five complimentary. Orders typically ship within two to three business days. For additional questions, contact info@ziatile.com or 310-844-1170.
+Yes, samples can be added directly from any product page by selecting the color and size. Up to ten samples may be ordered, with the first five complimentary. Orders typically ship within two to three business days. For additional questions, contact the Zia team at info@ziatile.com or 310-844-1170.
