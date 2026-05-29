@@ -18,11 +18,14 @@ purpose: |
 required_invariants:
   - id: voice_judge_floor
     check: |
-      voice-judge returned a score >= 80 with verdict "On-register" or
-      "Acceptable". A score in 70-79 is "Below floor" and halts B4.
+      voice-judge returned a score >= the gate floor reported in its
+      output (80 when _approved/{content-type}/ has <3 exemplars; 85
+      when it has >=3). Verdict must be "On-register" or "Acceptable".
+      "Below floor" halts B4 with the lowest dimension surfaced for the
+      next iteration.
     severity: critical
     tier: haiku
-    source: agents/voice-judge.md output format
+    source: agents/voice-judge.md gate floor section
 
   - id: koray_judge_floor
     check: |
