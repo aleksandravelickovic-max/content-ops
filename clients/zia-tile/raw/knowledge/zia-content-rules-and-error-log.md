@@ -82,6 +82,10 @@ These apply to every content type: product pages, collection pages, blog posts, 
 ### 2.11 Semicolons vs. em-dashes
 - Parenthetical insertions use em-dashes, not semicolons.
 
+### 2.12 Number ranges use "to" not dashes
+- Write "15 to 20 percent," not "15–20%" or "15-20%."
+- No en-dashes or em-dashes in number ranges anywhere in the copy.
+
 **Correct form:** "surface variation — chips, pits, and crazing — results directly from"
 **Incorrect form:** "surface variation; chips, pits, and crazing; results directly from"
 
@@ -145,6 +149,14 @@ These apply to every content type: product pages, collection pages, blog posts, 
 | the correct choice | A great choice — never frame Zia's tile as the only or correct answer |
 | most often specified / most popular / most specified | Omit or name specific use contexts without ranking — "we never allude to best-sellers" |
 | [specific grout color names in recommendations] | Describe the approach: color-matching vs. contrasting — never name buff, warm grey, etc. |
+| tried-and-true craftsmanship | Remove or replace with a specific process detail |
+| balanced option / balanced choice | Empty without context — describe what makes it right for the use case |
+| performs well | Only acceptable with a specific metric after it ("DCOF of 0.74") — never as a standalone claim |
+| elevated aesthetic | Remove — describe the quality specifically |
+| timeless beauty | Remove — no undefined "timeless" language |
+| desirable option | Remove — specify why |
+| minimize the appearance of crazing | Crazing is an authentic material characteristic, never a flaw to minimize or hide |
+| applications each finish suits | Doesn't parse — rewrite |
 
 ### 3.3 Capitalization rules
 - **zellige** — always lowercase, including in titles and headings. Never at the start of a sentence — restructure the sentence.
@@ -170,13 +182,14 @@ Hard rules. Apply each to its specific material only.
 | Cotto Allende (glazed) | NOT suitable for outdoor freeze/thaw. Same rule as glazed zellige. |
 | Marble | Can be used outdoors in appropriate climates. Do not say it cannot. |
 | Cement tile | Suitable for exterior in non-freeze/thaw climates only. |
+| Terrazzo | Suitable for exterior floors in non-freeze/thaw climates. NOT suitable for exterior floor installations in freeze/thaw climates. Not suitable for submerged applications (pools or spas). Source: Blog #8. |
 | Limestone | Verify per SKU. French Cobblestone (Bordeaux) and Moroccan limestone have different confirmed rules. Do not apply one to the other. |
 
 ### 4.2 Pool and spa rules
 
 | Material | Pool/spa rule |
 |---|---|
-| Glazed zellige | Verify per SKU before asserting — do not assume approved |
+| Glazed zellige | Approved for pool and spa environments including submerged and splash-zone. Confirmed by Jamie's Blog #5 edits (May 2026). |
 | Unglazed Cotto | NOT suitable for pools or spas |
 | Cotto Allende (glazed) | Approved for pools and spas |
 | Ceramics (Japanese) | Verify per SKU before asserting |
@@ -193,6 +206,13 @@ Hard rules. Apply each to its specific material only.
 - Sealing guidance must appear inline within the specific usage bullet (shower, pool, spa) — not only in a section-end catch-all.
 - Direct readers to the Installation Guide. Never name a specific sealer product in customer-facing pages.
 - Dry spaces also require sealing. Required language: "Always seal [tile name] according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers."
+
+**Terrazzo sealing (Blog #8):**
+- Interior: penetrating sealer before and after grouting; finish with a protective wax coat after grout cures.
+- Exterior: penetrating sealer only — do not use wax on exterior terrazzo surfaces.
+
+**Outdoor sealing rule — all materials (Blogs #6, #8):**
+- For any exterior application: use a penetrating sealer only. Wax causes discoloration under UV exposure. Confirmed in zellige buying guide and terrazzo care post.
 
 ### 4.4 Slip resistance
 - DCOF threshold for wet level interior floors: 0.42 (ANSI A137.1).
@@ -359,6 +379,28 @@ No placeholder text in any final output. If a figure, colorway, price, or specif
 - Honed finish for shower floors. Polished not recommended for wet floors.
 - Variation: veining and tone inherent to the stone.
 
+### Terrazzo (Blog #8)
+- **Capitalization:** "terrazzo" is lowercase as a general material term — same rule as "terra cotta." Capitalize "Terrazzo" only when referring to Zia's collection by name ("Zia's Terrazzo collection"). Jamie corrected every mid-sentence capital T to lowercase throughout Blog #8.
+- **Formats:** 12x12 and 24x24 square.
+- **Pool/spa:** NOT suitable for submerged applications.
+- **Freeze/thaw:** Suitable for exterior floors in non-freeze/thaw climates. Not suitable for exterior floors in freeze/thaw climates.
+- **Installation:** Tiles pressed into place with the palm only. No rubber mallets — mallet impact causes hairline cracks that appear in time.
+- **Sealing:** Interior = penetrating sealer before and after grouting + protective wax coat. Exterior = penetrating sealer only.
+- **Care — cleaning:** Sweep or dust mop often. "Daily" was in the draft; Jamie changed to "often."
+- **Care — spills:** Blot rather than wipe, as wiping spreads the spill.
+- **Care — products to avoid:** Vinegar, bleach, and ammonia-based cleaners degrade the cement binder. Once that damage accumulates, it requires replacement or professional refinishing.
+- **Wear language:** Use "wear" not "use" — same rule as Cotto. "High traffic" not "high use."
+- **Staining language:** "Staining substances" not "staining agents."
+- **Variation:** Aggregate runs through the full body of the tile — minor surface wear does not expose a different layer.
+
+### Ceramics (Japanese) — updates from Blog #3
+- Origin framing: "handcrafted near Nagoya" — not "produced in partnership with Nagoya" (Jamie's Blog #3 edit).
+- Field Trip: Japan is a "release within the core ceramics collection" — not a "line" or "sub-line." It features extruded + die-cut construction, furrowed profiles, and relief patterns.
+
+### Zellige — ordering and installation (Blog #6)
+- Each production run varies; tiles from separate orders can differ in tone and surface character. When discussing quantity, include: "Ordering the full quantity at once gives the most consistent result across the installation."
+- Zellige requires an installer with specific experience in handmade Moroccan tile. Variation in thickness and edge profile requires a different approach than precision-cut tile. Include in installation sections.
+
 ---
 
 ---
@@ -438,16 +480,15 @@ Fix: Writers must look at the tile, the room, and the installation before writin
 Fix: Make the claim or don't. If a colorway is right for a context, say why specifically. Don't signal authority through ranking or categorization language.
 
 ### 10.4 Writers front-load sections with setup sentences
-"The names appear together often, and they describe distinct products" → "pointless" (Jamie). Writers ease into sections with an observation about what they're about to explain, rather than leading with the explanation.
+"The names appear together often, and they describe distinct products" → Jamie replaced with "One clay-based base, two distinct lines:" (Blog #1). Writers ease into sections with an observation about what they're about to explain, rather than leading with the explanation.
 
-This also applies at the article level. Meta-sentences that announce what the article will do ("Understanding the differences between zellige, cement, and ceramic options makes for a well-informed choice") are filler. Jamie flagged this as "no." The article opens on the first piece of useful information, not a sentence about why the article exists.
+The same pattern appears inside sections as report-style labels: "The practical summary: Cotto is the unglazed core line…" — transition through content, not through labeling it.
 
-The same pattern appears inside sections as report-style labels: "The practical summary: Cotto is the unglazed core line…" — transition through content, not through labeling it. "Practical summary" is a structural tell that the writer ran out of editorial connective tissue.
+**Confirmed error (Blog #1, section opener):** "The names appear together often, and they describe distinct products." — Jamie: replaced with the point directly.
+**Note:** "The practical summary:" was flagged verbally but remains in the approved Blog #1. Treat as a style preference to avoid, not a hard block.
+**Correction (Blog #3):** "Understanding the differences between zellige, cement, and ceramic options makes for a well-informed choice for a long-lasting installation" — this was **written by Jamie**, not flagged by her. It replaced weaker draft language ("saves reconsideration once the tile is on the kitchen wall"). Do not treat it as an error.
 
-**Error observed (Blog #3):** "Understanding the differences between zellige, cement, and ceramic options makes for a well-informed choice for a long-lasting installation." — Jamie: "no."
-**Error observed (Blog #1):** "The practical summary: Cotto is the unglazed core line, freeze/thaw rated…" — Jamie: "poor word choice" / "strange word choice."
-
-Fix: The first sentence of every section — and every piece — is the point. Not the setup for it. Not a label for what follows.
+Fix: The first sentence of every section is the point. Not the setup for it.
 
 ---
 
@@ -467,7 +508,7 @@ Fix: The first sentence of every section — and every piece — is the point. N
 | Unfilled placeholder in output | Zellige v2 | Critical |
 | Pool/spa asserted without verified source | Multiple | Critical |
 | Second person (you/your) | Multiple | Critical |
-| Unverified colorways referenced (Aegean, Absinthe) | Zellige v2 | Critical |
+| Unverified colorways referenced (Absinthe) | Zellige v2 | Critical |
 | Unverified production claim (chiseled to shape) | Zellige v2 | Critical |
 | "Dynamic glazes" applied to Cotto Allende | Cotto Allende copy | Critical |
 | Crazing language applied to unglazed Cotto | Cotto copy | Critical |
@@ -482,5 +523,100 @@ Fix: The first sentence of every section — and every piece — is the point. N
 | "products" used for tiles/collections | Blog 01 (terra cotta) | Critical |
 | Negative framing ("protects against splatters") instead of positive | Blog 03 (backsplash) | Significant |
 | Colorway described in physical terms ("soft tan, warm, and light") not design terms | Blog 01 (terra cotta) | Significant |
-| Meta setup sentence announcing article intent instead of leading with content | Blog 03 (backsplash) | Significant |
-| Report-style section label ("The practical summary:") instead of direct editorial transition | Blog 01 (terra cotta) | Significant |
+| Report-style section label ("The practical summary:") — avoid; not a hard block | Blog 01 (terra cotta) | Minor |
+| "belongs to the category of materials that improve with..." as a weak phrase | NOT an error — approved Blog #1 keeps it; confirmed acceptable | — |
+| terrazzo capitalized mid-sentence (Terrazzo) | Lowercase as general material term — Blog #8 | Significant |
+| Zellige pool/spa asserted without verified source | Now confirmed approved — Blogs #5, #6 | — (resolved) |
+| "Portuguese Blue" vs "Tidepool" | Use "Portuguese Blue" in editorial copy — Blog #6 | Minor |
+| "neutrals" vs "naturals" for cement tile | "Muted neutrals" is correct — Blog #3 | Minor |
+| Overage as range "15 to 20%" | "Minimum of 15%... up to 25%" is Jamie's consistent pattern — Blogs #2, #5, #6 | Significant |
+
+---
+
+## Part 11 — False Claims About Finishes (never write these)
+
+These claims are factually wrong and were flagged by Jamie. Writing them is a factual error, not a style issue.
+
+| False claim | Correction |
+|---|---|
+| "Matte tile conceals smudges / water marks / dirt" | False — matte tile does not conceal; it simply reads differently under light |
+| "Matte is the best choice for kitchen or bathroom floors" | Unqualified "best" claim — all finish types can suit these spaces depending on context |
+| "Glossy tile is limited to walls" / "Glossy cannot go on floors" | False for dry floors — glossy ceramic is below the DCOF threshold for wet floors (shower floors) only; it can go on dry residential floors |
+| "Glossy tiles emphasize imperfections" | Unsupported — do not write |
+| "Matte tile is more durable than glossy" | Unsupported — do not write |
+
+---
+
+## Part 12 — Finish Term Assignments (apply only to the correct material)
+
+Each finish descriptor belongs to a specific material category. Cross-application is a factual error.
+
+| Finish terms | Correct material |
+|---|---|
+| honed, polished, bush-hammered | Stone only: Marble, Limestone, Cantera, Roman Mosaics |
+| glazed, unglazed | Terra cotta (Cotto, Cotto Allende) and zellige only |
+| matte, satin, glossy, textured, furrowed, etched | Ceramics (Japanese collection) |
+| Unglazed Natural | Zellige finish — always title case when naming it as a product |
+
+---
+
+## Part 13 — Approved Design-Effect Phrasings (Jamie-confirmed; use freely)
+
+These phrasings passed Jamie's review and can be used without further approval.
+
+| Context | Approved phrasing |
+|---|---|
+| Darker floors | "grounds the space" / "gives visual weight" |
+| Lighter floors in small baths | "expands a small bath and opens the space" |
+| Contrast combinations | "provides interesting contrast" / "darker floor provides contrast against white wall" |
+| Matched grout | "foregrounds the tile itself" |
+| zellige at backsplash height | "introduces inherent variation at eye level" |
+| Contrasting dark grout | "renders the geometry graphic and emphasizes the grid" |
+| Mid-tone grout | "softens the pattern" |
+| Grout color (not finish) | "conceals wear over time" |
+| Material combinations | "pairs cleanly with" |
+| Chips, pits, crazing | "authentic material details" |
+
+---
+
+## Part 14 — Forbidden Claims (business-level; factually false for Zia)
+
+| Claim | Why forbidden |
+|---|---|
+| Warehouse or showroom viewings | Zia does not offer warehouse viewings. Do not write any claim that customers or trade clients can visit a warehouse to view tiles in person. Source: client correction, 2026-05-28. |
+| "200 colorways" / "200 colors" / "200 color options" | The 200 figure refers to SKU count, not distinct colors or colorways. Use "200 SKUs" or omit the number until client-approved wording exists. Source: client correction, 2026-05-28. |
+
+---
+
+## Part 15 — Terminology & Editorial Corrections: Blog Round 2 (Blogs #3, #5, #6, #8 — May 2026)
+
+Source: Jamie Greenspan tracked edits on the four blog posts delivered March 2026, reviewed May 2026. Parsed with DRAFT-HAD vs JAMIE-WANTS direction from Word OOXML.
+
+### 15.1 Terminology corrections (confirmed from tracked changes)
+
+| Draft had | Jamie wants | Source |
+|---|---|---|
+| "muted naturals" (cement tile colorways) | "muted neutrals" | Blog #3 |
+| "settling" (grout joint decisions) | "determining" | Blog #3 |
+| "produced in partnership with Nagoya" (ceramics) | "handcrafted near Nagoya" | Blog #3 |
+| "main ceramics line" (Field Trip: Japan context) | "core ceramics line" | Blog #3 |
+| "line" (Field Trip: Japan descriptor) | "release" — full phrase: "Field Trip: Japan release within the core ceramics collection" | Blog #3 |
+| "Tidepool" (zellige colorway name in editorial copy) | "Portuguese Blue" | Blog #6 |
+| "Arab world" (zellige history, geographic spread) | "the Middle East" | Blog #5 |
+| "colorways" (zellige 200+ count) | "distinct tiles" — but per corrections.md, the correct figure is 200 SKUs, not tiles or colorways | Blog #5 |
+| "seeing" (sample recommendation) | "exploring" — use "exploring in person" or "exploring before committing" | Blog #6 |
+| "reliably" (zellige wet-area performance) | "well" — simpler language preferred | Blog #6 |
+| "assembled" (mosaic sheets) | "ready" — "arrive ready for installation" | Blog #5 |
+| "daily" (terrazzo sweeping frequency) | "often" | Blog #8 |
+| "agents" (terrazzo staining) | "substances" — "staining substances" | Blog #8 |
+| "develop" (terrazzo hairline cracks) | "appear" — "cracks that appear in time" | Blog #8 |
+| "use" (high traffic/wear context, terrazzo) | "traffic" — "high traffic" not "high use" | Blog #8 |
+
+### 15.2 Editorial patterns confirmed in Round 2
+
+- **Stay positive — confirmed again (Blog #3):** "carries most of the kitchen's visible design weight" → replaced with "can serve as a focal point in the room." Lead with what the surface does for the room, not what it manages.
+- **Overage phrasing pattern (Blogs #5, #6):** Jamie consistently removes "to 20" from "15 to 20%" and adds "minimum of." Preferred form: "a minimum overage of 15%... up to 25% for [reason]." This pattern was also confirmed in Blog #2 (yesterday).
+- **Mosaic version numbers omitted (Blog #5):** "(versions 1, 2, and 4)" and "(versions 1 and 2)" deleted from Atlas, Souk, and Xylem descriptions. Do not list version numbers for mosaic collections in copy.
+- **"Exploring" for sample recommendations (Blog #6):** When recommending that customers view samples before ordering, use "exploring" — not "seeing in person." Confirmed substitution.
+- **Installer experience note required for zellige (Blog #6):** Installation sections should note that zellige requires an installer with specific experience in handmade Moroccan tile.
+- **Production run ordering note for zellige (Blog #6):** Quantity sections should include: "Each production run varies; ordering the full quantity at once gives the most consistent result across the installation."
