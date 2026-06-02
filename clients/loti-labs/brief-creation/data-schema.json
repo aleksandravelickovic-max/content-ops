@@ -1,0 +1,164 @@
+{
+  "_comment": "Schema / sample for fill_brief.py. All fields are required unless marked optional.",
+
+  "keyword":          "BPC-157 peptide",
+  "month":            "May",
+  "year":             "2026",
+
+  "primary_url":      "https://lotilabs.com/bpc-157/",
+  "secondary_url":    "https://lotilabs.com/peptides/",
+  "tertiary_url":     "",
+
+  "content_type":     "Informational guide",
+  "strategic_purpose":"Rank for primary keyword; drive traffic to product page",
+  "word_count_range": "2,000–2,500 words",
+
+  "primary_keyword":  "BPC-157 peptide",
+  "additional_keywords": [
+    "buy BPC-157",
+    "BPC-157 research",
+    "BPC-157 purity",
+    "BPC-157 peptide supplier"
+  ],
+
+  "primary_intent":   "Informational — researchers seeking compound background",
+  "secondary_intent": "Commercial — researchers evaluating suppliers",
+  "target_audiences": [
+    "Academic researchers studying tissue repair and angiogenesis",
+    "Biotechnology teams sourcing research-grade peptides",
+    "Pharmaceutical research groups evaluating GI and musculoskeletal compounds"
+  ],
+
+  "competitors": [
+    {
+      "url":         "example-supplier.com/bpc-157",
+      "word_count":  2100,
+      "covers_well": "Mechanism of action, receptor binding",
+      "gaps":        "No purity/testing information; no sourcing detail"
+    },
+    {
+      "url":         "research-peptides-site.com/bpc-157-guide",
+      "word_count":  1800,
+      "covers_well": "Dosage protocols in animal studies",
+      "gaps":        "Missing manufacturing and fulfillment context"
+    }
+  ],
+
+  "serp_content_type":    "Informational guides and product pages",
+  "serp_avg_word_count":  "1,950",
+  "serp_competitor_gaps": "Few competitors address purity verification or COA transparency",
+  "serp_domain_types":    "Peptide suppliers, nootropics blogs, academic aggregators",
+  "serp_tone":            "Mix of scientific and semi-educational; some consumer-facing",
+  "serp_context_2026":    "AI Overview present; PAA box prominent with mechanism questions",
+
+  "paa_questions": [
+    "What is BPC-157 used for in research?",
+    "Is BPC-157 safe for laboratory use?",
+    "How is BPC-157 purity verified?",
+    "Where can researchers buy BPC-157?"
+  ],
+
+  "internal_links": [
+    "https://lotilabs.com/bpc-157/ (primary target page)",
+    "https://lotilabs.com/peptides/ (secondary target page)"
+  ],
+
+  "outline": [
+    { "level": "H1", "heading": "BPC-157 Peptide: Research Overview and Sourcing Guide" },
+    { "level": "H2", "heading": "What Is BPC-157?" },
+    { "level": "H3", "heading": "Chemical Structure and Classification" },
+    { "level": "H3", "heading": "How BPC-157 Works at the Molecular Level" },
+    { "level": "H2", "heading": "BPC-157 in Research: Key Study Areas" },
+    { "level": "H2", "heading": "Purity Standards for Research-Grade BPC-157" },
+    { "level": "H2", "heading": "Sourcing BPC-157 for Laboratory Use" },
+    { "level": "H2", "heading": "Frequently Asked Questions" }
+  ],
+
+  "sections": [
+    {
+      "heading":    "Introduction",
+      "word_count": "120–150",
+      "guidance": [
+        "Include 'BPC-157 peptide' in sentence one or two",
+        "Define BPC-157 as a synthetic pentadecapeptide derived from human gastric juice protein",
+        "State scope: mechanism, research applications, and sourcing criteria",
+        "Do not imply human or clinical use"
+      ]
+    },
+    {
+      "heading":    "What Is BPC-157?",
+      "word_count": "200–250",
+      "guidance": [
+        "Define the compound: 15-amino-acid sequence, molecular weight, CAS number",
+        "Distinguish from consumer peptide products — position as research compound",
+        "Mention its origin (gastric protein fragment) without therapeutic framing"
+      ]
+    },
+    {
+      "heading":    "Chemical Structure and Classification",
+      "word_count": "150–180",
+      "guidance": [
+        "Describe the amino acid sequence and structural features relevant to stability",
+        "Note solubility characteristics relevant to lab reconstitution",
+        "Define scientific terms on first use"
+      ]
+    },
+    {
+      "heading":    "How BPC-157 Works at the Molecular Level",
+      "word_count": "200–240",
+      "guidance": [
+        "Cover receptor interactions and signaling pathways studied in the literature",
+        "Cite peer-reviewed studies — do not invent or paraphrase without basis",
+        "Frame all effects as research findings, not product outcomes",
+        "40–60 word snippet answer: 'What is BPC-157 used for in research?'"
+      ]
+    },
+    {
+      "heading":    "BPC-157 in Research: Key Study Areas",
+      "word_count": "250–300",
+      "guidance": [
+        "Summarize the main areas of active research (tissue repair, angiogenesis, GI, CNS)",
+        "Use table here to organize study areas vs. research findings",
+        "All claims must reference existing peer-reviewed literature"
+      ]
+    },
+    {
+      "heading":    "Purity Standards for Research-Grade BPC-157",
+      "word_count": "200–240",
+      "guidance": [
+        "Explain what purity percentage means for peptide research compounds",
+        "Cover COA (certificate of analysis) — what it is and why it matters",
+        "Mention third-party independent testing as the standard; tie to Loti Labs COA availability",
+        "40–60 word snippet answer: 'How is BPC-157 purity verified?'"
+      ]
+    },
+    {
+      "heading":    "Sourcing BPC-157 for Laboratory Use",
+      "word_count": "200–240",
+      "guidance": [
+        "Cover what research teams should evaluate when selecting a supplier (purity, COAs, shipping, manufacturing location)",
+        "Soft secondary CTA: link to Loti Labs peptide catalog",
+        "Do not make comparative claims about specific competitors"
+      ]
+    },
+    {
+      "heading":    "Frequently Asked Questions",
+      "word_count": "200–250",
+      "guidance": [
+        "Cover all PAA questions collected in SERP analysis",
+        "Each FAQ is an H3 in sentence case",
+        "40–60 word answer per question, followed by 1–2 sentences of expansion",
+        "Maintain research framing throughout — no clinical or consumer language"
+      ]
+    },
+    {
+      "heading":    "Conclusion",
+      "word_count": "80–100",
+      "guidance": [
+        "Summarize key research context for BPC-157",
+        "Primary CTA: soft link to Loti Labs BPC-157 product page",
+        "Do not add new information — close the article"
+      ]
+    }
+  ]
+}
