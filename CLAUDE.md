@@ -128,6 +128,7 @@ portal/
 | Portugal Pathways | `clients/portugal-pathways/STYLE-SYSTEM.md` | Active — HNW relocation/residency advisory, Portugal; British English; strict financial promotion compliance (CSM: Arianna Trabanino) |
 | Loti Labs | `clients/loti-labs/STYLE-SYSTEM.md` | Active — US-based research peptide, liquid, and capsule supplier; strict RUO compliance; dual audience (research + skincare) (CSM: Alex Belanger) |
 | The Nash Casino | `clients/the-nash-casino/STYLE-SYSTEM.md` | Active — NH's largest charitable gaming venue, Nashua NH; never use "slots"; responsible gaming compliance required; agency: McGuinness Media (CSM: Alex Belanger) |
+| Liveops | `clients/liveops/STYLE-SYSTEM.md` | Active — cloud-based remote agent network for enterprise CX; critical agent language compliance (never "hire/employee/trained"); not a call center, not CCaaS (CSM: Chanakya Thakkar) |
 
 ### Adding a new client
 
