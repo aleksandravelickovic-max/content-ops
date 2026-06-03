@@ -126,6 +126,7 @@ portal/
 | Esthetics Center | `clients/esthetics-center/STYLE-SYSTEM.md` | Active — medical aesthetics + plastic surgery, Northern CA; led by Dr. Reginald Rice |
 | Thera | `clients/thera/STYLE-SYSTEM.md` | Active — VIP; specialized rehabilitation clinic, Midtown Manhattan (CSM: Wendy Alinor) |
 | Portugal Pathways | `clients/portugal-pathways/STYLE-SYSTEM.md` | Active — HNW relocation/residency advisory, Portugal; British English; strict financial promotion compliance (CSM: Arianna Trabanino) |
+| Loti Labs | `clients/loti-labs/STYLE-SYSTEM.md` | Active — US-based research peptide, liquid, and capsule supplier; strict RUO compliance; dual audience (research + skincare) (CSM: Alex Belanger) |
 
 ### Adding a new client
 
