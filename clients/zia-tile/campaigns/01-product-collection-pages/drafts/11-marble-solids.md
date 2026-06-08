@@ -8,7 +8,7 @@
 
 Nothing can match the classic charm of marble. An ancient stone seen in architecture and art from the Duomo to the Statue of David, Europe has played a leading role in the legacy of the iconic material, and marks the origin of our collection. Raw stone is quarried from the mountains of both Italy and Spain, then cut in Italy by the most discerning artisans. Our marble tiles reveal what millions of years of heat and pressure created within. Rich tones and unique veining reveal beauty as deep as the earth itself.  
 
-Zia's marble tile is offered in a small format solids, sets, and mosaics. Anchored in Carrara, patterned offerings feature complements of Nero Marquina, Grigio Carnico, Rosso Alicante, Giallo Reale, and Verdi Alpi, perfectly paired for installations that are equally timely and timeless. Roman Mosaics introduce tesserae in solids, patterns, and fans.
+Zia's marble tile is offered in a small format solids, sets, and mosaics. Anchored in Carrara, patterned offerings feature complements of Nero Marquina, Grigio Carnico, Rosso Alicante, Giallo Reale, and Verde Alpi, perfectly paired for installations that are equally timely and timeless. Roman Mosaics introduce tesserae in solids, patterns, and fans.
 
 \[IMAGE: SIZE/THICKNESS DIAGRAM\]
 
