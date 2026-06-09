@@ -1,0 +1,2346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zia Tile — Collection Pages Compliance Scan — June 04, 2026</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box}
+  body{margin:0;padding:0;font-family:"Georgia","Times New Roman",serif;background:#f6f1e8;color:#111827}
+  .page-wrap{max-width:1200px;margin:0 auto;padding:32px 24px 64px}
+  h1{font-size:1.6rem;margin:0 0 4px;font-weight:700;color:#111827}
+  .subtitle{color:#6b7280;font-size:0.88rem;font-family:sans-serif;margin:0 0 28px}
+  .stat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;margin-bottom:28px}
+  .stat-card{background:#fff;border-radius:8px;padding:16px 18px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+  .stat-card .num{font-size:1.8rem;font-weight:700;line-height:1}
+  .stat-card .lbl{font-size:0.75rem;color:#6b7280;font-family:sans-serif;margin-top:4px}
+  .progress-bar-wrap{background:#fff;border-radius:8px;padding:16px 20px;border:1px solid #e5e7eb;
+      margin-bottom:28px;box-shadow:0 1px 3px rgba(0,0,0,.06);display:flex;align-items:center;gap:16px}
+  .progress-bar-wrap .label{font-size:0.88rem;font-family:sans-serif;color:#374151;white-space:nowrap}
+  .progress-bar-outer{flex:1;height:10px;background:#e5e7eb;border-radius:99px;overflow:hidden}
+  #progress-bar-inner{height:100%;background:#8a3324;border-radius:99px;transition:width .3s}
+  #progress-text{font-size:0.88rem;font-family:sans-serif;font-weight:700;color:#8a3324;white-space:nowrap}
+  .section-card{background:#fff;border-radius:10px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,.06);margin-bottom:28px;overflow:hidden}
+  .section-card h2{font-size:1rem;font-family:sans-serif;font-weight:700;color:#374151;padding:14px 18px 10px;margin:0;border-bottom:1px solid #f3f4f6}
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:28px}
+  @media(max-width:700px){.two-col{grid-template-columns:1fr}}
+  table.main-table{width:100%;border-collapse:collapse;font-family:sans-serif}
+  table.main-table thead th{padding:8px 10px;font-size:0.75rem;font-weight:700;color:#6b7280;
+      text-transform:uppercase;letter-spacing:.05em;background:#f9fafb;border-bottom:1px solid #e5e7eb;text-align:left}
+  table.main-table thead th.center{text-align:center}
+  table.main-table tbody tr{border-bottom:1px solid #f3f4f6}
+  table.main-table tbody tr:hover{background:#fafaf9}
+  table.main-table tbody tr.section-header{background:#f9fafb}
+  tr.has-critical td:first-child{border-left:3px solid #b91c1c}
+  tr.has-issues td:first-child{border-left:3px solid #f59e0b}
+  tr.clean td:first-child{border-left:3px solid #16a34a}
+  tr.checked-done{background:#f0fdf4!important;opacity:.7}
+  .badge{display:inline-block;padding:2px 7px;border-radius:99px;font-size:0.72rem;font-family:sans-serif;font-weight:600;white-space:nowrap}
+  #filter-bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:14px;font-family:sans-serif}
+  #filter-bar label{font-size:0.82rem;color:#374151;cursor:pointer;display:flex;align-items:center;gap:5px}
+  #filter-bar input[type=search]{padding:5px 10px;border:1px solid #d1d5db;border-radius:6px;font-size:0.82rem;width:240px}
+  #reset-btn{margin-left:auto;font-size:0.78rem;padding:4px 12px;background:#fff;border:1px solid #d1d5db;border-radius:6px;cursor:pointer;color:#6b7280}
+  #reset-btn:hover{background:#fef2f2;color:#b91c1c;border-color:#b91c1c}
+  .note-box{background:#fffbeb;border:1px solid #fcd34d;border-radius:8px;padding:12px 16px;margin-bottom:20px;font-family:sans-serif;font-size:0.82rem;color:#78350f}
+</style>
+</head>
+<body>
+<div class="page-wrap">
+  <h1>Zia Tile — Collection Pages Compliance Scan</h1>
+  <p class="subtitle">June 04, 2026 &mdash; 51 pages scanned &bull; Rules: STYLE-SYSTEM + COMPLIANCE.yml + error log + humanizer agent + colorway reference</p>
+
+  <div class="note-box">
+    <strong>Note on second person:</strong> Installation guides are written in second-person instructional register — this is correct per the Zia brand voice guide (&ldquo;FAQ / instructional copy: second person enters only in practical contexts&rdquo;). Second-person checks are suppressed for installation guide docs.
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat-card"><div class="num">51</div><div class="lbl">Pages scanned</div></div>
+    <div class="stat-card" style="border-left:3px solid #16a34a;"><div class="num" style="color:#16a34a;">3</div><div class="lbl">Clean (0 issues)</div></div>
+    <div class="stat-card" style="border-left:3px solid #b91c1c;"><div class="num" style="color:#b91c1c;">26</div><div class="lbl">Critical flags</div></div>
+    <div class="stat-card" style="border-left:3px solid #f59e0b;"><div class="num" style="color:#92400e;">105</div><div class="lbl">Significant flags</div></div>
+    <div class="stat-card" style="border-left:3px solid #3b82f6;"><div class="num" style="color:#1e40af;">0</div><div class="lbl">Minor flags</div></div>
+    <div class="stat-card"><div class="num" style="color:#6b7280;">4</div><div class="lbl">Info notices</div></div>
+  </div>
+
+  <div class="progress-bar-wrap">
+    <span class="label">&#10003; Pages verified / fixed:</span>
+    <div class="progress-bar-outer"><div id="progress-bar-inner" style="width:0%"></div></div>
+    <span id="progress-text">0 / 51</span>
+    <button id="reset-btn" onclick="resetAll()">Reset all</button>
+  </div>
+
+  <div class="two-col">
+    <div class="section-card">
+      <h2>By page type</h2>
+      <table class="main-table">
+        <thead><tr><th>Type</th><th>Pages</th><th style="color:#b91c1c;">Crit</th><th style="color:#92400e;">Sig</th></tr></thead>
+        <tbody><tr>
+      <td style="padding:6px 10px;"><span class="badge" style="background:#f5f3ff;color:#5b21b6;border:1px solid #5b21b633;">Material collection</span></td>
+      <td style="padding:6px 10px;font-size:0.83rem;color:#374151;">12</td>
+      <td style="padding:6px 10px;color:#b91c1c;font-weight:700;font-size:0.83rem;">5</td>
+      <td style="padding:6px 10px;color:#92400e;font-weight:700;font-size:0.83rem;">15</td>
+    </tr><tr>
+      <td style="padding:6px 10px;"><span class="badge" style="background:#fdf2f8;color:#be185d;border:1px solid #be185d33;">Color collection</span></td>
+      <td style="padding:6px 10px;font-size:0.83rem;color:#374151;">13</td>
+      <td style="padding:6px 10px;color:#b91c1c;font-weight:700;font-size:0.83rem;">7</td>
+      <td style="padding:6px 10px;color:#92400e;font-weight:700;font-size:0.83rem;">23</td>
+    </tr><tr>
+      <td style="padding:6px 10px;"><span class="badge" style="background:#e0f2fe;color:#0369a1;border:1px solid #0369a133;">Shape collection</span></td>
+      <td style="padding:6px 10px;font-size:0.83rem;color:#374151;">6</td>
+      <td style="padding:6px 10px;color:#b91c1c;font-weight:700;font-size:0.83rem;">6</td>
+      <td style="padding:6px 10px;color:#92400e;font-weight:700;font-size:0.83rem;">10</td>
+    </tr><tr>
+      <td style="padding:6px 10px;"><span class="badge" style="background:#ecfdf5;color:#065f46;border:1px solid #065f4633;">Space collection</span></td>
+      <td style="padding:6px 10px;font-size:0.83rem;color:#374151;">4</td>
+      <td style="padding:6px 10px;color:#b91c1c;font-weight:700;font-size:0.83rem;">3</td>
+      <td style="padding:6px 10px;color:#92400e;font-weight:700;font-size:0.83rem;">7</td>
+    </tr><tr>
+      <td style="padding:6px 10px;"><span class="badge" style="background:#eff6ff;color:#1e40af;border:1px solid #1e40af33;">Homepage</span></td>
+      <td style="padding:6px 10px;font-size:0.83rem;color:#374151;">1</td>
+      <td style="padding:6px 10px;color:#b91c1c;font-weight:700;font-size:0.83rem;">1</td>
+      <td style="padding:6px 10px;color:#92400e;font-weight:700;font-size:0.83rem;">1</td>
+    </tr><tr>
+      <td style="padding:6px 10px;"><span class="badge" style="background:#fffbeb;color:#78350f;border:1px solid #78350f33;">Trade Program</span></td>
+      <td style="padding:6px 10px;font-size:0.83rem;color:#374151;">1</td>
+      <td style="padding:6px 10px;color:#b91c1c;font-weight:700;font-size:0.83rem;">0</td>
+      <td style="padding:6px 10px;color:#92400e;font-weight:700;font-size:0.83rem;">0</td>
+    </tr><tr>
+      <td style="padding:6px 10px;"><span class="badge" style="background:#f3f4f6;color:#374151;border:1px solid #37415133;">Installation Guide</span></td>
+      <td style="padding:6px 10px;font-size:0.83rem;color:#374151;">14</td>
+      <td style="padding:6px 10px;color:#b91c1c;font-weight:700;font-size:0.83rem;">4</td>
+      <td style="padding:6px 10px;color:#92400e;font-weight:700;font-size:0.83rem;">49</td>
+    </tr></tbody>
+      </table>
+    </div>
+    <div class="section-card">
+      <h2>Issue-type breakdown</h2>
+      <table class="main-table">
+        <thead><tr><th>Severity</th><th>Issue</th><th>Code</th><th style="text-align:right;">Count</th></tr></thead>
+        <tbody><tr>
+      <td style="padding:5px 10px;"><span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #b91c1c33;">● CRITICAL</span></td>
+      <td style="padding:5px 10px;font-weight:600;font-size:0.83rem;color:#111827;">Banned term</td>
+      <td style="padding:5px 10px;font-size:0.83rem;color:#374151;font-family:monospace;">banned</td>
+      <td style="padding:5px 10px;text-align:right;font-weight:700;color:#374151;">29</td>
+    </tr><tr>
+      <td style="padding:5px 10px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:5px 10px;font-weight:600;font-size:0.83rem;color:#111827;">"Shop" in meta description</td>
+      <td style="padding:5px 10px;font-size:0.83rem;color:#374151;font-family:monospace;">meta-shop-desc</td>
+      <td style="padding:5px 10px;text-align:right;font-weight:700;color:#374151;">24</td>
+    </tr><tr>
+      <td style="padding:5px 10px;"><span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #b91c1c33;">● CRITICAL</span></td>
+      <td style="padding:5px 10px;font-weight:600;font-size:0.83rem;color:#111827;">Zellige capitalized</td>
+      <td style="padding:5px 10px;font-size:0.83rem;color:#374151;font-family:monospace;">zellige-cap</td>
+      <td style="padding:5px 10px;text-align:right;font-weight:700;color:#374151;">20</td>
+    </tr><tr>
+      <td style="padding:5px 10px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:5px 10px;font-weight:600;font-size:0.83rem;color:#111827;">Meta desc length</td>
+      <td style="padding:5px 10px;font-size:0.83rem;color:#374151;font-family:monospace;">meta-desc-len</td>
+      <td style="padding:5px 10px;text-align:right;font-weight:700;color:#374151;">14</td>
+    </tr><tr>
+      <td style="padding:5px 10px;"><span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #b91c1c33;">● CRITICAL</span></td>
+      <td style="padding:5px 10px;font-weight:600;font-size:0.83rem;color:#111827;">Meta title missing</td>
+      <td style="padding:5px 10px;font-size:0.83rem;color:#374151;font-family:monospace;">meta-missing</td>
+      <td style="padding:5px 10px;text-align:right;font-weight:700;color:#374151;">14</td>
+    </tr><tr>
+      <td style="padding:5px 10px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:5px 10px;font-weight:600;font-size:0.83rem;color:#111827;">Meta desc missing</td>
+      <td style="padding:5px 10px;font-size:0.83rem;color:#374151;font-family:monospace;">meta-desc-missing</td>
+      <td style="padding:5px 10px;text-align:right;font-weight:700;color:#374151;">14</td>
+    </tr><tr>
+      <td style="padding:5px 10px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:5px 10px;font-weight:600;font-size:0.83rem;color:#111827;">Required framing missing</td>
+      <td style="padding:5px 10px;font-size:0.83rem;color:#374151;font-family:monospace;">req-framing</td>
+      <td style="padding:5px 10px;text-align:right;font-weight:700;color:#374151;">7</td>
+    </tr><tr>
+      <td style="padding:5px 10px;"><span class="badge" style="background:#f9fafb;color:#6b7280;border:1px solid #6b728033;">○ INFO</span></td>
+      <td style="padding:5px 10px;font-weight:600;font-size:0.83rem;color:#111827;">Template placeholder</td>
+      <td style="padding:5px 10px;font-size:0.83rem;color:#374151;font-family:monospace;">template-placeholder</td>
+      <td style="padding:5px 10px;text-align:right;font-weight:700;color:#374151;">4</td>
+    </tr><tr>
+      <td style="padding:5px 10px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:5px 10px;font-weight:600;font-size:0.83rem;color:#111827;">Meta title too long</td>
+      <td style="padding:5px 10px;font-size:0.83rem;color:#374151;font-family:monospace;">meta-len</td>
+      <td style="padding:5px 10px;text-align:right;font-weight:700;color:#374151;">3</td>
+    </tr><tr>
+      <td style="padding:5px 10px;"><span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #b91c1c33;">● CRITICAL</span></td>
+      <td style="padding:5px 10px;font-weight:600;font-size:0.83rem;color:#111827;">Freeze/thaw technical error</td>
+      <td style="padding:5px 10px;font-size:0.83rem;color:#374151;font-family:monospace;">tech-freeze</td>
+      <td style="padding:5px 10px;text-align:right;font-weight:700;color:#374151;">2</td>
+    </tr><tr>
+      <td style="padding:5px 10px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:5px 10px;font-weight:600;font-size:0.83rem;color:#111827;">No contact line</td>
+      <td style="padding:5px 10px;font-size:0.83rem;color:#374151;font-family:monospace;">contact</td>
+      <td style="padding:5px 10px;text-align:right;font-weight:700;color:#374151;">2</td>
+    </tr><tr>
+      <td style="padding:5px 10px;"><span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #b91c1c33;">● CRITICAL</span></td>
+      <td style="padding:5px 10px;font-weight:600;font-size:0.83rem;color:#111827;">"Normal" variation framing</td>
+      <td style="padding:5px 10px;font-size:0.83rem;color:#374151;font-family:monospace;">normal-framing</td>
+      <td style="padding:5px 10px;text-align:right;font-weight:700;color:#374151;">1</td>
+    </tr><tr>
+      <td style="padding:5px 10px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:5px 10px;font-weight:600;font-size:0.83rem;color:#111827;">Cement outdoor qualifier missing</td>
+      <td style="padding:5px 10px;font-size:0.83rem;color:#374151;font-family:monospace;">tech-cement-outdoor</td>
+      <td style="padding:5px 10px;text-align:right;font-weight:700;color:#374151;">1</td>
+    </tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <h2>Per-page results</h2>
+    <div id="filter-bar">
+      <input type="search" id="search-box" placeholder="Filter by page name or URL…" oninput="filterRows()">
+      <label><input type="checkbox" id="show-critical" onchange="filterRows()" checked> Critical</label>
+      <label><input type="checkbox" id="show-significant" onchange="filterRows()" checked> Significant</label>
+      <label><input type="checkbox" id="show-clean" onchange="filterRows()" checked> Clean</label>
+      <label><input type="checkbox" id="hide-done" onchange="filterRows()"> Hide verified</label>
+    </div>
+    <table class="main-table" id="pages-table">
+      <thead>
+        <tr>
+          <th class="center" style="width:36px;" title="Mark as verified">&#10003;</th>
+          <th>Page</th>
+          <th>URL</th>
+          <th class="center" style="color:#b91c1c;">Crit</th>
+          <th class="center" style="color:#92400e;">Sig</th>
+          <th class="center" style="color:#1e40af;">Min</th>
+          <th>Issues</th>
+        </tr>
+      </thead>
+      <tbody id="pages-tbody">
+<tr class="section-header">
+  <td colspan="7" style="background:#f5f3ff;color:#5b21b6;font-weight:700;font-size:0.83rem;
+      padding:8px 14px;border-top:2px solid #5b21b644;letter-spacing:.04em;">
+    MATERIAL COLLECTION &mdash; 12 pages
+  </td>
+</tr>
+<tr class="page-row has-critical" data-pid="core-page-1-zia-tile-march-2026-material-zellige">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-1-zia-tile-march-2026-material-zellige"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Material -  Zellige</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/en-ca/collections/zellige" target="_blank" style="color:#8a3324;font-size:0.78rem;">/en-ca/collections/zellige</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#b91c1c;font-weight:700;font-size:0.85rem;">2</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">2</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-1-zia-tile-march-2026-material-zellige')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-1-zia-tile-march-2026-material-zellige" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta desc length</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description 179 chars (max 160)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #b91c1c33;">● CRITICAL</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Zellige capitalized</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">"Zellige" capitalized 6× — must be lowercase</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Banned term</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Em dash present (humanizer rule: avoid em dashes)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #b91c1c33;">● CRITICAL</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Freeze/thaw technical error</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Zellige must not be described as outdoor freeze/thaw suitable</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-issues" data-pid="core-page-10-zia-tile-march-2026-limestone">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-10-zia-tile-march-2026-limestone"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Limestone</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/en-ca/collections/limestone-tile" target="_blank" style="color:#8a3324;font-size:0.78rem;">/en-ca/collections/limestone-tile</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">2</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-10-zia-tile-march-2026-limestone')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-10-zia-tile-march-2026-limestone" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta desc length</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description 164 chars (max 160)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Banned term</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Em dash present (humanizer rule: avoid em dashes)</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-issues" data-pid="core-page-11-zia-tile-march-2026-ceramics">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-11-zia-tile-march-2026-ceramics"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Ceramics</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/en-ca/collections/ceramics" target="_blank" style="color:#8a3324;font-size:0.78rem;">/en-ca/collections/ceramics</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">2</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-11-zia-tile-march-2026-ceramics')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-11-zia-tile-march-2026-ceramics" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">"Shop" in meta description</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description starts with "Shop" — lead with material value instead</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Banned term</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Em dash present (humanizer rule: avoid em dashes)</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-issues" data-pid="core-page-12-zia-tile-march-2026-field-trip-japan">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-12-zia-tile-march-2026-field-trip-japan"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Field Trip Japan</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#f3f4f6;color:#6b7280;border:1px solid #6b728033;">On Hold</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/en-ca/collections/field-trip-japan" target="_blank" style="color:#8a3324;font-size:0.78rem;">/en-ca/collections/field-trip-japan</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-12-zia-tile-march-2026-field-trip-japan')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-12-zia-tile-march-2026-field-trip-japan" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta title too long</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta title 62 chars (max 60)</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-issues" data-pid="core-page-2-zia-tile-march-2026-cement">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-2-zia-tile-march-2026-cement"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Cement</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/en-ca/collections/cement-tile" target="_blank" style="color:#8a3324;font-size:0.78rem;">/en-ca/collections/cement-tile</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">2</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-2-zia-tile-march-2026-cement')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-2-zia-tile-march-2026-cement" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta desc length</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description 166 chars (max 160)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Banned term</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Em dash present (humanizer rule: avoid em dashes)</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-critical" data-pid="core-page-3-zia-tile-march-2026-cotto">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-3-zia-tile-march-2026-cotto"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Cotto</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#f0fdf4;color:#166534;border:1px solid #16653433;">Zia Approved</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/en-ca/collections/cotto" target="_blank" style="color:#8a3324;font-size:0.78rem;">/en-ca/collections/cotto</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#b91c1c;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-3-zia-tile-march-2026-cotto')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-3-zia-tile-march-2026-cotto" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta desc length</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description 133 chars (min 140)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #b91c1c33;">● CRITICAL</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Zellige capitalized</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">"Zellige" capitalized 2× — must be lowercase</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-critical" data-pid="core-page-4-zia-tile-march-2026-cotto-allende">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-4-zia-tile-march-2026-cotto-allende"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Cotto Allende</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/en-ca/collections/cotto-tile-allende" target="_blank" style="color:#8a3324;font-size:0.78rem;">/en-ca/collections/cotto-tile-allende</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#b91c1c;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">2</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-4-zia-tile-march-2026-cotto-allende')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-4-zia-tile-march-2026-cotto-allende" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Banned term</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Em dash present (humanizer rule: avoid em dashes)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #b91c1c33;">● CRITICAL</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Freeze/thaw technical error</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Cotto Allende must not be described as outdoor freeze/thaw suitable</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">No contact line</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Contact info not present (consider adding for trade inquiries)</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-critical" data-pid="core-page-5-zia-tile-march-2026-glass-mosaics">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-5-zia-tile-march-2026-glass-mosaics"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Glass Mosaics</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/en-ca/collections/glass-mosaics" target="_blank" style="color:#8a3324;font-size:0.78rem;">/en-ca/collections/glass-mosaics</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#b91c1c;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-5-zia-tile-march-2026-glass-mosaics')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-5-zia-tile-march-2026-glass-mosaics" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #b91c1c33;">● CRITICAL</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Banned term</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Banned: best-in-class</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row clean" data-pid="core-page-6-zia-tile-march-2026-terrazzo">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-6-zia-tile-march-2026-terrazzo"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Terrazzo</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/en-ca/collections/terrazzo" target="_blank" style="color:#8a3324;font-size:0.78rem;">/en-ca/collections/terrazzo</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-6-zia-tile-march-2026-terrazzo')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Clean
+    </button>
+    <div id="details-core-page-6-zia-tile-march-2026-terrazzo" class="details-panel" style="display:none;"></div>
+  </td>
+</tr>
+<tr class="page-row has-issues" data-pid="core-page-7-zia-tile-march-2026-marble">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-7-zia-tile-march-2026-marble"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Marble</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/en-ca/collections/marble-tile" target="_blank" style="color:#8a3324;font-size:0.78rem;">/en-ca/collections/marble-tile</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-7-zia-tile-march-2026-marble')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-7-zia-tile-march-2026-marble" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">No contact line</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Contact info not present (consider adding for trade inquiries)</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-issues" data-pid="core-page-8-zia-tile-march-2026-roman-mosaics">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-8-zia-tile-march-2026-roman-mosaics"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Roman Mosaics</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/en-ca/collections/roman-mosaics" target="_blank" style="color:#8a3324;font-size:0.78rem;">/en-ca/collections/roman-mosaics</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-8-zia-tile-march-2026-roman-mosaics')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-8-zia-tile-march-2026-roman-mosaics" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">"Shop" in meta description</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description starts with "Shop" — lead with material value instead</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-issues" data-pid="core-page-9-zia-tile-march-2026-cantera">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-9-zia-tile-march-2026-cantera"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Cantera</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/en-ca/collections/cantera-tile" target="_blank" style="color:#8a3324;font-size:0.78rem;">/en-ca/collections/cantera-tile</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-9-zia-tile-march-2026-cantera')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-9-zia-tile-march-2026-cantera" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Banned term</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Em dash present (humanizer rule: avoid em dashes)</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="section-header">
+  <td colspan="7" style="background:#fdf2f8;color:#be185d;font-weight:700;font-size:0.83rem;
+      padding:8px 14px;border-top:2px solid #be185d44;letter-spacing:.04em;">
+    COLOR COLLECTION &mdash; 13 pages
+  </td>
+</tr>
+<tr class="page-row has-issues" data-pid="core-page-1-zia-tile-april-2026-color-white">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-1-zia-tile-april-2026-color-white"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Color - White</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/collections/all?color=white" target="_blank" style="color:#8a3324;font-size:0.78rem;">/collections/all?color=white</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-1-zia-tile-april-2026-color-white')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-1-zia-tile-april-2026-color-white" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">"Shop" in meta description</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description starts with "Shop" — lead with material value instead</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-critical" data-pid="core-page-10-zia-tile-april-2026-color-blue">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-10-zia-tile-april-2026-color-blue"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Color - Blue</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/collections/all?color=blue" target="_blank" style="color:#8a3324;font-size:0.78rem;">/collections/all?color=blue</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#b91c1c;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">2</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-10-zia-tile-april-2026-color-blue')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-10-zia-tile-april-2026-color-blue" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta desc length</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description 165 chars (max 160)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">"Shop" in meta description</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description starts with "Shop" — lead with material value instead</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #b91c1c33;">● CRITICAL</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Zellige capitalized</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">"Zellige" capitalized 1× — must be lowercase</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-issues" data-pid="core-page-11-zia-tile-april-2026-color-purple">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-11-zia-tile-april-2026-color-purple"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Color - Purple</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/collections/all?color=purple" target="_blank" style="color:#8a3324;font-size:0.78rem;">/collections/all?color=purple</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">2</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-11-zia-tile-april-2026-color-purple')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-11-zia-tile-april-2026-color-purple" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta title too long</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta title 61 chars (max 60)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">"Shop" in meta description</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description starts with "Shop" — lead with material value instead</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-issues" data-pid="core-page-12-zia-tile-april-2026-color-black">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-12-zia-tile-april-2026-color-black"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Color - Black</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/collections/all?color=black" target="_blank" style="color:#8a3324;font-size:0.78rem;">/collections/all?color=black</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-12-zia-tile-april-2026-color-black')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-12-zia-tile-april-2026-color-black" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">"Shop" in meta description</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description starts with "Shop" — lead with material value instead</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-critical" data-pid="core-page-13-zia-tile-april-2026-color-pattern">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-13-zia-tile-april-2026-color-pattern"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Color - Pattern</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/collections/all?design=pattern" target="_blank" style="color:#8a3324;font-size:0.78rem;">/collections/all?design=pattern</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#b91c1c;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">2</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-13-zia-tile-april-2026-color-pattern')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-13-zia-tile-april-2026-color-pattern" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta title too long</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta title 64 chars (max 60)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">"Shop" in meta description</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description starts with "Shop" — lead with material value instead</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #b91c1c33;">● CRITICAL</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Zellige capitalized</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">"Zellige" capitalized 1× — must be lowercase</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-critical" data-pid="core-page-2-zia-tile-april-2026-color-tan">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-2-zia-tile-april-2026-color-tan"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Color - Tan</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/collections/all?color=tan" target="_blank" style="color:#8a3324;font-size:0.78rem;">/collections/all?color=tan</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#b91c1c;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">3</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-2-zia-tile-april-2026-color-tan')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-2-zia-tile-april-2026-color-tan" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta desc length</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description 130 chars (min 140)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">"Shop" in meta description</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description starts with "Shop" — lead with material value instead</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #b91c1c33;">● CRITICAL</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Zellige capitalized</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">"Zellige" capitalized 1× — must be lowercase</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Banned term</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Em dash present (humanizer rule: avoid em dashes)</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-critical" data-pid="core-page-3-zia-tile-april-2026-color-yellow">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-3-zia-tile-april-2026-color-yellow"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Color - Yellow</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/collections/all?color=yellow" target="_blank" style="color:#8a3324;font-size:0.78rem;">/collections/all?color=yellow</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#b91c1c;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">2</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-3-zia-tile-april-2026-color-yellow')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-3-zia-tile-april-2026-color-yellow" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta desc length</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description 135 chars (min 140)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">"Shop" in meta description</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description starts with "Shop" — lead with material value instead</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #b91c1c33;">● CRITICAL</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Zellige capitalized</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">"Zellige" capitalized 1× — must be lowercase</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-issues" data-pid="core-page-4-zia-tile-april-2026-color-orange">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-4-zia-tile-april-2026-color-orange"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Color - Orange</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/collections/all?color=orange" target="_blank" style="color:#8a3324;font-size:0.78rem;">/collections/all?color=orange</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">2</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-4-zia-tile-april-2026-color-orange')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-4-zia-tile-april-2026-color-orange" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">"Shop" in meta description</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description starts with "Shop" — lead with material value instead</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Banned term</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Em dash present (humanizer rule: avoid em dashes)</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row clean" data-pid="core-page-5-zia-tile-april-2026-color-pink">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-5-zia-tile-april-2026-color-pink"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Color - Pink</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/collections/all?color=pink" target="_blank" style="color:#8a3324;font-size:0.78rem;">/collections/all?color=pink</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-5-zia-tile-april-2026-color-pink')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Clean
+    </button>
+    <div id="details-core-page-5-zia-tile-april-2026-color-pink" class="details-panel" style="display:none;"></div>
+  </td>
+</tr>
+<tr class="page-row has-critical" data-pid="core-page-6-zia-tile-april-2026-color-red">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-6-zia-tile-april-2026-color-red"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Color - Red</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/collections/all?color=red" target="_blank" style="color:#8a3324;font-size:0.78rem;">/collections/all?color=red</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#b91c1c;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">2</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-6-zia-tile-april-2026-color-red')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-6-zia-tile-april-2026-color-red" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta desc length</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description 135 chars (min 140)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">"Shop" in meta description</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description starts with "Shop" — lead with material value instead</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #b91c1c33;">● CRITICAL</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Zellige capitalized</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">"Zellige" capitalized 2× — must be lowercase</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-critical" data-pid="core-page-7-zia-tile-april-2026-color-brown">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-7-zia-tile-april-2026-color-brown"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Color - Brown</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/collections/all?color=brown" target="_blank" style="color:#8a3324;font-size:0.78rem;">/collections/all?color=brown</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#b91c1c;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">3</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-7-zia-tile-april-2026-color-brown')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-7-zia-tile-april-2026-color-brown" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta desc length</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description 134 chars (min 140)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">"Shop" in meta description</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description starts with "Shop" — lead with material value instead</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #b91c1c33;">● CRITICAL</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Zellige capitalized</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">"Zellige" capitalized 3× — must be lowercase</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Banned term</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Em dash present (humanizer rule: avoid em dashes)</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-issues" data-pid="core-page-8-zia-tile-april-2026-color-grey">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-8-zia-tile-april-2026-color-grey"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Color - Grey</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/collections/all?color=grey" target="_blank" style="color:#8a3324;font-size:0.78rem;">/collections/all?color=grey</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">2</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-8-zia-tile-april-2026-color-grey')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-8-zia-tile-april-2026-color-grey" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta desc length</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description 131 chars (min 140)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">"Shop" in meta description</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description starts with "Shop" — lead with material value instead</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-critical" data-pid="core-page-9-zia-tile-april-2026-color-green">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-9-zia-tile-april-2026-color-green"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Color - Green</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/collections/all?color=green" target="_blank" style="color:#8a3324;font-size:0.78rem;">/collections/all?color=green</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#b91c1c;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-9-zia-tile-april-2026-color-green')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-9-zia-tile-april-2026-color-green" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">"Shop" in meta description</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description starts with "Shop" — lead with material value instead</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #b91c1c33;">● CRITICAL</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Zellige capitalized</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">"Zellige" capitalized 2× — must be lowercase</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="section-header">
+  <td colspan="7" style="background:#e0f2fe;color:#0369a1;font-weight:700;font-size:0.83rem;
+      padding:8px 14px;border-top:2px solid #0369a144;letter-spacing:.04em;">
+    SHAPE COLLECTION &mdash; 6 pages
+  </td>
+</tr>
+<tr class="page-row has-critical" data-pid="core-page-13-zia-tile-march-2026-shape-square">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-13-zia-tile-march-2026-shape-square"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Shape - Square</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/en-ca/collections/all?shape=square" target="_blank" style="color:#8a3324;font-size:0.78rem;">/en-ca/collections/all?shape=square</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#b91c1c;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-13-zia-tile-march-2026-shape-square')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-13-zia-tile-march-2026-shape-square" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">"Shop" in meta description</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description starts with "Shop" — lead with material value instead</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #b91c1c33;">● CRITICAL</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Banned term</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Banned filler: truly</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-critical" data-pid="core-page-14-zia-tile-march-2026-shape-rectangle">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-14-zia-tile-march-2026-shape-rectangle"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Shape - Rectangle</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/en-ca/collections/all?shape=rectangle" target="_blank" style="color:#8a3324;font-size:0.78rem;">/en-ca/collections/all?shape=rectangle</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#b91c1c;font-weight:700;font-size:0.85rem;">2</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-14-zia-tile-march-2026-shape-rectangle')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-14-zia-tile-march-2026-shape-rectangle" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">"Shop" in meta description</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description starts with "Shop" — lead with material value instead</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #b91c1c33;">● CRITICAL</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Zellige capitalized</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">"Zellige" capitalized 1× — must be lowercase</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #b91c1c33;">● CRITICAL</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Banned term</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Banned filler: really (check context)</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-critical" data-pid="core-page-15-zia-tile-march-2026-shape-subwa">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-15-zia-tile-march-2026-shape-subwa"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Shape - Subwa</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/en-ca/collections/all?shape=subway" target="_blank" style="color:#8a3324;font-size:0.78rem;">/en-ca/collections/all?shape=subway</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#b91c1c;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">2</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-15-zia-tile-march-2026-shape-subwa')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-15-zia-tile-march-2026-shape-subwa" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">"Shop" in meta description</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description starts with "Shop" — lead with material value instead</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #b91c1c33;">● CRITICAL</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Zellige capitalized</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">"Zellige" capitalized 2× — must be lowercase</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Banned term</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Em dash present (humanizer rule: avoid em dashes)</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-critical" data-pid="core-page-16-zia-tile-april-2026-shape-hexagon">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-16-zia-tile-april-2026-shape-hexagon"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Shape - Hexagon</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/en-ca/collections/all?shape=hexagon" target="_blank" style="color:#8a3324;font-size:0.78rem;">/en-ca/collections/all?shape=hexagon</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#b91c1c;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">2</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-16-zia-tile-april-2026-shape-hexagon')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-16-zia-tile-april-2026-shape-hexagon" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">"Shop" in meta description</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description starts with "Shop" — lead with material value instead</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #b91c1c33;">● CRITICAL</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Zellige capitalized</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">"Zellige" capitalized 3× — must be lowercase</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Banned term</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Wrong verb: "laid" → use "set"</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-issues" data-pid="core-page-17-zia-tile-march-2026-shape-large-format">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-17-zia-tile-march-2026-shape-large-format"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Shape - Large Format</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/en-ca/collections/all?shape=large+format" target="_blank" style="color:#8a3324;font-size:0.78rem;">/en-ca/collections/all?shape=large+format</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-17-zia-tile-march-2026-shape-large-format')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-17-zia-tile-march-2026-shape-large-format" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">"Shop" in meta description</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description starts with "Shop" — lead with material value instead</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-critical" data-pid="core-page-18-zia-tile-march-2026-shape-special-shape">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-18-zia-tile-march-2026-shape-special-shape"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Shape - Special Shape</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/en-ca/collections/all?shape=special+shape" target="_blank" style="color:#8a3324;font-size:0.78rem;">/en-ca/collections/all?shape=special+shape</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#b91c1c;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">3</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-18-zia-tile-march-2026-shape-special-shape')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-18-zia-tile-march-2026-shape-special-shape" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta desc length</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description 132 chars (min 140)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">"Shop" in meta description</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description starts with "Shop" — lead with material value instead</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #b91c1c33;">● CRITICAL</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Zellige capitalized</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">"Zellige" capitalized 1× — must be lowercase</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Banned term</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Wrong verb: "laid" → use "set"</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="section-header">
+  <td colspan="7" style="background:#ecfdf5;color:#065f46;font-weight:700;font-size:0.83rem;
+      padding:8px 14px;border-top:2px solid #065f4644;letter-spacing:.04em;">
+    SPACE COLLECTION &mdash; 4 pages
+  </td>
+</tr>
+<tr class="page-row has-issues" data-pid="core-page-14-zia-tile-april-2026-space-bathroom">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-14-zia-tile-april-2026-space-bathroom"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Space - Bathroom</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/pages/bathroom-collection" target="_blank" style="color:#8a3324;font-size:0.78rem;">/pages/bathroom-collection</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-14-zia-tile-april-2026-space-bathroom')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-14-zia-tile-april-2026-space-bathroom" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">"Shop" in meta description</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description starts with "Shop" — lead with material value instead</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#f9fafb;color:#6b7280;border:1px solid #6b728033;">○ INFO</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Template placeholder</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">1 placeholder(s): [PRODUCT IMAGES]</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-critical" data-pid="core-page-15-zia-tile-april-2026-space-kitchen">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-15-zia-tile-april-2026-space-kitchen"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Space - Kitchen</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/pages/kitchen-collection" target="_blank" style="color:#8a3324;font-size:0.78rem;">/pages/kitchen-collection</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#b91c1c;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">2</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-15-zia-tile-april-2026-space-kitchen')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-15-zia-tile-april-2026-space-kitchen" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta desc length</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description 139 chars (min 140)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">"Shop" in meta description</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description starts with "Shop" — lead with material value instead</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #b91c1c33;">● CRITICAL</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Zellige capitalized</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">"Zellige" capitalized 2× — must be lowercase</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#f9fafb;color:#6b7280;border:1px solid #6b728033;">○ INFO</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Template placeholder</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">1 placeholder(s): [PRODUCT IMAGES]</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-critical" data-pid="core-page-16-zia-tile-april-2026-space-outdoor">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-16-zia-tile-april-2026-space-outdoor"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Space - Outdoor</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/pages/outdoor-collection" target="_blank" style="color:#8a3324;font-size:0.78rem;">/pages/outdoor-collection</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#b91c1c;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">2</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-16-zia-tile-april-2026-space-outdoor')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-16-zia-tile-april-2026-space-outdoor" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta desc length</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description 119 chars (min 140)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">"Shop" in meta description</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description starts with "Shop" — lead with material value instead</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #b91c1c33;">● CRITICAL</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Zellige capitalized</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">"Zellige" capitalized 1× — must be lowercase</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#f9fafb;color:#6b7280;border:1px solid #6b728033;">○ INFO</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Template placeholder</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">1 placeholder(s): [PRODUCT IMAGES]</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-critical" data-pid="core-page-17-zia-tile-april-2026-space-shower">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-17-zia-tile-april-2026-space-shower"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Space - Shower</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/pages/shower-collection" target="_blank" style="color:#8a3324;font-size:0.78rem;">/pages/shower-collection</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#b91c1c;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">2</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-17-zia-tile-april-2026-space-shower')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-17-zia-tile-april-2026-space-shower" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta desc length</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description 118 chars (min 140)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">"Shop" in meta description</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description starts with "Shop" — lead with material value instead</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #b91c1c33;">● CRITICAL</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Zellige capitalized</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">"Zellige" capitalized 2× — must be lowercase</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="section-header">
+  <td colspan="7" style="background:#eff6ff;color:#1e40af;font-weight:700;font-size:0.83rem;
+      padding:8px 14px;border-top:2px solid #1e40af44;letter-spacing:.04em;">
+    HOMEPAGE &mdash; 1 page
+  </td>
+</tr>
+<tr class="page-row has-critical" data-pid="core-page-zia-tile-march-2026-homepage">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-zia-tile-march-2026-homepage"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Homepage</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/en-ca" target="_blank" style="color:#8a3324;font-size:0.78rem;">/en-ca</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#b91c1c;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-zia-tile-march-2026-homepage')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-core-page-zia-tile-march-2026-homepage" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #b91c1c33;">● CRITICAL</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Zellige capitalized</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">"Zellige" capitalized 3× — must be lowercase</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Banned term</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Em dash present (humanizer rule: avoid em dashes)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#f9fafb;color:#6b7280;border:1px solid #6b728033;">○ INFO</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Template placeholder</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">1 placeholder(s): [INSERT INSTAGRAM COLLAGE]</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="section-header">
+  <td colspan="7" style="background:#fffbeb;color:#78350f;font-weight:700;font-size:0.83rem;
+      padding:8px 14px;border-top:2px solid #78350f44;letter-spacing:.04em;">
+    TRADE PROGRAM &mdash; 1 page
+  </td>
+</tr>
+<tr class="page-row clean" data-pid="core-page-18-zia-tile-april-2026-trade-program">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="core-page-18-zia-tile-april-2026-trade-program"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Trade Program</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/pages/contact?view=trade" target="_blank" style="color:#8a3324;font-size:0.78rem;">/pages/contact?view=trade</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('core-page-18-zia-tile-april-2026-trade-program')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Clean
+    </button>
+    <div id="details-core-page-18-zia-tile-april-2026-trade-program" class="details-panel" style="display:none;"></div>
+  </td>
+</tr>
+<tr class="section-header">
+  <td colspan="7" style="background:#f3f4f6;color:#374151;font-weight:700;font-size:0.83rem;
+      padding:8px 14px;border-top:2px solid #37415144;letter-spacing:.04em;">
+    INSTALLATION GUIDE &mdash; 14 pages
+  </td>
+</tr>
+<tr class="page-row has-critical" data-pid="installation-guide-1-zia-tile-may-cantera">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="installation-guide-1-zia-tile-may-cantera"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Cantera</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/pages/cantera-installation-guide" target="_blank" style="color:#8a3324;font-size:0.78rem;">/pages/cantera-installation-guide</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#b91c1c;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">4</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('installation-guide-1-zia-tile-may-cantera')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-installation-guide-1-zia-tile-may-cantera" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta title missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta title missing from doc (not yet written)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta desc missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description missing from doc (not yet written)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Banned term</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Em dash present (humanizer rule: avoid em dashes)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #b91c1c33;">● CRITICAL</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">"Normal" variation framing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Use "inherent" not "normal": "…erences in shape and size are normal and should be expected. Minor…"</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Required framing missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Material/guide: "inherent" variation framing not found</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-issues" data-pid="installation-guide-10-zia-tile-may-roman-mosaics">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="installation-guide-10-zia-tile-may-roman-mosaics"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Roman Mosaics</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/pages/roman-mosaics-installation-guide" target="_blank" style="color:#8a3324;font-size:0.78rem;">/pages/roman-mosaics-installation-guide</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">3</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('installation-guide-10-zia-tile-may-roman-mosaics')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-installation-guide-10-zia-tile-may-roman-mosaics" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta title missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta title missing from doc (not yet written)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta desc missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description missing from doc (not yet written)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Banned term</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Em dash present (humanizer rule: avoid em dashes)</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-issues" data-pid="installation-guide-11-zia-tile-may-terrazzo">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="installation-guide-11-zia-tile-may-terrazzo"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Terrazzo</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/pages/terrazzo-installation-guide" target="_blank" style="color:#8a3324;font-size:0.78rem;">/pages/terrazzo-installation-guide</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">4</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('installation-guide-11-zia-tile-may-terrazzo')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-installation-guide-11-zia-tile-may-terrazzo" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta title missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta title missing from doc (not yet written)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta desc missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description missing from doc (not yet written)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Banned term</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Em dash present (humanizer rule: avoid em dashes)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Required framing missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Material/guide: "inherent" variation framing not found</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-critical" data-pid="installation-guide-12-zia-tile-may-zellige">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="installation-guide-12-zia-tile-may-zellige"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Zellige</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/pages/zellige-installation-guide" target="_blank" style="color:#8a3324;font-size:0.78rem;">/pages/zellige-installation-guide</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#b91c1c;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">4</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('installation-guide-12-zia-tile-may-zellige')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-installation-guide-12-zia-tile-may-zellige" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta title missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta title missing from doc (not yet written)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta desc missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description missing from doc (not yet written)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #b91c1c33;">● CRITICAL</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Zellige capitalized</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">"Zellige" capitalized 8× — must be lowercase</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Banned term</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Em dash present (humanizer rule: avoid em dashes)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Required framing missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Material/guide: "inherent" variation framing not found</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-critical" data-pid="installation-guide-13-zia-tile-may-zellige-mosaic">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="installation-guide-13-zia-tile-may-zellige-mosaic"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Zellige Mosaic</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/pages/zellige-mosaics-installation-guide" target="_blank" style="color:#8a3324;font-size:0.78rem;">/pages/zellige-mosaics-installation-guide</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#b91c1c;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">4</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('installation-guide-13-zia-tile-may-zellige-mosaic')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-installation-guide-13-zia-tile-may-zellige-mosaic" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta title missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta title missing from doc (not yet written)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta desc missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description missing from doc (not yet written)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #b91c1c33;">● CRITICAL</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Zellige capitalized</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">"Zellige" capitalized 7× — must be lowercase</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Banned term</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Em dash present (humanizer rule: avoid em dashes)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Required framing missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Material/guide: "inherent" variation framing not found</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-issues" data-pid="installation-guide-2-zia-tile-may-cement">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="installation-guide-2-zia-tile-may-cement"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Cement</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/pages/cement-installation-guide" target="_blank" style="color:#8a3324;font-size:0.78rem;">/pages/cement-installation-guide</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">5</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('installation-guide-2-zia-tile-may-cement')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-installation-guide-2-zia-tile-may-cement" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta title missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta title missing from doc (not yet written)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta desc missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description missing from doc (not yet written)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Banned term</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Em dash present (humanizer rule: avoid em dashes)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Required framing missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Material/guide: "inherent" variation framing not found</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Cement outdoor qualifier missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Cement tile exterior use: specify non-freeze/thaw climates only</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-issues" data-pid="installation-guide-3-zia-tile-may-ceramics">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="installation-guide-3-zia-tile-may-ceramics"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Ceramics</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/pages/ceramics-installation-guide" target="_blank" style="color:#8a3324;font-size:0.78rem;">/pages/ceramics-installation-guide</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">3</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('installation-guide-3-zia-tile-may-ceramics')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-installation-guide-3-zia-tile-may-ceramics" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta title missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta title missing from doc (not yet written)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta desc missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description missing from doc (not yet written)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Banned term</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Em dash present (humanizer rule: avoid em dashes)</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-issues" data-pid="installation-guide-4-zia-tile-may-cotto">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="installation-guide-4-zia-tile-may-cotto"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Cotto</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/pages/cotto-installation-guide" target="_blank" style="color:#8a3324;font-size:0.78rem;">/pages/cotto-installation-guide</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">4</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('installation-guide-4-zia-tile-may-cotto')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-installation-guide-4-zia-tile-may-cotto" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta title missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta title missing from doc (not yet written)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta desc missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description missing from doc (not yet written)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Banned term</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Em dash present (humanizer rule: avoid em dashes)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Required framing missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Material/guide: "inherent" variation framing not found</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-issues" data-pid="installation-guide-5-zia-tile-may-cotto-allende">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="installation-guide-5-zia-tile-may-cotto-allende"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Cotto Allende</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/pages/cotto-allende-installation-guide" target="_blank" style="color:#8a3324;font-size:0.78rem;">/pages/cotto-allende-installation-guide</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">4</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('installation-guide-5-zia-tile-may-cotto-allende')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-installation-guide-5-zia-tile-may-cotto-allende" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta title missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta title missing from doc (not yet written)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta desc missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description missing from doc (not yet written)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Banned term</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Em dash present (humanizer rule: avoid em dashes)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Required framing missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Material/guide: "inherent" variation framing not found</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-issues" data-pid="installation-guide-6-zia-tile-may-field-trip">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="installation-guide-6-zia-tile-may-field-trip"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Field Trip</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/pages/japanese-brick-ceramics-installation-guide" target="_blank" style="color:#8a3324;font-size:0.78rem;">/pages/japanese-brick-ceramics-installation-guide</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">3</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('installation-guide-6-zia-tile-may-field-trip')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-installation-guide-6-zia-tile-may-field-trip" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta title missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta title missing from doc (not yet written)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta desc missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description missing from doc (not yet written)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Banned term</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Em dash present (humanizer rule: avoid em dashes)</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-issues" data-pid="installation-guide-7-zia-tile-may-glass-mosaic">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="installation-guide-7-zia-tile-may-glass-mosaic"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Glass Mosaic</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/pages/glass-mosaics-installation-guide" target="_blank" style="color:#8a3324;font-size:0.78rem;">/pages/glass-mosaics-installation-guide</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">3</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('installation-guide-7-zia-tile-may-glass-mosaic')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-installation-guide-7-zia-tile-may-glass-mosaic" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta title missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta title missing from doc (not yet written)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta desc missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description missing from doc (not yet written)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Banned term</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Em dash present (humanizer rule: avoid em dashes)</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-issues" data-pid="installation-guide-8-zia-tile-may-limestone">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="installation-guide-8-zia-tile-may-limestone"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Limestone</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/pages/limestone-installation-guide" target="_blank" style="color:#8a3324;font-size:0.78rem;">/pages/limestone-installation-guide</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">3</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('installation-guide-8-zia-tile-may-limestone')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-installation-guide-8-zia-tile-may-limestone" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta title missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta title missing from doc (not yet written)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta desc missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description missing from doc (not yet written)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Banned term</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Em dash present (humanizer rule: avoid em dashes)</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-issues" data-pid="installation-guide-9-zia-tile-may-marble">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="installation-guide-9-zia-tile-may-marble"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Marble</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/pages/roman-mosaics-installation-guide" target="_blank" style="color:#8a3324;font-size:0.78rem;">/pages/roman-mosaics-installation-guide</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">3</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('installation-guide-9-zia-tile-may-marble')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-installation-guide-9-zia-tile-may-marble" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta title missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta title missing from doc (not yet written)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta desc missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description missing from doc (not yet written)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Banned term</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Em dash present (humanizer rule: avoid em dashes)</td>
+    </tr></table></div>
+  </td>
+</tr>
+<tr class="page-row has-critical" data-pid="installation-guide-page-zia-tile-may">
+  <td style="padding:8px 6px;text-align:center;width:36px;">
+    <input type="checkbox" class="page-check" data-pid="installation-guide-page-zia-tile-may"
+           onchange="toggleCheck(this)"
+           style="width:16px;height:16px;cursor:pointer;accent-color:#8a3324;">
+  </td>
+  <td style="padding:8px 10px;font-size:0.82rem;max-width:200px;">
+    <div style="font-weight:600;line-height:1.3;color:#111827;">Zia Tile — May</div>
+    <div style="margin-top:3px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">Zia to review</span></div>
+  </td>
+  <td style="padding:8px 10px;font-size:0.78rem;color:#374151;"><a href="https://ziatile.com/pages/installation-guides" target="_blank" style="color:#8a3324;font-size:0.78rem;">/pages/installation-guides</a></td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#b91c1c;font-weight:700;font-size:0.85rem;">1</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#92400e;font-weight:700;font-size:0.85rem;">2</span>
+  </td>
+  <td style="padding:8px 6px;text-align:center;">
+    <span style="color:#9ca3af;font-size:0.85rem;">0</span>
+  </td>
+  <td style="padding:8px 10px;">
+    <button class="toggle-btn" onclick="toggleDetails('installation-guide-page-zia-tile-may')"
+            style="font-size:0.75rem;padding:3px 10px;background:#f3f4f6;border:1px solid #d1d5db;
+                   border-radius:4px;cursor:pointer;color:#374151;">
+      Show issues
+    </button>
+    <div id="details-installation-guide-page-zia-tile-may" class="details-panel" style="display:none;"><table style="width:100%;border-collapse:collapse;margin-top:6px;"><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta title missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta title missing from doc (not yet written)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fffbeb;color:#92400e;border:1px solid #92400e33;">◆ SIGNIFICANT</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Meta desc missing</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">Meta description missing from doc (not yet written)</td>
+    </tr><tr class="issue-row">
+      <td style="padding:4px 8px;width:130px;"><span class="badge" style="background:#fef2f2;color:#b91c1c;border:1px solid #b91c1c33;">● CRITICAL</span></td>
+      <td style="padding:4px 8px;color:#374151;font-size:0.82rem;">Zellige capitalized</td>
+      <td style="padding:4px 8px;color:#4b5563;font-size:0.82rem;">"Zellige" capitalized 2× — must be lowercase</td>
+    </tr></table></div>
+  </td>
+</tr></tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+const TOTAL = 51;
+const STORAGE_KEY = 'zia-collection-checked-pages';
+
+function getChecked(){try{return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]'))}catch(e){return new Set()}}
+function saveChecked(s){localStorage.setItem(STORAGE_KEY,JSON.stringify([...s]))}
+
+function updateProgress(){
+  const n = getChecked().size;
+  document.getElementById('progress-bar-inner').style.width=(n/TOTAL*100)+'%';
+  document.getElementById('progress-text').textContent=n+' / '+TOTAL;
+}
+
+function toggleCheck(cb){
+  const pid=cb.dataset.pid, checked=getChecked(), row=cb.closest('tr');
+  if(cb.checked){checked.add(pid);row.classList.add('checked-done')}
+  else{checked.delete(pid);row.classList.remove('checked-done')}
+  saveChecked(checked);updateProgress();filterRows();
+}
+
+function toggleDetails(pid){
+  const panel=document.getElementById('details-'+pid);
+  if(!panel)return;
+  const open=panel.style.display==='none'||!panel.style.display;
+  panel.style.display=open?'block':'none';
+  panel.previousElementSibling.textContent=open?'Hide issues':'Show issues';
+}
+
+function filterRows(){
+  const q=document.getElementById('search-box').value.toLowerCase();
+  const showCrit=document.getElementById('show-critical').checked;
+  const showSig=document.getElementById('show-significant').checked;
+  const showClean=document.getElementById('show-clean').checked;
+  const hideDone=document.getElementById('hide-done').checked;
+  const checked=getChecked();
+  document.querySelectorAll('#pages-tbody tr.page-row').forEach(row=>{
+    const pid=row.dataset.pid;
+    const hasCrit=row.classList.contains('has-critical');
+    const hasIssues=row.classList.contains('has-issues');
+    const isClean=row.classList.contains('clean');
+    const isDone=checked.has(pid);
+    let v=true;
+    if(q&&!row.textContent.toLowerCase().includes(q))v=false;
+    if(hideDone&&isDone)v=false;
+    if(hasCrit&&!showCrit)v=false;
+    if(hasIssues&&!showSig)v=false;
+    if(isClean&&!showClean)v=false;
+    row.style.display=v?'':'none';
+  });
+}
+
+function resetAll(){
+  if(!confirm('Clear all verified checkmarks?'))return;
+  localStorage.removeItem(STORAGE_KEY);
+  document.querySelectorAll('.page-check').forEach(cb=>{
+    cb.checked=false;cb.closest('tr').classList.remove('checked-done');
+  });
+  updateProgress();
+}
+
+(function init(){
+  const checked=getChecked();
+  checked.forEach(pid=>{
+    const cb=document.querySelector(`.page-check[data-pid="${pid}"]`);
+    if(cb){cb.checked=true;cb.closest('tr').classList.add('checked-done');}
+  });
+  updateProgress();
+})();
+</script>
+</body>
+</html>

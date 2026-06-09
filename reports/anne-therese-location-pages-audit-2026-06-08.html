@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anne Therese — Location Service Pages Audit | June 2026</title>
+<style>
+  :root {
+    --red: #dc2626;
+    --red-bg: #fef2f2;
+    --red-border: #fecaca;
+    --yellow: #d97706;
+    --yellow-bg: #fffbeb;
+    --yellow-border: #fde68a;
+    --green: #16a34a;
+    --green-bg: #f0fdf4;
+    --green-border: #bbf7d0;
+    --blue: #2563eb;
+    --blue-bg: #eff6ff;
+    --blue-border: #bfdbfe;
+    --gray: #6b7280;
+    --gray-light: #f9fafb;
+    --gray-border: #e5e7eb;
+    --dark: #111827;
+    --medium: #374151;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    font-size: 14px;
+    color: var(--dark);
+    background: #f3f4f6;
+    line-height: 1.5;
+  }
+
+  .page-header {
+    background: #fff;
+    border-bottom: 1px solid var(--gray-border);
+    padding: 24px 32px;
+  }
+
+  .page-header h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--dark);
+  }
+
+  .page-header .meta {
+    margin-top: 4px;
+    font-size: 13px;
+    color: var(--gray);
+  }
+
+  .page-header .meta span { margin-right: 20px; }
+
+  .content { padding: 28px 32px; max-width: 1200px; margin: 0 auto; }
+
+  /* Summary bar */
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .summary-card {
+    background: #fff;
+    border: 1px solid var(--gray-border);
+    border-radius: 8px;
+    padding: 16px 20px;
+  }
+
+  .summary-card .number {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .summary-card .label {
+    font-size: 12px;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 500;
+  }
+
+  .summary-card.red .number { color: var(--red); }
+  .summary-card.yellow .number { color: var(--yellow); }
+  .summary-card.green .number { color: var(--green); }
+  .summary-card.blue .number { color: var(--blue); }
+
+  /* Sections */
+  .section { margin-bottom: 32px; }
+
+  .section-title {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--gray);
+    margin-bottom: 12px;
+  }
+
+  /* Issue cards */
+  .issue-card {
+    background: #fff;
+    border: 1px solid var(--gray-border);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+
+  .issue-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 16px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .issue-header:hover { background: var(--gray-light); }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 8px;
+    border-radius: 99px;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .badge.critical { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
+  .badge.flag { background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow-border); }
+  .badge.pass { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+  .badge.info { background: var(--blue-bg); color: var(--blue); border: 1px solid var(--blue-border); }
+
+  .issue-title {
+    font-weight: 600;
+    font-size: 14px;
+    flex: 1;
+  }
+
+  .issue-scope {
+    font-size: 12px;
+    color: var(--gray);
+    margin-top: 2px;
+  }
+
+  .issue-body {
+    border-top: 1px solid var(--gray-border);
+    padding: 16px;
+    background: var(--gray-light);
+    display: none;
+  }
+
+  .issue-body.open { display: block; }
+
+  .issue-body p { margin-bottom: 10px; color: var(--medium); font-size: 13px; }
+  .issue-body p:last-child { margin-bottom: 0; }
+
+  .issue-body strong { color: var(--dark); }
+
+  .fix-block {
+    background: #fff;
+    border: 1px solid var(--gray-border);
+    border-radius: 6px;
+    padding: 12px 14px;
+    margin-top: 10px;
+    font-size: 13px;
+  }
+
+  .fix-block .fix-label {
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    color: var(--gray);
+  }
+
+  .fix-block.red { border-color: var(--red-border); background: var(--red-bg); }
+  .fix-block.red .fix-label { color: var(--red); }
+  .fix-block.yellow { border-color: var(--yellow-border); background: var(--yellow-bg); }
+  .fix-block.yellow .fix-label { color: var(--yellow); }
+
+  code {
+    font-family: 'SF Mono', 'Fira Mono', 'Consolas', monospace;
+    font-size: 12px;
+    background: #f3f4f6;
+    border: 1px solid var(--gray-border);
+    border-radius: 3px;
+    padding: 1px 5px;
+    color: #7c3aed;
+  }
+
+  .quote {
+    font-style: italic;
+    color: var(--red);
+    background: var(--red-bg);
+    border-left: 3px solid var(--red-border);
+    padding: 8px 12px;
+    margin: 8px 0;
+    border-radius: 0 4px 4px 0;
+    font-size: 13px;
+  }
+
+  /* Page grid */
+  .page-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .page-card {
+    background: #fff;
+    border: 1px solid var(--gray-border);
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+
+  .page-card .page-label {
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 8px;
+    color: var(--dark);
+  }
+
+  .page-card .page-service {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 10px;
+  }
+
+  .check-row {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12px;
+    color: var(--medium);
+    margin-bottom: 4px;
+  }
+
+  .check-row .icon { flex-shrink: 0; font-size: 13px; }
+  .check-row.fail { color: var(--red); }
+  .check-row.warn { color: var(--yellow); }
+  .check-row.ok { color: var(--green); }
+
+  /* Pass section */
+  .pass-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .pass-item {
+    background: #fff;
+    border: 1px solid var(--green-border);
+    border-radius: 6px;
+    padding: 10px 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 13px;
+  }
+
+  .pass-item .pi { flex-shrink: 0; color: var(--green); font-size: 15px; margin-top: 1px; }
+  .pass-item .pt { color: var(--medium); }
+  .pass-item .pt strong { color: var(--dark); display: block; font-size: 13px; margin-bottom: 1px; }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--gray-border);
+    margin: 28px 0;
+  }
+
+  .chevron {
+    margin-left: auto;
+    color: var(--gray);
+    font-size: 12px;
+    flex-shrink: 0;
+    transition: transform 0.15s;
+  }
+
+  .chevron.open { transform: rotate(180deg); }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>Anne Therese — Location Service Pages Audit</h1>
+  <div class="meta">
+    <span>12 pages reviewed</span>
+    <span>4 locations &times; 3 services</span>
+    <span>Hydrafacial &bull; Clear + Brilliant Laser &bull; Dysport</span>
+    <span>Audited: June 8, 2026</span>
+  </div>
+</div>
+
+<div class="content">
+
+  <!-- Summary -->
+  <div class="summary-grid">
+    <div class="summary-card red">
+      <div class="number">3</div>
+      <div class="label">Critical — Must Fix</div>
+    </div>
+    <div class="summary-card yellow">
+      <div class="number">4</div>
+      <div class="label">Flags — Verify / Fix</div>
+    </div>
+    <div class="summary-card green">
+      <div class="number">14</div>
+      <div class="label">Checks Passed</div>
+    </div>
+    <div class="summary-card blue">
+      <div class="number">12</div>
+      <div class="label">Pages Audited</div>
+    </div>
+  </div>
+
+  <!-- Per-page overview -->
+  <div class="section">
+    <div class="section-title">Page-by-Page Status</div>
+    <div class="page-grid">
+
+      <!-- Hydrafacial -->
+      <div class="page-card">
+        <div class="page-service">Hydrafacial</div>
+        <div class="page-label">Cape Coral, FL</div>
+        <div class="check-row fail"><span class="icon">✗</span> "Medical-grade" — not confirmed</div>
+        <div class="check-row fail"><span class="icon">✗</span> Footer: "CoolSculpting patients" → wrong service</div>
+        <div class="check-row fail"><span class="icon">✗</span> "Over 20 years" — unverified claim</div>
+        <div class="check-row warn"><span class="icon">⚠</span> Dr. Stubbs attributed as provider — verify</div>
+        <div class="check-row ok"><span class="icon">✓</span> URL, keyword, meta, address correct</div>
+      </div>
+
+      <div class="page-card">
+        <div class="page-service">Hydrafacial</div>
+        <div class="page-label">Bonita Springs, FL</div>
+        <div class="check-row fail"><span class="icon">✗</span> "Medical-grade" — not confirmed</div>
+        <div class="check-row warn"><span class="icon">⚠</span> Dr. Stubbs attributed as provider — verify</div>
+        <div class="check-row ok"><span class="icon">✓</span> URL, keyword, meta, address correct</div>
+        <div class="check-row ok"><span class="icon">✓</span> Local references accurate (Bonita Bay, winter season)</div>
+      </div>
+
+      <div class="page-card">
+        <div class="page-service">Hydrafacial</div>
+        <div class="page-label">Lewis Center, OH</div>
+        <div class="check-row fail"><span class="icon">✗</span> "Medical-grade" — not confirmed</div>
+        <div class="check-row warn"><span class="icon">⚠</span> Dr. Stubbs attributed as provider — verify</div>
+        <div class="check-row ok"><span class="icon">✓</span> URL, keyword, meta, address correct</div>
+        <div class="check-row ok"><span class="icon">✓</span> Seasonal context (Olentangy, Alum Creek) accurate</div>
+      </div>
+
+      <div class="page-card">
+        <div class="page-service">Hydrafacial</div>
+        <div class="page-label">Gahanna, OH</div>
+        <div class="check-row fail"><span class="icon">✗</span> "Medical-grade" — not confirmed</div>
+        <div class="check-row fail"><span class="icon">✗</span> Typo: "trials" → should be "trails"</div>
+        <div class="check-row warn"><span class="icon">⚠</span> Dr. Stubbs attributed as provider — verify</div>
+        <div class="check-row ok"><span class="icon">✓</span> URL, keyword, meta, address correct</div>
+      </div>
+
+      <!-- Clear + Brilliant -->
+      <div class="page-card">
+        <div class="page-service">Clear + Brilliant Laser</div>
+        <div class="page-label">Cape Coral, FL</div>
+        <div class="check-row fail"><span class="icon">✗</span> Appt. duration conflict: 45–60 min vs. site's 30–45 min</div>
+        <div class="check-row warn"><span class="icon">⚠</span> Dr. Stubbs attributed as provider — verify</div>
+        <div class="check-row ok"><span class="icon">✓</span> URL, keyword, meta, address correct</div>
+        <div class="check-row ok"><span class="icon">✓</span> Fitzpatrick/candidacy language correct</div>
+      </div>
+
+      <div class="page-card">
+        <div class="page-service">Clear + Brilliant Laser</div>
+        <div class="page-label">Bonita Springs, FL</div>
+        <div class="check-row fail"><span class="icon">✗</span> Appt. duration conflict: 45–60 min vs. site's 30–45 min</div>
+        <div class="check-row warn"><span class="icon">⚠</span> Dr. Stubbs attributed as provider — verify</div>
+        <div class="check-row ok"><span class="icon">✓</span> URL, keyword, meta, address correct</div>
+        <div class="check-row ok"><span class="icon">✓</span> Seasonal scheduling framing strong</div>
+      </div>
+
+      <div class="page-card">
+        <div class="page-service">Clear + Brilliant Laser</div>
+        <div class="page-label">Lewis Center, OH</div>
+        <div class="check-row fail"><span class="icon">✗</span> Appt. duration conflict: 45–60 min vs. site's 30–45 min</div>
+        <div class="check-row warn"><span class="icon">⚠</span> Demographic claim about Lewis Center population — unsourced</div>
+        <div class="check-row warn"><span class="icon">⚠</span> Dr. Stubbs attributed as provider — verify</div>
+        <div class="check-row ok"><span class="icon">✓</span> URL, keyword, meta, address correct</div>
+      </div>
+
+      <div class="page-card">
+        <div class="page-service">Clear + Brilliant Laser</div>
+        <div class="page-label">Gahanna, OH</div>
+        <div class="check-row fail"><span class="icon">✗</span> Appt. duration conflict: 45–60 min vs. site's 30–45 min</div>
+        <div class="check-row warn"><span class="icon">⚠</span> Demographic claim about Gahanna population — unsourced</div>
+        <div class="check-row warn"><span class="icon">⚠</span> Dr. Stubbs attributed as provider — verify</div>
+        <div class="check-row ok"><span class="icon">✓</span> URL, keyword, meta, address correct</div>
+      </div>
+
+      <!-- Dysport -->
+      <div class="page-card">
+        <div class="page-service">Dysport</div>
+        <div class="page-label">Cape Coral, FL</div>
+        <div class="check-row warn"><span class="icon">⚠</span> Dr. Stubbs attributed as provider — verify</div>
+        <div class="check-row ok"><span class="icon">✓</span> URL, keyword, meta, address correct</div>
+        <div class="check-row ok"><span class="icon">✓</span> FDA/off-label disclosure language correct</div>
+        <div class="check-row ok"><span class="icon">✓</span> Onset, duration, appt. time match site</div>
+      </div>
+
+      <div class="page-card">
+        <div class="page-service">Dysport</div>
+        <div class="page-label">Bonita Springs, FL</div>
+        <div class="check-row warn"><span class="icon">⚠</span> Dr. Stubbs attributed as provider — verify</div>
+        <div class="check-row ok"><span class="icon">✓</span> URL, keyword, meta, address correct</div>
+        <div class="check-row ok"><span class="icon">✓</span> FDA/off-label disclosure language correct</div>
+        <div class="check-row ok"><span class="icon">✓</span> Onset, duration, appt. time match site</div>
+      </div>
+
+      <div class="page-card">
+        <div class="page-service">Dysport</div>
+        <div class="page-label">Lewis Center, OH</div>
+        <div class="check-row warn"><span class="icon">⚠</span> Dr. Stubbs attributed as provider — verify</div>
+        <div class="check-row ok"><span class="icon">✓</span> URL, keyword, meta, address correct</div>
+        <div class="check-row ok"><span class="icon">✓</span> FDA/off-label disclosure language correct</div>
+        <div class="check-row ok"><span class="icon">✓</span> Local context (Olentangy graduations) appropriate</div>
+      </div>
+
+      <div class="page-card">
+        <div class="page-service">Dysport</div>
+        <div class="page-label">Gahanna, OH</div>
+        <div class="check-row warn"><span class="icon">⚠</span> Dr. Stubbs attributed as provider — verify</div>
+        <div class="check-row ok"><span class="icon">✓</span> URL, keyword, meta, address correct</div>
+        <div class="check-row ok"><span class="icon">✓</span> FDA/off-label disclosure language correct</div>
+        <div class="check-row ok"><span class="icon">✓</span> Creekside / local event calendar well-used</div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Critical Issues -->
+  <div class="section">
+    <div class="section-title">Critical Issues — Must Fix Before Publishing</div>
+
+    <!-- Issue 1 -->
+    <div class="issue-card">
+      <div class="issue-header" onclick="toggle(this)">
+        <span class="badge critical">✗ Critical</span>
+        <div>
+          <div class="issue-title">"Medical-grade" used for Hydrafacial without confirmation</div>
+          <div class="issue-scope">Affects: All 4 Hydrafacial pages (Cape Coral, Bonita Springs, Lewis Center, Gahanna)</div>
+        </div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="issue-body">
+        <p>All four Hydrafacial pages contain the phrase <strong>"Hydrafacial is a medical-grade facial treatment"</strong> in the "Why [Location] Patients Choose Hydrafacial" section. The Anne Therese style system explicitly prohibits "medical-grade" without client confirmation.</p>
+        <div class="quote">"Hydrafacial is a medical-grade facial treatment that fits [location] patients who want to address surface concerns…"</div>
+        <p>Additionally, the site's own Hydrafacial treatment page does not use "medical-grade" to describe the service. The featured provider listed on the Hydrafacial page is Krystle Anderson (LME, LT — an esthetician), which makes "medical-grade" an especially problematic descriptor since the service appears to be categorized as a skincare/aesthetic service, not a medical one.</p>
+        <div class="fix-block red">
+          <div class="fix-label">Fix Required</div>
+          Replace "medical-grade facial treatment" with approved language. Preferred options per style system: <strong>"medically supervised facial treatment"</strong> or <strong>"professional Hydrafacial at a medically guided practice."</strong> Confirm correct descriptor with Wendy (CSM) before final copy. If the client does not want to use "medically supervised" for Hydrafacial (since it's esthetician-performed), simply remove the modifier and let the practice's positioning carry the authority.
+        </div>
+      </div>
+    </div>
+
+    <!-- Issue 2 -->
+    <div class="issue-card">
+      <div class="issue-header" onclick="toggle(this)">
+        <span class="badge critical">✗ Critical</span>
+        <div>
+          <div class="issue-title">Cape Coral Hydrafacial footer says "CoolSculpting patients"</div>
+          <div class="issue-scope">Affects: Page 1 — Hydrafacial, Cape Coral only</div>
+        </div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="issue-body">
+        <p>The "Visit Our Cape Coral Location" footer block at the bottom of the Cape Coral Hydrafacial page contains a copy-paste error. It reads:</p>
+        <div class="quote">"Our Cape Coral location serves <strong>CoolSculpting patients</strong> in Cape Coral and surrounding communities, including Fort Myers, North Fort Myers, Pine Island, and Matlacha."</div>
+        <p>Every other location page (Bonita Springs, Lewis Center, Gahanna) correctly reads "Hydrafacial patients." This is clearly a leftover from a CoolSculpting page template. The surrounding cities also need a quick check — Fort Myers, North Fort Myers, Pine Island, and Matlacha are appropriate Southwest Florida communities for Cape Coral, so those are fine.</p>
+        <div class="fix-block red">
+          <div class="fix-label">Fix Required</div>
+          Change <code>"CoolSculpting patients"</code> → <code>"Hydrafacial patients"</code> in the Cape Coral Hydrafacial footer.
+        </div>
+      </div>
+    </div>
+
+    <!-- Issue 3 -->
+    <div class="issue-card">
+      <div class="issue-header" onclick="toggle(this)">
+        <span class="badge critical">✗ Critical</span>
+        <div>
+          <div class="issue-title">Clear + Brilliant appointment duration conflicts with the live site</div>
+          <div class="issue-scope">Affects: All 4 Clear + Brilliant pages (Cape Coral, Bonita Springs, Lewis Center, Gahanna)</div>
+        </div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="issue-body">
+        <p>All four Clear + Brilliant pages state the appointment is <strong>45–60 minutes total</strong>, with 20–30 minutes of numbing before the 15–20 minute laser portion. However, the official Clear + Brilliant treatment page on the Anne Therese website states the appointment is <strong>30–45 minutes</strong>.</p>
+        <p>The docs' math (20–30 min numbing + 15–20 min treatment + post-treatment review) does add up to ~45–60 minutes, so the logic is sound. But the conflict with the live site means one of two things: (a) the site's stated time is outdated, or (b) the docs are overstating. Publishing content that contradicts the live site on appointment duration will confuse patients and create scheduling issues.</p>
+        <div class="fix-block red">
+          <div class="fix-label">Fix Required</div>
+          Confirm the correct appointment duration with Wendy or the client before publishing. If 45–60 minutes is accurate, the website's treatment page should also be updated for consistency. Do not publish with a discrepancy between these pages and the site.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Flags -->
+  <div class="section">
+    <div class="section-title">Flags — Verify Before Publishing</div>
+
+    <!-- Flag 1 -->
+    <div class="issue-card">
+      <div class="issue-header" onclick="toggle(this)">
+        <span class="badge flag">⚠ Flag</span>
+        <div>
+          <div class="issue-title">All pages credit Dr. Stubbs as the treating provider — verify accuracy</div>
+          <div class="issue-scope">Affects: All 12 pages</div>
+        </div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="issue-body">
+        <p>Every page across all 12 contains this identical sentence in the "Why [Location] Patients Choose" section:</p>
+        <div class="quote">"At Anne Therese Aesthetic Medicine, each [service] session is supervised by Dr. Anne Therese Stubbs. Dr. Stubbs is an MD and Founder &amp; Medical Director who spent 14 years in emergency medicine before transitioning to aesthetic practice."</div>
+        <p>The concern is the phrase "each session is supervised by Dr. Anne Therese Stubbs" applied uniformly across 4 locations and 3 service types. The website's treatment pages show the following actual featured providers:</p>
+        <ul style="font-size:13px; color: var(--medium); padding-left: 20px; margin: 8px 0 12px;">
+          <li>Hydrafacial → <strong>Krystle Anderson, LME, LT</strong> (esthetician — Cape Coral)</li>
+          <li>Clear + Brilliant → <strong>Kristina Slemker, RN BSN</strong> (aesthetic nurse injector — Lewis Center)</li>
+          <li>Dysport → <strong>Auri Resh, FNP, BSN</strong> (family nurse practitioner — treatment page)</li>
+        </ul>
+        <p>If "supervised by" means medical director oversight (which is legally valid for a medical practice), the claim may be accurate in a compliance sense. But patients reading these pages may reasonably expect Dr. Stubbs to personally administer or attend every treatment at all four locations, which is not what the website shows.</p>
+        <div class="fix-block yellow">
+          <div class="fix-label">Action Required</div>
+          Confirm with Wendy (CSM): Is "supervised by Dr. Anne Therese Stubbs" approved client-side language for all three service types, or should these pages feature the actual location-specific providers? If the client wants Dr. Stubbs featured consistently as a brand trust signal, the phrasing should be softened — e.g., <strong>"treatments are performed under the medical direction of Dr. Anne Therese Stubbs"</strong> rather than "each session is supervised by."
+        </div>
+      </div>
+    </div>
+
+    <!-- Flag 2 -->
+    <div class="issue-card">
+      <div class="issue-header" onclick="toggle(this)">
+        <span class="badge flag">⚠ Flag</span>
+        <div>
+          <div class="issue-title">"Over 20 years of aesthetic treatments" — unverified claim</div>
+          <div class="issue-scope">Affects: Page 1 — Hydrafacial, Cape Coral only</div>
+        </div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="issue-body">
+        <p>The Cape Coral Hydrafacial FAQ contains this line:</p>
+        <div class="quote">"With over 20 years of aesthetic treatments, Anne Therese Aesthetic Medicine brings the clinical structure needed to assess whether a session series is the right fit."</div>
+        <p>This claim is not sourced from <code>raw/</code> or the client brief. The same section on other Hydrafacial pages omits this figure entirely — Bonita Springs, Lewis Center, and Gahanna say only "Anne Therese Aesthetic Medicine brings the clinical structure needed…" with no year count. The 14-year emergency medicine background mentioned elsewhere in the docs for Dr. Stubbs suggests that "20 years in aesthetic medicine" would need an earlier start date that isn't confirmed.</p>
+        <div class="fix-block yellow">
+          <div class="fix-label">Action Required</div>
+          Either confirm the founding/operating date of Anne Therese Aesthetic Medicine and verify "20+ years" is accurate, or remove the year count and align this sentence with the other three Hydrafacial pages, which don't include it.
+        </div>
+      </div>
+    </div>
+
+    <!-- Flag 3 -->
+    <div class="issue-card">
+      <div class="issue-header" onclick="toggle(this)">
+        <span class="badge flag">⚠ Flag</span>
+        <div>
+          <div class="issue-title">Demographic population claims in Lewis Center and Gahanna C+B pages — unsourced</div>
+          <div class="issue-scope">Affects: Page 8 — Clear + Brilliant, Lewis Center &bull; Page 11 — Clear + Brilliant, Gahanna</div>
+        </div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="issue-body">
+        <p>Both Ohio Clear + Brilliant pages make specific demographic statements about the local patient population:</p>
+        <div class="quote">Lewis Center: "Lewis Center's meaningfully diverse population, including a significant Asian community and a notable Black/African American population, means skin-tone eligibility framing is directly relevant to local patients."</div>
+        <div class="quote">Gahanna: "Gahanna's patient population is meaningfully diverse, with a significant Black and African American community, which means skin tone eligibility is a real factor in treatment planning here, not a footnote."</div>
+        <p>These claims are not sourced from <code>raw/</code>. The intent — ensuring light-based treatment candidacy is inclusive in the copy — is well-placed and clinically appropriate. The demographic descriptions are plausible for these Columbus-area suburbs. However, per the no-invention rule, any specific claim about the patient population needs to be either confirmed or reframed in general terms.</p>
+        <div class="fix-block yellow">
+          <div class="fix-label">Action Required</div>
+          Two options: (1) Confirm the demographic references are accurate and acceptable to the client, or (2) rephrase to remove the specificity — e.g., <strong>"Because the treatment is light-based, candidacy depends on Fitzpatrick skin type, and the provider calibrates accordingly for medium to darker skin tones."</strong> The clinical point stands either way; it's the unsourced demographic language that needs grounding.
+        </div>
+      </div>
+    </div>
+
+    <!-- Flag 4 -->
+    <div class="issue-card">
+      <div class="issue-header" onclick="toggle(this)">
+        <span class="badge flag">⚠ Flag</span>
+        <div>
+          <div class="issue-title">Gahanna Hydrafacial: typo "trials" in benefits list</div>
+          <div class="issue-scope">Affects: Page 10 — Hydrafacial, Gahanna only</div>
+        </div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="issue-body">
+        <p>In the "No downtime" benefit bullet, the Gahanna Hydrafacial page reads:</p>
+        <div class="quote">"No downtime: Most patients return to their full schedule the same day, including <strong>trials</strong>, evening plans, and weekend commitments."</div>
+        <p>Given the consistent trail references throughout this page (Hannah Park, McCorkle Park, Big Walnut Creek), "trials" is clearly a typo for "trails."</p>
+        <div class="fix-block yellow">
+          <div class="fix-label">Fix Required</div>
+          Change <code>"trials"</code> → <code>"trails"</code> in the No Downtime benefit bullet.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <hr class="divider">
+
+  <!-- What's Working -->
+  <div class="section">
+    <div class="section-title">What's Working — Passes Across All 12 Pages</div>
+    <div class="pass-grid">
+
+      <div class="pass-item">
+        <span class="pi">✓</span>
+        <div class="pt">
+          <strong>All URLs match the brief exactly</strong>
+          /location/{location}/{service} structure correct for all 12 pages.
+        </div>
+      </div>
+
+      <div class="pass-item">
+        <span class="pi">✓</span>
+        <div class="pt">
+          <strong>Title tags — all within 60 characters</strong>
+          Longest is "Clear + Brilliant Laser in Bonita Springs, FL | Anne Therese" at 60 chars.
+        </div>
+      </div>
+
+      <div class="pass-item">
+        <span class="pi">✓</span>
+        <div class="pt">
+          <strong>Meta descriptions — all within 140–160 characters</strong>
+          Each includes primary keyword + at least one outcome or use case.
+        </div>
+      </div>
+
+      <div class="pass-item">
+        <span class="pi">✓</span>
+        <div class="pt">
+          <strong>Target keywords all correct and present</strong>
+          Primary keyword matches the task brief for every page. No location cross-contamination.
+        </div>
+      </div>
+
+      <div class="pass-item">
+        <span class="pi">✓</span>
+        <div class="pt">
+          <strong>No compliance violations in language</strong>
+          No "guarantee," "dramatic transformation," "look younger," "best medspa," "revolutionary," "eliminate," or banned filler terms found across all 12 pages.
+        </div>
+      </div>
+
+      <div class="pass-item">
+        <span class="pi">✓</span>
+        <div class="pt">
+          <strong>Dysport FDA/off-label disclosure — correct</strong>
+          All Dysport pages accurately state FDA approval for glabellar lines, disclose off-label use for forehead lines and crow's feet, and describe the mechanism precisely (abobotulinumtoxinA, neuromuscular junction).
+        </div>
+      </div>
+
+      <div class="pass-item">
+        <span class="pi">✓</span>
+        <div class="pt">
+          <strong>Dysport clinical data matches the website</strong>
+          Onset (2–3 days), full effect (within first week), duration (3–4 months), and appointment time (15–30 minutes) are consistent with the live treatment page across all four Dysport pages.
+        </div>
+      </div>
+
+      <div class="pass-item">
+        <span class="pi">✓</span>
+        <div class="pt">
+          <strong>Clear + Brilliant candidacy language — correct</strong>
+          All four pages correctly address Fitzpatrick skin types IV–VI, photosensitizing medication contraindications, tan/sun exposure restrictions, and appropriate referral to Fraxel for advanced concerns.
+        </div>
+      </div>
+
+      <div class="pass-item">
+        <span class="pi">✓</span>
+        <div class="pt">
+          <strong>Location addresses and phone numbers verified</strong>
+          All four locations match the live site exactly: Cape Coral (831 Cape Coral Pkwy E), Bonita Springs (26841 South Bay Dr, Suite 154), Lewis Center (8706 Cotter St), Gahanna (438 Beecher Rd).
+        </div>
+      </div>
+
+      <div class="pass-item">
+        <span class="pi">✓</span>
+        <div class="pt">
+          <strong>All three services confirmed available at all four locations</strong>
+          Hydrafacial, Clear + Brilliant, and Dysport are listed as active services at Cape Coral, Bonita Springs, Lewis Center, and Gahanna on the live site.
+        </div>
+      </div>
+
+      <div class="pass-item">
+        <span class="pi">✓</span>
+        <div class="pt">
+          <strong>Strong local relevance throughout</strong>
+          Each page is genuinely localized — no boilerplate swaps. Florida pages use seasonal social calendar, UV/humidity, golf/beach context. Ohio pages use four-season climate, specific trail systems, and local events (Creekside, Olentangy Greenway).
+        </div>
+      </div>
+
+      <div class="pass-item">
+        <span class="pi">✓</span>
+        <div class="pt">
+          <strong>No Ohio/Florida location cross-contamination</strong>
+          Ohio pages reference Ohio seasonal patterns and local lifestyle only. Florida pages reference Florida climate and social context only.
+        </div>
+      </div>
+
+      <div class="pass-item">
+        <span class="pi">✓</span>
+        <div class="pt">
+          <strong>Consistent page structure across all 12 pages</strong>
+          Hero → What Is → Results → What to Expect → Benefits → Why [Location] → Provider → Step-by-step → Candidacy → Pros/Cons → FAQs → Location footer. Structure is uniform and matches the reference campaign style.
+        </div>
+      </div>
+
+      <div class="pass-item">
+        <span class="pi">✓</span>
+        <div class="pt">
+          <strong>Tone is on-register throughout</strong>
+          Medical professionalism without being cold or clinical. No promotional language. Results framed as outcomes with caveats ("not permanent," "varies by individual"), not guarantees.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Action list -->
+  <div class="section">
+    <div class="section-title">Consolidated Action List</div>
+    <div class="issue-card">
+      <div style="padding: 16px;">
+        <table style="width:100%; border-collapse:collapse; font-size:13px;">
+          <thead>
+            <tr style="border-bottom: 2px solid var(--gray-border);">
+              <th style="text-align:left; padding: 8px 12px; color: var(--gray); font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em;">Priority</th>
+              <th style="text-align:left; padding: 8px 12px; color: var(--gray); font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em;">Action</th>
+              <th style="text-align:left; padding: 8px 12px; color: var(--gray); font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em;">Scope</th>
+              <th style="text-align:left; padding: 8px 12px; color: var(--gray); font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em;">Owner</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--gray-border);">
+              <td style="padding: 10px 12px;"><span class="badge critical">Critical</span></td>
+              <td style="padding: 10px 12px; color: var(--dark);">Replace "medical-grade facial treatment" on all 4 Hydrafacial pages with confirmed terminology</td>
+              <td style="padding: 10px 12px; color: var(--gray);">Pages 1, 4, 7, 10</td>
+              <td style="padding: 10px 12px; color: var(--gray);">Writer + Wendy</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--gray-border);">
+              <td style="padding: 10px 12px;"><span class="badge critical">Critical</span></td>
+              <td style="padding: 10px 12px; color: var(--dark);">Fix Cape Coral Hydrafacial footer: "CoolSculpting patients" → "Hydrafacial patients"</td>
+              <td style="padding: 10px 12px; color: var(--gray);">Page 1 only</td>
+              <td style="padding: 10px 12px; color: var(--gray);">Writer</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--gray-border);">
+              <td style="padding: 10px 12px;"><span class="badge critical">Critical</span></td>
+              <td style="padding: 10px 12px; color: var(--dark);">Confirm correct Clear + Brilliant appointment duration with client (docs say 45–60 min; site says 30–45 min)</td>
+              <td style="padding: 10px 12px; color: var(--gray);">Pages 2, 5, 8, 11</td>
+              <td style="padding: 10px 12px; color: var(--gray);">Wendy → Writer</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--gray-border);">
+              <td style="padding: 10px 12px;"><span class="badge flag">Verify</span></td>
+              <td style="padding: 10px 12px; color: var(--dark);">Confirm whether "supervised by Dr. Stubbs" is approved client language for all 3 service types and all 4 locations</td>
+              <td style="padding: 10px 12px; color: var(--gray);">All 12 pages</td>
+              <td style="padding: 10px 12px; color: var(--gray);">Wendy</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--gray-border);">
+              <td style="padding: 10px 12px;"><span class="badge flag">Verify</span></td>
+              <td style="padding: 10px 12px; color: var(--dark);">Verify "over 20 years of aesthetic treatments" claim or remove from Cape Coral Hydrafacial FAQ</td>
+              <td style="padding: 10px 12px; color: var(--gray);">Page 1 only</td>
+              <td style="padding: 10px 12px; color: var(--gray);">Writer + Wendy</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--gray-border);">
+              <td style="padding: 10px 12px;"><span class="badge flag">Verify</span></td>
+              <td style="padding: 10px 12px; color: var(--dark);">Confirm or rephrase demographic population references in Lewis Center and Gahanna C+B pages</td>
+              <td style="padding: 10px 12px; color: var(--gray);">Pages 8, 11</td>
+              <td style="padding: 10px 12px; color: var(--gray);">Writer + Wendy</td>
+            </tr>
+            <tr>
+              <td style="padding: 10px 12px;"><span class="badge flag">Fix</span></td>
+              <td style="padding: 10px 12px; color: var(--dark);">Gahanna Hydrafacial: typo "trials" → "trails" in No Downtime benefit bullet</td>
+              <td style="padding: 10px 12px; color: var(--gray);">Page 10 only</td>
+              <td style="padding: 10px 12px; color: var(--gray);">Writer</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding: 16px 0; color: var(--gray); font-size: 12px; text-align: center;">
+    Anne Therese Aesthetic Medicine — Content Audit · 12 pages · Generated June 8, 2026 · Content Ops / LinkGraph
+  </div>
+
+</div>
+
+<script>
+function toggle(header) {
+  const body = header.nextElementSibling;
+  const chevron = header.querySelector('.chevron');
+  body.classList.toggle('open');
+  chevron.classList.toggle('open');
+}
+</script>
+
+</body>
+</html>

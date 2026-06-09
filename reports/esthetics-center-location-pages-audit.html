@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Esthetics Center — Location Pages Content Audit</title>
+<style>
+:root {
+  --bg: #f8f9fa;
+  --card: #fff;
+  --border: #e5e7eb;
+  --header-bg: #1a1a2e;
+  --green: #16a34a;
+  --green-light: #dcfce7;
+  --green-border: #bbf7d0;
+  --amber: #d97706;
+  --amber-light: #fef3c7;
+  --amber-border: #fde68a;
+  --red: #dc2626;
+  --red-light: #fee2e2;
+  --red-border: #fecaca;
+  --blue: #2563eb;
+  --blue-light: #dbeafe;
+  --blue-border: #bfdbfe;
+  --text: #111827;
+  --muted: #6b7280;
+  --sub: #9ca3af;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* ── HEADER ── */
+.site-header {
+  background: var(--header-bg);
+  color: #f9fafb;
+  padding: 28px 32px 24px;
+}
+.header-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.header-text { flex: 1; min-width: 260px; }
+.header-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin-bottom: 6px;
+}
+.header-title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #f9fafb;
+  margin-bottom: 6px;
+}
+.header-sub {
+  font-size: 13px;
+  color: #9ca3af;
+}
+.header-badges {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.badge-red   { background: var(--red-light);   color: var(--red);   border: 1px solid var(--red-border); }
+.badge-amber { background: var(--amber-light); color: var(--amber); border: 1px solid var(--amber-border); }
+.badge-green { background: var(--green-light); color: var(--green); border: 1px solid var(--green-border); }
+.badge-blue  { background: var(--blue-light);  color: var(--blue);  border: 1px solid var(--blue-border); }
+.badge-dot { width: 7px; height: 7px; border-radius: 50%; }
+.badge-red   .badge-dot { background: var(--red); }
+.badge-amber .badge-dot { background: var(--amber); }
+.badge-green .badge-dot { background: var(--green); }
+.badge-blue  .badge-dot { background: var(--blue); }
+.status-line {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* ── LAYOUT ── */
+.container { max-width: 1140px; margin: 0 auto; padding: 28px 20px; }
+
+/* ── SCORECARD ── */
+.scorecard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+  margin-bottom: 28px;
+}
+.stat-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px 18px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,.05);
+}
+.stat-num {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.stat-label { font-size: 12px; color: var(--muted); font-weight: 500; }
+.stat-note  { font-size: 11px; color: var(--sub); margin-top: 4px; }
+.stat-green .stat-num { color: var(--green); }
+.stat-amber .stat-num { color: var(--amber); }
+.stat-red   .stat-num { color: var(--red); }
+.stat-blue  .stat-num { color: var(--blue); }
+.stat-card .badge { margin: 8px auto 0; }
+
+/* ── SECTION HEADINGS ── */
+.section-heading {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-heading::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── COLLAPSIBLE PASSES PANEL ── */
+.passes-panel {
+  background: var(--green-light);
+  border: 1px solid var(--green-border);
+  border-radius: 10px;
+  margin-bottom: 28px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+}
+.passes-toggle {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: #14532d;
+}
+.passes-toggle:hover { background: rgba(22,163,74,.07); }
+.passes-toggle .toggle-icon {
+  margin-left: auto;
+  font-size: 16px;
+  transition: transform .2s;
+  color: var(--green);
+}
+.passes-toggle[aria-expanded="true"] .toggle-icon { transform: rotate(180deg); }
+.passes-body {
+  display: none;
+  padding: 0 20px 18px;
+  border-top: 1px solid var(--green-border);
+}
+.passes-body.open { display: block; }
+.passes-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 8px;
+}
+.passes-list li {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  font-size: 13px;
+  color: #166534;
+}
+.passes-list li::before {
+  content: '✓';
+  font-weight: 700;
+  color: var(--green);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ── ISSUE CARDS ── */
+.issues-grid {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+.issue-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,.05);
+}
+.issue-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 18px 14px;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+.issue-card-meta { flex: 1; min-width: 200px; }
+.issue-cat-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.issue-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+}
+.issue-card-body { padding: 16px 18px; }
+.issue-desc {
+  font-size: 13px;
+  color: #374151;
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+.issue-desc p + p { margin-top: 8px; }
+.issue-detail-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--muted);
+  margin-bottom: 7px;
+}
+.pages-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+.chip {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.chip-amber { background: var(--amber-light); color: #92400e; border: 1px solid var(--amber-border); }
+.chip-blue  { background: var(--blue-light);  color: #1e40af; border: 1px solid var(--blue-border); }
+.chip-muted { background: #f3f4f6; color: #374151; border: 1px solid #e5e7eb; }
+.fix-box {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 12px 14px;
+}
+.fix-box .fix-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--blue);
+  margin-bottom: 5px;
+}
+.fix-box p, .fix-box ul { font-size: 13px; color: #374151; }
+.fix-box ul { padding-left: 18px; }
+.fix-box li { margin-bottom: 3px; }
+code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 12px;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  padding: 1px 5px;
+  color: #1e293b;
+}
+.note-box {
+  margin-top: 10px;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 7px;
+  padding: 10px 13px;
+  font-size: 12px;
+  color: #78350f;
+}
+.note-box strong { color: #92400e; }
+
+/* Severity accent strips */
+.issue-card.sev-warning  { border-left: 4px solid var(--amber); }
+.issue-card.sev-critical { border-left: 4px solid var(--red); }
+.issue-card.sev-cms      { border-left: 4px solid var(--blue); }
+.issue-card.sev-info     { border-left: 4px solid #8b5cf6; }
+
+/* ── MATRIX TABLE ── */
+.matrix-wrap {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.05);
+  margin-bottom: 28px;
+  overflow: hidden;
+}
+.matrix-scroll { overflow-x: auto; }
+.matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 780px;
+}
+.matrix-table thead tr {
+  background: #f9fafb;
+}
+.matrix-table th {
+  padding: 10px 12px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.matrix-table td {
+  padding: 9px 12px;
+  font-size: 13px;
+  border-bottom: 1px solid #f3f4f6;
+  vertical-align: middle;
+}
+.matrix-table tbody tr:last-child td { border-bottom: none; }
+.matrix-table tbody tr:hover { background: #fafafa; }
+.matrix-table .col-page { font-weight: 600; min-width: 200px; }
+.matrix-table .col-url  { font-size: 11px; color: var(--muted); font-family: monospace; white-space: nowrap; }
+.cell-pass   { text-align: center; font-size: 16px; }
+.cell-fail   { text-align: center; font-size: 16px; }
+.cell-warn   { text-align: center; font-size: 16px; }
+.cell-na     { text-align: center; font-size: 13px; color: #d1d5db; }
+.group-header td {
+  background: #f3f4f6;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--muted);
+  padding: 6px 12px;
+  border-bottom: 1px solid var(--border);
+}
+.legend-row {
+  padding: 12px 16px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--muted);
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  background: #f9fafb;
+}
+.legend-item { display: flex; align-items: center; gap: 5px; }
+
+/* ── CMS CHECKLIST ── */
+.checklist-panel {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.05);
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+.checklist-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--border);
+  background: #f9fafb;
+}
+.checklist-header h2 {
+  font-size: 15px;
+  font-weight: 700;
+  flex: 1;
+}
+.checklist-header p {
+  font-size: 12px;
+  color: var(--muted);
+}
+.checklist-body { padding: 18px; }
+.checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.checklist-group h3 {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--muted);
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+.checklist-items { list-style: none; }
+.checklist-items li {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  padding: 7px 0;
+  border-bottom: 1px solid #f9fafb;
+  font-size: 13px;
+}
+.checklist-items li:last-child { border-bottom: none; }
+.check-box {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  border: 2px solid #d1d5db;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-top: 1px;
+  transition: border-color .15s, background .15s;
+  background: #fff;
+  user-select: none;
+}
+.check-box.checked {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #fff;
+  font-size: 11px;
+}
+.check-label-text { line-height: 1.4; }
+.check-sub { font-size: 11px; color: var(--muted); margin-top: 1px; }
+.checklist-note {
+  margin-top: 16px;
+  background: var(--blue-light);
+  border: 1px solid var(--blue-border);
+  border-radius: 7px;
+  padding: 10px 14px;
+  font-size: 12px;
+  color: #1e40af;
+}
+
+/* ── FOOTER ── */
+.site-footer {
+  text-align: center;
+  padding: 24px 20px 32px;
+  font-size: 12px;
+  color: var(--sub);
+  border-top: 1px solid var(--border);
+  background: var(--card);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  .header-inner { flex-direction: column; }
+  .header-badges { align-items: flex-start; }
+  .site-header { padding: 20px 16px 18px; }
+  .header-title { font-size: 18px; }
+  .container { padding: 20px 14px; }
+  .scorecard { grid-template-columns: repeat(2, 1fr); }
+  .stat-num { font-size: 28px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     HEADER
+══════════════════════════════════════════════════════ -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-text">
+      <div class="header-eyebrow">Content Audit Report</div>
+      <h1 class="header-title">Esthetics Center — Location Pages Content Audit</h1>
+      <p class="header-sub">12 location service pages &nbsp;·&nbsp; 4 locations &nbsp;·&nbsp; 3 services &nbsp;·&nbsp; June 2026</p>
+      <div class="status-line">
+        <span class="badge badge-green"><span class="badge-dot"></span>0 Critical Issues</span>
+        <span class="badge badge-amber"><span class="badge-dot"></span>7 Warning Categories</span>
+        <span class="badge badge-blue"><span class="badge-dot"></span>Pre-publish CMS tasks pending</span>
+      </div>
+    </div>
+    <div class="header-badges">
+      <div style="text-align:right">
+        <div style="font-size:11px;color:#9ca3af;margin-bottom:6px;text-transform:uppercase;letter-spacing:.07em;font-weight:600">Client</div>
+        <div style="font-size:14px;font-weight:600;color:#f9fafb">Esthetics Center</div>
+        <div style="font-size:12px;color:#9ca3af;margin-top:2px">Northern California</div>
+      </div>
+      <div style="text-align:right;margin-top:12px">
+        <div style="font-size:11px;color:#9ca3af;margin-bottom:6px;text-transform:uppercase;letter-spacing:.07em;font-weight:600">Reviewed</div>
+        <div style="font-size:14px;font-weight:600;color:#f9fafb">June 2026</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════
+     MAIN CONTENT
+══════════════════════════════════════════════════════ -->
+<main class="container">
+
+  <!-- SCORECARD -->
+  <div class="scorecard">
+    <div class="stat-card stat-blue">
+      <div class="stat-num">12</div>
+      <div class="stat-label">Pages Audited</div>
+      <div class="stat-note">4 locations × 3 services</div>
+    </div>
+    <div class="stat-card stat-red">
+      <div class="stat-num">0</div>
+      <div class="stat-label">Critical Issues</div>
+      <div class="stat-note">No banned terms found</div>
+      <span class="badge badge-green" style="margin-top:8px">All clear</span>
+    </div>
+    <div class="stat-card stat-amber">
+      <div class="stat-num">7</div>
+      <div class="stat-label">Warning Categories</div>
+      <div class="stat-note">Content &amp; pre-publish flags</div>
+    </div>
+    <div class="stat-card stat-green">
+      <div class="stat-num">3</div>
+      <div class="stat-label">Pages Fully Clear</div>
+      <div class="stat-note">No content errors (CMS tasks only)</div>
+    </div>
+  </div>
+
+  <!-- PAGES FULLY CLEAR CALLOUT -->
+  <div style="background:var(--green-light);border:1px solid var(--green-border);border-radius:10px;padding:14px 18px;margin-bottom:28px;display:flex;align-items:flex-start;gap:12px;box-shadow:0 1px 3px rgba(0,0,0,.04)">
+    <div style="font-size:20px;line-height:1;margin-top:2px">✓</div>
+    <div>
+      <div style="font-size:13px;font-weight:700;color:#14532d;margin-bottom:4px">Pages with zero content errors</div>
+      <div style="font-size:13px;color:#166534">Sacramento – Lip Flip &nbsp;·&nbsp; Sacramento – Lymphatic Drainage Massage &nbsp;·&nbsp; Fair Oaks – Lip Flip</div>
+      <div style="font-size:12px;color:#15803d;margin-top:4px">These pages pass all writing, terminology, and SEO checks. Only the shared CMS placeholder tasks remain (pre-publish checklist below).</div>
+    </div>
+  </div>
+
+  <!-- WHAT'S WORKING WELL -->
+  <div class="section-heading">What's Working Well</div>
+  <div class="passes-panel">
+    <button class="passes-toggle" aria-expanded="false" onclick="togglePasses(this)">
+      <span style="font-size:16px">✓</span>
+      14 passing checks across all 12 pages — click to expand
+      <span class="toggle-icon">▾</span>
+    </button>
+    <div class="passes-body" id="passesBody">
+      <ul class="passes-list">
+        <li>Zero critical violations — no banned terms (guarantee, cure, tapestry, dramatic transformation, competitor claims) found across all 12 pages</li>
+        <li>Page structure matches reference template on all 12 pages (H1 → treatment area hub → before/after → What Is → Skinny table → Benefits → CTAs → How Does It Work → What to Expect → Candidate → FAQ → Testimonials → Patients Also Love → Featured Provider → 3 Steps → Final CTA → Ebook capture)</li>
+        <li>Dr. Rice credentials present on all pages — "double board-certified facial plastic and reconstructive surgeon," Fellow of the American Academy of Cosmetic Surgery, 25+ years, 12,000+ patients — in 2 placements per page</li>
+        <li>Dr. Rice full name on first reference — all pages use "Dr. Reginald Rice" on first use, then "Dr. Rice" after, per §3.1</li>
+        <li>Local relevance executed well — each page references correct location-specific neighborhoods (Roseville/Lincoln/Granite Bay for Rocklin; Carmichael/Citrus Heights/Rancho Cordova for Sacramento; etc.)</li>
+        <li>Correct address and phone per location on all pages</li>
+        <li>Anti-slop compliance — no instances of: utilize, leverage, robust, seamless, holistic, synergy, transformative, innovative, tapestry, testament, embark, journey, streamline, elevate, or unlock</li>
+        <li>Lip flip and lymphatic drainage pages use "non-surgical" correctly — 8 of 12 pages pass the non-invasive check</li>
+        <li>Competitor-treatment comparison sections present and well-written on all pages (2 per page)</li>
+        <li>"The Skinny on…" table present and accurately filled in on all 12 pages</li>
+        <li>BOOK NOW and SCHEDULE NOW CTAs present and linking to /book-online consistently</li>
+        <li>Meta titles and descriptions generally well-formed — 9 of 12 meta titles within 60 characters; all descriptions within 140–155 characters</li>
+        <li>No outcome guarantees — language is appropriately hedged throughout ("typically lasts," "most patients," "results vary")</li>
+        <li>"Medically supervised" language correctly used and references the clinical setting on multiple pages</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ISSUES -->
+  <div class="section-heading">Issues by Category</div>
+  <div class="issues-grid">
+
+    <!-- CAT 1: Credential Hyphenation -->
+    <div class="issue-card sev-warning">
+      <div class="issue-card-header">
+        <div class="issue-card-meta">
+          <div class="issue-cat-label">Category 1 &nbsp;·&nbsp; Style &amp; Terminology</div>
+          <div class="issue-title">Credential Hyphenation Error — "double-board-certified"</div>
+        </div>
+        <span class="badge badge-amber">WARNING</span>
+      </div>
+      <div class="issue-card-body">
+        <div class="issue-desc">
+          <p>The STYLE-SYSTEM requires <code>double board-certified</code> — a hyphen only between "board" and "certified." Two pages incorrectly add an extra hyphen between "double" and "board," producing <code>double-board-certified</code>.</p>
+        </div>
+        <div class="issue-detail-label">Affected Pages (2)</div>
+        <div class="pages-chips">
+          <span class="chip chip-amber">Rocklin – Lip Flip <span style="opacity:.65;font-size:11px">line 59</span></span>
+          <span class="chip chip-amber">Fair Oaks – Oxygen Facial <span style="opacity:.65;font-size:11px">line 56</span></span>
+        </div>
+        <div class="issue-detail-label">Exact Lines</div>
+        <div style="margin-bottom:14px;display:flex;flex-direction:column;gap:6px">
+          <div style="font-size:12px;background:#f8fafc;border:1px solid var(--border);border-radius:6px;padding:9px 12px">
+            <span style="color:var(--muted);font-size:11px">Rocklin – Lip Flip, line 59</span><br>
+            <code style="display:block;margin-top:4px;color:var(--red)">"double-board-certified facial plastic and reconstructive surgeon and a Fellow"</code>
+          </div>
+          <div style="font-size:12px;background:#f8fafc;border:1px solid var(--border);border-radius:6px;padding:9px 12px">
+            <span style="color:var(--muted);font-size:11px">Fair Oaks – Oxygen Facial, line 56</span><br>
+            <code style="display:block;margin-top:4px;color:var(--red)">"double-board-certified facial plastic and reconstructive surgeon who has treated more than 12,000 patients"</code>
+          </div>
+        </div>
+        <div class="fix-box">
+          <div class="fix-label">Fix</div>
+          <p>Remove the hyphen between "double" and "board" on both pages.<br>
+          <code>double-board-certified</code> → <code>double board-certified</code></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAT 2: Non-invasive -->
+    <div class="issue-card sev-warning">
+      <div class="issue-card-header">
+        <div class="issue-card-meta">
+          <div class="issue-cat-label">Category 2 &nbsp;·&nbsp; Terminology — §3.1</div>
+          <div class="issue-title">"Non-invasive" Instead of "Non-surgical" on All Oxygen Facial Pages</div>
+        </div>
+        <span class="badge badge-amber">WARNING</span>
+      </div>
+      <div class="issue-card-body">
+        <div class="issue-desc">
+          <p>STYLE-SYSTEM §3.1 states: <em>"Non-surgical — preferred over 'non-invasive' for injectable and energy-based treatments."</em> All 4 oxygen facial pages open their "What Is an Oxygen Facial?" section with "non-invasive" in the first sentence.</p>
+          <p>The 8 non-oxygen pages (all lip flip and all lymphatic drainage pages) correctly avoid this term and pass this check.</p>
+        </div>
+        <div class="issue-detail-label">Affected Pages (4)</div>
+        <div class="pages-chips">
+          <span class="chip chip-amber">Sacramento – Oxygen Facial</span>
+          <span class="chip chip-amber">Fair Oaks – Oxygen Facial</span>
+          <span class="chip chip-amber">El Dorado Hills – Oxygen Facial</span>
+          <span class="chip chip-amber">Rocklin – Oxygen Facial</span>
+        </div>
+        <div class="issue-detail-label">Exact Language</div>
+        <div style="margin-bottom:14px;display:flex;flex-direction:column;gap:5px">
+          <div style="font-size:12px;background:#f8fafc;border:1px solid var(--border);border-radius:6px;padding:8px 12px"><span style="color:var(--muted);font-size:11px">Sacramento &amp; El Dorado Hills:</span><br><code style="color:var(--red)">"an oxygen facial is a non-invasive skin treatment"</code></div>
+          <div style="font-size:12px;background:#f8fafc;border:1px solid var(--border);border-radius:6px;padding:8px 12px"><span style="color:var(--muted);font-size:11px">Fair Oaks &amp; Rocklin:</span><br><code style="color:var(--red)">"An oxygen facial is a non-invasive treatment"</code></div>
+        </div>
+        <div class="fix-box">
+          <div class="fix-label">Fix</div>
+          <p>Replace <code>non-invasive</code> with <code>non-surgical</code> in the opening sentence of each oxygen facial page's "What Is an Oxygen Facial?" section.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAT 3: Meta Titles -->
+    <div class="issue-card sev-warning">
+      <div class="issue-card-header">
+        <div class="issue-card-meta">
+          <div class="issue-cat-label">Category 3 &nbsp;·&nbsp; SEO — Meta Titles</div>
+          <div class="issue-title">Meta Titles Over 60 Characters (3 pages)</div>
+        </div>
+        <span class="badge badge-amber">WARNING</span>
+      </div>
+      <div class="issue-card-body">
+        <div class="issue-desc">
+          <p>Universal rules state: "Title tags: concise, primary keyword near the front, under 60 characters." Three pages are 61 characters — one character over the limit. The remaining 9 pages are within 55–58 characters.</p>
+        </div>
+        <div class="issue-detail-label">Affected Pages (3)</div>
+        <div class="pages-chips">
+          <span class="chip chip-amber">El Dorado Hills – Lip Flip</span>
+          <span class="chip chip-amber">El Dorado Hills – Lymphatic Drainage Massage</span>
+          <span class="chip chip-amber">Rocklin – Lymphatic Drainage Massage</span>
+        </div>
+        <div style="margin-bottom:14px;display:flex;flex-direction:column;gap:6px">
+          <div style="font-size:12px;background:#f8fafc;border:1px solid var(--border);border-radius:6px;padding:9px 12px">
+            <span style="color:var(--muted);font-size:11px">El Dorado Hills – Lip Flip &nbsp;<span style="color:var(--red);font-weight:700">61 chars</span></span><br>
+            <code>"Lip Flip Treatment in El Dorado Hills, CA | Esthetics Center"</code>
+          </div>
+          <div style="font-size:12px;background:#f8fafc;border:1px solid var(--border);border-radius:6px;padding:9px 12px">
+            <span style="color:var(--muted);font-size:11px">El Dorado Hills – Lymphatic &nbsp;<span style="color:var(--red);font-weight:700">61 chars</span></span><br>
+            <code>"Lymphatic Drainage Massage in El Dorado Hills, CA | Book Now"</code>
+          </div>
+          <div style="font-size:12px;background:#f8fafc;border:1px solid var(--border);border-radius:6px;padding:9px 12px">
+            <span style="color:var(--muted);font-size:11px">Rocklin – Lymphatic &nbsp;<span style="color:var(--red);font-weight:700">61 chars</span></span><br>
+            <code>"Lymphatic Drainage Massage in Rocklin, CA | Esthetics Center"</code>
+          </div>
+        </div>
+        <div class="fix-box">
+          <div class="fix-label">Suggested Fixes</div>
+          <ul>
+            <li>El Dorado Hills – Lip Flip: <code>"Lip Flip in El Dorado Hills, CA | Esthetics Center"</code> (51 chars)</li>
+            <li>El Dorado Hills – Lymphatic: Remove "in" or abbreviate — target under 60 chars while keeping city name</li>
+            <li>Rocklin – Lymphatic: <code>"Lymphatic Drainage Massage in Rocklin | Esthetics Center"</code> (57 chars — remove ", CA")</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAT 4: URL Formatting -->
+    <div class="issue-card sev-warning">
+      <div class="issue-card-header">
+        <div class="issue-card-meta">
+          <div class="issue-cat-label">Category 4 &nbsp;·&nbsp; Technical — URL Format</div>
+          <div class="issue-title">URL Formatting Error — Missing Leading Slash</div>
+        </div>
+        <span class="badge badge-amber">WARNING</span>
+      </div>
+      <div class="issue-card-body">
+        <div class="issue-desc">
+          <p>The URL field in the Rocklin – Lip Flip page header reads as an absolute URL instead of the relative path format used by all 11 other pages.</p>
+        </div>
+        <div class="issue-detail-label">Affected Page (1)</div>
+        <div class="pages-chips">
+          <span class="chip chip-amber">Rocklin – Lip Flip</span>
+        </div>
+        <div style="margin-bottom:14px;display:flex;flex-direction:column;gap:6px">
+          <div style="font-size:12px;background:#f8fafc;border:1px solid var(--border);border-radius:6px;padding:9px 12px">
+            <span style="color:var(--red);font-size:11px;font-weight:600">Incorrect (this page)</span><br>
+            <code style="color:var(--red)">estheticscenter.com/location/rocklin/lip-flip</code>
+          </div>
+          <div style="font-size:12px;background:#f8fafc;border:1px solid var(--border);border-radius:6px;padding:9px 12px">
+            <span style="color:var(--green);font-size:11px;font-weight:600">Correct (all other pages)</span><br>
+            <code style="color:var(--green)">/location/{city}/{service}</code>
+          </div>
+        </div>
+        <div class="fix-box">
+          <div class="fix-label">Fix</div>
+          <p>Add the leading slash: <code>estheticscenter.com/location/rocklin/lip-flip</code> → <code>/location/rocklin/lip-flip</code></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAT 5: Fair Oaks Location Gap -->
+    <div class="issue-card sev-info">
+      <div class="issue-card-header">
+        <div class="issue-card-meta">
+          <div class="issue-cat-label">Category 5 &nbsp;·&nbsp; Documentation Gap</div>
+          <div class="issue-title">Fair Oaks Not Listed in STYLE-SYSTEM §4 — Documentation Needs Update</div>
+        </div>
+        <span class="badge" style="background:#ede9fe;color:#5b21b6;border:1px solid #ddd6fe;">INFO</span>
+      </div>
+      <div class="issue-card-body">
+        <div class="issue-desc">
+          <p>STYLE-SYSTEM §4 states: "Three locations: Sacramento, Rocklin, El Dorado Hills. Do not imply other locations exist." However, the ClickUp task explicitly commissioned Fair Oaks as a 4th location, and all 3 Fair Oaks pages carry a real address: <strong>5442 Hazel Ave, Suite 504, Fair Oaks, CA 95628 — (279) 202-1844</strong>.</p>
+          <p>This is a documentation gap, not a content error. The Fair Oaks page content is well-written. The style guide was likely not updated when the 4th location opened.</p>
+        </div>
+        <div class="issue-detail-label">Affected Pages (3)</div>
+        <div class="pages-chips">
+          <span class="chip" style="background:#f5f3ff;color:#5b21b6;border:1px solid #ddd6fe;">Fair Oaks – Lip Flip</span>
+          <span class="chip" style="background:#f5f3ff;color:#5b21b6;border:1px solid #ddd6fe;">Fair Oaks – Oxygen Facial</span>
+          <span class="chip" style="background:#f5f3ff;color:#5b21b6;border:1px solid #ddd6fe;">Fair Oaks – Lymphatic Drainage Massage</span>
+        </div>
+        <div class="fix-box">
+          <div class="fix-label">Action Required</div>
+          <p>CSM to confirm Fair Oaks location is live, then update STYLE-SYSTEM §4 to list all 4 locations. No changes needed to the Fair Oaks page content itself.</p>
+        </div>
+        <div class="note-box"><strong>Note:</strong> This finding does not block publishing. It flags an internal documentation inconsistency only.</div>
+      </div>
+    </div>
+
+    <!-- CAT 6: Provider URL -->
+    <div class="issue-card sev-cms">
+      <div class="issue-card-header">
+        <div class="issue-card-meta">
+          <div class="issue-cat-label">Category 6 &nbsp;·&nbsp; Pre-publish — Featured Provider</div>
+          <div class="issue-title">Unfilled Featured Provider URL on All 12 Pages</div>
+        </div>
+        <span class="badge badge-blue">CMS TASK</span>
+      </div>
+      <div class="issue-card-body">
+        <div class="issue-desc">
+          <p>All 12 pages include a "Featured Provider" section with a <code>[MEET ME]</code> link. None have a real provider URL filled in. Two patterns are present across the pages:</p>
+        </div>
+        <div style="margin-bottom:14px;display:flex;flex-direction:column;gap:6px">
+          <div style="font-size:12px;background:#f8fafc;border:1px solid var(--border);border-radius:6px;padding:9px 12px">
+            <span style="color:var(--muted);font-size:11px">9 pages — anchor goes nowhere</span><br>
+            <code>[MEET ME](#) [Insert URL]</code>
+          </div>
+          <div style="font-size:12px;background:#f8fafc;border:1px solid var(--border);border-radius:6px;padding:9px 12px">
+            <span style="color:var(--muted);font-size:11px">3 pages — Sacramento Lymphatic, Fair Oaks Oxygen, Fair Oaks Lymphatic</span><br>
+            <code>[MEET ME](https://www.estheticscenter.com/team-members/providers-name)</code>
+          </div>
+        </div>
+        <div class="issue-detail-label">Affects All 12 Pages</div>
+        <div class="pages-chips">
+          <span class="chip chip-blue">All 12 pages</span>
+        </div>
+        <div class="fix-box">
+          <div class="fix-label">Fix</div>
+          <p>Web/CMS team: replace placeholder links with the actual provider profile URL before publishing. This is an implementation task, not a writing error.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAT 7: CMS Placeholders -->
+    <div class="issue-card sev-cms">
+      <div class="issue-card-header">
+        <div class="issue-card-meta">
+          <div class="issue-cat-label">Category 7 &nbsp;·&nbsp; Pre-publish — CMS Placeholders</div>
+          <div class="issue-title">7 CMS Content Placeholders Remain on All 12 Pages</div>
+        </div>
+        <span class="badge badge-blue">CMS TASK</span>
+      </div>
+      <div class="issue-card-body">
+        <div class="issue-desc">
+          <p>All 12 pages contain standard content placeholders from the page template. These are expected in a content deliverable and are not writer errors. They are listed here as a pre-publish checklist for the web/CMS team.</p>
+        </div>
+        <div class="issue-detail-label">Placeholder Items (7)</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:6px;margin-bottom:14px">
+          <div style="background:#f8fafc;border:1px solid var(--border);border-radius:6px;padding:8px 11px;font-size:12px"><code>[Treatment area link hub]</code></div>
+          <div style="background:#f8fafc;border:1px solid var(--border);border-radius:6px;padding:8px 11px;font-size:12px"><code>[Before-and-after photos]</code></div>
+          <div style="background:#f8fafc;border:1px solid var(--border);border-radius:6px;padding:8px 11px;font-size:12px"><code>[A background image here]</code></div>
+          <div style="background:#f8fafc;border:1px solid var(--border);border-radius:6px;padding:8px 11px;font-size:12px"><code>[Testimonial cards/reviews]</code></div>
+          <div style="background:#f8fafc;border:1px solid var(--border);border-radius:6px;padding:8px 11px;font-size:12px"><code>[Related treatment cards]</code></div>
+          <div style="background:#f8fafc;border:1px solid var(--border);border-radius:6px;padding:8px 11px;font-size:12px"><code>[Featured provider]</code></div>
+          <div style="background:#f8fafc;border:1px solid var(--border);border-radius:6px;padding:8px 11px;font-size:12px"><code>[Email capture form]</code></div>
+        </div>
+        <div class="issue-detail-label">Affects All 12 Pages</div>
+        <div class="pages-chips">
+          <span class="chip chip-blue">All 12 pages</span>
+        </div>
+        <div class="fix-box">
+          <div class="fix-label">Action</div>
+          <p>Web/CMS team resolves all 7 items before go-live. See the CMS Pre-publish Checklist section below for a trackable task list.</p>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /issues-grid -->
+
+  <!-- PER-PAGE MATRIX -->
+  <div class="section-heading">Per-Page Issue Matrix</div>
+  <div class="matrix-wrap">
+    <div class="matrix-scroll">
+      <table class="matrix-table">
+        <thead>
+          <tr>
+            <th>Page</th>
+            <th>URL</th>
+            <th title="Category 1: Credential hyphenation error">Cred. Hyphen</th>
+            <th title="Category 2: Non-invasive vs non-surgical">Non-invasive</th>
+            <th title="Category 3: Meta title over 60 characters">Meta Title</th>
+            <th title="Category 4: URL formatting error">URL Error</th>
+            <th title="Category 5: Fair Oaks not in style guide">FO Gap</th>
+            <th title="Category 6: Provider URL placeholder">Provider URL</th>
+            <th title="Category 7: CMS placeholders">CMS Tasks</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rocklin -->
+          <tr class="group-header"><td colspan="9">Rocklin</td></tr>
+          <tr>
+            <td class="col-page">Rocklin – Lip Flip</td>
+            <td class="col-url">/location/rocklin/lip-flip</td>
+            <td class="cell-fail" title="Extra hyphen: double-board-certified">❌</td>
+            <td class="cell-pass" title="Pass">✅</td>
+            <td class="cell-pass" title="Pass">✅</td>
+            <td class="cell-fail" title="Missing leading slash">❌</td>
+            <td class="cell-na">—</td>
+            <td class="cell-warn" title="Placeholder link">⚠️</td>
+            <td class="cell-warn" title="CMS placeholders pending">⚠️</td>
+          </tr>
+          <tr>
+            <td class="col-page">Rocklin – Oxygen Facial</td>
+            <td class="col-url">/location/rocklin/oxygen-facial</td>
+            <td class="cell-pass">✅</td>
+            <td class="cell-fail" title="Uses non-invasive instead of non-surgical">❌</td>
+            <td class="cell-pass">✅</td>
+            <td class="cell-na">—</td>
+            <td class="cell-na">—</td>
+            <td class="cell-warn">⚠️</td>
+            <td class="cell-warn">⚠️</td>
+          </tr>
+          <tr>
+            <td class="col-page">Rocklin – Lymphatic Massage</td>
+            <td class="col-url">/location/rocklin/lymphatic-drainage-massage</td>
+            <td class="cell-pass">✅</td>
+            <td class="cell-pass">✅</td>
+            <td class="cell-fail" title="61 characters — 1 over limit">❌</td>
+            <td class="cell-na">—</td>
+            <td class="cell-na">—</td>
+            <td class="cell-warn">⚠️</td>
+            <td class="cell-warn">⚠️</td>
+          </tr>
+          <!-- Sacramento -->
+          <tr class="group-header"><td colspan="9">Sacramento</td></tr>
+          <tr>
+            <td class="col-page">Sacramento – Lip Flip</td>
+            <td class="col-url">/location/sacramento/lip-flip</td>
+            <td class="cell-pass">✅</td>
+            <td class="cell-pass">✅</td>
+            <td class="cell-pass">✅</td>
+            <td class="cell-na">—</td>
+            <td class="cell-na">—</td>
+            <td class="cell-warn">⚠️</td>
+            <td class="cell-warn">⚠️</td>
+          </tr>
+          <tr>
+            <td class="col-page">Sacramento – Oxygen Facial</td>
+            <td class="col-url">/location/sacramento/oxygen-facial</td>
+            <td class="cell-pass">✅</td>
+            <td class="cell-fail" title="Uses non-invasive instead of non-surgical">❌</td>
+            <td class="cell-pass">✅</td>
+            <td class="cell-na">—</td>
+            <td class="cell-na">—</td>
+            <td class="cell-warn">⚠️</td>
+            <td class="cell-warn">⚠️</td>
+          </tr>
+          <tr>
+            <td class="col-page">Sacramento – Lymphatic Massage</td>
+            <td class="col-url">/location/sacramento/lymphatic-drainage-massage</td>
+            <td class="cell-pass">✅</td>
+            <td class="cell-pass">✅</td>
+            <td class="cell-pass">✅</td>
+            <td class="cell-na">—</td>
+            <td class="cell-na">—</td>
+            <td class="cell-warn">⚠️</td>
+            <td class="cell-warn">⚠️</td>
+          </tr>
+          <!-- Fair Oaks -->
+          <tr class="group-header"><td colspan="9">Fair Oaks</td></tr>
+          <tr>
+            <td class="col-page">Fair Oaks – Lip Flip</td>
+            <td class="col-url">/location/fair-oaks/lip-flip</td>
+            <td class="cell-pass">✅</td>
+            <td class="cell-pass">✅</td>
+            <td class="cell-pass">✅</td>
+            <td class="cell-na">—</td>
+            <td class="cell-warn" title="Fair Oaks not in STYLE-SYSTEM §4">⚠️</td>
+            <td class="cell-warn">⚠️</td>
+            <td class="cell-warn">⚠️</td>
+          </tr>
+          <tr>
+            <td class="col-page">Fair Oaks – Oxygen Facial</td>
+            <td class="col-url">/location/fair-oaks/oxygen-facial</td>
+            <td class="cell-fail" title="Extra hyphen: double-board-certified">❌</td>
+            <td class="cell-fail" title="Uses non-invasive instead of non-surgical">❌</td>
+            <td class="cell-pass">✅</td>
+            <td class="cell-na">—</td>
+            <td class="cell-warn">⚠️</td>
+            <td class="cell-warn">⚠️</td>
+            <td class="cell-warn">⚠️</td>
+          </tr>
+          <tr>
+            <td class="col-page">Fair Oaks – Lymphatic Massage</td>
+            <td class="col-url">/location/fair-oaks/lymphatic-drainage-massage</td>
+            <td class="cell-pass">✅</td>
+            <td class="cell-pass">✅</td>
+            <td class="cell-pass">✅</td>
+            <td class="cell-na">—</td>
+            <td class="cell-warn">⚠️</td>
+            <td class="cell-warn">⚠️</td>
+            <td class="cell-warn">⚠️</td>
+          </tr>
+          <!-- El Dorado Hills -->
+          <tr class="group-header"><td colspan="9">El Dorado Hills</td></tr>
+          <tr>
+            <td class="col-page">El Dorado Hills – Lip Flip</td>
+            <td class="col-url">/location/el-dorado-hills/lip-flip</td>
+            <td class="cell-pass">✅</td>
+            <td class="cell-pass">✅</td>
+            <td class="cell-fail" title="61 characters — 1 over limit">❌</td>
+            <td class="cell-na">—</td>
+            <td class="cell-na">—</td>
+            <td class="cell-warn">⚠️</td>
+            <td class="cell-warn">⚠️</td>
+          </tr>
+          <tr>
+            <td class="col-page">El Dorado Hills – Oxygen Facial</td>
+            <td class="col-url">/location/el-dorado-hills/oxygen-facial</td>
+            <td class="cell-pass">✅</td>
+            <td class="cell-fail" title="Uses non-invasive instead of non-surgical">❌</td>
+            <td class="cell-pass">✅</td>
+            <td class="cell-na">—</td>
+            <td class="cell-na">—</td>
+            <td class="cell-warn">⚠️</td>
+            <td class="cell-warn">⚠️</td>
+          </tr>
+          <tr>
+            <td class="col-page">El Dorado Hills – Lymphatic Massage</td>
+            <td class="col-url">/location/el-dorado-hills/lymphatic-drainage-massage</td>
+            <td class="cell-pass">✅</td>
+            <td class="cell-pass">✅</td>
+            <td class="cell-fail" title="61 characters — 1 over limit">❌</td>
+            <td class="cell-na">—</td>
+            <td class="cell-na">—</td>
+            <td class="cell-warn">⚠️</td>
+            <td class="cell-warn">⚠️</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="legend-row">
+      <span class="legend-item"><span style="font-size:15px">✅</span> Pass</span>
+      <span class="legend-item"><span style="font-size:15px">❌</span> Needs fix</span>
+      <span class="legend-item"><span style="font-size:15px">⚠️</span> Action required</span>
+      <span class="legend-item" style="color:#d1d5db;font-size:15px">— Not applicable</span>
+    </div>
+  </div>
+
+  <!-- CMS PRE-PUBLISH CHECKLIST -->
+  <div class="section-heading">CMS Pre-publish Checklist</div>
+  <div class="checklist-panel">
+    <div class="checklist-header">
+      <div>
+        <h2>Pre-publish Tasks — Web / CMS Team</h2>
+        <p>Applies to all 12 pages. Check items off as they are completed.</p>
+      </div>
+      <span class="badge badge-blue" id="checklistProgress">0 / 8 done</span>
+    </div>
+    <div class="checklist-body">
+      <div class="checklist-grid">
+
+        <div class="checklist-group">
+          <h3>Content Placeholders (template)</h3>
+          <ul class="checklist-items" id="checklistA">
+            <li>
+              <span class="check-box" onclick="toggleCheck(this)" title="Click to mark complete"></span>
+              <div>
+                <div class="check-label-text">Replace <code>[Treatment area link hub]</code></div>
+                <div class="check-sub">Add live internal links to related treatment pages</div>
+              </div>
+            </li>
+            <li>
+              <span class="check-box" onclick="toggleCheck(this)" title="Click to mark complete"></span>
+              <div>
+                <div class="check-label-text">Replace <code>[Before-and-after photos]</code></div>
+                <div class="check-sub">Upload approved patient photography with consent documentation</div>
+              </div>
+            </li>
+            <li>
+              <span class="check-box" onclick="toggleCheck(this)" title="Click to mark complete"></span>
+              <div>
+                <div class="check-label-text">Replace <code>[A background image here]</code></div>
+                <div class="check-sub">"Want a Second Opinion?" section — add approved hero image</div>
+              </div>
+            </li>
+            <li>
+              <span class="check-box" onclick="toggleCheck(this)" title="Click to mark complete"></span>
+              <div>
+                <div class="check-label-text">Replace <code>[Testimonial cards/reviews]</code></div>
+                <div class="check-sub">Populate with verified patient reviews per location and service</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="checklist-group">
+          <h3>Dynamic / CMS Components</h3>
+          <ul class="checklist-items" id="checklistB">
+            <li>
+              <span class="check-box" onclick="toggleCheck(this)" title="Click to mark complete"></span>
+              <div>
+                <div class="check-label-text">Replace <code>[Related treatment cards]</code></div>
+                <div class="check-sub">Connect to CMS-driven related services widget</div>
+              </div>
+            </li>
+            <li>
+              <span class="check-box" onclick="toggleCheck(this)" title="Click to mark complete"></span>
+              <div>
+                <div class="check-label-text">Replace <code>[Featured provider]</code> component</div>
+                <div class="check-sub">Connect to provider profile data; assign correct provider per location</div>
+              </div>
+            </li>
+            <li>
+              <span class="check-box" onclick="toggleCheck(this)" title="Click to mark complete"></span>
+              <div>
+                <div class="check-label-text">Fill in all <code>[MEET ME]</code> provider URLs</div>
+                <div class="check-sub">9 pages: replace <code>(#) [Insert URL]</code> · 3 pages: replace <code>/team-members/providers-name</code> placeholder with real slug</div>
+              </div>
+            </li>
+            <li>
+              <span class="check-box" onclick="toggleCheck(this)" title="Click to mark complete"></span>
+              <div>
+                <div class="check-label-text">Replace <code>[Email capture form]</code></div>
+                <div class="check-sub">Embed CRM-connected form; confirm confirmation email is configured</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="checklist-note">
+        <strong>Note:</strong> These are implementation tasks only — they do not affect the content quality score. The 3 pages flagged as "Fully Clear" (Sacramento – Lip Flip, Sacramento – Lymphatic Massage, Fair Oaks – Lip Flip) are ready to publish as soon as these CMS tasks are complete and the writing fixes in Categories 1–4 are confirmed not applicable to them.
+      </div>
+    </div>
+  </div>
+
+  <!-- ISSUE COUNTS BY PAGE TYPE -->
+  <div class="section-heading">Breakdown by Service Type</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-bottom:28px">
+
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px;box-shadow:0 1px 3px rgba(0,0,0,.05)">
+      <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:10px">Lip Flip (4 pages)</div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px">
+          <span>Credential hyphen errors</span><span class="badge badge-amber" style="font-size:11px">1 page</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px">
+          <span>Non-invasive usage</span><span class="badge badge-green" style="font-size:11px">0 pages ✓</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px">
+          <span>Meta title over 60 chars</span><span class="badge badge-amber" style="font-size:11px">1 page</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px">
+          <span>URL format error</span><span class="badge badge-amber" style="font-size:11px">1 page</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px;box-shadow:0 1px 3px rgba(0,0,0,.05)">
+      <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:10px">Oxygen Facial (4 pages)</div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px">
+          <span>Credential hyphen errors</span><span class="badge badge-amber" style="font-size:11px">1 page</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px">
+          <span>Non-invasive usage</span><span class="badge badge-amber" style="font-size:11px">4 pages — all</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px">
+          <span>Meta title over 60 chars</span><span class="badge badge-green" style="font-size:11px">0 pages ✓</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px">
+          <span>URL format error</span><span class="badge badge-green" style="font-size:11px">0 pages ✓</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px;box-shadow:0 1px 3px rgba(0,0,0,.05)">
+      <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:10px">Lymphatic Drainage Massage (4 pages)</div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px">
+          <span>Credential hyphen errors</span><span class="badge badge-green" style="font-size:11px">0 pages ✓</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px">
+          <span>Non-invasive usage</span><span class="badge badge-green" style="font-size:11px">0 pages ✓</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px">
+          <span>Meta title over 60 chars</span><span class="badge badge-amber" style="font-size:11px">2 pages</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px">
+          <span>URL format error</span><span class="badge badge-green" style="font-size:11px">0 pages ✓</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  Esthetics Center — Location Pages Content Audit &nbsp;·&nbsp; 12 pages &nbsp;·&nbsp; June 2026 &nbsp;·&nbsp; LinkGraph Content Ops
+</footer>
+
+<script>
+function togglePasses(btn) {
+  var body = document.getElementById('passesBody');
+  var expanded = btn.getAttribute('aria-expanded') === 'true';
+  btn.setAttribute('aria-expanded', !expanded);
+  body.classList.toggle('open', !expanded);
+}
+
+var totalChecks = 8;
+
+function updateProgress() {
+  var checked = document.querySelectorAll('.check-box.checked').length;
+  document.getElementById('checklistProgress').textContent = checked + ' / ' + totalChecks + ' done';
+  if (checked === totalChecks) {
+    document.getElementById('checklistProgress').className = 'badge badge-green';
+  } else if (checked > 0) {
+    document.getElementById('checklistProgress').className = 'badge badge-amber';
+  } else {
+    document.getElementById('checklistProgress').className = 'badge badge-blue';
+  }
+}
+
+function toggleCheck(el) {
+  el.classList.toggle('checked');
+  if (el.classList.contains('checked')) {
+    el.innerHTML = '✓';
+    el.parentElement.querySelector('.check-label-text').style.textDecoration = 'line-through';
+    el.parentElement.querySelector('.check-label-text').style.color = '#9ca3af';
+  } else {
+    el.innerHTML = '';
+    el.parentElement.querySelector('.check-label-text').style.textDecoration = '';
+    el.parentElement.querySelector('.check-label-text').style.color = '';
+  }
+  updateProgress();
+}
+</script>
+</body>
+</html>

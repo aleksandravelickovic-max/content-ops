@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Content Review — zellige Kitchen Backsplash Article — Zia Tile</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; background: #f8f8f6; color: #1a1a1a; font-size: 14px; line-height: 1.6; }
+a { color: #2563eb; }
+.header { background: #fff; border-bottom: 2px solid #e2e2dc; padding: 28px 40px 24px; }
+.header-inner { max-width: 1100px; margin: 0 auto; }
+.header-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+.header h1 { font-size: 22px; font-weight: 700; color: #111; }
+.header .meta { font-size: 12px; color: #888; margin-top: 4px; }
+.header .meta span { margin-right: 16px; }
+.header-badge { display: flex; gap: 8px; flex-wrap: wrap; align-items: flex-start; margin-top: 4px; }
+.container { max-width: 1100px; margin: 0 auto; padding: 32px 40px 80px; }
+.metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 32px; }
+.metric-card { background: #fff; border: 1px solid #e2e2dc; border-radius: 8px; padding: 20px; }
+.metric-card .label { font-size: 11px; font-weight: 600; color: #888; text-transform: uppercase; letter-spacing: .07em; margin-bottom: 6px; }
+.metric-card .value { font-size: 32px; font-weight: 700; line-height: 1.1; }
+.metric-card .value.red { color: #dc2626; }
+.metric-card .value.amber { color: #d97706; }
+.metric-card .value.blue { color: #2563eb; }
+.metric-card .value.green { color: #16a34a; }
+.metric-card .note { font-size: 12px; color: #888; margin-top: 4px; }
+.section { background: #fff; border: 1px solid #e2e2dc; border-radius: 8px; margin-bottom: 24px; overflow: hidden; }
+.section-header { background: #f4f4f1; padding: 14px 20px; border-bottom: 1px solid #e2e2dc; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.section-header h2 { font-size: 15px; font-weight: 700; color: #111; }
+.section-body { padding: 20px; }
+.badge { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 9px; border-radius: 4px; white-space: nowrap; }
+.badge-red { background: #fee2e2; color: #b91c1c; }
+.badge-amber { background: #fef3c7; color: #92400e; }
+.badge-blue { background: #dbeafe; color: #1d4ed8; }
+.badge-green { background: #dcfce7; color: #15803d; }
+.badge-grey { background: #f1f5f9; color: #475569; }
+.pass-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.pass-item { display: flex; align-items: flex-start; gap: 10px; padding: 10px 14px; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 6px; }
+.pass-icon { font-size: 14px; flex-shrink: 0; margin-top: 1px; }
+.pass-body { font-size: 13px; color: #1a1a1a; line-height: 1.5; }
+.pass-body strong { color: #15803d; }
+.issue-item { padding: 14px 16px; border-left: 4px solid #ccc; margin-bottom: 12px; background: #fafaf8; border-radius: 0 6px 6px 0; }
+.issue-item:last-child { margin-bottom: 0; }
+.issue-item.critical { border-left-color: #dc2626; background: #fff5f5; }
+.issue-item.significant { border-left-color: #d97706; background: #fffbeb; }
+.issue-item.minor { border-left-color: #3b82f6; background: #eff6ff; }
+.issue-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+.issue-title { font-size: 13px; font-weight: 700; color: #111; }
+.issue-rule { font-size: 11px; color: #888; background: #f1f5f9; padding: 1px 7px; border-radius: 3px; font-family: monospace; }
+.issue-body { font-size: 13px; color: #333; line-height: 1.6; }
+.issue-body p { margin-bottom: 6px; }
+.issue-body p:last-child { margin-bottom: 0; }
+.line-flag { font-family: monospace; font-size: 12px; background: #f1f1ef; padding: 6px 10px; border-radius: 4px; margin: 6px 0; display: block; color: #444; border-left: 2px solid #ccc; }
+.line-fix { font-family: monospace; font-size: 12px; background: #f0fdf4; padding: 6px 10px; border-radius: 4px; margin: 6px 0; display: block; color: #166534; border-left: 2px solid #86efac; }
+.summary-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.summary-table th { background: #f4f4f1; text-align: left; padding: 9px 12px; border-bottom: 2px solid #ddd; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: #666; }
+.summary-table td { padding: 9px 12px; border-bottom: 1px solid #eee; vertical-align: top; }
+.summary-table tr:last-child td { border-bottom: none; }
+.summary-table tr:hover td { background: #fafaf8; }
+.sev-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+.dot-red { background: #dc2626; }
+.dot-amber { background: #d97706; }
+.dot-blue { background: #3b82f6; }
+.section-divider { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: #888; padding: 16px 0 8px; border-top: 1px solid #eee; margin-top: 20px; }
+.section-divider:first-child { border-top: none; margin-top: 0; padding-top: 0; }
+@media (max-width: 768px) {
+  .container, .header-inner { padding-left: 20px; padding-right: 20px; }
+  .metrics { grid-template-columns: repeat(2, 1fr); }
+  .pass-grid { grid-template-columns: 1fr; }
+  .header-top { flex-direction: column; }
+}
+@media print {
+  body { background: white; font-size: 12px; }
+  .container { padding: 24px; }
+  .section { break-inside: avoid; }
+  .issue-item { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <div class="header-top">
+      <div>
+        <h1>Content Review — zellige Kitchen Backsplash Article</h1>
+        <div class="meta">
+          <span>Client: Zia Tile</span>
+          <span>File: zia_article_for_aleksandra_clean_2026-06-03.html</span>
+          <span>Reviewed: 2026-06-04</span>
+        </div>
+      </div>
+      <div class="header-badge">
+        <span class="badge badge-red">5 Critical</span>
+        <span class="badge badge-amber">6 Significant</span>
+        <span class="badge badge-blue">3 Minor</span>
+        <span class="badge badge-green">18 Passing</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- Metrics -->
+  <div class="metrics">
+    <div class="metric-card">
+      <div class="label">Critical Issues</div>
+      <div class="value red">5</div>
+      <div class="note">Fix before any delivery</div>
+    </div>
+    <div class="metric-card">
+      <div class="label">Significant Issues</div>
+      <div class="value amber">6</div>
+      <div class="note">Fix before sign-off</div>
+    </div>
+    <div class="metric-card">
+      <div class="label">Minor / Register</div>
+      <div class="value blue">3</div>
+      <div class="note">Flag for writer awareness</div>
+    </div>
+    <div class="metric-card">
+      <div class="label">Passing Checks</div>
+      <div class="value green">18</div>
+      <div class="note">Terminology &amp; tech accuracy solid</div>
+    </div>
+  </div>
+
+  <!-- Summary -->
+  <div class="section">
+    <div class="section-header">
+      <h2>Overview</h2>
+    </div>
+    <div class="section-body">
+      <p style="font-size:14px; line-height:1.7; color:#333; max-width:800px;">
+        The piece is technically well-grounded. Terminology compliance is strong — zellige lowercase throughout, the required "handcrafted Moroccan art form" framing is in the opening, chips/pits/crazing are handled correctly as a trio, and the verified production narrative is intact with no invented steps. Contact info, sample policy, freeze/thaw rule, and 2x6 bejmat designation are all correct.
+      </p>
+      <p style="font-size:14px; line-height:1.7; color:#333; max-width:800px; margin-top:12px;">
+        The five critical issues are specific and fixable: a missing overage figure, one confirmed Jamie word swap ("reliably" → "well"), a semicolon-for-em-dash punctuation error, an unnamed attribution flag, and unverified phone extensions in the contact block. The significant issues are structural — incomplete sealing guidance, a repeated sample recommendation across sections, and an out-of-place Cotto Allende reference. The register is competent but clinical; the Zia editorial voice comes through in isolated lines but doesn't hold across the full piece.
+      </p>
+    </div>
+  </div>
+
+  <!-- What's Working -->
+  <div class="section">
+    <div class="section-header">
+      <h2>Passing Checks</h2>
+      <span class="badge badge-green">18 items</span>
+    </div>
+    <div class="section-body">
+      <div class="pass-grid">
+        <div class="pass-item">
+          <div class="pass-icon">✓</div>
+          <div class="pass-body"><strong>zellige lowercase</strong> — consistent in body copy, all section headers, and the meta title. No capitalization errors.</div>
+        </div>
+        <div class="pass-item">
+          <div class="pass-icon">✓</div>
+          <div class="pass-body"><strong>"Handcrafted Moroccan art form"</strong> — required framing present in the opening paragraph. Correctly placed, not buried.</div>
+        </div>
+        <div class="pass-item">
+          <div class="pass-icon">✓</div>
+          <div class="pass-body"><strong>Chips, pits, and crazing as a trio</strong> — used consistently throughout, framed as intentional characteristics, never as defects or flaws.</div>
+        </div>
+        <div class="pass-item">
+          <div class="pass-icon">✓</div>
+          <div class="pass-body"><strong>Verified production narrative</strong> — "hand-pressing, sun drying, hand-shaping, glaze dipping, and kiln-firing in earthen kilns." No invented steps, no "chiseling."</div>
+        </div>
+        <div class="pass-item">
+          <div class="pass-icon">✓</div>
+          <div class="pass-body"><strong>Freeze/thaw rule correct</strong> — "not suitable for outdoor installations in freeze/thaw climates" stated plainly and affirmatively.</div>
+        </div>
+        <div class="pass-item">
+          <div class="pass-icon">✓</div>
+          <div class="pass-body"><strong>2x6 bejmat designation</strong> — correct format (not "6x2"). Used in both narrative and bullet list.</div>
+        </div>
+        <div class="pass-item">
+          <div class="pass-icon">✓</div>
+          <div class="pass-body"><strong>Contact info complete</strong> — email and phone appear together in multiple sections, meeting the joint-presence requirement.</div>
+        </div>
+        <div class="pass-item">
+          <div class="pass-icon">✓</div>
+          <div class="pass-body"><strong>Sample policy with trade qualifier</strong> — "five complimentary samples" for trade members; "$3 each" for non-trade. Correctly differentiated throughout.</div>
+        </div>
+        <div class="pass-item">
+          <div class="pass-icon">✓</div>
+          <div class="pass-body"><strong>Grout as visual outcomes</strong> — color-matching vs. contrasting described in terms of spatial reading. No specific color names prescribed.</div>
+        </div>
+        <div class="pass-item">
+          <div class="pass-icon">✓</div>
+          <div class="pass-body"><strong>No second person</strong> — "you/your" absent throughout. Third person held consistently from start to finish.</div>
+        </div>
+        <div class="pass-item">
+          <div class="pass-icon">✓</div>
+          <div class="pass-body"><strong>"Inherent" variation framing</strong> — "inherent tonal variation," "inherent surface variation," "inherent to the earthen-kiln process." Never "normal" or "to be expected."</div>
+        </div>
+        <div class="pass-item">
+          <div class="pass-icon">✓</div>
+          <div class="pass-body"><strong>No banned terms detected</strong> — no luxury, sophisticated, charming, defects, products, laid, sources, trim pieces, grout spacing, or other flagged terms.</div>
+        </div>
+        <div class="pass-item">
+          <div class="pass-icon">✓</div>
+          <div class="pass-body"><strong>No SEO question headings</strong> — all H2/H3 headings are declarative. No "What makes zellige right for…" patterns.</div>
+        </div>
+        <div class="pass-item">
+          <div class="pass-icon">✓</div>
+          <div class="pass-body"><strong>Production run ordering note present</strong> — "color batch consistency across separate orders cannot be guaranteed" + order-in-full recommendation. Meets §15.2.</div>
+        </div>
+        <div class="pass-item">
+          <div class="pass-icon">✓</div>
+          <div class="pass-body"><strong>No unverified colorway names</strong> — uses range descriptions (whites, earthy mid-tones, saturated colors) rather than naming specific colorways. No "Aegean," no "Absinthe."</div>
+        </div>
+        <div class="pass-item">
+          <div class="pass-icon">✓</div>
+          <div class="pass-body"><strong>Positive framing throughout</strong> — glaze layer described for what it provides, not what it protects against. No defensive language.</div>
+        </div>
+        <div class="pass-item">
+          <div class="pass-icon">✓</div>
+          <div class="pass-body"><strong>Number ranges written out</strong> — "55 to 60 percent," "15 to 20 percent." Correct form per Rule 2.12. No en-dashes in number ranges.</div>
+        </div>
+        <div class="pass-item">
+          <div class="pass-icon">✓</div>
+          <div class="pass-body"><strong>55–60% trade revenue figure</strong> — uses the confirmed figure from the style system. Not invented or approximated.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Critical Issues -->
+  <div class="section">
+    <div class="section-header">
+      <h2>Issues to Fix</h2>
+      <span class="badge badge-red">5 Critical</span>
+      <span class="badge badge-amber">6 Significant</span>
+      <span class="badge badge-blue">3 Minor</span>
+    </div>
+    <div class="section-body">
+
+      <div class="section-divider">Critical — fix before delivery</div>
+
+      <div class="issue-item critical">
+        <div class="issue-header">
+          <span class="issue-title">Overage recommendation entirely absent</span>
+          <span class="issue-rule">§4.9 / §15.2 overage pattern</span>
+        </div>
+        <div class="issue-body">
+          <p>The piece has multiple sections covering ordering, production runs, and total square footage — but never gives an overage figure. This is a required element wherever ordering guidance appears. Jamie's consistent pattern across Blogs #2, #5, and #6 is:</p>
+          <code class="line-fix">a minimum overage of 15%... up to 25% for a more uniform result</code>
+          <p>Add this to the ordering/color batch section where total square footage is discussed. Both figures need context: 15% standard; 25% for the most consistent result across the installation.</p>
+        </div>
+      </div>
+
+      <div class="issue-item critical">
+        <div class="issue-header">
+          <span class="issue-title">"performs reliably" → "performs well"</span>
+          <span class="issue-rule">§15.1 Blog #6 Jamie edit</span>
+        </div>
+        <div class="issue-body">
+          <p>Current line:</p>
+          <code class="line-flag">Glazed zellige performs reliably as a kitchen backsplash material.</code>
+          <p>Jamie changed "reliably" to "well" in her Blog #6 edits. This is a confirmed terminology correction, not a style preference. One word swap.</p>
+          <code class="line-fix">Glazed zellige performs well as a kitchen backsplash material.</code>
+        </div>
+      </div>
+
+      <div class="issue-item critical">
+        <div class="issue-header">
+          <span class="issue-title">Semicolons used as parenthetical separator — must be em-dashes</span>
+          <span class="issue-rule">Rule 2.11</span>
+        </div>
+        <div class="issue-body">
+          <p>Current line in the "Grout and surface care" section:</p>
+          <code class="line-flag">allowing chips, pits, and crazing; the inherent surface characteristics of hand-fired zellige; to register as texture rather than interruption.</code>
+          <p>Rule 2.11 is explicit: parenthetical insertions use em-dashes, not semicolons.</p>
+          <code class="line-fix">allowing chips, pits, and crazing — the inherent surface characteristics of hand-fired zellige — to register as texture rather than interruption.</code>
+        </div>
+      </div>
+
+      <div class="issue-item critical">
+        <div class="issue-header">
+          <span class="issue-title">"Design commentary has noted…" — unnamed attribution</span>
+          <span class="issue-rule">Rule 2.8</span>
+        </div>
+        <div class="issue-body">
+          <p>Current line in the "Format and scale" section:</p>
+          <code class="line-flag">Design commentary has noted that the square format can read as period-specific when set in a conventional grid.</code>
+          <p>Rule 2.8: never use unnamed groups making a claim ("Some say," "experts agree," "design commentary has noted"). Make the claim direct or cut it.</p>
+          <code class="line-fix">The 4x4 square can read as period-specific in a conventional grid — a consideration specifiers should weigh against the project's intended aesthetic register.</code>
+        </div>
+      </div>
+
+      <div class="issue-item critical">
+        <div class="issue-header">
+          <span class="issue-title">Phone extensions are unverified</span>
+          <span class="issue-rule">§4.8 / Part 14 no-invention rule</span>
+        </div>
+        <div class="issue-body">
+          <p>The piece includes:</p>
+          <code class="line-flag">310-844-1170, Ext. 1 for general questions; Ext. 2 for Trade Program support</code>
+          <p>The approved contact block specifies info@ziatile.com and 310-844-1170 only. Extensions do not appear in any approved source. Either get client confirmation on the extensions or revert to the standard contact block without them. The line appears once in the "Reaching the specification team" section and references the same number again below — both need to be consistent.</p>
+        </div>
+      </div>
+
+      <div class="section-divider">Significant — fix before sign-off</div>
+
+      <div class="issue-item significant">
+        <div class="issue-header">
+          <span class="issue-title">Sample recommendation repeated three to four times</span>
+          <span class="issue-rule">§6.3 no information repetition</span>
+        </div>
+        <div class="issue-body">
+          <p>The piece states that reviewing physical samples is "the most reliable method" in nearly identical language across the color batch section, the grout strategy section, and again in the Trade Program section. §6.3 is explicit: do not repeat the same information in different words across sections. Keep the strongest single instance — the one in the grout strategy section where it's most contextually earned — and reduce all others to a light reference or cut them.</p>
+        </div>
+      </div>
+
+      <div class="issue-item significant">
+        <div class="issue-header">
+          <span class="issue-title">Installer experience note too implicit</span>
+          <span class="issue-rule">§15.2 zellige installation requirement</span>
+        </div>
+        <div class="issue-body">
+          <p>The piece touches on this with "the handmade format does not conform to the tolerances of machine-cut tile" — but §15.2 and the zellige material guard require a direct, explicit statement in the installation section:</p>
+          <code class="line-fix">zellige requires an installer with specific experience in handmade Moroccan tile.</code>
+          <p>The current framing implies the requirement without stating it. State it plainly.</p>
+        </div>
+      </div>
+
+      <div class="issue-item significant">
+        <div class="issue-header">
+          <span class="issue-title">Sealing guidance covers grout joints only — incomplete</span>
+          <span class="issue-rule">§4.3 sealing rules</span>
+        </div>
+        <div class="issue-body">
+          <p>The maintenance section currently says:</p>
+          <code class="line-flag">Sealing the grout joints during installation protects against staining over time.</code>
+          <p>This only covers grout joints. Per §4.3, sealing applies to all applications including dry spaces, must be stated inline, and should direct to the Installation Guide. Required framing:</p>
+          <code class="line-fix">Always seal zellige according to our installation instructions, whether in dry spaces or in areas exposed to moisture.</code>
+          <p>Also verify the zellige installation guide link is present in the live HTML — §9.11 requires it to be hyperlinked wherever referenced.</p>
+        </div>
+      </div>
+
+      <div class="issue-item significant">
+        <div class="issue-header">
+          <span class="issue-title">Cotto Allende mentioned out of context</span>
+          <span class="issue-rule">Material specificity</span>
+        </div>
+        <div class="issue-body">
+          <p>In the "Application scope and climate suitability" section:</p>
+          <code class="line-flag">Cotto Allende and glazed zellige are not suitable for outdoor freeze/thaw conditions…</code>
+          <p>This is a zellige article. Cotto Allende has no reason to appear here. State the zellige freeze/thaw rule on its own. Bringing Cotto Allende in introduces material confusion for a reader focused on zellige specification.</p>
+        </div>
+      </div>
+
+      <div class="issue-item significant">
+        <div class="issue-header">
+          <span class="issue-title">"Bell Gardens warehouse" — inconsistent naming, potentially unverified</span>
+          <span class="issue-rule">Part 14 no-invention rule</span>
+        </div>
+        <div class="issue-body">
+          <p>The ordering section says "LA-area warehouse" and the delivery section says "Bell Gardens warehouse in the LA metro." These are inconsistent. More importantly, "Bell Gardens" as a specific facility name doesn't appear in any approved source. If the client has confirmed that location, use it consistently throughout. If not, revert to "LA-area warehouse" in both places.</p>
+        </div>
+      </div>
+
+      <div class="issue-item significant">
+        <div class="issue-header">
+          <span class="issue-title">Installation Guide reference — verify hyperlink is present</span>
+          <span class="issue-rule">§9.11</span>
+        </div>
+        <div class="issue-body">
+          <p>The installation section references a "zellige installation guide" developed for the collection. Per §9.11, every reference to the zellige Installation Guide must be hyperlinked. Verify the link is present in the live HTML. A text reference without a link is incomplete.</p>
+        </div>
+      </div>
+
+      <div class="section-divider">Minor — register and editorial</div>
+
+      <div class="issue-item minor">
+        <div class="issue-header">
+          <span class="issue-title">H1 title reads as SEO, not editorial</span>
+          <span class="issue-rule">§1.1 AD benchmark</span>
+        </div>
+        <div class="issue-body">
+          <p>"How to Choose zellige Tile for a Kitchen Backsplash" is functional but sits at the WikiHow end of the register spectrum. The AD benchmark would be closer to "zellige in the Kitchen" or "Specifying zellige: Kitchen Backsplash" — something with compression and intent. Not a compliance violation; flag for the writer to reconsider.</p>
+        </div>
+      </div>
+
+      <div class="issue-item minor">
+        <div class="issue-header">
+          <span class="issue-title">Section headers are entirely spec-document style</span>
+          <span class="issue-rule">§1.1 AD benchmark / brand voice</span>
+        </div>
+        <div class="issue-body">
+          <p>Every header is functional prose: "Color batch variation and ordering practice," "Application scope and climate suitability," "Format and scale decisions for backsplash specification." None approach the compression and punch of the Zia header register (HANDS. HEAT. HISTORY. / POUR. PRESS. PATINA.). For a blog post the full ALL-CAPS compression isn't expected, but shorter and more pointed headers would lift the register considerably.</p>
+        </div>
+      </div>
+
+      <div class="issue-item minor">
+        <div class="issue-header">
+          <span class="issue-title">Zia brand voice doesn't hold across the body</span>
+          <span class="issue-rule">§1.1 AD benchmark</span>
+        </div>
+        <div class="issue-body">
+          <p>The piece is accurate and well-structured but reads as a competent spec document, not editorial writing. The Zia voice breaks through in isolated lines — "the installed field reads as a composition rather than a uniform surface" is the best sentence in the piece — but the rest is professional and flat. The trade-focused register is appropriate; the clinical delivery isn't. Apply the AD test to the opening, the format section, and the closing before delivery.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Summary Table -->
+  <div class="section">
+    <div class="section-header">
+      <h2>Issue Summary</h2>
+    </div>
+    <div class="section-body">
+      <table class="summary-table">
+        <thead>
+          <tr>
+            <th>Issue</th>
+            <th>Severity</th>
+            <th>Location in article</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Overage % (15% min / 25% max) never mentioned</td>
+            <td><span class="sev-dot dot-red"></span><span style="color:#b91c1c;font-weight:600;">Critical</span></td>
+            <td>Ordering / Color batch sections</td>
+          </tr>
+          <tr>
+            <td>"performs reliably" → "performs well" (confirmed Jamie edit)</td>
+            <td><span class="sev-dot dot-red"></span><span style="color:#b91c1c;font-weight:600;">Critical</span></td>
+            <td>Application suitability section</td>
+          </tr>
+          <tr>
+            <td>Semicolons for parenthetical — must be em-dashes (Rule 2.11)</td>
+            <td><span class="sev-dot dot-red"></span><span style="color:#b91c1c;font-weight:600;">Critical</span></td>
+            <td>Grout and surface care section</td>
+          </tr>
+          <tr>
+            <td>"Design commentary has noted…" — unnamed attribution</td>
+            <td><span class="sev-dot dot-red"></span><span style="color:#b91c1c;font-weight:600;">Critical</span></td>
+            <td>Format and scale section</td>
+          </tr>
+          <tr>
+            <td>Phone extensions (Ext. 1, Ext. 2) — unverified detail</td>
+            <td><span class="sev-dot dot-red"></span><span style="color:#b91c1c;font-weight:600;">Critical</span></td>
+            <td>Contact lines throughout</td>
+          </tr>
+          <tr>
+            <td>Sample recommendation repeated 3–4× across sections</td>
+            <td><span class="sev-dot dot-amber"></span><span style="color:#d97706;font-weight:600;">Significant</span></td>
+            <td>Color batch, grout, Trade Program sections</td>
+          </tr>
+          <tr>
+            <td>Installer experience note too implicit — needs direct statement</td>
+            <td><span class="sev-dot dot-amber"></span><span style="color:#d97706;font-weight:600;">Significant</span></td>
+            <td>Installation section</td>
+          </tr>
+          <tr>
+            <td>Sealing guidance covers grout joints only — incomplete</td>
+            <td><span class="sev-dot dot-amber"></span><span style="color:#d97706;font-weight:600;">Significant</span></td>
+            <td>Grout and surface care section</td>
+          </tr>
+          <tr>
+            <td>Cotto Allende mentioned in freeze/thaw note — out of scope</td>
+            <td><span class="sev-dot dot-amber"></span><span style="color:#d97706;font-weight:600;">Significant</span></td>
+            <td>Application scope section</td>
+          </tr>
+          <tr>
+            <td>"Bell Gardens warehouse" inconsistent and potentially unverified</td>
+            <td><span class="sev-dot dot-amber"></span><span style="color:#d97706;font-weight:600;">Significant</span></td>
+            <td>Ordering + delivery sections</td>
+          </tr>
+          <tr>
+            <td>Installation Guide reference — verify hyperlink is present</td>
+            <td><span class="sev-dot dot-amber"></span><span style="color:#d97706;font-weight:600;">Significant</span></td>
+            <td>Installation section</td>
+          </tr>
+          <tr>
+            <td>H1 title "How to Choose…" — SEO-register, not editorial</td>
+            <td><span class="sev-dot dot-blue"></span><span style="color:#2563eb;font-weight:600;">Minor</span></td>
+            <td>Title</td>
+          </tr>
+          <tr>
+            <td>Section headers entirely spec-document style</td>
+            <td><span class="sev-dot dot-blue"></span><span style="color:#2563eb;font-weight:600;">Minor</span></td>
+            <td>Throughout</td>
+          </tr>
+          <tr>
+            <td>Zia editorial voice doesn't hold across body copy</td>
+            <td><span class="sev-dot dot-blue"></span><span style="color:#2563eb;font-weight:600;">Minor</span></td>
+            <td>Throughout</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <p style="font-size:12px;color:#aaa;margin-top:8px;">Generated 2026-06-04 · Zia Tile content ops · Reviewed against STYLE-SYSTEM.md, COMPLIANCE.yml, zia-content-rules-and-error-log.md</p>
+
+</div>
+</body>
+</html>
