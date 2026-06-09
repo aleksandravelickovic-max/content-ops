@@ -1,0 +1,48 @@
+{
+  "client": "us-self-storage",
+  "scope": "client",
+  "generatedAt": "2026-06-08T00:00:00",
+  "totalFiles": 4,
+  "entries": [
+    {
+      "id": "style-system",
+      "filename": "STYLE-SYSTEM.md",
+      "displayName": "US Self Storage — Style System",
+      "type": "style-system",
+      "category": "style-system",
+      "status": "active",
+      "version": 1,
+      "path": "STYLE-SYSTEM.md"
+    },
+    {
+      "id": "compliance",
+      "filename": "COMPLIANCE.yml",
+      "displayName": "US Self Storage — Compliance Config",
+      "type": "compliance",
+      "category": "compliance",
+      "status": "active",
+      "version": 1,
+      "path": "COMPLIANCE.yml"
+    },
+    {
+      "id": "contact-block",
+      "filename": "contact-block.md",
+      "displayName": "US Self Storage — Contact Block",
+      "type": "reference",
+      "category": "reference",
+      "status": "active",
+      "version": 1,
+      "path": "contact-block.md"
+    },
+    {
+      "id": "overview",
+      "filename": "overview.md",
+      "displayName": "US Self Storage — Client Overview",
+      "type": "knowledge",
+      "category": "knowledge",
+      "status": "active",
+      "version": 1,
+      "path": "raw/knowledge/overview.md"
+    }
+  ]
+}

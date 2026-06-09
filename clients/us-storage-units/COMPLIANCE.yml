@@ -1,0 +1,175 @@
+# Compliance config — US Storage Units
+#
+# Fail-closed rule set for the compliance-gate agent.
+# Derived from STYLE-SYSTEM.md §3 (anti-slop rules + avoidance list) and §4 (accuracy standards).
+# severity: critical halts the pipeline before /ship; warning is reported but does not halt.
+
+client: us-storage-units
+schema_version: 1
+
+# Marketplace accuracy guards — critical
+# USStorageUnits.com is a marketplace. It does not own or operate facilities.
+banned_terms:
+  - term: "our facilities"
+    severity: critical
+    reason: "Implies the platform owns or operates storage facilities. Use 'facilities in the network' or 'listed facilities' (STYLE-SYSTEM §4.1)."
+  - term: "our storage units"
+    severity: critical
+    reason: "Implies platform ownership of units. Attribute to facilities, not the platform (STYLE-SYSTEM §4.1)."
+  - term: "our storage locations"
+    severity: critical
+    reason: "Implies platform ownership of locations (STYLE-SYSTEM §4.1)."
+  - term: "our climate-controlled"
+    severity: critical
+    reason: "Attributes facility features to the platform as owner. Use 'climate-controlled units at listed facilities' (STYLE-SYSTEM §4.1)."
+  - term: "we offer storage units"
+    severity: critical
+    reason: "Platform does not offer units — it lists facilities that do (STYLE-SYSTEM §4.1)."
+  - term: "we operate"
+    severity: critical
+    reason: "Platform does not operate facilities (STYLE-SYSTEM §4.1)."
+  - term: "we own"
+    severity: critical
+    reason: "Platform does not own facilities (STYLE-SYSTEM §4.1)."
+  - term: "20,000"
+    severity: critical
+    reason: "20,000+ facilities is the sister site (US Self Storage). This client's confirmed network size is 10,000+ (STYLE-SYSTEM §4.5)."
+  - term: "guaranteed results"
+    severity: critical
+    reason: "Wrong type of guarantee. The platform's guarantee is about price, not results (STYLE-SYSTEM §4.2)."
+  - term: "storage journey"
+    severity: warning
+    reason: "Banned lifestyle framing for this client (STYLE-SYSTEM §3.3)."
+
+# Anti-slop — highest-risk banned words (full list in STYLE-SYSTEM §3.2)
+  - term: "delve"
+    severity: warning
+    reason: "AI fingerprint word. Replace with: explore, examine, look at (STYLE-SYSTEM §3.2)."
+  - term: "utilize"
+    severity: warning
+    reason: "Use 'use' (STYLE-SYSTEM §3.2)."
+  - term: "leverage"
+    severity: warning
+    reason: "Use 'use' (STYLE-SYSTEM §3.2)."
+  - term: "robust"
+    severity: warning
+    reason: "Use 'strong,' 'reliable,' 'solid' (STYLE-SYSTEM §3.2)."
+  - term: "seamless"
+    severity: warning
+    reason: "Use 'smooth,' 'easy' (STYLE-SYSTEM §3.2)."
+  - term: "comprehensive"
+    severity: warning
+    reason: "Use 'full,' 'complete,' 'thorough' (STYLE-SYSTEM §3.2)."
+  - term: "cutting-edge"
+    severity: warning
+    reason: "Use 'modern,' 'new,' 'latest' (STYLE-SYSTEM §3.2)."
+  - term: "holistic"
+    severity: warning
+    reason: "Use 'complete,' 'full,' 'whole' (STYLE-SYSTEM §3.2)."
+  - term: "innovative"
+    severity: warning
+    reason: "Describe what's actually new (STYLE-SYSTEM §3.2)."
+  - term: "transformative"
+    severity: warning
+    reason: "Describe the actual change (STYLE-SYSTEM §3.2)."
+  - term: "synergy"
+    severity: warning
+    reason: "Delete and rewrite the sentence (STYLE-SYSTEM §3.2)."
+  - term: "tapestry"
+    severity: critical
+    reason: "Delete entirely (STYLE-SYSTEM §3.2)."
+  - term: "testament"
+    severity: warning
+    reason: "Use 'proof,' 'evidence,' 'sign' (STYLE-SYSTEM §3.2)."
+  - term: "embark"
+    severity: warning
+    reason: "Use 'start,' 'begin' (STYLE-SYSTEM §3.2)."
+  - term: "journey"
+    severity: warning
+    reason: "Use 'process,' 'experience,' 'path' — and only if it fits a non-lifestyle context (STYLE-SYSTEM §3.2, §3.3)."
+  - term: "streamline"
+    severity: warning
+    reason: "Use 'simplify,' 'speed up,' 'cut steps from' (STYLE-SYSTEM §3.2)."
+  - term: "elevate"
+    severity: warning
+    reason: "Use 'improve,' 'raise,' 'strengthen' (STYLE-SYSTEM §3.2)."
+  - term: "unlock"
+    severity: warning
+    reason: "Use 'enable,' 'open up,' 'create' (STYLE-SYSTEM §3.2)."
+  - term: "seamlessly"
+    severity: warning
+    reason: "Use 'easily,' 'quickly,' 'without steps' (STYLE-SYSTEM §3.2)."
+  - term: "It's important to note"
+    severity: warning
+    reason: "Throat-clearing. Delete and start with the point (STYLE-SYSTEM §3.3)."
+  - term: "In today's"
+    severity: warning
+    reason: "Banned opening phrase (STYLE-SYSTEM §3.3)."
+  - term: "Let's dive"
+    severity: warning
+    reason: "Banned throat-clearing phrase (STYLE-SYSTEM §3.3)."
+  - term: "In this article"
+    severity: warning
+    reason: "Banned throat-clearing phrase (STYLE-SYSTEM §3.3)."
+  - term: "At the end of the day"
+    severity: warning
+    reason: "Empty hedge — delete (STYLE-SYSTEM §3.3)."
+  - term: "In conclusion"
+    severity: warning
+    reason: "Banned lazy closer (STYLE-SYSTEM §3.3)."
+  - term: "To sum up"
+    severity: warning
+    reason: "Banned lazy closer (STYLE-SYSTEM §3.3)."
+  - term: "Feel free to reach out"
+    severity: warning
+    reason: "Banned lazy closer — write the actual CTA (STYLE-SYSTEM §3.3)."
+  - term: "Don't hesitate to"
+    severity: warning
+    reason: "Banned lazy closer (STYLE-SYSTEM §3.3)."
+  - term: "Imagine a world"
+    severity: warning
+    reason: "Banned hook opener (STYLE-SYSTEM §3.3)."
+  - term: "Picture this"
+    severity: warning
+    reason: "Banned hook opener (STYLE-SYSTEM §3.3)."
+  - term: "Have you ever wondered"
+    severity: warning
+    reason: "Banned hook opener (STYLE-SYSTEM §3.3)."
+  - term: "isn't just"
+    severity: warning
+    reason: "Flag for 'Not just X — it's Y' pattern (STYLE-SYSTEM §3.4)."
+
+# Structural and accuracy presence checks
+required_presence:
+  - rule: marketplace_framing
+    severity: critical
+    check: "No language that implies the platform owns or operates storage facilities. All facility features must be attributed to 'facilities in the network,' 'listed facilities,' or 'partner facilities' — not to USStorageUnits.com as owner."
+    source: "STYLE-SYSTEM §4.1"
+  - rule: correct_network_size
+    severity: critical
+    check: "Network size must be cited as 10,000+ facilities. Do not use 20,000+ (that is the sister site US Self Storage)."
+    source: "STYLE-SYSTEM §4.5"
+  - rule: reserve_cta_present
+    severity: critical
+    check: "Every page must include a reserve-focused CTA that references the free reservation flow. Must use confirmed claim language: 'free to reserve,' 'no credit card required,' or 'guaranteed lowest prices.'"
+    source: "STYLE-SYSTEM §6"
+  - rule: no_invented_pricing
+    severity: critical
+    check: "No specific pricing figures for any unit or facility unless sourced from raw/ or confirmed by the CSM. Do not assert 'units start at $X' without a confirmed source."
+    source: "STYLE-SYSTEM §4.3"
+  - rule: unit_sizes_accurate
+    severity: warning
+    check: "Unit sizes must match confirmed dimensions: 5x5, 5x10, 10x10, 10x15, 10x20, 10x30 (standard); 3x4 ft lockers. Ceiling heights: 8-9 ft standard, 3-4 ft lockers. Do not invent other sizes."
+    source: "STYLE-SYSTEM §4.4"
+  - rule: serp_analysis_required
+    severity: warning
+    check: "SERP analysis must be run before writing. Do not simulate — must access live search results."
+    source: "STYLE-SYSTEM §7"
+  - rule: no_blog_content
+    severity: critical
+    check: "USStorageUnits.com has no blog. Do not produce editorial-style articles, how-to guides, or resource center content for this client without CSM approval."
+    source: "STYLE-SYSTEM §5"
+  - rule: primary_keyword_first_sentence
+    severity: warning
+    check: "Primary keyword must appear in the first sentence of body content."
+    source: "STYLE-SYSTEM §7"
