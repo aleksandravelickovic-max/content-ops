@@ -1,0 +1,140 @@
+# Compliance config — Arizona IOP
+#
+# Fail-closed rule set for the compliance-gate agent.
+# Derived from STYLE-SYSTEM.md §3 (terminology), §4 (clinical accuracy), and §9 (group entities).
+# severity: critical halts the pipeline before /ship; warning is reported but does not halt.
+
+client: arizonaiop
+schema_version: 1
+
+banned_terms:
+  # Outcome guarantees — critical
+  - term: "guarantee recovery"
+    severity: critical
+    reason: "Cannot guarantee clinical outcomes. Results vary by individual (STYLE-SYSTEM §4)."
+  - term: "guaranteed results"
+    severity: critical
+    reason: "Cannot guarantee clinical outcomes (STYLE-SYSTEM §4)."
+  - term: "guarantee"
+    severity: critical
+    reason: "Any form of outcome guarantee is off-limits in behavioral health content (STYLE-SYSTEM §4)."
+  - term: "guaranteed"
+    severity: critical
+    reason: "Any form of outcome guarantee is off-limits (STYLE-SYSTEM §4)."
+  - term: "we will cure"
+    severity: critical
+    reason: "Outcome guarantee — not clinically responsible."
+  - term: "proven to cure"
+    severity: critical
+    reason: "Outcome guarantee — not clinically responsible."
+
+  # Addiction metaphor bans — critical
+  - term: "battle addiction"
+    severity: critical
+    reason: "\"Battle\" is a banned addiction metaphor. Use \"address,\" \"work through,\" \"confront,\" or \"heal\" (STYLE-SYSTEM §3.3)."
+  - term: "fight addiction"
+    severity: critical
+    reason: "\"Fight\" is a banned addiction metaphor. Use \"address,\" \"work through,\" \"confront,\" or \"heal\" (STYLE-SYSTEM §3.3)."
+  - term: "battling addiction"
+    severity: critical
+    reason: "\"Battling\" is a banned addiction metaphor (STYLE-SYSTEM §3.3)."
+  - term: "fighting addiction"
+    severity: critical
+    reason: "\"Fighting\" is a banned addiction metaphor (STYLE-SYSTEM §3.3)."
+
+  # IOP overclaim — critical
+  - term: "IOP is equivalent to residential"
+    severity: critical
+    reason: "IOP is not residential treatment. Do not position them as equivalent (STYLE-SYSTEM §4)."
+  - term: "same as residential"
+    severity: critical
+    reason: "IOP is not equivalent to residential treatment (STYLE-SYSTEM §4)."
+  - term: "replaces residential"
+    severity: critical
+    reason: "IOP does not replace residential treatment for clients who need that level of care (STYLE-SYSTEM §4)."
+
+  # Invented staff — critical
+  - term: "Dr. "
+    severity: critical
+    reason: "No individual staff names or credentials are confirmed beyond credential classes. Do not invent. (STYLE-SYSTEM §3.2)."
+
+  # Group entity names — critical in external content
+  - term: "The Hope House"
+    severity: warning
+    reason: "Do not reference sister entities by name unless step-down/step-up care is the explicit topic (STYLE-SYSTEM §9)."
+  - term: "Scottsdale Detox"
+    severity: warning
+    reason: "Do not reference sister entities by name unless step-down/step-up care is the explicit topic (STYLE-SYSTEM §9)."
+  - term: "Scottsdale TMS"
+    severity: warning
+    reason: "Do not reference sister entities by name unless step-down/step-up care is the explicit topic (STYLE-SYSTEM §9)."
+
+voice_bans:
+  # Anti-slop list — warnings
+  - term: "utilize"
+    severity: warning
+    reason: "Anti-slop ban. Use \"use\" (STYLE-SYSTEM §3.3)."
+  - term: "leverage"
+    severity: warning
+    reason: "Anti-slop ban — only when used as puff (STYLE-SYSTEM §3.3)."
+  - term: "robust"
+    severity: warning
+    reason: "Anti-slop ban (STYLE-SYSTEM §3.3)."
+  - term: "seamless"
+    severity: warning
+    reason: "Anti-slop ban (STYLE-SYSTEM §3.3)."
+  - term: "cutting-edge"
+    severity: warning
+    reason: "Anti-slop ban. Describe the specific technology or method instead (STYLE-SYSTEM §3.3)."
+  - term: "holistic"
+    severity: warning
+    reason: "Anti-slop ban when used as vague puff. Use a specific description of care approach instead (STYLE-SYSTEM §3.3)."
+  - term: "synergy"
+    severity: warning
+    reason: "Anti-slop ban (STYLE-SYSTEM §3.3)."
+  - term: "transformative"
+    severity: warning
+    reason: "Anti-slop ban (STYLE-SYSTEM §3.3)."
+  - term: "innovative"
+    severity: warning
+    reason: "Anti-slop ban (STYLE-SYSTEM §3.3)."
+  - term: "game-changing"
+    severity: warning
+    reason: "Anti-slop ban (STYLE-SYSTEM §3.3)."
+  - term: "revolutionary"
+    severity: warning
+    reason: "Anti-slop ban (STYLE-SYSTEM §3.3)."
+  - term: "empower"
+    severity: warning
+    reason: "Anti-slop ban when used as vague puff. Describe the specific mechanism instead (STYLE-SYSTEM §3.3)."
+  - term: "comprehensive"
+    severity: warning
+    reason: "Anti-slop ban when used as vague puff. Be specific about what is included (STYLE-SYSTEM §3.3)."
+  - term: "world-class"
+    severity: warning
+    reason: "Unsupported superlative."
+  - term: "best-in-class"
+    severity: warning
+    reason: "Unsupported superlative."
+
+required_presence:
+  - rule: abbreviation_expansion
+    severity: critical
+    check: "IOP, PHP, and MAT must be spelled out in full on first use in every piece. Verify before publishing."
+    source: "STYLE-SYSTEM §3.1"
+  - rule: no_invented_clinical_details
+    severity: critical
+    check: "Do not invent session formats, session counts, schedules, or specific therapeutic modality names beyond 'over 20 therapeutic modalities.'"
+    source: "STYLE-SYSTEM §4"
+  - rule: no_unconfirmed_insurance
+    severity: critical
+    check: "Only confirmed insurers may be listed: Cigna, GEHA, Blue Cross Blue Shield, Aetna, UnitedHealthcare, UMR."
+    source: "STYLE-SYSTEM §7"
+  - rule: iop_scope_accurate
+    severity: critical
+    check: "IOP must be described as structured outpatient care for people who do not need 24-hour medical supervision. It must not be positioned as equivalent to residential treatment or detox."
+    source: "STYLE-SYSTEM §4"
+  - rule: outcomes_qualified
+    severity: critical
+    check: "Results and recovery outcomes must be qualified as individual-dependent. No implied guarantees."
+    source: "STYLE-SYSTEM §4"

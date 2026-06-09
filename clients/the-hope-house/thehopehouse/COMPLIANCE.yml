@@ -1,0 +1,214 @@
+# Compliance config — The Hope House
+#
+# Fail-closed rule set for the compliance-gate agent.
+# Derived from STYLE-SYSTEM.md §2.6 (banned language), §3 (clinical accuracy), and §9 (behavioral health standards).
+# severity: critical halts the pipeline before /ship; warning is reported but does not halt.
+#
+# Behavioral health content carries elevated risk. When in doubt, escalate to CSM rather than publish.
+
+client: the-hope-house
+schema_version: 1
+
+banned_terms:
+  # --- Outcome guarantees ---
+  - term: "guaranteed recovery"
+    severity: critical
+    reason: "Cannot guarantee recovery outcomes in addiction treatment (STYLE-SYSTEM §3, §9)."
+  - term: "guarantee"
+    severity: critical
+    reason: "Any outcome guarantee is prohibited in behavioral health content (STYLE-SYSTEM §9)."
+  - term: "guaranteed"
+    severity: critical
+    reason: "Any outcome guarantee is prohibited (STYLE-SYSTEM §9)."
+  - term: "you will recover"
+    severity: critical
+    reason: "Direct outcome promise — not medically or ethically permissible (STYLE-SYSTEM §9)."
+  - term: "will recover"
+    severity: critical
+    reason: "Implied outcome promise — results vary and must never be stated as certain (STYLE-SYSTEM §9)."
+  - term: "cure"
+    severity: critical
+    reason: "Addiction is a chronic condition — cure framing is clinically inaccurate and prohibited (STYLE-SYSTEM §2.6)."
+  - term: "cured"
+    severity: critical
+    reason: "Outcome guarantee; clinically inaccurate (STYLE-SYSTEM §2.6)."
+  - term: "success rate"
+    severity: critical
+    reason: "No success rate data is confirmed on the site. Inventing or implying one is prohibited (STYLE-SYSTEM §3)."
+
+  # --- Staff and credentials ---
+  - term: "our doctors"
+    severity: critical
+    reason: "Staff references must use 'masters-level clinicians' only — no invented titles or names (STYLE-SYSTEM §3.1)."
+  - term: "our therapists"
+    severity: warning
+    reason: "Prefer 'masters-level clinicians' — 'our therapists' is acceptable only if not implying specific individuals or credentials (STYLE-SYSTEM §3.1)."
+  - term: "our physicians"
+    severity: critical
+    reason: "Physician claim is not confirmed on the site (STYLE-SYSTEM §3.1)."
+  - term: "board-certified"
+    severity: critical
+    reason: "Not a confirmed credential for The Hope House staff (STYLE-SYSTEM §3.1)."
+
+  # --- Addiction metaphors (off-brand) ---
+  - term: "battle addiction"
+    severity: critical
+    reason: "Brand uses 'confront' and 'heal' — 'battle' is off-brand (STYLE-SYSTEM §2.4)."
+  - term: "fight addiction"
+    severity: critical
+    reason: "Brand uses 'confront' and 'heal' — 'fight' is off-brand (STYLE-SYSTEM §2.4)."
+  - term: "battling addiction"
+    severity: critical
+    reason: "Off-brand metaphor. Use 'confronting addiction' (STYLE-SYSTEM §2.4)."
+  - term: "fighting addiction"
+    severity: critical
+    reason: "Off-brand metaphor. Use 'confronting addiction' (STYLE-SYSTEM §2.4)."
+  - term: "war on addiction"
+    severity: critical
+    reason: "Off-brand; stigmatizing framing (STYLE-SYSTEM §2.4)."
+
+  # --- Stigmatizing identity labels ---
+  - term: "addict"
+    severity: warning
+    reason: "Use person-first language: 'person with addiction' or 'person in recovery' (STYLE-SYSTEM §9)."
+  - term: "junkie"
+    severity: critical
+    reason: "Stigmatizing identity label — never use (STYLE-SYSTEM §9)."
+  - term: "alcoholic"
+    severity: warning
+    reason: "Use 'person with alcohol use disorder' or 'person in recovery from alcohol' (STYLE-SYSTEM §9). Exception: quoting a clinical diagnostic term in context."
+
+  # --- Unconfirmed modalities ---
+  - term: "CBT"
+    severity: warning
+    reason: "CBT is not confirmed on the site by name — use 'behavioral therapy' (STYLE-SYSTEM §3.4)."
+  - term: "DBT"
+    severity: warning
+    reason: "DBT is not confirmed on the site by name — use 'behavioral therapy' (STYLE-SYSTEM §3.4)."
+  - term: "EMDR"
+    severity: warning
+    reason: "EMDR is not confirmed on the site — do not claim (STYLE-SYSTEM §3.4)."
+  - term: "equine therapy"
+    severity: warning
+    reason: "Equine therapy is confirmed only for the Dual Diagnosis Program. Flag if applied to other programs (STYLE-SYSTEM §3.4)."
+  - term: "treatment-resistant"
+    severity: critical
+    reason: "Clinical language reserved for TMS (a different company) — do not apply to The Hope House (STYLE-SYSTEM §3)."
+
+  # --- Unconfirmed insurance ---
+  - term: "Humana"
+    severity: critical
+    reason: "Humana is not a confirmed carrier. Only list UnitedHealthcare, BCBS, GEHA, Aetna, Cigna (STYLE-SYSTEM §3.6)."
+  - term: "Medicare"
+    severity: critical
+    reason: "Medicare coverage not confirmed on site — do not claim (STYLE-SYSTEM §3.6)."
+  - term: "Medicaid"
+    severity: critical
+    reason: "Medicaid coverage not confirmed on site — do not claim (STYLE-SYSTEM §3.6)."
+  - term: "most insurance"
+    severity: critical
+    reason: "Vague insurance claim — use only the confirmed carrier list (STYLE-SYSTEM §3.6)."
+  - term: "all insurance"
+    severity: critical
+    reason: "Prohibited — only confirmed carriers may be referenced (STYLE-SYSTEM §3.6)."
+
+  # --- Affiliated company references ---
+  - term: "Arizona IOP"
+    severity: critical
+    reason: "Do not reference affiliated companies by name. Use 'partner programs' or 'outpatient care is available after residential treatment' (STYLE-SYSTEM §1)."
+  - term: "Scottsdale Detox"
+    severity: critical
+    reason: "Do not reference affiliated companies by name (STYLE-SYSTEM §1)."
+
+  # --- Anti-slop list (universal) ---
+  - term: "utilize"
+    severity: warning
+    reason: "Use 'use' (anti-slop — STYLE-SYSTEM §2.6)."
+  - term: "leverage"
+    severity: warning
+    reason: "Describe the mechanism instead (anti-slop — STYLE-SYSTEM §2.6)."
+  - term: "robust"
+    severity: warning
+    reason: "Vague intensifier (anti-slop — STYLE-SYSTEM §2.6)."
+  - term: "seamless"
+    severity: warning
+    reason: "Vague promotional language (anti-slop — STYLE-SYSTEM §2.6)."
+  - term: "cutting-edge"
+    severity: warning
+    reason: "Vague superlative — describe what is specific instead (anti-slop — STYLE-SYSTEM §2.6)."
+  - term: "innovative"
+    severity: warning
+    reason: "Vague — describe what is actually different (anti-slop — STYLE-SYSTEM §2.6)."
+  - term: "transformative"
+    severity: warning
+    reason: "Vague — describe the actual change (anti-slop — STYLE-SYSTEM §2.6)."
+  - term: "synergy"
+    severity: warning
+    reason: "Corporate filler — remove (anti-slop — STYLE-SYSTEM §2.6)."
+  - term: "game-changing"
+    severity: warning
+    reason: "Prohibited (anti-slop — STYLE-SYSTEM §2.6)."
+  - term: "revolutionary"
+    severity: warning
+    reason: "Prohibited (anti-slop — STYLE-SYSTEM §2.6)."
+  - term: "holistic"
+    severity: warning
+    reason: "Banned as a standalone puff term. Acceptable only when paired with a specific named modality (STYLE-SYSTEM §2.6)."
+
+voice_bans:
+  - term: "world-class"
+    severity: warning
+    reason: "Unsupported superlative."
+  - term: "industry-leading"
+    severity: warning
+    reason: "Unsupported superlative."
+  - term: "best-in-class"
+    severity: warning
+    reason: "Unsupported superlative."
+  - term: "state-of-the-art"
+    severity: warning
+    reason: "Vague. Describe what is specific about the facility or approach."
+  - term: "journey"
+    severity: warning
+    reason: "Overused recovery-marketing cliche. Describe the actual process (STYLE-SYSTEM §2.4)."
+  - term: "empower"
+    severity: warning
+    reason: "Vague puff framing — describe what the client specifically gains (STYLE-SYSTEM §2.6)."
+
+required_presence:
+  - rule: no_outcome_guarantees
+    severity: critical
+    check: "No content may promise, imply, or strongly suggest a specific recovery outcome. 'Recovery is possible' framing is approved; 'you will recover' is not."
+    source: "STYLE-SYSTEM §2.4, §9"
+  - rule: staff_language_accuracy
+    severity: critical
+    check: "Staff references must use 'masters-level clinicians' only. No individual names, no invented credentials, no physician claims."
+    source: "STYLE-SYSTEM §3.1"
+  - rule: insurance_accuracy
+    severity: critical
+    check: "Only reference UnitedHealthcare, Blue Cross Blue Shield, GEHA, Aetna, and Cigna. Do not claim any other carrier."
+    source: "STYLE-SYSTEM §3.6"
+  - rule: program_name_accuracy
+    severity: critical
+    check: "Use only confirmed program names: Executive Treatment Program, Dual Diagnosis Program, Luxury Rehab Program, Executive Golf Rehab, Luxury Spa Rehab."
+    source: "STYLE-SYSTEM §3.2"
+  - rule: equine_therapy_scope
+    severity: critical
+    check: "Equine therapy is confirmed only for the Dual Diagnosis Program. Do not apply it to other programs."
+    source: "STYLE-SYSTEM §3.4"
+  - rule: no_affiliated_company_names
+    severity: critical
+    check: "Do not name Arizona IOP, Scottsdale Detox, or any other affiliated company. Use 'partner programs' or 'outpatient care is available after residential treatment' only if step-down context requires it."
+    source: "STYLE-SYSTEM §1"
+  - rule: person_first_language
+    severity: warning
+    check: "Use person-first language throughout. 'Person with addiction,' 'person in recovery,' 'person with alcohol use disorder' — not identity labels."
+    source: "STYLE-SYSTEM §9"
+  - rule: client_census_accuracy
+    severity: critical
+    check: "The confirmed client maximum is 10 per facility. Never inflate this number. Arizona average of 29 is approved context."
+    source: "STYLE-SYSTEM §5"
+  - rule: behavioral_health_sensitivity
+    severity: warning
+    check: "Content may be read by people in active crisis or family members in distress. Tone must be compassionate, non-minimizing, and action-directing."
+    source: "STYLE-SYSTEM §9"

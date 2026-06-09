@@ -1,0 +1,159 @@
+# Compliance config — Scottsdale Detox
+#
+# Fail-closed rule set for the compliance-gate agent.
+# Derived from STYLE-SYSTEM.md §2.6 (banned language), §3 (clinical accuracy), §5 (insurance).
+# severity: critical halts the pipeline before /ship; warning is reported but does not halt.
+#
+# Medical detox is behavioral health content — the standard for accuracy and harm avoidance is high.
+
+client: scottsdaleazdetox
+schema_version: 1
+
+banned_terms:
+  # Outcome guarantees — critical
+  - term: "guarantee"
+    severity: critical
+    reason: "No outcome guarantees permitted in medical detox content (STYLE-SYSTEM §2.6, §3)."
+  - term: "guaranteed"
+    severity: critical
+    reason: "No outcome guarantees permitted (STYLE-SYSTEM §2.6)."
+  - term: "symptom-free"
+    severity: critical
+    reason: "Cannot promise symptom-free withdrawal — withdrawal involves real physical distress (STYLE-SYSTEM §2.6)."
+  - term: "pain-free detox"
+    severity: critical
+    reason: "Cannot promise pain-free withdrawal (STYLE-SYSTEM §2.6)."
+  - term: "comfortable withdrawal"
+    severity: critical
+    reason: "Cannot promise comfortable withdrawal as an outcome (STYLE-SYSTEM §2.6). Comfort-focused amenities are fine; framing withdrawal itself as comfortable is not."
+  - term: "easy withdrawal"
+    severity: critical
+    reason: "Minimizes medical reality of withdrawal (STYLE-SYSTEM §2.6, §3.5)."
+  - term: "quick detox"
+    severity: critical
+    reason: "Minimizes the required medical timeline — timelines are confirmed and must not be compressed (STYLE-SYSTEM §2.6, §3.3)."
+  # Benzo stat — restricted use
+  - term: "24% to 51%"
+    severity: warning
+    reason: "This statistic must only appear in educational benzo detox context WITH the 'after 12 months' qualifier. Check that both conditions are met (STYLE-SYSTEM §3.4)."
+  - term: "24-51%"
+    severity: warning
+    reason: "Same restriction as '24% to 51%' — must include 'after 12 months' qualifier in educational context only (STYLE-SYSTEM §3.4)."
+  # Private rooms claim
+  - term: "private rooms are standard"
+    severity: critical
+    reason: "Do not imply private rooms and bathrooms are standard at other Arizona facilities — this is Scottsdale Detox's confirmed differentiator (STYLE-SYSTEM §4.1)."
+  # Addiction metaphors
+  - term: "battle addiction"
+    severity: warning
+    reason: "Prohibited addiction metaphor. Use 'address,' 'work through,' 'confront,' or 'stabilize' instead (STYLE-SYSTEM §2.5)."
+  - term: "fight addiction"
+    severity: warning
+    reason: "Prohibited addiction metaphor (STYLE-SYSTEM §2.5)."
+  - term: "fight withdrawal"
+    severity: warning
+    reason: "Prohibited addiction metaphor (STYLE-SYSTEM §2.5)."
+  # Anti-slop
+  - term: "utilize"
+    severity: warning
+    reason: "Anti-slop list. Use 'use' (STYLE-SYSTEM §2.6)."
+  - term: "leverage"
+    severity: warning
+    reason: "Anti-slop list (STYLE-SYSTEM §2.6)."
+  - term: "robust"
+    severity: warning
+    reason: "Anti-slop list (STYLE-SYSTEM §2.6)."
+  - term: "seamless"
+    severity: warning
+    reason: "Anti-slop list (STYLE-SYSTEM §2.6)."
+  - term: "cutting-edge"
+    severity: warning
+    reason: "Anti-slop list (STYLE-SYSTEM §2.6)."
+  - term: "innovative"
+    severity: warning
+    reason: "Anti-slop list. Describe what is actually different instead (STYLE-SYSTEM §2.6)."
+  - term: "game-changing"
+    severity: warning
+    reason: "Anti-slop list (STYLE-SYSTEM §2.6)."
+  - term: "revolutionary"
+    severity: warning
+    reason: "Anti-slop list (STYLE-SYSTEM §2.6)."
+  - term: "transformative"
+    severity: warning
+    reason: "Anti-slop list (STYLE-SYSTEM §2.6)."
+  - term: "synergy"
+    severity: warning
+    reason: "Anti-slop list (STYLE-SYSTEM §2.6)."
+  - term: "holistic"
+    severity: warning
+    reason: "Anti-slop when used as a standalone puff modifier. Exception: 'holistic individualized treatment' is a confirmed site phrase and may be used verbatim (STYLE-SYSTEM §2.6, §4.4)."
+  # Framing violations
+  - term: "detox completes recovery"
+    severity: critical
+    reason: "Detox is the first step, not the full treatment. Framing it as completing recovery sets a false patient expectation (STYLE-SYSTEM §2.4)."
+  - term: "full recovery"
+    severity: warning
+    reason: "Detox achieves stabilization, not full recovery. Flag any use for context review."
+
+voice_bans:
+  - term: "world-class"
+    severity: warning
+    reason: "Unsupported superlative (STYLE-SYSTEM §2.6)."
+  - term: "industry-leading"
+    severity: warning
+    reason: "Unsupported superlative (STYLE-SYSTEM §2.6)."
+  - term: "best-in-class"
+    severity: warning
+    reason: "Unsupported superlative (STYLE-SYSTEM §2.6)."
+  - term: "next-generation"
+    severity: warning
+    reason: "Anti-slop list (STYLE-SYSTEM §2.6)."
+  - term: "comprehensive solution"
+    severity: warning
+    reason: "Detox is not a comprehensive solution — it is the first step. Also anti-slop (STYLE-SYSTEM §2.4, §2.6)."
+
+required_presence:
+  - rule: detox_first_framing
+    severity: critical
+    check: "Every piece must include at least one clear framing of medical detox as the first step in recovery, not the complete treatment. See STYLE-SYSTEM §2.4 for approved patterns."
+    source: "STYLE-SYSTEM §2.4"
+  - rule: no_outcome_guarantees
+    severity: critical
+    check: "Zero guarantee language. Withdrawal outcomes cannot be promised — outcomes vary by individual, substance, and history."
+    source: "STYLE-SYSTEM §2.6, §3"
+  - rule: alcohol_benzo_risk_language
+    severity: critical
+    check: "Content covering alcohol or benzodiazepine detox must note that unsupervised withdrawal can be dangerous. This is a patient safety requirement, not optional."
+    source: "STYLE-SYSTEM §3.5"
+  - rule: timeline_accuracy
+    severity: critical
+    check: "Withdrawal timelines must match the confirmed data in STYLE-SYSTEM §3.3 exactly. Do not compress phases, invent new phases, or alter timeframes."
+    source: "STYLE-SYSTEM §3.3"
+  - rule: staff_credentials_exact
+    severity: critical
+    check: "Named clinical staff credentials must be cited exactly as listed in STYLE-SYSTEM §3.1. Do not alter credential order, abbreviations, or names."
+    source: "STYLE-SYSTEM §3.1"
+  - rule: mat_medications_confirmed_only
+    severity: critical
+    check: "Only name MAT medications from the confirmed list: buprenorphine, methadone, naltrexone, benzodiazepines (alcohol withdrawal). Do not invent medication names or dosing."
+    source: "STYLE-SYSTEM §3.2"
+  - rule: insurance_confirmed_only
+    severity: critical
+    check: "Only reference confirmed insurance plans: Cigna, GEHA, Blue Cross Blue Shield, Aetna, Beacon. Do not invent or extrapolate coverage."
+    source: "STYLE-SYSTEM §5"
+  - rule: no_group_companies_named
+    severity: warning
+    check: "Do not name other companies in The Hope House group. Use 'residential rehab programs' or 'outpatient programs' generically when referencing step-down care."
+    source: "STYLE-SYSTEM §2.4"
+  - rule: contact_block_present
+    severity: warning
+    check: "Every page or piece must include the contact block with phone number and email. See contact-block.md."
+    source: "contact-block.md"
+  - rule: benzo_stat_qualified
+    severity: critical
+    check: "If the 24% to 51% success rate statistic appears, it must include 'after 12 months' and appear only in educational benzo detox context. Never as a standalone brand claim."
+    source: "STYLE-SYSTEM §3.4"
+  - rule: no_invented_success_statistics
+    severity: critical
+    check: "Do not invent success rates, outcome statistics, or patient satisfaction figures. The only confirmed stat is the benzo withdrawal reference in §3.4."
+    source: "STYLE-SYSTEM §3"

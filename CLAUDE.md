@@ -134,6 +134,10 @@ portal/
 | US Self Storage | `clients/us-self-storage/STYLE-SYSTEM.md` | Active — self-storage comparison marketplace + editorial hub; 20,000+ facilities; marketplace framing critical (never "our facilities"); dual audience: consumers + B2B operators (Storage Promoter Blog); no "guaranteed lowest prices" claim (CSM: Arianna Trabanino) |
 | TrustLayer | `clients/trustlayer/STYLE-SYSTEM.md` | Active — AI-powered COI collection and third-party compliance management platform; never "insurance software"; vendor zero-sign-in is key differentiator (CSM: Wendy Alinor) |
 | Print & Cheques Now | `clients/print-and-cheques-now/STYLE-SYSTEM.md` | Active — Canadian cheque printing specialist, CPA Self-Accredited Printer #1010; dual cheque/check spelling required for SEO; volume claims require "up to" qualifier (CSM: Arianna Trabanino) |
+| The Hope House | `clients/the-hope-house/thehopehouse/STYLE-SYSTEM.md` | Active — luxury residential addiction rehab, Scottsdale AZ; max 10 clients; never guarantee outcomes; equine therapy scoped to dual diagnosis only (CSM: Wendy Alinor) |
+| Arizona IOP | `clients/the-hope-house/arizonaiop/STYLE-SYSTEM.md` | Active — intensive outpatient program, Scottsdale AZ; IOP/PHP/MAT always spelled out on first use; never equate IOP to residential care (CSM: Wendy Alinor) |
+| Scottsdale Detox | `clients/the-hope-house/scottsdaleazdetox/STYLE-SYSTEM.md` | Active — medical detox, Scottsdale AZ; named staff: Dr. Michael Vines MD, Alex Spritzer FNP, Natalie Foster LPC-S; alcohol/benzo withdrawal risks must not be minimized (CSM: Wendy Alinor) |
+| Scottsdale TMS Therapy | `clients/the-hope-house/scottsdaletmstherapy/STYLE-SYSTEM.md` | Active — TMS + Spravato + psychiatric care, Scottsdale AZ; TMS is "FDA-cleared" not "FDA-approved"; Spravato is "FDA-approved"; REMS required for Spravato; never guarantee outcomes (CSM: Wendy Alinor) |
 
 ### Adding a new client
 

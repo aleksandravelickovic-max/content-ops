@@ -1,0 +1,48 @@
+{
+  "client": "the-hope-house",
+  "scope": "client",
+  "generatedAt": "2026-06-08T00:00:00",
+  "totalFiles": 4,
+  "entries": [
+    {
+      "id": "style-system",
+      "filename": "STYLE-SYSTEM.md",
+      "displayName": "The Hope House — Style System",
+      "type": "style-system",
+      "category": "style-system",
+      "status": "active",
+      "version": 1,
+      "path": "STYLE-SYSTEM.md"
+    },
+    {
+      "id": "compliance",
+      "filename": "COMPLIANCE.yml",
+      "displayName": "The Hope House — Compliance Config",
+      "type": "compliance",
+      "category": "compliance",
+      "status": "active",
+      "version": 1,
+      "path": "COMPLIANCE.yml"
+    },
+    {
+      "id": "contact-block",
+      "filename": "contact-block.md",
+      "displayName": "The Hope House — Contact Block",
+      "type": "contact-block",
+      "category": "contact-block",
+      "status": "active",
+      "version": 1,
+      "path": "contact-block.md"
+    },
+    {
+      "id": "overview",
+      "filename": "overview.md",
+      "displayName": "The Hope House — Client Overview",
+      "type": "knowledge",
+      "category": "knowledge",
+      "status": "active",
+      "version": 1,
+      "path": "raw/knowledge/overview.md"
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+# Compliance config — Scottsdale TMS Therapy
+#
+# Fail-closed rule set for the compliance-gate agent.
+# Derived from STYLE-SYSTEM.md §3 (regulatory language) and §4 (clinical accuracy).
+# severity: critical halts the pipeline before /ship; warning is reported but does not halt.
+
+client: scottsdaletmstherapy
+schema_version: 1
+
+banned_terms:
+  # FDA terminology errors — critical
+  - term: "FDA-approved TMS"
+    severity: critical
+    reason: "TMS is FDA-cleared, not FDA-approved. These are distinct regulatory designations. (STYLE-SYSTEM §3.1)"
+  - term: "FDA approved TMS"
+    severity: critical
+    reason: "TMS is FDA-cleared, not FDA-approved. (STYLE-SYSTEM §3.1)"
+  - term: "FDA-approved transcranial"
+    severity: critical
+    reason: "TMS is FDA-cleared, not FDA-approved. (STYLE-SYSTEM §3.1)"
+  - term: "FDA approved transcranial"
+    severity: critical
+    reason: "TMS is FDA-cleared, not FDA-approved. (STYLE-SYSTEM §3.1)"
+
+  # Outcome guarantees — critical
+  - term: "guaranteed"
+    severity: critical
+    reason: "Cannot guarantee any treatment outcome. (STYLE-SYSTEM §3.2)"
+  - term: "guarantee"
+    severity: critical
+    reason: "Cannot guarantee any treatment outcome. (STYLE-SYSTEM §3.2)"
+  - term: "cure depression"
+    severity: critical
+    reason: "TMS reduces symptoms in many patients — it does not cure depression. (STYLE-SYSTEM §3.2)"
+  - term: "cure anxiety"
+    severity: critical
+    reason: "Cannot claim curative outcomes for anxiety. (STYLE-SYSTEM §3.2)"
+  - term: "cure OCD"
+    severity: critical
+    reason: "Cannot claim curative outcomes for OCD. (STYLE-SYSTEM §3.2)"
+  - term: "eliminate depression"
+    severity: critical
+    reason: "Use 'significantly reduces depressive symptoms in many patients' — not 'eliminate'. (STYLE-SYSTEM §3.2)"
+  - term: "eliminate anxiety"
+    severity: critical
+    reason: "Treatments reduce or improve symptoms — they do not eliminate the condition. (STYLE-SYSTEM §3.2)"
+  - term: "resolve depression"
+    severity: warning
+    reason: "Implies a guarantee. Use 'reduce' or 'improve' with appropriate qualification. (STYLE-SYSTEM §3.2)"
+  - term: "resolve anxiety"
+    severity: warning
+    reason: "Implies a guarantee. Use 'reduce' or 'improve' with appropriate qualification. (STYLE-SYSTEM §3.2)"
+  - term: "100%"
+    severity: critical
+    reason: "No success rate or remission percentage has been confirmed from the site. Do not invent figures. (STYLE-SYSTEM §3.3)"
+  - term: "remission rate"
+    severity: critical
+    reason: "No specific remission rate has been confirmed from the site. Do not state one. (STYLE-SYSTEM §3.3)"
+  - term: "success rate"
+    severity: critical
+    reason: "No specific success rate has been confirmed from the site. Do not state one. (STYLE-SYSTEM §3.3)"
+
+  # Misuse of clinical terms — critical
+  - term: "treatment-resistant depression"
+    severity: warning
+    reason: "Use only for patients who have failed prior treatments — this is a clinical definition requiring prior treatment failure. Do not apply loosely to all depression patients. (STYLE-SYSTEM §3.4)"
+
+  # Spravato without REMS — critical
+  - term: "Spravato at home"
+    severity: critical
+    reason: "Spravato is administered in-clinic only under REMS program requirements. (STYLE-SYSTEM §3.5)"
+  - term: "esketamine at home"
+    severity: critical
+    reason: "Esketamine/Spravato is in-clinic only under REMS requirements. (STYLE-SYSTEM §3.5)"
+  - term: "take Spravato"
+    severity: warning
+    reason: "Spravato is administered in-clinic under medical supervision — not self-administered at home. Clarify the supervised in-clinic protocol. (STYLE-SYSTEM §3.5)"
+
+  # TMS as replacement for all medications — warning
+  - term: "replace medication"
+    severity: warning
+    reason: "'Drug-free alternative' refers to the TMS procedure being non-pharmaceutical — some patients use both TMS and medication. Do not imply TMS replaces all medications. (STYLE-SYSTEM §3.6)"
+  - term: "replace all medication"
+    severity: critical
+    reason: "TMS does not replace all medications for all patients. (STYLE-SYSTEM §3.6)"
+  - term: "stop taking medication"
+    severity: critical
+    reason: "Do not advise patients to discontinue medications. (STYLE-SYSTEM §3.6)"
+
+  # Crisis framing errors — critical
+  - term: "emergency TMS"
+    severity: critical
+    reason: "TMS is not an emergency treatment. For crisis situations, reference 988 or emergency services. (STYLE-SYSTEM §3.7)"
+  - term: "crisis treatment"
+    severity: critical
+    reason: "TMS and Spravato are not crisis interventions. Always reference 988 for crisis situations. (STYLE-SYSTEM §3.7)"
+
+  # Invented credentials or staff names — critical
+  - term: "Dr. Vines, PhD"
+    severity: critical
+    reason: "Dr. Vines' confirmed credential is MD only. Do not add degrees not confirmed. (STYLE-SYSTEM §3.8)"
+  - term: "Dr. Vines, DO"
+    severity: critical
+    reason: "Dr. Vines' confirmed credential is MD. Do not substitute or add degrees. (STYLE-SYSTEM §3.8)"
+
+  # Cross-promotion with sister entities — critical
+  - term: "The Hope House"
+    severity: critical
+    reason: "Scottsdale TMS Therapy is a standalone clinic. Do not reference sister entities. (STYLE-SYSTEM §3.9)"
+  - term: "Arizona IOP"
+    severity: critical
+    reason: "Do not reference sister entities. Scottsdale TMS Therapy is a standalone mental health clinic. (STYLE-SYSTEM §3.9)"
+  - term: "Scottsdale Detox"
+    severity: critical
+    reason: "Do not reference sister entities. (STYLE-SYSTEM §3.9)"
+
+voice_bans:
+  - term: "utilize"
+    severity: warning
+    reason: "Anti-slop banned term. Use 'use'. (STYLE-SYSTEM §2.4)"
+  - term: "leverage"
+    severity: warning
+    reason: "Anti-slop banned term. Be specific about the mechanism. (STYLE-SYSTEM §2.4)"
+  - term: "robust"
+    severity: warning
+    reason: "Anti-slop banned term. Describe what is substantial about it. (STYLE-SYSTEM §2.4)"
+  - term: "seamless"
+    severity: warning
+    reason: "Anti-slop banned term. (STYLE-SYSTEM §2.4)"
+  - term: "cutting-edge"
+    severity: warning
+    reason: "Anti-slop banned term. Name the specific technology instead. (STYLE-SYSTEM §2.4)"
+  - term: "holistic"
+    severity: warning
+    reason: "Anti-slop banned term when used as puff. Use 'integrated' or describe the specific elements. (STYLE-SYSTEM §2.4)"
+  - term: "synergy"
+    severity: warning
+    reason: "Anti-slop banned term. (STYLE-SYSTEM §2.4)"
+  - term: "transformative"
+    severity: warning
+    reason: "Anti-slop banned term. Describe the specific outcome instead. (STYLE-SYSTEM §2.4)"
+  - term: "innovative"
+    severity: warning
+    reason: "Anti-slop banned term. (STYLE-SYSTEM §2.4)"
+  - term: "game-changing"
+    severity: warning
+    reason: "Anti-slop banned term. (STYLE-SYSTEM §2.4)"
+  - term: "revolutionary"
+    severity: warning
+    reason: "Anti-slop banned term. (STYLE-SYSTEM §2.4)"
+
+required_presence:
+  - rule: seizure_risk_in_educational_content
+    severity: critical
+    check: "Any content that lists TMS side effects must include seizure risk, noting it is rare and higher in patients with seizure or epilepsy history. Omitting seizure risk from a side effects list is a compliance failure."
+    source: "STYLE-SYSTEM §3.10"
+  - rule: rems_with_spravato
+    severity: critical
+    check: "Any content discussing Spravato must note REMS certification and that administration is in-clinic only under medical supervision."
+    source: "STYLE-SYSTEM §3.5"
+  - rule: cost_qualifier_on_price
+    severity: critical
+    check: "When referencing the $2,000–$12,000 cost range, always note 'per full course' and that insurance coverage varies."
+    source: "STYLE-SYSTEM §3.11"
+  - rule: crisis_line_in_closing
+    severity: critical
+    check: "Every blog post and mental health content piece must reference 988 (call or text) in or near the closing CTA."
+    source: "STYLE-SYSTEM §3.7"
+  - rule: no_invented_staff
+    severity: critical
+    check: "Only three staff members are confirmed: Dr. Michael Vines (MD), Alyssa Gentile (PMHNP-BC, MSN), Sarah Ann Nguyen (MS, LPC). Do not invent names, titles, or credentials for additional staff."
+    source: "STYLE-SYSTEM §3.8"
+  - rule: no_invented_success_metrics
+    severity: critical
+    check: "No specific remission rates or success percentages have been confirmed from the site. Do not state any. Use 'significantly reduces depressive symptoms in many patients' or equivalent qualified language."
+    source: "STYLE-SYSTEM §3.3"
