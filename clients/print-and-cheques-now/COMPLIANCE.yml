@@ -1,0 +1,206 @@
+# Compliance config — Print & Cheques Now
+#
+# Fail-closed rule set for the compliance-gate agent.
+# Derived from STYLE-SYSTEM.md §3 (anti-slop rules + avoidance list), §4 (technical accuracy), and §5 (blog rules).
+# severity: critical halts the pipeline before /ship; warning is reported but does not halt.
+
+client: print-and-cheques-now
+schema_version: 1
+
+# Volume claim guards (critical — false advertising exposure if tripped)
+banned_terms:
+  - term: "Canadian Payments Association"
+    severity: critical
+    reason: "Retired name. The certifying body is now 'Payments Canada' — use that name exclusively (STYLE-SYSTEM §4.2)."
+  - term: "60% more"
+    severity: critical
+    reason: "Volume claim must use 'up to' qualifier: 'up to 60% more.' Never state as absolute (STYLE-SYSTEM §4.1)."
+  - term: "50% more"
+    severity: critical
+    reason: "Volume claim must use 'up to' qualifier: 'up to 50% more.' Never state as absolute (STYLE-SYSTEM §4.1)."
+  - term: "25% more"
+    severity: critical
+    reason: "Volume claim must use 'up to' qualifier: 'up to 25% more.' Never state as absolute (STYLE-SYSTEM §4.1)."
+  - term: "100% acceptance"
+    severity: critical
+    reason: "Do not claim 100% bank acceptance. The Bank Acceptance Guarantee covers reprinting or refunding — not an absolute acceptance rate (STYLE-SYSTEM §4.6)."
+  - term: "guaranteed acceptance"
+    severity: critical
+    reason: "Do not use 'guaranteed acceptance' as a standalone claim. Use 'Bank Acceptance Guarantee' (capitalized) with the correct description: accepted or reprinted/refunded (STYLE-SYSTEM §4.6)."
+  - term: "our bank"
+    severity: critical
+    reason: "Implies Print & Cheques Now owns banking relationships. The company prints cheques — it does not hold banking relationships (STYLE-SYSTEM §3.4)."
+  - term: "our banking"
+    severity: critical
+    reason: "Implies banking ownership. Reframe around Payments Canada compliance (STYLE-SYSTEM §3.4)."
+  - term: "cheque check"
+    severity: critical
+    reason: "Do not combine the two spellings as a compound. Use them separately in different sentence contexts (STYLE-SYSTEM §3.5)."
+  - term: "cheques/checks"
+    severity: critical
+    reason: "Do not use the two spellings as a parenthetical compound. Use them separately as natural alternate references (STYLE-SYSTEM §3.5)."
+  - term: "cheques (checks)"
+    severity: critical
+    reason: "Parenthetical compound is banned. Use both spellings naturally across separate sentences (STYLE-SYSTEM §3.5)."
+
+  # Software compatibility guards
+  - term: "compatible with all accounting software"
+    severity: critical
+    reason: "Do not claim universal software compatibility. Only confirmed platforms are: QuickBooks, Sage 50, Xero, Simply Accounting (STYLE-SYSTEM §4.3)."
+  - term: "works with any accounting"
+    severity: critical
+    reason: "Do not claim compatibility beyond the confirmed software list (STYLE-SYSTEM §4.3)."
+
+  # Anti-slop — highest-risk banned words (full list in STYLE-SYSTEM §3.2)
+  - term: "delve"
+    severity: warning
+    reason: "AI fingerprint word. Replace with: explore, examine, look at (STYLE-SYSTEM §3.2)."
+  - term: "utilize"
+    severity: warning
+    reason: "Use 'use' (STYLE-SYSTEM §3.2)."
+  - term: "leverage"
+    severity: warning
+    reason: "Use 'use' (STYLE-SYSTEM §3.2)."
+  - term: "robust"
+    severity: warning
+    reason: "Use 'strong,' 'reliable,' 'solid' (STYLE-SYSTEM §3.2)."
+  - term: "seamless"
+    severity: warning
+    reason: "Use 'smooth,' 'easy' (STYLE-SYSTEM §3.2)."
+  - term: "comprehensive"
+    severity: warning
+    reason: "Use 'full,' 'complete,' 'thorough' (STYLE-SYSTEM §3.2)."
+  - term: "cutting-edge"
+    severity: warning
+    reason: "Use 'modern,' 'new,' 'latest' (STYLE-SYSTEM §3.2)."
+  - term: "holistic"
+    severity: warning
+    reason: "Use 'complete,' 'full,' 'whole' (STYLE-SYSTEM §3.2)."
+  - term: "innovative"
+    severity: warning
+    reason: "Describe what is actually new instead (STYLE-SYSTEM §3.2)."
+  - term: "transformative"
+    severity: warning
+    reason: "Describe the actual change instead (STYLE-SYSTEM §3.2)."
+  - term: "synergy"
+    severity: warning
+    reason: "Delete and rewrite the sentence (STYLE-SYSTEM §3.2)."
+  - term: "tapestry"
+    severity: critical
+    reason: "Delete entirely (STYLE-SYSTEM §3.2)."
+  - term: "testament"
+    severity: warning
+    reason: "Use 'proof,' 'evidence,' 'sign' (STYLE-SYSTEM §3.2)."
+  - term: "embark"
+    severity: warning
+    reason: "Use 'start,' 'begin' (STYLE-SYSTEM §3.2)."
+  - term: "journey"
+    severity: warning
+    reason: "Use 'process,' 'experience,' 'path' (STYLE-SYSTEM §3.2)."
+  - term: "streamline"
+    severity: warning
+    reason: "Use 'simplify,' 'speed up,' 'cut steps from' (STYLE-SYSTEM §3.2)."
+  - term: "elevate"
+    severity: warning
+    reason: "Use 'improve,' 'raise,' 'strengthen' (STYLE-SYSTEM §3.2)."
+  - term: "unlock"
+    severity: warning
+    reason: "Use 'enable,' 'open up,' 'create' (STYLE-SYSTEM §3.2)."
+  - term: "empower"
+    severity: warning
+    reason: "Say what capability it gives instead (STYLE-SYSTEM §3.2)."
+  - term: "ecosystem"
+    severity: warning
+    reason: "Use 'system,' 'community,' 'market' (STYLE-SYSTEM §3.2)."
+  - term: "bolster"
+    severity: warning
+    reason: "Use 'strengthen,' 'support' (STYLE-SYSTEM §3.2)."
+  - term: "pivotal"
+    severity: warning
+    reason: "Use 'important,' 'key,' 'critical' (STYLE-SYSTEM §3.2)."
+  - term: "harness"
+    severity: warning
+    reason: "Use 'use,' 'apply,' 'put to work' (STYLE-SYSTEM §3.2)."
+  - term: "curate"
+    severity: warning
+    reason: "Use 'choose,' 'pick,' 'collect,' 'organize' (STYLE-SYSTEM §3.2)."
+  - term: "It's important to note"
+    severity: warning
+    reason: "Throat-clearing. Delete and start with the point (STYLE-SYSTEM §3.3)."
+  - term: "In today's"
+    severity: warning
+    reason: "Banned opening phrase (STYLE-SYSTEM §3.3)."
+  - term: "Let's dive"
+    severity: warning
+    reason: "Banned throat-clearing phrase (STYLE-SYSTEM §3.3)."
+  - term: "In this article"
+    severity: warning
+    reason: "Banned throat-clearing phrase (STYLE-SYSTEM §3.3)."
+  - term: "At the end of the day"
+    severity: warning
+    reason: "Empty hedge — delete (STYLE-SYSTEM §3.3)."
+  - term: "In conclusion"
+    severity: warning
+    reason: "Banned lazy closer (STYLE-SYSTEM §3.3)."
+  - term: "To sum up"
+    severity: warning
+    reason: "Banned lazy closer (STYLE-SYSTEM §3.3)."
+  - term: "To wrap up"
+    severity: warning
+    reason: "Banned lazy closer (STYLE-SYSTEM §3.3)."
+  - term: "Feel free to reach out"
+    severity: warning
+    reason: "Banned lazy closer — write the actual CTA (STYLE-SYSTEM §3.3)."
+  - term: "Don't hesitate to"
+    severity: warning
+    reason: "Banned lazy closer (STYLE-SYSTEM §3.3)."
+  - term: "Imagine a world"
+    severity: warning
+    reason: "Banned hook opener (STYLE-SYSTEM §3.3)."
+  - term: "Picture this"
+    severity: warning
+    reason: "Banned hook opener (STYLE-SYSTEM §3.3)."
+  - term: "Have you ever wondered"
+    severity: warning
+    reason: "Banned hook opener (STYLE-SYSTEM §3.3)."
+  - term: "isn't just"
+    severity: warning
+    reason: "Flag for 'Not just X — it's Y' pattern (STYLE-SYSTEM §3.4)."
+  - term: "not just"
+    severity: warning
+    reason: "Flag for 'Not just X — it's Y' pattern (STYLE-SYSTEM §3.4)."
+
+# Required presence checks
+required_presence:
+  - rule: blog_cta_present
+    severity: critical
+    check: "Every blog post must end with a CTA directing the reader to chequesnow.ca or the phone number (1-866-760-2661). See contact-block.md for approved phrasing."
+    source: "STYLE-SYSTEM §5.3"
+  - rule: dual_spelling_present
+    severity: critical
+    check: "Both 'cheque' (Canadian spelling) and 'check' (American spelling) must appear naturally in every blog post or page of meaningful length. This is an intentional dual-spelling SEO strategy — not an error. See STYLE-SYSTEM §3.5."
+    source: "STYLE-SYSTEM §3.5"
+  - rule: volume_claim_qualifier
+    severity: critical
+    check: "Any percentage-volume claim (60%, 50%, 25%) must be preceded by 'up to.' Scan the entire piece for bare percentage claims and add the qualifier."
+    source: "STYLE-SYSTEM §4.1"
+  - rule: cpa_credential_accuracy
+    severity: warning
+    check: "When the CPA credential is cited, use the full form: 'CPA Self-Accredited Printer #1010.' The certifying body must be named 'Payments Canada' — never 'Canadian Payments Association.'"
+    source: "STYLE-SYSTEM §4.2"
+  - rule: software_list_accuracy
+    severity: warning
+    check: "Software compatibility claims must match the confirmed list: QuickBooks, Sage 50, Xero, Simply Accounting. Do not add software not on this list."
+    source: "STYLE-SYSTEM §4.3"
+  - rule: guarantee_names_capitalized
+    severity: warning
+    check: "'Bank Acceptance Guarantee' and 'Price Match Guarantee' must be capitalized as proper names throughout the piece."
+    source: "STYLE-SYSTEM §3.1"
+  - rule: serp_analysis_required
+    severity: warning
+    check: "SERP analysis must be run before writing. Do not simulate — must access live search results. Location: Canada."
+    source: "STYLE-SYSTEM §7"
+  - rule: no_banking_relationship_language
+    severity: critical
+    check: "Do not use 'our bank,' 'our banking partners,' or any phrase implying Print & Cheques Now owns or manages banking relationships. The company prints Payments Canada-compliant cheques — it is not a bank."
+    source: "STYLE-SYSTEM §3.4"

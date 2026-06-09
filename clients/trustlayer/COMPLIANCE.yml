@@ -1,0 +1,182 @@
+# Compliance config — TrustLayer
+#
+# Fail-closed rule set for the compliance-gate agent.
+# Derived from STYLE-SYSTEM.md §3 (terminology + anti-slop), §4 (technical accuracy), and §5 (blog rules).
+# severity: critical halts the pipeline before /ship; warning is reported but does not halt.
+
+client: trustlayer
+schema_version: 1
+
+# Platform category guards (critical — misrepresents the product if tripped)
+banned_terms:
+  - term: "insurance software"
+    severity: critical
+    reason: "TrustLayer is a third-party risk management platform, not insurance software. This is a product category error (STYLE-SYSTEM §4.1)."
+  - term: "issues insurance"
+    severity: critical
+    reason: "TrustLayer does not issue insurance. It collects and verifies compliance documents (STYLE-SYSTEM §4.1, §4.2)."
+  - term: "underwrites"
+    severity: critical
+    reason: "TrustLayer does not underwrite coverage of any kind. Do not use this word in relation to TrustLayer (STYLE-SYSTEM §4.2)."
+  - term: "guaranteed compliance"
+    severity: critical
+    reason: "TrustLayer verifies and monitors compliance — it does not guarantee it. Remove this phrase (STYLE-SYSTEM §4.1)."
+  - term: "compliance guaranteed"
+    severity: critical
+    reason: "TrustLayer verifies and monitors compliance — it does not guarantee it. Remove this phrase (STYLE-SYSTEM §4.1)."
+  - term: "ensures your vendors are compliant"
+    severity: critical
+    reason: "TrustLayer monitors and flags — it does not ensure or guarantee vendor compliance. Use: 'monitors vendor compliance' or 'flags non-compliant coverage' (STYLE-SYSTEM §4.1)."
+  - term: "guarantees your vendors"
+    severity: critical
+    reason: "TrustLayer does not guarantee vendor compliance. Use 'monitors' or 'verifies' (STYLE-SYSTEM §4.1)."
+
+  # Anti-slop — highest-risk banned words (full list in STYLE-SYSTEM §3.2)
+  - term: "delve"
+    severity: warning
+    reason: "AI fingerprint word. Replace with: explore, examine, look at (STYLE-SYSTEM §3.2)."
+  - term: "utilize"
+    severity: warning
+    reason: "Use 'use' (STYLE-SYSTEM §3.2)."
+  - term: "leverage"
+    severity: warning
+    reason: "Use 'use' (STYLE-SYSTEM §3.2)."
+  - term: "robust"
+    severity: warning
+    reason: "Use 'strong,' 'reliable,' 'solid' (STYLE-SYSTEM §3.2)."
+  - term: "seamless"
+    severity: warning
+    reason: "Use 'smooth,' 'easy' (STYLE-SYSTEM §3.2)."
+  - term: "comprehensive"
+    severity: warning
+    reason: "Use 'full,' 'complete,' 'thorough' (STYLE-SYSTEM §3.2)."
+  - term: "cutting-edge"
+    severity: warning
+    reason: "Use 'modern,' 'new,' 'latest' (STYLE-SYSTEM §3.2)."
+  - term: "holistic"
+    severity: warning
+    reason: "Use 'complete,' 'full,' 'whole' (STYLE-SYSTEM §3.2)."
+  - term: "innovative"
+    severity: warning
+    reason: "Describe what is actually new instead (STYLE-SYSTEM §3.2)."
+  - term: "transformative"
+    severity: warning
+    reason: "Describe the actual change instead (STYLE-SYSTEM §3.2)."
+  - term: "synergy"
+    severity: warning
+    reason: "Delete and rewrite the sentence (STYLE-SYSTEM §3.2)."
+  - term: "tapestry"
+    severity: critical
+    reason: "Delete entirely (STYLE-SYSTEM §3.2)."
+  - term: "testament"
+    severity: warning
+    reason: "Use 'proof,' 'evidence,' 'sign' (STYLE-SYSTEM §3.2)."
+  - term: "embark"
+    severity: warning
+    reason: "Use 'start,' 'begin' (STYLE-SYSTEM §3.2)."
+  - term: "journey"
+    severity: warning
+    reason: "Use 'process,' 'experience,' 'path' (STYLE-SYSTEM §3.2)."
+  - term: "streamline"
+    severity: warning
+    reason: "Use 'simplify,' 'speed up,' 'cut steps from' (STYLE-SYSTEM §3.2)."
+  - term: "elevate"
+    severity: warning
+    reason: "Use 'improve,' 'raise,' 'strengthen' (STYLE-SYSTEM §3.2)."
+  - term: "unlock"
+    severity: warning
+    reason: "Use 'enable,' 'open up,' 'create' (STYLE-SYSTEM §3.2)."
+  - term: "empower"
+    severity: warning
+    reason: "Say what capability it gives instead (STYLE-SYSTEM §3.2)."
+  - term: "ecosystem"
+    severity: warning
+    reason: "Use 'system,' 'community,' 'market' (STYLE-SYSTEM §3.2)."
+  - term: "bolster"
+    severity: warning
+    reason: "Use 'strengthen,' 'support' (STYLE-SYSTEM §3.2)."
+  - term: "pivotal"
+    severity: warning
+    reason: "Use 'important,' 'key,' 'critical' (STYLE-SYSTEM §3.2)."
+  - term: "harness"
+    severity: warning
+    reason: "Use 'use,' 'apply,' 'put to work' (STYLE-SYSTEM §3.2)."
+  - term: "curate"
+    severity: warning
+    reason: "Use 'choose,' 'pick,' 'collect,' 'organize' (STYLE-SYSTEM §3.2)."
+  - term: "It's important to note"
+    severity: warning
+    reason: "Throat-clearing. Delete and start with the point (STYLE-SYSTEM §3.3)."
+  - term: "In today's"
+    severity: warning
+    reason: "Banned opening phrase (STYLE-SYSTEM §3.3)."
+  - term: "Let's dive"
+    severity: warning
+    reason: "Banned throat-clearing phrase (STYLE-SYSTEM §3.3)."
+  - term: "In this article"
+    severity: warning
+    reason: "Banned throat-clearing phrase (STYLE-SYSTEM §3.3)."
+  - term: "At the end of the day"
+    severity: warning
+    reason: "Empty hedge — delete (STYLE-SYSTEM §3.3)."
+  - term: "In conclusion"
+    severity: warning
+    reason: "Banned lazy closer (STYLE-SYSTEM §3.3)."
+  - term: "To sum up"
+    severity: warning
+    reason: "Banned lazy closer (STYLE-SYSTEM §3.3)."
+  - term: "To wrap up"
+    severity: warning
+    reason: "Banned lazy closer (STYLE-SYSTEM §3.3)."
+  - term: "Feel free to reach out"
+    severity: warning
+    reason: "Banned lazy closer — write the actual CTA (STYLE-SYSTEM §3.3)."
+  - term: "Don't hesitate to"
+    severity: warning
+    reason: "Banned lazy closer (STYLE-SYSTEM §3.3)."
+  - term: "Imagine a world"
+    severity: warning
+    reason: "Banned hook opener (STYLE-SYSTEM §3.3)."
+  - term: "Picture this"
+    severity: warning
+    reason: "Banned hook opener (STYLE-SYSTEM §3.3)."
+  - term: "Have you ever wondered"
+    severity: warning
+    reason: "Banned hook opener (STYLE-SYSTEM §3.3)."
+  - term: "isn't just"
+    severity: warning
+    reason: "Flag for 'Not just X — it's Y' pattern (STYLE-SYSTEM §3.4)."
+  - term: "not just"
+    severity: warning
+    reason: "Flag for 'Not just X — it's Y' pattern (STYLE-SYSTEM §3.4)."
+
+# Required presence checks
+required_presence:
+  - rule: blog_cta_present
+    severity: critical
+    check: "Every blog post must end with a CTA directing the reader to request a demo, schedule a meeting, or get their free TrustScore. See contact-block.md for approved phrasing."
+    source: "STYLE-SYSTEM §5.3"
+  - rule: coi_spelled_out_on_first_use
+    severity: critical
+    check: "Every piece must spell out 'certificate of insurance (COI)' on first use. Abbreviating as 'COI' from the start is a compliance error."
+    source: "STYLE-SYSTEM §3.1, §4.4"
+  - rule: platform_category_check
+    severity: critical
+    check: "TrustLayer must be described as a third-party risk management platform or compliance document management platform. Any sentence that describes it as 'insurance software' or implies it issues or underwrites coverage must be rewritten before the piece ships."
+    source: "STYLE-SYSTEM §4.1"
+  - rule: trustscore_capitalization
+    severity: warning
+    check: "TrustScore must be capitalized exactly as shown — capital T, capital S. Check every instance."
+    source: "STYLE-SYSTEM §3.1"
+  - rule: no_invented_clients
+    severity: critical
+    check: "Only reference named clients confirmed in STYLE-SYSTEM §8: EL Ad, Grenadier Homes, PayneWest Insurance. Do not add client names not in this list."
+    source: "STYLE-SYSTEM §4.3, §8"
+  - rule: no_invented_pricing_or_limits
+    severity: critical
+    check: "Do not state coverage limits, pricing tiers, or feature specifications not confirmed in raw/knowledge/. Flag gaps to the CSM."
+    source: "STYLE-SYSTEM §4.3"
+  - rule: serp_analysis_required
+    severity: warning
+    check: "SERP analysis must be run before writing. Do not simulate — must access live search results."
+    source: "STYLE-SYSTEM §7"

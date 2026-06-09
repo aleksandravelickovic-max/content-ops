@@ -132,6 +132,8 @@ portal/
 | A Plus Landscaping | `clients/a-plus-landscaping/STYLE-SYSTEM.md` | Active — family-owned outdoor living design-build, Central PA; no dashes ever; warranty mentioned only on patio page (CSM: Arianna Trabanino) |
 | US Storage Units | `clients/us-storage-units/STYLE-SYSTEM.md` | Active — self-storage comparison and reservation marketplace; 10,000+ facilities; marketplace framing critical (never "our facilities"); no blog (CSM: Arianna Trabanino) |
 | US Self Storage | `clients/us-self-storage/STYLE-SYSTEM.md` | Active — self-storage comparison marketplace + editorial hub; 20,000+ facilities; marketplace framing critical (never "our facilities"); dual audience: consumers + B2B operators (Storage Promoter Blog); no "guaranteed lowest prices" claim (CSM: Arianna Trabanino) |
+| TrustLayer | `clients/trustlayer/STYLE-SYSTEM.md` | Active — AI-powered COI collection and third-party compliance management platform; never "insurance software"; vendor zero-sign-in is key differentiator (CSM: Wendy Alinor) |
+| Print & Cheques Now | `clients/print-and-cheques-now/STYLE-SYSTEM.md` | Active — Canadian cheque printing specialist, CPA Self-Accredited Printer #1010; dual cheque/check spelling required for SEO; volume claims require "up to" qualifier (CSM: Arianna Trabanino) |
 
 ### Adding a new client
 
