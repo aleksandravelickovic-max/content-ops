@@ -1,0 +1,37 @@
+--- MANIFEST ---
+doc_title: Installation Guide Page | Zia Tile — May
+doc_id: 1eVxhjAItVmyP6_cVnxnGReom03BiN5nurOSd0eNEerw
+status: Zia to review
+page_url: https://ziatile.com/pages/installation-guides
+month: May
+category: 
+title: Installation Guides Page
+--- CONTENT ---
+﻿Tile Installation Guides by Material
+Zellige, natural stone, cement tile, and ceramic each have distinct installation requirements. Adhesive type, substrate preparation, sealing timing, and grout selection all differ by material. Matching the correct specification to the correct material is what allows an installation to perform as intended.
+
+
+Cantera
+Read Installation Guide
+Cement
+Read Installation Guide
+Ceramics
+Read Installation Guide
+Cotto
+Read Installation Guide
+Cotto Allende
+Read Installation Guide
+Field Trip: Japan
+Read Installation Guide
+Glass Mosaics
+Read Installation Guide
+Limestone
+Read Installation Guide
+Marble
+Read Installation Guide
+Roman Mosaics
+Read Installation Guide
+Terrazzo
+Read Installation Guide
+Zellige
+Read Installation Guide

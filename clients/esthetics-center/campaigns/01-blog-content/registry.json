@@ -1,0 +1,77 @@
+{
+  "client": "esthetics-center",
+  "campaign": "01-blog-content",
+  "totalFiles": 10,
+  "entries": [
+    {
+      "path": "html/01-botox-aftercare.html",
+      "displayName": "Botox Aftercare Mistakes That Can Ruin Your Results",
+      "type": "blog",
+      "sizeHuman": "20.2 KB",
+      "lastModified": "2026-06-06"
+    },
+    {
+      "path": "html/02-laser-vs-waxing.html",
+      "displayName": "Laser vs. Waxing: Cost Comparison and Benefits",
+      "type": "blog",
+      "sizeHuman": "19.4 KB",
+      "lastModified": "2026-06-06"
+    },
+    {
+      "path": "html/03-jawline-filler.html",
+      "displayName": "Jawline Contouring with Filler: Creating Definition and Balance",
+      "type": "blog",
+      "sizeHuman": "20.8 KB",
+      "lastModified": "2026-06-06"
+    },
+    {
+      "path": "html/04-non-surgical-body-contouring.html",
+      "displayName": "Am I a Good Candidate for Non-Surgical Body Sculpting?",
+      "type": "blog",
+      "sizeHuman": "22.3 KB",
+      "lastModified": "2026-06-06"
+    },
+    {
+      "path": "html/05-rhinoplasty-recovery.html",
+      "displayName": "Rhinoplasty Recovery: What to Expect Day by Day",
+      "type": "blog",
+      "sizeHuman": "21.1 KB",
+      "lastModified": "2026-06-06"
+    },
+    {
+      "path": "html/06-botox-consultation.html",
+      "displayName": "Botox Consultation Guide: What to Ask Your Provider",
+      "type": "blog",
+      "sizeHuman": "20.7 KB",
+      "lastModified": "2026-06-06"
+    },
+    {
+      "path": "html/07-laser-hair-removal-skin-tones.html",
+      "displayName": "Laser Hair Removal on Different Skin Tones: Technology and Safety Explained",
+      "type": "blog",
+      "sizeHuman": "21.8 KB",
+      "lastModified": "2026-06-06"
+    },
+    {
+      "path": "html/08-filler-swelling-timeline.html",
+      "displayName": "Filler Swelling Timeline: What's Normal Week by Week",
+      "type": "blog",
+      "sizeHuman": "21.8 KB",
+      "lastModified": "2026-06-06"
+    },
+    {
+      "path": "html/09-coolsculpting-fat.html",
+      "displayName": "What Happens to Fat Cells After CoolSculpting?",
+      "type": "blog",
+      "sizeHuman": "21.5 KB",
+      "lastModified": "2026-06-06"
+    },
+    {
+      "path": "html/10-brow-lift.html",
+      "displayName": "Brow Lift: Minimally Invasive Forehead Rejuvenation",
+      "type": "blog",
+      "sizeHuman": "21.4 KB",
+      "lastModified": "2026-06-06"
+    }
+  ]
+}

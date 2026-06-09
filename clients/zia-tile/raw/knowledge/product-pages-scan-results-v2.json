@@ -1,0 +1,5217 @@
+[
+  {
+    "filename": "2x6-rectangle-oscura",
+    "doc_title": "Product Page 38 | Zia Tile - April 2026 | 2x6 Rectangle + Oscura",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/2x6-rectangle-oscura",
+    "material": "cotto",
+    "meta_title": "",
+    "meta_desc": "Shop Zia's Oscura 2x6 Cotto. A matte black handmade terra cotta tile for kitchen backsplashes, bathroom walls, and outdoor patios in any climate.",
+    "issues": [
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"rectangle + oscura\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 0,
+    "significant": 1,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "8x9-hex-red-clay",
+    "doc_title": "Product Page 42 | Zia Tile - April 2026 | 8x9 Hex + Red Clay",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/8x9-hex-red-clay-cotto-tile",
+    "material": "cotto",
+    "meta_title": "8x9 Hex + Red Clay Terracotta Tile | Zia Tile",
+    "meta_desc": "Shop Zia's 8x9 Hex + Red Clay Cotto. A red hexagon terra cotta tile for kitchen floors, outdoor patios, and bathroom wall installations.",
+    "issues": [
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 0,
+    "significant": 0,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "absinthe-2x6-bejmat-zellige",
+    "doc_title": "Product Page 21 | Zia Tile - March 2026 | Absinthe 2x6 Bejmat Zellige",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/absinthe-2x6-zellige-tile",
+    "material": "zellige",
+    "meta_title": "Absinthe 2x6 Bejmat Zellige | Zia Tile",
+    "meta_desc": "Shop Zia's Absinthe 2x6 Bejmat zellige. A handcrafted Moroccan tile with aqua-hued tones, suited for kitchen backsplashes, bathroom walls, and more.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "unconfirmed-colorway",
+        "critical",
+        "Colorway \"absinthe\" not confirmed in approved reference"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (3\u00d7)"
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Missing: \"handcrafted Moroccan art form\""
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Missing: \"chips, pits, and crazing\""
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 38 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 3,
+    "significant": 3,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "absinthe-trapezoid",
+    "doc_title": "Product Page 33 | Zia Tile - April 2026 | Absinthe Trapezoid",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/absinthe-trapezoid-zellige-tile",
+    "material": "unknown",
+    "meta_title": "",
+    "meta_desc": "Shop Zia's Absinthe Trapezoid zellige. An aqua-hued handcrafted Moroccan tile for kitchen backsplashes, bathroom walls, and shower installations.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (4\u00d7)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 1,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "aegean-4x4",
+    "doc_title": "Product Page 24 | Zia Tile - March 2026 | Aegean 4x4",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/aegean-zellige-tile",
+    "material": "unknown",
+    "meta_title": "Aegean 4x4 Square Zellige | Zia Tile",
+    "meta_desc": "Shop Zia's Aegean 4x4 zellige. A deep sea blue handcrafted Moroccan tile with inherent variation, suited for kitchen backsplashes and bathroom walls.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "unconfirmed-colorway",
+        "critical",
+        "Colorway \"aegean\" not confirmed in approved reference"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (4\u00d7)"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 36 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 3,
+    "significant": 1,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "alcazar-madera",
+    "doc_title": "Product Page 11 | Zia Tile - May 2026 | Alcazar + Madera",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/alcazar-madera",
+    "material": "cotto",
+    "meta_title": "Shop Alcazar + Madera Terra Cotta Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Alcazar + Madera Cotto. A handcrafted Mexican terra cotta specialty shape tile for kitchen floors, patios, and feature wall applications.",
+    "issues": [
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"alcazar + madera\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "no-color-desc",
+        "significant",
+        "No color description in romance copy"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 1,
+    "significant": 3,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "amber-4x4",
+    "doc_title": "Product Page 27 | Zia Tile - March 2026 | Amber 4x4",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/amber-zellige-tile",
+    "material": "unknown",
+    "meta_title": "Amber 4x4 Square Zellige | Zia Tile",
+    "meta_desc": "Shop Zia's Amber 4x4 zellige. A neutral turned up a notch, this handcrafted Moroccan tile suits kitchen backsplashes, bathroom walls, and more.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: your"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (4\u00d7)"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 35 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 1,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "apollo-12x12",
+    "doc_title": "Product Page 3 | Zia Tile - May 2026 | Apollo 12x12",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/apollo-12x12",
+    "material": "terrazzo",
+    "meta_title": "Shop Apollo 12x12 Square Terrazzo Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Apollo 12x12 Terrazzo. A handmade cement terrazzo tile with a grey base and multi-colored stone aggregate, suited for interior floors, bathrooms, and feature walls.",
+    "issues": [
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you"
+      ],
+      [
+        "ai-pattern",
+        "significant",
+        "AI cadence: Vague: \"versatile tile/option\""
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "meta-desc-len",
+        "minor",
+        "Meta desc 175 chars (target 140\u2013160)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 1,
+    "significant": 2,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "atomic-4x4",
+    "doc_title": "Product Page 32 | Zia Tile - May 2026 | Atomic 4x4",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/atomic-4x4-cement-tile",
+    "material": "cement",
+    "meta_title": "Shop Atomic 4x4 Cement Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Atomic 4x4 cement tile. A warm brown handmade cement tile in a 4x4 square for floors, walls, and shower installations.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: your"
+      ],
+      [
+        "banned",
+        "significant",
+        "Banned: affordable"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 38 chars (target 50\u201360)"
+      ],
+      [
+        "meta-desc-len",
+        "minor",
+        "Meta desc 129 chars (target 140\u2013160)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 2,
+    "minor": 2,
+    "info": 1
+  },
+  {
+    "filename": "basilica-12x24",
+    "doc_title": "Product Page 30 | Zia Tile - April 2026 | Basilica 12x24",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/basilica-12x24-honed-limestone-tile",
+    "material": "limestone",
+    "meta_title": "Shop Basilica 12x24 Honed Limestone Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Basilica 12x24 honed limestone. A grey natural stone tile quarried near Fez for interior floors, bathrooms, showers, and patios in mild climates.",
+    "issues": [
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you, your"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 1,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "basilica-4x12-honed",
+    "doc_title": "Product Page 22 | Zia Tile - May 2026 | Basilica 4x12 + Honed",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/basilica-4x12-honed-limestone-tile",
+    "material": "limestone",
+    "meta_title": "Shop Basilica 4x12 Honed Limestone | Zia Tile",
+    "meta_desc": "Shop Zia's Basilica 4x12 Honed Limestone. A cool grey natural stone with a smooth matte finish, suited for interior floors, showers, and fireplaces.",
+    "issues": [
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you, your"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"basilica +\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 1,
+    "significant": 2,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "basilica-6x6-honed",
+    "doc_title": "Product Page 13 | Zia Tile - April 2026 | Basilica 6x6 Honed",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/basilica-6x6-honed",
+    "material": "limestone",
+    "meta_title": "Basilica Honed 6x6 Square Limestone | Zia Tile",
+    "meta_desc": "Shop Zia's Basilica 6x6 honed limestone. A cool grey natural stone tile for kitchen floors, bathroom walls, and interior and exterior installations.",
+    "issues": [
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you, your"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 1,
+    "significant": 0,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "bone-2x8",
+    "doc_title": "Product Page 16 | Zia Tile - May 2026 | Bone 2x8",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/bone-2x8-cement-tile",
+    "material": "cement",
+    "meta_title": "Shop Bone 2x8 Cement Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Bone 2x8 Cement Tile. A warm off-white cement tile in a 2x8 rectangle, suited for kitchens, bathrooms, patios in mild climates, and showers.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: your"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "banned",
+        "significant",
+        "Banned: affordable"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 36 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 3,
+    "significant": 2,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "bone-hex",
+    "doc_title": "Optimization | Zia Tile - May 2026 | Bone Hex",
+    "status": "On Hold",
+    "page_url": "https://ziatile.com/products/bone-hex-cement-tile",
+    "material": "cement",
+    "meta_title": "Shop Bone Hex Cement Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Bone Hex cement tile. A warm bone-colored handmade cement tile in a hexagonal format for floors, walls, and shower installations.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: your"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "banned",
+        "significant",
+        "Banned: affordable"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 36 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 3,
+    "significant": 2,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "brighton-hyannis",
+    "doc_title": "Optimization | Zia Tile - May 2026 | Brighton Hyannis",
+    "status": "On Hold",
+    "page_url": "https://ziatile.com/products/brighton-hyannis-cement-tile",
+    "material": "cement",
+    "meta_title": "Shop Brighton Hyannis Cement Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Brighton Hyannis Cement Tile. A coastal grey cement tile suited for kitchen floors, bathroom floors, patios in mild climates, and shower walls.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: slightly different"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you, your"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "banned",
+        "significant",
+        "Banned: affordable"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "normal-framing",
+        "significant",
+        "\"is normal\" \u2014 use \"inherent\" framing"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"brighton hyannis\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 44 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 4,
+    "significant": 4,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "brownstone-4x4",
+    "doc_title": "Product Page 9 | Zia Tile - May 2026 | Brownstone 4x4",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/brownstone-zellige-tile",
+    "material": "unknown",
+    "meta_title": "Brownstone 4x4 Square Zellige | Zia Tile",
+    "meta_desc": "Shop Zia's Brownstone 4x4 zellige. A warm, deep brown Moroccan tile with a glaze that shifts between chocolate, burnt umber, and amber-brown tones.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: defects"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned: slightly different"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (5\u00d7)"
+      ],
+      [
+        "no-color-desc",
+        "significant",
+        "No color description in romance copy"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 40 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 3,
+    "significant": 2,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "buckeye-flat",
+    "doc_title": "Product Page 15 | Zia Tile - May 2026 | Buckeye + Flat",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/buckeye-flat",
+    "material": "mosaic",
+    "meta_title": "Shop Buckeye Flat Field Trip Japan Ceramic | Zia Tile",
+    "meta_desc": "Shop Zia's Buckeye Flat Field Trip Japan tile. A warm brown clay tile from the Field Trip: Japan series, suited for kitchens, bathrooms, showers, and pools.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: vary slightly"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned: slightly different"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned: is normal for"
+      ],
+      [
+        "overage",
+        "critical",
+        "Overage 10\u201315% \u2014 correct: min 15%, up to 25%"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "normal-framing",
+        "significant",
+        "\"is normal\" \u2014 use \"inherent\" framing"
+      ],
+      [
+        "vary-slightly",
+        "significant",
+        "\"vary/varies slightly\" \u2014 name the actual variation"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"buckeye +\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "no-color-desc",
+        "significant",
+        "No color description in romance copy"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 4,
+    "significant": 5,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "bungalow-12x12-terrazzo",
+    "doc_title": "Product Page 20 | Zia Tile - March 2026 | Bungalow 12x12 Terrazzo",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/bungalow-12x12",
+    "material": "terrazzo",
+    "meta_title": "Bungalow 12x12 Square Terrazzo Cement Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Bungalow 12x12 Terrazzo. A handmade cement terrazzo tile with an ivory base and earth-toned aggregate, suited for interior floors, bathroom walls, and more.",
+    "issues": [
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "ai-pattern",
+        "significant",
+        "AI cadence: Vague: \"versatile tile/option\""
+      ],
+      [
+        "meta-desc-len",
+        "minor",
+        "Meta desc 167 chars (target 140\u2013160)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 1,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "burnt-sugar-2x2",
+    "doc_title": "Product Page 10 | Zia Tile - April 2026 | Burnt Sugar 2x2",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/burnt-sugar-2x2-zellige-tile",
+    "material": "unknown",
+    "meta_title": "Burnt Sugar 2x2 Square Zellige | Zia Tile",
+    "meta_desc": "Shop Zia's Burnt Sugar 2x2 zellige. A dark brown Moroccan tile for kitchen backsplashes, bathroom walls, and shower installations.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (5\u00d7)"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 41 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 1,
+    "significant": 1,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "burnt-sugar-2x6",
+    "doc_title": "Product Page 19 | Zia Tile - April 2026 | Burnt Sugar 2x6",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/burnt-sugar-2x6-zellige-tile",
+    "material": "unknown",
+    "meta_title": "Shop Burnt Sugar 2x6 Bejmat Zellige Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Burnt Sugar 2x6 Bejmat Zellige. A handcrafted Moroccan rectangular tile for kitchen backsplashes, bathroom walls and shower installations.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (5\u00d7)"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "no-color-desc",
+        "significant",
+        "No color description in romance copy"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 3,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "burnt-sugar-4x4",
+    "doc_title": "Product Page 4 | Zia Tile - March 2026 | Burnt Sugar 4x4",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/burnt-sugar-zellige-tile",
+    "material": "unknown",
+    "meta_title": "Burnt Sugar 4x4 Square Zellige | Zia Tile",
+    "meta_desc": "Shop Zia\u2019s Burnt Sugar 4x4 zellige. These handcrafted Moroccan clay tiles feature inherent variation for kitchens, showers, floors, and fireplace features.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (4\u00d7)"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 41 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 3,
+    "significant": 1,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "burnt-sugar-glazed-earth-2x2",
+    "doc_title": "Product Page 20 | Zia Tile - April 2026 | Burnt Sugar + Glazed Earth 2x2",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/burnt-sugar-glazed-earth-2x2",
+    "material": "unknown",
+    "meta_title": "Burnt Sugar + Glazed Earth 2x2 Zellige | Zia Tile",
+    "meta_desc": "Shop Zia's Burnt Sugar + Glazed Earth 2x2 Zellige. A handcrafted Moroccan checkerboard tile for kitchen backsplashes, bathroom walls and shower installations.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: grout spacing"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you, your"
+      ],
+      [
+        "terminology",
+        "critical",
+        "\"dynamic glazes\" on non-zellige"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "ai-pattern",
+        "significant",
+        "AI cadence: Vague superlative: \"one of the most/best\""
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (4\u00d7)"
+      ],
+      [
+        "no-color-desc",
+        "significant",
+        "No color description in romance copy"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 4,
+    "significant": 3,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "cacao-4x4",
+    "doc_title": "Product Page 36 | Zia Tile - April 2026 | Cacao 4x4",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/cacao-4x4",
+    "material": "cotto",
+    "meta_title": "Shop Cacao 4x4 Cotto Allende Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Cacao 4x4 Cotto Allende. A dark brown glossy glazed terra cotta tile from San Miguel de Allende for floors, walls, showers, and pools.",
+    "issues": [
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you, your"
+      ],
+      [
+        "wrong-variation",
+        "critical",
+        "Crazing on unglazed Cotto \u2014 banned"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "normal-framing",
+        "significant",
+        "\"is normal\" \u2014 use \"inherent\" framing"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"cacao\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "no-color-desc",
+        "significant",
+        "No color description in romance copy"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 44 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 3,
+    "significant": 4,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "canvas-white",
+    "doc_title": "Optimization | Zia Tile - May 2026 | Canvas White",
+    "status": "On Hold",
+    "page_url": "https://ziatile.com/products/canvas-white-cement-tile",
+    "material": "cement",
+    "meta_title": "Shop Canvas White Cement Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Canvas White Cement Tile. A warm, soft white cement tile suited for kitchen floors, bathroom floors, patios in mild climates, and shower walls.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: your"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "banned",
+        "significant",
+        "Banned: affordable"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 40 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 3,
+    "significant": 2,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "carbon-black",
+    "doc_title": "Product Page 29 | Zia Tile - April 2026 | Carbon Black",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/carbon-black-zellige-tile",
+    "material": "unknown",
+    "meta_title": "Shop Carbon Black 4x4 Zellige Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Carbon Black zellige. A handcrafted grey Moroccan tile in the 4x4 square format for kitchens, bathrooms, showers, and pool applications.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (9\u00d7)"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 2,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "carrara-12x12",
+    "doc_title": "Product Page 39 | Zia Tile - May 2026 | Carrara 12x12",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/carrara-12x12",
+    "material": "marble",
+    "meta_title": "Shop Carrara 12x12 Honed Marble Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Carrara 12x12 honed marble. A natural stone tile quarried in Italy and Spain for floors, bathrooms, showers, and outdoor patios in mild climates.",
+    "issues": [
+      [
+        "2nd-person",
+        "critical",
+        "Second person: your"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "no-color-desc",
+        "significant",
+        "No color description in romance copy"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 2,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "casablanca-2x2-zellige",
+    "doc_title": "Product Page 15 | Zia Tile - March 2026 | Casablanca 2x2 Zellige",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/casablanca-white-2x2-zellige-tile",
+    "material": "zellige",
+    "meta_title": "Casablanca 2x2 Square Zellige | Zia Tile",
+    "meta_desc": "Shop Casablanca 2x2 zellige from Zia Tile. A light neutral handcrafted Moroccan tile with inherent variation, suited for kitchen backsplashes, shower walls, and more.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: defects"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you, your"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (5\u00d7)"
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Missing: \"handcrafted Moroccan art form\""
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 40 chars (target 50\u201360)"
+      ],
+      [
+        "meta-desc-len",
+        "minor",
+        "Meta desc 166 chars (target 140\u2013160)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 3,
+    "significant": 2,
+    "minor": 2,
+    "info": 1
+  },
+  {
+    "filename": "casablanca-2x6-zellige",
+    "doc_title": "Product Page 2 | Zia Tile - March 2026 |  Casablanca 2x6 Zellige",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/casablanca-white-2x6-zellige-tile",
+    "material": "zellige",
+    "meta_title": "",
+    "meta_desc": "Shop Zia\u2019s Casablanca 2x6 zellige. Handcrafted Moroccan rectangle tiles offer a classic subway profile and dynamic glazes for kitchens and bathrooms.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "ai-pattern",
+        "significant",
+        "AI cadence: Vague superlative: \"one of the most/best\""
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (6\u00d7)"
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Missing: \"handcrafted Moroccan art form\""
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Missing: \"chips, pits, and crazing\""
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "1 template section(s) pending"
+      ]
+    ],
+    "critical": 1,
+    "significant": 4,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "casablanca-4x4-zellige-4-6-26",
+    "doc_title": "Product Page 1 | Zia Tile - March 2026 | Casablanca 4x4 Zellige 4.6.26",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/casablanca-white-zellige-tile",
+    "material": "zellige",
+    "meta_title": "Casablanca 4x4 Square Zellige | Zia Tile",
+    "meta_desc": "Shop Zia\u2019s Casablanca 4x4 zellige. These handcrafted Moroccan clay tiles offer innate variation and dynamic glazes for kitchens, showers, floors, and fireplace walls.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you, your"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (3\u00d7)"
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Missing: \"handcrafted Moroccan art form\""
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"casablanca 4.6.26\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 40 chars (target 50\u201360)"
+      ],
+      [
+        "meta-desc-len",
+        "minor",
+        "Meta desc 166 chars (target 140\u2013160)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 3,
+    "minor": 2,
+    "info": 1
+  },
+  {
+    "filename": "casablanca-trapezoid-1x4-zellige",
+    "doc_title": "Product Page 12 | Zia Tile - March 2026 | Casablanca Trapezoid 1x4 Zellige",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/casablanca-white-trapezoid-zellige-tile",
+    "material": "zellige",
+    "meta_title": "Casablanca 1x4 Trapezoid Zellige | Zia Tile",
+    "meta_desc": "Shop Casablanca Trapezoid 1x4 zellige. A light neutral handcrafted Moroccan tile with inherent variation, suited for kitchen backsplashes, shower walls, and more.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: your"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (5\u00d7)"
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Missing: \"handcrafted Moroccan art form\""
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Missing: \"chips, pits, and crazing\""
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"casablanca trapezoid\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 43 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 4,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "ceramics-linen-2x8-matte-finish",
+    "doc_title": "Product Page 19 | Zia Tile - March 2026 | Ceramics Linen 2x8 Matte Finish",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/linen-2x8-ceramic-tile",
+    "material": "ceramic",
+    "meta_title": "Linen 2x8 Subway Ceramic Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Linen 2x8 Matte Ceramic. A true ivory ceramic tile with a soft matte finish, suited for kitchen backsplashes, bathroom walls, and shower applications.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: vary slightly"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned: is normal for"
+      ],
+      [
+        "overage",
+        "critical",
+        "Overage 10\u201315% \u2014 correct: min 15%, up to 25%"
+      ],
+      [
+        "normal-framing",
+        "significant",
+        "\"is normal\" \u2014 use \"inherent\" framing"
+      ],
+      [
+        "vary-slightly",
+        "significant",
+        "\"vary/varies slightly\" \u2014 name the actual variation"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"ceramics linen finish\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "no-color-desc",
+        "significant",
+        "No color description in romance copy"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 40 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 3,
+    "significant": 4,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "condesa-4x4-square",
+    "doc_title": "Product Page 17 | Zia Tile - April 2026 | Condesa 4x4 Square",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/condesa-4x4",
+    "material": "cotto",
+    "meta_title": "Condesa 4x4 Square Cotto Allende | Zia Tile",
+    "meta_desc": "Zia Tile Condesa 4x4 Square Cotto Allende brings glazed terra cotta tile craftsmanship with deep brown tones, matte surface, and natural variation.",
+    "issues": [
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you, your"
+      ],
+      [
+        "wrong-variation",
+        "critical",
+        "Crazing on unglazed Cotto \u2014 banned"
+      ],
+      [
+        "terminology",
+        "critical",
+        "\"dynamic glazes\" on non-zellige"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"condesa\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 43 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 3,
+    "significant": 1,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "constellation-bone-white-24x24",
+    "doc_title": "Product Page 13 | Zia Tile - May 2026 | Constellation Bone White 24x24",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/constellation-bone-white-24x24",
+    "material": "terrazzo",
+    "meta_title": "Constellation Bone White 24x24 Terrazzo Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Constellation Bone White 24x24 terrazzo. A large-format cement tile with a bone white base and scattered stone aggregate for floors and walls.",
+    "issues": [
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "ai-pattern",
+        "significant",
+        "AI cadence: Vague: \"versatile tile/option\""
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"constellation bone white\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 2,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "desert-bloom-2x6",
+    "doc_title": "Product Page 35 | Zia Tile - April 2026 | Desert Bloom 2x6",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/desert-bloom-2x6-zellige-tile",
+    "material": "unknown",
+    "meta_title": "Shop Desert Bloom 2x6 Zellige Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Desert Bloom 2x6 zellige. A handcrafted Moroccan tile in a pink colorway for kitchens, bathrooms, showers, and pool applications.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: grout spacing"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: your"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (9\u00d7)"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 4,
+    "significant": 2,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "desert-bloom-4x4-zellige",
+    "doc_title": "Product Page 18 | Zia Tile - March 2026 | Desert Bloom 4x4 Zellige",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/desert-bloom-zellige-tile",
+    "material": "zellige",
+    "meta_title": "Desert Bloom 4x4 Square Zellige | Zia Tile",
+    "meta_desc": "Shop Zia Tile Desert Bloom 4x4 zellige. A warm-pink tile that creates designs where handcrafted Moroccan tiles add warmth, texture, and light-catching detail.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you, your"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (6\u00d7)"
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Missing: \"handcrafted Moroccan art form\""
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 42 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 2,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "desert-grey-2x8",
+    "doc_title": "Product Page 36 | Zia Tile - May 2026 | Desert Grey 2x8",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/desert-grey-2x8-cement-tile",
+    "material": "cement",
+    "meta_title": "Shop Desert Grey 2x8 Cement Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Desert Grey 2x8 cement tile. A warm grey handmade cement tile in a 2x8 rectangle for floors, walls, and shower installations.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: your"
+      ],
+      [
+        "banned",
+        "significant",
+        "Banned: affordable"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 43 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 2,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "durango-madera",
+    "doc_title": "Product Page 8 | Zia Tile - April 2026 | Durango + Madera",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/durango-madera",
+    "material": "cotto",
+    "meta_title": "Durango + Madera Terra Cotta Tile | Zia Tile",
+    "meta_desc": "Explore Zia Tile Durango + Madera Cotto, a handcrafted Mexican terra cotta tile defined by rich earthy tones and natural variation",
+    "issues": [
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "banned",
+        "significant",
+        "Banned: muted (stand-alone without design context)"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"durango + madera\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 44 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 2,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "ethereal-blue-2x8",
+    "doc_title": "Product Page 34 | Zia Tile - April 2026 | Ethereal Blue 2x8",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/ethereal-blue-2x8-ceramic-tile",
+    "material": "ceramic",
+    "meta_title": "Shop Ethereal Blue 2x8 Glossy Ceramic Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Ethereal Blue 2x8 ceramic. A blue glossy tile for kitchen backsplashes, bathroom walls, and shower installations. Designed in LA, made in Japan. Keywords: Ethereal Blue 2x8 ceramic, Ethereal Blue ceramic tile, Blue glossy ceramic tile",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: vary slightly"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned: is normal for"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: your"
+      ],
+      [
+        "overage",
+        "critical",
+        "Overage 10\u201315% \u2014 correct: min 15%, up to 25%"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "normal-framing",
+        "significant",
+        "\"is normal\" \u2014 use \"inherent\" framing"
+      ],
+      [
+        "vary-slightly",
+        "significant",
+        "\"vary/varies slightly\" \u2014 name the actual variation"
+      ],
+      [
+        "meta-desc-len",
+        "minor",
+        "Meta desc 245 chars (target 140\u2013160)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 4,
+    "significant": 3,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "etna-in-carrara-verde-alpi",
+    "doc_title": "Product Page 25 | Zia Tile - May 2026 | Etna in Carrara + Verde Alpi",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/etna-in-carrara-verde-alpi",
+    "material": "marble",
+    "meta_title": "Shop Etna in Carrara + Verde Alpi Marble Pattern | Zia Tile",
+    "meta_desc": "Shop Zia's Etna marble pattern. A geometric composition pairing white Carrara with deep green Verde Alpi for interior floors, shower walls, and fireplaces.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "no-color-desc",
+        "significant",
+        "No color description in romance copy"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 1,
+    "significant": 2,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "eucalyptus-2x8",
+    "doc_title": "Product Page 37 | Zia Tile - May 2026 | Eucalyptus 2x8",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/eucalyptus-2x8-ceramic-tile",
+    "material": "ceramic",
+    "meta_title": "Shop Eucalyptus 2x8 Satin Ceramic Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Eucalyptus 2x8 ceramic. A light green satin tile for kitchen backsplashes, bathroom walls, and showers. Designed in LA, made in Japan.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: is normal for"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: your"
+      ],
+      [
+        "overage",
+        "critical",
+        "Overage 10\u201315% \u2014 correct: min 15%, up to 25%"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "normal-framing",
+        "significant",
+        "\"is normal\" \u2014 use \"inherent\" framing"
+      ],
+      [
+        "no-color-desc",
+        "significant",
+        "No color description in romance copy"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 3,
+    "significant": 3,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "feather-flat",
+    "doc_title": "Product Page 8 | Zia Tile - May 2026 | Feather + Flat",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/feather-flat",
+    "material": "mosaic",
+    "meta_title": "Feather Flat Field Trip Japan Ceramic | Zia Tile",
+    "meta_desc": "Shop Zia's Feather Flat Field Trip Japan ceramic. An off-white clay tile from the Field Trip: Japan series, made for kitchens, bathrooms, showers, and pools.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: vary slightly"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned: sub-line"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned: is normal for"
+      ],
+      [
+        "overage",
+        "critical",
+        "Overage 10\u201315% \u2014 correct: min 15%, up to 25%"
+      ],
+      [
+        "normal-framing",
+        "significant",
+        "\"is normal\" \u2014 use \"inherent\" framing"
+      ],
+      [
+        "vary-slightly",
+        "significant",
+        "\"vary/varies slightly\" \u2014 name the actual variation"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"feather +\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "no-color-desc",
+        "significant",
+        "No color description in romance copy"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 4,
+    "significant": 4,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "french-cobblestone",
+    "doc_title": "Product Page 22 | Zia Tile - April 2026 | French Cobblestone",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/french-cobble-stone",
+    "material": "limestone",
+    "meta_title": "Shop French Cobblestone Limestone | Zia Tile",
+    "meta_desc": "Shop Zia's French Cobblestone. A natural limestone quarried near Bordeaux for interior floors, outdoor patios in mild climates, and bathroom walls.",
+    "issues": [
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you, your"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "no-color-desc",
+        "significant",
+        "No color description in romance copy"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 44 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 2,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "frogtown-flat",
+    "doc_title": "Product Page 21 | Zia Tile - May 2026 | Frogtown + Flat",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/frogtown-flat",
+    "material": "mosaic",
+    "meta_title": "Frogtown Flat Field Trip Japan Ceramic | Zia Tile",
+    "meta_desc": "Shop Zia's Frogtown Flat Field Trip Japan ceramic. A muted green extruded clay tile from Japan, suited for kitchens, bathrooms, shower walls, and pools.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: vary slightly"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned: slightly different"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned: is normal for"
+      ],
+      [
+        "overage",
+        "critical",
+        "Overage 10\u201315% \u2014 correct: min 15%, up to 25%"
+      ],
+      [
+        "banned",
+        "significant",
+        "Banned: muted (stand-alone without design context)"
+      ],
+      [
+        "normal-framing",
+        "significant",
+        "\"is normal\" \u2014 use \"inherent\" framing"
+      ],
+      [
+        "vary-slightly",
+        "significant",
+        "\"vary/varies slightly\" \u2014 name the actual variation"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"frogtown +\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "no-color-desc",
+        "significant",
+        "No color description in romance copy"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 4,
+    "significant": 5,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "gambit-1",
+    "doc_title": "Product Page 2 | Zia Tile - April 2026 | Gambit 1",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/gambit-1",
+    "material": "mosaic",
+    "meta_title": "",
+    "meta_desc": "Discover Zia Tile Gambit 1 Zellige tile inspired by Moroccan heritage, hand-pressed clay, and kiln-fired tonal movement across each piece.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: your"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (5\u00d7)"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"gambit 1\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 2,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "gambit-7",
+    "doc_title": "Product Page 5 | Zia Tile - April 2026 | Gambit 7",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/gambit-7",
+    "material": "mosaic",
+    "meta_title": "",
+    "meta_desc": "Shop Zia's Gambit 7 zellige. A blue-green multi-color Moroccan mosaic tile for kitchen backsplashes, bathroom walls, and shower installations.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: your"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (4\u00d7)"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"gambit 7\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 3,
+    "significant": 2,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "gambit-8",
+    "doc_title": "Product Page 20 | Zia Tile - May 2026 | Gambit 8",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/gambit-8",
+    "material": "mosaic",
+    "meta_title": "Shop Gambit 8 Zellige Mosaic | Zia Tile",
+    "meta_desc": "Shop Zia's Gambit 8 zellige mosaic. A Moroccan geometric mosaic in Plum, Purple Iris, and Portuguese Blue, made for kitchens, bathrooms, showers, and pools.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: grout spacing"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (5\u00d7)"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"gambit 8\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 39 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 3,
+    "significant": 3,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "glazed-earth-2x2",
+    "doc_title": "Product Page 9 | Zia Tile - April 2026 | Glazed Earth 2x2",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/glazed-earth-2x2-zellige-tile",
+    "material": "unknown",
+    "meta_title": "Glazed Earth 2x2 Square Zellige | Zia Tile",
+    "meta_desc": "Shop Zia's Glazed Earth 2x2 zellige. A beige handcrafted Moroccan tile for kitchen backsplashes, bathroom walls, and shower installations.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (4\u00d7)"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 42 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 3,
+    "significant": 1,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "glazed-earth-trapezoid",
+    "doc_title": "Product Page 17 | Zia Tile - May 2026 | Glazed Earth Trapezoid",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/glazed-earth-trapezoid-zellige-tile",
+    "material": "unknown",
+    "meta_title": "Shop Glazed Earth Trapezoid Zellige | Zia Tile",
+    "meta_desc": "Shop Zia's Glazed Earth 1x4 Trapezoid zellige. A warm beige-neutral tile in a geometric trapezoid format, suited for kitchens, bathrooms, and pools.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (4\u00d7)"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 1,
+    "significant": 2,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "graphite-grey-2x6",
+    "doc_title": "Product Page 23 | Zia Tile - May 2026 | Graphite Grey 2x6",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/graphite-grey-2x6-zellige-tile",
+    "material": "unknown",
+    "meta_title": "Shop Graphite Grey 2x6 Bejmat Zellige | Zia Tile",
+    "meta_desc": "Shop Zia's Graphite Grey 2x6 Bejmat zellige. A deep, cool grey handcrafted Moroccan tile with a glaze that shifts between charcoal and slate tones.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "unconfirmed-colorway",
+        "critical",
+        "Colorway \"graphite grey\" not confirmed in approved reference"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (5\u00d7)"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 2,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "graphite-grey-4x4",
+    "doc_title": "Product Page 15 | Zia Tile - April 2026 | Graphite Grey 4x4",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/graphite-grey-zellige-tile",
+    "material": "unknown",
+    "meta_title": "Graphite Grey 4x4 Square Zellige Tile | Zia Tile",
+    "meta_desc": "Explore Zia's Graphite Grey 4x4 zellige. A dark grey handcrafted Moroccan tile for kitchen backsplashes, bathroom walls, and shower installations.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "unconfirmed-colorway",
+        "critical",
+        "Colorway \"graphite grey\" not confirmed in approved reference"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (6\u00d7)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 1,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "grigio-carnico-12x24",
+    "doc_title": "Product Page 31 | Zia Tile - May 2026 | Grigio Carnico 12x24",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/grigio-carnico-12x24",
+    "material": "marble",
+    "meta_title": "Shop Grigio Carnico 12x24 Marble Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Grigio Carnico 12x24 Marble. A grey Italian marble with complex veining in a large-format plank, honed to a soft matte finish.",
+    "issues": [
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 0,
+    "significant": 1,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "iconic-blue-4x4-matte",
+    "doc_title": "Product Page 28 | Zia Tile - May 2026 | Iconic Blue 4x4 + Matte",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/iconic-blue-4x4-ceramic-tile",
+    "material": "ceramic",
+    "meta_title": "Shop Iconic Blue 4x4 Matte Ceramic Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Iconic Blue 4x4 matte ceramic. A deep blue 4x4 square tile with a smooth matte surface for kitchen backsplashes, bathroom walls, and showers.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: vary slightly"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned: is normal for"
+      ],
+      [
+        "overage",
+        "critical",
+        "Overage 10\u201315% \u2014 correct: min 15%, up to 25%"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "normal-framing",
+        "significant",
+        "\"is normal\" \u2014 use \"inherent\" framing"
+      ],
+      [
+        "vary-slightly",
+        "significant",
+        "\"vary/varies slightly\" \u2014 name the actual variation"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"iconic blue +\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 3,
+    "significant": 4,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "jade-2x6",
+    "doc_title": "Product Page 1 | Zia Tile - May 2026 | Jade 2x6",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/jade-2x6-zellige-tile",
+    "material": "unknown",
+    "meta_title": "Shop Jade 2x6 Bejmat Zellige | Zia Tile",
+    "meta_desc": "Shop Zia's Jade 2x6 Bejmat zellige. A deep green handcrafted Moroccan tile with a glaze that shimmers and shifts, suited for kitchens, bathrooms, and pools.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: your"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (5\u00d7)"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 39 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 2,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "jade",
+    "doc_title": "Product Page 32 | Zia Tile - April 2026 | Jade",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/jade-zellige-tile",
+    "material": "unknown",
+    "meta_title": "Shop Jade 4x4 Zellige Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Jade zellige. A handcrafted Moroccan zellige tile in the 4x4 square format for kitchens, bathrooms, showers, and pool applications.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (9\u00d7)"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 37 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 2,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "kelp-forest-2x8",
+    "doc_title": "Product Page 25 | Zia Tile - March 2026 | Kelp Forest 2x8",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/kelp-forest-2x8-ceramic-tile",
+    "material": "ceramic",
+    "meta_title": "Kelp Forest 2x8 Subway Ceramic Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Kelp Forest 2x8 Glossy Ceramic. A vibrant green high-fired tile from Nagoya, Japan, for kitchen backsplashes, bath walls, and feature surfaces.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: is normal for"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: your"
+      ],
+      [
+        "overage",
+        "critical",
+        "Overage 10\u201315% \u2014 correct: min 15%, up to 25%"
+      ],
+      [
+        "normal-framing",
+        "significant",
+        "\"is normal\" \u2014 use \"inherent\" framing"
+      ],
+      [
+        "no-color-desc",
+        "significant",
+        "No color description in romance copy"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 3,
+    "significant": 2,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "kelp-forest-4x4",
+    "doc_title": "Product Page 24 | Zia Tile - April 2026 | Kelp Forest 4x4",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/kelp-forest-4x4-ceramic-tile",
+    "material": "ceramic",
+    "meta_title": "Shop Kelp Forest 4x4 Glossy Ceramic Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Kelp Forest 4x4 ceramic. An olive green glossy tile for kitchens, bathrooms, showers, and pools. Designed in LA, made in Japan.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: vary slightly"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned: is normal for"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: your"
+      ],
+      [
+        "overage",
+        "critical",
+        "Overage 10\u201315% \u2014 correct: min 15%, up to 25%"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "normal-framing",
+        "significant",
+        "\"is normal\" \u2014 use \"inherent\" framing"
+      ],
+      [
+        "vary-slightly",
+        "significant",
+        "\"vary/varies slightly\" \u2014 name the actual variation"
+      ],
+      [
+        "no-color-desc",
+        "significant",
+        "No color description in romance copy"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 4,
+    "significant": 4,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "lattice-4-zellige-mosaic-pure-white-casablanca",
+    "doc_title": "Product Page 30 | Zia Tile - March 2026 | Lattice 4 Zellige Mosaic Pure White / Casablanca",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/lattice-4",
+    "material": "zellige",
+    "meta_title": "Lattice 4 Pure White + Casablanca Zellige Mosaic | Zia Tile",
+    "meta_desc": "Shop Zia's Lattice 4 zellige mosaic. A handcrafted Moroccan mosaic that combines Pure White and Casablanca in a repeating lattice composition.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: grout spacing"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you, your"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (3\u00d7)"
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Missing: \"handcrafted Moroccan art form\""
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Missing: \"chips, pits, and crazing\""
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 3,
+    "significant": 3,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "limestone-buff-honed-12x12",
+    "doc_title": "Product Page 31 | Zia Tile - March 2026 | Limestone Buff Honed 12x12",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/buff-12x12-honed-limestone-tile",
+    "material": "limestone",
+    "meta_title": "Buff Honed 12x12 Square Limestone | Zia Tile",
+    "meta_desc": "Shop Zia's Buff Honed Limestone 12x12. A honed natural stone in a square format with a buff tone and smooth matte surface.",
+    "issues": [
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you, your"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"limestone buff\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 44 chars (target 50\u201360)"
+      ],
+      [
+        "meta-desc-len",
+        "minor",
+        "Meta desc 122 chars (target 140\u2013160)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 1,
+    "significant": 1,
+    "minor": 2,
+    "info": 1
+  },
+  {
+    "filename": "limestone-buff-honed-12x24",
+    "doc_title": "Product Page 14 | Zia Tile - March 2026 | Limestone Buff Honed 12x24",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/buff-12x24-honed-limestone-tile",
+    "material": "limestone",
+    "meta_title": "Buff 12x24 Rectangle Honed Limestone | Zia Tile",
+    "meta_desc": "Shop Zia's Buff Honed Limestone 12x24. A natural sedimentary stone with a smooth matte finish, suited for interior and exterior designs.",
+    "issues": [
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you, your"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"limestone buff\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 1,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "limestone-buff-honed-4x12",
+    "doc_title": "Product Page 7 | Zia Tile - March 2026 | Limestone Buff Honed 4x12",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/buff-4x12-honed-limestone-tile",
+    "material": "limestone",
+    "meta_title": "Buff Honed 4x12 Rectangle Limestone | Zia Tile",
+    "meta_desc": "Shop Zia's Buff Honed Limestone 4x12. A natural sedimentary stone with a smooth matte finish, suited for interior floors and shower applications.",
+    "issues": [
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you, your"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"limestone buff\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 1,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "limestone-buff-honed-6x6",
+    "doc_title": "Product Page 10 | Zia Tile - March 2026 | Limestone Buff Honed 6x6",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/buff-6x6-honed-limestone-tile",
+    "material": "limestone",
+    "meta_title": "Buff Honed 6x6 Square Limestone | Zia Tile",
+    "meta_desc": "Shop Zia's Buff Honed Limestone 6x6. A honed natural stone suited for interior floors, shower walls, and residential and commercial applications.",
+    "issues": [
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you, your"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"limestone buff\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 42 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 1,
+    "significant": 1,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "linen-4x4",
+    "doc_title": "Product Page 28 | Zia Tile - March 2026 | Linen 4x4",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/linen-4x4-ceramic-tile",
+    "material": "ceramic",
+    "meta_title": "Linen 4x4 Square Ceramic Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Linen 4x4 Matte Ceramic. A true ivory square ceramic tile from Nagoya, Japan, suited for kitchen backsplashes and bathroom walls.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: vary slightly"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned: is normal for"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "overage",
+        "critical",
+        "Overage 10\u201315% \u2014 correct: min 15%, up to 25%"
+      ],
+      [
+        "normal-framing",
+        "significant",
+        "\"is normal\" \u2014 use \"inherent\" framing"
+      ],
+      [
+        "vary-slightly",
+        "significant",
+        "\"vary/varies slightly\" \u2014 name the actual variation"
+      ],
+      [
+        "no-color-desc",
+        "significant",
+        "No color description in romance copy"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 40 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 4,
+    "significant": 3,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "madera-8x8",
+    "doc_title": "Product Page 10 | Zia Tile - May 2026 | Madera 8x8",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/8x8-square-madera",
+    "material": "cotto",
+    "meta_title": "Shop Madera 8x8 Square Cotto Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Madera 8x8 Square Cotto. A handcrafted Mexican terra cotta tile for kitchen floors, outdoor patios in any climate, and feature wall applications.",
+    "issues": [
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 44 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 1,
+    "significant": 1,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "molasses-2x8",
+    "doc_title": "Product Page 26 | Zia Tile - March 2026 | Molasses 2x8",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/molasses-2x8",
+    "material": "mosaic",
+    "meta_title": "Molasses 2x8 Subway Ceramic Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Molasses 2x8 Glossy Ceramic. A handmade brown ceramic from Nagoya, Japan, with over 1,000 years of ceramic tradition behind each tile.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: vary slightly"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned: is normal for"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: your"
+      ],
+      [
+        "overage",
+        "critical",
+        "Overage 10\u201315% \u2014 correct: min 15%, up to 25%"
+      ],
+      [
+        "normal-framing",
+        "significant",
+        "\"is normal\" \u2014 use \"inherent\" framing"
+      ],
+      [
+        "vary-slightly",
+        "significant",
+        "\"vary/varies slightly\" \u2014 name the actual variation"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"molasses\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "no-color-desc",
+        "significant",
+        "No color description in romance copy"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 43 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 4,
+    "significant": 4,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "molasses",
+    "doc_title": "Product Page 4 | Zia Tile - April 2026 | Molasses",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/molasses-4x4",
+    "material": "mosaic",
+    "meta_title": "",
+    "meta_desc": "Shop Zia's Molasses 4x4 glossy ceramic. A deep brown Japanese ceramic tile for kitchen backsplashes, bathroom walls, and shower installations.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: vary slightly"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned: slightly different"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned: is normal for"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: your"
+      ],
+      [
+        "overage",
+        "critical",
+        "Overage 10\u201315% \u2014 correct: min 15%, up to 25%"
+      ],
+      [
+        "normal-framing",
+        "significant",
+        "\"is normal\" \u2014 use \"inherent\" framing"
+      ],
+      [
+        "vary-slightly",
+        "significant",
+        "\"vary/varies slightly\" \u2014 name the actual variation"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"molasses\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 5,
+    "significant": 3,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "montana",
+    "doc_title": "Optimization | Zia Tile - May 2026 | Montana",
+    "status": "On Hold",
+    "page_url": "https://ziatile.com/products/montana-cement-tile",
+    "material": "cement",
+    "meta_title": "Shop Montana Cement Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Montana Cement Tile. A warm grey-brown handmade cement tile suited for kitchen floors, bathroom floors, patios in mild climates, and shower walls.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: defects"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: your"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "banned",
+        "significant",
+        "Banned: affordable"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 35 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 4,
+    "significant": 2,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "monument-4x12",
+    "doc_title": "Product Page 26 | Zia Tile - April 2026 | Monument 4x12",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/monument-4x12-honed-limestone-tile",
+    "material": "limestone",
+    "meta_title": "Monument 4x12 Honed Limestone Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Monument 4x12 honed limestone. A grey natural stone tile quarried near Fez for floors, bathrooms, showers, and outdoor patios in mild climates.",
+    "issues": [
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you, your"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 0,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "monument-6x6-honed",
+    "doc_title": "Product Page 11 | Zia Tile - April 2026 | Monument 6x6 + Honed",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/monument-6x6-honed-limestone-tile",
+    "material": "limestone",
+    "meta_title": "Monument 6x6 + Honed Limestone | Zia Tile",
+    "meta_desc": "Shop the Zia Tile Monument 6x6 Honed Limestone featuring quiet tonal shifts, honed finish, and enduring Moroccan stone craftsmanship tradition.",
+    "issues": [
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you, your"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"monument +\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 41 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 1,
+    "significant": 1,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "moon-rock-12x12",
+    "doc_title": "Product Page 34 | Zia Tile - May 2026 | Moon Rock 12x12",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/moonrock-12x12",
+    "material": "terrazzo",
+    "meta_title": "Shop Moon Rock 12x12 Square Terrazzo Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Moon Rock 12x12 terrazzo. A cement terrazzo tile with a warm grey base and stone aggregate flecks for interior floors, walls, and showers.",
+    "issues": [
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you"
+      ],
+      [
+        "ai-pattern",
+        "significant",
+        "AI cadence: Vague: \"versatile tile/option\""
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 1,
+    "significant": 2,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "moonlight-2x8",
+    "doc_title": "Product Page 23 | Zia Tile - April 2026 | Moonlight 2x8",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/moonlight-2x8-ceramic-tile",
+    "material": "ceramic",
+    "meta_title": "Moonlight 2x8 Satin Ceramic Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Moonlight 2x8 ceramic. A satin finish subway tile for kitchen backsplashes, bathroom walls, and showers. Designed in LA, made in Japan.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: vary slightly"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned: is normal for"
+      ],
+      [
+        "overage",
+        "critical",
+        "Overage 10\u201315% \u2014 correct: min 15%, up to 25%"
+      ],
+      [
+        "normal-framing",
+        "significant",
+        "\"is normal\" \u2014 use \"inherent\" framing"
+      ],
+      [
+        "vary-slightly",
+        "significant",
+        "\"vary/varies slightly\" \u2014 name the actual variation"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 43 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 3,
+    "significant": 2,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "morning-light-furrowed",
+    "doc_title": "Product Page 37 | Zia Tile - May 2026 | Morning Light + Furrowed",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/morning-light-furrowed",
+    "material": "ceramic",
+    "meta_title": "Morning Light Furrowed Field Trip Japan Ceramic | Zia Tile",
+    "meta_desc": "Shop Zia's Morning Light Furrowed Field Trip Japan ceramic. A pale blue-grey extruded clay tile in a furrowed finish for backsplashes, walls, and pools.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: vary slightly"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned: is normal for"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "overage",
+        "critical",
+        "Overage 10\u201315% \u2014 correct: min 15%, up to 25%"
+      ],
+      [
+        "normal-framing",
+        "significant",
+        "\"is normal\" \u2014 use \"inherent\" framing"
+      ],
+      [
+        "vary-slightly",
+        "significant",
+        "\"vary/varies slightly\" \u2014 name the actual variation"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"morning light +\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 4,
+    "significant": 3,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "nagano-2x8",
+    "doc_title": "Product Page 28 | Zia Tile - April 2026 | Nagano 2x8",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/nagano-2x8",
+    "material": "ceramic",
+    "meta_title": "Shop Nagano 2x8 Glossy Ceramic Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Nagano 2x8 ceramic. A grey glossy tile for kitchen backsplashes, bathroom walls, and shower installations. Designed in LA, made in Japan.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: vary slightly"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned: is normal for"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: your"
+      ],
+      [
+        "overage",
+        "critical",
+        "Overage 10\u201315% \u2014 correct: min 15%, up to 25%"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "normal-framing",
+        "significant",
+        "\"is normal\" \u2014 use \"inherent\" framing"
+      ],
+      [
+        "vary-slightly",
+        "significant",
+        "\"vary/varies slightly\" \u2014 name the actual variation"
+      ],
+      [
+        "no-color-desc",
+        "significant",
+        "No color description in romance copy"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 4,
+    "significant": 4,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "neutra-12x12",
+    "doc_title": "Product Page 7 | Zia Tile - April 2026 | Neutra 12x12",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/neutra-12x12",
+    "material": "terrazzo",
+    "meta_title": "Neutra 12x12 Square Terrazzo Cement Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Neutra 12x12 terrazzo. A light beige cement terrazzo tile for kitchen floors, bathroom walls, and commercial interior installations.",
+    "issues": [
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "ai-pattern",
+        "significant",
+        "AI cadence: Vague: \"versatile tile/option\""
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 1,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "neutra-24x24",
+    "doc_title": "Product Page 27 | Zia Tile - April 2026 | Neutra 24x24",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/neutra-24x24",
+    "material": "terrazzo",
+    "meta_title": "Shop Neutra 24x24 Terrazzo Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Neutra 24x24 terrazzo. An encaustic terrazzo tile in the large-format 24x24 square for floors and walls. Crafted using Venetian techniques.",
+    "issues": [
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "ai-pattern",
+        "significant",
+        "AI cadence: Vague: \"versatile tile/option\""
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 42 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 2,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "nouveau-alluvian",
+    "doc_title": "Product Page 33 | Zia Tile - May 2026 | Nouveau Alluvian",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/nouveau-alluvian-cement-tile",
+    "material": "cement",
+    "meta_title": "Shop Nouveau Alluvian Cement Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Nouveau Alluvian cement tile. A warm sandy grey handmade cement tile in a specialty shape for floors, walls, and shower installations.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: your"
+      ],
+      [
+        "banned",
+        "significant",
+        "Banned: affordable"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 44 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 2,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "oslo-white",
+    "doc_title": "Optimization | Zia Tile - May 2026 | Oslo White",
+    "status": "On Hold",
+    "page_url": "https://ziatile.com/products/oslo-white-cement-tile",
+    "material": "cement",
+    "meta_title": "Shop Oslo White Cement Tile | Zia Tile Meta Description: Shop Zia's Oslo White Cement Tile. A clean cool white handmade cement tile suited for kitchen floors, bathroom floors, exterior patios in mild climates, and shower walls. Keywords: Oslo White cement tile, White cement tile, Cool white cement tile",
+    "meta_desc": "Shop Zia's Oslo White Cement Tile. A clean cool white handmade cement tile suited for kitchen floors, bathroom floors, exterior patios in mild climates, and shower walls. Keywords: Oslo White cement tile, White cement tile, Cool white cement tile",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: your"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "banned",
+        "significant",
+        "Banned: affordable"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 303 chars (target 50\u201360)"
+      ],
+      [
+        "meta-desc-len",
+        "minor",
+        "Meta desc 246 chars (target 140\u2013160)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 3,
+    "significant": 2,
+    "minor": 2,
+    "info": 1
+  },
+  {
+    "filename": "pacific-blue-2x8-satin",
+    "doc_title": "Product Page 24 | Zia Tile - May 2026 | Pacific Blue 2x8 + Satin",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/pacific-blue-2x8-ceramic-tile",
+    "material": "ceramic",
+    "meta_title": "Shop Pacific Blue 2x8 Satin Ceramic Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Pacific Blue 2x8 satin ceramic. A medium blue subway tile with a soft satin finish for kitchen backsplashes, bathroom walls, and showers.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: vary slightly"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned: is normal for"
+      ],
+      [
+        "overage",
+        "critical",
+        "Overage 10\u201315% \u2014 correct: min 15%, up to 25%"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "normal-framing",
+        "significant",
+        "\"is normal\" \u2014 use \"inherent\" framing"
+      ],
+      [
+        "vary-slightly",
+        "significant",
+        "\"vary/varies slightly\" \u2014 name the actual variation"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"pacific blue +\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 3,
+    "significant": 4,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "peyote-4x4",
+    "doc_title": "Product Page 19 | Zia Tile - May 2026 | Peyote 4x4",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/peyote-4x4",
+    "material": "cotto",
+    "meta_title": "Shop Peyote 4x4 Square Cotto Allende | Zia Tile",
+    "meta_desc": "Shop Zia's Peyote 4x4 Cotto Allende. A muted blue-green glazed tile in satin finish for kitchens, bathrooms, showers, and pools in non-freeze/thaw climates.",
+    "issues": [
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you, your"
+      ],
+      [
+        "wrong-variation",
+        "critical",
+        "Crazing on unglazed Cotto \u2014 banned"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "banned",
+        "significant",
+        "Banned: muted (stand-alone without design context)"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"peyote\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 3,
+    "significant": 3,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "piedra-4x4",
+    "doc_title": "Product Page 21 | Zia Tile - April 2026 | Piedra 4x4",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/piedra-4x4",
+    "material": "cotto",
+    "meta_title": "Shop Piedra 4x4 Square Cotto Allende | Zia Tile",
+    "meta_desc": "Shop Zia's Piedra 4x4 Cotto Allende. A dark blue glazed terra cotta tile for kitchen backsplashes, bathroom walls, shower installations, and pools.",
+    "issues": [
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you, your"
+      ],
+      [
+        "wrong-variation",
+        "critical",
+        "Crazing on unglazed Cotto \u2014 banned"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"piedra\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 2,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "pomelo-bone",
+    "doc_title": "Product Page 41 | Zia Tile - April 2026 | Pomelo Bone",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/pomelo-bone-cement-tile",
+    "material": "cement",
+    "meta_title": "Shop Pomelo Bone Cement Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Pomelo Bone cement tile. A handmade 8x8 cement tile in a bone and white geometric pattern for interior floors, walls, and shower installations.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: is normal for"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: your"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "banned",
+        "significant",
+        "Banned: affordable"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "normal-framing",
+        "significant",
+        "\"is normal\" \u2014 use \"inherent\" framing"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"pomelo bone\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 39 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 4,
+    "significant": 4,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "ponderosa-2x8-glossy",
+    "doc_title": "Product Page 26 | Zia Tile - May 2026 | Ponderosa 2x8 + Glossy",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/ponderosa-2x8",
+    "material": "ceramic",
+    "meta_title": "Shop Ponderosa 2x8 Glossy Ceramic Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Ponderosa 2x8 Glossy Ceramic Tile. A muted green ceramic in a 2x8 subway format with a glossy finish for kitchens, bathrooms, showers, and pools.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: is normal for"
+      ],
+      [
+        "overage",
+        "critical",
+        "Overage 10\u201315% \u2014 correct: min 15%, up to 25%"
+      ],
+      [
+        "banned",
+        "significant",
+        "Banned: muted (stand-alone without design context)"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "normal-framing",
+        "significant",
+        "\"is normal\" \u2014 use \"inherent\" framing"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"ponderosa +\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "no-color-desc",
+        "significant",
+        "No color description in romance copy"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 5,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "prismatic-1",
+    "doc_title": "Product Page 12 | Zia Tile - May 2026 | Prismatic 1",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/prismatic-1",
+    "material": "mosaic",
+    "meta_title": "Shop Prismatic 1 Zellige Mosaic | Zia Tile",
+    "meta_desc": "Shop Zia's Prismatic 1 zellige mosaic. A handcrafted Moroccan geometric mosaic in Casablanca White, suited for kitchens, bathrooms, showers, and pools.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: slightly different"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (5\u00d7)"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"prismatic 1\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 42 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 3,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "puebla-4x4",
+    "doc_title": "Product Page 40 | Zia Tile - April 2026 | Puebla 4x4",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/puebla-4x4",
+    "material": "cotto",
+    "meta_title": "Shop Puebla 4x4 Cotto Allende Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Puebla 4x4 Cotto Allende. A satin-glazed terra cotta tile from San Miguel de Allende for floors, walls, shower installations, and pools.",
+    "issues": [
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you, your"
+      ],
+      [
+        "wrong-variation",
+        "critical",
+        "Crazing on unglazed Cotto \u2014 banned"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"puebla\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "no-color-desc",
+        "significant",
+        "No color description in romance copy"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 3,
+    "significant": 3,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "pure-white-2x2",
+    "doc_title": "Product Page 16 | Zia Tile - April 2026 | Pure White 2x2",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/pure-white-2x2-zellige-tile",
+    "material": "unknown",
+    "meta_title": "Pure White 2x2 Square Zellige Tile | Zia Tile",
+    "meta_desc": "Shop Zia Tile Pure White 2x2 Zellige tile, handcrafted Moroccan mosaic defined by crisp white glaze and naturally shifting tonal variation.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (4\u00d7)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 1,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "pure-white-2x6",
+    "doc_title": "Product Page 5 | Zia Tile - March 2026 | Pure White 2x6",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/pure-white-2x6-zellige-tile",
+    "material": "unknown",
+    "meta_title": "",
+    "meta_desc": "Shop Zia's Pure White 2x6 Bejmat zellige. A handcrafted Moroccan tile suited for kitchen backsplashes, bathroom walls, and shower enclosures.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: slightly different"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (6\u00d7)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 3,
+    "significant": 1,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "pure-white-4x4-zellige-docx",
+    "doc_title": "Product Page 3  | Zia Tile - March 2026 | Pure White 4x4 Zellige.docx",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/pure-white-zellige-tile",
+    "material": "zellige",
+    "meta_title": "",
+    "meta_desc": "Shop Zia\u2019s Pure White 4x4 zellige. Handcrafted Moroccan clay tiles feature inherent variation for kitchens, showers, floors, and fireplace features.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (5\u00d7)"
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Missing: \"handcrafted Moroccan art form\""
+      ],
+      [
+        "vary-slightly",
+        "significant",
+        "\"vary/varies slightly\" \u2014 name the actual variation"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"pure white.docx\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 1,
+    "significant": 4,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "pure-white-trapezoid-zellige",
+    "doc_title": "Product Page 16 | Zia Tile - March 2026 | Pure White Trapezoid Zellige",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/pure-white-trapezoid-zellige-tile",
+    "material": "zellige",
+    "meta_title": "Pure White 1x4 Trapezoid Zellige | Zia Tile",
+    "meta_desc": "Shop Pure White Trapezoid zellige from Zia Tile, featuring hand-dipped glaze, tonal variation, and a refined geometric presence.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (4\u00d7)"
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Missing: \"handcrafted Moroccan art form\""
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Missing: \"chips, pits, and crazing\""
+      ],
+      [
+        "vary-slightly",
+        "significant",
+        "\"vary/varies slightly\" \u2014 name the actual variation"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"pure white trapezoid\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 43 chars (target 50\u201360)"
+      ],
+      [
+        "meta-desc-len",
+        "minor",
+        "Meta desc 128 chars (target 140\u2013160)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 1,
+    "significant": 5,
+    "minor": 2,
+    "info": 1
+  },
+  {
+    "filename": "racing-green-2x6-zellige",
+    "doc_title": "Product Page 17 | Zia Tile - March 2026 | Racing Green 2x6 Zellige",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/racing-green-2x6-zellige-tile",
+    "material": "zellige",
+    "meta_title": "Racing Green 2x6 Bejmat Zellige | Zia Tile",
+    "meta_desc": "Shop Zia's Racing Green 2x6 zellige. A deep green handcrafted Moroccan tile for kitchen backsplashes, bathroom walls, and more.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: your"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (5\u00d7)"
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Missing: \"handcrafted Moroccan art form\""
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Missing: \"chips, pits, and crazing\""
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 42 chars (target 50\u201360)"
+      ],
+      [
+        "meta-desc-len",
+        "minor",
+        "Meta desc 127 chars (target 140\u2013160)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 3,
+    "minor": 2,
+    "info": 1
+  },
+  {
+    "filename": "red-clay-8x8-square",
+    "doc_title": "Product Page 14 | Zia Tile - April 2026 | Red Clay 8x8 Square",
+    "status": "Zia Approved",
+    "page_url": "https://ziatile.com/products/8x8-square-red-clay-cotto-tile",
+    "material": "cotto",
+    "meta_title": "Red Clay 8x8 Square Terra Cotta Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Red Clay 8x8 cotto. A red handmade terra cotta tile for kitchen floors, outdoor patios, and bathroom wall installations.",
+    "issues": [
+      [
+        "prop65",
+        "critical",
+        "Prop 65 warning missing"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "3 template section(s) pending"
+      ]
+    ],
+    "critical": 1,
+    "significant": 0,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "rouge-4x4",
+    "doc_title": "Product Page 23 | Zia Tile - March 2026 | Rouge 4x4",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/rouge-zellige-tile",
+    "material": "unknown",
+    "meta_title": "Rouge 4x4 Square Zellige | Zia Tile",
+    "meta_desc": "Shop Zia's Rouge 4x4 zellige. A deep red handcrafted Moroccan tile with inherent variation, suited for interior and exterior applications.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you, your"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (5\u00d7)"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 35 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 1,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "rubric-4",
+    "doc_title": "Product Page 5 | Zia Tile - May 2026 | Rubric 4",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/rubric-4",
+    "material": "mosaic",
+    "meta_title": "Shop Rubric 4 Zellige Mosaic | Zia Tile",
+    "meta_desc": "Shop Zia's Rubric 4 zellige mosaic. A handcrafted Moroccan mosaic in Tidepool and Casablanca, suited for kitchens, bathrooms, showers, and pool applications.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: grout spacing"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you, your"
+      ],
+      [
+        "terminology",
+        "critical",
+        "\"dynamic glazes\" on non-zellige"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (6\u00d7)"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"rubric 4\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "no-color-desc",
+        "significant",
+        "No color description in romance copy"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 39 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 4,
+    "significant": 4,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "rust-2x8",
+    "doc_title": "Product Page 30 | Zia Tile - May 2026 | Rust 2x8",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/rust-2x8",
+    "material": "ceramic",
+    "meta_title": "Shop Rust 2x8 Cement Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Rust 2x8 cement tile. A warm orange-brown handmade cement tile in a 2x8 rectangle for floors, walls, and shower installations.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: your"
+      ],
+      [
+        "banned",
+        "significant",
+        "Banned: affordable"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 36 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 2,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "sedona-12x12",
+    "doc_title": "Product Page 35 | Zia Tile - May 2026 |  Sedona 12x12",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/sedona-12x12",
+    "material": "terrazzo",
+    "meta_title": "Shop Sedona 12x12 Cantera Stone Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Sedona 12x12 Cantera. A warm toned volcanic stone tile suited for interior floors, exterior non-freeze/thaw patios, and feature walls.",
+    "issues": [
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 1,
+    "significant": 1,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "sequoia-2x8",
+    "doc_title": "Product Page 25 | Zia Tile - April 2026 | Sequoia 2x8",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/sequoia-2x8-ceramic-tile",
+    "material": "ceramic",
+    "meta_title": "Shop Sequoia 2x8 Satin Ceramic Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Sequoia 2x8 ceramic. An olive green satin finish subway tile for kitchens, bathrooms, and showers. Designed in LA, made in Japan.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: vary slightly"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned: is normal for"
+      ],
+      [
+        "overage",
+        "critical",
+        "Overage 10\u201315% \u2014 correct: min 15%, up to 25%"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "normal-framing",
+        "significant",
+        "\"is normal\" \u2014 use \"inherent\" framing"
+      ],
+      [
+        "vary-slightly",
+        "significant",
+        "\"vary/varies slightly\" \u2014 name the actual variation"
+      ],
+      [
+        "no-color-desc",
+        "significant",
+        "No color description in romance copy"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 3,
+    "significant": 4,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "sequoia-4x4",
+    "doc_title": "Product Page 6 | Zia Tile - April 2026 | Sequoia 4x4",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/sequoia-4x4-ceramic-tile",
+    "material": "ceramic",
+    "meta_title": "",
+    "meta_desc": "Shop Zia's Sequoia 4x4 satin ceramic. A tranquil green Japanese ceramic tile for kitchen backsplashes, bathroom walls, and shower installations.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: vary slightly"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned: is normal for"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you, your"
+      ],
+      [
+        "overage",
+        "critical",
+        "Overage 10\u201315% \u2014 correct: min 15%, up to 25%"
+      ],
+      [
+        "banned",
+        "significant",
+        "Banned: muted (stand-alone without design context)"
+      ],
+      [
+        "normal-framing",
+        "significant",
+        "\"is normal\" \u2014 use \"inherent\" framing"
+      ],
+      [
+        "vary-slightly",
+        "significant",
+        "\"vary/varies slightly\" \u2014 name the actual variation"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 4,
+    "significant": 3,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "skylight-4x4",
+    "doc_title": "Product Page 1 | Zia Tile - April 2026 | Skylight 4x4",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/sky-light-zellige-tile",
+    "material": "unknown",
+    "meta_title": "",
+    "meta_desc": "Shop Zia's Skylight 4x4 zellige. A sky-blue handcrafted Moroccan tile suited for kitchen backsplashes, bathroom walls, and shower installations.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (5\u00d7)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 1,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "slate",
+    "doc_title": "Product Page 29 | Zia Tile - May 2026 | Slate",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/slate-cement-tile",
+    "material": "cement",
+    "meta_title": "Shop Slate 8x8 Cement Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Slate Cement Tile. A deep blue-grey handmade cement tile suited for kitchen floors, bathroom floors, patios in mild climates, and shower walls.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: your"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "banned",
+        "significant",
+        "Banned: affordable"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 37 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 3,
+    "significant": 2,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "stars-cross-red-clay",
+    "doc_title": "Product Page 18 | Zia Tile - April 2026 | Stars & Cross + Red Clay",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/6x6-stars-and-cross-red-clay-cotto-tile",
+    "material": "cotto",
+    "meta_title": "Stars & Cross + Red Clay Terra Cotta Tile | Zia Tile",
+    "meta_desc": "Shop Zia Tile Stars & Cross + Red Clay Terra Cotta Tile, where traditional Moroccan geometry meets rich terra cotta earth tones and artisan craft.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: defects"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 0,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "superior-blue-4x4",
+    "doc_title": "Product Page 27 | Zia Tile - May 2026 | Superior Blue 4x4",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/superior-blue-zellige-tile",
+    "material": "unknown",
+    "meta_title": "Superior Blue 4x4 Square Zellige | Zia Tile",
+    "meta_desc": "Shop Zia's Superior Blue 4x4 Square zellige. A blue tile with a glaze that shifts between saturated tones, suited for kitchens, bathrooms, and pools.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "unconfirmed-colorway",
+        "critical",
+        "Colorway \"superior blue\" not confirmed in approved reference"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (5\u00d7)"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 43 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 1,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "terra-rosa-4x4",
+    "doc_title": "Product Page 4 | Zia Tile - May 2026 | Terra Rosa 4x4",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/terra-rosa-zellige-tile",
+    "material": "unknown",
+    "meta_title": "Shop Terra Rosa 4x4 Square Zellige | Zia Tile",
+    "meta_desc": "Shop Zia's Terra Rosa 4x4 zellige. A warm terracotta-pink Moroccan tile with a glaze that shifts between terracotta, muted clay, and reddish-brown tones.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: your"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (9\u00d7)"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 2,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "tidepool-2x6",
+    "doc_title": "Product Page 29 | Zia Tile - March 2026 | Tidepool 2x6",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/tidepool-2x6-zellige-tile",
+    "material": "unknown",
+    "meta_title": "Tidepool 2x6 Bejmat Zellige | Zia Tile",
+    "meta_desc": "Shop Zia's Tidepool 2x6 Bejmat zellige. A handcrafted Moroccan tile with blue-green tones and a linear format, suited for herringbone and stacked installations.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: your"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (5\u00d7)"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 38 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 3,
+    "significant": 1,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "tidepool-4x4-zellige",
+    "doc_title": "Product Page 13 | Zia Tile - March 2026 | Tidepool 4x4 Zellige",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/tidepool-zellige-tile",
+    "material": "zellige",
+    "meta_title": "Tidepool 4x4 Square Zellige | Zia Tile",
+    "meta_desc": "Shop Tidepool Zellige 4x4 from Zia Tile. A handcrafted Moroccan tile with shifting blue-green tones and inherent variation.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (5\u00d7)"
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Missing: \"handcrafted Moroccan art form\""
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Missing: \"chips, pits, and crazing\""
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 38 chars (target 50\u201360)"
+      ],
+      [
+        "meta-desc-len",
+        "minor",
+        "Meta desc 123 chars (target 140\u2013160)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 3,
+    "minor": 2,
+    "info": 1
+  },
+  {
+    "filename": "tidepool",
+    "doc_title": "Product Page 3 | Zia Tile - April 2026 | Tidepool",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/tidepool-trapezoid-zellige-tile",
+    "material": "unknown",
+    "meta_title": "",
+    "meta_desc": "Shop Zia's Tidepool trapezoid zellige. A multi-tonal green-and-blue Moroccan tile for kitchen backsplashes, bathroom walls, and shower installations.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (6\u00d7)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 1,
+    "significant": 1,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "toltec-red-clay",
+    "doc_title": "Product Page 31 | Zia Tile - April 2026 | Toltec Red Clay",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/toltec-red-clay-cotto-tile",
+    "material": "cotto",
+    "meta_title": "Shop Toltec Red Clay Cotto Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Toltec Red Clay Cotto. An unglazed handmade terra cotta tile from San Miguel de Allende for floors and wall installations in any climate.",
+    "issues": [
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"toltec red clay\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 42 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 1,
+    "significant": 2,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "unglazed-natural-2x6",
+    "doc_title": "Product Page 12 | Zia Tile - April 2026 | Unglazed Natural 2x6",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/unglazed-natural-2x6-zellige-tile",
+    "material": "unknown",
+    "meta_title": "Unglazed Natural 2x6 Bejmat Zellige | Zia Tile",
+    "meta_desc": "Explore Zia's Unglazed Natural 2x6 zellige. A Bejmat tile for kitchen backsplashes, bathroom walls, and shower installations.",
+    "issues": [
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you, your"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (3\u00d7)"
+      ],
+      [
+        "no-color-desc",
+        "significant",
+        "No color description in romance copy"
+      ],
+      [
+        "meta-desc-len",
+        "minor",
+        "Meta desc 125 chars (target 140\u2013160)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 2,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "unglazed-natural-4x4",
+    "doc_title": "Product Page 2 | Zia Tile - May 2026 | Unglazed Natural 4x4",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/unglazed-natural-zellige-tile",
+    "material": "unknown",
+    "meta_title": "Unglazed Natural 4x4 Square Zellige | Zia Tile",
+    "meta_desc": "Shop Zia's Unglazed Natural 4x4 Square zellige. A raw clay Moroccan tile in matte finish with natural firing variation, suited for kitchen floors, interior walls, and more.",
+    "issues": [
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you, your"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (3\u00d7)"
+      ],
+      [
+        "no-color-desc",
+        "significant",
+        "No color description in romance copy"
+      ],
+      [
+        "meta-desc-len",
+        "minor",
+        "Meta desc 172 chars (target 140\u2013160)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 2,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "valverde-4x4",
+    "doc_title": "Product Page 6 | Zia Tile - May 2026 | Valverde 4x4",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/valverde-4x4",
+    "material": "cotto",
+    "meta_title": "Shop Valverde 4x4 Square Cotto Allende | Zia Tile",
+    "meta_desc": "Shop Zia's Valverde 4x4 Cotto Allende. A deep green glazed tile in a glossy finish for kitchens, bathrooms, showers, and pools in non-freeze/thaw climates.",
+    "issues": [
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you, your"
+      ],
+      [
+        "wrong-variation",
+        "critical",
+        "Crazing on unglazed Cotto \u2014 banned"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"valverde\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 2,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "volcan-12x12",
+    "doc_title": "Product Page 14 | Zia Tile - May 2026 | Volcan 12x12",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/volcan-12x12",
+    "material": "terrazzo",
+    "meta_title": "Volcan 12x12 Cantera Stone Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Volcan 12x12 Cantera. A warm brown volcanic stone tile cut by hand in Mexico, made for interiors, non-freeze/thaw applications, and feature walls.",
+    "issues": [
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 42 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 1,
+    "significant": 0,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "volcan-24x24",
+    "doc_title": "Product Page 18 | Zia Tile - May 2026 | Volcan 24x24",
+    "status": "LG Review",
+    "page_url": "https://ziatile.com/products/volcan-24x24",
+    "material": "terrazzo",
+    "meta_title": "Shop Volcan 24x24 Cantera Stone Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Volcan 24x24 Cantera. A large-format warm brown volcanic stone tile for interior floors, exterior courtyards, and commercial installations.",
+    "issues": [
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "meta-shop",
+        "significant",
+        "Meta title \"Shop\" prefix"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 1,
+    "significant": 1,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "volcan-4x12",
+    "doc_title": "Product Page 22 | Zia Tile - March 2026 | Volcan 4x12",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/volcan-4x12",
+    "material": "terrazzo",
+    "meta_title": "Volcan 4x12 Cantera Stone Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Volcan 4x12 Cantera. A warm brown volcanic stone tile cut by hand in Mexico, suited for interior floors and exterior wall applications.",
+    "issues": [
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 41 chars (target 50\u201360)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 1,
+    "significant": 0,
+    "minor": 1,
+    "info": 1
+  },
+  {
+    "filename": "zellige-absinthe-4x4",
+    "doc_title": "Product Page 11 | Zia Tile - March 2026 | Zellige Absinthe 4x4",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/absinthe-zellige-tile",
+    "material": "zellige",
+    "meta_title": "Absinthe 4x4 Square Zellige | Zia Tile",
+    "meta_desc": "Shop Zia's Absinthe 4x4 zellige. An aqua-hued handcrafted Moroccan tile featuring green tones and natural variation.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you, your"
+      ],
+      [
+        "banned",
+        "significant",
+        "Banned: muted (stand-alone without design context)"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (4\u00d7)"
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Missing: \"handcrafted Moroccan art form\""
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Missing: \"chips, pits, and crazing\""
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"zellige absinthe\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 38 chars (target 50\u201360)"
+      ],
+      [
+        "meta-desc-len",
+        "minor",
+        "Meta desc 116 chars (target 140\u2013160)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 5,
+    "minor": 2,
+    "info": 1
+  },
+  {
+    "filename": "zellige-glazed-earth-2x6",
+    "doc_title": "Product Page 9 | Zia Tile - March 2026 | Zellige Glazed Earth 2x6",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/glazed-earth-2x6-zellige-tile",
+    "material": "zellige",
+    "meta_title": "Glazed Earth 2x6 Bejmat Zellige | Zia Tile",
+    "meta_desc": "Shop Zia\u2019s Glazed Earth 2x6 zellige. These handcrafted Moroccan clay tiles feature dynamic tones and inherent variation for kitchen backsplashes, shower walls, and more.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you, your"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (5\u00d7)"
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Missing: \"handcrafted Moroccan art form\""
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Missing: \"chips, pits, and crazing\""
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"zellige glazed earth\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 42 chars (target 50\u201360)"
+      ],
+      [
+        "meta-desc-len",
+        "minor",
+        "Meta desc 169 chars (target 140\u2013160)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 4,
+    "minor": 2,
+    "info": 1
+  },
+  {
+    "filename": "zellige-glazed-earth-4x4",
+    "doc_title": "Product Page 6 | Zia Tile - March 2026 | Zellige Glazed Earth 4x4",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/glazed-earth-zellige-tile",
+    "material": "zellige",
+    "meta_title": "",
+    "meta_desc": "Shop Zia's Glazed Earth 4x4 zellige. A handcrafted Moroccan tile with shades of beige, suited for kitchen backsplashes and bathroom walls.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "2nd-person",
+        "critical",
+        "Second person: you, your"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (5\u00d7)"
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Missing: \"handcrafted Moroccan art form\""
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Missing: \"chips, pits, and crazing\""
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"zellige glazed earth\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 3,
+    "significant": 4,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "zellige-racing-green-4x4",
+    "doc_title": "Product Page 8 | Zia Tile - March 2026 | Zellige Racing Green 4x4",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/products/racing-green-zellige-tile",
+    "material": "zellige",
+    "meta_title": "Racing Green 4x4 Square Zellige | Zia Tile",
+    "meta_desc": "Shop Zia\u2019s Racing Green 4x4 zellige. These handcrafted Moroccan clay tiles feature dynamic tones and inherent variation for kitchen backsplashes, shower walls, and more.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: laid (installation verb)"
+      ],
+      [
+        "contact",
+        "critical",
+        "Missing contact: phone"
+      ],
+      [
+        "zellige-cap",
+        "significant",
+        "Zellige capitalized (5\u00d7)"
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Missing: \"handcrafted Moroccan art form\""
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Missing: \"chips, pits, and crazing\""
+      ],
+      [
+        "colorway-verify",
+        "significant",
+        "Colorway \"zellige racing green\" not in reference \u2014 verify name is approved"
+      ],
+      [
+        "meta-len",
+        "minor",
+        "Meta title 42 chars (target 50\u201360)"
+      ],
+      [
+        "meta-desc-len",
+        "minor",
+        "Meta desc 169 chars (target 140\u2013160)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "2 template section(s) pending"
+      ]
+    ],
+    "critical": 2,
+    "significant": 4,
+    "minor": 2,
+    "info": 1
+  }
+]

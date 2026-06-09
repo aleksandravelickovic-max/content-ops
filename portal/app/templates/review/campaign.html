@@ -96,7 +96,7 @@
         {% set total = comment_counts.get(entry.path, 0) %}
         {% set unresolved = unresolved_counts.get(entry.path, 0) %}
         {% set resolved = total - unresolved %}
-        <tr class="content-row" data-comments="{{ total }}" onclick="window.location='/review/{{ token }}/{{ entry.path }}'">
+        <tr class="content-row" data-comments="{{ total }}" onclick="window.location='/review/{{ token }}/{{ 'blog/' if entry.type == 'blog' else '' }}{{ entry.path }}'">
           <td class="col-title">
             <span class="row-title">{{ entry.displayName }}</span>
             <span class="row-path">{{ entry.path }}</span>

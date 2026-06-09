@@ -1,0 +1,1541 @@
+[
+  {
+    "filename": "core-page-1-zia-tile-april-2026-color-white",
+    "doc_title": "Core Page 1 | Zia Tile - April 2026 | Color - White",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/collections/all?color=white",
+    "month": "April",
+    "page_type": "color",
+    "material": "unknown",
+    "meta_title": "White Tile for Showers, Backsplashes & Floors | Zia Tile",
+    "meta_desc": "Shop white tile at Zia Tile: handmade zellige, Carrara marble, matte ceramics & more for showers, backsplashes, kitchen floors, and bathroom walls.",
+    "issues": [
+      [
+        "meta-shop-desc",
+        "significant",
+        "Meta description starts with \"Shop\" \u2014 lead with material value instead"
+      ]
+    ],
+    "critical": 0,
+    "significant": 1,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-1-zia-tile-march-2026-material-zellige",
+    "doc_title": "Core Page 1 | Zia Tile - March 2026 | Material -  Zellige",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/en-ca/collections/zellige",
+    "month": "March",
+    "page_type": "material",
+    "material": "zellige",
+    "meta_title": "Handcrafted Moroccan Zellige Tile | Zia Tile",
+    "meta_desc": "Each zellige tile is hand-shaped, glazed, and kiln-fired, producing inherent variation in color, tone, and surface. Explore Zia's collection in multiple colors, sizes, and shapes.",
+    "issues": [
+      [
+        "meta-desc-len",
+        "significant",
+        "Meta description 179 chars (max 160)"
+      ],
+      [
+        "zellige-cap",
+        "critical",
+        "\"Zellige\" capitalized 6\u00d7 \u2014 must be lowercase"
+      ],
+      [
+        "banned",
+        "significant",
+        "Em dash present (humanizer rule: avoid em dashes)"
+      ],
+      [
+        "tech-freeze",
+        "critical",
+        "Zellige must not be described as outdoor freeze/thaw suitable"
+      ]
+    ],
+    "critical": 2,
+    "significant": 2,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-10-zia-tile-april-2026-color-blue",
+    "doc_title": "Core Page 10 | Zia Tile - April 2026 | Color - Blue",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/collections/all?color=blue",
+    "month": "April",
+    "page_type": "color",
+    "material": "unknown",
+    "meta_title": "Blue Tile for Backsplashes, Pools & Bathrooms | Zia Tile",
+    "meta_desc": "Shop blue tile at Zia Tile: handmade zellige, ceramic, cement, and glass mosaic pool tile in cobalt, pacific blue, and beyond for backsplashes, bathrooms, and pools.",
+    "issues": [
+      [
+        "meta-desc-len",
+        "significant",
+        "Meta description 165 chars (max 160)"
+      ],
+      [
+        "meta-shop-desc",
+        "significant",
+        "Meta description starts with \"Shop\" \u2014 lead with material value instead"
+      ],
+      [
+        "zellige-cap",
+        "critical",
+        "\"Zellige\" capitalized 1\u00d7 \u2014 must be lowercase"
+      ]
+    ],
+    "critical": 1,
+    "significant": 2,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-10-zia-tile-march-2026-limestone",
+    "doc_title": "Core Page 10 | Zia Tile - March 2026 | Limestone",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/en-ca/collections/limestone-tile",
+    "month": "March",
+    "page_type": "material",
+    "material": "limestone",
+    "meta_title": "Natural Limestone Tile | Zia Tile",
+    "meta_desc": "Natural limestone tile quarried near Fez, Morocco, and Bordeaux, France. Shop Zia's collection in honed and bush-hammered finishes for floors, walls, and wet areas.",
+    "issues": [
+      [
+        "meta-desc-len",
+        "significant",
+        "Meta description 164 chars (max 160)"
+      ],
+      [
+        "banned",
+        "significant",
+        "Em dash present (humanizer rule: avoid em dashes)"
+      ]
+    ],
+    "critical": 0,
+    "significant": 2,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-11-zia-tile-april-2026-color-purple",
+    "doc_title": "Core Page 11 | Zia Tile - April 2026 | Color - Purple",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/collections/all?color=purple",
+    "month": "April",
+    "page_type": "color",
+    "material": "unknown",
+    "meta_title": "Purple Tile for Accent Walls, Backsplashes & Baths | Zia Tile",
+    "meta_desc": "Shop purple tile at Zia Tile: lavender ceramic, plum zellige, and hand-poured cement tile for accent walls, backsplashes, and primary baths.",
+    "issues": [
+      [
+        "meta-len",
+        "significant",
+        "Meta title 61 chars (max 60)"
+      ],
+      [
+        "meta-shop-desc",
+        "significant",
+        "Meta description starts with \"Shop\" \u2014 lead with material value instead"
+      ]
+    ],
+    "critical": 0,
+    "significant": 2,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-11-zia-tile-march-2026-ceramics",
+    "doc_title": "Core Page 11 | Zia Tile - March 2026 | Ceramics",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/en-ca/collections/ceramics",
+    "month": "March",
+    "page_type": "material",
+    "material": "unknown",
+    "meta_title": "Architectural Ceramics | Zia Tile",
+    "meta_desc": "Shop ceramic tile from Zia Tile, crafted in Japan with precise forms, clean lines, and refined finishes designed for controlled, architectural surfaces",
+    "issues": [
+      [
+        "meta-shop-desc",
+        "significant",
+        "Meta description starts with \"Shop\" \u2014 lead with material value instead"
+      ],
+      [
+        "banned",
+        "significant",
+        "Em dash present (humanizer rule: avoid em dashes)"
+      ]
+    ],
+    "critical": 0,
+    "significant": 2,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-12-zia-tile-april-2026-color-black",
+    "doc_title": "Core Page 12 | Zia Tile - April 2026 | Color - Black",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/collections/all?color=black",
+    "month": "April",
+    "page_type": "color",
+    "material": "unknown",
+    "meta_title": "Black Tile for Floors, Walls & Backsplashes | Zia Tile",
+    "meta_desc": "Shop black tile at Zia Tile: handmade cotto, zellige, cement, terrazzo, Roman mosaic, and marble for kitchen floors, backsplashes, and bathroom walls.",
+    "issues": [
+      [
+        "meta-shop-desc",
+        "significant",
+        "Meta description starts with \"Shop\" \u2014 lead with material value instead"
+      ]
+    ],
+    "critical": 0,
+    "significant": 1,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-12-zia-tile-march-2026-field-trip-japan",
+    "doc_title": "Core Page 12 | Zia Tile - March 2026 | Field Trip Japan",
+    "status": "On Hold",
+    "page_url": "https://ziatile.com/en-ca/collections/field-trip-japan",
+    "month": "March",
+    "page_type": "material",
+    "material": "ceramic",
+    "meta_title": "Field Trip: Japan Ceramic \u2014 Flat, Furrowed & Etched | Zia Tile",
+    "meta_desc": "Field Trip: Japan is Zia's extruded ceramic tile line, designed in Los Angeles and hand-glazed in Nagoya, Japan, in flat, furrowed, and etched finishes.",
+    "issues": [
+      [
+        "meta-len",
+        "significant",
+        "Meta title 62 chars (max 60)"
+      ]
+    ],
+    "critical": 0,
+    "significant": 1,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-13-zia-tile-april-2026-color-pattern",
+    "doc_title": "Core Page 13 | Zia Tile - April 2026 | Color - Pattern",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/collections/all?design=pattern",
+    "month": "April",
+    "page_type": "color",
+    "material": "unknown",
+    "meta_title": "Pattern Tile for Floors, Backsplashes & Feature Walls | Zia Tile",
+    "meta_desc": "Shop pattern tile at Zia Tile: handmade cement tile and zellige in geometric and floral designs for kitchen floors, backsplashes, and bathroom walls.",
+    "issues": [
+      [
+        "meta-len",
+        "significant",
+        "Meta title 64 chars (max 60)"
+      ],
+      [
+        "meta-shop-desc",
+        "significant",
+        "Meta description starts with \"Shop\" \u2014 lead with material value instead"
+      ],
+      [
+        "zellige-cap",
+        "critical",
+        "\"Zellige\" capitalized 1\u00d7 \u2014 must be lowercase"
+      ]
+    ],
+    "critical": 1,
+    "significant": 2,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-13-zia-tile-march-2026-shape-square",
+    "doc_title": "Core Page 13 | Zia Tile - March 2026 | Shape - Square",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/en-ca/collections/all?shape=square",
+    "month": "March",
+    "page_type": "shape",
+    "material": "unknown",
+    "meta_title": "Square Tile in Zellige, Ceramic, Limestone & More | Zia Tile",
+    "meta_desc": "Shop square tile at Zia Tile. Zellige, ceramic, cement, limestone, cantera, and more. Sizes from 2x2 to 24x24 for floors, walls, and wet areas.",
+    "issues": [
+      [
+        "meta-shop-desc",
+        "significant",
+        "Meta description starts with \"Shop\" \u2014 lead with material value instead"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned filler: truly"
+      ]
+    ],
+    "critical": 1,
+    "significant": 1,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-14-zia-tile-april-2026-space-bathroom",
+    "doc_title": "Core Page 14 | Zia Tile - April 2026 | Space - Bathroom",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/pages/bathroom-collection",
+    "month": "April",
+    "page_type": "space",
+    "material": "unknown",
+    "meta_title": "Bathroom Tile for Showers, Floors & Walls | Zia Tile",
+    "meta_desc": "Shop bathroom tiles at Zia Tile: zellige, hexagon bathroom tile, bathroom marble tile, and shower tile in glass mosaic. Handmade, rated for wet-area use.",
+    "issues": [
+      [
+        "meta-shop-desc",
+        "significant",
+        "Meta description starts with \"Shop\" \u2014 lead with material value instead"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "1 placeholder(s): [PRODUCT IMAGES]"
+      ]
+    ],
+    "critical": 0,
+    "significant": 1,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "core-page-14-zia-tile-march-2026-shape-rectangle",
+    "doc_title": "Core Page 14 | Zia Tile - March 2026 | Shape - Rectangle",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/en-ca/collections/all?shape=rectangle",
+    "month": "March",
+    "page_type": "shape",
+    "material": "unknown",
+    "meta_title": "Rectangular Tile in Zellige, Ceramic & More | Zia Tile",
+    "meta_desc": "Shop rectangular tile at Zia Tile, including Bejmat zellige, ceramic, limestone, and cement, in formats from 2x6 to 12x24 for floors, walls, and backsplashes.",
+    "issues": [
+      [
+        "meta-shop-desc",
+        "significant",
+        "Meta description starts with \"Shop\" \u2014 lead with material value instead"
+      ],
+      [
+        "zellige-cap",
+        "critical",
+        "\"Zellige\" capitalized 1\u00d7 \u2014 must be lowercase"
+      ],
+      [
+        "banned",
+        "critical",
+        "Banned filler: really (check context)"
+      ]
+    ],
+    "critical": 2,
+    "significant": 1,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-15-zia-tile-april-2026-space-kitchen",
+    "doc_title": "Core Page 15 | Zia Tile - April 2026 | Space - Kitchen",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/pages/kitchen-collection",
+    "month": "April",
+    "page_type": "space",
+    "material": "unknown",
+    "meta_title": "Kitchen Tile for Floors, Backsplashes & Islands | Zia Tile",
+    "meta_desc": "Shop kitchen tile at Zia Tile: handmade zellige, marble, ceramic, cement, and cotto for kitchen floors, backsplashes, and island surrounds.",
+    "issues": [
+      [
+        "meta-desc-len",
+        "significant",
+        "Meta description 139 chars (min 140)"
+      ],
+      [
+        "meta-shop-desc",
+        "significant",
+        "Meta description starts with \"Shop\" \u2014 lead with material value instead"
+      ],
+      [
+        "zellige-cap",
+        "critical",
+        "\"Zellige\" capitalized 2\u00d7 \u2014 must be lowercase"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "1 placeholder(s): [PRODUCT IMAGES]"
+      ]
+    ],
+    "critical": 1,
+    "significant": 2,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "core-page-15-zia-tile-march-2026-shape-subwa",
+    "doc_title": "Core Page 15 | Zia Tile - March 2026 | Shape - Subwa",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/en-ca/collections/all?shape=subway",
+    "month": "March",
+    "page_type": "shape",
+    "material": "unknown",
+    "meta_title": "Subway Tile for Kitchens, Bathrooms & More | Zia Tile",
+    "meta_desc": "Shop subway tiles in zellige and ceramic at Zia. Classic rectangular formats for kitchen backsplashes, shower walls, and more. Order your samples today.",
+    "issues": [
+      [
+        "meta-shop-desc",
+        "significant",
+        "Meta description starts with \"Shop\" \u2014 lead with material value instead"
+      ],
+      [
+        "zellige-cap",
+        "critical",
+        "\"Zellige\" capitalized 2\u00d7 \u2014 must be lowercase"
+      ],
+      [
+        "banned",
+        "significant",
+        "Em dash present (humanizer rule: avoid em dashes)"
+      ]
+    ],
+    "critical": 1,
+    "significant": 2,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-16-zia-tile-april-2026-shape-hexagon",
+    "doc_title": "Core Page 16 | Zia Tile - April 2026 | Shape - Hexagon",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/en-ca/collections/all?shape=hexagon",
+    "month": "March",
+    "page_type": "shape",
+    "material": "unknown",
+    "meta_title": "Hexagon Tile for Floors, Walls & Backsplashes | Zia Tile",
+    "meta_desc": "Shop hexagon tiles at Zia Tile. Zellige, cotto, and cement in solid colorways and patterned compositions for shower floors, kitchen backsplashes, and more.",
+    "issues": [
+      [
+        "meta-shop-desc",
+        "significant",
+        "Meta description starts with \"Shop\" \u2014 lead with material value instead"
+      ],
+      [
+        "zellige-cap",
+        "critical",
+        "\"Zellige\" capitalized 3\u00d7 \u2014 must be lowercase"
+      ],
+      [
+        "banned",
+        "significant",
+        "Wrong verb: \"laid\" \u2192 use \"set\""
+      ]
+    ],
+    "critical": 1,
+    "significant": 2,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-16-zia-tile-april-2026-space-outdoor",
+    "doc_title": "Core Page 16 | Zia Tile - April 2026 | Space - Outdoor",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/pages/outdoor-collection",
+    "month": "April",
+    "page_type": "space",
+    "material": "unknown",
+    "meta_title": "Outdoor Tile for Patios, Pools & Yards | Zia Tile",
+    "meta_desc": "Shop outdoor tile at Zia Tile: cotto, cement, glass mosaic, and zellige for patios, pool surrounds, and exterior walls.",
+    "issues": [
+      [
+        "meta-desc-len",
+        "significant",
+        "Meta description 119 chars (min 140)"
+      ],
+      [
+        "meta-shop-desc",
+        "significant",
+        "Meta description starts with \"Shop\" \u2014 lead with material value instead"
+      ],
+      [
+        "zellige-cap",
+        "critical",
+        "\"Zellige\" capitalized 1\u00d7 \u2014 must be lowercase"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "1 placeholder(s): [PRODUCT IMAGES]"
+      ]
+    ],
+    "critical": 1,
+    "significant": 2,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "core-page-17-zia-tile-april-2026-space-shower",
+    "doc_title": "Core Page 17 | Zia Tile - April 2026 | Space - Shower",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/pages/shower-collection",
+    "month": "April",
+    "page_type": "space",
+    "material": "unknown",
+    "meta_title": "Shower Tile: Floor, Wall & Modern Designs | Zia Tile",
+    "meta_desc": "Shop shower tile at Zia Tile: zellige, marble, ceramic, cement, and glass mosaic for shower walls, floors, and niches.",
+    "issues": [
+      [
+        "meta-desc-len",
+        "significant",
+        "Meta description 118 chars (min 140)"
+      ],
+      [
+        "meta-shop-desc",
+        "significant",
+        "Meta description starts with \"Shop\" \u2014 lead with material value instead"
+      ],
+      [
+        "zellige-cap",
+        "critical",
+        "\"Zellige\" capitalized 2\u00d7 \u2014 must be lowercase"
+      ]
+    ],
+    "critical": 1,
+    "significant": 2,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-17-zia-tile-march-2026-shape-large-format",
+    "doc_title": "Core Page 17 | Zia Tile - March 2026 | Shape - Large Format",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/en-ca/collections/all?shape=large+format",
+    "month": "March",
+    "page_type": "shape",
+    "material": "unknown",
+    "meta_title": "Large Format Tile for Floors and Walls | Zia Tile",
+    "meta_desc": "Shop large format tile at Zia Tile for open floors, feature walls, and commercial installations in terrazzo, marble, limestone, cantera, and cotto.",
+    "issues": [
+      [
+        "meta-shop-desc",
+        "significant",
+        "Meta description starts with \"Shop\" \u2014 lead with material value instead"
+      ]
+    ],
+    "critical": 0,
+    "significant": 1,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-18-zia-tile-april-2026-trade-program",
+    "doc_title": "Core Page 18 | Zia Tile - April 2026 | Trade Program",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/pages/contact?view=trade",
+    "month": "April",
+    "page_type": "trade-program",
+    "material": "unknown",
+    "meta_title": "Trade Program for Interior Designers & Architects | Zia Tile",
+    "meta_desc": "Apply to the Zia Tile trade program for interior designers and architects: trade pricing, dedicated rep, samples at no charge, installation support.",
+    "issues": [],
+    "critical": 0,
+    "significant": 0,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-18-zia-tile-march-2026-shape-special-shape",
+    "doc_title": "Core Page 18 | Zia Tile - March 2026 | Shape - Special Shape",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/en-ca/collections/all?shape=special+shape",
+    "month": "March",
+    "page_type": "shape",
+    "material": "unknown",
+    "meta_title": "Special Shape Tile: Unique Formats | Zia Tile",
+    "meta_desc": "Shop special shape tile at Zia Tile. Hexagon, trapezoid, Durango, Stars and Cross, and more across multiple materials and colorways.",
+    "issues": [
+      [
+        "meta-desc-len",
+        "significant",
+        "Meta description 132 chars (min 140)"
+      ],
+      [
+        "meta-shop-desc",
+        "significant",
+        "Meta description starts with \"Shop\" \u2014 lead with material value instead"
+      ],
+      [
+        "zellige-cap",
+        "critical",
+        "\"Zellige\" capitalized 1\u00d7 \u2014 must be lowercase"
+      ],
+      [
+        "banned",
+        "significant",
+        "Wrong verb: \"laid\" \u2192 use \"set\""
+      ]
+    ],
+    "critical": 1,
+    "significant": 3,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-2-zia-tile-april-2026-color-tan",
+    "doc_title": "Core Page 2 | Zia Tile - April 2026 | Color - Tan",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/collections/all?color=tan",
+    "month": "April",
+    "page_type": "color",
+    "material": "unknown",
+    "meta_title": "Tan Tile for Floors, Showers & Backsplashes | Zia Tile",
+    "meta_desc": "Shop tan tile at Zia Tile: handmade terra cotta, zellige, Cantera, limestone & more for kitchen floors, showers, and backsplashes.",
+    "issues": [
+      [
+        "meta-desc-len",
+        "significant",
+        "Meta description 130 chars (min 140)"
+      ],
+      [
+        "meta-shop-desc",
+        "significant",
+        "Meta description starts with \"Shop\" \u2014 lead with material value instead"
+      ],
+      [
+        "zellige-cap",
+        "critical",
+        "\"Zellige\" capitalized 1\u00d7 \u2014 must be lowercase"
+      ],
+      [
+        "banned",
+        "significant",
+        "Em dash present (humanizer rule: avoid em dashes)"
+      ]
+    ],
+    "critical": 1,
+    "significant": 3,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-2-zia-tile-march-2026-cement",
+    "doc_title": "Core Page 2 | Zia Tile - March 2026 | Cement",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/en-ca/collections/cement-tile",
+    "month": "March",
+    "page_type": "material",
+    "material": "cement",
+    "meta_title": "Handmade Encaustic Cement Tile | Zia Tile",
+    "meta_desc": "From single-color fields to intricate geometric patterns, Zia's handmade encaustic cement tile suits floors, walls, and exterior surfaces in non-freeze/thaw climates.",
+    "issues": [
+      [
+        "meta-desc-len",
+        "significant",
+        "Meta description 166 chars (max 160)"
+      ],
+      [
+        "banned",
+        "significant",
+        "Em dash present (humanizer rule: avoid em dashes)"
+      ]
+    ],
+    "critical": 0,
+    "significant": 2,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-3-zia-tile-april-2026-color-yellow",
+    "doc_title": "Core Page 3 | Zia Tile - April 2026 | Color - Yellow",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/collections/all?color=yellow",
+    "month": "April",
+    "page_type": "color",
+    "material": "unknown",
+    "meta_title": "Yellow Tile for Kitchens, Baths & Feature Walls | Zia Tile",
+    "meta_desc": "Shop yellow tile at Zia Tile: handmade zellige, marble, cement, ceramic, and more for kitchen backsplashes, bathroom walls, and floors.",
+    "issues": [
+      [
+        "meta-desc-len",
+        "significant",
+        "Meta description 135 chars (min 140)"
+      ],
+      [
+        "meta-shop-desc",
+        "significant",
+        "Meta description starts with \"Shop\" \u2014 lead with material value instead"
+      ],
+      [
+        "zellige-cap",
+        "critical",
+        "\"Zellige\" capitalized 1\u00d7 \u2014 must be lowercase"
+      ]
+    ],
+    "critical": 1,
+    "significant": 2,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-3-zia-tile-march-2026-cotto",
+    "doc_title": "Core Page 3 | Zia Tile - March 2026 | Cotto",
+    "status": "Zia Approved",
+    "page_url": "https://ziatile.com/en-ca/collections/cotto",
+    "month": "March",
+    "page_type": "material",
+    "material": "cotto",
+    "meta_title": "Handmade Terra Cotta Tile | Zia Tile",
+    "meta_desc": "Handmade in Mexico, Zia's Cotto is an unglazed terra cotta tile suitable for floors, walls, and outdoor installations in any climate.",
+    "issues": [
+      [
+        "meta-desc-len",
+        "significant",
+        "Meta description 133 chars (min 140)"
+      ],
+      [
+        "zellige-cap",
+        "critical",
+        "\"Zellige\" capitalized 2\u00d7 \u2014 must be lowercase"
+      ]
+    ],
+    "critical": 1,
+    "significant": 1,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-4-zia-tile-april-2026-color-orange",
+    "doc_title": "Core Page 4 | Zia Tile - April 2026 | Color - Orange",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/collections/all?color=orange",
+    "month": "April",
+    "page_type": "color",
+    "material": "unknown",
+    "meta_title": "Orange Tile for Backsplashes, Baths & Floors | Zia Tile",
+    "meta_desc": "Shop orange tile at Zia in handmade terra cotta, zellige, and Tangelo ceramic. From soft coral to burnt orange and deep rust for backsplashes, baths & floors.",
+    "issues": [
+      [
+        "meta-shop-desc",
+        "significant",
+        "Meta description starts with \"Shop\" \u2014 lead with material value instead"
+      ],
+      [
+        "banned",
+        "significant",
+        "Em dash present (humanizer rule: avoid em dashes)"
+      ]
+    ],
+    "critical": 0,
+    "significant": 2,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-4-zia-tile-march-2026-cotto-allende",
+    "doc_title": "Core Page 4 | Zia Tile - March 2026 | Cotto Allende",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/en-ca/collections/cotto-tile-allende",
+    "month": "March",
+    "page_type": "material",
+    "material": "cotto_allende",
+    "meta_title": "Cotto Allende: Glazed Terra Cotta Tiles | Zia Tile",
+    "meta_desc": "A glazed terra cotta tile handmade in San Miguel de Allende, Mexico. Shop Cotto Allende at Zia Tile for floors, walls, pools, and wet area installations.",
+    "issues": [
+      [
+        "banned",
+        "significant",
+        "Em dash present (humanizer rule: avoid em dashes)"
+      ],
+      [
+        "tech-freeze",
+        "critical",
+        "Cotto Allende must not be described as outdoor freeze/thaw suitable"
+      ],
+      [
+        "contact",
+        "significant",
+        "Contact info not present (consider adding for trade inquiries)"
+      ]
+    ],
+    "critical": 1,
+    "significant": 2,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-5-zia-tile-april-2026-color-pink",
+    "doc_title": "Core Page 5 | Zia Tile - April 2026 | Color - Pink",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/collections/all?color=pink",
+    "month": "April",
+    "page_type": "color",
+    "material": "unknown",
+    "meta_title": "Pink Tile for Showers, Baths & Backsplashes | Zia Tile",
+    "meta_desc": "Pink tile at Zia spans zellige, cement, and terrazzo for shower walls, bathroom floors, and kitchen backsplashes, with tones shaped by clay, pigment, and glaze.",
+    "issues": [],
+    "critical": 0,
+    "significant": 0,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-5-zia-tile-march-2026-glass-mosaics",
+    "doc_title": "Core Page 5 | Zia Tile - March 2026 | Glass Mosaics",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/en-ca/collections/glass-mosaics",
+    "month": "March",
+    "page_type": "material",
+    "material": "glass",
+    "meta_title": "Glass Mosaic Tile: Solid & Patterned | Zia Tile",
+    "meta_desc": "Made from 98% recycled glass and fired with renewable energy. Shop Zia's glass mosaic collection in solid colors and seven intentional patterned designs.",
+    "issues": [
+      [
+        "banned",
+        "critical",
+        "Banned: best-in-class"
+      ]
+    ],
+    "critical": 1,
+    "significant": 0,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-6-zia-tile-april-2026-color-red",
+    "doc_title": "Core Page 6 | Zia Tile - April 2026 | Color - Red",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/collections/all?color=red",
+    "month": "April",
+    "page_type": "color",
+    "material": "unknown",
+    "meta_title": "Red Tile for Floors, Backsplashes & Walls | Zia Tile",
+    "meta_desc": "Shop red tiles at Zia: handmade cotto, red zellige tile, and Rosso Alicante marble for kitchen floors, backsplashes, and feature walls.",
+    "issues": [
+      [
+        "meta-desc-len",
+        "significant",
+        "Meta description 135 chars (min 140)"
+      ],
+      [
+        "meta-shop-desc",
+        "significant",
+        "Meta description starts with \"Shop\" \u2014 lead with material value instead"
+      ],
+      [
+        "zellige-cap",
+        "critical",
+        "\"Zellige\" capitalized 2\u00d7 \u2014 must be lowercase"
+      ]
+    ],
+    "critical": 1,
+    "significant": 2,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-6-zia-tile-march-2026-terrazzo",
+    "doc_title": "Core Page 6 | Zia Tile - March 2026 | Terrazzo",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/en-ca/collections/terrazzo",
+    "month": "March",
+    "page_type": "material",
+    "material": "terrazzo",
+    "meta_title": "Terrazzo Tile: Classic & Patterned Formats | Zia Tile",
+    "meta_desc": "Terrazzo tile with over 500 years of architectural history. Shop Zia's collection in 12x12 and 24x24 sizes across standard and patterned configurations.",
+    "issues": [],
+    "critical": 0,
+    "significant": 0,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-7-zia-tile-april-2026-color-brown",
+    "doc_title": "Core Page 7 | Zia Tile - April 2026 | Color - Brown",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/collections/all?color=brown",
+    "month": "April",
+    "page_type": "color",
+    "material": "unknown",
+    "meta_title": "Brown Tile for Floors, Showers & Backsplashes | Zia Tile",
+    "meta_desc": "Shop brown tile at Zia Tile: handmade Cotto, brown zellige, Cantera, and ceramic for kitchen floors, backsplashes, and bathroom walls.",
+    "issues": [
+      [
+        "meta-desc-len",
+        "significant",
+        "Meta description 134 chars (min 140)"
+      ],
+      [
+        "meta-shop-desc",
+        "significant",
+        "Meta description starts with \"Shop\" \u2014 lead with material value instead"
+      ],
+      [
+        "zellige-cap",
+        "critical",
+        "\"Zellige\" capitalized 3\u00d7 \u2014 must be lowercase"
+      ],
+      [
+        "banned",
+        "significant",
+        "Em dash present (humanizer rule: avoid em dashes)"
+      ]
+    ],
+    "critical": 1,
+    "significant": 3,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-7-zia-tile-march-2026-marble",
+    "doc_title": "Core Page 7 | Zia Tile - March 2026 | Marble",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/en-ca/collections/marble-tile",
+    "month": "March",
+    "page_type": "material",
+    "material": "marble",
+    "meta_title": "Natural Stone Marble Tile | Zia Tile",
+    "meta_desc": "Natural marble tile sourced from Italy and Spain. Shop Zia's collection in Carrara, Rosso Alicante, Giallo Reale, and more in a honed finish.",
+    "issues": [
+      [
+        "contact",
+        "significant",
+        "Contact info not present (consider adding for trade inquiries)"
+      ]
+    ],
+    "critical": 0,
+    "significant": 1,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-8-zia-tile-april-2026-color-grey",
+    "doc_title": "Core Page 8 | Zia Tile - April 2026 | Color - Grey",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/collections/all?color=grey",
+    "month": "April",
+    "page_type": "color",
+    "material": "unknown",
+    "meta_title": "Grey Tile for Kitchens, Showers & Interior Floors | Zia Tile",
+    "meta_desc": "Shop grey tile at Zia: ceramic, marble, cantera, cement, and zellige for bathroom walls, kitchen backsplashes, and interior floors.",
+    "issues": [
+      [
+        "meta-desc-len",
+        "significant",
+        "Meta description 131 chars (min 140)"
+      ],
+      [
+        "meta-shop-desc",
+        "significant",
+        "Meta description starts with \"Shop\" \u2014 lead with material value instead"
+      ]
+    ],
+    "critical": 0,
+    "significant": 2,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-8-zia-tile-march-2026-roman-mosaics",
+    "doc_title": "Core Page 8 | Zia Tile - March 2026 | Roman Mosaics",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/en-ca/collections/roman-mosaics",
+    "month": "March",
+    "page_type": "material",
+    "material": "unknown",
+    "meta_title": "Handcrafted Marble Roman Mosaic Tile | Zia Tile",
+    "meta_desc": "Shop Zia's Roman mosaic tile. Italian marble hand-clipped into 5/8-inch tesserae and assembled on mesh sheets in solid, fan, and checkerboard layouts.",
+    "issues": [
+      [
+        "meta-shop-desc",
+        "significant",
+        "Meta description starts with \"Shop\" \u2014 lead with material value instead"
+      ]
+    ],
+    "critical": 0,
+    "significant": 1,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-9-zia-tile-april-2026-color-green",
+    "doc_title": "Core Page 9 | Zia Tile - April 2026 | Color - Green",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/collections/all?color=green",
+    "month": "April",
+    "page_type": "color",
+    "material": "unknown",
+    "meta_title": "Green Tile for Bathrooms, Backsplashes & Floors | Zia Tile",
+    "meta_desc": "Shop green tile at Zia Tile: handmade zellige, ceramic, and cement tile in sage, olive, and deep green for backsplashes, bathroom walls, and floors.",
+    "issues": [
+      [
+        "meta-shop-desc",
+        "significant",
+        "Meta description starts with \"Shop\" \u2014 lead with material value instead"
+      ],
+      [
+        "zellige-cap",
+        "critical",
+        "\"Zellige\" capitalized 2\u00d7 \u2014 must be lowercase"
+      ]
+    ],
+    "critical": 1,
+    "significant": 1,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-9-zia-tile-march-2026-cantera",
+    "doc_title": "Core Page 9 | Zia Tile - March 2026 | Cantera",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/en-ca/collections/cantera-tile",
+    "month": "March",
+    "page_type": "material",
+    "material": "cantera",
+    "meta_title": "Cantera Tile: Natural Volcanic Stone | Zia Tile",
+    "meta_desc": "Cantera is a naturally porous volcanic stone quarried in Mexico and hand-finished to preserve its natural surface. Shop Zia's curated collection.",
+    "issues": [
+      [
+        "banned",
+        "significant",
+        "Em dash present (humanizer rule: avoid em dashes)"
+      ]
+    ],
+    "critical": 0,
+    "significant": 1,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "core-page-zia-tile-march-2026-homepage",
+    "doc_title": "Core Page | Zia Tile - March 2026 | Homepage",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/en-ca",
+    "month": "March",
+    "page_type": "homepage",
+    "material": "unknown",
+    "meta_title": "Handmade Tile & Stone from Around the World | Zia Tile",
+    "meta_desc": "Handmade artisanal tile and stone for residential and commercial projects. Shop zellige, terrazzo, marble, and cement, made with artisans worldwide.",
+    "issues": [
+      [
+        "zellige-cap",
+        "critical",
+        "\"Zellige\" capitalized 3\u00d7 \u2014 must be lowercase"
+      ],
+      [
+        "banned",
+        "significant",
+        "Em dash present (humanizer rule: avoid em dashes)"
+      ],
+      [
+        "template-placeholder",
+        "info",
+        "1 placeholder(s): [INSERT INSTAGRAM COLLAGE]"
+      ]
+    ],
+    "critical": 1,
+    "significant": 1,
+    "minor": 0,
+    "info": 1
+  },
+  {
+    "filename": "installation-guide-1-zia-tile-may-cantera",
+    "doc_title": "Installation Guide 1 | Zia Tile \u2014 May | Cantera",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/pages/cantera-installation-guide",
+    "month": "May",
+    "page_type": "installation-guide",
+    "material": "cantera",
+    "meta_title": "",
+    "meta_desc": "",
+    "issues": [
+      [
+        "meta-missing",
+        "significant",
+        "Meta title missing from doc (not yet written)"
+      ],
+      [
+        "meta-desc-missing",
+        "significant",
+        "Meta description missing from doc (not yet written)"
+      ],
+      [
+        "banned",
+        "significant",
+        "Em dash present (humanizer rule: avoid em dashes)"
+      ],
+      [
+        "normal-framing",
+        "critical",
+        "Use \"inherent\" not \"normal\": \"\u2026erences in shape and size are normal and should be expected. Minor\u2026\""
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Material/guide: \"inherent\" variation framing not found"
+      ]
+    ],
+    "critical": 1,
+    "significant": 4,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "installation-guide-10-zia-tile-may-roman-mosaics",
+    "doc_title": "Installation Guide 10 | Zia Tile \u2014 May | Roman Mosaics",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/pages/roman-mosaics-installation-guide",
+    "month": "May",
+    "page_type": "installation-guide",
+    "material": "unknown",
+    "meta_title": "",
+    "meta_desc": "",
+    "issues": [
+      [
+        "meta-missing",
+        "significant",
+        "Meta title missing from doc (not yet written)"
+      ],
+      [
+        "meta-desc-missing",
+        "significant",
+        "Meta description missing from doc (not yet written)"
+      ],
+      [
+        "banned",
+        "significant",
+        "Em dash present (humanizer rule: avoid em dashes)"
+      ]
+    ],
+    "critical": 0,
+    "significant": 3,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "installation-guide-11-zia-tile-may-terrazzo",
+    "doc_title": "Installation Guide 11 | Zia Tile \u2014 May | Terrazzo",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/pages/terrazzo-installation-guide",
+    "month": "May",
+    "page_type": "installation-guide",
+    "material": "terrazzo",
+    "meta_title": "",
+    "meta_desc": "",
+    "issues": [
+      [
+        "meta-missing",
+        "significant",
+        "Meta title missing from doc (not yet written)"
+      ],
+      [
+        "meta-desc-missing",
+        "significant",
+        "Meta description missing from doc (not yet written)"
+      ],
+      [
+        "banned",
+        "significant",
+        "Em dash present (humanizer rule: avoid em dashes)"
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Material/guide: \"inherent\" variation framing not found"
+      ]
+    ],
+    "critical": 0,
+    "significant": 4,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "installation-guide-12-zia-tile-may-zellige",
+    "doc_title": "Installation Guide 12 | Zia Tile \u2014 May | Zellige",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/pages/zellige-installation-guide",
+    "month": "May",
+    "page_type": "installation-guide",
+    "material": "zellige",
+    "meta_title": "",
+    "meta_desc": "",
+    "issues": [
+      [
+        "meta-missing",
+        "significant",
+        "Meta title missing from doc (not yet written)"
+      ],
+      [
+        "meta-desc-missing",
+        "significant",
+        "Meta description missing from doc (not yet written)"
+      ],
+      [
+        "zellige-cap",
+        "critical",
+        "\"Zellige\" capitalized 8\u00d7 \u2014 must be lowercase"
+      ],
+      [
+        "banned",
+        "significant",
+        "Em dash present (humanizer rule: avoid em dashes)"
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Material/guide: \"inherent\" variation framing not found"
+      ]
+    ],
+    "critical": 1,
+    "significant": 4,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "installation-guide-13-zia-tile-may-zellige-mosaic",
+    "doc_title": "Installation Guide 13 | Zia Tile \u2014 May | Zellige Mosaic",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/pages/zellige-mosaics-installation-guide",
+    "month": "May",
+    "page_type": "installation-guide",
+    "material": "zellige",
+    "meta_title": "",
+    "meta_desc": "",
+    "issues": [
+      [
+        "meta-missing",
+        "significant",
+        "Meta title missing from doc (not yet written)"
+      ],
+      [
+        "meta-desc-missing",
+        "significant",
+        "Meta description missing from doc (not yet written)"
+      ],
+      [
+        "zellige-cap",
+        "critical",
+        "\"Zellige\" capitalized 7\u00d7 \u2014 must be lowercase"
+      ],
+      [
+        "banned",
+        "significant",
+        "Em dash present (humanizer rule: avoid em dashes)"
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Material/guide: \"inherent\" variation framing not found"
+      ]
+    ],
+    "critical": 1,
+    "significant": 4,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "installation-guide-2-zia-tile-may-cement",
+    "doc_title": "Installation Guide 2 | Zia Tile \u2014 May | Cement",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/pages/cement-installation-guide",
+    "month": "May",
+    "page_type": "installation-guide",
+    "material": "cement",
+    "meta_title": "",
+    "meta_desc": "",
+    "issues": [
+      [
+        "meta-missing",
+        "significant",
+        "Meta title missing from doc (not yet written)"
+      ],
+      [
+        "meta-desc-missing",
+        "significant",
+        "Meta description missing from doc (not yet written)"
+      ],
+      [
+        "banned",
+        "significant",
+        "Em dash present (humanizer rule: avoid em dashes)"
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Material/guide: \"inherent\" variation framing not found"
+      ],
+      [
+        "tech-cement-outdoor",
+        "significant",
+        "Cement tile exterior use: specify non-freeze/thaw climates only"
+      ]
+    ],
+    "critical": 0,
+    "significant": 5,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "installation-guide-3-zia-tile-may-ceramics",
+    "doc_title": "Installation Guide 3 | Zia Tile \u2014 May | Ceramics",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/pages/ceramics-installation-guide",
+    "month": "May",
+    "page_type": "installation-guide",
+    "material": "unknown",
+    "meta_title": "",
+    "meta_desc": "",
+    "issues": [
+      [
+        "meta-missing",
+        "significant",
+        "Meta title missing from doc (not yet written)"
+      ],
+      [
+        "meta-desc-missing",
+        "significant",
+        "Meta description missing from doc (not yet written)"
+      ],
+      [
+        "banned",
+        "significant",
+        "Em dash present (humanizer rule: avoid em dashes)"
+      ]
+    ],
+    "critical": 0,
+    "significant": 3,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "installation-guide-4-zia-tile-may-cotto",
+    "doc_title": "Installation Guide 4 | Zia Tile \u2014 May | Cotto",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/pages/cotto-installation-guide",
+    "month": "May",
+    "page_type": "installation-guide",
+    "material": "cotto",
+    "meta_title": "",
+    "meta_desc": "",
+    "issues": [
+      [
+        "meta-missing",
+        "significant",
+        "Meta title missing from doc (not yet written)"
+      ],
+      [
+        "meta-desc-missing",
+        "significant",
+        "Meta description missing from doc (not yet written)"
+      ],
+      [
+        "banned",
+        "significant",
+        "Em dash present (humanizer rule: avoid em dashes)"
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Material/guide: \"inherent\" variation framing not found"
+      ]
+    ],
+    "critical": 0,
+    "significant": 4,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "installation-guide-5-zia-tile-may-cotto-allende",
+    "doc_title": "Installation Guide 5 | Zia Tile \u2014 May | Cotto Allende",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/pages/cotto-allende-installation-guide",
+    "month": "May",
+    "page_type": "installation-guide",
+    "material": "cotto_allende",
+    "meta_title": "",
+    "meta_desc": "",
+    "issues": [
+      [
+        "meta-missing",
+        "significant",
+        "Meta title missing from doc (not yet written)"
+      ],
+      [
+        "meta-desc-missing",
+        "significant",
+        "Meta description missing from doc (not yet written)"
+      ],
+      [
+        "banned",
+        "significant",
+        "Em dash present (humanizer rule: avoid em dashes)"
+      ],
+      [
+        "req-framing",
+        "significant",
+        "Material/guide: \"inherent\" variation framing not found"
+      ]
+    ],
+    "critical": 0,
+    "significant": 4,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "installation-guide-6-zia-tile-may-field-trip",
+    "doc_title": "Installation Guide 6 | Zia Tile \u2014 May | Field Trip",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/pages/japanese-brick-ceramics-installation-guide",
+    "month": "May",
+    "page_type": "installation-guide",
+    "material": "ceramic",
+    "meta_title": "",
+    "meta_desc": "",
+    "issues": [
+      [
+        "meta-missing",
+        "significant",
+        "Meta title missing from doc (not yet written)"
+      ],
+      [
+        "meta-desc-missing",
+        "significant",
+        "Meta description missing from doc (not yet written)"
+      ],
+      [
+        "banned",
+        "significant",
+        "Em dash present (humanizer rule: avoid em dashes)"
+      ]
+    ],
+    "critical": 0,
+    "significant": 3,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "installation-guide-7-zia-tile-may-glass-mosaic",
+    "doc_title": "Installation Guide 7 | Zia Tile \u2014 May | Glass Mosaic",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/pages/glass-mosaics-installation-guide",
+    "month": "May",
+    "page_type": "installation-guide",
+    "material": "mosaic",
+    "meta_title": "",
+    "meta_desc": "",
+    "issues": [
+      [
+        "meta-missing",
+        "significant",
+        "Meta title missing from doc (not yet written)"
+      ],
+      [
+        "meta-desc-missing",
+        "significant",
+        "Meta description missing from doc (not yet written)"
+      ],
+      [
+        "banned",
+        "significant",
+        "Em dash present (humanizer rule: avoid em dashes)"
+      ]
+    ],
+    "critical": 0,
+    "significant": 3,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "installation-guide-8-zia-tile-may-limestone",
+    "doc_title": "Installation Guide 8 | Zia Tile \u2014 May | Limestone",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/pages/limestone-installation-guide",
+    "month": "May",
+    "page_type": "installation-guide",
+    "material": "limestone",
+    "meta_title": "",
+    "meta_desc": "",
+    "issues": [
+      [
+        "meta-missing",
+        "significant",
+        "Meta title missing from doc (not yet written)"
+      ],
+      [
+        "meta-desc-missing",
+        "significant",
+        "Meta description missing from doc (not yet written)"
+      ],
+      [
+        "banned",
+        "significant",
+        "Em dash present (humanizer rule: avoid em dashes)"
+      ]
+    ],
+    "critical": 0,
+    "significant": 3,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "installation-guide-9-zia-tile-may-marble",
+    "doc_title": "Installation Guide 9 | Zia Tile \u2014 May | Marble",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/pages/roman-mosaics-installation-guide",
+    "month": "May",
+    "page_type": "installation-guide",
+    "material": "marble",
+    "meta_title": "",
+    "meta_desc": "",
+    "issues": [
+      [
+        "meta-missing",
+        "significant",
+        "Meta title missing from doc (not yet written)"
+      ],
+      [
+        "meta-desc-missing",
+        "significant",
+        "Meta description missing from doc (not yet written)"
+      ],
+      [
+        "banned",
+        "significant",
+        "Em dash present (humanizer rule: avoid em dashes)"
+      ]
+    ],
+    "critical": 0,
+    "significant": 3,
+    "minor": 0,
+    "info": 0
+  },
+  {
+    "filename": "installation-guide-page-zia-tile-may",
+    "doc_title": "Installation Guide Page | Zia Tile \u2014 May",
+    "status": "Zia to review",
+    "page_url": "https://ziatile.com/pages/installation-guides",
+    "month": "May",
+    "page_type": "installation-guide",
+    "material": "unknown",
+    "meta_title": "",
+    "meta_desc": "",
+    "issues": [
+      [
+        "meta-missing",
+        "significant",
+        "Meta title missing from doc (not yet written)"
+      ],
+      [
+        "meta-desc-missing",
+        "significant",
+        "Meta description missing from doc (not yet written)"
+      ],
+      [
+        "zellige-cap",
+        "critical",
+        "\"Zellige\" capitalized 2\u00d7 \u2014 must be lowercase"
+      ]
+    ],
+    "critical": 1,
+    "significant": 2,
+    "minor": 0,
+    "info": 0
+  }
+]
