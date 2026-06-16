@@ -76,8 +76,6 @@ The orchestration layer connects all five layers above it. It routes data betwee
 
 **Most marketing teams treat orchestration as optional: a nice-to-have layer they will add when they scale. It is not optional.** Without orchestration, every data flow in the five-layer stack requires a human to manually export from one tool and import to another. That manual overhead is exactly what AI stacks are supposed to remove.
 
-Atlas Coworker (Search Atlas's workspace integration) is built to fill this gap without adding another tool. It brings the Atlas Agent into Slack, Microsoft Teams, and ClickUp (the channels where marketing decisions already happen) and from there connects to 3,000+ external platforms: HubSpot, Salesforce, Meta Ads, Google Calendar, GitHub, Vercel, and more. The team can brief, review, and approve from a Slack thread; the agent executes across connected platforms and returns results in the same channel. Routines and Playbooks run on a schedule, so the orchestration layer operates proactively rather than waiting for someone to trigger it manually.
-
 ---
 
 ## The five data flows that make the stack compound
@@ -142,7 +140,7 @@ At the growth stage, paid media becomes viable and the content layer needs gover
 |---|---|---|
 | Data and analytics | GA4 + Segment | $0–$120 |
 | SEO and content | Search Atlas Growth/Pro | $199–$399 |
-| Paid media | Smart Ads (Search Atlas Growth/Pro) or Google Ads native | Variable |
+| Paid media | Smart Ads (included) or Google Ads native | Variable |
 | CRM and lifecycle | HubSpot Professional or Klaviyo | $800–$1,200 |
 | Orchestration | Zapier Professional | $49–$99 |
 | Attribution | Triple Whale (SMB plan) | $129–$299 |
@@ -193,34 +191,6 @@ Complete this in 30 minutes:
 
 ---
 
-## FAQ
-
-### What is an AI marketing stack?
-
-An AI marketing stack is the connected set of tools a team uses to plan, create, distribute, optimize, and measure marketing, where AI handles the execution layer. The defining characteristic of a working stack is that tools share data with each other. A list of AI tools that don't connect is a collection, not a stack.
-
-### How much does an AI marketing stack cost?
-
-A minimum viable stack starts at $139–$264/month (GA4 free, Search Atlas $99–$199, HubSpot Starter $20–$45, Zapier $20). A growth-stage connected stack runs $1,300–$2,000/month. Enterprise-grade stacks with dedicated attribution and orchestration platforms run $3,600–$7,400/month. The cost gap between tiers is mostly in the CRM and orchestration layers, not the SEO or content tools.
-
-### How many tools do I actually need?
-
-Four to six tools cover the six core stack layers if they have native integrations. More than 25 marketing tools is a signal of fragmentation, not capability. The right question is not how many tools, but how many data flows those tools actively share.
-
-### Why is my AI marketing stack not producing results even though the tools are good?
-
-The most common cause is the coexistence trap: tools running in parallel without sharing data. Each tool optimizes for its own objective with no view of what the others are doing. The fix is not new tools. Build the data flows between the ones you have: SEO data to content briefs, CRM segments to paid audiences, content performance to ad creative decisions.
-
-### How do AI marketing tools share data with each other?
-
-Tools share data through three mechanisms: native integrations (built-in connections between platforms on a shared data layer), APIs (direct connections configured by a developer), and orchestration tools like Zapier or Make (workflow automation that transfers data between tools on a schedule or event trigger). The orchestration layer is the mechanism most teams skip and the one most responsible for coexistence failures.
-
-### When should I add more tools to my stack?
-
-Add a tool only when you have a specific data flow problem it solves and the orchestration layer in place to connect it to existing tools. The signal to expand is a gap in your signal map: a layer producing data with nowhere to send it, or a decision being made without data that another tool could provide. Adding tools before the orchestration layer is ready creates more disconnected tools, not a better stack.
-
----
-
 ## How Search Atlas addresses the integration problem
 
 Search Atlas eliminates several of the most common disconnected-tool problems by covering multiple stack layers from a single platform with a shared data layer.
@@ -228,10 +198,6 @@ Search Atlas eliminates several of the most common disconnected-tool problems by
 OTTO SEO (Search Atlas's autonomous SEO execution agent) and Content Genius (the content production module) share the same Knowledge Graph (the structured business profile that defines the ICP, keyword architecture, and content constraints). SEO data automatically informs content briefs rather than requiring a manual export. Flow 4 (SEO data to content brief generation) is built in to the platform.
 
 Smart Ads connects paid media to the same Knowledge Graph and keyword signals that inform OTTO SEO and Content Genius. Flow 2 (content performance to paid creative) requires minimal configuration when all three layers share a data foundation. LLM Visibility (Search Atlas's brand monitoring module) adds a signal that most attribution tools do not track: brand presence in AI-generated search results across ChatGPT, Claude, Gemini, and Perplexity.
-
-Atlas Coworker adds the orchestration layer that most stacks outsource to Zapier or leave unbuilt. It runs inside Slack, Microsoft Teams, and ClickUp, connecting the Search Atlas platform to the full external tool ecosystem from within the workspace channels the team already uses. Marketing decisions happen in Slack. The execution happens there too. The Sense-Detect-Propose-Approve-Heal loop runs continuously: the agent watches live surfaces against the current strategy, flags drift, proposes corrections, and ships approved changes without requiring anyone to log into a separate dashboard to trigger them.
-
-**This is what moving from a coexisting stack to a compounding one looks like in practice: strategy stays in the open, the agent holds it in view across every connected surface, and drift is corrected before it compounds.** Single-player tools optimize in isolation. A stack built on Search Atlas heals itself.
 
 A team building the $500/month minimum viable stack gets three data flows pre-connected without additional configuration: SEO to content, content to paid signal, and keyword targeting to audience definition. The team building the growth-stage stack at $2K/month adds the CRM and attribution flows on top of an already-connected foundation.
 
