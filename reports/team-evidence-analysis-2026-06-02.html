@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Semantic SEO Content Team — Evidence-Based Analysis</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 15px; line-height: 1.65; color: #1a1a1a; background: #f6f6f4; }
+  .page { max-width: 900px; margin: 0 auto; padding: 48px 32px; }
+
+  /* Header */
+  .report-header { background: #1a1a1a; color: #fff; padding: 40px 40px 36px; border-radius: 8px; margin-bottom: 40px; }
+  .report-header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.3px; }
+  .report-header .meta { font-size: 13px; color: #aaa; display: flex; gap: 24px; flex-wrap: wrap; margin-top: 12px; }
+  .report-header .meta span { display: flex; align-items: center; gap: 6px; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 4px; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; }
+  .badge-alert { background: #fff3cd; color: #7d5c00; }
+  .badge-internal { background: #f8d7da; color: #721c24; }
+
+  /* Section */
+  .section { background: #fff; border-radius: 8px; padding: 32px; margin-bottom: 24px; border: 1px solid #e8e8e5; }
+  .section h2 { font-size: 17px; font-weight: 700; margin-bottom: 4px; color: #1a1a1a; }
+  .section .lead { font-size: 14px; color: #666; margin-bottom: 20px; border-bottom: 1px solid #f0f0ee; padding-bottom: 16px; }
+
+  /* Methodology callout */
+  .callout { background: #fef9ec; border-left: 3px solid #e6a817; padding: 16px 20px; border-radius: 0 6px 6px 0; margin: 16px 0; }
+  .callout strong { color: #7d5c00; }
+  .callout.red { background: #fdf2f2; border-left-color: #d94f4f; }
+  .callout.red strong { color: #8b1f1f; }
+  .callout.green { background: #f0faf3; border-left-color: #2e9e5b; }
+  .callout.green strong { color: #1a6637; }
+
+  /* Stat row */
+  .stat-row { display: flex; gap: 16px; flex-wrap: wrap; margin: 20px 0; }
+  .stat-card { flex: 1; min-width: 160px; background: #f9f9f7; border: 1px solid #e8e8e5; border-radius: 6px; padding: 16px; text-align: center; }
+  .stat-card .number { font-size: 32px; font-weight: 800; color: #1a1a1a; line-height: 1; }
+  .stat-card .label { font-size: 12px; color: #888; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .stat-card.highlight { background: #1a1a1a; border-color: #1a1a1a; }
+  .stat-card.highlight .number { color: #fff; }
+  .stat-card.highlight .label { color: #999; }
+
+  /* Person cards */
+  .person-card { border: 1px solid #e8e8e5; border-radius: 6px; margin-bottom: 20px; overflow: hidden; }
+  .person-header { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; background: #f9f9f7; border-bottom: 1px solid #e8e8e5; flex-wrap: wrap; gap: 8px; }
+  .person-name { font-size: 16px; font-weight: 700; }
+  .person-role { font-size: 12px; color: #888; font-weight: 400; }
+  .score-group { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .score-pill { font-size: 12px; padding: 4px 10px; border-radius: 100px; font-weight: 600; }
+  .score-audit { background: #f0f0ee; color: #666; }
+  .score-actual { background: #1a1a1a; color: #fff; }
+  .score-flag { background: #fdf2f2; color: #c0392b; }
+  .person-body { padding: 20px; }
+  .person-body h4 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.6px; color: #999; margin: 16px 0 8px; font-weight: 600; }
+  .person-body h4:first-child { margin-top: 0; }
+  .person-body p { font-size: 14px; color: #444; margin-bottom: 8px; }
+  .evidence-list { list-style: none; }
+  .evidence-list li { font-size: 13px; color: #444; padding: 5px 0 5px 20px; position: relative; border-bottom: 1px solid #f5f5f3; }
+  .evidence-list li:last-child { border-bottom: none; }
+  .evidence-list li::before { content: "→"; position: absolute; left: 0; color: #999; }
+  .evidence-list li strong { color: #1a1a1a; }
+  .discrepancy { background: #fdf2f2; border: 1px solid #f5c6c6; border-radius: 6px; padding: 14px 16px; margin-top: 12px; }
+  .discrepancy strong { color: #8b1f1f; font-size: 13px; }
+  .discrepancy p { font-size: 13px; color: #6b3333; margin-top: 4px; }
+  .confirmation { background: #f0faf3; border: 1px solid #b7dfc7; border-radius: 6px; padding: 14px 16px; margin-top: 12px; }
+  .confirmation strong { color: #1a6637; font-size: 13px; }
+  .confirmation p { font-size: 13px; color: #2d5a3a; margin-top: 4px; }
+
+  /* Table */
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #f0f0ee; padding: 10px 14px; text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: #666; border-bottom: 2px solid #e0e0dc; }
+  td { padding: 10px 14px; border-bottom: 1px solid #f0f0ee; color: #444; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr.highlight-row td { background: #fff9f0; }
+  .rank-num { font-weight: 800; font-size: 15px; color: #1a1a1a; }
+  .vs-badge { font-size: 10px; font-weight: 600; padding: 2px 6px; border-radius: 4px; margin-left: 4px; }
+  .vs-up { background: #f0faf3; color: #2e9e5b; }
+  .vs-down { background: #fdf2f2; color: #d94f4f; }
+  .vs-same { background: #f0f0ee; color: #666; }
+
+  /* Footer */
+  .report-footer { text-align: center; font-size: 12px; color: #aaa; margin-top: 40px; padding-top: 24px; border-top: 1px solid #e8e8e5; }
+
+  hr { border: none; border-top: 1px solid #e8e8e5; margin: 20px 0; }
+  blockquote { border-left: 3px solid #e0e0dc; padding: 8px 16px; margin: 12px 0; font-style: italic; color: #555; font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <div class="report-header">
+    <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px;">
+      <div>
+        <h1>Semantic SEO Content Team<br>Evidence-Based Performance Analysis</h1>
+        <div class="meta">
+          <span>June 2, 2026</span>
+          <span>Aleksandra Velickovic, Team Lead</span>
+          <span>Response to Agentic Audit v3.0</span>
+        </div>
+      </div>
+      <div style="display:flex; gap:8px; flex-wrap:wrap;">
+        <span class="badge badge-internal">Internal / HR Sensitive</span>
+        <span class="badge badge-alert">Do Not Distribute</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Purpose -->
+  <div class="section">
+    <h2>Purpose</h2>
+    <p class="lead">This document responds to the Agentic Audit v3.0 (2026-05-31) sent by Manick Bhan. It presents evidence-based performance profiles drawn from ClickUp EOD reports, direct messages, and output logs — the actual record of what this team produced.</p>
+    <div class="callout red">
+      <strong>Core finding:</strong> The audit's Tier A result (Mina Jahangir) does not match observable output. Its Tier C result for the team's highest-producing builder (Mateus Pimenta) was captured during a documented migration week. The methodology measures individual screen activity at 60 sampled frames — it cannot measure pipeline runs, unattended automation, or lead-level coordination. This report provides the ground truth.
+    </div>
+  </div>
+
+  <!-- Team output at scale -->
+  <div class="section">
+    <h2>Team Output at Scale</h2>
+    <p class="lead">The team produces at a scale the audit does not reflect.</p>
+    <div class="stat-row">
+      <div class="stat-card highlight">
+        <div class="number">350–450</div>
+        <div class="label">Pieces / month</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">37</div>
+        <div class="label">Active clients</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">22</div>
+        <div class="label">Peak pages in one day (Mateus)</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">28</div>
+        <div class="label">Pages generated by Andresa for team distribution (single day)</div>
+      </div>
+    </div>
+    <div class="callout green">
+      <strong>Source:</strong> Aleksandra's written summary to COO Sophia Deluz-Bhan, June 2, 2026 — "The writers are running Claude Code pipelines, building client-specific agents, and reviewing output before it reaches clients. That's why the volume is possible: over 350–450 pieces/month across 37 clients."
+    </div>
+  </div>
+
+  <!-- Methodology critique -->
+  <div class="section">
+    <h2>Why the Audit Methodology Undercounts This Team</h2>
+    <p class="lead">The audit scores what is visible on screen during 60 sampled Hubstaff frames. Three structural problems apply specifically to this team.</p>
+    <ul class="evidence-list" style="margin-top: 0;">
+      <li><strong>Automation runs unattended.</strong> Mateus's 22-page batches run while he is not actively clicking. A frame captured during that run scores 0 agentic intensity. The output — 37,400 words in a day — is real.</li>
+      <li><strong>Infrastructure work is invisible.</strong> Building a slash command, a QA agent, or a SERP analysis pipeline produces no finished content during that session. It produces 10× output in every session after. Screenshot scoring penalizes investment weeks.</li>
+      <li><strong>Lead-level coordination looks like off-task.</strong> ClickUp task direction, Meet reviews, and cross-IC coordination all register as low or zero on an IC-designed rubric. The output those activities enable shows up in other people's scores, not the lead's.</li>
+    </ul>
+    <div class="callout">
+      <strong>60 frames is a narrow sample.</strong> The audit's own methodology section states it "may over- or under-represent any given phase of work." For Mateus, the captured window was a documented migration and infrastructure week — the lowest-output week in months. The audit treated it as representative.
+    </div>
+  </div>
+
+  <!-- Ranking comparison -->
+  <div class="section">
+    <h2>Audit Ranking vs. Ground Truth</h2>
+    <p class="lead">Based on EOD reports, output logs, and direct messages reviewed across the team.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Ground Truth Rank</th>
+          <th>Name</th>
+          <th>Audit Tier</th>
+          <th>Audit Agentic Score</th>
+          <th>Assessment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="rank-num">1</span></td>
+          <td><strong>Mateus Pimenta</strong></td>
+          <td>Tier C <span class="vs-badge vs-down">↓</span></td>
+          <td>30.6</td>
+          <td>Highest builder. 22 pages/day peak. 5 automated systems. Low audit window = documented migration week.</td>
+        </tr>
+        <tr>
+          <td><span class="rank-num">2</span></td>
+          <td><strong>James Campbell</strong></td>
+          <td>Tier C <span class="vs-badge vs-down">↓↓</span></td>
+          <td>25.0</td>
+          <td>40 Upland blogs/day, 24 Zia edits/day, 25 RR pages in 2 days. Widest client coverage. YMYL audit + RR action plan sent to Manick directly.</td>
+        </tr>
+        <tr>
+          <td><span class="rank-num">3</span></td>
+          <td><strong>Andresa Araujo</strong></td>
+          <td>Tier B <span class="vs-badge vs-same">≈</span></td>
+          <td>47.8</td>
+          <td>High tooling contribution — /ship, /ship-tech, /research-location, gap pipeline. Generated 28 pages for team distribution in one session.</td>
+        </tr>
+        <tr>
+          <td><span class="rank-num">4</span></td>
+          <td><strong>Milena Barbaresco</strong></td>
+          <td>Tier D agentic <span class="vs-badge vs-down">↓</span></td>
+          <td>8.9</td>
+          <td>SA internal content lead. Passed Q2 goal. 5+ landing pages/week, blog refreshes, agentic marketing articles. Consistent volume through CC.</td>
+        </tr>
+        <tr>
+          <td><span class="rank-num">5</span></td>
+          <td><strong>Emilija Stojilkovic</strong></td>
+          <td>Tier B <span class="vs-badge vs-same">≈</span></td>
+          <td>44.4</td>
+          <td>Being off-boarded for moonlighting. Not included in future planning.</td>
+        </tr>
+        <tr>
+          <td><span class="rank-num">6</span></td>
+          <td><strong>Mina Jahangir</strong></td>
+          <td>Tier A <span class="vs-badge vs-down">↓↓</span></td>
+          <td>73.9</td>
+          <td>Audit's #1. DM log shows May was spent in CC setup and learning — not production. 1 piece completed during a 2-day Zia push. Frames = setup screens, not output.</td>
+        </tr>
+        <tr>
+          <td><span class="rank-num">7</span></td>
+          <td><strong>Emanuel de Macedo</strong></td>
+          <td>Tier C <span class="vs-badge vs-same">≈</span></td>
+          <td>18.9</td>
+          <td>Supervisory/coordination on Zia. Adoption real but yield doesn't match headcount cost.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Per-person profiles -->
+  <div class="section">
+    <h2>Per-Person Evidence Profiles</h2>
+    <p class="lead">Each profile is grounded in ClickUp EOD messages and direct chat logs. Dates and output figures are from primary source.</p>
+
+    <!-- Mateus -->
+    <div class="person-card">
+      <div class="person-header">
+        <div>
+          <div class="person-name">Mateus Pimenta <span class="person-role">IC — Multi-client</span></div>
+        </div>
+        <div class="score-group">
+          <span class="score-pill score-audit">Audit: Tier C · 30.6 agentic</span>
+          <span class="score-pill score-actual">Ground truth: #1 Builder</span>
+          <span class="score-pill score-flag">30% off-task (audit)</span>
+        </div>
+      </div>
+      <div class="person-body">
+        <h4>Peak Output (EOD logs)</h4>
+        <ul class="evidence-list">
+          <li><strong>May 1:</strong> 22 service pages for Roto-Rooter (~1,700 words each = ~37,400 words). "My automation is working really well."</li>
+          <li><strong>May 4:</strong> 22 service pages for Roto-Rooter.</li>
+          <li><strong>May 5:</strong> 10 service pages + 1 landing page optimization + new blog optimization feature built and deployed.</li>
+          <li><strong>May 7:</strong> 13 service pages (May 6) + 3 blog posts (May 7). Final piece took 1 hour 15 minutes after setup. Internal linking automated.</li>
+          <li><strong>May 18–22:</strong> 6–9 service pages per day consistently across Esthetics Center and Anne Therese.</li>
+          <li><strong>May 29:</strong> 6 service pages + 6 Loti Labs briefs + 13 Anne Therese blog reviews across 3-day span.</li>
+        </ul>
+
+        <h4>Agentic Infrastructure Built (from EODs)</h4>
+        <ul class="evidence-list">
+          <li><strong>Parallel agent dispatch system</strong> — dispatches parallel agents per piece, no manual handoff between steps.</li>
+          <li><strong>Live sitemap updater</strong> — fetches live sitemap, compares to local version, updates if stale. Shared proactively with team.</li>
+          <li><strong>Automated Content Genius scoring</strong> — "Claude Code now handles the scoring for me, so I no longer need to visit Search Atlas manually." Pieces consistently scoring 80+ on CG before delivery.</li>
+          <li><strong>Automated SERP analysis</strong> — LSI terms, related keywords, content gaps, micro-queries generated per piece.</li>
+          <li><strong>Per-client AI agents</strong> — Esthetics Center, Enterprise Software Review, Anne Therese, Roto-Rooter. Each with structure, writing style, SEO, E-E-A-T, and project guideline rules.</li>
+        </ul>
+
+        <h4>Multi-client Coverage</h4>
+        <ul class="evidence-list">
+          <li>Roto-Rooter, Esthetics Center, Anne Therese, Liveops, Loti Labs, Pekas &amp; Smith, Laser Center, Enterprise Software Review, Cheqroom</li>
+        </ul>
+
+        <div class="discrepancy">
+          <strong>Why the audit scored him Tier C</strong>
+          <p>The May 15 EOW report explicitly documents the reason: "Migrating repositories and switching to my personal Claude account required significant setup time." He wrote 11 pieces that week and flagged it as an infrastructure investment week. His automation runs unattended — screen time during a batch run scores 0 agentic intensity on the Hubstaff rubric. The 30% off-task figure was captured during this specific window.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Andresa -->
+    <div class="person-card">
+      <div class="person-header">
+        <div>
+          <div class="person-name">Andresa Araujo <span class="person-role">IC — Multi-client, Infrastructure</span></div>
+        </div>
+        <div class="score-group">
+          <span class="score-pill score-audit">Audit: Tier B · 47.8 agentic</span>
+          <span class="score-pill score-actual">Ground truth: #2 — Infra + Output</span>
+          <span class="score-pill score-flag">17% off-task (audit)</span>
+        </div>
+      </div>
+      <div class="person-body">
+        <h4>Infrastructure Built (from EODs)</h4>
+        <ul class="evidence-list">
+          <li><strong>/ship command</strong> (April 23) — catches banned phrases, em dashes, first-person usage, product naming errors. "It caught small errors that are easy to overlook." PASS-verdict confirmed in frame logs.</li>
+          <li><strong>/ship-tech-anne-therese</strong> (May 13) — 12-check slash command + 11-section medical-aesthetics fact-checking reference (FDA scopes, filler brands, treatment mechanisms).</li>
+          <li><strong>/research-location</strong> (May 20) — slash command for location-specific pre-writing SEO research. Solved a Windows/symlink issue independently.</li>
+          <li><strong>Entity gap analysis pipeline</strong> (May 20) — full gap analysis on topics: gap reports, editorial filters, section gap reports, recommendations. Being pushed to GitHub repo.</li>
+          <li><strong>SEO gap detection system (Python)</strong> (April 8) — "Initiated a Python-based project for Semantic Gap Detection." POC completed.</li>
+          <li><strong>CC setup shared with James</strong> (April 29) — "Shared my Claude Code setup files with James so he can refine the prompts instead of building from scratch." Direct infrastructure multiplier.</li>
+          <li><strong>Researcher agent for Zia</strong> — "Very necessary to research historic facts and references for blog posts."</li>
+        </ul>
+
+        <h4>Team Leverage (Output Beyond Own Work)</h4>
+        <ul class="evidence-list">
+          <li><strong>April 27:</strong> Generated 28 service pages for James, Mateus, and herself to edit — dispatched as parallel output for the team.</li>
+          <li>Connected content-ops repo via VSCode on Windows, expanding team infrastructure access.</li>
+          <li>Creating GitHub account to push entity gap agent to the shared repo.</li>
+        </ul>
+
+        <h4>Output Volume (Representative EODs)</h4>
+        <ul class="evidence-list">
+          <li><strong>May 29:</strong> 7 Zia edits + 2 new pieces. Created merge request based on Jamie's latest feedback.</li>
+          <li><strong>May 28:</strong> 3 Zia edits + 3 new pieces.</li>
+          <li><strong>May 22:</strong> 5 Zia pieces (Zellige Buying Guide, Cement vs Porcelain, Terrazzo Floor Care, Kitchen Backsplash, Tile for Interior Designers).</li>
+          <li><strong>May 20:</strong> 6 hyperlocal service pages + full gap analysis pipeline + /research-location command built.</li>
+          <li><strong>April 27:</strong> 13 RR pages completed + 28 generated for team distribution.</li>
+          <li><strong>April 15:</strong> 15 Roto-Rooter service pages + Zia homepage copy.</li>
+        </ul>
+
+        <h4>Multi-client Coverage</h4>
+        <ul class="evidence-list">
+          <li>Zia Tile, Anne Therese, Roto-Rooter, Axiom HRS, Liveops, Laser Center, YMYL content</li>
+        </ul>
+
+        <div class="confirmation">
+          <strong>Audit broadly correct on tier</strong>
+          <p>Tier B is defensible. What the audit misses is that Andresa's agentic score reflects not just her own output but infrastructure that multiplies James and Mateus's output. The CI width (±12.3) reflects bursty high-intensity sessions, not inconsistency.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- James -->
+    <div class="person-card">
+      <div class="person-header">
+        <div>
+          <div class="person-name">James Campbell <span class="person-role">IC — Multi-client</span></div>
+        </div>
+        <div class="score-group">
+          <span class="score-pill score-audit">Audit: Tier C · 25.0 agentic</span>
+          <span class="score-pill score-actual">Ground truth: #2 — High-volume, widest client coverage</span>
+          <span class="score-pill score-flag">10% off-task (audit)</span>
+        </div>
+      </div>
+      <div class="person-body">
+        <h4>Peak Output (from EODs)</h4>
+        <ul class="evidence-list">
+          <li><strong>May 4–5:</strong> 25 RR service pages + 30 Upland blogs across two days.</li>
+          <li><strong>May 7:</strong> 40 Upland blogs total + RR pricing blog reframe + CC workflow built for Upland pipeline.</li>
+          <li><strong>May 8:</strong> 10 Laser Marin blogs + YMYL audit pass + YMYL checks on older blogs + implemented RR pricing feedback into CLAUDE.md + CC repo cleanup.</li>
+          <li><strong>May 9:</strong> 14 RR service pages + duplicate content audit + CC configuration.</li>
+          <li><strong>May 26–27:</strong> 15 Zia edits (May 26) + 24 Zia edits (May 27) — "got the rest of those Zia edits done, X24 in total, my brain can handle no more!"</li>
+          <li><strong>May 29:</strong> 7 Loti Labs pages + 5 RR service pages + RR team meeting + RR video strategy.</li>
+        </ul>
+
+        <h4>Agentic Tools Built</h4>
+        <ul class="evidence-list">
+          <li><strong>YMYL audit command</strong> — "runs against the client's sitemap, picks up dead URLs, products not mentioned that automation put in." Built independently and offered to the team repo.</li>
+          <li><strong>RR SEO audit &amp; 30-day action plan</strong> — built and sent directly to Manick.</li>
+          <li><strong>Workflow process report for Manick</strong> — independent deliverable outside normal content scope.</li>
+          <li><strong>Upland blog CC pipeline</strong> — built and produced 40 blogs in one session.</li>
+          <li><strong>Automated Anne Therese competitor analysis</strong> — built and documented in EOD.</li>
+        </ul>
+
+        <h4>Multi-client Coverage (widest on the team)</h4>
+        <ul class="evidence-list">
+          <li>Roto-Rooter, Zia Tile, Loti Labs, Upland, Laser Marin, Anne Therese, Cheqroom, TrustLayer, A Plus Landscaping, Bereliani, Axiom HRS</li>
+        </ul>
+
+        <div class="discrepancy">
+          <strong>Why the audit ranked him Tier C</strong>
+          <p>His CC engagement is bursty — zero-intensity frames between intensive sessions. The audit's own note says "12 agentic=3 frames" — meaning when he is in CC, it's substantive. What the rubric misses entirely: 40 Upland blogs in a day, 24 Zia edits in a day, and tools built and delivered directly to Manick. These produce zero screenshot signal except for the active build session.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Milena -->
+    <div class="person-card">
+      <div class="person-header">
+        <div>
+          <div class="person-name">Milena Barbaresco <span class="person-role">IC — SA Internal Content</span></div>
+        </div>
+        <div class="score-group">
+          <span class="score-pill score-audit">Audit: Tier D agentic · 8.9</span>
+          <span class="score-pill score-actual">Ground truth: #4 — SA content lead, Q2 goal passed</span>
+          <span class="score-pill score-flag">8% off-task (audit)</span>
+        </div>
+      </div>
+      <div class="person-body">
+        <h4>Role Clarification</h4>
+        <p>Milena runs Search Atlas internal content — landing pages, agentic marketing articles, blog refreshes, and WordPress formatting. Her work is distinct from client content and tracked against SA's own quarterly content goals.</p>
+
+        <h4>Output Evidence (from DM log)</h4>
+        <ul class="evidence-list">
+          <li><strong>Q2 goal:</strong> "We passed the Q2 goal" — jumped from 35 to 53 weekly content points, needed 131 total. Milena is the primary driver of this output alongside Aleksandra.</li>
+          <li>Producing 5+ SA landing pages per week (Atlas Agent, GBP Galactic, link building, Website Studio).</li>
+          <li>Using CC for all content production: "I'm using CC for all contents."</li>
+          <li>Managing Mihai's broken tool issue for 3 days, then moved production to CC independently: "completely gave up on it now... Emilija and I are doing it through CC and it's working fine!"</li>
+          <li>Tracking progress weekly in a shared Google Sheet, reporting to Aleksandra.</li>
+          <li>Audit documents high output independently: Server Logs (5,212 words), data-freshness (8,653 words).</li>
+        </ul>
+
+        <div class="confirmation">
+          <strong>Not a performance issue — a role-type issue in the audit</strong>
+          <p>The audit's Tier D agentic label reflects her production style (long-form, steady, less bursty than client writers). But she passed the SA Q2 content goal, runs CC for all production, and is listed as a core operator to retain. The audit evaluated her on the wrong axis.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mina -->
+    <div class="person-card">
+      <div class="person-header">
+        <div>
+          <div class="person-name">Mina Jahangir <span class="person-role">IC</span></div>
+        </div>
+        <div class="score-group">
+          <span class="score-pill score-audit">Audit: Tier A · 73.9 agentic</span>
+          <span class="score-pill score-actual">Ground truth: #6 — Learning phase, low output</span>
+          <span class="score-pill score-flag">2% off-task (audit)</span>
+        </div>
+      </div>
+      <div class="person-body">
+        <h4>What the DM Log Actually Shows</h4>
+        <p>The direct message history from Mina's channel makes the audit's Tier A ranking indefensible. Nearly the entire May log is setup, troubleshooting, and learning — not production.</p>
+
+        <h4>Chronological Evidence (from Mina's DM channel, May 2026)</h4>
+        <ul class="evidence-list">
+          <li><strong>Early May:</strong> "I still haven't learnt how to build sub agents for each of my clients, but I am getting used to the interface. Should be able to make agents by the end of the week." — asking permission to try producing content.</li>
+          <li><strong>May 5:</strong> "Can I try to create a blog post and a few other pages, just to get a hang of it? Was wondering about spending credits while learning so thought I'd check in first." — still in practice mode.</li>
+          <li><strong>May 7:</strong> "I used CC for my work this week and it's a true game changer. Just need to work on getting better at it." — first week of actual use.</li>
+          <li><strong>May 12–13:</strong> Sharing screenshots of her agent setup for Altify and The Nash, asking Aleksandra to review them: "hoping if you could take a look and give me a nod."</li>
+          <li><strong>Mid-May:</strong> Multiple troubleshooting messages — account migration issues, GitHub login loops, CC account switching, can't connect to shared agents.</li>
+          <li><strong>Late May:</strong> Working on a single Zia piece ("best tiles for shower"): "I've almost completed the piece... Will be ready to submit shortly."</li>
+          <li><strong>May 27 (Emanuel to Aleksandra):</strong> "Andresa just told me that Mina only did one [piece for 2 days during Zia push week]."</li>
+          <li><strong>Aleksandra:</strong> "why did she only do one for 2 days?" / "I'm worried because Mina is off for 3 days" — during an active delivery deadline.</li>
+        </ul>
+
+        <div class="discrepancy">
+          <strong>The audit's Tier A is explained — and it's a methodology failure</strong>
+          <p>The 28/60 Claude Code frames were setup screens, troubleshooting sessions, and learning walkthroughs — not production output. The audit scored every CC frame at high agentic intensity regardless of what was actually happening on screen. Mina spent most of May getting into CC. That is not the same as being the team's top agentic practitioner. Ranking her above Mateus (22 pages in a day), James (40 Upland blogs in a day), and Andresa (28 pages generated for team distribution) is the clearest single proof that the metric is measuring the wrong thing.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Emanuel -->
+    <div class="person-card">
+      <div class="person-header">
+        <div>
+          <div class="person-name">Emanuel de Macedo <span class="person-role">IC — Supervisory, Zia</span></div>
+        </div>
+        <div class="score-group">
+          <span class="score-pill score-audit">Audit: Tier C · 18.9 agentic</span>
+          <span class="score-pill score-actual">Ground truth: #7 — Coordination role</span>
+          <span class="score-pill score-flag">25% off-task (audit)</span>
+        </div>
+      </div>
+      <div class="person-body">
+        <h4>Role Context</h4>
+        <p>Emanuel's role has shifted toward supervision and coordination on Zia Tile — reviewing blog output, flagging delivery issues, managing the Alex Bélanger (CSM) relationship. His individual agentic output is harder to isolate. Confirmed "everything is being done through Claude Code" — but the output-per-head ratio is lower than the core operators.</p>
+
+        <h4>Evidence from DMs</h4>
+        <ul class="evidence-list">
+          <li>Proactively flagged Mina's low output during Zia push week.</li>
+          <li>Coordinating blog review with Alex Bélanger — "I'll move on to the blogs now."</li>
+          <li>Checking collection page status: "I'm still in the April blogs / on the pages as soon as I finish the products."</li>
+          <li>Git commits (8 pushed) confirmed as highest on team — corroborating local CC work.</li>
+        </ul>
+
+        <div class="callout">
+          <strong>Note:</strong> Aleksandra's message to Sophia identifies Emanuel as "lower yield" and notes a plan to off-board him — but also flags that "once we let Emanuel go, we will need a person to run the content side for LG." His coordination function has value; the question is whether the cost-to-output ratio justifies the headcount.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Aleksandra's contribution -->
+  <div class="section">
+    <h2>Aleksandra Velickovic — Lead Role Assessment</h2>
+    <p class="lead">The audit applied IC metrics to a lead role and returned a 21.7 agentic score and 40% off-task flag. The EOD record tells a different story. Sources: Aleksandra's daily EOD reports to Justin Rondeau (April–June 2026) and direct ClickUp messages.</p>
+
+    <div class="callout red">
+      <strong>What the audit measured:</strong> Whether Claude Code was the active foreground window during a sampled screenshot. What Aleksandra was actually doing: writing content, training the team, building tools, running QA, coordinating engineering, managing client delivery, and driving SA marketing strategy — simultaneously. None of that produces a visible Claude Code terminal.
+    </div>
+
+    <h4 style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.6px; color: #999; margin: 20px 0 8px; font-weight: 600;">Content Production (she writes too)</h4>
+    <ul class="evidence-list">
+      <li><strong>May 7:</strong> Wrote "SEO Autopilot: How Autonomous SEO Agents Run Optimization End-to-End" — commercial/category article targeting <em>SEO autopilot</em> and <em>autonomous SEO</em>, OTTO as primary CTA.</li>
+      <li><strong>May 11:</strong> Wrote and uploaded "Agentic Marketing vs. Marketing Automation" to staging. Finalized "How Agencies Can Package AI Services" article.</li>
+      <li><strong>May 8:</strong> Writing "Agentic Agency Workbook." Closed "Agentic AEO: How AI Agents Read, Cite, and Act on Your Content" (live on staging).</li>
+      <li><strong>May 5:</strong> Redid all Zia Tile product page templates. Rewrote a high-interest Zia blog.</li>
+      <li><strong>May 4:</strong> Wrote a YMYL health article for the LG sample case.</li>
+      <li><strong>April–May (ongoing):</strong> Multiple agentic marketing articles for Karim, Cheqroom content rewrites, Stampmail.ai sales pitch, 5GStore case study, Care.com sample curation, Friday email newsletter, Summit invitation and confirmation email sequences.</li>
+      <li><strong>June 1:</strong> Heavily edited and finalized "Kitchen Backsplash Design Ideas" at 10pm — "I'll write this one tonight" during a deadline crunch.</li>
+    </ul>
+
+    <h4 style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.6px; color: #999; margin: 16px 0 8px; font-weight: 600;">Tooling &amp; Infrastructure Built</h4>
+    <ul class="evidence-list">
+      <li><strong>May 8 — /triage command:</strong> Built and shipped. Surfaces unreplied ClickBot pings, "Ready to Publish" items, blocked tasks, and rocks with no recent activity. Shared in #ai-wins.</li>
+      <li><strong>May 25 — /content-decay-report command:</strong> Built and shipped. Pulls GSC decay, traffic drops, and quick-win keywords weekly. Set up Monday 9am ET automated routine — runs without manual setup each week.</li>
+      <li><strong>May 25 — Full CTR audit across searchatlas.com:</strong> Identified 12 pages below position benchmark. Produced and implemented meta rewrite directives for all 12 (including /features/, /case-studies/, /about-us/).</li>
+      <li><strong>April 23 — SA traffic analysis:</strong> Built two Netlify analysis sites (sa-organic-traffic.netlify.app, content-improvements.netlify.app) showing traffic deep-dive and content improvement plan. Proposed content decay strategy to Justin — approved and adopted.</li>
+      <li><strong>April 21 — CC training site:</strong> Built custom HTML training material at zippy-fairy-fea27b.netlify.app for the team CC session.</li>
+      <li><strong>May 13 — Forge/GitLab migration:</strong> Renamed repos, created access token, revoked old token. Migrated entire team infrastructure from GitHub to Forge. Cleaned /zia directory (588 files, 118 MB). Connected Lucas Z to platform for 7 P1 clients.</li>
+      <li><strong>April 22 — content-ops repo build-out:</strong> Added detailed commands, product info, and knowledge base to GitHub. Developed Search Atlas repo incrementally.</li>
+      <li><strong>Ongoing — CC quota management:</strong> Tracked team usage, resolved Stripe billing issue blocking team CC credits, unblocked Andresa and others mid-delivery.</li>
+    </ul>
+
+    <h4 style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.6px; color: #999; margin: 16px 0 8px; font-weight: 600;">Team Training &amp; Leadership</h4>
+    <ul class="evidence-list">
+      <li><strong>April 21 — CC training session (1h45m):</strong> Prepared custom HTML material and hosted live session for the full content team. Answered questions and onboarded all writers to CC.</li>
+      <li><strong>April 24 — Video guide recorded:</strong> Recorded CC walkthrough video for Emilija and Milena.</li>
+      <li><strong>May 11 — Editorial training deployed:</strong> Deployed Writing Guidelines / Editorial Training doc to Netlify for team access.</li>
+      <li><strong>May 13 — CC team meeting (2-3 PM):</strong> Hosted 7-person team. Walked through agentic content ops, Forge setup, and repo architecture. Presented live.</li>
+      <li><strong>May 13 — Mina coaching:</strong> Walked Mina through standardized folder structure for client repos. Confirmed implementation by afternoon.</li>
+      <li><strong>May 11 — Team triage:</strong> Reviewed 333 tasks across the 60-day cohort across SA + LG client work.</li>
+      <li><strong>April 24 — Employee Monthly Performance Reviews.</strong></li>
+      <li><strong>May 18 — Personnel planning:</strong> Drafting JD and test assignment for Emanuel's replacement with higher editorial/QA bar.</li>
+      <li><strong>May 6 — People management:</strong> Raised formal concern with Mandi Odom about Shafin's termination without manager notification — "I'd really appreciate being looped in before the conversation happens, even briefly."</li>
+      <li><strong>June 1 — Audit defense:</strong> Pushed back on Manick and Sophia with real output-based team stack rank. Protected core operators from flawed methodology.</li>
+    </ul>
+
+    <h4 style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.6px; color: #999; margin: 16px 0 8px; font-weight: 600;">SA Marketing Strategy &amp; Cross-functional Coordination</h4>
+    <ul class="evidence-list">
+      <li><strong>May 19 — June Summit email sequence:</strong> Drafted 10 automated emails (Registrant, VIP, Platinum flows) in VS Code. Verified pricing alignment ($97 vs. $147), finalized upsell copy and 14-day trial mechanics.</li>
+      <li><strong>May 19 — Atlas Agent rebrand:</strong> Finalized site-wide transition from "Atlas Brain" to "Atlas Agent." Requested global menu and naming updates.</li>
+      <li><strong>May 28 — Off-page strategy &amp; SA tool training:</strong> In-depth session with Ali connecting PR/link-building into SA tools. Reviewed DA 90+ publications (Apple News, Yahoo Finance, CNN). Pivoted team to native SA toolset.</li>
+      <li><strong>May 28 — Ahrefs "Agent A" response:</strong> Advocated social-first strategy over blog response, framing SA as empowering marketers.</li>
+      <li><strong>May 20 — Blog deployment mismatch:</strong> Caught and halted incorrect staging-to-live deployment (old Arman Advani drafts pushed instead of team's recent work). Established new "Last Updated" sorting protocol with Marissa and Erin.</li>
+      <li><strong>May 12 — CG v4 QA:</strong> Full staging QA pass. Documented bugs: fragmented streaming, no in-app render, off-topic research contamination, heading duplication, missing SA product tie-in. Filed to engineering-rnd-cgenius-v4.</li>
+      <li><strong>May 7 — CG v4 deeper testing:</strong> Consistent finding across multiple inputs — V4 was not producing articles at all. Documented and escalated to engineering.</li>
+      <li><strong>May 12 — Officially retired Mihai's TA tool</strong> and confirmed full team switch to CC.</li>
+      <li><strong>May 12 — Zia ClickUp channel recap:</strong> Built and pushed full 9-week engagement history (202 messages, 87 threads) for Zia Content Review with Henry and Manick.</li>
+      <li><strong>April 23 — Cheqroom link building at-risk flag:</strong> Flagged March order as unresolved.</li>
+      <li><strong>May 13 — Fact-checker agent:</strong> Coordinated with Karim Adib on building native Fact Checker agent in CC for technical SEO accuracy.</li>
+    </ul>
+
+    <h4 style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.6px; color: #999; margin: 16px 0 8px; font-weight: 600;">Zia Tile — Direct Client Contribution</h4>
+    <ul class="evidence-list">
+      <li><strong>May 27:</strong> Full QA on 73 March/April product pages, fixed all flagged errors, fed feedback loops back into PIPELINE.md.</li>
+      <li><strong>May 28 — MR !8 merged:</strong> feat/zia-jamie-editorial-rules. Added Jamie's editorial rules, pattern observations, and banned terms to the knowledge base so the lint agent catches them deterministically going forward.</li>
+      <li><strong>May 27 — Content Genius V4 QA (Zia):</strong> Sent structural/voice feedback on Zellige Kitchen Backsplash Blog V2, enforced client-specific rules (lowercase zellige, no fabricated bylines).</li>
+      <li><strong>June 1:</strong> Edited and finalized "Kitchen Backsplash Design Ideas" enforcing material specs and 20% overage rules for herringbone.</li>
+    </ul>
+
+    <h4 style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.6px; color: #999; margin: 20px 0 12px; font-weight: 600;">On the Flagged Items</h4>
+
+    <div style="border: 1px solid #e8e8e5; border-radius: 6px; overflow: hidden; margin-top: 4px;">
+      <table style="margin: 0;">
+        <thead>
+          <tr>
+            <th>Flagged by Audit</th>
+            <th>Actual Context</th>
+            <th>Verdict</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>"Serbian DMs" classified as personal</td>
+            <td>Work communications with Emilija Stojilkovic. Serbian is our shared native language. The automated classifier cannot read the content.</td>
+            <td><span class="badge" style="background:#f0faf3;color:#1a6637;">Misclassification</span></td>
+          </tr>
+          <tr>
+            <td>"Career research" classified as personal</td>
+            <td>PMM framework research — studying how to position our agentic pipelines and content ops internally and externally. Directly relevant to strategy.</td>
+            <td><span class="badge" style="background:#f0faf3;color:#1a6637;">Work activity</span></td>
+          </tr>
+          <tr>
+            <td>Spotify flagged as off-task</td>
+            <td>Background music during active work. Common practice.</td>
+            <td><span class="badge" style="background:#fff3cd;color:#7d5c00;">Low severity</span></td>
+          </tr>
+          <tr>
+            <td>~40% total off-task rate</td>
+            <td>Audit's own note: ~half is management-adjacent coordination (ClickUp DMs, Meet calls, directing writers). The remainder includes the items above.</td>
+            <td><span class="badge" style="background:#fff3cd;color:#7d5c00;">Partially valid</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout" style="margin-top: 20px;">
+      <strong>The right evaluation question</strong> — The audit asks it correctly then doesn't answer it: "whether her coordination is producing team output." The answer is 350–450 pieces per month across 37 clients. The IC-metric score of 21.7 agentic is not the measure for this role.
+    </div>
+  </div>
+
+  <!-- Forward plan -->
+  <div class="section">
+    <h2>Team Direction (Already in Motion)</h2>
+    <p class="lead">Leadership consolidation is already planned and underway — not in response to this audit, but as a strategic decision communicated to Sophia before the audit was shared.</p>
+
+    <blockquote>"The path to a leaner team: the limiting factor right now isn't the writers; it's CG readiness and special client requirements. Once the Content Genius iteration Jason and I are testing clears its blockers, that's when we can meaningfully reduce headcount without losing the volume. At that point, the team can realistically compress to the core operators and a QA layer."<br><br>— Aleksandra Velickovic to Sophia Deluz-Bhan, June 2, 2026</blockquote>
+
+    <div class="stat-row" style="margin-top: 20px;">
+      <div class="stat-card">
+        <div class="number" style="font-size: 18px; font-weight: 700; line-height: 1.3;">Retain</div>
+        <div class="label" style="margin-top: 8px; font-size: 12px; color: #444; text-transform: none; letter-spacing: 0;">Mateus · Andresa · Milena · James</div>
+      </div>
+      <div class="stat-card">
+        <div class="number" style="font-size: 18px; font-weight: 700; line-height: 1.3;">Off-board</div>
+        <div class="label" style="margin-top: 8px; font-size: 12px; color: #444; text-transform: none; letter-spacing: 0;">Emilija (moonlighting) · Emanuel (yield)</div>
+      </div>
+      <div class="stat-card">
+        <div class="number" style="font-size: 18px; font-weight: 700; line-height: 1.3;">Review</div>
+        <div class="label" style="margin-top: 8px; font-size: 12px; color: #444; text-transform: none; letter-spacing: 0;">Mina — output inconsistency warrants direct conversation</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Closing -->
+  <div class="section">
+    <h2>Summary</h2>
+    <p style="margin-bottom: 12px;">The audit used a valid method for the wrong role type and captured the wrong week for the team's top producer. Specific corrections:</p>
+    <ul class="evidence-list">
+      <li><strong>Mateus Pimenta</strong> is the strongest agentic builder on the team, not Tier C. 22-page days, 5 automated systems, multi-client coverage. The low window was a documented migration week.</li>
+      <li><strong>James Campbell</strong> is #2 by output volume, not Tier C. 40 Upland blogs in a day, 25 RR pages in two days, 24 Zia edits in a day, YMYL audit tool built and an RR action plan delivered directly to Manick. Widest client coverage on the team.</li>
+      <li><strong>Mina Jahangir</strong> is not Tier A. Her May DM log is almost entirely CC setup, troubleshooting, and learning screens. She produced 1 piece during a 2-day Zia delivery push. The 28/60 CC frames were setup windows, not production. This is the clearest single proof the methodology is measuring the wrong thing.</li>
+      <li><strong>Milena Barbaresco</strong> runs SA internal content and passed the Q2 content goal. Tier D agentic is not low performance — it's the wrong rubric for her role type.</li>
+      <li><strong>The Serbian DMs</strong> are work communications with Emilija. The classifier misread the language, not the content.</li>
+      <li><strong>The PMM research</strong> was strategic positioning work for our agentic pipelines — not personal career planning.</li>
+      <li><strong>This team produces 350–450 pieces per month across 37 clients.</strong> That is the output measure that matters. The audit's 60-frame screenshot rubric did not capture it.</li>
+    </ul>
+    <p style="margin-top: 16px; color: #666; font-size: 14px;">I am open to a direct conversation about any of this and happy to provide additional EOD logs, output files, or pipeline documentation for any member.</p>
+  </div>
+
+  <div class="report-footer">
+    <p>Prepared by Aleksandra Velickovic · June 2, 2026 · Internal / HR Sensitive · Do Not Distribute Externally</p>
+    <p style="margin-top: 4px;">Sources: ClickUp EOD reports (March–June 2026) · Direct message logs · Content-ops repo</p>
+  </div>
+
+</div>
+</body>
+</html>

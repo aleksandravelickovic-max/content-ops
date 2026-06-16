@@ -1,88 +1,47 @@
 {
   "client": "portugal-pathways",
   "scope": "client",
-  "generatedAt": "2026-05-29T00:00:00",
-  "totalFiles": 8,
+  "generatedAt": "2026-06-16T20:58:52",
+  "totalFiles": 3,
   "entries": [
     {
       "id": "style-system",
       "filename": "STYLE-SYSTEM.md",
-      "displayName": "Portugal Pathways — Style System",
+      "displayName": "Portugal Pathways \u2014 Style System",
       "type": "style-system",
       "category": "style-system",
       "status": "active",
       "version": 1,
-      "path": "STYLE-SYSTEM.md"
-    },
-    {
-      "id": "compliance",
-      "filename": "COMPLIANCE.yml",
-      "displayName": "Portugal Pathways — Compliance Config",
-      "type": "compliance",
-      "category": "compliance",
-      "status": "active",
-      "version": 1,
-      "path": "COMPLIANCE.yml"
+      "path": "STYLE-SYSTEM.md",
+      "sizeBytes": 13135,
+      "sizeHuman": "12.8 KB",
+      "lastModified": "2026-06-12"
     },
     {
       "id": "overview",
       "filename": "overview.md",
-      "displayName": "Portugal Pathways — Client Overview",
-      "type": "knowledge",
-      "category": "knowledge",
-      "status": "active",
+      "displayName": "Portugal Pathways \u2014 Client Overview",
+      "type": "other",
+      "category": "other",
+      "status": "delivered",
       "version": 1,
-      "path": "raw/knowledge/overview.md"
+      "path": "raw/knowledge/overview.md",
+      "sizeBytes": 6559,
+      "sizeHuman": "6.4 KB",
+      "lastModified": "2026-06-12"
     },
     {
       "id": "website-faq",
       "filename": "website-faq.md",
-      "displayName": "Portugal Pathways — Website FAQ & Knowledge Base",
-      "type": "knowledge",
-      "category": "knowledge",
-      "status": "active",
-      "version": 1,
-      "path": "raw/knowledge/website-faq.md"
-    },
-    {
-      "id": "approved-lisbon",
-      "filename": "lisbon.md",
-      "displayName": "Approved — Lisbon Location Page (April 2026)",
-      "type": "approved",
-      "category": "approved",
+      "displayName": "Portugal Pathways \u2014 Website FAQ & Knowledge Base",
+      "type": "other",
+      "category": "other",
       "status": "delivered",
       "version": 1,
-      "path": "_approved/location-pages/lisbon.md"
-    },
-    {
-      "id": "approved-porto",
-      "filename": "porto.md",
-      "displayName": "Approved — Porto Location Page (April 2026)",
-      "type": "approved",
-      "category": "approved",
-      "status": "delivered",
-      "version": 1,
-      "path": "_approved/location-pages/porto.md"
-    },
-    {
-      "id": "approved-vilamoura",
-      "filename": "vilamoura.md",
-      "displayName": "Approved — Vilamoura Location Page (April 2026)",
-      "type": "approved",
-      "category": "approved",
-      "status": "delivered",
-      "version": 1,
-      "path": "_approved/location-pages/vilamoura.md"
-    },
-    {
-      "id": "approved-vale-do-lobo",
-      "filename": "vale-do-lobo.md",
-      "displayName": "Approved — Vale do Lobo Location Page (April 2026)",
-      "type": "approved",
-      "category": "approved",
-      "status": "delivered",
-      "version": 1,
-      "path": "_approved/location-pages/vale-do-lobo.md"
+      "path": "raw/knowledge/website-faq.md",
+      "sizeBytes": 12781,
+      "sizeHuman": "12.5 KB",
+      "lastModified": "2026-06-12"
     }
   ]
 }

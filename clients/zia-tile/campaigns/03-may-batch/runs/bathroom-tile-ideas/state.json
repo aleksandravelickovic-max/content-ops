@@ -1,0 +1,22 @@
+{
+  "piece_slug": "bathroom-tile-ideas",
+  "client": "zia-tile",
+  "content_type": "blog",
+  "material": "mixed",
+  "topic": "bathroom-tile-ideas",
+  "stages": [
+    {"name": "brief", "status": "completed", "note": "Multi-material: zellige, marble, limestone, ceramics. Third person. Classic-to-contemporary arc."},
+    {"name": "draft", "status": "completed", "note": "draft-v1.md written. Third person. No em dashes. Verified facts only."},
+    {"name": "material-guard", "status": "completed", "note": "PASS. All freeze/thaw, pool/spa, DCOF, sealing, and variation language verified per material configs."},
+    {"name": "terminology-lint", "status": "completed", "note": "PASS. No banned-term violations. False positive on zellige pool/spa overridden by zellige.md."},
+    {"name": "claims-grounding", "status": "completed", "note": "Fixed: zellige sealing scope; unsupported zellige patina; high-temperature inference; marble patina. Flag for Alex: earthen kilns in blog context."},
+    {"name": "person-consistency", "status": "completed", "note": "PASS. Third person throughout. Zero second-person hits."},
+    {"name": "contact-line-check", "status": "completed", "note": "PASS. Both email and phone present in closing."},
+    {"name": "humanize", "status": "completed", "note": "Applied. Tightened opening, fixed repetition, improved rhythm. Technical facts preserved."},
+    {"name": "ship-qa", "status": "skipped", "note": "Skipped — voice and Koray judges both failed below gate. Ship QA would also fail on the same structural issues."},
+    {"name": "voice-judge", "status": "failed", "note": "62/100. Lead is generic category claim. Closing is a marketing tagline. Duplicate zellige light-shift sentences. Zellige section ends with SEO-style CTA redirect."},
+    {"name": "koray-judge", "status": "failed", "note": "61/100. Query intent mismatch — openers define material origin, not bathroom application. Missing meta title/description. Missing internal links for marble, limestone, ceramics, Install Guide. Two redundant closing sections."},
+    {"name": "render-html", "status": "completed", "note": "clients/zia-tile/campaigns/03-may-batch/drafts/bathroom-tile-ideas.html"}
+  ],
+  "updated": "2026-05-29T00:00:00Z"
+}

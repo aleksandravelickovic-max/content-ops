@@ -1,4 +1,47 @@
 {
   "client": "a-plus-landscaping",
-  "campaigns": []
+  "scope": "client",
+  "generatedAt": "2026-06-16T20:58:52",
+  "totalFiles": 3,
+  "entries": [
+    {
+      "id": "style-system",
+      "filename": "STYLE-SYSTEM.md",
+      "displayName": "A Plus Landscaping \u2014 Style System",
+      "type": "style-system",
+      "category": "style-system",
+      "status": "active",
+      "version": 1,
+      "path": "STYLE-SYSTEM.md",
+      "sizeBytes": 14107,
+      "sizeHuman": "13.8 KB",
+      "lastModified": "2026-06-12"
+    },
+    {
+      "id": "client-overview",
+      "filename": "client-overview.md",
+      "displayName": "A Plus Landscaping \u2014 Client Overview",
+      "type": "other",
+      "category": "other",
+      "status": "delivered",
+      "version": 1,
+      "path": "raw/knowledge/client-overview.md",
+      "sizeBytes": 2789,
+      "sizeHuman": "2.7 KB",
+      "lastModified": "2026-06-12"
+    },
+    {
+      "id": "content-agent-brief",
+      "filename": "content-agent-brief.md",
+      "displayName": "A Plus Landscaping \u2014 Content Agent Brief",
+      "type": "brief",
+      "category": "brief",
+      "status": "delivered",
+      "version": 1,
+      "path": "raw/knowledge/content-agent-brief.md",
+      "sizeBytes": 2432,
+      "sizeHuman": "2.4 KB",
+      "lastModified": "2026-06-12"
+    }
+  ]
 }

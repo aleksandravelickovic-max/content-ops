@@ -1,4 +1,47 @@
 {
   "client": "liveops",
-  "campaigns": []
+  "scope": "client",
+  "generatedAt": "2026-06-16T20:58:52",
+  "totalFiles": 3,
+  "entries": [
+    {
+      "id": "style-system",
+      "filename": "STYLE-SYSTEM.md",
+      "displayName": "Liveops \u2014 Style System",
+      "type": "style-system",
+      "category": "style-system",
+      "status": "active",
+      "version": 1,
+      "path": "STYLE-SYSTEM.md",
+      "sizeBytes": 15659,
+      "sizeHuman": "15.3 KB",
+      "lastModified": "2026-06-12"
+    },
+    {
+      "id": "agent-speak-doc",
+      "filename": "agent-speak-doc.md",
+      "displayName": "Liveops \u2014 Agent Speak Doc",
+      "type": "other",
+      "category": "other",
+      "status": "delivered",
+      "version": 1,
+      "path": "raw/knowledge/agent-speak-doc.md",
+      "sizeBytes": 3923,
+      "sizeHuman": "3.8 KB",
+      "lastModified": "2026-06-12"
+    },
+    {
+      "id": "external-messaging-guidelines",
+      "filename": "external-messaging-guidelines.md",
+      "displayName": "Liveops \u2014 External Messaging Guidelines",
+      "type": "other",
+      "category": "other",
+      "status": "delivered",
+      "version": 1,
+      "path": "raw/knowledge/external-messaging-guidelines.md",
+      "sizeBytes": 3293,
+      "sizeHuman": "3.2 KB",
+      "lastModified": "2026-06-12"
+    }
+  ]
 }

@@ -1,8 +1,8 @@
 {
   "client": "zia-tile",
   "scope": "client",
-  "generatedAt": "2026-05-13T01:43:36",
-  "totalFiles": 36,
+  "generatedAt": "2026-06-16T20:58:52",
+  "totalFiles": 47,
   "entries": [
     {
       "id": "style-system",
@@ -13,9 +13,9 @@
       "status": "active",
       "version": 1,
       "path": "STYLE-SYSTEM.md",
-      "sizeBytes": 43080,
-      "sizeHuman": "42.1 KB",
-      "lastModified": "2026-05-12"
+      "sizeBytes": 49107,
+      "sizeHuman": "48.0 KB",
+      "lastModified": "2026-06-12"
     },
     {
       "id": "clickup-channel-recap",
@@ -28,7 +28,7 @@
       "path": "raw/research/clickup-channel-recap.md",
       "sizeBytes": 36687,
       "sizeHuman": "35.8 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "content-intelligence-report",
@@ -41,7 +41,7 @@
       "path": "raw/research/content-intelligence-report.html",
       "sizeBytes": 54150,
       "sizeHuman": "52.9 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "editorial-voice-research-2026-05-04",
@@ -54,7 +54,7 @@
       "path": "raw/research/editorial-voice-research-2026-05-04.html",
       "sizeBytes": 33792,
       "sizeHuman": "33.0 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "editorial-voice-research-2026-05-04",
@@ -67,7 +67,7 @@
       "path": "raw/research/editorial-voice-research-2026-05-04.md",
       "sizeBytes": 26857,
       "sizeHuman": "26.2 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "installation-guides-research",
@@ -80,7 +80,20 @@
       "path": "raw/research/installation-guides-research.md",
       "sizeBytes": 12071,
       "sizeHuman": "11.8 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "materials-reference",
+      "filename": "materials-reference.md",
+      "displayName": "**How to use this document**",
+      "type": "research",
+      "category": "research",
+      "status": "delivered",
+      "version": 1,
+      "path": "raw/research/materials-reference.md",
+      "sizeBytes": 79858,
+      "sizeHuman": "78.0 KB",
+      "lastModified": "2026-05-21"
     },
     {
       "id": "style-guide-v2",
@@ -93,7 +106,7 @@
       "path": "raw/research/style-guide-v2.md",
       "sizeBytes": 14860,
       "sizeHuman": "14.5 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "website-research-2026-05-04",
@@ -106,7 +119,7 @@
       "path": "raw/research/website-research-2026-05-04.html",
       "sizeBytes": 42976,
       "sizeHuman": "42.0 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "website-research-2026-05-04",
@@ -119,7 +132,7 @@
       "path": "raw/research/website-research-2026-05-04.md",
       "sizeBytes": 35095,
       "sizeHuman": "34.3 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "website-research",
@@ -132,7 +145,7 @@
       "path": "raw/research/website-research.md",
       "sizeBytes": 29968,
       "sizeHuman": "29.3 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "2026-03-11-linkgraph-zia-tile-kickoff",
@@ -145,7 +158,7 @@
       "path": "raw/transcripts/2026-03-11-linkgraph-zia-tile-kickoff.md",
       "sizeBytes": 111533,
       "sizeHuman": "108.9 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "2026-03-27-zia-tile-content-discussion-linkgraph",
@@ -158,7 +171,7 @@
       "path": "raw/transcripts/2026-03-27-zia-tile-content-discussion-linkgraph.md",
       "sizeBytes": 49220,
       "sizeHuman": "48.1 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "2026-03-30-zia-tile-seo-strategy-review",
@@ -171,7 +184,7 @@
       "path": "raw/transcripts/2026-03-30-zia-tile-seo-strategy-review.md",
       "sizeBytes": 114930,
       "sizeHuman": "112.2 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "2026-04-08-zia-tile-linkgraph-link-building-review",
@@ -184,7 +197,7 @@
       "path": "raw/transcripts/2026-04-08-zia-tile-linkgraph-link-building-review.md",
       "sizeBytes": 42946,
       "sizeHuman": "41.9 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "2026-04-15-product-pages-custom-code-walkthrough-zia-tile-linkgraph",
@@ -197,7 +210,7 @@
       "path": "raw/transcripts/2026-04-15-product-pages-custom-code-walkthrough-zia-tile-linkgraph.md",
       "sizeBytes": 64831,
       "sizeHuman": "63.3 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "2026-04-30-zia-tile-linkgraph-content-connect",
@@ -210,7 +223,7 @@
       "path": "raw/transcripts/2026-04-30-zia-tile-linkgraph-content-connect.md",
       "sizeBytes": 50427,
       "sizeHuman": "49.2 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "2026-05-04-zia-tile-blog-posts-connect",
@@ -223,7 +236,7 @@
       "path": "raw/transcripts/2026-05-04-zia-tile-blog-posts-connect.md",
       "sizeBytes": 47814,
       "sizeHuman": "46.7 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "2026-05-08-afternoon-zia-tile-pdp-and-collection-page-structural-updates-connect",
@@ -236,7 +249,7 @@
       "path": "raw/transcripts/2026-05-08-afternoon-zia-tile-pdp-and-collection-page-structural-updates-connect.md",
       "sizeBytes": 37137,
       "sizeHuman": "36.3 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "2026-05-08-morning-zia-content-review",
@@ -249,7 +262,124 @@
       "path": "raw/transcripts/2026-05-08-morning-zia-content-review.md",
       "sizeBytes": 105580,
       "sizeHuman": "103.1 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "collection-pages-manifest",
+      "filename": "collection-pages-manifest.json",
+      "displayName": "Collection Pages Manifest.Json",
+      "type": "other",
+      "category": "other",
+      "status": "delivered",
+      "version": 1,
+      "path": "raw/knowledge/collection-pages-manifest.json",
+      "sizeBytes": 29678,
+      "sizeHuman": "29.0 KB",
+      "lastModified": "2026-06-12"
+    },
+    {
+      "id": "collection-pages-scan-results",
+      "filename": "collection-pages-scan-results.json",
+      "displayName": "Collection Pages Scan Results.Json",
+      "type": "other",
+      "category": "other",
+      "status": "delivered",
+      "version": 1,
+      "path": "raw/knowledge/collection-pages-scan-results.json",
+      "sizeBytes": 48042,
+      "sizeHuman": "46.9 KB",
+      "lastModified": "2026-06-12"
+    },
+    {
+      "id": "colorway-temperature-reference",
+      "filename": "colorway-temperature-reference.md",
+      "displayName": "Zia Tile \u2014 Colorway Temperature Reference",
+      "type": "other",
+      "category": "other",
+      "status": "delivered",
+      "version": 1,
+      "path": "raw/knowledge/colorway-temperature-reference.md",
+      "sizeBytes": 7165,
+      "sizeHuman": "7.0 KB",
+      "lastModified": "2026-06-12"
+    },
+    {
+      "id": "product-pages-deep-scan-v2",
+      "filename": "product-pages-deep-scan-v2.json",
+      "displayName": "Product Pages Deep Scan V2.Json",
+      "type": "other",
+      "category": "other",
+      "status": "delivered",
+      "version": 1,
+      "path": "raw/knowledge/product-pages-deep-scan-v2.json",
+      "sizeBytes": 139429,
+      "sizeHuman": "136.2 KB",
+      "lastModified": "2026-06-12"
+    },
+    {
+      "id": "product-pages-deep-scan",
+      "filename": "product-pages-deep-scan.json",
+      "displayName": "Product Pages Deep Scan.Json",
+      "type": "other",
+      "category": "other",
+      "status": "delivered",
+      "version": 1,
+      "path": "raw/knowledge/product-pages-deep-scan.json",
+      "sizeBytes": 205599,
+      "sizeHuman": "200.8 KB",
+      "lastModified": "2026-06-12"
+    },
+    {
+      "id": "product-pages-manifest",
+      "filename": "product-pages-manifest.json",
+      "displayName": "Product Pages Manifest.Json",
+      "type": "other",
+      "category": "other",
+      "status": "delivered",
+      "version": 1,
+      "path": "raw/knowledge/product-pages-manifest.json",
+      "sizeBytes": 57178,
+      "sizeHuman": "55.8 KB",
+      "lastModified": "2026-06-12"
+    },
+    {
+      "id": "product-pages-scan-results-v2",
+      "filename": "product-pages-scan-results-v2.json",
+      "displayName": "Product Pages Scan Results V2.Json",
+      "type": "other",
+      "category": "other",
+      "status": "delivered",
+      "version": 1,
+      "path": "raw/knowledge/product-pages-scan-results-v2.json",
+      "sizeBytes": 139717,
+      "sizeHuman": "136.4 KB",
+      "lastModified": "2026-06-12"
+    },
+    {
+      "id": "product-pages-scan-results",
+      "filename": "product-pages-scan-results.json",
+      "displayName": "Product Pages Scan Results.Json",
+      "type": "other",
+      "category": "other",
+      "status": "delivered",
+      "version": 1,
+      "path": "raw/knowledge/product-pages-scan-results.json",
+      "sizeBytes": 130451,
+      "sizeHuman": "127.4 KB",
+      "lastModified": "2026-06-12"
+    },
+    {
+      "id": "zia-content-rules-and-error-log",
+      "filename": "zia-content-rules-and-error-log.md",
+      "displayName": "Zia Tile \u2014 Content Rules & Error Log",
+      "type": "other",
+      "category": "other",
+      "status": "delivered",
+      "version": 1,
+      "path": "raw/knowledge/zia-content-rules-and-error-log.md",
+      "sizeBytes": 40364,
+      "sizeHuman": "39.4 KB",
+      "lastModified": "2026-06-12"
     },
     {
       "id": "README",
@@ -262,7 +392,7 @@
       "path": "reference-site/README.md",
       "sizeBytes": 3059,
       "sizeHuman": "3.0 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "_build",
@@ -275,7 +405,7 @@
       "path": "reference-site/_build.py",
       "sizeBytes": 17289,
       "sizeHuman": "16.9 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "blog-4-cotto",
@@ -288,7 +418,7 @@
       "path": "reference-site/blog-4-cotto.html",
       "sizeBytes": 18742,
       "sizeHuman": "18.3 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "clickup-channel-recap",
@@ -301,7 +431,7 @@
       "path": "reference-site/clickup-channel-recap.html",
       "sizeBytes": 45991,
       "sizeHuman": "44.9 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "collection-cotto",
@@ -314,7 +444,7 @@
       "path": "reference-site/collection-cotto.html",
       "sizeBytes": 11179,
       "sizeHuman": "10.9 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "editorial-voice",
@@ -327,7 +457,20 @@
       "path": "reference-site/editorial-voice.html",
       "sizeBytes": 32186,
       "sizeHuman": "31.4 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
+    },
+    {
+      "id": "index-editable",
+      "filename": "index-editable.html",
+      "displayName": "Index Editable",
+      "type": "reference",
+      "category": "reference",
+      "status": "delivered",
+      "version": 1,
+      "path": "reference-site/index-editable.html",
+      "sizeBytes": 13042,
+      "sizeHuman": "12.7 KB",
+      "lastModified": "2026-05-21"
     },
     {
       "id": "index",
@@ -340,7 +483,7 @@
       "path": "reference-site/index.html",
       "sizeBytes": 7771,
       "sizeHuman": "7.6 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "installation-guides",
@@ -353,7 +496,7 @@
       "path": "reference-site/installation-guides.html",
       "sizeBytes": 16624,
       "sizeHuman": "16.2 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "jamie-feedback",
@@ -366,7 +509,7 @@
       "path": "reference-site/jamie-feedback.html",
       "sizeBytes": 21108,
       "sizeHuman": "20.6 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "nav",
@@ -379,7 +522,7 @@
       "path": "reference-site/nav.js",
       "sizeBytes": 299,
       "sizeHuman": "299 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "product-red-clay-8x8",
@@ -392,7 +535,7 @@
       "path": "reference-site/product-red-clay-8x8.html",
       "sizeBytes": 7220,
       "sizeHuman": "7.1 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "style-guide-v3",
@@ -405,7 +548,7 @@
       "path": "reference-site/style-guide-v3.html",
       "sizeBytes": 46982,
       "sizeHuman": "45.9 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "style-guide",
@@ -418,7 +561,7 @@
       "path": "reference-site/style-guide.html",
       "sizeBytes": 20183,
       "sizeHuman": "19.7 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "styles",
@@ -431,7 +574,7 @@
       "path": "reference-site/styles.css",
       "sizeBytes": 7221,
       "sizeHuman": "7.1 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "website-research-2026-05-04",
@@ -444,7 +587,7 @@
       "path": "reference-site/website-research-2026-05-04.html",
       "sizeBytes": 41453,
       "sizeHuman": "40.5 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "website-research-original",
@@ -457,7 +600,7 @@
       "path": "reference-site/website-research-original.html",
       "sizeBytes": 34836,
       "sizeHuman": "34.0 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     },
     {
       "id": "workspace",
@@ -470,7 +613,7 @@
       "path": "reference-site/workspace.html",
       "sizeBytes": 13590,
       "sizeHuman": "13.3 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-13"
     }
   ]
 }

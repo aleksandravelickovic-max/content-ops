@@ -1,4 +1,47 @@
 {
   "client": "loti-labs",
-  "campaigns": []
+  "scope": "client",
+  "generatedAt": "2026-06-16T20:58:52",
+  "totalFiles": 3,
+  "entries": [
+    {
+      "id": "style-system",
+      "filename": "STYLE-SYSTEM.md",
+      "displayName": "Loti Labs \u2014 Style System",
+      "type": "style-system",
+      "category": "style-system",
+      "status": "active",
+      "version": 1,
+      "path": "STYLE-SYSTEM.md",
+      "sizeBytes": 22173,
+      "sizeHuman": "21.7 KB",
+      "lastModified": "2026-06-12"
+    },
+    {
+      "id": "overview",
+      "filename": "overview.md",
+      "displayName": "Loti Labs | Wholesale Peptide \u2014 Client Overview",
+      "type": "other",
+      "category": "other",
+      "status": "delivered",
+      "version": 1,
+      "path": "raw/knowledge/overview.md",
+      "sizeBytes": 4229,
+      "sizeHuman": "4.1 KB",
+      "lastModified": "2026-06-12"
+    },
+    {
+      "id": "writers-brief",
+      "filename": "writers-brief.md",
+      "displayName": "Writers Brief",
+      "type": "brief",
+      "category": "brief",
+      "status": "delivered",
+      "version": 1,
+      "path": "raw/knowledge/writers-brief.md",
+      "sizeBytes": 33102,
+      "sizeHuman": "32.3 KB",
+      "lastModified": "2026-06-12"
+    }
+  ]
 }
