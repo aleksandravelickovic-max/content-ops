@@ -1,145 +1,199 @@
-# Codebase Map: zia-content-ops
+# Codebase Map: content-ops
 
-> Auto-generated: 2026-05-13 02:03 | Commit: ae98ec64 | Branch: main
-> 96 files | 19 code files | 109 functions/classes indexed
+> Auto-generated: 2026-06-16 | Commit: b536a4d | Branch: feat/sa-ai-cmo-batch-01
+> 1,308 files total
 
 ## Git Info
 - Remote: https://forge.internal.searchatlas.com/search-atlas-group/content-team/content-ops.git
-- Last commit: ae98ec6 docs: rebuild Zia Tile content HTML and update portal with annotation support
+- Last commit: b536a4d chore: regenerate registry files and content navigator
+- Active branch: feat/sa-ai-cmo-batch-01
 
 ## File Distribution
-- `.md`: 26 files
-- `.html`: 18 files
-- `.py`: 16 files
-- `.json`: 4 files
-- `.js`: 3 files
-- `.css`: 3 files
-- `.tag`: 2 files
-- `.txt`: 2 files
-- `.db`: 1 files
-- `.yml`: 1 files
+- `.md`: 664 files
+- `.html`: 341 files
+- `.txt`: 167 files
+- `.json`: 45 files
+- `.py`: 32 files
+- `.yml`: 23 files
+- `.js`: 4 files
+- `.css`: 4 files
+
+## Active Clients (20)
+
+| Client | Campaigns | Notes |
+|---|---|---|
+| searchatlas | 01-blog-content | AI CMO cluster, 11 finals |
+| zia-tile | 01-product-collection-pages, 02-march-april-updates, 02-may-2026-blogs, 03-may-batch | Reference site included |
+| altify | 01-may-content-optimization | Enterprise account planning AI |
+| 5gstore | 01-may-content-optimization | 4G/5G networking equipment |
+| a-plus-landscaping | — | Family-owned design-build, Central PA |
+| anne-therese | — | Medical aesthetics, OH + FL |
+| axiom-hrs | — | HCM/payroll, UKG partner |
+| esthetics-center | 01-blog-content | Medical aesthetics + plastic surgery, Northern CA |
+| laser-center-of-marin | — | Aesthetic clinic, Marin County CA |
+| liveops | — | Cloud remote agent network for enterprise CX |
+| loti-labs | — | Research peptides/capsules, RUO compliance |
+| pekas-smith | — | AZ Social Security Disability law firm |
+| portugal-pathways | — | HNW relocation advisory, British English |
+| print-and-cheques-now | — | Canadian cheque printing, CPA #1010 |
+| the-hope-house | — | 4 sub-brands: Hope House, AZ IOP, Scottsdale Detox, Scottsdale TMS |
+| the-nash-casino | — | NH charitable gaming, Nashua NH |
+| thera | — | VIP rehab clinic, Midtown Manhattan |
+| trustlayer | — | AI-powered COI + third-party compliance |
+| us-self-storage | — | Storage marketplace, 20,000+ facilities |
+| us-storage-units | — | Storage marketplace, 10,000+ facilities |
 
 ## Directory Structure
+
 ```
 clients/
   searchatlas/
+    STYLE-SYSTEM.md
+    delivery.yml                        # Drive folder IDs — DO NOT COMMIT credentials
+    registry.json
+    campaigns/
+      01-blog-content/
+        batches/
+          ai-cmo-batch-01.csv
+          production-log.md
+        briefs/                         # 9 briefs
+        drafts/                         # 20 drafts (v1 + v2 for each article)
+          ai-cmo-for-marketing-agencies-v1.md / v2.md
+          ai-cmo-for-startups-and-lean-teams-v1.md
+          ai-cmo-for-startups-v2.md
+          ai-cmo-kpis-v1.md
+          ai-cmo-vs-fractional-cmo-v1.md / v2.md
+          ai-cmo-vs-marketing-agency-v1.md / v2.md
+          ai-marketing-automation-mistakes-v1.md / v2.md
+          best-ai-cmo-tools-execution-depth-comparison-v1.md
+          best-ai-cmo-tools-v2.md
+          how-to-build-an-ai-marketing-stack-v1.md / v2.md
+          how-to-measure-ai-marketing-performance-v1.md / v2.md
+          what-is-google-ai-mode.md
+          what-is-multiplayer-marketing-v1.md / .html
+        final/                          # 11 articles — each has .md + .html
+          ai-cmo-for-marketing-agencies
+          ai-cmo-for-startups
+          ai-cmo-for-startups-and-lean-teams   # stale — superseded by ai-cmo-for-startups
+          ai-cmo-kpis
+          ai-cmo-vs-fractional-cmo
+          ai-cmo-vs-marketing-agency
+          ai-marketing-automation-mistakes
+          best-ai-cmo-tools
+          best-ai-cmo-tools-execution-depth-comparison
+          how-to-build-an-ai-marketing-stack
+          how-to-measure-ai-marketing-performance
+        sa-editorial-guidelines-dpr.md
+        registry.json
+    raw/
+      knowledge/
+        competitors/                    # 55 competitor files
+        facts/                          # 26 fact files
+        products/                       # 43 product files (incl. atlas-coworker.md)
+        proof/                          # 7 study/proof files
+        testimonials/                   # 21 testimonial files
   zia-tile/
+    STYLE-SYSTEM.md
+    COMPLIANCE.yml
     reference-site/
-content-toolkit/
-  agents/
-  commands/
-  worktrees/
-    agent-a2caf43aff80c9696/
-portal/
-  .ruff_cache/
-    0.15.12/
-    0.8.6/
+    materials/
+    page-templates/
+    _approved/
+    campaigns/
+      01-product-collection-pages/
+      02-march-april-updates/
+      02-may-2026-blogs/
+      03-may-batch/
+  {other 18 clients}/
+    STYLE-SYSTEM.md
+    campaigns/ (where applicable)
+    raw/ (where applicable)
+
+content-toolkit/                        # Symlinked as .claude/
+  agents/                               # Writing, editing, QA, judge agents
+  commands/                             # Slash commands
+    auto-brief.md
+    bulk-article-production.md
+    content-decay-report.md
+    llm-visibility-report.md
+    render-html.md
+    run-piece.md
+    (+ others)
+  skills/
+    bulk-article-production/
+      SKILL.md                          # Bulk production workflow
+      scripts/
+        qa_scan.py                      # QA gate: em dash, prohibited terms, FAQ, H1
+        validate_batch.py               # CSV batch validation
+      templates/
+        article-brief-template.md       # Includes SERP research block + FAQ candidates
+  contracts/                            # Keyway B1-B5 contracts
+  PIPELINE.md
+  IMPROVEMENT-LOOP.md
+  codebase-map.md                       # This file
+  settings-content-ops.json
+
+portal/                                 # FastAPI content review portal
   app/
-    routes/
-    static/
-    templates/
-reports/
-ruff_cache/
-  0.15.12/
-  0.8.6/
+    main.py / config.py / database.py / models.py / content.py
+    routes/ (admin, review, api, auth)
+    static/ (styles.css, app.js, annotation.css, annotation.js)
+    templates/ (base, admin, review)
+  Dockerfile / docker-compose.yml
+  manage.py
+
 scripts/
+  build-content-navigator.py            # Generates reports/content-navigator.html
+  build-html-before-after.py
+  render-html.py
+  export-gdrive.py
+  format-to-wp.py
+
+reports/
+  content-navigator.html                # Standalone content browser (21MB)
+  searchatlas-pr-link-building-guide.html
+  team-evidence-analysis-2026-06-02.html
+  (+ audit reports)
+
 universal-rules/
+  UNIVERSAL-RULES.md
 ```
+
+## SA Campaign: 01-blog-content — Article Status
+
+| Slug | Final | HTML | Status |
+|---|---|---|---|
+| ai-cmo-for-marketing-agencies | ✓ | ✓ | QA passed |
+| ai-cmo-for-startups | ✓ | ✓ | QA passed — systems architect model, 30-day setup |
+| ai-cmo-kpis | ✓ | ✓ | QA passed — two-tier KPI framework |
+| ai-cmo-vs-fractional-cmo | ✓ | ✓ | QA passed |
+| ai-cmo-vs-marketing-agency | ✓ | ✓ | QA passed |
+| ai-marketing-automation-mistakes | ✓ | ✓ | QA passed |
+| best-ai-cmo-tools | ✓ | ✓ | QA passed — execution depth comparison |
+| how-to-build-an-ai-marketing-stack | ✓ | ✓ | QA passed — Atlas Coworker + Multiplayer framing added |
+| how-to-measure-ai-marketing-performance | ✓ | ✓ | QA passed |
+| what-is-google-ai-mode | draft only | — | Not produced as final |
+| what-is-multiplayer-marketing | draft only | ✓ | Not produced as final |
+| ai-cmo-for-startups-and-lean-teams | stale | ✓ | Superseded by ai-cmo-for-startups — candidate for deletion |
+
+## SA Knowledge Base
+
+| Category | Count | Notable additions |
+|---|---|---|
+| products | 43 | atlas-coworker.md (June 2026) |
+| competitors | 55 | — |
+| facts | 26 | search-atlas-plan-details.md (pricing source of truth) |
+| testimonials | 21 | — |
+| proof | 7 | — |
 
 ## Code Index (Functions & Classes)
 
-### clients/zia-tile/reference-site/_build.py
-  def build_nav(active_slug: str)
-  def build_index_body()
-  def fix_internal_links(html_body: str, source_path: Path | None)
-  def render_markdown(source: Path)
-  def page_template(page: dict, body_html: str)
-  def main()
+### content-toolkit/skills/bulk-article-production/scripts/qa_scan.py
+  def scan(path: str)
+  Gates: em dash | prohibited terms (14) | H1 in first 30 lines | FAQ section
 
-### portal/app/content.py
-  def get_campaign_path(client_slug: str, campaign_slug: str)
-  def load_registry(client_slug: str, campaign_slug: str)
-  def load_client_registry(client_slug: str)
-  def get_content_html(client_slug: str, campaign_slug: str, content_path: str)
-  def get_content_raw(client_slug: str, campaign_slug: str, content_path: str)
-  def list_campaigns(client_slug: str)
-  def get_compare_pairs(registry: dict)
-  def find_draft_for_html
-  def list_clients()
-
-### portal/app/database.py
-  class Base
-  def get_db()
-  def init_db()
-
-### portal/app/main.py
-  def lifespan(app: FastAPI)
-  def root()
-
-### portal/app/models.py
-  def utcnow()
-  class ShareLink
-  class Comment
-
-### portal/app/routes/admin.py
-  def _get_user_or_none(request: Request)
-  def require_admin(request: Request)
-  def admin_dashboard
-  def create_share_link
-  def toggle_share_link
-  def admin_comments
-  def admin_resolve_comment
-  def _build_tabs(groups: dict[str, list])
-  def admin_campaigns
-  def admin_campaign_detail
-  def admin_campaign_create_share_link
-  def admin_raw_html
-  def admin_compare_view
-  def admin_content_detail
-
-### portal/app/routes/api.py
-  class CommentCreate
-  class CommentResolve
-  def create_comment
-  def resolve_comment
-
-### portal/app/routes/auth.py
-  def is_oauth_configured()
-  def _email_domain_allowed(email: str)
-  def login_page(request: Request, error: str | None = None)
-  def google_login(request: Request)
-  def google_callback(request: Request)
-  def logout(request: Request)
-
-### portal/app/routes/review.py
-  def campaign_review
-  def raw_html
-  def compare_view
-  def content_review
-
-### portal/app/static/annotation.js
-  function findTextInDom(container, exact, prefix, suffix)
-  function textOffsetToRange(container, startOff, endOff)
-  function renderHighlights()
-  function clearHighlights(container)
-  function scrollToComment(id)
-  function extractAnchor(range)
-  function showPopover(rect, anchor)
-  function hidePopover()
-  function escapeHtml(str)
-  function submitInlineComment(form)
-  function onDocumentMouseUp(e)
-  function onDocumentMouseDown(e)
-  function addJumpLinks()
-  function init()
-
-### portal/manage.py
-  def init_db()
-  def create_link(client: str, campaign: str, label: str | None = None, re...)
-  def list_links()
-  def revoke_link(token_str: str)
-  def list_comments(token_str: str | None = None)
-  def main()
+### content-toolkit/skills/bulk-article-production/scripts/validate_batch.py
+  def validate_csv(path: str)
 
 ### scripts/build-content-navigator.py
   def human_size(n)
@@ -161,29 +215,34 @@ universal-rules/
   def build_html(registries, content_store)
   def main()
 
-### scripts/build-html-before-after.py
-  def parse_product_draft(path: Path)
-  def build_collection_url_map()
-  def discover_pages()
-  def url_to_filename(url: str)
-  def fetch_page(url: str, session: requests.Session)
-  def fetch_all_originals(pages: list[dict])
-  def extract_sections_from_product_draft(path: Path)
-  def extract_sections_from_collection_draft(path: Path)
-  def md_to_html(md_text: str)
-  def apply_product_content(original_html: str, sections: dict, page_info: dict)
-  def apply_collection_content(original_html: str, sections: dict, page_info: dict)
-  def find_collection_for_product(product_slug: str, product_url: str)
-  def build_revised_pages(pages: list[dict])
-  def build_index_page(pages: list[dict])
-  def main()
+### scripts/render-html.py
+  Converts final .md drafts to semantic HTML delivery artifacts.
 
-### scripts/fetch-missing-originals.py
-  def extract_ziatile_urls(campaign_file: Path)
-  def url_to_filename(url: str)
-  def find_missing(urls: list[str])
-  def fetch_page(url: str, session: requests.Session)
-  def main()
+### portal/app/content.py
+  def get_campaign_path(client_slug, campaign_slug)
+  def load_registry(client_slug, campaign_slug)
+  def load_client_registry(client_slug)
+  def get_content_html(client_slug, campaign_slug, content_path)
+  def list_campaigns(client_slug)
+  def list_clients()
+
+### portal/app/routes/admin.py
+  def admin_dashboard
+  def create_share_link
+  def admin_comments
+  def admin_campaigns
+  def admin_campaign_detail
+
+### portal/app/routes/review.py
+  def campaign_review
+  def content_review
+
+### portal/manage.py
+  def init_db()
+  def create_link(client, campaign, label)
+  def list_links()
+  def revoke_link(token_str)
+  def list_comments(token_str)
 
 ## CLAUDE.md Present
-This repo has a CLAUDE.md with project-specific instructions.
+This repo has CLAUDE.md files at: / (global), /Users/aleksandravelickovic/ (personal), and content-ops/ (project).
