@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Find Self Storage — Content Audit | June 2026</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --surface: #1a1d27;
+    --surface2: #222636;
+    --border: #2e3248;
+    --text: #e2e4f0;
+    --muted: #8b90a8;
+    --accent: #6c8ff0;
+    --red: #f04f5a;
+    --orange: #f09c3a;
+    --yellow: #f0d43a;
+    --green: #3af09c;
+    --teal: #3acff0;
+    --purple: #b07af0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; font-size: 14px; line-height: 1.6; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .header { padding: 32px 40px 24px; border-bottom: 1px solid var(--border); }
+  .header-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; }
+  .header h1 { font-size: 22px; font-weight: 700; color: #fff; }
+  .header .meta { font-size: 12px; color: var(--muted); margin-top: 4px; }
+  .header .meta a { color: var(--muted); }
+  .badges { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .badge { padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; letter-spacing: 0.03em; }
+  .badge-urgent { background: rgba(240,79,90,0.15); color: var(--red); border: 1px solid rgba(240,79,90,0.3); }
+  .badge-review { background: rgba(108,143,240,0.15); color: var(--accent); border: 1px solid rgba(108,143,240,0.3); }
+  .badge-pages { background: rgba(58,207,240,0.1); color: var(--teal); border: 1px solid rgba(58,207,240,0.2); }
+
+  .container { max-width: 1300px; margin: 0 auto; padding: 32px 40px; }
+
+  /* SCORECARD */
+  .scorecard { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 40px; }
+  .score-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 18px 16px; text-align: center; }
+  .score-card .page-name { font-size: 11px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
+  .score-card .grade { font-size: 36px; font-weight: 800; line-height: 1; margin-bottom: 4px; }
+  .grade-A { color: var(--green); }
+  .grade-Bplus { color: #7af09c; }
+  .grade-B { color: var(--yellow); }
+  .grade-Bminus { color: var(--orange); }
+  .score-card .sub-scores { display: flex; flex-direction: column; gap: 5px; margin-top: 10px; }
+  .sub-row { display: flex; justify-content: space-between; align-items: center; }
+  .sub-label { font-size: 10px; color: var(--muted); }
+  .sub-bar-wrap { flex: 1; margin: 0 8px; height: 4px; background: var(--border); border-radius: 2px; }
+  .sub-bar { height: 4px; border-radius: 2px; }
+  .sub-val { font-size: 10px; color: var(--text); font-weight: 600; min-width: 20px; text-align: right; }
+
+  /* SECTION HEADERS */
+  .section-title { font-size: 13px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+
+  /* FINDING CARDS */
+  .findings-grid { display: flex; flex-direction: column; gap: 10px; margin-bottom: 40px; }
+  .finding { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px 18px; border-left: 3px solid var(--border); }
+  .finding-critical { border-left-color: var(--red); }
+  .finding-major { border-left-color: var(--orange); }
+  .finding-minor { border-left-color: var(--yellow); }
+  .finding-good { border-left-color: var(--green); }
+  .finding-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 8px; }
+  .finding-id { font-size: 10px; font-weight: 700; letter-spacing: 0.06em; padding: 2px 7px; border-radius: 4px; flex-shrink: 0; margin-top: 2px; }
+  .id-critical { background: rgba(240,79,90,0.15); color: var(--red); }
+  .id-major { background: rgba(240,156,58,0.15); color: var(--orange); }
+  .id-minor { background: rgba(240,212,58,0.15); color: var(--yellow); }
+  .id-good { background: rgba(58,240,156,0.15); color: var(--green); }
+  .finding-title { font-size: 14px; font-weight: 600; color: #fff; flex: 1; }
+  .finding-body { font-size: 13px; color: var(--muted); line-height: 1.65; }
+  .finding-body strong { color: var(--text); }
+  .finding-pages { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+  .page-tag { font-size: 11px; padding: 2px 8px; border-radius: 12px; background: var(--surface2); color: var(--muted); border: 1px solid var(--border); }
+  .page-tag.affected { background: rgba(240,79,90,0.08); color: var(--red); border-color: rgba(240,79,90,0.2); }
+  .code-block { background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; padding: 10px 14px; margin: 10px 0 0; font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 12px; color: var(--muted); line-height: 1.5; }
+  .code-block .del { color: var(--red); }
+  .code-block .ins { color: var(--green); }
+
+  /* PRIORITY TABLE */
+  .priority-table { width: 100%; border-collapse: collapse; margin-bottom: 40px; }
+  .priority-table th { background: var(--surface2); color: var(--muted); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+  .priority-table td { padding: 10px 14px; border-bottom: 1px solid rgba(46,50,72,0.5); font-size: 13px; color: var(--text); vertical-align: top; }
+  .priority-table tr:hover td { background: rgba(255,255,255,0.02); }
+  .effort-low { color: var(--green); font-size: 11px; font-weight: 600; }
+  .effort-med { color: var(--yellow); font-size: 11px; font-weight: 600; }
+  .effort-csm { color: var(--purple); font-size: 11px; font-weight: 600; }
+  .effort-triv { color: var(--teal); font-size: 11px; font-weight: 600; }
+
+  /* PAGE BREAKDOWN */
+  .pages-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 40px; }
+  .page-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px; }
+  .page-card.full-width { grid-column: 1 / -1; }
+  .page-card-title { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+  .page-card-url { font-size: 11px; color: var(--muted); margin-bottom: 14px; }
+  .check-list { display: flex; flex-direction: column; gap: 6px; }
+  .check-row { display: flex; align-items: flex-start; gap: 8px; font-size: 12px; }
+  .check-icon { flex-shrink: 0; margin-top: 1px; font-size: 13px; }
+  .check-pass { color: var(--green); }
+  .check-fail { color: var(--red); }
+  .check-warn { color: var(--orange); }
+  .check-text { color: var(--text); }
+  .check-sub { color: var(--muted); font-size: 11px; }
+  .divider { height: 1px; background: var(--border); margin: 14px 0; }
+
+  /* WHAT'S WORKING */
+  .working-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 40px; }
+  .working-item { background: var(--surface); border: 1px solid rgba(58,240,156,0.15); border-radius: 8px; padding: 14px 16px; }
+  .working-item .wi-title { font-size: 13px; font-weight: 600; color: var(--green); margin-bottom: 4px; }
+  .working-item .wi-body { font-size: 12px; color: var(--muted); line-height: 1.55; }
+
+  /* FOOTER */
+  .footer { text-align: center; padding: 32px; color: var(--muted); font-size: 11px; border-top: 1px solid var(--border); margin-top: 16px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-top">
+    <div>
+      <h1>Find Self Storage — Content Optimization Audit</h1>
+      <p class="meta">June 2026 &nbsp;·&nbsp; 5 pages &nbsp;·&nbsp; Audited 2026-06-17 &nbsp;·&nbsp; <a href="https://app.clickup.com/t/868jw1d5z" target="_blank">ClickUp task ↗</a></p>
+    </div>
+    <div class="badges">
+      <span class="badge badge-urgent">Urgent</span>
+      <span class="badge badge-review">Content Team Reviewing</span>
+      <span class="badge badge-pages">5 Pages</span>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- SCORECARD -->
+  <div class="section-title">Overall Scores</div>
+  <div class="scorecard">
+
+    <div class="score-card">
+      <div class="page-name">Car Storage</div>
+      <div class="grade grade-B">B</div>
+      <div class="sub-scores">
+        <div class="sub-row"><span class="sub-label">Scope</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:80%;background:#f0d43a;"></div></div><span class="sub-val">8</span></div>
+        <div class="sub-row"><span class="sub-label">Fluency</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:70%;background:#f0d43a;"></div></div><span class="sub-val">7</span></div>
+        <div class="sub-row"><span class="sub-label">Compliance</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:70%;background:#f0d43a;"></div></div><span class="sub-val">7</span></div>
+        <div class="sub-row"><span class="sub-label">Deliverables</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:50%;background:#f04f5a;"></div></div><span class="sub-val">5</span></div>
+      </div>
+    </div>
+
+    <div class="score-card">
+      <div class="page-name">Boat Storage</div>
+      <div class="grade grade-B">B</div>
+      <div class="sub-scores">
+        <div class="sub-row"><span class="sub-label">Scope</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:90%;background:#7af09c;"></div></div><span class="sub-val">9</span></div>
+        <div class="sub-row"><span class="sub-label">Fluency</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:60%;background:#f09c3a;"></div></div><span class="sub-val">6</span></div>
+        <div class="sub-row"><span class="sub-label">Compliance</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:70%;background:#f0d43a;"></div></div><span class="sub-val">7</span></div>
+        <div class="sub-row"><span class="sub-label">Deliverables</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:50%;background:#f04f5a;"></div></div><span class="sub-val">5</span></div>
+      </div>
+    </div>
+
+    <div class="score-card">
+      <div class="page-name">RV Storage</div>
+      <div class="grade grade-Bminus">B−</div>
+      <div class="sub-scores">
+        <div class="sub-row"><span class="sub-label">Scope</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:70%;background:#f09c3a;"></div></div><span class="sub-val">7</span></div>
+        <div class="sub-row"><span class="sub-label">Fluency</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:80%;background:#f0d43a;"></div></div><span class="sub-val">8</span></div>
+        <div class="sub-row"><span class="sub-label">Compliance</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:70%;background:#f0d43a;"></div></div><span class="sub-val">7</span></div>
+        <div class="sub-row"><span class="sub-label">Deliverables</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:50%;background:#f04f5a;"></div></div><span class="sub-val">5</span></div>
+      </div>
+    </div>
+
+    <div class="score-card">
+      <div class="page-name">Wine Storage</div>
+      <div class="grade grade-Bplus">B+</div>
+      <div class="sub-scores">
+        <div class="sub-row"><span class="sub-label">Scope</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:80%;background:#f0d43a;"></div></div><span class="sub-val">8</span></div>
+        <div class="sub-row"><span class="sub-label">Fluency</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:90%;background:#7af09c;"></div></div><span class="sub-val">9</span></div>
+        <div class="sub-row"><span class="sub-label">Compliance</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:70%;background:#f0d43a;"></div></div><span class="sub-val">7</span></div>
+        <div class="sub-row"><span class="sub-label">Deliverables</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:50%;background:#f04f5a;"></div></div><span class="sub-val">5</span></div>
+      </div>
+    </div>
+
+    <div class="score-card">
+      <div class="page-name">Motorcycle</div>
+      <div class="grade grade-B">B</div>
+      <div class="sub-scores">
+        <div class="sub-row"><span class="sub-label">Scope</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:90%;background:#7af09c;"></div></div><span class="sub-val">9</span></div>
+        <div class="sub-row"><span class="sub-label">Fluency</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:70%;background:#f0d43a;"></div></div><span class="sub-val">7</span></div>
+        <div class="sub-row"><span class="sub-label">Compliance</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:60%;background:#f09c3a;"></div></div><span class="sub-val">6</span></div>
+        <div class="sub-row"><span class="sub-label">Deliverables</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:50%;background:#f04f5a;"></div></div><span class="sub-val">5</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CRITICAL FINDINGS -->
+  <div class="section-title">Critical Findings — Fix Before Publish</div>
+  <div class="findings-grid">
+
+    <div class="finding finding-critical">
+      <div class="finding-header">
+        <div class="finding-title">C1 — /storage-unit-near-me link missing on all 5 pages</div>
+        <span class="finding-id id-critical">CRITICAL</span>
+      </div>
+      <div class="finding-body">The task scope requires a contextual link to <strong>/storage-unit-near-me</strong> on every page. It is not listed in the deliverables section of any page's optimization notes. Either absent or undocumented. Best placement: the "Find [X] Near You" CTA section.</div>
+      <div class="finding-pages">
+        <span class="page-tag affected">Car</span>
+        <span class="page-tag affected">Boat</span>
+        <span class="page-tag affected">RV</span>
+        <span class="page-tag affected">Wine</span>
+        <span class="page-tag affected">Motorcycle</span>
+      </div>
+    </div>
+
+    <div class="finding finding-critical">
+      <div class="finding-header">
+        <div class="finding-title">C2 — "Our" ownership language in pricing sections and FAQs</div>
+        <span class="finding-id id-critical">CRITICAL</span>
+      </div>
+      <div class="finding-body">FindSelfStorage.com is a marketplace aggregator — not an operator. Possessive "our" language implies ownership and is a style system violation on every page.</div>
+      <div class="code-block">
+        <span class="del">Car: "facilities listed through <strong>our search tool</strong>"</span><br>
+        <span class="del">Boat: "facilities you'll find through <strong>our search tool</strong>"</span><br>
+        <span class="del">RV: "facilities in <strong>our search network</strong>"</span><br>
+        <span class="del">Wine FAQ: "Use <strong>our search tool</strong> to find..."</span><br>
+        <span class="del">Motorcycle FAQ: "Use <strong>our search tool</strong> to find..."</span><br><br>
+        <span class="ins">→ "facilities listed on FindSelfStorage.com"</span><br>
+        <span class="ins">→ "the FindSelfStorage.com search"</span><br>
+        <span class="ins">→ "facilities in the network"</span>
+      </div>
+      <div class="finding-pages">
+        <span class="page-tag affected">Car</span>
+        <span class="page-tag affected">Boat</span>
+        <span class="page-tag affected">RV</span>
+        <span class="page-tag affected">Wine</span>
+        <span class="page-tag affected">Motorcycle</span>
+      </div>
+    </div>
+
+    <div class="finding finding-critical">
+      <div class="finding-header">
+        <div class="finding-title">C3 — RV page is missing the climate control section</div>
+        <span class="finding-id id-critical">CRITICAL</span>
+      </div>
+      <div class="finding-body">Every other vehicle page has an explicit H2 covering when climate control matters (car: <em>"Should You Look for Climate Controlled Car Storage?"</em>; boat, motorcycle: same pattern). The RV page has no equivalent. This is both a scope gap and a cross-set inconsistency — climate control for RVs is a real search query.
+      <br><br><strong>Fix:</strong> Add a "Do You Need Climate Controlled RV Storage?" section, matching the structure on the other vehicle pages. Note that availability varies by facility and direct users to check listings.</div>
+      <div class="finding-pages">
+        <span class="page-tag affected">RV</span>
+      </div>
+    </div>
+
+    <div class="finding finding-critical">
+      <div class="finding-header">
+        <div class="finding-title">C4 — Three formatting errors that will publish broken</div>
+        <span class="finding-id id-critical">CRITICAL</span>
+      </div>
+      <div class="finding-body">Merged lines in two pages, and a truncated keyword on the RV page.</div>
+      <div class="code-block">
+        <strong>Wine</strong> — "Who Needs Wine Storage" bullet list:<br>
+        <span class="del">"Wine purchased to age for years before opening<strong>Restaurant</strong> and hospitality businesses"</span><br>
+        <span class="ins">→ Missing line break between two separate bullet points</span><br><br>
+        <strong>Motorcycle</strong> — keywords block:<br>
+        <span class="del">"Indoor motorcycle storage<strong>Motorcycle</strong> winter storage"</span><br>
+        <span class="ins">→ Missing line break between two keywords</span><br><br>
+        <strong>RV</strong> — meta keywords:<br>
+        <span class="del">"How much does rv storage cos"</span><br>
+        <span class="ins">→ Truncated — missing final "t"</span>
+      </div>
+      <div class="finding-pages">
+        <span class="page-tag affected">Wine</span>
+        <span class="page-tag affected">Motorcycle</span>
+        <span class="page-tag affected">RV</span>
+      </div>
+    </div>
+
+    <div class="finding finding-critical">
+      <div class="finding-header">
+        <div class="finding-title">C5 — "Whilst" in motorcycle intro</div>
+        <span class="finding-id id-critical">CRITICAL</span>
+      </div>
+      <div class="finding-body">British English on a US platform. One occurrence in the motorcycle page intro.</div>
+      <div class="code-block">
+        <span class="del">"...at a price that fits most budgets <strong>whilst</strong> keeping it ready to ride..."</span><br>
+        <span class="ins">→ "...while keeping it ready to ride..."</span>
+      </div>
+      <div class="finding-pages">
+        <span class="page-tag affected">Motorcycle</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MAJOR FINDINGS -->
+  <div class="section-title">Major Findings — Fix Before Publish</div>
+  <div class="findings-grid">
+
+    <div class="finding finding-major">
+      <div class="finding-header">
+        <div class="finding-title">M1 — Car page H1 uses "Vehicle" instead of "Car"</div>
+        <span class="finding-id id-major">MAJOR</span>
+      </div>
+      <div class="finding-body">The primary keyword is "car storage" not "vehicle storage." Every other page keeps its noun consistent through the H1. This dilutes exact-match signal.</div>
+      <div class="code-block">
+        <span class="del">H1: "Car Storage Units: Find Indoor, Covered &amp; Outdoor <strong>Vehicle</strong> Storage Near You"</span><br>
+        <span class="ins">→ "Car Storage Units: Find Indoor, Covered &amp; Outdoor <strong>Car</strong> Storage Near You"</span>
+      </div>
+      <div class="finding-pages">
+        <span class="page-tag affected">Car</span>
+      </div>
+    </div>
+
+    <div class="finding finding-major">
+      <div class="finding-header">
+        <div class="finding-title">M2 — Car page H2 implies agency ("We Connect You With")</div>
+        <span class="finding-id id-major">MAJOR</span>
+      </div>
+      <div class="finding-body">The H2 "Types of Car Storage Units <strong>We Connect You With</strong>" implies the platform operates as a connector/agent, not a neutral marketplace. It's the only heading across all 5 pages with this framing.</div>
+      <div class="code-block">
+        <span class="del">"Types of Car Storage Units <strong>We Connect You With</strong>"</span><br>
+        <span class="ins">→ "Types of Car Storage Units" or "Car Storage Unit Types Explained"</span>
+      </div>
+      <div class="finding-pages">
+        <span class="page-tag affected">Car</span>
+      </div>
+    </div>
+
+    <div class="finding finding-major">
+      <div class="finding-header">
+        <div class="finding-title">M3 — Car and Boat intros follow identical syntactic template</div>
+        <span class="finding-id id-major">MAJOR</span>
+      </div>
+      <div class="finding-body">Both intros use the same sentence scaffold: <em>"Whether you [X, Y, or Z], [noun] units offer a safer and more [adjective] [solution/alternative] than leaving your [item] exposed in a [location]."</em> Anyone reading both pages notices this immediately. It signals bulk production, not original writing.</div>
+      <div class="code-block">
+        <strong>Car:</strong> "Whether you're reclaiming your garage from a seasonal sports car, protecting a classic during winter, or need long-term secure parking while you travel, car storage units offer a safer and more accessible <strong>alternative</strong> than leaving your vehicle exposed on a driveway..."<br><br>
+        <strong>Boat:</strong> "Whether you need winter storage for a fishing boat, a secure spot to park your pontoon between outings, or a protected space for a cabin cruiser you only use seasonally, boat storage units offer a safer and more practical <strong>solution</strong> than leaving your watercraft exposed in a driveway..."
+      </div>
+      <div class="finding-body" style="margin-top:10px;"><strong>Fix:</strong> Rewrite the Boat intro with a distinct structure. Boats have specific triggers — dock access, HOA parking bans, haul-out timing — that can open the page without mirroring the Car intro.</div>
+      <div class="finding-pages">
+        <span class="page-tag affected">Boat</span>
+        <span class="page-tag">Car</span>
+      </div>
+    </div>
+
+    <div class="finding finding-major">
+      <div class="finding-header">
+        <div class="finding-title">M4 — "Specialty Wine Vaults" may not be in the network</div>
+        <span class="finding-id id-major">MAJOR</span>
+      </div>
+      <div class="finding-body">The wine page introduces Specialty Wine Vaults as a storage type "available through" the platform. This is not a confirmed storage category in the FindSelfStorage.com style system or website research. If the platform does not list specialty wine vaults, this describes a service it can't deliver — a factual accuracy issue.</div>
+      <div class="finding-body" style="margin-top:8px;"><strong>Action required:</strong> CSM to confirm whether specialty wine vault facilities are in the network. If not confirmed, reframe as general market context: <em>"Some markets have dedicated wine vault facilities, though availability varies. Filter for climate-controlled options near you to see what's listed."</em></div>
+      <div class="finding-pages">
+        <span class="page-tag affected">Wine</span>
+      </div>
+    </div>
+
+    <div class="finding finding-major">
+      <div class="finding-header">
+        <div class="finding-title">M5 — Motorcycle meta title secondary segment is generic</div>
+        <span class="finding-id id-major">MAJOR</span>
+      </div>
+      <div class="finding-body">Car uses "All Car Storage Types"; Boat uses "All Boat Storage Types." Motorcycle uses "All Storage Types" — which adds no keyword value and breaks the cross-set pattern.</div>
+      <div class="code-block">
+        <span class="del">"Motorcycle Storage Units Near You | <strong>All Storage Types</strong>"</span><br>
+        <span class="ins">→ "Motorcycle Storage Units Near You | All Motorcycle Storage Types"</span><br>
+        <span class="ins">→ or: "Indoor &amp; Outdoor Motorcycle Storage Near You" (matches H1)</span>
+      </div>
+      <div class="finding-pages">
+        <span class="page-tag affected">Motorcycle</span>
+      </div>
+    </div>
+
+    <div class="finding finding-major">
+      <div class="finding-header">
+        <div class="finding-title">M6 — SERP competitor analysis not documented on any page</div>
+        <span class="finding-id id-major">MAJOR</span>
+      </div>
+      <div class="finding-body">Task scope requires identifying 3–5 direct competitors per page for structure reference. No optimization notes section documents which pages were reviewed or what was learned. This is either undone or undocumented — both are deliverable failures for the ClickUp task.</div>
+      <div class="finding-pages">
+        <span class="page-tag affected">Car</span>
+        <span class="page-tag affected">Boat</span>
+        <span class="page-tag affected">RV</span>
+        <span class="page-tag affected">Wine</span>
+        <span class="page-tag affected">Motorcycle</span>
+      </div>
+    </div>
+
+    <div class="finding finding-major">
+      <div class="finding-header">
+        <div class="finding-title">M7 — Internal links not enumerated in any deliverable</div>
+        <span class="finding-id id-major">MAJOR</span>
+      </div>
+      <div class="finding-body">Scope requires a listed set of internal links added per page. The optimization notes confirm cross-links exist in the body and CTAs were updated, but never list the actual links. Add an "Internal Links Added" section to each page's optimization notes with full anchor text and destination URLs.</div>
+      <div class="finding-pages">
+        <span class="page-tag affected">Car</span>
+        <span class="page-tag affected">Boat</span>
+        <span class="page-tag affected">RV</span>
+        <span class="page-tag affected">Wine</span>
+        <span class="page-tag affected">Motorcycle</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MINOR FINDINGS -->
+  <div class="section-title">Minor Findings</div>
+  <div class="findings-grid">
+
+    <div class="finding finding-minor">
+      <div class="finding-header">
+        <div class="finding-title">N1 — CTA closing blocks are copy-paste across all 5 pages</div>
+        <span class="finding-id id-minor">MINOR</span>
+      </div>
+      <div class="finding-body">The sentence <em>"Compare prices, check availability, and reserve your unit online in minutes."</em> appears verbatim in the closing CTA of every page. Fine for conversion consistency, but the paragraph-level repetition is noticeable. Vary at least the final sentence by page.</div>
+      <div class="finding-pages">
+        <span class="page-tag affected">Car</span>
+        <span class="page-tag affected">Boat</span>
+        <span class="page-tag affected">RV</span>
+        <span class="page-tag affected">Wine</span>
+        <span class="page-tag affected">Motorcycle</span>
+      </div>
+    </div>
+
+    <div class="finding finding-minor">
+      <div class="finding-header">
+        <div class="finding-title">N2 — Prep checklist section openers are formulaic (AI fingerprint)</div>
+        <span class="finding-id id-minor">MINOR</span>
+      </div>
+      <div class="finding-body">Each vehicle page opens its prep section with the same construction. These are textbook AI-generated checklist intros — replace with vehicle-specific openers.</div>
+      <div class="code-block">
+        <span class="del">Car: "Take these steps before parking your vehicle to prevent..."</span><br>
+        <span class="del">Boat: "Properly preparing your boat before storing it protects..."</span><br>
+        <span class="del">RV: "Proper preparation protects your RV from..."</span><br>
+        <span class="del">Motorcycle: "Proper preparation protects the engine, paint, tires..."</span>
+      </div>
+      <div class="finding-pages">
+        <span class="page-tag affected">Car</span>
+        <span class="page-tag affected">Boat</span>
+        <span class="page-tag affected">RV</span>
+        <span class="page-tag affected">Motorcycle</span>
+      </div>
+    </div>
+
+    <div class="finding finding-minor">
+      <div class="finding-header">
+        <div class="finding-title">N3 — Propane step in RV prep checklist is underweight</div>
+        <span class="finding-id id-minor">MINOR</span>
+      </div>
+      <div class="finding-body">Every prep step in the RV checklist has 2–3 sentences of guidance. The propane step — a safety item — is one brief sentence: <em>"Check and note the propane."</em> This is underdeveloped relative to the rest of the checklist and relative to what the topic requires. Expand to cover: turn off the valve, why propane must be off in enclosed storage, whether to remove tanks for long-term storage.</div>
+      <div class="finding-pages">
+        <span class="page-tag affected">RV</span>
+      </div>
+    </div>
+
+    <div class="finding finding-minor">
+      <div class="finding-header">
+        <div class="finding-title">N4 — "Near you" duplicated in wine CTA</div>
+        <span class="finding-id id-minor">MINOR</span>
+      </div>
+      <div class="finding-body">Simple copy error in the wine page CTA section.</div>
+      <div class="code-block">
+        <span class="del">"Search facilities near you to find climate controlled storage options <strong>near you</strong>."</span><br>
+        <span class="ins">→ "Find climate controlled storage options near you."</span>
+      </div>
+      <div class="finding-pages">
+        <span class="page-tag affected">Wine</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- WHAT'S WORKING -->
+  <div class="section-title">What's Working — Preserve These</div>
+  <div class="working-grid">
+    <div class="working-item">
+      <div class="wi-title">Wine page intro</div>
+      <div class="wi-body">"Wine is one of the few things you store that actively changes based on its environment." — Best opener in the set. Specific, human, immediately useful. This is the voice model for the other pages.</div>
+    </div>
+    <div class="working-item">
+      <div class="wi-title">RV class table</div>
+      <div class="wi-body">Unique to this page. Class A/B/C classification directly affects unit sizing decisions — this is information users genuinely need and competitors don't always provide clearly.</div>
+    </div>
+    <div class="working-item">
+      <div class="wi-title">Motorcycle "Ready to Ride After Storage" section</div>
+      <div class="wi-body">Differentiating section not present on any other page. Creates a natural second visit for seasonal riders. Well-executed, practical, earns the page a longer dwell time.</div>
+    </div>
+    <div class="working-item">
+      <div class="wi-title">Boat dry stack section</div>
+      <div class="wi-body">Well-structured, honest about limitations (advance notice, staffing hours), not oversold. Exactly the kind of decision-support content the scope called for.</div>
+    </div>
+    <div class="working-item">
+      <div class="wi-title">All unit size tables</div>
+      <div class="wi-body">Complete, specific, and matched to real vehicle types. These tables answer the actual search query and are well-formatted for scanning.</div>
+    </div>
+    <div class="working-item">
+      <div class="wi-title">Prep checklists (detail level)</div>
+      <div class="wi-body">11, 12, 10, and 9 steps respectively — thorough and specific. The depth is appropriate for high-intent informational searchers and competitive with the best-performing pages in this SERP category.</div>
+    </div>
+    <div class="working-item">
+      <div class="wi-title">FAQ count and structure</div>
+      <div class="wi-body">All 5 pages hit 6 FAQs, each structured as a discrete question with a focused answer. The PAA-style phrasing is consistent throughout.</div>
+    </div>
+    <div class="working-item">
+      <div class="wi-title">Marketplace framing in body copy</div>
+      <div class="wi-body">Body sections consistently avoid "our facilities" and "our units." Violations are limited to FAQs and pricing summaries — the main content is clean on this dimension.</div>
+    </div>
+    <div class="working-item">
+      <div class="wi-title">Cross-linking between vehicle pages</div>
+      <div class="wi-body">Car, boat, RV, and motorcycle cross-link to each other appropriately in the "Also looking for..." sections. Internal equity is flowing correctly across the vehicle cluster.</div>
+    </div>
+  </div>
+
+  <!-- PER-PAGE BREAKDOWN -->
+  <div class="section-title">Per-Page Issue Summary</div>
+  <div class="pages-grid">
+
+    <div class="page-card">
+      <div class="page-card-title">Car Storage Units</div>
+      <div class="page-card-url">findselfstorage.com/car-storage-units</div>
+      <div class="check-list">
+        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Scope coverage complete — all required sections present</span></div>
+        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">6 FAQs — meets requirement</span></div>
+        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Size table complete, pricing table present</span></div>
+        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Prep checklist 11 steps — thorough</span></div>
+        <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">/storage-unit-near-me link not documented <span class="check-sub">[C1]</span></span></div>
+        <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">H1 says "Vehicle" instead of "Car" <span class="check-sub">[M1]</span></span></div>
+        <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">H2 "We Connect You With" — ownership language <span class="check-sub">[M2]</span></span></div>
+        <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">"Our search tool" in pricing section <span class="check-sub">[C2]</span></span></div>
+        <div class="check-row"><span class="check-icon check-warn">⚠</span><span class="check-text">Intro template matches Boat page structure <span class="check-sub">[M3]</span></span></div>
+        <div class="check-row"><span class="check-icon check-warn">⚠</span><span class="check-text">SERP competitors not documented <span class="check-sub">[M6]</span></span></div>
+        <div class="check-row"><span class="check-icon check-warn">⚠</span><span class="check-text">Internal links not listed in deliverables <span class="check-sub">[M7]</span></span></div>
+      </div>
+    </div>
+
+    <div class="page-card">
+      <div class="page-card-title">Boat Storage Units</div>
+      <div class="page-card-url">findselfstorage.com/boat-storage-units</div>
+      <div class="check-list">
+        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Best scope coverage in the set — all sections present including dry stack</span></div>
+        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">6 FAQs — meets requirement</span></div>
+        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Vessel size table complete with measurement guidance</span></div>
+        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">12-step prep checklist — most thorough in the set</span></div>
+        <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">/storage-unit-near-me link not documented <span class="check-sub">[C1]</span></span></div>
+        <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">"Our search tool" in pricing section <span class="check-sub">[C2]</span></span></div>
+        <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">Intro is structural copy of Car page intro <span class="check-sub">[M3]</span></span></div>
+        <div class="check-row"><span class="check-icon check-warn">⚠</span><span class="check-text">SERP competitors not documented <span class="check-sub">[M6]</span></span></div>
+        <div class="check-row"><span class="check-icon check-warn">⚠</span><span class="check-text">Internal links not listed in deliverables <span class="check-sub">[M7]</span></span></div>
+      </div>
+    </div>
+
+    <div class="page-card">
+      <div class="page-card-title">RV Storage Units</div>
+      <div class="page-card-url">findselfstorage.com/rv-storage-units</div>
+      <div class="check-list">
+        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Best intro in the vehicle set — distinctive, no template echo</span></div>
+        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Unique RV class table — genuine differentiator</span></div>
+        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">6 FAQs including HOA question — meets requirement</span></div>
+        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">10-step prep checklist</span></div>
+        <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">Climate control section missing — scope gap <span class="check-sub">[C3]</span></span></div>
+        <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">/storage-unit-near-me link not documented <span class="check-sub">[C1]</span></span></div>
+        <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">"Our search network" in pricing section <span class="check-sub">[C2]</span></span></div>
+        <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">Meta keywords typo "rv storage cos" <span class="check-sub">[C4]</span></span></div>
+        <div class="check-row"><span class="check-icon check-warn">⚠</span><span class="check-text">Propane step is a single sentence — safety gap <span class="check-sub">[N3]</span></span></div>
+        <div class="check-row"><span class="check-icon check-warn">⚠</span><span class="check-text">SERP competitors not documented <span class="check-sub">[M6]</span></span></div>
+      </div>
+    </div>
+
+    <div class="page-card">
+      <div class="page-card-title">Wine Storage Units</div>
+      <div class="page-card-url">findselfstorage.com/wine-storage-units</div>
+      <div class="check-list">
+        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Best-written page in the set — strongest intro, most human voice</span></div>
+        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Unique page structure appropriate to the topic (environmental factors framework)</span></div>
+        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">6 FAQs — meets requirement</span></div>
+        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Pricing table present with per-case and per-unit ranges</span></div>
+        <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">Merged line in "Who Needs Wine Storage" — will publish broken <span class="check-sub">[C4]</span></span></div>
+        <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">"Our search tool" in FAQ answer <span class="check-sub">[C2]</span></span></div>
+        <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">"Near you" duplicated in CTA sentence <span class="check-sub">[N4]</span></span></div>
+        <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">/storage-unit-near-me link not documented <span class="check-sub">[C1]</span></span></div>
+        <div class="check-row"><span class="check-icon check-warn">⚠</span><span class="check-text">Specialty Wine Vaults — confirm whether in network <span class="check-sub">[M4]</span></span></div>
+        <div class="check-row"><span class="check-icon check-warn">⚠</span><span class="check-text">No numbered prep checklist (has prose equivalent — confirm format with CSM)</span></div>
+      </div>
+    </div>
+
+    <div class="page-card full-width">
+      <div class="page-card-title">Motorcycle Storage Units</div>
+      <div class="page-card-url">findselfstorage.com/motorcycle-storage-units</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div class="check-list">
+          <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Scope coverage complete — all sections present</span></div>
+          <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Unique "Ready to Ride After Storage" section — differentiator</span></div>
+          <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">6 FAQs — meets requirement</span></div>
+          <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Size table complete with sidecar and two-bike options</span></div>
+        </div>
+        <div class="check-list">
+          <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">"Whilst" in intro — British English <span class="check-sub">[C5]</span></span></div>
+          <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">Keywords formatting error — merged lines <span class="check-sub">[C4]</span></span></div>
+          <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">"Our search tool" in FAQ <span class="check-sub">[C2]</span></span></div>
+          <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">Meta title secondary segment generic: "All Storage Types" <span class="check-sub">[M5]</span></span></div>
+          <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">/storage-unit-near-me link not documented <span class="check-sub">[C1]</span></span></div>
+          <div class="check-row"><span class="check-icon check-warn">⚠</span><span class="check-text">SERP competitors not documented <span class="check-sub">[M6]</span></span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PRIORITY TABLE -->
+  <div class="section-title">Action Priority Order</div>
+  <table class="priority-table">
+    <thead>
+      <tr><th>#</th><th>Action</th><th>Pages</th><th>Effort</th><th>ID</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Fix formatting errors (merged lines, truncated keyword)</td><td>Wine, Motorcycle, RV</td><td><span class="effort-triv">Trivial</span></td><td>C4</td></tr>
+      <tr><td>2</td><td>Fix "whilst" → "while" in motorcycle intro</td><td>Motorcycle</td><td><span class="effort-triv">Trivial</span></td><td>C5</td></tr>
+      <tr><td>3</td><td>Replace all "our search tool / our network" language</td><td>All 5</td><td><span class="effort-low">Low</span></td><td>C2</td></tr>
+      <tr><td>4</td><td>Fix "near you" duplication in wine CTA</td><td>Wine</td><td><span class="effort-triv">Trivial</span></td><td>N4</td></tr>
+      <tr><td>5</td><td>Add /storage-unit-near-me link to each page</td><td>All 5</td><td><span class="effort-low">Low</span></td><td>C1</td></tr>
+      <tr><td>6</td><td>Fix Car H1: "Vehicle" → "Car"</td><td>Car</td><td><span class="effort-triv">Trivial</span></td><td>M1</td></tr>
+      <tr><td>7</td><td>Fix Car H2: remove "We Connect You With"</td><td>Car</td><td><span class="effort-triv">Trivial</span></td><td>M2</td></tr>
+      <tr><td>8</td><td>Fix Motorcycle meta title: "All Motorcycle Storage Types"</td><td>Motorcycle</td><td><span class="effort-triv">Trivial</span></td><td>M5</td></tr>
+      <tr><td>9</td><td>Add climate control section to RV page</td><td>RV</td><td><span class="effort-med">Medium</span></td><td>C3</td></tr>
+      <tr><td>10</td><td>Rewrite Boat intro (distinct from Car intro)</td><td>Boat</td><td><span class="effort-med">Medium</span></td><td>M3</td></tr>
+      <tr><td>11</td><td>Expand propane step in RV checklist</td><td>RV</td><td><span class="effort-low">Low</span></td><td>N3</td></tr>
+      <tr><td>12</td><td>Confirm Specialty Wine Vaults with CSM</td><td>Wine</td><td><span class="effort-csm">CSM decision</span></td><td>M4</td></tr>
+      <tr><td>13</td><td>Document SERP competitors in optimization notes</td><td>All 5</td><td><span class="effort-med">Medium</span></td><td>M6</td></tr>
+      <tr><td>14</td><td>List internal links added in deliverables</td><td>All 5</td><td><span class="effort-low">Low</span></td><td>M7</td></tr>
+      <tr><td>15</td><td>Vary prep checklist section openers (AI fingerprint)</td><td>Car, Boat, RV, Moto</td><td><span class="effort-low">Low</span></td><td>N2</td></tr>
+    </tbody>
+  </table>
+
+</div>
+
+<div class="footer">
+  Find Self Storage — Content Optimization Audit · June 2026 · Generated 2026-06-17 by content-ops
+</div>
+
+</body>
+</html>
