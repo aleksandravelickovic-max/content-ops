@@ -1,101 +1,120 @@
 ---
-description: Research and generate a semantic & NLP terms reference doc for a Zia Tile article.
-argument-hint: <client-slug> <article-slug> <primary-keyword> [<keyword2> <keyword3>]
+description: Research semantic and NLP terms before drafting, then produce a protected-terms doc for the editor after.
+argument-hint: <client-slug> <article-slug> <primary-keyword> [<keyword2> <keyword3>] [--pre-draft | --post-draft]
 model: sonnet
 ---
 
-Generate a semantic and NLP terms reference document for a content piece. Run this before finishing any article. The primary output is a **do-not-remove list** — terms already in the draft that carry semantic weight and must survive editing. Secondary sections cover gaps and intentional omissions.
+Runs in two phases depending on where it sits in the pipeline.
+
+- `--pre-draft` (stage 0): SERP research before writing begins. Extracts NLP and semantic terms from top-ranking pages and saves them as drafting guidance so the writer knows which terms to incorporate.
+- `--post-draft` (stage 16, default): Cross-references the finished article against the pre-draft terms list, then produces a clean protected-terms doc for the editor. The editor doc lists only what is in the article — no gap analysis, no editorial notes.
+
+---
 
 ## Input
 
-`$ARGUMENTS`: `<client-slug> <article-slug> <primary-keyword> [<keyword2> <keyword3>]`
+`$ARGUMENTS`: `<client-slug> <article-slug> <primary-keyword> [<keyword2> <keyword3>] [--pre-draft | --post-draft]`
 
 - `client-slug` — e.g. `zia-tile`
 - `article-slug` — matches the draft filename or URL slug, e.g. `herringbone-tile-pattern`
 - `primary-keyword` — the main target keyword, e.g. `herringbone tile`
 - `keyword2`, `keyword3` — optional secondary keywords
+- `--pre-draft` — run phase 1 only
+- `--post-draft` — run phase 2 only (default when called from stage 16)
 
-## What this command does
+---
 
-1. **Reads the draft** at `clients/{client}/campaigns/**/drafts/**/{article-slug}*.md`. If no draft is found, produce the doc without cross-reference and note it.
-2. **Searches the SERP** for the primary keyword (plus secondary keywords if provided) using WebSearch. Block pinterest.com, instagram.com, youtube.com.
-3. **Fetches the top 3–4 ranking pages** using WebFetch. Target comprehensive guides, not product pages or forums. Run fetches in parallel.
-4. **Extracts NLP terms** from the fetched pages: technical terms, material names, installation terms, layout terms, room applications, tools, measurements, and recurring concepts.
-5. **Cross-references** extracted terms against the draft — marking each as present, thin, or missing.
-6. **Writes the output** to `clients/{client}/semantic-terms/{article-slug}.md`.
+## Phase 1 — Pre-draft research (`--pre-draft`)
 
-## Output format
+Run this before the brief is written.
+
+1. **Search the SERP** for the primary keyword (plus secondary keywords) using WebSearch. Block pinterest.com, instagram.com, youtube.com.
+2. **Fetch the top 3–4 ranking pages** using WebFetch in parallel. Target comprehensive guides, not product pages or forums.
+3. **Extract NLP and semantic terms** from each page: technical terms, material names, installation terms, layout terms, room applications, tools, measurements, and recurring concepts. Only include terms that appear on the fetched pages — no invention.
+4. **Identify intentional omissions** — terms that appear on SERP pages but are not applicable to this client's product range. For Zia, this includes porcelain, vinyl, travertine, wood, and wood look tile.
+5. **Write `nlp-guidance.md`** to the run directory as drafting input for the writer.
+
+### nlp-guidance.md format
 
 ```markdown
----
-article: {article-slug}
-url: {client-domain}/blogs/...
-primary_keyword: {primary-keyword}
-keywords: {all keywords}
-grader_score: {score if available, else "not run"}
-source: SERP research ({domains fetched})
----
+# NLP & Semantic Terms — Drafting Guidance
+# {Article Title}
 
-# Semantic & NLP Terms — {Article Title}
+These terms appear across top-ranking pages for "{primary keyword}".
+Incorporate them naturally into the draft. Do not force them — use where they fit.
 
-*Internal reference. Do not remove the terms in Section 1 during editing.*
+## Terms to incorporate
 
----
+**{category}**
+- {term}
+- {term}
 
-## Do not remove — these terms are present and carry semantic weight
+## Do not include — not applicable for {client}
 
-These terms appear in the draft and match what ranking pages cover for this topic.
-Editing and rewriting is fine. Removing these terms entirely reduces topical coverage.
-
-{bulleted list, grouped by category: pattern/layout | installation | materials | room applications | maintenance}
-
----
-
-## Missing or thin — consider adding before publishing
-
-| Term | Gap | Where it could fit |
-|---|---|---|
-| {term} | Not mentioned / thin | {section name in the draft} |
-
----
-
-## Not applicable for {client} — intentional omissions
-
-These terms appear on SERP pages but should not be added.
-
-| Term | Reason |
-|---|---|
-| {term} | {one-line reason, e.g. "Zia does not carry porcelain"} |
-
----
-
-## Related search terms
-
-Useful for heading variations and FAQ expansion only — do not force into body copy.
-
-{bulleted list}
+- {term} — {one-line reason}
 ```
 
-## Rules
+---
 
-- **Section 1 is the deliverable.** The do-not-remove list is what the editor needs before every editing session. Make it complete and grouped so it is scannable at a glance.
-- **No invention.** Only include terms that actually appear on the fetched SERP pages. Do not add terms from general SEO knowledge or assumption.
-- **Flag intentional omissions clearly.** For Zia, terms like "porcelain," "vinyl," "wood tile" belong in Section 3 — they appear on ranking pages but Zia does not carry these materials.
-- **Keep gap notes tight.** One line per gap. Name the specific section of the draft where the term could be added.
-- **Do not rewrite the draft.** This command produces a reference doc only. All editing decisions belong to the editor.
-- If the draft does not exist yet, omit Sections 1 and 2 and note: *"Draft not yet available — cross-reference pending."*
+## Phase 2 — Post-draft protected-terms doc (`--post-draft`)
 
-## Output location
+Run this after the article passes all pipeline gates and before delivery to the editor.
 
-`clients/{client}/semantic-terms/{article-slug}.md`
+1. **Read the finished draft** at `clients/{client}/campaigns/**/drafts/**/{article-slug}*.md`.
+2. **Read `nlp-guidance.md`** from the run directory.
+3. **Cross-reference**: identify which terms from the guidance doc are present in the finished article.
+4. **Write two files:**
+   - `clients/{client}/semantic-terms/{article-slug}.md` — the editor-facing protected-terms doc (format below)
+   - Append the path to `RUN-SUMMARY.md`
+
+### Editor-facing protected-terms doc format
+
+```markdown
+# Protected Terms — {Article Title}
+
+These terms are in the article. Do not remove or replace them during editing.
+They are present because they match what search engines and ranking pages expect for this topic.
+
+**{category}**
+- {term}
+- {term}
+
+**{category}**
+- {term}
+```
+
+Rules for this doc:
+- **No gap analysis.** No missing terms, no editorial notes, no recommendations.
+- **No intentional omissions section.** That is internal only and lives in `nlp-guidance.md`.
+- **Grouped by category** so it is scannable: pattern/layout — installation — materials — room applications — grout and finish — design concepts.
+- **Clean enough to hand directly to the editor.** No internal process language.
+
+---
+
+## Output locations
+
+| File | Purpose |
+|---|---|
+| `runs/{slug}/nlp-guidance.md` | Drafting input — writer reads this before and during writing |
+| `clients/{client}/semantic-terms/{article-slug}.md` | Editor doc — Brittany's do-not-change list |
 
 Create `clients/{client}/semantic-terms/` if it does not exist.
 
-## When to run
+---
 
-- **In the pipeline:** `/run-piece` calls this as stage 16 (after `/render-html`). Output is referenced in `RUN-SUMMARY.md`.
-- **Standalone:** Run for any article drafted outside the pipeline, or before any editorial revision session.
+## Integration with the pipeline
+
+`/run-piece` calls this command at two points:
+
+- **Stage 0** (before brief): `--pre-draft` — produces `nlp-guidance.md`
+- **Stage 16** (after render-html): `--post-draft` — produces the editor protected-terms doc
+
+Standalone usage:
 
 ```
-/semantic-terms zia-tile herringbone-tile-pattern "herringbone tile" "herringbone pattern" "herringbone floor tile"
+# Before drafting
+/semantic-terms zia-tile herringbone-tile-pattern "herringbone tile" "herringbone pattern" "herringbone floor tile" --pre-draft
+
+# After drafting
+/semantic-terms zia-tile herringbone-tile-pattern "herringbone tile" "herringbone pattern" "herringbone floor tile" --post-draft
 ```

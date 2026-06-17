@@ -12,7 +12,7 @@ Orchestrate a single content piece from brief to scored draft. You are the orche
 - `content-type`: `collection` | `product` | `blog`
 - `--resume`: continue from the last completed stage in the existing state file.
 
-## Setup (before stage 1)
+## Setup (before stage 0)
 
 1. **Identify** client, content-type, material, topic.
 2. **Confirm context files exist:** `clients/{client}/STYLE-SYSTEM.md`, `clients/{client}/materials/{material}.md`, `clients/{client}/page-templates/{content-type}.md`, `clients/{client}/contact-block.md`. If any is missing, stop and report.
@@ -23,6 +23,7 @@ Orchestrate a single content piece from brief to scored draft. You are the orche
 
 | # | Stage | Agent / command | Gate behavior |
 |---|---|---|---|
+| 0 | NLP research | `/semantic-terms --pre-draft` | informational: never halts |
 | 1 | Brief | `/brief` | advisory |
 | 2 | Draft | `/draft-{content-type}` | advisory (drafter self-checks) |
 | 3 | Placeholder check | `placeholder-check` | **critical**: any unfilled slot or hedge halts |
@@ -38,9 +39,13 @@ Orchestrate a single content piece from brief to scored draft. You are the orche
 | 13 | Voice judge | `voice-judge` | **gate**: score < 80 halts |
 | 14 | Koray judge | `koray-judge` | **gate**: score < 80 halts |
 | 15 | Render HTML | `/render-html` | mechanical: never halts on its own |
-| 16 | NLP terms | `cg_run_content_grader` | informational: never halts |
+| 16 | Protected terms | `/semantic-terms --post-draft` | informational: never halts |
 
-Stages 3-10 are the mechanical enforcers (cheap, run first to fail fast). Stages 13-14 are the scored gates (run last on a clean draft). Stage 15 is deterministic — it converts the gate-cleared MD into the canonical `.html` delivery artifact (decision: 2026-05-27). It runs only after all critical stages pass; a halted piece does not produce an `.html`. Stage 16 runs immediately after stage 15 and appends an internal semantic terms file for use during editing.
+**Stage 0** runs SERP research before the brief is written and produces `nlp-guidance.md` in the run directory. The brief and drafter read this file to know which terms to incorporate. Stage 0 failure never halts the pipeline — log it and continue.
+
+**Stage 16** cross-references the finished article against the stage 0 term list and writes `clients/{client}/semantic-terms/{piece-slug}.md` — a clean protected-terms doc for the editor (Brittany). No gap analysis, no editorial notes. Just the terms in the article that must not be removed.
+
+Stages 3-10 are the mechanical enforcers (cheap, run first to fail fast). Stages 13-14 are the scored gates (run last on a clean draft). Stage 15 is deterministic — it converts the gate-cleared MD into the canonical `.html` delivery artifact (decision: 2026-05-27). It runs only after all critical stages pass; a halted piece does not produce an `.html`.
 
 **Why placeholder-check runs first (stage 3):** an unfilled placeholder breaks the input every later stage works on — material-guard might silently pass a draft that says "approved for [TBD]" because the literal claim is missing. Catch placeholders before any rule-checker reads the draft.
 
@@ -69,15 +74,19 @@ A BLOCKED verdict from keyway-check halts the pipeline at that boundary. The BLO
 
 A PASS verdict records the boundary as crossed in `state.json` (`keyways.B{n}: { status: "passed", at: ISO-8601 }`) and lets the next stage run.
 
-## Stage 16 — NLP terms (informational, non-blocking)
+## Stage 0 — NLP research (informational, non-blocking)
 
-Run `/semantic-terms {client} {piece-slug} {primary-keyword} [{keyword2} {keyword3}]` after stage 15 succeeds. The command handles SERP research, term extraction, and file writing. See `commands/semantic-terms.md` for full spec.
+Run `/semantic-terms {client} {piece-slug} {primary-keyword} [{keyword2} {keyword3}] --pre-draft` before the brief.
 
-The output is a **do-not-remove list** — terms already in the draft that carry semantic weight and must survive any subsequent editorial revision. Secondary sections cover gaps and intentional omissions.
+Writes `clients/{client}/campaigns/{campaign}/runs/{piece-slug}/nlp-guidance.md` — the term list the brief and drafter use to know what to incorporate. Stage 0 failure never halts; log it in `state.json` as `"nlp_research": "failed"` and continue without it.
 
-For reference, the stage writes `semantic-terms.md` to the run directory (`clients/{client}/campaigns/{campaign}/runs/{piece-slug}/semantic-terms.md`) and to `clients/{client}/semantic-terms/{piece-slug}.md`.
+## Stage 16 — Protected terms doc (informational, non-blocking)
 
-The semantic-terms file is a sidecar — never merged into the draft MD or the rendered HTML. Stage 16 failure never blocks delivery; log it in `state.json` as `"nlp_terms": "failed"` and continue.
+Run `/semantic-terms {client} {piece-slug} {primary-keyword} [{keyword2} {keyword3}] --post-draft` after stage 15.
+
+Reads the finished article, cross-references against the stage 0 term list, and writes `clients/{client}/semantic-terms/{piece-slug}.md` — a clean list of terms present in the article that the editor must not remove. No gap analysis. No editorial notes. This file is the deliverable for Brittany.
+
+Stage 16 failure never halts delivery; log it in `state.json` as `"nlp_terms": "failed"` and continue.
 
 ## Halt protocol
 
