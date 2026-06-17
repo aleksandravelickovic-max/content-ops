@@ -6,19 +6,10 @@
 <title>Find Self Storage — Content Audit | June 2026</title>
 <style>
   :root {
-    --bg: #0f1117;
-    --surface: #1a1d27;
-    --surface2: #222636;
-    --border: #2e3248;
-    --text: #e2e4f0;
-    --muted: #8b90a8;
-    --accent: #6c8ff0;
-    --red: #f04f5a;
-    --orange: #f09c3a;
-    --yellow: #f0d43a;
-    --green: #3af09c;
-    --teal: #3acff0;
-    --purple: #b07af0;
+    --bg: #0f1117; --surface: #1a1d27; --surface2: #222636; --border: #2e3248;
+    --text: #e2e4f0; --muted: #8b90a8; --accent: #6c8ff0;
+    --red: #f04f5a; --orange: #f09c3a; --yellow: #f0d43a;
+    --green: #3af09c; --teal: #3acff0; --purple: #b07af0;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; font-size: 14px; line-height: 1.6; }
@@ -36,6 +27,18 @@
   .badge-review { background: rgba(108,143,240,0.15); color: var(--accent); border: 1px solid rgba(108,143,240,0.3); }
   .badge-pages { background: rgba(58,207,240,0.1); color: var(--teal); border: 1px solid rgba(58,207,240,0.2); }
 
+  /* TAB NAV */
+  .tab-nav { position: sticky; top: 0; z-index: 100; background: var(--bg); border-bottom: 1px solid var(--border); padding: 0 32px; display: flex; gap: 0; overflow-x: auto; scrollbar-width: none; }
+  .tab-nav::-webkit-scrollbar { display: none; }
+  .tab-btn { background: none; border: none; border-bottom: 2px solid transparent; padding: 13px 18px; color: var(--muted); cursor: pointer; font-size: 13px; font-weight: 500; white-space: nowrap; transition: color 0.15s, border-color 0.15s; font-family: inherit; }
+  .tab-btn:hover { color: var(--text); }
+  .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+  .tab-check { color: var(--green); margin-left: 5px; font-size: 10px; }
+
+  /* TAB PANELS */
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
   .container { max-width: 1300px; margin: 0 auto; padding: 32px 40px; }
 
   /* SCORECARD */
@@ -43,10 +46,7 @@
   .score-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 18px 16px; text-align: center; }
   .score-card .page-name { font-size: 11px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
   .score-card .grade { font-size: 36px; font-weight: 800; line-height: 1; margin-bottom: 4px; }
-  .grade-A { color: var(--green); }
-  .grade-Bplus { color: #7af09c; }
-  .grade-B { color: var(--yellow); }
-  .grade-Bminus { color: var(--orange); }
+  .grade-A { color: var(--green); } .grade-Bplus { color: #7af09c; } .grade-B { color: var(--yellow); } .grade-Bminus { color: var(--orange); }
   .score-card .sub-scores { display: flex; flex-direction: column; gap: 5px; margin-top: 10px; }
   .sub-row { display: flex; justify-content: space-between; align-items: center; }
   .sub-label { font-size: 10px; color: var(--muted); }
@@ -54,22 +54,16 @@
   .sub-bar { height: 4px; border-radius: 2px; }
   .sub-val { font-size: 10px; color: var(--text); font-weight: 600; min-width: 20px; text-align: right; }
 
-  /* SECTION HEADERS */
   .section-title { font-size: 13px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
 
-  /* FINDING CARDS */
   .findings-grid { display: flex; flex-direction: column; gap: 10px; margin-bottom: 40px; }
   .finding { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px 18px; border-left: 3px solid var(--border); }
-  .finding-critical { border-left-color: var(--red); }
-  .finding-major { border-left-color: var(--orange); }
-  .finding-minor { border-left-color: var(--yellow); }
-  .finding-good { border-left-color: var(--green); }
+  .finding-critical { border-left-color: var(--red); } .finding-major { border-left-color: var(--orange); }
+  .finding-minor { border-left-color: var(--yellow); } .finding-good { border-left-color: var(--green); }
   .finding-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 8px; }
   .finding-id { font-size: 10px; font-weight: 700; letter-spacing: 0.06em; padding: 2px 7px; border-radius: 4px; flex-shrink: 0; margin-top: 2px; }
-  .id-critical { background: rgba(240,79,90,0.15); color: var(--red); }
-  .id-major { background: rgba(240,156,58,0.15); color: var(--orange); }
-  .id-minor { background: rgba(240,212,58,0.15); color: var(--yellow); }
-  .id-good { background: rgba(58,240,156,0.15); color: var(--green); }
+  .id-critical { background: rgba(240,79,90,0.15); color: var(--red); } .id-major { background: rgba(240,156,58,0.15); color: var(--orange); }
+  .id-minor { background: rgba(240,212,58,0.15); color: var(--yellow); } .id-good { background: rgba(58,240,156,0.15); color: var(--green); }
   .finding-title { font-size: 14px; font-weight: 600; color: #fff; flex: 1; }
   .finding-body { font-size: 13px; color: var(--muted); line-height: 1.65; }
   .finding-body strong { color: var(--text); }
@@ -77,20 +71,15 @@
   .page-tag { font-size: 11px; padding: 2px 8px; border-radius: 12px; background: var(--surface2); color: var(--muted); border: 1px solid var(--border); }
   .page-tag.affected { background: rgba(240,79,90,0.08); color: var(--red); border-color: rgba(240,79,90,0.2); }
   .code-block { background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; padding: 10px 14px; margin: 10px 0 0; font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 12px; color: var(--muted); line-height: 1.5; }
-  .code-block .del { color: var(--red); }
-  .code-block .ins { color: var(--green); }
+  .code-block .del { color: var(--red); } .code-block .ins { color: var(--green); }
 
-  /* PRIORITY TABLE */
   .priority-table { width: 100%; border-collapse: collapse; margin-bottom: 40px; }
   .priority-table th { background: var(--surface2); color: var(--muted); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); }
   .priority-table td { padding: 10px 14px; border-bottom: 1px solid rgba(46,50,72,0.5); font-size: 13px; color: var(--text); vertical-align: top; }
   .priority-table tr:hover td { background: rgba(255,255,255,0.02); }
-  .effort-low { color: var(--green); font-size: 11px; font-weight: 600; }
-  .effort-med { color: var(--yellow); font-size: 11px; font-weight: 600; }
-  .effort-csm { color: var(--purple); font-size: 11px; font-weight: 600; }
-  .effort-triv { color: var(--teal); font-size: 11px; font-weight: 600; }
+  .effort-low { color: var(--green); font-size: 11px; font-weight: 600; } .effort-med { color: var(--yellow); font-size: 11px; font-weight: 600; }
+  .effort-csm { color: var(--purple); font-size: 11px; font-weight: 600; } .effort-triv { color: var(--teal); font-size: 11px; font-weight: 600; }
 
-  /* PAGE BREAKDOWN */
   .pages-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 40px; }
   .page-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px; }
   .page-card.full-width { grid-column: 1 / -1; }
@@ -99,20 +88,48 @@
   .check-list { display: flex; flex-direction: column; gap: 6px; }
   .check-row { display: flex; align-items: flex-start; gap: 8px; font-size: 12px; }
   .check-icon { flex-shrink: 0; margin-top: 1px; font-size: 13px; }
-  .check-pass { color: var(--green); }
-  .check-fail { color: var(--red); }
-  .check-warn { color: var(--orange); }
-  .check-text { color: var(--text); }
-  .check-sub { color: var(--muted); font-size: 11px; }
-  .divider { height: 1px; background: var(--border); margin: 14px 0; }
+  .check-pass { color: var(--green); } .check-fail { color: var(--red); } .check-warn { color: var(--orange); }
+  .check-text { color: var(--text); } .check-sub { color: var(--muted); font-size: 11px; }
 
-  /* WHAT'S WORKING */
   .working-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 40px; }
   .working-item { background: var(--surface); border: 1px solid rgba(58,240,156,0.15); border-radius: 8px; padding: 14px 16px; }
   .working-item .wi-title { font-size: 13px; font-weight: 600; color: var(--green); margin-bottom: 4px; }
   .working-item .wi-body { font-size: 12px; color: var(--muted); line-height: 1.55; }
 
-  /* FOOTER */
+  /* CONTENT PAGE STYLES */
+  .content-page { max-width: 820px; margin: 0 auto; padding: 40px 40px 60px; }
+  .content-meta-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; }
+  .cm-row { display: grid; grid-template-columns: 100px 1fr; gap: 10px; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 12px; }
+  .cm-row:last-child { border-bottom: none; }
+  .cm-key { font-weight: 600; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; padding-top: 1px; }
+  .cm-val { color: var(--text); line-height: 1.5; }
+  .kw-wrap { display: flex; flex-wrap: wrap; gap: 5px; }
+  .kw-tag { background: var(--surface2); border: 1px solid var(--border); border-radius: 12px; padding: 2px 8px; font-size: 11px; color: var(--muted); }
+  .corrected-banner { background: rgba(58,240,156,0.07); border: 1px solid rgba(58,240,156,0.2); border-radius: 8px; padding: 12px 16px; color: var(--green); font-size: 12px; font-weight: 500; margin-bottom: 32px; }
+  .corrected-banner ul { margin: 6px 0 0 18px; color: rgba(58,240,156,0.7); font-size: 11px; line-height: 1.8; list-style: disc; }
+  .page-content { line-height: 1.75; }
+  .page-content h1 { font-size: 26px; font-weight: 800; color: #fff; margin: 0 0 20px; line-height: 1.25; }
+  .page-content h2 { font-size: 18px; font-weight: 700; color: #fff; margin: 36px 0 14px; padding-top: 24px; border-top: 1px solid var(--border); }
+  .page-content h3 { font-size: 15px; font-weight: 700; color: var(--text); margin: 22px 0 10px; }
+  .page-content p { color: var(--muted); margin-bottom: 13px; font-size: 14px; }
+  .page-content p strong { color: var(--text); }
+  .page-content ul, .page-content ol { margin: 0 0 14px 22px; }
+  .page-content li { color: var(--muted); font-size: 14px; margin-bottom: 5px; }
+  .page-content li strong { color: var(--text); }
+  .page-content table { width: 100%; border-collapse: collapse; margin: 14px 0 20px; }
+  .page-content th { background: var(--surface2); color: var(--muted); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; padding: 9px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+  .page-content td { padding: 9px 14px; border-bottom: 1px solid rgba(46,50,72,0.5); font-size: 13px; color: var(--text); }
+  .page-content tr:hover td { background: rgba(255,255,255,0.02); }
+  .faq-item { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px 18px; margin-bottom: 10px; }
+  .faq-q { font-weight: 600; color: var(--text); font-size: 14px; margin-bottom: 8px; }
+  .faq-a { color: var(--muted); font-size: 13px; line-height: 1.65; }
+  .link-block { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; margin: 20px 0; }
+  .link-block p { color: var(--muted); margin-bottom: 8px; font-size: 13px; }
+  .link-block ul { margin: 0 0 0 18px; }
+  .link-block li { font-size: 13px; margin-bottom: 4px; }
+  .note-p { background: rgba(108,143,240,0.06); border-left: 3px solid rgba(108,143,240,0.3); padding: 10px 14px; margin: 12px 0; font-size: 13px; color: var(--muted); border-radius: 0 6px 6px 0; }
+  .inline-links { color: var(--muted); font-size: 13px; margin: 16px 0; padding: 10px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; }
+
   .footer { text-align: center; padding: 32px; color: var(--muted); font-size: 11px; border-top: 1px solid var(--border); margin-top: 16px; }
 </style>
 </head>
@@ -132,12 +149,21 @@
   </div>
 </div>
 
+<div class="tab-nav">
+  <button class="tab-btn active" data-tab="audit">Audit Report</button>
+  <button class="tab-btn" data-tab="car">Car Storage <span class="tab-check">✓</span></button>
+  <button class="tab-btn" data-tab="boat">Boat Storage <span class="tab-check">✓</span></button>
+  <button class="tab-btn" data-tab="rv">RV Storage <span class="tab-check">✓</span></button>
+  <button class="tab-btn" data-tab="wine">Wine Storage <span class="tab-check">✓</span></button>
+  <button class="tab-btn" data-tab="motorcycle">Motorcycle <span class="tab-check">✓</span></button>
+</div>
+
+<!-- TAB: AUDIT REPORT -->
+<div id="tab-audit" class="tab-panel active">
 <div class="container">
 
-  <!-- SCORECARD -->
   <div class="section-title">Overall Scores</div>
   <div class="scorecard">
-
     <div class="score-card">
       <div class="page-name">Car Storage</div>
       <div class="grade grade-B">B</div>
@@ -148,7 +174,6 @@
         <div class="sub-row"><span class="sub-label">Deliverables</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:50%;background:#f04f5a;"></div></div><span class="sub-val">5</span></div>
       </div>
     </div>
-
     <div class="score-card">
       <div class="page-name">Boat Storage</div>
       <div class="grade grade-B">B</div>
@@ -159,7 +184,6 @@
         <div class="sub-row"><span class="sub-label">Deliverables</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:50%;background:#f04f5a;"></div></div><span class="sub-val">5</span></div>
       </div>
     </div>
-
     <div class="score-card">
       <div class="page-name">RV Storage</div>
       <div class="grade grade-Bminus">B−</div>
@@ -170,7 +194,6 @@
         <div class="sub-row"><span class="sub-label">Deliverables</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:50%;background:#f04f5a;"></div></div><span class="sub-val">5</span></div>
       </div>
     </div>
-
     <div class="score-card">
       <div class="page-name">Wine Storage</div>
       <div class="grade grade-Bplus">B+</div>
@@ -181,7 +204,6 @@
         <div class="sub-row"><span class="sub-label">Deliverables</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:50%;background:#f04f5a;"></div></div><span class="sub-val">5</span></div>
       </div>
     </div>
-
     <div class="score-card">
       <div class="page-name">Motorcycle</div>
       <div class="grade grade-B">B</div>
@@ -192,33 +214,17 @@
         <div class="sub-row"><span class="sub-label">Deliverables</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:50%;background:#f04f5a;"></div></div><span class="sub-val">5</span></div>
       </div>
     </div>
-
   </div>
 
-  <!-- CRITICAL FINDINGS -->
   <div class="section-title">Critical Findings — Fix Before Publish</div>
   <div class="findings-grid">
-
     <div class="finding finding-critical">
-      <div class="finding-header">
-        <div class="finding-title">C1 — /storage-unit-near-me link missing on all 5 pages</div>
-        <span class="finding-id id-critical">CRITICAL</span>
-      </div>
+      <div class="finding-header"><div class="finding-title">C1 — /storage-unit-near-me link missing on all 5 pages</div><span class="finding-id id-critical">CRITICAL</span></div>
       <div class="finding-body">The task scope requires a contextual link to <strong>/storage-unit-near-me</strong> on every page. It is not listed in the deliverables section of any page's optimization notes. Either absent or undocumented. Best placement: the "Find [X] Near You" CTA section.</div>
-      <div class="finding-pages">
-        <span class="page-tag affected">Car</span>
-        <span class="page-tag affected">Boat</span>
-        <span class="page-tag affected">RV</span>
-        <span class="page-tag affected">Wine</span>
-        <span class="page-tag affected">Motorcycle</span>
-      </div>
+      <div class="finding-pages"><span class="page-tag affected">Car</span><span class="page-tag affected">Boat</span><span class="page-tag affected">RV</span><span class="page-tag affected">Wine</span><span class="page-tag affected">Motorcycle</span></div>
     </div>
-
     <div class="finding finding-critical">
-      <div class="finding-header">
-        <div class="finding-title">C2 — "Our" ownership language in pricing sections and FAQs</div>
-        <span class="finding-id id-critical">CRITICAL</span>
-      </div>
+      <div class="finding-header"><div class="finding-title">C2 — "Our" ownership language in pricing sections and FAQs</div><span class="finding-id id-critical">CRITICAL</span></div>
       <div class="finding-body">FindSelfStorage.com is a marketplace aggregator — not an operator. Possessive "our" language implies ownership and is a style system violation on every page.</div>
       <div class="code-block">
         <span class="del">Car: "facilities listed through <strong>our search tool</strong>"</span><br>
@@ -230,32 +236,15 @@
         <span class="ins">→ "the FindSelfStorage.com search"</span><br>
         <span class="ins">→ "facilities in the network"</span>
       </div>
-      <div class="finding-pages">
-        <span class="page-tag affected">Car</span>
-        <span class="page-tag affected">Boat</span>
-        <span class="page-tag affected">RV</span>
-        <span class="page-tag affected">Wine</span>
-        <span class="page-tag affected">Motorcycle</span>
-      </div>
+      <div class="finding-pages"><span class="page-tag affected">Car</span><span class="page-tag affected">Boat</span><span class="page-tag affected">RV</span><span class="page-tag affected">Wine</span><span class="page-tag affected">Motorcycle</span></div>
     </div>
-
     <div class="finding finding-critical">
-      <div class="finding-header">
-        <div class="finding-title">C3 — RV page is missing the climate control section</div>
-        <span class="finding-id id-critical">CRITICAL</span>
-      </div>
-      <div class="finding-body">Every other vehicle page has an explicit H2 covering when climate control matters (car: <em>"Should You Look for Climate Controlled Car Storage?"</em>; boat, motorcycle: same pattern). The RV page has no equivalent. This is both a scope gap and a cross-set inconsistency — climate control for RVs is a real search query.
-      <br><br><strong>Fix:</strong> Add a "Do You Need Climate Controlled RV Storage?" section, matching the structure on the other vehicle pages. Note that availability varies by facility and direct users to check listings.</div>
-      <div class="finding-pages">
-        <span class="page-tag affected">RV</span>
-      </div>
+      <div class="finding-header"><div class="finding-title">C3 — RV page is missing the climate control section</div><span class="finding-id id-critical">CRITICAL</span></div>
+      <div class="finding-body">Every other vehicle page has an explicit H2 covering when climate control matters. The RV page has no equivalent. This is both a scope gap and a cross-set inconsistency.<br><br><strong>Fix:</strong> Add a "Do You Need Climate Controlled RV Storage?" section matching the structure on the other vehicle pages.</div>
+      <div class="finding-pages"><span class="page-tag affected">RV</span></div>
     </div>
-
     <div class="finding finding-critical">
-      <div class="finding-header">
-        <div class="finding-title">C4 — Three formatting errors that will publish broken</div>
-        <span class="finding-id id-critical">CRITICAL</span>
-      </div>
+      <div class="finding-header"><div class="finding-title">C4 — Three formatting errors that will publish broken</div><span class="finding-id id-critical">CRITICAL</span></div>
       <div class="finding-body">Merged lines in two pages, and a truncated keyword on the RV page.</div>
       <div class="code-block">
         <strong>Wine</strong> — "Who Needs Wine Storage" bullet list:<br>
@@ -268,253 +257,119 @@
         <span class="del">"How much does rv storage cos"</span><br>
         <span class="ins">→ Truncated — missing final "t"</span>
       </div>
-      <div class="finding-pages">
-        <span class="page-tag affected">Wine</span>
-        <span class="page-tag affected">Motorcycle</span>
-        <span class="page-tag affected">RV</span>
-      </div>
+      <div class="finding-pages"><span class="page-tag affected">Wine</span><span class="page-tag affected">Motorcycle</span><span class="page-tag affected">RV</span></div>
     </div>
-
     <div class="finding finding-critical">
-      <div class="finding-header">
-        <div class="finding-title">C5 — "Whilst" in motorcycle intro</div>
-        <span class="finding-id id-critical">CRITICAL</span>
-      </div>
+      <div class="finding-header"><div class="finding-title">C5 — "Whilst" in motorcycle intro</div><span class="finding-id id-critical">CRITICAL</span></div>
       <div class="finding-body">British English on a US platform. One occurrence in the motorcycle page intro.</div>
       <div class="code-block">
         <span class="del">"...at a price that fits most budgets <strong>whilst</strong> keeping it ready to ride..."</span><br>
         <span class="ins">→ "...while keeping it ready to ride..."</span>
       </div>
-      <div class="finding-pages">
-        <span class="page-tag affected">Motorcycle</span>
-      </div>
+      <div class="finding-pages"><span class="page-tag affected">Motorcycle</span></div>
     </div>
-
   </div>
 
-  <!-- MAJOR FINDINGS -->
   <div class="section-title">Major Findings — Fix Before Publish</div>
   <div class="findings-grid">
-
     <div class="finding finding-major">
-      <div class="finding-header">
-        <div class="finding-title">M1 — Car page H1 uses "Vehicle" instead of "Car"</div>
-        <span class="finding-id id-major">MAJOR</span>
-      </div>
-      <div class="finding-body">The primary keyword is "car storage" not "vehicle storage." Every other page keeps its noun consistent through the H1. This dilutes exact-match signal.</div>
+      <div class="finding-header"><div class="finding-title">M1 — Car page H1 uses "Vehicle" instead of "Car"</div><span class="finding-id id-major">MAJOR</span></div>
+      <div class="finding-body">The primary keyword is "car storage" not "vehicle storage." This dilutes exact-match signal.</div>
       <div class="code-block">
         <span class="del">H1: "Car Storage Units: Find Indoor, Covered &amp; Outdoor <strong>Vehicle</strong> Storage Near You"</span><br>
         <span class="ins">→ "Car Storage Units: Find Indoor, Covered &amp; Outdoor <strong>Car</strong> Storage Near You"</span>
       </div>
-      <div class="finding-pages">
-        <span class="page-tag affected">Car</span>
-      </div>
+      <div class="finding-pages"><span class="page-tag affected">Car</span></div>
     </div>
-
     <div class="finding finding-major">
-      <div class="finding-header">
-        <div class="finding-title">M2 — Car page H2 implies agency ("We Connect You With")</div>
-        <span class="finding-id id-major">MAJOR</span>
-      </div>
-      <div class="finding-body">The H2 "Types of Car Storage Units <strong>We Connect You With</strong>" implies the platform operates as a connector/agent, not a neutral marketplace. It's the only heading across all 5 pages with this framing.</div>
+      <div class="finding-header"><div class="finding-title">M2 — Car page H2 implies agency ("We Connect You With")</div><span class="finding-id id-major">MAJOR</span></div>
+      <div class="finding-body">The H2 "Types of Car Storage Units <strong>We Connect You With</strong>" implies the platform operates as a connector/agent, not a neutral marketplace.</div>
       <div class="code-block">
         <span class="del">"Types of Car Storage Units <strong>We Connect You With</strong>"</span><br>
-        <span class="ins">→ "Types of Car Storage Units" or "Car Storage Unit Types Explained"</span>
+        <span class="ins">→ "Types of Car Storage Units"</span>
       </div>
-      <div class="finding-pages">
-        <span class="page-tag affected">Car</span>
-      </div>
+      <div class="finding-pages"><span class="page-tag affected">Car</span></div>
     </div>
-
     <div class="finding finding-major">
-      <div class="finding-header">
-        <div class="finding-title">M3 — Car and Boat intros follow identical syntactic template</div>
-        <span class="finding-id id-major">MAJOR</span>
-      </div>
-      <div class="finding-body">Both intros use the same sentence scaffold: <em>"Whether you [X, Y, or Z], [noun] units offer a safer and more [adjective] [solution/alternative] than leaving your [item] exposed in a [location]."</em> Anyone reading both pages notices this immediately. It signals bulk production, not original writing.</div>
-      <div class="code-block">
-        <strong>Car:</strong> "Whether you're reclaiming your garage from a seasonal sports car, protecting a classic during winter, or need long-term secure parking while you travel, car storage units offer a safer and more accessible <strong>alternative</strong> than leaving your vehicle exposed on a driveway..."<br><br>
-        <strong>Boat:</strong> "Whether you need winter storage for a fishing boat, a secure spot to park your pontoon between outings, or a protected space for a cabin cruiser you only use seasonally, boat storage units offer a safer and more practical <strong>solution</strong> than leaving your watercraft exposed in a driveway..."
-      </div>
-      <div class="finding-body" style="margin-top:10px;"><strong>Fix:</strong> Rewrite the Boat intro with a distinct structure. Boats have specific triggers — dock access, HOA parking bans, haul-out timing — that can open the page without mirroring the Car intro.</div>
-      <div class="finding-pages">
-        <span class="page-tag affected">Boat</span>
-        <span class="page-tag">Car</span>
-      </div>
+      <div class="finding-header"><div class="finding-title">M3 — Car and Boat intros follow identical syntactic template</div><span class="finding-id id-major">MAJOR</span></div>
+      <div class="finding-body">Both intros use the same sentence scaffold: <em>"Whether you [X, Y, or Z], [noun] units offer a safer and more [adjective] [solution/alternative] than leaving your [item] exposed in a [location]."</em> Anyone reading both pages notices immediately.<br><br><strong>Fix:</strong> Rewrite the Boat intro with a distinct structure using boat-specific triggers — dock access, HOA bans, haul-out timing.</div>
+      <div class="finding-pages"><span class="page-tag affected">Boat</span><span class="page-tag">Car</span></div>
     </div>
-
     <div class="finding finding-major">
-      <div class="finding-header">
-        <div class="finding-title">M4 — "Specialty Wine Vaults" may not be in the network</div>
-        <span class="finding-id id-major">MAJOR</span>
-      </div>
-      <div class="finding-body">The wine page introduces Specialty Wine Vaults as a storage type "available through" the platform. This is not a confirmed storage category in the FindSelfStorage.com style system or website research. If the platform does not list specialty wine vaults, this describes a service it can't deliver — a factual accuracy issue.</div>
-      <div class="finding-body" style="margin-top:8px;"><strong>Action required:</strong> CSM to confirm whether specialty wine vault facilities are in the network. If not confirmed, reframe as general market context: <em>"Some markets have dedicated wine vault facilities, though availability varies. Filter for climate-controlled options near you to see what's listed."</em></div>
-      <div class="finding-pages">
-        <span class="page-tag affected">Wine</span>
-      </div>
+      <div class="finding-header"><div class="finding-title">M4 — "Specialty Wine Vaults" may not be in the network</div><span class="finding-id id-major">MAJOR</span></div>
+      <div class="finding-body">The wine page introduces Specialty Wine Vaults as a storage type available through the platform. This is not a confirmed storage category in the FindSelfStorage.com style system.<br><br><strong>Action required:</strong> CSM to confirm. If not confirmed, reframe as general market context with a caveat about availability.</div>
+      <div class="finding-pages"><span class="page-tag affected">Wine</span></div>
     </div>
-
     <div class="finding finding-major">
-      <div class="finding-header">
-        <div class="finding-title">M5 — Motorcycle meta title secondary segment is generic</div>
-        <span class="finding-id id-major">MAJOR</span>
-      </div>
-      <div class="finding-body">Car uses "All Car Storage Types"; Boat uses "All Boat Storage Types." Motorcycle uses "All Storage Types" — which adds no keyword value and breaks the cross-set pattern.</div>
+      <div class="finding-header"><div class="finding-title">M5 — Motorcycle meta title secondary segment is generic</div><span class="finding-id id-major">MAJOR</span></div>
+      <div class="finding-body">Car uses "All Car Storage Types"; Boat uses "All Boat Storage Types." Motorcycle uses "All Storage Types" — no keyword value and breaks the cross-set pattern.</div>
       <div class="code-block">
         <span class="del">"Motorcycle Storage Units Near You | <strong>All Storage Types</strong>"</span><br>
-        <span class="ins">→ "Motorcycle Storage Units Near You | All Motorcycle Storage Types"</span><br>
-        <span class="ins">→ or: "Indoor &amp; Outdoor Motorcycle Storage Near You" (matches H1)</span>
+        <span class="ins">→ "Motorcycle Storage Units Near You | All Motorcycle Storage Types"</span>
       </div>
-      <div class="finding-pages">
-        <span class="page-tag affected">Motorcycle</span>
-      </div>
+      <div class="finding-pages"><span class="page-tag affected">Motorcycle</span></div>
     </div>
-
     <div class="finding finding-major">
-      <div class="finding-header">
-        <div class="finding-title">M6 — SERP competitor analysis not documented on any page</div>
-        <span class="finding-id id-major">MAJOR</span>
-      </div>
-      <div class="finding-body">Task scope requires identifying 3–5 direct competitors per page for structure reference. No optimization notes section documents which pages were reviewed or what was learned. This is either undone or undocumented — both are deliverable failures for the ClickUp task.</div>
-      <div class="finding-pages">
-        <span class="page-tag affected">Car</span>
-        <span class="page-tag affected">Boat</span>
-        <span class="page-tag affected">RV</span>
-        <span class="page-tag affected">Wine</span>
-        <span class="page-tag affected">Motorcycle</span>
-      </div>
+      <div class="finding-header"><div class="finding-title">M6 — SERP competitor analysis not documented on any page</div><span class="finding-id id-major">MAJOR</span></div>
+      <div class="finding-body">Task scope requires identifying 3–5 direct competitors per page for structure reference. No optimization notes section documents which pages were reviewed or what was learned.</div>
+      <div class="finding-pages"><span class="page-tag affected">Car</span><span class="page-tag affected">Boat</span><span class="page-tag affected">RV</span><span class="page-tag affected">Wine</span><span class="page-tag affected">Motorcycle</span></div>
     </div>
-
     <div class="finding finding-major">
-      <div class="finding-header">
-        <div class="finding-title">M7 — Internal links not enumerated in any deliverable</div>
-        <span class="finding-id id-major">MAJOR</span>
-      </div>
-      <div class="finding-body">Scope requires a listed set of internal links added per page. The optimization notes confirm cross-links exist in the body and CTAs were updated, but never list the actual links. Add an "Internal Links Added" section to each page's optimization notes with full anchor text and destination URLs.</div>
-      <div class="finding-pages">
-        <span class="page-tag affected">Car</span>
-        <span class="page-tag affected">Boat</span>
-        <span class="page-tag affected">RV</span>
-        <span class="page-tag affected">Wine</span>
-        <span class="page-tag affected">Motorcycle</span>
-      </div>
+      <div class="finding-header"><div class="finding-title">M7 — Internal links not enumerated in any deliverable</div><span class="finding-id id-major">MAJOR</span></div>
+      <div class="finding-body">Scope requires a listed set of internal links added per page. Cross-links exist in the body but are never listed. Add an "Internal Links Added" section to each page's optimization notes with full anchor text and destination URLs.</div>
+      <div class="finding-pages"><span class="page-tag affected">Car</span><span class="page-tag affected">Boat</span><span class="page-tag affected">RV</span><span class="page-tag affected">Wine</span><span class="page-tag affected">Motorcycle</span></div>
     </div>
-
   </div>
 
-  <!-- MINOR FINDINGS -->
   <div class="section-title">Minor Findings</div>
   <div class="findings-grid">
-
     <div class="finding finding-minor">
-      <div class="finding-header">
-        <div class="finding-title">N1 — CTA closing blocks are copy-paste across all 5 pages</div>
-        <span class="finding-id id-minor">MINOR</span>
-      </div>
-      <div class="finding-body">The sentence <em>"Compare prices, check availability, and reserve your unit online in minutes."</em> appears verbatim in the closing CTA of every page. Fine for conversion consistency, but the paragraph-level repetition is noticeable. Vary at least the final sentence by page.</div>
-      <div class="finding-pages">
-        <span class="page-tag affected">Car</span>
-        <span class="page-tag affected">Boat</span>
-        <span class="page-tag affected">RV</span>
-        <span class="page-tag affected">Wine</span>
-        <span class="page-tag affected">Motorcycle</span>
-      </div>
+      <div class="finding-header"><div class="finding-title">N1 — CTA closing blocks are copy-paste across all 5 pages</div><span class="finding-id id-minor">MINOR</span></div>
+      <div class="finding-body">The sentence <em>"Compare prices, check availability, and reserve your unit online in minutes."</em> appears verbatim in the closing CTA of every page. Vary at least the final sentence by page.</div>
+      <div class="finding-pages"><span class="page-tag affected">Car</span><span class="page-tag affected">Boat</span><span class="page-tag affected">RV</span><span class="page-tag affected">Wine</span><span class="page-tag affected">Motorcycle</span></div>
     </div>
-
     <div class="finding finding-minor">
-      <div class="finding-header">
-        <div class="finding-title">N2 — Prep checklist section openers are formulaic (AI fingerprint)</div>
-        <span class="finding-id id-minor">MINOR</span>
-      </div>
-      <div class="finding-body">Each vehicle page opens its prep section with the same construction. These are textbook AI-generated checklist intros — replace with vehicle-specific openers.</div>
+      <div class="finding-header"><div class="finding-title">N2 — Prep checklist section openers are formulaic (AI fingerprint)</div><span class="finding-id id-minor">MINOR</span></div>
+      <div class="finding-body">Each vehicle page opens its prep section with the same construction — textbook AI-generated checklist intros. Replace with vehicle-specific consequence-first openers.</div>
       <div class="code-block">
         <span class="del">Car: "Take these steps before parking your vehicle to prevent..."</span><br>
         <span class="del">Boat: "Properly preparing your boat before storing it protects..."</span><br>
         <span class="del">RV: "Proper preparation protects your RV from..."</span><br>
         <span class="del">Motorcycle: "Proper preparation protects the engine, paint, tires..."</span>
       </div>
-      <div class="finding-pages">
-        <span class="page-tag affected">Car</span>
-        <span class="page-tag affected">Boat</span>
-        <span class="page-tag affected">RV</span>
-        <span class="page-tag affected">Motorcycle</span>
-      </div>
+      <div class="finding-pages"><span class="page-tag affected">Car</span><span class="page-tag affected">Boat</span><span class="page-tag affected">RV</span><span class="page-tag affected">Motorcycle</span></div>
     </div>
-
     <div class="finding finding-minor">
-      <div class="finding-header">
-        <div class="finding-title">N3 — Propane step in RV prep checklist is underweight</div>
-        <span class="finding-id id-minor">MINOR</span>
-      </div>
-      <div class="finding-body">Every prep step in the RV checklist has 2–3 sentences of guidance. The propane step — a safety item — is one brief sentence: <em>"Check and note the propane."</em> This is underdeveloped relative to the rest of the checklist and relative to what the topic requires. Expand to cover: turn off the valve, why propane must be off in enclosed storage, whether to remove tanks for long-term storage.</div>
-      <div class="finding-pages">
-        <span class="page-tag affected">RV</span>
-      </div>
+      <div class="finding-header"><div class="finding-title">N3 — Propane step in RV prep checklist is underweight</div><span class="finding-id id-minor">MINOR</span></div>
+      <div class="finding-body">Every prep step in the RV checklist has 2–3 sentences. The propane step — a safety item — is a single brief sentence. Expand to cover: turn off the valve, why propane must be off in enclosed storage, whether to remove tanks for long-term storage.</div>
+      <div class="finding-pages"><span class="page-tag affected">RV</span></div>
     </div>
-
     <div class="finding finding-minor">
-      <div class="finding-header">
-        <div class="finding-title">N4 — "Near you" duplicated in wine CTA</div>
-        <span class="finding-id id-minor">MINOR</span>
-      </div>
+      <div class="finding-header"><div class="finding-title">N4 — "Near you" duplicated in wine CTA</div><span class="finding-id id-minor">MINOR</span></div>
       <div class="finding-body">Simple copy error in the wine page CTA section.</div>
       <div class="code-block">
         <span class="del">"Search facilities near you to find climate controlled storage options <strong>near you</strong>."</span><br>
         <span class="ins">→ "Find climate controlled storage options near you."</span>
       </div>
-      <div class="finding-pages">
-        <span class="page-tag affected">Wine</span>
-      </div>
+      <div class="finding-pages"><span class="page-tag affected">Wine</span></div>
     </div>
-
   </div>
 
-  <!-- WHAT'S WORKING -->
   <div class="section-title">What's Working — Preserve These</div>
   <div class="working-grid">
-    <div class="working-item">
-      <div class="wi-title">Wine page intro</div>
-      <div class="wi-body">"Wine is one of the few things you store that actively changes based on its environment." — Best opener in the set. Specific, human, immediately useful. This is the voice model for the other pages.</div>
-    </div>
-    <div class="working-item">
-      <div class="wi-title">RV class table</div>
-      <div class="wi-body">Unique to this page. Class A/B/C classification directly affects unit sizing decisions — this is information users genuinely need and competitors don't always provide clearly.</div>
-    </div>
-    <div class="working-item">
-      <div class="wi-title">Motorcycle "Ready to Ride After Storage" section</div>
-      <div class="wi-body">Differentiating section not present on any other page. Creates a natural second visit for seasonal riders. Well-executed, practical, earns the page a longer dwell time.</div>
-    </div>
-    <div class="working-item">
-      <div class="wi-title">Boat dry stack section</div>
-      <div class="wi-body">Well-structured, honest about limitations (advance notice, staffing hours), not oversold. Exactly the kind of decision-support content the scope called for.</div>
-    </div>
-    <div class="working-item">
-      <div class="wi-title">All unit size tables</div>
-      <div class="wi-body">Complete, specific, and matched to real vehicle types. These tables answer the actual search query and are well-formatted for scanning.</div>
-    </div>
-    <div class="working-item">
-      <div class="wi-title">Prep checklists (detail level)</div>
-      <div class="wi-body">11, 12, 10, and 9 steps respectively — thorough and specific. The depth is appropriate for high-intent informational searchers and competitive with the best-performing pages in this SERP category.</div>
-    </div>
-    <div class="working-item">
-      <div class="wi-title">FAQ count and structure</div>
-      <div class="wi-body">All 5 pages hit 6 FAQs, each structured as a discrete question with a focused answer. The PAA-style phrasing is consistent throughout.</div>
-    </div>
-    <div class="working-item">
-      <div class="wi-title">Marketplace framing in body copy</div>
-      <div class="wi-body">Body sections consistently avoid "our facilities" and "our units." Violations are limited to FAQs and pricing summaries — the main content is clean on this dimension.</div>
-    </div>
-    <div class="working-item">
-      <div class="wi-title">Cross-linking between vehicle pages</div>
-      <div class="wi-body">Car, boat, RV, and motorcycle cross-link to each other appropriately in the "Also looking for..." sections. Internal equity is flowing correctly across the vehicle cluster.</div>
-    </div>
+    <div class="working-item"><div class="wi-title">Wine page intro</div><div class="wi-body">"Wine is one of the few things you store that actively changes based on its environment." — Best opener in the set. Specific, human, immediately useful. This is the voice model for the other pages.</div></div>
+    <div class="working-item"><div class="wi-title">RV class table</div><div class="wi-body">Unique to this page. Class A/B/C classification directly affects unit sizing decisions — this is information users genuinely need and competitors don't always provide clearly.</div></div>
+    <div class="working-item"><div class="wi-title">Motorcycle "Ready to Ride After Storage" section</div><div class="wi-body">Differentiating section not present on any other page. Creates a natural second visit for seasonal riders. Well-executed, practical, earns longer dwell time.</div></div>
+    <div class="working-item"><div class="wi-title">Boat dry stack section</div><div class="wi-body">Well-structured, honest about limitations (advance notice, staffing hours), not oversold. Exactly the kind of decision-support content the scope called for.</div></div>
+    <div class="working-item"><div class="wi-title">All unit size tables</div><div class="wi-body">Complete, specific, and matched to real vehicle types. These tables answer the actual search query and are well-formatted for scanning.</div></div>
+    <div class="working-item"><div class="wi-title">Prep checklists (detail level)</div><div class="wi-body">11, 12, 10, and 9 steps respectively — thorough and specific. The depth is appropriate for high-intent informational searchers.</div></div>
+    <div class="working-item"><div class="wi-title">FAQ count and structure</div><div class="wi-body">All 5 pages hit 6 FAQs, each structured as a discrete question with a focused answer. PAA-style phrasing is consistent throughout.</div></div>
+    <div class="working-item"><div class="wi-title">Marketplace framing in body copy</div><div class="wi-body">Body sections consistently avoid "our facilities" and "our units." Violations are limited to FAQs and pricing summaries — the main content is clean.</div></div>
+    <div class="working-item"><div class="wi-title">Cross-linking between vehicle pages</div><div class="wi-body">Car, boat, RV, and motorcycle cross-link to each other appropriately. Internal equity is flowing correctly across the vehicle cluster.</div></div>
   </div>
 
-  <!-- PER-PAGE BREAKDOWN -->
   <div class="section-title">Per-Page Issue Summary</div>
   <div class="pages-grid">
-
     <div class="page-card">
       <div class="page-card-title">Car Storage Units</div>
       <div class="page-card-url">findselfstorage.com/car-storage-units</div>
@@ -528,90 +383,73 @@
         <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">H2 "We Connect You With" — ownership language <span class="check-sub">[M2]</span></span></div>
         <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">"Our search tool" in pricing section <span class="check-sub">[C2]</span></span></div>
         <div class="check-row"><span class="check-icon check-warn">⚠</span><span class="check-text">Intro template matches Boat page structure <span class="check-sub">[M3]</span></span></div>
-        <div class="check-row"><span class="check-icon check-warn">⚠</span><span class="check-text">SERP competitors not documented <span class="check-sub">[M6]</span></span></div>
-        <div class="check-row"><span class="check-icon check-warn">⚠</span><span class="check-text">Internal links not listed in deliverables <span class="check-sub">[M7]</span></span></div>
       </div>
     </div>
-
     <div class="page-card">
       <div class="page-card-title">Boat Storage Units</div>
       <div class="page-card-url">findselfstorage.com/boat-storage-units</div>
       <div class="check-list">
-        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Best scope coverage in the set — all sections present including dry stack</span></div>
+        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Best scope coverage — all sections present including dry stack</span></div>
         <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">6 FAQs — meets requirement</span></div>
         <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Vessel size table complete with measurement guidance</span></div>
         <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">12-step prep checklist — most thorough in the set</span></div>
         <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">/storage-unit-near-me link not documented <span class="check-sub">[C1]</span></span></div>
         <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">"Our search tool" in pricing section <span class="check-sub">[C2]</span></span></div>
         <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">Intro is structural copy of Car page intro <span class="check-sub">[M3]</span></span></div>
-        <div class="check-row"><span class="check-icon check-warn">⚠</span><span class="check-text">SERP competitors not documented <span class="check-sub">[M6]</span></span></div>
-        <div class="check-row"><span class="check-icon check-warn">⚠</span><span class="check-text">Internal links not listed in deliverables <span class="check-sub">[M7]</span></span></div>
       </div>
     </div>
-
     <div class="page-card">
       <div class="page-card-title">RV Storage Units</div>
       <div class="page-card-url">findselfstorage.com/rv-storage-units</div>
       <div class="check-list">
         <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Best intro in the vehicle set — distinctive, no template echo</span></div>
         <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Unique RV class table — genuine differentiator</span></div>
-        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">6 FAQs including HOA question — meets requirement</span></div>
-        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">10-step prep checklist</span></div>
+        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">6 FAQs including HOA question</span></div>
         <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">Climate control section missing — scope gap <span class="check-sub">[C3]</span></span></div>
         <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">/storage-unit-near-me link not documented <span class="check-sub">[C1]</span></span></div>
         <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">"Our search network" in pricing section <span class="check-sub">[C2]</span></span></div>
         <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">Meta keywords typo "rv storage cos" <span class="check-sub">[C4]</span></span></div>
         <div class="check-row"><span class="check-icon check-warn">⚠</span><span class="check-text">Propane step is a single sentence — safety gap <span class="check-sub">[N3]</span></span></div>
-        <div class="check-row"><span class="check-icon check-warn">⚠</span><span class="check-text">SERP competitors not documented <span class="check-sub">[M6]</span></span></div>
       </div>
     </div>
-
     <div class="page-card">
       <div class="page-card-title">Wine Storage Units</div>
       <div class="page-card-url">findselfstorage.com/wine-storage-units</div>
       <div class="check-list">
-        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Best-written page in the set — strongest intro, most human voice</span></div>
-        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Unique page structure appropriate to the topic (environmental factors framework)</span></div>
+        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Best-written page — strongest intro, most human voice</span></div>
+        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Unique structure appropriate to topic (environmental factors framework)</span></div>
         <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">6 FAQs — meets requirement</span></div>
-        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Pricing table present with per-case and per-unit ranges</span></div>
         <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">Merged line in "Who Needs Wine Storage" — will publish broken <span class="check-sub">[C4]</span></span></div>
         <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">"Our search tool" in FAQ answer <span class="check-sub">[C2]</span></span></div>
-        <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">"Near you" duplicated in CTA sentence <span class="check-sub">[N4]</span></span></div>
+        <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">"Near you" duplicated in CTA <span class="check-sub">[N4]</span></span></div>
         <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">/storage-unit-near-me link not documented <span class="check-sub">[C1]</span></span></div>
         <div class="check-row"><span class="check-icon check-warn">⚠</span><span class="check-text">Specialty Wine Vaults — confirm whether in network <span class="check-sub">[M4]</span></span></div>
-        <div class="check-row"><span class="check-icon check-warn">⚠</span><span class="check-text">No numbered prep checklist (has prose equivalent — confirm format with CSM)</span></div>
       </div>
     </div>
-
     <div class="page-card full-width">
       <div class="page-card-title">Motorcycle Storage Units</div>
       <div class="page-card-url">findselfstorage.com/motorcycle-storage-units</div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
         <div class="check-list">
           <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Scope coverage complete — all sections present</span></div>
-          <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Unique "Ready to Ride After Storage" section — differentiator</span></div>
+          <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Unique "Ready to Ride After Storage" section</span></div>
           <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">6 FAQs — meets requirement</span></div>
-          <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Size table complete with sidecar and two-bike options</span></div>
+          <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Size table includes sidecar and two-bike options</span></div>
         </div>
         <div class="check-list">
           <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">"Whilst" in intro — British English <span class="check-sub">[C5]</span></span></div>
           <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">Keywords formatting error — merged lines <span class="check-sub">[C4]</span></span></div>
           <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">"Our search tool" in FAQ <span class="check-sub">[C2]</span></span></div>
-          <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">Meta title secondary segment generic: "All Storage Types" <span class="check-sub">[M5]</span></span></div>
-          <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">/storage-unit-near-me link not documented <span class="check-sub">[C1]</span></span></div>
-          <div class="check-row"><span class="check-icon check-warn">⚠</span><span class="check-text">SERP competitors not documented <span class="check-sub">[M6]</span></span></div>
+          <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">Meta title: "All Storage Types" → "All Motorcycle Storage Types" <span class="check-sub">[M5]</span></span></div>
+          <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">/storage-unit-near-me link missing <span class="check-sub">[C1]</span></span></div>
         </div>
       </div>
     </div>
-
   </div>
 
-  <!-- PRIORITY TABLE -->
   <div class="section-title">Action Priority Order</div>
   <table class="priority-table">
-    <thead>
-      <tr><th>#</th><th>Action</th><th>Pages</th><th>Effort</th><th>ID</th></tr>
-    </thead>
+    <thead><tr><th>#</th><th>Action</th><th>Pages</th><th>Effort</th><th>ID</th></tr></thead>
     <tbody>
       <tr><td>1</td><td>Fix formatting errors (merged lines, truncated keyword)</td><td>Wine, Motorcycle, RV</td><td><span class="effort-triv">Trivial</span></td><td>C4</td></tr>
       <tr><td>2</td><td>Fix "whilst" → "while" in motorcycle intro</td><td>Motorcycle</td><td><span class="effort-triv">Trivial</span></td><td>C5</td></tr>
@@ -620,22 +458,762 @@
       <tr><td>5</td><td>Add /storage-unit-near-me link to each page</td><td>All 5</td><td><span class="effort-low">Low</span></td><td>C1</td></tr>
       <tr><td>6</td><td>Fix Car H1: "Vehicle" → "Car"</td><td>Car</td><td><span class="effort-triv">Trivial</span></td><td>M1</td></tr>
       <tr><td>7</td><td>Fix Car H2: remove "We Connect You With"</td><td>Car</td><td><span class="effort-triv">Trivial</span></td><td>M2</td></tr>
-      <tr><td>8</td><td>Fix Motorcycle meta title: "All Motorcycle Storage Types"</td><td>Motorcycle</td><td><span class="effort-triv">Trivial</span></td><td>M5</td></tr>
+      <tr><td>8</td><td>Fix Motorcycle meta title secondary segment</td><td>Motorcycle</td><td><span class="effort-triv">Trivial</span></td><td>M5</td></tr>
       <tr><td>9</td><td>Add climate control section to RV page</td><td>RV</td><td><span class="effort-med">Medium</span></td><td>C3</td></tr>
       <tr><td>10</td><td>Rewrite Boat intro (distinct from Car intro)</td><td>Boat</td><td><span class="effort-med">Medium</span></td><td>M3</td></tr>
       <tr><td>11</td><td>Expand propane step in RV checklist</td><td>RV</td><td><span class="effort-low">Low</span></td><td>N3</td></tr>
       <tr><td>12</td><td>Confirm Specialty Wine Vaults with CSM</td><td>Wine</td><td><span class="effort-csm">CSM decision</span></td><td>M4</td></tr>
       <tr><td>13</td><td>Document SERP competitors in optimization notes</td><td>All 5</td><td><span class="effort-med">Medium</span></td><td>M6</td></tr>
       <tr><td>14</td><td>List internal links added in deliverables</td><td>All 5</td><td><span class="effort-low">Low</span></td><td>M7</td></tr>
-      <tr><td>15</td><td>Vary prep checklist section openers (AI fingerprint)</td><td>Car, Boat, RV, Moto</td><td><span class="effort-low">Low</span></td><td>N2</td></tr>
+      <tr><td>15</td><td>Vary prep checklist section openers</td><td>Car, Boat, RV, Moto</td><td><span class="effort-low">Low</span></td><td>N2</td></tr>
     </tbody>
   </table>
 
 </div>
+</div><!-- /tab-audit -->
 
-<div class="footer">
-  Find Self Storage — Content Optimization Audit · June 2026 · Generated 2026-06-17 by content-ops
+<!-- TAB: CAR STORAGE -->
+<div id="tab-car" class="tab-panel">
+<div class="content-page">
+  <div class="content-meta-card">
+    <div class="cm-row"><span class="cm-key">Title</span><span class="cm-val">Car Storage Units Near You | All Car Storage Types</span></div>
+    <div class="cm-row"><span class="cm-key">Description</span><span class="cm-val">Find car storage units near you. Compare enclosed, covered, and outdoor options for any car and budget. Search facilities, check prices, and reserve online.</span></div>
+    <div class="cm-row"><span class="cm-key">Keywords</span><span class="cm-val"><div class="kw-wrap"><span class="kw-tag">Car storage units</span><span class="kw-tag">Car storage near me</span><span class="kw-tag">Vehicle storage units</span><span class="kw-tag">Self storage for cars</span><span class="kw-tag">Climate controlled car storage</span><span class="kw-tag">Auto storage units</span><span class="kw-tag">Enclosed car storage</span><span class="kw-tag">Indoor car storage</span><span class="kw-tag">Covered car storage</span><span class="kw-tag">Outdoor car storage</span><span class="kw-tag">Car storage facility</span><span class="kw-tag">Automobile storage</span><span class="kw-tag">Car storage unit sizes</span><span class="kw-tag">How much does car storage cost</span></div></span></div>
+  </div>
+  <div class="corrected-banner">✓ Corrected version — all audit issues applied<ul><li>H1 fixed: "Vehicle" → "Car"</li><li>H2 fixed: removed "We Connect You With"</li><li>"Our search tool" replaced with "facilities listed on FindSelfStorage.com"</li><li>/storage-unit-near-me link added to CTA</li><li>Prep checklist opener humanized (consequence-first)</li><li>CTA closer varied</li></ul></div>
+  <div class="page-content">
+    <h1>Car Storage Units: Find Indoor, Covered &amp; Outdoor Car Storage Near You</h1>
+    <p>Whether you're reclaiming your garage from a seasonal sports car, protecting a classic during winter, or need long-term secure parking while you travel, car storage units offer a safer and more accessible alternative to leaving your vehicle exposed on a driveway or crammed into a shared space.</p>
+    <p>Search storage facilities near you to compare car-friendly unit sizes, prices, and availability. Reserve online for free with no credit card required.</p>
+
+    <h2>Who Should Use Car Storage?</h2>
+    <p>Car and vehicle storage fits a wide range of situations:</p>
+    <ul>
+      <li><strong>Seasonal drivers:</strong> Classic cars, convertibles, and sports cars stored during winter months</li>
+      <li><strong>Collectors and enthusiasts:</strong> Multiple vehicles with insufficient home garage space</li>
+      <li><strong>Military members and frequent travelers:</strong> Long-term, secure parking while away for extended periods</li>
+      <li><strong>Snowbirds:</strong> Leaving a vehicle behind when splitting time between residences</li>
+      <li><strong>Homeowners in transition:</strong> Garage under renovation, downsizing, or converting to another use</li>
+      <li><strong>Owners of oversized vehicles:</strong> Full-size trucks, vans, or vehicles banned from residential parking</li>
+    </ul>
+
+    <h2>Types of Car Storage Units</h2>
+    <p>The three main types of car storage offer different levels of protection at different price points. Your choice should match your vehicle's value, storage duration, and local climate.</p>
+
+    <h3>Enclosed (Indoor) Car Storage</h3>
+    <p>Fully enclosed units work like a private garage. The vehicle sits inside a sealed drive-up unit with a roll-up door, protected from rain, hail, UV rays, dust, rodents, and temperature extremes. This is the highest-protection option and the right choice for anything valuable or stored long-term.</p>
+    <p><strong>Best for:</strong> Classic and collector cars, luxury vehicles, winter storage in cold climates, and any vehicle where paint, interior, or mechanical condition matters.</p>
+    <table>
+      <thead><tr><th>Unit Size</th><th>Dimensions</th><th>Fits</th></tr></thead>
+      <tbody>
+        <tr><td>Small</td><td>10' x 10' to 10' x 15'</td><td>Motorcycles, compact cars, sports cars</td></tr>
+        <tr><td>Medium</td><td>10' x 20'</td><td>Sedans, SUVs, minivans</td></tr>
+        <tr><td>Large</td><td>10' x 25' to 10' x 30'</td><td>Full-size pickups, cargo vans, or one car plus extra items</td></tr>
+      </tbody>
+    </table>
+    <p class="note-p"><strong>Sizing note:</strong> If your vehicle has a lift kit, roof rack, or oversize tires, measure actual vehicle height and compare against both the unit's interior clearance and door opening height, as these are often different measurements.</p>
+
+    <h3>Covered Car Storage</h3>
+    <p>Covered storage parks your vehicle under a standalone canopy roof with open sides. You get overhead protection from rain, hail, and direct sun without the fully enclosed unit cost.</p>
+    <p><strong>Best for:</strong> Daily drivers or lightly used vehicles where budget matters more than maximum protection.</p>
+    <p><strong>Limitations:</strong> Open sides mean limited protection from rodents, temperature extremes, wind-driven rain, or flooding. Typically secured with perimeter fencing and gated entry.</p>
+
+    <h3>Outdoor Car Storage</h3>
+    <p>A secured, open parking lot with perimeter fencing and surveillance. No weather protection, but access is easy and pricing is the lowest of the three options.</p>
+    <p><strong>Best for:</strong> RVs, trailers, and vehicles built for outdoor exposure. Also practical for short-term storage in mild climates.</p>
+    <p class="inline-links">Browse related specialty storage: <a href="/rv-storage-units">RV and motorhome storage</a> | <a href="/boat-storage-units">Boat storage units</a> | <a href="/motorcycle-storage-units">Motorcycle storage</a></p>
+
+    <h2>What Size Storage Unit Do You Need for a Car?</h2>
+    <table>
+      <thead><tr><th>Vehicle Type</th><th>Recommended Unit Size</th></tr></thead>
+      <tbody>
+        <tr><td>Motorcycle or scooter</td><td>5' x 10' or 10' x 10'</td></tr>
+        <tr><td>Compact car, sports car, or hatchback</td><td>10' x 15'</td></tr>
+        <tr><td>Standard sedan, crossover, or SUV</td><td>10' x 20'</td></tr>
+        <tr><td>Minivan or midsize pickup</td><td>10' x 20'</td></tr>
+        <tr><td>Full-size truck or cargo van</td><td>10' x 25' to 10' x 30'</td></tr>
+        <tr><td>Two vehicles</td><td>10' x 30' or two separate units</td></tr>
+      </tbody>
+    </table>
+    <p>If you plan to store the vehicle plus seasonal items, tools, or furniture, size up at least one tier to leave a comfortable working room around the vehicle.</p>
+
+    <h2>Should You Look for Climate Controlled Car Storage?</h2>
+    <p>Climate controlled car storage (also called temperature-controlled or heated/cooled storage) keeps the interior of the unit at a stable temperature year-round, typically between 55 and 85 degrees Fahrenheit.</p>
+    <p>Not all facilities offer this for vehicles, and availability varies by location. When searching for car storage, check individual facility listings to see whether this option is available near you.</p>
+    <p>It is worth seeking out if any of the following apply:</p>
+    <ul>
+      <li>You're in a region with extreme heat, hard freezes, or high year-round humidity</li>
+      <li>Storage duration is 3 months or longer</li>
+      <li>The vehicle has leather upholstery, sensitive electronics, or significant collector value</li>
+      <li>You're concerned about battery discharge in freezing temperatures or fluid thickening in extreme cold</li>
+    </ul>
+    <p>What climate control protects against:</p>
+    <ul>
+      <li>Paint oxidation and cracking from heat spikes</li>
+      <li>Rubber seal deterioration from UV and temperature cycling</li>
+      <li>Mold and condensation buildup from humidity</li>
+      <li>Battery failure in freezing conditions</li>
+      <li>Fluid thickening (oil, brake fluid, coolant) in extreme cold</li>
+    </ul>
+    <p>For a modern daily driver stored short-term in a mild climate, covered or standard enclosed storage is usually adequate. For anything valuable, long-term, or in a harsh climate, climate control is worth checking availability for when you compare facilities.</p>
+
+    <h2>Car Storage Security Features to Look For</h2>
+    <p>When comparing facilities, look for these security features before committing to a unit:</p>
+    <ul>
+      <li>Perimeter fencing with controlled gate access (PIN pad or key fob)</li>
+      <li>24/7 video surveillance with recorded footage</li>
+      <li>Individual unit alarms on enclosed units</li>
+      <li>On-site management or regular staffed hours</li>
+      <li>Well-lit access areas throughout the property</li>
+      <li>Drive-up unit access to protect your vehicle during loading</li>
+    </ul>
+    <p>Ask facilities specifically about overnight, weekend, and holiday security protocols, not just what is listed on the website.</p>
+
+    <h2>How Much Does Car Storage Cost?</h2>
+    <p>Prices vary by storage type, unit size, facility location, and amenities. These are typical monthly ranges based on facilities listed on FindSelfStorage.com:</p>
+    <table>
+      <thead><tr><th>Storage Type</th><th>Monthly Cost Range</th></tr></thead>
+      <tbody>
+        <tr><td>Outdoor (open lot)</td><td>$25 to $75</td></tr>
+        <tr><td>Covered parking</td><td>$50 to $150</td></tr>
+        <tr><td>Enclosed (non-climate)</td><td>$75 to $200</td></tr>
+        <tr><td>Enclosed plus climate controlled</td><td>$150 to $400+</td></tr>
+      </tbody>
+    </table>
+    <p>What drives the price up or down:</p>
+    <ul>
+      <li><strong>Location:</strong> Urban and high-cost-of-living markets are significantly more expensive</li>
+      <li><strong>Unit size:</strong> A 10' x 30' costs substantially more than a 10' x 15'</li>
+      <li><strong>Access hours:</strong> 24/7 facilities typically charge a premium over business-hours-only access</li>
+      <li><strong>Lease term:</strong> Month-to-month rates are usually higher than 6- or 12-month commitments</li>
+      <li><strong>Seasonality:</strong> Demand for enclosed storage peaks in winter in cold climates</li>
+    </ul>
+    <p>Search facilities near you to compare real-time pricing and check for current move-in promotions.</p>
+
+    <h2>How to Prepare Your Car for Long-Term Storage</h2>
+    <p>Stored cars develop predictable problems — dead batteries, flat-spotted tires, and degraded fuel that gums up injectors and carburetors. Taking a few hours before storage prevents most of them.</p>
+    <p><strong>Change the oil and oil filter:</strong> Used engine oil contains acidic byproducts that cause internal corrosion when left sitting. Change the oil immediately before storage and do not defer to the next regular interval.</p>
+    <p><strong>Drain and replace the cooling system:</strong> Use a 50/50 antifreeze-to-water mix rated for your climate's lowest expected temperature. During summer months, it's common to run on straight water, so switch to the proper mix before winter storage.</p>
+    <p><strong>Top off transmission, steering, and differential fluids:</strong> Full fluid reservoirs reduce oxidation and confirm proper lubrication when the vehicle is restarted after a long idle period. Always use the fluid types specified in your owner's manual.</p>
+    <p><strong>Check and top off brake fluid:</strong> A dry brake system is a safety hazard. Top off the reservoir before storage and inspect for any existing leaks.</p>
+    <p><strong>Fill the fuel tank and add fuel stabilizer:</strong> A full tank prevents moisture and condensation inside the fuel system. Add a fuel stabilizer (such as Sta-Bil) for any storage period over 30 days to prevent fuel degradation and varnish buildup in injectors and carburetors.</p>
+    <p><strong>Inflate tires to the correct PSI:</strong> Tires develop flat spots under prolonged static load. Inflate to the vehicle manufacturer's specification, or slightly above. For storage exceeding six months, consider tire cradles or flat-spot prevention stands.</p>
+    <p><strong>Wash, wax, and cover the exterior:</strong> Dirt and contaminants accelerate paint oxidation. Wash the vehicle, apply a coat of wax, and treat rubber trim with a UV protectant. Inside an enclosed unit, use a breathable fabric car cover. Avoid non-breathable plastic covers, which trap condensation against the paint.</p>
+    <p><strong>Clean the interior thoroughly:</strong> Vacuum the carpets and seats, wipe down all surfaces, and remove all food, beverages, and organic materials. Organic matter attracts pests and causes mold and odor during storage.</p>
+    <p><strong>Disconnect the battery or connect a maintainer:</strong> Disconnect the negative terminal to prevent phantom drain from the clock, alarm system, and onboard electronics. For long-term storage, a battery maintainer (trickle charger) is the better option, as it keeps the battery at proper charge without overcharging. Clean terminal connectors with a baking soda and water solution before reinstalling.</p>
+    <p><strong>Seal the exhaust and air intake:</strong> Use a clean rag, foam plug, or plastic bag (secured with a rubber band) to cover the exhaust tip and air intake opening. This prevents rodents and insects from nesting inside. Mark or tag these covers clearly so you do not start the vehicle without removing them first.</p>
+    <p><strong>Run the vehicle periodically:</strong> If your facility permits it, return every two weeks to start the engine and run it for at least 15 to 20 minutes. Drive slowly within the facility if possible to prevent tire flat-spotting and keep all lubricated components in good condition. Reconnect the battery and remove exhaust plugs each time before starting.</p>
+
+    <h2>Find Car Storage Units Near You</h2>
+    <p>Ready to store your vehicle? Search self storage facilities near you to compare enclosed, covered, and outdoor car storage options by size, price, and location. Search <a href="/storage-unit-near-me">storage units near you</a> to filter for car-friendly unit sizes and compare options by price and availability. The search is completely free with no credit card required and no obligation. Compare prices, check availability, and lock in your unit in a few clicks.</p>
+    <div class="link-block">
+      <p>Also looking for storage for other vehicles?</p>
+      <ul>
+        <li><a href="/rv-storage-units">RV and motorhome storage units</a></li>
+        <li><a href="/boat-storage-units">Boat storage units</a></li>
+        <li><a href="/motorcycle-storage-units">Motorcycle storage units</a></li>
+        <li><a href="/vehicle-storage-units">All vehicle storage options</a></li>
+      </ul>
+    </div>
+
+    <h2>Car Storage FAQs</h2>
+    <div class="faq-item"><div class="faq-q">How much does it cost to store a car per month?</div><div class="faq-a">Expect to pay $25 to $75 per month for outdoor lot storage, $50 to $150 for covered parking, and $75 to $400 or more for enclosed units depending on size and whether climate control is available. Prices vary significantly by location, with urban markets running higher than suburban or rural areas.</div></div>
+    <div class="faq-item"><div class="faq-q">What size storage unit do I need for a car?</div><div class="faq-a">A 10' x 15' unit fits most compact cars and sports cars. A 10' x 20' accommodates sedans, crossovers, and minivans. Full-size pickups and vans typically require a 10' x 25' or 10' x 30' unit. Always measure your vehicle's height and verify it clears the facility's door opening before renting.</div></div>
+    <div class="faq-item"><div class="faq-q">Can I store a car in a regular self storage unit?</div><div class="faq-a">Yes. Many standard drive-up self storage units are large enough for a vehicle. You'll need at least a 10' x 15' for compact cars and a 10' x 20' or larger for full-size vehicles. Confirm with the facility that vehicle storage is permitted and that door clearance matches your car's height.</div></div>
+    <div class="faq-item"><div class="faq-q">Is climate controlled storage necessary for a car?</div><div class="faq-a">It depends on the vehicle and the storage duration. Climate control is worth seeking for classic or collector cars, storage of 3 or more months, and regions with extreme temperatures or high humidity. It protects paint, rubber seals, electronics, and fluids from damage. Availability varies by facility, so check listings near you to see which locations offer this option.</div></div>
+    <div class="faq-item"><div class="faq-q">What is the difference between covered and enclosed car storage?</div><div class="faq-a">Enclosed storage places your car inside a fully sealed drive-up unit with a roll-up door. It provides complete protection from weather, pests, dust, and temperature extremes. Covered storage parks your vehicle under a standalone roof with open sides. It protects from direct rain and sun but not from rodents, flooding, or temperature extremes.</div></div>
+    <div class="faq-item"><div class="faq-q">How do I prepare my car for long-term storage?</div><div class="faq-a">Key steps: change the oil, fill the tank and add fuel stabilizer, top off all fluids, inflate tires, disconnect the battery or connect a maintainer, wash and wax the exterior, clean the interior, and plug the exhaust and air intake. Run the engine for 15 to 20 minutes every two weeks when possible.</div></div>
+  </div>
 </div>
+</div><!-- /tab-car -->
 
+<!-- TAB: BOAT STORAGE -->
+<div id="tab-boat" class="tab-panel">
+<div class="content-page">
+  <div class="content-meta-card">
+    <div class="cm-row"><span class="cm-key">Title</span><span class="cm-val">Boat Storage Units Near You | All Boat Storage Types</span></div>
+    <div class="cm-row"><span class="cm-key">Description</span><span class="cm-val">Find boat storage units near you. Compare enclosed, covered, outdoor, and dry stack options for any boat size and budget. Search facilities and reserve online for free.</span></div>
+    <div class="cm-row"><span class="cm-key">Keywords</span><span class="cm-val"><div class="kw-wrap"><span class="kw-tag">Boat storage units</span><span class="kw-tag">Boat storage near me</span><span class="kw-tag">Boat storage units near me</span><span class="kw-tag">Indoor boat storage</span><span class="kw-tag">Covered boat storage</span><span class="kw-tag">Dry stack boat storage</span><span class="kw-tag">Boat self storage</span><span class="kw-tag">Boat storage facility</span><span class="kw-tag">RV and boat storage near me</span><span class="kw-tag">How much does boat storage cost</span><span class="kw-tag">Boat storage size</span><span class="kw-tag">Boat winterization storage</span><span class="kw-tag">Enclosed boat storage</span></div></span></div>
+  </div>
+  <div class="corrected-banner">✓ Corrected version — all audit issues applied<ul><li>Intro completely rewritten — distinct from Car page, boat-specific triggers (dock fees, HOA bans, haul-out timing)</li><li>"Our search tool" replaced with "facilities listed on FindSelfStorage.com"</li><li>/storage-unit-near-me link added to CTA</li><li>Prep checklist opener humanized (consequence-first)</li><li>CTA closer varied</li></ul></div>
+  <div class="page-content">
+    <h1>Boat Storage Units: Find Indoor, Covered &amp; Outdoor Boat Storage Near You</h1>
+    <p>Dock fees add up fast, and most HOAs prohibit boats and trailers on residential lots outright. When the season ends and haul-out is due, finding a dedicated storage spot before the rush is the practical move. Search facilities listed on FindSelfStorage.com to compare enclosed, covered, outdoor, and dry stack options by size and price — reserve online for free, no credit card required.</p>
+
+    <h2>Who Needs Boat Storage?</h2>
+    <p>Boat storage is a practical solution for a wide range of watercraft owners:</p>
+    <ul>
+      <li><strong>Seasonal boaters:</strong> sailboats, fishing boats, and ski boats stored during winter months</li>
+      <li><strong>Owners without driveway space:</strong> boats and trailers that are too large to park at home</li>
+      <li><strong>HOA-restricted homeowners:</strong> communities that prohibit boat and trailer parking on residential lots</li>
+      <li><strong>Saltwater boaters:</strong> boats that benefit from enclosed protection between outings to prevent corrosion</li>
+      <li><strong>Cabin cruiser and pontoon owners:</strong> larger vessels that require dedicated sized spaces</li>
+      <li><strong>Jet ski and PWC owners:</strong> personal watercraft stored away from direct weather exposure</li>
+    </ul>
+
+    <h2>Types of Boat Storage Units</h2>
+    <p>Boat storage comes in four main configurations. The right choice depends on your boat's size, value, how often you use it, and your budget.</p>
+
+    <h3>Enclosed (Indoor) Boat Storage</h3>
+    <p>Enclosed boat storage places your vessel inside a sealed drive-up unit with a roll-up door, similar to a private garage. It provides the highest level of protection from weather, UV damage, dust, and pests.</p>
+    <p><strong>Best for:</strong> Boats stored for a full season, high-value watercraft, saltwater boats that benefit from drying out in a sealed environment, and boats with sensitive electronics or upholstery.</p>
+    <p>To use an enclosed unit, your boat and trailer must fit within the unit dimensions. Measure your boat's overall length on the trailer (including the hitch tongue), width, and height (including the motor if tilted) before comparing unit sizes.</p>
+
+    <h3>Covered Boat Storage</h3>
+    <p>Covered storage parks your boat under a roof structure with open sides. You get protection from rain, hail, and direct sun without the cost of a fully enclosed unit.</p>
+    <p><strong>Best for:</strong> Boaters who use their vessel regularly and want some weather protection between outings without paying for full enclosure. A good middle-ground option for mild climates.</p>
+    <p><strong>Limitations:</strong> Limited protection from wind-driven rain, humidity, rodents, or temperature extremes. Most covered facilities use perimeter fencing and gated access for security.</p>
+
+    <h3>Outdoor (Open) Boat Storage</h3>
+    <p>Outdoor storage is a secured, open-air lot with fencing and surveillance. No weather protection, but pricing is the most affordable option and access is typically flexible.</p>
+    <p><strong>Best for:</strong> Boat owners on a tight budget, boats already designed for outdoor exposure, or short-term storage in mild-weather climates where precipitation is low.</p>
+    <p>If choosing outdoor storage, a quality boat cover is a worthwhile investment to protect the hull, cockpit, and motor from UV rays and moisture between uses.</p>
+
+    <h3>Dry Stack Boat Storage</h3>
+    <p>Dry stack (also called stack storage or rack storage) is a specialized system where a marina or facility uses large forklift-style equipment to store boats on steel racks, stacked several units high inside a large covered or enclosed building. When you want to use your boat, staff retrieve it with the forklift and launch it for you.</p>
+    <p><strong>Best for:</strong> Smaller to mid-size powerboats in coastal or lakefront markets. Ideal for boats stored for weeks or months at a time. Not practical for boaters who want spontaneous, self-service access.</p>
+    <p><strong>Advantages:</strong> Excellent protection, efficient use of space, and many dry stack facilities are waterfront-adjacent, making launch and retrieval easy.</p>
+    <p><strong>Limitations:</strong> Access requires advance notice and is dependent on facility staffing hours. Not suitable for boats over a certain size or weight. Less common inland.</p>
+    <p class="inline-links">Browse related vehicle storage: <a href="/rv-storage-units">RV and motorhome storage</a> | <a href="/car-storage-units">Car storage units</a> | <a href="/motorcycle-storage-units">Motorcycle storage</a></p>
+
+    <h2>What Size Storage Unit Do You Need for a Boat?</h2>
+    <p>Boat storage sizing is based on your vessel's total length on the trailer, not just the hull length. Always measure the complete rig: bow to stern, width at the widest point, and total height with the motor tilted up. The following are general industry sizing guidelines so it is best to confirm exact dimensions and door clearance with each facility before booking.</p>
+    <table>
+      <thead><tr><th>Vessel Type</th><th>Typical Overall Length on Trailer</th><th>Recommended Unit Size</th></tr></thead>
+      <tbody>
+        <tr><td>Jet ski / PWC</td><td>10' to 14'</td><td>10' x 15'</td></tr>
+        <tr><td>Small fishing boat or jon boat</td><td>14' to 18'</td><td>10' x 20'</td></tr>
+        <tr><td>Bass boat or ski boat</td><td>18' to 22'</td><td>10' x 25'</td></tr>
+        <tr><td>Pontoon or deck boat</td><td>20' to 26'</td><td>10' x 30'</td></tr>
+        <tr><td>Cabin cruiser or larger powerboat</td><td>24'+</td><td>10' x 35'+ or outdoor lot</td></tr>
+      </tbody>
+    </table>
+    <p class="note-p"><strong>Important:</strong> Boats with T-tops, towers, radar arches, or outboard motors add height. Measure total rig height with the motor tilted up and compare it against the facility's door opening height before committing to a unit. Some facilities accommodate non-standard lengths on a case-by-case basis. Always call ahead to confirm.</p>
+
+    <h2>Should You Look for Climate Controlled Boat Storage?</h2>
+    <p>Climate controlled boat storage maintains a stable interior temperature year-round, typically between 55 and 85 degrees Fahrenheit. Availability varies by facility, so check individual listings near you to see which locations offer this option.</p>
+    <p>It is worth seeking out if any of the following apply:</p>
+    <ul>
+      <li>You're storing a boat with a fiberglass hull in a region with extreme temperature swings</li>
+      <li>The vessel has leather upholstery, wood trim, or high-end electronics</li>
+      <li>You're in a high-humidity coastal environment where mold and mildew are a concern</li>
+      <li>Storage duration is 3 months or longer</li>
+    </ul>
+    <p>What climate control protects against:</p>
+    <ul>
+      <li>Fiberglass osmotic blistering from freeze/thaw cycles</li>
+      <li>Gelcoat fading and cracking from heat exposure</li>
+      <li>Mold and mildew on upholstery, canvas, and carpet</li>
+      <li>Battery discharge and fluid degradation in extreme cold</li>
+      <li>Corrosion on metal hardware, wiring, and electronics</li>
+    </ul>
+    <p>For a trailerable fishing boat or ski boat stored short-term in a moderate climate, covered or standard enclosed storage is typically adequate. For a higher-value vessel or long-term seasonal storage in a harsh climate, climate control is worth checking availability for when comparing facilities.</p>
+
+    <h2>Boat Storage Security Features to Look For</h2>
+    <p>When comparing facilities, verify these security layers before committing to a unit:</p>
+    <ul>
+      <li>Perimeter fencing with gated access control (PIN pad or key fob)</li>
+      <li>24/7 video surveillance covering the lot, access points, and storage bays</li>
+      <li>On-site management or regular staff presence during access hours</li>
+      <li>Adequate lighting throughout the facility</li>
+      <li>Individual unit alarms (for enclosed units)</li>
+      <li>Drive-up or forklift access appropriate to your storage type</li>
+    </ul>
+    <p>For outdoor and covered lots, also check whether the facility has security patrols and whether the perimeter fencing extends fully around the property with no open access points.</p>
+
+    <h2>How Much Does Boat Storage Cost?</h2>
+    <p>Boat storage prices vary by type, unit size, location, and amenities. These are typical monthly ranges based on facilities listed on FindSelfStorage.com:</p>
+    <table>
+      <thead><tr><th>Storage Type</th><th>Monthly Cost Range</th></tr></thead>
+      <tbody>
+        <tr><td>Outdoor (open lot)</td><td>$50 to $150</td></tr>
+        <tr><td>Covered parking</td><td>$100 to $250</td></tr>
+        <tr><td>Enclosed (non-climate)</td><td>$150 to $350+</td></tr>
+        <tr><td>Dry stack</td><td>$200 to $600+</td></tr>
+      </tbody>
+    </table>
+    <p>What drives the price up or down:</p>
+    <ul>
+      <li><strong>Location:</strong> Coastal and waterfront markets are significantly more expensive than inland areas</li>
+      <li><strong>Boat size:</strong> A 10' x 30' unit costs substantially more than a 10' x 15'</li>
+      <li><strong>Season:</strong> Demand peaks in fall as boating season ends in cold climates</li>
+      <li><strong>Access hours:</strong> 24/7 self-access facilities typically charge more than staffed-hours-only locations</li>
+      <li><strong>Lease term:</strong> Month-to-month rates are usually higher than seasonal or annual commitments</li>
+      <li><strong>Marina vs. self storage:</strong> Dry stack at a marina is typically more expensive than equivalent self storage options</li>
+    </ul>
+    <p>Search facilities near you to compare real-time pricing and check for current move-in promotions.</p>
+
+    <h2>How to Prepare Your Boat for Storage</h2>
+    <p>Skipping prep costs more than the storage unit itself. Corrosion works through cooling passages over a single winter, osmotic blistering can compromise a fiberglass hull after one freeze/thaw cycle, and mold in upholstery and canvas rarely comes out cleanly. These steps are how you avoid those repairs.</p>
+    <p><strong>Flush the engine with fresh water:</strong> Particularly critical for saltwater boats. Connect a flushing attachment to the lower unit and run the engine on fresh water for at least 10 minutes. This clears salt, sand, and debris from the cooling passages before they can cause corrosion.</p>
+    <p><strong>Change the engine oil and filter:</strong> Old oil contains acids and combustion byproducts that corrode engine internals during long idle periods. Change the oil and filter immediately before storage, regardless of where you are in your normal service interval.</p>
+    <p><strong>Fog the engine cylinders:</strong> With the engine running, spray fogging oil into the carburetor or throttle body. This coats cylinder walls with a protective film that prevents rust during storage. Shut the engine off while fogging so the oil remains on the cylinder walls.</p>
+    <p><strong>Stabilize the fuel:</strong> Fill the tank to at least 95% capacity to minimize condensation buildup. Add a marine-grade fuel stabilizer (such as Sta-Bil Marine) and run the engine for 10 minutes to circulate it through the entire fuel system. This prevents varnish deposits in carburetors and injectors.</p>
+    <p><strong>Flush and service the cooling system:</strong> Drain all water from the engine block, water pump, and any water lines. In cold climates, use marine antifreeze (propylene glycol) in the cooling system to prevent freeze damage. Do not skip this step if temperatures in your area drop below freezing.</p>
+    <p><strong>Disconnect or maintain the battery:</strong> Disconnect the negative terminal to prevent phantom drain. For storage over 30 days, connect a marine battery maintainer to keep the battery at full charge without overcharging. Remove the battery entirely if storing outdoors or in an unheated space.</p>
+    <p><strong>Clean the hull and apply protective wax:</strong> Wash the hull thoroughly, removing all algae, barnacles (if saltwater), waterline stains, and grime. Apply a coat of marine wax to the above-waterline gelcoat to protect the finish during storage. Do not leave bottom paint exposed to air longer than necessary before re-launching.</p>
+    <p><strong>Clean and protect the interior:</strong> Remove all seat cushions, canvas covers, carpeting, and any porous materials that can trap moisture and grow mold. Wipe down all surfaces, treat vinyl upholstery with a UV protectant, and leave compartment hatches slightly open to allow airflow.</p>
+    <p><strong>Remove all electronics and valuables:</strong> Remove fish finders, GPS units, stereo heads, and any portable electronics. Store these separately in a climate-controlled environment. This also reduces theft risk while the boat is in storage.</p>
+    <p><strong>Lubricate all fittings and moving parts:</strong> Grease the trailer wheel bearings, lube the steering cable, and apply corrosion inhibitor to all metal fittings, hinges, latches, and clamps. This prevents seizing during the storage period.</p>
+    <p><strong>Cover the boat properly:</strong> Use a breathable, boat-specific cover sized for your vessel. Secure it tightly to prevent wind from lifting it. Avoid non-breathable plastic tarps, which trap condensation and accelerate mold growth. In enclosed storage, a well-fitted cover still protects against dust.</p>
+    <p><strong>Check and inflate trailer tires:</strong> Trailer tires are prone to flat-spotting and UV cracking. Inflate to the maximum recommended PSI and park the trailer on blocks or stands to relieve weight from the tires if storing for 3 months or more.</p>
+
+    <h2>Find Boat Storage Units Near You</h2>
+    <p>Ready to find a storage spot for your boat? Search <a href="/storage-unit-near-me">storage units near you</a> to compare boat-friendly options by type, size, and price. The search is completely free with no credit card required and no obligation. Compare options side by side, check availability, and reserve online — no credit card needed.</p>
+    <div class="link-block">
+      <p>Also looking for storage for other vehicles?</p>
+      <ul>
+        <li><a href="/rv-storage-units">RV and motorhome storage units</a></li>
+        <li><a href="/car-storage-units">Car storage units</a></li>
+        <li><a href="/motorcycle-storage-units">Motorcycle storage units</a></li>
+        <li><a href="/vehicle-storage-units">All vehicle storage options</a></li>
+      </ul>
+    </div>
+
+    <h2>Boat Storage FAQs</h2>
+    <div class="faq-item"><div class="faq-q">How much does it cost to store a boat per month?</div><div class="faq-a">Typical monthly costs run $50 to $150 for outdoor lot storage, $100 to $250 for covered parking, $150 to $350 or more for enclosed units, and $200 to $600 or more for dry stack depending on location and boat size. Coastal markets are significantly more expensive than inland areas.</div></div>
+    <div class="faq-item"><div class="faq-q">What size storage unit do I need for a boat?</div><div class="faq-a">Measure your boat and trailer as a complete unit from hitch to bow. A jet ski typically fits in a 10' x 15'. A small fishing boat needs a 10' x 20'. A pontoon or deck boat usually requires a 10' x 30'. Larger vessels may need an oversized enclosed unit or outdoor lot. Always confirm the facility's door height clears your boat's highest point before renting.</div></div>
+    <div class="faq-item"><div class="faq-q">What is dry stack boat storage?</div><div class="faq-a">Dry stack storage uses large rack systems inside a covered building to stack boats vertically, maximizing storage capacity. Staff retrieve your boat by forklift when you want to use it. It offers excellent protection and is common at marinas. The trade-off is that access requires advance notice and is limited to facility staffing hours.</div></div>
+    <div class="faq-item"><div class="faq-q">Is indoor boat storage worth it?</div><div class="faq-a">For boats stored over winter or for extended periods, indoor enclosed storage is worth the premium. It protects fiberglass, upholstery, electronics, and paint from UV damage, temperature extremes, and moisture. For boats used regularly year-round in mild climates, covered or outdoor storage may be sufficient.</div></div>
+    <div class="faq-item"><div class="faq-q">Can I store a boat on its trailer in a storage unit?</div><div class="faq-a">Yes. Most boat storage at self storage facilities is designed for boats on their trailers. This makes drop-off and pickup easy since you simply tow the boat in and out. Measure the full rig (boat plus trailer) for length, width, and height before selecting a unit size.</div></div>
+    <div class="faq-item"><div class="faq-q">How do I prepare a boat for long-term storage?</div><div class="faq-a">Key steps: flush the engine with fresh water, change the oil, fog the cylinders, stabilize the fuel, drain and antifreeze the cooling system, disconnect the battery or connect a maintainer, clean and wax the hull, remove cushions and canvas, cover with a breathable boat cover, and lubricate trailer bearings. Run the engine every few weeks if possible during long storage periods.</div></div>
+  </div>
+</div>
+</div><!-- /tab-boat -->
+
+<!-- TAB: RV STORAGE -->
+<div id="tab-rv" class="tab-panel">
+<div class="content-page">
+  <div class="content-meta-card">
+    <div class="cm-row"><span class="cm-key">Title</span><span class="cm-val">RV Storage Units Near You | All Motorhome Storage Types</span></div>
+    <div class="cm-row"><span class="cm-key">Description</span><span class="cm-val">Find RV storage units near you. Compare enclosed, covered, and outdoor options for motorhomes, campers, and trailers. Search facilities and reserve for free.</span></div>
+    <div class="cm-row"><span class="cm-key">Keywords</span><span class="cm-val"><div class="kw-wrap"><span class="kw-tag">RV storage units</span><span class="kw-tag">RV storage near me</span><span class="kw-tag">RV storage units near me</span><span class="kw-tag">Motorhome storage near me</span><span class="kw-tag">Camper storage near me</span><span class="kw-tag">Indoor rv storage</span><span class="kw-tag">Covered rv storage near me</span><span class="kw-tag">RV storage facilities</span><span class="kw-tag">Enclosed rv storage</span><span class="kw-tag">How much does rv storage cost</span><span class="kw-tag">RV self storage</span><span class="kw-tag">Recreational vehicle storage</span></div></span></div>
+  </div>
+  <div class="corrected-banner">✓ Corrected version — all audit issues applied<ul><li>Meta keyword typo fixed ("rv storage cost")</li><li>New "Do You Need Climate Controlled RV Storage?" section added (scope gap closed)</li><li>"Our search network" replaced with "FindSelfStorage.com network"</li><li>Propane step expanded with safety detail (valve procedure, enclosed-space risk, tank removal guidance)</li><li>/storage-unit-near-me link added to CTA</li><li>Prep checklist opener humanized (consequence-first)</li><li>CTA closer varied</li></ul></div>
+  <div class="page-content">
+    <h1>RV Storage Units: Find Covered, Enclosed &amp; Outdoor Motorhome Storage Near You</h1>
+    <p>Finding a safe, accessible place to store an RV between trips is one of the most common challenges RV owners face. HOA rules, municipal parking codes, and plain lack of space make home storage impractical for most. Search storage facilities near you to compare RV storage options by type, size, and price. Reserve online for free with no credit card required.</p>
+
+    <h2>Who Needs RV Storage?</h2>
+    <p>RV storage is a practical solution for a wide range of owners:</p>
+    <ul>
+      <li><strong>Seasonal travelers:</strong> Motorhomes and campers parked for months at a time between trips</li>
+      <li><strong>HOA-restricted homeowners:</strong> Communities that prohibit RVs, trailers, and oversized vehicles in driveways or on streets</li>
+      <li><strong>Urban and suburban residents:</strong> No driveway space, or space too small for a large vehicle</li>
+      <li><strong>Full-time RVers between trips:</strong> Short or long-term parking when not on the road</li>
+      <li><strong>Multi-vehicle owners:</strong> Managing garage space and parking when an RV isn't the daily driver</li>
+      <li><strong>RV owners protecting their investment:</strong> Keeping a vehicle valued at tens of thousands of dollars secure and protected from weather</li>
+    </ul>
+
+    <h2>RV Classes: What Type Do You Have?</h2>
+    <p>Understanding your RV class matters when selecting the right storage unit. Size, weight, and height vary significantly across vehicle types.</p>
+    <table>
+      <thead><tr><th>RV Class</th><th>Description</th><th>Typical Length</th></tr></thead>
+      <tbody>
+        <tr><td>Class A</td><td>Large motorhomes on commercial-type chassis (gas or diesel). Fully loaded with amenities.</td><td>26' to 45'</td></tr>
+        <tr><td>Class B</td><td>Smallest motorhomes, also called camper vans or conversion vans. Compact amenities.</td><td>17' to 24'</td></tr>
+        <tr><td>Class C</td><td>Midsize motorhomes built on a truck or van cutaway chassis. Sleeping area over cab.</td><td>20' to 35'</td></tr>
+        <tr><td>Fifth-Wheel</td><td>Towable trailer with an extended front section over the tow vehicle's cab. Full amenities.</td><td>22' to 40'</td></tr>
+        <tr><td>Travel Trailer</td><td>A towable trailer requiring a hitch on a truck, van, or SUV. Varies widely in amenities.</td><td>12' to 35'</td></tr>
+        <tr><td>Folding/Pop-Up Trailer</td><td>Foldable sides for compact towing. Can be towed by most cars and SUVs.</td><td>8' to 20' (folded)</td></tr>
+      </tbody>
+    </table>
+    <p>Always measure your RV's total length, width, and height (including roof-mounted AC units, antennas, and awnings) before selecting a storage space. Confirm door clearance and overhead height with each facility.</p>
+
+    <h2>Types of RV Storage Units</h2>
+    <p>RV storage comes in three main configurations. The right choice depends on your RV's size, how long you're storing, your budget, and how important weather protection is to you.</p>
+
+    <h3>Enclosed (Indoor) RV Storage</h3>
+    <p>Enclosed RV storage places your vehicle inside a dedicated space with walls and a door. They are either individual drive-up units with a roll-up door, or spaces inside a larger enclosed building shared with other RVs.</p>
+    <p>Individual enclosed units give you a private space similar to a large garage. Your vehicle is the only one in the unit, eliminating the risk of accidental damage from neighboring vehicles. These typically accommodate smaller Class B and Class C motorhomes, travel trailers, and fifth-wheels.</p>
+    <p>Enclosed garage buildings have one or two entrances with individual marked parking spaces inside. Multiple owners share the same building but each RV has its own designated spot. Large buildings can accommodate Class A motorhomes depending on ceiling height.</p>
+    <p><strong>Best for:</strong> Long-term storage, Class A and B motorhomes, and owners who want maximum protection from weather, pests, and theft.</p>
+
+    <h3>Covered RV Storage</h3>
+    <p>Covered storage parks your RV under a roof structure with open sides. It protects against direct rain, hail, snow accumulation, and UV damage without the cost of a fully enclosed option.</p>
+    <p><strong>Best for:</strong> Owners on a moderate budget who want meaningful weather protection. A good middle-ground for Class C and travel trailers in most climates.</p>
+    <p><strong>Limitations:</strong> Open sides mean wind-driven rain, temperature extremes, and pests can still reach the vehicle. Most covered facilities use perimeter fencing and gate access for security.</p>
+
+    <h3>Outdoor (Uncovered) RV Storage</h3>
+    <p>An open, secured lot with fencing and surveillance. No weather protection, but pricing is lowest and access tends to be most flexible.</p>
+    <p><strong>Best for:</strong> Budget-conscious owners, RVs with heavy-duty exterior covers, or short-term parking when weather risk is low.</p>
+    <p class="note-p">If choosing outdoor storage, a quality RV cover is a worthwhile investment to protect the roof, seals, and exterior from UV damage and precipitation.</p>
+    <p class="inline-links">Explore related vehicle storage: <a href="/boat-storage-units">Boat storage units</a> | <a href="/car-storage-units">Car storage units</a> | <a href="/motorcycle-storage-units">Motorcycle storage</a></p>
+
+    <h2>What Size Storage Space Do You Need for an RV?</h2>
+    <p>Use your RV's total length as the primary measurement. Add a few feet of clearance on each end for safe maneuvering. Width and height are equally important, especially for Class A vehicles with slide-outs, roof AC units, or raised antennas.</p>
+    <table>
+      <thead><tr><th>RV Type</th><th>Typical Length</th><th>Recommended Space</th></tr></thead>
+      <tbody>
+        <tr><td>Pop-up / folding trailer</td><td>Up to 20'</td><td>10' x 20' to 10' x 25'</td></tr>
+        <tr><td>Class B camper van</td><td>17' to 24'</td><td>10' x 25'</td></tr>
+        <tr><td>Class C motorhome</td><td>20' to 35'</td><td>10' x 30' to 10' x 40'</td></tr>
+        <tr><td>Travel trailer</td><td>12' to 35'</td><td>10' x 20' to 10' x 40'</td></tr>
+        <tr><td>Fifth-wheel</td><td>22' to 40'</td><td>10' x 30' to 10' x 45'</td></tr>
+        <tr><td>Class A motorhome</td><td>26' to 45'</td><td>10' x 40' to 10' x 50' or outdoor lot</td></tr>
+      </tbody>
+    </table>
+    <p>Always confirm the facility's maximum vehicle length, width, and height restrictions before booking. Some facilities have maximum vehicle length limits or height clearance restrictions that may not accommodate larger Class A coaches.</p>
+
+    <h2>Do You Need Climate Controlled RV Storage?</h2>
+    <p>Climate controlled RV storage maintains a stable interior temperature year-round — typically somewhere in the 55–85°F range — regardless of outside conditions. It is not standard for RV storage, and availability varies considerably by facility and region. When you search listings on FindSelfStorage.com, check individual facility pages to see whether climate control is offered.</p>
+    <p>For many RV owners, it is not necessary. Short-term storage in a mild climate, or covered storage with a good RV cover, is usually sufficient. But there are situations where climate control is worth seeking out.</p>
+    <p>It matters most when:</p>
+    <ul>
+      <li>You are storing in a region with extreme heat or cold</li>
+      <li>The storage period will run three months or longer</li>
+      <li>Your RV has components sensitive to temperature swings — leather upholstery, rubber roof seals, electronics, or a lithium battery bank</li>
+    </ul>
+    <p>What climate control actually protects against:</p>
+    <ul>
+      <li><strong>Rubber seal deterioration:</strong> Heat accelerates cracking in roof seams and door gaskets</li>
+      <li><strong>Fiberglass oxidation:</strong> Prolonged sun and heat exposure dulls and pits the exterior</li>
+      <li><strong>Battery failure:</strong> Freezing temperatures permanently reduce battery capacity, especially in AGM and lithium cells</li>
+      <li><strong>Mold and mildew:</strong> High-humidity regions without temperature regulation create conditions for interior growth even in a closed RV</li>
+    </ul>
+    <p>For short-term storage or storage in temperate climates, a covered or enclosed unit without climate control is typically sufficient and costs less. For long-term storage in climates with hard winters, intense summer heat, or high humidity, filtering for climate controlled options when comparing facilities on FindSelfStorage.com is worthwhile.</p>
+
+    <h2>Security Features to Look For in RV Storage</h2>
+    <p>RVs represent a significant financial investment. Before committing to a facility, verify these security measures:</p>
+    <ul>
+      <li>Perimeter fencing with controlled gate access (PIN or key fob)</li>
+      <li>24/7 HD video surveillance covering the entire lot and access points</li>
+      <li>On-site management or regular staff patrols during access hours</li>
+      <li>Well-lit access areas to deter theft and vandalism</li>
+      <li>Individual unit alarms for enclosed options</li>
+      <li>Drive-through or pull-through spaces so you can maneuver safely without tight reversing</li>
+    </ul>
+    <p>Ask about overnight and weekend security specifically. A facility with daytime management only offers very different protection than one with 24/7 monitoring.</p>
+
+    <h2>How Much Does RV Storage Cost?</h2>
+    <p>Monthly RV storage costs vary significantly based on the storage type, your RV's size, and your location. These are typical ranges based on facilities in the FindSelfStorage.com network:</p>
+    <table>
+      <thead><tr><th>Storage Type</th><th>Monthly Cost Range</th></tr></thead>
+      <tbody>
+        <tr><td>Outdoor (open lot)</td><td>$50 to $125</td></tr>
+        <tr><td>Covered</td><td>$100 to $250</td></tr>
+        <tr><td>Enclosed (individual or shared building)</td><td>$150 to $450+</td></tr>
+      </tbody>
+    </table>
+    <p>What drives the price:</p>
+    <ul>
+      <li><strong>RV size:</strong> A Class A at 40'+ costs significantly more to store than a compact travel trailer</li>
+      <li><strong>Location:</strong> Urban and coastal markets charge more than rural areas</li>
+      <li><strong>Access hours:</strong> 24/7 self-access facilities typically charge a premium</li>
+      <li><strong>Lease term:</strong> Month-to-month rates are higher than seasonal or annual commitments</li>
+      <li><strong>Demand and seasonality:</strong> Prices rise in fall as camping season ends in cold climates</li>
+    </ul>
+    <p>Search facilities near you to compare current pricing and check for move-in promotions.</p>
+
+    <h2>How to Prepare Your RV for Storage</h2>
+    <p>Skip the prep steps and the bill arrives later — blown water lines in January, seized slide mechanisms that need a shop visit, or a rodent nest discovered in the engine bay after six months in a lot. The work you do before parking saves far more time and money than it costs.</p>
+    <p><strong>Clean the exterior thoroughly:</strong> Wash the entire exterior including the roof. Remove all bugs, road grime, and mildew before storage. Apply a UV protectant or wax to fiberglass and painted surfaces. Inspect and treat any rubber roof seams or seals with appropriate conditioner to prevent cracking.</p>
+    <p><strong>Clean and empty the interior:</strong> Remove all food, beverages, and organic materials. Wipe down all surfaces, vacuum carpets, and clean upholstery. Leave cabinet doors and compartments slightly open to allow air circulation and prevent mildew.</p>
+    <p><strong>Drain and flush all water systems:</strong> Drain the fresh water tank, water heater, and all water lines. If storing over winter in a cold climate, use RV antifreeze (propylene glycol, not automotive antifreeze) to protect all lines and the water pump from freezing. Drain and flush the black and grey tanks as well.</p>
+    <p><strong>Stabilize the fuel:</strong> Fill the fuel tank to at least 95% to minimize condensation buildup. Add a fuel stabilizer and run the engine for 15 minutes to circulate it through the fuel system. This prevents varnish and deposits from forming in carburetors and injectors.</p>
+    <p><strong>Change the engine oil and check fluid levels:</strong> Old oil is acidic and can cause corrosion during long storage periods. Change the oil and filter before parking. Top off coolant, brake fluid, and power steering fluid.</p>
+    <p><strong>Disconnect or maintain the battery:</strong> Disconnect the house batteries and chassis battery to prevent phantom drain. For long-term storage, connect a battery maintainer (not a basic trickle charger) to keep batteries at full charge without overcharging.</p>
+    <p><strong>Protect the tires:</strong> Inflate tires to the maximum recommended PSI. Park on a hard, level surface rather than grass or dirt to prevent flat spots and reduce moisture wicking into tire sidewalls. Use tire covers to protect against UV degradation. For storage exceeding 3 months, place boards or tire cradles under each tire to reduce flat-spotting.</p>
+    <p><strong>Cover or seal all openings:</strong> Seal the exhaust pipe, air intake, and any exterior vents to prevent rodents and insects from nesting inside. Use foam plugs, mesh covers, or purpose-made vent covers. Place rodent deterrents (steel wool, peppermint sachets, or commercial repellents) inside compartments.</p>
+    <p><strong>Retract slide-outs and awnings:</strong> Store the RV with all slide-outs fully retracted to reduce stress on the seals. Retract awnings fully and secure them. Extended awnings are vulnerable to wind damage and can collect debris that leads to mold.</p>
+    <p><strong>Check and address the propane:</strong> Close the main valve at the tank before moving the RV into any enclosed or covered space. Propane is heavier than air — even a small leak in an enclosed structure creates an accumulation risk that can ignite from a single spark. Note the fuel level before storage so you are not caught short on the next trip. For storage lasting three months or more, consider removing the tanks entirely and storing them outdoors or in a well-ventilated area rather than leaving them attached. Never store an RV with propane appliances left in pilot or standing flame mode — this applies to furnaces, water heaters, and refrigerators.</p>
+
+    <h2>Find RV Storage Units Near You</h2>
+    <p>Ready to find a storage solution for your motorhome, camper, or trailer? Search self storage facilities near you to compare enclosed, covered, and outdoor RV storage by size, price, and location. Free to search, no credit card required, no obligation. Search <a href="/storage-unit-near-me">storage units near you</a> to filter by RV storage type, unit size, and price. Compare options, check current availability, and reserve your spot — free with no credit card required.</p>
+    <div class="link-block">
+      <p>Also looking for storage for other vehicles?</p>
+      <ul>
+        <li><a href="/boat-storage-units">Boat storage units</a></li>
+        <li><a href="/car-storage-units">Car storage units</a></li>
+        <li><a href="/motorcycle-storage-units">Motorcycle storage units</a></li>
+        <li><a href="/vehicle-storage-units">All vehicle storage options</a></li>
+      </ul>
+    </div>
+
+    <h2>RV Storage FAQs</h2>
+    <div class="faq-item"><div class="faq-q">How much does it cost to store an RV per month?</div><div class="faq-a">Expect to pay $50 to $125 for outdoor lot storage, $100 to $250 for covered parking, and $150 to $450 or more for enclosed storage. Prices vary by RV size, location, and facility. Class A motorhomes at 40'+ cost significantly more to store than smaller travel trailers.</div></div>
+    <div class="faq-item"><div class="faq-q">What size storage space do I need for my RV?</div><div class="faq-a">Measure your RV's total length including any tow hitch or front overhang, then add 3 to 5 feet of clearance on each end. Most travel trailers and Class C motorhomes fit in a 10' x 30' to 10' x 40' space. Large Class A coaches often require 10' x 45' or more. Always confirm ceiling height and door clearance with the facility.</div></div>
+    <div class="faq-item"><div class="faq-q">Can I store an RV in a regular self storage unit?</div><div class="faq-a">Smaller Class B camper vans and compact travel trailers can sometimes fit in large drive-up self storage units. Class A and larger Class C motorhomes typically need a dedicated vehicle storage lot or large enclosed building. Measure carefully and confirm the facility accepts RVs before booking.</div></div>
+    <div class="faq-item"><div class="faq-q">Is covered or enclosed RV storage worth the extra cost?</div><div class="faq-a">For long-term storage (3 months or more) or in regions with harsh winters, hail, or intense UV, covered or enclosed storage protects the roof seals, fiberglass, rubber trim, and interior from accelerated deterioration. For short-term or mild-climate storage, outdoor lots are often sufficient with a quality RV cover.</div></div>
+    <div class="faq-item"><div class="faq-q">How do I prepare my RV for long-term storage?</div><div class="faq-a">Key steps: clean and dry the interior and exterior, drain and winterize all water systems, stabilize the fuel, change the engine oil, disconnect or maintain the batteries, cover exhaust and vents to block pests, retract slide-outs and awnings, and protect tires from flat-spotting and UV damage.</div></div>
+    <div class="faq-item"><div class="faq-q">Are there HOA or municipal restrictions on parking an RV at home?</div><div class="faq-a">Many HOAs and municipalities restrict or prohibit parking RVs in driveways, on streets, or in front yards. Restrictions vary by location. If you are unsure about your local rules, check with your HOA or local planning department. Self storage facilities offer a compliant, secure alternative.</div></div>
+  </div>
+</div>
+</div><!-- /tab-rv -->
+
+<!-- TAB: WINE STORAGE -->
+<div id="tab-wine" class="tab-panel">
+<div class="content-page">
+  <div class="content-meta-card">
+    <div class="cm-row"><span class="cm-key">Title</span><span class="cm-val">Wine Storage Units Near You | Climate Controlled Wine Storage</span></div>
+    <div class="cm-row"><span class="cm-key">Description</span><span class="cm-val">Find climate controlled wine storage units near you. Protect your collection with the right temperature, humidity, and light conditions. Reserve for free.</span></div>
+    <div class="cm-row"><span class="cm-key">Keywords</span><span class="cm-val"><div class="kw-wrap"><span class="kw-tag">Wine storage units</span><span class="kw-tag">Wine storage near me</span><span class="kw-tag">Wine storage facility</span><span class="kw-tag">Climate controlled wine storage</span><span class="kw-tag">Wine storage facilities near me</span><span class="kw-tag">Wine cellar storage units</span><span class="kw-tag">Wine collection storage</span><span class="kw-tag">Self storage for wine</span></div></span></div>
+  </div>
+  <div class="corrected-banner">✓ Corrected version — all audit issues applied<ul><li>Merged bullet fixed — two separate list items restored in "Who Needs Wine Storage"</li><li>"Our search tool" replaced with "Search FindSelfStorage.com"</li><li>"Near you" duplication fixed in CTA sentence</li><li>Specialty Wine Vaults caveat added (availability varies; CSM confirmation pending)</li><li>/storage-unit-near-me link integrated into CTA</li></ul></div>
+  <div class="page-content">
+    <h1>Wine Storage Units: Find Climate Controlled Wine Storage Near You</h1>
+    <p>Wine is one of the few things you store that actively changes based on its environment. A bottle stored at the wrong temperature, exposed to too much light, or left standing upright too long can go from excellent to undrinkable before you ever open it.</p>
+    <p>Whether you are a collector growing out of home storage space or a business managing inventory, a specialist wine storage facility provides the controlled conditions your collection needs. Search storage facilities near you to find climate controlled units that can accommodate wine storage.</p>
+
+    <h2>Who Needs Wine Storage?</h2>
+    <p>Wine storage is a practical solution for several types of collectors and businesses:</p>
+    <ul>
+      <li><strong>Home collectors:</strong> Bottles outgrowing the refrigerator, kitchen rack, or home wine fridge</li>
+      <li><strong>Serious collectors:</strong> Growing collections requiring consistent long-term cellaring conditions</li>
+      <li><strong>Buyers of futures or cases:</strong> Wine purchased to age for years before opening</li>
+      <li><strong>Restaurant and hospitality businesses:</strong> Managing wine inventory outside of the establishment</li>
+      <li><strong>Estate and inheritance collections:</strong> Properly storing a wine collection during a property transition</li>
+      <li><strong>Apartment and condo dwellers:</strong> No basement or cellar space at home for long-term storage</li>
+    </ul>
+
+    <h2>What Wine Needs to Stay in Good Condition</h2>
+    <p>Wine is sensitive to four environmental factors. Any facility you use should control all of them.</p>
+
+    <h3>Temperature</h3>
+    <p>Temperature is the most critical factor. Wine stored too warm oxidizes and turns sour faster. Wine stored too cold can cause the cork to contract and allow air into the bottle. The ideal storage temperature is between 55 and 65 degrees Fahrenheit for most wines. Consistency matters as much as the number as frequent temperature swings are more damaging than a slightly elevated but stable temperature.</p>
+
+    <h3>Humidity</h3>
+    <p>The ideal relative humidity for wine storage is between 60 and 70 percent. Too dry and corks dry out and shrink, allowing oxidation. Too humid and mold can grow on labels and corks. Climate controlled storage units that manage both temperature and humidity offer the best protection.</p>
+
+    <h3>Light</h3>
+    <p>Ultraviolet light degrades wine faster than almost any other external factor. This is why most wine bottles are made from dark-tinted glass. A storage environment with no direct sunlight and minimal artificial UV exposure is essential. Storage units with no exterior windows are ideal. If a unit has light exposure, storing bottles in their original wooden cases or cardboard cartons provides additional protection.</p>
+
+    <h3>Vibration</h3>
+    <p>Prolonged vibration can disturb sediment in wine, disrupt the slow chemical processes involved in aging, and contribute to a grainier texture and less refined flavor over time. Choose a facility away from heavy traffic, industrial equipment, or frequent foot traffic. While no facility is perfectly vibration-free, some are significantly better than others.</p>
+
+    <h2>Types of Wine Storage Options</h2>
+
+    <h3>Climate Controlled Storage Units</h3>
+    <p>A standard climate controlled self storage unit keeps temperature and humidity at stable levels year-round. While not purpose-built for wine, these units can be highly effective for collections that will be accessed periodically. Look for facilities that actively monitor and log temperature and humidity and not those that set it and walk away.</p>
+    <p><strong>Best for:</strong> Collectors looking for affordable, accessible storage for medium to large collections. Practical for wines intended for drinking within 5 to 10 years.</p>
+
+    <h3>Wine Locker or Bin Storage</h3>
+    <p>Some specialty facilities offer individual wine lockers or shared bin storage. These specialty storage options are smaller dedicated spaces within a larger climate controlled wine vault. These are priced per bin or per case rather than per square foot, making them cost-effective for smaller collections.</p>
+    <p><strong>Best for:</strong> Collectors with fewer than 50 to 100 bottles who do not need a full storage unit. Also useful for those who want to separate part of a collection from home storage.</p>
+
+    <h3>Specialty Wine Vaults</h3>
+    <p>Dedicated wine storage facilities go beyond temperature and humidity control to include vibration dampening, individual locked cages or rooms, and inventory management services. These exist primarily in larger urban markets. Availability varies by market and is less common than general climate controlled storage. When searching, filter for climate controlled facilities and contact them directly to ask about wine-specific storage capabilities.</p>
+    <p><strong>Best for:</strong> High-value collections, wine invested for long-term aging, or collectors who want full inventory tracking and professional management.</p>
+    <p class="note-p"><strong>Note:</strong> Specialty wine vault facilities are not listed in all markets. Filter for climate controlled options near you and contact facilities directly to confirm wine-specific capabilities before booking.</p>
+
+    <h2>What to Look for in a Wine Storage Facility</h2>
+    <p>Before committing to a facility, verify these conditions:</p>
+    <ul>
+      <li><strong>Active temperature monitoring:</strong> is temperature logged and tracked, not just set?</li>
+      <li><strong>Humidity control:</strong> does the unit manage humidity as well as temperature?</li>
+      <li><strong>No natural light:</strong> are there windows or skylights that could expose bottles to UV?</li>
+      <li><strong>Dedicated wine racks or shelving:</strong> are bottles stored horizontally, not upright?</li>
+      <li><strong>Access security:</strong> controlled entry to protect a high-value collection</li>
+      <li><strong>Cleanliness:</strong> no strong chemical odors, cleaning products, or adjacent storage of odor-producing items that wine could absorb through the cork</li>
+    </ul>
+
+    <h2>How to Store Wine Correctly</h2>
+    <p>Even with the right facility, how the wine is arranged matters. Store bottles on their side. Horizontal storage keeps the cork in contact with the wine, preventing it from drying out and shrinking. Upright storage for extended periods risks oxidation as the cork dries. Most purpose-built wine racks and facility shelving automatically orient bottles correctly.</p>
+    <p>Keep wines isolated from strong odors. Wine breathes slowly through the cork. Chemical smells, including cleaning products, paint, solvents, or strong food odors, can be absorbed and affect the taste over time. Store only wine in a wine storage unit and avoid facilities where adjacent units store chemicals.</p>
+    <p>Do not store wine near old or rotting wood. Degraded wood produces compounds that can lead to cork taint, giving wine a musty, cardboard-like off-flavor.</p>
+    <p>Keep the collection organized. Label or track bottles by variety, producer, vintage, and intended drinking window. Regularly retrieving bottles and disturbing the rest of the collection increases vibration and temperature fluctuation.</p>
+
+    <h2>How Much Does Wine Storage Cost?</h2>
+    <p>Wine storage pricing varies by facility type, unit size, and location. These are typical ranges:</p>
+    <table>
+      <thead><tr><th>Storage Type</th><th>Monthly Cost Range</th></tr></thead>
+      <tbody>
+        <tr><td>Climate controlled self storage unit (small)</td><td>$75 to $150</td></tr>
+        <tr><td>Climate controlled self storage unit (large)</td><td>$150 to $400+</td></tr>
+        <tr><td>Wine locker or bin rental (per case or bin)</td><td>$10 to $30 per case/month</td></tr>
+        <tr><td>Specialty wine vault (per case)</td><td>$20 to $60 per case/month</td></tr>
+      </tbody>
+    </table>
+    <p>Factors that affect pricing:</p>
+    <ul>
+      <li><strong>Location:</strong> Urban markets, especially wine-producing regions, are significantly more expensive</li>
+      <li><strong>Unit size:</strong> Priced per square foot; a full unit costs more than a shared bin</li>
+      <li><strong>Facility type:</strong> Specialty wine vaults charge a premium over general climate controlled storage</li>
+      <li><strong>Insurance:</strong> Some facilities offer or require insurance for high-value collections</li>
+    </ul>
+    <p>Search facilities near you to find climate controlled storage options and compare current pricing near you.</p>
+
+    <h2>Find Wine Storage Units Near You</h2>
+    <p>Ready to find a safe home for your wine collection? Search <a href="/storage-unit-near-me">storage units near you</a> and filter for climate controlled options to see what's listed in your area. Free to search, no credit card required, and no obligation. Compare facilities, check current pricing, and reserve your unit online.</p>
+    <div class="link-block">
+      <p>Looking for other specialty storage options?</p>
+      <ul>
+        <li><a href="/24-hour-storage-units">24 Hour Storage</a></li>
+        <li><a href="/climate-controlled-storage-units">Climate Controlled Storage</a></li>
+        <li><a href="/business-storage-units">Business Storage</a></li>
+      </ul>
+    </div>
+
+    <h2>Wine Storage FAQs</h2>
+    <div class="faq-item"><div class="faq-q">What temperature should wine be stored at?</div><div class="faq-a">Between 55 and 65 degrees Fahrenheit is the ideal range for most wines. Consistent temperature is more important than hitting a specific number. Frequent swings between warm and cool are more damaging than a slightly elevated but stable temperature.</div></div>
+    <div class="faq-item"><div class="faq-q">Do I need a specialty wine storage facility or will a climate controlled storage unit work?</div><div class="faq-a">A well-maintained climate controlled self storage unit can be sufficient for most collectors, particularly for wines intended for drinking within 5 to 10 years. For high-value aged wines or very long-term cellaring, a dedicated wine vault with active monitoring, humidity control, and vibration dampening is the safer choice.</div></div>
+    <div class="faq-item"><div class="faq-q">How should wine be oriented in storage?</div><div class="faq-a">Bottles should be stored on their side so the cork stays in contact with the wine. This prevents the cork from drying out and contracting, which would allow air into the bottle. Most purpose-built wine racks automatically store bottles horizontally.</div></div>
+    <div class="faq-item"><div class="faq-q">Can I store wine in a regular self storage unit?</div><div class="faq-a">A standard unclimate-controlled unit is not suitable for wine, as temperature swings will degrade the wine over time. A climate controlled self storage unit can work for short to medium-term storage if the facility actively maintains a stable temperature and humidity within the recommended ranges.</div></div>
+    <div class="faq-item"><div class="faq-q">How much does wine storage cost per month?</div><div class="faq-a">Costs range from $10 to $30 per case per month for wine locker or bin storage, up to $75 to $400 or more per month for a private climate controlled unit depending on size and location. Specialty wine vaults in urban markets can charge $20 to $60 per case per month with full management services.</div></div>
+    <div class="faq-item"><div class="faq-q">How do I find a wine storage facility near me?</div><div class="faq-a">Search FindSelfStorage.com to find climate controlled storage facilities near you. Filter for climate controlled units and contact facilities directly to confirm temperature management, humidity control, and wine storage suitability before booking.</div></div>
+  </div>
+</div>
+</div><!-- /tab-wine -->
+
+<!-- TAB: MOTORCYCLE STORAGE -->
+<div id="tab-motorcycle" class="tab-panel">
+<div class="content-page">
+  <div class="content-meta-card">
+    <div class="cm-row"><span class="cm-key">Title</span><span class="cm-val">Motorcycle Storage Units Near You | All Motorcycle Storage Types</span></div>
+    <div class="cm-row"><span class="cm-key">Description</span><span class="cm-val">Find motorcycle storage units near you. Compare enclosed, covered, and outdoor options for all bikes. Search facilities, check prices, and reserve for free.</span></div>
+    <div class="cm-row"><span class="cm-key">Keywords</span><span class="cm-val"><div class="kw-wrap"><span class="kw-tag">Motorcycle storage units</span><span class="kw-tag">Motorcycle storage near me</span><span class="kw-tag">Motorcycle storage units near me</span><span class="kw-tag">Indoor motorcycle storage</span><span class="kw-tag">Motorcycle winter storage</span><span class="kw-tag">Motorbike storage near me</span><span class="kw-tag">Motorcycle self storage</span><span class="kw-tag">How much does motorcycle storage cost</span><span class="kw-tag">Climate controlled motorcycle storage</span></div></span></div>
+  </div>
+  <div class="corrected-banner">✓ Corrected version — all audit issues applied<ul><li>"Whilst" fixed → "while"</li><li>Keywords block formatting fixed (separate lines)</li><li>Meta title fixed: "All Motorcycle Storage Types"</li><li>"Our search tool" replaced with "Search FindSelfStorage.com"</li><li>/storage-unit-near-me link added to CTA</li><li>Prep checklist opener humanized (consequence-first)</li><li>CTA closer varied</li></ul></div>
+  <div class="page-content">
+    <h1>Motorcycle Storage Units: Find Indoor &amp; Covered Motorcycle Storage Near You</h1>
+    <p>Keeping a motorcycle in your garage during the off-season takes up space and leaves the bike exposed to temperature swings, humidity, and pests. A dedicated motorcycle storage unit gives your bike a secure, protected space at a price that fits most budgets while keeping it ready to ride when the season starts.</p>
+    <p>Search storage facilities near you to compare motorcycle-friendly units by size, type, and price. Reserve online for free with no credit card required.</p>
+
+    <h2>Who Needs Motorcycle Storage?</h2>
+    <p>Motorcycle storage is a practical solution for a range of riders:</p>
+    <ul>
+      <li><strong>Seasonal riders:</strong> Bikes stored over winter months when riding conditions are poor</li>
+      <li><strong>Collectors:</strong> Multiple motorcycles with insufficient garage space at home</li>
+      <li><strong>Apartment and condo dwellers:</strong> No garage or secure parking space at the building</li>
+      <li><strong>HOA-restricted homeowners:</strong> Communities that restrict vehicle storage in driveways or carports</li>
+      <li><strong>Long-term travelers:</strong> Storing a bike securely while away for weeks or months</li>
+      <li><strong>Vintage and classic bike owners:</strong> Protecting a high-value motorcycle from the elements and theft</li>
+    </ul>
+
+    <h2>Types of Motorcycle Storage Units</h2>
+
+    <h3>Enclosed (Indoor) Motorcycle Storage</h3>
+    <p>Fully enclosed storage places your motorcycle inside a lockable drive-up unit with a roll-up door. This is the highest-protection option, keeping the bike safe from weather, dust, pests, and temperature extremes.</p>
+    <p><strong>Best for:</strong> Winter storage in cold or wet climates, classic and vintage bikes, and any motorcycle where paint, chrome, or mechanical condition matters.</p>
+    <p>Enclosed units are sized in the same range as standard self storage. A 5' x 10' unit comfortably fits most motorcycles with room for a helmet and riding gear. A 10' x 10' gives additional space for tools or maintenance work alongside the bike.</p>
+
+    <h3>Covered Motorcycle Storage</h3>
+    <p>Covered storage parks your motorcycle under a roof structure with open sides. You get protection from rain, hail, and direct sun without the cost of a fully enclosed unit.</p>
+    <p><strong>Best for:</strong> Riders in mild climates who want basic weather protection and flexible, frequent access at a lower price point.</p>
+    <p><strong>Limitations:</strong> Open sides mean limited protection from wind-driven rain, temperature extremes, and pests.</p>
+
+    <h3>Outdoor Motorcycle Storage</h3>
+    <p>An open, secured lot with perimeter fencing and surveillance cameras. No weather protection, but access is typically easy and pricing is lowest.</p>
+    <p><strong>Best for:</strong> Short-term storage in mild climates, or as a budget option for a bike with a quality weatherproof motorcycle cover.</p>
+
+    <h2>What Size Storage Unit Do You Need for a Motorcycle?</h2>
+    <p>Motorcycles are among the most space-efficient vehicles to store. Most fit easily in a 5' x 10' unit, making motorcycle storage one of the more affordable vehicle storage options available.</p>
+    <table>
+      <thead><tr><th>Bike Type</th><th>Recommended Unit Size</th></tr></thead>
+      <tbody>
+        <tr><td>Standard motorcycle or cruiser</td><td>5' x 10'</td></tr>
+        <tr><td>Sport bike or touring bike</td><td>5' x 10' to 10' x 10'</td></tr>
+        <tr><td>Large touring or adventure bike</td><td>10' x 10'</td></tr>
+        <tr><td>Motorcycle plus gear/tools</td><td>10' x 10' to 10' x 15'</td></tr>
+        <tr><td>Two motorcycles</td><td>10' x 10' to 10' x 15'</td></tr>
+        <tr><td>Motorcycle plus sidecar</td><td>10' x 15' to 10' x 20'</td></tr>
+      </tbody>
+    </table>
+    <p class="note-p"><strong>Note:</strong> All motorcycle storage requires a drive-up unit so you can ride or push the bike directly in and out. Confirm with the facility that the unit has drive-up access before renting.</p>
+
+    <h2>Do You Need Climate Controlled Motorcycle Storage?</h2>
+    <p>Climate control typically maintains a consistent temperature inside the unit of between 55 and 85 degrees Fahrenheit. It is not required for most motorcycles, but is worth considering if:</p>
+    <ul>
+      <li>You're in a region with extreme cold (below freezing) or intense summer heat</li>
+      <li>The motorcycle has leather seats, custom paintwork, or chrome components that are vulnerable to temperature cycling</li>
+      <li>Storage duration is 3 months or longer</li>
+      <li>You own a vintage or collector bike with significant value</li>
+    </ul>
+    <p>For most modern bikes stored through a standard winter in a moderate climate, an enclosed non-climate-controlled unit is adequate if the bike is properly prepared for storage. Availability of climate controlled motorcycle storage varies by facility so it is best to check individual listings near you to see what's offered.</p>
+
+    <h2>Security Features to Look For</h2>
+    <p>A good motorcycle storage facility should offer:</p>
+    <ul>
+      <li>Perimeter fencing with gated, code-controlled access</li>
+      <li>24/7 HD video surveillance covering all units and access points</li>
+      <li>Individual unit alarms on enclosed units</li>
+      <li>On-site management or regular security patrols</li>
+      <li>Well-lit access areas throughout the facility</li>
+      <li>Drive-up access so you never have to maneuver through a crowded hallway</li>
+    </ul>
+    <p>Location matters too. Choose a facility in a well-trafficked, safe area. If you are unfamiliar with the neighborhood, visit during off-hours before committing.</p>
+
+    <h2>How Much Does Motorcycle Storage Cost?</h2>
+    <p>Motorcycles are among the least expensive vehicles to store because they fit in small units. Typical monthly ranges:</p>
+    <table>
+      <thead><tr><th>Storage Type</th><th>Monthly Cost Range</th></tr></thead>
+      <tbody>
+        <tr><td>Outdoor (open lot)</td><td>$20 to $60</td></tr>
+        <tr><td>Covered parking</td><td>$40 to $100</td></tr>
+        <tr><td>Enclosed 5' x 10' unit</td><td>$40 to $100</td></tr>
+        <tr><td>Enclosed 10' x 10' unit</td><td>$75 to $150</td></tr>
+        <tr><td>Enclosed + climate controlled</td><td>$100 to $200+</td></tr>
+      </tbody>
+    </table>
+    <p>What affects pricing:</p>
+    <ul>
+      <li><strong>Location:</strong> Urban markets are more expensive than suburban or rural areas</li>
+      <li><strong>Unit size:</strong> A 10' x 10' costs more than a 5' x 10'</li>
+      <li><strong>Access hours:</strong> 24/7 facilities typically charge more</li>
+      <li><strong>Lease term:</strong> Month-to-month is usually higher than seasonal pricing</li>
+      <li><strong>Climate control:</strong> Adds a premium of roughly $30 to $75 per month depending on unit size</li>
+    </ul>
+    <p>Search facilities near you to compare current pricing and look for move-in promotions.</p>
+
+    <h2>How to Prepare Your Motorcycle for Storage</h2>
+    <p>Neglected bikes develop problems fast: carburetors seize from varnished fuel, batteries drain completely and won't hold a charge, tires develop flat spots under static weight for months, and chains corrode into stiff, rust-spotted links. The steps below prevent all of that.</p>
+    <p><strong>Take a final ride to warm up the engine:</strong> Before preparing for storage, ride the motorcycle for at least 30 minutes to bring the engine up to full operating temperature. This burns off moisture from the engine internals and helps circulate fresh fluids.</p>
+    <p><strong>Add fuel stabilizer and fill the tank:</strong> Add a fuel stabilizer to the gas tank, then fill the tank completely. Run the engine for 10 minutes to circulate the stabilizer through the fuel system. A full tank minimizes air space and prevents moisture condensation inside the tank. This step is essential for any storage period over 30 days.</p>
+    <p><strong>Change the oil if it is due:</strong> If an oil change is approaching, do it now while the engine is hot. Old oil contains acidic byproducts that cause corrosion when left sitting. Fresh oil during storage is significantly better for engine internals than oil that has been in the engine for thousands of miles.</p>
+    <p><strong>Wash and wax the motorcycle:</strong> Wash the entire motorcycle to remove dirt, bugs, road salt, and grime. Apply a coat of wax to painted surfaces and a metal protectant or light oil to chrome and bare metal parts. Clean and treat leather seats with a conditioner to prevent cracking.</p>
+    <p><strong>Lubricate the chain:</strong> If your motorcycle has a chain drive, clean and lubricate it thoroughly before storage. A properly lubricated chain resists rust and corrosion far better than a dry one sitting for months.</p>
+    <p><strong>Check and inflate tires:</strong> Inflate tires to the manufacturer's maximum recommended PSI. Tires lose pressure slowly during storage and can develop flat spots under prolonged static weight. Parking the bike on a paddock stand keeps weight off the tires entirely and is the best option for long-term storage.</p>
+    <p><strong>Disconnect the battery or connect a maintainer:</strong> Disconnect the negative terminal to prevent phantom drain from electronics. For storage over 30 days, connect a motorcycle battery maintainer (not a basic trickle charger) to keep the battery at full charge without overcharging. Store the battery in a cool, dry place if removing it from the bike.</p>
+    <p><strong>Cover the exhaust and air intake:</strong> Use a rag, foam plug, or purpose-made cover to seal the exhaust pipe and air intake opening. This prevents moisture and pests from entering the engine. Mark these covers visibly so you remember to remove them before starting.</p>
+    <p><strong>Cover the motorcycle:</strong> Use a breathable motorcycle-specific cover. Avoid non-breathable plastic tarps, which trap condensation and promote rust. A good motorcycle cover keeps dust off the bike while allowing moisture to escape.</p>
+
+    <h2>Getting Your Motorcycle Ready to Ride After Storage</h2>
+    <p>Before your first ride of the season, take these steps:</p>
+    <ul>
+      <li>Reconnect the battery and check for corrosion on the terminals</li>
+      <li>Remove exhaust and intake covers</li>
+      <li>Check all fluid levels (coolant, brake fluid, clutch fluid) and top off if needed</li>
+      <li>Check tire pressure and inspect for cracking or flat spots</li>
+      <li>Check the chain lubrication</li>
+      <li>Start the engine and let it idle for several minutes</li>
+      <li>Take a short, slow test ride before going on a long trip</li>
+    </ul>
+
+    <h2>Find Motorcycle Storage Units Near You</h2>
+    <p>Ready to find storage for your bike? Search self storage facilities listed on FindSelfStorage.com to compare enclosed, covered, and outdoor motorcycle storage options by price and location. Free to search, no credit card required, and no obligation. Search <a href="/storage-unit-near-me">storage units near you</a> to find drive-up units suitable for motorcycles in your area. Find a unit, check what's available near you, and reserve in a few clicks — no credit card required.</p>
+    <div class="link-block">
+      <p>Also looking for storage for other vehicles?</p>
+      <ul>
+        <li><a href="/car-storage-units">Car storage units</a></li>
+        <li><a href="/rv-storage-units">RV and motorhome storage</a></li>
+        <li><a href="/boat-storage-units">Boat storage units</a></li>
+        <li><a href="/vehicle-storage-units">All vehicle storage options</a></li>
+      </ul>
+    </div>
+
+    <h2>Motorcycle Storage FAQs</h2>
+    <div class="faq-item"><div class="faq-q">How much does motorcycle storage cost per month?</div><div class="faq-a">Costs typically range from $20 to $60 per month for outdoor lot storage, $40 to $100 for covered or enclosed 5' x 10' units, and $75 to $200 or more for larger enclosed or climate controlled units. Motorcycle storage is one of the most affordable vehicle storage options because bikes fit in small units.</div></div>
+    <div class="faq-item"><div class="faq-q">What size storage unit do I need for a motorcycle?</div><div class="faq-a">Most motorcycles fit comfortably in a 5' x 10' drive-up unit. If you want space for tools, gear, or maintenance work alongside the bike, a 10' x 10' unit is more comfortable. Two bikes typically fit in a 10' x 10' to 10' x 15' unit.</div></div>
+    <div class="faq-item"><div class="faq-q">Do I need climate controlled storage for a motorcycle?</div><div class="faq-a">Not for most bikes in moderate climates. A standard enclosed drive-up unit provides adequate protection for typical winter storage. Climate control is worth considering for classic or collector bikes, very long storage periods, or regions with extreme cold or heat. Availability varies by facility.</div></div>
+    <div class="faq-item"><div class="faq-q">Can I store a motorcycle outside?</div><div class="faq-a">Yes, in a secured outdoor lot with a quality weatherproof motorcycle cover. Outdoor storage is the least expensive option and works well for mild-climate short-term storage. For winter storage or valuable bikes, enclosed storage is a better investment.</div></div>
+    <div class="faq-item"><div class="faq-q">What is the best way to store a motorcycle for winter?</div><div class="faq-a">Fill the tank and add fuel stabilizer, change the oil if due, wash and wax the bike, lubricate the chain, inflate the tires, disconnect or maintain the battery, cover the exhaust and intake, and use a breathable motorcycle cover. Store in an enclosed or covered unit to protect against moisture and temperature extremes.</div></div>
+    <div class="faq-item"><div class="faq-q">How do I find motorcycle storage near me?</div><div class="faq-a">Search FindSelfStorage.com to find facilities near you that offer drive-up units suitable for motorcycles. Filter by unit size and look for 5' x 10' or 10' x 10' drive-up units. Confirm the facility accepts motorcycles and offers drive-up access before booking.</div></div>
+  </div>
+</div>
+</div><!-- /tab-motorcycle -->
+
+<div class="footer">Find Self Storage — Content Optimization Audit · June 2026 · Generated 2026-06-17 by content-ops</div>
+
+<script>
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const tabId = this.dataset.tab;
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById('tab-' + tabId).classList.add('active');
+      this.classList.add('active');
+    });
+  });
+</script>
 </body>
 </html>
