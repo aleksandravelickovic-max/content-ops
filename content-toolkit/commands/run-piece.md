@@ -38,8 +38,9 @@ Orchestrate a single content piece from brief to scored draft. You are the orche
 | 13 | Voice judge | `voice-judge` | **gate**: score < 80 halts |
 | 14 | Koray judge | `koray-judge` | **gate**: score < 80 halts |
 | 15 | Render HTML | `/render-html` | mechanical: never halts on its own |
+| 16 | NLP terms | `cg_run_content_grader` | informational: never halts |
 
-Stages 3-10 are the mechanical enforcers (cheap, run first to fail fast). Stages 13-14 are the scored gates (run last on a clean draft). Stage 15 is deterministic — it converts the gate-cleared MD into the canonical `.html` delivery artifact (decision: 2026-05-27). It runs only after all critical stages pass; a halted piece does not produce an `.html`.
+Stages 3-10 are the mechanical enforcers (cheap, run first to fail fast). Stages 13-14 are the scored gates (run last on a clean draft). Stage 15 is deterministic — it converts the gate-cleared MD into the canonical `.html` delivery artifact (decision: 2026-05-27). It runs only after all critical stages pass; a halted piece does not produce an `.html`. Stage 16 runs immediately after stage 15 and appends an internal semantic terms file for use during editing.
 
 **Why placeholder-check runs first (stage 3):** an unfilled placeholder breaks the input every later stage works on — material-guard might silently pass a draft that says "approved for [TBD]" because the literal claim is missing. Catch placeholders before any rule-checker reads the draft.
 
@@ -68,6 +69,36 @@ A BLOCKED verdict from keyway-check halts the pipeline at that boundary. The BLO
 
 A PASS verdict records the boundary as crossed in `state.json` (`keyways.B{n}: { status: "passed", at: ISO-8601 }`) and lets the next stage run.
 
+## Stage 16 — NLP terms (informational, non-blocking)
+
+After stage 15 succeeds:
+
+1. **Extract the primary keyword** from the brief produced in stage 1 (look for `primary_keyword`, `target_keyword`, or the first keyword listed under `Keywords:`). Fall back to the piece topic if no keyword field is present.
+2. **Run the content grader:** call `cg_run_content_grader` with `content` set to the rendered HTML from stage 15 and `keywords` set to the primary keyword (and secondary keywords if present in the brief, up to 3 total).
+3. **Write `semantic-terms.md`** to the run directory (`clients/{client}/campaigns/{campaign}/runs/{piece-slug}/semantic-terms.md`):
+
+```markdown
+# Semantic Terms — Internal Reference
+
+**Article:** {piece-slug}
+**Primary keyword:** {keyword}
+**Grader score:** {score}/100
+
+## NLP Terms to Cover
+
+{bulleted list of NLP terms returned by the grader, ordered by importance}
+
+## Terms Already Present
+
+{terms the grader flagged as already in the content}
+
+---
+*Internal reference only — not publishable copy. Use during editing to maintain semantic coverage.*
+```
+
+4. **Do not modify the draft MD or the rendered HTML.** The semantic-terms file is a sidecar — never merged into the delivery artifact.
+5. **If the grader call fails** (API error, timeout), log the failure in `state.json` as `"nlp_terms": "failed"` and continue. Stage 16 failure never blocks delivery.
+
 ## Halt protocol
 
 On any critical/gate failure (including a BLOCKED verdict from `keyway-check`):
@@ -93,9 +124,10 @@ On all stages passing:
    - Positive-framing hits (0 critical, n warnings allowed): {n}
    - Verify-with-Alex items: {list from material-guard, or None}
    - Delivery artifact: {piece-slug}.html
+   - Semantic terms: semantic-terms.md ({n} NLP terms, grader score {n}/100)
    - Model tiers used: opus (orchestrator), sonnet (draft/judges), haiku (enforcers + render)
    ```
-4. Report the MD path, the HTML path, and both scores to the user.
+4. Report the MD path, the HTML path, both scores, and the semantic-terms.md path to the user.
 
 ## State file shape
 
@@ -109,6 +141,8 @@ On all stages passing:
   "stages": [
     {"name": "brief", "status": "completed|pending|failed", "note": "..."},
     ...
+    {"name": "render_html", "status": "completed|pending|failed", "note": "..."},
+    {"name": "nlp_terms", "status": "completed|pending|failed", "note": "..."}
   ],
   "keyways": {
     "B1": {"status": "passed|blocked|pending", "at": "ISO-8601", "note": "..."},
@@ -118,6 +152,7 @@ On all stages passing:
     "B5": {"status": "...", "at": "...", "note": "..."}
   },
   "verify_items": ["list of verify-with-Alex items surfaced by material-guard"],
+  "nlp_terms": "completed|failed|pending",
   "updated": "ISO-8601"
 }
 ```
