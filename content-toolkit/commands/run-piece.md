@@ -71,33 +71,13 @@ A PASS verdict records the boundary as crossed in `state.json` (`keyways.B{n}: {
 
 ## Stage 16 — NLP terms (informational, non-blocking)
 
-After stage 15 succeeds:
+Run `/semantic-terms {client} {piece-slug} {primary-keyword} [{keyword2} {keyword3}]` after stage 15 succeeds. The command handles SERP research, term extraction, and file writing. See `commands/semantic-terms.md` for full spec.
 
-1. **Extract the primary keyword** from the brief produced in stage 1 (look for `primary_keyword`, `target_keyword`, or the first keyword listed under `Keywords:`). Fall back to the piece topic if no keyword field is present.
-2. **Run the content grader:** call `cg_run_content_grader` with `content` set to the rendered HTML from stage 15 and `keywords` set to the primary keyword (and secondary keywords if present in the brief, up to 3 total).
-3. **Write `semantic-terms.md`** to the run directory (`clients/{client}/campaigns/{campaign}/runs/{piece-slug}/semantic-terms.md`):
+The output is a **do-not-remove list** — terms already in the draft that carry semantic weight and must survive any subsequent editorial revision. Secondary sections cover gaps and intentional omissions.
 
-```markdown
-# Semantic Terms — Internal Reference
+For reference, the stage writes `semantic-terms.md` to the run directory (`clients/{client}/campaigns/{campaign}/runs/{piece-slug}/semantic-terms.md`) and to `clients/{client}/semantic-terms/{piece-slug}.md`.
 
-**Article:** {piece-slug}
-**Primary keyword:** {keyword}
-**Grader score:** {score}/100
-
-## NLP Terms to Cover
-
-{bulleted list of NLP terms returned by the grader, ordered by importance}
-
-## Terms Already Present
-
-{terms the grader flagged as already in the content}
-
----
-*Internal reference only — not publishable copy. Use during editing to maintain semantic coverage.*
-```
-
-4. **Do not modify the draft MD or the rendered HTML.** The semantic-terms file is a sidecar — never merged into the delivery artifact.
-5. **If the grader call fails** (API error, timeout), log the failure in `state.json` as `"nlp_terms": "failed"` and continue. Stage 16 failure never blocks delivery.
+The semantic-terms file is a sidecar — never merged into the draft MD or the rendered HTML. Stage 16 failure never blocks delivery; log it in `state.json` as `"nlp_terms": "failed"` and continue.
 
 ## Halt protocol
 
