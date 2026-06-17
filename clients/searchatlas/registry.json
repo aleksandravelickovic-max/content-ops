@@ -1,7 +1,7 @@
 {
   "client": "searchatlas",
   "scope": "client",
-  "generatedAt": "2026-05-13T01:43:36",
+  "generatedAt": "2026-06-17T20:04:49",
   "totalFiles": 152,
   "entries": [
     {
@@ -15,7 +15,7 @@
       "path": "STYLE-SYSTEM.md",
       "sizeBytes": 3435,
       "sizeHuman": "3.4 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "domain-power-llm-visibility-study",
@@ -28,7 +28,7 @@
       "path": "raw/knowledge/proof/domain-power-llm-visibility-study.md",
       "sizeBytes": 1129,
       "sizeHuman": "1.1 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "domain-power-study",
@@ -41,7 +41,7 @@
       "path": "raw/knowledge/proof/domain-power-study.md",
       "sizeBytes": 1018,
       "sizeHuman": "1018 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "gbp-galactic-study",
@@ -54,7 +54,7 @@
       "path": "raw/knowledge/proof/gbp-galactic-study.md",
       "sizeBytes": 914,
       "sizeHuman": "914 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "gpt-vs-search-study",
@@ -67,7 +67,7 @@
       "path": "raw/knowledge/proof/gpt-vs-search-study.md",
       "sizeBytes": 1001,
       "sizeHuman": "1001 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "otto-seo-fixes-study",
@@ -80,7 +80,7 @@
       "path": "raw/knowledge/proof/otto-seo-fixes-study.md",
       "sizeBytes": 1076,
       "sizeHuman": "1.1 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "scholar-study",
@@ -93,7 +93,7 @@
       "path": "raw/knowledge/proof/scholar-study.md",
       "sizeBytes": 1425,
       "sizeHuman": "1.4 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "smart-ads-study",
@@ -106,7 +106,7 @@
       "path": "raw/knowledge/proof/smart-ads-study.md",
       "sizeBytes": 1372,
       "sizeHuman": "1.3 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "ai-content-templates",
@@ -119,7 +119,7 @@
       "path": "raw/knowledge/products/ai-content-templates.md",
       "sizeBytes": 936,
       "sizeHuman": "936 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "atlas-brain",
@@ -132,7 +132,7 @@
       "path": "raw/knowledge/products/atlas-brain.md",
       "sizeBytes": 2154,
       "sizeHuman": "2.1 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "backlink-gap-analysis",
@@ -145,7 +145,7 @@
       "path": "raw/knowledge/products/backlink-gap-analysis.md",
       "sizeBytes": 994,
       "sizeHuman": "994 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "backlink-profile-comparison",
@@ -158,7 +158,7 @@
       "path": "raw/knowledge/products/backlink-profile-comparison.md",
       "sizeBytes": 893,
       "sizeHuman": "893 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "backlink-research",
@@ -171,7 +171,7 @@
       "path": "raw/knowledge/products/backlink-research.md",
       "sizeBytes": 1153,
       "sizeHuman": "1.1 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "bulk-url-analyzer",
@@ -184,7 +184,7 @@
       "path": "raw/knowledge/products/bulk-url-analyzer.md",
       "sizeBytes": 689,
       "sizeHuman": "689 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "content-genius",
@@ -197,7 +197,7 @@
       "path": "raw/knowledge/products/content-genius.md",
       "sizeBytes": 1152,
       "sizeHuman": "1.1 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "content-pruning",
@@ -210,7 +210,7 @@
       "path": "raw/knowledge/products/content-pruning.md",
       "sizeBytes": 1026,
       "sizeHuman": "1.0 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "content-rewriting",
@@ -223,7 +223,7 @@
       "path": "raw/knowledge/products/content-rewriting.md",
       "sizeBytes": 894,
       "sizeHuman": "894 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "content-velocity",
@@ -236,7 +236,7 @@
       "path": "raw/knowledge/products/content-velocity.md",
       "sizeBytes": 843,
       "sizeHuman": "843 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "crawl-monitoring",
@@ -249,7 +249,7 @@
       "path": "raw/knowledge/products/crawl-monitoring.md",
       "sizeBytes": 974,
       "sizeHuman": "974 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "domain-power",
@@ -262,7 +262,7 @@
       "path": "raw/knowledge/products/domain-power.md",
       "sizeBytes": 1078,
       "sizeHuman": "1.1 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "gbp-galactic",
@@ -275,7 +275,7 @@
       "path": "raw/knowledge/products/gbp-galactic.md",
       "sizeBytes": 1470,
       "sizeHuman": "1.4 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "gsc-performance",
@@ -288,7 +288,7 @@
       "path": "raw/knowledge/products/gsc-performance.md",
       "sizeBytes": 1580,
       "sizeHuman": "1.5 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "keyword-gap-tool",
@@ -301,7 +301,7 @@
       "path": "raw/knowledge/products/keyword-gap-tool.md",
       "sizeBytes": 1182,
       "sizeHuman": "1.2 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "keyword-magic-tool",
@@ -314,7 +314,7 @@
       "path": "raw/knowledge/products/keyword-magic-tool.md",
       "sizeBytes": 889,
       "sizeHuman": "889 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "keyword-rank-tracker",
@@ -327,7 +327,7 @@
       "path": "raw/knowledge/products/keyword-rank-tracker.md",
       "sizeBytes": 1091,
       "sizeHuman": "1.1 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "keyword-research",
@@ -340,7 +340,7 @@
       "path": "raw/knowledge/products/keyword-research.md",
       "sizeBytes": 1225,
       "sizeHuman": "1.2 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "link-building-outreach",
@@ -353,7 +353,7 @@
       "path": "raw/knowledge/products/link-building-outreach.md",
       "sizeBytes": 1587,
       "sizeHuman": "1.5 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "llm-visibility",
@@ -366,7 +366,7 @@
       "path": "raw/knowledge/products/llm-visibility.md",
       "sizeBytes": 1027,
       "sizeHuman": "1.0 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "local-citation-builder",
@@ -379,7 +379,7 @@
       "path": "raw/knowledge/products/local-citation-builder.md",
       "sizeBytes": 1298,
       "sizeHuman": "1.3 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "local-heatmaps",
@@ -392,7 +392,7 @@
       "path": "raw/knowledge/products/local-heatmaps.md",
       "sizeBytes": 1142,
       "sizeHuman": "1.1 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "meta-generator",
@@ -405,7 +405,7 @@
       "path": "raw/knowledge/products/meta-generator.md",
       "sizeBytes": 959,
       "sizeHuman": "959 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "on-page-audit",
@@ -418,7 +418,7 @@
       "path": "raw/knowledge/products/on-page-audit.md",
       "sizeBytes": 1031,
       "sizeHuman": "1.0 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "otto-seo",
@@ -431,7 +431,7 @@
       "path": "raw/knowledge/products/otto-seo.md",
       "sizeBytes": 1728,
       "sizeHuman": "1.7 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "portfolio-summary",
@@ -444,7 +444,7 @@
       "path": "raw/knowledge/products/portfolio-summary.md",
       "sizeBytes": 992,
       "sizeHuman": "992 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "press-release-distribution",
@@ -457,7 +457,7 @@
       "path": "raw/knowledge/products/press-release-distribution.md",
       "sizeBytes": 968,
       "sizeHuman": "968 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "quest",
@@ -470,7 +470,7 @@
       "path": "raw/knowledge/products/quest.md",
       "sizeBytes": 1030,
       "sizeHuman": "1.0 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "report-builder",
@@ -483,7 +483,7 @@
       "path": "raw/knowledge/products/report-builder.md",
       "sizeBytes": 942,
       "sizeHuman": "942 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "schema-markup-generator",
@@ -496,7 +496,7 @@
       "path": "raw/knowledge/products/schema-markup-generator.md",
       "sizeBytes": 1013,
       "sizeHuman": "1013 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "scholar",
@@ -509,7 +509,7 @@
       "path": "raw/knowledge/products/scholar.md",
       "sizeBytes": 1131,
       "sizeHuman": "1.1 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "search-atlas-platform",
@@ -522,7 +522,7 @@
       "path": "raw/knowledge/products/search-atlas-platform.md",
       "sizeBytes": 2219,
       "sizeHuman": "2.2 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "seo-white-label-software",
@@ -535,7 +535,7 @@
       "path": "raw/knowledge/products/seo-white-label-software.md",
       "sizeBytes": 950,
       "sizeHuman": "950 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "site-auditor",
@@ -548,7 +548,7 @@
       "path": "raw/knowledge/products/site-auditor.md",
       "sizeBytes": 1541,
       "sizeHuman": "1.5 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "site-explorer",
@@ -561,7 +561,7 @@
       "path": "raw/knowledge/products/site-explorer.md",
       "sizeBytes": 1059,
       "sizeHuman": "1.0 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "smart-ads",
@@ -574,7 +574,7 @@
       "path": "raw/knowledge/products/smart-ads.md",
       "sizeBytes": 2242,
       "sizeHuman": "2.2 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "topical-dominance",
@@ -587,7 +587,7 @@
       "path": "raw/knowledge/products/topical-dominance.md",
       "sizeBytes": 949,
       "sizeHuman": "949 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "topical-map-generator",
@@ -600,7 +600,7 @@
       "path": "raw/knowledge/products/topical-map-generator.md",
       "sizeBytes": 1009,
       "sizeHuman": "1009 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "universal-email-alerts",
@@ -613,7 +613,7 @@
       "path": "raw/knowledge/products/universal-email-alerts.md",
       "sizeBytes": 1121,
       "sizeHuman": "1.1 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "url-indexer",
@@ -626,7 +626,7 @@
       "path": "raw/knowledge/products/url-indexer.md",
       "sizeBytes": 662,
       "sizeHuman": "662 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "website-studio",
@@ -639,7 +639,7 @@
       "path": "raw/knowledge/products/website-studio.md",
       "sizeBytes": 2333,
       "sizeHuman": "2.3 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "wildfire",
@@ -652,7 +652,7 @@
       "path": "raw/knowledge/products/wildfire.md",
       "sizeBytes": 1552,
       "sizeHuman": "1.5 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "abdul-ahmed",
@@ -665,7 +665,7 @@
       "path": "raw/knowledge/testimonials/abdul-ahmed.md",
       "sizeBytes": 632,
       "sizeHuman": "632 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "adam-mcchesney",
@@ -678,7 +678,7 @@
       "path": "raw/knowledge/testimonials/adam-mcchesney.md",
       "sizeBytes": 811,
       "sizeHuman": "811 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "alec-neumeyer",
@@ -691,7 +691,7 @@
       "path": "raw/knowledge/testimonials/alec-neumeyer.md",
       "sizeBytes": 629,
       "sizeHuman": "629 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "bailey-kucharek",
@@ -704,7 +704,7 @@
       "path": "raw/knowledge/testimonials/bailey-kucharek.md",
       "sizeBytes": 607,
       "sizeHuman": "607 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "barry-a-page",
@@ -717,7 +717,7 @@
       "path": "raw/knowledge/testimonials/barry-a-page.md",
       "sizeBytes": 1025,
       "sizeHuman": "1.0 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "bennett-black",
@@ -730,7 +730,7 @@
       "path": "raw/knowledge/testimonials/bennett-black.md",
       "sizeBytes": 694,
       "sizeHuman": "694 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "bruce-beck",
@@ -743,7 +743,7 @@
       "path": "raw/knowledge/testimonials/bruce-beck.md",
       "sizeBytes": 1107,
       "sizeHuman": "1.1 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "cohen",
@@ -756,7 +756,7 @@
       "path": "raw/knowledge/testimonials/cohen.md",
       "sizeBytes": 667,
       "sizeHuman": "667 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "danny-barrera",
@@ -769,7 +769,7 @@
       "path": "raw/knowledge/testimonials/danny-barrera.md",
       "sizeBytes": 587,
       "sizeHuman": "587 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "frankie-fihn",
@@ -782,7 +782,7 @@
       "path": "raw/knowledge/testimonials/frankie-fihn.md",
       "sizeBytes": 543,
       "sizeHuman": "543 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "gabe-fletcher",
@@ -795,7 +795,7 @@
       "path": "raw/knowledge/testimonials/gabe-fletcher.md",
       "sizeBytes": 1160,
       "sizeHuman": "1.1 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "jake-f",
@@ -808,7 +808,7 @@
       "path": "raw/knowledge/testimonials/jake-f.md",
       "sizeBytes": 735,
       "sizeHuman": "735 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "jay-neyer",
@@ -821,7 +821,7 @@
       "path": "raw/knowledge/testimonials/jay-neyer.md",
       "sizeBytes": 593,
       "sizeHuman": "593 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "kimball-conover",
@@ -834,7 +834,7 @@
       "path": "raw/knowledge/testimonials/kimball-conover.md",
       "sizeBytes": 737,
       "sizeHuman": "737 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "lade",
@@ -847,7 +847,7 @@
       "path": "raw/knowledge/testimonials/lade.md",
       "sizeBytes": 1096,
       "sizeHuman": "1.1 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "nancy-mikyska",
@@ -860,7 +860,7 @@
       "path": "raw/knowledge/testimonials/nancy-mikyska.md",
       "sizeBytes": 587,
       "sizeHuman": "587 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "nick-jacobs",
@@ -873,7 +873,7 @@
       "path": "raw/knowledge/testimonials/nick-jacobs.md",
       "sizeBytes": 875,
       "sizeHuman": "875 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "shannon-waters-donovan",
@@ -886,7 +886,7 @@
       "path": "raw/knowledge/testimonials/shannon-waters-donovan.md",
       "sizeBytes": 712,
       "sizeHuman": "712 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "stephan-noack",
@@ -899,7 +899,7 @@
       "path": "raw/knowledge/testimonials/stephan-noack.md",
       "sizeBytes": 712,
       "sizeHuman": "712 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "steve-kaplan",
@@ -912,7 +912,7 @@
       "path": "raw/knowledge/testimonials/steve-kaplan.md",
       "sizeBytes": 715,
       "sizeHuman": "715 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "traian-hustiu",
@@ -925,7 +925,7 @@
       "path": "raw/knowledge/testimonials/traian-hustiu.md",
       "sizeBytes": 771,
       "sizeHuman": "771 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "ai-content-templates-categories",
@@ -938,7 +938,7 @@
       "path": "raw/knowledge/facts/ai-content-templates-categories.md",
       "sizeBytes": 320,
       "sizeHuman": "320 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "backlink-index-size",
@@ -951,7 +951,7 @@
       "path": "raw/knowledge/facts/backlink-index-size.md",
       "sizeBytes": 574,
       "sizeHuman": "574 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "citation-builder-aggregators",
@@ -964,7 +964,7 @@
       "path": "raw/knowledge/facts/citation-builder-aggregators.md",
       "sizeBytes": 485,
       "sizeHuman": "485 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "domain-power-scale",
@@ -977,7 +977,7 @@
       "path": "raw/knowledge/facts/domain-power-scale.md",
       "sizeBytes": 407,
       "sizeHuman": "407 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "keyword-database-size",
@@ -990,7 +990,7 @@
       "path": "raw/knowledge/facts/keyword-database-size.md",
       "sizeBytes": 350,
       "sizeHuman": "350 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "local-heatmaps-config",
@@ -1003,7 +1003,7 @@
       "path": "raw/knowledge/facts/local-heatmaps-config.md",
       "sizeBytes": 332,
       "sizeHuman": "332 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "otto-per-site-pricing",
@@ -1016,7 +1016,7 @@
       "path": "raw/knowledge/facts/otto-per-site-pricing.md",
       "sizeBytes": 401,
       "sizeHuman": "401 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "otto-seo-first-ai-autopilot",
@@ -1029,7 +1029,7 @@
       "path": "raw/knowledge/facts/otto-seo-first-ai-autopilot.md",
       "sizeBytes": 305,
       "sizeHuman": "305 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "otto-seo-pixel-any-cms",
@@ -1042,7 +1042,7 @@
       "path": "raw/knowledge/facts/otto-seo-pixel-any-cms.md",
       "sizeBytes": 296,
       "sizeHuman": "296 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "otto-seo-saves-90-percent-labor",
@@ -1055,7 +1055,7 @@
       "path": "raw/knowledge/facts/otto-seo-saves-90-percent-labor.md",
       "sizeBytes": 321,
       "sizeHuman": "321 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "scholar-12-dimensions",
@@ -1068,7 +1068,7 @@
       "path": "raw/knowledge/facts/scholar-12-dimensions.md",
       "sizeBytes": 386,
       "sizeHuman": "386 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "scholar-acronym",
@@ -1081,7 +1081,7 @@
       "path": "raw/knowledge/facts/scholar-acronym.md",
       "sizeBytes": 198,
       "sizeHuman": "198 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "search-atlas-awards",
@@ -1094,7 +1094,7 @@
       "path": "raw/knowledge/facts/search-atlas-awards.md",
       "sizeBytes": 224,
       "sizeHuman": "224 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "search-atlas-founded",
@@ -1107,7 +1107,7 @@
       "path": "raw/knowledge/facts/search-atlas-founded.md",
       "sizeBytes": 208,
       "sizeHuman": "208 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "search-atlas-plan-details",
@@ -1120,7 +1120,7 @@
       "path": "raw/knowledge/facts/search-atlas-plan-details.md",
       "sizeBytes": 847,
       "sizeHuman": "847 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "search-atlas-pricing-range",
@@ -1133,7 +1133,7 @@
       "path": "raw/knowledge/facts/search-atlas-pricing-range.md",
       "sizeBytes": 248,
       "sizeHuman": "248 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "search-atlas-proprietary-metrics",
@@ -1146,7 +1146,7 @@
       "path": "raw/knowledge/facts/search-atlas-proprietary-metrics.md",
       "sizeBytes": 319,
       "sizeHuman": "319 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "search-atlas-ratings",
@@ -1159,7 +1159,7 @@
       "path": "raw/knowledge/facts/search-atlas-ratings.md",
       "sizeBytes": 755,
       "sizeHuman": "755 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "site-auditor-crawl-defaults",
@@ -1172,7 +1172,7 @@
       "path": "raw/knowledge/facts/site-auditor-crawl-defaults.md",
       "sizeBytes": 259,
       "sizeHuman": "259 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "site-auditor-health-score-scale",
@@ -1185,7 +1185,7 @@
       "path": "raw/knowledge/facts/site-auditor-health-score-scale.md",
       "sizeBytes": 301,
       "sizeHuman": "301 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "site-explorer-holistic-pillars",
@@ -1198,7 +1198,7 @@
       "path": "raw/knowledge/facts/site-explorer-holistic-pillars.md",
       "sizeBytes": 246,
       "sizeHuman": "246 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "smart-ads-stag-structure",
@@ -1211,7 +1211,7 @@
       "path": "raw/knowledge/facts/smart-ads-stag-structure.md",
       "sizeBytes": 356,
       "sizeHuman": "356 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "topical-dominance-layers",
@@ -1224,7 +1224,7 @@
       "path": "raw/knowledge/facts/topical-dominance-layers.md",
       "sizeBytes": 504,
       "sizeHuman": "504 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "website-studio-lighthouse",
@@ -1237,7 +1237,7 @@
       "path": "raw/knowledge/facts/website-studio-lighthouse.md",
       "sizeBytes": 410,
       "sizeHuman": "410 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "website-studio-tracking-integrations",
@@ -1250,7 +1250,7 @@
       "path": "raw/knowledge/facts/website-studio-tracking-integrations.md",
       "sizeBytes": 403,
       "sizeHuman": "403 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "wildfire-exchange-ratio",
@@ -1263,7 +1263,7 @@
       "path": "raw/knowledge/facts/wildfire-exchange-ratio.md",
       "sizeBytes": 302,
       "sizeHuman": "302 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "accuranker",
@@ -1276,7 +1276,7 @@
       "path": "raw/knowledge/competitors/accuranker.md",
       "sizeBytes": 486,
       "sizeHuman": "486 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "agency-analytics",
@@ -1289,7 +1289,7 @@
       "path": "raw/knowledge/competitors/agency-analytics.md",
       "sizeBytes": 515,
       "sizeHuman": "515 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "ahrefs",
@@ -1302,7 +1302,7 @@
       "path": "raw/knowledge/competitors/ahrefs.md",
       "sizeBytes": 2624,
       "sizeHuman": "2.6 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "aiseo",
@@ -1315,7 +1315,7 @@
       "path": "raw/knowledge/competitors/aiseo.md",
       "sizeBytes": 437,
       "sizeHuman": "437 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "alli-ai",
@@ -1328,7 +1328,7 @@
       "path": "raw/knowledge/competitors/alli-ai.md",
       "sizeBytes": 676,
       "sizeHuman": "676 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "answerthepublic",
@@ -1341,7 +1341,7 @@
       "path": "raw/knowledge/competitors/answerthepublic.md",
       "sizeBytes": 456,
       "sizeHuman": "456 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "brightlocal",
@@ -1354,7 +1354,7 @@
       "path": "raw/knowledge/competitors/brightlocal.md",
       "sizeBytes": 763,
       "sizeHuman": "763 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "buzzstream",
@@ -1367,7 +1367,7 @@
       "path": "raw/knowledge/competitors/buzzstream.md",
       "sizeBytes": 520,
       "sizeHuman": "520 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "cision",
@@ -1380,7 +1380,7 @@
       "path": "raw/knowledge/competitors/cision.md",
       "sizeBytes": 374,
       "sizeHuman": "374 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "clearscope",
@@ -1393,7 +1393,7 @@
       "path": "raw/knowledge/competitors/clearscope.md",
       "sizeBytes": 547,
       "sizeHuman": "547 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "copyai",
@@ -1406,7 +1406,7 @@
       "path": "raw/knowledge/competitors/copyai.md",
       "sizeBytes": 466,
       "sizeHuman": "466 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "deepcrawl",
@@ -1419,7 +1419,7 @@
       "path": "raw/knowledge/competitors/deepcrawl.md",
       "sizeBytes": 394,
       "sizeHuman": "394 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "framer",
@@ -1432,7 +1432,7 @@
       "path": "raw/knowledge/competitors/framer.md",
       "sizeBytes": 416,
       "sizeHuman": "416 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "frase",
@@ -1445,7 +1445,7 @@
       "path": "raw/knowledge/competitors/frase.md",
       "sizeBytes": 777,
       "sizeHuman": "777 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "georanker",
@@ -1458,7 +1458,7 @@
       "path": "raw/knowledge/competitors/georanker.md",
       "sizeBytes": 374,
       "sizeHuman": "374 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "google-data-studio",
@@ -1471,7 +1471,7 @@
       "path": "raw/knowledge/competitors/google-data-studio.md",
       "sizeBytes": 585,
       "sizeHuman": "585 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "indexmenow",
@@ -1484,7 +1484,7 @@
       "path": "raw/knowledge/competitors/indexmenow.md",
       "sizeBytes": 340,
       "sizeHuman": "340 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "jasper",
@@ -1497,7 +1497,7 @@
       "path": "raw/knowledge/competitors/jasper.md",
       "sizeBytes": 692,
       "sizeHuman": "692 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "local-viking",
@@ -1510,7 +1510,7 @@
       "path": "raw/knowledge/competitors/local-viking.md",
       "sizeBytes": 395,
       "sizeHuman": "395 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "majestic",
@@ -1523,7 +1523,7 @@
       "path": "raw/knowledge/competitors/majestic.md",
       "sizeBytes": 476,
       "sizeHuman": "476 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "marketmuse",
@@ -1536,7 +1536,7 @@
       "path": "raw/knowledge/competitors/marketmuse.md",
       "sizeBytes": 914,
       "sizeHuman": "914 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "meltwater",
@@ -1549,7 +1549,7 @@
       "path": "raw/knowledge/competitors/meltwater.md",
       "sizeBytes": 361,
       "sizeHuman": "361 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "merkle",
@@ -1562,7 +1562,7 @@
       "path": "raw/knowledge/competitors/merkle.md",
       "sizeBytes": 405,
       "sizeHuman": "405 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "monitor-backlinks",
@@ -1575,7 +1575,7 @@
       "path": "raw/knowledge/competitors/monitor-backlinks.md",
       "sizeBytes": 449,
       "sizeHuman": "449 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "morningscore",
@@ -1588,7 +1588,7 @@
       "path": "raw/knowledge/competitors/morningscore.md",
       "sizeBytes": 414,
       "sizeHuman": "414 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "moz",
@@ -1601,7 +1601,7 @@
       "path": "raw/knowledge/competitors/moz.md",
       "sizeBytes": 1336,
       "sizeHuman": "1.3 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "optmyzr",
@@ -1614,7 +1614,7 @@
       "path": "raw/knowledge/competitors/optmyzr.md",
       "sizeBytes": 452,
       "sizeHuman": "452 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "pitchbox",
@@ -1627,7 +1627,7 @@
       "path": "raw/knowledge/competitors/pitchbox.md",
       "sizeBytes": 468,
       "sizeHuman": "468 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "pr-newswire",
@@ -1640,7 +1640,7 @@
       "path": "raw/knowledge/competitors/pr-newswire.md",
       "sizeBytes": 398,
       "sizeHuman": "398 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "prowly",
@@ -1653,7 +1653,7 @@
       "path": "raw/knowledge/competitors/prowly.md",
       "sizeBytes": 411,
       "sizeHuman": "411 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "quillbot",
@@ -1666,7 +1666,7 @@
       "path": "raw/knowledge/competitors/quillbot.md",
       "sizeBytes": 425,
       "sizeHuman": "425 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "rank-ranger",
@@ -1679,7 +1679,7 @@
       "path": "raw/knowledge/competitors/rank-ranger.md",
       "sizeBytes": 435,
       "sizeHuman": "435 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "raven-tools",
@@ -1692,7 +1692,7 @@
       "path": "raw/knowledge/competitors/raven-tools.md",
       "sizeBytes": 353,
       "sizeHuman": "353 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "respona",
@@ -1705,7 +1705,7 @@
       "path": "raw/knowledge/competitors/respona.md",
       "sizeBytes": 483,
       "sizeHuman": "483 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "scalenut",
@@ -1718,7 +1718,7 @@
       "path": "raw/knowledge/competitors/scalenut.md",
       "sizeBytes": 395,
       "sizeHuman": "395 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "screaming-frog",
@@ -1731,7 +1731,7 @@
       "path": "raw/knowledge/competitors/screaming-frog.md",
       "sizeBytes": 777,
       "sizeHuman": "777 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "se-ranking",
@@ -1744,7 +1744,7 @@
       "path": "raw/knowledge/competitors/se-ranking.md",
       "sizeBytes": 792,
       "sizeHuman": "792 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "semrush",
@@ -1757,7 +1757,7 @@
       "path": "raw/knowledge/competitors/semrush.md",
       "sizeBytes": 3081,
       "sizeHuman": "3.0 KB",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "seo-powersuite",
@@ -1770,7 +1770,7 @@
       "path": "raw/knowledge/competitors/seo-powersuite.md",
       "sizeBytes": 468,
       "sizeHuman": "468 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "seomonitor",
@@ -1783,7 +1783,7 @@
       "path": "raw/knowledge/competitors/seomonitor.md",
       "sizeBytes": 491,
       "sizeHuman": "491 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "seoptimer",
@@ -1796,7 +1796,7 @@
       "path": "raw/knowledge/competitors/seoptimer.md",
       "sizeBytes": 392,
       "sizeHuman": "392 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "serpstat",
@@ -1809,7 +1809,7 @@
       "path": "raw/knowledge/competitors/serpstat.md",
       "sizeBytes": 384,
       "sizeHuman": "384 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "sitebulb",
@@ -1822,7 +1822,7 @@
       "path": "raw/knowledge/competitors/sitebulb.md",
       "sizeBytes": 429,
       "sizeHuman": "429 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "spyfu",
@@ -1835,7 +1835,7 @@
       "path": "raw/knowledge/competitors/spyfu.md",
       "sizeBytes": 457,
       "sizeHuman": "457 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "surfer-seo",
@@ -1848,7 +1848,7 @@
       "path": "raw/knowledge/competitors/surfer-seo.md",
       "sizeBytes": 850,
       "sizeHuman": "850 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "technicalseo",
@@ -1861,7 +1861,7 @@
       "path": "raw/knowledge/competitors/technicalseo.md",
       "sizeBytes": 389,
       "sizeHuman": "389 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "ubersuggest",
@@ -1874,7 +1874,7 @@
       "path": "raw/knowledge/competitors/ubersuggest.md",
       "sizeBytes": 531,
       "sizeHuman": "531 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "webflow",
@@ -1887,7 +1887,7 @@
       "path": "raw/knowledge/competitors/webflow.md",
       "sizeBytes": 386,
       "sizeHuman": "386 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "whitespark",
@@ -1900,7 +1900,7 @@
       "path": "raw/knowledge/competitors/whitespark.md",
       "sizeBytes": 714,
       "sizeHuman": "714 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "wix",
@@ -1913,7 +1913,7 @@
       "path": "raw/knowledge/competitors/wix.md",
       "sizeBytes": 511,
       "sizeHuman": "511 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "wordpress",
@@ -1926,7 +1926,7 @@
       "path": "raw/knowledge/competitors/wordpress.md",
       "sizeBytes": 736,
       "sizeHuman": "736 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "wordstream",
@@ -1939,7 +1939,7 @@
       "path": "raw/knowledge/competitors/wordstream.md",
       "sizeBytes": 447,
       "sizeHuman": "447 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "wordtune",
@@ -1952,7 +1952,7 @@
       "path": "raw/knowledge/competitors/wordtune.md",
       "sizeBytes": 364,
       "sizeHuman": "364 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "writesonic",
@@ -1965,7 +1965,7 @@
       "path": "raw/knowledge/competitors/writesonic.md",
       "sizeBytes": 469,
       "sizeHuman": "469 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     },
     {
       "id": "yext",
@@ -1978,7 +1978,7 @@
       "path": "raw/knowledge/competitors/yext.md",
       "sizeBytes": 734,
       "sizeHuman": "734 B",
-      "lastModified": "2026-05-12"
+      "lastModified": "2026-05-14"
     }
   ]
 }

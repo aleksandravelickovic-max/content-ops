@@ -1,0 +1,21 @@
+{
+  "client": "a-plus-landscaping",
+  "campaign": "01-retaining-walls-pr",
+  "generatedAt": "2026-06-17T20:04:49",
+  "totalFiles": 1,
+  "entries": [
+    {
+      "id": "retaining-walls-press-release",
+      "filename": "retaining-walls-press-release.md",
+      "displayName": "Retaining Walls Provide Structural and Aesthetic Benefits for Sloped Landscapes",
+      "type": "draft",
+      "category": "draft",
+      "status": "delivered",
+      "version": 1,
+      "path": "drafts/retaining-walls-press-release.md",
+      "sizeBytes": 3837,
+      "sizeHuman": "3.7 KB",
+      "lastModified": "2026-06-10"
+    }
+  ]
+}

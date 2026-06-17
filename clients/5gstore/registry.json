@@ -1,4 +1,47 @@
 {
   "client": "5gstore",
-  "campaigns": []
+  "scope": "client",
+  "generatedAt": "2026-06-17T20:04:49",
+  "totalFiles": 3,
+  "entries": [
+    {
+      "id": "style-system",
+      "filename": "STYLE-SYSTEM.md",
+      "displayName": "5Gstore \u2014 Style System",
+      "type": "style-system",
+      "category": "style-system",
+      "status": "active",
+      "version": 1,
+      "path": "STYLE-SYSTEM.md",
+      "sizeBytes": 10423,
+      "sizeHuman": "10.2 KB",
+      "lastModified": "2026-05-17"
+    },
+    {
+      "id": "client-overview",
+      "filename": "client-overview.md",
+      "displayName": "5Gstore",
+      "type": "research",
+      "category": "research",
+      "status": "delivered",
+      "version": 1,
+      "path": "raw/research/client-overview.md",
+      "sizeBytes": 3745,
+      "sizeHuman": "3.7 KB",
+      "lastModified": "2026-05-17"
+    },
+    {
+      "id": "company-profile",
+      "filename": "company-profile.md",
+      "displayName": "5Gstore Company Profile & Data Structure",
+      "type": "research",
+      "category": "research",
+      "status": "delivered",
+      "version": 1,
+      "path": "raw/research/company-profile.md",
+      "sizeBytes": 5826,
+      "sizeHuman": "5.7 KB",
+      "lastModified": "2026-05-17"
+    }
+  ]
 }

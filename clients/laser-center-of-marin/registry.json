@@ -1,38 +1,34 @@
 {
   "client": "laser-center-of-marin",
   "scope": "client",
-  "generatedAt": "2026-05-29T00:00:00",
-  "totalFiles": 3,
+  "generatedAt": "2026-06-17T20:04:49",
+  "totalFiles": 2,
   "entries": [
     {
       "id": "style-system",
       "filename": "STYLE-SYSTEM.md",
-      "displayName": "Laser Center of Marin — Style System",
+      "displayName": "Laser Center of Marin \u2014 Style System",
       "type": "style-system",
       "category": "style-system",
       "status": "active",
       "version": 1,
-      "path": "STYLE-SYSTEM.md"
-    },
-    {
-      "id": "compliance",
-      "filename": "COMPLIANCE.yml",
-      "displayName": "Laser Center of Marin — Compliance Config",
-      "type": "compliance",
-      "category": "compliance",
-      "status": "active",
-      "version": 1,
-      "path": "COMPLIANCE.yml"
+      "path": "STYLE-SYSTEM.md",
+      "sizeBytes": 5792,
+      "sizeHuman": "5.7 KB",
+      "lastModified": "2026-05-29"
     },
     {
       "id": "overview",
       "filename": "overview.md",
-      "displayName": "Laser Center of Marin — Client Overview",
-      "type": "knowledge",
-      "category": "knowledge",
-      "status": "active",
+      "displayName": "Laser Center of Marin \u2014 Client Overview",
+      "type": "other",
+      "category": "other",
+      "status": "delivered",
       "version": 1,
-      "path": "raw/knowledge/overview.md"
+      "path": "raw/knowledge/overview.md",
+      "sizeBytes": 3587,
+      "sizeHuman": "3.5 KB",
+      "lastModified": "2026-05-29"
     }
   ]
 }

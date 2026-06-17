@@ -1,4 +1,60 @@
 {
   "client": "altify",
-  "campaigns": []
+  "scope": "client",
+  "generatedAt": "2026-06-17T20:04:49",
+  "totalFiles": 4,
+  "entries": [
+    {
+      "id": "style-system",
+      "filename": "STYLE-SYSTEM.md",
+      "displayName": "Altify \u2014 Style System",
+      "type": "style-system",
+      "category": "style-system",
+      "status": "active",
+      "version": 1,
+      "path": "STYLE-SYSTEM.md",
+      "sizeBytes": 14566,
+      "sizeHuman": "14.2 KB",
+      "lastModified": "2026-05-15"
+    },
+    {
+      "id": "client-overview",
+      "filename": "client-overview.md",
+      "displayName": "Altify",
+      "type": "research",
+      "category": "research",
+      "status": "delivered",
+      "version": 1,
+      "path": "raw/research/client-overview.md",
+      "sizeBytes": 6439,
+      "sizeHuman": "6.3 KB",
+      "lastModified": "2026-05-15"
+    },
+    {
+      "id": "content-directory-brief",
+      "filename": "content-directory-brief.md",
+      "displayName": "Altify Content Directory Brief",
+      "type": "brief",
+      "category": "brief",
+      "status": "delivered",
+      "version": 1,
+      "path": "raw/research/content-directory-brief.md",
+      "sizeBytes": 10758,
+      "sizeHuman": "10.5 KB",
+      "lastModified": "2026-05-15"
+    },
+    {
+      "id": "content-directory-readme",
+      "filename": "content-directory-readme.md",
+      "displayName": "Altify Content Directory",
+      "type": "research",
+      "category": "research",
+      "status": "delivered",
+      "version": 1,
+      "path": "raw/research/content-directory-readme.md",
+      "sizeBytes": 2888,
+      "sizeHuman": "2.8 KB",
+      "lastModified": "2026-05-15"
+    }
+  ]
 }

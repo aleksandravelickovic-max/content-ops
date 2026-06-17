@@ -1,0 +1,112 @@
+{
+  "client": "5gstore",
+  "campaign": "01-may-content-optimization",
+  "generatedAt": "2026-06-17T20:04:49",
+  "totalFiles": 8,
+  "entries": [
+    {
+      "id": "campaign-urls",
+      "filename": "campaign-urls.md",
+      "displayName": "5Gstore \u2014 Content Optimization Campaign",
+      "type": "campaign-urls",
+      "category": "campaign-urls",
+      "status": "delivered",
+      "version": 1,
+      "path": "campaign-urls.md",
+      "sizeBytes": 642,
+      "sizeHuman": "642 B",
+      "lastModified": "2026-05-20"
+    },
+    {
+      "id": "index",
+      "filename": "index.html",
+      "displayName": "Index",
+      "type": "html-index",
+      "category": "html-index",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/index.html",
+      "sizeBytes": 6421,
+      "sizeHuman": "6.3 KB",
+      "lastModified": "2026-05-20"
+    },
+    {
+      "id": "01-dome-pro-duo",
+      "filename": "01-dome-pro-duo.html",
+      "displayName": "Dome Pro Duo",
+      "type": "html-revised",
+      "category": "html-revised",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/revised/01-dome-pro-duo.html",
+      "sizeBytes": 16913,
+      "sizeHuman": "16.5 KB",
+      "lastModified": "2026-05-20"
+    },
+    {
+      "id": "02-peplink-switch",
+      "filename": "02-peplink-switch.html",
+      "displayName": "Peplink Switch",
+      "type": "html-revised",
+      "category": "html-revised",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/revised/02-peplink-switch.html",
+      "sizeBytes": 14561,
+      "sizeHuman": "14.2 KB",
+      "lastModified": "2026-05-20"
+    },
+    {
+      "id": "03-fusionhub-pro",
+      "filename": "03-fusionhub-pro.html",
+      "displayName": "Fusionhub Pro",
+      "type": "html-revised",
+      "category": "html-revised",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/revised/03-fusionhub-pro.html",
+      "sizeBytes": 14217,
+      "sizeHuman": "13.9 KB",
+      "lastModified": "2026-05-20"
+    },
+    {
+      "id": "04-vwan-license",
+      "filename": "04-vwan-license.html",
+      "displayName": "Vwan License",
+      "type": "html-revised",
+      "category": "html-revised",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/revised/04-vwan-license.html",
+      "sizeBytes": 12484,
+      "sizeHuman": "12.2 KB",
+      "lastModified": "2026-05-20"
+    },
+    {
+      "id": "05-inseego-fg2000e",
+      "filename": "05-inseego-fg2000e.html",
+      "displayName": "Inseego Fg2000E",
+      "type": "html-revised",
+      "category": "html-revised",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/revised/05-inseego-fg2000e.html",
+      "sizeBytes": 16331,
+      "sizeHuman": "15.9 KB",
+      "lastModified": "2026-05-20"
+    },
+    {
+      "id": "06-gpio-cable",
+      "filename": "06-gpio-cable.html",
+      "displayName": "Gpio Cable",
+      "type": "html-revised",
+      "category": "html-revised",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/revised/06-gpio-cable.html",
+      "sizeBytes": 13041,
+      "sizeHuman": "12.7 KB",
+      "lastModified": "2026-05-20"
+    }
+  ]
+}
