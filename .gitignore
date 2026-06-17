@@ -25,3 +25,6 @@ clients/*/delivery.yml
 content-toolkit/worktrees/
 
 __pycache__/
+
+# format-to-wp secrets (ClickUp + WP credentials)
+scripts/.env.format-to-wp
