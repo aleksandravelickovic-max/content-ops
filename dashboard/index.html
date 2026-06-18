@@ -255,6 +255,7 @@ function relTime(iso){if(!iso)return '';const d=Math.floor((Date.now()-new Date(
 function dueLabel(ds){if(!ds)return '';const d=Math.floor((new Date(ds)-Date.now())/86400000);if(d<0)return '<span style="color:var(--red);font-weight:600">Overdue</span>';if(d===0)return '<span style="color:var(--amber);font-weight:600">Due today</span>';if(d<=7)return `<span style="color:var(--amber)">Due in ${d}d</span>`;return `Due ${new Date(ds).toLocaleDateString('en-US',{month:'short',day:'numeric'})}`;}
 function statusBdg(s){const m={in_progress:'s-ip',not_started:'s-ns',blocked:'s-bl',done:'s-dn'};const l={in_progress:'In Progress',not_started:'Not Started',blocked:'Blocked',done:'Done'};return `<span class="bdg ${m[s]||'s-ns'}">${esc(l[s]||s)}</span>`;}
 function trendBdg(t){if(!t)return '';if(t.includes('declining'))return '<span class="bdg bdg-red">Declining</span>';if(t.includes('stable'))return '<span class="bdg bdg-amber">Demand ↓</span>';if(t.includes('improved'))return '<span class="bdg bdg-blue">Rank ↑</span>';return `<span class="bdg bdg-gray">${esc(t)}</span>`;}
+function actionForTrend(t){if(!t)return '';if(t.includes('declining'))return 'Refresh content — rankings dropping';if(t.includes('stable'))return 'Rewrite title/meta — CTR is the gap';if(t.includes('improved'))return 'Target adjacent queries — demand shifted';return '';}
 function inlinePb(val,max,color){const p=pct(val,max||1);return `<span class="pb"><span class="pb-f" style="width:${p}%;background:${color||'var(--blue)'}"></span></span>`;}
 
 // ── Quarter nav ────────────────────────────────────────────────────────────
@@ -350,6 +351,7 @@ function buildAll(){
     buildWeeklyProgress(Q),
     buildClickUp(),
     buildLLMV(),
+    buildPerformance(),
     acc('gsc','GSC Organic Performance',gscSub(),gscBadge(),buildGSCInner()),
     acc('decay','Content Decay',decaySub(),decayBadge(),buildDecayInner()),
     acc('wins','Quick Win Keywords',winsSub(),winsBadge(),buildWinsInner()),
@@ -593,6 +595,27 @@ function buildLLMV(){
   </div></div></div>`;
 }
 
+// ── CONTENT PERFORMANCE (wins first) ──────────────────────────────────────
+function buildPerformance(){
+  const P=DATA?.content_performance;if(!P)return '';
+  const top=P.top_pages||[],climb=P.climbing||[];
+  const topRows=top.map((r,i)=>`<tr><td>${i+1}</td><td><a href="${esc(r.page)}" target="_blank">${esc(r.slug)}</a></td><td class="tr" style="font-weight:600">${fmt(r.clicks)}</td><td class="tr" style="color:var(--muted)">${r.ctr.toFixed(2)}%</td><td class="tr tm">${r.position.toFixed(1)}</td></tr>`).join('');
+  const climbRows=climb.map((r,i)=>{
+    const growthTxt=r.is_new?'New':`+${r.growth_pct.toFixed(0)}%`;
+    return `<tr><td>${i+1}</td><td><a href="${esc(r.page)}" target="_blank">${esc(r.slug)}</a></td><td class="tr tm" style="color:var(--muted)">${r.clicks_prior} → <strong style="color:var(--text)">${r.clicks_now}</strong></td><td class="tr"><span class="bdg bdg-green">▲ ${growthTxt}</span></td></tr>`;
+  }).join('');
+  return `<div class="section g2">
+    <div class="card">
+      <div class="card-hd"><span class="card-title">🏆 Top Performing Pages — 28d</span><span class="bdg bdg-blue">${top.length} pages</span></div>
+      <div class="card-body" style="overflow-x:auto"><table class="tbl"><thead><tr><th>#</th><th>Page</th><th class="tr">Clicks</th><th class="tr">CTR</th><th class="tr">Pos</th></tr></thead><tbody>${topRows||'<tr><td colspan="5" style="text-align:center;color:var(--muted);padding:14px">No data.</td></tr>'}</tbody></table></div>
+    </div>
+    <div class="card">
+      <div class="card-hd"><span class="card-title">📈 Climbing Pages — vs prior 28d</span><span class="bdg bdg-green">${climb.length} growing</span></div>
+      <div class="card-body" style="overflow-x:auto"><table class="tbl"><thead><tr><th>#</th><th>Page</th><th class="tr">Prior → Now</th><th class="tr">Growth</th></tr></thead><tbody>${climbRows||'<tr><td colspan="4" style="text-align:center;color:var(--muted);padding:14px">No significant climbers this period.</td></tr>'}</tbody></table></div>
+    </div>
+  </div>`;
+}
+
 // ── GSC ────────────────────────────────────────────────────────────────────
 function gscSub(){const G=DATA?.gsc;if(!G)return 'not connected';return `${fmt(G.current?.clicks)} clicks · ${G.period}`;}
 function gscBadge(){const G=DATA?.gsc;if(!G)return '<span class="bdg bdg-gray">—</span>';const p=G.change?.clicks_pct||0;return `<span class="bdg ${p<-10?'bdg-red':p<0?'bdg-amber':'bdg-green'}">${sign(p)} ${abs(p).toFixed(1)}%</span>`;}
@@ -610,14 +633,14 @@ function decayBadge(){const rows=DATA?.content_decay||[];return `<span class="bd
 function buildDecayInner(){
   const rows=DATA?.content_decay||[];if(!rows.length)return '<div style="padding:14px 18px;color:var(--muted);font-size:12px">No content decay detected.</div>';
   const maxL=rows[0]?.loss||1;
-  const mkRow=(r,i)=>`<tr><td>${i+1}</td><td><a href="https://searchatlas.com${r.page}" target="_blank">${esc(r.slug||r.page)}</a></td><td class="tr" style="color:var(--red);font-weight:600">−${r.loss}</td><td>${inlinePb(r.loss,maxL,r.loss>=50?'var(--red)':r.loss>=20?'var(--amber)':'var(--blue)')} <span style="font-size:10px;color:var(--muted)">${r.clicks_now}→${r.clicks_p3}</span></td><td>${trendBdg(r.trend)}</td><td class="tr tm">${r.position_now?.toFixed(1)}</td></tr>`;
+  const mkRow=(r,i)=>`<tr><td>${i+1}</td><td><a href="${esc(r.page)}" target="_blank">${esc(r.slug||r.page)}</a></td><td class="tr" style="color:var(--red);font-weight:600">−${r.loss}</td><td>${inlinePb(r.loss,maxL,r.loss>=50?'var(--red)':r.loss>=20?'var(--amber)':'var(--blue)')} <span style="font-size:10px;color:var(--muted)">${r.clicks_now}→${r.clicks_p3}</span></td><td>${trendBdg(r.trend)}</td><td style="font-size:11px;color:var(--muted)">${esc(actionForTrend(r.trend))}</td><td class="tr tm">${r.position_now?.toFixed(1)}</td></tr>`;
   const show=rows.slice(0,6),rest=rows.slice(6);
-  return `<div style="overflow-x:auto"><table class="tbl"><thead><tr><th>#</th><th>Page</th><th class="tr">Clicks Lost</th><th>Trend</th><th>Diagnosis</th><th class="tr">Pos</th></tr></thead><tbody id="decay-tb">${show.map((r,i)=>mkRow(r,i)).join('')}${rest.length?`<tr class="more-row" onclick="expandDecay()"><td colspan="6">▾ Show ${rest.length} more</td></tr>`:''}</tbody></table></div>`;
+  return `<div style="overflow-x:auto"><table class="tbl"><thead><tr><th>#</th><th>Page</th><th class="tr">Clicks Lost</th><th>Trend</th><th>Diagnosis</th><th>Action</th><th class="tr">Pos</th></tr></thead><tbody id="decay-tb">${show.map((r,i)=>mkRow(r,i)).join('')}${rest.length?`<tr class="more-row" onclick="expandDecay()"><td colspan="7">▾ Show ${rest.length} more</td></tr>`:''}</tbody></table></div>`;
 }
 function expandDecay(){
   const rows=DATA?.content_decay||[],maxL=rows[0]?.loss||1;
   const rest=rows.slice(6);const tb=document.getElementById('decay-tb');const mr=tb.querySelector('.more-row');
-  rest.forEach((r,i)=>{const tr=document.createElement('tr');tr.innerHTML=`<td>${i+7}</td><td><a href="https://searchatlas.com${r.page}" target="_blank">${esc(r.slug||r.page)}</a></td><td class="tr" style="color:var(--red);font-weight:600">−${r.loss}</td><td>${inlinePb(r.loss,maxL,r.loss>=50?'var(--red)':r.loss>=20?'var(--amber)':'var(--blue)')} <span style="font-size:10px;color:var(--muted)">${r.clicks_now}→${r.clicks_p3}</span></td><td>${trendBdg(r.trend)}</td><td class="tr tm">${r.position_now?.toFixed(1)}</td>`;tb.insertBefore(tr,mr);});mr.remove();
+  rest.forEach((r,i)=>{const tr=document.createElement('tr');tr.innerHTML=`<td>${i+7}</td><td><a href="${esc(r.page)}" target="_blank">${esc(r.slug||r.page)}</a></td><td class="tr" style="color:var(--red);font-weight:600">−${r.loss}</td><td>${inlinePb(r.loss,maxL,r.loss>=50?'var(--red)':r.loss>=20?'var(--amber)':'var(--blue)')} <span style="font-size:10px;color:var(--muted)">${r.clicks_now}→${r.clicks_p3}</span></td><td>${trendBdg(r.trend)}</td><td style="font-size:11px;color:var(--muted)">${esc(actionForTrend(r.trend))}</td><td class="tr tm">${r.position_now?.toFixed(1)}</td>`;tb.insertBefore(tr,mr);});mr.remove();
 }
 
 // ── QUICK WINS ─────────────────────────────────────────────────────────────
