@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-06-18T18:09:56.717194+00:00",
+    "generated_at": "2026-06-18T19:45:40.898562+00:00",
     "version": "2.2.0",
     "sources": {
       "clickup_published": "connected",
@@ -17,7 +17,7 @@
   },
   "clickup_stats": {
     "articles_published_7d": 9,
-    "generated_at": "2026-06-18T18:09:38.364531+00:00",
+    "generated_at": "2026-06-18T19:45:24.381893+00:00",
     "window_days": 7,
     "tasks": [
       {
@@ -111,7 +111,7 @@
     ]
   },
   "gsc": {
-    "generated_at": "2026-06-18T18:09:31.872004+00:00",
+    "generated_at": "2026-06-18T19:45:18.453283+00:00",
     "period": "2026-05-19 to 2026-06-15",
     "current": {
       "clicks": 14040,
@@ -130,10 +130,24 @@
       "impressions_pct": -3.78,
       "ctr_delta": -0.05,
       "position_change": -5.1
+    },
+    "branded_split": {
+      "brand_filter": "searchatlas|search atlas|linkgraph|otto seo|atlas agent|manick bhan",
+      "current": {
+        "branded_clicks": 7348,
+        "nonbranded_clicks": 6692,
+        "nonbranded_pct": 47.7
+      },
+      "prior": {
+        "branded_clicks": 9543,
+        "nonbranded_clicks": 7472,
+        "nonbranded_pct": 43.9
+      },
+      "nonbranded_ppt_change": 3.8
     }
   },
   "content_performance": {
-    "generated_at": "2026-06-18T18:09:33.307144+00:00",
+    "generated_at": "2026-06-18T19:45:19.514045+00:00",
     "note": "Current 28d (2026-05-19\u20132026-06-15) vs prior 28d (2026-04-21\u20132026-05-18). Source: GSC.",
     "top_pages": [
       {
@@ -692,7 +706,7 @@
   ],
   "content_pipeline": {
     "source": "clickup",
-    "generated_at": "2026-06-18T18:09:55.971980+00:00",
+    "generated_at": "2026-06-18T19:45:40.878494+00:00",
     "summary": {
       "not_begun": 54,
       "in_progress": 0,
@@ -844,7 +858,7 @@
     ]
   },
   "clickup_tasks": {
-    "generated_at": "2026-06-18T18:09:38.368001+00:00",
+    "generated_at": "2026-06-18T19:45:24.382158+00:00",
     "overdue": [
       {
         "id": "868fr98j6",

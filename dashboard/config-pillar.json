@@ -62,7 +62,7 @@
 
     "rocks": [
       { "id": "r1", "title": "Publish 360 Weighted Content Pieces", "owner": "Aleksandra Velickovic", "status": "completed", "pct": 100, "tone": "good", "due": "2026-07-01", "link": "https://app.clickup.com/t/868j3h33f", "notes": "Final: 400.69 pts — exceeded by 11.3%." },
-      { "id": "r2", "title": "Grow real non-branded organic share from 17% to 20%+", "owner": "Aleksandra Velickovic", "status": "in_progress", "pct": 50, "tone": "warn", "due": null, "link": "https://app.clickup.com/t/868j3j4t9", "notes": "Current: ~13,978 clicks/28d. CTR gap from AI Mode click displacement. (pct is a status estimate — no direct non-branded-share tracking yet)" },
+      { "id": "r2", "title": "Grow real non-branded organic share from 17% to 20%+", "owner": "Aleksandra Velickovic", "status": "in_progress", "pct": 50, "tone": "warn", "due": null, "link": "https://app.clickup.com/t/868j3j4t9", "notes": "GSC (Jun 2026): non-branded = 52.6% (7,379 / 14,040 clicks). Prior period: 47.7% — +4.9 pp improvement. Brand filter: searchatlas|search atlas|linkgraph|otto seo|atlas agent|manick bhan. Note: '17%' baseline may be from a different tool — align definition with Justin." },
       { "id": "r3", "title": "Own 'Agentic Marketing'", "owner": "Aleksandra Velickovic", "status": "in_progress", "pct": 50, "tone": "warn", "due": "2026-07-01", "link": "https://app.clickup.com/t/868j9hq0c", "notes": "AI CMO batch published June 2026. SERP ownership + LLM citations needed. (pct is a status estimate)" }
     ],
 

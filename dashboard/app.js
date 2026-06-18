@@ -34,11 +34,16 @@ function buildLive(){
   const decay = DATA.content_decay || [];
   const wins = DATA.quick_wins || [];
 
+  const bs = gsc.branded_split || {};
+  const nbPct  = bs.current?.nonbranded_pct ?? null;
+  const nbDelta = bs.nonbranded_ppt_change ?? null;
+  const nbDeltaStr = nbDelta !== null ? (nbDelta >= 0 ? '+' : '') + nbDelta.toFixed(1) + ' pp' : null;
+
   const metrics = [
-    { label:'Organic Clicks', value: fmtNum(gsc.current?.clicks), delta: pctStr(gsc.change?.clicks_pct), dir: dirOf(gsc.change?.clicks_pct), ctx:'GSC · 28-day rolling · sc-domain:searchatlas.com' },
-    { label:'LLM Visibility', value: (llmv.overall_visibility??'—')+'%', delta: pctStr(llmv.visibility_change), dir: dirOf(llmv.visibility_change), ctx:'SearchAtlas LLMV · searchatlas.com' },
-    { label:'Decaying Pages', value: String(decay.length), delta:null, dir:'flat', ctx:'3-period click decline · GSC' },
-    { label:'Quick Win Keywords', value: String(wins.length), delta:null, dir:'flat', ctx:'Position 4–15 · opportunity ≥150 clicks · GSC' },
+    { label:'Organic Clicks',    value: fmtNum(gsc.current?.clicks), delta: pctStr(gsc.change?.clicks_pct), dir: dirOf(gsc.change?.clicks_pct), ctx:'GSC · 28-day rolling · sc-domain:searchatlas.com' },
+    { label:'Non-branded Share', value: nbPct !== null ? nbPct + '%' : '—', delta: nbDeltaStr, dir: dirOf(nbDelta), ctx:'GSC · branded = searchatlas|search atlas|linkgraph|otto seo|atlas agent|manick bhan' },
+    { label:'LLM Visibility',    value: (llmv.overall_visibility??'—')+'%', delta: pctStr(llmv.visibility_change), dir: dirOf(llmv.visibility_change), ctx:'SearchAtlas LLMV · searchatlas.com' },
+    { label:'Decaying Pages',    value: String(decay.length), delta:null, dir:'flat', ctx:'3-period click decline · GSC' },
   ];
 
   const rocks = (Q.rocks||[]).map(r=>({
