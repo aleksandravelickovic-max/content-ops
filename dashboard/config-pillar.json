@@ -1,0 +1,189 @@
+{
+  "_note": "Manual sections live here. Auto sections (GSC, LLMV, decay, quick wins, ClickUp tasks) come from data.json via generate.py.",
+
+  "name": "Aleksandra Velickovic",
+  "role": "Content Manager",
+  "company": "Search Atlas / LinkGraph",
+  "one_on_one_with": "Sophia Deluz-Bhan",
+  "last_edited": "2026-06-18",
+  "active_quarter": "q2",
+
+  "north_star": "Rank #1 for 'agentic marketing' across Google, YouTube, and LLMs while recovering organic traffic to 16,900 clicks/28d and LLM visibility to 30%+ — all by September 30.",
+
+  "q2": {
+    "label": "Q2 2026",
+    "period": "Apr 1 – Jun 30, 2026",
+    "start": "2026-04-01",
+    "end": "2026-06-30",
+    "status": "active",
+
+    "content_production": {
+      "goal": 360,
+      "final": 400.69,
+      "status": "exceeded",
+      "note": "Exceeded Q2 goal by 11.3% (400.69 vs 360). Strategy shift to quality over volume worked.",
+      "scoring_model": "4k words = 1pt | LP = 3pt | case study = 3pt | brief = 1pt | email campaign = 1pt | news/thought leadership = 1pt | research = 1pt | LP edit = 1pt | guest post = 1pt",
+      "weekly_history": [
+        { "week": "Mar 30–Apr 5",   "points": 29.84 },
+        { "week": "Apr 6–12",       "points": 31.53 },
+        { "week": "Apr 13–19",      "points": 37.63 },
+        { "week": "Apr 20–26",      "points": 38.85 },
+        { "week": "Apr 27–May 3",   "points": 32.53 },
+        { "week": "May 4–10",       "points": 40.01 },
+        { "week": "May 11–17",      "points": 53.01 },
+        { "week": "May 18–24",      "points": 56.90 },
+        { "week": "May 25–31",      "points": 37.65 },
+        { "week": "Jun 1–7",        "points": 21.93 },
+        { "week": "Jun 8–14",       "points": 20.82 },
+        { "week": "Jun 15–21",      "points": null   },
+        { "week": "Jun 22–28",      "points": null   }
+      ]
+    },
+
+    "traffic_goal": {
+      "label": "Organic Traffic Recovery",
+      "target": 16900,
+      "target_unit": "clicks / 28d",
+      "current": 13978,
+      "source": "GSC (live)",
+      "deadline": "2026-06-30",
+      "baseline_note": "Q2 traffic peak: 16,900 clicks/28d. Current: 13,978 (−17.3%). Position improved 33.4 → 28.2 — CTR is the gap (AI Mode click displacement)."
+    },
+
+    "leading_indicators": [
+      { "group": "Content Output", "items": [
+        { "label": "Content weighted points", "target": 30, "actual": 30.8, "unit": "/ week", "source": "CNT Scorecard", "note": "Q2 avg: 30.8 pts/wk (400.69 ÷ 13 wks)" },
+        { "label": "SA articles published",   "target": 5,  "actual": null, "unit": "/ week", "source": "ClickUp" }
+      ]},
+      { "group": "AI / LLM Visibility", "items": [
+        { "label": "LLM Visibility score",    "target": 50, "actual": 10,   "unit": "%",      "source": "SearchAtlas LLMV (auto)", "note": "Was 50.8% at Q2 start — collapsed to 10%" }
+      ]}
+    ],
+
+    "rocks": [
+      { "id": "r1", "title": "Publish 360 Weighted Content Pieces", "owner": "Aleksandra Velickovic", "status": "completed", "pct": 100, "tone": "good", "due": "2026-07-01", "link": "https://app.clickup.com/t/868j3h33f", "notes": "Final: 400.69 pts — exceeded by 11.3%." },
+      { "id": "r2", "title": "Grow real non-branded organic share from 17% to 20%+", "owner": "Aleksandra Velickovic", "status": "in_progress", "pct": 50, "tone": "warn", "due": null, "link": "https://app.clickup.com/t/868j3j4t9", "notes": "Current: ~13,978 clicks/28d. CTR gap from AI Mode click displacement. (pct is a status estimate — no direct non-branded-share tracking yet)" },
+      { "id": "r3", "title": "Own 'Agentic Marketing'", "owner": "Aleksandra Velickovic", "status": "in_progress", "pct": 50, "tone": "warn", "due": "2026-07-01", "link": "https://app.clickup.com/t/868j9hq0c", "notes": "AI CMO batch published June 2026. SERP ownership + LLM citations needed. (pct is a status estimate)" }
+    ],
+
+    "agenda": [
+      { "topic": "ContentGenius feedback delivery to Jason",     "type": "action_item", "notes": "Quality delta vs. MCP workflow, recommended config" },
+      { "topic": "OTTO implementation — who owns it day-to-day?","type": "decision",    "notes": "PMs overextended; needs an explicit daily owner for OTTO rollout" },
+      { "topic": "LLM visibility recovery plan",                 "type": "discussion",  "notes": "3 platforms at 0% — need content + technical strategy" },
+      { "topic": "Tiered product launch content system",         "type": "update",      "notes": "Content deliverables per tier, ClickUp automation" },
+      { "topic": "Cross-marketing task force relaunch",          "type": "action_item", "notes": "Reform with Sahar + Ali — content to demand gen handoff" }
+    ]
+  },
+
+  "q3": {
+    "label": "Q3 2026",
+    "period": "Jul 1 – Sep 30, 2026",
+    "start": "2026-07-01",
+    "end": "2026-09-30",
+    "status": "planning",
+
+    "content_production": {
+      "goal": 420,
+      "current": null,
+      "unit": "weighted pts",
+      "source": "CNT Scorecard (manual — update weekly)",
+      "deadline": "2026-09-30",
+      "q2_baseline": 400.69,
+      "note": "Q3 = +5% growth over Q2 actual (400.69). Weekly target: ~33 pts/wk.",
+      "scoring_model": "4k words = 1pt | LP = 3pt | case study = 3pt | brief = 1pt | email campaign = 1pt | news/thought leadership = 1pt | research = 1pt | LP edit = 1pt | guest post = 1pt",
+      "scorecard_url": "https://docs.google.com/spreadsheets/d/1IlrmXGJqHjiTtED0qu5QgnDRzD18kIW1kmBuRzZhcSI/edit?usp=sharing",
+      "weekly_history": [
+        { "week": "Jul 7–13",       "points": null },
+        { "week": "Jul 14–20",      "points": null },
+        { "week": "Jul 21–27",      "points": null },
+        { "week": "Jul 28–Aug 3",   "points": null },
+        { "week": "Aug 4–10",       "points": null },
+        { "week": "Aug 11–17",      "points": null },
+        { "week": "Aug 18–24",      "points": null },
+        { "week": "Aug 25–31",      "points": null },
+        { "week": "Sep 1–7",        "points": null },
+        { "week": "Sep 8–14",       "points": null },
+        { "week": "Sep 15–21",      "points": null },
+        { "week": "Sep 22–28",      "points": null },
+        { "week": "Sep 29–Oct 5",   "points": null }
+      ]
+    },
+
+    "traffic_goal": {
+      "label": "Organic Traffic Recovery — Q3",
+      "target": 16900,
+      "target_unit": "clicks / 28d",
+      "current": 13978,
+      "source": "GSC (live)",
+      "deadline": "2026-09-30",
+      "baseline_note": "Q2 traffic peak: 16,900 clicks/28d. Current: 13,978 (−17.3%). Position improved 33.4 → 28.2 — CTR is the gap (AI Mode click displacement). Q2 content closed at 400.69 pts (+11.3% vs goal)."
+    },
+
+    "leading_indicators": [
+      { "group": "Content Output", "items": [
+        { "label": "Content weighted points", "target": 33,   "actual": null, "unit": "/ week",  "source": "CNT Scorecard (manual)", "note": "Q3 target: 420 pts (13 wks × ~33/wk). Q2 avg was 30.8 pts/wk." },
+        { "label": "SA articles published",   "target": 5,    "actual": null, "unit": "/ week",  "source": "ClickUp — SEO Content list" }
+      ]},
+      { "group": "AI / LLM Visibility", "items": [
+        { "label": "LLM Visibility score",    "target": 30,   "actual": 10,   "unit": "%",       "source": "SearchAtlas LLMV (auto)", "note": "Was 50.8% — target: recover to 30% across 3+ platforms by Sept 30." }
+      ]}
+    ],
+
+    "rocks": [
+      { "id": "r1", "title": "Rank #1 for 'agentic marketing' in Google, YouTube, and LLMs", "owner": "Aleksandra Velickovic", "status": "in_progress", "pct": 50, "tone": "warn", "due": "2026-09-30", "link": "https://app.clickup.com/t/868j5y39p", "notes": "Content strategy: own the term SA is building its rebrand around. Pillar content + LLM citation play." },
+      { "id": "r2", "title": "Grow non-branded organic share from 17% to 20%+",              "owner": "Aleksandra Velickovic", "status": "in_progress", "pct": 50, "tone": "warn", "due": "2026-09-30", "link": "https://app.clickup.com/t/868j3j4t9", "notes": "CTR gap from AI Mode displacement. Quick wins: 'google ai mode' at 39K impressions, pos 6.2." },
+      { "id": "r3", "title": "Recover LLM visibility to 30%+ across 3+ platforms",           "owner": "Aleksandra Velickovic", "status": "not_started", "pct": 0, "tone": "neutral", "due": "2026-09-30", "link": "https://app.clickup.com/9011399348/v/l/8chy2nm-7211", "notes": "Currently 10%. Gemini, Perplexity, Google AI Mode all at 0%. Aligned to rebrand: SA must appear in AI answers for its own positioning terms." },
+      { "id": "r4", "title": "Deliver 420 weighted content points",                          "owner": "Aleksandra Velickovic", "status": "not_started", "pct": 0, "tone": "neutral", "due": "2026-09-30", "link": "https://app.clickup.com/t/868j3h33f", "notes": "Q2 baseline: 400.69 pts. Q3 target: 420 (~33/wk). Content mix to support rebrand pillars: agentic marketing, self-healing, coworker." }
+    ],
+
+    "agenda": [
+      { "topic": "Rebrand content roadmap — Q3 alignment",              "type": "discussion",  "notes": "Positioning: 'growth engine that runs your marketing while you sleep.' What does Q3 content prioritize — agentic marketing SERP, LLM citations, or rebrand pillar pages?" },
+      { "topic": "Own 'agentic marketing' — content plan",              "type": "action_item", "notes": "Rock 868j9hq0c. Pillar content cluster, Wikipedia article, LLM citation strategy. Who owns the execution?" },
+      { "topic": "OTTO implementation — who owns it day-to-day?",       "type": "decision",    "notes": "PMs overextended; needs an explicit daily owner for OTTO rollout across client accounts" },
+      { "topic": "LLM visibility recovery to 30% — content + tech ask", "type": "decision",    "notes": "3 platforms at 0%: Gemini, Perplexity, Google AI Mode. Content can address the citation gap; technical changes needed for the rest." },
+      { "topic": "ContentGenius vs MCP quality gap: roadmap ask",       "type": "action_item", "notes": "Q2 feedback delivered to Jason. Q3 ask: what's the fix timeline and who tests it?" }
+    ]
+  },
+
+  "clickup_links": {
+    "seo_content_open":     "https://app.clickup.com/9011399348/v/l/8chy2nm-758171",
+    "general_content_open": "https://app.clickup.com/9011399348/v/l/6-901110742485-1",
+    "rocks_open":           "https://app.clickup.com/9011399348/v/l/8chy2nm-7211",
+    "eod_open":             "https://app.clickup.com/9011399348/chat/r/8chy2nm-1616691"
+  },
+  "cnt_scorecard": "https://docs.google.com/spreadsheets/d/1IlrmXGJqHjiTtED0qu5QgnDRzD18kIW1kmBuRzZhcSI/edit?usp=sharing",
+
+  "ongoing_responsibilities": [
+    { "t": "Content strategy & production",   "d": "SA blog and landing page content strategy + production" },
+    { "t": "Team management",                 "d": "Leads Milena, Emanuel, Andresa, Mateus, James" },
+    { "t": "Cross-team collaboration",        "d": "Works across the broader marketing team" },
+    { "t": "ContentGenius oversight",         "d": "Quality oversight and feedback loop to product (Jason)" },
+    { "t": "Client content delivery",         "d": "20+ active clients across the LinkGraph network" },
+    { "t": "SEO performance monitoring",      "d": "GSC + SearchAtlas tracking for SA content" },
+    { "t": "LLM / AI visibility strategy",    "d": "Content strategy for Search Atlas brand visibility in AI answers" }
+  ],
+
+  "context_truths": [
+    "Aleksandra Velickovic is Content Manager at Search Atlas / LinkGraph, reporting to Justin Rondeau (Head of Growth).",
+    "Content team: Milena, Emanuel, Andresa, Mateus, James — plus collaboration with the broader marketing team.",
+    "Q2 2026 strategy: quality over volume, landing pages as primary content type, improved intent targeting.",
+    "Q2 2026 goal was 360 weighted content points. Final close: 400.69 pts (+11.3% above goal).",
+    "Scoring model: 4k-word article = 1pt, landing page = 3pt, case study = 3pt, everything else (brief/email/news/research/LP edit/guest post) = 1pt.",
+    "Q3 2026 targets: 420 weighted pts (~33/wk), 5 SA articles/week, LLM visibility recovered to 30%+ across 3+ platforms, organic traffic recovered to 16,900 clicks/28d.",
+    "LLM visibility collapsed from 50.8% to 10% between Q2 start and now (Jun 2026). Only ChatGPT (40%) and Copilot (20%) show any visibility; Gemini, Perplexity, and Google AI Mode are all at 0%.",
+    "Organic clicks are down ~17% vs the Q2 peak (16,900 → ~13,978 over 28 days), despite average position improving from 33.4 to 28.2 — the gap is CTR, likely from AI Mode click displacement.",
+    "18 pages are in 3-period content decay as of June 2026.",
+    "Top quick-win keyword: 'google ai mode' at ~39K impressions/28d, average position 6.2, only 8 clicks — a clear CTR/title-tag opportunity.",
+    "AI CMO batch (9 articles) published mid-June 2026 as part of the 'agentic marketing' positioning push.",
+    "ContentGenius output quality lags the Claude Code MCP workflow; feedback was delivered to Jason (product) as a live Q3 priority.",
+    "Search Atlas rebrand positioning (June 2026): 'The growth engine that runs your marketing while you sleep' — never call it a 'tool', avoid antithesis framing ('not X, it's Y')."
+  ],
+
+  "coaching": {
+    "read": "",
+    "work": [],
+    "risk": [],
+    "moves": [],
+    "close": ""
+  }
+}
