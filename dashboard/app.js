@@ -395,7 +395,8 @@ function expandWins(){
    WEEKLY METRICS SCORECARD
    ============================================================ */
 function renderWeeklyMetrics(){
-  const wm = CFG?.[CFG.active_quarter]?.weekly_metrics;
+  // Auto-fetched from Google Sheets takes priority; manual config is the fallback
+  const wm = DATA?.weekly_metrics || CFG?.[CFG.active_quarter]?.weekly_metrics;
   const el = document.getElementById('weeklyTable');
   const noteEl = document.getElementById('weeklyNote');
   if(!el) return;
