@@ -434,14 +434,16 @@ function buildContentGoal(Q){
 function buildMetrics(){
   const llmv=DATA?.llm_visibility||{},gsc=DATA?.gsc||{};
   const c=gsc.current||{},ch=gsc.change||{};
+  const bs=gsc.branded_split||{},bsc=bs.current||{};
   const decay=(DATA?.content_decay||[]).length,wins=(DATA?.quick_wins||[]).length,lc=llmv.visibility_change||0;
+  const nbPct=bsc.nonbranded_pct??null, nbDelta=bs.nonbranded_ppt_change??null;
   const cards=[
-    {lbl:'Organic Clicks',val:fmt(c.clicks||0),delta:ch.clicks_pct,icon:'i-blue',svg:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>'},
-    {lbl:'LLM Visibility',val:(llmv.overall_visibility??'—')+'%',delta:lc,icon:'i-purple',svg:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>'},
-    {lbl:'Decaying Pages',val:decay,delta:null,icon:decay>10?'i-red':'i-amber',svg:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>'},
-    {lbl:'Quick Wins',val:wins,delta:null,icon:'i-green',svg:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>'},
+    {lbl:'Organic Clicks',val:fmt(c.clicks||0),delta:ch.clicks_pct,unit:'%',icon:'i-blue',svg:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>'},
+    {lbl:'Non-branded Share',val:nbPct!==null?nbPct+'%':'—',delta:nbDelta,unit:' pp',icon:'i-green',svg:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>'},
+    {lbl:'LLM Visibility',val:(llmv.overall_visibility??'—')+'%',delta:lc,unit:'%',icon:'i-purple',svg:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>'},
+    {lbl:'Decaying Pages',val:decay,delta:null,unit:'%',icon:decay>10?'i-red':'i-amber',svg:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>'},
   ];
-  return `<div class="g4">${cards.map(k=>{const cls=k.delta!=null?dc(k.delta):'nt';return`<div class="card kpi"><div class="kpi-icon ${k.icon}">${k.svg}</div><div class="kpi-val">${esc(String(k.val))}</div><div class="kpi-lbl">${esc(k.lbl)}</div>${k.delta!=null?`<div class="kpi-delta ${cls}">${sign(k.delta)} ${abs(k.delta).toFixed(1)}%</div>`:''}</div>`;}).join('')}</div>`;
+  return `<div class="g4">${cards.map(k=>{const cls=k.delta!=null?dc(k.delta):'nt';return`<div class="card kpi"><div class="kpi-icon ${k.icon}">${k.svg}</div><div class="kpi-val">${esc(String(k.val))}</div><div class="kpi-lbl">${esc(k.lbl)}</div>${k.delta!=null?`<div class="kpi-delta ${cls}">${sign(k.delta)} ${abs(k.delta).toFixed(1)}${esc(k.unit||'%')}</div>`:''}</div>`;}).join('')}</div>`;
 }
 
 // ── WEEKLY PROGRESS CHART ──────────────────────────────────────────────────

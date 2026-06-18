@@ -217,6 +217,59 @@ def _period_dates():
     return p1_start, p1_end, p2_start, p2_end, p3_start, p3_end
 
 
+BRAND_REGEX = "searchatlas|search atlas|linkgraph|otto seo|atlas agent|manick bhan"
+
+
+def fetch_gsc_branded_split(auth, total_cur, total_prior):
+    """Branded vs non-branded click split for current and prior 28-day periods.
+    Non-branded = total_clicks - branded_clicks (avoids double-counting edge cases)."""
+    log("Fetching GSC branded/non-branded split…")
+    p1s, p1e, p2s, p2e, *_ = _period_dates()
+
+    def branded_clicks(start, end):
+        data, err = _gsc_query(auth, {
+            "startDate": str(start),
+            "endDate":   str(end),
+            "dimensions": ["query"],
+            "dimensionFilterGroups": [{
+                "groupType": "and",
+                "filters": [{"dimension": "QUERY", "operator": "includingRegex", "expression": BRAND_REGEX}],
+            }],
+            "rowLimit": 500,
+        })
+        if err:
+            log(f"  GSC branded error ({start}→{end}): {err}")
+            return None
+        return sum(int(r.get("clicks", 0)) for r in (data or {}).get("rows", []))
+
+    b_cur   = branded_clicks(p1s, p1e)
+    b_prior = branded_clicks(p2s, p2e)
+    if b_cur is None:
+        return None
+
+    nb_cur    = max(0, total_cur   - b_cur)
+    nb_prior  = max(0, total_prior - b_prior) if b_prior is not None else None
+    pct_cur   = round(nb_cur  / total_cur   * 100, 1) if total_cur   else 0.0
+    pct_prior = round(nb_prior / total_prior * 100, 1) if (nb_prior is not None and total_prior) else None
+    ppt_chg   = round(pct_cur - pct_prior, 1) if pct_prior is not None else None
+
+    log(f"  Non-branded: {nb_cur} ({pct_cur}%)  Branded: {b_cur} ({round(b_cur/total_cur*100,1) if total_cur else 0}%)")
+    return {
+        "brand_filter": BRAND_REGEX,
+        "current": {
+            "branded_clicks":    b_cur,
+            "nonbranded_clicks": nb_cur,
+            "nonbranded_pct":    pct_cur,
+        },
+        "prior": {
+            "branded_clicks":    b_prior,
+            "nonbranded_clicks": nb_prior,
+            "nonbranded_pct":    pct_prior,
+        } if b_prior is not None else None,
+        "nonbranded_ppt_change": ppt_chg,
+    }
+
+
 def fetch_gsc(auth):
     """Site-level totals: current vs prior 28-day period."""
     log("Fetching GSC site performance…")
@@ -756,10 +809,18 @@ def main():
     gsc_auth = _load_gsc_auth()
     gsc = gsc_perf = gsc_decay = gsc_wins = None
     if gsc_auth:
-        gsc        = fetch_gsc(gsc_auth)
-        gsc_perf   = fetch_gsc_content_performance(gsc_auth, slug_lookup)
-        gsc_decay  = fetch_gsc_decay(gsc_auth, slug_lookup)
-        gsc_wins   = fetch_gsc_quick_wins(gsc_auth)
+        gsc      = fetch_gsc(gsc_auth)
+        gsc_perf = fetch_gsc_content_performance(gsc_auth, slug_lookup)
+        gsc_decay = fetch_gsc_decay(gsc_auth, slug_lookup)
+        gsc_wins  = fetch_gsc_quick_wins(gsc_auth)
+        if gsc:
+            split = fetch_gsc_branded_split(
+                gsc_auth,
+                total_cur   = gsc["current"]["clicks"],
+                total_prior = gsc["prior"]["clicks"],
+            )
+            if split:
+                gsc["branded_split"] = split
         sources_status["gsc"] = "connected" if gsc else "error"
     else:
         log("  GSC token not found — skipping (existing data preserved)")
