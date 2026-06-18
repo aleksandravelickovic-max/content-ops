@@ -1,0 +1,985 @@
+{
+  "meta": {
+    "generated_at": "2026-06-18T17:02:56.143190+00:00",
+    "version": "2.1.0",
+    "sources": {
+      "clickup_published": "connected",
+      "clickup": "connected",
+      "contentgenius": "skipped",
+      "llm_visibility": "connected",
+      "gsc": "api_key_required",
+      "content_decay": "connected",
+      "quick_wins": "connected",
+      "content_performance": "connected",
+      "local_fs": "connected",
+      "clickup_tasks": "connected"
+    }
+  },
+  "clickup_stats": {
+    "articles_published_7d": 9,
+    "generated_at": "2026-06-18T17:02:47.386208+00:00",
+    "window_days": 7,
+    "tasks": [
+      {
+        "title": "Bulk Keyword Research Tools",
+        "list": "SEO Content",
+        "updated": "2026-06-12"
+      },
+      {
+        "title": "What is Multiplayer Marketing?",
+        "list": "General Content",
+        "updated": "2026-06-15"
+      },
+      {
+        "title": "AI CMO vs Fractional CMO: How to Choose the Right Model",
+        "list": "General Content",
+        "updated": "2026-06-15"
+      },
+      {
+        "title": "How Agencies Use an AI CMO to Manage More Clients",
+        "list": "General Content",
+        "updated": "2026-06-15"
+      },
+      {
+        "title": "AI CMO KPIs: How to Measure AI Marketing Performance",
+        "list": "General Content",
+        "updated": "2026-06-15"
+      },
+      {
+        "title": "AI Marketing Automation Mistakes: 7 Failure Modes",
+        "list": "General Content",
+        "updated": "2026-06-15"
+      },
+      {
+        "title": "AI CMO for Startups: The Lean Team Setup Guide",
+        "list": "General Content",
+        "updated": "2026-06-15"
+      },
+      {
+        "title": "AI CMO vs Marketing Agency: Cost, Tasks, and Transition",
+        "list": "General Content",
+        "updated": "2026-06-15"
+      },
+      {
+        "title": "How to Build an AI Marketing Stack That Actually Works",
+        "list": "General Content",
+        "updated": "2026-06-17"
+      }
+    ]
+  },
+  "llm_visibility": {
+    "domain": "searchatlas.com",
+    "generated_at": "2026-06-18T10:45:00Z",
+    "overall_visibility": 10,
+    "visibility_change": -40.847,
+    "visibility_previous": 50.847,
+    "sentiment_score": 86.3,
+    "sentiment_change": 1.8,
+    "total_mentions": 184,
+    "previous_mentions": 205,
+    "platforms": [
+      {
+        "platform": "ChatGPT",
+        "visibility_score": 40,
+        "sentiment_score": 84,
+        "topics": "2/5"
+      },
+      {
+        "platform": "Copilot",
+        "visibility_score": 20,
+        "sentiment_score": 85,
+        "topics": "1/5"
+      },
+      {
+        "platform": "Gemini",
+        "visibility_score": 0,
+        "sentiment_score": 88,
+        "topics": "0/5"
+      },
+      {
+        "platform": "Perplexity",
+        "visibility_score": 0,
+        "sentiment_score": 85,
+        "topics": "0/5"
+      },
+      {
+        "platform": "Google AI Mode",
+        "visibility_score": 0,
+        "sentiment_score": 88,
+        "topics": "0/5"
+      }
+    ]
+  },
+  "gsc": {
+    "generated_at": "2026-06-18T18:05:00Z",
+    "period": "May 21 \u2013 Jun 17, 2026",
+    "current": {
+      "clicks": 13978,
+      "impressions": 5296913,
+      "ctr": 0.26,
+      "position": 28.2
+    },
+    "prior": {
+      "clicks": 16900,
+      "impressions": 5513560,
+      "ctr": 0.31,
+      "position": 33.4
+    },
+    "change": {
+      "clicks_pct": -17.29,
+      "impressions_pct": -3.93,
+      "ctr_delta": -0.05,
+      "position_change": -5.2
+    }
+  },
+  "content_performance": {
+    "generated_at": "2026-06-18T18:05:00Z",
+    "note": "Current 28d (May 21\u2013Jun 17) vs prior 28d (Apr 23\u2013May 20). Source: Google Search Console (live).",
+    "top_pages": [
+      {
+        "page": "https://searchatlas.com/",
+        "slug": "Homepage",
+        "clicks": 6045,
+        "impressions": 279177,
+        "ctr": 2.17,
+        "position": 14.5
+      },
+      {
+        "page": "https://searchatlas.com/blog/ahrefs-features/",
+        "slug": "Ahrefs Features (blog)",
+        "clicks": 859,
+        "impressions": 68715,
+        "ctr": 1.25,
+        "position": 8.8
+      },
+      {
+        "page": "https://searchatlas.com/otto-seo/",
+        "slug": "OTTO SEO",
+        "clicks": 834,
+        "impressions": 111013,
+        "ctr": 0.75,
+        "position": 22.6
+      },
+      {
+        "page": "https://searchatlas.com/ai-search-seo-mastery-course/",
+        "slug": "AI Search SEO Mastery Course",
+        "clicks": 635,
+        "impressions": 1704,
+        "ctr": 37.27,
+        "position": 5.9
+      },
+      {
+        "page": "https://searchatlas.com/pricing/",
+        "slug": "Pricing",
+        "clicks": 353,
+        "impressions": 67927,
+        "ctr": 0.52,
+        "position": 11.1
+      },
+      {
+        "page": "https://searchatlas.com/da-checker/",
+        "slug": "DA Checker",
+        "clicks": 266,
+        "impressions": 24727,
+        "ctr": 1.08,
+        "position": 13.3
+      },
+      {
+        "page": "https://searchatlas.com/careers/",
+        "slug": "Careers",
+        "clicks": 195,
+        "impressions": 17126,
+        "ctr": 1.14,
+        "position": 2.4
+      },
+      {
+        "page": "https://searchatlas.com/blog/geo/",
+        "slug": "GEO (blog)",
+        "clicks": 190,
+        "impressions": 17671,
+        "ctr": 1.08,
+        "position": 24.7
+      },
+      {
+        "page": "https://searchatlas.com/blog/holistic-seo/",
+        "slug": "Holistic SEO (blog)",
+        "clicks": 176,
+        "impressions": 1714,
+        "ctr": 10.27,
+        "position": 22.0
+      },
+      {
+        "page": "https://searchatlas.com/blog/aeo/",
+        "slug": "AEO (blog)",
+        "clicks": 156,
+        "impressions": 4079,
+        "ctr": 3.82,
+        "position": 11.5
+      }
+    ],
+    "climbing": [
+      {
+        "page": "https://searchatlas.com/atlas-agent/",
+        "slug": "Atlas Agent (rebrand page)",
+        "clicks_prior": 0,
+        "clicks_now": 115,
+        "growth_pct": null,
+        "is_new": true,
+        "position": 4.1
+      },
+      {
+        "page": "https://searchatlas.com/blog/geo/",
+        "slug": "GEO (blog)",
+        "clicks_prior": 70,
+        "clicks_now": 190,
+        "growth_pct": 171.4,
+        "is_new": false,
+        "position": 24.7
+      },
+      {
+        "page": "https://searchatlas.com/da-checker/",
+        "slug": "DA Checker",
+        "clicks_prior": 122,
+        "clicks_now": 266,
+        "growth_pct": 118.0,
+        "is_new": false,
+        "position": 13.3
+      },
+      {
+        "page": "https://searchatlas.com/blog/how-to-find-what-people-are-searching-for/",
+        "slug": "How to Find What People Search For (blog)",
+        "clicks_prior": 21,
+        "clicks_now": 44,
+        "growth_pct": 109.5,
+        "is_new": false,
+        "position": 12.2
+      },
+      {
+        "page": "https://searchatlas.com/blog/aeo-traditional-seo/",
+        "slug": "AEO vs Traditional SEO (blog)",
+        "clicks_prior": 43,
+        "clicks_now": 86,
+        "growth_pct": 100.0,
+        "is_new": false,
+        "position": 20.6
+      },
+      {
+        "page": "https://searchatlas.com/blog/agentic-marketing/",
+        "slug": "Agentic Marketing (blog) \u2014 Q2/Q3 rock",
+        "clicks_prior": 17,
+        "clicks_now": 30,
+        "growth_pct": 76.5,
+        "is_new": false,
+        "position": 7.0
+      },
+      {
+        "page": "https://searchatlas.com/site-explorer/",
+        "slug": "Site Explorer",
+        "clicks_prior": 42,
+        "clicks_now": 72,
+        "growth_pct": 71.4,
+        "is_new": false,
+        "position": 10.7
+      }
+    ]
+  },
+  "content_decay": [
+    {
+      "page": "https://searchatlas.com/careers/",
+      "slug": "Careers",
+      "clicks_now": 210,
+      "clicks_p2": 314,
+      "clicks_p3": 386,
+      "loss": 176,
+      "position_now": 2.4,
+      "trend": "Rankings stable (possible CTR or demand decline)"
+    },
+    {
+      "page": "https://searchatlas.com/otto-google-ads/",
+      "slug": "OTTO Google Ads",
+      "clicks_now": 7,
+      "clicks_p2": 84,
+      "clicks_p3": 93,
+      "loss": 86,
+      "position_now": 22.1,
+      "trend": "Rankings improved but traffic still dropped (possible search demand decline)"
+    },
+    {
+      "page": "https://searchatlas.com/blog/keyword-research-api/",
+      "slug": "Keyword Research API",
+      "clicks_now": 21,
+      "clicks_p2": 27,
+      "clicks_p3": 40,
+      "loss": 19,
+      "position_now": 19.6,
+      "trend": "Rankings improved but traffic still dropped (possible search demand decline)"
+    },
+    {
+      "page": "https://status.searchatlas.com/",
+      "slug": "Status Page",
+      "clicks_now": 16,
+      "clicks_p2": 30,
+      "clicks_p3": 33,
+      "loss": 17,
+      "position_now": 6.0,
+      "trend": "Rankings stable (possible CTR or demand decline)"
+    },
+    {
+      "page": "https://searchatlas.com/blog/blaze-ai-alternatives/",
+      "slug": "Blaze AI Alternatives",
+      "clicks_now": 4,
+      "clicks_p2": 5,
+      "clicks_p3": 17,
+      "loss": 13,
+      "position_now": 11.1,
+      "trend": "Rankings declining"
+    },
+    {
+      "page": "https://searchatlas.com/blog/how-to-schema-markup/",
+      "slug": "Schema Markup Guide",
+      "clicks_now": 7,
+      "clicks_p2": 8,
+      "clicks_p3": 16,
+      "loss": 9,
+      "position_now": 27.0,
+      "trend": "Rankings improved but traffic still dropped (possible search demand decline)"
+    },
+    {
+      "page": "https://searchatlas.com/blog/free-trial-seo-tools/",
+      "slug": "Free Trial SEO Tools",
+      "clicks_now": 3,
+      "clicks_p2": 6,
+      "clicks_p3": 11,
+      "loss": 8,
+      "position_now": 19.0,
+      "trend": "Rankings stable (possible CTR or demand decline)"
+    },
+    {
+      "page": "https://searchatlas.com/blog/google-ads-management-tools/",
+      "slug": "Google Ads Mgmt Tools",
+      "clicks_now": 3,
+      "clicks_p2": 5,
+      "clicks_p3": 11,
+      "loss": 8,
+      "position_now": 33.7,
+      "trend": "Rankings improved but traffic still dropped (possible search demand decline)"
+    },
+    {
+      "page": "https://searchatlas.com/blog/broken-links/",
+      "slug": "Broken Links",
+      "clicks_now": 2,
+      "clicks_p2": 3,
+      "clicks_p3": 10,
+      "loss": 8,
+      "position_now": 30.6,
+      "trend": "Rankings improved but traffic still dropped (possible search demand decline)"
+    },
+    {
+      "page": "https://searchatlas.com/blog/wordpress-seo/",
+      "slug": "WordPress SEO",
+      "clicks_now": 19,
+      "clicks_p2": 22,
+      "clicks_p3": 26,
+      "loss": 7,
+      "position_now": 17.7,
+      "trend": "Rankings improved but traffic still dropped (possible search demand decline)"
+    },
+    {
+      "page": "https://searchatlas.com/blog/how-to-use-search-atlas-llm-visibility/",
+      "slug": "LLM Visibility Guide",
+      "clicks_now": 7,
+      "clicks_p2": 12,
+      "clicks_p3": 14,
+      "loss": 7,
+      "position_now": 41.8,
+      "trend": "Rankings declining"
+    },
+    {
+      "page": "https://shop.searchatlas.com/",
+      "slug": "Shop",
+      "clicks_now": 4,
+      "clicks_p2": 8,
+      "clicks_p3": 11,
+      "loss": 7,
+      "position_now": 5.7,
+      "trend": "Rankings stable (possible CTR or demand decline)"
+    },
+    {
+      "page": "https://searchatlas.com/additional-help/",
+      "slug": "Additional Help",
+      "clicks_now": 50,
+      "clicks_p2": 51,
+      "clicks_p3": 56,
+      "loss": 6,
+      "position_now": 13.5,
+      "trend": "Rankings improved but traffic still dropped (possible search demand decline)"
+    },
+    {
+      "page": "https://searchatlas.com/blog/localfalcon-vs-localviking/",
+      "slug": "LocalFalcon vs LocalViking",
+      "clicks_now": 11,
+      "clicks_p2": 13,
+      "clicks_p3": 17,
+      "loss": 6,
+      "position_now": 10.4,
+      "trend": "Rankings stable (possible CTR or demand decline)"
+    },
+    {
+      "page": "https://searchatlas.com/press-release-software/",
+      "slug": "Press Release Software",
+      "clicks_now": 18,
+      "clicks_p2": 19,
+      "clicks_p3": 22,
+      "loss": 4,
+      "position_now": 12.6,
+      "trend": "Rankings improved but traffic still dropped (possible search demand decline)"
+    },
+    {
+      "page": "https://searchatlas.com/business/how-i-scaled-search-atlas-from-2m-to-3m-arr/",
+      "slug": "2M\u21923M ARR Story",
+      "clicks_now": 8,
+      "clicks_p2": 11,
+      "clicks_p3": 12,
+      "loss": 4,
+      "position_now": 6.1,
+      "trend": "Rankings stable (possible CTR or demand decline)"
+    },
+    {
+      "page": "https://searchatlas.com/blog/da-vs-ta-2026/",
+      "slug": "DA vs TA 2026",
+      "clicks_now": 6,
+      "clicks_p2": 8,
+      "clicks_p3": 10,
+      "loss": 4,
+      "position_now": 7.4,
+      "trend": "Rankings stable (possible CTR or demand decline)"
+    },
+    {
+      "page": "https://searchatlas.com/blog/best-ai-tools/",
+      "slug": "Best AI Tools",
+      "clicks_now": 9,
+      "clicks_p2": 10,
+      "clicks_p3": 11,
+      "loss": 2,
+      "position_now": 13.4,
+      "trend": "Rankings declining"
+    }
+  ],
+  "quick_wins": [
+    {
+      "query": "google ai mode",
+      "position": 6.2,
+      "impressions": 39214,
+      "clicks": 8,
+      "ctr": 0.02,
+      "opportunity": 4306
+    },
+    {
+      "query": "ai mode google",
+      "position": 8.0,
+      "impressions": 24284,
+      "clicks": 1,
+      "ctr": 0.0,
+      "opportunity": 2670
+    },
+    {
+      "query": "what are the best seo tools for tracking authority scores?",
+      "position": 4.2,
+      "impressions": 7770,
+      "clicks": 0,
+      "ctr": 0.0,
+      "opportunity": 855
+    },
+    {
+      "query": "guidetoblog.com",
+      "position": 6.5,
+      "impressions": 6786,
+      "clicks": 16,
+      "ctr": 0.24,
+      "opportunity": 730
+    },
+    {
+      "query": "site explorer",
+      "position": 7.5,
+      "impressions": 6089,
+      "clicks": 17,
+      "ctr": 0.28,
+      "opportunity": 653
+    },
+    {
+      "query": "where can i get expert search engine optimization for google and ai search engines?",
+      "position": 9.1,
+      "impressions": 4761,
+      "clicks": 0,
+      "ctr": 0.0,
+      "opportunity": 524
+    },
+    {
+      "query": "ai seo software",
+      "position": 11.5,
+      "impressions": 4441,
+      "clicks": 3,
+      "ctr": 0.07,
+      "opportunity": 486
+    },
+    {
+      "query": "seo software platform",
+      "position": 6.3,
+      "impressions": 4196,
+      "clicks": 1,
+      "ctr": 0.02,
+      "opportunity": 461
+    },
+    {
+      "query": "what is technical seo",
+      "position": 13.3,
+      "impressions": 3653,
+      "clicks": 2,
+      "ctr": 0.05,
+      "opportunity": 400
+    },
+    {
+      "query": "schema markup generator",
+      "position": 9.3,
+      "impressions": 3563,
+      "clicks": 3,
+      "ctr": 0.08,
+      "opportunity": 389
+    },
+    {
+      "query": "automated seo software",
+      "position": 9.2,
+      "impressions": 3201,
+      "clicks": 3,
+      "ctr": 0.09,
+      "opportunity": 349
+    },
+    {
+      "query": "moz seo",
+      "position": 11.3,
+      "impressions": 3038,
+      "clicks": 0,
+      "ctr": 0.0,
+      "opportunity": 334
+    },
+    {
+      "query": "localo",
+      "position": 7.4,
+      "impressions": 2990,
+      "clicks": 4,
+      "ctr": 0.13,
+      "opportunity": 325
+    },
+    {
+      "query": "seo automation tools",
+      "position": 8.3,
+      "impressions": 2965,
+      "clicks": 2,
+      "ctr": 0.07,
+      "opportunity": 324
+    },
+    {
+      "query": "seo automation",
+      "position": 11.7,
+      "impressions": 2885,
+      "clicks": 6,
+      "ctr": 0.21,
+      "opportunity": 311
+    }
+  ],
+  "content_pipeline": {
+    "source": "clickup",
+    "generated_at": "2026-06-18T17:02:56.103854+00:00",
+    "summary": {
+      "not_begun": 54,
+      "in_progress": 0,
+      "needs_review": 0,
+      "completed": 200,
+      "total": 254
+    },
+    "articles": [
+      {
+        "id": "868jeakac",
+        "title": "Agentic Local Marketing: Autonomous Agents for GBP, Citations, Heatmaps",
+        "status": "Closed",
+        "list": "Agentic Marketing",
+        "updated": "2026-06-12"
+      },
+      {
+        "id": "868jeax2j",
+        "title": "How to Build an Agentic Workflow for SEO",
+        "status": "Closed",
+        "list": "Agentic Marketing",
+        "updated": "2026-06-12"
+      },
+      {
+        "id": "868jean2a",
+        "title": "Agentic Digital PR: How AI Agents Source, Pitch, and Place Coverage",
+        "status": "Closed",
+        "list": "Agentic Marketing",
+        "updated": "2026-06-12"
+      },
+      {
+        "id": "868jeajjd",
+        "title": "Agentic Paid Media: AI Agents Running Google Ads from Brief to Bid",
+        "status": "Closed",
+        "list": "Agentic Marketing",
+        "updated": "2026-06-12"
+      },
+      {
+        "id": "868ja5618",
+        "title": "Blog: \"What is Agentic Marketing?\" - Karim ",
+        "status": "Closed",
+        "list": "Agentic Marketing",
+        "updated": "2026-06-11"
+      },
+      {
+        "id": "868japj8r",
+        "title": "What is a marketing agent",
+        "status": "Closed",
+        "list": "Agentic Marketing",
+        "updated": "2026-06-11"
+      },
+      {
+        "id": "868japj7w",
+        "title": "Beginner's Guide to getting started with Agentic Marketing",
+        "status": "Closed",
+        "list": "Agentic Marketing",
+        "updated": "2026-06-11"
+      },
+      {
+        "id": "868jea3pe",
+        "title": "Agentic SEO: The 2026 Operator's Playbook",
+        "status": "Closed",
+        "list": "Agentic Marketing",
+        "updated": "2026-06-11"
+      },
+      {
+        "id": "868jevrh2",
+        "title": "8 Agentic Marketing Use Cases With Input/Output Specs",
+        "status": "Closed",
+        "list": "Agentic Marketing",
+        "updated": "2026-06-11"
+      },
+      {
+        "id": "868jhvqvf",
+        "title": "Agentic Marketing Defined - Forbes",
+        "status": "Closed",
+        "list": "Agentic Marketing",
+        "updated": "2026-06-11"
+      },
+      {
+        "id": "868jea68k",
+        "title": "Agentic AEO: How AI Agents Read, Cite, and Act on Your Content",
+        "status": "Closed",
+        "list": "Agentic Marketing",
+        "updated": "2026-06-11"
+      },
+      {
+        "id": "868jea8a0",
+        "title": "The 12 Best AI Agents for SEO in 2026 (Tested by Workflow, Not Marketing Claims)",
+        "status": "Closed",
+        "list": "Agentic Marketing",
+        "updated": "2026-06-11"
+      },
+      {
+        "id": "868jeaagj",
+        "title": "SEO Autopilot: How Autonomous SEO Agents Run Optimization End-to-End",
+        "status": "Closed",
+        "list": "Agentic Marketing",
+        "updated": "2026-06-11"
+      },
+      {
+        "id": "868jeaf0g",
+        "title": "Agentic Marketing vs. Marketing Automation: What Actually Changed",
+        "status": "Closed",
+        "list": "Agentic Marketing",
+        "updated": "2026-06-11"
+      },
+      {
+        "id": "868jeag1k",
+        "title": "Agentic Content Marketing: How Autonomous Agents Brief, Write, Optimize, and Deploy",
+        "status": "Closed",
+        "list": "Agentic Marketing",
+        "updated": "2026-06-11"
+      },
+      {
+        "id": "868h61uqw",
+        "title": "What is On-page SEO (translation)",
+        "status": "Closed",
+        "list": "AI Content",
+        "updated": "2026-03-30"
+      },
+      {
+        "id": "868h61up4",
+        "title": "What is Off-page SEO  (translation)",
+        "status": "Closed",
+        "list": "AI Content",
+        "updated": "2026-03-30"
+      },
+      {
+        "id": "868h61uke",
+        "title": "What is SEO  (translation)",
+        "status": "Closed",
+        "list": "AI Content",
+        "updated": "2026-03-30"
+      },
+      {
+        "id": "868hhqed8",
+        "title": "Part 3: Cons & Alternatives  \u2013 Full analysis + FAQs",
+        "status": "Closed",
+        "list": "AI Content",
+        "updated": "2026-03-02"
+      },
+      {
+        "id": "868hhqeck",
+        "title": "Part 2: All 36 Features \u2013 Deep dive into every tool",
+        "status": "Closed",
+        "list": "AI Content",
+        "updated": "2026-03-02"
+      }
+    ]
+  },
+  "clickup_tasks": {
+    "generated_at": "2026-06-18T17:02:47.386475+00:00",
+    "overdue": [
+      {
+        "id": "868euxr92",
+        "title": "SA: Onboarding sequence (7)",
+        "status": "complete",
+        "list": "General Content",
+        "url": "https://app.clickup.com/t/868euxr92",
+        "due": "2025-07-23",
+        "days_overdue": 330
+      },
+      {
+        "id": "868ewxkwf",
+        "title": "SG: Product Launch Email",
+        "status": "complete",
+        "list": "General Content",
+        "url": "https://app.clickup.com/t/868ewxkwf",
+        "due": "2025-08-08",
+        "days_overdue": 314
+      },
+      {
+        "id": "868fav0p7",
+        "title": "SA TM Brief: Seobility Alternatives",
+        "status": "complete",
+        "list": "General Content",
+        "url": "https://app.clickup.com/t/868fav0p7",
+        "due": "2025-09-05",
+        "days_overdue": 286
+      },
+      {
+        "id": "868fauuq4",
+        "title": "SA TM Brief: Marketmuse Alternatives",
+        "status": "complete",
+        "list": "General Content",
+        "url": "https://app.clickup.com/t/868fauuq4",
+        "due": "2025-09-05",
+        "days_overdue": 286
+      },
+      {
+        "id": "868ghudcy",
+        "title": "WNISA - 12/02/2025",
+        "status": "complete",
+        "list": "General Content",
+        "url": "https://app.clickup.com/t/868ghudcy",
+        "due": "2025-12-01",
+        "days_overdue": 198
+      },
+      {
+        "id": "868gmh1j9",
+        "title": "WNISA 12/09",
+        "status": "complete",
+        "list": "General Content",
+        "url": "https://app.clickup.com/t/868gmh1j9",
+        "due": "2025-12-08",
+        "days_overdue": 192
+      },
+      {
+        "id": "868gtfr0x",
+        "title": "Press Release: Social Posting",
+        "status": "complete",
+        "list": "General Content",
+        "url": "https://app.clickup.com/t/868gtfr0x",
+        "due": "2026-01-09",
+        "days_overdue": 160
+      },
+      {
+        "id": "868gqv4vn",
+        "title": "Press Release: LLM Visibility",
+        "status": "complete",
+        "list": "General Content",
+        "url": "https://app.clickup.com/t/868gqv4vn",
+        "due": "2026-01-09",
+        "days_overdue": 160
+      },
+      {
+        "id": "868gqv4ky",
+        "title": "Press Release: Report Builder V3",
+        "status": "complete",
+        "list": "General Content",
+        "url": "https://app.clickup.com/t/868gqv4ky",
+        "due": "2026-01-09",
+        "days_overdue": 160
+      },
+      {
+        "id": "868jcv3gj",
+        "title": "Friday content email 04/24",
+        "status": "complete",
+        "list": "General Content",
+        "url": "https://app.clickup.com/t/868jcv3gj",
+        "due": "2026-04-24",
+        "days_overdue": 55
+      },
+      {
+        "id": "868fr98j6",
+        "title": "SA: Case Studies Page",
+        "status": "on hold",
+        "list": "General Content",
+        "url": "https://app.clickup.com/t/868fr98j6",
+        "due": "2026-05-18",
+        "days_overdue": 31
+      },
+      {
+        "id": "868g93hqh",
+        "title": "SA: Email Cancel SA Subscription",
+        "status": "approved",
+        "list": "General Content",
+        "url": "https://app.clickup.com/t/868g93hqh",
+        "due": "2026-05-20",
+        "days_overdue": 29
+      }
+    ],
+    "no_due_date": [
+      {
+        "id": "868k21nk9",
+        "title": "Investigate homepage traffic drop \u2014 -2,302 clicks (-27.5%)",
+        "status": "ready for writer",
+        "list": "SEO Content",
+        "url": "https://app.clickup.com/t/868k21nk9",
+        "due": null
+      }
+    ],
+    "assigned": [
+      {
+        "id": "868k1tg7q",
+        "title": "SA: AI CMO Coworker",
+        "status": "ready for writer",
+        "list": "General Content",
+        "url": "https://app.clickup.com/t/868k1tg7q",
+        "due": "2026-06-19"
+      },
+      {
+        "id": "868fx7atg",
+        "title": "How Agencies Can Package AI Services",
+        "status": "in review",
+        "list": "General Content",
+        "url": "https://app.clickup.com/t/868fx7atg",
+        "due": "2026-06-19"
+      }
+    ],
+    "recently_completed": [
+      {
+        "id": "868k0v779",
+        "title": "How to Build an AI Marketing Stack That Actually Works",
+        "status": "published",
+        "list": "General Content",
+        "url": "https://app.clickup.com/t/868k0v779",
+        "closed": "2026-06-17"
+      },
+      {
+        "id": "868k0v76v",
+        "title": "AI CMO vs Marketing Agency: Cost, Tasks, and Transition",
+        "status": "published",
+        "list": "General Content",
+        "url": "https://app.clickup.com/t/868k0v76v",
+        "closed": "2026-06-15"
+      },
+      {
+        "id": "868k0v76d",
+        "title": "AI CMO for Startups: The Lean Team Setup Guide",
+        "status": "published",
+        "list": "General Content",
+        "url": "https://app.clickup.com/t/868k0v76d",
+        "closed": "2026-06-15"
+      },
+      {
+        "id": "868k0v5zq",
+        "title": "AI Marketing Automation Mistakes: 7 Failure Modes",
+        "status": "published",
+        "list": "General Content",
+        "url": "https://app.clickup.com/t/868k0v5zq",
+        "closed": "2026-06-15"
+      },
+      {
+        "id": "868k0v5kj",
+        "title": "AI CMO KPIs: How to Measure AI Marketing Performance",
+        "status": "published",
+        "list": "General Content",
+        "url": "https://app.clickup.com/t/868k0v5kj",
+        "closed": "2026-06-15"
+      },
+      {
+        "id": "868k0v5d1",
+        "title": "How Agencies Use an AI CMO to Manage More Clients",
+        "status": "published",
+        "list": "General Content",
+        "url": "https://app.clickup.com/t/868k0v5d1",
+        "closed": "2026-06-15"
+      },
+      {
+        "id": "868k0v5bb",
+        "title": "AI CMO vs Fractional CMO: How to Choose the Right Model",
+        "status": "published",
+        "list": "General Content",
+        "url": "https://app.clickup.com/t/868k0v5bb",
+        "closed": "2026-06-15"
+      },
+      {
+        "id": "868k0mc9a",
+        "title": "What is Multiplayer Marketing?",
+        "status": "published",
+        "list": "General Content",
+        "url": "https://app.clickup.com/t/868k0mc9a",
+        "closed": "2026-06-15"
+      },
+      {
+        "id": "868jeax2j",
+        "title": "How to Build an Agentic Workflow for SEO",
+        "status": "Closed",
+        "list": "Agentic Marketing",
+        "url": "https://app.clickup.com/t/868jeax2j",
+        "closed": "2026-06-12"
+      }
+    ]
+  },
+  "local_stats": {
+    "active_clients": 20,
+    "total_drafts": 173,
+    "active_briefs": 4,
+    "clients": [
+      "5gstore",
+      "a-plus-landscaping",
+      "altify",
+      "anne-therese",
+      "axiom-hrs",
+      "esthetics-center",
+      "laser-center-of-marin",
+      "liveops",
+      "loti-labs",
+      "pekas-smith",
+      "portugal-pathways",
+      "print-and-cheques-now",
+      "searchatlas",
+      "the-hope-house",
+      "the-nash-casino",
+      "thera",
+      "trustlayer",
+      "us-self-storage",
+      "us-storage-units",
+      "zia-tile"
+    ]
+  }
+}
