@@ -26,12 +26,19 @@ jobs:
       - name: Install dependencies
         run: pip install -r dashboard/requirements.txt
 
+      - name: Set up GSC credentials
+        if: ${{ secrets.GSC_TOKEN_JSON != '' }}
+        run: |
+          mkdir -p ~/.gsc-mcp ~/.config/gsc
+          echo '${{ secrets.GSC_TOKEN_JSON }}' > ~/.gsc-mcp/oauth-token.json
+          echo '${{ secrets.GSC_CLIENT_SECRETS_JSON }}' > ~/.config/gsc/client_secrets.json
+
       - name: Generate dashboard data
         env:
           SEARCHATLAS_API_KEY: ${{ secrets.SEARCHATLAS_API_KEY }}
           CLICKUP_API_KEY: ${{ secrets.CLICKUP_API_KEY }}
-          GSC_PROPERTY: ${{ secrets.GSC_PROPERTY }}
-        run: python dashboard/generate.py
+          GSC_PROPERTY: sc-domain:searchatlas.com
+        run: python3 dashboard/generate.py
 
       - name: Commit updated data
         run: |
