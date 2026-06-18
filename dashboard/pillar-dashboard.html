@@ -199,6 +199,21 @@
   .llmv-stat{text-align:center} .llmv-stat .v{font-size:21px; font-weight:800} .llmv-stat .l{font-size:11px; color:var(--subtle)}
   .llmv-zero-flag{flex:1; min-width:180px; background:var(--bad-soft); border:1px solid #f3c4c0; border-radius:var(--radius-sm); padding:9px 12px; font-size:12px; color:var(--bad)}
 
+  /* Weekly metrics table */
+  .wm-wrap{overflow-x:auto; -webkit-overflow-scrolling:touch}
+  .wm-table{border-collapse:collapse; font-size:12px; white-space:nowrap; min-width:100%}
+  .wm-table th,.wm-table td{padding:5px 10px; border:1px solid var(--border); text-align:right}
+  .wm-table th{background:var(--surface-alt); font-weight:600; color:var(--subtle); font-size:11px}
+  .wm-table td.wm-metric{text-align:left; font-weight:500; color:var(--text); position:sticky; left:0; background:#fff; z-index:1; min-width:160px; border-right:2px solid var(--border)}
+  .wm-table tr:nth-child(even) td{background:#fafafa}
+  .wm-table tr:nth-child(even) td.wm-metric{background:#fafafa}
+  .wm-table .wm-group-traffic td{background:#f0f7ff} .wm-table .wm-group-traffic td.wm-metric{background:#f0f7ff}
+  .wm-table .wm-group-pipeline td{background:#f0fff5} .wm-table .wm-group-pipeline td.wm-metric{background:#f0fff5}
+  .wm-table .wm-group-llm td{background:#f5f0ff} .wm-table .wm-group-llm td.wm-metric{background:#f5f0ff}
+  .wm-table .wm-group-branded td{background:#fffbf0} .wm-table .wm-group-branded td.wm-metric{background:#fffbf0}
+  .wm-table td.wm-null{color:var(--subtle); font-size:11px}
+  .wm-week-head{background:var(--accent)!important; color:#fff!important}
+
   .foot{margin-top:34px; padding-top:16px; border-top:1px solid var(--border); font-size:12px; color:var(--subtle); display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px}
 
   @media (max-width:880px){ .grid-4{grid-template-columns:repeat(2,1fr)} .cu-grid,.resp-grid{grid-template-columns:1fr} .hero .northstar{font-size:20px} }
@@ -324,6 +339,11 @@
     <section class="section">
       <div class="section-head"><h2>Quick Win Keywords</h2><span class="note" id="winsNote"></span></div>
       <div class="table-wrap" id="winsTable"></div>
+    </section>
+
+    <section class="section" id="weeklyMetricsSection">
+      <div class="section-head"><h2>Weekly Metrics</h2><span class="note" id="weeklyNote"></span></div>
+      <div class="table-wrap" id="weeklyTable"></div>
     </section>
 
     <section class="coach" id="coachSection"></section>

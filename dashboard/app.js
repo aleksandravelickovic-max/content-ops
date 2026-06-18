@@ -392,6 +392,58 @@ function expandWins(){
 }
 
 /* ============================================================
+   WEEKLY METRICS SCORECARD
+   ============================================================ */
+function renderWeeklyMetrics(){
+  const wm = CFG?.[CFG.active_quarter]?.weekly_metrics;
+  const el = document.getElementById('weeklyTable');
+  const noteEl = document.getElementById('weeklyNote');
+  if(!el) return;
+  if(!wm || !wm.weeks || !wm.rows || !wm.rows.length){
+    el.innerHTML = '<p style="color:var(--subtle);font-size:13px;padding:8px 0">Add <code>weekly_metrics</code> to config-pillar.json to enable this table.</p>';
+    return;
+  }
+
+  const weeks = wm.weeks;
+  const rows = wm.rows;
+
+  // Update note
+  const filled = rows.reduce((s,r)=>{
+    const v=r.values||[]; return s+v.filter(x=>x!==null&&x!==undefined&&x!=='').length;
+  },0);
+  const total = rows.length * weeks.length;
+  if(noteEl) noteEl.textContent = `${weeks.length} weeks · ${filled}/${total} cells filled`;
+
+  // Group separator labels
+  const GROUP_LABELS = { traffic:'Traffic', pipeline:'Pipeline', llm:'LLM', branded:'Branded Split' };
+  let lastGroup = null;
+  let bodyHtml = '';
+  for(const r of rows){
+    if(r.group && r.group !== lastGroup){
+      lastGroup = r.group;
+      const lbl = GROUP_LABELS[r.group] || r.group;
+      bodyHtml += `<tr class="wm-group-label"><td class="wm-metric" style="font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--subtle);font-weight:700;background:var(--surface-alt)" colspan="${1+weeks.length}">${lbl}</td></tr>`;
+    }
+    const cells = (r.values || []).map((v,i)=>{
+      if(v === null || v === undefined || v === '') return `<td class="wm-null">—</td>`;
+      const fmt = typeof v === 'number' && v >= 1000 ? fmtNum(v) : (typeof v === 'number' ? String(v) : esc(String(v)));
+      return `<td>${fmt}</td>`;
+    });
+    // pad if fewer values than weeks
+    while(cells.length < weeks.length) cells.push('<td class="wm-null">—</td>');
+    bodyHtml += `<tr class="wm-group-${r.group||''}"><td class="wm-metric">${esc(r.metric)}</td>${cells.join('')}</tr>`;
+  }
+
+  el.innerHTML = `<div class="wm-wrap"><table class="wm-table">
+    <thead><tr>
+      <th style="text-align:left;min-width:160px">Metric</th>
+      ${weeks.map(w=>`<th class="wm-week-head">${esc(w)}</th>`).join('')}
+    </tr></thead>
+    <tbody>${bodyHtml}</tbody>
+  </table></div>`;
+}
+
+/* ============================================================
    8 · AI CAREER COACHING
    ============================================================ */
 function renderCoaching(s){
@@ -435,6 +487,7 @@ function renderReport(s){
   renderGSC();
   renderDecay();
   renderWins();
+  renderWeeklyMetrics();
   renderCoaching(s);
   document.getElementById('footLeft').textContent = 'Search Atlas · Content Pillar · 1:1 with ' + (CFG?.one_on_one_with||'Sophia Deluz-Bhan');
   document.getElementById('freshness').textContent = 'Data as of ' + parseD(s.asOf).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
