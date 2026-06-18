@@ -692,6 +692,152 @@ def fetch_clickup_pipeline():
 
 
 
+# ── Google Sheets scorecard ───────────────────────────────────────────────────
+
+SHEETS_SCORECARD_URL = (
+    "https://docs.google.com/spreadsheets/d/"
+    "1gMOwOW54NYCoc2zxW3FQyH140xptUacRGWs1iDAgB8g/export?format=csv"
+)
+SHEETS_N_WEEKS = 6
+
+# (sheet column B name, dashboard display name, group)
+SCORECARD_METRIC_MAP = [
+    ("Clicks",                  "Clicks",                "traffic"),
+    ("Impressions",             "Impressions",           "traffic"),
+    ("Traffic (GA4)",           "Traffic GA4",           "traffic"),
+    ("Organic Trials",          "Organic Trials",        "pipeline"),
+    ("Organic Accounts",        "Organic Accounts",      "pipeline"),
+    ("New Content Published",   "New Content Published", "pipeline"),
+    ("LLM Clicks",              "LLM Clicks",            "llm"),
+    ("LLM Trials",              "LLM Trials",            "llm"),
+    ("Clicks Branded",          "Clicks Branded",        "branded"),
+    ("Impressions Branded",     "Impressions Branded",   "branded"),
+    ("Clicks Non-Branded",      "Clicks Non-Branded",    "branded"),
+    ("Impressions Non-Branded", "Impressions Non-Branded", "branded"),
+]
+
+
+def _parse_sheet_num(v):
+    """Parse a number from the scorecard CSV. Handles European format (4.105,00 → 4105)."""
+    if not v:
+        return None
+    v = v.strip().strip('"')
+    if v in ("", "-", "—", "N/A"):
+        return None
+    if "," in v and "." in v:
+        # European: period = thousands sep, comma = decimal  →  4.119.950,00
+        v = v.replace(".", "").replace(",", ".")
+    elif "," in v:
+        # Comma as decimal only  →  4232,00
+        v = v.replace(",", ".")
+    try:
+        f = float(v)
+        return int(f) if f == int(f) else round(f, 2)
+    except ValueError:
+        return None
+
+
+def fetch_sheets_weekly_metrics(n_weeks=SHEETS_N_WEEKS):
+    """Pull the last N weeks of scorecard data from the public Google Sheet."""
+    import io
+    import csv as csv_mod
+    import urllib.request
+
+    log("Fetching weekly scorecard from Google Sheets…")
+    try:
+        req = urllib.request.Request(
+            SHEETS_SCORECARD_URL,
+            headers={"User-Agent": "Mozilla/5.0"},
+        )
+        with urllib.request.urlopen(req, timeout=20) as r:
+            content = r.read().decode("utf-8")
+    except Exception as e:
+        log(f"  Sheets fetch failed: {e}")
+        return None
+
+    rows = list(csv_mod.reader(io.StringIO(content)))
+
+    # Find the "Date Range >" header row and the "EOS Date >" row
+    date_range_row = None
+    eos_date_row   = None
+    data_start_col = 5   # default column where weekly data begins
+
+    for row in rows:
+        row_str = ",".join(row)
+        if "Date Range" in row_str and date_range_row is None:
+            date_range_row = row
+            for ci, cell in enumerate(row):
+                if "Date Range" in cell:
+                    data_start_col = ci + 1
+                    break
+        if "EOS Date" in row_str and eos_date_row is None:
+            eos_date_row = row
+        if date_range_row and eos_date_row:
+            break
+
+    if date_range_row is None:
+        log("  Sheets: 'Date Range' header row not found — using col 5 default")
+
+    # Collect raw weekly values for each metric
+    metric_data: dict = {}
+    for row in rows:
+        if len(row) <= data_start_col:
+            continue
+        name = row[1].strip() if len(row) > 1 else ""
+        for sheet_name, _, _ in SCORECARD_METRIC_MAP:
+            if name == sheet_name and sheet_name not in metric_data:
+                metric_data[sheet_name] = row[data_start_col:]
+                break
+
+    if not metric_data:
+        log("  Sheets: no metric rows found in CSV")
+        return None
+
+    # Use Clicks to find last N filled weeks
+    reference = metric_data.get("Clicks", next(iter(metric_data.values())))
+    filled = [i for i, v in enumerate(reference) if _parse_sheet_num(v) is not None]
+    if not filled:
+        log("  Sheets: no filled weeks found")
+        return None
+
+    selected = filled[-n_weeks:]          # oldest → newest indices
+    selected_rev = list(reversed(selected))  # newest → oldest (for display)
+
+    # Build human-readable week labels: "Jun 8-14"
+    week_labels = []
+    for idx in selected_rev:
+        col = data_start_col + idx
+        label = None
+        if eos_date_row and col < len(eos_date_row):
+            eos = eos_date_row[col].strip()   # e.g. "Jun-10"
+            month = eos.split("-")[0] if "-" in eos else ""
+            if date_range_row and col < len(date_range_row):
+                dr = date_range_row[col].strip().replace(" ", "")  # "8-14"
+                if month and dr:
+                    label = f"{month} {dr}"
+        if not label and date_range_row and col < len(date_range_row):
+            label = date_range_row[col].strip()
+        week_labels.append(label or f"Week {idx + 1}")
+
+    # Build output rows
+    out_rows = []
+    for sheet_name, display_name, group in SCORECARD_METRIC_MAP:
+        vals_raw = metric_data.get(sheet_name, [])
+        values = [
+            _parse_sheet_num(vals_raw[idx]) if idx < len(vals_raw) else None
+            for idx in selected_rev
+        ]
+        out_rows.append({"metric": display_name, "group": group, "values": values})
+
+    log(f"  Sheets: {len(selected)} weeks · {len(out_rows)} metrics")
+    return {
+        "source": "google_sheets",
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "weeks": week_labels,
+        "rows": out_rows,
+    }
+
+
 def fetch_quota():
     """Pull platform credit usage from SearchAtlas."""
     log("Fetching SA quota…")
@@ -854,6 +1000,14 @@ def main():
         sources_status["contentgenius"] = "connected" if pipeline else "error"
     elif not pipeline and not SA_API_KEY:
         sources_status["contentgenius"] = "api_key_required"
+
+    # ── Google Sheets scorecard ──────────────────────────────────────────────
+    sheets_wm = fetch_sheets_weekly_metrics()
+    if sheets_wm:
+        existing["weekly_metrics"] = sheets_wm
+        sources_status["sheets_scorecard"] = "connected"
+    else:
+        sources_status["sheets_scorecard"] = "error"
 
     # ── SA quota ─────────────────────────────────────────────────────────────
     credits = {"alerts": [], "highlights": []}

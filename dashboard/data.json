@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-06-18T19:45:40.898562+00:00",
+    "generated_at": "2026-06-18T20:18:54.637541+00:00",
     "version": "2.2.0",
     "sources": {
       "clickup_published": "connected",
@@ -12,12 +12,13 @@
       "quick_wins": "connected",
       "content_performance": "connected",
       "local_fs": "connected",
-      "clickup_tasks": "connected"
+      "clickup_tasks": "connected",
+      "sheets_scorecard": "connected"
     }
   },
   "clickup_stats": {
     "articles_published_7d": 9,
-    "generated_at": "2026-06-18T19:45:24.381893+00:00",
+    "generated_at": "2026-06-18T20:18:40.818656+00:00",
     "window_days": 7,
     "tasks": [
       {
@@ -111,7 +112,7 @@
     ]
   },
   "gsc": {
-    "generated_at": "2026-06-18T19:45:18.453283+00:00",
+    "generated_at": "2026-06-18T20:18:34.035737+00:00",
     "period": "2026-05-19 to 2026-06-15",
     "current": {
       "clicks": 14040,
@@ -147,7 +148,7 @@
     }
   },
   "content_performance": {
-    "generated_at": "2026-06-18T19:45:19.514045+00:00",
+    "generated_at": "2026-06-18T20:18:35.088928+00:00",
     "note": "Current 28d (2026-05-19\u20132026-06-15) vs prior 28d (2026-04-21\u20132026-05-18). Source: GSC.",
     "top_pages": [
       {
@@ -706,7 +707,7 @@
   ],
   "content_pipeline": {
     "source": "clickup",
-    "generated_at": "2026-06-18T19:45:40.878494+00:00",
+    "generated_at": "2026-06-18T20:18:53.713712+00:00",
     "summary": {
       "not_begun": 54,
       "in_progress": 0,
@@ -858,7 +859,7 @@
     ]
   },
   "clickup_tasks": {
-    "generated_at": "2026-06-18T19:45:24.382158+00:00",
+    "generated_at": "2026-06-18T20:18:40.819063+00:00",
     "overdue": [
       {
         "id": "868fr98j6",
@@ -998,6 +999,164 @@
       "us-self-storage",
       "us-storage-units",
       "zia-tile"
+    ]
+  },
+  "weekly_metrics": {
+    "source": "google_sheets",
+    "generated_at": "2026-06-18T20:18:54.595862+00:00",
+    "weeks": [
+      "Jun 8-14",
+      "Jun 1-7",
+      "May 25-31",
+      "May 18-24",
+      "May 11-17",
+      "May 4-10"
+    ],
+    "rows": [
+      {
+        "metric": "Clicks",
+        "group": "traffic",
+        "values": [
+          3226,
+          3651,
+          3364,
+          3821,
+          3927,
+          5012
+        ]
+      },
+      {
+        "metric": "Impressions",
+        "group": "traffic",
+        "values": [
+          1322635,
+          1220298,
+          1364710,
+          1401187,
+          1385144,
+          1501794
+        ]
+      },
+      {
+        "metric": "Traffic GA4",
+        "group": "traffic",
+        "values": [
+          4003,
+          4600,
+          2328,
+          5280,
+          4862,
+          5246
+        ]
+      },
+      {
+        "metric": "Organic Trials",
+        "group": "pipeline",
+        "values": [
+          43,
+          42,
+          17,
+          61,
+          56,
+          89
+        ]
+      },
+      {
+        "metric": "Organic Accounts",
+        "group": "pipeline",
+        "values": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "metric": "New Content Published",
+        "group": "pipeline",
+        "values": [
+          20,
+          21,
+          37,
+          56,
+          53,
+          40
+        ]
+      },
+      {
+        "metric": "LLM Clicks",
+        "group": "llm",
+        "values": [
+          null,
+          null,
+          null,
+          null,
+          176,
+          183
+        ]
+      },
+      {
+        "metric": "LLM Trials",
+        "group": "llm",
+        "values": [
+          null,
+          null,
+          null,
+          null,
+          1,
+          0
+        ]
+      },
+      {
+        "metric": "Clicks Branded",
+        "group": "branded",
+        "values": [
+          1789,
+          2080,
+          1879,
+          2116,
+          2232,
+          3040
+        ]
+      },
+      {
+        "metric": "Impressions Branded",
+        "group": "branded",
+        "values": [
+          8079,
+          9535,
+          8429,
+          11897,
+          8978,
+          14715
+        ]
+      },
+      {
+        "metric": "Clicks Non-Branded",
+        "group": "branded",
+        "values": [
+          1437,
+          1571,
+          1485,
+          1705,
+          1695,
+          1972
+        ]
+      },
+      {
+        "metric": "Impressions Non-Branded",
+        "group": "branded",
+        "values": [
+          1314556,
+          1210763,
+          1356281,
+          1389290,
+          1376166,
+          1487079
+        ]
+      }
     ]
   }
 }
