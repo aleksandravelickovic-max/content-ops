@@ -72,7 +72,26 @@
       { "topic": "LLM visibility recovery plan",                 "type": "discussion",  "notes": "3 platforms at 0% — need content + technical strategy" },
       { "topic": "Tiered product launch content system",         "type": "update",      "notes": "Content deliverables per tier, ClickUp automation" },
       { "topic": "Cross-marketing task force relaunch",          "type": "action_item", "notes": "Reform with Sahar + Ali — content to demand gen handoff" }
-    ]
+    ],
+
+    "weekly_metrics": {
+      "_note": "Update values manually each week. Weeks are newest-first. Values: numbers or null.",
+      "weeks": ["Jun 15-21", "Jun 8-14", "Jun 1-7", "May 25-31", "May 18-24", "May 11-17"],
+      "rows": [
+        { "metric": "Clicks",                "group": "traffic",  "values": [null, null, null, null, null, null] },
+        { "metric": "Impressions",           "group": "traffic",  "values": [null, null, null, null, null, null] },
+        { "metric": "Traffic GA4",           "group": "traffic",  "values": [null, null, null, null, null, null] },
+        { "metric": "Organic Trials",        "group": "pipeline", "values": [null, null, null, null, null, null] },
+        { "metric": "Organic Accounts",      "group": "pipeline", "values": [null, null, null, null, null, null] },
+        { "metric": "New Content Published", "group": "pipeline", "values": [null, null, null, null, null, null] },
+        { "metric": "LLM Clicks",            "group": "llm",      "values": [null, null, null, null, null, null] },
+        { "metric": "LLM Trials",            "group": "llm",      "values": [null, null, null, null, null, null] },
+        { "metric": "Clicks Branded",        "group": "branded",  "values": [null, null, null, null, null, null] },
+        { "metric": "Impressions Branded",   "group": "branded",  "values": [null, null, null, null, null, null] },
+        { "metric": "Clicks Non-Branded",    "group": "branded",  "values": [null, null, null, null, null, null] },
+        { "metric": "Impressions Non-Branded","group": "branded", "values": [null, null, null, null, null, null] }
+      ]
+    }
   },
 
   "q3": {
