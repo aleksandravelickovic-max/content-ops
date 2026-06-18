@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Content Pillar Dashboard — Search Atlas</title>
+<style>
+:root{
+  --navy:#0f172a;--blue:#1d4ed8;--blue-lt:#3b82f6;--purple:#7c3aed;
+  --green:#059669;--red:#dc2626;--amber:#d97706;--sky:#0ea5e9;
+  --bg:#f1f5f9;--surface:#fff;--border:#e2e8f0;--text:#0f172a;
+  --muted:#64748b;--light:#94a3b8;--r:10px;
+  --shadow:0 1px 3px rgba(0,0,0,.07),0 1px 2px rgba(0,0,0,.04);
+  --shadow-md:0 4px 6px -1px rgba(0,0,0,.08),0 2px 4px rgba(0,0,0,.04);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5;}
+a{color:var(--blue);text-decoration:none;}a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,monospace;font-size:12px;background:#f1f5f9;padding:1px 5px;border-radius:4px;}
+
+/* HEADER */
+.hdr{background:linear-gradient(135deg,#0f172a 0%,#1e3a8a 55%,#2563eb 100%);color:#fff;padding:18px 28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.hdr-brand{display:flex;align-items:center;gap:12px;}
+.hdr-logo{width:36px;height:36px;background:rgba(255,255,255,.15);border-radius:9px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:11px;flex-shrink:0;}
+.hdr-name{font-size:16px;font-weight:700;letter-spacing:-.2px;}
+.hdr-sub{font-size:12px;opacity:.7;margin-top:1px;}
+.hdr-right{display:flex;flex-direction:column;align-items:flex-end;gap:5px;}
+.hdr-date{font-size:13px;font-weight:600;}
+.hdr-meta{font-size:11px;opacity:.75;display:flex;align-items:center;gap:8px;}
+.hdr-actions{display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
+.btn-sm{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;padding:4px 10px;border-radius:18px;cursor:pointer;font-size:11px;font-weight:500;transition:background .15s;}
+.btn-sm:hover{background:rgba(255,255,255,.22);}
+.spin{animation:spin .8s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.version-wrap{position:relative;}
+.version-select{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;padding:4px 10px;border-radius:18px;font-size:11px;cursor:pointer;appearance:none;padding-right:22px;}
+.version-arrow{position:absolute;right:8px;top:50%;transform:translateY(-50%);pointer-events:none;opacity:.7;font-size:9px;}
+
+/* QUARTER NAV */
+.qnav{background:#1e293b;padding:0 28px;display:flex;align-items:center;gap:0;border-bottom:1px solid rgba(255,255,255,.08);}
+.qnav-btn{padding:11px 18px;font-size:12px;font-weight:600;color:rgba(255,255,255,.55);cursor:pointer;border:none;background:none;border-bottom:2px solid transparent;transition:all .15s;white-space:nowrap;}
+.qnav-btn:hover{color:rgba(255,255,255,.8);}
+.qnav-btn.active{color:#fff;border-bottom-color:#3b82f6;}
+.qnav-badge{display:inline-flex;align-items:center;padding:1px 6px;border-radius:10px;font-size:10px;font-weight:700;margin-left:6px;}
+.qb-active{background:rgba(59,130,246,.3);color:#93c5fd;}
+.qb-plan{background:rgba(124,58,237,.3);color:#c4b5fd;}
+.qb-done{background:rgba(5,150,105,.3);color:#6ee7b7;}
+
+/* ALERT */
+.alert{padding:9px 28px;font-size:12px;display:flex;align-items:center;gap:8px;}
+.alert-red{background:#fef2f2;border-bottom:1px solid #fecaca;color:#991b1b;}
+.alert.hidden{display:none;}
+
+/* MAIN */
+.main{max-width:1440px;margin:0 auto;padding:20px 20px 80px;}
+.section{margin-bottom:16px;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.g-goals{display:grid;grid-template-columns:300px 1fr;gap:16px;align-items:start;}
+@media(max-width:1100px){.g4{grid-template-columns:1fr 1fr;}.g3{grid-template-columns:1fr 1fr;}.g-goals{grid-template-columns:1fr;}}
+@media(max-width:680px){.g2,.g3,.g4,.g-goals{grid-template-columns:1fr;}.hdr{padding:14px;}.main{padding:12px;}.qnav{padding:0 14px;}}
+
+/* CARDS */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow);}
+.card-hd{padding:14px 18px 0;display:flex;align-items:center;justify-content:space-between;}
+.card-title{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);}
+.card-body{padding:12px 18px 16px;}
+
+/* NORTH STAR */
+.northstar{background:linear-gradient(135deg,#1e3a8a,#4f46e5);color:#fff;border-radius:var(--r);padding:18px 24px;box-shadow:var(--shadow-md);}
+.northstar-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.7;margin-bottom:6px;}
+.northstar-text{font-size:17px;font-weight:600;line-height:1.45;letter-spacing:-.2px;}
+
+/* GOAL CARDS */
+.goal-card{padding:18px;}
+.goal-flag{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:12px;}
+.flag-green{background:#dcfce7;color:#15803d;} .flag-amber{background:#fef3c7;color:#b45309;} .flag-red{background:#fee2e2;color:#dc2626;} .flag-blue{background:#dbeafe;color:#1d4ed8;}
+.goal-bar-wrap{height:8px;background:var(--border);border-radius:4px;overflow:hidden;margin:8px 0;}
+.goal-bar-fill{height:100%;border-radius:4px;transition:width .5s ease;}
+.goal-big{font-size:26px;font-weight:800;letter-spacing:-.5px;line-height:1;}
+.goal-unit{font-size:13px;font-weight:500;color:var(--muted);}
+
+/* KPI CARDS */
+.kpi{padding:16px 18px;}
+.kpi-icon{width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;margin-bottom:8px;}
+.kpi-val{font-size:24px;font-weight:800;letter-spacing:-.5px;line-height:1;}
+.kpi-lbl{font-size:11px;color:var(--muted);margin-top:3px;font-weight:500;}
+.kpi-delta{display:inline-flex;align-items:center;gap:3px;font-size:10px;font-weight:600;margin-top:4px;padding:2px 6px;border-radius:20px;}
+.i-blue{background:#dbeafe;color:var(--blue);} .i-purple{background:#ede9fe;color:var(--purple);}
+.i-red{background:#fee2e2;color:var(--red);} .i-green{background:#dcfce7;color:var(--green);}
+.i-amber{background:#fef3c7;color:var(--amber);}
+.up{background:#dcfce7;color:#15803d;} .dn{background:#fee2e2;color:#dc2626;} .nt{background:#f1f5f9;color:#475569;}
+
+/* WEEKLY CHART */
+.chart-wrap{padding:14px 18px 16px;}
+.chart-bars{display:flex;align-items:flex-end;gap:3px;height:80px;margin-bottom:6px;}
+.chart-bar-col{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;}
+.chart-bar{width:100%;border-radius:3px 3px 0 0;min-height:2px;transition:height .3s;cursor:default;position:relative;}
+.chart-bar:hover::after{content:attr(data-tip);position:absolute;bottom:calc(100% + 4px);left:50%;transform:translateX(-50%);background:#1e293b;color:#fff;font-size:10px;padding:3px 7px;border-radius:4px;white-space:nowrap;pointer-events:none;z-index:10;}
+.chart-label{font-size:8px;color:var(--light);text-align:center;line-height:1.2;writing-mode:vertical-rl;transform:rotate(180deg);height:40px;overflow:hidden;}
+.chart-meta{display:flex;justify-content:space-between;font-size:10px;color:var(--muted);margin-top:4px;}
+.chart-goal-line{position:relative;}
+
+/* LEADING INDICATORS */
+.li-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--border);}
+.li-row:first-child{padding-top:0;} .li-row:last-child{border-bottom:none;padding-bottom:0;}
+.li-label{flex:1;font-size:12px;font-weight:500;}
+.li-source{font-size:10px;color:var(--light);margin-top:1px;}
+.li-bar-bg{width:80px;height:5px;background:var(--border);border-radius:3px;flex-shrink:0;}
+.li-bar-fg{height:100%;border-radius:3px;}
+.li-nums{text-align:right;flex-shrink:0;min-width:72px;}
+.li-actual{font-size:14px;font-weight:700;}
+.li-target{font-size:10px;color:var(--muted);}
+
+/* ROCKS */
+.rock-row{display:flex;align-items:flex-start;gap:9px;padding:11px 0;border-bottom:1px solid var(--border);}
+.rock-row:first-child{padding-top:0;} .rock-row:last-child{border-bottom:none;padding-bottom:0;}
+.rock-num{width:20px;height:20px;border-radius:50%;background:var(--bg);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--muted);flex-shrink:0;margin-top:1px;}
+.rock-title{font-size:12px;font-weight:600;line-height:1.4;}
+.rock-due{font-size:11px;color:var(--muted);margin-top:1px;}
+
+/* AGENDA */
+.agenda-row{display:flex;align-items:flex-start;gap:7px;padding:9px 0;border-bottom:1px solid var(--border);}
+.agenda-row:first-child{padding-top:0;} .agenda-row:last-child{border-bottom:none;padding-bottom:0;}
+.agenda-type{font-size:10px;font-weight:600;padding:2px 6px;border-radius:4px;white-space:nowrap;margin-top:1px;flex-shrink:0;}
+.t-action{background:#dbeafe;color:#1d4ed8;} .t-decision{background:#ede9fe;color:#6d28d9;}
+.t-discussion{background:#dcfce7;color:#15803d;} .t-update{background:#f1f5f9;color:#475569;}
+.agenda-topic{font-size:12px;font-weight:600;}
+.agenda-notes{font-size:11px;color:var(--muted);margin-top:1px;}
+
+/* CLICKUP TABS */
+.cu-open-btn{display:inline-flex;align-items:center;gap:5px;padding:7px 14px;border-radius:7px;border:1px solid var(--border);background:var(--bg);font-size:12px;font-weight:600;color:var(--text);text-decoration:none;transition:background .12s,border-color .12s;}
+.cu-open-btn:hover{background:var(--surface);border-color:var(--blue);color:var(--blue);}
+.cu-pub-row{display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid var(--border);}
+.cu-pub-row:last-child{border-bottom:none;}
+.bdg-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.cu-placeholder{padding:28px 18px;text-align:center;color:var(--muted);font-size:12px;background:var(--bg);border-radius:0 0 8px 8px;flex-direction:column;align-items:center;gap:8px;}
+.cu-placeholder strong{display:block;font-size:13px;color:var(--text);margin-bottom:4px;}
+
+/* LLMV */
+.llmv-ring-wrap{position:relative;width:80px;height:80px;flex-shrink:0;}
+.llmv-ring-wrap svg{transform:rotate(-90deg);}
+.llmv-ring-num{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;}
+.llmv-ring-num .v{font-size:20px;font-weight:800;line-height:1;}
+.llmv-ring-num .l{font-size:8px;color:var(--muted);display:block;}
+.platform-row{display:flex;align-items:center;gap:7px;padding:6px 0;border-bottom:1px solid var(--border);}
+.platform-row:first-child{padding-top:0;} .platform-row:last-child{border-bottom:none;padding-bottom:0;}
+.p-name{font-size:12px;font-weight:600;width:110px;flex-shrink:0;}
+.p-bar-bg{flex:1;height:5px;background:var(--border);border-radius:3px;}
+.p-bar-fg{height:100%;border-radius:3px;background:var(--blue);}
+.p-score{font-size:12px;font-weight:700;width:34px;text-align:right;flex-shrink:0;}
+
+/* ACCORDION */
+.acc-btn{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:13px 18px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;text-align:left;box-shadow:var(--shadow);transition:background .1s;}
+.acc-btn:hover{background:#f8fafc;} .acc-btn.open{border-radius:var(--r) var(--r) 0 0;border-bottom:none;}
+.acc-title{font-size:13px;font-weight:600;} .acc-sub{font-size:11px;color:var(--muted);}
+.acc-right{display:flex;align-items:center;gap:7px;}
+.chev{transition:transform .2s;flex-shrink:0;} .chev.open{transform:rotate(180deg);}
+.acc-body{overflow:hidden;max-height:0;transition:max-height .3s ease;}
+.acc-body.open{max-height:6000px;}
+.acc-inner{background:var(--surface);border:1px solid var(--border);border-top:none;border-radius:0 0 var(--r) var(--r);overflow:hidden;}
+
+/* TABLES */
+.tbl{width:100%;border-collapse:collapse;}
+.tbl th{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);padding:7px 12px;border-bottom:2px solid var(--border);text-align:left;white-space:nowrap;}
+.tbl td{padding:8px 12px;border-bottom:1px solid var(--border);font-size:12px;vertical-align:middle;}
+.tbl tr:last-child td{border-bottom:none;} .tbl tr:hover td{background:#f8fafc;}
+.tr{text-align:right;} .tm{font-family:ui-monospace,monospace;font-size:11px;}
+.more-row td{text-align:center;padding:8px;color:var(--blue);cursor:pointer;font-size:12px;font-weight:500;}
+.more-row:hover td{background:#eff6ff;}
+
+/* BADGES */
+.bdg{display:inline-block;font-size:10px;font-weight:600;padding:2px 7px;border-radius:20px;white-space:nowrap;}
+.bdg-red{background:#fee2e2;color:#dc2626;} .bdg-amber{background:#fef3c7;color:#b45309;}
+.bdg-green{background:#dcfce7;color:#15803d;} .bdg-blue{background:#dbeafe;color:#1d4ed8;}
+.bdg-gray{background:#f1f5f9;color:#475569;} .bdg-purple{background:#ede9fe;color:#6d28d9;}
+.s-ip{background:#dbeafe;color:#1d4ed8;} .s-ns{background:#f1f5f9;color:#475569;}
+.s-bl{background:#fee2e2;color:#dc2626;} .s-dn{background:#dcfce7;color:#15803d;}
+
+.pb{display:inline-block;width:64px;height:4px;background:var(--border);border-radius:2px;vertical-align:middle;}
+.pb-f{height:100%;border-radius:2px;}
+
+/* COACHING */
+.coaching{padding:16px 18px 18px;}
+.coaching-empty{background:var(--bg);border:1px dashed var(--border);border-radius:8px;padding:14px;font-size:12px;color:var(--muted);text-align:center;}
+.coaching-text{font-size:13px;line-height:1.7;color:var(--text);white-space:pre-wrap;}
+.ctx-text{font-size:11px;line-height:1.7;color:var(--muted);background:var(--bg);border-radius:8px;padding:12px;font-family:ui-monospace,monospace;}
+
+/* Q3 PLANNING BANNER */
+.plan-banner{background:linear-gradient(135deg,#4c1d95,#6d28d9);color:#fff;border-radius:var(--r);padding:16px 22px;box-shadow:var(--shadow-md);display:flex;align-items:center;gap:14px;}
+.plan-banner-icon{font-size:24px;flex-shrink:0;}
+.plan-banner-text{font-size:14px;font-weight:600;line-height:1.4;}
+.plan-banner-sub{font-size:12px;opacity:.75;margin-top:2px;}
+
+.footer{text-align:center;padding:12px;font-size:11px;color:var(--light);}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="hdr">
+  <div class="hdr-brand">
+    <div class="hdr-logo">SA</div>
+    <div>
+      <div class="hdr-name" id="hdr-name">Aleksandra Velickovic</div>
+      <div class="hdr-sub" id="hdr-sub">Content Pillar · Search Atlas / LinkGraph</div>
+    </div>
+  </div>
+  <div class="hdr-right">
+    <div class="hdr-date" id="hdr-date"></div>
+    <div class="hdr-meta">
+      <span id="hdr-updated"></span>
+      <span id="hdr-countdown"></span>
+    </div>
+    <div class="hdr-actions">
+      <div class="version-wrap">
+        <select class="version-select" id="version-select" onchange="loadVersion(this.value)">
+          <option value="live">▸ Live view</option>
+        </select>
+        <span class="version-arrow">▾</span>
+      </div>
+      <button class="btn-sm" onclick="saveSnapshot()">💾 Snapshot</button>
+      <button class="btn-sm" onclick="triggerRefresh()">
+        <svg id="ricon" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4v6h6M23 20v-6h-6"/><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/></svg>
+        Refresh
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- QUARTER NAV -->
+<div class="qnav" id="qnav"></div>
+
+<div id="alert" class="alert hidden"></div>
+<div class="main" id="main"><div style="text-align:center;padding:60px;color:#94a3b8">Loading…</div></div>
+<div class="footer" id="footer"></div>
+
+<script>
+// ── State ──────────────────────────────────────────────────────────────────
+let CFG=null, DATA=null;
+let activeQ='q2';
+let nextAt=null;
+const INTERVAL=5*60*1000;
+const SNAP_KEY='sa-dashboard-snapshots-v2';
+
+// ── Utils ──────────────────────────────────────────────────────────────────
+const fmt=n=>n==null?'—':Number(n).toLocaleString();
+const esc=s=>String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const abs=n=>Math.abs(n||0);
+const sign=n=>(n||0)>0?'▲':'▼';
+const pct=(a,b)=>b?Math.min(100,Math.round(a/b*100)):0;
+function dc(n,inv){if(n==null)return 'nt';return(inv?n<0:n>0)?'up':'dn';}
+function relTime(iso){if(!iso)return '';const d=Math.floor((Date.now()-new Date(iso))/60000);if(d<2)return 'just now';if(d<60)return d+'m ago';if(d<1440)return Math.floor(d/60)+'h ago';return Math.floor(d/1440)+'d ago';}
+function dueLabel(ds){if(!ds)return '';const d=Math.floor((new Date(ds)-Date.now())/86400000);if(d<0)return '<span style="color:var(--red);font-weight:600">Overdue</span>';if(d===0)return '<span style="color:var(--amber);font-weight:600">Due today</span>';if(d<=7)return `<span style="color:var(--amber)">Due in ${d}d</span>`;return `Due ${new Date(ds).toLocaleDateString('en-US',{month:'short',day:'numeric'})}`;}
+function statusBdg(s){const m={in_progress:'s-ip',not_started:'s-ns',blocked:'s-bl',done:'s-dn'};const l={in_progress:'In Progress',not_started:'Not Started',blocked:'Blocked',done:'Done'};return `<span class="bdg ${m[s]||'s-ns'}">${esc(l[s]||s)}</span>`;}
+function trendBdg(t){if(!t)return '';if(t.includes('declining'))return '<span class="bdg bdg-red">Declining</span>';if(t.includes('stable'))return '<span class="bdg bdg-amber">Demand ↓</span>';if(t.includes('improved'))return '<span class="bdg bdg-blue">Rank ↑</span>';return `<span class="bdg bdg-gray">${esc(t)}</span>`;}
+function inlinePb(val,max,color){const p=pct(val,max||1);return `<span class="pb"><span class="pb-f" style="width:${p}%;background:${color||'var(--blue)'}"></span></span>`;}
+
+// ── Quarter nav ────────────────────────────────────────────────────────────
+function buildQNav(){
+  if(!CFG)return;
+  const quarters=[
+    {key:'q2',label:CFG.q2?.label||'Q2 2026',status:CFG.q2?.status},
+    {key:'q3',label:CFG.q3?.label||'Q3 2026',status:CFG.q3?.status},
+  ];
+  const html=quarters.map(q=>{
+    const bdgCls=q.status==='active'?'qb-active':q.status==='planning'?'qb-plan':'qb-done';
+    const bdgTxt=q.status==='active'?'Current':q.status==='planning'?'Planning':'Complete';
+    return `<button class="qnav-btn${activeQ===q.key?' active':''}" onclick="switchQ('${q.key}')">
+      ${esc(q.label)}<span class="qnav-badge ${bdgCls}">${bdgTxt}</span>
+    </button>`;
+  }).join('');
+  document.getElementById('qnav').innerHTML=html;
+}
+function switchQ(q){activeQ=q;buildQNav();document.getElementById('main').innerHTML=buildAll();window.scrollTo(0,0);}
+
+// ── Versions ───────────────────────────────────────────────────────────────
+function getSnaps(){return JSON.parse(localStorage.getItem(SNAP_KEY)||'{}');}
+function saveSnapshot(){
+  const snaps=getSnaps();const key=new Date().toISOString().split('T')[0];
+  snaps[key]={date:key,saved_at:Date.now(),data:DATA,config:CFG,quarter:activeQ};
+  localStorage.setItem(SNAP_KEY,JSON.stringify(snaps));
+  updateVersionDropdown();alert(`Snapshot saved for ${key}`);
+}
+function updateVersionDropdown(){
+  const sel=document.getElementById('version-select');
+  const snaps=getSnaps();const keys=Object.keys(snaps).sort().reverse();
+  sel.innerHTML=`<option value="live">▸ Live view</option>`+keys.map(k=>`<option value="${k}">${k}</option>`).join('');
+}
+function loadVersion(key){
+  if(key==='live'){DATA=window._liveData;CFG=window._liveCfg;render();return;}
+  const snaps=getSnaps();if(snaps[key]){DATA=snaps[key].data;CFG=snaps[key].config;if(snaps[key].quarter)activeQ=snaps[key].quarter;render();}
+}
+
+// ── Load ───────────────────────────────────────────────────────────────────
+async function triggerRefresh(){
+  document.getElementById('ricon').classList.add('spin');
+  try{
+    const[dr,cr]=await Promise.all([fetch('data.json?t='+Date.now()),fetch('config.json?t='+Date.now())]);
+    if(dr.ok){DATA=await dr.json();window._liveData=DATA;}
+    if(cr.ok){CFG=await cr.json();window._liveCfg=CFG;}
+    render();scheduleNext();
+  }finally{document.getElementById('ricon').classList.remove('spin');}
+}
+async function load(){
+  try{
+    const[dr,cr]=await Promise.all([fetch('data.json?t='+Date.now()),fetch('config.json?t='+Date.now())]);
+    if(dr.ok){DATA=await dr.json();window._liveData=DATA;}
+    if(cr.ok){CFG=await cr.json();window._liveCfg=CFG;activeQ=CFG.active_quarter||'q2';}
+    render();scheduleNext();updateVersionDropdown();
+  }catch(e){
+    document.getElementById('main').innerHTML=`<div class="card" style="max-width:380px;margin:40px auto;padding:22px;text-align:center"><div style="color:var(--red);font-weight:600;margin-bottom:6px">Failed to load</div><div style="font-size:12px;color:var(--muted)">${esc(e.message)}</div><div style="font-size:11px;color:var(--light);margin-top:8px">Serve with: <code>python3 -m http.server 8080</code></div></div>`;
+  }
+}
+function scheduleNext(){
+  nextAt=Date.now()+INTERVAL;clearInterval(window._ri);clearInterval(window._ci);
+  window._ri=setInterval(triggerRefresh,INTERVAL);
+  window._ci=setInterval(()=>{const r=Math.max(0,nextAt-Date.now());const m=Math.floor(r/60000),s=Math.floor((r%60000)/1000);document.getElementById('hdr-countdown').textContent=`· ${m}:${String(s).padStart(2,'0')}`;},1000);
+}
+
+// ── RENDER ─────────────────────────────────────────────────────────────────
+function render(){
+  if(!CFG&&!DATA)return;
+  const now=new Date();
+  document.getElementById('hdr-date').textContent=now.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'});
+  if(CFG){document.getElementById('hdr-name').textContent=CFG.name||'Aleksandra Velickovic';document.getElementById('hdr-sub').textContent=(CFG.role||'Content Manager')+' · '+(CFG.company||'Search Atlas');}
+  document.getElementById('hdr-updated').textContent=DATA?'Data: '+relTime(DATA.meta?.generated_at):'';
+  buildQNav();
+
+  // Alert bar
+  const al=document.getElementById('alert');
+  const llmv=DATA?.llm_visibility,gsc=DATA?.gsc,alerts=[];
+  if(llmv&&llmv.visibility_change<-15)alerts.push(`⚠️ <strong>LLM Visibility:</strong> ${llmv.overall_visibility}% overall — down ${abs(llmv.visibility_change).toFixed(1)}%.`);
+  if(gsc&&(gsc.change?.clicks_pct||0)<-10)alerts.push(`📉 <strong>Organic clicks:</strong> ${fmt(gsc.current?.clicks)} — down ${abs(gsc.change?.clicks_pct).toFixed(1)}%. Position improved ${gsc.prior?.position?.toFixed(1)} → ${gsc.current?.position?.toFixed(1)}.`);
+  if(alerts.length){al.className='alert alert-red';al.innerHTML=alerts.join('&nbsp;&nbsp;|&nbsp;&nbsp;');}else{al.className='alert hidden';}
+
+  document.getElementById('main').innerHTML=buildAll();
+  document.getElementById('footer').textContent='Search Atlas Content Pillar · '+(DATA?.meta?.generated_at?new Date(DATA.meta.generated_at).toLocaleString():new Date().toLocaleString())+' · auto-refreshes every 5 min';
+}
+
+function buildAll(){
+  const Q=CFG?.[activeQ]||{};
+  return[
+    buildNorthStar(),
+    activeQ==='q3'?buildQ3Banner():'',
+    buildGoalsRow(Q),
+    buildLeadingIndicators(Q),
+    buildRocksAndAgenda(Q),
+    buildWeeklyProgress(Q),
+    buildClickUp(),
+    buildLLMV(),
+    acc('gsc','GSC Organic Performance',gscSub(),gscBadge(),buildGSCInner()),
+    acc('decay','Content Decay',decaySub(),decayBadge(),buildDecayInner()),
+    acc('wins','Quick Win Keywords',winsSub(),winsBadge(),buildWinsInner()),
+    buildResponsibilitiesAndContext(),
+    buildCoaching(),
+  ].join('');
+}
+
+// ── NORTH STAR ─────────────────────────────────────────────────────────────
+function buildNorthStar(){
+  return `<div class="section"><div class="northstar"><div class="northstar-label">⭐ North Star</div><div class="northstar-text">${esc(CFG?.north_star||'—')}</div></div></div>`;
+}
+
+// ── Q3 PLANNING BANNER ─────────────────────────────────────────────────────
+function buildQ3Banner(){
+  const Q=CFG?.q3||{};
+  return `<div class="section"><div class="plan-banner"><div class="plan-banner-icon">🗓️</div><div><div class="plan-banner-text">Q3 Planning View — ${esc(Q.period||'Jul 1 – Sep 30, 2026')}</div><div class="plan-banner-sub">Targets set. Rocks defined. Tracking begins July 1. Update weekly actuals in config.json.</div></div></div></div>`;
+}
+
+// ── GOALS ROW ──────────────────────────────────────────────────────────────
+function buildGoalsRow(Q){
+  return `<div class="section g-goals"><div style="display:flex;flex-direction:column;gap:14px">${buildTrafficGoal(Q)}${buildContentGoal(Q)}</div>${buildMetrics()}</div>`;
+}
+
+function buildTrafficGoal(Q){
+  const G=Q.traffic_goal||{};
+  const target=G.target||16900;
+  const current=G.current!=null?G.current:(DATA?.gsc?.current?.clicks||0);
+  const p=pct(current,target);
+  const flagCls=p>=90?'flag-green':p>=60?'flag-amber':'flag-red';
+  const flagTxt=p>=90?'✅ On Track':p>=60?'⚠️ Off Track':'🔴 Behind';
+  const fill=p>=90?'var(--green)':p>=60?'var(--amber)':'var(--red)';
+  return `<div class="card goal-card">
+    <span class="card-title" style="display:block;padding:14px 18px 0">Organic Traffic — ${esc(CFG?.[activeQ]?.label||'')}</span>
+    <div style="padding:10px 18px 14px">
+      <span class="goal-flag ${flagCls}">${flagTxt}</span>
+      <div class="goal-big">${fmt(current)} <span class="goal-unit">/ ${fmt(target)} ${esc(G.target_unit||'clicks/28d')}</span></div>
+      <div class="goal-bar-wrap"><div class="goal-bar-fill" style="width:${p}%;background:${fill}"></div></div>
+      <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--muted)">${p}% of target<span>Due ${G.deadline||'—'}</span></div>
+      ${G.baseline_note?`<div style="font-size:10px;color:var(--light);margin-top:8px;line-height:1.5">${esc(G.baseline_note)}</div>`:''}
+    </div>
+  </div>`;
+}
+
+function buildContentGoal(Q){
+  const CP=Q.content_production||{};
+  const isQ2=activeQ==='q2';
+  if(isQ2){
+    const goal=CP.goal||360,final=CP.final||0;
+    const p=Math.min(100,Math.round(final/goal*100));
+    const exceeded=final>=goal;
+    return `<div class="card goal-card">
+      <span class="card-title" style="display:block;padding:14px 18px 0">Content Production — Q2 Final</span>
+      <div style="padding:10px 18px 14px">
+        <span class="goal-flag ${exceeded?'flag-green':'flag-amber'}">${exceeded?'✅ Exceeded Goal':'⚠️ In Progress'}</span>
+        <div class="goal-big">${final.toFixed(1)} <span class="goal-unit">/ ${goal} weighted pts</span></div>
+        <div class="goal-bar-wrap"><div class="goal-bar-fill" style="width:${p}%;background:var(--green)"></div></div>
+        <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--muted)">${p}% of goal<span>${exceeded?`+${(final-goal).toFixed(1)} above target`:''}</span></div>
+        ${CP.note?`<div style="font-size:10px;color:var(--light);margin-top:8px;line-height:1.5">${esc(CP.note)}</div>`:''}
+        ${CFG?.cnt_scorecard?`<div style="margin-top:8px"><a href="${esc(CFG.cnt_scorecard)}" target="_blank" style="font-size:11px;color:var(--blue)">CNT Scorecard ↗</a></div>`:''}
+      </div>
+    </div>`;
+  }else{
+    const goal=CP.goal||420,current=CP.current,q2b=CP.q2_baseline||400.69;
+    const p=current!=null?Math.min(100,Math.round(current/goal*100)):0;
+    return `<div class="card goal-card">
+      <span class="card-title" style="display:block;padding:14px 18px 0">Content Production — Q3 Target</span>
+      <div style="padding:10px 18px 14px">
+        <span class="goal-flag flag-blue">📋 Planning</span>
+        <div class="goal-big">${current!=null?current.toFixed(1):'—'} <span class="goal-unit">/ ${goal} ${esc(CP.unit||'weighted pts')}</span></div>
+        <div class="goal-bar-wrap"><div class="goal-bar-fill" style="width:${p}%;background:var(--blue)"></div></div>
+        <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--muted)">Q2 baseline: ${q2b.toFixed(1)} pts<span>${CP.scorecard_url?`<a href="${esc(CP.scorecard_url)}" target="_blank" style="color:var(--blue)">CNT Scorecard ↗</a>`:''}</span></div>
+        ${CP.note?`<div style="font-size:10px;color:var(--light);margin-top:8px;line-height:1.5">${esc(CP.note)}</div>`:''}
+      </div>
+    </div>`;
+  }
+}
+
+// ── TOP METRICS ────────────────────────────────────────────────────────────
+function buildMetrics(){
+  const llmv=DATA?.llm_visibility||{},gsc=DATA?.gsc||{};
+  const c=gsc.current||{},ch=gsc.change||{};
+  const decay=(DATA?.content_decay||[]).length,wins=(DATA?.quick_wins||[]).length,lc=llmv.visibility_change||0;
+  const cards=[
+    {lbl:'Organic Clicks',val:fmt(c.clicks||0),delta:ch.clicks_pct,icon:'i-blue',svg:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>'},
+    {lbl:'LLM Visibility',val:(llmv.overall_visibility??'—')+'%',delta:lc,icon:'i-purple',svg:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>'},
+    {lbl:'Decaying Pages',val:decay,delta:null,icon:decay>10?'i-red':'i-amber',svg:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>'},
+    {lbl:'Quick Wins',val:wins,delta:null,icon:'i-green',svg:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>'},
+  ];
+  return `<div class="g4">${cards.map(k=>{const cls=k.delta!=null?dc(k.delta):'nt';return`<div class="card kpi"><div class="kpi-icon ${k.icon}">${k.svg}</div><div class="kpi-val">${esc(String(k.val))}</div><div class="kpi-lbl">${esc(k.lbl)}</div>${k.delta!=null?`<div class="kpi-delta ${cls}">${sign(k.delta)} ${abs(k.delta).toFixed(1)}%</div>`:''}</div>`;}).join('')}</div>`;
+}
+
+// ── WEEKLY PROGRESS CHART ──────────────────────────────────────────────────
+function buildWeeklyProgress(Q){
+  const CP=Q.content_production||{};
+  const weeks=CP.weekly_history||[];
+  if(!weeks.length)return '';
+  const goal=CP.goal||(activeQ==='q2'?360:420);
+  const total13=goal/weeks.length;
+  const filled=weeks.filter(w=>w.points!=null);
+  const runningTotal=filled.reduce((s,w)=>s+w.points,0);
+  const maxVal=Math.max(...filled.map(w=>w.points),total13,1);
+  const goalPct=Math.min(100,Math.round(total13/maxVal*100));
+
+  const bars=weeks.map((w,i)=>{
+    const hasVal=w.points!=null;
+    const h=hasVal?Math.round((w.points/maxVal)*72):0;
+    const color=hasVal?(w.points>=total13*1.1?'var(--green)':w.points>=total13*0.7?'var(--blue)':'var(--amber)'):'var(--border)';
+    const tip=hasVal?`${w.week}: ${w.points} pts`:w.week+': pending';
+    return `<div class="chart-bar-col">
+      <div class="chart-bar" style="height:${h}px;background:${color}" data-tip="${esc(tip)}"></div>
+      <div class="chart-label">${esc(w.week.replace(/\d{4}/,'').trim())}</div>
+    </div>`;
+  }).join('');
+
+  const label=activeQ==='q2'?`Q2 Weekly Production · ${runningTotal.toFixed(1)} / ${goal} pts (${Math.round(runningTotal/goal*100)}%)`:`Q3 Weekly Production · ${runningTotal>0?runningTotal.toFixed(1)+' / '+goal+' pts recorded':'Tracking starts Jul 1'}`;
+
+  return `<div class="section">
+    <div class="card">
+      <div class="card-hd">
+        <span class="card-title">${label}</span>
+        <span class="bdg ${activeQ==='q2'&&runningTotal>=goal?'bdg-green':activeQ==='q2'?'bdg-blue':'bdg-gray'}">${activeQ==='q2'?'Q2 Final':CFG?.cnt_scorecard?'<a href="'+esc(CFG.cnt_scorecard)+'" target="_blank" style="color:inherit">CNT Scorecard ↗</a>':''}</span>
+      </div>
+      <div class="chart-wrap">
+        <div class="chart-bars" style="position:relative">
+          <div style="position:absolute;bottom:${goalPct}%;left:0;right:0;border-top:1px dashed var(--amber);pointer-events:none" title="Weekly target: ${total13.toFixed(1)} pts/wk"></div>
+          ${bars}
+        </div>
+        <div class="chart-meta">
+          <span>— dashed line = weekly target (${total13.toFixed(1)} pts/wk)</span>
+          ${CP.scorecard_url?`<a href="${esc(CP.scorecard_url)}" target="_blank" style="font-size:10px">CNT Scorecard ↗</a>`:''}
+        </div>
+        ${CP.scoring_model?`<div style="font-size:10px;color:var(--light);margin-top:6px;line-height:1.6">${esc(CP.scoring_model)}</div>`:''}
+      </div>
+    </div>
+  </div>`;
+}
+
+// ── LEADING INDICATORS ─────────────────────────────────────────────────────
+function buildLeadingIndicators(Q){
+  const items=Q.leading_indicators||[];
+  if(!items.length)return '';
+  const rows=items.map(li=>{
+    // Auto-populate ClickUp-sourced indicators from live data.json
+    let actual=li.actual;
+    if((li.source||'').toLowerCase().includes('clickup') && (li.label||'').toLowerCase().includes('articles published')){
+      const live=DATA?.clickup_stats?.articles_published_7d;
+      if(live!=null) actual=live;
+    }
+    const target=li.target;
+    const p=actual!=null?pct(actual,target):null;
+    const fill=p==null?'var(--border)':p>=90?'var(--green)':p>=60?'var(--amber)':'var(--red)';
+    const displayActual=actual!=null?actual:'<span style="color:var(--light)">—</span>';
+    return `<div class="li-row">
+      <div style="flex:1;min-width:0"><div class="li-label">${esc(li.label)}</div><div class="li-source">${esc(li.source||'')}</div></div>
+      <div class="li-bar-bg"><div class="li-bar-fg" style="width:${p||0}%;background:${fill}"></div></div>
+      <div class="li-nums">
+        <div class="li-actual">${displayActual}<span style="font-size:10px;font-weight:400;color:var(--muted)">${esc(li.unit||'')}</span></div>
+        <div class="li-target">target ${target}${esc(li.unit||'')}</div>
+      </div>
+    </div>`;
+  }).join('');
+  const qlabel=CFG?.[activeQ]?.label||'';
+  return `<div class="section"><div class="card"><div class="card-hd"><span class="card-title">Leading Indicators — ${esc(qlabel)}</span></div><div class="card-body">${rows}</div></div></div>`;
+}
+
+// ── ROCKS + AGENDA ─────────────────────────────────────────────────────────
+function buildRocksAndAgenda(Q){
+  const rocks=Q.rocks||[],agenda=Q.agenda||[];
+  const with_=CFG?.one_on_one_with||'Sophia Deluz-Bhan';
+  const qlabel=CFG?.[activeQ]?.label||'';
+  const rockRows=rocks.map((r,i)=>`
+    <div class="rock-row">
+      <div class="rock-num">${i+1}</div>
+      <div style="flex:1;min-width:0">
+        <div style="display:flex;align-items:center;gap:7px;flex-wrap:wrap">
+          <span class="rock-title">${r.link?`<a href="${esc(r.link)}" target="_blank">${esc(r.title)}</a>`:esc(r.title)}</span>
+          ${statusBdg(r.status)}
+        </div>
+        <div class="rock-due">${r.due?dueLabel(r.due):''}</div>
+      </div>
+    </div>`).join('');
+  const aRows=agenda.map(a=>{
+    const tc={action_item:'t-action',decision:'t-decision',discussion:'t-discussion',update:'t-update'}[a.type]||'t-update';
+    const tl={action_item:'Action',decision:'Decision',discussion:'Discussion',update:'Update'}[a.type]||a.type;
+    return `<div class="agenda-row"><span class="agenda-type ${tc}">${tl}</span><div><div class="agenda-topic">${esc(a.topic)}</div>${a.notes?`<div class="agenda-notes">${esc(a.notes)}</div>`:''}</div></div>`;
+  }).join('');
+  return `<div class="section g2">
+    <div class="card"><div class="card-hd"><span class="card-title">${esc(qlabel)} Rocks</span><span class="bdg bdg-blue">${rocks.length}</span></div><div class="card-body">${rockRows||'<span style="color:var(--muted);font-size:12px">No rocks defined.</span>'}</div></div>
+    <div class="card"><div class="card-hd"><span class="card-title">1:1 Agenda — ${esc(with_)}</span><span class="bdg bdg-purple">${agenda.length}</span></div><div class="card-body">${aRows||'<span style="color:var(--muted);font-size:12px">No agenda items.</span>'}</div></div>
+  </div>`;
+}
+
+// ── CLICKUP ────────────────────────────────────────────────────────────────
+function buildClickUp(){
+  const links=CFG?.clickup_links||{};
+  const published=DATA?.clickup_stats?.articles_published_7d;
+  const tasks=(DATA?.clickup_stats?.tasks||[]);
+
+  // Quick-open buttons
+  const openBtns=[
+    {label:'📝 SEO Content',  url:links.seo_content_open},
+    {label:'📋 General Content', url:links.general_content_open},
+    {label:'🪨 Rocks',        url:links.rocks_open},
+    {label:'📊 EOD Reports',  url:links.eod_open},
+  ].map(b=>b.url?`<a href="${esc(b.url)}" target="_blank" class="cu-open-btn">${b.label} <span style="font-size:10px;opacity:0.6">↗</span></a>`:'').join('');
+
+  // Published this week list
+  const pubList=tasks.length?tasks.map(t=>`<div class="cu-pub-row"><span class="bdg-dot" style="background:${t.list==='SEO Content'?'var(--blue)':'var(--green)'}"></span><span style="font-size:12px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(t.title)}</span><span style="font-size:10px;color:var(--muted);flex-shrink:0;margin-left:8px">${esc(t.list)}</span></div>`).join(''):'<div style="font-size:12px;color:var(--muted)">No published articles found this week.</div>';
+
+  const pubColor=published!=null?(published>=5?'bdg-green':published>=2?'bdg-amber':'bdg-red'):'bdg-gray';
+
+  return `<div class="section"><div class="card"><div class="card-hd"><span class="card-title">ClickUp</span>${published!=null?`<span class="bdg ${pubColor}">${published} published this week</span>`:''}</div>
+    <div class="card-body">
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px">${openBtns}</div>
+      <div style="margin-bottom:8px;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em">Published this week${published!=null?' · '+published:''}</div>
+      <div style="display:flex;flex-direction:column;gap:6px">${pubList}</div>
+    </div>
+  </div></div>`;
+}
+
+// ── LLM VISIBILITY ─────────────────────────────────────────────────────────
+function buildLLMV(){
+  const L=DATA?.llm_visibility;if(!L)return '';
+  const v=L.overall_visibility||0,R=35,C=2*Math.PI*R,dash=(v/100)*C,gap=C-dash;
+  const color=v>=40?'var(--green)':v>=20?'var(--amber)':'var(--red)';
+  const lc=L.visibility_change||0;
+  const zero=(L.platforms||[]).filter(p=>p.visibility_score===0).map(p=>p.platform).join(', ');
+  const platforms=(L.platforms||[]).map(p=>`<div class="platform-row"><div class="p-name" style="color:${p.visibility_score>0?'var(--text)':'var(--light)'}">${esc(p.platform)}</div><div class="p-bar-bg"><div class="p-bar-fg" style="width:${p.visibility_score}%"></div></div><div class="p-score" style="color:${p.visibility_score>0?'var(--text)':'var(--light)'}">${p.visibility_score}%</div><div style="width:52px;text-align:right;font-size:10px;color:var(--muted);flex-shrink:0">😊 ${p.sentiment_score}%</div><div style="width:40px;text-align:right;font-size:10px;color:var(--light);flex-shrink:0">${esc(p.topics)}</div></div>`).join('');
+  return `<div class="section"><div class="card"><div class="card-hd"><span class="card-title">LLM / AI Visibility — searchatlas.com</span><span class="bdg ${lc<-15?'bdg-red':lc<0?'bdg-amber':'bdg-green'}">${sign(lc)} ${abs(lc).toFixed(1)}%</span></div><div class="card-body">
+    <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:16px">
+      <div class="llmv-ring-wrap"><svg width="80" height="80" viewBox="0 0 80 80"><circle cx="40" cy="40" r="${R}" fill="none" stroke="#e2e8f0" stroke-width="7"/><circle cx="40" cy="40" r="${R}" fill="none" stroke="${color}" stroke-width="7" stroke-dasharray="${dash.toFixed(1)} ${gap.toFixed(1)}" stroke-linecap="round"/></svg><div class="llmv-ring-num"><span class="v" style="color:${color}">${v}%</span><span class="l">visibility</span></div></div>
+      <div style="display:flex;gap:18px;flex-wrap:wrap">
+        <div style="text-align:center"><div style="font-size:20px;font-weight:800;color:var(--green)">${L.sentiment_score?.toFixed(0)}%</div><div style="font-size:11px;color:var(--muted)">Sentiment</div></div>
+        <div style="text-align:center"><div style="font-size:20px;font-weight:800">${fmt(L.total_mentions)}</div><div style="font-size:11px;color:var(--muted)">Mentions</div><div style="font-size:10px;color:var(--light)">was ${fmt(L.previous_mentions)}</div></div>
+        <div style="text-align:center"><div style="font-size:20px;font-weight:800">${(L.platforms||[]).filter(p=>p.visibility_score>0).length}/${(L.platforms||[]).length}</div><div style="font-size:11px;color:var(--muted)">Platforms active</div></div>
+      </div>
+      ${zero?`<div style="flex:1;min-width:160px;background:#fef2f2;border:1px solid #fecaca;border-radius:8px;padding:9px 12px;font-size:11px;color:#991b1b"><strong style="display:block;margin-bottom:2px">0% visibility:</strong>${esc(zero)}</div>`:''}
+    </div>
+    ${platforms}
+  </div></div></div>`;
+}
+
+// ── GSC ────────────────────────────────────────────────────────────────────
+function gscSub(){const G=DATA?.gsc;if(!G)return 'not connected';return `${fmt(G.current?.clicks)} clicks · ${G.period}`;}
+function gscBadge(){const G=DATA?.gsc;if(!G)return '<span class="bdg bdg-gray">—</span>';const p=G.change?.clicks_pct||0;return `<span class="bdg ${p<-10?'bdg-red':p<0?'bdg-amber':'bdg-green'}">${sign(p)} ${abs(p).toFixed(1)}%</span>`;}
+function buildGSCInner(){
+  const G=DATA?.gsc;if(!G)return '<div style="padding:16px;color:var(--muted);font-size:12px">No GSC data.</div>';
+  const c=G.current||{},ch=G.change||{};
+  const stats=[{lbl:'Clicks (28d)',val:fmt(c.clicks),delta:ch.clicks_pct,inv:false},{lbl:'Impressions',val:fmt(c.impressions),delta:ch.impressions_pct,inv:false},{lbl:'Avg CTR',val:(c.ctr||0)+'%',delta:null,sub:`was ${G.prior?.ctr}%`},{lbl:'Avg Position',val:(c.position||0).toFixed(1),delta:ch.position_change,inv:true,sub:`was ${G.prior?.position?.toFixed(1)}`}];
+  const sHTML=stats.map(s=>{const cls=s.delta!=null?dc(s.delta,s.inv):'nt';return `<div style="background:var(--bg);border-radius:8px;padding:12px;text-align:center"><div style="font-size:20px;font-weight:700">${esc(String(s.val))}</div><div style="font-size:11px;color:var(--muted);margin-top:1px">${esc(s.lbl)}</div>${s.delta!=null?`<div style="font-size:10px;font-weight:600;margin-top:2px;color:${cls==='up'?'var(--green)':'var(--red)'}">${sign(s.delta)} ${abs(s.delta).toFixed(1)}%</div>`:`<div style="font-size:10px;color:var(--muted);margin-top:2px">${esc(s.sub||'')}</div>`}</div>`;}).join('');
+  return `<div style="padding:14px 18px 18px"><div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:12px">${sHTML}</div><div style="background:#eff6ff;border-radius:8px;padding:9px 12px;font-size:11px;color:var(--blue)"><strong>Insight:</strong> Position improved ${abs(ch.position_change||0).toFixed(1)} pts (${G.prior?.position?.toFixed(1)} → ${c.position?.toFixed(1)}) but clicks dropped ${abs(ch.clicks_pct||0).toFixed(1)}%. CTR fell ${G.prior?.ctr}% → ${c.ctr}% — AI Mode likely displacing organic clicks.</div></div>`;
+}
+
+// ── CONTENT DECAY ──────────────────────────────────────────────────────────
+function decaySub(){const rows=DATA?.content_decay||[];return `${rows.length} pages · ${rows.reduce((s,r)=>s+(r.loss||0),0)} clicks lost`;}
+function decayBadge(){const rows=DATA?.content_decay||[];return `<span class="bdg ${rows.length>15?'bdg-red':rows.length>5?'bdg-amber':'bdg-green'}">${rows.length} pages</span>`;}
+function buildDecayInner(){
+  const rows=DATA?.content_decay||[];if(!rows.length)return '<div style="padding:14px 18px;color:var(--muted);font-size:12px">No content decay detected.</div>';
+  const maxL=rows[0]?.loss||1;
+  const mkRow=(r,i)=>`<tr><td>${i+1}</td><td><a href="https://searchatlas.com${r.page}" target="_blank">${esc(r.slug||r.page)}</a></td><td class="tr" style="color:var(--red);font-weight:600">−${r.loss}</td><td>${inlinePb(r.loss,maxL,r.loss>=50?'var(--red)':r.loss>=20?'var(--amber)':'var(--blue)')} <span style="font-size:10px;color:var(--muted)">${r.clicks_now}→${r.clicks_p3}</span></td><td>${trendBdg(r.trend)}</td><td class="tr tm">${r.position_now?.toFixed(1)}</td></tr>`;
+  const show=rows.slice(0,6),rest=rows.slice(6);
+  return `<div style="overflow-x:auto"><table class="tbl"><thead><tr><th>#</th><th>Page</th><th class="tr">Clicks Lost</th><th>Trend</th><th>Diagnosis</th><th class="tr">Pos</th></tr></thead><tbody id="decay-tb">${show.map((r,i)=>mkRow(r,i)).join('')}${rest.length?`<tr class="more-row" onclick="expandDecay()"><td colspan="6">▾ Show ${rest.length} more</td></tr>`:''}</tbody></table></div>`;
+}
+function expandDecay(){
+  const rows=DATA?.content_decay||[],maxL=rows[0]?.loss||1;
+  const rest=rows.slice(6);const tb=document.getElementById('decay-tb');const mr=tb.querySelector('.more-row');
+  rest.forEach((r,i)=>{const tr=document.createElement('tr');tr.innerHTML=`<td>${i+7}</td><td><a href="https://searchatlas.com${r.page}" target="_blank">${esc(r.slug||r.page)}</a></td><td class="tr" style="color:var(--red);font-weight:600">−${r.loss}</td><td>${inlinePb(r.loss,maxL,r.loss>=50?'var(--red)':r.loss>=20?'var(--amber)':'var(--blue)')} <span style="font-size:10px;color:var(--muted)">${r.clicks_now}→${r.clicks_p3}</span></td><td>${trendBdg(r.trend)}</td><td class="tr tm">${r.position_now?.toFixed(1)}</td>`;tb.insertBefore(tr,mr);});mr.remove();
+}
+
+// ── QUICK WINS ─────────────────────────────────────────────────────────────
+function winsSub(){const rows=DATA?.quick_wins||[];return `${rows.length} keywords · top: ${fmt(rows[0]?.opportunity||0)} opp`;}
+function winsBadge(){const rows=DATA?.quick_wins||[];return `<span class="bdg bdg-green">${rows.length} opportunities</span>`;}
+function buildWinsInner(){
+  const rows=DATA?.quick_wins||[];if(!rows.length)return '<div style="padding:14px 18px;color:var(--muted);font-size:12px">No quick win data.</div>';
+  const topOpp=rows[0]?.opportunity||1;
+  const mkRow=(r,i)=>`<tr><td>${i+1}</td><td style="font-weight:500">${esc(r.query)}</td><td class="tr tm">${r.position?.toFixed(1)}</td><td class="tr">${fmt(r.impressions)}</td><td class="tr">${r.clicks}</td><td class="tr" style="color:var(--muted)">${(r.ctr*100).toFixed(2)}%</td><td>${inlinePb(r.opportunity,topOpp,'var(--green)')} <span style="font-size:10px;color:var(--muted)">${fmt(r.opportunity)}</span></td></tr>`;
+  const show=rows.slice(0,10),rest=rows.slice(10);
+  return `<div style="overflow-x:auto"><table class="tbl"><thead><tr><th>#</th><th>Keyword</th><th class="tr">Position</th><th class="tr">Impressions</th><th class="tr">Clicks</th><th class="tr">CTR</th><th>Opportunity</th></tr></thead><tbody id="wins-tb">${show.map((r,i)=>mkRow(r,i)).join('')}${rest.length?`<tr class="more-row" onclick="expandWins()"><td colspan="7">▾ Show ${rest.length} more</td></tr>`:''}</tbody></table></div>`;
+}
+function expandWins(){
+  const rows=DATA?.quick_wins||[],topOpp=rows[0]?.opportunity||1;
+  const rest=rows.slice(10);const tb=document.getElementById('wins-tb');const mr=tb.querySelector('.more-row');
+  rest.forEach((r,i)=>{const tr=document.createElement('tr');tr.innerHTML=`<td>${i+11}</td><td style="font-weight:500">${esc(r.query)}</td><td class="tr tm">${r.position?.toFixed(1)}</td><td class="tr">${fmt(r.impressions)}</td><td class="tr">${r.clicks}</td><td class="tr" style="color:var(--muted)">${(r.ctr*100).toFixed(2)}%</td><td>${inlinePb(r.opportunity,topOpp,'var(--green)')} <span style="font-size:10px;color:var(--muted)">${fmt(r.opportunity)}</span></td>`;tb.insertBefore(tr,mr);});mr.remove();
+}
+
+// ── RESPONSIBILITIES + CONTEXT ─────────────────────────────────────────────
+function buildResponsibilitiesAndContext(){
+  const resp=CFG?.ongoing_responsibilities||[],ctx=CFG?.context_for_ai||'';
+  return `<div class="section g2">
+    <div class="card"><div class="card-hd"><span class="card-title">Ongoing Responsibilities</span></div><div class="card-body">${resp.map(r=>`<div style="display:flex;align-items:center;gap:7px;padding:7px 0;border-bottom:1px solid var(--border);font-size:12px;"><div style="width:5px;height:5px;border-radius:50%;background:var(--blue);flex-shrink:0"></div>${esc(r)}</div>`).join('')}</div></div>
+    <div class="card"><div class="card-hd"><span class="card-title">Context for AI</span><span class="bdg bdg-gray">copy → paste into any AI</span></div><div class="card-body"><div class="ctx-text">${esc(ctx)||'<span style="color:var(--muted)">Add in config.json → context_for_ai</span>'}</div></div></div>
+  </div>`;
+}
+
+// ── COACHING READ ──────────────────────────────────────────────────────────
+function buildCoaching(){
+  const text=CFG?.coaching_read||'';
+  return `<div class="section"><div class="card"><div class="card-hd"><span class="card-title">Coaching Read</span><span class="bdg bdg-purple">Sofia → Aleksandra</span></div><div class="coaching">${text?`<div class="coaching-text">${esc(text)}</div>`:`<div class="coaching-empty">Sofia fills this in before each 1:1.<br>Add under <code>coaching_read</code> in config.json.</div>`}</div></div></div>`;
+}
+
+// ── ACCORDION ──────────────────────────────────────────────────────────────
+function acc(key,title,sub,badge,content){
+  const id='ac-'+key;
+  return `<div class="section"><button class="acc-btn" id="${id}-btn" onclick="toggleAcc('${id}')"><div><div class="acc-title">${esc(title)}</div><div class="acc-sub">${esc(sub)}</div></div><div class="acc-right">${badge}<svg class="chev" id="${id}-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div></button><div class="acc-body" id="${id}"><div class="acc-inner">${content}</div></div></div>`;
+}
+function toggleAcc(id){
+  const body=document.getElementById(id),btn=document.getElementById(id+'-btn'),chev=document.getElementById(id+'-chev');
+  const o=body.classList.contains('open');
+  body.classList.toggle('open',!o);btn.classList.toggle('open',!o);chev.classList.toggle('open',!o);
+}
+
+load();
+</script>
+</body>
+</html>
