@@ -233,8 +233,12 @@ def fetch_clickup_task_buckets():
     overdue, no_due, assigned, recently_completed = [], [], [], []
     cutoff_ms = int((now - timedelta(days=7)).timestamp() * 1000)
 
+    # Statuses that mean "done" in this workspace even when date_closed is unset.
+    # ClickUp doesn't always populate date_closed for every completed-type status.
+    DONE_STATUSES = {"complete", "approved", "published", "closed", "done"}
+
     for t in all_tasks:
-        status = (t.get("status", {}) or {}).get("status", "")
+        status = (t.get("status", {}) or {}).get("status", "").lower()
         base = {
             "id": t.get("id"),
             "title": t.get("name", ""),
@@ -251,6 +255,8 @@ def fetch_clickup_task_buckets():
             continue
         if dc:
             continue  # closed before the 7-day window — not relevant to any bucket
+        if status in DONE_STATUSES:
+            continue  # effectively done even though date_closed is unset
 
         due_ms = t.get("due_date")
         if not due_ms:

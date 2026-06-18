@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-06-18T17:02:56.143190+00:00",
+    "generated_at": "2026-06-18T17:43:44.163590+00:00",
     "version": "2.1.0",
     "sources": {
       "clickup_published": "connected",
@@ -17,7 +17,7 @@
   },
   "clickup_stats": {
     "articles_published_7d": 9,
-    "generated_at": "2026-06-18T17:02:47.386208+00:00",
+    "generated_at": "2026-06-18T17:43:33.642861+00:00",
     "window_days": 7,
     "tasks": [
       {
@@ -589,7 +589,7 @@
   ],
   "content_pipeline": {
     "source": "clickup",
-    "generated_at": "2026-06-18T17:02:56.103854+00:00",
+    "generated_at": "2026-06-18T17:43:44.125061+00:00",
     "summary": {
       "not_begun": 54,
       "in_progress": 0,
@@ -741,98 +741,8 @@
     ]
   },
   "clickup_tasks": {
-    "generated_at": "2026-06-18T17:02:47.386475+00:00",
+    "generated_at": "2026-06-18T17:43:33.642998+00:00",
     "overdue": [
-      {
-        "id": "868euxr92",
-        "title": "SA: Onboarding sequence (7)",
-        "status": "complete",
-        "list": "General Content",
-        "url": "https://app.clickup.com/t/868euxr92",
-        "due": "2025-07-23",
-        "days_overdue": 330
-      },
-      {
-        "id": "868ewxkwf",
-        "title": "SG: Product Launch Email",
-        "status": "complete",
-        "list": "General Content",
-        "url": "https://app.clickup.com/t/868ewxkwf",
-        "due": "2025-08-08",
-        "days_overdue": 314
-      },
-      {
-        "id": "868fav0p7",
-        "title": "SA TM Brief: Seobility Alternatives",
-        "status": "complete",
-        "list": "General Content",
-        "url": "https://app.clickup.com/t/868fav0p7",
-        "due": "2025-09-05",
-        "days_overdue": 286
-      },
-      {
-        "id": "868fauuq4",
-        "title": "SA TM Brief: Marketmuse Alternatives",
-        "status": "complete",
-        "list": "General Content",
-        "url": "https://app.clickup.com/t/868fauuq4",
-        "due": "2025-09-05",
-        "days_overdue": 286
-      },
-      {
-        "id": "868ghudcy",
-        "title": "WNISA - 12/02/2025",
-        "status": "complete",
-        "list": "General Content",
-        "url": "https://app.clickup.com/t/868ghudcy",
-        "due": "2025-12-01",
-        "days_overdue": 198
-      },
-      {
-        "id": "868gmh1j9",
-        "title": "WNISA 12/09",
-        "status": "complete",
-        "list": "General Content",
-        "url": "https://app.clickup.com/t/868gmh1j9",
-        "due": "2025-12-08",
-        "days_overdue": 192
-      },
-      {
-        "id": "868gtfr0x",
-        "title": "Press Release: Social Posting",
-        "status": "complete",
-        "list": "General Content",
-        "url": "https://app.clickup.com/t/868gtfr0x",
-        "due": "2026-01-09",
-        "days_overdue": 160
-      },
-      {
-        "id": "868gqv4vn",
-        "title": "Press Release: LLM Visibility",
-        "status": "complete",
-        "list": "General Content",
-        "url": "https://app.clickup.com/t/868gqv4vn",
-        "due": "2026-01-09",
-        "days_overdue": 160
-      },
-      {
-        "id": "868gqv4ky",
-        "title": "Press Release: Report Builder V3",
-        "status": "complete",
-        "list": "General Content",
-        "url": "https://app.clickup.com/t/868gqv4ky",
-        "due": "2026-01-09",
-        "days_overdue": 160
-      },
-      {
-        "id": "868jcv3gj",
-        "title": "Friday content email 04/24",
-        "status": "complete",
-        "list": "General Content",
-        "url": "https://app.clickup.com/t/868jcv3gj",
-        "due": "2026-04-24",
-        "days_overdue": 55
-      },
       {
         "id": "868fr98j6",
         "title": "SA: Case Studies Page",
@@ -841,15 +751,6 @@
         "url": "https://app.clickup.com/t/868fr98j6",
         "due": "2026-05-18",
         "days_overdue": 31
-      },
-      {
-        "id": "868g93hqh",
-        "title": "SA: Email Cancel SA Subscription",
-        "status": "approved",
-        "list": "General Content",
-        "url": "https://app.clickup.com/t/868g93hqh",
-        "due": "2026-05-20",
-        "days_overdue": 29
       }
     ],
     "no_due_date": [
@@ -948,7 +849,7 @@
       {
         "id": "868jeax2j",
         "title": "How to Build an Agentic Workflow for SEO",
-        "status": "Closed",
+        "status": "closed",
         "list": "Agentic Marketing",
         "url": "https://app.clickup.com/t/868jeax2j",
         "closed": "2026-06-12"
