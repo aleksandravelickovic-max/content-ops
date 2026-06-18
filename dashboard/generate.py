@@ -146,6 +146,14 @@ PUBLISHED_LISTS = {
     "General Content": "901110742485",
 }
 
+CU_USER_ID = os.environ.get("CLICKUP_USER_ID", "81501508")
+
+ASSIGNED_LISTS = {
+    "SEO Content":       "901111125948",
+    "General Content":   "901110742485",
+    "Agentic Marketing": "901113624480",
+}
+
 def fetch_clickup_articles_published(days=7):
     """Count tasks moved to 'published' status in the last N days."""
     if not CU_API_KEY:
@@ -185,6 +193,86 @@ def fetch_clickup_articles_published(days=7):
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "window_days": days,
         "tasks": tasks_found,
+    }
+
+
+def fetch_clickup_task_buckets():
+    """Bucket Aleksandra's tasks into Overdue / No Due Date / Assigned / Recently Completed.
+
+    ClickUp's `include_closed` flag and `date_closed_gt` query param don't behave as
+    their names suggest on this endpoint (include_closed=false still returns many
+    "complete"-status tasks; date_closed_gt is ignored entirely). The only reliable
+    signal is the `date_closed` field itself: null means still open, set means done.
+    So fetch everything once and bucket client-side on due_date / date_closed.
+    """
+    if not CU_API_KEY:
+        return None
+
+    log("Fetching ClickUp task buckets (overdue/no-due-date/assigned/recently-completed)…")
+    now = datetime.now(timezone.utc)
+    all_tasks = []
+    for list_name, list_id in ASSIGNED_LISTS.items():
+        page = 0
+        while True:
+            data, err = cu_get(f"/list/{list_id}/task", {
+                "assignees[]": CU_USER_ID,
+                "include_closed": "true",
+                "page": page,
+            })
+            if err:
+                log(f"  ClickUp '{list_name}' page {page} error: {err}")
+                break
+            tasks = data.get("tasks", [])
+            for t in tasks:
+                t["_list_name"] = list_name
+                all_tasks.append(t)
+            if len(tasks) < 100:
+                break
+            page += 1
+
+    overdue, no_due, assigned, recently_completed = [], [], [], []
+    cutoff_ms = int((now - timedelta(days=7)).timestamp() * 1000)
+
+    for t in all_tasks:
+        status = (t.get("status", {}) or {}).get("status", "")
+        base = {
+            "id": t.get("id"),
+            "title": t.get("name", ""),
+            "status": status,
+            "list": t["_list_name"],
+            "url": t.get("url", ""),
+        }
+        dc = t.get("date_closed")
+        if dc and int(dc) >= cutoff_ms:
+            recently_completed.append({
+                **base,
+                "closed": datetime.fromtimestamp(int(dc) / 1000, tz=timezone.utc).strftime("%Y-%m-%d"),
+            })
+            continue
+        if dc:
+            continue  # closed before the 7-day window — not relevant to any bucket
+
+        due_ms = t.get("due_date")
+        if not due_ms:
+            no_due.append({**base, "due": None})
+        else:
+            due_dt = datetime.fromtimestamp(int(due_ms) / 1000, tz=timezone.utc)
+            if due_dt < now:
+                overdue.append({**base, "due": due_dt.strftime("%Y-%m-%d"), "days_overdue": (now - due_dt).days})
+            else:
+                assigned.append({**base, "due": due_dt.strftime("%Y-%m-%d")})
+
+    overdue.sort(key=lambda r: r["days_overdue"], reverse=True)
+    assigned.sort(key=lambda r: r["due"])
+    recently_completed.sort(key=lambda r: r["closed"], reverse=True)
+
+    log(f"  Overdue: {len(overdue)}, No due date: {len(no_due)}, Assigned: {len(assigned)}, Recently completed: {len(recently_completed)}")
+    return {
+        "generated_at": now.isoformat(),
+        "overdue": overdue,
+        "no_due_date": no_due,
+        "assigned": assigned,
+        "recently_completed": recently_completed,
     }
 
 
@@ -413,6 +501,14 @@ def main():
     else:
         sources_status["clickup_published"] = "api_key_required"
 
+    # 4-category task buckets for the pillar-dashboard ClickUp section
+    clickup_tasks = None
+    if CU_API_KEY:
+        clickup_tasks = fetch_clickup_task_buckets()
+        sources_status["clickup_tasks"] = "connected" if clickup_tasks else "error"
+    else:
+        sources_status["clickup_tasks"] = "api_key_required"
+
     # ContentGenius pipeline (or ClickUp if key available)
     pipeline = None
     if CU_API_KEY:
@@ -464,6 +560,8 @@ def main():
     }
     if clickup_stats is not None:
         existing["clickup_stats"] = clickup_stats
+    if clickup_tasks is not None:
+        existing["clickup_tasks"] = clickup_tasks
     if pipeline is not None:
         existing["content_pipeline"] = pipeline
     if local:
