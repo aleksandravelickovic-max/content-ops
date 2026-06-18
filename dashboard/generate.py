@@ -3,13 +3,17 @@
 Dashboard data generator.
 
 Pulls from:
-  - SearchAtlas API  (SEARCHATLAS_API_KEY)  — ContentGenius articles, GSC performance, quota
+  - Google GSC API   (OAuth token at ~/.gsc-mcp/oauth-token.json) — traffic, pages, decay, quick wins
+  - SearchAtlas API  (SEARCHATLAS_API_KEY)  — ContentGenius articles, quota
   - ClickUp API      (CLICKUP_API_KEY)       — content pipeline task counts
 
 Writes:  dashboard/data.json
 
-Run manually:     python dashboard/generate.py
-Run with debug:   python dashboard/generate.py --debug
+Run manually:     python3 dashboard/generate.py
+Run with debug:   python3 dashboard/generate.py --debug
+
+CI: set GSC_TOKEN_JSON and GSC_CLIENT_SECRETS_JSON as GitHub secrets.
+    The workflow writes them to the expected paths before running this script.
 """
 
 import json
@@ -99,6 +103,300 @@ def cu_get(path, params=None):
         return None, f"HTTP {resp.status_code}: {resp.text[:200]}"
     except Exception as e:
         return None, str(e)
+
+
+# ── Google GSC (direct OAuth) ────────────────────────────────────────────────
+
+GSC_TOKEN_FILE   = Path.home() / ".gsc-mcp"  / "oauth-token.json"
+GSC_SECRETS_FILE = Path.home() / ".config"   / "gsc" / "client_secrets.json"
+GSC_API_BASE     = "https://searchconsole.googleapis.com/webmasters/v3"
+
+
+def _load_gsc_auth():
+    """Load and auto-refresh the stored GSC OAuth token. Returns headers dict or None."""
+    if not GSC_TOKEN_FILE.exists() or not GSC_SECRETS_FILE.exists():
+        return None
+    try:
+        token   = json.loads(GSC_TOKEN_FILE.read_text())
+        secrets = json.loads(GSC_SECRETS_FILE.read_text())
+        creds   = secrets.get("installed") or secrets.get("web") or {}
+        now_ms  = int(datetime.now(timezone.utc).timestamp() * 1000)
+
+        if token.get("expiry_date", 0) < now_ms + 60_000:
+            resp = requests.post(creds["token_uri"], data={
+                "client_id":     creds["client_id"],
+                "client_secret": creds["client_secret"],
+                "refresh_token": token["refresh_token"],
+                "grant_type":    "refresh_token",
+            }, timeout=15)
+            if resp.status_code == 200:
+                new = resp.json()
+                token["access_token"] = new["access_token"]
+                token["expiry_date"]  = now_ms + int(new.get("expires_in", 3600)) * 1000
+                GSC_TOKEN_FILE.write_text(json.dumps(token, indent=2))
+                log("  GSC token refreshed")
+            else:
+                log(f"  GSC token refresh failed: {resp.status_code}")
+
+        return {"Authorization": f"Bearer {token['access_token']}"}
+    except Exception as e:
+        log(f"  GSC auth error: {e}")
+        return None
+
+
+def _gsc_query(auth, body):
+    """POST to GSC searchAnalytics/query for GSC_PROPERTY."""
+    site = GSC_PROPERTY.replace(":", "%3A")
+    url  = f"{GSC_API_BASE}/sites/{site}/searchAnalytics/query"
+    try:
+        resp = requests.post(url, headers={**auth, "Content-Type": "application/json"},
+                             json=body, timeout=20)
+        if DEBUG:
+            log(f"  GSC POST → {resp.status_code}")
+        if resp.status_code == 200:
+            return resp.json(), None
+        return None, f"HTTP {resp.status_code}: {resp.text[:200]}"
+    except Exception as e:
+        return None, str(e)
+
+
+def _slug_from_url(url, lookup=None):
+    """Human-readable label for a URL. Uses lookup dict first, then derives from path."""
+    if lookup and url in lookup:
+        return lookup[url]
+    try:
+        from urllib.parse import urlparse
+        p     = urlparse(url)
+        host  = p.netloc
+        parts = [x for x in p.path.rstrip("/").split("/") if x]
+        if host != "searchatlas.com":
+            return host + ("/" + "/".join(parts) if parts else "")
+        if not parts:
+            return "Homepage"
+        if parts[0] == "blog":
+            return "Blog: " + (parts[1].replace("-", " ").title() if len(parts) > 1 else "index")
+        return parts[-1].replace("-", " ").title()
+    except Exception:
+        return url
+
+
+def _gsc_pages_for_period(auth, start, end, limit=100):
+    """Return {url: {clicks, impressions, ctr, position}} for one period."""
+    data, err = _gsc_query(auth, {
+        "startDate": str(start),
+        "endDate":   str(end),
+        "dimensions": ["page"],
+        "rowLimit":   limit,
+    })
+    if err:
+        log(f"  GSC pages error ({start}→{end}): {err}")
+        return {}
+    out = {}
+    for r in (data or {}).get("rows", []):
+        url = (r.get("keys") or [None])[0]
+        if url:
+            out[url] = {
+                "clicks":      int(r.get("clicks", 0)),
+                "impressions": int(r.get("impressions", 0)),
+                "ctr":         round(float(r.get("ctr", 0)) * 100, 2),
+                "position":    round(float(r.get("position", 0)), 1),
+            }
+    return out
+
+
+def _period_dates():
+    """Return (p1_start, p1_end, p2_start, p2_end, p3_start, p3_end) as date objects.
+    P1 = current 28d, P2 = prior 28d, P3 = oldest 28d. GSC lags ~3 days."""
+    today   = datetime.now(timezone.utc).date()
+    p1_end  = today - timedelta(days=3)
+    p1_start = p1_end - timedelta(days=27)
+    p2_end  = p1_start - timedelta(days=1)
+    p2_start = p2_end - timedelta(days=27)
+    p3_end  = p2_start - timedelta(days=1)
+    p3_start = p3_end - timedelta(days=27)
+    return p1_start, p1_end, p2_start, p2_end, p3_start, p3_end
+
+
+def fetch_gsc(auth):
+    """Site-level totals: current vs prior 28-day period."""
+    log("Fetching GSC site performance…")
+    p1s, p1e, p2s, p2e, *_ = _period_dates()
+
+    def pull_totals(start, end):
+        data, err = _gsc_query(auth, {"startDate": str(start), "endDate": str(end), "rowLimit": 1})
+        if err:
+            log(f"  GSC totals error: {err}")
+            return {}
+        rows = (data or {}).get("rows", [])
+        if not rows:
+            return {}
+        r = rows[0]
+        return {
+            "clicks":      int(r.get("clicks", 0)),
+            "impressions": int(r.get("impressions", 0)),
+            "ctr":         round(float(r.get("ctr", 0)) * 100, 2),
+            "position":    round(float(r.get("position", 0)), 1),
+        }
+
+    cur  = pull_totals(p1s, p1e)
+    prev = pull_totals(p2s, p2e)
+    if not cur:
+        return None
+
+    def pct(key):
+        c, p = cur.get(key, 0) or 0, prev.get(key, 0) or 0
+        return round((c - p) / p * 100, 2) if p else None
+
+    def delta(key):
+        return round((cur.get(key, 0) or 0) - (prev.get(key, 0) or 0), 2)
+
+    log(f"  GSC: clicks={cur.get('clicks')}, impressions={cur.get('impressions')}")
+    return {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "period": f"{p1s} to {p1e}",
+        "current": cur,
+        "prior":   prev,
+        "change": {
+            "clicks_pct":      pct("clicks"),
+            "impressions_pct": pct("impressions"),
+            "ctr_delta":       delta("ctr"),
+            "position_change": delta("position"),
+        },
+    }
+
+
+def fetch_gsc_content_performance(auth, slug_lookup=None):
+    """Top 10 pages by clicks + climbing pages (≥20% growth). Two periods."""
+    log("Fetching GSC page performance…")
+    p1s, p1e, p2s, p2e, *_ = _period_dates()
+    now_pages   = _gsc_pages_for_period(auth, p1s, p1e, limit=50)
+    prior_pages = _gsc_pages_for_period(auth, p2s, p2e, limit=50)
+    if not now_pages:
+        return None
+
+    top_pages = []
+    for url, m in sorted(now_pages.items(), key=lambda x: -x[1]["clicks"])[:10]:
+        top_pages.append({
+            "page":        url,
+            "slug":        _slug_from_url(url, slug_lookup),
+            "clicks":      m["clicks"],
+            "impressions": m["impressions"],
+            "ctr":         m["ctr"],
+            "position":    m["position"],
+        })
+
+    climbing = []
+    for url, m in now_pages.items():
+        if m["clicks"] < 10:
+            continue
+        prior_clicks = (prior_pages.get(url) or {}).get("clicks", 0)
+        if prior_clicks == 0:
+            climbing.append({"page": url, "slug": _slug_from_url(url, slug_lookup),
+                             "clicks_prior": 0, "clicks_now": m["clicks"],
+                             "growth_pct": None, "is_new": True, "position": m["position"]})
+        elif m["clicks"] >= prior_clicks * 1.2:
+            growth = round((m["clicks"] - prior_clicks) / prior_clicks * 100, 1)
+            climbing.append({"page": url, "slug": _slug_from_url(url, slug_lookup),
+                             "clicks_prior": prior_clicks, "clicks_now": m["clicks"],
+                             "growth_pct": growth, "is_new": False, "position": m["position"]})
+
+    climbing.sort(key=lambda r: (0 if r["is_new"] else -(r["growth_pct"] or 0)))
+    log(f"  GSC pages: {len(top_pages)} top, {len(climbing)} climbing")
+    return {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "note": f"Current 28d ({p1s}–{p1e}) vs prior 28d ({p2s}–{p2e}). Source: GSC.",
+        "top_pages": top_pages,
+        "climbing": climbing[:10],
+    }
+
+
+def fetch_gsc_decay(auth, slug_lookup=None):
+    """Pages with consistent click decline across 3 consecutive 28-day periods."""
+    log("Fetching GSC content decay…")
+    p1s, p1e, p2s, p2e, p3s, p3e = _period_dates()
+    p1 = _gsc_pages_for_period(auth, p1s, p1e, limit=150)
+    p2 = _gsc_pages_for_period(auth, p2s, p2e, limit=150)
+    p3 = _gsc_pages_for_period(auth, p3s, p3e, limit=150)
+    if not p1:
+        return None
+
+    decay = []
+    for url, m1 in p1.items():
+        m3 = p3.get(url, {})
+        clicks_now = m1["clicks"]
+        clicks_p3  = m3.get("clicks", 0)
+        if not clicks_p3:
+            continue
+        loss = clicks_p3 - clicks_now
+        if loss < 3 or loss / clicks_p3 < 0.10:
+            continue
+        m2 = p2.get(url, {})
+        pos_now = m1["position"]
+        pos_p3  = m3.get("position", pos_now)
+        pos_delta = pos_now - pos_p3  # positive = worse, negative = improved
+        if pos_delta > 1.0:
+            trend = "Rankings declining"
+        elif pos_delta < -1.0:
+            trend = "Rankings improved but traffic still dropped (possible search demand decline)"
+        else:
+            trend = "Rankings stable (possible CTR or demand decline)"
+        decay.append({
+            "page":         url,
+            "slug":         _slug_from_url(url, slug_lookup),
+            "clicks_now":   clicks_now,
+            "clicks_p2":    m2.get("clicks", 0),
+            "clicks_p3":    clicks_p3,
+            "loss":         loss,
+            "position_now": pos_now,
+            "trend":        trend,
+        })
+
+    decay.sort(key=lambda r: -r["loss"])
+    log(f"  GSC decay: {len(decay)} pages")
+    return decay
+
+
+def fetch_gsc_quick_wins(auth):
+    """Keywords in position 4–15 with high impressions and low CTR."""
+    log("Fetching GSC quick wins…")
+    p1s, p1e, *_ = _period_dates()
+    data, err = _gsc_query(auth, {
+        "startDate":  str(p1s),
+        "endDate":    str(p1e),
+        "dimensions": ["query"],
+        "rowLimit":   250,
+    })
+    if err:
+        log(f"  GSC quick wins error: {err}")
+        return None
+
+    wins = []
+    for r in (data or {}).get("rows", []):
+        query      = (r.get("keys") or [None])[0]
+        position   = round(float(r.get("position", 0)), 1)
+        if not query or position < 4 or position > 15:
+            continue
+        impressions = int(r.get("impressions", 0))
+        if impressions < 500:
+            continue
+        clicks = int(r.get("clicks", 0))
+        ctr    = float(r.get("ctr", 0))
+        # Opportunity = clicks you'd gain at ~11% CTR (top-5 benchmark) minus current clicks
+        opportunity = max(0, round(impressions * (0.11 - ctr)))
+        if opportunity < 100:
+            continue
+        wins.append({
+            "query":       query,
+            "position":    position,
+            "impressions": impressions,
+            "clicks":      clicks,
+            "ctr":         round(ctr, 4),
+            "opportunity": opportunity,
+        })
+
+    wins.sort(key=lambda r: -r["opportunity"])
+    log(f"  GSC quick wins: {len(wins)} keywords")
+    return wins[:20]
 
 
 # ── Data sources ─────────────────────────────────────────────────────────────
@@ -340,74 +638,6 @@ def fetch_clickup_pipeline():
     }
 
 
-def fetch_gsc():
-    """Pull 28-day GSC performance vs prior 28-day period."""
-    log("Fetching GSC performance…")
-    today = datetime.now(timezone.utc).date()
-    p_end   = today - timedelta(days=3)   # GSC typically lags 2-3 days
-    p_start = p_end - timedelta(days=27)
-    pp_end   = p_start - timedelta(days=1)
-    pp_start = pp_end - timedelta(days=27)
-
-    def pull(start, end):
-        data, err = sa_get("/gsc/site-property-performance/", {
-            "selected_property": GSC_PROPERTY,
-            "period_start": str(start),
-            "period_end": str(end),
-            "limit": 5,
-        })
-        if err:
-            log(f"  GSC error: {err}")
-            return None
-        return data
-
-    current = pull(p_start, p_end)
-    if not current:
-        return None
-
-    prior = pull(pp_start, pp_end)
-
-    def extract_totals(d):
-        if not d:
-            return {}
-        overview = d.get("overview") or {}
-        rows = overview.get("rows", [])
-        cols = overview.get("columns", [])
-        if rows and cols:
-            row = rows[0]
-            return dict(zip(cols, row))
-        return d.get("totals") or {}
-
-    cur  = extract_totals(current)
-    prev = extract_totals(prior) if prior else {}
-
-    def delta(key):
-        c = cur.get(key, 0) or 0
-        p = prev.get(key, 0) or 0
-        if not p:
-            return None
-        return round((c - p) / p * 100, 1)
-
-    top_pages = []
-    for section in (current.get("by_page") or []):
-        cols = section.get("columns", [])
-        for row in section.get("rows", [])[:5]:
-            d = dict(zip(cols, row))
-            top_pages.append({"page": d.get("page", ""), "clicks": d.get("clicks", 0)})
-
-    log(f"  GSC: clicks={cur.get('clicks')}, impressions={cur.get('impressions')}")
-    return {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
-        "period": f"{p_start} to {p_end}",
-        "clicks":             cur.get("clicks"),
-        "impressions":        cur.get("impressions"),
-        "ctr":                round(float(cur.get("ctr") or 0) * 100, 2),
-        "position":           round(float(cur.get("position") or 0), 1),
-        "clicks_delta":       delta("clicks"),
-        "impressions_delta":  delta("impressions"),
-        "top_pages":          top_pages,
-    }
-
 
 def fetch_quota():
     """Pull platform credit usage from SearchAtlas."""
@@ -499,7 +729,43 @@ def main():
     log("Starting data generation…")
     sources_status = {}
 
-    # Articles published this week (primary new metric)
+    # Read existing data.json early — merge strategy preserves sections that fail.
+    out_path = Path(args.output)
+    existing = {}
+    if out_path.exists():
+        try:
+            with open(out_path) as f:
+                existing = json.load(f)
+        except Exception:
+            pass
+
+    # Build slug lookup from existing content_performance + content_decay
+    # so auto-generated slugs stay human-readable across runs.
+    slug_lookup: dict = {}
+    for entry in (existing.get("content_performance") or {}).get("top_pages", []):
+        if entry.get("page") and entry.get("slug"):
+            slug_lookup[entry["page"]] = entry["slug"]
+    for entry in (existing.get("content_performance") or {}).get("climbing", []):
+        if entry.get("page") and entry.get("slug"):
+            slug_lookup[entry["page"]] = entry["slug"]
+    for entry in (existing.get("content_decay") or []):
+        if entry.get("page") and entry.get("slug"):
+            slug_lookup[entry["page"]] = entry["slug"]
+
+    # ── GSC (Google OAuth direct) ────────────────────────────────────────────
+    gsc_auth = _load_gsc_auth()
+    gsc = gsc_perf = gsc_decay = gsc_wins = None
+    if gsc_auth:
+        gsc        = fetch_gsc(gsc_auth)
+        gsc_perf   = fetch_gsc_content_performance(gsc_auth, slug_lookup)
+        gsc_decay  = fetch_gsc_decay(gsc_auth, slug_lookup)
+        gsc_wins   = fetch_gsc_quick_wins(gsc_auth)
+        sources_status["gsc"] = "connected" if gsc else "error"
+    else:
+        log("  GSC token not found — skipping (existing data preserved)")
+        sources_status["gsc"] = "token_not_found"
+
+    # ── ClickUp ──────────────────────────────────────────────────────────────
     clickup_stats = None
     if CU_API_KEY:
         clickup_stats = fetch_clickup_articles_published(days=7)
@@ -507,7 +773,6 @@ def main():
     else:
         sources_status["clickup_published"] = "api_key_required"
 
-    # 4-category task buckets for the pillar-dashboard ClickUp section
     clickup_tasks = None
     if CU_API_KEY:
         clickup_tasks = fetch_clickup_task_buckets()
@@ -515,7 +780,6 @@ def main():
     else:
         sources_status["clickup_tasks"] = "api_key_required"
 
-    # ContentGenius pipeline (or ClickUp if key available)
     pipeline = None
     if CU_API_KEY:
         pipeline = fetch_clickup_pipeline()
@@ -530,40 +794,29 @@ def main():
     elif not pipeline and not SA_API_KEY:
         sources_status["contentgenius"] = "api_key_required"
 
-    # GSC
-    gsc = None
-    if SA_API_KEY:
-        gsc = fetch_gsc()
-        sources_status["gsc"] = "connected" if gsc else "not_connected"
-    else:
-        sources_status["gsc"] = "api_key_required"
-
-    # Quota
+    # ── SA quota ─────────────────────────────────────────────────────────────
     credits = {"alerts": [], "highlights": []}
     if SA_API_KEY:
         credits = fetch_quota()
 
-    # Local filesystem
+    # ── Local filesystem ─────────────────────────────────────────────────────
     local = scan_local_fs()
     sources_status["local_fs"] = "connected" if local else "error"
 
-    # Merge strategy: read existing data.json and only overwrite sections
-    # that were successfully fetched. This preserves hand-crafted sections
-    # (llm_visibility, content_decay, quick_wins) across runs.
-    out_path = Path(args.output)
-    existing = {}
-    if out_path.exists():
-        try:
-            with open(out_path) as f:
-                existing = json.load(f)
-        except Exception:
-            pass
-
+    # ── Merge ────────────────────────────────────────────────────────────────
     existing["meta"] = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
-        "version": "2.1.0",
+        "version": "2.2.0",
         "sources": {**existing.get("meta", {}).get("sources", {}), **sources_status},
     }
+    if gsc is not None:
+        existing["gsc"] = gsc
+    if gsc_perf is not None:
+        existing["content_performance"] = gsc_perf
+    if gsc_decay is not None:
+        existing["content_decay"] = gsc_decay
+    if gsc_wins is not None:
+        existing["quick_wins"] = gsc_wins
     if clickup_stats is not None:
         existing["clickup_stats"] = clickup_stats
     if clickup_tasks is not None:
@@ -572,8 +825,6 @@ def main():
         existing["content_pipeline"] = pipeline
     if local:
         existing["local_stats"] = local
-    if gsc is not None:
-        existing["gsc"] = gsc
     if credits.get("alerts") or credits.get("highlights"):
         existing["platform_credits"] = credits
 
