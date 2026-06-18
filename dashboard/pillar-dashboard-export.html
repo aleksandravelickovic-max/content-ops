@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Content Pillar Dashboard — Aleksandra Velickovic</title>
+<style>
+  :root{
+    --bg:#f4f6f9; --surface:#ffffff; --surface-alt:#fafbfc;
+    --border:#e3e6eb; --border-strong:#d1d6de; --rule:#ecedf1;
+    --text:#14181f; --muted:#525a68; --subtle:#7a8290;
+    --accent:#2453d6; --accent-soft:#e7edfc;
+    --good:#117a3d; --good-soft:#e4f3eb;
+    --warn:#92590a; --warn-soft:#fbeed1;
+    --bad:#b8302a;  --bad-soft:#fbe3e1;
+    --ink:#0b1f4d;
+    --radius:10px; --radius-sm:6px;
+    --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--bg); color:var(--text); font-family:var(--font); font-size:15px; line-height:1.5; -webkit-font-smoothing:antialiased}
+  .wrap{max-width:1180px; margin:0 auto; padding:14px 24px 64px}
+  .num{font-variant-numeric:tabular-nums}
+  a{color:var(--accent); text-decoration:none} a:hover{text-decoration:underline}
+
+  .tabbar{display:flex; gap:4px; border-bottom:1px solid var(--border); margin-bottom:14px}
+  .tabbar button{font:inherit; font-size:14px; font-weight:600; color:var(--subtle); background:none; border:0; border-bottom:2px solid transparent; padding:9px 16px; cursor:pointer; margin-bottom:-1px}
+  .tabbar button:hover{color:var(--text)}
+  .tabbar button[aria-selected="true"]{color:var(--accent); border-bottom-color:var(--accent)}
+  .tab-panel{display:none} .tab-panel.active{display:block}
+
+  .section{margin-top:30px}
+  .section-head{display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin:0 0 12px}
+  .section-head h2{font-size:13px; font-weight:700; letter-spacing:.09em; text-transform:uppercase; color:var(--subtle); margin:0}
+  .section-head .note{font-size:12px; color:var(--subtle)}
+  .tag-manual{font-size:10.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--warn); background:var(--warn-soft); padding:3px 8px; border-radius:999px}
+  .tag-auto{font-size:10.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); background:var(--accent-soft); padding:3px 8px; border-radius:999px}
+
+  .hero{position:relative; overflow:hidden; background:linear-gradient(135deg,#0b1f4d 0%,#1b3a8f 55%,#2453d6 100%); color:#fff; border-radius:16px; padding:34px 38px; box-shadow:0 10px 30px rgba(11,31,77,.18)}
+  .hero-stars{position:absolute; inset:0; z-index:0; pointer-events:none}
+  .hero-stars span{position:absolute; color:#fff; line-height:1}
+  .hero > .eyebrow, .hero > .northstar, .hero > .meta{position:relative; z-index:1}
+  .dash-title{font-size:14px; font-weight:700; letter-spacing:.04em; color:var(--muted); margin:0 0 8px 2px}
+  .hero .eyebrow{font-size:13px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:#a9c0ff; margin:0 0 14px}
+  .hero .eyebrow .ns-star{color:#ffd25e; margin-right:3px}
+  .hero .northstar{font-size:25px; line-height:1.32; font-weight:600; margin:0; max-width:62ch; color:#eef3ff}
+  .hero .meta{margin-top:22px; padding-top:18px; border-top:1px solid rgba(255,255,255,.16); display:flex; flex-wrap:wrap; gap:22px; font-size:13px; color:#c7d6ff}
+  .hero .meta b{color:#fff; font-weight:600}
+
+  .pace{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:24px 26px}
+  .pace-top{display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap; margin-bottom:20px}
+  .pace-goal .lbl{font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--subtle)}
+  .pace-goal .big{font-size:34px; font-weight:800; letter-spacing:-.01em; margin-top:2px}
+  .pace-goal .sub{font-size:13px; color:var(--muted); margin-top:2px}
+  .status-badge{display:inline-flex; align-items:center; gap:9px; font-size:16px; font-weight:700; padding:11px 20px; border-radius:999px; border:1.5px solid transparent}
+  .status-badge .dot{width:11px; height:11px; border-radius:50%}
+  .status-badge.good{color:var(--good); background:var(--good-soft); border-color:#bfe3cc} .status-badge.good .dot{background:var(--good)}
+  .status-badge.warn{color:var(--warn); background:var(--warn-soft); border-color:#f0dca6} .status-badge.warn .dot{background:var(--warn)}
+  .status-badge.bad{color:var(--bad); background:var(--bad-soft); border-color:#f3c4c0} .status-badge.bad .dot{background:var(--bad)}
+  .track-wrap{position:relative; margin:8px 0 6px}
+  .track{position:relative; height:34px; background:var(--surface-alt); border:1px solid var(--border); border-radius:999px; overflow:hidden}
+  .fill{height:100%; border-radius:999px 0 0 999px; transition:width .5s ease; background:linear-gradient(90deg,#2453d6,#3f74f0)}
+  .fill.good{background:linear-gradient(90deg,#117a3d,#23a157)} .fill.warn{background:linear-gradient(90deg,#b07a13,#d49a26)} .fill.bad{background:linear-gradient(90deg,#b8302a,#e0544d)}
+  .pace-marker{position:absolute; top:-6px; bottom:-6px; width:2px; background:var(--ink); z-index:3}
+  .pace-marker::after{content:attr(data-label); position:absolute; top:-22px; left:50%; transform:translateX(-50%); white-space:nowrap; font-size:11px; font-weight:700; color:var(--ink); background:var(--surface); padding:1px 6px; border-radius:4px; border:1px solid var(--border)}
+  .track-scale{display:flex; justify-content:space-between; margin-top:9px; font-size:12px; color:var(--subtle)}
+  .pace-summary{margin:18px 0 0; padding-top:16px; border-top:1px solid var(--rule); font-size:17px; line-height:1.45; color:var(--text); font-weight:500}
+  .pace-summary b{font-weight:700}
+
+  .ver-bar{display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:8px 14px; margin-bottom:12px}
+  .ver-left{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+  .ver-left label{font-size:12px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--subtle)}
+  .ver-bar select{font:inherit; font-size:14px; font-weight:600; color:var(--text); padding:7px 30px 7px 11px; border:1px solid var(--border-strong); border-radius:var(--radius-sm); background:var(--surface) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6'><path d='M0 0l5 6 5-6z' fill='%237a8290'/></svg>") no-repeat right 11px center; -webkit-appearance:none; appearance:none; cursor:pointer}
+  .ver-badge{font-size:11px; font-weight:700; letter-spacing:.04em; padding:3px 9px; border-radius:999px}
+  .ver-badge.live{color:var(--good); background:var(--good-soft)} .ver-badge.arch{color:var(--warn); background:var(--warn-soft)}
+  .ver-right{display:flex; gap:8px; align-items:center}
+  .ver-countdown{font-size:11.5px; color:var(--subtle); white-space:nowrap}
+  .ver-btn{font:inherit; font-size:13px; font-weight:600; cursor:pointer; padding:7px 13px; border-radius:var(--radius-sm); border:1px solid var(--accent); background:var(--accent); color:#fff}
+  .ver-btn.ghost{background:var(--surface); color:var(--subtle); border-color:var(--border-strong)}
+  .ver-btn:hover{filter:brightness(1.05)}
+  .ver-banner{background:var(--warn-soft); border:1px solid #f0dca6; color:var(--warn); border-radius:var(--radius-sm); padding:10px 14px; margin-bottom:18px; font-size:13.5px}
+  .ver-banner a{color:var(--warn); font-weight:700}
+
+  .coach{background:linear-gradient(180deg,#11151c 0%,#1a212c 100%); color:#e7ebf2; border-radius:14px; padding:30px 32px; margin-top:30px}
+  .coach .c-eyebrow{font-size:12px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:#8aa0ff; margin:0 0 6px}
+  .coach h2{font-size:21px; font-weight:800; margin:0 0 4px; color:#fff}
+  .coach .c-sub{font-size:13px; color:#9aa6b8; margin:0 0 20px}
+  .coach .c-read{font-size:16px; line-height:1.55; color:#eef2f8; margin:0 0 22px; padding-bottom:20px; border-bottom:1px solid rgba(255,255,255,.12)}
+  .coach .c-grid{display:grid; grid-template-columns:1fr 1fr; gap:26px}
+  .coach .c-block h3{font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; margin:0 0 12px}
+  .coach .c-block.work h3{color:#5fd198} .coach .c-block.risk h3{color:#ff9f9a}
+  .coach .c-block.moves{margin-top:24px; padding-top:20px; border-top:1px solid rgba(255,255,255,.12)} .coach .c-block.moves h3{color:#ffd25e}
+  .coach ul{margin:0; padding:0; list-style:none}
+  .coach li{position:relative; padding:0 0 12px 20px; font-size:14px; line-height:1.5; color:#dbe2ec} .coach li:last-child{padding-bottom:0}
+  .coach li::before{content:""; position:absolute; left:0; top:8px; width:6px; height:6px; border-radius:50%}
+  .coach .c-block.work li::before{background:#5fd198} .coach .c-block.risk li::before{background:#ff9f9a} .coach .c-block.moves li::before{background:#ffd25e}
+  .coach .c-close{margin:22px 0 0; padding-top:18px; border-top:1px solid rgba(255,255,255,.12); font-size:15px; line-height:1.55; color:#eef2f8}
+  .coach li b, .coach .c-close b{color:#fff}
+  .coach-empty{color:#8b95a8; font-size:14px; text-align:center; padding:14px; border:1px dashed rgba(255,255,255,.18); border-radius:var(--radius-sm)}
+  @media (max-width:880px){ .coach .c-grid{grid-template-columns:1fr; gap:18px} }
+
+  .grid-4{display:grid; grid-template-columns:repeat(4,1fr); gap:16px}
+  .metric{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:18px 18px 16px; border-top:3px solid var(--accent)}
+  .metric .label{font-size:12px; letter-spacing:.05em; text-transform:uppercase; color:var(--subtle)}
+  .metric .value{font-size:29px; font-weight:800; letter-spacing:-.01em; margin:6px 0 4px}
+  .metric .delta{font-size:13px; font-weight:600}
+  .metric .delta.up{color:var(--good)} .metric .delta.down{color:var(--bad)} .metric .delta.flat{color:var(--subtle)}
+  .metric .ctx{font-size:12px; color:var(--subtle); margin-top:3px}
+  .metric.sm{padding:14px 16px 12px} .metric.sm .value{font-size:22px}
+
+  .lead-intro{font-size:14px; color:var(--muted); margin:-2px 0 14px; max-width:80ch}
+  .grid-2{display:grid; grid-template-columns:repeat(2,1fr); gap:16px}
+  .lead-card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:18px 20px 8px}
+  .lead-head{display:flex; align-items:baseline; justify-content:space-between; gap:10px; padding-bottom:12px; margin-bottom:6px; border-bottom:1px solid var(--rule)}
+  .lead-head h3{margin:0; font-size:15px; font-weight:700}
+  .lead-head .lead-sub{font-size:11.5px; letter-spacing:.04em; text-transform:uppercase; color:var(--subtle)}
+  .lead-row{padding:11px 0; border-bottom:1px solid var(--rule)} .lead-row:last-child{border-bottom:0}
+  .lr-top{display:flex; align-items:baseline; justify-content:space-between; gap:10px; margin-bottom:8px}
+  .lr-label{font-size:14px; color:var(--text)} .lr-val{font-size:14px; color:var(--muted)} .lr-val b{font-size:16px; color:var(--text)} .lr-tgt{color:var(--subtle)}
+  .lr-bar{height:7px; border-radius:999px; background:var(--surface-alt); border:1px solid var(--border); overflow:hidden}
+  .lr-bar i{display:block; height:100%; border-radius:999px}
+  @media (max-width:880px){ .grid-2{grid-template-columns:1fr} }
+
+  .grid-rocks{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px}
+  .rock{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:18px 18px 16px; display:flex; flex-direction:column}
+  .rock .rk-head{display:flex; align-items:flex-start; justify-content:space-between; gap:10px}
+  .rock .rk-num{font-size:12px; font-weight:800; color:var(--accent); background:var(--accent-soft); width:24px; height:24px; border-radius:6px; display:flex; align-items:center; justify-content:center; flex:none}
+  .rock .rk-title{font-size:15px; font-weight:700; line-height:1.32; margin:0; flex:1}
+  .rock .rk-owner{font-size:12px; color:var(--subtle); margin-top:8px}
+  .rock .rk-notes{font-size:12px; color:var(--muted); margin-top:6px; line-height:1.45}
+  .rock .rk-bar{height:7px; border-radius:999px; background:var(--surface-alt); border:1px solid var(--border); overflow:hidden; margin-top:12px}
+  .rock .rk-bar i{display:block; height:100%; border-radius:999px}
+  .rock .rk-foot{display:flex; align-items:center; justify-content:space-between; margin-top:9px}
+  .pill{font-size:11px; font-weight:700; letter-spacing:.04em; padding:3px 9px; border-radius:999px}
+  .pill.good{color:var(--good); background:var(--good-soft)} .pill.warn{color:var(--warn); background:var(--warn-soft)} .pill.bad{color:var(--bad); background:var(--bad-soft)} .pill.neutral{color:var(--muted); background:#eef0f3}
+  .rk-pct{font-size:13px; font-weight:700; color:var(--muted)}
+  .rk-doc{display:inline-block; margin-top:11px; font-size:12.5px; font-weight:600; text-decoration:none}
+  a.rk-doc{color:var(--accent)} a.rk-doc:hover{text-decoration:underline}
+  .rk-doc.muted{color:var(--subtle); font-weight:500}
+
+  .agenda{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:20px 24px}
+  .agenda ol{margin:0; padding:0; list-style:none; counter-reset:ag}
+  .agenda li{counter-increment:ag; position:relative; padding:11px 0 11px 38px; border-bottom:1px solid var(--rule)} .agenda li:last-child{border-bottom:0}
+  .agenda li::before{content:counter(ag); position:absolute; left:0; top:10px; width:25px; height:25px; border-radius:50%; background:var(--ink); color:#fff; font-size:12px; font-weight:700; display:flex; align-items:center; justify-content:center}
+  .agenda li .ag-t{font-weight:600; display:flex; align-items:center; gap:8px; flex-wrap:wrap}
+  .agenda li .ag-d{font-size:13px; color:var(--muted); margin-top:2px}
+  .ag-type{font-size:10px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; padding:2px 7px; border-radius:4px}
+  .t-action_item{background:var(--accent-soft); color:var(--accent)} .t-decision{background:#ede9fe; color:#6d28d9} .t-discussion{background:var(--good-soft); color:var(--good)} .t-update{background:#eef0f3; color:var(--subtle)}
+
+  .cu-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px}
+  .cu-card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden}
+  .cu-head{display:flex; align-items:center; justify-content:space-between; padding:12px 16px; border-bottom:1px solid var(--rule); background:var(--surface-alt)}
+  .cu-head .h{font-size:13px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; display:flex; align-items:center; gap:8px}
+  .cu-head .h .sw{width:9px; height:9px; border-radius:50%}
+  .cu-head .ct{font-size:12px; color:var(--subtle); font-weight:600}
+  .cu-list{max-height:280px; overflow-y:auto}
+  .cu-row{display:flex; align-items:center; gap:8px; padding:9px 16px; border-bottom:1px solid var(--rule)} .cu-row:last-child{border-bottom:0}
+  .cu-row .ct-title{flex:1; min-width:0; font-size:13px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+  .cu-row .ct-meta{font-size:10.5px; color:var(--subtle); flex:none; text-align:right}
+  .cu-more{padding:9px 16px; text-align:center; font-size:12px; font-weight:600; background:var(--surface-alt)}
+  .cu-empty{height:160px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px; text-align:center; color:var(--subtle); padding:20px; background:var(--surface-alt)}
+  .cu-empty .ic{font-size:22px; opacity:.5}
+
+  .resp-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:12px 28px}
+  .resp{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-sm); padding:14px 16px; display:flex; gap:12px; align-items:flex-start}
+  .resp .rb{width:8px; height:8px; border-radius:50%; background:var(--accent); margin-top:7px; flex:none}
+  .resp .rt{font-weight:600} .resp .rd{font-size:12.5px; color:var(--muted); margin-top:2px}
+
+  .ctx-hero{background:linear-gradient(135deg,#10233f 0%,#1f3d54 60%,#2b5f6e 100%)} .ctx-hero .northstar{font-size:21px; max-width:62ch}
+  .ctx-list{display:flex; flex-direction:column; gap:10px}
+  .ctx-item{display:flex; gap:12px; align-items:flex-start; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-sm); padding:13px 14px}
+  .ctx-item .ci-dot{flex:none; width:20px; height:20px; border-radius:50%; margin-top:1px; background:var(--good-soft); color:var(--good); font-size:12px; font-weight:700; display:flex; align-items:center; justify-content:center}
+  .ctx-item .ci-text{flex:1; line-height:1.45}
+  .ctx-item .ci-del{flex:none; font:inherit; font-size:18px; line-height:1; color:var(--subtle); background:none; border:0; cursor:pointer; padding:0 4px} .ctx-item .ci-del:hover{color:var(--bad)}
+  .ctx-empty{color:var(--subtle); font-size:14px; padding:18px; text-align:center; border:1px dashed var(--border-strong); border-radius:var(--radius-sm)}
+  .ctx-add{display:flex; gap:10px; margin-top:16px; flex-wrap:wrap}
+  .ctx-add input{flex:1; min-width:240px; font:inherit; font-size:14px; padding:10px 13px; border:1px solid var(--border-strong); border-radius:var(--radius-sm); background:var(--surface)}
+  .ctx-add input:focus{outline:2px solid var(--accent); outline-offset:1px; border-color:var(--accent)}
+  .ctx-add button{font:inherit; font-size:14px; font-weight:600; cursor:pointer; padding:10px 18px; border-radius:var(--radius-sm); border:1px solid var(--accent); background:var(--accent); color:#fff}
+  .ctx-add button.secondary{background:var(--surface); color:var(--accent)} .ctx-add button:hover{filter:brightness(1.05)}
+
+  .dtable{width:100%; border-collapse:collapse; font-size:13px}
+  .dtable th{font-size:11px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--subtle); padding:8px 10px; border-bottom:2px solid var(--border); text-align:left; white-space:nowrap}
+  .dtable td{padding:8px 10px; border-bottom:1px solid var(--rule); vertical-align:middle}
+  .dtable tr:last-child td{border-bottom:0} .dtable tr:hover td{background:var(--surface-alt)}
+  .dtable .tr{text-align:right} .dtable .tm{font-family:ui-monospace,monospace; font-size:12px}
+  .more-row td{text-align:center; color:var(--accent); cursor:pointer; padding:9px; font-weight:600}
+  .more-row:hover td{background:var(--accent-soft)}
+  .mini-bar{display:inline-block; width:60px; height:4px; background:var(--surface-alt); border:1px solid var(--border); border-radius:2px; vertical-align:middle; overflow:hidden}
+  .mini-bar i{display:block; height:100%}
+  .table-wrap{overflow-x:auto}
+
+  .llmv-wrap{display:flex; align-items:center; gap:20px; flex-wrap:wrap; margin-bottom:14px}
+  .llmv-ring{position:relative; width:84px; height:84px; flex:none}
+  .llmv-ring svg{transform:rotate(-90deg)}
+  .llmv-ring-num{position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center}
+  .llmv-ring-num .v{font-size:21px; font-weight:800; line-height:1} .llmv-ring-num .l{font-size:9px; color:var(--subtle)}
+  .llmv-stats{display:flex; gap:20px; flex-wrap:wrap}
+  .llmv-stat{text-align:center} .llmv-stat .v{font-size:21px; font-weight:800} .llmv-stat .l{font-size:11px; color:var(--subtle)}
+  .llmv-zero-flag{flex:1; min-width:180px; background:var(--bad-soft); border:1px solid #f3c4c0; border-radius:var(--radius-sm); padding:9px 12px; font-size:12px; color:var(--bad)}
+
+  /* Weekly metrics table */
+  .wm-wrap{overflow-x:auto; -webkit-overflow-scrolling:touch}
+  .wm-table{border-collapse:collapse; font-size:12px; white-space:nowrap; min-width:100%}
+  .wm-table th,.wm-table td{padding:5px 10px; border:1px solid var(--border); text-align:right}
+  .wm-table th{background:var(--surface-alt); font-weight:600; color:var(--subtle); font-size:11px}
+  .wm-table td.wm-metric{text-align:left; font-weight:500; color:var(--text); position:sticky; left:0; background:#fff; z-index:1; min-width:160px; border-right:2px solid var(--border)}
+  .wm-table tr:nth-child(even) td{background:#fafafa}
+  .wm-table tr:nth-child(even) td.wm-metric{background:#fafafa}
+  .wm-table .wm-group-traffic td{background:#f0f7ff} .wm-table .wm-group-traffic td.wm-metric{background:#f0f7ff}
+  .wm-table .wm-group-pipeline td{background:#f0fff5} .wm-table .wm-group-pipeline td.wm-metric{background:#f0fff5}
+  .wm-table .wm-group-llm td{background:#f5f0ff} .wm-table .wm-group-llm td.wm-metric{background:#f5f0ff}
+  .wm-table .wm-group-branded td{background:#fffbf0} .wm-table .wm-group-branded td.wm-metric{background:#fffbf0}
+  .wm-table td.wm-null{color:var(--subtle); font-size:11px}
+  .wm-week-head{background:var(--accent)!important; color:#fff!important}
+
+  .foot{margin-top:34px; padding-top:16px; border-top:1px solid var(--border); font-size:12px; color:var(--subtle); display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px}
+
+  @media (max-width:880px){ .grid-4{grid-template-columns:repeat(2,1fr)} .cu-grid,.resp-grid{grid-template-columns:1fr} .hero .northstar{font-size:20px} }
+  @media print{ body{background:#fff} .hero{box-shadow:none} .section,.rock,.metric,.pace,.cu-card{break-inside:avoid} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="tabbar" role="tablist">
+    <button role="tab" aria-selected="true" data-tab="dashboard">Dashboard</button>
+    <button role="tab" aria-selected="false" data-tab="context">Context for AI</button>
+  </nav>
+
+  <div id="tab-dashboard" class="tab-panel active">
+
+    <div class="ver-bar">
+      <div class="ver-left">
+        <label for="verSelect">Report version</label>
+        <select id="verSelect"></select>
+        <span class="ver-badge live" id="verBadge">Live</span>
+      </div>
+      <div class="ver-right">
+        <span class="ver-countdown" id="countdown"></span>
+        <button id="btnRefresh" class="ver-btn ghost">⟳ Refresh</button>
+        <button id="verSave" class="ver-btn">Save this week's version</button>
+        <button id="verReset" class="ver-btn ghost">Reset</button>
+      </div>
+    </div>
+    <div class="ver-banner" id="verBanner" hidden></div>
+
+    <p class="dash-title" id="dashTitle"></p>
+    <header class="hero">
+      <div class="hero-stars" aria-hidden="true">
+        <span style="top:14%; left:5%; font-size:13px; opacity:.16">✦</span>
+        <span style="top:70%; left:9%; font-size:9px; opacity:.13">✧</span>
+        <span style="top:40%; left:2%; font-size:8px; opacity:.10">✦</span>
+        <span style="top:8%; left:58%; font-size:11px; opacity:.15">✧</span>
+        <span style="top:22%; left:74%; font-size:16px; opacity:.18">✦</span>
+        <span style="top:55%; left:64%; font-size:9px; opacity:.13">✧</span>
+        <span style="top:78%; left:80%; font-size:13px; opacity:.16">✦</span>
+        <span style="top:12%; left:90%; font-size:10px; opacity:.14">✧</span>
+        <span style="top:44%; left:88%; font-size:18px; opacity:.17">✦</span>
+      </div>
+      <p class="eyebrow"><span class="ns-star">★</span> North Star</p>
+      <p class="northstar" id="northStar"></p>
+      <div class="meta">
+        <span>Owner: <b id="ownerName"></b></span>
+        <span>Quarter: <b id="quarterLabel"></b></span>
+        <span>As of: <b id="asOfLabel"></b></span>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="pace">
+        <div class="pace-top">
+          <div class="pace-goal">
+            <div class="lbl" id="goalLbl"></div>
+            <div class="big num" id="goalBig"></div>
+            <div class="sub"><span class="num" id="actualInline"></span> produced to date</div>
+          </div>
+          <div class="status-badge" id="statusBadge"><span class="dot"></span><span id="statusText"></span></div>
+        </div>
+        <div class="track-wrap">
+          <div class="track"><div class="fill" id="fill"></div><div class="pace-marker" id="paceMarker" data-label=""></div></div>
+          <div class="track-scale"><span>0</span><span id="scaleMid" class="num"></span><span id="scaleEnd" class="num"></span></div>
+        </div>
+        <p class="pace-summary" id="paceSummary"></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>Top Metrics</h2><span class="tag-auto">Auto-synced</span></div>
+      <div class="grid-4" id="metrics"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>Quarterly Rocks</h2><span class="note" id="rocksNote"></span></div>
+      <div class="grid-rocks" id="rocks"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>1:1 Agenda</h2><span class="tag-manual">Manually updated</span></div>
+      <div class="agenda"><ol id="agenda"></ol></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>ClickUp — Tasks</h2><span class="note" id="cuOwnerNote"></span></div>
+      <div class="cu-grid" id="cuGrid"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>Ongoing Responsibilities / Areas of Ownership</h2></div>
+      <div class="resp-grid" id="resp"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>Leading Indicators</h2><span class="tag-auto">Auto-synced</span></div>
+      <p class="lead-intro">The weekly output that drives the quarterly content goal and AI visibility recovery. These are the inputs we control — if a number runs red here, we fix it before it shows up in the pacing bar.</p>
+      <div class="grid-2" id="leading"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>LLM / AI Visibility</h2><span class="tag-auto">Auto-synced · SearchAtlas LLMV</span></div>
+      <div id="llmvCard"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>Content Performance — Wins First</h2><span class="tag-auto">Auto-synced · GSC</span></div>
+      <div class="grid-2" id="perfGrid"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>GSC Organic Performance</h2><span class="tag-auto">Auto-synced</span></div>
+      <div id="gscCard"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>Content Decay</h2><span class="note" id="decayNote"></span></div>
+      <div class="table-wrap" id="decayTable"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>Quick Win Keywords</h2><span class="note" id="winsNote"></span></div>
+      <div class="table-wrap" id="winsTable"></div>
+    </section>
+
+    <section class="section" id="weeklyMetricsSection">
+      <div class="section-head"><h2>Weekly Metrics</h2><span class="note" id="weeklyNote"></span></div>
+      <div class="table-wrap" id="weeklyTable"></div>
+    </section>
+
+    <section class="coach" id="coachSection"></section>
+
+    <div class="foot"><span id="footLeft"></span><span id="freshness"></span></div>
+
+  </div><!-- /tab-dashboard -->
+
+  <div id="tab-context" class="tab-panel">
+    <p class="dash-title">Context for AI</p>
+    <header class="hero ctx-hero">
+      <p class="eyebrow"><span class="ns-star">✧</span> Ground Truth</p>
+      <p class="northstar">A single place for the truths about this pillar, so any AI analysis run on this dashboard reasons from facts we've confirmed — not guesses.</p>
+    </header>
+    <section class="section" style="margin-top:24px">
+      <div class="section-head"><h2>Saved Truths</h2><span class="note">Keep them short, verifiable, and current</span></div>
+      <div class="ctx-list" id="ctxList"></div>
+      <div class="ctx-add">
+        <input id="ctxInput" type="text" placeholder="Add a true statement…" aria-label="Add a true statement">
+        <button id="ctxAdd">Add</button>
+        <button id="ctxCopy" class="secondary">Copy all</button>
+      </div>
+    </section>
+  </div><!-- /tab-context -->
+
+</div>
+<script>
+/* global localStorage, fetch */
+let CFG=null, DATA=null, LIVE=null;
+let nextAt=null;
+const INTERVAL=5*60*1000;
+const VKEY='ai_dash_versions_v2';
+const CKEY='ai_dash_context_v2';
+
+const fmtNum=n=>n==null?'—':Number(n).toLocaleString('en-US');
+const fmtPts=n=>n==null?'—':Number(n).toLocaleString('en-US',{maximumFractionDigits:1});
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const abs=n=>Math.abs(n||0);
+const parseD=s=>{ if(!s) return new Date(); const [y,m,d]=s.split('-').map(Number); return new Date(y,(m||1)-1,d||1); };
+const longDate=ds=>parseD(ds).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+const isoDate=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+const dirOf=n=>n==null?'flat':n>0?'up':n<0?'down':'flat';
+const pctStr=n=>n==null?'':(n>0?'+':'')+n.toFixed(1)+'%';
+
+function statusLabel(s){
+  return ({completed:'Completed', in_progress:'In Progress', not_started:'Not Started', blocked:'Blocked'})[s] || s || '';
+}
+function statusTone(s){
+  return ({completed:'good', in_progress:'warn', not_started:'neutral', blocked:'bad'})[s] || 'neutral';
+}
+
+/* ============================================================
+   MAP fetched CFG/DATA -> LIVE render-shape (mirrors template's
+   static CONFIG/METRICS/LEADING/ROCKS/AGENDA, but computed live)
+   ============================================================ */
+function buildLive(){
+  const Q = (CFG[CFG.active_quarter] || CFG.q2 || {});
+  const CP = Q.content_production || {};
+  const gsc = DATA.gsc || {};
+  const llmv = DATA.llm_visibility || {};
+  const decay = DATA.content_decay || [];
+  const wins = DATA.quick_wins || [];
+
+  const bs = gsc.branded_split || {};
+  const nbPct  = bs.current?.nonbranded_pct ?? null;
+  const nbDelta = bs.nonbranded_ppt_change ?? null;
+  const nbDeltaStr = nbDelta !== null ? (nbDelta >= 0 ? '+' : '') + nbDelta.toFixed(1) + ' pp' : null;
+
+  const metrics = [
+    { label:'Organic Clicks',    value: fmtNum(gsc.current?.clicks), delta: pctStr(gsc.change?.clicks_pct), dir: dirOf(gsc.change?.clicks_pct), ctx:'GSC · 28-day rolling · sc-domain:searchatlas.com' },
+    { label:'Non-branded Share', value: nbPct !== null ? nbPct + '%' : '—', delta: nbDeltaStr, dir: dirOf(nbDelta), ctx:'GSC · branded = searchatlas|search atlas|linkgraph|otto seo|atlas agent|manick bhan' },
+    { label:'LLM Visibility',    value: (llmv.overall_visibility??'—')+'%', delta: pctStr(llmv.visibility_change), dir: dirOf(llmv.visibility_change), ctx:'SearchAtlas LLMV · searchatlas.com' },
+    { label:'Decaying Pages',    value: String(decay.length), delta:null, dir:'flat', ctx:'3-period click decline · GSC' },
+  ];
+
+  const rocks = (Q.rocks||[]).map(r=>({
+    title:r.title, owner:r.owner||CFG.name, pct:(r.pct??0), tone:r.tone||statusTone(r.status),
+    status:statusLabel(r.status), doc:r.link||'', notes:r.notes||'', due:r.due
+  }));
+
+  const agenda = (Q.agenda||[]).map(a=>({ t:a.topic, d:a.notes||'', type:a.type||'update' }));
+
+  let leadingActual5 = null;
+  const liGroups = (Q.leading_indicators||[]).map(g=>({
+    group:g.group,
+    items:(g.items||[]).map(it=>{
+      let actual = it.actual;
+      if((it.source||'').toLowerCase().includes('clickup') && (it.label||'').toLowerCase().includes('articles published')){
+        const live = DATA?.clickup_stats?.articles_published_7d;
+        if(live!=null) actual = live;
+      }
+      return { label:it.label, target:it.target, actual, unit:it.unit||'', note:it.note||'' };
+    })
+  }));
+
+  return {
+    asOf: (DATA.meta?.generated_at || new Date().toISOString()).slice(0,10),
+    northStar: CFG.north_star || '',
+    owner: CFG.name || '',
+    quarterLabel: Q.label || '',
+    quarterStart: Q.start, quarterEnd: Q.end,
+    goal: CP.goal || 0,
+    goalUnit: 'weighted pts',
+    actual: (CP.final!=null ? CP.final : (CP.current!=null ? CP.current : 0)),
+    thresholds: { exceeding:1.05, onTrack:0.92 },
+    metrics, rocks, agenda, leadingGroups: liGroups,
+    resp: CFG.ongoing_responsibilities || [],
+    coaching: CFG.coaching || {read:'',work:[],risk:[],moves:[],close:''},
+  };
+}
+
+/* ============================================================
+   1 · NORTH STAR + dash title
+   ============================================================ */
+function renderNorthStar(s){
+  document.getElementById('dashTitle').textContent = (s.owner||'') + ' — Content Pillar';
+  document.getElementById('northStar').textContent = s.northStar;
+  document.getElementById('ownerName').textContent = s.owner;
+  document.getElementById('quarterLabel').textContent = s.quarterLabel;
+  document.getElementById('asOfLabel').textContent = parseD(s.asOf).toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
+}
+
+/* ============================================================
+   2 · GOAL PACING
+   ============================================================ */
+function renderPacing(s){
+  const goal=s.goal, actual=s.actual;
+  const start=parseD(s.quarterStart), end=parseD(s.quarterEnd), now=parseD(s.asOf);
+  const th=s.thresholds||{exceeding:1.05,onTrack:0.92};
+
+  const totalDays=Math.max(1,(end-start)/86400000);
+  const elapsedDays=Math.min(totalDays,Math.max(0,(now-start)/86400000));
+  const elapsedFrac=elapsedDays/totalDays;
+  const expected=goal*elapsedFrac;
+  const ratio = expected>0 ? actual/expected : (actual>0?Infinity:1);
+
+  let tone,label;
+  if(ratio>=th.exceeding){tone='good';label='Exceeding';}
+  else if(ratio>=th.onTrack){tone='good';label='On Track';}
+  else if(ratio>=0.75){tone='warn';label='Slightly Behind';}
+  else {tone='bad';label='Off Track';}
+
+  document.getElementById('goalLbl').textContent = s.quarterLabel + ' Content Goal';
+  document.getElementById('goalBig').textContent = fmtPts(goal)+' '+s.goalUnit;
+  document.getElementById('actualInline').textContent = fmtPts(actual)+' '+s.goalUnit;
+
+  const badge=document.getElementById('statusBadge');
+  badge.className='status-badge '+tone;
+  document.getElementById('statusText').textContent=label;
+
+  const fill=document.getElementById('fill');
+  fill.className='fill '+tone;
+  fill.style.width=Math.min(100,(actual/goal)*100)+'%';
+
+  const marker=document.getElementById('paceMarker');
+  marker.style.left=Math.min(100,elapsedFrac*100)+'%';
+  marker.setAttribute('data-label','Pace today '+Math.round(elapsedFrac*100)+'%');
+
+  document.getElementById('scaleMid').textContent=fmtPts(goal/2);
+  document.getElementById('scaleEnd').textContent=fmtPts(goal);
+
+  const pct=elapsedFrac*100;
+  let whereInQ;
+  if(pct<12) whereInQ="We're just getting into the quarter";
+  else if(pct<38) whereInQ="We're a few weeks into the quarter";
+  else if(pct<46) whereInQ="We're about a third of the way through the quarter";
+  else if(pct<58) whereInQ="We're halfway through the quarter";
+  else if(pct<80) whereInQ="We're about three-quarters through the quarter";
+  else whereInQ="We're in the final stretch of the quarter";
+
+  const goalFmt=fmtPts(goal)+' '+s.goalUnit;
+  let pacing;
+  if(ratio>=1.20) pacing=`pacing well ahead of the ${goalFmt} goal`;
+  else if(ratio>=th.exceeding) pacing='pacing comfortably ahead of schedule';
+  else if(ratio>=th.onTrack) pacing='pacing just ahead of schedule';
+  else if(ratio>=0.75) pacing='tracking a little behind pace';
+  else pacing=`falling behind the ${goalFmt} goal`;
+
+  document.getElementById('paceSummary').innerHTML =
+    `${whereInQ} and we're <b>${pacing}</b> — ${fmtPts(actual)} produced of the ${goalFmt} target.`;
+}
+
+/* ============================================================
+   3 · TOP METRICS
+   ============================================================ */
+function renderMetrics(s){
+  document.getElementById('metrics').innerHTML = s.metrics.map(m=>`
+    <div class="metric">
+      <div class="label">${esc(m.label)}</div>
+      <div class="value num">${esc(m.value)}</div>
+      ${m.delta?`<div class="delta ${m.dir||'flat'}">${m.dir==='up'?'▲':m.dir==='down'?'▼':'–'} ${esc(m.delta)}</div>`:''}
+      <div class="ctx">${esc(m.ctx||'')}</div>
+    </div>`).join('');
+}
+
+/* ============================================================
+   4 · ROCKS
+   ============================================================ */
+function dueLabel(ds){
+  if(!ds) return '';
+  const d=Math.floor((parseD(ds)-new Date())/86400000);
+  if(d<0) return '<span style="color:var(--bad);font-weight:600">Overdue</span>';
+  if(d===0) return '<span style="color:var(--warn);font-weight:600">Due today</span>';
+  if(d<=7) return `<span style="color:var(--warn)">Due in ${d}d</span>`;
+  return 'Due '+parseD(ds).toLocaleDateString('en-US',{month:'short',day:'numeric'});
+}
+function renderRocks(s){
+  document.getElementById('rocksNote').textContent = s.rocks.length + ' priorities this quarter';
+  document.getElementById('rocks').innerHTML = s.rocks.map((r,i)=>{
+    const barColor = r.tone==='good'?'var(--good)':r.tone==='warn'?'var(--warn)':r.tone==='bad'?'var(--bad)':'var(--subtle)';
+    return `<div class="rock">
+      <div class="rk-head"><span class="rk-num">R${i+1}</span><h3 class="rk-title">${esc(r.title)}</h3></div>
+      <div class="rk-owner">Owner · ${esc(r.owner)}${r.due?' · '+dueLabel(r.due):''}</div>
+      ${r.notes?`<div class="rk-notes">${esc(r.notes)}</div>`:''}
+      <div class="rk-bar"><i style="width:${r.pct}%;background:${barColor}"></i></div>
+      <div class="rk-foot"><span class="pill ${r.tone}">${esc(r.status)}</span><span class="rk-pct num">${r.pct}%</span></div>
+      ${r.doc?`<a class="rk-doc" href="${esc(r.doc)}" target="_blank" rel="noopener">View in ClickUp →</a>`:`<span class="rk-doc muted">No doc linked</span>`}
+    </div>`;
+  }).join('');
+}
+
+/* ============================================================
+   5 · AGENDA
+   ============================================================ */
+function renderAgenda(s){
+  const typeLabel={action_item:'Action',decision:'Decision',discussion:'Discussion',update:'Update'};
+  document.getElementById('agenda').innerHTML = s.agenda.map(a=>`
+    <li>
+      <div class="ag-t">${esc(a.t)} <span class="ag-type t-${esc(a.type)}">${esc(typeLabel[a.type]||a.type)}</span></div>
+      <div class="ag-d">${esc(a.d)}</div>
+    </li>`).join('');
+}
+
+/* ============================================================
+   6 · CLICKUP — 4-category native lists (no iframes; X-Frame-Options blocks them)
+   ============================================================ */
+function cuRow(t, metaFn){
+  return `<div class="cu-row"><a class="ct-title" href="${esc(t.url)}" target="_blank" title="${esc(t.title)}">${esc(t.title)}</a><span class="ct-meta">${metaFn(t)}</span></div>`;
+}
+function renderClickUp(){
+  const links = CFG?.clickup_links || {};
+  document.getElementById('cuOwnerNote').textContent = 'Assigned to ' + (CFG.name||'');
+  const CT = DATA?.clickup_tasks || {};
+  const cats = [
+    { key:'overdue', h:'Overdue', sw:'var(--bad)', metaFn:t=>(t.days_overdue>0?t.days_overdue+'d overdue':'due today'), empty:'No overdue tasks.' },
+    { key:'no_due_date', h:'No Due Date', sw:'var(--warn)', metaFn:t=>esc(t.status), empty:'Everything has a due date.' },
+    { key:'recently_completed', h:'Recently Completed', sw:'var(--good)', metaFn:t=>esc(t.closed), empty:'Nothing completed recently.' },
+    { key:'assigned', h:'Assigned', sw:'var(--accent)', metaFn:t=>esc(t.due||''), empty:'Nothing currently assigned.' },
+  ];
+  document.getElementById('cuGrid').innerHTML = cats.map(c=>{
+    const items = CT[c.key]||[];
+    const show = items.slice(0,6);
+    const rest = items.length-show.length;
+    const inner = items.length
+      ? `<div class="cu-list">${show.map(t=>cuRow(t,c.metaFn)).join('')}</div>${rest>0?`<div class="cu-more"><a href="${esc(links.seo_content_open||'#')}" target="_blank">+${rest} more in ClickUp</a></div>`:''}`
+      : `<div class="cu-empty"><div class="ic">✓</div><div>${esc(c.empty)}</div></div>`;
+    return `<div class="cu-card">
+      <div class="cu-head"><span class="h"><span class="sw" style="background:${c.sw}"></span>${esc(c.h)}</span><span class="ct">${items.length}</span></div>
+      ${inner}
+    </div>`;
+  }).join('');
+}
+
+/* ============================================================
+   7 · RESPONSIBILITIES
+   ============================================================ */
+function renderResp(s){
+  document.getElementById('resp').innerHTML = s.resp.map(r=>`
+    <div class="resp"><span class="rb"></span><div><div class="rt">${esc(r.t)}</div><div class="rd">${esc(r.d||'')}</div></div></div>`).join('');
+}
+
+/* ============================================================
+   3b · LEADING INDICATORS
+   ============================================================ */
+function renderLeading(s){
+  document.getElementById('leading').innerHTML = s.leadingGroups.map(g=>`
+    <div class="lead-card">
+      <div class="lead-head"><h3>${esc(g.group)}</h3><span class="lead-sub">This week vs. weekly target</span></div>
+      ${g.items.map(it=>{
+        const r = it.target ? (it.actual||0)/it.target : 0;
+        const col = r>=1 ? 'var(--good)' : r>=0.7 ? 'var(--warn)' : 'var(--bad)';
+        const actualDisp = it.actual!=null ? it.actual : '—';
+        return `<div class="lead-row">
+          <div class="lr-top"><span class="lr-label">${esc(it.label)}</span><span class="lr-val"><b class="num">${esc(String(actualDisp))}</b> <span class="lr-tgt num">/ ${esc(String(it.target))}${esc(it.unit)}</span></span></div>
+          <div class="lr-bar"><i style="width:${Math.min(100,r*100)}%;background:${col}"></i></div>
+          ${it.note?`<div style="font-size:11px;color:var(--subtle);margin-top:6px">${esc(it.note)}</div>`:''}
+        </div>`;
+      }).join('')}
+    </div>`).join('');
+}
+
+/* ============================================================
+   EXTRA — LLM / AI VISIBILITY (not in template)
+   ============================================================ */
+function renderLLMV(){
+  const L = DATA?.llm_visibility;
+  const el = document.getElementById('llmvCard');
+  if(!L){ el.innerHTML = '<div class="lead-card">No LLM visibility data.</div>'; return; }
+  const v=L.overall_visibility||0, R=35, C=2*Math.PI*R, dash=(v/100)*C, gap=C-dash;
+  const color = v>=40?'var(--good)':v>=20?'var(--warn)':'var(--bad)';
+  const zero=(L.platforms||[]).filter(p=>p.visibility_score===0).map(p=>p.platform).join(', ');
+  const rows=(L.platforms||[]).map(p=>{
+    const col = p.visibility_score>=40?'var(--good)':p.visibility_score>=20?'var(--warn)':p.visibility_score>0?'var(--accent)':'var(--bad)';
+    return `<div class="lead-row">
+      <div class="lr-top"><span class="lr-label">${esc(p.platform)}</span><span class="lr-val"><b class="num">${p.visibility_score}%</b><span class="lr-tgt"> · 😊 ${p.sentiment_score}%</span></span></div>
+      <div class="lr-bar"><i style="width:${p.visibility_score}%;background:${col}"></i></div>
+    </div>`;
+  }).join('');
+  el.innerHTML = `<div class="lead-card">
+    <div class="llmv-wrap">
+      <div class="llmv-ring"><svg width="84" height="84" viewBox="0 0 84 84"><circle cx="42" cy="42" r="${R}" fill="none" stroke="#ecedf1" stroke-width="7"/><circle cx="42" cy="42" r="${R}" fill="none" stroke="${color}" stroke-width="7" stroke-dasharray="${dash.toFixed(1)} ${gap.toFixed(1)}" stroke-linecap="round"/></svg><div class="llmv-ring-num"><span class="v" style="color:${color}">${v}%</span><span class="l">visibility</span></div></div>
+      <div class="llmv-stats">
+        <div class="llmv-stat"><div class="v">${L.sentiment_score?.toFixed(0)}%</div><div class="l">Sentiment</div></div>
+        <div class="llmv-stat"><div class="v">${fmtNum(L.total_mentions)}</div><div class="l">Mentions (was ${fmtNum(L.previous_mentions)})</div></div>
+        <div class="llmv-stat"><div class="v">${(L.platforms||[]).filter(p=>p.visibility_score>0).length}/${(L.platforms||[]).length}</div><div class="l">Platforms active</div></div>
+      </div>
+      ${zero?`<div class="llmv-zero-flag"><b>0% visibility:</b> ${esc(zero)}</div>`:''}
+    </div>
+    ${rows}
+  </div>`;
+}
+
+/* ============================================================
+   EXTRA — CONTENT PERFORMANCE: top performers + climbing pages
+   ============================================================ */
+function renderPerformance(){
+  const P = DATA?.content_performance;
+  const el = document.getElementById('perfGrid');
+  if(!P){ el.innerHTML=''; return; }
+  const top=P.top_pages||[], climb=P.climbing||[];
+  const topRows = top.map((r,i)=>`<tr><td>${i+1}</td><td><a href="${esc(r.page)}" target="_blank">${esc(r.slug)}</a></td><td class="tr" style="font-weight:600">${fmtNum(r.clicks)}</td><td class="tr">${r.ctr.toFixed(2)}%</td><td class="tr tm">${r.position.toFixed(1)}</td></tr>`).join('');
+  const climbRows = climb.map((r,i)=>{
+    const growthTxt = r.is_new ? 'New' : `+${r.growth_pct.toFixed(0)}%`;
+    return `<tr><td>${i+1}</td><td><a href="${esc(r.page)}" target="_blank">${esc(r.slug)}</a></td><td class="tr tm" style="color:var(--subtle)">${r.clicks_prior} → <strong style="color:var(--text)">${r.clicks_now}</strong></td><td class="tr"><span class="pill good">▲ ${esc(growthTxt)}</span></td></tr>`;
+  }).join('');
+  el.innerHTML = `
+    <div class="lead-card">
+      <div class="lead-head"><h3>🏆 Top Performing Pages — 28d</h3><span class="lead-sub">${top.length} pages</span></div>
+      <div class="table-wrap"><table class="dtable"><thead><tr><th>#</th><th>Page</th><th class="tr">Clicks</th><th class="tr">CTR</th><th class="tr">Pos</th></tr></thead><tbody>${topRows}</tbody></table></div>
+    </div>
+    <div class="lead-card">
+      <div class="lead-head"><h3>📈 Climbing Pages — vs prior 28d</h3><span class="lead-sub">${climb.length} growing</span></div>
+      <div class="table-wrap"><table class="dtable"><thead><tr><th>#</th><th>Page</th><th class="tr">Prior → Now</th><th class="tr">Growth</th></tr></thead><tbody>${climbRows||'<tr><td colspan="4" style="text-align:center;color:var(--subtle);padding:14px">No significant climbers.</td></tr>'}</tbody></table></div>
+    </div>`;
+}
+
+/* ============================================================
+   EXTRA — GSC DETAIL
+   ============================================================ */
+function renderGSC(){
+  const G = DATA?.gsc;
+  const el = document.getElementById('gscCard');
+  if(!G){ el.innerHTML='<div class="lead-card">No GSC data.</div>'; return; }
+  const c=G.current||{}, ch=G.change||{};
+  const stats=[
+    {lbl:'Clicks (28d)', val:fmtNum(c.clicks), delta:ch.clicks_pct, inv:false},
+    {lbl:'Impressions', val:fmtNum(c.impressions), delta:ch.impressions_pct, inv:false},
+    {lbl:'Avg CTR', val:(c.ctr||0)+'%', delta:null, sub:'was '+G.prior?.ctr+'%'},
+    {lbl:'Avg Position', val:(c.position||0).toFixed(1), delta:ch.position_change, inv:true, sub:'was '+G.prior?.position?.toFixed(1)},
+  ];
+  const cards = stats.map(s=>{
+    const dir = s.delta==null ? 'flat' : (s.inv ? (s.delta<0?'up':'down') : (s.delta>0?'up':'down'));
+    return `<div class="metric sm"><div class="value num">${esc(String(s.val))}</div><div class="label" style="text-transform:none;letter-spacing:0;font-size:11px">${esc(s.lbl)}</div>${s.delta!=null?`<div class="delta ${dir}">${dir==='up'?'▲':'▼'} ${abs(s.delta).toFixed(1)}%</div>`:`<div class="ctx">${esc(s.sub||'')}</div>`}</div>`;
+  }).join('');
+  el.innerHTML = `<div class="grid-4">${cards}</div>
+    <div class="lead-card" style="margin-top:14px;background:var(--accent-soft);border-color:#c7d6ff">
+      <b>Insight:</b> Position improved ${abs(ch.position_change||0).toFixed(1)} pts (${G.prior?.position?.toFixed(1)} → ${c.position?.toFixed(1)}) but clicks dropped ${abs(ch.clicks_pct||0).toFixed(1)}%. CTR fell ${G.prior?.ctr}% → ${c.ctr}% — AI Mode likely displacing organic clicks.
+    </div>`;
+}
+
+/* ============================================================
+   EXTRA — CONTENT DECAY (with recommended action)
+   ============================================================ */
+function actionForTrend(t){
+  if(!t) return '';
+  if(t.includes('declining')) return 'Refresh content — rankings dropping';
+  if(t.includes('stable')) return 'Rewrite title/meta — CTR is the gap';
+  if(t.includes('improved')) return 'Target adjacent queries — demand shifted';
+  return '';
+}
+function trendPill(t){
+  if(!t) return '';
+  if(t.includes('declining')) return '<span class="pill bad">Declining</span>';
+  if(t.includes('stable')) return '<span class="pill warn">Demand ↓</span>';
+  if(t.includes('improved')) return '<span class="pill neutral" style="color:var(--accent);background:var(--accent-soft)">Rank ↑</span>';
+  return `<span class="pill neutral">${esc(t)}</span>`;
+}
+let decayRows=[], decayMax=1;
+function renderDecay(){
+  decayRows = DATA?.content_decay || [];
+  decayMax = decayRows[0]?.loss || 1;
+  document.getElementById('decayNote').textContent = decayRows.length+' pages · '+decayRows.reduce((s,r)=>s+(r.loss||0),0)+' clicks lost';
+  const mk=(r,i)=>`<tr><td>${i+1}</td><td><a href="${esc(r.page)}" target="_blank">${esc(r.slug||r.page)}</a></td><td class="tr" style="color:var(--bad);font-weight:600">−${r.loss}</td><td>${trendPill(r.trend)}</td><td style="font-size:11.5px;color:var(--muted)">${esc(actionForTrend(r.trend))}</td><td class="tr tm">${r.position_now?.toFixed(1)}</td></tr>`;
+  const show=decayRows.slice(0,6), rest=decayRows.slice(6);
+  document.getElementById('decayTable').innerHTML = `<table class="dtable"><thead><tr><th>#</th><th>Page</th><th class="tr">Clicks Lost</th><th>Trend</th><th>Action</th><th class="tr">Pos</th></tr></thead><tbody id="decay-tb">${show.map(mk).join('')}${rest.length?`<tr class="more-row" onclick="expandDecay()"><td colspan="6">▾ Show ${rest.length} more</td></tr>`:''}</tbody></table>`;
+}
+function expandDecay(){
+  const rest=decayRows.slice(6); const tb=document.getElementById('decay-tb'); const mr=tb.querySelector('.more-row');
+  rest.forEach((r,i)=>{ const tr=document.createElement('tr'); tr.innerHTML=`<td>${i+7}</td><td><a href="${esc(r.page)}" target="_blank">${esc(r.slug||r.page)}</a></td><td class="tr" style="color:var(--bad);font-weight:600">−${r.loss}</td><td>${trendPill(r.trend)}</td><td style="font-size:11.5px;color:var(--muted)">${esc(actionForTrend(r.trend))}</td><td class="tr tm">${r.position_now?.toFixed(1)}</td>`; tb.insertBefore(tr,mr); });
+  mr.remove();
+}
+
+/* ============================================================
+   EXTRA — QUICK WIN KEYWORDS
+   ============================================================ */
+let winsRows=[], winsMax=1;
+function renderWins(){
+  winsRows = DATA?.quick_wins || [];
+  winsMax = winsRows[0]?.opportunity || 1;
+  document.getElementById('winsNote').textContent = winsRows.length+' keywords · top opportunity: '+fmtNum(winsRows[0]?.opportunity||0)+' clicks';
+  const mk=(r,i)=>`<tr><td>${i+1}</td><td style="font-weight:500">${esc(r.query)}</td><td class="tr tm">${r.position?.toFixed(1)}</td><td class="tr">${fmtNum(r.impressions)}</td><td class="tr">${r.clicks}</td><td class="tr" style="color:var(--subtle)">${(r.ctr*100).toFixed(2)}%</td><td><span class="mini-bar"><i style="width:${Math.min(100,r.opportunity/winsMax*100)}%;background:var(--good)"></i></span> <span style="font-size:11px;color:var(--subtle)">${fmtNum(r.opportunity)}</span></td></tr>`;
+  const show=winsRows.slice(0,10), rest=winsRows.slice(10);
+  document.getElementById('winsTable').innerHTML = `<table class="dtable"><thead><tr><th>#</th><th>Keyword</th><th class="tr">Position</th><th class="tr">Impressions</th><th class="tr">Clicks</th><th class="tr">CTR</th><th>Opportunity</th></tr></thead><tbody id="wins-tb">${show.map(mk).join('')}${rest.length?`<tr class="more-row" onclick="expandWins()"><td colspan="7">▾ Show ${rest.length} more</td></tr>`:''}</tbody></table>`;
+}
+function expandWins(){
+  const rest=winsRows.slice(10); const tb=document.getElementById('wins-tb'); const mr=tb.querySelector('.more-row');
+  rest.forEach((r,i)=>{ const tr=document.createElement('tr'); tr.innerHTML=`<td>${i+11}</td><td style="font-weight:500">${esc(r.query)}</td><td class="tr tm">${r.position?.toFixed(1)}</td><td class="tr">${fmtNum(r.impressions)}</td><td class="tr">${r.clicks}</td><td class="tr" style="color:var(--subtle)">${(r.ctr*100).toFixed(2)}%</td><td><span class="mini-bar"><i style="width:${Math.min(100,r.opportunity/winsMax*100)}%;background:var(--good)"></i></span> <span style="font-size:11px;color:var(--subtle)">${fmtNum(r.opportunity)}</span></td>`; tb.insertBefore(tr,mr); });
+  mr.remove();
+}
+
+/* ============================================================
+   WEEKLY METRICS SCORECARD
+   ============================================================ */
+function renderWeeklyMetrics(){
+  // Auto-fetched from Google Sheets takes priority; manual config is the fallback
+  const wm = DATA?.weekly_metrics || CFG?.[CFG.active_quarter]?.weekly_metrics;
+  const el = document.getElementById('weeklyTable');
+  const noteEl = document.getElementById('weeklyNote');
+  if(!el) return;
+  if(!wm || !wm.weeks || !wm.rows || !wm.rows.length){
+    el.innerHTML = '<p style="color:var(--subtle);font-size:13px;padding:8px 0">Add <code>weekly_metrics</code> to config-pillar.json to enable this table.</p>';
+    return;
+  }
+
+  const weeks = wm.weeks;
+  const rows = wm.rows;
+
+  // Update note
+  const filled = rows.reduce((s,r)=>{
+    const v=r.values||[]; return s+v.filter(x=>x!==null&&x!==undefined&&x!=='').length;
+  },0);
+  const total = rows.length * weeks.length;
+  if(noteEl) noteEl.textContent = `${weeks.length} weeks · ${filled}/${total} cells filled`;
+
+  // Group separator labels
+  const GROUP_LABELS = { traffic:'Traffic', pipeline:'Pipeline', llm:'LLM', branded:'Branded Split' };
+  let lastGroup = null;
+  let bodyHtml = '';
+  for(const r of rows){
+    if(r.group && r.group !== lastGroup){
+      lastGroup = r.group;
+      const lbl = GROUP_LABELS[r.group] || r.group;
+      bodyHtml += `<tr class="wm-group-label"><td class="wm-metric" style="font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--subtle);font-weight:700;background:var(--surface-alt)" colspan="${1+weeks.length}">${lbl}</td></tr>`;
+    }
+    const cells = (r.values || []).map((v,i)=>{
+      if(v === null || v === undefined || v === '') return `<td class="wm-null">—</td>`;
+      const fmt = typeof v === 'number' && v >= 1000 ? fmtNum(v) : (typeof v === 'number' ? String(v) : esc(String(v)));
+      return `<td>${fmt}</td>`;
+    });
+    // pad if fewer values than weeks
+    while(cells.length < weeks.length) cells.push('<td class="wm-null">—</td>');
+    bodyHtml += `<tr class="wm-group-${r.group||''}"><td class="wm-metric">${esc(r.metric)}</td>${cells.join('')}</tr>`;
+  }
+
+  el.innerHTML = `<div class="wm-wrap"><table class="wm-table">
+    <thead><tr>
+      <th style="text-align:left;min-width:160px">Metric</th>
+      ${weeks.map(w=>`<th class="wm-week-head">${esc(w)}</th>`).join('')}
+    </tr></thead>
+    <tbody>${bodyHtml}</tbody>
+  </table></div>`;
+}
+
+/* ============================================================
+   8 · AI CAREER COACHING
+   ============================================================ */
+function renderCoaching(s){
+  const C = s.coaching || {};
+  const has = C.read || (C.work&&C.work.length) || (C.risk&&C.risk.length) || (C.moves&&C.moves.length) || C.close;
+  const el = document.getElementById('coachSection');
+  if(!has){
+    el.innerHTML = `<p class="c-eyebrow">✧ AI Career Coaching</p>
+      <h2>${esc(s.owner)} — Content Pillar</h2>
+      <p class="c-sub">Acting-CMO read. Blunt on purpose.</p>
+      <div class="coach-empty">Sophia fills this in before each 1:1. Add under <code style="color:#cdd6e6">coaching</code> in config-pillar.json.</div>`;
+    return;
+  }
+  el.innerHTML = `
+    <p class="c-eyebrow">✧ AI Career Coaching</p>
+    <h2>${esc(s.owner)} — Content Pillar</h2>
+    <p class="c-sub">Acting-CMO read. Blunt on purpose.</p>
+    ${C.read?`<p class="c-read">${esc(C.read)}</p>`:''}
+    <div class="c-grid">
+      <div class="c-block work"><h3>What's working</h3><ul>${(C.work||[]).map(x=>`<li>${esc(x)}</li>`).join('')||'<li>—</li>'}</ul></div>
+      <div class="c-block risk"><h3>The problems</h3><ul>${(C.risk||[]).map(x=>`<li>${esc(x)}</li>`).join('')||'<li>—</li>'}</ul></div>
+    </div>
+    ${(C.moves&&C.moves.length)?`<div class="c-block moves"><h3>Do this week</h3><ul>${C.moves.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`:''}
+    ${C.close?`<p class="c-close">${esc(C.close)}</p>`:''}`;
+}
+
+/* ============================================================
+   RENDER ORCHESTRATION
+   ============================================================ */
+function renderReport(s){
+  renderNorthStar(s);
+  renderPacing(s);
+  renderMetrics(s);
+  renderRocks(s);
+  renderAgenda(s);
+  renderClickUp();
+  renderResp(s);
+  renderLeading(s);
+  renderLLMV();
+  renderPerformance();
+  renderGSC();
+  renderDecay();
+  renderWins();
+  renderWeeklyMetrics();
+  renderCoaching(s);
+  document.getElementById('footLeft').textContent = 'Search Atlas · Content Pillar · 1:1 with ' + (CFG?.one_on_one_with||'Sophia Deluz-Bhan');
+  document.getElementById('freshness').textContent = 'Data as of ' + parseD(s.asOf).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+}
+
+/* ============================================================
+   VERSION ARCHIVE (date drop-down)
+   ============================================================ */
+const clone=o=>JSON.parse(JSON.stringify(o));
+function versionsLoad(){ try{ const v=JSON.parse(localStorage.getItem(VKEY)); return v&&typeof v==='object'?v:{}; }catch(e){ return {}; } }
+function versionsSave(m){ try{ localStorage.setItem(VKEY, JSON.stringify(m)); }catch(e){} }
+
+function initVersions(){
+  let versions = versionsLoad();
+  versions[LIVE.asOf] = clone(LIVE);
+  versionsSave(versions);
+
+  const sel=document.getElementById('verSelect');
+  const badge=document.getElementById('verBadge');
+  const banner=document.getElementById('verBanner');
+
+  function refreshOptions(){
+    versions = versionsLoad();
+    const dates = Object.keys(versions).sort((a,b)=>b.localeCompare(a));
+    sel.innerHTML = dates.map(d=>`<option value="${d}">${longDate(d)}${d===LIVE.asOf?' — current':''}</option>`).join('');
+  }
+  function show(dateStr){
+    const v = versionsLoad();
+    const s = v[dateStr];
+    if(!s) return;
+    renderReport(s);
+    const isCurrent = dateStr===LIVE.asOf;
+    badge.textContent = isCurrent?'Live':'Archived';
+    badge.className = 'ver-badge '+(isCurrent?'live':'arch');
+    if(isCurrent){ banner.hidden=true; }
+    else{
+      banner.hidden=false;
+      banner.innerHTML = `Viewing the archived version from <b>${longDate(dateStr)}</b> — read-only snapshot. <a href="#" id="verBack">Back to current →</a>`;
+      document.getElementById('verBack').addEventListener('click', e=>{ e.preventDefault(); sel.value=LIVE.asOf; show(LIVE.asOf); });
+    }
+    sel.value = dateStr;
+  }
+  refreshOptions();
+  show(LIVE.asOf);
+  sel.addEventListener('change', ()=>show(sel.value));
+
+  document.getElementById('verSave').addEventListener('click', e=>{
+    const v=versionsLoad(); v[LIVE.asOf]=clone(LIVE); versionsSave(v);
+    refreshOptions(); show(LIVE.asOf);
+    const b=e.target, o=b.textContent; b.textContent='Saved ✓'; setTimeout(()=>b.textContent=o,1400);
+  });
+  document.getElementById('verReset').addEventListener('click', ()=>{
+    if(confirm("Clear all saved report versions from this browser?")){ localStorage.removeItem(VKEY); location.reload(); }
+  });
+}
+
+/* ============================================================
+   LOAD + AUTO-REFRESH
+   ============================================================ */
+async function loadData(){
+  const [cr,dr] = await Promise.all([fetch('config-pillar.json?t='+Date.now()), fetch('data.json?t='+Date.now())]);
+  CFG = await cr.json();
+  DATA = await dr.json();
+  LIVE = buildLive();
+}
+function scheduleNext(){
+  nextAt = Date.now()+INTERVAL;
+  clearInterval(window._ri); clearInterval(window._ci);
+  window._ri = setInterval(doRefresh, INTERVAL);
+  window._ci = setInterval(()=>{
+    const r=Math.max(0,nextAt-Date.now()); const m=Math.floor(r/60000), sec=Math.floor((r%60000)/1000);
+    document.getElementById('countdown').textContent = `Refreshes in ${m}:${String(sec).padStart(2,'0')}`;
+  },1000);
+}
+async function doRefresh(){
+  const btn=document.getElementById('btnRefresh'); const orig=btn.textContent; btn.textContent='⟳ Refreshing…';
+  try{
+    await loadData();
+    const versions=versionsLoad(); versions[LIVE.asOf]=clone(LIVE); versionsSave(versions);
+    renderReport(LIVE);
+    document.getElementById('verBadge').textContent='Live'; document.getElementById('verBadge').className='ver-badge live';
+    document.getElementById('verBanner').hidden=true;
+    const sel=document.getElementById('verSelect');
+    const dates=Object.keys(versions).sort((a,b)=>b.localeCompare(a));
+    sel.innerHTML = dates.map(d=>`<option value="${d}">${longDate(d)}${d===LIVE.asOf?' — current':''}</option>`).join('');
+    sel.value=LIVE.asOf;
+  } finally { btn.textContent=orig; scheduleNext(); }
+}
+
+async function init(){
+  try{
+    await loadData();
+    initVersions();
+    scheduleNext();
+    window.dispatchEvent(new Event('ctx-cfg-ready'));
+  }catch(e){
+    document.getElementById('tab-dashboard').innerHTML = `<div class="lead-card" style="max-width:420px;margin:60px auto;text-align:center"><div style="color:var(--bad);font-weight:700;margin-bottom:6px">Failed to load</div><div style="font-size:12px;color:var(--muted)">${esc(e.message)}</div><div style="font-size:11px;color:var(--subtle);margin-top:8px">Serve with: <code>python3 -m http.server 8080</code></div></div>`;
+  }
+}
+document.getElementById('btnRefresh').addEventListener('click', doRefresh);
+
+/* ============================================================
+   TABS
+   ============================================================ */
+document.querySelectorAll('.tabbar button').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('.tabbar button').forEach(b=>b.setAttribute('aria-selected', String(b===btn)));
+    document.querySelectorAll('.tab-panel').forEach(p=>p.classList.toggle('active', p.id==='tab-'+btn.dataset.tab));
+    window.scrollTo(0,0);
+  });
+});
+
+/* ============================================================
+   CONTEXT FOR AI (editable, saved in browser)
+   ============================================================ */
+(function contextStore(){
+  const load=()=>{ try{ const v=JSON.parse(localStorage.getItem(CKEY)); return Array.isArray(v)?v:null; }catch(e){ return null; } };
+  const save=a=>{ try{ localStorage.setItem(CKEY, JSON.stringify(a)); }catch(e){} };
+  let truths=null;
+
+  const listEl=document.getElementById('ctxList');
+  const inputEl=document.getElementById('ctxInput');
+
+  function ensureLoaded(){ if(truths===null){ const stored=load(); truths = stored!==null ? stored : (CFG?.context_truths ? CFG.context_truths.slice() : []); } }
+  function render(){
+    ensureLoaded();
+    if(!truths.length){ listEl.innerHTML = `<div class="ctx-empty">No statements yet. Add the first truth below.</div>`; return; }
+    listEl.innerHTML = truths.map((t,i)=>`<div class="ctx-item"><span class="ci-dot">✓</span><div class="ci-text">${esc(t)}</div><button class="ci-del" data-i="${i}" title="Remove">×</button></div>`).join('');
+    listEl.querySelectorAll('.ci-del').forEach(b=>b.addEventListener('click', ()=>{ truths.splice(+b.dataset.i,1); save(truths); render(); }));
+  }
+  function add(){ const v=inputEl.value.trim(); if(!v) return; ensureLoaded(); truths.push(v); save(truths); inputEl.value=''; render(); inputEl.focus(); }
+  document.getElementById('ctxAdd').addEventListener('click', add);
+  inputEl.addEventListener('keydown', e=>{ if(e.key==='Enter') add(); });
+  document.getElementById('ctxCopy').addEventListener('click', e=>{
+    ensureLoaded();
+    navigator.clipboard?.writeText(truths.map(t=>'- '+t).join('\n'));
+    const b=e.target, orig=b.textContent; b.textContent='Copied ✓'; setTimeout(()=>b.textContent=orig,1400);
+  });
+  window.addEventListener('ctx-cfg-ready', ()=>{ truths=null; render(); });
+  render();
+})();
+
+init();
+
+
+// ── Standalone overrides ────────────────────────────────────────────
+const __CFG__  = {"_note":"Manual sections live here. Auto sections (GSC, LLMV, decay, quick wins, ClickUp tasks) come from data.json via generate.py.","name":"Aleksandra Velickovic","role":"Content Manager","company":"Search Atlas / LinkGraph","one_on_one_with":"Sophia Deluz-Bhan","last_edited":"2026-06-18","active_quarter":"q2","north_star":"Rank #1 for 'agentic marketing' across Google, YouTube, and LLMs while recovering organic traffic to 16,900 clicks/28d and LLM visibility to 30%+ \u2014 all by September 30.","q2":{"label":"Q2 2026","period":"Apr 1 \u2013 Jun 30, 2026","start":"2026-04-01","end":"2026-06-30","status":"active","content_production":{"goal":360,"final":400.69,"status":"exceeded","note":"Exceeded Q2 goal by 11.3% (400.69 vs 360). Strategy shift to quality over volume worked.","scoring_model":"4k words = 1pt | LP = 3pt | case study = 3pt | brief = 1pt | email campaign = 1pt | news/thought leadership = 1pt | research = 1pt | LP edit = 1pt | guest post = 1pt","weekly_history":[{"week":"Mar 30\u2013Apr 5","points":29.84},{"week":"Apr 6\u201312","points":31.53},{"week":"Apr 13\u201319","points":37.63},{"week":"Apr 20\u201326","points":38.85},{"week":"Apr 27\u2013May 3","points":32.53},{"week":"May 4\u201310","points":40.01},{"week":"May 11\u201317","points":53.01},{"week":"May 18\u201324","points":56.9},{"week":"May 25\u201331","points":37.65},{"week":"Jun 1\u20137","points":21.93},{"week":"Jun 8\u201314","points":20.82},{"week":"Jun 15\u201321","points":null},{"week":"Jun 22\u201328","points":null}]},"traffic_goal":{"label":"Organic Traffic Recovery","target":16900,"target_unit":"clicks / 28d","current":13978,"source":"GSC (live)","deadline":"2026-06-30","baseline_note":"Q2 traffic peak: 16,900 clicks/28d. Current: 13,978 (\u221217.3%). Position improved 33.4 \u2192 28.2 \u2014 CTR is the gap (AI Mode click displacement)."},"leading_indicators":[{"group":"Content Output","items":[{"label":"Content weighted points","target":30,"actual":30.8,"unit":"/ week","source":"CNT Scorecard","note":"Q2 avg: 30.8 pts/wk (400.69 \u00f7 13 wks)"},{"label":"SA articles published","target":5,"actual":null,"unit":"/ week","source":"ClickUp"}]},{"group":"AI / LLM Visibility","items":[{"label":"LLM Visibility score","target":50,"actual":10,"unit":"%","source":"SearchAtlas LLMV (auto)","note":"Was 50.8% at Q2 start \u2014 collapsed to 10%"}]}],"rocks":[{"id":"r1","title":"Publish 360 Weighted Content Pieces","owner":"Aleksandra Velickovic","status":"completed","pct":100,"tone":"good","due":"2026-07-01","link":"https://app.clickup.com/t/868j3h33f","notes":"Final: 400.69 pts \u2014 exceeded by 11.3%."},{"id":"r2","title":"Grow real non-branded organic share from 17% to 20%+","owner":"Aleksandra Velickovic","status":"in_progress","pct":50,"tone":"warn","due":null,"link":"https://app.clickup.com/t/868j3j4t9","notes":"GSC (Jun 2026): non-branded = 52.6% (7,379 / 14,040 clicks). Prior period: 47.7% \u2014 +4.9 pp improvement. Brand filter: searchatlas|search atlas|linkgraph|otto seo|atlas agent|manick bhan. Note: '17%' baseline may be from a different tool \u2014 align definition with Justin."},{"id":"r3","title":"Own 'Agentic Marketing'","owner":"Aleksandra Velickovic","status":"in_progress","pct":50,"tone":"warn","due":"2026-07-01","link":"https://app.clickup.com/t/868j9hq0c","notes":"AI CMO batch published June 2026. SERP ownership + LLM citations needed. (pct is a status estimate)"}],"agenda":[{"topic":"ContentGenius feedback delivery to Jason","type":"action_item","notes":"Quality delta vs. MCP workflow, recommended config"},{"topic":"OTTO implementation \u2014 who owns it day-to-day?","type":"decision","notes":"PMs overextended; needs an explicit daily owner for OTTO rollout"},{"topic":"LLM visibility recovery plan","type":"discussion","notes":"3 platforms at 0% \u2014 need content + technical strategy"},{"topic":"Tiered product launch content system","type":"update","notes":"Content deliverables per tier, ClickUp automation"},{"topic":"Cross-marketing task force relaunch","type":"action_item","notes":"Reform with Sahar + Ali \u2014 content to demand gen handoff"}],"weekly_metrics":{"_note":"Update values manually each week. Weeks are newest-first. Values: numbers or null.","weeks":["Jun 15-21","Jun 8-14","Jun 1-7","May 25-31","May 18-24","May 11-17"],"rows":[{"metric":"Clicks","group":"traffic","values":[null,null,null,null,null,null]},{"metric":"Impressions","group":"traffic","values":[null,null,null,null,null,null]},{"metric":"Traffic GA4","group":"traffic","values":[null,null,null,null,null,null]},{"metric":"Organic Trials","group":"pipeline","values":[null,null,null,null,null,null]},{"metric":"Organic Accounts","group":"pipeline","values":[null,null,null,null,null,null]},{"metric":"New Content Published","group":"pipeline","values":[null,null,null,null,null,null]},{"metric":"LLM Clicks","group":"llm","values":[null,null,null,null,null,null]},{"metric":"LLM Trials","group":"llm","values":[null,null,null,null,null,null]},{"metric":"Clicks Branded","group":"branded","values":[null,null,null,null,null,null]},{"metric":"Impressions Branded","group":"branded","values":[null,null,null,null,null,null]},{"metric":"Clicks Non-Branded","group":"branded","values":[null,null,null,null,null,null]},{"metric":"Impressions Non-Branded","group":"branded","values":[null,null,null,null,null,null]}]}},"q3":{"label":"Q3 2026","period":"Jul 1 \u2013 Sep 30, 2026","start":"2026-07-01","end":"2026-09-30","status":"planning","content_production":{"goal":420,"current":null,"unit":"weighted pts","source":"CNT Scorecard (manual \u2014 update weekly)","deadline":"2026-09-30","q2_baseline":400.69,"note":"Q3 = +5% growth over Q2 actual (400.69). Weekly target: ~33 pts/wk.","scoring_model":"4k words = 1pt | LP = 3pt | case study = 3pt | brief = 1pt | email campaign = 1pt | news/thought leadership = 1pt | research = 1pt | LP edit = 1pt | guest post = 1pt","scorecard_url":"https://docs.google.com/spreadsheets/d/1IlrmXGJqHjiTtED0qu5QgnDRzD18kIW1kmBuRzZhcSI/edit?usp=sharing","weekly_history":[{"week":"Jul 7\u201313","points":null},{"week":"Jul 14\u201320","points":null},{"week":"Jul 21\u201327","points":null},{"week":"Jul 28\u2013Aug 3","points":null},{"week":"Aug 4\u201310","points":null},{"week":"Aug 11\u201317","points":null},{"week":"Aug 18\u201324","points":null},{"week":"Aug 25\u201331","points":null},{"week":"Sep 1\u20137","points":null},{"week":"Sep 8\u201314","points":null},{"week":"Sep 15\u201321","points":null},{"week":"Sep 22\u201328","points":null},{"week":"Sep 29\u2013Oct 5","points":null}]},"traffic_goal":{"label":"Organic Traffic Recovery \u2014 Q3","target":16900,"target_unit":"clicks / 28d","current":13978,"source":"GSC (live)","deadline":"2026-09-30","baseline_note":"Q2 traffic peak: 16,900 clicks/28d. Current: 13,978 (\u221217.3%). Position improved 33.4 \u2192 28.2 \u2014 CTR is the gap (AI Mode click displacement). Q2 content closed at 400.69 pts (+11.3% vs goal)."},"leading_indicators":[{"group":"Content Output","items":[{"label":"Content weighted points","target":33,"actual":null,"unit":"/ week","source":"CNT Scorecard (manual)","note":"Q3 target: 420 pts (13 wks \u00d7 ~33/wk). Q2 avg was 30.8 pts/wk."},{"label":"SA articles published","target":5,"actual":null,"unit":"/ week","source":"ClickUp \u2014 SEO Content list"}]},{"group":"AI / LLM Visibility","items":[{"label":"LLM Visibility score","target":30,"actual":10,"unit":"%","source":"SearchAtlas LLMV (auto)","note":"Was 50.8% \u2014 target: recover to 30% across 3+ platforms by Sept 30."}]}],"rocks":[{"id":"r1","title":"Rank #1 for 'agentic marketing' in Google, YouTube, and LLMs","owner":"Aleksandra Velickovic","status":"in_progress","pct":50,"tone":"warn","due":"2026-09-30","link":"https://app.clickup.com/t/868j5y39p","notes":"Content strategy: own the term SA is building its rebrand around. Pillar content + LLM citation play."},{"id":"r2","title":"Grow non-branded organic share from 17% to 20%+","owner":"Aleksandra Velickovic","status":"in_progress","pct":50,"tone":"warn","due":"2026-09-30","link":"https://app.clickup.com/t/868j3j4t9","notes":"CTR gap from AI Mode displacement. Quick wins: 'google ai mode' at 39K impressions, pos 6.2."},{"id":"r3","title":"Recover LLM visibility to 30%+ across 3+ platforms","owner":"Aleksandra Velickovic","status":"not_started","pct":0,"tone":"neutral","due":"2026-09-30","link":"https://app.clickup.com/9011399348/v/l/8chy2nm-7211","notes":"Currently 10%. Gemini, Perplexity, Google AI Mode all at 0%. Aligned to rebrand: SA must appear in AI answers for its own positioning terms."},{"id":"r4","title":"Deliver 420 weighted content points","owner":"Aleksandra Velickovic","status":"not_started","pct":0,"tone":"neutral","due":"2026-09-30","link":"https://app.clickup.com/t/868j3h33f","notes":"Q2 baseline: 400.69 pts. Q3 target: 420 (~33/wk). Content mix to support rebrand pillars: agentic marketing, self-healing, coworker."}],"agenda":[{"topic":"Rebrand content roadmap \u2014 Q3 alignment","type":"discussion","notes":"Positioning: 'growth engine that runs your marketing while you sleep.' What does Q3 content prioritize \u2014 agentic marketing SERP, LLM citations, or rebrand pillar pages?"},{"topic":"Own 'agentic marketing' \u2014 content plan","type":"action_item","notes":"Rock 868j9hq0c. Pillar content cluster, Wikipedia article, LLM citation strategy. Who owns the execution?"},{"topic":"OTTO implementation \u2014 who owns it day-to-day?","type":"decision","notes":"PMs overextended; needs an explicit daily owner for OTTO rollout across client accounts"},{"topic":"LLM visibility recovery to 30% \u2014 content + tech ask","type":"decision","notes":"3 platforms at 0%: Gemini, Perplexity, Google AI Mode. Content can address the citation gap; technical changes needed for the rest."},{"topic":"ContentGenius vs MCP quality gap: roadmap ask","type":"action_item","notes":"Q2 feedback delivered to Jason. Q3 ask: what's the fix timeline and who tests it?"}]},"clickup_links":{"seo_content_open":"https://app.clickup.com/9011399348/v/l/8chy2nm-758171","general_content_open":"https://app.clickup.com/9011399348/v/l/6-901110742485-1","rocks_open":"https://app.clickup.com/9011399348/v/l/8chy2nm-7211","eod_open":"https://app.clickup.com/9011399348/chat/r/8chy2nm-1616691"},"cnt_scorecard":"https://docs.google.com/spreadsheets/d/1IlrmXGJqHjiTtED0qu5QgnDRzD18kIW1kmBuRzZhcSI/edit?usp=sharing","ongoing_responsibilities":[{"t":"Content strategy & production","d":"SA blog and landing page content strategy + production"},{"t":"Team management","d":"Leads Milena, Emanuel, Andresa, Mateus, James"},{"t":"Cross-team collaboration","d":"Works across the broader marketing team"},{"t":"ContentGenius oversight","d":"Quality oversight and feedback loop to product (Jason)"},{"t":"Client content delivery","d":"20+ active clients across the LinkGraph network"},{"t":"SEO performance monitoring","d":"GSC + SearchAtlas tracking for SA content"},{"t":"LLM / AI visibility strategy","d":"Content strategy for Search Atlas brand visibility in AI answers"}],"context_truths":["Aleksandra Velickovic is Content Manager at Search Atlas / LinkGraph, reporting to Justin Rondeau (Head of Growth).","Content team: Milena, Emanuel, Andresa, Mateus, James \u2014 plus collaboration with the broader marketing team.","Q2 2026 strategy: quality over volume, landing pages as primary content type, improved intent targeting.","Q2 2026 goal was 360 weighted content points. Final close: 400.69 pts (+11.3% above goal).","Scoring model: 4k-word article = 1pt, landing page = 3pt, case study = 3pt, everything else (brief/email/news/research/LP edit/guest post) = 1pt.","Q3 2026 targets: 420 weighted pts (~33/wk), 5 SA articles/week, LLM visibility recovered to 30%+ across 3+ platforms, organic traffic recovered to 16,900 clicks/28d.","LLM visibility collapsed from 50.8% to 10% between Q2 start and now (Jun 2026). Only ChatGPT (40%) and Copilot (20%) show any visibility; Gemini, Perplexity, and Google AI Mode are all at 0%.","Organic clicks are down ~17% vs the Q2 peak (16,900 \u2192 ~13,978 over 28 days), despite average position improving from 33.4 to 28.2 \u2014 the gap is CTR, likely from AI Mode click displacement.","18 pages are in 3-period content decay as of June 2026.","Top quick-win keyword: 'google ai mode' at ~39K impressions/28d, average position 6.2, only 8 clicks \u2014 a clear CTR/title-tag opportunity.","AI CMO batch (9 articles) published mid-June 2026 as part of the 'agentic marketing' positioning push.","ContentGenius output quality lags the Claude Code MCP workflow; feedback was delivered to Jason (product) as a live Q3 priority.","Search Atlas rebrand positioning (June 2026): 'The growth engine that runs your marketing while you sleep' \u2014 never call it a 'tool', avoid antithesis framing ('not X, it's Y')."],"coaching":{"read":"","work":[],"risk":[],"moves":[],"close":""}};
+const __DATA__ = {"meta":{"generated_at":"2026-06-18T20:18:54.637541+00:00","version":"2.2.0","sources":{"clickup_published":"connected","clickup":"connected","contentgenius":"skipped","llm_visibility":"connected","gsc":"connected","content_decay":"connected","quick_wins":"connected","content_performance":"connected","local_fs":"connected","clickup_tasks":"connected","sheets_scorecard":"connected"}},"clickup_stats":{"articles_published_7d":9,"generated_at":"2026-06-18T20:18:40.818656+00:00","window_days":7,"tasks":[{"title":"Bulk Keyword Research Tools","list":"SEO Content","updated":"2026-06-12"},{"title":"What is Multiplayer Marketing?","list":"General Content","updated":"2026-06-15"},{"title":"AI CMO vs Fractional CMO: How to Choose the Right Model","list":"General Content","updated":"2026-06-15"},{"title":"How Agencies Use an AI CMO to Manage More Clients","list":"General Content","updated":"2026-06-15"},{"title":"AI CMO KPIs: How to Measure AI Marketing Performance","list":"General Content","updated":"2026-06-15"},{"title":"AI Marketing Automation Mistakes: 7 Failure Modes","list":"General Content","updated":"2026-06-15"},{"title":"AI CMO for Startups: The Lean Team Setup Guide","list":"General Content","updated":"2026-06-15"},{"title":"AI CMO vs Marketing Agency: Cost, Tasks, and Transition","list":"General Content","updated":"2026-06-15"},{"title":"How to Build an AI Marketing Stack That Actually Works","list":"General Content","updated":"2026-06-17"}]},"llm_visibility":{"domain":"searchatlas.com","generated_at":"2026-06-18T10:45:00Z","overall_visibility":10,"visibility_change":-40.847,"visibility_previous":50.847,"sentiment_score":86.3,"sentiment_change":1.8,"total_mentions":184,"previous_mentions":205,"platforms":[{"platform":"ChatGPT","visibility_score":40,"sentiment_score":84,"topics":"2/5"},{"platform":"Copilot","visibility_score":20,"sentiment_score":85,"topics":"1/5"},{"platform":"Gemini","visibility_score":0,"sentiment_score":88,"topics":"0/5"},{"platform":"Perplexity","visibility_score":0,"sentiment_score":85,"topics":"0/5"},{"platform":"Google AI Mode","visibility_score":0,"sentiment_score":88,"topics":"0/5"}]},"gsc":{"generated_at":"2026-06-18T20:18:34.035737+00:00","period":"2026-05-19 to 2026-06-15","current":{"clicks":14040,"impressions":5307186,"ctr":0.26,"position":28.5},"prior":{"clicks":17015,"impressions":5515700,"ctr":0.31,"position":33.6},"change":{"clicks_pct":-17.48,"impressions_pct":-3.78,"ctr_delta":-0.05,"position_change":-5.1},"branded_split":{"brand_filter":"searchatlas|search atlas|linkgraph|otto seo|atlas agent|manick bhan","current":{"branded_clicks":7348,"nonbranded_clicks":6692,"nonbranded_pct":47.7},"prior":{"branded_clicks":9543,"nonbranded_clicks":7472,"nonbranded_pct":43.9},"nonbranded_ppt_change":3.8}},"content_performance":{"generated_at":"2026-06-18T20:18:35.088928+00:00","note":"Current 28d (2026-05-19\u20132026-06-15) vs prior 28d (2026-04-21\u20132026-05-18). Source: GSC.","top_pages":[{"page":"https://searchatlas.com/","slug":"Homepage","clicks":6125,"impressions":284922,"ctr":2.15,"position":14.2},{"page":"https://searchatlas.com/blog/ahrefs-features/","slug":"Ahrefs Features (blog)","clicks":862,"impressions":67134,"ctr":1.28,"position":8.9},{"page":"https://searchatlas.com/otto-seo/","slug":"OTTO SEO","clicks":837,"impressions":112038,"ctr":0.75,"position":22.3},{"page":"https://searchatlas.com/ai-search-seo-mastery-course/","slug":"AI Search SEO Mastery Course","clicks":633,"impressions":1747,"ctr":36.23,"position":5.6},{"page":"https://searchatlas.com/pricing/","slug":"Pricing","clicks":340,"impressions":68688,"ctr":0.49,"position":10.9},{"page":"https://dashboard.searchatlas.com/login","slug":"dashboard.searchatlas.com/login","clicks":238,"impressions":3279,"ctr":7.26,"position":5.6},{"page":"https://searchatlas.com/da-checker/","slug":"DA Checker","clicks":229,"impressions":22569,"ctr":1.01,"position":13.4},{"page":"https://searchatlas.com/careers/","slug":"Careers","clicks":193,"impressions":17385,"ctr":1.11,"position":2.5},{"page":"https://searchatlas.com/blog/geo/","slug":"GEO (blog)","clicks":175,"impressions":17173,"ctr":1.02,"position":25.5},{"page":"https://searchatlas.com/blog/aio/","slug":"Blog: Aio","clicks":172,"impressions":8163,"ctr":2.11,"position":12.6}],"climbing":[{"page":"https://searchatlas.com/blog/geo/","slug":"GEO (blog)","clicks_prior":72,"clicks_now":175,"growth_pct":143.1,"is_new":false,"position":25.5},{"page":"https://searchatlas.com/blog/aeo-traditional-seo/","slug":"AEO vs Traditional SEO (blog)","clicks_prior":39,"clicks_now":90,"growth_pct":130.8,"is_new":false,"position":20.3},{"page":"https://searchatlas.com/da-checker/","slug":"DA Checker","clicks_prior":125,"clicks_now":229,"growth_pct":83.2,"is_new":false,"position":13.4},{"page":"https://searchatlas.com/site-explorer/","slug":"Site Explorer","clicks_prior":41,"clicks_now":71,"growth_pct":73.2,"is_new":false,"position":10.6},{"page":"https://searchatlas.com/blog/how-to-find-what-people-are-searching-for/","slug":"How to Find What People Search For (blog)","clicks_prior":25,"clicks_now":43,"growth_pct":72.0,"is_new":false,"position":12.1},{"page":"https://searchatlas.com/blog/perplexity-ai-alternatives/","slug":"Blog: Perplexity Ai Alternatives","clicks_prior":0,"clicks_now":103,"growth_pct":null,"is_new":true,"position":9.1},{"page":"https://searchatlas.com/atlas-agent/","slug":"Atlas Agent (rebrand page)","clicks_prior":0,"clicks_now":98,"growth_pct":null,"is_new":true,"position":4.4},{"page":"https://searchatlas.com/blog/author/manick/","slug":"Blog: Author","clicks_prior":0,"clicks_now":42,"growth_pct":null,"is_new":true,"position":6.3},{"page":"https://searchatlas.com/patentbrain/","slug":"Patentbrain","clicks_prior":0,"clicks_now":38,"growth_pct":null,"is_new":true,"position":5.7},{"page":"https://searchatlas.com/smart-ads/","slug":"Smart Ads","clicks_prior":0,"clicks_now":37,"growth_pct":null,"is_new":true,"position":30.3}]},"content_decay":[{"page":"https://searchatlas.com/careers/","slug":"Careers","clicks_now":193,"clicks_p2":287,"clicks_p3":364,"loss":171,"position_now":2.5,"trend":"Rankings stable (possible CTR or demand decline)"},{"page":"https://dashboard.searchatlas.com/login","slug":"dashboard.searchatlas.com/login","clicks_now":238,"clicks_p2":360,"clicks_p3":323,"loss":85,"position_now":5.6,"trend":"Rankings declining"},{"page":"https://searchatlas.com/otto-google-ads/","slug":"OTTO Google Ads","clicks_now":7,"clicks_p2":74,"clicks_p3":83,"loss":76,"position_now":22.1,"trend":"Rankings improved but traffic still dropped (possible search demand decline)"},{"page":"https://searchatlas.com/affiliate-program/","slug":"Affiliate Program","clicks_now":36,"clicks_p2":46,"clicks_p3":73,"loss":37,"position_now":30.0,"trend":"Rankings improved but traffic still dropped (possible search demand decline)"},{"page":"https://searchatlas.com/blog/perplexityai-alternatives/","slug":"Blog: Perplexityai Alternatives","clicks_now":10,"clicks_p2":107,"clicks_p3":46,"loss":36,"position_now":7.6,"trend":"Rankings declining"},{"page":"https://searchatlas.com/atlas-brain/","slug":"Atlas Brain","clicks_now":57,"clicks_p2":289,"clicks_p3":77,"loss":20,"position_now":7.6,"trend":"Rankings declining"},{"page":"https://searchatlas.com/blog/keyword-research-api/","slug":"Keyword Research API","clicks_now":18,"clicks_p2":24,"clicks_p3":38,"loss":20,"position_now":19.7,"trend":"Rankings improved but traffic still dropped (possible search demand decline)"},{"page":"https://searchatlas.com/search-atlas-refund-policy/","slug":"Search Atlas Refund Policy","clicks_now":13,"clicks_p2":37,"clicks_p3":29,"loss":16,"position_now":6.6,"trend":"Rankings declining"},{"page":"https://searchatlas.com/about-us/","slug":"About Us","clicks_now":52,"clicks_p2":71,"clicks_p3":65,"loss":13,"position_now":2.6,"trend":"Rankings stable (possible CTR or demand decline)"},{"page":"https://searchatlas.com/additional-help/","slug":"Additional Help","clicks_now":47,"clicks_p2":47,"clicks_p3":59,"loss":12,"position_now":13.5,"trend":"Rankings improved but traffic still dropped (possible search demand decline)"},{"page":"https://searchatlas.com/blog/vibe-seo/","slug":"Blog: Vibe Seo","clicks_now":11,"clicks_p2":25,"clicks_p3":23,"loss":12,"position_now":8.7,"trend":"Rankings declining"},{"page":"https://status.searchatlas.com/","slug":"Status Page","clicks_now":15,"clicks_p2":30,"clicks_p3":26,"loss":11,"position_now":6.1,"trend":"Rankings stable (possible CTR or demand decline)"},{"page":"https://searchatlas.com/blog/prowritingaid-alternatives/","slug":"Blog: Prowritingaid Alternatives","clicks_now":14,"clicks_p2":11,"clicks_p3":24,"loss":10,"position_now":8.1,"trend":"Rankings declining"},{"page":"https://searchatlas.com/blog/localfalcon-vs-localviking/","slug":"LocalFalcon vs LocalViking","clicks_now":9,"clicks_p2":11,"clicks_p3":19,"loss":10,"position_now":10.1,"trend":"Rankings stable (possible CTR or demand decline)"},{"page":"https://searchatlas.com/otto-pixel/","slug":"Otto Pixel","clicks_now":22,"clicks_p2":41,"clicks_p3":31,"loss":9,"position_now":12.2,"trend":"Rankings declining"},{"page":"https://searchatlas.com/terms-of-use/","slug":"Terms Of Use","clicks_now":9,"clicks_p2":8,"clicks_p3":17,"loss":8,"position_now":8.2,"trend":"Rankings improved but traffic still dropped (possible search demand decline)"},{"page":"https://searchatlas.com/press-release-software/","slug":"Press Release Software","clicks_now":18,"clicks_p2":15,"clicks_p3":25,"loss":7,"position_now":13.0,"trend":"Rankings improved but traffic still dropped (possible search demand decline)"},{"page":"https://searchatlas.com/blog/agentic-seo/","slug":"Blog: Agentic Seo","clicks_now":7,"clicks_p2":13,"clicks_p3":13,"loss":6,"position_now":13.8,"trend":"Rankings declining"},{"page":"https://searchatlas.com/blog/uberall-vs-yext/","slug":"Blog: Uberall Vs Yext","clicks_now":7,"clicks_p2":6,"clicks_p3":13,"loss":6,"position_now":14.5,"trend":"Rankings declining"},{"page":"https://searchatlas.com/blog/track-traffic-google-gemini/","slug":"Blog: Track Traffic Google Gemini","clicks_now":11,"clicks_p2":23,"clicks_p3":16,"loss":5,"position_now":13.8,"trend":"Rankings stable (possible CTR or demand decline)"},{"page":"https://searchatlas.com/blog/google-news-seo/","slug":"Blog: Google News Seo","clicks_now":8,"clicks_p2":0,"clicks_p3":13,"loss":5,"position_now":17.7,"trend":"Rankings declining"},{"page":"https://searchatlas.com/case-studies/","slug":"Case Studies","clicks_now":7,"clicks_p2":15,"clicks_p3":12,"loss":5,"position_now":5.8,"trend":"Rankings improved but traffic still dropped (possible search demand decline)"},{"page":"https://searchatlas.com/blog/wordpress-seo/","slug":"WordPress SEO","clicks_now":19,"clicks_p2":19,"clicks_p3":23,"loss":4,"position_now":17.9,"trend":"Rankings improved but traffic still dropped (possible search demand decline)"},{"page":"https://searchatlas.com/blog/advanced-seo-course/","slug":"Blog: Advanced Seo Course","clicks_now":18,"clicks_p2":35,"clicks_p3":22,"loss":4,"position_now":17.0,"trend":"Rankings improved but traffic still dropped (possible search demand decline)"},{"page":"https://searchatlas.com/blog/brightedge-review/","slug":"Blog: Brightedge Review","clicks_now":10,"clicks_p2":0,"clicks_p3":14,"loss":4,"position_now":18.1,"trend":"Rankings declining"},{"page":"https://searchatlas.com/blog/","slug":"Blog: index","clicks_now":23,"clicks_p2":26,"clicks_p3":26,"loss":3,"position_now":28.3,"trend":"Rankings improved but traffic still dropped (possible search demand decline)"},{"page":"https://searchatlas.com/blog/twitter-cards/","slug":"Blog: Twitter Cards","clicks_now":20,"clicks_p2":22,"clicks_p3":23,"loss":3,"position_now":10.1,"trend":"Rankings stable (possible CTR or demand decline)"},{"page":"https://searchatlas.com/business/how-i-scaled-search-atlas-from-2m-to-3m-arr/","slug":"2M\u21923M ARR Story","clicks_now":8,"clicks_p2":11,"clicks_p3":11,"loss":3,"position_now":6.1,"trend":"Rankings stable (possible CTR or demand decline)"}],"quick_wins":[{"query":"google ai mode","position":6.2,"impressions":39213,"clicks":8,"ctr":0.0002,"opportunity":4305},{"query":"guidetoblog.com","position":6.4,"impressions":6562,"clicks":17,"ctr":0.0026,"opportunity":705},{"query":"site explorer","position":7.5,"impressions":6019,"clicks":16,"ctr":0.0027,"opportunity":646},{"query":"seo automation","position":11.8,"impressions":2862,"clicks":7,"ctr":0.0024,"opportunity":308},{"query":"localo","position":7.5,"impressions":2615,"clicks":4,"ctr":0.0015,"opportunity":284},{"query":"agency seo software","position":11.7,"impressions":2356,"clicks":6,"ctr":0.0025,"opportunity":253},{"query":"seo automation platform","position":4.8,"impressions":2309,"clicks":7,"ctr":0.003,"opportunity":247},{"query":"enterprise seo agency software","position":10.4,"impressions":2037,"clicks":5,"ctr":0.0025,"opportunity":219},{"query":"seo automation software","position":10.0,"impressions":1793,"clicks":9,"ctr":0.005,"opportunity":188},{"query":"bulk da pa checker","position":10.1,"impressions":1753,"clicks":26,"ctr":0.0148,"opportunity":167},{"query":"website explorer","position":4.9,"impressions":1310,"clicks":7,"ctr":0.0053,"opportunity":137},{"query":"atlas dashboard","position":5.8,"impressions":1238,"clicks":6,"ctr":0.0048,"opportunity":130}],"content_pipeline":{"source":"clickup","generated_at":"2026-06-18T20:18:53.713712+00:00","summary":{"not_begun":54,"in_progress":0,"needs_review":0,"completed":200,"total":254},"articles":[{"id":"868jeakac","title":"Agentic Local Marketing: Autonomous Agents for GBP, Citations, Heatmaps","status":"Closed","list":"Agentic Marketing","updated":"2026-06-12"},{"id":"868jeax2j","title":"How to Build an Agentic Workflow for SEO","status":"Closed","list":"Agentic Marketing","updated":"2026-06-12"},{"id":"868jean2a","title":"Agentic Digital PR: How AI Agents Source, Pitch, and Place Coverage","status":"Closed","list":"Agentic Marketing","updated":"2026-06-12"},{"id":"868jeajjd","title":"Agentic Paid Media: AI Agents Running Google Ads from Brief to Bid","status":"Closed","list":"Agentic Marketing","updated":"2026-06-12"},{"id":"868ja5618","title":"Blog: \"What is Agentic Marketing?\" - Karim ","status":"Closed","list":"Agentic Marketing","updated":"2026-06-11"},{"id":"868japj8r","title":"What is a marketing agent","status":"Closed","list":"Agentic Marketing","updated":"2026-06-11"},{"id":"868japj7w","title":"Beginner's Guide to getting started with Agentic Marketing","status":"Closed","list":"Agentic Marketing","updated":"2026-06-11"},{"id":"868jea3pe","title":"Agentic SEO: The 2026 Operator's Playbook","status":"Closed","list":"Agentic Marketing","updated":"2026-06-11"},{"id":"868jevrh2","title":"8 Agentic Marketing Use Cases With Input/Output Specs","status":"Closed","list":"Agentic Marketing","updated":"2026-06-11"},{"id":"868jhvqvf","title":"Agentic Marketing Defined - Forbes","status":"Closed","list":"Agentic Marketing","updated":"2026-06-11"},{"id":"868jea68k","title":"Agentic AEO: How AI Agents Read, Cite, and Act on Your Content","status":"Closed","list":"Agentic Marketing","updated":"2026-06-11"},{"id":"868jea8a0","title":"The 12 Best AI Agents for SEO in 2026 (Tested by Workflow, Not Marketing Claims)","status":"Closed","list":"Agentic Marketing","updated":"2026-06-11"},{"id":"868jeaagj","title":"SEO Autopilot: How Autonomous SEO Agents Run Optimization End-to-End","status":"Closed","list":"Agentic Marketing","updated":"2026-06-11"},{"id":"868jeaf0g","title":"Agentic Marketing vs. Marketing Automation: What Actually Changed","status":"Closed","list":"Agentic Marketing","updated":"2026-06-11"},{"id":"868jeag1k","title":"Agentic Content Marketing: How Autonomous Agents Brief, Write, Optimize, and Deploy","status":"Closed","list":"Agentic Marketing","updated":"2026-06-11"},{"id":"868h61uqw","title":"What is On-page SEO (translation)","status":"Closed","list":"AI Content","updated":"2026-03-30"},{"id":"868h61up4","title":"What is Off-page SEO  (translation)","status":"Closed","list":"AI Content","updated":"2026-03-30"},{"id":"868h61uke","title":"What is SEO  (translation)","status":"Closed","list":"AI Content","updated":"2026-03-30"},{"id":"868hhqed8","title":"Part 3: Cons & Alternatives  \u2013 Full analysis + FAQs","status":"Closed","list":"AI Content","updated":"2026-03-02"},{"id":"868hhqeck","title":"Part 2: All 36 Features \u2013 Deep dive into every tool","status":"Closed","list":"AI Content","updated":"2026-03-02"}]},"clickup_tasks":{"generated_at":"2026-06-18T20:18:40.819063+00:00","overdue":[{"id":"868fr98j6","title":"SA: Case Studies Page","status":"on hold","list":"General Content","url":"https://app.clickup.com/t/868fr98j6","due":"2026-05-18","days_overdue":31}],"no_due_date":[{"id":"868k21nk9","title":"Investigate homepage traffic drop \u2014 -2,302 clicks (-27.5%)","status":"ready for writer","list":"SEO Content","url":"https://app.clickup.com/t/868k21nk9","due":null}],"assigned":[{"id":"868k1tg7q","title":"SA: AI CMO Coworker","status":"ready for writer","list":"General Content","url":"https://app.clickup.com/t/868k1tg7q","due":"2026-06-19"},{"id":"868fx7atg","title":"How Agencies Can Package AI Services","status":"in review","list":"General Content","url":"https://app.clickup.com/t/868fx7atg","due":"2026-06-19"}],"recently_completed":[{"id":"868k0v779","title":"How to Build an AI Marketing Stack That Actually Works","status":"published","list":"General Content","url":"https://app.clickup.com/t/868k0v779","closed":"2026-06-17"},{"id":"868k0v76v","title":"AI CMO vs Marketing Agency: Cost, Tasks, and Transition","status":"published","list":"General Content","url":"https://app.clickup.com/t/868k0v76v","closed":"2026-06-15"},{"id":"868k0v76d","title":"AI CMO for Startups: The Lean Team Setup Guide","status":"published","list":"General Content","url":"https://app.clickup.com/t/868k0v76d","closed":"2026-06-15"},{"id":"868k0v5zq","title":"AI Marketing Automation Mistakes: 7 Failure Modes","status":"published","list":"General Content","url":"https://app.clickup.com/t/868k0v5zq","closed":"2026-06-15"},{"id":"868k0v5kj","title":"AI CMO KPIs: How to Measure AI Marketing Performance","status":"published","list":"General Content","url":"https://app.clickup.com/t/868k0v5kj","closed":"2026-06-15"},{"id":"868k0v5d1","title":"How Agencies Use an AI CMO to Manage More Clients","status":"published","list":"General Content","url":"https://app.clickup.com/t/868k0v5d1","closed":"2026-06-15"},{"id":"868k0v5bb","title":"AI CMO vs Fractional CMO: How to Choose the Right Model","status":"published","list":"General Content","url":"https://app.clickup.com/t/868k0v5bb","closed":"2026-06-15"},{"id":"868k0mc9a","title":"What is Multiplayer Marketing?","status":"published","list":"General Content","url":"https://app.clickup.com/t/868k0mc9a","closed":"2026-06-15"},{"id":"868jeax2j","title":"How to Build an Agentic Workflow for SEO","status":"closed","list":"Agentic Marketing","url":"https://app.clickup.com/t/868jeax2j","closed":"2026-06-12"}]},"local_stats":{"active_clients":20,"total_drafts":173,"active_briefs":4,"clients":["5gstore","a-plus-landscaping","altify","anne-therese","axiom-hrs","esthetics-center","laser-center-of-marin","liveops","loti-labs","pekas-smith","portugal-pathways","print-and-cheques-now","searchatlas","the-hope-house","the-nash-casino","thera","trustlayer","us-self-storage","us-storage-units","zia-tile"]},"weekly_metrics":{"source":"google_sheets","generated_at":"2026-06-18T20:18:54.595862+00:00","weeks":["Jun 8-14","Jun 1-7","May 25-31","May 18-24","May 11-17","May 4-10"],"rows":[{"metric":"Clicks","group":"traffic","values":[3226,3651,3364,3821,3927,5012]},{"metric":"Impressions","group":"traffic","values":[1322635,1220298,1364710,1401187,1385144,1501794]},{"metric":"Traffic GA4","group":"traffic","values":[4003,4600,2328,5280,4862,5246]},{"metric":"Organic Trials","group":"pipeline","values":[43,42,17,61,56,89]},{"metric":"Organic Accounts","group":"pipeline","values":[null,null,null,null,null,null]},{"metric":"New Content Published","group":"pipeline","values":[20,21,37,56,53,40]},{"metric":"LLM Clicks","group":"llm","values":[null,null,null,null,176,183]},{"metric":"LLM Trials","group":"llm","values":[null,null,null,null,1,0]},{"metric":"Clicks Branded","group":"branded","values":[1789,2080,1879,2116,2232,3040]},{"metric":"Impressions Branded","group":"branded","values":[8079,9535,8429,11897,8978,14715]},{"metric":"Clicks Non-Branded","group":"branded","values":[1437,1571,1485,1705,1695,1972]},{"metric":"Impressions Non-Branded","group":"branded","values":[1314556,1210763,1356281,1389290,1376166,1487079]}]}};
+
+async function loadData(){
+  CFG  = __CFG__;
+  DATA = __DATA__;
+  LIVE = buildLive();
+}
+function scheduleNext(){ /* disabled in standalone export */ }
+async function doRefresh(){
+  renderReport(LIVE);
+  document.getElementById('countdown').textContent = 'Standalone export — data frozen at generation time';
+}
+
+</script>
+</body>
+</html>
