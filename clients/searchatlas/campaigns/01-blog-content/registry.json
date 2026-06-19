@@ -1,21 +1,47 @@
 {
   "client": "searchatlas",
   "campaign": "01-blog-content",
-  "generatedAt": "2026-06-16T20:58:52",
-  "totalFiles": 53,
+  "generatedAt": "2026-06-19T18:12:19",
+  "totalFiles": 57,
   "entries": [
     {
-      "id": "sa-editorial-guidelines-dpr",
-      "filename": "sa-editorial-guidelines-dpr.md",
-      "displayName": "SearchAtlas \u2014 Editorial Guidelines for Contributors",
+      "id": "README",
+      "filename": "README.md",
+      "displayName": "01 \u2014 Blog Content (AI CMO cluster)",
       "type": "other",
       "category": "other",
       "status": "delivered",
       "version": 1,
-      "path": "sa-editorial-guidelines-dpr.md",
-      "sizeBytes": 3907,
-      "sizeHuman": "3.8 KB",
-      "lastModified": "2026-06-12"
+      "path": "README.md",
+      "sizeBytes": 685,
+      "sizeHuman": "685 B",
+      "lastModified": "2026-06-19"
+    },
+    {
+      "id": "sa-editorial-guidelines-dpr",
+      "filename": "sa-editorial-guidelines-dpr.html",
+      "displayName": "Sa Editorial Guidelines Dpr",
+      "type": "research",
+      "category": "research",
+      "status": "delivered",
+      "version": 1,
+      "path": "research/sa-editorial-guidelines-dpr.html",
+      "sizeBytes": 5490,
+      "sizeHuman": "5.4 KB",
+      "lastModified": "2026-06-18"
+    },
+    {
+      "id": "sa-editorial-guidelines-dpr",
+      "filename": "sa-editorial-guidelines-dpr.md",
+      "displayName": "SearchAtlas \u2014 Editorial Guidelines for Contributors",
+      "type": "research",
+      "category": "research",
+      "status": "delivered",
+      "version": 1,
+      "path": "research/sa-editorial-guidelines-dpr.md",
+      "sizeBytes": 4347,
+      "sizeHuman": "4.2 KB",
+      "lastModified": "2026-06-18"
     },
     {
       "id": "ai-cmo-for-marketing-agencies-v1",
@@ -41,7 +67,7 @@
       "path": "drafts/ai-cmo-for-marketing-agencies-v2.md",
       "sizeBytes": 12176,
       "sizeHuman": "11.9 KB",
-      "lastModified": "2026-06-15"
+      "lastModified": "2026-06-18"
     },
     {
       "id": "ai-cmo-for-startups-and-lean-teams-v1",
@@ -67,7 +93,7 @@
       "path": "drafts/ai-cmo-for-startups-v2.md",
       "sizeBytes": 17958,
       "sizeHuman": "17.5 KB",
-      "lastModified": "2026-06-15"
+      "lastModified": "2026-06-18"
     },
     {
       "id": "ai-cmo-kpis-v1",
@@ -80,7 +106,7 @@
       "path": "drafts/ai-cmo-kpis-v1.md",
       "sizeBytes": 15870,
       "sizeHuman": "15.5 KB",
-      "lastModified": "2026-06-15"
+      "lastModified": "2026-06-18"
     },
     {
       "id": "ai-cmo-vs-fractional-cmo-v1",
@@ -106,7 +132,7 @@
       "path": "drafts/ai-cmo-vs-fractional-cmo-v2.md",
       "sizeBytes": 13145,
       "sizeHuman": "12.8 KB",
-      "lastModified": "2026-06-15"
+      "lastModified": "2026-06-18"
     },
     {
       "id": "ai-cmo-vs-marketing-agency-v1",
@@ -132,7 +158,7 @@
       "path": "drafts/ai-cmo-vs-marketing-agency-v2.md",
       "sizeBytes": 10542,
       "sizeHuman": "10.3 KB",
-      "lastModified": "2026-06-15"
+      "lastModified": "2026-06-18"
     },
     {
       "id": "ai-marketing-automation-mistakes-v1",
@@ -158,7 +184,20 @@
       "path": "drafts/ai-marketing-automation-mistakes-v2.md",
       "sizeBytes": 11455,
       "sizeHuman": "11.2 KB",
-      "lastModified": "2026-06-15"
+      "lastModified": "2026-06-18"
+    },
+    {
+      "id": "ai-recommendations-vs-execution-sample",
+      "filename": "ai-recommendations-vs-execution-sample.md",
+      "displayName": "The Difference Between AI Recommendations and AI Execution",
+      "type": "draft",
+      "category": "draft",
+      "status": "delivered",
+      "version": 1,
+      "path": "drafts/ai-recommendations-vs-execution-sample.md",
+      "sizeBytes": 7398,
+      "sizeHuman": "7.2 KB",
+      "lastModified": "2026-06-18"
     },
     {
       "id": "best-ai-cmo-tools-execution-depth-comparison-v1",
@@ -184,7 +223,7 @@
       "path": "drafts/best-ai-cmo-tools-v2.md",
       "sizeBytes": 12927,
       "sizeHuman": "12.6 KB",
-      "lastModified": "2026-06-15"
+      "lastModified": "2026-06-18"
     },
     {
       "id": "how-to-build-an-ai-marketing-stack-v1",
@@ -210,7 +249,7 @@
       "path": "drafts/how-to-build-an-ai-marketing-stack-v2.md",
       "sizeBytes": 16511,
       "sizeHuman": "16.1 KB",
-      "lastModified": "2026-06-15"
+      "lastModified": "2026-06-18"
     },
     {
       "id": "how-to-measure-ai-marketing-performance-v1",
@@ -236,7 +275,7 @@
       "path": "drafts/how-to-measure-ai-marketing-performance-v2.md",
       "sizeBytes": 12848,
       "sizeHuman": "12.5 KB",
-      "lastModified": "2026-06-15"
+      "lastModified": "2026-06-18"
     },
     {
       "id": "what-is-google-ai-mode",
@@ -253,19 +292,6 @@
     },
     {
       "id": "what-is-multiplayer-marketing-v1",
-      "filename": "what-is-multiplayer-marketing-v1.html",
-      "displayName": "What Is Multiplayer Marketing V1",
-      "type": "draft",
-      "category": "draft",
-      "status": "delivered",
-      "version": 1,
-      "path": "drafts/what-is-multiplayer-marketing-v1.html",
-      "sizeBytes": 16343,
-      "sizeHuman": "16.0 KB",
-      "lastModified": "2026-06-12"
-    },
-    {
-      "id": "what-is-multiplayer-marketing-v1",
       "filename": "what-is-multiplayer-marketing-v1.md",
       "displayName": "What is multiplayer marketing?",
       "type": "draft",
@@ -275,53 +301,196 @@
       "path": "drafts/what-is-multiplayer-marketing-v1.md",
       "sizeBytes": 14509,
       "sizeHuman": "14.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-18"
     },
     {
       "id": "ai-cmo-for-marketing-agencies",
       "filename": "ai-cmo-for-marketing-agencies.html",
       "displayName": "Ai Cmo For Marketing Agencies",
-      "type": "other",
-      "category": "other",
+      "type": "html",
+      "category": "html",
       "status": "delivered",
       "version": 1,
-      "path": "final/ai-cmo-for-marketing-agencies.html",
+      "path": "html/ai-cmo-for-marketing-agencies.html",
       "sizeBytes": 16399,
       "sizeHuman": "16.0 KB",
-      "lastModified": "2026-06-15"
-    },
-    {
-      "id": "ai-cmo-for-marketing-agencies",
-      "filename": "ai-cmo-for-marketing-agencies.md",
-      "displayName": "AI CMO for marketing agencies: how to scale client SEO without scaling headcount",
-      "type": "other",
-      "category": "other",
-      "status": "delivered",
-      "version": 1,
-      "path": "final/ai-cmo-for-marketing-agencies.md",
-      "sizeBytes": 14486,
-      "sizeHuman": "14.1 KB",
-      "lastModified": "2026-06-15"
+      "lastModified": "2026-06-18"
     },
     {
       "id": "ai-cmo-for-startups-and-lean-teams",
       "filename": "ai-cmo-for-startups-and-lean-teams.html",
       "displayName": "Ai Cmo For Startups And Lean Teams",
-      "type": "other",
-      "category": "other",
+      "type": "html",
+      "category": "html",
       "status": "delivered",
       "version": 1,
-      "path": "final/ai-cmo-for-startups-and-lean-teams.html",
+      "path": "html/ai-cmo-for-startups-and-lean-teams.html",
       "sizeBytes": 12109,
       "sizeHuman": "11.8 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-18"
+    },
+    {
+      "id": "ai-cmo-for-startups",
+      "filename": "ai-cmo-for-startups.html",
+      "displayName": "Ai Cmo For Startups",
+      "type": "html",
+      "category": "html",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/ai-cmo-for-startups.html",
+      "sizeBytes": 20964,
+      "sizeHuman": "20.5 KB",
+      "lastModified": "2026-06-18"
+    },
+    {
+      "id": "ai-cmo-kpis",
+      "filename": "ai-cmo-kpis.html",
+      "displayName": "Ai Cmo Kpis",
+      "type": "html",
+      "category": "html",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/ai-cmo-kpis.html",
+      "sizeBytes": 18174,
+      "sizeHuman": "17.7 KB",
+      "lastModified": "2026-06-18"
+    },
+    {
+      "id": "ai-cmo-vs-fractional-cmo",
+      "filename": "ai-cmo-vs-fractional-cmo.html",
+      "displayName": "Ai Cmo Vs Fractional Cmo",
+      "type": "html",
+      "category": "html",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/ai-cmo-vs-fractional-cmo.html",
+      "sizeBytes": 17609,
+      "sizeHuman": "17.2 KB",
+      "lastModified": "2026-06-18"
+    },
+    {
+      "id": "ai-cmo-vs-marketing-agency",
+      "filename": "ai-cmo-vs-marketing-agency.html",
+      "displayName": "Ai Cmo Vs Marketing Agency",
+      "type": "html",
+      "category": "html",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/ai-cmo-vs-marketing-agency.html",
+      "sizeBytes": 14719,
+      "sizeHuman": "14.4 KB",
+      "lastModified": "2026-06-18"
+    },
+    {
+      "id": "ai-marketing-automation-mistakes",
+      "filename": "ai-marketing-automation-mistakes.html",
+      "displayName": "Ai Marketing Automation Mistakes",
+      "type": "html",
+      "category": "html",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/ai-marketing-automation-mistakes.html",
+      "sizeBytes": 16256,
+      "sizeHuman": "15.9 KB",
+      "lastModified": "2026-06-18"
+    },
+    {
+      "id": "ai-recommendations-vs-execution-sample",
+      "filename": "ai-recommendations-vs-execution-sample.html",
+      "displayName": "Ai Recommendations Vs Execution Sample",
+      "type": "html",
+      "category": "html",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/ai-recommendations-vs-execution-sample.html",
+      "sizeBytes": 8354,
+      "sizeHuman": "8.2 KB",
+      "lastModified": "2026-06-18"
+    },
+    {
+      "id": "best-ai-cmo-tools-execution-depth-comparison",
+      "filename": "best-ai-cmo-tools-execution-depth-comparison.html",
+      "displayName": "Best Ai Cmo Tools Execution Depth Comparison",
+      "type": "html",
+      "category": "html",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/best-ai-cmo-tools-execution-depth-comparison.html",
+      "sizeBytes": 13680,
+      "sizeHuman": "13.4 KB",
+      "lastModified": "2026-06-18"
+    },
+    {
+      "id": "best-ai-cmo-tools",
+      "filename": "best-ai-cmo-tools.html",
+      "displayName": "Best Ai Cmo Tools",
+      "type": "html",
+      "category": "html",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/best-ai-cmo-tools.html",
+      "sizeBytes": 18188,
+      "sizeHuman": "17.8 KB",
+      "lastModified": "2026-06-18"
+    },
+    {
+      "id": "how-to-build-an-ai-marketing-stack",
+      "filename": "how-to-build-an-ai-marketing-stack.html",
+      "displayName": "How To Build An Ai Marketing Stack",
+      "type": "html",
+      "category": "html",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/how-to-build-an-ai-marketing-stack.html",
+      "sizeBytes": 24414,
+      "sizeHuman": "23.8 KB",
+      "lastModified": "2026-06-18"
+    },
+    {
+      "id": "how-to-measure-ai-marketing-performance",
+      "filename": "how-to-measure-ai-marketing-performance.html",
+      "displayName": "How To Measure Ai Marketing Performance",
+      "type": "html",
+      "category": "html",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/how-to-measure-ai-marketing-performance.html",
+      "sizeBytes": 17285,
+      "sizeHuman": "16.9 KB",
+      "lastModified": "2026-06-18"
+    },
+    {
+      "id": "what-is-multiplayer-marketing-v1",
+      "filename": "what-is-multiplayer-marketing-v1.html",
+      "displayName": "What Is Multiplayer Marketing V1",
+      "type": "html",
+      "category": "html",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/what-is-multiplayer-marketing-v1.html",
+      "sizeBytes": 16343,
+      "sizeHuman": "16.0 KB",
+      "lastModified": "2026-06-18"
+    },
+    {
+      "id": "ai-cmo-for-marketing-agencies",
+      "filename": "ai-cmo-for-marketing-agencies.md",
+      "displayName": "AI CMO for marketing agencies: how to scale client SEO without scaling headcount",
+      "type": "final",
+      "category": "final",
+      "status": "delivered",
+      "version": 1,
+      "path": "final/ai-cmo-for-marketing-agencies.md",
+      "sizeBytes": 14486,
+      "sizeHuman": "14.1 KB",
+      "lastModified": "2026-06-18"
     },
     {
       "id": "ai-cmo-for-startups-and-lean-teams",
       "filename": "ai-cmo-for-startups-and-lean-teams.md",
       "displayName": "AI CMO for Startups: The Minimum Viable Configuration for Lean Teams",
-      "type": "other",
-      "category": "other",
+      "type": "final",
+      "category": "final",
       "status": "delivered",
       "version": 1,
       "path": "final/ai-cmo-for-startups-and-lean-teams.md",
@@ -331,153 +500,75 @@
     },
     {
       "id": "ai-cmo-for-startups",
-      "filename": "ai-cmo-for-startups.html",
-      "displayName": "Ai Cmo For Startups",
-      "type": "other",
-      "category": "other",
-      "status": "delivered",
-      "version": 1,
-      "path": "final/ai-cmo-for-startups.html",
-      "sizeBytes": 20964,
-      "sizeHuman": "20.5 KB",
-      "lastModified": "2026-06-15"
-    },
-    {
-      "id": "ai-cmo-for-startups",
       "filename": "ai-cmo-for-startups.md",
       "displayName": "AI CMO for startups: the lean team setup guide",
-      "type": "other",
-      "category": "other",
+      "type": "final",
+      "category": "final",
       "status": "delivered",
       "version": 1,
       "path": "final/ai-cmo-for-startups.md",
       "sizeBytes": 17958,
       "sizeHuman": "17.5 KB",
-      "lastModified": "2026-06-15"
-    },
-    {
-      "id": "ai-cmo-kpis",
-      "filename": "ai-cmo-kpis.html",
-      "displayName": "Ai Cmo Kpis",
-      "type": "other",
-      "category": "other",
-      "status": "delivered",
-      "version": 1,
-      "path": "final/ai-cmo-kpis.html",
-      "sizeBytes": 18174,
-      "sizeHuman": "17.7 KB",
-      "lastModified": "2026-06-15"
+      "lastModified": "2026-06-18"
     },
     {
       "id": "ai-cmo-kpis",
       "filename": "ai-cmo-kpis.md",
       "displayName": "AI CMO KPIs: how to measure AI marketing performance",
-      "type": "other",
-      "category": "other",
+      "type": "final",
+      "category": "final",
       "status": "delivered",
       "version": 1,
       "path": "final/ai-cmo-kpis.md",
       "sizeBytes": 15870,
       "sizeHuman": "15.5 KB",
-      "lastModified": "2026-06-15"
-    },
-    {
-      "id": "ai-cmo-vs-fractional-cmo",
-      "filename": "ai-cmo-vs-fractional-cmo.html",
-      "displayName": "Ai Cmo Vs Fractional Cmo",
-      "type": "other",
-      "category": "other",
-      "status": "delivered",
-      "version": 1,
-      "path": "final/ai-cmo-vs-fractional-cmo.html",
-      "sizeBytes": 17609,
-      "sizeHuman": "17.2 KB",
-      "lastModified": "2026-06-15"
+      "lastModified": "2026-06-18"
     },
     {
       "id": "ai-cmo-vs-fractional-cmo",
       "filename": "ai-cmo-vs-fractional-cmo.md",
       "displayName": "AI CMO vs fractional CMO: which does your company actually need?",
-      "type": "other",
-      "category": "other",
+      "type": "final",
+      "category": "final",
       "status": "delivered",
       "version": 1,
       "path": "final/ai-cmo-vs-fractional-cmo.md",
       "sizeBytes": 15627,
       "sizeHuman": "15.3 KB",
-      "lastModified": "2026-06-15"
-    },
-    {
-      "id": "ai-cmo-vs-marketing-agency",
-      "filename": "ai-cmo-vs-marketing-agency.html",
-      "displayName": "Ai Cmo Vs Marketing Agency",
-      "type": "other",
-      "category": "other",
-      "status": "delivered",
-      "version": 1,
-      "path": "final/ai-cmo-vs-marketing-agency.html",
-      "sizeBytes": 14719,
-      "sizeHuman": "14.4 KB",
-      "lastModified": "2026-06-15"
+      "lastModified": "2026-06-18"
     },
     {
       "id": "ai-cmo-vs-marketing-agency",
       "filename": "ai-cmo-vs-marketing-agency.md",
       "displayName": "AI CMO vs marketing agency: which model fits your budget and goals?",
-      "type": "other",
-      "category": "other",
+      "type": "final",
+      "category": "final",
       "status": "delivered",
       "version": 1,
       "path": "final/ai-cmo-vs-marketing-agency.md",
       "sizeBytes": 12832,
       "sizeHuman": "12.5 KB",
-      "lastModified": "2026-06-15"
-    },
-    {
-      "id": "ai-marketing-automation-mistakes",
-      "filename": "ai-marketing-automation-mistakes.html",
-      "displayName": "Ai Marketing Automation Mistakes",
-      "type": "other",
-      "category": "other",
-      "status": "delivered",
-      "version": 1,
-      "path": "final/ai-marketing-automation-mistakes.html",
-      "sizeBytes": 16256,
-      "sizeHuman": "15.9 KB",
-      "lastModified": "2026-06-15"
+      "lastModified": "2026-06-18"
     },
     {
       "id": "ai-marketing-automation-mistakes",
       "filename": "ai-marketing-automation-mistakes.md",
       "displayName": "AI marketing automation mistakes: 7 failure modes and how to fix them",
-      "type": "other",
-      "category": "other",
+      "type": "final",
+      "category": "final",
       "status": "delivered",
       "version": 1,
       "path": "final/ai-marketing-automation-mistakes.md",
       "sizeBytes": 14426,
       "sizeHuman": "14.1 KB",
-      "lastModified": "2026-06-15"
-    },
-    {
-      "id": "best-ai-cmo-tools-execution-depth-comparison",
-      "filename": "best-ai-cmo-tools-execution-depth-comparison.html",
-      "displayName": "Best Ai Cmo Tools Execution Depth Comparison",
-      "type": "other",
-      "category": "other",
-      "status": "delivered",
-      "version": 1,
-      "path": "final/best-ai-cmo-tools-execution-depth-comparison.html",
-      "sizeBytes": 13680,
-      "sizeHuman": "13.4 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-18"
     },
     {
       "id": "best-ai-cmo-tools-execution-depth-comparison",
       "filename": "best-ai-cmo-tools-execution-depth-comparison.md",
       "displayName": "Best AI CMO Tools: A Comparison by Execution Depth",
-      "type": "other",
-      "category": "other",
+      "type": "final",
+      "category": "final",
       "status": "delivered",
       "version": 1,
       "path": "final/best-ai-cmo-tools-execution-depth-comparison.md",
@@ -487,81 +578,42 @@
     },
     {
       "id": "best-ai-cmo-tools",
-      "filename": "best-ai-cmo-tools.html",
-      "displayName": "Best Ai Cmo Tools",
-      "type": "other",
-      "category": "other",
-      "status": "delivered",
-      "version": 1,
-      "path": "final/best-ai-cmo-tools.html",
-      "sizeBytes": 18188,
-      "sizeHuman": "17.8 KB",
-      "lastModified": "2026-06-15"
-    },
-    {
-      "id": "best-ai-cmo-tools",
       "filename": "best-ai-cmo-tools.md",
       "displayName": "Best AI CMO tools in 2026: execution depth comparison",
-      "type": "other",
-      "category": "other",
+      "type": "final",
+      "category": "final",
       "status": "delivered",
       "version": 1,
       "path": "final/best-ai-cmo-tools.md",
       "sizeBytes": 15618,
       "sizeHuman": "15.3 KB",
-      "lastModified": "2026-06-15"
-    },
-    {
-      "id": "how-to-build-an-ai-marketing-stack",
-      "filename": "how-to-build-an-ai-marketing-stack.html",
-      "displayName": "How To Build An Ai Marketing Stack",
-      "type": "other",
-      "category": "other",
-      "status": "delivered",
-      "version": 1,
-      "path": "final/how-to-build-an-ai-marketing-stack.html",
-      "sizeBytes": 22781,
-      "sizeHuman": "22.2 KB",
-      "lastModified": "2026-06-15"
+      "lastModified": "2026-06-18"
     },
     {
       "id": "how-to-build-an-ai-marketing-stack",
       "filename": "how-to-build-an-ai-marketing-stack.md",
       "displayName": "How to build an AI marketing stack that actually works",
-      "type": "other",
-      "category": "other",
+      "type": "final",
+      "category": "final",
       "status": "delivered",
       "version": 1,
       "path": "final/how-to-build-an-ai-marketing-stack.md",
       "sizeBytes": 20612,
       "sizeHuman": "20.1 KB",
-      "lastModified": "2026-06-16"
-    },
-    {
-      "id": "how-to-measure-ai-marketing-performance",
-      "filename": "how-to-measure-ai-marketing-performance.html",
-      "displayName": "How To Measure Ai Marketing Performance",
-      "type": "other",
-      "category": "other",
-      "status": "delivered",
-      "version": 1,
-      "path": "final/how-to-measure-ai-marketing-performance.html",
-      "sizeBytes": 17285,
-      "sizeHuman": "16.9 KB",
-      "lastModified": "2026-06-15"
+      "lastModified": "2026-06-18"
     },
     {
       "id": "how-to-measure-ai-marketing-performance",
       "filename": "how-to-measure-ai-marketing-performance.md",
       "displayName": "How to measure AI marketing performance: KPIs and attribution for autonomous systems",
-      "type": "other",
-      "category": "other",
+      "type": "final",
+      "category": "final",
       "status": "delivered",
       "version": 1,
       "path": "final/how-to-measure-ai-marketing-performance.md",
       "sizeBytes": 15370,
       "sizeHuman": "15.0 KB",
-      "lastModified": "2026-06-15"
+      "lastModified": "2026-06-18"
     },
     {
       "id": "production-log",
@@ -681,14 +733,14 @@
       "lastModified": "2026-06-12"
     },
     {
-      "id": "what-is-google-ai-mode",
-      "filename": "what-is-google-ai-mode.md",
+      "id": "what-is-google-ai-mode-brief",
+      "filename": "what-is-google-ai-mode-brief.md",
       "displayName": "Brief: What is Google AI Mode",
       "type": "brief",
       "category": "brief",
       "status": "delivered",
       "version": 1,
-      "path": "briefs/what-is-google-ai-mode.md",
+      "path": "briefs/what-is-google-ai-mode-brief.md",
       "sizeBytes": 6128,
       "sizeHuman": "6.0 KB",
       "lastModified": "2026-05-13"
