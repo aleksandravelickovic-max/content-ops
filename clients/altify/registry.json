@@ -1,7 +1,7 @@
 {
   "client": "altify",
   "scope": "client",
-  "generatedAt": "2026-06-16T20:58:52",
+  "generatedAt": "2026-06-19T18:12:19",
   "totalFiles": 4,
   "entries": [
     {
@@ -34,8 +34,8 @@
       "id": "content-directory-brief",
       "filename": "content-directory-brief.md",
       "displayName": "Altify Content Directory Brief",
-      "type": "brief",
-      "category": "brief",
+      "type": "research",
+      "category": "research",
       "status": "delivered",
       "version": 1,
       "path": "raw/research/content-directory-brief.md",

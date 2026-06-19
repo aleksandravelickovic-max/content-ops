@@ -1,9 +1,22 @@
 {
   "client": "altify",
   "campaign": "01-may-content-optimization",
-  "generatedAt": "2026-06-16T20:58:52",
-  "totalFiles": 13,
+  "generatedAt": "2026-06-19T18:12:19",
+  "totalFiles": 14,
   "entries": [
+    {
+      "id": "README",
+      "filename": "README.md",
+      "displayName": "01 \u2014 May Content Optimization",
+      "type": "other",
+      "category": "other",
+      "status": "delivered",
+      "version": 1,
+      "path": "README.md",
+      "sizeBytes": 517,
+      "sizeHuman": "517 B",
+      "lastModified": "2026-06-19"
+    },
     {
       "id": "brief",
       "filename": "brief.md",
