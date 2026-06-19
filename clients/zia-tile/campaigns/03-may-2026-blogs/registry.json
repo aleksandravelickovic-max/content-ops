@@ -1,9 +1,22 @@
 {
   "client": "zia-tile",
-  "campaign": "02-may-2026-blogs",
-  "generatedAt": "2026-06-16T20:58:52",
-  "totalFiles": 14,
+  "campaign": "03-may-2026-blogs",
+  "generatedAt": "2026-06-19T18:12:19",
+  "totalFiles": 15,
   "entries": [
+    {
+      "id": "README",
+      "filename": "README.md",
+      "displayName": "03 \u2014 May 2026 Blogs",
+      "type": "other",
+      "category": "other",
+      "status": "delivered",
+      "version": 1,
+      "path": "README.md",
+      "sizeBytes": 453,
+      "sizeHuman": "453 B",
+      "lastModified": "2026-06-19"
+    },
     {
       "id": "blog-1-cement-tile-patina-corrected",
       "filename": "blog-1-cement-tile-patina-corrected.md",

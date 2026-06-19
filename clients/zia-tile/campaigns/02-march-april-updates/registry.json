@@ -1,34 +1,21 @@
 {
   "client": "zia-tile",
   "campaign": "02-march-april-updates",
-  "generatedAt": "2026-06-16T20:58:52",
-  "totalFiles": 9,
+  "generatedAt": "2026-06-19T18:12:19",
+  "totalFiles": 10,
   "entries": [
     {
-      "id": "REWRITE-PLAN",
-      "filename": "REWRITE-PLAN.md",
-      "displayName": "March/April Rewrite Plan \u2014 Zia Tile Campaign 02",
+      "id": "README",
+      "filename": "README.md",
+      "displayName": "02 \u2014 March/April Updates",
       "type": "other",
       "category": "other",
       "status": "delivered",
       "version": 1,
-      "path": "REWRITE-PLAN.md",
-      "sizeBytes": 12181,
-      "sizeHuman": "11.9 KB",
-      "lastModified": "2026-06-12"
-    },
-    {
-      "id": "audit-report-gaps",
-      "filename": "audit-report-gaps.md",
-      "displayName": "Stream C \u2014 audit-report.md Gaps on the 16 Templates",
-      "type": "audit",
-      "category": "audit",
-      "status": "delivered",
-      "version": 1,
-      "path": "audit-report-gaps.md",
-      "sizeBytes": 6217,
-      "sizeHuman": "6.1 KB",
-      "lastModified": "2026-06-12"
+      "path": "README.md",
+      "sizeBytes": 556,
+      "sizeHuman": "556 B",
+      "lastModified": "2026-06-19"
     },
     {
       "id": "brief",
@@ -44,14 +31,40 @@
       "lastModified": "2026-06-12"
     },
     {
+      "id": "REWRITE-PLAN",
+      "filename": "REWRITE-PLAN.md",
+      "displayName": "March/April Rewrite Plan \u2014 Zia Tile Campaign 02",
+      "type": "research",
+      "category": "research",
+      "status": "delivered",
+      "version": 1,
+      "path": "research/REWRITE-PLAN.md",
+      "sizeBytes": 12181,
+      "sizeHuman": "11.9 KB",
+      "lastModified": "2026-06-12"
+    },
+    {
+      "id": "audit-report-gaps",
+      "filename": "audit-report-gaps.md",
+      "displayName": "Stream C \u2014 audit-report.md Gaps on the 16 Templates",
+      "type": "research",
+      "category": "research",
+      "status": "delivered",
+      "version": 1,
+      "path": "research/audit-report-gaps.md",
+      "sizeBytes": 6217,
+      "sizeHuman": "6.1 KB",
+      "lastModified": "2026-06-12"
+    },
+    {
       "id": "v3-promotion-worklist",
       "filename": "v3-promotion-worklist.md",
       "displayName": "Stream A \u2014 v3 Promotion Worklist",
-      "type": "other",
-      "category": "other",
+      "type": "research",
+      "category": "research",
       "status": "delivered",
       "version": 1,
-      "path": "v3-promotion-worklist.md",
+      "path": "research/v3-promotion-worklist.md",
       "sizeBytes": 4052,
       "sizeHuman": "4.0 KB",
       "lastModified": "2026-06-12"
@@ -119,7 +132,7 @@
       "path": "gdocs-content/blog-01-terra-cotta-v2.md",
       "sizeBytes": 13046,
       "sizeHuman": "12.7 KB",
-      "lastModified": "2026-05-28"
+      "lastModified": "2026-06-18"
     }
   ]
 }
