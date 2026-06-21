@@ -160,6 +160,8 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
   <button class="nav-btn" onclick="switchTab('hrms')">Internal HR System</button>
   <button class="nav-btn" onclick="switchTab('adp')">UKG vs ADP</button>
   <button class="nav-btn" onclick="switchTab('paylocity')">UKG Ready vs Paylocity</button>
+  <button class="nav-btn" onclick="switchTab('outsource')">Outsource HR</button>
+  <button class="nav-btn" onclick="switchTab('tlm')">Time &amp; Labor</button>
 </div>
 
 <!-- AUDIT PANEL -->
@@ -320,6 +322,90 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
   <tr><td>10</td><td>Confirm "8+ years" claim is sourced in raw/</td><td>Both comparison pages</td><td>CSM confirm</td><td>⏳ Pending</td></tr>
   <tr><td>11</td><td>Confirm "3 Months Free Payroll" offer is active</td><td>hrms</td><td>CSM confirm</td><td>⏳ Pending</td></tr>
   <tr><td>12</td><td>Verify "UKG Dimensions / Workforce Central" naming</td><td>ukg-vs-adp</td><td>CSM confirm</td><td>⏳ Pending</td></tr>
+</table>
+
+<h2>Blog Post Findings — Task <a href="https://app.clickup.com/t/868jykf2x" target="_blank" style="color:var(--accent)">868jykf2x</a></h2>
+
+<div class="score-cards" style="grid-template-columns:repeat(2,1fr);max-width:420px">
+  <div class="score-card">
+    <div class="score-title">Outsource HR</div>
+    <div class="score-grade" style="color:#2ecc71">B+</div>
+  </div>
+  <div class="score-card">
+    <div class="score-title">Time &amp; Labor</div>
+    <div class="score-grade" style="color:#2ecc71">B+</div>
+  </div>
+</div>
+
+<table>
+  <tr><th>Page</th><th>Accuracy</th><th>AI / Fluency</th><th>Style Compliance</th><th>Deliverables</th><th>Overall</th></tr>
+  <tr><td>Outsource HR blog</td><td>8/10</td><td>9/10</td><td>8/10</td><td>8/10</td><td><strong>B+</strong></td></tr>
+  <tr><td>Time &amp; Labor blog</td><td>9/10</td><td>9/10</td><td>8/10</td><td>8/10</td><td><strong>B+</strong></td></tr>
+</table>
+
+<p style="color:var(--muted);font-size:13px">Both posts are clean, well-structured, and technically accurate. No banned terminology, no ownership-language violations, no invented product claims. Fixes are targeted.</p>
+
+<div class="finding major">
+  <span class="tag major">M1 · Outsource HR</span>
+  <h3>Primary keyword not in first sentence (§7)</h3>
+  <p>The primary keyword is "companies that outsource HR." First sentence: <em>"Payroll lands on the owner's desk."</em> — no keyword. §7 requires the primary keyword in the first sentence of body content.</p>
+  <p><strong>Fix applied in v2:</strong> Restructured opening paragraph to lead with the primary keyword: <em>"Companies that outsource HR usually reach that decision at a specific moment — when something breaks, or nearly breaks, and the current setup can no longer absorb it."</em></p>
+</div>
+
+<div class="finding major">
+  <span class="tag major">M2 · Outsource HR</span>
+  <h3>H1 targets secondary keyword, not primary</h3>
+  <p>H1 is <em>"When to Outsource HR: The Signals That Tell You It's Time"</em> — this targets keyword #3 (when to outsource HR functions), not the primary keyword "companies that outsource HR." The meta title has the same framing.</p>
+  <p><strong>Fix applied in v2:</strong> H1 updated to <em>"Companies That Outsource HR: What Triggers the Decision and What to Expect"</em> to align with the primary keyword while preserving the article's intent.</p>
+</div>
+
+<div class="finding major">
+  <span class="tag major">M3 · Time &amp; Labor</span>
+  <h3>Primary keyword not in first sentence (§7)</h3>
+  <p>Primary keyword: "time and labor management." First sentence: <em>"Every pay period, someone on your HR or payroll team cross-checks timesheets, corrects missed punches..."</em> — no keyword present. §7 requires it in the first sentence.</p>
+  <p><strong>Fix applied in v2:</strong> Opening restructured to lead with definition: <em>"Time and labor management is the system that replaces the manual work that happens every pay period: cross-checking timesheets, correcting missed punches, recalculating overtime for employees who worked across two states."</em></p>
+</div>
+
+<div class="finding minor">
+  <span class="tag minor">N1 · Outsource HR</span>
+  <h3>Pricing claims need CSM verification</h3>
+  <p>Three unverified figures appear with hedging language but need confirmation before publish: <strong>$50–$200 PEPM</strong> range for HR outsourcing, <strong>$55,000–$75,000/year</strong> for an HR generalist, and <strong>4–12 weeks</strong> implementation timeline. These are not in <code>clients/axiom-hrs/raw/</code>. <strong>Status: ⏳ CSM confirm.</strong></p>
+</div>
+
+<div class="finding minor">
+  <span class="tag minor">N2 · Time &amp; Labor</span>
+  <h3>"Hands-on support" absent from article body (§4)</h3>
+  <p>§4 states hands-on support "is what separates Axiom from a pure SaaS offering" and must be maintained. The Axiom section correctly frames single-database architecture but never names the support model. <strong>Fix applied in v2:</strong> Added one sentence to the payroll integration section: <em>"Axiom's team provides hands-on support through implementation and ongoing operations, so your configuration is actively maintained, not left to self-service."</em></p>
+</div>
+
+<div class="finding minor">
+  <span class="tag minor">N3 · Time &amp; Labor</span>
+  <h3>"Axiom's HR Analytics and Reporting" — confirm feature name in raw/</h3>
+  <p>The article references this as a named feature. Verify the exact product name is in <code>clients/axiom-hrs/raw/</code> before publish. <strong>Status: ⏳ CSM confirm.</strong></p>
+</div>
+
+<div class="finding good">
+  <span class="tag good">Preserved in v2</span>
+  <ul>
+    <li><strong>No banned terminology in either post</strong> — "integrated," "seamless," "robust," "works with" are all absent.</li>
+    <li><strong>Rip-and-replace framing correct (Outsource HR)</strong> — "You replace your current setup entirely" is exactly the right language.</li>
+    <li><strong>Single-database framing correct (Time &amp; Labor)</strong> — Axiom's payroll and TLM sharing the same database is stated accurately and without "integration" language.</li>
+    <li><strong>PEO vs. HR outsourcing distinction (Outsource HR)</strong> — clear, accurate explanation of co-employer vs. platform model. Strong differentiator content.</li>
+    <li><strong>Regulatory specificity (Time &amp; Labor)</strong> — FLSA overtime, California/Alaska daily OT rules, predictive scheduling cities, 2-year record retention. All accurate and specific per §5.</li>
+    <li><strong>Manual vs. TLM comparison table (Time &amp; Labor)</strong> — well-structured, specific to real operational pain. Six rows, clear mechanism/outcome contrast. Strong content.</li>
+    <li><strong>"Hands-on support" present (Outsource HR)</strong> — correctly used in Axiom positioning section.</li>
+  </ul>
+</div>
+
+<h2>Blog Post Action Priority</h2>
+<table>
+  <tr><th>Priority</th><th>Item</th><th>Page</th><th>Effort</th><th>Status in v2</th></tr>
+  <tr><td>1</td><td>Add primary keyword to first sentence</td><td>Outsource HR</td><td>Trivial</td><td>✓ Fixed</td></tr>
+  <tr><td>2</td><td>Update H1 to lead with primary keyword</td><td>Outsource HR</td><td>Trivial</td><td>✓ Fixed</td></tr>
+  <tr><td>3</td><td>Add primary keyword to first sentence</td><td>Time &amp; Labor</td><td>Trivial</td><td>✓ Fixed</td></tr>
+  <tr><td>4</td><td>Add "hands-on support" to Axiom section</td><td>Time &amp; Labor</td><td>Low</td><td>✓ Fixed</td></tr>
+  <tr><td>5</td><td>Confirm pricing claims ($50–$200 PEPM, etc.)</td><td>Outsource HR</td><td>CSM confirm</td><td>⏳ Pending</td></tr>
+  <tr><td>6</td><td>Verify "HR Analytics and Reporting" feature name</td><td>Time &amp; Labor</td><td>CSM confirm</td><td>⏳ Pending</td></tr>
 </table>
 
   </div>
@@ -1634,6 +1720,458 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
           <a href="#">LinkedIn</a><a href="#">Privacy Policy</a><a href="#">Terms</a>
         </div>
       </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="tab-panel" id="panel-outsource">
+  <div class="article-subtabs">
+    <button class="subtab-btn active" onclick="switchSubtab(this,'outsource','orig')">Original</button>
+    <button class="subtab-btn" onclick="switchSubtab(this,'outsource','v2')">Rewritten</button>
+    <button class="subtab-btn" onclick="switchSubtab(this,'outsource','replica')">Page Replica</button>
+  </div>
+
+  <!-- ORIGINAL -->
+  <div class="article-pane" id="outsource-orig">
+    <div class="meta-block">
+      <div class="mb-row"><span class="mb-lbl">URL</span><span>https://axiomhrs.com/answers/when-to-outsource-hr/</span></div>
+      <div class="mb-row"><span class="mb-lbl">Meta title</span><span>When to Outsource HR Functions: Signs It's Time to Switch <em style="color:#ffa502">(55 chars)</em></span></div>
+      <div class="mb-row"><span class="mb-lbl">Meta desc</span><span>The decision to outsource HR usually comes at a specific moment. Here's what triggers it, which companies make the move, and what to expect. <em style="color:#2ecc71">(140 chars)</em></span></div>
+      <div class="mb-row"><span class="mb-lbl">Keywords</span><span>companies that outsource hr · HR outsourcing for mid-market businesses · when to outsource HR functions</span></div>
+    </div>
+    <h1>When to Outsource HR: The Signals That Tell You It's Time</h1>
+<p>Payroll lands on the owner's desk. Benefits renewal comes up, and nobody owns it. A new hire asks about FMLA eligibility, and the answer takes three days to find. These incidents signal that your HR has grown past the person managing it.</p>
+<p>Companies that outsource HR usually reach that decision when something breaks, or nearly breaks, and it forces the question. Most often, that moment comes around 50 employees, when federal obligations like FMLA and ACA activate, or when the business expands into a second state and suddenly has a different set of payroll tax and leave laws to manage.</p>
+<p>This guide covers the most common signals for when to outsource HR functions, the types of companies that typically make the move, and what to consider before you decide.</p>
+<h4>Key takeaways</h4>
+<ul>
+<li>Companies most commonly outsource HR when administrative complexity has outpaced internal capacity, typically around 50 employees, or when expanding across state lines.</li>
+<li>Payroll processing, benefits administration, and compliance monitoring are the 3 most commonly outsourced HR functions because they are deadline-driven and legally consequential.</li>
+<li>For a 75-person company, outsourcing HR often costs less than a single full-time HR hire once you factor in salary, benefits, and software.</li>
+<li>Mid-market companies in healthcare, manufacturing, and construction most frequently outsource HR due to high compliance exposure and complex workforce structures.</li>
+<li>You can outsource select HR functions without handing off your entire HR operation.</li>
+<li>Outsourcing HR is a poor fit when a company already has sufficient internal HR capacity or is still early in a recent platform migration.</li>
+</ul>
+<h2>Signs It's Time to Outsource HR</h2>
+<p>The clearest sign is that HR tasks are being handled by people whose job is not HR. Beyond that, four operational triggers reliably indicate a company has reached the point where outsourcing makes more sense than staying in-house.</p>
+<h3>1. HR Tasks Are Landing on the Wrong People's Desks</h3>
+<p>When payroll runs through an operations manager and onboarding paperwork falls to whoever has a spare hour, the problem is structural, not a staffing gap. The company has grown past the "everyone pitches in" model, but hasn't built the function to replace it. Time that should go toward management, operations, or growth gets absorbed by administrative work that requires specialists to do correctly.</p>
+<h3>2. You've Had Payroll Errors, Late Filings, or Compliance Gaps</h3>
+<p>A missed tax deadline, a misclassified employee, or an I-9 with documentation errors is not a one-off mistake. They're signals that the volume or complexity has exceeded what the current setup can reliably handle. The HR outsourcing risks companies worry about are actually a more accurate description of what happens when compliance work is left with someone not trained for it.</p>
+<h3>3. Headcount Is Approaching or Has Crossed 50</h3>
+<p>At 50 employees, FMLA eligibility requirements activate. Under the ACA, employer coverage mandates apply at 50 full-time equivalents. These aren't soft thresholds. They carry penalties. Most companies crossing that line don't realize how much the HR footprint needs to change until something surfaces during an audit or a leave request creates legal exposure.</p>
+<h3>4. Your Workforce Has Crossed State Lines</h3>
+<p>Each state adds its own payroll tax structure, leave laws, and reporting requirements. Indiana and California handle overtime differently. Some states require paid sick leave; others don't. Managing multi-state payroll without a system built for it is one of the most common reasons mid-market companies decide the current setup can't continue.</p>
+<h2>What Types of Companies Outsource HR</h2>
+<p>HR outsourcing for mid-market businesses is most common in the 50–500-employee range. They've grown past what a basic payroll service or spreadsheet setup can manage, but haven't reached the scale where building a full internal HR department makes financial sense.</p>
+<p>The industries where this move comes up most consistently are healthcare, manufacturing, and construction. These sectors share a common profile: large hourly workforces, complex pay structures, shift differentials, and significant compliance exposure.</p>
+<p>A hospital system tracking credential expiration across departments, a manufacturer running multiple shift types under different pay rules, or a construction company managing job costs across project sites in multiple states all face HR complexity that basic software doesn't solve.</p>
+<p>Outsourcing human resources frees up your team to focus on work that actually moves the business. For a senior manager spending Friday afternoons on payroll, that's not an abstract benefit.</p>
+<h2>Which HR Functions Are Most Commonly Outsourced</h2>
+<p>Most companies start with functions that are deadline-driven, error-prone, or require continuous regulatory tracking.</p>
+<table>
+<thead><tr><th>Function</th><th>Why It's Commonly Outsourced</th></tr></thead>
+<tbody>
+<tr><td>Payroll processing and tax filing</td><td>Deadline-driven; errors carry penalties</td></tr>
+<tr><td>Benefits administration</td><td>Renewal complexity, carrier negotiations</td></tr>
+<tr><td>Compliance monitoring</td><td>Regulations change continuously; multi-state exposure compounds the burden</td></tr>
+<tr><td>Onboarding and I-9/E-Verify</td><td>Documentation-heavy with legal consequences</td></tr>
+<tr><td>Time and attendance</td><td>Directly tied to payroll accuracy and labor law</td></tr>
+<tr><td>HR reporting and analytics</td><td>Data exists, but rarely gets used without dedicated capacity</td></tr>
+</tbody>
+</table>
+<p>Payroll services and benefits administration are the two most common starting points, in part because they're the most visible when something goes wrong.</p>
+<h2>When Outsourcing Is the Wrong Call</h2>
+<p>Not every company is at the right stage for HR outsourcing. Three scenarios where it typically doesn't make sense:</p>
+<p>Your company already has a capable internal HR team with bandwidth to manage current and near-term needs. Adding an outside provider in this case creates overlap without solving a problem.</p>
+<p>Your HR platform is new. If you adopted an HCM system in the last 12–18 months and are still in implementation, adding a service layer before you understand the platform's capabilities introduces complexity before value.</p>
+<p>You're under 25–30 employees with no near-term growth plans. Most full-service HR outsourcing models are built for companies with 50 or more employees.</p>
+<h2>Outsourcing vs. Building an In-House HR Team</h2>
+<p>In terms of cost, outsourcing often wins for mid-market companies. An HR generalist typically costs $55,000–$75,000 per year in base salary before benefits and software. HR outsourcing is priced per employee per month (PEPM), and for a 75-person company, the math often comes out to less than a single full-time hire.</p>
+<p>The cost comparison misses something important, though. A generalist handles a wide range of HR tasks at a general level. When you outsource, you get access to payroll specialists, compliance experts, and benefits administrators without hiring all three separately.</p>
+<p>Axiom's model combines the UKG Ready HCM platform with hands-on service support and is priced as a single per-employee package. Payroll, time and attendance, benefits, and HR reporting all run from the same database, and Axiom's team manages the underlying functions. You replace your current setup entirely.</p>
+<h2>Frequently Asked Questions About Companies That Outsource HR</h2>
+<h3>What's the difference between a PEO and HR outsourcing?</h3>
+<p>A PEO becomes a co-employer of your workforce; your employees are technically shared between your company and the PEO. HR outsourcing through a platform model keeps you as the sole employer. You use a unified HCM system backed by expert support, without any change to who employs your people.</p>
+<h3>How much does HR outsourcing cost?</h3>
+<p>HR outsourcing services are typically priced per employee per month (PEPM), with rates varying by service level. Full-service models generally fall within the $50–$200 PEPM range. For Axiom's current rates, see the pricing page.</p>
+<h3>Can you outsource only part of your HR?</h3>
+<p>Yes. Many companies start by outsourcing payroll and benefits while keeping employee relations in-house. The right scope is determined by where your current setup is under the most strain.</p>
+<h3>How long does it take to switch to an outsourced HR setup?</h3>
+<p>For most mid-market companies, a full platform migration takes 4–12 weeks, with payroll typically going live first.</p>
+<h3>Is HR outsourcing a good fit for companies with fewer than 50 employees?</h3>
+<p>It depends less on headcount and more on complexity. A 30-person company operating across 3 states with a mix of hourly and salaried workers may have more HR complexity than a 75-person company in a single state.</p>
+<h2>Ready to Stop Patching Together Your HR Setup?</h2>
+<p>If your company has reached the point where payroll, compliance, and benefits need a dedicated system, Axiom can show you what that looks like. See how Axiom's HR outsourcing works.</p>
+  </div>
+
+  <!-- REWRITTEN v2 -->
+  <div class="article-pane hidden" id="outsource-v2">
+    <div class="meta-block">
+      <div class="mb-row"><span class="mb-lbl">URL</span><span>https://axiomhrs.com/answers/when-to-outsource-hr/</span></div>
+      <div class="mb-row"><span class="mb-lbl">Meta title</span><span>When to Outsource HR Functions: Signs It's Time to Switch <em style="color:#ffa502">(55 chars)</em></span></div>
+      <div class="mb-row"><span class="mb-lbl">Meta desc</span><span>The decision to outsource HR usually comes at a specific moment. Here's what triggers it, which companies make the move, and what to expect. <em style="color:#2ecc71">(140 chars)</em></span></div>
+      <div class="mb-row"><span class="mb-lbl">Keywords</span><span>companies that outsource hr · HR outsourcing for mid-market businesses · when to outsource HR functions</span></div>
+    </div>
+    <h1>Companies That Outsource HR: What Triggers the Decision and What to Expect</h1>
+<p>Companies that outsource HR usually reach that decision at a specific moment — when something breaks, or nearly breaks, and the current setup can no longer absorb it. Payroll lands on the wrong person's desk. Benefits renewal comes up and nobody owns it. A new hire asks about FMLA eligibility and the answer takes three days to find.</p>
+<p>These incidents don't signal a staffing problem. They signal that your HR has grown past the structure managing it. Most often that moment comes around 50 employees, when federal obligations like FMLA and ACA activate, or when the business expands into a second state and suddenly has a different set of payroll tax and leave laws to manage.</p>
+<p>This guide covers the most common signals for when to outsource HR functions, the types of companies that typically make the move, and what to consider before you decide.</p>
+<h4>Key takeaways</h4>
+<ul>
+<li>Companies most commonly outsource HR when administrative complexity has outpaced internal capacity, typically around 50 employees, or when expanding across state lines.</li>
+<li>Payroll processing, benefits administration, and compliance monitoring are the 3 most commonly outsourced HR functions because they are deadline-driven and legally consequential.</li>
+<li>For a 75-person company, outsourcing HR often costs less than a single full-time HR hire once you factor in salary, benefits, and software.</li>
+<li>Mid-market companies in healthcare, manufacturing, and construction most frequently outsource HR due to high compliance exposure and complex workforce structures.</li>
+<li>You can outsource select HR functions without handing off your entire HR operation.</li>
+<li>Outsourcing HR is a poor fit when a company already has sufficient internal HR capacity or is still early in a recent platform migration.</li>
+</ul>
+<h2>Signs It's Time to Outsource HR</h2>
+<p>The clearest sign is that HR tasks are being handled by people whose job is not HR. Beyond that, four operational triggers reliably indicate a company has reached the point where outsourcing makes more sense than staying in-house.</p>
+<h3>1. HR Tasks Are Landing on the Wrong People's Desks</h3>
+<p>When payroll runs through an operations manager and onboarding paperwork falls to whoever has a spare hour, the problem is structural, not a staffing gap. The company has grown past the "everyone pitches in" model, but hasn't built the function to replace it. Time that should go toward management, operations, or growth gets absorbed by administrative work that requires specialists to do correctly.</p>
+<h3>2. You've Had Payroll Errors, Late Filings, or Compliance Gaps</h3>
+<p>A missed tax deadline, a misclassified employee, or an I-9 with documentation errors is not a one-off mistake. They're signals that the volume or complexity has exceeded what the current setup can reliably handle. The HR outsourcing risks companies worry about are actually a more accurate description of what happens when compliance work is left with someone not trained for it.</p>
+<h3>3. Headcount Is Approaching or Has Crossed 50</h3>
+<p>At 50 employees, FMLA eligibility requirements activate. Under the ACA, employer coverage mandates apply at 50 full-time equivalents. These aren't soft thresholds. They carry penalties. Most companies crossing that line don't realize how much the HR footprint needs to change until something surfaces during an audit or a leave request creates legal exposure.</p>
+<h3>4. Your Workforce Has Crossed State Lines</h3>
+<p>Each state adds its own payroll tax structure, leave laws, and reporting requirements. Indiana and California handle overtime differently. Some states require paid sick leave; others don't. Managing multi-state payroll without a system built for it is one of the most common reasons mid-market companies decide the current setup can't continue.</p>
+<h2>What Types of Companies Outsource HR</h2>
+<p>HR outsourcing for mid-market businesses is most common in the 50–500-employee range. They've grown past what a basic payroll service or spreadsheet setup can manage, but haven't reached the scale where building a full internal HR department makes financial sense.</p>
+<p>The industries where this move comes up most consistently are healthcare, manufacturing, and construction. These sectors share a common profile: large hourly workforces, complex pay structures, shift differentials, and significant compliance exposure.</p>
+<p>A hospital system tracking credential expiration across departments, a manufacturer running multiple shift types under different pay rules, or a construction company managing job costs across project sites in multiple states all face HR complexity that basic software doesn't solve.</p>
+<p>Outsourcing human resources frees up your team to focus on work that actually moves the business. For a senior manager spending Friday afternoons on payroll, that's not an abstract benefit.</p>
+<h2>Which HR Functions Are Most Commonly Outsourced</h2>
+<p>Most companies start with functions that are deadline-driven, error-prone, or require continuous regulatory tracking.</p>
+<table>
+<thead><tr><th>Function</th><th>Why It's Commonly Outsourced</th></tr></thead>
+<tbody>
+<tr><td>Payroll processing and tax filing</td><td>Deadline-driven; errors carry penalties</td></tr>
+<tr><td>Benefits administration</td><td>Renewal complexity, carrier negotiations</td></tr>
+<tr><td>Compliance monitoring</td><td>Regulations change continuously; multi-state exposure compounds the burden</td></tr>
+<tr><td>Onboarding and I-9/E-Verify</td><td>Documentation-heavy with legal consequences</td></tr>
+<tr><td>Time and attendance</td><td>Directly tied to payroll accuracy and labor law</td></tr>
+<tr><td>HR reporting and analytics</td><td>Data exists, but rarely gets used without dedicated capacity</td></tr>
+</tbody>
+</table>
+<p>Payroll services and benefits administration are the two most common starting points, in part because they're the most visible when something goes wrong.</p>
+<h2>When Outsourcing Is the Wrong Call</h2>
+<p>Not every company is at the right stage for HR outsourcing. Three scenarios where it typically doesn't make sense:</p>
+<p>Your company already has a capable internal HR team with bandwidth to manage current and near-term needs. Adding an outside provider in this case creates overlap without solving a problem.</p>
+<p>Your HR platform is new. If you adopted an HCM system in the last 12–18 months and are still in implementation, adding a service layer before you understand the platform's capabilities introduces complexity before value.</p>
+<p>You're under 25–30 employees with no near-term growth plans. Most full-service HR outsourcing models are built for companies with 50 or more employees.</p>
+<h2>Outsourcing vs. Building an In-House HR Team</h2>
+<p>In terms of cost, outsourcing often wins for mid-market companies. An HR generalist typically costs $55,000–$75,000 per year in base salary before benefits and software. HR outsourcing is priced per employee per month (PEPM), and for a 75-person company, the math often comes out to less than a single full-time hire.</p>
+<p>The cost comparison misses something important, though. A generalist handles a wide range of HR tasks at a general level. When you outsource, you get access to payroll specialists, compliance experts, and benefits administrators without hiring all three separately.</p>
+<p>Axiom's model combines the UKG Ready HCM platform with hands-on support from a dedicated team, priced as a single per-employee package. Payroll, time and attendance, benefits, and HR reporting all run from the same database, and Axiom's team manages the underlying functions with direct involvement — not a general support queue. You replace your current setup entirely.</p>
+<h2>Frequently Asked Questions About Companies That Outsource HR</h2>
+<h3>What's the difference between a PEO and HR outsourcing?</h3>
+<p>A PEO becomes a co-employer of your workforce; your employees are technically shared between your company and the PEO. HR outsourcing through a platform model keeps you as the sole employer. You use a unified HCM system backed by expert support, without any change to who employs your people.</p>
+<h3>How much does HR outsourcing cost?</h3>
+<p>HR outsourcing services are typically priced per employee per month (PEPM), with rates varying by service level. Full-service models generally fall within the $50–$200 PEPM range. For Axiom's current rates, see the pricing page.</p>
+<h3>Can you outsource only part of your HR?</h3>
+<p>Yes. Many companies start by outsourcing payroll and benefits while keeping employee relations in-house. The right scope is determined by where your current setup is under the most strain.</p>
+<h3>How long does it take to switch to an outsourced HR setup?</h3>
+<p>For most mid-market companies, a full platform migration takes 4–12 weeks, with payroll typically going live first.</p>
+<h3>Is HR outsourcing a good fit for companies with fewer than 50 employees?</h3>
+<p>It depends less on headcount and more on complexity. A 30-person company operating across 3 states with a mix of hourly and salaried workers may have more HR complexity than a 75-person company in a single state.</p>
+<h2>Ready to Stop Patching Together Your HR Setup?</h2>
+<p>If your company has reached the point where payroll, compliance, and benefits need a dedicated system, Axiom can show you what that looks like. See how Axiom's HR outsourcing works.</p>
+  </div>
+
+  <!-- PAGE REPLICA -->
+  <div class="replica-pane hidden" id="outsource-replica">
+  <div class="axiom-replica">
+    <div class="ax-nav">
+      <div class="ax-nav-logo">Axiom HRS</div>
+      <div class="ax-nav-links">
+        <a href="#">Solutions ▾</a>
+        <a href="#">Who We Help ▾</a>
+        <a href="#">Resources ▾</a>
+        <a href="#">Answers</a>
+        <a href="#">About</a>
+        <a href="#">Pricing</a>
+      </div>
+      <div class="ax-nav-right">
+        <span class="ax-topphone">(317) 587-1019</span>
+        <a href="#" class="ax-talk-btn">Let's Talk</a>
+      </div>
+    </div>
+    <div class="ax-article-hdr">
+      <div class="ax-breadcrumb"><a href="#">Home</a> <span>›</span> <a href="#">Answers</a> <span>›</span> When to Outsource HR</div>
+      <div class="ax-article-h1">Companies That Outsource HR: What Triggers the Decision and What to Expect</div>
+    </div>
+    <div class="ax-content-wrap">
+<p>Companies that outsource HR usually reach that decision at a specific moment — when something breaks, or nearly breaks, and the current setup can no longer absorb it. Payroll lands on the wrong person's desk. Benefits renewal comes up and nobody owns it. A new hire asks about FMLA eligibility and the answer takes three days to find.</p>
+<p>These incidents don't signal a staffing problem. They signal that your HR has grown past the structure managing it. Most often that moment comes around 50 employees, when federal obligations like FMLA and ACA activate, or when the business expands into a second state.</p>
+<p>This guide covers the most common signals for when to outsource HR functions, the types of companies that typically make the move, and what to consider before you decide.</p>
+<h2>Signs It's Time to Outsource HR</h2>
+<p>The clearest sign is that HR tasks are being handled by people whose job is not HR. Beyond that, four operational triggers reliably indicate a company has reached the point where outsourcing makes more sense than staying in-house.</p>
+<h3>1. HR Tasks Are Landing on the Wrong People's Desks</h3>
+<p>When payroll runs through an operations manager and onboarding paperwork falls to whoever has a spare hour, the problem is structural, not a staffing gap. Time that should go toward management, operations, or growth gets absorbed by administrative work that requires specialists to do correctly.</p>
+<h3>2. You've Had Payroll Errors, Late Filings, or Compliance Gaps</h3>
+<p>A missed tax deadline, a misclassified employee, or an I-9 with documentation errors is not a one-off mistake. They're signals that the volume or complexity has exceeded what the current setup can reliably handle.</p>
+<h3>3. Headcount Is Approaching or Has Crossed 50</h3>
+<p>At 50 employees, FMLA eligibility requirements activate. Under the ACA, employer coverage mandates apply at 50 full-time equivalents. These aren't soft thresholds — they carry penalties.</p>
+<h3>4. Your Workforce Has Crossed State Lines</h3>
+<p>Each state adds its own payroll tax structure, leave laws, and reporting requirements. Managing multi-state payroll without a system built for it is one of the most common reasons mid-market companies decide the current setup can't continue.</p>
+<h2>What Types of Companies Outsource HR</h2>
+<p>HR outsourcing for mid-market businesses is most common in the 50–500-employee range. The industries where this move comes up most consistently are healthcare, manufacturing, and construction — large hourly workforces, complex pay structures, shift differentials, and significant compliance exposure.</p>
+<h2>Which HR Functions Are Most Commonly Outsourced</h2>
+<table>
+<thead><tr><th>Function</th><th>Why It's Commonly Outsourced</th></tr></thead>
+<tbody>
+<tr><td>Payroll processing and tax filing</td><td>Deadline-driven; errors carry penalties</td></tr>
+<tr><td>Benefits administration</td><td>Renewal complexity, carrier negotiations</td></tr>
+<tr><td>Compliance monitoring</td><td>Regulations change continuously; multi-state exposure compounds the burden</td></tr>
+<tr><td>Onboarding and I-9/E-Verify</td><td>Documentation-heavy with legal consequences</td></tr>
+<tr><td>Time and attendance</td><td>Directly tied to payroll accuracy and labor law</td></tr>
+<tr><td>HR reporting and analytics</td><td>Data exists, but rarely gets used without dedicated capacity</td></tr>
+</tbody>
+</table>
+<h2>When Outsourcing Is the Wrong Call</h2>
+<p>Not every company is not at the right stage for HR outsourcing. It typically doesn't make sense if you already have a capable internal HR team, if your HCM platform is newly implemented, or if you're under 25–30 employees with no near-term growth plans.</p>
+<h2>Outsourcing vs. Building an In-House HR Team</h2>
+<p>An HR generalist typically costs $55,000–$75,000 per year in base salary before benefits and software. HR outsourcing is priced per employee per month (PEPM), and for a 75-person company, the math often comes out to less than a single full-time hire.</p>
+<p>Axiom's model combines the UKG Ready HCM platform with hands-on support from a dedicated team, priced as a single per-employee package. Payroll, time and attendance, benefits, and HR reporting all run from the same database. You replace your current setup entirely.</p>
+<h2>Frequently Asked Questions</h2>
+<h3>What's the difference between a PEO and HR outsourcing?</h3>
+<p>A PEO becomes a co-employer of your workforce. HR outsourcing through a platform model keeps you as the sole employer — you use a unified HCM system backed by expert support, without any change to who employs your people.</p>
+<h3>How much does HR outsourcing cost?</h3>
+<p>Full-service models generally fall within the $50–$200 PEPM range. For Axiom's current rates, see the pricing page.</p>
+<h3>Can you outsource only part of your HR?</h3>
+<p>Yes. Many companies start by outsourcing payroll and benefits while keeping employee relations in-house.</p>
+<h3>How long does it take to switch to an outsourced HR setup?</h3>
+<p>For most mid-market companies, a full platform migration takes 4–12 weeks, with payroll typically going live first.</p>
+<div class="ax-cta-section">
+  <h2>Ready to Stop Patching Together Your HR Setup?</h2>
+  <p>If your company has reached the point where payroll, compliance, and benefits need a dedicated system, Axiom can show you what that looks like.</p>
+  <a href="#" class="ax-inline-demo">See How Axiom Works</a>
+</div>
+    </div>
+    <div class="ax-footer">
+      <div><div class="ax-footer-logo">Axiom HRS</div><div class="ax-footer-copy">© 2024 Axiom Human Resource Solutions · UKG Ready Preferred Partner</div></div>
+      <div class="ax-footer-info">9400 Priority Way W Dr · Indianapolis, IN 46240<br>Mon–Fri 8:00 a.m. – 8:00 p.m.</div>
+      <div class="ax-footer-right"><div class="ax-footer-phone-big">(317) 587-1019</div><div class="ax-footer-nav"><a href="#">LinkedIn</a><a href="#">Privacy Policy</a><a href="#">Terms</a></div></div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="tab-panel" id="panel-tlm">
+  <div class="article-subtabs">
+    <button class="subtab-btn active" onclick="switchSubtab(this,'tlm','orig')">Original</button>
+    <button class="subtab-btn" onclick="switchSubtab(this,'tlm','v2')">Rewritten</button>
+    <button class="subtab-btn" onclick="switchSubtab(this,'tlm','replica')">Page Replica</button>
+  </div>
+
+  <!-- ORIGINAL -->
+  <div class="article-pane" id="tlm-orig">
+    <div class="meta-block">
+      <div class="mb-row"><span class="mb-lbl">URL</span><span>https://axiomhrs.com/answers/time-and-labor-management/</span></div>
+      <div class="mb-row"><span class="mb-lbl">Meta title</span><span>What Is Time and Labor Management? A Complete Guide <em style="color:#2ecc71">(50 chars)</em></span></div>
+      <div class="mb-row"><span class="mb-lbl">Meta desc</span><span>What is time and labor management, and how does it protect you from payroll errors and compliance risk? Here's a clear breakdown of the system. <em style="color:#2ecc71">(142 chars)</em></span></div>
+      <div class="mb-row"><span class="mb-lbl">Keywords</span><span>time and labor management · time and attendance tracking for hourly employees · labor cost management software</span></div>
+    </div>
+    <h1>Time and Labor Management: What It Is and Why It Matters</h1>
+<p>Every pay period, someone on your HR or payroll team cross-checks timesheets, corrects missed punches, and manually recalculates overtime for employees who worked across two states. The process takes hours. It repeats every two weeks. And it is exactly where payroll errors, compliance gaps, and labor cost overruns quietly accumulate.</p>
+<p>Time and labor management is the system that replaces this. It covers how your employees record hours, how those hours connect to pay rules, how schedules are built and maintained, how leave is administered, and how all of it flows into payroll and compliance reporting.</p>
+<p>This guide explains what a TLM system includes, why it matters most for hourly workforces, and what to look for when choosing a solution.</p>
+<h2>What Time and Labor Management Covers</h2>
+<p>Time and labor management (TLM) is the set of processes and systems your organization uses to track time worked, manage employee schedules, administer leave, and enforce wage-and-hour compliance. It sits within the broader category of workforce management systems but has a defined scope: connecting worked hours to pay calculations, compliance rules, and labor cost visibility.</p>
+<p>It is worth knowing how TLM differs from time and attendance (T&amp;A). A T&amp;A system records when your employees start and stop work. A TLM system does that, but also applies pay rules to the data, then connects that data to payroll, generates compliance reports, and informs scheduling decisions. T&amp;A is a component of TLM, not a synonym for it.</p>
+<h2>The Core Components of a TLM System</h2>
+<p>A complete time and labor management system spans five functional areas. All five share the same underlying data in a well-built platform.</p>
+<h3>Time Tracking</h3>
+<p>Time tracking is the process by which hours enter the system. Methods include biometric time clocks, web-based punch-in, mobile apps with GPS verification, and geofencing for field-based teams. What matters most is that the data flows directly into pay calculations without manual re-entry.</p>
+<h3>Attendance and Absence Management</h3>
+<p>Attendance management covers monitoring patterns, processing leave requests, and running accrual calculations for PTO, sick time, and other leave types. Accrual rules vary by state, and some states layer their own family leave requirements on top of FMLA. A TLM system automatically applies these rules against each employee's location and classification.</p>
+<h3>Employee Scheduling</h3>
+<p>Scheduling connects labor demand to shift coverage. A TLM system links the schedule to real-time data so managers can see coverage gaps before a shift starts. Employees submit shift-swap requests and view their schedules through a self-service portal.</p>
+<h3>Payroll Integration</h3>
+<p>Hours recorded in TLM need to be accurately reflected in payroll. In a single-database platform, time data and payroll rules live in the same system. Overtime calculates at the correct rate, shift differentials apply automatically, and the pay run draws from the same records your HR and managers have reviewed during the period.</p>
+<p>When TLM and payroll run on separate systems connected via data exports, each transfer point is a potential source of record discrepancies. Axiom's payroll services operate from the same database as the time and labor module, removing that reconciliation step entirely.</p>
+<h3>Compliance Tracking and Reporting</h3>
+<p>A TLM system maintains a timestamped record of every clock event, schedule change, and manager approval. Those records support audits, respond to wage disputes, and satisfy record-keeping requirements under state and federal law.</p>
+<h2>Why TLM Matters More for Hourly Workforces</h2>
+<p>Time and attendance tracking for hourly employees means recording and verifying every worked hour at the minute level, then applying the correct pay rate to each category of time: regular, overtime, holiday, and shift differential. Because hourly employees are non-exempt under the FLSA by default, every hour they work has a direct wage consequence.</p>
+<p>If your system misses an overtime threshold, you are out of compliance with federal law, not just with payroll policy.</p>
+<p>Hourly workers also face a higher risk of time theft. Buddy punching and manual timesheet inflation are most common in environments where oversight is limited. The cost accumulates quietly.</p>
+<h2>How TLM Keeps You on the Right Side of Wage and Hour Law</h2>
+<p>A TLM system handles overtime by applying the applicable pay rule automatically at the point of calculation. Under the FLSA, your non-exempt employees must receive 1.5 times their regular rate for any hours worked beyond 40 in a workweek.</p>
+<p>Federal overtime is the floor. California and Alaska require daily overtime: 1.5x after 8 hours in a day, and double time after 12 hours in California. Several other states have their own break and rest-period requirements.</p>
+<p>Predictive scheduling laws add another layer. Cities including Chicago, New York, San Francisco, and Seattle require employers to post schedules in advance, typically 10 to 14 days, and to pay a premium when schedules change on short notice.</p>
+<p>The FLSA requires payroll records to be retained for at least 2 years; some state laws extend that period to 3 years. Your TLM system maintains those records automatically.</p>
+<h2>What Separates a Good TLM System from a Spreadsheet</h2>
+<table>
+<thead><tr><th>Manual process</th><th>TLM system</th></tr></thead>
+<tbody>
+<tr><td>Overtime is calculated after timesheets are submitted</td><td>Overtime is flagged in real time as hours accumulate</td></tr>
+<tr><td>Accruals are tracked per employee in a separate file</td><td>Accruals are calculated automatically against state rules</td></tr>
+<tr><td>Schedules are distributed by email or group text</td><td>Schedules are published and acknowledged in the system</td></tr>
+<tr><td>Leave requests are managed through email threads</td><td>Leave requests, approvals, and balances in one place</td></tr>
+<tr><td>Labor cost is visible only at the month-end</td><td>Labor cost is visible by department or job code, updated daily</td></tr>
+<tr><td>Compliance records are reconstructed on demand</td><td>Audit trail is maintained automatically from every clock event</td></tr>
+</tbody>
+</table>
+<p>Beyond architecture, the features that distinguish strong systems include employee self-service, mobile and GPS access, labor cost analytics, and automated compliance rules.</p>
+<h2>Frequently Asked Questions</h2>
+<h3>What is the difference between time and labor management and time and attendance?</h3>
+<p>Time and attendance (T&amp;A) records when employees start and stop work. Time and labor management (TLM) does that and adds pay rule application, overtime calculation, leave accrual tracking, scheduling, payroll integration, and compliance reporting. T&amp;A is one component within a TLM system.</p>
+<h3>What is time and attendance tracking for hourly employees?</h3>
+<p>For hourly employees, time and attendance tracking involves recording every minute worked, verifying clock events against the schedule, and applying the correct pay rate to each category of time. Because hourly workers are non-exempt under the FLSA, tracking accuracy has legal and financial consequences.</p>
+<h3>How does TLM software calculate overtime automatically?</h3>
+<p>The system tracks each employee's accumulated hours in real time against their assigned workweek. When hours reach the FLSA threshold (40 hours per week for non-exempt employees), the system automatically applies the 1.5x rate to any additional hours. For states with daily overtime rules, the calculation runs against daily hour totals instead.</p>
+<h3>Does a time and labor management system replace payroll software?</h3>
+<p>Not exactly. TLM handles time capture, schedule management, and pay rule application. Payroll software handles wage calculations, tax withholding, and payment disbursement. In a single-database HCM platform, both functions share the same underlying data.</p>
+<h3>What industries use time and labor management software the most?</h3>
+<p>Healthcare, manufacturing, retail, hospitality, and food service see the highest TLM adoption rates because they operate on variable schedules, have large hourly workforces, and face tight compliance requirements.</p>
+<h3>Can TLM software handle compliance across multiple states?</h3>
+<p>Yes, if the system is configured to apply state-specific pay rules, break requirements, and overtime thresholds by employee location. Multi-state compliance is one of the most common failure points for organizations that have grown beyond a single-state payroll setup.</p>
+<h2>Ready to Stop Reconciling Timesheets by Hand?</h2>
+<p>If your current process creates more reconciliation work than it eliminates, you have outgrown it. Explore Axiom's time and labor management solution and see what changes when time tracking, scheduling, and payroll run on one system.</p>
+  </div>
+
+  <!-- REWRITTEN v2 -->
+  <div class="article-pane hidden" id="tlm-v2">
+    <div class="meta-block">
+      <div class="mb-row"><span class="mb-lbl">URL</span><span>https://axiomhrs.com/answers/time-and-labor-management/</span></div>
+      <div class="mb-row"><span class="mb-lbl">Meta title</span><span>What Is Time and Labor Management? A Complete Guide <em style="color:#2ecc71">(50 chars)</em></span></div>
+      <div class="mb-row"><span class="mb-lbl">Meta desc</span><span>What is time and labor management, and how does it protect you from payroll errors and compliance risk? Here's a clear breakdown of the system. <em style="color:#2ecc71">(142 chars)</em></span></div>
+      <div class="mb-row"><span class="mb-lbl">Keywords</span><span>time and labor management · time and attendance tracking for hourly employees · labor cost management software</span></div>
+    </div>
+    <h1>Time and Labor Management: What It Is and Why It Matters</h1>
+<p>Time and labor management is the system that replaces the manual work that happens every pay period: cross-checking timesheets, correcting missed punches, recalculating overtime for employees who worked across two states. That process takes hours, repeats every two weeks, and is where payroll errors, compliance gaps, and labor cost overruns quietly accumulate.</p>
+<p>A TLM system covers how your employees record hours, how those hours connect to pay rules, how schedules are built and maintained, how leave is administered, and how all of it flows into payroll and compliance reporting.</p>
+<p>This guide explains what a TLM system includes, why it matters most for hourly workforces, and what to look for when choosing a solution.</p>
+<h2>What Time and Labor Management Covers</h2>
+<p>Time and labor management (TLM) is the set of processes and systems your organization uses to track time worked, manage employee schedules, administer leave, and enforce wage-and-hour compliance. It sits within the broader category of workforce management systems but has a defined scope: connecting worked hours to pay calculations, compliance rules, and labor cost visibility.</p>
+<p>It is worth knowing how TLM differs from time and attendance (T&amp;A). A T&amp;A system records when your employees start and stop work. A TLM system does that, but also applies pay rules to the data, then connects that data to payroll, generates compliance reports, and informs scheduling decisions. T&amp;A is a component of TLM, not a synonym for it.</p>
+<h2>The Core Components of a TLM System</h2>
+<p>A complete time and labor management system spans five functional areas. All five share the same underlying data in a well-built platform.</p>
+<h3>Time Tracking</h3>
+<p>Time tracking is the process by which hours enter the system. Methods include biometric time clocks, web-based punch-in, mobile apps with GPS verification, and geofencing for field-based teams. What matters most is that the data flows directly into pay calculations without manual re-entry.</p>
+<h3>Attendance and Absence Management</h3>
+<p>Attendance management covers monitoring patterns, processing leave requests, and running accrual calculations for PTO, sick time, and other leave types. Accrual rules vary by state, and some states layer their own family leave requirements on top of FMLA. A TLM system automatically applies these rules against each employee's location and classification.</p>
+<h3>Employee Scheduling</h3>
+<p>Scheduling connects labor demand to shift coverage. A TLM system links the schedule to real-time data so managers can see coverage gaps before a shift starts. Employees submit shift-swap requests and view their schedules through a self-service portal.</p>
+<h3>Payroll Integration</h3>
+<p>Hours recorded in TLM need to be accurately reflected in payroll. In a single-database platform, time data and payroll rules live in the same system. Overtime calculates at the correct rate, shift differentials apply automatically, and the pay run draws from the same records your HR and managers have reviewed during the period.</p>
+<p>When TLM and payroll run on separate systems connected via data exports, each transfer point is a potential source of record discrepancies. Axiom's payroll services operate from the same database as the time and labor module, removing that reconciliation step entirely. Axiom's team provides hands-on support through implementation and ongoing operations, so your configuration is actively maintained — not left to self-service.</p>
+<h3>Compliance Tracking and Reporting</h3>
+<p>A TLM system maintains a timestamped record of every clock event, schedule change, and manager approval. Those records support audits, respond to wage disputes, and satisfy record-keeping requirements under state and federal law.</p>
+<h2>Why TLM Matters More for Hourly Workforces</h2>
+<p>Time and attendance tracking for hourly employees means recording and verifying every worked hour at the minute level, then applying the correct pay rate to each category of time: regular, overtime, holiday, and shift differential. Because hourly employees are non-exempt under the FLSA by default, every hour they work has a direct wage consequence.</p>
+<p>If your system misses an overtime threshold, you are out of compliance with federal law, not just with payroll policy.</p>
+<p>Hourly workers also face a higher risk of time theft. Buddy punching and manual timesheet inflation are most common in environments where oversight is limited. The cost accumulates quietly.</p>
+<h2>How TLM Keeps You on the Right Side of Wage and Hour Law</h2>
+<p>A TLM system handles overtime by applying the applicable pay rule automatically at the point of calculation. Under the FLSA, your non-exempt employees must receive 1.5 times their regular rate for any hours worked beyond 40 in a workweek.</p>
+<p>Federal overtime is the floor. California and Alaska require daily overtime: 1.5x after 8 hours in a day, and double time after 12 hours in California. Several other states have their own break and rest-period requirements.</p>
+<p>Predictive scheduling laws add another layer. Cities including Chicago, New York, San Francisco, and Seattle require employers to post schedules in advance, typically 10 to 14 days, and to pay a premium when schedules change on short notice.</p>
+<p>The FLSA requires payroll records to be retained for at least 2 years; some state laws extend that period to 3 years. Your TLM system maintains those records automatically.</p>
+<h2>What Separates a Good TLM System from a Spreadsheet</h2>
+<table>
+<thead><tr><th>Manual process</th><th>TLM system</th></tr></thead>
+<tbody>
+<tr><td>Overtime is calculated after timesheets are submitted</td><td>Overtime is flagged in real time as hours accumulate</td></tr>
+<tr><td>Accruals are tracked per employee in a separate file</td><td>Accruals are calculated automatically against state rules</td></tr>
+<tr><td>Schedules are distributed by email or group text</td><td>Schedules are published and acknowledged in the system</td></tr>
+<tr><td>Leave requests are managed through email threads</td><td>Leave requests, approvals, and balances in one place</td></tr>
+<tr><td>Labor cost is visible only at the month-end</td><td>Labor cost is visible by department or job code, updated daily</td></tr>
+<tr><td>Compliance records are reconstructed on demand</td><td>Audit trail is maintained automatically from every clock event</td></tr>
+</tbody>
+</table>
+<p>Beyond architecture, the features that distinguish strong systems include employee self-service, mobile and GPS access, labor cost analytics, and automated compliance rules.</p>
+<h2>Frequently Asked Questions</h2>
+<h3>What is the difference between time and labor management and time and attendance?</h3>
+<p>Time and attendance (T&amp;A) records when employees start and stop work. Time and labor management (TLM) does that and adds pay rule application, overtime calculation, leave accrual tracking, scheduling, payroll integration, and compliance reporting. T&amp;A is one component within a TLM system.</p>
+<h3>What is time and attendance tracking for hourly employees?</h3>
+<p>For hourly employees, time and attendance tracking involves recording every minute worked, verifying clock events against the schedule, and applying the correct pay rate to each category of time. Because hourly workers are non-exempt under the FLSA, tracking accuracy has legal and financial consequences.</p>
+<h3>How does TLM software calculate overtime automatically?</h3>
+<p>The system tracks each employee's accumulated hours in real time against their assigned workweek. When hours reach the FLSA threshold (40 hours per week for non-exempt employees), the system automatically applies the 1.5x rate to any additional hours. For states with daily overtime rules, the calculation runs against daily hour totals instead.</p>
+<h3>Does a time and labor management system replace payroll software?</h3>
+<p>Not exactly. TLM handles time capture, schedule management, and pay rule application. Payroll software handles wage calculations, tax withholding, and payment disbursement. In a single-database HCM platform, both functions share the same underlying data.</p>
+<h3>What industries use time and labor management software the most?</h3>
+<p>Healthcare, manufacturing, retail, hospitality, and food service see the highest TLM adoption rates because they operate on variable schedules, have large hourly workforces, and face tight compliance requirements.</p>
+<h3>Can TLM software handle compliance across multiple states?</h3>
+<p>Yes, if the system is configured to apply state-specific pay rules, break requirements, and overtime thresholds by employee location. Multi-state compliance is one of the most common failure points for organizations that have grown beyond a single-state payroll setup.</p>
+<h2>Ready to Stop Reconciling Timesheets by Hand?</h2>
+<p>If your current process creates more reconciliation work than it eliminates, you have outgrown it. Explore Axiom's time and labor management solution and see what changes when time tracking, scheduling, and payroll run on one system.</p>
+  </div>
+
+  <!-- PAGE REPLICA -->
+  <div class="replica-pane hidden" id="tlm-replica">
+  <div class="axiom-replica">
+    <div class="ax-nav">
+      <div class="ax-nav-logo">Axiom HRS</div>
+      <div class="ax-nav-links">
+        <a href="#">Solutions ▾</a>
+        <a href="#">Who We Help ▾</a>
+        <a href="#">Resources ▾</a>
+        <a href="#">Answers</a>
+        <a href="#">About</a>
+        <a href="#">Pricing</a>
+      </div>
+      <div class="ax-nav-right">
+        <span class="ax-topphone">(317) 587-1019</span>
+        <a href="#" class="ax-talk-btn">Let's Talk</a>
+      </div>
+    </div>
+    <div class="ax-article-hdr">
+      <div class="ax-breadcrumb"><a href="#">Home</a> <span>›</span> <a href="#">Answers</a> <span>›</span> Time and Labor Management</div>
+      <div class="ax-article-h1">Time and Labor Management: What It Is and Why It Matters</div>
+    </div>
+    <div class="ax-content-wrap">
+<p>Time and labor management is the system that replaces the manual work that happens every pay period: cross-checking timesheets, correcting missed punches, recalculating overtime for employees who worked across two states. That process takes hours, repeats every two weeks, and is where payroll errors, compliance gaps, and labor cost overruns quietly accumulate.</p>
+<p>This guide explains what a TLM system includes, why it matters most for hourly workforces, and what to look for when choosing a solution.</p>
+<h2>What Time and Labor Management Covers</h2>
+<p>Time and labor management (TLM) is the set of processes and systems your organization uses to track time worked, manage employee schedules, administer leave, and enforce wage-and-hour compliance. It connects worked hours to pay calculations, compliance rules, and labor cost visibility.</p>
+<p>A T&amp;A system records when employees start and stop work. A TLM system does that, plus applies pay rules, connects to payroll, generates compliance reports, and informs scheduling. T&amp;A is a component of TLM, not a synonym.</p>
+<h2>The Core Components of a TLM System</h2>
+<h3>Time Tracking</h3>
+<p>Methods include biometric time clocks, web-based punch-in, mobile apps with GPS verification, and geofencing. The data flows directly into pay calculations without manual re-entry.</p>
+<h3>Attendance and Absence Management</h3>
+<p>Covers monitoring patterns, leave requests, and accrual calculations for PTO, sick time, and other leave types — applied automatically against each employee's location and classification.</p>
+<h3>Employee Scheduling</h3>
+<p>Links the schedule to real-time data so managers see coverage gaps before a shift starts. Employees submit shift-swap requests and view schedules through a self-service portal.</p>
+<h3>Payroll Integration</h3>
+<p>In a single-database platform, time data and payroll rules live in the same system — overtime calculates at the correct rate, shift differentials apply automatically. Axiom's payroll services operate from the same database as the time and labor module, removing the reconciliation step entirely. Axiom's team provides hands-on support through implementation and ongoing operations.</p>
+<h3>Compliance Tracking and Reporting</h3>
+<p>A TLM system maintains a timestamped record of every clock event, schedule change, and manager approval — supporting audits and wage disputes automatically.</p>
+<h2>Why TLM Matters More for Hourly Workforces</h2>
+<p>Because hourly employees are non-exempt under the FLSA by default, every hour they work has a direct wage consequence. If your system misses an overtime threshold, you are out of compliance with federal law — not just payroll policy.</p>
+<h2>How TLM Keeps You on the Right Side of Wage and Hour Law</h2>
+<p>Under the FLSA, non-exempt employees must receive 1.5x their regular rate for hours beyond 40 per workweek. California and Alaska require daily overtime: 1.5x after 8 hours, double time after 12 in California. Predictive scheduling laws in Chicago, New York, San Francisco, and Seattle require 10–14 days advance notice. The FLSA requires payroll records retained for at least 2 years.</p>
+<h2>Manual vs. TLM System</h2>
+<table>
+<thead><tr><th>Manual process</th><th>TLM system</th></tr></thead>
+<tbody>
+<tr><td>Overtime calculated after timesheets submitted</td><td>Overtime flagged in real time as hours accumulate</td></tr>
+<tr><td>Accruals tracked per employee in a separate file</td><td>Accruals calculated automatically against state rules</td></tr>
+<tr><td>Schedules distributed by email or group text</td><td>Schedules published and acknowledged in the system</td></tr>
+<tr><td>Leave requests managed through email threads</td><td>Leave requests, approvals, and balances in one place</td></tr>
+<tr><td>Labor cost visible only at month-end</td><td>Labor cost visible by department or job code, updated daily</td></tr>
+<tr><td>Compliance records reconstructed on demand</td><td>Audit trail maintained automatically from every clock event</td></tr>
+</tbody>
+</table>
+<h2>Frequently Asked Questions</h2>
+<h3>What is the difference between TLM and time and attendance?</h3>
+<p>T&amp;A records start/stop times. TLM adds pay rule application, overtime calculation, leave accrual tracking, scheduling, and compliance reporting. T&amp;A is one component within a TLM system.</p>
+<h3>How does TLM software calculate overtime automatically?</h3>
+<p>The system tracks accumulated hours in real time. When hours cross the FLSA threshold, the 1.5x rate applies automatically. For states with daily overtime rules, the calculation runs against daily totals.</p>
+<h3>Can TLM software handle multi-state compliance?</h3>
+<p>Yes — if configured to apply state-specific pay rules, break requirements, and overtime thresholds by employee location. Multi-state compliance is one of the most common failure points for organizations that have grown beyond a single-state setup.</p>
+<div class="ax-cta-section">
+  <h2>Ready to Stop Reconciling Timesheets by Hand?</h2>
+  <p>See what changes when time tracking, scheduling, and payroll run on one system.</p>
+  <a href="#" class="ax-inline-demo">Explore Axiom's TLM Solution</a>
+</div>
+    </div>
+    <div class="ax-footer">
+      <div><div class="ax-footer-logo">Axiom HRS</div><div class="ax-footer-copy">© 2024 Axiom Human Resource Solutions · UKG Ready Preferred Partner</div></div>
+      <div class="ax-footer-info">9400 Priority Way W Dr · Indianapolis, IN 46240<br>Mon–Fri 8:00 a.m. – 8:00 p.m.</div>
+      <div class="ax-footer-right"><div class="ax-footer-phone-big">(317) 587-1019</div><div class="ax-footer-nav"><a href="#">LinkedIn</a><a href="#">Privacy Policy</a><a href="#">Terms</a></div></div>
     </div>
   </div>
   </div>
