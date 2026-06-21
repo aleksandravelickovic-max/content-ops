@@ -131,6 +131,60 @@
   .inline-links { color: var(--muted); font-size: 13px; margin: 16px 0; padding: 10px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; }
 
   .footer { text-align: center; padding: 32px; color: var(--muted); font-size: 11px; border-top: 1px solid var(--border); margin-top: 16px; }
+
+  /* === FSS PAGE REPLICA === */
+  .fss-replica { background: #fff; overflow: hidden; font-family: 'Inter', system-ui, sans-serif; color: #333; }
+  .fss-nav { background: #0c3d6b; padding: 0 28px; height: 58px; display: flex; align-items: center; justify-content: space-between; }
+  .fss-nav-logo { font-size: 18px; font-weight: 800; color: #fff; letter-spacing: -0.3px; }
+  .fss-nav-logo em { color: #f58220; font-style: normal; }
+  .fss-nav-links { display: flex; gap: 20px; }
+  .fss-nav-links a { color: rgba(255,255,255,0.8); font-size: 13px; font-weight: 500; text-decoration: none; }
+  .fss-nav-links a:hover { color: #fff; }
+  .fss-alert-bar { background: #1a6dba; color: rgba(255,255,255,0.9); font-size: 12px; padding: 8px 28px; display: flex; align-items: center; gap: 10px; }
+  .fss-reserve-btn { background: #f58220; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 4px; text-decoration: none; white-space: nowrap; }
+  .fss-hero { background: linear-gradient(135deg, #0c3d6b 0%, #1a6dba 100%); padding: 32px 28px 28px; }
+  .fss-hero-sub { color: rgba(255,255,255,0.7); font-size: 14px; margin-bottom: 14px; }
+  .fss-search-wrap { display: flex; max-width: 500px; border-radius: 6px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.25); }
+  .fss-search-input { flex: 1; padding: 12px 16px; border: none; font-size: 14px; color: #333; background: #fff; outline: none; font-family: inherit; }
+  .fss-search-btn { background: #f58220; color: #fff; border: none; padding: 12px 22px; font-size: 14px; font-weight: 700; cursor: pointer; font-family: inherit; white-space: nowrap; }
+  .fss-content-wrap { padding: 36px 40px 24px; max-width: 900px; }
+
+  /* Light-theme overrides within replica */
+  .fss-replica .page-content h1 { font-size: 28px; font-weight: 800; color: #0c3d6b; margin: 0 0 16px; line-height: 1.25; border: none; padding: 0; }
+  .fss-replica .page-content h2 { font-size: 20px; font-weight: 700; color: #0c3d6b; margin: 32px 0 12px; padding-top: 22px; border-top: 2px solid #eef1f6; }
+  .fss-replica .page-content h3 { font-size: 16px; font-weight: 700; color: #1a6dba; margin: 18px 0 8px; }
+  .fss-replica .page-content p { color: #444; font-size: 15px; margin-bottom: 12px; line-height: 1.75; }
+  .fss-replica .page-content p strong { color: #222; }
+  .fss-replica .page-content ul, .fss-replica .page-content ol { margin: 0 0 14px 22px; }
+  .fss-replica .page-content li { color: #444; font-size: 15px; margin-bottom: 5px; line-height: 1.65; }
+  .fss-replica .page-content li strong { color: #222; }
+  .fss-replica .page-content a { color: #1a6dba; }
+  .fss-replica .page-content table { width: 100%; border-collapse: collapse; margin: 14px 0 20px; border: 1px solid #dde5f0; }
+  .fss-replica .page-content th { background: #0c3d6b; color: #fff; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; padding: 10px 14px; text-align: left; border: none; }
+  .fss-replica .page-content td { padding: 10px 14px; border-bottom: 1px solid #e8eef5; font-size: 14px; color: #444; background: none; }
+  .fss-replica .page-content tr:nth-child(even) td { background: #f5f8ff; }
+  .fss-replica .page-content tr:hover td { background: #eef3ff; }
+  .fss-replica .faq-item { background: #fff; border: 1px solid #dde5f0; border-radius: 8px; padding: 16px 18px; margin-bottom: 10px; border-left: 3px solid #1a6dba; }
+  .fss-replica .faq-q { font-weight: 700; color: #0c3d6b; font-size: 15px; margin-bottom: 8px; }
+  .fss-replica .faq-a { color: #555; font-size: 14px; line-height: 1.7; }
+  .fss-replica .link-block { background: #f0f5ff; border: 1px solid #c5d8f0; border-radius: 8px; padding: 14px 18px; margin: 20px 0; }
+  .fss-replica .link-block p { color: #555 !important; font-size: 14px !important; margin-bottom: 8px !important; background: none !important; border: none !important; padding: 0 !important; }
+  .fss-replica .link-block li { font-size: 14px !important; color: #444 !important; margin-bottom: 4px; }
+  .fss-replica .link-block a { color: #1a6dba; }
+  .fss-replica .note-p { background: #e8f0fb; border-left: 3px solid #1a6dba; padding: 10px 14px; margin: 12px 0; font-size: 14px; color: #444; border-radius: 0 6px 6px 0; }
+  .fss-replica .note-p strong { color: #333; }
+  .fss-replica .inline-links { color: #666; font-size: 14px; background: #f5f7fa; border: 1px solid #dde5f0; border-radius: 6px; padding: 10px 14px; }
+  .fss-replica .inline-links a { color: #1a6dba; }
+
+  .fss-cities { background: #f7f9fc; border-top: 1px solid #e0e8f0; padding: 24px 28px; }
+  .fss-cities-heading { font-size: 12px; font-weight: 700; color: #666; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; }
+  .fss-cities-list { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+  .fss-cities-list a { font-size: 13px; color: #1a6dba; text-decoration: none; }
+  .fss-cities-list a:hover { text-decoration: underline; }
+  .fss-page-footer { background: #0c2a47; padding: 18px 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .fss-page-footer-copy { color: rgba(255,255,255,0.45); font-size: 12px; }
+  .fss-page-footer-links { display: flex; gap: 16px; }
+  .fss-page-footer-links a { color: rgba(255,255,255,0.55); font-size: 12px; text-decoration: none; }
 </style>
 </head>
 <body>
@@ -196,12 +250,12 @@
     </div>
     <div class="score-card">
       <div class="page-name">Wine Storage</div>
-      <div class="grade grade-Bplus">B+</div>
+      <div class="grade grade-A">A−</div>
       <div class="sub-scores">
-        <div class="sub-row"><span class="sub-label">Scope</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:80%;background:#f0d43a;"></div></div><span class="sub-val">8</span></div>
+        <div class="sub-row"><span class="sub-label">Scope</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:90%;background:#7af09c;"></div></div><span class="sub-val">9</span></div>
         <div class="sub-row"><span class="sub-label">Fluency</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:90%;background:#7af09c;"></div></div><span class="sub-val">9</span></div>
-        <div class="sub-row"><span class="sub-label">Compliance</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:70%;background:#f0d43a;"></div></div><span class="sub-val">7</span></div>
-        <div class="sub-row"><span class="sub-label">Deliverables</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:50%;background:#f04f5a;"></div></div><span class="sub-val">5</span></div>
+        <div class="sub-row"><span class="sub-label">Compliance</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:90%;background:#7af09c;"></div></div><span class="sub-val">9</span></div>
+        <div class="sub-row"><span class="sub-label">Deliverables</span><div class="sub-bar-wrap"><div class="sub-bar" style="width:80%;background:#f0d43a;"></div></div><span class="sub-val">8</span></div>
       </div>
     </div>
     <div class="score-card">
@@ -419,10 +473,13 @@
         <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Best-written page — strongest intro, most human voice</span></div>
         <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Unique structure appropriate to topic (environmental factors framework)</span></div>
         <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">6 FAQs — meets requirement</span></div>
-        <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">Merged line in "Who Needs Wine Storage" — will publish broken <span class="check-sub">[C4]</span></span></div>
-        <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">"Our search tool" in FAQ answer <span class="check-sub">[C2]</span></span></div>
-        <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">"Near you" duplicated in CTA <span class="check-sub">[N4]</span></span></div>
-        <div class="check-row"><span class="check-icon check-fail">✗</span><span class="check-text">/storage-unit-near-me link not documented <span class="check-sub">[C1]</span></span></div>
+        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Merged line fixed — "Who Needs Wine Storage" bullet restored <span class="check-sub">[C4]</span></span></div>
+        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">"Our search tool" replaced with "Search FindSelfStorage.com" <span class="check-sub">[C2]</span></span></div>
+        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">"Near you" duplication fixed in CTA <span class="check-sub">[N4]</span></span></div>
+        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">/storage-unit-near-me link added to CTA <span class="check-sub">[C1]</span></span></div>
+        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">New section: "What Types of Wine Need Proper Storage?" — 5 wine categories</span></div>
+        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">New section: "How Much Wine Can You Store?" — collection size table (bottles → unit size)</span></div>
+        <div class="check-row"><span class="check-icon check-pass">✓</span><span class="check-text">Access hours added to pricing factors list</span></div>
         <div class="check-row"><span class="check-icon check-warn">⚠</span><span class="check-text">Specialty Wine Vaults — confirm whether in network <span class="check-sub">[M4]</span></span></div>
       </div>
     </div>
@@ -479,8 +536,33 @@
     <div class="cm-row"><span class="cm-key">Title</span><span class="cm-val">Car Storage Units Near You | All Car Storage Types</span></div>
     <div class="cm-row"><span class="cm-key">Description</span><span class="cm-val">Find car storage units near you. Compare enclosed, covered, and outdoor options for any car and budget. Search facilities, check prices, and reserve online.</span></div>
     <div class="cm-row"><span class="cm-key">Keywords</span><span class="cm-val"><div class="kw-wrap"><span class="kw-tag">Car storage units</span><span class="kw-tag">Car storage near me</span><span class="kw-tag">Vehicle storage units</span><span class="kw-tag">Self storage for cars</span><span class="kw-tag">Climate controlled car storage</span><span class="kw-tag">Auto storage units</span><span class="kw-tag">Enclosed car storage</span><span class="kw-tag">Indoor car storage</span><span class="kw-tag">Covered car storage</span><span class="kw-tag">Outdoor car storage</span><span class="kw-tag">Car storage facility</span><span class="kw-tag">Automobile storage</span><span class="kw-tag">Car storage unit sizes</span><span class="kw-tag">How much does car storage cost</span></div></span></div>
+  <div class="cm-row"><span class="cm-key">Links</span><span class="cm-val"><div class="kw-wrap"><span class="kw-tag">/storage-unit-near-me</span><span class="kw-tag">/rv-storage-units</span><span class="kw-tag">/boat-storage-units</span><span class="kw-tag">/motorcycle-storage-units</span><span class="kw-tag">/vehicle-storage-units</span></div></span></div>
   </div>
   <div class="corrected-banner">✓ Corrected version — all audit issues applied<ul><li>H1 fixed: "Vehicle" → "Car"</li><li>H2 fixed: removed "We Connect You With"</li><li>"Our search tool" replaced with "facilities listed on FindSelfStorage.com"</li><li>/storage-unit-near-me link added to CTA</li><li>Prep checklist opener humanized (consequence-first)</li><li>CTA closer varied</li></ul></div>
+</div>
+<div class="fss-replica">
+  <div class="fss-nav">
+    <div class="fss-nav-logo">Find<em>Self</em>Storage</div>
+    <div class="fss-nav-links">
+      <a href="#">Storage Units Near Me</a>
+      <a href="#">Self Storage ▾</a>
+      <a href="#">Vehicle Storage ▾</a>
+      <a href="#">Blog</a>
+      <a href="#">About Us</a>
+    </div>
+  </div>
+  <div class="fss-alert-bar">
+    <a href="#" class="fss-reserve-btn">Reserve your unit now!</a>
+    <span>Pricing and availability may change.</span>
+  </div>
+  <div class="fss-hero">
+    <div class="fss-hero-sub">Search, find and book your unit FREE.</div>
+    <div class="fss-search-wrap">
+      <input class="fss-search-input" type="text" placeholder="Enter city, state, or ZIP" />
+      <button class="fss-search-btn">Search</button>
+    </div>
+  </div>
+  <div class="fss-content-wrap">
   <div class="page-content">
     <h1>Car Storage Units: Find Indoor, Covered &amp; Outdoor Car Storage Near You</h1>
     <p>Whether you're reclaiming your garage from a seasonal sports car, protecting a classic during winter, or need long-term secure parking while you travel, car storage units offer a safer and more accessible alternative to leaving your vehicle exposed on a driveway or crammed into a shared space.</p>
@@ -624,6 +706,19 @@
     <div class="faq-item"><div class="faq-q">What is the difference between covered and enclosed car storage?</div><div class="faq-a">Enclosed storage places your car inside a fully sealed drive-up unit with a roll-up door. It provides complete protection from weather, pests, dust, and temperature extremes. Covered storage parks your vehicle under a standalone roof with open sides. It protects from direct rain and sun but not from rodents, flooding, or temperature extremes.</div></div>
     <div class="faq-item"><div class="faq-q">How do I prepare my car for long-term storage?</div><div class="faq-a">Key steps: change the oil, fill the tank and add fuel stabilizer, top off all fluids, inflate tires, disconnect the battery or connect a maintainer, wash and wax the exterior, clean the interior, and plug the exhaust and air intake. Run the engine for 15 to 20 minutes every two weeks when possible.</div></div>
   </div>
+  </div>
+  <div class="fss-cities">
+    <div class="fss-cities-heading">Find a Storage Unit Near You</div>
+    <div class="fss-cities-list">
+      <a href="#">Albuquerque, NM</a><a href="#">Atlanta, GA</a><a href="#">Austin, TX</a><a href="#">Charlotte, NC</a><a href="#">Chicago, IL</a><a href="#">Dallas, TX</a><a href="#">Denver, CO</a><a href="#">Houston, TX</a><a href="#">Las Vegas, NV</a><a href="#">Los Angeles, CA</a><a href="#">Miami, FL</a><a href="#">Nashville, TN</a><a href="#">New York, NY</a><a href="#">Orlando, FL</a><a href="#">Phoenix, AZ</a><a href="#">Portland, OR</a><a href="#">San Antonio, TX</a><a href="#">San Diego, CA</a><a href="#">San Francisco, CA</a><a href="#">Seattle, WA</a><a href="#">Tampa, FL</a>
+    </div>
+  </div>
+  <div class="fss-page-footer">
+    <div class="fss-page-footer-copy">Find Self Storage — Copyright 2022 — All rights reserved</div>
+    <div class="fss-page-footer-links">
+      <a href="#">Blog</a><a href="#">About Us</a><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a>
+    </div>
+  </div>
 </div>
 </div><!-- /tab-car -->
 
@@ -634,8 +729,33 @@
     <div class="cm-row"><span class="cm-key">Title</span><span class="cm-val">Boat Storage Units Near You | All Boat Storage Types</span></div>
     <div class="cm-row"><span class="cm-key">Description</span><span class="cm-val">Find boat storage units near you. Compare enclosed, covered, outdoor, and dry stack options for any boat size and budget. Search facilities and reserve online for free.</span></div>
     <div class="cm-row"><span class="cm-key">Keywords</span><span class="cm-val"><div class="kw-wrap"><span class="kw-tag">Boat storage units</span><span class="kw-tag">Boat storage near me</span><span class="kw-tag">Boat storage units near me</span><span class="kw-tag">Indoor boat storage</span><span class="kw-tag">Covered boat storage</span><span class="kw-tag">Dry stack boat storage</span><span class="kw-tag">Boat self storage</span><span class="kw-tag">Boat storage facility</span><span class="kw-tag">RV and boat storage near me</span><span class="kw-tag">How much does boat storage cost</span><span class="kw-tag">Boat storage size</span><span class="kw-tag">Boat winterization storage</span><span class="kw-tag">Enclosed boat storage</span></div></span></div>
+  <div class="cm-row"><span class="cm-key">Links</span><span class="cm-val"><div class="kw-wrap"><span class="kw-tag">/storage-unit-near-me</span><span class="kw-tag">/rv-storage-units</span><span class="kw-tag">/car-storage-units</span><span class="kw-tag">/motorcycle-storage-units</span><span class="kw-tag">/vehicle-storage-units</span></div></span></div>
   </div>
   <div class="corrected-banner">✓ Corrected version — all audit issues applied<ul><li>Intro completely rewritten — distinct from Car page, boat-specific triggers (dock fees, HOA bans, haul-out timing)</li><li>"Our search tool" replaced with "facilities listed on FindSelfStorage.com"</li><li>/storage-unit-near-me link added to CTA</li><li>Prep checklist opener humanized (consequence-first)</li><li>CTA closer varied</li></ul></div>
+</div>
+<div class="fss-replica">
+  <div class="fss-nav">
+    <div class="fss-nav-logo">Find<em>Self</em>Storage</div>
+    <div class="fss-nav-links">
+      <a href="#">Storage Units Near Me</a>
+      <a href="#">Self Storage ▾</a>
+      <a href="#">Vehicle Storage ▾</a>
+      <a href="#">Blog</a>
+      <a href="#">About Us</a>
+    </div>
+  </div>
+  <div class="fss-alert-bar">
+    <a href="#" class="fss-reserve-btn">Reserve your unit now!</a>
+    <span>Pricing and availability may change.</span>
+  </div>
+  <div class="fss-hero">
+    <div class="fss-hero-sub">Search, find and book your unit FREE.</div>
+    <div class="fss-search-wrap">
+      <input class="fss-search-input" type="text" placeholder="Enter city, state, or ZIP" />
+      <button class="fss-search-btn">Search</button>
+    </div>
+  </div>
+  <div class="fss-content-wrap">
   <div class="page-content">
     <h1>Boat Storage Units: Find Indoor, Covered &amp; Outdoor Boat Storage Near You</h1>
     <p>Dock fees add up fast, and most HOAs prohibit boats and trailers on residential lots outright. When the season ends and haul-out is due, finding a dedicated storage spot before the rush is the practical move. Search facilities listed on FindSelfStorage.com to compare enclosed, covered, outdoor, and dry stack options by size and price — reserve online for free, no credit card required.</p>
@@ -778,6 +898,19 @@
     <div class="faq-item"><div class="faq-q">Can I store a boat on its trailer in a storage unit?</div><div class="faq-a">Yes. Most boat storage at self storage facilities is designed for boats on their trailers. This makes drop-off and pickup easy since you simply tow the boat in and out. Measure the full rig (boat plus trailer) for length, width, and height before selecting a unit size.</div></div>
     <div class="faq-item"><div class="faq-q">How do I prepare a boat for long-term storage?</div><div class="faq-a">Key steps: flush the engine with fresh water, change the oil, fog the cylinders, stabilize the fuel, drain and antifreeze the cooling system, disconnect the battery or connect a maintainer, clean and wax the hull, remove cushions and canvas, cover with a breathable boat cover, and lubricate trailer bearings. Run the engine every few weeks if possible during long storage periods.</div></div>
   </div>
+  </div>
+  <div class="fss-cities">
+    <div class="fss-cities-heading">Find a Storage Unit Near You</div>
+    <div class="fss-cities-list">
+      <a href="#">Albuquerque, NM</a><a href="#">Atlanta, GA</a><a href="#">Austin, TX</a><a href="#">Charlotte, NC</a><a href="#">Chicago, IL</a><a href="#">Dallas, TX</a><a href="#">Denver, CO</a><a href="#">Houston, TX</a><a href="#">Las Vegas, NV</a><a href="#">Los Angeles, CA</a><a href="#">Miami, FL</a><a href="#">Nashville, TN</a><a href="#">New York, NY</a><a href="#">Orlando, FL</a><a href="#">Phoenix, AZ</a><a href="#">Portland, OR</a><a href="#">San Antonio, TX</a><a href="#">San Diego, CA</a><a href="#">San Francisco, CA</a><a href="#">Seattle, WA</a><a href="#">Tampa, FL</a>
+    </div>
+  </div>
+  <div class="fss-page-footer">
+    <div class="fss-page-footer-copy">Find Self Storage — Copyright 2022 — All rights reserved</div>
+    <div class="fss-page-footer-links">
+      <a href="#">Blog</a><a href="#">About Us</a><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a>
+    </div>
+  </div>
 </div>
 </div><!-- /tab-boat -->
 
@@ -788,8 +921,33 @@
     <div class="cm-row"><span class="cm-key">Title</span><span class="cm-val">RV Storage Units Near You | All Motorhome Storage Types</span></div>
     <div class="cm-row"><span class="cm-key">Description</span><span class="cm-val">Find RV storage units near you. Compare enclosed, covered, and outdoor options for motorhomes, campers, and trailers. Search facilities and reserve for free.</span></div>
     <div class="cm-row"><span class="cm-key">Keywords</span><span class="cm-val"><div class="kw-wrap"><span class="kw-tag">RV storage units</span><span class="kw-tag">RV storage near me</span><span class="kw-tag">RV storage units near me</span><span class="kw-tag">Motorhome storage near me</span><span class="kw-tag">Camper storage near me</span><span class="kw-tag">Indoor rv storage</span><span class="kw-tag">Covered rv storage near me</span><span class="kw-tag">RV storage facilities</span><span class="kw-tag">Enclosed rv storage</span><span class="kw-tag">How much does rv storage cost</span><span class="kw-tag">RV self storage</span><span class="kw-tag">Recreational vehicle storage</span></div></span></div>
+  <div class="cm-row"><span class="cm-key">Links</span><span class="cm-val"><div class="kw-wrap"><span class="kw-tag">/storage-unit-near-me</span><span class="kw-tag">/boat-storage-units</span><span class="kw-tag">/car-storage-units</span><span class="kw-tag">/motorcycle-storage-units</span><span class="kw-tag">/vehicle-storage-units</span></div></span></div>
   </div>
   <div class="corrected-banner">✓ Corrected version — all audit issues applied<ul><li>Meta keyword typo fixed ("rv storage cost")</li><li>New "Do You Need Climate Controlled RV Storage?" section added (scope gap closed)</li><li>"Our search network" replaced with "FindSelfStorage.com network"</li><li>Propane step expanded with safety detail (valve procedure, enclosed-space risk, tank removal guidance)</li><li>/storage-unit-near-me link added to CTA</li><li>Prep checklist opener humanized (consequence-first)</li><li>CTA closer varied</li></ul></div>
+</div>
+<div class="fss-replica">
+  <div class="fss-nav">
+    <div class="fss-nav-logo">Find<em>Self</em>Storage</div>
+    <div class="fss-nav-links">
+      <a href="#">Storage Units Near Me</a>
+      <a href="#">Self Storage ▾</a>
+      <a href="#">Vehicle Storage ▾</a>
+      <a href="#">Blog</a>
+      <a href="#">About Us</a>
+    </div>
+  </div>
+  <div class="fss-alert-bar">
+    <a href="#" class="fss-reserve-btn">Reserve your unit now!</a>
+    <span>Pricing and availability may change.</span>
+  </div>
+  <div class="fss-hero">
+    <div class="fss-hero-sub">Search, find and book your unit FREE.</div>
+    <div class="fss-search-wrap">
+      <input class="fss-search-input" type="text" placeholder="Enter city, state, or ZIP" />
+      <button class="fss-search-btn">Search</button>
+    </div>
+  </div>
+  <div class="fss-content-wrap">
   <div class="page-content">
     <h1>RV Storage Units: Find Covered, Enclosed &amp; Outdoor Motorhome Storage Near You</h1>
     <p>Finding a safe, accessible place to store an RV between trips is one of the most common challenges RV owners face. HOA rules, municipal parking codes, and plain lack of space make home storage impractical for most. Search storage facilities near you to compare RV storage options by type, size, and price. Reserve online for free with no credit card required.</p>
@@ -938,6 +1096,19 @@
     <div class="faq-item"><div class="faq-q">How do I prepare my RV for long-term storage?</div><div class="faq-a">Key steps: clean and dry the interior and exterior, drain and winterize all water systems, stabilize the fuel, change the engine oil, disconnect or maintain the batteries, cover exhaust and vents to block pests, retract slide-outs and awnings, and protect tires from flat-spotting and UV damage.</div></div>
     <div class="faq-item"><div class="faq-q">Are there HOA or municipal restrictions on parking an RV at home?</div><div class="faq-a">Many HOAs and municipalities restrict or prohibit parking RVs in driveways, on streets, or in front yards. Restrictions vary by location. If you are unsure about your local rules, check with your HOA or local planning department. Self storage facilities offer a compliant, secure alternative.</div></div>
   </div>
+  </div>
+  <div class="fss-cities">
+    <div class="fss-cities-heading">Find a Storage Unit Near You</div>
+    <div class="fss-cities-list">
+      <a href="#">Albuquerque, NM</a><a href="#">Atlanta, GA</a><a href="#">Austin, TX</a><a href="#">Charlotte, NC</a><a href="#">Chicago, IL</a><a href="#">Dallas, TX</a><a href="#">Denver, CO</a><a href="#">Houston, TX</a><a href="#">Las Vegas, NV</a><a href="#">Los Angeles, CA</a><a href="#">Miami, FL</a><a href="#">Nashville, TN</a><a href="#">New York, NY</a><a href="#">Orlando, FL</a><a href="#">Phoenix, AZ</a><a href="#">Portland, OR</a><a href="#">San Antonio, TX</a><a href="#">San Diego, CA</a><a href="#">San Francisco, CA</a><a href="#">Seattle, WA</a><a href="#">Tampa, FL</a>
+    </div>
+  </div>
+  <div class="fss-page-footer">
+    <div class="fss-page-footer-copy">Find Self Storage — Copyright 2022 — All rights reserved</div>
+    <div class="fss-page-footer-links">
+      <a href="#">Blog</a><a href="#">About Us</a><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a>
+    </div>
+  </div>
 </div>
 </div><!-- /tab-rv -->
 
@@ -948,8 +1119,33 @@
     <div class="cm-row"><span class="cm-key">Title</span><span class="cm-val">Wine Storage Units Near You | Climate Controlled Wine Storage</span></div>
     <div class="cm-row"><span class="cm-key">Description</span><span class="cm-val">Find climate controlled wine storage units near you. Protect your collection with the right temperature, humidity, and light conditions. Reserve for free.</span></div>
     <div class="cm-row"><span class="cm-key">Keywords</span><span class="cm-val"><div class="kw-wrap"><span class="kw-tag">Wine storage units</span><span class="kw-tag">Wine storage near me</span><span class="kw-tag">Wine storage facility</span><span class="kw-tag">Climate controlled wine storage</span><span class="kw-tag">Wine storage facilities near me</span><span class="kw-tag">Wine cellar storage units</span><span class="kw-tag">Wine collection storage</span><span class="kw-tag">Self storage for wine</span></div></span></div>
+  <div class="cm-row"><span class="cm-key">Links</span><span class="cm-val"><div class="kw-wrap"><span class="kw-tag">/storage-unit-near-me</span><span class="kw-tag">/24-hour-storage-units</span><span class="kw-tag">/climate-controlled-storage-units</span><span class="kw-tag">/business-storage-units</span></div></span></div>
   </div>
-  <div class="corrected-banner">✓ Corrected version — all audit issues applied<ul><li>Merged bullet fixed — two separate list items restored in "Who Needs Wine Storage"</li><li>"Our search tool" replaced with "Search FindSelfStorage.com"</li><li>"Near you" duplication fixed in CTA sentence</li><li>Specialty Wine Vaults caveat added (availability varies; CSM confirmation pending)</li><li>/storage-unit-near-me link integrated into CTA</li></ul></div>
+  <div class="corrected-banner">✓ Corrected version — all audit issues applied<ul><li>Merged bullet fixed — two separate list items restored in "Who Needs Wine Storage"</li><li>"Our search tool" replaced with "Search FindSelfStorage.com"</li><li>"Near you" duplication fixed in CTA sentence</li><li>Specialty Wine Vaults caveat added (availability varies; CSM confirmation pending)</li><li>/storage-unit-near-me link integrated into CTA</li><li>New section added: "What Types of Wine Need Proper Storage?" (investment wines, age-worthy reds, Champagne, large collections, case buyers)</li><li>New section added: "How Much Wine Can You Store? Unit Sizes by Collection" — 5-row table mapping bottles/cases to unit size</li><li>Access hours bullet added to pricing factors list</li></ul></div>
+</div>
+<div class="fss-replica">
+  <div class="fss-nav">
+    <div class="fss-nav-logo">Find<em>Self</em>Storage</div>
+    <div class="fss-nav-links">
+      <a href="#">Storage Units Near Me</a>
+      <a href="#">Self Storage ▾</a>
+      <a href="#">Vehicle Storage ▾</a>
+      <a href="#">Blog</a>
+      <a href="#">About Us</a>
+    </div>
+  </div>
+  <div class="fss-alert-bar">
+    <a href="#" class="fss-reserve-btn">Reserve your unit now!</a>
+    <span>Pricing and availability may change.</span>
+  </div>
+  <div class="fss-hero">
+    <div class="fss-hero-sub">Search, find and book your unit FREE.</div>
+    <div class="fss-search-wrap">
+      <input class="fss-search-input" type="text" placeholder="Enter city, state, or ZIP" />
+      <button class="fss-search-btn">Search</button>
+    </div>
+  </div>
+  <div class="fss-content-wrap">
   <div class="page-content">
     <h1>Wine Storage Units: Find Climate Controlled Wine Storage Near You</h1>
     <p>Wine is one of the few things you store that actively changes based on its environment. A bottle stored at the wrong temperature, exposed to too much light, or left standing upright too long can go from excellent to undrinkable before you ever open it.</p>
@@ -965,6 +1161,17 @@
       <li><strong>Estate and inheritance collections:</strong> Properly storing a wine collection during a property transition</li>
       <li><strong>Apartment and condo dwellers:</strong> No basement or cellar space at home for long-term storage</li>
     </ul>
+
+    <h2>What Types of Wine Need Proper Storage?</h2>
+    <p>Not all wine benefits equally from dedicated storage. These categories have the most to gain:</p>
+    <ul>
+      <li><strong>Investment and futures wines:</strong> Bottles purchased specifically to appreciate in value require precise long-term conditions to protect that investment</li>
+      <li><strong>Age-worthy reds:</strong> Cabernet Sauvignon, Barolo, Bordeaux, and similar structured reds develop complexity over years and decades — proper storage is what makes that aging possible</li>
+      <li><strong>Champagne and sparkling wines:</strong> Sensitive to temperature swings and light; premium bottles meant for cellaring should be stored at stable temperatures, not in a standard refrigerator</li>
+      <li><strong>Large collections (50+ bottles):</strong> Once a collection grows beyond home storage capacity, a dedicated facility prevents bottles from being stored in unsuitable conditions</li>
+      <li><strong>Everyday drinking wine in quantity:</strong> If you buy wine by the case to rotate through over months, climate controlled storage keeps the remaining bottles in good condition between purchases</li>
+    </ul>
+    <p>Wines intended for drinking within the next few weeks do not require dedicated storage. The investment in a storage unit is most worthwhile for bottles you plan to hold for months or years.</p>
 
     <h2>What Wine Needs to Stay in Good Condition</h2>
     <p>Wine is sensitive to four environmental factors. Any facility you use should control all of them.</p>
@@ -995,6 +1202,20 @@
     <p>Dedicated wine storage facilities go beyond temperature and humidity control to include vibration dampening, individual locked cages or rooms, and inventory management services. These exist primarily in larger urban markets. Availability varies by market and is less common than general climate controlled storage. When searching, filter for climate controlled facilities and contact them directly to ask about wine-specific storage capabilities.</p>
     <p><strong>Best for:</strong> High-value collections, wine invested for long-term aging, or collectors who want full inventory tracking and professional management.</p>
     <p class="note-p"><strong>Note:</strong> Specialty wine vault facilities are not listed in all markets. Filter for climate controlled options near you and contact facilities directly to confirm wine-specific capabilities before booking.</p>
+
+    <h2>How Much Wine Can You Store? Unit Sizes by Collection</h2>
+    <p>Choosing the right unit size depends on how many bottles or cases you need to store. This table maps typical collection sizes to recommended unit sizes:</p>
+    <table>
+      <thead><tr><th>Collection Size</th><th>Approximate Cases</th><th>Recommended Unit Size</th></tr></thead>
+      <tbody>
+        <tr><td>Up to 50 bottles</td><td>4 cases</td><td>Wine locker or bin storage</td></tr>
+        <tr><td>50 to 150 bottles</td><td>4 to 12 cases</td><td>5×5 or 5×10 climate controlled unit</td></tr>
+        <tr><td>150 to 300 bottles</td><td>12 to 25 cases</td><td>5×10 or 10×10 climate controlled unit</td></tr>
+        <tr><td>300 to 600 bottles</td><td>25 to 50 cases</td><td>10×10 to 10×15 climate controlled unit</td></tr>
+        <tr><td>600+ bottles</td><td>50+ cases</td><td>10×20 or larger; specialty vault recommended</td></tr>
+      </tbody>
+    </table>
+    <p>These are approximate ranges. Actual capacity depends on how bottles are racked, whether you use original wooden cases, and how much aisle space you need for access. When searching, contact the facility to confirm available shelving or racking before booking.</p>
 
     <h2>What to Look for in a Wine Storage Facility</h2>
     <p>Before committing to a facility, verify these conditions:</p>
@@ -1030,6 +1251,7 @@
       <li><strong>Unit size:</strong> Priced per square foot; a full unit costs more than a shared bin</li>
       <li><strong>Facility type:</strong> Specialty wine vaults charge a premium over general climate controlled storage</li>
       <li><strong>Insurance:</strong> Some facilities offer or require insurance for high-value collections</li>
+      <li><strong>Access hours:</strong> Facilities with 24/7 keypad entry typically charge more than locations with business-hours-only access</li>
     </ul>
     <p>Search facilities near you to find climate controlled storage options and compare current pricing near you.</p>
 
@@ -1052,6 +1274,19 @@
     <div class="faq-item"><div class="faq-q">How much does wine storage cost per month?</div><div class="faq-a">Costs range from $10 to $30 per case per month for wine locker or bin storage, up to $75 to $400 or more per month for a private climate controlled unit depending on size and location. Specialty wine vaults in urban markets can charge $20 to $60 per case per month with full management services.</div></div>
     <div class="faq-item"><div class="faq-q">How do I find a wine storage facility near me?</div><div class="faq-a">Search FindSelfStorage.com to find climate controlled storage facilities near you. Filter for climate controlled units and contact facilities directly to confirm temperature management, humidity control, and wine storage suitability before booking.</div></div>
   </div>
+  </div>
+  <div class="fss-cities">
+    <div class="fss-cities-heading">Find a Storage Unit Near You</div>
+    <div class="fss-cities-list">
+      <a href="#">Albuquerque, NM</a><a href="#">Atlanta, GA</a><a href="#">Austin, TX</a><a href="#">Charlotte, NC</a><a href="#">Chicago, IL</a><a href="#">Dallas, TX</a><a href="#">Denver, CO</a><a href="#">Houston, TX</a><a href="#">Las Vegas, NV</a><a href="#">Los Angeles, CA</a><a href="#">Miami, FL</a><a href="#">Nashville, TN</a><a href="#">New York, NY</a><a href="#">Orlando, FL</a><a href="#">Phoenix, AZ</a><a href="#">Portland, OR</a><a href="#">San Antonio, TX</a><a href="#">San Diego, CA</a><a href="#">San Francisco, CA</a><a href="#">Seattle, WA</a><a href="#">Tampa, FL</a>
+    </div>
+  </div>
+  <div class="fss-page-footer">
+    <div class="fss-page-footer-copy">Find Self Storage — Copyright 2022 — All rights reserved</div>
+    <div class="fss-page-footer-links">
+      <a href="#">Blog</a><a href="#">About Us</a><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a>
+    </div>
+  </div>
 </div>
 </div><!-- /tab-wine -->
 
@@ -1062,8 +1297,33 @@
     <div class="cm-row"><span class="cm-key">Title</span><span class="cm-val">Motorcycle Storage Units Near You | All Motorcycle Storage Types</span></div>
     <div class="cm-row"><span class="cm-key">Description</span><span class="cm-val">Find motorcycle storage units near you. Compare enclosed, covered, and outdoor options for all bikes. Search facilities, check prices, and reserve for free.</span></div>
     <div class="cm-row"><span class="cm-key">Keywords</span><span class="cm-val"><div class="kw-wrap"><span class="kw-tag">Motorcycle storage units</span><span class="kw-tag">Motorcycle storage near me</span><span class="kw-tag">Motorcycle storage units near me</span><span class="kw-tag">Indoor motorcycle storage</span><span class="kw-tag">Motorcycle winter storage</span><span class="kw-tag">Motorbike storage near me</span><span class="kw-tag">Motorcycle self storage</span><span class="kw-tag">How much does motorcycle storage cost</span><span class="kw-tag">Climate controlled motorcycle storage</span></div></span></div>
+  <div class="cm-row"><span class="cm-key">Links</span><span class="cm-val"><div class="kw-wrap"><span class="kw-tag">/storage-unit-near-me</span><span class="kw-tag">/car-storage-units</span><span class="kw-tag">/rv-storage-units</span><span class="kw-tag">/boat-storage-units</span><span class="kw-tag">/vehicle-storage-units</span></div></span></div>
   </div>
   <div class="corrected-banner">✓ Corrected version — all audit issues applied<ul><li>"Whilst" fixed → "while"</li><li>Keywords block formatting fixed (separate lines)</li><li>Meta title fixed: "All Motorcycle Storage Types"</li><li>"Our search tool" replaced with "Search FindSelfStorage.com"</li><li>/storage-unit-near-me link added to CTA</li><li>Prep checklist opener humanized (consequence-first)</li><li>CTA closer varied</li></ul></div>
+</div>
+<div class="fss-replica">
+  <div class="fss-nav">
+    <div class="fss-nav-logo">Find<em>Self</em>Storage</div>
+    <div class="fss-nav-links">
+      <a href="#">Storage Units Near Me</a>
+      <a href="#">Self Storage ▾</a>
+      <a href="#">Vehicle Storage ▾</a>
+      <a href="#">Blog</a>
+      <a href="#">About Us</a>
+    </div>
+  </div>
+  <div class="fss-alert-bar">
+    <a href="#" class="fss-reserve-btn">Reserve your unit now!</a>
+    <span>Pricing and availability may change.</span>
+  </div>
+  <div class="fss-hero">
+    <div class="fss-hero-sub">Search, find and book your unit FREE.</div>
+    <div class="fss-search-wrap">
+      <input class="fss-search-input" type="text" placeholder="Enter city, state, or ZIP" />
+      <button class="fss-search-btn">Search</button>
+    </div>
+  </div>
+  <div class="fss-content-wrap">
   <div class="page-content">
     <h1>Motorcycle Storage Units: Find Indoor &amp; Covered Motorcycle Storage Near You</h1>
     <p>Keeping a motorcycle in your garage during the off-season takes up space and leaves the bike exposed to temperature swings, humidity, and pests. A dedicated motorcycle storage unit gives your bike a secure, protected space at a price that fits most budgets while keeping it ready to ride when the season starts.</p>
@@ -1198,6 +1458,19 @@
     <div class="faq-item"><div class="faq-q">Can I store a motorcycle outside?</div><div class="faq-a">Yes, in a secured outdoor lot with a quality weatherproof motorcycle cover. Outdoor storage is the least expensive option and works well for mild-climate short-term storage. For winter storage or valuable bikes, enclosed storage is a better investment.</div></div>
     <div class="faq-item"><div class="faq-q">What is the best way to store a motorcycle for winter?</div><div class="faq-a">Fill the tank and add fuel stabilizer, change the oil if due, wash and wax the bike, lubricate the chain, inflate the tires, disconnect or maintain the battery, cover the exhaust and intake, and use a breathable motorcycle cover. Store in an enclosed or covered unit to protect against moisture and temperature extremes.</div></div>
     <div class="faq-item"><div class="faq-q">How do I find motorcycle storage near me?</div><div class="faq-a">Search FindSelfStorage.com to find facilities near you that offer drive-up units suitable for motorcycles. Filter by unit size and look for 5' x 10' or 10' x 10' drive-up units. Confirm the facility accepts motorcycles and offers drive-up access before booking.</div></div>
+  </div>
+  </div>
+  <div class="fss-cities">
+    <div class="fss-cities-heading">Find a Storage Unit Near You</div>
+    <div class="fss-cities-list">
+      <a href="#">Albuquerque, NM</a><a href="#">Atlanta, GA</a><a href="#">Austin, TX</a><a href="#">Charlotte, NC</a><a href="#">Chicago, IL</a><a href="#">Dallas, TX</a><a href="#">Denver, CO</a><a href="#">Houston, TX</a><a href="#">Las Vegas, NV</a><a href="#">Los Angeles, CA</a><a href="#">Miami, FL</a><a href="#">Nashville, TN</a><a href="#">New York, NY</a><a href="#">Orlando, FL</a><a href="#">Phoenix, AZ</a><a href="#">Portland, OR</a><a href="#">San Antonio, TX</a><a href="#">San Diego, CA</a><a href="#">San Francisco, CA</a><a href="#">Seattle, WA</a><a href="#">Tampa, FL</a>
+    </div>
+  </div>
+  <div class="fss-page-footer">
+    <div class="fss-page-footer-copy">Find Self Storage — Copyright 2022 — All rights reserved</div>
+    <div class="fss-page-footer-links">
+      <a href="#">Blog</a><a href="#">About Us</a><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a>
+    </div>
   </div>
 </div>
 </div><!-- /tab-motorcycle -->
