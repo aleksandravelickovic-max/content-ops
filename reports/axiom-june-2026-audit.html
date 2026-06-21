@@ -150,6 +150,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 .ax-footer-phone-big { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 4px; }
 .ax-footer-nav { display: flex; gap: 14px; justify-content: flex-end; }
 .ax-footer-nav a { font-size: 12px; color: rgba(255,255,255,0.45); text-decoration: none; }
+.fix-highlight{background:#fef08a;border-radius:2px;padding:0 2px}
 </style>
 </head>
 <body>
@@ -162,6 +163,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
   <button class="nav-btn" onclick="switchTab('paylocity')">UKG Ready vs Paylocity</button>
   <button class="nav-btn" onclick="switchTab('outsource')">Outsource HR</button>
   <button class="nav-btn" onclick="switchTab('tlm')">Time &amp; Labor</button>
+  <button class="nav-btn" onclick="switchTab('pillar')">HR Outsourcing Guide</button>
 </div>
 
 <!-- AUDIT PANEL -->
@@ -406,6 +408,70 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
   <tr><td>4</td><td>Add "hands-on support" to Axiom section</td><td>Time &amp; Labor</td><td>Low</td><td>✓ Fixed</td></tr>
   <tr><td>5</td><td>Confirm pricing claims ($50–$200 PEPM, etc.)</td><td>Outsource HR</td><td>CSM confirm</td><td>⏳ Pending</td></tr>
   <tr><td>6</td><td>Verify "HR Analytics and Reporting" feature name</td><td>Time &amp; Labor</td><td>CSM confirm</td><td>⏳ Pending</td></tr>
+</table>
+
+<h2>Pillar Page Findings — Task <a href="https://app.clickup.com/t/868jyk5hw" target="_blank" style="color:var(--accent)">868jyk5hw</a></h2>
+
+<div class="score-cards" style="grid-template-columns:repeat(1,1fr);max-width:210px">
+  <div class="score-card">
+    <div class="score-title">HR Outsourcing Guide</div>
+    <div class="score-grade" style="color:#2ecc71">B+</div>
+  </div>
+</div>
+
+<table>
+  <tr><th>Page</th><th>Accuracy</th><th>AI / Fluency</th><th>Style Compliance</th><th>Deliverables</th><th>Overall</th></tr>
+  <tr><td>HR Outsourcing Guide (pillar)</td><td>9/10</td><td>9/10</td><td>8/10</td><td>8/10</td><td><strong>B+</strong></td></tr>
+</table>
+
+<p style="color:var(--muted);font-size:13px">Strong skyscraper pillar page. Comprehensive topic coverage, accurate HRO/PEO/ASO distinctions, correct rip-and-replace positioning, and no banned terminology. Two targeted fixes plus two CSM confirmations before publish.</p>
+
+<div class="finding major">
+  <span class="tag major">M1 · Pillar page</span>
+  <h3>Primary keyword not in first body sentence (§7)</h3>
+  <p>Primary keyword is "outsourcing human resources." First sentence: <em>"At 50 employees, one person can reasonably handle HR."</em> — no keyword present. The primary keyword first appears in paragraph 2: <em>"Outsourcing human resources is the arrangement companies make..."</em> §7 requires the primary keyword in the first sentence of body content.</p>
+  <p><strong>Fix applied in v2:</strong> Opening restructured to lead with the primary keyword while preserving the headcount context: <em>"Outsourcing human resources is how companies separate the people decisions they want to keep from the processing volume they can no longer absorb. At 150, payroll grows more complex, compliance requirements multiply across states, and your HR lead is spending most of their time on paperwork rather than on hiring and retention."</em></p>
+</div>
+
+<div class="finding major">
+  <span class="tag major">M2 · Pillar page</span>
+  <h3>CTA uses "hands-on HR expertise" instead of required "hands-on support" (§4)</h3>
+  <p>§4 names <strong>"hands-on support"</strong> as the core differentiator term: <em>"it is what separates Axiom from a pure SaaS offering."</em> The closing CTA reads: <em>"Axiom's HR outsourcing solutions combine the UKG Ready platform with hands-on HR expertise."</em> "Hands-on HR expertise" is not the required term.</p>
+  <p><strong>Fix applied in v2:</strong> CTA updated to: <em>"Axiom's HR outsourcing solutions combine the UKG Ready platform with hands-on support: payroll, compliance, benefits, and more, running from a single database."</em></p>
+</div>
+
+<div class="finding minor">
+  <span class="tag minor">N1 · Pillar page</span>
+  <h3>"Four tiers" pricing structure — confirm in raw/</h3>
+  <p>The cost section states: <em>"Axiom prices its services per employee per month across four tiers, from payroll and tax filing at the entry level to full HCM with benefits, leave management, and analytics at the top."</em> The four-tier structure is not confirmed in <code>clients/axiom-hrs/raw/</code>. If the tier count or descriptions are inaccurate, this could be a factual error. <strong>Status: ⏳ CSM confirm.</strong></p>
+</div>
+
+<div class="finding minor">
+  <span class="tag minor">N2 · Pillar page</span>
+  <h3>"See current rates on our pricing page" — pricing page URL needed</h3>
+  <p>The cost section ends with: <em>"See current rates on our pricing page."</em> No URL is provided. Before publishing, confirm the pricing page URL exists and is live, or remove the reference. <strong>Status: ⏳ CSM confirm.</strong></p>
+</div>
+
+<div class="finding good">
+  <span class="tag good">Preserved in v2</span>
+  <ul>
+    <li><strong>HRO/PEO/ASO distinction</strong> — accurate, clearly explained, no co-employment confusion. The comparison table (co-employment, employer of record, benefits sponsorship, strategic HR support) is well-structured.</li>
+    <li><strong>Rip-and-replace positioning</strong> — no "connects with," "works alongside," or "add-on" language anywhere. Axiom is framed as a full replacement, not an augmentation.</li>
+    <li><strong>"Unified" used correctly</strong> — appears in "unified HCM platform" and "unified platform" with accurate context. "Integrated" as platform descriptor is absent.</li>
+    <li><strong>Compliance claims are specific</strong> — FLSA, FMLA, ACA, ADA, state leave laws, payroll tax, quarterly filings. All named by type, none left generic.</li>
+    <li><strong>No banned SaaS language</strong> — "robust," "seamless," "revolutionary," "cutting-edge," "innovative" are absent throughout.</li>
+    <li><strong>Specificity throughout</strong> — "shift differentials, union agreements," "missed I-9s, outdated job descriptions," "30–90 day notice period," "parallel processing period" — concrete operational detail per §5.</li>
+    <li><strong>UKG relationship framed correctly</strong> — UKG Ready is the platform, Axiom provides the support layer. Not described as a connector or integration.</li>
+  </ul>
+</div>
+
+<h2>Pillar Page Action Priority</h2>
+<table>
+  <tr><th>Priority</th><th>Item</th><th>Effort</th><th>Status in v2</th></tr>
+  <tr><td>1</td><td>Add primary keyword to first body sentence</td><td>Low</td><td>✓ Fixed</td></tr>
+  <tr><td>2</td><td>Replace "hands-on HR expertise" with "hands-on support" in CTA</td><td>Trivial</td><td>✓ Fixed</td></tr>
+  <tr><td>3</td><td>Confirm "four tiers" pricing structure in raw/</td><td>CSM confirm</td><td>⏳ Pending</td></tr>
+  <tr><td>4</td><td>Confirm pricing page URL exists and is live</td><td>CSM confirm</td><td>⏳ Pending</td></tr>
 </table>
 
   </div>
@@ -2174,6 +2240,380 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
       <div class="ax-footer-right"><div class="ax-footer-phone-big">(317) 587-1019</div><div class="ax-footer-nav"><a href="#">LinkedIn</a><a href="#">Privacy Policy</a><a href="#">Terms</a></div></div>
     </div>
   </div>
+  </div>
+</div>
+
+<div class="tab-panel" id="panel-pillar">
+  <div class="article-subtabs">
+    <button class="subtab-btn active" onclick="switchSubtab(this,'pillar','orig')">Original</button>
+    <button class="subtab-btn" onclick="switchSubtab(this,'pillar','v2')">Rewritten</button>
+    <button class="subtab-btn" onclick="switchSubtab(this,'pillar','replica')">Page Replica</button>
+  </div>
+
+  <!-- ORIGINAL -->
+  <div class="article-pane" id="pillar-orig">
+    <div class="article-meta">
+      <strong>Meta title:</strong> HR Outsourcing Guide: How to Outsource Human Resources<br>
+      <strong>Meta description:</strong> What does outsourcing human resources actually include? Compare HRO, PEO, and ASO models, understand the costs, and learn when it makes sense.<br>
+      <strong>Keywords:</strong> outsourcing human resources · hr outsourcing solutions · outsource human resources<br>
+      <strong>Slug:</strong> /outsourcing-human-resources
+    </div>
+
+    <h1>HR Outsourcing: Complete Guide for Growing Companies</h1>
+
+    <p>At 50 employees, one person can reasonably handle HR. At 150, the same setup breaks. Payroll gets more complex, benefits questions multiply, and compliance requirements across two or three states mean your HR lead is spending most of their time on paperwork rather than on hiring and retention.</p>
+
+    <p>Outsourcing human resources is the arrangement companies make when administrative volume and compliance complexity exceed what an internal team can handle. A third-party provider takes over designated HR functions while you retain employer status and control over employment decisions.</p>
+
+    <p>This guide covers what HR outsourcing includes, how it differs from a PEO, when the move makes sense, how to choose a provider, what the transition looks like, and how the costs compare.</p>
+
+    <p><strong>Key takeaways:</strong></p>
+    <ul>
+      <li>HR outsourcing (HRO) is a service arrangement in which a third-party provider takes over specific HR functions while the company retains employer status and full control over employment decisions.</li>
+      <li>HRO, PEO, and ASO are three distinct models. PEO involves co-employment and benefits sponsorship; HRO and ASO do not. The right model turns on how much control you need over employment decisions and benefits.</li>
+      <li>The most common driver for outsourcing HR is compliance exposure: when multi-state operations, FMLA, ACA, or payroll tax complexity exceeds what an internal team can reliably handle.</li>
+      <li>Outsourcing HR typically costs less than a comparable in-house hire when total employment costs are factored in, but vague contracts and an uncapped scope can quickly close that gap.</li>
+      <li>A successful transition starts with auditing your current HR processes and data before onboarding a provider. Skipping this step is the most common reason implementations stall.</li>
+    </ul>
+
+    <h2>What Is HR Outsourcing?</h2>
+    <p>HR outsourcing is a service arrangement in which an organization transfers designated HR functions to a third-party provider. The provider delivers those services — payroll, compliance, benefits administration, or others — while the company retains full employer status. Unlike a PEO, an HRO provider does not become a co-employer. You keep your employment relationships; the provider handles the execution.</p>
+    <p>The two main delivery modes are full HR outsourcing and single-process outsourcing. Full HR outsourcing means the provider manages all HR functions, with your internal team acting as a liaison or handling strategy. Single-process outsourcing means you hand off one or two functions (most commonly payroll) while keeping the rest in-house.</p>
+    <p>A third option, the administrative services only (ASO) model, handles payroll processing and tax filing without the strategic HR support that comes with a full HRO arrangement. ASOs work best for companies that have competent internal HR leadership but want to remove administrative processing from their plate.</p>
+
+    <h2>What HR Functions Can Be Outsourced?</h2>
+    <p>Most administrative and compliance-heavy HR functions can be outsourced. The functions your team spends the most time processing, rather than deciding, are the best candidates.</p>
+    <p>Functions commonly included in HR outsourcing services:</p>
+    <ul>
+      <li>Payroll processing and tax filing, including multi-state withholding and quarterly filings</li>
+      <li>Benefits administration and open enrollment management</li>
+      <li>Compliance tracking and regulatory filings (FLSA, FMLA, ACA, and state-specific labor laws)</li>
+      <li>Recruiting coordination and onboarding administration</li>
+      <li>Time and attendance tracking</li>
+      <li>Performance management administration</li>
+      <li>Employee training program management</li>
+      <li>HR policy development and employee handbook maintenance</li>
+    </ul>
+    <h3>HR Functions That Should Stay In-House</h3>
+    <ul>
+      <li><strong>Culture and employee experience</strong></li>
+      <li><strong>Direct employee relations</strong></li>
+      <li><strong>Disciplinary decisions</strong></li>
+      <li><strong>Strategic workforce planning</strong></li>
+    </ul>
+
+    <h2>HRO vs. PEO vs. ASO: What's the Difference?</h2>
+    <table>
+      <tr><th></th><th>HRO</th><th>PEO</th><th>ASO</th></tr>
+      <tr><td>Co-employment</td><td>No</td><td>Yes</td><td>No</td></tr>
+      <tr><td>Employer of record</td><td>You</td><td>Shared</td><td>You</td></tr>
+      <tr><td>Benefits sponsorship</td><td>No</td><td>Provider pools</td><td>No</td></tr>
+      <tr><td>Strategic HR support</td><td>Yes</td><td>Varies</td><td>No</td></tr>
+      <tr><td>Best fit</td><td>50–500 employees</td><td>10–150 employees</td><td>Admin-only needs</td></tr>
+    </table>
+
+    <h2>Benefits of Outsourcing HR</h2>
+    <ul>
+      <li><strong>Lower total cost</strong></li>
+      <li><strong>Compliance coverage across every jurisdiction you operate in</strong></li>
+      <li><strong>Time redirected from administration to strategy</strong></li>
+      <li><strong>Access to enterprise-level HR technology</strong></li>
+      <li><strong>Scalability without proportional headcount growth</strong></li>
+      <li><strong>Competitive benefits access</strong></li>
+    </ul>
+
+    <h2>Risks and Tradeoffs to Understand Before You Outsource</h2>
+    <p>Loss of Responsiveness · Cultural Misalignment · Data Security · Scope Creep · Knowledge Loss During Transitions</p>
+
+    <h2>Signs It's Time to Outsource HR</h2>
+    <ul>
+      <li>HR administration is consuming leadership time</li>
+      <li>You have had a compliance miss or close call</li>
+      <li>You are operating in multiple states</li>
+      <li>Headcount is growing faster than HR can absorb</li>
+      <li>Complexity and the cost of benefits have become unmanageable</li>
+      <li>HR is reactive, not strategic</li>
+    </ul>
+
+    <h2>How to Choose an HR Outsourcing Provider</h2>
+    <p>Define scope, evaluate service breadth, technology, compliance track record, implementation support, pricing model, and named account team. Red flags: vague scope, no named contact, no regulatory change process, reluctance to provide references.</p>
+
+    <h2>What the Transition Looks Like</h2>
+    <p><strong>Step 1:</strong> HR Audit &nbsp;·&nbsp; <strong>Step 2:</strong> Vendor Onboarding &nbsp;·&nbsp; <strong>Step 3:</strong> Go-Live and Stabilization</p>
+    <p>Realistic timeline: 2–8 weeks depending on scope, states, and data cleanliness.</p>
+
+    <h2>How Much Does HR Outsourcing Cost?</h2>
+    <p>Priced per employee per month (PEPM). Cost drivers: employee count, functions in scope, number of states, HR technology included, complexity of pay rules.</p>
+    <p>Axiom prices its services per employee per month across four tiers, from payroll and tax filing at the entry level to full HCM with benefits, leave management, and analytics at the top. See current rates on our pricing page.</p>
+
+    <h2>Frequently Asked Questions About HR Outsourcing</h2>
+    <p>[Full FAQ section: Is HR outsourcing right for small businesses? · Can you outsource HR if you already have an internal HR team? · What is the difference between HR outsourcing and HR consulting? · How is HR outsourcing different from buying HR software? · What happens if you need to exit an HR outsourcing contract?]</p>
+
+    <h2>Ready to Stop Patching Together an HR Operation?</h2>
+    <p>Axiom's HR outsourcing solutions combine the UKG Ready platform with hands-on HR expertise: payroll, compliance, benefits, and more, running from a single database. Stop managing human resources across disconnected tools. Talk to Axiom about what outsourcing HR looks like at your headcount.</p>
+  </div>
+
+  <!-- REWRITTEN v2 -->
+  <div class="article-pane hidden" id="pillar-v2">
+    <div class="article-meta">
+      <strong>Meta title:</strong> HR Outsourcing Guide: How to Outsource Human Resources<br>
+      <strong>Meta description:</strong> What does outsourcing human resources actually include? Compare HRO, PEO, and ASO models, understand the costs, and learn when it makes sense.<br>
+      <strong>Keywords:</strong> outsourcing human resources · hr outsourcing solutions · outsource human resources<br>
+      <strong>Slug:</strong> /outsourcing-human-resources<br>
+      <strong>Changes:</strong> M1 — primary keyword moved to first sentence; M2 — "hands-on HR expertise" → "hands-on support" in CTA
+    </div>
+
+    <h1>HR Outsourcing: Complete Guide for Growing Companies</h1>
+
+    <p><span class="fix-highlight">Outsourcing human resources is how companies separate the people decisions they want to keep from the processing volume they can no longer absorb.</span> At 50 employees, one HR person can manage both. At 150, payroll grows more complex, compliance requirements multiply across states, and your HR lead is spending most of their time on paperwork rather than on hiring and retention.</p>
+
+    <p>An HR outsourcing arrangement means a third-party provider takes over designated HR functions while you retain employer status and control over employment decisions.</p>
+
+    <p>This guide covers what HR outsourcing includes, how it differs from a PEO, when the move makes sense, how to choose a provider, what the transition looks like, and how the costs compare.</p>
+
+    <p><strong>Key takeaways:</strong></p>
+    <ul>
+      <li>HR outsourcing (HRO) is a service arrangement in which a third-party provider takes over specific HR functions while the company retains employer status and full control over employment decisions.</li>
+      <li>HRO, PEO, and ASO are three distinct models. PEO involves co-employment and benefits sponsorship; HRO and ASO do not. The right model turns on how much control you need over employment decisions and benefits.</li>
+      <li>The most common driver for outsourcing HR is compliance exposure: when multi-state operations, FMLA, ACA, or payroll tax complexity exceeds what an internal team can reliably handle.</li>
+      <li>Outsourcing HR typically costs less than a comparable in-house hire when total employment costs are factored in, but vague contracts and an uncapped scope can quickly close that gap.</li>
+      <li>A successful transition starts with auditing your current HR processes and data before onboarding a provider. Skipping this step is the most common reason implementations stall.</li>
+    </ul>
+
+    <h2>What Is HR Outsourcing?</h2>
+    <p>HR outsourcing is a service arrangement in which an organization transfers designated HR functions to a third-party provider. The provider delivers those services — payroll, compliance, benefits administration, or others — while the company retains full employer status. Unlike a PEO, an HRO provider does not become a co-employer. You keep your employment relationships; the provider handles the execution.</p>
+    <p>The two main delivery modes are full HR outsourcing and single-process outsourcing. Full HR outsourcing means the provider manages all HR functions, with your internal team acting as a liaison or handling strategy. Single-process outsourcing means you hand off one or two functions (most commonly payroll) while keeping the rest in-house.</p>
+    <p>A third option, the administrative services only (ASO) model, handles payroll processing and tax filing without the strategic HR support that comes with a full HRO arrangement. ASOs work best for companies that have competent internal HR leadership but want to remove administrative processing from their plate.</p>
+    <p>For a broader look at HR outsourcing solutions and how providers differ, the scope of services and technology platform are the two factors that vary most.</p>
+
+    <h2>What HR Functions Can Be Outsourced?</h2>
+    <p>Most administrative and compliance-heavy HR functions can be outsourced. The functions your team spends the most time processing, rather than deciding, are the best candidates.</p>
+    <p>Functions commonly included in HR outsourcing services:</p>
+    <ul>
+      <li>Payroll processing and tax filing, including multi-state withholding and quarterly filings</li>
+      <li>Benefits administration and open enrollment management</li>
+      <li>Compliance tracking and regulatory filings (FLSA, FMLA, ACA, and state-specific labor laws)</li>
+      <li>Recruiting coordination and onboarding administration</li>
+      <li>Time and attendance tracking</li>
+      <li>Performance management administration</li>
+      <li>Employee training program management</li>
+      <li>HR policy development and employee handbook maintenance</li>
+    </ul>
+    <h3>HR Functions That Should Stay In-House</h3>
+    <p>Some functions require institutional knowledge and internal accountability that a third-party provider cannot replicate:</p>
+    <ul>
+      <li><strong>Culture and employee experience:</strong> A provider can administer recognition programs, but building the culture is internal work.</li>
+      <li><strong>Direct employee relations:</strong> When a manager and an employee are in conflict, that conversation needs someone who knows both parties and understands your values.</li>
+      <li><strong>Disciplinary decisions:</strong> Terminations, performance improvement plans, and formal discipline carry legal risk that should remain with internal leadership.</li>
+      <li><strong>Strategic workforce planning:</strong> Decisions about org structure, team growth, or succession require full context on the business.</li>
+    </ul>
+
+    <h2>HRO vs. PEO vs. ASO: What's the Difference?</h2>
+    <p>HRO, PEO, and ASO are three different outsourcing structures with fundamentally different legal and operational implications. Which one fits your company depends on how much control you want to retain and what you need the provider to carry.</p>
+    <h3>HRO (Human Resource Outsourcing)</h3>
+    <p>The provider delivers HR services: payroll, compliance, benefits administration, and recruiting support. You remain the employer of record. All employment decisions stay with your company.</p>
+    <h3>PEO (Professional Employer Organization)</h3>
+    <p>The PEO enters a co-employment arrangement. It becomes a joint employer of record for tax and benefits purposes, allowing it to pool employees from multiple client companies to offer better group rates. In exchange, you share some control over employment-related decisions.</p>
+    <h3>ASO (Administrative Services Only)</h3>
+    <p>The provider handles administrative processing (payroll, tax filings, and some HR admin) without co-employment or strategic HR support. It is a narrower version of HRO, suited to companies with internal HR leadership that want to offload transaction processing.</p>
+    <table>
+      <tr><th></th><th>HRO</th><th>PEO</th><th>ASO</th></tr>
+      <tr><td>Co-employment</td><td>No</td><td>Yes</td><td>No</td></tr>
+      <tr><td>Employer of record</td><td>You</td><td>Shared</td><td>You</td></tr>
+      <tr><td>Benefits sponsorship</td><td>No</td><td>Provider pools</td><td>No</td></tr>
+      <tr><td>Strategic HR support</td><td>Yes</td><td>Varies</td><td>No</td></tr>
+      <tr><td>Best fit</td><td>50–500 employees</td><td>10–150 employees</td><td>Admin-only needs</td></tr>
+    </table>
+    <p>The main reason companies choose a PEO is access to pooled benefits. The main reason they choose HRO instead is control. If your company needs to maintain direct authority over hiring, firing, and benefits vendors, HRO is the right model.</p>
+
+    <h2>Benefits of Outsourcing HR</h2>
+    <p>The core business case for outsourcing HR is cost structure and expertise. You trade a fixed internal HR cost for a variable per-employee fee, and you gain access to specialists your company's size typically cannot afford to hire full-time.</p>
+    <ul>
+      <li><strong>Lower total cost:</strong> A full-time HR hire carries base salary, benefits, payroll taxes, software licenses, and overhead. Per-employee outsourcing fees for the same scope of work often run lower when those total costs are added up.</li>
+      <li><strong>Compliance coverage across every jurisdiction you operate in:</strong> FLSA overtime thresholds, ACA reporting requirements, and state-by-state leave laws all require ongoing monitoring. The provider tracks that; your team does not have to.</li>
+      <li><strong>Time redirected from administration to strategy:</strong> When your HR lead stops processing payroll manually and fielding benefits enrollment calls, that capacity moves toward hiring, culture, and retention work.</li>
+      <li><strong>Access to enterprise-level HR technology:</strong> Most HRO providers include a unified HCM platform as part of the service — scheduling, self-service, analytics, and payroll in a single system — without requiring a separate software purchase.</li>
+      <li><strong>Scalability without proportional headcount growth:</strong> Adding 30 employees does not require adding HR staff when the provider scales with you.</li>
+      <li><strong>Competitive benefits access:</strong> Providers working with multiple clients can offer group rates for health, dental, and vision coverage that a standalone company of your size may not be able to negotiate on its own.</li>
+    </ul>
+
+    <h2>Risks and Tradeoffs to Understand Before You Outsource</h2>
+    <h3>Loss of Responsiveness</h3>
+    <p>A provider serves multiple clients. Your employees may wait longer for answers to benefits or payroll questions than they would with an internal contact who sits down the hall. A named account manager — one person who knows your company specifically — is the right ask during contract negotiations, not a concession to make later.</p>
+    <h3>Cultural Misalignment</h3>
+    <p>A provider managing employee relations does not know your business the way an internal hire does. If they handle a sensitive situation generically, it costs you trust with employees, not just efficiency. Before signing, ask specifically how they handle employee-facing communication and escalations.</p>
+    <h3>Data Security</h3>
+    <p>Employee records, payroll data, and benefits information will live on the provider's systems. Ask about encryption standards, access controls, breach notification procedures, and what happens to your data when the contract ends. Get those answers in writing.</p>
+    <h3>Scope Creep</h3>
+    <p>Initial pricing looks clean. Six months in, requests outside the original scope start generating add-on fees. Define the scope of work at the function level, not just the category level, and agree on how out-of-scope work is handled and priced before you sign.</p>
+    <h3>Knowledge Loss During Transitions</h3>
+    <p>If a provider relationship ends, your institutional HR knowledge may be sitting in their systems. Get contractual clarity on data portability and the exit process upfront.</p>
+
+    <h2>Signs It's Time to Outsource HR</h2>
+    <p>The right time to outsource HR is when administrative volume or compliance complexity is approaching the limit of your team's capacity, not after it has already caused a problem.</p>
+    <ul>
+      <li><strong>HR administration is consuming leadership time</strong></li>
+      <li><strong>You have had a compliance miss or close call</strong></li>
+      <li><strong>You are operating in multiple states</strong></li>
+      <li><strong>Headcount is growing faster than HR can absorb</strong></li>
+      <li><strong>Complexity and the cost of benefits have become unmanageable</strong></li>
+      <li><strong>HR is reactive, not strategic</strong></li>
+    </ul>
+
+    <h2>How to Choose an HR Outsourcing Provider</h2>
+    <h3>Define Scope Before You Talk to Anyone</h3>
+    <p>Before evaluating providers, write down exactly which functions you are outsourcing, how many employees are in scope, which states you operate in, and what your current HR technology looks like.</p>
+    <h3>What to Evaluate</h3>
+    <ul>
+      <li>Service breadth</li>
+      <li>Technology — unified platform vs. multi-system</li>
+      <li>Compliance track record</li>
+      <li>Implementation support</li>
+      <li>Pricing model (PEPM, minimums, add-on triggers)</li>
+      <li>Named account team</li>
+    </ul>
+    <h3>Questions to Ask Providers</h3>
+    <ul>
+      <li>What are the SLA response times for payroll issues, compliance questions, and employee inquiries?</li>
+      <li>If a payroll error occurs, who is responsible, and what is the remediation process?</li>
+      <li>What are your data security certifications and breach notification procedures?</li>
+      <li>Can you provide references from clients in our industry with a similar employee count?</li>
+      <li>What are the contract exit terms, and how is our data returned?</li>
+    </ul>
+    <h3>Red Flags</h3>
+    <ul>
+      <li>Scope of work defined in broad categories rather than specific functions</li>
+      <li>No named account manager or dedicated contact for your account</li>
+      <li>No clear explanation of how regulatory changes get communicated to clients</li>
+      <li>Reluctance to provide client references in your company size range</li>
+      <li>Pricing that changes significantly between the initial conversation and the formal proposal</li>
+    </ul>
+
+    <h2>What the Transition Looks Like</h2>
+    <h3>Step 1: HR Audit</h3>
+    <p>Before onboarding a provider, inventory your current state: which HR functions you are running, where data lives, what contracts and benefits are in place, which compliance filings are open or upcoming, and what employee documentation needs to be transferred. The audit also surfaces problems — missing I-9s, outdated job descriptions, unresolved leave records — that are better addressed during transition than after.</p>
+    <h3>Step 2: Vendor Onboarding</h3>
+    <p>This phase covers data migration (employee records, payroll history, benefits enrollment data), system configuration, policy alignment, and employee communication. Your employees need to know who handles their HR questions now, how to access the new system, and what, if anything, changes in their day-to-day experience.</p>
+    <h3>Step 3: Go-Live and Stabilization</h3>
+    <p>Most payroll implementations include a parallel processing period: running payroll through both the old and new systems for one or two cycles to verify accuracy before fully cutting over. Plan for a stabilization window of four to eight weeks.</p>
+    <p>Realistic timeline: 2–8 weeks, depending on how many functions you are moving, how many states are involved, and how complete your current HR data is.</p>
+
+    <h2>How Much Does HR Outsourcing Cost?</h2>
+    <p>HR outsourcing is typically priced on a per employee per month (PEPM) model, with a base monthly fee plus a per-employee rate above a minimum threshold.</p>
+    <table>
+      <tr><th>Cost driver</th><th>How it affects the price</th></tr>
+      <tr><td>Employee count</td><td>Higher headcount raises the total; per-employee rate sometimes decreases at scale</td></tr>
+      <tr><td>Functions in scope</td><td>Payroll only costs less than payroll plus benefits, plus compliance, plus recruiting</td></tr>
+      <tr><td>Number of states</td><td>Each additional state adds payroll tax accounts and compliance requirements</td></tr>
+      <tr><td>HR technology included</td><td>Platforms with full HCM functionality cost more than admin-only tools</td></tr>
+      <tr><td>Complexity of pay rules</td><td>Overtime premiums, shift differentials, and union agreements increase processing costs</td></tr>
+    </table>
+    <p>The right comparison is not outsourcing cost versus zero. It is the outsourcing cost versus the true total cost of an in-house hire — base salary, benefits, payroll taxes, HR software licenses, and overhead combined.</p>
+    <p>Axiom prices its services per employee per month across four tiers, from payroll and tax filing at the entry level to full HCM with benefits, leave management, and analytics at the top. See current rates on our pricing page.</p>
+
+    <h2>Frequently Asked Questions About HR Outsourcing</h2>
+    <h3>Is HR outsourcing right for small businesses?</h3>
+    <p>Yes, depending on which functions you outsource. Businesses with fewer than 25 employees typically benefit most from payroll outsourcing alone. Full HRO is usually more than they need at that size. Once headcount reaches 50 or more, especially with multi-state operations or complex benefits requirements, full HR outsourcing generally delivers a cost and compliance advantage over a solo in-house HR hire.</p>
+    <h3>Can you outsource HR if you already have an internal HR team?</h3>
+    <p>Yes. Most mid-market companies that outsource HR keep at least one internal HR person. That person shifts from processing and administration to strategy, culture, and employee relations — all work that requires institutional context a provider cannot carry.</p>
+    <h3>What is the difference between HR outsourcing and HR consulting?</h3>
+    <p>HR consulting is project-based. A consultant comes in to solve a specific problem and then the engagement ends. HR outsourcing is ongoing. The provider runs designated HR functions as a continuous service, not as a one-time project.</p>
+    <h3>How is HR outsourcing different from buying HR software?</h3>
+    <p>HR software gives your team tools to manage HR functions more efficiently. HR outsourcing transfers the execution of those functions to a provider. If your HR team is overwhelmed by volume, adding software does not reduce it. Outsourcing does.</p>
+    <h3>What happens if you need to exit an HR outsourcing contract?</h3>
+    <p>Standard contract exit terms include a notice period (typically 30–90 days), data export in a portable format, and a final accounting of outstanding fees. Get those terms in writing before you sign, and confirm that your employee data can be exported in a format your next provider or internal team can use from day one.</p>
+
+    <h2>Ready to Stop Patching Together an HR Operation?</h2>
+    <p>Axiom's HR outsourcing solutions combine the UKG Ready platform with <span class="fix-highlight">hands-on support</span>: payroll, compliance, benefits, and more, running from a single database. Stop managing human resources across disconnected tools. Talk to Axiom about what outsourcing HR looks like at your headcount.</p>
+  </div>
+
+  <!-- PAGE REPLICA -->
+  <div class="replica-pane hidden" id="pillar-replica">
+    <div class="axiom-replica">
+      <nav class="ax-nav">
+        <div class="ax-nav-logo">Axiom HRS</div>
+        <div style="display:flex;gap:24px;font-size:13px;color:#6b7280">
+          <span>Solutions</span><span>Answers</span><span>About</span><span style="color:#1850a5;font-weight:600">Get a Demo</span>
+        </div>
+      </nav>
+
+      <div class="ax-article-hdr">
+        <div class="ax-breadcrumb">Home › HR Outsourcing › Guide</div>
+        <h1 class="ax-article-h1">HR Outsourcing: Complete Guide for Growing Companies</h1>
+        <div style="font-size:13px;color:#6b7280;margin-top:6px">Updated June 2026 &nbsp;·&nbsp; 15 min read &nbsp;·&nbsp; Keywords: outsourcing human resources, hr outsourcing solutions</div>
+      </div>
+
+      <div class="ax-content-wrap">
+        <p>Outsourcing human resources is how companies separate the people decisions they want to keep from the processing volume they can no longer absorb. At 50 employees, one HR person can manage both. At 150, payroll grows more complex, compliance requirements multiply across states, and your HR lead is spending most of their time on paperwork rather than on hiring and retention.</p>
+
+        <p>An HR outsourcing arrangement means a third-party provider takes over designated HR functions while you retain employer status and control over employment decisions.</p>
+
+        <p>This guide covers what HR outsourcing includes, how it differs from a PEO, when the move makes sense, how to choose a provider, what the transition looks like, and how the costs compare.</p>
+
+        <div style="background:#f0f4ff;border-left:4px solid #1850a5;padding:16px 20px;border-radius:0 6px 6px 0;margin:24px 0">
+          <strong style="color:#1850a5;font-size:13px;text-transform:uppercase;letter-spacing:.05em">Key takeaways</strong>
+          <ul style="margin:10px 0 0;padding-left:20px;font-size:14px;line-height:1.7">
+            <li>HRO transfers specific HR functions to a provider while you keep employer status and employment decisions.</li>
+            <li>HRO, PEO, and ASO are distinct models with different legal structures. The right choice depends on how much control you need.</li>
+            <li>The most common driver is compliance exposure — multi-state payroll, FMLA, ACA, state leave laws.</li>
+            <li>Per-employee outsourcing fees typically run lower than the true total cost of an in-house hire.</li>
+            <li>Transition success depends on auditing your HR data before the provider onboards, not after.</li>
+          </ul>
+        </div>
+
+        <h2>What Is HR Outsourcing?</h2>
+        <p>HR outsourcing is a service arrangement in which an organization transfers designated HR functions to a third-party provider. The provider delivers those services — payroll, compliance, benefits administration, or others — while the company retains full employer status. Unlike a PEO, an HRO provider does not become a co-employer. You keep your employment relationships; the provider handles the execution.</p>
+        <p>The two main delivery modes are full HR outsourcing and single-process outsourcing. A third option, the ASO model, handles payroll processing and tax filing without strategic HR support — suited to companies that have internal HR leadership but want to remove administrative processing from their plate.</p>
+
+        <h2>What HR Functions Can Be Outsourced?</h2>
+        <ul>
+          <li>Payroll processing and tax filing, including multi-state withholding and quarterly filings</li>
+          <li>Benefits administration and open enrollment management</li>
+          <li>Compliance tracking: FLSA, FMLA, ACA, and state-specific labor laws</li>
+          <li>Recruiting coordination and onboarding administration</li>
+          <li>Time and attendance tracking</li>
+          <li>Performance management administration</li>
+          <li>Employee training program management</li>
+          <li>HR policy development and employee handbook maintenance</li>
+        </ul>
+
+        <h2>HRO vs. PEO vs. ASO: What's the Difference?</h2>
+        <table>
+          <tr><th></th><th>HRO</th><th>PEO</th><th>ASO</th></tr>
+          <tr><td>Co-employment</td><td>No</td><td>Yes</td><td>No</td></tr>
+          <tr><td>Employer of record</td><td>You</td><td>Shared</td><td>You</td></tr>
+          <tr><td>Benefits sponsorship</td><td>No</td><td>Provider pools</td><td>No</td></tr>
+          <tr><td>Strategic HR support</td><td>Yes</td><td>Varies</td><td>No</td></tr>
+          <tr><td>Best fit</td><td>50–500 employees</td><td>10–150 employees</td><td>Admin-only needs</td></tr>
+        </table>
+
+        <h2>Signs It's Time to Outsource HR</h2>
+        <ul>
+          <li>HR administration is consuming leadership time</li>
+          <li>You have had a compliance miss or close call</li>
+          <li>You are operating in multiple states</li>
+          <li>Headcount is growing faster than HR can absorb</li>
+          <li>Benefits renewal has become unmanageable</li>
+          <li>HR is reactive, not strategic</li>
+        </ul>
+
+        <h2>How Much Does HR Outsourcing Cost?</h2>
+        <p>Priced per employee per month (PEPM). Cost scales with employee count, functions in scope, number of states, HR technology included, and complexity of pay rules.</p>
+        <p>The right comparison is outsourcing cost vs. the true total cost of an in-house hire — base salary, benefits, payroll taxes, software licenses, and overhead combined.</p>
+        <p>Axiom prices its HR outsourcing services per employee per month across four tiers, from payroll and tax filing at the entry level to full HCM with benefits, leave management, and analytics at the top. See current rates on our pricing page.</p>
+
+        <div class="ax-inline-demo" style="margin:32px 0">
+          <strong style="font-size:15px">Ready to stop patching together an HR operation?</strong>
+          <p style="margin:8px 0 0;font-size:14px;color:#4b5563">Axiom's HR outsourcing solutions combine the UKG Ready platform with hands-on support: payroll, compliance, benefits, and more, running from a single database.</p>
+          <a href="#" style="display:inline-block;margin-top:14px;background:#1850a5;color:#fff;padding:10px 20px;border-radius:6px;font-size:13px;font-weight:600;text-decoration:none">Talk to Axiom →</a>
+        </div>
+      </div>
+
+      <footer class="ax-footer">
+        <div style="font-size:13px;color:#9ca3af">© 2026 Axiom HRS. All rights reserved.</div>
+        <div style="font-size:13px;color:#9ca3af">Powered by UKG Ready</div>
+      </footer>
+    </div>
   </div>
 </div>
 
