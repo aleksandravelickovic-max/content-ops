@@ -1,0 +1,98 @@
+<title>LLM Visibility Tool Banner</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#ffffff}
+  .page{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:#16121f;padding:40px 24px 64px;-webkit-font-smoothing:antialiased;
+  }
+  .col{max-width:880px;margin:0 auto}
+  .cap{font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#8b84a0;margin:36px 0 12px}
+  .cap:first-child{margin-top:0}
+
+  /* ---------- banner shell (house style) ---------- */
+  .banner{
+    position:relative;overflow:hidden;border-radius:20px;
+    background:
+      radial-gradient(120% 140% at 88% 30%, rgba(123,92,246,.55) 0%, rgba(123,92,246,0) 55%),
+      linear-gradient(108deg,#221a31 0%,#2a2140 46%,#352a55 100%);
+    padding:30px 34px;display:flex;align-items:center;gap:28px;
+    box-shadow:0 14px 36px rgba(28,18,52,.28);
+  }
+  .banner .left{flex:1 1 auto;min-width:0}
+  .wordmark{
+    display:inline-block;font-weight:800;font-size:14px;letter-spacing:.16em;
+    color:#fff;font-style:italic;margin-bottom:16px;opacity:.95;
+  }
+  .wordmark .sl{color:#2BE5A6;font-style:normal;margin:0 1px}
+  .banner h2{
+    color:#fff;font-size:25px;line-height:1.22;font-weight:800;margin:0 0 20px;
+    max-width:30ch;letter-spacing:-.01em;
+  }
+  .cta{
+    display:inline-flex;align-items:center;gap:9px;
+    background:#2BE5A6;color:#0c241c;font-weight:800;font-size:15px;
+    text-decoration:none;padding:13px 22px;border-radius:10px;
+    transition:transform .12s ease, box-shadow .12s ease;
+  }
+  .cta:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(43,229,166,.32)}
+  .cta .arw{font-size:15px;line-height:1}
+
+  /* ---------- bubble visual (right) ---------- */
+  .viz{flex:0 0 auto;display:flex;align-items:center}
+  .bub{
+    width:104px;height:104px;border-radius:50%;
+    background:radial-gradient(circle at 36% 30%,#a78bfa 0%,#7c5cf6 55%,#5d3fd6 100%);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.12), 0 8px 18px rgba(60,40,120,.35);
+    color:#fff;
+  }
+  .bub + .bub{margin-left:-20px}
+  .bub .big{font-size:15px;font-weight:800;line-height:1.1;padding:0 8px}
+  .bub .sm{font-size:9.5px;line-height:1.2;opacity:.82;margin-top:4px;padding:0 10px;font-weight:600}
+  .bub.mid{transform:scale(1.06);z-index:2;position:relative}
+
+  @media (max-width:680px){
+    .banner{flex-direction:column;align-items:flex-start}
+    .banner h2{font-size:22px}
+    .viz{align-self:center;margin-top:6px}
+    .cta{width:100%;justify-content:center}
+  }
+  @media (max-width:420px){
+    .bub{width:90px;height:90px}
+  }
+</style>
+
+<div class="page">
+  <div class="col">
+
+    <div class="cap">Primary — in-content</div>
+    <div class="banner">
+      <div class="left">
+        <span class="wordmark">SEARCH<span class="sl">/</span>ATLAS</span>
+        <h2>Track Your Brand's Visibility Across Every Major AI Model With The LLM Visibility Tool</h2>
+        <a class="cta" href="https://dashboard.searchatlas.com/register">Start for Free <span class="arw">→</span></a>
+      </div>
+      <div class="viz">
+        <div class="bub"><span class="big">Visibility</span><span class="sm">Score across LLMs</span></div>
+        <div class="bub mid"><span class="big">Share of Voice</span><span class="sm">vs competitors</span></div>
+        <div class="bub"><span class="big">Sentiment</span><span class="sm">per platform</span></div>
+      </div>
+    </div>
+
+    <div class="cap">Variant — research / authority-metrics posts</div>
+    <div class="banner">
+      <div class="left">
+        <span class="wordmark">SEARCH<span class="sl">/</span>ATLAS</span>
+        <h2>Authority Metrics Don't Predict AI Citations. Track What Does With The LLM Visibility Tool</h2>
+        <a class="cta" href="https://dashboard.searchatlas.com/register">Start for Free <span class="arw">→</span></a>
+      </div>
+      <div class="viz">
+        <div class="bub"><span class="big">ChatGPT</span><span class="sm">&amp; Claude</span></div>
+        <div class="bub mid"><span class="big">Gemini</span><span class="sm">&amp; Perplexity</span></div>
+        <div class="bub"><span class="big">Benchmarks</span><span class="sm">vs competitors</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>

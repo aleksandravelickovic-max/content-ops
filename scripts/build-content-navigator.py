@@ -51,6 +51,8 @@ def detect_type(rel_path):
         return "html-original"
     if p == "html/index.html":
         return "html-index"
+    if "html/" in p and p.endswith(".html"):
+        return "html"
     if "product-pages/" in p:
         return "product-page"
     if "collection-pages/" in p:
@@ -59,6 +61,12 @@ def detect_type(rel_path):
         return "draft-v3"
     if "drafts/" in p:
         return "draft"
+    if "final/" in p:
+        return "final"
+    if "assets/" in p:
+        return "asset"
+    if "research/" in p:
+        return "research"
     if "campaign-urls" in p:
         return "campaign-urls"
     if "audit-report" in p:
@@ -77,8 +85,6 @@ def detect_type(rel_path):
         return "testimonial"
     if "transcripts/" in p:
         return "transcript"
-    if "research/" in p:
-        return "research"
     if "reference-site/" in p:
         return "reference"
     if "style-system" in p.lower():
@@ -268,7 +274,8 @@ def scan_directory(base_path, rel_root, allowed_exts=None):
         allowed_exts = {".md", ".html", ".json", ".py", ".js", ".css", ".txt"}
     entries = []
     for root, dirs, files in os.walk(base_path):
-        dirs[:] = [d for d in dirs if not d.startswith(".")]
+        # Skip hidden dirs and underscore-prefixed dirs (e.g. _build/ — not content)
+        dirs[:] = [d for d in dirs if not d.startswith(".") and not d.startswith("_")]
         for fname in sorted(files):
             if fname.startswith(".") or fname == "registry.json":
                 continue

@@ -1,9 +1,22 @@
 {
   "client": "5gstore",
   "campaign": "01-may-content-optimization",
-  "generatedAt": "2026-06-17T20:04:49",
-  "totalFiles": 8,
+  "generatedAt": "2026-06-21T22:56:17",
+  "totalFiles": 9,
   "entries": [
+    {
+      "id": "README",
+      "filename": "README.md",
+      "displayName": "01 \u2014 May Content Optimization",
+      "type": "other",
+      "category": "other",
+      "status": "delivered",
+      "version": 1,
+      "path": "README.md",
+      "sizeBytes": 475,
+      "sizeHuman": "475 B",
+      "lastModified": "2026-06-21"
+    },
     {
       "id": "campaign-urls",
       "filename": "campaign-urls.md",
@@ -15,7 +28,7 @@
       "path": "campaign-urls.md",
       "sizeBytes": 642,
       "sizeHuman": "642 B",
-      "lastModified": "2026-05-20"
+      "lastModified": "2026-05-21"
     },
     {
       "id": "index",
@@ -28,7 +41,7 @@
       "path": "html/index.html",
       "sizeBytes": 6421,
       "sizeHuman": "6.3 KB",
-      "lastModified": "2026-05-20"
+      "lastModified": "2026-05-21"
     },
     {
       "id": "01-dome-pro-duo",
@@ -41,7 +54,7 @@
       "path": "html/revised/01-dome-pro-duo.html",
       "sizeBytes": 16913,
       "sizeHuman": "16.5 KB",
-      "lastModified": "2026-05-20"
+      "lastModified": "2026-05-21"
     },
     {
       "id": "02-peplink-switch",
@@ -54,7 +67,7 @@
       "path": "html/revised/02-peplink-switch.html",
       "sizeBytes": 14561,
       "sizeHuman": "14.2 KB",
-      "lastModified": "2026-05-20"
+      "lastModified": "2026-05-21"
     },
     {
       "id": "03-fusionhub-pro",
@@ -67,7 +80,7 @@
       "path": "html/revised/03-fusionhub-pro.html",
       "sizeBytes": 14217,
       "sizeHuman": "13.9 KB",
-      "lastModified": "2026-05-20"
+      "lastModified": "2026-05-21"
     },
     {
       "id": "04-vwan-license",
@@ -80,7 +93,7 @@
       "path": "html/revised/04-vwan-license.html",
       "sizeBytes": 12484,
       "sizeHuman": "12.2 KB",
-      "lastModified": "2026-05-20"
+      "lastModified": "2026-05-21"
     },
     {
       "id": "05-inseego-fg2000e",
@@ -93,7 +106,7 @@
       "path": "html/revised/05-inseego-fg2000e.html",
       "sizeBytes": 16331,
       "sizeHuman": "15.9 KB",
-      "lastModified": "2026-05-20"
+      "lastModified": "2026-05-21"
     },
     {
       "id": "06-gpio-cable",
@@ -106,7 +119,7 @@
       "path": "html/revised/06-gpio-cable.html",
       "sizeBytes": 13041,
       "sizeHuman": "12.7 KB",
-      "lastModified": "2026-05-20"
+      "lastModified": "2026-05-21"
     }
   ]
 }

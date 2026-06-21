@@ -1,7 +1,7 @@
 {
   "client": "find-self-storage",
   "scope": "client",
-  "generatedAt": "2026-06-17T20:04:49",
+  "generatedAt": "2026-06-21T22:56:17",
   "totalFiles": 2,
   "entries": [
     {
@@ -15,7 +15,7 @@
       "path": "STYLE-SYSTEM.md",
       "sizeBytes": 18624,
       "sizeHuman": "18.2 KB",
-      "lastModified": "2026-06-17"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "website-scan-2026-06-17",
@@ -28,7 +28,7 @@
       "path": "raw/research/website-scan-2026-06-17.md",
       "sizeBytes": 7788,
       "sizeHuman": "7.6 KB",
-      "lastModified": "2026-06-17"
+      "lastModified": "2026-06-21"
     }
   ]
 }

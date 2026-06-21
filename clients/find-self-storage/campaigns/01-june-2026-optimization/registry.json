@@ -1,7 +1,7 @@
 {
   "client": "find-self-storage",
   "campaign": "01-june-2026-optimization",
-  "generatedAt": "2026-06-17T20:04:49",
+  "generatedAt": "2026-06-21T22:56:17",
   "totalFiles": 6,
   "entries": [
     {
@@ -15,7 +15,7 @@
       "path": "audit-report.md",
       "sizeBytes": 11295,
       "sizeHuman": "11.0 KB",
-      "lastModified": "2026-06-17"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "boat-storage-units",
@@ -28,7 +28,7 @@
       "path": "drafts/boat-storage-units.md",
       "sizeBytes": 15353,
       "sizeHuman": "15.0 KB",
-      "lastModified": "2026-06-17"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "car-storage-units",
@@ -41,7 +41,7 @@
       "path": "drafts/car-storage-units.md",
       "sizeBytes": 13608,
       "sizeHuman": "13.3 KB",
-      "lastModified": "2026-06-17"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "motorcycle-storage-units",
@@ -54,7 +54,7 @@
       "path": "drafts/motorcycle-storage-units.md",
       "sizeBytes": 12365,
       "sizeHuman": "12.1 KB",
-      "lastModified": "2026-06-17"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "rv-storage-units",
@@ -67,7 +67,7 @@
       "path": "drafts/rv-storage-units.md",
       "sizeBytes": 15929,
       "sizeHuman": "15.6 KB",
-      "lastModified": "2026-06-17"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "wine-storage-units",
@@ -80,7 +80,7 @@
       "path": "drafts/wine-storage-units.md",
       "sizeBytes": 10408,
       "sizeHuman": "10.2 KB",
-      "lastModified": "2026-06-17"
+      "lastModified": "2026-06-21"
     }
   ]
 }

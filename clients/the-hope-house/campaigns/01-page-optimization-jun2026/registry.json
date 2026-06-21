@@ -1,7 +1,7 @@
 {
   "client": "the-hope-house",
   "campaign": "01-page-optimization-jun2026",
-  "generatedAt": "2026-06-17T20:04:49",
+  "generatedAt": "2026-06-21T22:56:17",
   "totalFiles": 1,
   "entries": [
     {
@@ -15,7 +15,7 @@
       "path": "audit-report.html",
       "sizeBytes": 84914,
       "sizeHuman": "82.9 KB",
-      "lastModified": "2026-06-14"
+      "lastModified": "2026-06-21"
     }
   ]
 }

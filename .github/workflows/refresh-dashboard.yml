@@ -1,0 +1,50 @@
+name: Refresh Dashboard Data
+
+on:
+  schedule:
+    # Every 4 hours (adjust as needed — GitHub Actions min is every 5 min)
+    - cron: "0 */4 * * *"
+  workflow_dispatch:     # Also allows manual trigger from GitHub UI
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write    # Needed to commit data.json back to the repo
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r dashboard/requirements.txt
+
+      - name: Set up GSC credentials
+        if: ${{ secrets.GSC_TOKEN_JSON != '' }}
+        run: |
+          mkdir -p ~/.gsc-mcp ~/.config/gsc
+          echo '${{ secrets.GSC_TOKEN_JSON }}' > ~/.gsc-mcp/oauth-token.json
+          echo '${{ secrets.GSC_CLIENT_SECRETS_JSON }}' > ~/.config/gsc/client_secrets.json
+
+      - name: Generate dashboard data
+        env:
+          SEARCHATLAS_API_KEY: ${{ secrets.SEARCHATLAS_API_KEY }}
+          CLICKUP_API_KEY: ${{ secrets.CLICKUP_API_KEY }}
+          GSC_PROPERTY: sc-domain:searchatlas.com
+        run: python3 dashboard/generate.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name  "dashboard-bot"
+          git config user.email "dashboard-bot@users.noreply.github.com"
+          git add dashboard/data.json
+          # Only commit if data.json actually changed
+          git diff --cached --quiet || git commit -m "chore: refresh dashboard data [skip ci]"
+          git push

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Do Domain Authority Metrics Predict AI Citations?</title>
+<meta name="generator" content="content-ops/render-html">
+<meta name="source-md" content="clients/searchatlas/campaigns/03-ai-search-discoverability/drafts/do-authority-metrics-predict-ai-citations-FINAL.md">
+<meta name="rendered-at" content="2026-06-19T12:56:13Z">
+</head>
+<body>
+<p><strong>Title tag:</strong> Does Domain Authority Affect AI Citations? | Search Atlas
+<strong>Meta description:</strong> Domain authority doesn&rsquo;t predict AI citations. A Search Atlas study of 21,767 domains shows why DA and DR fail, and what to track for ChatGPT and Perplexity instead.</p>
+<h1 id="do-domain-authority-metrics-predict-ai-citations">Do Domain Authority Metrics Predict AI Citations?</h1>
+<p><em>By the Search Atlas research team. Based on the study &ldquo;Relationship Between Domain Power, Domain Rating, Domain Authority and LLM Visibility Score in Citations&rdquo; by Manick Bhan.</em></p>
+<p>Domain authority metrics, Moz&rsquo;s Domain Authority (DA) and Ahrefs&rsquo; Domain Rating (DR), score a site&rsquo;s backlink-based ranking strength. They do not reliably predict whether ChatGPT, Perplexity, Gemini, or Claude will cite a page. A Search Atlas analysis of 21,767 domains found slightly negative correlations between these metrics and AI visibility. The gap matters because the signals that earn backlinks are not the signals that earn AI citations.</p>
+<h2 id="do-domain-authority-metrics-predict-ai-citations_1">Do domain authority metrics predict AI citations?</h2>
+<p>Domain authority metrics do not predict AI citations. Across 21,767 domains carrying DA, DR, and Domain Power scores, higher authority did not raise the odds of a citation; it tracked with a small decline in both AI visibility (whether a domain appears in AI answers) and win rate (how often a domain is the cited source when it does appear).</p>
+<p>Domain Power is Search Atlas&rsquo;s authority metric, a single score that aggregates organic traffic, keyword performance, and backlink trust rather than raw link volume alone. All three metrics, DA, DR, and Domain Power, behaved the same way against AI visibility: no positive signal.</p>
+<p>For teams that allocate budget by DA or DR, the metric they trust most says little about whether AI engines will cite them.</p>
+<h2 id="what-the-data-shows-da-dr-and-domain-power-vs-llm-citations">What the data shows: DA, DR, and Domain Power vs LLM citations</h2>
+<p>The data shows no positive relationship between authority metrics and AI citations across any of the three scores. The correlations were slightly negative for both visibility and win rate, and the effect held at scale rather than appearing only in a small sample.</p>
+<h3 id="the-21767-domain-correlation-finding">The 21,767-domain correlation finding</h3>
+<p>The study analyzed 21,767 unique domains carrying DR, DP, and DA metrics, with data collected between August 25 and October 24, 2025. All three authority metrics showed slightly negative correlations with LLM visibility. A separate set of 368,972 unique domains with visibility scores of 50 to 100% supported the same conclusion at scale.</p>
+<p>The direction is what disqualifies authority as a predictor: not a weak positive link, but a small negative one. Authority and AI citation move slightly in opposite directions.</p>
+<h3 id="why-win-rates-decline-across-every-authority-range">Why win rates decline across every authority range</h3>
+<p>Win rates declined across every authority band, not only at the top. A domain in a high DA range was no more likely to be the cited source than one in a lower band, and often slightly less likely. This rules out a threshold effect where authority starts to matter past a certain score.</p>
+<p>Pushing DA or DR higher therefore does not convert into more citations at any point on the scale.</p>
+<h2 id="why-high-authority-sites-still-appear-to-win-the-competition-tier-effect">Why high-authority sites still appear to win (the competition-tier effect)</h2>
+<p>High-authority sites often appear to win because of low competition in the answer, not their authority. Visibility falls as co-mention competition rises, meaning the number of other domains cited in the same AI answer: responses citing one or two domains hold consistently higher visibility than responses competing against six or more.</p>
+<p>Two platform patterns show the effect, per the study&rsquo;s platform-level breakdown. Google held close to 100% visibility when it was the sole cited domain. YouTube kept 90 to 100% visibility across low-to-mid competition, where one to five domains appeared.</p>
+<p>A recognizable brand tends to surface in sparse-citation answers, which reads like an authority advantage but is a competition advantage. The lever is how crowded the answer is, not how strong the domain is. Raising DA will not help when the query returns a crowded, multi-domain answer.</p>
+<h2 id="why-legacy-authority-metrics-fail-to-predict-ai-citations">Why legacy authority metrics fail to predict AI citations</h2>
+<p>AI engines select sources by relevance, not authority, which is why backlink-based scores miss. An engine assembles an answer from passages that fit the query, then weights which domains stay visible by how few others compete in that response. The study describes this behavior as relevance-driven rather than authority-driven.</p>
+<p>Backlink-based scores were built for a different mechanism. They estimate how a page ranks in a list of results, where link trust accumulates across the whole domain. AI answers do not return a list; they return a synthesized response drawn from a small set of relevant passages.</p>
+<h3 id="what-backlinks-measure-vs-what-retrieval-rewards">What backlinks measure vs what retrieval rewards</h3>
+<p>Backlinks measure endorsement across domains; AI retrieval rewards contextual relevance and co-mention within a single answer.</p>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>What backlinks measure</th>
+<th>What AI retrieval rewards</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unit</td>
+<td>Links from other domains</td>
+<td>Fit of a passage to the query</td>
+</tr>
+<tr>
+<td>Authority basis</td>
+<td>Aggregate link trust over a domain</td>
+<td>Contextual relevance plus co-mention frequency</td>
+</tr>
+<tr>
+<td>Competition</td>
+<td>Domain against domain in a ranked list</td>
+<td>Domains co-cited inside one answer</td>
+</tr>
+<tr>
+<td>What you act on</td>
+<td>Earning more and better links</td>
+<td>Being the clearest relevant source for the prompt</td>
+</tr>
+</tbody>
+</table>
+<p>The two systems reward different work, so a strong backlink profile does not carry over into citation odds.</p>
+<h3 id="what-actually-predicts-citation-visibility-signals-co-mentions-response-prominence">What actually predicts citation: visibility signals, co-mentions, response prominence</h3>
+<p>Contextual relevance and low co-mention competition predict citation, not link authority. A page is cited when its content matches the query closely and when the answer it lands in cites few competing domains. Prominence within that answer, whether the domain is one of one or one of eight, then drives how often it holds visibility.</p>
+<p>Platforms retrieve differently, so a domain cited on one engine can be absent on another. Citation is a per-platform, per-query outcome, not a single domain-wide score.</p>
+<h2 id="what-to-track-instead-of-dadr">What to track instead of DA/DR</h2>
+<p>Track AI visibility signals directly instead of authority proxies. The following sequence replaces a DA or DR target with measures tied to how engines actually cite.</p>
+<ol>
+<li><strong>Measure cross-platform visibility per query.</strong> Check whether your domain appears in answers on ChatGPT, Perplexity, Gemini, and Claude for your target prompts. This shows where you are absent and which prompts to act on first.</li>
+<li><strong>Track share of voice against co-mentioned domains.</strong> Record which competitors appear in the same answers and how often. Share of voice within the answer set reflects your real position better than any domain score.</li>
+<li><strong>Count co-mention competition for each prompt.</strong> Note how many domains a typical answer cites for the query. Prompts that return one or two sources are higher-value targets than crowded ones.</li>
+<li><strong>Monitor sentiment by platform.</strong> Read how each engine frames your brand, since a citation paired with negative framing changes its value. Sentiment varies by model, so record it per platform.</li>
+<li><strong>Re-check on a weekly cadence.</strong> Re-run the same prompts weekly, because AI answers shift faster than search rankings. A citation captured once is not a citation held.</li>
+</ol>
+<p>Each step produces a citation outcome you can act on the same week you measure it.</p>
+<h2 id="how-search-atlas-measures-ai-citation-behavior">How Search Atlas measures AI citation behavior</h2>
+<p>Search Atlas measures AI citation behavior through its LLM Visibility tool, which tracks how often a brand is cited across ChatGPT, Claude, Gemini, and Perplexity and its share of voice against the competitors cited alongside it. It scores visibility per platform, so the per-platform variance described above appears as separate readings rather than one blended number.</p>
+<p>The tool groups the domains co-cited alongside a brand, which turns co-mention competition, the factor the study identifies as decisive, into a share-of-voice figure against named competitors. Sentiment tracking shows how each engine frames the brand, and topic-level views show which subjects a brand is cited for. The full dataset and method are documented in the Search Atlas study on the <a href="https://searchatlas.com/research/relationship-between-domain-power-domain-rating-domain-authority-and-llm-visibility-score-in-citations/">relationship between Domain Power, Domain Rating, Domain Authority, and LLM visibility</a>.</p>
+<h2 id="frequently-asked-questions">Frequently asked questions</h2>
+<h3 id="should-i-stop-building-backlinks-for-ai-search">Should I stop building backlinks for AI search?</h3>
+<p>No. Backlinks still build search ranking and crawl access, but they do not raise AI citation odds on their own. Treat them as ranking infrastructure, not a citation lever.</p>
+<h3 id="can-a-low-authority-site-get-cited-by-ai">Can a low-authority site get cited by AI?</h3>
+<p>Yes. Because engines select sources by relevance and co-mention competition, a low-DA page that matches the query closely can be cited ahead of a high-authority site.</p>
+<h3 id="does-a-higher-domain-rating-improve-chatgpt-or-perplexity-citations">Does a higher Domain Rating improve ChatGPT or Perplexity citations?</h3>
+<p>No measurable improvement. The 21,767-domain analysis found slightly negative correlations between DR and AI visibility, so raising DR does not predict more citations.</p>
+<h3 id="how-is-ai-visibility-different-from-search-ranking">How is AI visibility different from search ranking?</h3>
+<p>Search ranking places a domain in a list of results; AI visibility is whether and how often a domain is cited inside a synthesized answer. AI visibility is scored per platform and per query, not as one domain-wide number.</p>
+<h3 id="why-do-citations-vary-between-ai-platforms">Why do citations vary between AI platforms?</h3>
+<p>Each platform pulls from different sources and indexes, so the same query can return different citations on ChatGPT, Perplexity, and Gemini. Track each engine separately rather than assuming one result represents all of them.</p>
+</body>
+</html>

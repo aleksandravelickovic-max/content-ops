@@ -39,8 +39,18 @@ def scan(path: str) -> int:
             print(f"FAIL: Prohibited term found: {term}")
             failed = True
 
-    if not text.strip().startswith("# "):
-        print("FAIL: Article does not start with an H1.")
+    lines = text.splitlines()
+    has_h1 = any(line.startswith("# ") for line in lines[:30])
+    if not has_h1:
+        print("FAIL: No H1 found in the first 30 lines.")
+        failed = True
+
+    has_faq = any(
+        line.lower().startswith("## faq") or line.lower().startswith("## frequently asked")
+        for line in lines
+    )
+    if not has_faq:
+        print("FAIL: No FAQ section found (required H2: '## FAQ' or '## Frequently asked questions').")
         failed = True
 
     if failed:

@@ -1,148 +1,240 @@
-# How to Build an AI Marketing Stack: Architecture Before Tools
+**Site:** searchatlas.com
+**Meta Title:** How to Build an AI Marketing Stack That Actually Works
+**Meta Description:** Why AI marketing tools underperform when deployed independently, the five data flows that make a stack compound, and how to build a connected system at $500, $2K, or $5K/month.
+**Slug:** how-to-build-an-ai-marketing-stack
 
-An AI marketing stack is a set of tools that automate the execution layer of marketing operations across SEO, content, paid media, and AI visibility. The architecture matters more than the tool list.
+---
 
-Most companies build a marketing tech stack by adding tools one category at a time. Each tool solves a problem in isolation. Over time, the team manages five platforms that do not talk to each other, producing five data streams that no one has the bandwidth to reconcile into a single view.
+# How to build an AI marketing stack that actually works
 
-The result is a fragmented stack that consumes more time to manage than it saves.
+An AI marketing stack that works is not a collection of AI-branded tools. It is a connected system where each layer passes signals to the next: audience data improves content targeting, content performance improves paid media decisions, and paid media results feed back into audience segmentation. Without those connections, even good tools produce mediocre results because they are optimizing in isolation.
 
-This guide covers what a functional AI marketing stack needs to cover, why the shared data layer is the architectural decision that determines whether the stack works, and how Search Atlas provides that as a single platform.
+Most teams disappointed with their AI marketing stack have both a tool problem and an architecture problem. The tools are technically fine. The data flow architecture (how signals move between layers) is not there. This guide covers the six layers of a working AI marketing stack, the five data flows that create compounding returns, and how to audit what you have for the connections that are missing.
 
 **Key takeaways**
-- A functional AI marketing stack covers four layers: SEO execution, content production, paid media automation, and AI visibility
-- The fragmented stack problem is not a tool problem; it is a data architecture problem
-- A shared data layer across all four functions eliminates the signal reconciliation that consumes team hours
-- The Search Atlas platform covers all four layers from one connected architecture
+- Tools that don't share data coexist rather than compound; the coexistence trap is why technically good AI stacks underperform
+- A working AI marketing stack requires five data flows: CRM signals to content, content performance to paid creative, paid results to audience refinement, SEO data to content briefs, and attribution data to budget reallocation
+- The orchestration layer is the most underbuilt part of most stacks; without it, all other layers require manual coordination to share data
+- A $500/month stack can cover four layers with meaningful data flow if tool selection prioritizes native integrations over best-of-breed point solutions
+- The signal diagram exercise (drawing which tools currently send data to which other tools) identifies disconnected tools faster than any vendor audit
 
 ---
 
-## What a Fragmented Marketing Stack Costs You
+## Why most AI marketing stacks don't work (even when the tools are good)
 
-A fragmented stack does not fail dramatically. It fails slowly, through accumulation.
+A technically correct AI marketing tool list can produce poor results. This happens consistently enough that it has a name: the coexistence trap.
 
-The SEO tool identifies a keyword opportunity. The content team is running a different set of priorities. The paid team is bidding on keywords that organic already covers at position 1. The brand monitoring tool shows a competitor gaining share of voice in LLM responses. No one connects these signals because each sits in a separate platform with its own export format.
+### The coexistence trap: tools that run in parallel but don't communicate
 
-The operational cost of that fragmentation:
+The coexistence trap is the failure mode where marketing tools run simultaneously but independently, each optimizing for its own objective with no view of what the others are doing.
 
-**Signal delay.** A ranking drop that OTTO SEO would flag and fix autonomously takes days to surface through a weekly audit report, a Slack notification, and a developer ticket.
+The pattern looks like this. An AI SEO tool optimizes for rankings based on its own keyword database. An AI writing tool generates content based on prompts, with no connection to which keywords the SEO tool is prioritizing. An AI paid media tool optimizes for conversions based on campaign data, with no visibility into which organic keywords are driving pipeline. Each tool is doing its job. The system is not.
 
-**Attribution failure.** When paid and organic run on separate data layers, the team cannot tell whether a traffic increase came from a content update, a technical fix, or a paid click. Attribution becomes guesswork.
+**The cost of coexistence is not visible in any individual tool's reporting, which is why it persists.** The SEO tool shows ranking improvements. The content tool shows draft production. The paid tool shows ROAS. None of them show what would have happened if they were sharing data.
 
-**Integration overhead.** Each additional tool requires setup, maintenance, and a team member who understands it. Five tools at moderate complexity each consume more management time than one integrated platform.
+### The compounding difference: what a connected stack does that isolated tools cannot
 
-**Conflicting signals.** The SEO tool recommends targeting Keyword A. The content tool is optimized for Keyword B. The paid tool is spending on Keyword C. No unified priority exists.
+A connected AI marketing stack compounds its outputs over time. When the CRM sends high-intent audience signals to the content layer, content production targets the buyer journey stage most likely to convert, not just the keywords with the highest search volume. When that content performs in organic search, the paid team knows which angles are resonating before spending on them. When paid results return, the audience segmentation in the CRM updates to reflect which content-to-paid paths converted.
 
-[What an AI CMO is and how it addresses the fragmented execution problem.](/blog/what-is-an-ai-cmo)
+Each cycle of that loop produces better targeting data than the last. The stack learns. Isolated tools do not.
 
----
-
-## The Four Layers of a Functional AI Marketing Stack
-
-A functional AI marketing stack operates across four distinct layers. Each layer has a different function and a different set of performance signals.
-
-### SEO Execution Layer
-
-The SEO execution layer handles on-page optimization, technical health, and search visibility. In a fragmented stack, this layer involves an audit tool, a developer, and a content team working asynchronously. In a connected stack, it runs autonomously.
-
-OTTO SEO is the SEO execution layer in Search Atlas. It deploys fixes directly to live sites through a JavaScript pixel: titles, headings, metadata, internal links, schema, canonical tags. No developer required. Changes are logged, tracked, and reversible.
-
-[OTTO SEO detailed overview.](/blog/otto-seo)
-
-### Content Production Layer
-
-The content production layer handles keyword-grounded content creation at the speed and volume required to build and maintain topical authority.
-
-In a fragmented stack, a keyword research tool produces a report, a content brief tool produces a brief, a writer produces a draft, and a content grading tool tells the team how to revise it. Each handoff is a delay and a potential quality drop.
-
-Content Genius integrates keyword research, SERP analysis, AI drafting, and Scholar grading into a single workflow. Scholar grades content against twelve dimensions (keyword density, entity coverage, structural completeness, passage indexing, and more) before publication.
-
-[Content Genius and Scholar overview.](/blog/content-genius)
-
-### Paid Media Layer
-
-The paid media layer handles campaign structure, keyword clustering, ad copy, bid optimization, and negative keyword management across Google Ads.
-
-In a fragmented stack, a PPC tool identifies opportunities and a human implements them. In a connected stack, Atlas Brain builds and optimizes campaigns from a goal input and executes changes directly.
-
-Smart Ads handles campaign creation, single-themed ad group structure, ad copy generation, budget reallocation, and retargeting. It runs through Atlas Brain with approval checkpoints at high-impact steps.
-
-[Smart Ads overview.](/blog/smart-ads)
-
-### AI Visibility Layer
-
-The AI visibility layer monitors brand presence, sentiment, and share of voice in AI-generated responses across ChatGPT, Claude, Gemini, and Perplexity.
-
-This layer does not exist in most fragmented stacks, because no point solution specifically built for it reached widespread adoption before LLM-based search became a significant buyer-influence channel.
-
-Search Atlas LLM Visibility tracks brand and competitor mentions across AI platforms continuously. It surfaces share-of-voice data, sentiment trends, and citation sources that inform content and Knowledge Graph decisions.
+**The architecture decision that determines whether a stack compounds or coexists is not which tools you buy. It is which data flows you build between them.**
 
 ---
 
-## Connected vs. Disconnected Stack Architecture
+## The six layers of a working AI marketing stack
 
-A disconnected stack has four separate data layers, four dashboards, and four reporting formats. The team reconciles them manually.
+A working AI marketing stack has six distinct layers. Each layer has a specific function; together they cover the full marketing operation.
 
-A connected stack shares one data layer across all four functions. Configuration changes in one area propagate to related functions automatically.
+### Layer 1: data and analytics foundation
 
-In Search Atlas, the Knowledge Graph is the shared configuration layer. It holds the business description, target audience, products, competitors, and brand terminology. OTTO SEO reads the Knowledge Graph to determine what to optimize for. Content Genius uses the same brand context when generating copy. Atlas Brain uses it when setting Smart Ads campaign goals. LLM Visibility tracks the entities and competitors defined there.
+The data layer is the source of truth for every decision the rest of the stack makes. It tracks website behavior, campaign performance, conversion events, and attribution paths. Without a functioning data layer, every other layer optimizes against incomplete or misleading signals.
 
-That shared architecture means the same business context informs SEO execution, content production, paid media, and AI visibility simultaneously.
+Tools in this layer: Google Analytics 4, Segment, Amplitude, or Heap. The key requirement is event-level tracking that can be queried by the content, paid, and CRM layers downstream.
 
----
+### Layer 2: content generation and governance
 
-## The Shared Data Layer Advantage
+The content layer generates and governs what the brand publishes. AI-assisted content generation speeds up draft production; content governance tooling scores output against quality dimensions, flags brand voice violations, and tracks topical coverage gaps.
 
-When tools share a data layer, three things improve:
+The critical integration: the content layer should receive keyword priority signals from the SEO layer and audience signals from the data layer before generating. Content produced without those signals fills editorial calendars without reinforcing ranking targets or buyer-journey fit.
 
-**Priority coherence.** OTTO SEO, Content Genius, and Smart Ads are all optimizing for the same goal. A conversion keyword that Smart Ads identifies as high-value feeds into the content cluster that Content Genius builds. A content cluster that drives organic traffic feeds into the branded query data that LLM Visibility tracks.
+### Layer 3: SEO and search visibility
 
-**Faster decision loops.** When ranking data, content performance, and paid conversion data are in the same platform, the team can make cross-channel decisions without pulling exports from three tools.
+The SEO layer handles on-page optimization, technical health, keyword tracking, and increasingly brand presence in AI-generated search results. The key integration: SEO data should feed content briefs in layer 2, so content production targets queries with documented ranking opportunity rather than guessing.
 
-**Simpler attribution.** A traffic movement traced through one platform is easier to attribute than a movement that requires reconciling data from three separate dashboards.
+### Layer 4: paid media automation
 
----
+The paid media layer manages campaign structure, bid optimization, audience targeting, and budget allocation. The key integration: organic content performance from layer 3 should inform which angles and keywords paid campaigns amplify. Paid results should then feed audience segmentation in layer 5.
 
-## Minimum Viable Stack by Budget and Team Size
+### Layer 5: CRM and lifecycle personalization
 
-**Solo founder or 1-person marketing team ($99/month):**
-Search Atlas Starter. One OTTO SEO project covers the core site. Content Genius for one content cluster per month. Smart Ads for one campaign structure. LLM Visibility for monthly share-of-voice benchmark.
+The CRM layer tracks leads, scores intent, and personalizes communication based on behavioral signals from the data layer. The key integration: CRM segments should flow upstream to layer 2 (content targeting) and layer 4 (paid audience targeting), so both layers target the buyer profiles most likely to convert based on historical deal data.
 
-**Lean in-house team of 2–5 ($199/month):**
-Search Atlas Growth. Two OTTO SEO projects. Content Genius bulk mode for higher publishing velocity. Smart Ads for 2 to 3 campaign structures. LLM Visibility for ongoing competitor monitoring.
+### Layer 6: orchestration and workflow automation
 
-**Marketing agency managing 4+ client sites ($399/month):**
-Search Atlas Pro. Four OTTO SEO projects, unlimited GSC connections, white-label dashboards. Full platform across all four layers for each active client.
+The orchestration layer connects all five layers above it. It routes data between tools, triggers workflows when conditions are met, and handles the handoffs that would otherwise require manual coordination.
 
-**Enterprise or agency at scale:**
-Search Atlas Enterprise. Unlimited OTTO projects, API access for custom reporting, dedicated support.
+**Most marketing teams treat orchestration as optional: a nice-to-have layer they will add when they scale. It is not optional.** Without orchestration, every data flow in the five-layer stack requires a human to manually export from one tool and import to another. That manual overhead is exactly what AI stacks are supposed to remove.
+
+Atlas Coworker (Search Atlas's workspace integration) is built to fill this gap without adding another tool. It brings the Atlas Agent into Slack, Microsoft Teams, and ClickUp (the channels where marketing decisions already happen) and from there connects to 3,000+ external platforms: HubSpot, Salesforce, Meta Ads, Google Calendar, GitHub, Vercel, and more. The team can brief, review, and approve from a Slack thread; the agent executes across connected platforms and returns results in the same channel. Routines and Playbooks run on a schedule, so the orchestration layer operates proactively rather than waiting for someone to trigger it manually.
 
 ---
 
-## How the Search Atlas Platform Replaces a Four-Tool Stack
+## The five data flows that make the stack compound
 
-In a fragmented stack, each layer typically involves a separate vendor:
+Six layers and a tool in each layer is not enough. The compounding happens through five specific data flows between layers.
 
-| Layer | Fragmented stack | Search Atlas |
+### Flow 1: audience signals from CRM to content targeting
+
+The CRM holds the clearest picture of who is actually buying and at what stage of the journey they converted. That data should reach the content layer in the form of targeting criteria: which job titles, company sizes, and pain points are associated with closed-won deals.
+
+Configuration: CRM segments tagged by deal stage flow to content brief templates. The content tool generates briefs filtered by the segment's associated keywords and topics, not just keyword search volume.
+
+### Flow 2: content performance to paid media creative decisions
+
+Organic content that ranks and converts reveals which angles, formats, and claims resonate with the audience before any paid budget tests them. The highest-performing organic pieces by conversion rate, not just traffic, should inform paid media creative: which headlines, which value propositions, which proof points to test in ads.
+
+Configuration: Google Analytics conversion data linked to organic landing pages, exported to the paid media layer on a weekly cadence. The paid team reviews the top-converting organic pages before briefing new ad creative.
+
+### Flow 3: paid media results to audience segmentation refinement
+
+Paid media runs against defined audiences. When certain audience segments convert at higher rates, that signal should return to the CRM to refine the ICP (Ideal Customer Profile) definition, and from there to the content layer to narrow content targeting further.
+
+**This is the feedback loop that separates a compounding stack from a coexisting one.** Paid data that stays inside the paid tool is a closed system. Paid data that flows back to the CRM and forward to content is a learning system.
+
+Configuration: Google Ads conversion segments pushed to CRM via API or a weekly export reviewed on a defined cadence. CRM segments updated monthly based on paid conversion data.
+
+### Flow 4: SEO data to content brief generation
+
+Keyword ranking data, query gap analysis, and SERP performance reports are inputs to content strategy, but only if they reach the content layer in a structured form. An SEO tool that produces ranking reports the content team reads manually is not sending signals; it is producing documents.
+
+The connected flow: SEO tools export priority queries directly to content brief templates, pre-populating the primary keyword, search intent classification, and SERP competitor analysis. The content team receives a brief with structural context, not a spreadsheet to interpret.
+
+### Flow 5: attribution data to budget reallocation
+
+Attribution data, specifically multi-touch attribution from tools like Triple Whale or Northbeam, identifies which channel combinations produce the lowest CAC (Customer Acquisition Cost) and shortest sales cycles. That data should trigger human-reviewed budget reallocation recommendations on a defined cadence.
+
+**Attribution reports that produce no downstream budget action are documentation, not decision-making.** The configuration that closes this flow: attribution output reviewed weekly by a budget owner with authority to reallocate, on a cadence short enough to respond before underperformance compounds.
+
+---
+
+## Stacks by budget: what to build at $500/month, $2K/month, and $5K+/month
+
+### Under $500/month: the four-tool minimum viable stack
+
+At the seed or early-growth stage, four tools can cover four layers if they have native integrations rather than requiring manual exports.
+
+| Layer | Tool | Monthly cost |
 |---|---|---|
-| SEO execution | Semrush/Ahrefs + developer + content writer | OTTO SEO (autonomous) |
-| Content production | Surfer SEO + Jasper + editorial team | Content Genius + Scholar |
-| Paid media | Optmyzr or manual Google Ads management | Smart Ads via Atlas Brain |
-| AI visibility | No tool or Brandwatch (social only) | LLM Visibility |
+| Data and analytics | Google Analytics 4 | $0 |
+| SEO and content | Search Atlas | $99–$199 |
+| CRM and lifecycle | HubSpot Starter | $20–$45 |
+| Orchestration | Zapier (Starter) | $20 |
+| **Total** | | **~$139–$264/month** |
 
-The fragmented stack requires four vendor relationships, four billing cycles, four onboarding processes, and ongoing management of four separate dashboards. The integrated platform requires one.
+The priority flows to build at this budget: SEO keyword data from Search Atlas to content brief templates (Flow 4), and website behavior from GA4 to HubSpot CRM segments (partial Flow 3). These two flows produce the highest compounding value for the lowest configuration cost.
 
-The trade-off: an integrated platform means depending on one vendor for core marketing infrastructure. The risk is vendor concentration. The benefit is the shared data layer and the management simplicity at small-to-mid team size.
+### $2K–$5K/month: the growth-stage connected stack
 
-For most companies at under $20M ARR with marketing teams of under 10 people, the management overhead of a fragmented stack outweighs the flexibility it provides.
+At the growth stage, paid media becomes viable and the content layer needs governance tooling to maintain quality at volume.
+
+| Layer | Tool | Monthly cost |
+|---|---|---|
+| Data and analytics | GA4 + Segment | $0–$120 |
+| SEO and content | Search Atlas Growth/Pro | $199–$399 |
+| Paid media | Smart Ads (Search Atlas Growth/Pro) or Google Ads native | Variable |
+| CRM and lifecycle | HubSpot Professional or Klaviyo | $800–$1,200 |
+| Orchestration | Zapier Professional | $49–$99 |
+| Attribution | Triple Whale (SMB plan) | $129–$299 |
+| **Total** | | **~$1,300–$2,000/month** |
+
+At this tier, add Flow 5: attribution data to budget reallocation. Triple Whale or Northbeam provides multi-touch attribution that GA4 alone cannot produce for multi-channel stacks.
+
+### $5K+/month: the enterprise-grade orchestrated stack
+
+At the enterprise tier, the orchestration layer becomes a dedicated platform rather than a workflow tool.
+
+| Layer | Tool | Monthly cost |
+|---|---|---|
+| Data and analytics | Amplitude or Heap | $500–$1,000 |
+| SEO and content | Search Atlas Pro | $399 |
+| Paid media | Smart Ads + media support | Variable |
+| CRM and lifecycle | HubSpot Breeze or Salesforce Marketing Cloud | $1,200–$3,000 |
+| Orchestration | Marketo or ActiveCampaign | $1,000–$2,000 |
+| Attribution | Northbeam | $500–$1,000 |
+| **Total** | | **~$3,600–$7,400/month** |
+
+At this tier, HubSpot Breeze (HubSpot's AI-augmented CRM layer) and Northbeam handle the CRM and attribution flows automatically. The orchestration platform manages the handoffs between layers rather than relying on Zapier triggers.
 
 ---
 
-## The Bottom Line
+## How to audit your current stack for disconnected tools
 
-Build the stack around the data architecture first. The tool selection follows from the architecture, not the other way around.
+### The data flow audit: drawing the signal map of your current tools
 
-A stack that shares one data layer across SEO, content, paid, and AI visibility produces coherent priorities, faster decision loops, and simpler attribution. A stack that adds tools by category produces four data silos and a growing reconciliation problem.
+The fastest way to identify broken connections in an existing stack is to draw the signal map: a one-page diagram showing every marketing tool in the current stack, with arrows representing data flows that currently exist.
 
-Start with the four layers. Decide whether you build the stack from point solutions or from an integrated platform. Then configure the Knowledge Graph that makes the platform work.
+Complete this in 30 minutes:
 
-The Knowledge Graph setup is not a technical task. It is a strategy task. Get it right, and every function the platform runs is optimized toward the right objective.
+1. List every marketing tool currently active and paid for.
+2. For each tool, write: what data does this tool produce, and where does that data currently go?
+3. Draw an arrow from each data source to each destination. If the data stays inside the tool and goes nowhere, leave that tool unconnected.
+4. Count the tools with no outbound arrows. These are coexistence tools: they produce data that dies inside the platform.
+
+**Any tool that produces data but sends it nowhere is contributing to the coexistence trap.** Either build the connection or cut the tool.
+
+### The three tools most commonly bought but never connected
+
+**AI writing tools without SEO integration.** Content produced without keyword signal from the SEO layer fills editorial calendars but does not reinforce ranking targets. The output looks like content; it does not function as an SEO asset. Fix: feed SEO priority queries to the writing tool before generating.
+
+**Standalone attribution tools.** Attribution platforms that produce reports but do not trigger any downstream action (no budget reallocation, no audience update) are documentation tools. Fix: connect attribution output to a budget review cadence with a defined owner and a timeline.
+
+**CRM with no upstream content connection.** A CRM that tracks leads but does not send ICP data upstream to content targeting or paid audience configuration is sitting on the stack's most valuable signal without using it. Fix: build the CRM-to-content-brief flow described in Flow 1.
+
+---
+
+## FAQ
+
+### What is an AI marketing stack?
+
+An AI marketing stack is the connected set of tools a team uses to plan, create, distribute, optimize, and measure marketing, where AI handles the execution layer. The defining characteristic of a working stack is that tools share data with each other. A list of AI tools that don't connect is a collection, not a stack.
+
+### How much does an AI marketing stack cost?
+
+A minimum viable stack starts at $139–$264/month (GA4 free, Search Atlas $99–$199, HubSpot Starter $20–$45, Zapier $20). A growth-stage connected stack runs $1,300–$2,000/month. Enterprise-grade stacks with dedicated attribution and orchestration platforms run $3,600–$7,400/month. The cost gap between tiers is mostly in the CRM and orchestration layers, not the SEO or content tools.
+
+### How many tools do I actually need?
+
+Four to six tools cover the six core stack layers if they have native integrations. More than 25 marketing tools is a signal of fragmentation, not capability. The right question is not how many tools, but how many data flows those tools actively share.
+
+### Why is my AI marketing stack not producing results even though the tools are good?
+
+The most common cause is the coexistence trap: tools running in parallel without sharing data. Each tool optimizes for its own objective with no view of what the others are doing. The fix is not new tools. Build the data flows between the ones you have: SEO data to content briefs, CRM segments to paid audiences, content performance to ad creative decisions.
+
+### How do AI marketing tools share data with each other?
+
+Tools share data through three mechanisms: native integrations (built-in connections between platforms on a shared data layer), APIs (direct connections configured by a developer), and orchestration tools like Zapier or Make (workflow automation that transfers data between tools on a schedule or event trigger). The orchestration layer is the mechanism most teams skip and the one most responsible for coexistence failures.
+
+### When should I add more tools to my stack?
+
+Add a tool only when you have a specific data flow problem it solves and the orchestration layer in place to connect it to existing tools. The signal to expand is a gap in your signal map: a layer producing data with nowhere to send it, or a decision being made without data that another tool could provide. Adding tools before the orchestration layer is ready creates more disconnected tools, not a better stack.
+
+---
+
+## How Search Atlas addresses the integration problem
+
+Search Atlas eliminates several of the most common disconnected-tool problems by covering multiple stack layers from a single platform with a shared data layer.
+
+OTTO SEO (Search Atlas's autonomous SEO execution agent) and Content Genius (the content production module) share the same Knowledge Graph (the structured business profile that defines the ICP, keyword architecture, and content constraints). SEO data automatically informs content briefs rather than requiring a manual export. Flow 4 (SEO data to content brief generation) is built in to the platform.
+
+Smart Ads connects paid media to the same Knowledge Graph and keyword signals that inform OTTO SEO and Content Genius. Flow 2 (content performance to paid creative) requires minimal configuration when all three layers share a data foundation. LLM Visibility (Search Atlas's brand monitoring module) adds a signal that most attribution tools do not track: brand presence in AI-generated search results across ChatGPT, Claude, Gemini, and Perplexity.
+
+Atlas Coworker adds the orchestration layer that most stacks outsource to Zapier or leave unbuilt. It runs inside Slack, Microsoft Teams, and ClickUp, connecting the Search Atlas platform to the full external tool ecosystem from within the workspace channels the team already uses. Marketing decisions happen in Slack. The execution happens there too. The Sense-Detect-Propose-Approve-Heal loop runs continuously: the agent watches live surfaces against the current strategy, flags drift, proposes corrections, and ships approved changes without requiring anyone to log into a separate dashboard to trigger them.
+
+**This is what moving from a coexisting stack to a compounding one looks like in practice: strategy stays in the open, the agent holds it in view across every connected surface, and drift is corrected before it compounds.** Single-player tools optimize in isolation. A stack built on Search Atlas heals itself.
+
+A team building the $500/month minimum viable stack gets three data flows pre-connected without additional configuration: SEO to content, content to paid signal, and keyword targeting to audience definition. The team building the growth-stage stack at $2K/month adds the CRM and attribution flows on top of an already-connected foundation.
+
+Plans start at $99/month for the Starter tier, scaling to $399/month for the Pro tier with four OTTO SEO projects and full white-label reporting.
+
+[Full OTTO SEO setup guide, including Knowledge Graph configuration and data flow setup.](/blog/otto-seo)

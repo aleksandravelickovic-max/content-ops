@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Atlas — PR & Link Building Tools Guide</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f9f9f8;
+      --white: #ffffff;
+      --ink: #1a1a1a;
+      --ink-secondary: #555;
+      --ink-muted: #888;
+      --border: #e2e2de;
+      --accent-pr: #2563eb;
+      --accent-ll: #7c3aed;
+      --accent-dpr: #059669;
+      --accent-pr-light: #eff6ff;
+      --accent-ll-light: #f5f3ff;
+      --accent-dpr-light: #ecfdf5;
+      --warn: #b45309;
+      --warn-light: #fffbeb;
+      --tag-bg: #f0f0ee;
+      --radius: 8px;
+      --radius-sm: 4px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    /* ── Layout ── */
+    .page-header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 40px 0 32px;
+    }
+
+    .page-header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .page-header .eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.4px;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .page-header .subtitle {
+      font-size: 15px;
+      color: var(--ink-secondary);
+      max-width: 560px;
+    }
+
+    .toc-strip {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0 32px;
+    }
+
+    .toc-strip-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      gap: 4px;
+    }
+
+    .toc-btn {
+      display: inline-block;
+      padding: 12px 16px;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      color: var(--ink-secondary);
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .toc-btn:hover { color: var(--ink); }
+    .toc-btn.pr { border-bottom-color: var(--accent-pr); color: var(--accent-pr); }
+    .toc-btn.ll { border-bottom-color: var(--accent-ll); color: var(--accent-ll); }
+    .toc-btn.dpr { border-bottom-color: var(--accent-dpr); color: var(--accent-dpr); }
+
+    main {
+      max-width: 860px;
+      margin: 48px auto 80px;
+      padding: 0 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 56px;
+    }
+
+    /* ── Quick-pick table ── */
+    .overview-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .overview-card table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .overview-card thead th {
+      background: #fafaf9;
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--ink-muted);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .overview-card tbody td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      vertical-align: top;
+    }
+
+    .overview-card tbody tr:last-child td { border-bottom: none; }
+
+    .tool-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .badge-pr { background: var(--accent-pr-light); color: var(--accent-pr); }
+    .badge-ll { background: var(--accent-ll-light); color: var(--accent-ll); }
+    .badge-dpr { background: var(--accent-dpr-light); color: var(--accent-dpr); }
+
+    /* ── Section ── */
+    .section-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .section-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .icon-pr { background: var(--accent-pr-light); }
+    .icon-ll { background: var(--accent-ll-light); }
+    .icon-dpr { background: var(--accent-dpr-light); }
+
+    .section-header h2 {
+      font-size: 21px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+
+    .section-header .tagline {
+      font-size: 14px;
+      color: var(--ink-secondary);
+    }
+
+    /* ── What it is ── */
+    .what-it-is {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-bottom: 24px;
+      font-size: 14px;
+      color: var(--ink-secondary);
+      line-height: 1.7;
+    }
+
+    /* ── Workflow steps ── */
+    .workflow-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--ink-muted);
+      margin-bottom: 12px;
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .step {
+      display: flex;
+      gap: 16px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+    }
+
+    .step-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .num-pr { background: var(--accent-pr-light); color: var(--accent-pr); }
+    .num-ll { background: var(--accent-ll-light); color: var(--accent-ll); }
+    .num-dpr { background: var(--accent-dpr-light); color: var(--accent-dpr); }
+
+    .step-body { flex: 1; }
+
+    .step-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .step-desc {
+      font-size: 13px;
+      color: var(--ink-secondary);
+      line-height: 1.6;
+    }
+
+    .step-desc code {
+      font-family: "SF Mono", "Fira Code", monospace;
+      font-size: 12px;
+      background: var(--tag-bg);
+      padding: 1px 5px;
+      border-radius: var(--radius-sm);
+      color: var(--ink);
+    }
+
+    /* ── Warning callout ── */
+    .callout {
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      font-size: 13px;
+      line-height: 1.6;
+      margin-bottom: 24px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .callout-warn {
+      background: var(--warn-light);
+      border: 1px solid #fde68a;
+      color: var(--warn);
+    }
+
+    .callout-info {
+      background: #f0f9ff;
+      border: 1px solid #bae6fd;
+      color: #0369a1;
+    }
+
+    .callout-icon { font-size: 15px; flex-shrink: 0; margin-top: 1px; }
+
+    /* ── Tips grid ── */
+    .tips-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 0;
+    }
+
+    .tip {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+    }
+
+    .tip-title {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .tip-desc {
+      font-size: 12px;
+      color: var(--ink-secondary);
+      line-height: 1.6;
+    }
+
+    /* ── Filters reference ── */
+    .filters-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .filter-chip {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 10px 14px;
+      font-size: 12px;
+    }
+
+    .filter-chip .filter-name {
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 2px;
+    }
+
+    .filter-chip .filter-note {
+      color: var(--ink-muted);
+      font-size: 11px;
+    }
+
+    /* ── Comparison table at bottom ── */
+    .comparison-table {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .comparison-table h3 {
+      padding: 18px 20px 14px;
+      font-size: 14px;
+      font-weight: 600;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .comparison-table table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .comparison-table thead th {
+      padding: 10px 16px;
+      text-align: left;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--ink-muted);
+      background: #fafaf9;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .comparison-table tbody td {
+      padding: 13px 16px;
+      font-size: 13px;
+      vertical-align: top;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .comparison-table tbody tr:last-child td { border-bottom: none; }
+
+    .check { color: #16a34a; font-weight: 700; }
+    .cross { color: #dc2626; font-weight: 700; }
+
+    /* ── HDC note ── */
+    .hdc-bar {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      font-size: 13px;
+      color: var(--ink-secondary);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .hdc-bar strong { color: var(--ink); }
+
+    @media (max-width: 640px) {
+      .filters-grid { grid-template-columns: 1fr 1fr; }
+      .tips-grid { grid-template-columns: 1fr; }
+      .toc-btn { padding: 10px 10px; font-size: 12px; }
+      h1 { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <p class="eyebrow">Search Atlas — Internal Reference</p>
+    <h1>PR &amp; Link Building Tools</h1>
+    <p class="subtitle">A practical guide to the three outreach and link-building tools available through Search Atlas. Written for PR and content teams, not developers.</p>
+  </div>
+</header>
+
+<nav class="toc-strip">
+  <div class="toc-strip-inner">
+    <a href="#press-releases" class="toc-btn pr">Press Releases</a>
+    <a href="#link-lab" class="toc-btn ll">Link Lab</a>
+    <a href="#digital-pr" class="toc-btn dpr">Digital PR Outreach</a>
+    <a href="#comparison" class="toc-btn">Quick Comparison</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- Quick-pick -->
+  <section>
+    <p class="workflow-label">At a glance — pick the right tool</p>
+    <div class="overview-card">
+      <table>
+        <thead>
+          <tr>
+            <th>What you want to do</th>
+            <th>Tool to use</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Announce a launch, milestone, or news story and get it syndicated across media sites</td>
+            <td><span class="tool-badge badge-pr">Press Releases</span></td>
+          </tr>
+          <tr>
+            <td>Place an editorial article with a backlink on a vetted publisher's site</td>
+            <td><span class="tool-badge badge-ll">Link Lab</span></td>
+          </tr>
+          <tr>
+            <td>Find journalists writing about your topics and pitch them directly via email</td>
+            <td><span class="tool-badge badge-dpr">Digital PR Outreach</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ──────────────────────────────
+       PRESS RELEASES
+  ────────────────────────────────── -->
+  <section id="press-releases">
+    <div class="section-header">
+      <div class="section-icon icon-pr">📣</div>
+      <div>
+        <h2>Press Releases</h2>
+        <p class="tagline">AI-written press releases distributed to news and media networks</p>
+      </div>
+    </div>
+
+    <div class="what-it-is">
+      <strong>What it is:</strong> You give Search Atlas a topic and a target URL. The platform writes the press release for you and then distributes it to a selection of media networks — think syndication sites, news wire services, and editorial outlets. You choose which networks to publish to based on their reach, tier, and cost.
+    </div>
+
+    <p class="workflow-label">Step-by-step workflow</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num num-pr">1</div>
+        <div class="step-body">
+          <div class="step-title">Check your HDC balance</div>
+          <div class="step-desc">Each action costs Hyperdrive Credits (HDC). Writing a press release costs 1 HDC. Distribution costs additional HDC per channel. Check your balance first so you don't get partway through and stall.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num num-pr">2</div>
+        <div class="step-body">
+          <div class="step-title">Create the press release</div>
+          <div class="step-desc">Provide: the <strong>target URL</strong> (the page you want covered), the <strong>main topic</strong> (e.g. "Search Atlas launches AI-powered link building marketplace"), up to 3 <strong>target keywords</strong>, a <strong>content type</strong> (e.g. product launch, company news, partnership), and any <strong>tone or style instructions</strong> (professional, authoritative, etc.). The platform generates a draft from these inputs. You can trigger writing immediately or do it as a separate step.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num num-pr">3</div>
+        <div class="step-body">
+          <div class="step-title">Review the generated draft</div>
+          <div class="step-desc">The AI writes the full press release — headline, body, and summary. You must review it before publishing. If it needs changes, you can update the content and regenerate (costs 1 more HDC). Publishing without reviewing is blocked by the system.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num num-pr">4</div>
+        <div class="step-body">
+          <div class="step-title">Choose distribution channels</div>
+          <div class="step-desc">Pull the available networks — each shows its HDC cost, tier (standard vs. premium), approximate number of links it will generate, and expected publishing time. Pick the ones that match your goals and budget. Higher-tier channels reach larger audiences and cost more HDC.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num num-pr">5</div>
+        <div class="step-body">
+          <div class="step-title">Confirm cost and publish</div>
+          <div class="step-desc">The system will show you your current HDC balance vs. the total cost of your selected channels before any money moves. You must explicitly confirm. Once published, you can track distribution status per channel.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout callout-info">
+      <span class="callout-icon">💡</span>
+      <div><strong>Dynamic PR mode:</strong> When publishing, you can enable "Dynamic PR" — the platform generates a slightly different version of the press release for each distribution channel, so every publisher receives unique content instead of the same copy. This costs extra HDC but reduces the risk of duplicate-content issues across outlets.</div>
+    </div>
+
+    <div class="callout callout-warn">
+      <span class="callout-icon">⚠️</span>
+      <div><strong>Cost confirmation cannot be skipped.</strong> The platform requires your explicit approval before charging HDC for publishing — even if you're running in automated mode. This is enforced at the system level, not just a courtesy check.</div>
+    </div>
+
+    <p class="workflow-label">Tips for better results</p>
+    <div class="tips-grid">
+      <div class="tip">
+        <div class="tip-title">Be specific with your topic</div>
+        <div class="tip-desc">The more concrete your topic input ("Search Atlas integrates with Google Search Console for real-time indexing alerts"), the tighter and more credible the AI output. Vague topics produce generic press releases.</div>
+      </div>
+      <div class="tip">
+        <div class="tip-title">Use the Knowledge Graph</div>
+        <div class="tip-desc">If the brand has a Knowledge Graph set up in Search Atlas, link the press release to it. The AI uses that company data — name, website, social profiles, description — to write a more accurate release with fewer errors to correct.</div>
+      </div>
+      <div class="tip">
+        <div class="tip-title">Match content type to the news</div>
+        <div class="tip-desc">Press release content types (product launch, thought leadership, award, etc.) affect how the AI frames the story. Choosing the right type avoids having to heavily rewrite the generated draft.</div>
+      </div>
+      <div class="tip">
+        <div class="tip-title">Check distribution timing</div>
+        <div class="tip-desc">Each channel shows an expected publishing time. For time-sensitive announcements, filter for faster-publishing channels first.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────────────────────
+       LINK LAB
+  ────────────────────────────────── -->
+  <section id="link-lab">
+    <div class="section-header">
+      <div class="section-icon icon-ll">🔗</div>
+      <div>
+        <h2>Link Lab</h2>
+        <p class="tagline">A publisher marketplace for paid editorial link placements</p>
+      </div>
+    </div>
+
+    <div class="what-it-is">
+      <strong>What it is:</strong> Link Lab is a marketplace where you can buy editorial placements on real publisher websites. You find a publication that fits your niche, write (or have them write) a 600–800 word article that includes a link back to your target page, pay for the placement in HDC, and the publisher posts it. It's a direct, transparent way to earn contextual backlinks without cold outreach.
+    </div>
+
+    <p class="workflow-label">Step-by-step workflow</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num num-ll">1</div>
+        <div class="step-body">
+          <div class="step-title">Create a project</div>
+          <div class="step-desc">Projects are just organizational folders — group your placements by campaign, client, or quarter (e.g. "Q3 Search Atlas Link Building"). Everything you buy gets attached to a project so you can track orders in one place.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num num-ll">2</div>
+        <div class="step-body">
+          <div class="step-title">Browse the publisher marketplace</div>
+          <div class="step-desc">Filter publications by 20+ criteria to find the right placements. Key filters: <strong>Domain Rating (DR)</strong> — Ahrefs link authority score; <strong>Domain Authority (DA)</strong> — Moz's equivalent; <strong>Domain Power</strong> — Search Atlas's own score; <strong>organic traffic</strong>; <strong>price</strong>; <strong>category</strong> (Technology, Business, Marketing, etc.); <strong>country</strong>; <strong>spam score</strong>; and Google News indexed status. Sort results by price, DR, or traffic to find the best value.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num num-ll">3</div>
+        <div class="step-body">
+          <div class="step-title">Filter for LLM visibility (optional but valuable)</div>
+          <div class="step-desc">This is a standout feature: you can specifically filter for publications that are <strong>visible in ChatGPT, Gemini, or Google AI Overviews</strong>. If you're building links with AI visibility in mind — not just traditional SEO — this filter narrows the marketplace to only publications that LLMs are already citing.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num num-ll">4</div>
+        <div class="step-body">
+          <div class="step-title">Add publications to your cart</div>
+          <div class="step-desc">When you find a publication you want, add it to your cart. You can add multiple publications in one session and buy them together at checkout. The target URL and anchor text are set at checkout — not when you add to cart — so you can plan first and specify details at the end.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num num-ll">5</div>
+        <div class="step-body">
+          <div class="step-title">Write the placement article</div>
+          <div class="step-desc">You need an article for each placement. Requirements: <strong>600–800 words</strong>, HTML format, includes your target URL wrapped in an anchor tag with your chosen anchor text, no more than 2 external reference links. You can write it yourself, have AI draft it here, or pay an extra <strong>+15 HDC per placement</strong> to use the publisher's own writing service. The article must be created <em>before</em> checkout — you reference its ID at purchase.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num num-ll">6</div>
+        <div class="step-body">
+          <div class="step-title">Checkout and confirm payment</div>
+          <div class="step-desc">At checkout you assign each cart item a project, a target URL, an anchor text, and an article ID. The system shows your HDC balance vs. total cost. You must confirm before charges are applied. Once submitted, orders go to the publisher for review and posting.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num num-ll">7</div>
+        <div class="step-body">
+          <div class="step-title">Track orders</div>
+          <div class="step-desc">After checkout, monitor order status through the orders list. You can check per-order details to see if a placement is under review, live, or needs attention.</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="workflow-label">Key marketplace filters — reference card</p>
+    <div class="filters-grid">
+      <div class="filter-chip">
+        <div class="filter-name">Domain Rating (DR)</div>
+        <div class="filter-note">Ahrefs link authority, 0–100. Target DR 40+ for meaningful link equity.</div>
+      </div>
+      <div class="filter-chip">
+        <div class="filter-name">Domain Authority (DA)</div>
+        <div class="filter-note">Moz's equivalent score. Useful as a second signal alongside DR.</div>
+      </div>
+      <div class="filter-chip">
+        <div class="filter-name">Domain Power</div>
+        <div class="filter-note">Search Atlas's own composite score.</div>
+      </div>
+      <div class="filter-chip">
+        <div class="filter-name">Organic Traffic</div>
+        <div class="filter-note">Monthly estimated visitors. Filter for publications with real audiences.</div>
+      </div>
+      <div class="filter-chip">
+        <div class="filter-name">Price (USD)</div>
+        <div class="filter-note">Set min/max to stay within budget. Higher DR = higher cost.</div>
+      </div>
+      <div class="filter-chip">
+        <div class="filter-name">Category</div>
+        <div class="filter-note">Technology, Business, Marketing, Health, etc. Match to your niche.</div>
+      </div>
+      <div class="filter-chip">
+        <div class="filter-name">Country</div>
+        <div class="filter-note">Filter by publisher country. Useful for geo-targeted campaigns.</div>
+      </div>
+      <div class="filter-chip">
+        <div class="filter-name">Spam Score</div>
+        <div class="filter-note">Set a max. Lower is better — high spam score = risky placement.</div>
+      </div>
+      <div class="filter-chip">
+        <div class="filter-name">Google News Indexed</div>
+        <div class="filter-note">Filters for publishers in Google News. Adds credibility signal.</div>
+      </div>
+      <div class="filter-chip">
+        <div class="filter-name">Common Crawl Visible</div>
+        <div class="filter-note">Site is in Common Crawl — used to train LLMs. Boosts AI visibility.</div>
+      </div>
+      <div class="filter-chip">
+        <div class="filter-name">ChatGPT Visible</div>
+        <div class="filter-note">Publisher is cited in OpenAI responses. Key for GEO/AEO strategy.</div>
+      </div>
+      <div class="filter-chip">
+        <div class="filter-name">Gemini / AI Overview Visible</div>
+        <div class="filter-note">Publisher appears in Google's AI-generated answers.</div>
+      </div>
+    </div>
+
+    <div class="callout callout-info">
+      <span class="callout-icon">💡</span>
+      <div><strong>Marquee publications:</strong> Some publishers are flagged as Marquee — premium placements with higher authority and stricter editorial standards. Filter for <code>is_marquee: true</code> if you need a prestige placement for a specific campaign.</div>
+    </div>
+
+    <p class="workflow-label">Tips for better placements</p>
+    <div class="tips-grid">
+      <div class="tip">
+        <div class="tip-title">Match category tightly</div>
+        <div class="tip-desc">A tech SaaS link on a marketing publication is fine. On a cooking or lifestyle site, it looks paid and signals low relevance to search engines. Stick to topically adjacent publishers.</div>
+      </div>
+      <div class="tip">
+        <div class="tip-title">Vary your anchor text</div>
+        <div class="tip-desc">Don't use exact-match keyword anchors across every placement. Mix branded anchors ("Search Atlas"), partial-match ("SEO platform"), and natural phrases ("learn more about") to keep a healthy link profile.</div>
+      </div>
+      <div class="tip">
+        <div class="tip-title">Write the article before you browse</div>
+        <div class="tip-desc">You need the article created before checkout. Writing it first means you can move faster once you've decided on publications.</div>
+      </div>
+      <div class="tip">
+        <div class="tip-title">Use LLM visibility filters for GEO work</div>
+        <div class="tip-desc">If the goal is to get a brand or page cited in AI answers (not just traditional SERPs), filter for ChatGPT- and Gemini-visible publishers. These placements have a different ROI story than pure DR.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────────────────────
+       DIGITAL PR OUTREACH
+  ────────────────────────────────── -->
+  <section id="digital-pr">
+    <div class="section-header">
+      <div class="section-icon icon-dpr">📬</div>
+      <div>
+        <h2>Digital PR Outreach</h2>
+        <p class="tagline">Find journalists covering your topics and pitch them at scale</p>
+      </div>
+    </div>
+
+    <div class="what-it-is">
+      <strong>What it is:</strong> The Digital PR tool automates the prospecting and emailing part of traditional PR outreach. You define who you want to reach (keywords, country, DR range), the platform discovers matching journalists and publications, and then you send personalized pitch emails through a connected email account — all tracked in one place. It's a CRM-lite for journalist relationships, built into Search Atlas.
+    </div>
+
+    <p class="workflow-label">Step-by-step workflow</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num num-dpr">1</div>
+        <div class="step-body">
+          <div class="step-title">Connect your send-from email account</div>
+          <div class="step-desc">Outreach emails are sent from a real email account you connect to Search Atlas — not a Search Atlas address. You'll need to link your email (e.g. your company Gmail or Outlook) before creating any campaigns. This is what journalists will see and reply to.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num num-dpr">2</div>
+        <div class="step-body">
+          <div class="step-title">Create a campaign</div>
+          <div class="step-desc">Set the campaign name and targeting parameters: <strong>target keywords</strong> (topics you want journalists to cover), <strong>country codes</strong> (e.g. us, uk, ca), <strong>DR range</strong> (minimum and maximum domain authority of publications you want to reach), <strong>search depth</strong> (1–5; higher = more opportunities discovered, slower), domains to <strong>blacklist</strong> (competitors, irrelevant sites), and specific <strong>target domains</strong> if you already have publications in mind. You also set up your outreach email template here: subject line, body, and follow-up sequence with timing.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num num-dpr">3</div>
+        <div class="step-body">
+          <div class="step-title">Review discovered opportunities</div>
+          <div class="step-desc">The platform returns a list of journalists and publications matching your criteria. For each one you can see: domain name, DR, organic traffic, referring domains, number of contacts found, and whether they've appeared in your previous campaigns. Filter by DR, traffic, or referring domains to prioritize the best targets. Sort by any metric to work the list efficiently.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num num-dpr">4</div>
+        <div class="step-body">
+          <div class="step-title">Verify contact emails</div>
+          <div class="step-desc">Before sending, run email verification on the campaign. This checks whether the journalist email addresses are valid and deliverable. <strong>Important:</strong> contacts that fail verification are permanently deleted from the campaign — this is destructive and irreversible. Only run verification when you're ready to commit to a contact list. You'll need to confirm this step explicitly.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num num-dpr">5</div>
+        <div class="step-body">
+          <div class="step-title">Schedule outreach in bulk</div>
+          <div class="step-desc">Select the opportunities you want to pitch and queue them for sending — up to 500 at a time. The platform sends emails using your campaign template and follow-up sequence. Timing of follow-ups is configured per campaign (e.g. follow up 72 hours after no reply).</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num num-dpr">6</div>
+        <div class="step-body">
+          <div class="step-title">Monitor replies and respond</div>
+          <div class="step-desc">Incoming journalist replies are collected in one inbox, organized by recency. You can filter by campaign, read/unread status, or search by contact name. Reply directly from the tool to keep the full conversation thread in one place rather than switching to your email client.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout callout-warn">
+      <span class="callout-icon">⚠️</span>
+      <div><strong>Email verification is destructive.</strong> When you verify contacts, any email that bounces or is undeliverable is permanently removed from the campaign — there is no undo. Do not run verification until you've reviewed the contact list and are ready to send. If you need to re-verify already-verified contacts, you must explicitly force re-verification.</div>
+    </div>
+
+    <div class="callout callout-info">
+      <span class="callout-icon">💡</span>
+      <div><strong>Keyword expansion:</strong> When creating a campaign, you can enable keyword expansion. The platform automatically expands your target keywords with related terms to discover a wider set of journalists. Useful when your initial keyword list is narrow. Keep it off if you want tight, precise targeting.</div>
+    </div>
+
+    <p class="workflow-label">Tips for better outreach</p>
+    <div class="tips-grid">
+      <div class="tip">
+        <div class="tip-title">Write the template like a human pitch</div>
+        <div class="tip-desc">The subject line and body are what journalists actually read. Personalize the subject, lead with what's relevant to them (not what you want), and keep the body short — 3–4 sentences max. Generic pitches go to trash.</div>
+      </div>
+      <div class="tip">
+        <div class="tip-title">Set a realistic DR floor</div>
+        <div class="tip-desc">Setting DR minimum too high means few opportunities; too low means outreach to low-quality sites. For most campaigns, DR 30–70 is a productive middle range. Adjust based on the campaign goal.</div>
+      </div>
+      <div class="tip">
+        <div class="tip-title">Use the blacklist early</div>
+        <div class="tip-desc">Add competitors, known irrelevant domains, and any publications you already have relationships with to the blacklist before discovery runs. It's harder to clean up after the list is built.</div>
+      </div>
+      <div class="tip">
+        <div class="tip-title">Check for duplicates across campaigns</div>
+        <div class="tip-desc">The opportunity list flags contacts found in your other campaigns. Filter for <code>found_in_other_campaigns: false</code> to avoid pitching the same journalist from two different campaigns simultaneously — it looks disorganized and can hurt your sender reputation.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────────────────────
+       COMPARISON
+  ────────────────────────────────── -->
+  <section id="comparison">
+    <div class="comparison-table">
+      <h3>Quick comparison — Press Releases vs. Link Lab vs. Digital PR</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Factor</th>
+            <th><span class="tool-badge badge-pr">Press Releases</span></th>
+            <th><span class="tool-badge badge-ll">Link Lab</span></th>
+            <th><span class="tool-badge badge-dpr">Digital PR</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Primary goal</strong></td>
+            <td>News syndication + brand visibility</td>
+            <td>Editorial backlinks on publisher sites</td>
+            <td>Journalist relationships + earned coverage</td>
+          </tr>
+          <tr>
+            <td><strong>Content required</strong></td>
+            <td>AI writes it for you</td>
+            <td>You write an article (or pay +15 HDC)</td>
+            <td>You write the pitch email template</td>
+          </tr>
+          <tr>
+            <td><strong>Cost structure</strong></td>
+            <td>1 HDC to write + HDC per distribution channel</td>
+            <td>HDC per publisher placement (varies by DR/tier)</td>
+            <td>No per-send HDC cost — email account based</td>
+          </tr>
+          <tr>
+            <td><strong>Speed</strong></td>
+            <td>Fast — publish in one session</td>
+            <td>Medium — write article, checkout, await publisher review</td>
+            <td>Slow — outreach → reply → relationship → coverage</td>
+          </tr>
+          <tr>
+            <td><strong>Link type</strong></td>
+            <td>Syndicated links (lower authority, high volume)</td>
+            <td>Contextual editorial links (higher authority, vetted)</td>
+            <td>Earned links (highest authority, unpredictable)</td>
+          </tr>
+          <tr>
+            <td><strong>Control over placement</strong></td>
+            <td>Low — syndication is automated</td>
+            <td>High — you pick the exact publisher</td>
+            <td>None — journalist decides whether to cover</td>
+          </tr>
+          <tr>
+            <td><strong>Best for</strong></td>
+            <td>Launch announcements, product news, brand awareness at scale</td>
+            <td>Targeted link-building campaigns with defined DR/niche goals</td>
+            <td>Building journalist lists, pitching studies/data, long-term PR</td>
+          </tr>
+          <tr>
+            <td><strong>Requires email account</strong></td>
+            <td><span class="cross">No</span></td>
+            <td><span class="cross">No</span></td>
+            <td><span class="check">Yes</span></td>
+          </tr>
+          <tr>
+            <td><strong>LLM visibility targeting</strong></td>
+            <td><span class="cross">No</span></td>
+            <td><span class="check">Yes — filter by ChatGPT/Gemini/AI Overview</span></td>
+            <td><span class="cross">No</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- HDC note -->
+  <div class="hdc-bar">
+    <span>💳</span>
+    <div><strong>About HDC (Hyperdrive Credits):</strong> HDC is the credit currency used across Search Atlas paid actions. Press release writing, distribution, link lab placements, and publisher writing services all consume HDC. Balance checks are built into each workflow — the platform will always show you your current balance before any charge is applied and will not proceed without your confirmation.</div>
+  </div>
+
+</main>
+
+</body>
+</html>

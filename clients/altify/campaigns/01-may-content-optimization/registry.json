@@ -1,9 +1,22 @@
 {
   "client": "altify",
   "campaign": "01-may-content-optimization",
-  "generatedAt": "2026-06-17T20:04:49",
-  "totalFiles": 13,
+  "generatedAt": "2026-06-21T22:56:17",
+  "totalFiles": 14,
   "entries": [
+    {
+      "id": "README",
+      "filename": "README.md",
+      "displayName": "01 \u2014 May Content Optimization",
+      "type": "other",
+      "category": "other",
+      "status": "delivered",
+      "version": 1,
+      "path": "README.md",
+      "sizeBytes": 517,
+      "sizeHuman": "517 B",
+      "lastModified": "2026-06-21"
+    },
     {
       "id": "brief",
       "filename": "brief.md",
@@ -15,7 +28,7 @@
       "path": "brief.md",
       "sizeBytes": 1429,
       "sizeHuman": "1.4 KB",
-      "lastModified": "2026-05-20"
+      "lastModified": "2026-05-21"
     },
     {
       "id": "campaign-urls",
@@ -28,85 +41,7 @@
       "path": "campaign-urls.md",
       "sizeBytes": 521,
       "sizeHuman": "521 B",
-      "lastModified": "2026-05-17"
-    },
-    {
-      "id": "index",
-      "filename": "index.html",
-      "displayName": "Index",
-      "type": "html-index",
-      "category": "html-index",
-      "status": "delivered",
-      "version": 1,
-      "path": "html/index.html",
-      "sizeBytes": 5635,
-      "sizeHuman": "5.5 KB",
-      "lastModified": "2026-05-20"
-    },
-    {
-      "id": "01-account-planning-challenges",
-      "filename": "01-account-planning-challenges.html",
-      "displayName": "Account Planning Challenges",
-      "type": "html-revised",
-      "category": "html-revised",
-      "status": "delivered",
-      "version": 1,
-      "path": "html/revised/01-account-planning-challenges.html",
-      "sizeBytes": 33748,
-      "sizeHuman": "33.0 KB",
-      "lastModified": "2026-05-17"
-    },
-    {
-      "id": "02-maxai-guided-selling",
-      "filename": "02-maxai-guided-selling.html",
-      "displayName": "Maxai Guided Selling",
-      "type": "html-revised",
-      "category": "html-revised",
-      "status": "delivered",
-      "version": 1,
-      "path": "html/revised/02-maxai-guided-selling.html",
-      "sizeBytes": 9406,
-      "sizeHuman": "9.2 KB",
-      "lastModified": "2026-05-17"
-    },
-    {
-      "id": "03-relationship-mapping",
-      "filename": "03-relationship-mapping.html",
-      "displayName": "Relationship Mapping",
-      "type": "html-revised",
-      "category": "html-revised",
-      "status": "delivered",
-      "version": 1,
-      "path": "html/revised/03-relationship-mapping.html",
-      "sizeBytes": 33735,
-      "sizeHuman": "32.9 KB",
-      "lastModified": "2026-05-17"
-    },
-    {
-      "id": "04-strategic-account-planning",
-      "filename": "04-strategic-account-planning.html",
-      "displayName": "Strategic Account Planning",
-      "type": "html-revised",
-      "category": "html-revised",
-      "status": "delivered",
-      "version": 1,
-      "path": "html/revised/04-strategic-account-planning.html",
-      "sizeBytes": 24205,
-      "sizeHuman": "23.6 KB",
-      "lastModified": "2026-05-17"
-    },
-    {
-      "id": "05-revenue-execution-salesforce",
-      "filename": "05-revenue-execution-salesforce.html",
-      "displayName": "Revenue Execution Salesforce",
-      "type": "html-revised",
-      "category": "html-revised",
-      "status": "delivered",
-      "version": 1,
-      "path": "html/revised/05-revenue-execution-salesforce.html",
-      "sizeBytes": 27935,
-      "sizeHuman": "27.3 KB",
-      "lastModified": "2026-05-20"
+      "lastModified": "2026-05-21"
     },
     {
       "id": "01-account-planning-challenges",
@@ -119,7 +54,7 @@
       "path": "drafts/01-account-planning-challenges.md",
       "sizeBytes": 27929,
       "sizeHuman": "27.3 KB",
-      "lastModified": "2026-05-17"
+      "lastModified": "2026-05-21"
     },
     {
       "id": "02-maxai-guided-selling",
@@ -132,7 +67,7 @@
       "path": "drafts/02-maxai-guided-selling.md",
       "sizeBytes": 4436,
       "sizeHuman": "4.3 KB",
-      "lastModified": "2026-05-17"
+      "lastModified": "2026-05-21"
     },
     {
       "id": "03-relationship-mapping",
@@ -145,7 +80,7 @@
       "path": "drafts/03-relationship-mapping.md",
       "sizeBytes": 27692,
       "sizeHuman": "27.0 KB",
-      "lastModified": "2026-05-17"
+      "lastModified": "2026-05-21"
     },
     {
       "id": "04-strategic-account-planning",
@@ -158,7 +93,7 @@
       "path": "drafts/04-strategic-account-planning.md",
       "sizeBytes": 18462,
       "sizeHuman": "18.0 KB",
-      "lastModified": "2026-05-17"
+      "lastModified": "2026-05-21"
     },
     {
       "id": "05-revenue-execution-salesforce",
@@ -171,7 +106,85 @@
       "path": "drafts/05-revenue-execution-salesforce.md",
       "sizeBytes": 22291,
       "sizeHuman": "21.8 KB",
-      "lastModified": "2026-05-20"
+      "lastModified": "2026-05-21"
+    },
+    {
+      "id": "index",
+      "filename": "index.html",
+      "displayName": "Index",
+      "type": "html-index",
+      "category": "html-index",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/index.html",
+      "sizeBytes": 5635,
+      "sizeHuman": "5.5 KB",
+      "lastModified": "2026-05-21"
+    },
+    {
+      "id": "01-account-planning-challenges",
+      "filename": "01-account-planning-challenges.html",
+      "displayName": "Account Planning Challenges",
+      "type": "html-revised",
+      "category": "html-revised",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/revised/01-account-planning-challenges.html",
+      "sizeBytes": 33748,
+      "sizeHuman": "33.0 KB",
+      "lastModified": "2026-05-21"
+    },
+    {
+      "id": "02-maxai-guided-selling",
+      "filename": "02-maxai-guided-selling.html",
+      "displayName": "Maxai Guided Selling",
+      "type": "html-revised",
+      "category": "html-revised",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/revised/02-maxai-guided-selling.html",
+      "sizeBytes": 9406,
+      "sizeHuman": "9.2 KB",
+      "lastModified": "2026-05-21"
+    },
+    {
+      "id": "03-relationship-mapping",
+      "filename": "03-relationship-mapping.html",
+      "displayName": "Relationship Mapping",
+      "type": "html-revised",
+      "category": "html-revised",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/revised/03-relationship-mapping.html",
+      "sizeBytes": 33735,
+      "sizeHuman": "32.9 KB",
+      "lastModified": "2026-05-21"
+    },
+    {
+      "id": "04-strategic-account-planning",
+      "filename": "04-strategic-account-planning.html",
+      "displayName": "Strategic Account Planning",
+      "type": "html-revised",
+      "category": "html-revised",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/revised/04-strategic-account-planning.html",
+      "sizeBytes": 24205,
+      "sizeHuman": "23.6 KB",
+      "lastModified": "2026-05-21"
+    },
+    {
+      "id": "05-revenue-execution-salesforce",
+      "filename": "05-revenue-execution-salesforce.html",
+      "displayName": "Revenue Execution Salesforce",
+      "type": "html-revised",
+      "category": "html-revised",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/revised/05-revenue-execution-salesforce.html",
+      "sizeBytes": 27935,
+      "sizeHuman": "27.3 KB",
+      "lastModified": "2026-05-21"
     }
   ]
 }

@@ -12,7 +12,7 @@ Orchestrate a single content piece from brief to scored draft. You are the orche
 - `content-type`: `collection` | `product` | `blog`
 - `--resume`: continue from the last completed stage in the existing state file.
 
-## Setup (before stage 1)
+## Setup (before stage 0)
 
 1. **Identify** client, content-type, material, topic.
 2. **Confirm context files exist:** `clients/{client}/STYLE-SYSTEM.md`, `clients/{client}/materials/{material}.md`, `clients/{client}/page-templates/{content-type}.md`, `clients/{client}/contact-block.md`. If any is missing, stop and report.
@@ -23,6 +23,7 @@ Orchestrate a single content piece from brief to scored draft. You are the orche
 
 | # | Stage | Agent / command | Gate behavior |
 |---|---|---|---|
+| 0 | NLP research | `/semantic-terms --pre-draft` | informational: never halts |
 | 1 | Brief | `/brief` | advisory |
 | 2 | Draft | `/draft-{content-type}` | advisory (drafter self-checks) |
 | 3 | Placeholder check | `placeholder-check` | **critical**: any unfilled slot or hedge halts |
@@ -38,6 +39,11 @@ Orchestrate a single content piece from brief to scored draft. You are the orche
 | 13 | Voice judge | `voice-judge` | **gate**: score < 80 halts |
 | 14 | Koray judge | `koray-judge` | **gate**: score < 80 halts |
 | 15 | Render HTML | `/render-html` | mechanical: never halts on its own |
+| 16 | Protected terms | `/semantic-terms --post-draft` | informational: never halts |
+
+**Stage 0** runs SERP research before the brief is written and produces `nlp-guidance.md` in the run directory. The brief and drafter read this file to know which terms to incorporate. Stage 0 failure never halts the pipeline — log it and continue.
+
+**Stage 16** cross-references the finished article against the stage 0 term list and writes `clients/{client}/semantic-terms/{piece-slug}.md` — a clean protected-terms doc for the editor (Brittany). No gap analysis, no editorial notes. Just the terms in the article that must not be removed.
 
 Stages 3-10 are the mechanical enforcers (cheap, run first to fail fast). Stages 13-14 are the scored gates (run last on a clean draft). Stage 15 is deterministic — it converts the gate-cleared MD into the canonical `.html` delivery artifact (decision: 2026-05-27). It runs only after all critical stages pass; a halted piece does not produce an `.html`.
 
@@ -68,6 +74,20 @@ A BLOCKED verdict from keyway-check halts the pipeline at that boundary. The BLO
 
 A PASS verdict records the boundary as crossed in `state.json` (`keyways.B{n}: { status: "passed", at: ISO-8601 }`) and lets the next stage run.
 
+## Stage 0 — NLP research (informational, non-blocking)
+
+Run `/semantic-terms {client} {piece-slug} {primary-keyword} [{keyword2} {keyword3}] --pre-draft` before the brief.
+
+Writes `clients/{client}/campaigns/{campaign}/runs/{piece-slug}/nlp-guidance.md` — the term list the brief and drafter use to know what to incorporate. Stage 0 failure never halts; log it in `state.json` as `"nlp_research": "failed"` and continue without it.
+
+## Stage 16 — Protected terms doc (informational, non-blocking)
+
+Run `/semantic-terms {client} {piece-slug} {primary-keyword} [{keyword2} {keyword3}] --post-draft` after stage 15.
+
+Reads the finished article, cross-references against the stage 0 term list, and writes `clients/{client}/semantic-terms/{piece-slug}.md` — a clean list of terms present in the article that the editor must not remove. No gap analysis. No editorial notes. This file is the deliverable for Brittany.
+
+Stage 16 failure never halts delivery; log it in `state.json` as `"nlp_terms": "failed"` and continue.
+
 ## Halt protocol
 
 On any critical/gate failure (including a BLOCKED verdict from `keyway-check`):
@@ -93,9 +113,10 @@ On all stages passing:
    - Positive-framing hits (0 critical, n warnings allowed): {n}
    - Verify-with-Alex items: {list from material-guard, or None}
    - Delivery artifact: {piece-slug}.html
+   - Semantic terms: semantic-terms.md ({n} NLP terms, grader score {n}/100)
    - Model tiers used: opus (orchestrator), sonnet (draft/judges), haiku (enforcers + render)
    ```
-4. Report the MD path, the HTML path, and both scores to the user.
+4. Report the MD path, the HTML path, both scores, and the semantic-terms.md path to the user.
 
 ## State file shape
 
@@ -109,6 +130,8 @@ On all stages passing:
   "stages": [
     {"name": "brief", "status": "completed|pending|failed", "note": "..."},
     ...
+    {"name": "render_html", "status": "completed|pending|failed", "note": "..."},
+    {"name": "nlp_terms", "status": "completed|pending|failed", "note": "..."}
   ],
   "keyways": {
     "B1": {"status": "passed|blocked|pending", "at": "ISO-8601", "note": "..."},
@@ -118,6 +141,7 @@ On all stages passing:
     "B5": {"status": "...", "at": "...", "note": "..."}
   },
   "verify_items": ["list of verify-with-Alex items surfaced by material-guard"],
+  "nlp_terms": "completed|failed|pending",
   "updated": "ISO-8601"
 }
 ```

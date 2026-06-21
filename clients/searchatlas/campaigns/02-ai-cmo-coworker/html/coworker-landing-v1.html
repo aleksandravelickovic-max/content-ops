@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search Atlas Coworker — AI CMO Platform for Marketing Teams</title>
+<meta name="description" content="Search Atlas Coworker is the AI CMO platform built for marketing teams. Runs in Slack, connects 3,000+ tools, backed by OTTO SEO, rank tracking, GBP Galactic, and Content Genius.">
+
+<!-- Flags:
+  - Testimonials: no verbatim quotes in source — Adam McChesney numbers used in stats, testimonial block uses paraphrased data. Replace with direct quotes before publishing.
+  - Screenshots: 8 cards with placeholder descriptions. Designer needs to source actual UI screenshots.
+-->
+
+<style>
+  /* =====================
+     Search Atlas Brand System
+     Dark navy base, purple-to-blue gradient accents
+     ===================== */
+  :root {
+    --sa-dark:       #080c18;
+    --sa-dark-2:     #0d1225;
+    --sa-dark-3:     #131929;
+    --sa-card:       #131929;
+    --sa-card-border:#1e2640;
+    --sa-purple:     #7c3aed;
+    --sa-blue:       #2563eb;
+    --sa-grad:       linear-gradient(135deg, #7c3aed 0%, #2563eb 100%);
+    --sa-grad-text:  linear-gradient(90deg, #a78bfa 0%, #60a5fa 100%);
+    --sa-white:      #ffffff;
+    --sa-gray-100:   #f1f5f9;
+    --sa-gray-300:   #cbd5e1;
+    --sa-gray-400:   #94a3b8;
+    --sa-gray-500:   #64748b;
+    --sa-green:      #22c55e;
+    --sa-amber:      #f59e0b;
+    --sa-red:        #ef4444;
+    --font:          'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --radius:        12px;
+    --radius-sm:     8px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--sa-dark);
+    color: var(--sa-white);
+    font-family: var(--font);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---- Layout ---- */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  section {
+    padding: 100px 0;
+  }
+
+  /* ---- Typography ---- */
+  h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; }
+  h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; }
+  h3 { font-size: 1.2rem; font-weight: 600; line-height: 1.3; }
+  h4 { font-size: 1rem; font-weight: 600; }
+  p  { color: var(--sa-gray-300); }
+
+  .grad-text {
+    background: var(--sa-grad-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ---- Buttons ---- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.2s, transform 0.15s;
+    border: none;
+    white-space: nowrap;
+  }
+  .btn:hover { opacity: 0.88; transform: translateY(-1px); }
+
+  .btn-primary {
+    background: var(--sa-grad);
+    color: #fff;
+  }
+  .btn-ghost {
+    background: transparent;
+    color: var(--sa-gray-300);
+    border: 1px solid var(--sa-card-border);
+  }
+  .btn-ghost:hover { border-color: var(--sa-gray-500); color: #fff; }
+
+  .btn-group {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  /* ---- Nav ---- */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(8, 12, 24, 0.88);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--sa-card-border);
+  }
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  .nav-logo {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .nav-logo-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--sa-grad);
+    display: inline-block;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+  .nav-links a {
+    color: var(--sa-gray-400);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.15s;
+  }
+  .nav-links a:hover { color: #fff; }
+
+  @media (max-width: 720px) {
+    .nav-links { display: none; }
+  }
+
+  /* ---- Hero ---- */
+  .hero {
+    padding: 100px 0 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 900px;
+    background: radial-gradient(ellipse at center, rgba(124, 58, 237, 0.18) 0%, rgba(37, 99, 235, 0.08) 50%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-eyebrows {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+
+  .eyebrow-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: rgba(124, 58, 237, 0.12);
+    border: 1px solid rgba(124, 58, 237, 0.3);
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #a78bfa;
+    letter-spacing: 0.02em;
+  }
+
+  .eyebrow-tag::before {
+    content: '✓';
+    font-size: 0.75rem;
+  }
+
+  .hero-category {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--sa-gray-400);
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    max-width: 860px;
+    margin: 0 auto 24px;
+  }
+
+  .hero-tagline {
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    color: var(--sa-gray-300);
+    max-width: 640px;
+    margin: 0 auto 32px;
+    line-height: 1.65;
+  }
+
+  .hero .btn-group {
+    justify-content: center;
+    margin-bottom: 56px;
+  }
+
+  .hero-trust {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.82rem;
+    color: var(--sa-gray-500);
+  }
+
+  .trust-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--sa-gray-500);
+  }
+
+  /* ---- Testimonial ---- */
+  .testimonial-section {
+    padding: 60px 0;
+    border-top: 1px solid var(--sa-card-border);
+    border-bottom: 1px solid var(--sa-card-border);
+  }
+
+  .testimonial-card {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 48px;
+    background: var(--sa-card);
+    border: 1px solid var(--sa-card-border);
+    border-radius: var(--radius);
+    position: relative;
+  }
+
+  .testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: 16px;
+    left: 32px;
+    font-size: 6rem;
+    color: var(--sa-purple);
+    opacity: 0.2;
+    line-height: 1;
+    font-family: Georgia, serif;
+  }
+
+  .testimonial-card blockquote {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--sa-gray-100);
+    margin-bottom: 24px;
+    font-style: italic;
+  }
+
+  .testimonial-attribution {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .testimonial-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--sa-grad);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+
+  .testimonial-name {
+    font-weight: 700;
+    color: #fff;
+    font-size: 0.95rem;
+  }
+
+  .testimonial-title {
+    font-size: 0.82rem;
+    color: var(--sa-gray-400);
+    margin-top: 2px;
+  }
+
+  /* ---- Performance Stats ---- */
+  .stats-section {
+    background: var(--sa-dark-2);
+  }
+
+  .stats-heading {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .stats-heading h2 { margin-bottom: 12px; }
+  .stats-heading p  { max-width: 540px; margin: 0 auto; }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    background: var(--sa-card-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  @media (max-width: 720px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .stat-cell {
+    padding: 40px 28px;
+    background: var(--sa-card);
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: clamp(2.4rem, 4vw, 3.4rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    background: var(--sa-grad-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 0.88rem;
+    color: var(--sa-gray-400);
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  /* ---- What Is ---- */
+  .whatis-section {
+    background: var(--sa-dark);
+  }
+
+  .whatis-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: center;
+  }
+
+  @media (max-width: 860px) {
+    .whatis-layout { grid-template-columns: 1fr; gap: 40px; }
+  }
+
+  .whatis-content h2 { margin-bottom: 24px; }
+  .whatis-content p  { margin-bottom: 16px; }
+  .whatis-content p:last-of-type { margin-bottom: 28px; }
+
+  .whatis-screenshot {
+    background: var(--sa-card);
+    border: 1px solid var(--sa-card-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    aspect-ratio: 16/10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .screenshot-placeholder {
+    padding: 32px;
+    text-align: center;
+  }
+
+  .screenshot-placeholder-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--sa-grad);
+    border-radius: 14px;
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+  }
+
+  .screenshot-placeholder-label {
+    font-size: 0.8rem;
+    color: var(--sa-gray-500);
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  /* ---- Capabilities ---- */
+  .capabilities-section {
+    background: var(--sa-dark-2);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .section-header h2 { margin-bottom: 12px; }
+  .section-header p  { max-width: 600px; margin: 0 auto; }
+
+  .capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  @media (max-width: 680px) {
+    .capabilities-grid { grid-template-columns: 1fr; }
+  }
+
+  .capability-item {
+    display: flex;
+    gap: 16px;
+    padding: 24px;
+    background: var(--sa-card);
+    border: 1px solid var(--sa-card-border);
+    border-radius: var(--radius-sm);
+  }
+
+  .capability-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--sa-grad);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .capability-title {
+    font-weight: 700;
+    color: #fff;
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+  }
+
+  .capability-desc {
+    font-size: 0.88rem;
+    color: var(--sa-gray-400);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* ---- Getting Started ---- */
+  .getting-started-section {
+    background: var(--sa-dark);
+  }
+
+  .steps-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: start;
+  }
+
+  @media (max-width: 860px) {
+    .steps-layout { grid-template-columns: 1fr; gap: 40px; }
+  }
+
+  .steps-content h2 { margin-bottom: 16px; }
+  .steps-content > p { margin-bottom: 28px; }
+
+  .steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .step-item {
+    display: flex;
+    gap: 20px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--sa-card-border);
+  }
+  .step-item:last-child { border-bottom: none; }
+
+  .step-number {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--sa-grad);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 800;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .step-title {
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+    font-size: 0.95rem;
+  }
+
+  .step-desc {
+    font-size: 0.88rem;
+    color: var(--sa-gray-400);
+    margin: 0;
+    line-height: 1.55;
+  }
+
+  .steps-visual {
+    background: var(--sa-card);
+    border: 1px solid var(--sa-card-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    aspect-ratio: 4/5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ---- Feature Cards ---- */
+  .features-section {
+    background: var(--sa-dark-2);
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  @media (max-width: 960px) {
+    .features-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .features-grid { grid-template-columns: 1fr; }
+  }
+
+  .feature-card {
+    background: var(--sa-card);
+    border: 1px solid var(--sa-card-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.2s;
+  }
+  .feature-card:hover { border-color: var(--sa-purple); }
+
+  .feature-card-screen {
+    aspect-ratio: 16/9;
+    background: var(--sa-dark-3);
+    border-bottom: 1px solid var(--sa-card-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .feature-card-screen-label {
+    font-size: 0.75rem;
+    color: var(--sa-gray-500);
+    text-align: center;
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  .feature-card-body {
+    padding: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feature-card-title {
+    font-weight: 700;
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .feature-card-desc {
+    font-size: 0.88rem;
+    color: var(--sa-gray-400);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex: 1;
+  }
+
+  .feature-card-cta {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #a78bfa;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.15s;
+  }
+  .feature-card-cta:hover { color: #c4b5fd; }
+  .feature-card-cta::after { content: ' →'; }
+
+  /* ---- Comparison ---- */
+  .comparison-section {
+    background: var(--sa-dark);
+  }
+
+  .comparison-intro {
+    font-size: 0.95rem;
+    color: var(--sa-gray-400);
+    margin-bottom: 36px;
+    max-width: 700px;
+  }
+
+  .comparison-table-wrap {
+    overflow-x: auto;
+    border-radius: var(--radius);
+    border: 1px solid var(--sa-card-border);
+  }
+
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+  }
+
+  .comparison-table th {
+    padding: 16px 18px;
+    background: var(--sa-card);
+    color: var(--sa-gray-300);
+    font-weight: 600;
+    text-align: left;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--sa-card-border);
+    font-size: 0.82rem;
+  }
+
+  .comparison-table th.col-sa {
+    background: rgba(124, 58, 237, 0.12);
+    color: #a78bfa;
+    font-weight: 700;
+  }
+
+  .comparison-table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--sa-card-border);
+    color: var(--sa-gray-300);
+    vertical-align: middle;
+  }
+
+  .comparison-table td.col-feature {
+    font-weight: 600;
+    color: var(--sa-gray-100);
+  }
+
+  .comparison-table td.col-sa {
+    background: rgba(124, 58, 237, 0.05);
+  }
+
+  .comparison-table tr:last-child td { border-bottom: none; }
+  .comparison-table tr:hover td { background-color: rgba(255,255,255,0.02); }
+  .comparison-table tr:hover td.col-sa { background: rgba(124, 58, 237, 0.08); }
+
+  .check { color: var(--sa-green); font-weight: 700; }
+  .warn  { color: var(--sa-amber); font-weight: 600; }
+  .cross { color: var(--sa-red); font-weight: 600; }
+
+  /* ---- FAQ ---- */
+  .faq-section {
+    background: var(--sa-dark-2);
+  }
+
+  .faq-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  @media (max-width: 860px) {
+    .faq-layout { grid-template-columns: 1fr; gap: 36px; }
+  }
+
+  .faq-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .faq-group-title {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--sa-purple);
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  details {
+    background: var(--sa-card);
+    border: 1px solid var(--sa-card-border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+
+  details[open] { border-color: var(--sa-purple); }
+
+  summary {
+    padding: 18px 20px;
+    font-weight: 600;
+    color: var(--sa-gray-100);
+    cursor: pointer;
+    list-style: none;
+    font-size: 0.92rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    transition: color 0.15s;
+  }
+
+  summary::-webkit-details-marker { display: none; }
+
+  summary::after {
+    content: '+';
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--sa-gray-500);
+    flex-shrink: 0;
+    transition: transform 0.2s;
+  }
+
+  details[open] summary::after {
+    content: '−';
+    color: var(--sa-purple);
+  }
+
+  summary:hover { color: #fff; }
+
+  .faq-answer {
+    padding: 0 20px 18px;
+    font-size: 0.88rem;
+    color: var(--sa-gray-400);
+    line-height: 1.65;
+  }
+
+  /* ---- CTA Banner ---- */
+  .cta-banner {
+    background: var(--sa-dark);
+    padding: 100px 0;
+  }
+
+  .cta-inner {
+    text-align: center;
+    background: var(--sa-card);
+    border: 1px solid var(--sa-card-border);
+    border-radius: 20px;
+    padding: 72px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-inner::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 400px;
+    background: radial-gradient(ellipse, rgba(124, 58, 237, 0.2) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .cta-inner h2 { margin-bottom: 16px; max-width: 640px; margin-left: auto; margin-right: auto; }
+  .cta-inner p  { max-width: 520px; margin: 0 auto 36px; }
+  .cta-inner .btn-group { justify-content: center; }
+
+  /* ---- Footer ---- */
+  footer {
+    background: var(--sa-dark-2);
+    border-top: 1px solid var(--sa-card-border);
+    padding: 40px 0;
+  }
+
+  .footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .footer-logo {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--sa-gray-400);
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
+
+  .footer-links a {
+    font-size: 0.82rem;
+    color: var(--sa-gray-500);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .footer-links a:hover { color: var(--sa-gray-300); }
+
+  .footer-copy {
+    font-size: 0.8rem;
+    color: var(--sa-gray-500);
+  }
+
+  /* ---- Badge ---- */
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 10px;
+    border-radius: 100px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    background: rgba(124, 58, 237, 0.15);
+    color: #a78bfa;
+    border: 1px solid rgba(124, 58, 237, 0.25);
+    margin-bottom: 16px;
+  }
+
+  .section-badge { display: block; margin-bottom: 14px; }
+</style>
+
+</head>
+<body>
+
+<!-- ========================
+     NAV
+     ======================== -->
+<nav>
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo">
+      <span class="nav-logo-dot"></span>
+      Search Atlas
+    </a>
+    <ul class="nav-links">
+      <li><a href="#what-is">Product</a></li>
+      <li><a href="#capabilities">Capabilities</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#comparison">Compare</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a href="#" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.88rem;">Start Free Trial</a>
+  </div>
+</nav>
+
+
+<!-- ========================
+     HERO
+     ======================== -->
+<section class="hero">
+  <div class="container">
+
+    <div class="hero-eyebrows">
+      <span class="eyebrow-tag">Runs in Slack, Teams &amp; ClickUp</span>
+      <span class="eyebrow-tag">Connects 3,000+ marketing tools</span>
+      <span class="eyebrow-tag">Backed by OTTO SEO + Rank Tracking</span>
+    </div>
+
+    <p class="hero-category">AI CMO Platform for Marketing Teams</p>
+
+    <h1>Meet <span class="grad-text">Atlas Coworker</span></h1>
+
+    <p class="hero-tagline">
+      The AI marketing coworker that <strong>executes campaigns from your Slack thread</strong> — connected to every tool in your stack, backed by native SEO, content, paid media, and LLM visibility intelligence.
+    </p>
+
+    <div class="btn-group">
+      <a href="#" class="btn btn-primary">Start 7-Day Free Trial</a>
+      <a href="#what-is" class="btn btn-ghost">See How It Works</a>
+    </div>
+
+    <div class="hero-trust">
+      <span class="trust-item">No credit card required</span>
+      <span class="trust-dot"></span>
+      <span class="trust-item">50,000+ websites powered</span>
+      <span class="trust-dot"></span>
+      <span class="trust-item">Included in all plans</span>
+      <span class="trust-dot"></span>
+      <span class="trust-item">G2: 4.7/5 (99 reviews)</span>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ========================
+     TESTIMONIAL
+     ======================== -->
+<section class="testimonial-section">
+  <div class="container">
+    <div class="testimonial-card">
+      <blockquote>
+        "Continuous GBP Galactic optimization moved us from 185 keywords to 1,571 — 55 first-position rankings and a stable $18,500 monthly traffic value over 500 days of automated SEO. I haven't touched a rank tracker manually in over a year."
+      </blockquote>
+      <div class="testimonial-attribution">
+        <div class="testimonial-avatar">AM</div>
+        <div>
+          <p class="testimonial-name">Adam McChesney</p>
+          <p class="testimonial-title">Founder, Builders of Authority</p>
+        </div>
+      </div>
+    </div>
+    <!-- NOTE: Paraphrased from raw testimonial data. Replace with verbatim quote before publishing. -->
+  </div>
+</section>
+
+
+<!-- ========================
+     PERFORMANCE STATS
+     ======================== -->
+<section class="stats-section" id="stats">
+  <div class="container">
+    <div class="stats-heading">
+      <h2>Performance Impact</h2>
+      <p>What teams running on Search Atlas actually report — from audit to outcome.</p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-cell">
+        <span class="stat-number">90%</span>
+        <span class="stat-label">reduction in manual SEO labor via OTTO SEO</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-number">3,000+</span>
+        <span class="stat-label">external tools connectable via Atlas Coworker</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-number">50k+</span>
+        <span class="stat-label">websites powered by OTTO SEO</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-number">4.7/5</span>
+        <span class="stat-label">G2 rating across 99 verified reviews</span>
+      </div>
+    </div>
+
+    <p style="text-align:center; margin-top: 24px; font-size: 0.88rem; color: var(--sa-gray-500);">
+      These results come from replacing fragmented tool stacks with a single execution layer. Every stat above shares a data layer — SEO, content, paid media, and LLM visibility move together.
+    </p>
+  </div>
+</section>
+
+
+<!-- ========================
+     WHAT IS ATLAS COWORKER
+     ======================== -->
+<section class="whatis-section" id="what-is">
+  <div class="container">
+    <div class="whatis-layout">
+
+      <div class="whatis-content">
+        <span class="badge section-badge">AI CMO Platform</span>
+        <h2>What Is <span class="grad-text">Atlas Coworker</span>?</h2>
+
+        <p>Atlas Coworker is Search Atlas's workspace integration layer — it brings Atlas Agent's full marketing execution capabilities into Slack, Microsoft Teams, and ClickUp.</p>
+
+        <p>It runs the same AI agent that operates inside the Search Atlas dashboard. That agent audits your site, proposes fixes, writes and grades content, builds and manages Google Ads campaigns, monitors your GBP listings, and tracks your brand presence in AI-generated search results. Atlas Coworker makes all of that available from a chat thread — no dashboard switch required.</p>
+
+        <p>Unlike general-purpose AI coworkers such as Viktor, Lindy, or Manus, Atlas Coworker is purpose-built for marketing. It connects natively to OTTO SEO, Content Genius, GBP Galactic, Smart Ads, and LLM Visibility — the same tool stack used by 50,000+ websites. When it runs a campaign audit, it already has your keyword data, your Domain Power, your GSC performance, and your competitor rankings. No integrations to build.</p>
+
+        <p>Changes go through human approval before anything publishes.</p>
+
+        <a href="#" class="btn btn-primary">See Atlas Coworker in Action</a>
+      </div>
+
+      <div class="whatis-screenshot">
+        <div class="screenshot-placeholder">
+          <div class="screenshot-placeholder-icon">💬</div>
+          <p class="screenshot-placeholder-label">[Screenshot: Slack thread showing Atlas Coworker responding to a campaign audit request — output includes keyword rankings, OTTO SEO fix queue, and a content brief, all in a single thread]</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ========================
+     WHAT ATLAS COWORKER MAKES POSSIBLE
+     ======================== -->
+<section class="capabilities-section" id="capabilities">
+  <div class="container">
+    <div class="section-header">
+      <h2>What Atlas Coworker Makes Possible</h2>
+      <p>Every action below runs from a Slack thread, a ClickUp comment, or a Teams message — no dashboard, no developer.</p>
+    </div>
+
+    <div class="capabilities-grid">
+
+      <div class="capability-item">
+        <div class="capability-icon">🔍</div>
+        <div>
+          <p class="capability-title">Run a full site audit from a chat message</p>
+          <p class="capability-desc">Type your request in Slack and Atlas Agent audits the connected domain against GSC data, queues OTTO SEO fixes, and returns a prioritized action list in the thread.</p>
+        </div>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-icon">📈</div>
+        <div>
+          <p class="capability-title">Check keyword rankings without opening a dashboard</p>
+          <p class="capability-desc">Ask Atlas Coworker for a ranking snapshot on any keyword set — it pulls live data from Rank Tracker and returns position, change, and volume in the thread.</p>
+        </div>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-icon">✍️</div>
+        <div>
+          <p class="capability-title">Brief and generate SEO content inline</p>
+          <p class="capability-desc">Request a content brief or full draft — Atlas Agent runs Content Genius against live SERP data and returns a keyword-grounded, Scholar-scored draft to the thread.</p>
+        </div>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-icon">📣</div>
+        <div>
+          <p class="capability-title">Build and deploy Google Ads campaigns conversationally</p>
+          <p class="capability-desc">Describe the campaign goal in plain language and Atlas Agent builds the STAG-structured campaign inside Smart Ads — ready to review and launch with one approval.</p>
+        </div>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-icon">📍</div>
+        <div>
+          <p class="capability-title">Monitor and update GBP listings across locations</p>
+          <p class="capability-desc">Pull location performance, spot profile drift, and push GBP Galactic updates — all from a single message in the team Slack channel, without switching apps.</p>
+        </div>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-icon">🤖</div>
+        <div>
+          <p class="capability-title">Track brand presence in AI-generated answers</p>
+          <p class="capability-desc">Ask Atlas Coworker which AI platforms are mentioning your brand, at what frequency, and how share-of-voice compares to named competitors — pulled from LLM Visibility.</p>
+        </div>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-icon">⚙️</div>
+        <div>
+          <p class="capability-title">Schedule automated marketing routines</p>
+          <p class="capability-desc">Set up recurring automations — daily ranking summaries, weekly content performance reports, monthly GBP snapshots — and Atlas Coworker delivers them to the right channel on schedule.</p>
+        </div>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-icon">🔗</div>
+        <div>
+          <p class="capability-title">Connect HubSpot, Salesforce, Meta Ads, and 3,000+ tools</p>
+          <p class="capability-desc">Workspace admins share connectors across the team — one HubSpot account, one Meta Ads account, accessible to everyone — or restrict to personal credentials per user.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ========================
+     GETTING STARTED
+     ======================== -->
+<section class="getting-started-section" id="getting-started">
+  <div class="container">
+    <div class="steps-layout">
+
+      <div class="steps-content">
+        <span class="badge section-badge">Setup</span>
+        <h2>Getting Started with Atlas Coworker</h2>
+        <p>After connecting your Slack workspace, Atlas Coworker is ready to run marketing operations. No onboarding session required.</p>
+        <a href="#" class="btn btn-primary" style="margin-bottom: 40px; display: inline-flex;">Connect Slack — Free for 7 Days</a>
+
+        <div class="steps-list">
+
+          <div class="step-item">
+            <div class="step-number">1</div>
+            <div>
+              <p class="step-title">Connect your messaging platform</p>
+              <p class="step-desc">Go to Search Atlas Settings → Messaging Gateways and authorize Slack, Teams, or ClickUp in under two minutes.</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">2</div>
+            <div>
+              <p class="step-title">Link your marketing accounts</p>
+              <p class="step-desc">Connect your Google Search Console, Google Ads, HubSpot, Meta Ads, and other platforms — workspace admins can share credentials across the full team.</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">3</div>
+            <div>
+              <p class="step-title">Invite Atlas Coworker to a channel</p>
+              <p class="step-desc">Add Atlas Coworker to the Slack or Teams channel where your marketing team already works — it reads channel context and responds in thread.</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">4</div>
+            <div>
+              <p class="step-title">Run your first audit or campaign request</p>
+              <p class="step-desc">Type a natural language request — "audit our homepage" or "what are our top 10 ranking keywords?" — and Atlas Agent responds with data and a proposed action queue.</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">5</div>
+            <div>
+              <p class="step-title">Approve changes and set up routines</p>
+              <p class="step-desc">Review each proposed change in the thread, approve or reject individually, then configure any recurring routines — daily reports, weekly SEO summaries — on a schedule.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="steps-visual">
+        <div class="screenshot-placeholder" style="padding: 40px;">
+          <div class="screenshot-placeholder-icon">🔧</div>
+          <p class="screenshot-placeholder-label">[Screenshot: Search Atlas Settings → Messaging Gateways screen showing Slack connected, Teams pending, and ClickUp coming soon — with three connected integrations visible: GSC, HubSpot, Google Ads]</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ========================
+     FEATURE CARDS
+     ======================== -->
+<section class="features-section" id="features">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge" style="display: inline-flex; margin-bottom: 16px;">Capabilities</span>
+      <h2>What Runs Inside Atlas Coworker</h2>
+      <p>Every capability below is powered by a native Search Atlas module — not a third-party API bolt-on.</p>
+    </div>
+
+    <div class="features-grid">
+
+      <!-- Card 1: OTTO SEO -->
+      <div class="feature-card">
+        <div class="feature-card-screen">
+          <p class="feature-card-screen-label">[Screenshot: OTTO SEO fix queue — list of 40+ pending changes with approve/reject controls, showing title tag and internal link fixes staged for deployment]</p>
+        </div>
+        <div class="feature-card-body">
+          <h3 class="feature-card-title">OTTO SEO — Autonomous Site Optimization</h3>
+          <p class="feature-card-desc">OTTO SEO connects to your site via a JavaScript pixel, audits against GSC data, and deploys on-page fixes directly: title tags, meta descriptions, internal links, schema markup, canonical tags, and Open Graph data. Changes deploy without a developer. The team approves, rejects, or rolls back each change individually from the Slack thread or the dashboard. OTTO SEO completes work that previously required months of manual SEO in compressed time.</p>
+          <a href="#" class="feature-card-cta">Run My Site Audit</a>
+        </div>
+      </div>
+
+      <!-- Card 2: Rank Tracker -->
+      <div class="feature-card">
+        <div class="feature-card-screen">
+          <p class="feature-card-screen-label">[Screenshot: Rank Tracker project view — keyword list with current position, 7-day change, search volume, and competitor rank columns, with a filter set to show movers this week]</p>
+        </div>
+        <div class="feature-card-body">
+          <h3 class="feature-card-title">Rank Tracker — Live Position Monitoring</h3>
+          <p class="feature-card-desc">Track rankings for up to 6,000 keywords on the Pro plan — locally by city and zip code, or nationally. Rank Tracker pulls Google SERP positions and maps them against competitor rankings from the same query set. Atlas Coworker surfaces keyword movement alerts in Slack automatically, so your team sees ranking changes as they happen rather than on a scheduled reporting cycle.</p>
+          <a href="#" class="feature-card-cta">Track My Keywords</a>
+        </div>
+      </div>
+
+      <!-- Card 3: Content Genius -->
+      <div class="feature-card">
+        <div class="feature-card-screen">
+          <p class="feature-card-screen-label">[Screenshot: Content Genius editor showing a generated 2,000-word article with Scholar score of 87/100 visible in the sidebar, alongside keyword usage panel]</p>
+        </div>
+        <div class="feature-card-body">
+          <h3 class="feature-card-title">Content Genius — SEO-Grounded Content Production</h3>
+          <p class="feature-card-desc">Content Genius generates drafts from keyword research and live SERP data — not a blank AI prompt. Every draft is scored by Scholar, the 12-dimension semantic grading system that evaluates content against the same signals OTTO SEO tracks. Request a brief or a full draft from the Slack thread; the output is SEO-grounded and ready for editorial review, not for an SEO specialist to rebuild from scratch.</p>
+          <a href="#" class="feature-card-cta">Generate My First Draft</a>
+        </div>
+      </div>
+
+      <!-- Card 4: GBP Galactic -->
+      <div class="feature-card">
+        <div class="feature-card-screen">
+          <p class="feature-card-screen-label">[Screenshot: GBP Galactic location grid showing 5 business locations with post automation settings, review reply queue, and last-updated timestamps]</p>
+        </div>
+        <div class="feature-card-body">
+          <h3 class="feature-card-title">GBP Galactic — Google Business Profile Automation</h3>
+          <p class="feature-card-desc">GBP Galactic manages Google Business Profiles across multiple locations from one interface: automated posting, review reply generation, category management, and citation building. Atlas Coworker surfaces GBP performance changes in Slack and allows profile updates without opening the Search Atlas dashboard. Teams managing five or more locations see the most significant reduction in manual profile maintenance work.</p>
+          <a href="#" class="feature-card-cta">Automate My GBP</a>
+        </div>
+      </div>
+
+      <!-- Card 5: Smart Ads -->
+      <div class="feature-card">
+        <div class="feature-card-screen">
+          <p class="feature-card-screen-label">[Screenshot: Smart Ads campaign creation flow — Atlas Agent in sidebar showing the natural language input "build a lead gen campaign for our accounting software" with STAG-structured ad groups being generated]</p>
+        </div>
+        <div class="feature-card-body">
+          <h3 class="feature-card-title">Smart Ads — Agentic Google Ads Execution</h3>
+          <p class="feature-card-desc">Smart Ads builds and manages Google Ads campaigns through Atlas Agent using Single-Themed Ad Group structure. It analyzes the connected site and Ads account, generates ad copy, reallocates budget toward converting keywords, and filters negative terms — all from a conversational prompt. Campaign changes execute directly in live accounts at configurable approval checkpoints, not after a manual export-and-upload cycle.</p>
+          <a href="#" class="feature-card-cta">Build My Campaign</a>
+        </div>
+      </div>
+
+      <!-- Card 6: LLM Visibility -->
+      <div class="feature-card">
+        <div class="feature-card-screen">
+          <p class="feature-card-screen-label">[Screenshot: LLM Visibility dashboard showing brand mention share of voice across ChatGPT, Gemini, and Perplexity, with a sentiment trend chart and competitor comparison table]</p>
+        </div>
+        <div class="feature-card-body">
+          <h3 class="feature-card-title">LLM Visibility — Brand Presence in AI Search</h3>
+          <p class="feature-card-desc">LLM Visibility tracks how often your brand appears in AI-generated answers across ChatGPT, Gemini, and Perplexity — with share of voice, sentiment trend, and competitor comparison. Traditional rank trackers have zero visibility into this channel. Atlas Coworker delivers weekly LLM presence summaries to Slack automatically, so your team monitors AI search presence on the same cadence as organic rankings.</p>
+          <a href="#" class="feature-card-cta">Monitor My AI Presence</a>
+        </div>
+      </div>
+
+      <!-- Card 7: Persistent Memory -->
+      <div class="feature-card">
+        <div class="feature-card-screen">
+          <p class="feature-card-screen-label">[Screenshot: Atlas Agent memory panel showing saved brand positioning statement, recurring meeting schedule, and top 5 priority keywords — all referenced in the current conversation thread]</p>
+        </div>
+        <div class="feature-card-body">
+          <h3 class="feature-card-title">Persistent Memory — Team Context Across Every Session</h3>
+          <p class="feature-card-desc">Atlas Coworker retains team context across conversations: brand positioning, recurring meeting cadences, client priorities, and content rules. When a new request comes in, it draws on saved context rather than starting from scratch. Teams that set up memory once reduce prompt overhead on every subsequent request — Atlas Coworker already knows the business.</p>
+          <a href="#" class="feature-card-cta">Set Up Team Memory</a>
+        </div>
+      </div>
+
+      <!-- Card 8: Multiplayer Marketing -->
+      <div class="feature-card">
+        <div class="feature-card-screen">
+          <p class="feature-card-screen-label">[Screenshot: Multiplayer Marketing drift detection — Atlas Agent Slack notification showing a landing page headline that no longer matches the current brand positioning, with a proposed fix and approve/reject buttons]</p>
+        </div>
+        <div class="feature-card-body">
+          <h3 class="feature-card-title">Self-Healing Loop — Continuous Marketing Coherence</h3>
+          <p class="feature-card-desc">Atlas Coworker runs the Multiplayer Marketing loop: it watches live marketing surfaces — landing pages, ad copy, GBP listings — against the current brand strategy stored in memory. When a surface drifts out of sync, it surfaces the gap in Slack with a proposed fix. The team approves before anything goes live. Nothing ships unseen. The loop runs continuously rather than waiting for a human to notice inconsistency.</p>
+          <a href="#" class="feature-card-cta">See the Loop in Action</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ========================
+     COMPARISON
+     ======================== -->
+<section class="comparison-section" id="comparison">
+  <div class="container">
+    <div class="section-header" style="text-align: left;">
+      <span class="badge" style="display: inline-flex; margin-bottom: 14px;">Comparison</span>
+      <h2>Why Atlas Coworker Outperforms General AI Coworker Tools</h2>
+    </div>
+
+    <p class="comparison-intro">General-purpose AI coworkers run tasks across any domain. Atlas Coworker runs marketing operations with native SEO, content, paid media, and LLM visibility intelligence built in — no integrations to build, no context to re-explain.</p>
+
+    <div class="comparison-table-wrap">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Capability</th>
+            <th class="col-sa">Atlas Coworker</th>
+            <th>Viktor</th>
+            <th>Lindy</th>
+            <th>NoimosAI</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-feature">Runs from Slack / Teams / ClickUp</td>
+            <td class="col-sa"><span class="check">✅</span> Slack (live), Teams + ClickUp July 2026</td>
+            <td><span class="check">✅</span> Slack and Teams supported</td>
+            <td><span class="check">✅</span> Slack supported</td>
+            <td><span class="warn">⚠️</span> Web interface only — no messaging integration listed</td>
+          </tr>
+          <tr>
+            <td class="col-feature">Native SEO keyword research</td>
+            <td class="col-sa"><span class="check">✅</span> Full keyword research suite, natively connected</td>
+            <td><span class="cross">❌</span> No SEO tools — requires external integration</td>
+            <td><span class="cross">❌</span> No SEO capability</td>
+            <td><span class="warn">⚠️</span> Limited — no rank tracker or keyword database</td>
+          </tr>
+          <tr>
+            <td class="col-feature">Autonomous on-page SEO deployment</td>
+            <td class="col-sa"><span class="check">✅</span> OTTO SEO deploys fixes to live site via pixel</td>
+            <td><span class="cross">❌</span> No SEO execution capability</td>
+            <td><span class="cross">❌</span> No on-page SEO execution</td>
+            <td><span class="cross">❌</span> Advisory recommendations only</td>
+          </tr>
+          <tr>
+            <td class="col-feature">Rank tracking (local + national)</td>
+            <td class="col-sa"><span class="check">✅</span> Up to 6,000 keywords with local grid tracking</td>
+            <td><span class="cross">❌</span> No rank tracking</td>
+            <td><span class="cross">❌</span> No rank tracking</td>
+            <td><span class="cross">❌</span> No rank tracking</td>
+          </tr>
+          <tr>
+            <td class="col-feature">SEO-grounded content generation</td>
+            <td class="col-sa"><span class="check">✅</span> Content Genius — SERP-grounded, Scholar-scored drafts</td>
+            <td><span class="cross">❌</span> No keyword or SERP grounding</td>
+            <td><span class="warn">⚠️</span> General AI writing, no SEO grounding</td>
+            <td><span class="warn">⚠️</span> AI content generation — no documented SEO grading</td>
+          </tr>
+          <tr>
+            <td class="col-feature">Google Business Profile management</td>
+            <td class="col-sa"><span class="check">✅</span> GBP Galactic — automated posts, reviews, citations</td>
+            <td><span class="cross">❌</span> No GBP capability</td>
+            <td><span class="cross">❌</span> No GBP capability</td>
+            <td><span class="cross">❌</span> No GBP capability</td>
+          </tr>
+          <tr>
+            <td class="col-feature">Google Ads campaign execution</td>
+            <td class="col-sa"><span class="check">✅</span> Smart Ads — STAG-structured campaigns built and deployed</td>
+            <td><span class="cross">❌</span> No native PPC execution</td>
+            <td><span class="warn">⚠️</span> Ads workflow automation, not campaign execution</td>
+            <td><span class="cross">❌</span> No PPC execution</td>
+          </tr>
+          <tr>
+            <td class="col-feature">LLM / AI search brand monitoring</td>
+            <td class="col-sa"><span class="check">✅</span> LLM Visibility — share of voice across ChatGPT, Gemini, Perplexity</td>
+            <td><span class="cross">❌</span> No AI search visibility tracking</td>
+            <td><span class="cross">❌</span> No AI search visibility tracking</td>
+            <td><span class="warn">⚠️</span> Some LLM optimization features — no share of voice tracking documented</td>
+          </tr>
+          <tr>
+            <td class="col-feature">Persistent cross-session team memory</td>
+            <td class="col-sa"><span class="check">✅</span> Stores brand context, meeting cadences, positioning rules</td>
+            <td><span class="check">✅</span> Memory supported</td>
+            <td><span class="check">✅</span> Memory supported</td>
+            <td><span class="warn">⚠️</span> Not documented</td>
+          </tr>
+          <tr>
+            <td class="col-feature">Human-in-the-loop approval gates</td>
+            <td class="col-sa"><span class="check">✅</span> Per-change approve/reject on all OTTO SEO and Ads actions</td>
+            <td><span class="warn">⚠️</span> Approval flows available for some actions</td>
+            <td><span class="warn">⚠️</span> Approval flows configurable</td>
+            <td><span class="warn">⚠️</span> Not documented at action level</td>
+          </tr>
+          <tr>
+            <td class="col-feature">Included in subscription (no add-on)</td>
+            <td class="col-sa"><span class="check">✅</span> Included in all plans from $99/month</td>
+            <td><span class="warn">⚠️</span> Separate subscription required</td>
+            <td><span class="warn">⚠️</span> Separate subscription required</td>
+            <td><span class="warn">⚠️</span> Pricing not publicly listed</td>
+          </tr>
+          <tr>
+            <td class="col-feature">3,000+ external tool connectors</td>
+            <td class="col-sa"><span class="check">✅</span> HubSpot, Salesforce, Meta Ads, LinkedIn Ads, GitHub, and more</td>
+            <td><span class="check">✅</span> Wide connector library</td>
+            <td><span class="check">✅</span> 3,000+ integrations supported</td>
+            <td><span class="warn">⚠️</span> Limited connector list documented</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========================
+     FAQ
+     ======================== -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="section-header" style="text-align: left; margin-bottom: 52px;">
+      <span class="badge" style="display: inline-flex; margin-bottom: 14px;">FAQ</span>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+
+    <div class="faq-layout">
+
+      <div>
+
+        <div class="faq-group">
+          <p class="faq-group-title">General</p>
+
+          <details>
+            <summary>What is Atlas Coworker?</summary>
+            <div class="faq-answer">Atlas Coworker is Search Atlas's AI marketing execution layer for Slack, Microsoft Teams, and ClickUp. It runs the same Atlas Agent that operates inside the Search Atlas dashboard — giving marketing teams access to SEO, content, paid media, and LLM visibility capabilities from their existing messaging tools.</div>
+          </details>
+
+          <details>
+            <summary>What does Atlas Coworker actually do?</summary>
+            <div class="faq-answer">It executes marketing tasks from a chat thread: running site audits, tracking keyword rankings, generating SEO-grounded content briefs, building Google Ads campaigns, updating Google Business Profile listings, and monitoring brand presence in AI-generated search results. It proposes changes and waits for human approval before anything deploys.</div>
+          </details>
+
+          <details>
+            <summary>How is Atlas Coworker different from Viktor or Lindy?</summary>
+            <div class="faq-answer">Viktor and Lindy are general-purpose AI coworkers with broad workflow automation capabilities but no native marketing intelligence. Atlas Coworker is purpose-built for marketing: it connects natively to OTTO SEO, Rank Tracker, Content Genius, GBP Galactic, Smart Ads, and LLM Visibility. When it runs a campaign audit, it already has your keyword data, GSC performance, and competitor rankings — no integrations to build, no context to re-explain.</div>
+          </details>
+
+          <details>
+            <summary>Who is Atlas Coworker built for?</summary>
+            <div class="faq-answer">Marketing teams that run SEO, content, paid media, and local search from a single platform and want those operations accessible from Slack or Teams. It works for in-house teams, agencies managing multiple clients, and lean teams where one person handles multiple marketing channels.</div>
+          </details>
+
+          <details>
+            <summary>Is Atlas Coworker a replacement for the Search Atlas dashboard?</summary>
+            <div class="faq-answer">No. Atlas Coworker is an access layer — it gives your team a way to run operations from Slack or Teams without switching to the dashboard for every task. The full Search Atlas dashboard remains available for deeper work, configuration, and reporting.</div>
+          </details>
+
+        </div>
+
+      </div>
+
+      <div>
+
+        <div class="faq-group" style="margin-bottom: 32px;">
+          <p class="faq-group-title">Capabilities &amp; Integration</p>
+
+          <details>
+            <summary>Which messaging platforms does Atlas Coworker support?</summary>
+            <div class="faq-answer">Slack launched at the Search Atlas Summit in June 2026. Microsoft Teams and ClickUp are scheduled for July 2026. Telegram, WhatsApp, and Zoom are on the roadmap.</div>
+          </details>
+
+          <details>
+            <summary>What external tools can Atlas Coworker connect to?</summary>
+            <div class="faq-answer">Atlas Coworker connects to 3,000+ tools via native connectors: HubSpot, Salesforce, Meta Ads, TikTok Ads, LinkedIn Ads, Twitter/X Ads, Google Calendar, Google Drive, GitHub, GitLab, Vercel, Intercom, and more. Workspace admins control which connectors are shared across the team and which require individual credentials.</div>
+          </details>
+
+          <details>
+            <summary>Can I run it on mobile?</summary>
+            <div class="faq-answer">Yes. Because Atlas Coworker works through Slack and Teams, it operates on any device those apps run on — including iOS and Android. No desktop required.</div>
+          </details>
+
+          <details>
+            <summary>How does the approval system work?</summary>
+            <div class="faq-answer">Every action Atlas Coworker proposes — an OTTO SEO fix, an ad campaign change, a GBP update — goes through a human approval step before it deploys. You can approve, reject, or roll back individual changes from the thread or from the Search Atlas dashboard. Nothing goes live without explicit confirmation.</div>
+          </details>
+
+        </div>
+
+        <div class="faq-group">
+          <p class="faq-group-title">Pricing &amp; Plans</p>
+
+          <details>
+            <summary>Is Atlas Coworker included in my Search Atlas plan?</summary>
+            <div class="faq-answer">Yes. Atlas Coworker is included in all Search Atlas plans — Starter ($99/month), Growth ($199/month), and Pro ($399/month). It is not a separate purchase. AI execution actions consume Universal Credits from your plan's shared credit bank.</div>
+          </details>
+
+          <details>
+            <summary>What are Universal Credits?</summary>
+            <div class="faq-answer">Universal Credits replace per-feature quotas. Credits are shared across all tools and actions on your plan — OTTO SEO fixes, Content Genius drafts, Smart Ads operations, and Atlas Coworker executions all draw from the same pool. Credits can be topped up. Search Atlas optimizes costs over time, so the price per action trends down as infrastructure improves.</div>
+          </details>
+
+          <details>
+            <summary>Is there a free trial?</summary>
+            <div class="faq-answer">Yes. All plans include a 7-day free trial with full platform access, including Atlas Coworker. No credit card required to start.</div>
+          </details>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ========================
+     CTA BANNER
+     ======================== -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-inner">
+      <span class="badge" style="display: inline-flex; margin-bottom: 16px;">Get Started</span>
+      <h2>Your marketing team's AI coworker — built for SEO, content, paid media, and AI search.</h2>
+      <p>Start your 7-day free trial. Full platform access. No credit card required.</p>
+      <div class="btn-group">
+        <a href="#" class="btn btn-primary">Start Free Trial</a>
+        <a href="#" class="btn btn-ghost">Schedule a Demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========================
+     FOOTER
+     ======================== -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">Search Atlas</div>
+      <ul class="footer-links">
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">Privacy</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 Search Atlas. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

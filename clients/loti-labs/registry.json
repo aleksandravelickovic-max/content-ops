@@ -1,7 +1,7 @@
 {
   "client": "loti-labs",
   "scope": "client",
-  "generatedAt": "2026-06-17T20:04:49",
+  "generatedAt": "2026-06-21T22:56:17",
   "totalFiles": 3,
   "entries": [
     {
@@ -15,7 +15,7 @@
       "path": "STYLE-SYSTEM.md",
       "sizeBytes": 22173,
       "sizeHuman": "21.7 KB",
-      "lastModified": "2026-06-02"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "overview",
@@ -28,7 +28,7 @@
       "path": "raw/knowledge/overview.md",
       "sizeBytes": 4229,
       "sizeHuman": "4.1 KB",
-      "lastModified": "2026-06-02"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "writers-brief",
@@ -41,7 +41,7 @@
       "path": "raw/knowledge/writers-brief.md",
       "sizeBytes": 33102,
       "sizeHuman": "32.3 KB",
-      "lastModified": "2026-06-02"
+      "lastModified": "2026-06-21"
     }
   ]
 }

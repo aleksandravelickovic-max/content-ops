@@ -1,7 +1,7 @@
 {
   "client": "esthetics-center",
   "scope": "client",
-  "generatedAt": "2026-06-17T20:04:49",
+  "generatedAt": "2026-06-21T22:56:17",
   "totalFiles": 2,
   "entries": [
     {
@@ -15,7 +15,7 @@
       "path": "STYLE-SYSTEM.md",
       "sizeBytes": 12294,
       "sizeHuman": "12.0 KB",
-      "lastModified": "2026-05-29"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "overview",
@@ -28,7 +28,7 @@
       "path": "raw/knowledge/overview.md",
       "sizeBytes": 3631,
       "sizeHuman": "3.5 KB",
-      "lastModified": "2026-05-29"
+      "lastModified": "2026-06-21"
     }
   ]
 }

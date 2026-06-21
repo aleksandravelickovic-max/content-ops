@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search Atlas Coworker — The marketing coworker that lives in your Slack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --sa-violet: #8047e8;
+      --sa-violet-light: #bc98ff;
+      --sa-mint: #00ffd4;
+      --sa-mint-soft: rgba(0, 255, 212, 0.12);
+      --bg: #000000;
+      --bg-soft: #0a0a0a;
+      --bg-card: #161616;
+      --bg-card-2: #222222;
+      --bg-frost-strong: rgba(255, 255, 255, 0.11);
+      --border: rgba(255, 255, 255, 0.48);
+      --border-soft: rgba(255, 255, 255, 0.11);
+      --border-violet: rgba(170, 133, 236, 0.24);
+      --ink: #ffffff;
+      --ink-muted: rgba(255, 255, 255, 0.58);
+      --ink-dim: rgba(255, 255, 255, 0.38);
+      --ink-dark: #1a1a1a;
+      --ok-soft: rgba(0, 255, 212, 0.12);
+      --err: #f87171;
+      --warn: #fbbf24;
+      --grad-atlas: linear-gradient(160deg, #bc98ff 0%, #8047e8 100%);
+      --grad-aurora: radial-gradient(ellipse at 30% 0%, #9cffac 0%, #88c2ff 40%, #c2a5ff 70%, #ffaddb 100%);
+      --font: "Inter Tight", system-ui, sans-serif;
+      --r-pill: 100px;
+      --r-lg: 24px;
+      --r: 16px;
+      --r-sm: 10px;
+      --glow-mint: 0 0 0 1px rgba(0,255,212,0.3), 0 8px 40px rgba(0,255,212,0.18);
+      --glow-violet: 0 0 0 1px rgba(170,133,236,0.3), 0 8px 40px rgba(128,71,232,0.18);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font);
+      font-size: 17px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: 58px;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(0,0,0,0.88);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .nav-mark {
+      width: 26px;
+      height: 26px;
+      background: var(--grad-atlas);
+      border-radius: 7px;
+      display: grid;
+      place-items: center;
+      font-size: 10px;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--ink-muted);
+      text-decoration: none;
+      transition: color .15s;
+    }
+    .nav-links a:hover { color: var(--ink); }
+
+    /* BUTTONS */
+    .btn {
+      font-family: var(--font);
+      font-weight: 700;
+      border: none;
+      border-radius: var(--r-pill);
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      transition: filter .15s, transform .15s, background .15s;
+    }
+
+    .btn-mint {
+      background: var(--sa-mint);
+      color: var(--ink-dark);
+      padding: 12px 22px;
+      font-size: 14px;
+    }
+
+    .btn-mint.lg { font-size: 16px; padding: 15px 28px; box-shadow: var(--glow-mint); }
+    .btn-mint:hover { filter: brightness(.92); }
+    .btn-mint:active { transform: translateY(1px); }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--ink);
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 11px 22px;
+      font-size: 14px;
+    }
+    .btn-ghost.lg { font-size: 16px; padding: 14px 28px; }
+    .btn-ghost:hover { background: var(--bg-frost-strong); }
+
+    /* GRAD TEXT */
+    .gt {
+      background: var(--grad-atlas);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* HERO */
+    .hero-outer {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-atmosphere {
+      position: absolute;
+      top: -160px;
+      left: -5%;
+      right: -5%;
+      height: 640px;
+      background: var(--grad-aurora);
+      opacity: 0.1;
+      filter: blur(80px);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 96px 40px 80px;
+      display: grid;
+      grid-template-columns: 50fr 50fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: clamp(3.2rem, 6vw, 5.8rem);
+      font-weight: 400;
+      line-height: 1.0;
+      letter-spacing: -0.035em;
+      margin-bottom: 24px;
+    }
+
+    .hero-sub {
+      font-size: 17px;
+      color: var(--ink-muted);
+      line-height: 1.65;
+      margin-bottom: 36px;
+      max-width: 400px;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .hero-btns .btn-mint { font-size: 15px; padding: 13px 24px; box-shadow: var(--glow-mint); }
+    .hero-btns .btn-ghost { font-size: 15px; padding: 12px 24px; }
+
+    /* SLACK CARD */
+    .card-wrap {
+      position: relative;
+    }
+
+    .card-glow {
+      position: absolute;
+      inset: -40px;
+      background: radial-gradient(ellipse at center, rgba(128,71,232,0.28) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .slack-card {
+      position: relative;
+      z-index: 1;
+      background: var(--bg-card);
+      border: 1px solid rgba(255,255,255,0.13);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.7), 0 0 0 1px rgba(170,133,236,0.15);
+    }
+
+    .sc-bar {
+      background: var(--bg-card-2);
+      border-bottom: 1px solid var(--border-soft);
+      padding: 11px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .macos-dots { display: flex; gap: 5px; }
+    .md { width: 9px; height: 9px; border-radius: 50%; }
+    .md-r { background: #ff5f57; }
+    .md-y { background: #febc2e; }
+    .md-g { background: #28c840; }
+
+    .sc-channel {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--ink-muted);
+      margin-left: 6px;
+    }
+
+    .sc-body {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .sc-msg { display: flex; gap: 10px; }
+
+    .av {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      font-size: 10px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .av-h { background: linear-gradient(135deg, #6366f1, #a855f7); }
+    .av-b { background: var(--grad-atlas); }
+
+    .sc-meta {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 3px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .sc-ts { font-weight: 400; color: var(--ink-dim); font-size: 11px; }
+
+    .app-pill {
+      font-size: 9px;
+      font-weight: 700;
+      background: var(--sa-mint-soft);
+      color: var(--sa-mint);
+      border-radius: 3px;
+      padding: 1px 4px;
+    }
+
+    .sc-text {
+      font-size: 13px;
+      color: var(--ink-muted);
+      line-height: 1.5;
+    }
+
+    .sc-checks {
+      margin-top: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .sc-check {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 12px;
+      color: var(--sa-mint);
+    }
+
+    .check-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--ok-soft);
+      border: 1px solid rgba(0,255,212,0.25);
+      display: grid;
+      place-items: center;
+      font-size: 7px;
+      flex-shrink: 0;
+    }
+
+    /* TRUST STRIP */
+    .trust-strip {
+      border-top: 1px solid var(--border-soft);
+      border-bottom: 1px solid var(--border-soft);
+      background: var(--bg-soft);
+      padding: 14px 40px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      overflow-x: auto;
+    }
+
+    .trust-label {
+      font-size: 12px;
+      color: var(--ink-dim);
+      white-space: nowrap;
+      font-weight: 500;
+      flex-shrink: 0;
+    }
+
+    .tool-row { display: flex; gap: 8px; }
+
+    .tool-tag {
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--r-sm);
+      padding: 4px 10px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--ink-dim);
+      white-space: nowrap;
+    }
+
+    .tool-tag.more {
+      background: transparent;
+      border-color: var(--border-violet);
+      color: var(--sa-violet-light);
+    }
+
+    /* COMMAND STRIP */
+    .cmd-strip {
+      padding: 48px 40px;
+      border-top: 1px solid var(--border-soft);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .cmd-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .cmd {
+      font-family: 'SF Mono', 'Fira Code', ui-monospace, monospace;
+      font-size: 13px;
+      background: rgba(128, 71, 232, 0.12);
+      color: var(--sa-violet-light);
+      border: 1px solid rgba(128, 71, 232, 0.22);
+      border-radius: 6px;
+      padding: 5px 11px;
+    }
+
+    .cmd-arr { color: var(--ink-dim); font-size: 16px; }
+
+    .cmd-result {
+      font-size: 13.5px;
+      color: var(--ink-muted);
+    }
+
+    /* SLACK CARD DATA TABLE */
+    .sc-data {
+      margin-top: 9px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 6px;
+      overflow: hidden;
+      font-size: 11px;
+    }
+
+    .sc-data-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 9px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .sc-data-row:last-child { border-bottom: none; }
+    .sc-data-label { color: var(--ink-dim); }
+    .sc-data-val { color: var(--ink); font-weight: 600; }
+
+    /* SLACK CARD ACTION BUTTONS */
+    .sc-actions {
+      display: flex;
+      gap: 6px;
+      margin-top: 9px;
+      flex-wrap: wrap;
+    }
+
+    .sc-action-btn {
+      font-size: 11px;
+      padding: 4px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 4px;
+      color: var(--ink-muted);
+      background: rgba(255, 255, 255, 0.04);
+      font-family: var(--font);
+      cursor: default;
+    }
+
+    /* SECTION SHELL */
+    .sh {
+      padding: 88px 40px;
+      border-top: 1px solid var(--border-soft);
+    }
+    .sh.dark { background: var(--bg-soft); }
+    .sh.tinted { background: rgba(128,71,232,0.04); border-color: var(--border-violet); }
+
+    .sh-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 3.8vw, 3.2rem);
+      font-weight: 400;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+      margin-bottom: 14px;
+    }
+
+    .sh-sub {
+      font-size: 16px;
+      color: var(--ink-muted);
+      line-height: 1.65;
+      max-width: 480px;
+      margin-bottom: 52px;
+    }
+
+    /* TASK CARDS */
+    .task-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .task-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--r-lg);
+      padding: 32px 28px;
+      transition: border-color .2s, box-shadow .2s;
+    }
+
+    .task-card:hover {
+      border-color: var(--border-violet);
+      box-shadow: var(--glow-violet);
+    }
+
+    .task-card h3 {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.35;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+
+    .task-card p {
+      font-size: 14px;
+      color: var(--ink-muted);
+      line-height: 1.6;
+    }
+
+    /* FEATURE ROW */
+    .feature-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .feat-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .feat-list li {
+      display: flex;
+      gap: 12px;
+      font-size: 15px;
+      color: var(--ink-muted);
+      line-height: 1.55;
+    }
+
+    .fdot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--sa-mint);
+      margin-top: 9px;
+      flex-shrink: 0;
+    }
+
+    /* COMPARISON TABLE */
+    .cmp {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--border-soft);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      margin-top: 48px;
+    }
+
+    .cmp thead th {
+      padding: 18px 22px;
+      text-align: left;
+      font-size: 13px;
+      font-weight: 700;
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .cmp th.c-feat { background: var(--bg-card); color: var(--ink-dim); width: 30%; }
+    .cmp th.c-gen  { background: var(--bg-card-2); color: var(--ink-dim); border-left: 1px solid var(--border-soft); }
+    .cmp th.c-sa   { background: var(--sa-violet); color: #fff; border-left: 1px solid rgba(128,71,232,.5); }
+
+    .cmp tbody td {
+      padding: 14px 22px;
+      font-size: 14px;
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .cmp tbody tr:last-child td { border-bottom: none; }
+    .cmp td.c-feat { background: var(--bg-card); font-weight: 500; color: var(--ink); }
+    .cmp td.c-gen  { background: var(--bg-card-2); color: var(--ink-muted); border-left: 1px solid var(--border-soft); }
+    .cmp td.c-sa   { background: rgba(128,71,232,.06); color: var(--ink); border-left: 1px solid var(--border-violet); }
+
+    .no  { color: var(--err); font-weight: 500; }
+    .yes { color: var(--sa-mint); font-weight: 600; }
+
+    /* TESTIMONIAL */
+    .testimonial-outer {
+      padding: 88px 40px;
+      border-top: 1px solid var(--border-soft);
+    }
+
+    .testimonial-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .quote-mark {
+      font-size: 80px;
+      line-height: .8;
+      color: var(--sa-violet-light);
+      opacity: 0.35;
+      font-family: Georgia, serif;
+      display: block;
+      margin-bottom: -8px;
+    }
+
+    blockquote {
+      font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--ink);
+      margin-bottom: 28px;
+      letter-spacing: -0.01em;
+    }
+
+    blockquote em { color: var(--sa-mint); font-style: normal; }
+
+    .t-who {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .t-av {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #6366f1, #a855f7);
+      display: grid;
+      place-items: center;
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .t-name { font-size: 14px; font-weight: 700; color: var(--ink); }
+    .t-title { font-size: 13px; color: var(--ink-dim); }
+
+    /* OUTCOME CARDS */
+    .oc-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 52px;
+    }
+
+    .oc-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--r-lg);
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: border-color .2s;
+    }
+
+    .oc-card:hover { border-color: var(--border-violet); }
+
+    .oc-num {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      background: var(--grad-atlas);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1;
+    }
+
+    .oc-who {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-dim);
+    }
+
+    .oc-card h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.4;
+    }
+
+    .oc-card p {
+      font-size: 13px;
+      color: var(--ink-muted);
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    /* FAQ */
+    .faq-inner { max-width: 640px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--border-soft); }
+
+    .faq-btn {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink);
+      cursor: pointer;
+      text-align: left;
+      gap: 16px;
+    }
+
+    .faq-icon {
+      color: var(--ink-dim);
+      transition: transform .2s;
+      flex-shrink: 0;
+    }
+
+    .faq-answer {
+      font-size: 14px;
+      color: var(--ink-muted);
+      line-height: 1.7;
+      padding-bottom: 20px;
+      display: none;
+    }
+
+    .faq-item.open .faq-answer { display: block; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+    /* FINAL CTA */
+    .cta-outer {
+      position: relative;
+      overflow: hidden;
+      padding: 112px 40px;
+      text-align: center;
+      border-top: 1px solid var(--border-soft);
+    }
+
+    .cta-bg {
+      position: absolute;
+      inset: 0;
+      background: var(--grad-aurora);
+      opacity: 0.07;
+      filter: blur(60px);
+      pointer-events: none;
+    }
+
+    .cta-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .cta-inner h2 {
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      margin-bottom: 16px;
+    }
+
+    .cta-inner p {
+      font-size: 16px;
+      color: var(--ink-muted);
+      margin-bottom: 36px;
+      line-height: 1.65;
+    }
+
+    .cta-btns {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border-soft);
+      height: 56px;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-left { display: flex; align-items: center; gap: 24px; }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: var(--ink-dim);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover { color: var(--ink-muted); }
+    .footer-copy { font-size: 13px; color: var(--ink-dim); }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">
+    <div class="nav-mark">SA</div>
+    Search Atlas
+  </a>
+  <ul class="nav-links">
+    <li><a href="#">Features</a></li>
+    <li><a href="#">Integrations</a></li>
+    <li><a href="#">Pricing</a></li>
+    <li><a href="#">Compare</a></li>
+  </ul>
+  <a class="btn btn-mint" href="#">Book a Demo</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero-outer">
+  <div class="hero-atmosphere"></div>
+  <div class="hero-inner">
+    <div>
+      <h1>The marketing<br>coworker that<br>lives in <span class="gt">Slack.</span></h1>
+      <p class="hero-sub">
+        Search Atlas Coworker monitors rankings, builds content, runs GBP, and deploys OTTO fixes.
+        Every result posts back to Slack. You wake up to what it did.
+      </p>
+      <div class="hero-btns">
+        <a class="btn btn-mint" href="#">Book a Demo</a>
+        <a class="btn btn-ghost" href="#">
+          <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 1.5L10.5 6L2 10.5V1.5Z" fill="currentColor"/></svg>
+          See it work
+        </a>
+      </div>
+    </div>
+    <div class="card-wrap">
+      <div class="card-glow"></div>
+      <div class="slack-card">
+        <div class="sc-bar">
+          <div class="macos-dots">
+            <div class="md md-r"></div>
+            <div class="md md-y"></div>
+            <div class="md md-g"></div>
+          </div>
+          <span class="sc-channel"># seo-team</span>
+        </div>
+        <div class="sc-body">
+          <div class="sc-msg">
+            <div class="av av-b">⚡</div>
+            <div>
+              <div class="sc-meta">Search Atlas Coworker <span class="app-pill">APP</span> <span class="sc-ts">3:12 AM</span></div>
+              <div class="sc-checks">
+                <div class="sc-check"><div class="check-dot">✓</div>847 keywords tracked · rank report ready</div>
+                <div class="sc-check"><div class="check-dot">✓</div>1 rank drop detected · OTTO fix queued</div>
+              </div>
+              <div class="sc-text" style="margin-top: 7px;">Here's what moved while you slept.</div>
+              <div class="sc-data">
+                <div class="sc-data-row"><span class="sc-data-label">Keywords up 5+ positions</span><span class="sc-data-val" style="color: var(--sa-mint);">14</span></div>
+                <div class="sc-data-row"><span class="sc-data-label">New featured snippets</span><span class="sc-data-val" style="color: var(--sa-mint);">3</span></div>
+                <div class="sc-data-row"><span class="sc-data-label">Top mover: "AI CMO platform"</span><span class="sc-data-val" style="color: var(--sa-mint);">#18 → #6</span></div>
+              </div>
+              <div class="sc-text" style="margin-top: 8px;">Full report posted to #seo-reports.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <span class="trust-label">Works with</span>
+  <div class="tool-row">
+    <div class="tool-tag">HubSpot</div>
+    <div class="tool-tag">GA4</div>
+    <div class="tool-tag">WordPress</div>
+    <div class="tool-tag">Search Console</div>
+    <div class="tool-tag">Salesforce</div>
+    <div class="tool-tag">Semrush</div>
+    <div class="tool-tag">Slack</div>
+    <div class="tool-tag more">+ 3,193 more</div>
+  </div>
+</div>
+
+<!-- COMMAND STRIP -->
+<div class="cmd-strip">
+  <div class="cmd-row">
+    <code class="cmd">@Atlas what moved this week?</code>
+    <span class="cmd-arr">→</span>
+    <span class="cmd-result">14 keywords climbed · 3 new featured snippets · report posted to #seo</span>
+  </div>
+  <div class="cmd-row">
+    <code class="cmd">@Atlas brief for "AI CMO platform"</code>
+    <span class="cmd-arr">→</span>
+    <span class="cmd-result">top 10 scraped · 3 gaps found · 1,800-word brief ready in Drive</span>
+  </div>
+</div>
+
+<!-- WHAT IT DOES -->
+<div class="sh dark">
+  <div class="sh-inner">
+    <h2>Four jobs ran<br>while you slept.</h2>
+    <p class="sh-sub">Search Atlas Coworker works where your team already communicates. The work happens in the background and posts back to the thread.</p>
+    <div class="task-grid">
+      <div class="task-card">
+        <h3>Rank drop detected. Brief written. Fix queued.<br>Before your first meeting.</h3>
+        <p>Search Atlas Coworker runs your rank tracking daily, flags anything that matters, generates a content brief, and queues an OTTO fix for your approval. You show up to a summary, not a task list.</p>
+      </div>
+      <div class="task-card">
+        <h3>SERP research to graded draft.<br>One thread.</h3>
+        <p>Search Atlas Coworker pulls the top 10, finds the gaps, writes the brief, drafts the article, and grades it against what's currently ranking. Start to published in one Slack thread.</p>
+      </div>
+      <div class="task-card">
+        <h3>GBP posts for every location.<br>Set once.</h3>
+        <p>Search Atlas Coworker runs the weekly local update on a schedule. It posts to all your GBP locations, flags new reviews, drafts responses, and reports back. Set it once and stop thinking about it.</p>
+      </div>
+      <div class="task-card">
+        <h3>Monday morning report.<br>Written before anyone logs in.</h3>
+        <p>Search Atlas Coworker pulls cross-channel performance data every week and posts a summary with the things that need your attention already flagged. You get the decisions, not the data-gathering.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHERE IT LIVES -->
+<div class="sh">
+  <div class="sh-inner">
+    <div class="feature-row">
+      <div>
+        <h2>No new app.<br>No new login.</h2>
+        <p style="color: var(--ink-muted); font-size: 16px; margin-top: 14px; line-height: 1.65; max-width: 400px;">Search Atlas Coworker lives where your team already communicates. It runs jobs on a schedule and surfaces results back to the thread — no dashboard to check.</p>
+        <ul class="feat-list">
+          <li><div class="fdot"></div><span>Runs on a schedule or responds when you ask</span></li>
+          <li><div class="fdot"></div><span>Results post back to the thread: the data, the draft, the completed changes</span></li>
+          <li><div class="fdot"></div><span>Connects to Search Atlas's native SEO channels, plus 3,000 other platforms</span></li>
+          <li><div class="fdot"></div><span>Available in Slack now. ClickUp, Microsoft Teams, and more coming soon.</span></li>
+        </ul>
+      </div>
+      <div style="position: relative;">
+        <div style="position: absolute; inset: -32px; background: radial-gradient(ellipse at center, rgba(128,71,232,0.22) 0%, transparent 70%); pointer-events: none;"></div>
+        <div class="slack-card">
+          <div class="sc-bar">
+            <div class="macos-dots">
+              <div class="md md-r"></div>
+              <div class="md md-y"></div>
+              <div class="md md-g"></div>
+            </div>
+            <span class="sc-channel"># content</span>
+          </div>
+          <div class="sc-body">
+            <div class="sc-msg">
+              <div class="av av-b">⚡</div>
+              <div>
+                <div class="sc-meta">Search Atlas Coworker <span class="app-pill">APP</span> <span class="sc-ts">11:14 AM</span></div>
+                <div class="sc-checks">
+                  <div class="sc-check"><div class="check-dot">✓</div>Top 10 scraped and analyzed</div>
+                  <div class="sc-check"><div class="check-dot">✓</div>3 subtopics missing from all ranking pages</div>
+                  <div class="sc-check"><div class="check-dot">✓</div>1,800-word brief ready in Drive</div>
+                </div>
+                <div class="sc-text" style="margin-top: 8px;">"AI CMO platform" dropped 3 spots this week. I found what the top 10 aren't covering. Brief is in Drive. Want me to draft the article?</div>
+              </div>
+            </div>
+            <div class="sc-msg">
+              <div class="av av-h">MT</div>
+              <div>
+                <div class="sc-meta">Marcus T. <span class="sc-ts">11:15 AM</span></div>
+                <div class="sc-text">Yes. Lead with the keyword.</div>
+              </div>
+            </div>
+            <div class="sc-msg">
+              <div class="av av-b">⚡</div>
+              <div>
+                <div class="sc-meta">Search Atlas Coworker <span class="app-pill">APP</span> <span class="sc-ts">11:15 AM</span></div>
+                <div class="sc-text">Drafting now. I'll post it in #content in about 4 minutes.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COMPARISON -->
+<div class="sh tinted">
+  <div class="sh-inner">
+    <h2>Viktor can't<br>do this.</h2>
+    <p class="sh-sub">Viktor, Lindy, and Manus are general-purpose AI assistants. They have no knowledge of your keyword rankings, your GBP listings, your SERP gaps, or how your content compares to what's ranking. Search Atlas Coworker does.</p>
+    <table class="cmp">
+      <thead>
+        <tr>
+          <th class="c-feat">Capability</th>
+          <th class="c-gen">General AI coworkers</th>
+          <th class="c-sa">Search Atlas Coworker</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="c-feat">Task execution</td>
+          <td class="c-gen no">Generates text. You do the rest.</td>
+          <td class="c-sa yes">Executes tasks across your connected platforms</td>
+        </tr>
+        <tr>
+          <td class="c-feat">Keyword data</td>
+          <td class="c-gen no">None</td>
+          <td class="c-sa yes">Live SERP data and gap analysis native</td>
+        </tr>
+        <tr>
+          <td class="c-feat">Rank tracking</td>
+          <td class="c-gen no">None</td>
+          <td class="c-sa yes">Monitors rankings, flags drops, queues fixes</td>
+        </tr>
+        <tr>
+          <td class="c-feat">GBP management</td>
+          <td class="c-gen no">No access</td>
+          <td class="c-sa yes">Posts, reviews, and listings managed</td>
+        </tr>
+        <tr>
+          <td class="c-feat">Content grading</td>
+          <td class="c-gen no">None</td>
+          <td class="c-sa yes">Graded against the live top-ranking pages</td>
+        </tr>
+        <tr>
+          <td class="c-feat">Integrations</td>
+          <td class="c-gen no">Requires custom setup</td>
+          <td class="c-sa yes">3,000+ platforms, connected from day one</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- TESTIMONIAL -->
+<div class="testimonial-outer">
+  <div class="testimonial-inner">
+    <span class="quote-mark">"</span>
+    <blockquote>
+      I sent one Slack message on Monday morning.
+      By the time I got back from coffee, the rank report was done,
+      three OTTO fixes were queued, and a content brief was already in Drive.
+      <em>That was day one.</em>
+    </blockquote>
+    <div class="t-who">
+      <div class="t-av">SK</div>
+      <div>
+        <div class="t-name">Sarah K.</div>
+        <div class="t-title">Head of Marketing</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- OUTCOMES / THREE TEAMS -->
+<div class="sh dark">
+  <div class="sh-inner">
+    <h2>Different teams.<br>Same channel.</h2>
+    <p class="sh-sub">Each team runs different workflows. Search Atlas Coworker handles them all from the same place.</p>
+    <div class="oc-grid">
+      <div class="oc-card">
+        <div class="oc-num">4h→20m</div>
+        <div class="oc-who">SEO teams</div>
+        <h3>Rank monitoring, OTTO fixes, and recovery tracking on autopilot.</h3>
+        <p>Search Atlas Coworker catches the drop, queues the fix, drafts the brief, and reports what changed. You sign off. That's the whole job.</p>
+      </div>
+      <div class="oc-card">
+        <div class="oc-num">1 thread</div>
+        <div class="oc-who">Content teams</div>
+        <h3>Brief to graded draft without switching tools.</h3>
+        <p>SERP research, brief, article, content grade. All posted back to Slack. No status updates, no follow-up messages.</p>
+      </div>
+      <div class="oc-card">
+        <div class="oc-num">Set once</div>
+        <div class="oc-who">Local marketing teams</div>
+        <h3>GBP updates and review responses across every location, weekly.</h3>
+        <p>Set the schedule once. Search Atlas Coworker handles the rest: posts, responses, flagged reviews, done before Monday's standup.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="sh">
+  <div class="sh-inner">
+    <h2 style="margin-bottom: 48px;">Questions.</h2>
+    <div class="faq-inner">
+      <div class="faq-item open">
+        <button class="faq-btn" onclick="toggleFaq(this)">
+          Is this just an AI chatbot?
+          <svg class="faq-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <div class="faq-answer">No. When Search Atlas Coworker detects a rank drop, it fixes it. When you ask for a brief, it writes one and posts it to Slack. Suggestions stay in the thread; actions happen in the system.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)">
+          How is it different from Viktor or other AI coworkers?
+          <svg class="faq-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <div class="faq-answer">Viktor is a general AI assistant. It has no knowledge of your keyword rankings, your GBP listings, your content gaps, or how your pages compare to what's currently ranking. Search Atlas Coworker has all of that built in from day one.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)">
+          Does it work with the tools we already use?
+          <svg class="faq-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <div class="faq-answer">Yes. 3,000+ integrations including HubSpot, GA4, WordPress, Salesforce, and Search Console. It works with what you have. Setup takes minutes.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)">
+          How long does onboarding take?
+          <svg class="faq-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <div class="faq-answer">Most teams run their first workflow on day one. There is nothing new to learn. If your team uses Slack, they already know how to use Search Atlas Coworker.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)">
+          What happens to our data?
+          <svg class="faq-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <div class="faq-answer">Search Atlas does not train on customer data. A full data processing agreement is available on request during the demo call.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-outer">
+  <div class="cta-bg"></div>
+  <div class="cta-inner">
+    <h2>Hire the marketing<br>coworker that<br>never <span class="gt">sleeps.</span></h2>
+    <p>Book 20 minutes and we'll show you what it ran overnight.</p>
+    <div class="cta-btns">
+      <a class="btn btn-mint lg" href="#">Book a 20-minute demo</a>
+      <a class="btn btn-ghost lg" href="#">
+        <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 1.5L10.5 6L2 10.5V1.5Z" fill="currentColor"/></svg>
+        Watch the 90-second video
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">
+    <a class="nav-logo" href="#" style="color: rgba(255,255,255,0.35);">
+      <div class="nav-mark" style="opacity: .4;">SA</div>
+      Search Atlas
+    </a>
+    <ul class="footer-links">
+      <li><a href="#">Product</a></li>
+      <li><a href="#">Integrations</a></li>
+      <li><a href="#">Pricing</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Privacy</a></li>
+    </ul>
+  </div>
+  <span class="footer-copy">© 2026 Search Atlas</span>
+</footer>
+
+<script>
+  function toggleFaq(btn) {
+    const item = btn.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  }
+</script>
+
+</body>
+</html>

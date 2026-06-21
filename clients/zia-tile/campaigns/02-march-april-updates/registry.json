@@ -1,34 +1,21 @@
 {
   "client": "zia-tile",
   "campaign": "02-march-april-updates",
-  "generatedAt": "2026-06-17T20:04:49",
-  "totalFiles": 8,
+  "generatedAt": "2026-06-21T22:56:17",
+  "totalFiles": 10,
   "entries": [
     {
-      "id": "REWRITE-PLAN",
-      "filename": "REWRITE-PLAN.md",
-      "displayName": "March/April Rewrite Plan \u2014 Zia Tile Campaign 02",
+      "id": "README",
+      "filename": "README.md",
+      "displayName": "02 \u2014 March/April Updates",
       "type": "other",
       "category": "other",
       "status": "delivered",
       "version": 1,
-      "path": "REWRITE-PLAN.md",
-      "sizeBytes": 12181,
-      "sizeHuman": "11.9 KB",
-      "lastModified": "2026-06-02"
-    },
-    {
-      "id": "audit-report-gaps",
-      "filename": "audit-report-gaps.md",
-      "displayName": "Stream C \u2014 audit-report.md Gaps on the 16 Templates",
-      "type": "audit",
-      "category": "audit",
-      "status": "delivered",
-      "version": 1,
-      "path": "audit-report-gaps.md",
-      "sizeBytes": 6217,
-      "sizeHuman": "6.1 KB",
-      "lastModified": "2026-06-02"
+      "path": "README.md",
+      "sizeBytes": 556,
+      "sizeHuman": "556 B",
+      "lastModified": "2026-06-21"
     },
     {
       "id": "brief",
@@ -41,20 +28,46 @@
       "path": "brief.md",
       "sizeBytes": 4443,
       "sizeHuman": "4.3 KB",
-      "lastModified": "2026-06-02"
+      "lastModified": "2026-06-21"
+    },
+    {
+      "id": "REWRITE-PLAN",
+      "filename": "REWRITE-PLAN.md",
+      "displayName": "March/April Rewrite Plan \u2014 Zia Tile Campaign 02",
+      "type": "research",
+      "category": "research",
+      "status": "delivered",
+      "version": 1,
+      "path": "research/REWRITE-PLAN.md",
+      "sizeBytes": 12181,
+      "sizeHuman": "11.9 KB",
+      "lastModified": "2026-06-21"
+    },
+    {
+      "id": "audit-report-gaps",
+      "filename": "audit-report-gaps.md",
+      "displayName": "Stream C \u2014 audit-report.md Gaps on the 16 Templates",
+      "type": "research",
+      "category": "research",
+      "status": "delivered",
+      "version": 1,
+      "path": "research/audit-report-gaps.md",
+      "sizeBytes": 6217,
+      "sizeHuman": "6.1 KB",
+      "lastModified": "2026-06-21"
     },
     {
       "id": "v3-promotion-worklist",
       "filename": "v3-promotion-worklist.md",
       "displayName": "Stream A \u2014 v3 Promotion Worklist",
-      "type": "other",
-      "category": "other",
+      "type": "research",
+      "category": "research",
       "status": "delivered",
       "version": 1,
-      "path": "v3-promotion-worklist.md",
+      "path": "research/v3-promotion-worklist.md",
       "sizeBytes": 4052,
       "sizeHuman": "4.0 KB",
-      "lastModified": "2026-06-02"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "CHANGES",
@@ -67,7 +80,7 @@
       "path": "drafts/CHANGES.md",
       "sizeBytes": 14786,
       "sizeHuman": "14.4 KB",
-      "lastModified": "2026-06-02"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "blog-4-cotto",
@@ -80,7 +93,7 @@
       "path": "drafts/blog-4-cotto.md",
       "sizeBytes": 15747,
       "sizeHuman": "15.4 KB",
-      "lastModified": "2026-06-02"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "collection-cotto",
@@ -93,7 +106,7 @@
       "path": "drafts/collection-cotto.md",
       "sizeBytes": 8571,
       "sizeHuman": "8.4 KB",
-      "lastModified": "2026-06-02"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "product-red-clay-8x8",
@@ -106,7 +119,20 @@
       "path": "drafts/product-red-clay-8x8.md",
       "sizeBytes": 12952,
       "sizeHuman": "12.6 KB",
-      "lastModified": "2026-06-02"
+      "lastModified": "2026-06-21"
+    },
+    {
+      "id": "blog-01-terra-cotta-v2",
+      "filename": "blog-01-terra-cotta-v2.md",
+      "displayName": "Terra Cotta Floor Tile: A Material That Earns Its Age",
+      "type": "other",
+      "category": "other",
+      "status": "delivered",
+      "version": 1,
+      "path": "gdocs-content/blog-01-terra-cotta-v2.md",
+      "sizeBytes": 13046,
+      "sizeHuman": "12.7 KB",
+      "lastModified": "2026-06-21"
     }
   ]
 }

@@ -55,16 +55,31 @@ zia-content-ops/
 │       │   └── knowledge/               # Product data, competitors, facts, testimonials
 │       ├── reference-site/              # Rendered HTML reference (if applicable)
 │       └── campaigns/
-│           └── {nn}-{campaign-name}/
-│               ├── brief.md             # Campaign brief (or briefs/ directory for multi-brief campaigns)
-│               ├── brief.html           # Rendered brief (if applicable)
+│           └── {nn}-{campaign-slug}/    # canonical skeleton — see "Campaign structure" below
+│               ├── README.md            # Goal, status, target URLs, what each folder holds
+│               ├── brief.md / briefs/   # Single brief, OR briefs/ directory (one per piece)
 │               ├── campaign-urls.md     # Target URLs for this campaign
-│               ├── audit-report.md      # Pre-production audit findings
-│               ├── registry.json        # Auto-generated content index for this campaign
-│               ├── gdocs-content/       # Google Docs exports (collection-pages/, product-pages/)
-│               ├── drafts/              # Working drafts + versioned revisions (v2/, v3/)
-│               └── html/               # Before/after HTML comparisons (original/ + revised/)
+│               ├── drafts/              # Working MARKDOWN only; -v1/-v2; drafts/v3/ for deep revisions
+│               ├── final/               # Approved MARKDOWN only; NO version suffix
+│               ├── html/                # Rendered/delivery HTML; html/original + html/revised for before/after; html/index.html
+│               ├── research/            # Audits, SERP/cluster analysis, fix-lists, briefable sets, editorial guidelines
+│               ├── assets/              # Embeddable HTML widgets/banners, images
+│               ├── gdocs-content/       # Google Docs exports (collection-pages/, product-pages/) — where applicable
+│               ├── runs/                # Pipeline state files (pipeline campaigns only)
+│               ├── _build/              # One-off build/patch scripts (.py) — EXCLUDED from registry
+│               └── registry.json        # Auto-generated content index — never hand-edit
 ```
+
+#### Campaign structure (canonical — applies to every client)
+
+Create a folder only when it holds something; no empty scaffolding. Rules:
+
+1. **Markdown and HTML never share a folder.** Markdown lives in `drafts/` and `final/`; rendered/delivery HTML lives in `html/`.
+2. **HTML-native deliverables** (landing pages, widgets) with no markdown source: drafts in `html/` with a `-v1` suffix, approved in `html/` with no suffix; pure embeddable widgets/banners go in `assets/`.
+3. **Versioning:** `-v1`, `-v2` in `drafts/`; the approved copy moves to `final/` with the suffix dropped. There is no `-FINAL` suffix.
+4. **Drop the client-name prefix** inside that client's own folder (no `sa-`, `atlas-`, etc.).
+5. **No scripts inside content folders** — one-off build/patch scripts go in `_build/` (skipped by the registry generator).
+6. **Never hand-edit `registry.json`** — regenerate it with `scripts/build-content-navigator.py`.
 
 ### App — Content Review Portal (`portal/`)
 

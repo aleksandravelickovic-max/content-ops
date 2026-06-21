@@ -6,6 +6,8 @@ allowed-tools:
   - Write
   - Edit
   - Bash
+  - WebSearch
+  - WebFetch
 ---
 
 # Bulk Article Production Skill
@@ -73,12 +75,19 @@ For each topic:
 
 1. Validate the row.
 2. Create a slug from the topic.
-3. Create the article brief.
-4. Create the first draft.
-5. Run QA.
-6. Revise the draft.
-7. Save the final article.
-8. Update the production log.
+3. **Run SERP research** (mandatory — do this before writing the brief):
+   - Search the primary keyword and review the top 5 organic results.
+   - Extract the "People Also Ask" questions visible for that query.
+   - Identify related searches and query variations.
+   - Note what the top pages cover and what they miss.
+   - Record 6–10 FAQ candidates from PAA and related searches.
+   - Save SERP findings into the brief under "SERP Research."
+4. Create the article brief (include SERP research findings and FAQ candidates).
+5. Create the first draft (include a mandatory FAQ section sourced from SERP research).
+6. Run QA.
+7. Revise the draft.
+8. Save the final article.
+9. Update the production log.
 
 Do not merge multiple topics into one article.
 

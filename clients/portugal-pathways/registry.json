@@ -1,7 +1,7 @@
 {
   "client": "portugal-pathways",
   "scope": "client",
-  "generatedAt": "2026-06-17T20:04:49",
+  "generatedAt": "2026-06-21T22:56:17",
   "totalFiles": 3,
   "entries": [
     {
@@ -15,7 +15,7 @@
       "path": "STYLE-SYSTEM.md",
       "sizeBytes": 13135,
       "sizeHuman": "12.8 KB",
-      "lastModified": "2026-05-29"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "overview",
@@ -28,7 +28,7 @@
       "path": "raw/knowledge/overview.md",
       "sizeBytes": 6559,
       "sizeHuman": "6.4 KB",
-      "lastModified": "2026-05-29"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "website-faq",
@@ -41,7 +41,7 @@
       "path": "raw/knowledge/website-faq.md",
       "sizeBytes": 12781,
       "sizeHuman": "12.5 KB",
-      "lastModified": "2026-05-29"
+      "lastModified": "2026-06-21"
     }
   ]
 }

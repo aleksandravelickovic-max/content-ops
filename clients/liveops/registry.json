@@ -1,7 +1,7 @@
 {
   "client": "liveops",
   "scope": "client",
-  "generatedAt": "2026-06-17T20:04:49",
+  "generatedAt": "2026-06-21T22:56:17",
   "totalFiles": 3,
   "entries": [
     {
@@ -15,7 +15,7 @@
       "path": "STYLE-SYSTEM.md",
       "sizeBytes": 15659,
       "sizeHuman": "15.3 KB",
-      "lastModified": "2026-06-03"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "agent-speak-doc",
@@ -28,7 +28,7 @@
       "path": "raw/knowledge/agent-speak-doc.md",
       "sizeBytes": 3923,
       "sizeHuman": "3.8 KB",
-      "lastModified": "2026-06-03"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "external-messaging-guidelines",
@@ -41,7 +41,7 @@
       "path": "raw/knowledge/external-messaging-guidelines.md",
       "sizeBytes": 3293,
       "sizeHuman": "3.2 KB",
-      "lastModified": "2026-06-03"
+      "lastModified": "2026-06-21"
     }
   ]
 }

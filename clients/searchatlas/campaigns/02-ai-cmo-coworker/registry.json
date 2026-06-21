@@ -1,0 +1,60 @@
+{
+  "client": "searchatlas",
+  "campaign": "02-ai-cmo-coworker",
+  "generatedAt": "2026-06-21T22:56:17",
+  "totalFiles": 4,
+  "entries": [
+    {
+      "id": "README",
+      "filename": "README.md",
+      "displayName": "02 \u2014 AI CMO Coworker (landing page)",
+      "type": "other",
+      "category": "other",
+      "status": "delivered",
+      "version": 1,
+      "path": "README.md",
+      "sizeBytes": 553,
+      "sizeHuman": "553 B",
+      "lastModified": "2026-06-21"
+    },
+    {
+      "id": "brief",
+      "filename": "brief.md",
+      "displayName": "Brief \u2014 AI CMO Coworker landing page",
+      "type": "brief",
+      "category": "brief",
+      "status": "delivered",
+      "version": 1,
+      "path": "brief.md",
+      "sizeBytes": 567,
+      "sizeHuman": "567 B",
+      "lastModified": "2026-06-21"
+    },
+    {
+      "id": "coworker-landing-v1",
+      "filename": "coworker-landing-v1.html",
+      "displayName": "Coworker Landing V1",
+      "type": "html",
+      "category": "html",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/coworker-landing-v1.html",
+      "sizeBytes": 55343,
+      "sizeHuman": "54.0 KB",
+      "lastModified": "2026-06-21"
+    },
+    {
+      "id": "coworker-landing",
+      "filename": "coworker-landing.html",
+      "displayName": "Coworker Landing",
+      "type": "html",
+      "category": "html",
+      "status": "delivered",
+      "version": 1,
+      "path": "html/coworker-landing.html",
+      "sizeBytes": 35410,
+      "sizeHuman": "34.6 KB",
+      "lastModified": "2026-06-21"
+    }
+  ]
+}

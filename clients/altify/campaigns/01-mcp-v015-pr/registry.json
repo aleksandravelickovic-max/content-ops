@@ -1,21 +1,7 @@
 {
   "client": "altify",
   "campaign": "01-mcp-v015-pr",
-  "generatedAt": "2026-06-17T20:04:49",
-  "totalFiles": 1,
-  "entries": [
-    {
-      "id": "altify-mcp-v015-press-release",
-      "filename": "altify-mcp-v015-press-release.md",
-      "displayName": "Altify Releases MCP v0.1.5 with Expanded AI Agent Capabilities Across Account Planning, Sales Process, and Methodology",
-      "type": "draft",
-      "category": "draft",
-      "status": "delivered",
-      "version": 1,
-      "path": "drafts/altify-mcp-v015-press-release.md",
-      "sizeBytes": 10578,
-      "sizeHuman": "10.3 KB",
-      "lastModified": "2026-06-10"
-    }
-  ]
+  "generatedAt": "2026-06-21T22:56:17",
+  "totalFiles": 0,
+  "entries": []
 }
