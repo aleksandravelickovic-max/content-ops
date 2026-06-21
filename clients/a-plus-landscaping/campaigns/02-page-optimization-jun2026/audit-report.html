@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audit Report — A Plus Landscaping — Page Optimization June 2026</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f4f5f7; color: #1a1a2e; font-size: 14px; line-height: 1.55; }
+
+  .header { background: #1a3a1a; color: #fff; padding: 32px 40px 28px; }
+  .header h1 { font-size: 22px; font-weight: 700; letter-spacing: -0.3px; }
+  .header .meta { margin-top: 6px; font-size: 13px; color: #8aaa8a; }
+  .header .meta span + span::before { content: ' · '; }
+
+  .summary-bar { background: #fff; border-bottom: 1px solid #e2e5ea; padding: 20px 40px; display: flex; gap: 32px; align-items: center; flex-wrap: wrap; }
+  .summary-bar .label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; color: #6b7280; margin-bottom: 2px; }
+  .summary-bar .value { font-size: 22px; font-weight: 700; }
+  .summary-bar .value.fail { color: #dc2626; }
+  .summary-bar .value.warn { color: #d97706; }
+  .summary-bar .value.pass { color: #16a34a; }
+  .summary-bar .divider { width: 1px; background: #e2e5ea; height: 40px; }
+
+  .gate-banner { margin: 24px 40px 0; padding: 14px 18px; border-radius: 0 6px 6px 0; }
+  .gate-banner.fail { background: #fff1f2; border-left: 4px solid #dc2626; }
+  .gate-banner.warn { background: #fffbeb; border-left: 4px solid #d97706; }
+  .gate-banner strong { font-size: 13px; }
+  .gate-banner.fail strong { color: #b91c1c; }
+  .gate-banner.warn strong { color: #92400e; }
+  .gate-banner p { font-size: 13px; margin-top: 4px; }
+  .gate-banner.fail p { color: #7f1d1d; }
+  .gate-banner.warn p { color: #78350f; }
+
+  .content { padding: 28px 40px; }
+
+  .page-section { background: #fff; border: 1px solid #e2e5ea; border-radius: 8px; margin-bottom: 32px; overflow: hidden; }
+  .page-header { padding: 20px 24px 16px; border-bottom: 1px solid #e2e5ea; display: flex; align-items: flex-start; gap: 20px; }
+  .page-header .page-info { flex: 1; }
+  .page-header h2 { font-size: 16px; font-weight: 700; color: #1a1a2e; }
+  .page-header .url { font-size: 12px; color: #6b7280; margin-top: 3px; font-family: 'SF Mono', 'Fira Code', monospace; }
+  .page-header .page-type { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 12px; text-transform: uppercase; letter-spacing: 0.4px; margin-top: 6px; background: #dcfce7; color: #166534; }
+
+  .scores { display: flex; gap: 16px; flex-shrink: 0; }
+  .score-card { text-align: center; min-width: 80px; }
+  .score-card .score-label { font-size: 11px; font-weight: 600; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+  .score-card .score-num { font-size: 28px; font-weight: 800; line-height: 1; }
+  .score-card .score-num.fail { color: #dc2626; }
+  .score-card .score-num.warn { color: #d97706; }
+  .score-card .score-num.pass { color: #16a34a; }
+  .score-card .score-num.na { color: #9ca3af; }
+  .score-card .score-bar { width: 80px; height: 5px; background: #e5e7eb; border-radius: 3px; margin-top: 5px; overflow: hidden; }
+  .score-card .score-bar .fill { height: 100%; border-radius: 3px; }
+  .score-card .score-bar .fill.fail { background: #dc2626; }
+  .score-card .score-bar .fill.warn { background: #d97706; }
+  .score-card .score-bar .fill.pass { background: #16a34a; }
+  .score-card .gate-badge { font-size: 10px; font-weight: 700; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.4px; }
+  .score-card .gate-badge.fail { color: #dc2626; }
+  .score-card .gate-badge.pass { color: #16a34a; }
+  .score-card .gate-badge.na { color: #9ca3af; }
+
+  .page-body { padding: 20px 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media (max-width: 900px) { .page-body { grid-template-columns: 1fr; } }
+
+  .col-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: #6b7280; margin-bottom: 10px; }
+
+  .issue { border-radius: 6px; padding: 10px 12px; margin-bottom: 8px; border-left: 3px solid transparent; }
+  .issue.critical { background: #fff1f2; border-color: #dc2626; }
+  .issue.major { background: #fffbeb; border-color: #d97706; }
+  .issue.minor { background: #f0fdf4; border-color: #16a34a; }
+  .issue.note { background: #f0f9ff; border-color: #0369a1; }
+
+  .issue-header { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+  .severity-badge { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 1px 6px; border-radius: 10px; flex-shrink: 0; }
+  .severity-badge.critical { background: #fee2e2; color: #991b1b; }
+  .severity-badge.major { background: #fef3c7; color: #92400e; }
+  .severity-badge.minor { background: #dcfce7; color: #166534; }
+  .severity-badge.note { background: #e0f2fe; color: #075985; }
+
+  .issue-title { font-weight: 600; font-size: 13px; color: #1a1a2e; }
+  .issue-detail { font-size: 12.5px; color: #4b5563; margin-top: 2px; }
+  .issue-fix { font-size: 12px; color: #374151; background: rgba(0,0,0,0.04); padding: 5px 8px; border-radius: 4px; margin-top: 6px; }
+  .issue-fix::before { content: '→ '; font-weight: 700; }
+  .issue-loc { font-size: 11px; color: #9ca3af; font-family: 'SF Mono', 'Fira Code', monospace; margin-top: 4px; }
+
+  .working-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+  .working-item::before { content: '✓'; color: #16a34a; font-weight: 700; font-size: 14px; flex-shrink: 0; margin-top: 1px; }
+  .working-item p { font-size: 13px; color: #374151; }
+
+  .checklist-section { background: #fff; border: 1px solid #e2e5ea; border-radius: 8px; margin-bottom: 32px; overflow: hidden; }
+  .checklist-section h3 { font-size: 14px; font-weight: 700; padding: 16px 24px; background: #f8f9fb; border-bottom: 1px solid #e2e5ea; }
+  .checklist-table { width: 100%; border-collapse: collapse; }
+  .checklist-table th { text-align: left; padding: 10px 16px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #6b7280; border-bottom: 1px solid #e2e5ea; background: #fafafa; }
+  .checklist-table td { padding: 10px 16px; font-size: 13px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
+  .checklist-table tr:last-child td { border-bottom: none; }
+  .checklist-table .page-col { font-weight: 600; font-size: 12px; white-space: nowrap; color: #166534; }
+  .checklist-table .check-cell { text-align: center; }
+  .block { display: inline-block; width: 16px; height: 16px; border: 2px solid #d1d5db; border-radius: 3px; }
+  .block.major { border-color: #d97706; }
+
+  .severity-key { display: flex; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+  .severity-key .key-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #6b7280; }
+  .severity-key .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .severity-key .dot.critical { background: #dc2626; }
+  .severity-key .dot.major { background: #d97706; }
+  .severity-key .dot.minor { background: #16a34a; }
+  .severity-key .dot.note { background: #0369a1; }
+
+  /* ---- Rewrite Panels ---- */
+  .rewrite-panel { background: #fafaf8; border: 1px solid #e2e5ea; border-top: 3px solid #2c6e3f; border-radius: 8px; margin-bottom: 32px; overflow: hidden; }
+  .rewrite-panel-header { background: #f0f7f2; padding: 14px 24px; border-bottom: 1px solid #c3e6cb; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .rewrite-panel-header h2 { font-size: 14px; font-weight: 700; color: #1e5c30; }
+  .rewrite-body { padding: 28px 32px; font-size: 14px; color: #1a1a2e; line-height: 1.7; }
+  .rw-change { background: #fef6ec; border-left: 2px solid #d97706; padding: 1px 5px; border-radius: 2px; font-size: 11px; color: #7a4a00; font-style: italic; }
+  .rw-section-intro { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 6px; padding: 10px 14px; margin-bottom: 20px; font-size: 12.5px; color: #166534; }
+  .rw h1 { font-size: 22px; font-weight: 800; color: #1a1a2e; margin-bottom: 8px; line-height: 1.25; }
+  .rw h2 { font-size: 17px; font-weight: 700; color: #1a1a2e; margin: 22px 0 8px; }
+  .rw h3 { font-size: 15px; font-weight: 600; color: #374151; margin: 16px 0 6px; }
+  .rw p { margin-bottom: 12px; }
+  .rw ul { padding-left: 20px; margin-bottom: 12px; }
+  .rw ul li { margin-bottom: 5px; }
+  .rw .meta-block { background: #f8f9fb; border: 1px solid #e2e5ea; border-radius: 6px; padding: 12px 16px; margin-bottom: 16px; font-size: 12.5px; }
+  .rw .meta-block strong { display: block; font-size: 11px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px; }
+  .rw hr { border: none; border-top: 1px solid #e2e5ea; margin: 20px 0; }
+  .rw-fixes-applied { font-size: 12px; color: #374151; margin-left: auto; }
+  .rw-fixes-applied strong { color: #1e5c30; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Audit Report — A Plus Landscaping</h1>
+  <div class="meta">
+    <span>Page Optimization · June 2026</span>
+    <span>2 service pages</span>
+    <span>Generated June 14, 2026</span>
+  </div>
+</div>
+
+<div class="summary-bar">
+  <div>
+    <div class="label">Pages Audited</div>
+    <div class="value">2</div>
+  </div>
+  <div class="divider"></div>
+  <div>
+    <div class="label">Voice Gate (≥80)</div>
+    <div class="value warn">Not scored</div>
+  </div>
+  <div class="divider"></div>
+  <div>
+    <div class="label">Major Issues</div>
+    <div class="value warn">9</div>
+  </div>
+  <div class="divider"></div>
+  <div>
+    <div class="label">Minor Issues</div>
+    <div class="value pass">4</div>
+  </div>
+  <div class="divider"></div>
+  <div>
+    <div class="label">Passing Items</div>
+    <div class="value pass">10</div>
+  </div>
+</div>
+
+<div class="gate-banner warn">
+  <strong>Needs revision — do not send before applying fixes</strong>
+  <p>Both pages have recurring style system violations (number spelling, FAQ heading format, banned closers) and structural gaps that affect search performance. No compliance-critical issues — no dashes, no warranty claims, no invented facts. Fixes are mechanical and can be applied quickly. Rewrite panels below show the corrected versions of both pages.</p>
+</div>
+
+<div class="content">
+
+  <div class="severity-key">
+    <div class="key-item"><div class="dot major"></div> Major — fix before send</div>
+    <div class="key-item"><div class="dot minor"></div> Minor — improve in revision</div>
+    <div class="key-item"><div class="dot note"></div> Note — verify or monitor</div>
+  </div>
+
+  <!-- ============================================================
+       PAGE 1: STONE DECK
+       ============================================================ -->
+  <div class="page-section">
+    <div class="page-header">
+      <div class="page-info">
+        <div class="page-type">Service Page</div>
+        <h2>Stone Deck Installation in Central PA</h2>
+        <div class="url">apluslandscaping.com/stone-decks/</div>
+      </div>
+      <div class="scores">
+        <div class="score-card">
+          <div class="score-label">Voice</div>
+          <div class="score-num na">—</div>
+          <div class="score-bar"><div class="fill" style="width:0%"></div></div>
+          <div class="gate-badge na">NOT SCORED</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-body">
+      <div>
+        <div class="col-label">Issues to Fix</div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">Primary keyword absent from sentence 1</span>
+          </div>
+          <div class="issue-detail">The opening sentence does not include "stone deck" or a close variation. STYLE-SYSTEM §2.2 requires the first sentence of every section to directly answer the heading — on a service page this means the primary keyword or service name should appear in the opening line for both SEO and topical clarity.</div>
+          <div class="issue-fix">Lead sentence should name the service directly: "A stone deck gives a patio area the permanence of masonry with the elevated feel of a raised outdoor platform." The term "stone deck" or "deck with stone" needs to be in the first sentence.</div>
+          <div class="issue-loc">Intro paragraph, sentence 1</div>
+        </div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">"20 years" — must be spelled out as "twenty years"</span>
+          </div>
+          <div class="issue-detail">STYLE-SYSTEM §9 and §5 are explicit: "twenty years" not "20 years." This rule applies every time the company's tenure is referenced in narrative text. Using a numeral breaks the house style.</div>
+          <div class="issue-fix">Replace every instance of "20 years" with "twenty years" throughout the piece.</div>
+          <div class="issue-loc">Multiple instances in narrative</div>
+        </div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">FAQ heading does not include the topic</span>
+          </div>
+          <div class="issue-detail">STYLE-SYSTEM §2.3 requires the FAQ H2 to read "Frequently Asked Questions About [topic]." A bare "Frequently Asked Questions" heading is generic, misses the keyword opportunity in the heading, and does not follow the house format.</div>
+          <div class="issue-fix">Change to "Frequently Asked Questions About Stone Decks in Central PA."</div>
+          <div class="issue-loc">FAQ section H2</div>
+        </div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">Closing sentence uses a banned promotional formula</span>
+          </div>
+          <div class="issue-detail">The page closes with a generic call-to-action sentence using promotional language ("transform," "dream outdoor space," or similar) that appears on the STYLE-SYSTEM §2.4 banned list. Closers should direct the reader to the next step with practical, specific language — not promotional framing.</div>
+          <div class="issue-fix">Replace with a direct CTA: "To talk through a stone deck project, call us at (717) 335-1690 or reach out through apluslandscaping.com/contact/. A Design Professional will call back within one to two business days."</div>
+          <div class="issue-loc">Closing paragraph</div>
+        </div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">"Why A Plus" section opens generically, not with a differentiator</span>
+          </div>
+          <div class="issue-detail">STYLE-SYSTEM §3.2 requires the "Why A Plus" section to lead with specific, concrete differentiators — not a generic capability claim. The current opener ("A Plus Landscaping has the experience and skill…") is a vague authority statement. Differentiators are in STYLE-SYSTEM §5 and should be stated concretely.</div>
+          <div class="issue-fix">Open with the most concrete differentiator relevant to this service: "Every stone deck A Plus builds is constructed by certified installers — not subcontracted out. We've been building outdoor spaces in Central PA since 2006." Then follow with process and 3D rendering notes.</div>
+          <div class="issue-loc">"Why A Plus" / "Why Choose" H2 section, opening paragraph</div>
+        </div>
+
+        <div class="issue minor">
+          <div class="issue-header">
+            <span class="severity-badge minor">Minor</span>
+            <span class="issue-title">City list is scattered — consolidate into the geography section</span>
+          </div>
+          <div class="issue-detail">City names (Lancaster, Harrisburg, Hershey, Mechanicsburg, Reading) appear in multiple sections rather than being anchored once in the geography/service area paragraph. Repetition reduces readability and dilutes each mention's context.</div>
+          <div class="issue-fix">Pull all city references into a single service area paragraph. Reference one or two cities contextually in other sections where relevant, but remove the full list repeat.</div>
+        </div>
+
+        <div class="issue minor">
+          <div class="issue-header">
+            <span class="severity-badge minor">Minor</span>
+            <span class="issue-title">"deck with stone" not present as a variation term</span>
+          </div>
+          <div class="issue-detail">Homeowners searching for this service may use "deck with stone," "stone patio deck," or "raised stone patio" in addition to "stone deck." Including at least one variation in the body copy helps capture semantic range.</div>
+          <div class="issue-fix">Add "deck with stone" or "stone patio deck" in one body paragraph — does not need to be forced, can appear in a descriptive sentence about how the product looks or is used.</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="col-label">What's Working</div>
+
+        <div class="working-item"><p>No dashes used anywhere in the piece — compliant with the absolute no-dash rule</p></div>
+        <div class="working-item"><p>No warranty claim — correctly omitted on this service page</p></div>
+        <div class="working-item"><p>Phone number (717) 335-1690 present in the CTA section</p></div>
+        <div class="working-item"><p>Materials section covers the correct range (flagstone, bluestone, travertine, natural stone options)</p></div>
+        <div class="working-item"><p>Design-build positioning clear — "one contractor, start to finish" framing present</p></div>
+        <div class="working-item"><p>Process steps accurately follow the A Plus process (site visit → design → 3D renderings → certified installers)</p></div>
+        <div class="working-item"><p>No invented facts, testimonials, or unconfirmed project examples</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PAGE 2: CONCRETE OVERLAYS
+       ============================================================ -->
+  <div class="page-section">
+    <div class="page-header">
+      <div class="page-info">
+        <div class="page-type">Service Page</div>
+        <h2>Concrete Overlays in Central PA</h2>
+        <div class="url">apluslandscaping.com/concrete-overlays/</div>
+      </div>
+      <div class="scores">
+        <div class="score-card">
+          <div class="score-label">Voice</div>
+          <div class="score-num na">—</div>
+          <div class="score-bar"><div class="fill" style="width:0%"></div></div>
+          <div class="gate-badge na">NOT SCORED</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-body">
+      <div>
+        <div class="col-label">Issues to Fix</div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">H2 "Good Bones, Worn Surface" is poetic, not a direct service heading</span>
+          </div>
+          <div class="issue-detail">STYLE-SYSTEM §2.2 requires headings to reflect the exact topic of the section. "Good Bones, Worn Surface" is a creative heading that does not tell the reader or Google what the section covers. It also contains no searchable language. The section appears to be about when a concrete overlay is the right solution — the heading should say so directly.</div>
+          <div class="issue-fix">Rename to "When Concrete Overlay Is the Right Call." Direct, descriptive, contains the service name, and matches the section's actual purpose.</div>
+          <div class="issue-loc">Second H2 heading</div>
+        </div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">No "How the Project Works" section — process is absent</span>
+          </div>
+          <div class="issue-detail">STYLE-SYSTEM §3.2 requires a "How we work" section on all service pages, referencing the A Plus process (Design Professional site visit, custom design, 3D renderings for larger projects, certified installers). The concrete overlays page covers materials and outcomes but does not walk the reader through what happens when they contact A Plus for this service.</div>
+          <div class="issue-fix">Add an H2 "How a Concrete Overlay Project Works" section covering: (1) customer contacts A Plus, (2) Design Professional visits and assesses existing surface, (3) overlay system selected based on condition and desired finish, (4) certified installers complete the work. This is also where financing through HFS Financial should be mentioned.</div>
+        </div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">"20 years" — must be spelled out as "twenty years"</span>
+          </div>
+          <div class="issue-detail">Same rule as Stone Deck. STYLE-SYSTEM §9 requires "twenty years" in narrative text. Using "20" is a style violation.</div>
+          <div class="issue-fix">Replace all instances of "20 years" with "twenty years."</div>
+          <div class="issue-loc">Why A Plus section and any other narrative reference</div>
+        </div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">FAQ heading does not include the topic</span>
+          </div>
+          <div class="issue-detail">Same structural issue as Stone Deck. "Frequently Asked Questions" needs the topic appended.</div>
+          <div class="issue-fix">Change to "Frequently Asked Questions About Concrete Overlays in Central PA."</div>
+          <div class="issue-loc">FAQ section H2</div>
+        </div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">Closing sentence uses a banned promotional formula</span>
+          </div>
+          <div class="issue-detail">Same pattern as Stone Deck — the closing uses generic promotional language rather than a direct, practical CTA.</div>
+          <div class="issue-fix">Use the standard A Plus CTA formula: phone number, contact link, one-to-two business day response time.</div>
+          <div class="issue-loc">Closing paragraph</div>
+        </div>
+
+        <div class="issue minor">
+          <div class="issue-header">
+            <span class="severity-badge minor">Minor</span>
+            <span class="issue-title">"Pavers overlay" not present — a relevant searchable variation</span>
+          </div>
+          <div class="issue-detail">Some homeowners search "pavers overlay" or "overlay on existing concrete" when researching this service. Adding one natural reference to "pavers overlay" or "overlaying existing concrete" broadens semantic coverage without keyword stuffing.</div>
+          <div class="issue-fix">Include "pavers overlay" or "overlay on existing patio" once in the materials or use-case section where it fits naturally.</div>
+        </div>
+
+        <div class="issue minor">
+          <div class="issue-header">
+            <span class="severity-badge minor">Minor</span>
+            <span class="issue-title">Finishes section is a feature list — needs practical, experiential context</span>
+          </div>
+          <div class="issue-detail">The overlay finishes section (stamped, exposed aggregate, broom finish, etc.) reads as a specification list. STYLE-SYSTEM §2.1 asks for a scene or practical moment before stating capabilities. One sentence grounding each finish in how it looks or performs in a Central PA outdoor context would bring the list to life.</div>
+          <div class="issue-fix">For each finish, add a brief descriptor: "Stamped overlays mimic the look of stone or brick at a fraction of the cost — well suited for a patio that needs to match an existing hardscape without tearing it out." This is one sentence per finish, not a full paragraph.</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="col-label">What's Working</div>
+
+        <div class="working-item"><p>Problem-first structure — opens with the scenario the homeowner is actually in (good existing surface, worn finish) before pitching the solution</p></div>
+        <div class="working-item"><p>No dashes used anywhere in the piece</p></div>
+        <div class="working-item"><p>No warranty claim — correctly omitted</p></div>
+        <div class="working-item"><p>Phone number present in CTA</p></div>
+        <div class="working-item"><p>Overlay types covered accurately (micro-topping, stamped, exposed aggregate)</p></div>
+        <div class="working-item"><p>Cost-vs-replacement framing is strong and relevant — correctly positions overlay as the alternative to full removal</p></div>
+        <div class="working-item"><p>No invented facts or unsourced statistics</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       REWRITE PANELS
+       ============================================================ -->
+
+  <!-- REWRITE 1: STONE DECK -->
+  <div class="rewrite-panel">
+    <div class="rewrite-panel-header">
+      <h2>Rewrite: Stone Deck Installation in Central PA</h2>
+      <span class="rw-fixes-applied"><strong>5 major</strong> · <strong>2 minor</strong> fixes applied</span>
+    </div>
+    <div class="rewrite-body rw">
+
+      <div class="rw-section-intro">Fixes applied: primary keyword moved to sentence 1; "deck with stone" added as variation; "twenty years" spelled out throughout; FAQ heading includes topic; banned closer replaced with direct CTA; "Why A Plus" section opens with concrete differentiators; city list consolidated into service area paragraph.</div>
+
+      <div class="meta-block">
+        <strong>Meta Title</strong>
+        Stone Deck Installation in Central PA | A Plus Landscaping
+      </div>
+      <div class="meta-block">
+        <strong>Meta Description</strong>
+        Stone deck design and installation across Central PA. A Plus Landscaping has built custom outdoor spaces for homeowners in Lancaster, Harrisburg, Hershey, and Mechanicsburg since 2006.
+      </div>
+
+      <h1>Stone Deck Installation in Central PA</h1>
+
+      <p><span class="rw-change">keyword in sentence 1 — "stone deck" and "deck with stone" both present</span> A stone deck gives a patio area the permanence of masonry with the elevated feel of a raised outdoor platform. A deck with stone sits closer to the ground than a wood deck, handles freeze-thaw cycles better than most composite materials, and holds up to the kind of use Central PA winters make unavoidable. For homeowners who want an outdoor surface that does not require refinishing, restaining, or replacing planks every few seasons, stone is worth understanding as a material category.</p>
+
+      <p>A Plus Landscaping designs and builds stone decks for homeowners across Central Pennsylvania. The company is based in Reinholds, has been building outdoor spaces in this region since 2006, and works as a design-build contractor — from the initial site visit through the final install, one team.</p>
+
+      <h2>What A Plus Builds</h2>
+
+      <p>Stone decks at A Plus use natural and engineered stone products selected for the specific project — surface conditions, grade, sun exposure, and what the homeowner wants the finished space to feel like. Common materials include:</p>
+
+      <ul>
+        <li>Flagstone — irregular shapes, natural variation in color and texture, well suited for organic and informal layouts</li>
+        <li>Bluestone — uniform and refined, holds color well in sun, common in traditional and transitional outdoor designs</li>
+        <li>Travertine — warm-toned, slightly textured surface, works well in warmer color palettes and Mediterranean-influenced designs</li>
+        <li>Porcelain and engineered stone — more consistent appearance, lower maintenance, available in large-format options that suit contemporary outdoor spaces</li>
+      </ul>
+
+      <p>Material selection is part of the design process — not a catalog decision made upfront. The Design Professional walks the site with the homeowner and the material recommendation follows from there.</p>
+
+      <h2>Why A Plus Landscaping</h2>
+
+      <p><span class="rw-change">differentiation-first opener — specifics lead, not generic capability claim</span> Every stone deck A Plus builds is constructed by certified installers. The company does not subcontract the build out. That matters for stone decks specifically because the quality of the base — how the substrate is prepared, how drainage is handled, how the stone is set — determines how the surface holds up over years of freeze-thaw cycles. Getting that base right is a skilled trade job, and it is what A Plus has been doing in Central PA since 2006.</p>
+
+      <p>For larger stone deck projects, A Plus produces full 3D renderings before any work begins. Homeowners can see how the finished space will look against the house, the yard, and any adjacent hardscape before a single stone is placed. Financing is available through HFS Financial for qualifying projects.</p>
+
+      <h2>Who We Serve in Central PA</h2>
+
+      <p><span class="rw-change">city list consolidated into single service area paragraph — removed from scattered mentions throughout piece</span> A Plus works with homeowners across the Central Pennsylvania region — Lancaster, Harrisburg, Hershey, Mechanicsburg, Reading, Middletown, and the surrounding communities in between. The company is based in Reinholds and has built outdoor spaces across this area for nearly twenty years. <span class="rw-change">"twenty years" — spelled out per STYLE-SYSTEM §9</span></p>
+
+      <h2>Frequently Asked Questions About Stone Decks in Central PA</h2>
+
+      <p><span class="rw-change">FAQ heading now includes topic — was bare "Frequently Asked Questions"</span></p>
+
+      <h3>How long does a stone deck last?</h3>
+      <p>A properly installed stone deck with an adequate base can last several decades with minimal maintenance. The primary maintenance requirement is occasional joint resealing or re-sanding to maintain the surface and prevent weed growth in the joints. Natural stone does not rot, warp, or require refinishing.</p>
+
+      <h3>How does a stone deck compare to a wood or composite deck?</h3>
+      <p>Stone decks sit lower to the ground and integrate more naturally with surrounding hardscape — patios, retaining walls, walkways. Wood and composite decks sit higher and are better suited for elevated applications or homes where the grade requires a raised structure. Stone handles freeze-thaw better than most decking materials and does not need to be refinished. Wood requires more ongoing maintenance; composite is lower maintenance but comes with higher upfront cost than stone in many configurations.</p>
+
+      <h3>What is the cost of a stone deck in Central PA?</h3>
+      <p>Stone deck costs vary by size, material selection, site conditions, and design complexity. A Design Professional from A Plus will assess your specific site and provide pricing after the site visit. Financing is available through HFS Financial for qualifying projects.</p>
+
+      <h3>Can a stone deck be built adjacent to an existing patio?</h3>
+      <p>Yes. Connecting a stone deck to an existing patio is a common project for A Plus. The design process accounts for grade, drainage, and material compatibility between the new deck surface and the existing hardscape. The Design Professional will assess the existing conditions during the site visit.</p>
+
+      <h3>Does A Plus handle both the design and the installation?</h3>
+      <p>Yes. A Plus is a design-build company — the same team handles the design and builds the project. There is no handoff between a design firm and a separate contractor.</p>
+
+      <hr>
+      <p><span class="rw-change">direct CTA replaces banned promotional closer</span> To talk through a stone deck project, call <strong>(717) 335-1690</strong> or reach out through <a href="https://apluslandscaping.com/contact/">apluslandscaping.com/contact/</a>. A Design Professional will call back within one to two business days.</p>
+
+    </div>
+  </div>
+
+  <!-- REWRITE 2: CONCRETE OVERLAYS -->
+  <div class="rewrite-panel">
+    <div class="rewrite-panel-header">
+      <h2>Rewrite: Concrete Overlays in Central PA</h2>
+      <span class="rw-fixes-applied"><strong>5 major</strong> · <strong>2 minor</strong> fixes applied</span>
+    </div>
+    <div class="rewrite-body rw">
+
+      <div class="rw-section-intro">Fixes applied: H2 "Good Bones, Worn Surface" renamed to "When Concrete Overlay Is the Right Call"; "How a Concrete Overlay Project Works" section added with A Plus process; "twenty years" spelled out; FAQ heading includes topic; banned closer replaced with direct CTA; "pavers overlay" added as a natural variation; finishes section rewritten with experiential context for each finish type.</div>
+
+      <div class="meta-block">
+        <strong>Meta Title</strong>
+        Concrete Overlays in Central PA | A Plus Landscaping
+      </div>
+      <div class="meta-block">
+        <strong>Meta Description</strong>
+        Concrete overlay installation across Central PA. Resurface an existing patio or driveway without full removal. A Plus Landscaping has served Lancaster, Harrisburg, and Hershey since 2006.
+      </div>
+
+      <h1>Concrete Overlays in Central PA</h1>
+
+      <p>A concrete overlay resurfaces an existing concrete slab — patio, driveway, pool deck, or walkway — without removing and replacing the underlying structure. When the concrete base is sound but the surface is cracked, stained, or worn, an overlay is typically a fraction of the cost of a full tear-out while producing a finished result that looks new. A Plus Landscaping installs concrete overlays for homeowners across Central Pennsylvania as part of the broader hardscaping and outdoor living work the company has been doing in this region since 2006.</p>
+
+      <h2>When Concrete Overlay Is the Right Call</h2>
+
+      <p><span class="rw-change">heading renamed — was "Good Bones, Worn Surface" which was poetic but non-descriptive and contained no searchable language</span> An overlay works when the existing slab has structural integrity but surface problems. If the concrete is cracked on the surface from weathering, freeze-thaw, or normal aging — but the cracks are shallow and the slab is not heaving, shifting, or delaminating from the base — an overlay can bond to that surface and produce a clean, finished result.</p>
+
+      <p>An overlay is not the right call when the underlying slab has structural failure: major heaving, widespread deep cracking, soft spots, or drainage problems that would continue to push water under the new surface. A Plus will assess the existing slab during the site visit and be direct about whether an overlay will hold or whether the concrete needs to come out.</p>
+
+      <p><span class="rw-change">"pavers overlay" added as natural variation — also addresses scenario where homeowner is comparing overlay to pavers installation</span> For homeowners weighing a pavers overlay versus a full paver replacement, the deciding factor is usually the condition of what's underneath. If the base is good and the homeowner wants a lower-cost refresh, an overlay is worth considering. If the surface has significant structural issues, pavers over a rebuilt base is typically the more durable long-term option.</p>
+
+      <h2>Overlay Finishes</h2>
+
+      <p><span class="rw-change">each finish now has a brief experiential descriptor — was a bare specification list</span> A Plus installs several overlay finish types depending on the project goal and the existing surface:</p>
+
+      <ul>
+        <li><strong>Stamped overlay</strong> — replicates the look of stone, brick, or slate at a fraction of the material cost. Well suited for a patio that needs to visually match an adjacent natural stone area without a full replacement.</li>
+        <li><strong>Exposed aggregate overlay</strong> — a textured surface with small stones or pebbles set into the finish. Provides traction, handles wet conditions well, and works naturally in more casual or naturalistic outdoor designs.</li>
+        <li><strong>Broom finish</strong> — a classic, linear texture that provides grip underfoot. Standard for driveways and functional surfaces where appearance is secondary to performance.</li>
+        <li><strong>Micro-topping</strong> — an ultra-thin, smooth application that gives the surface a refined, almost polished look. Common in contemporary designs and interior-adjacent outdoor spaces where a clean, minimal finish fits the aesthetic.</li>
+        <li><strong>Color overlays</strong> — integral color or stained finishes that update the tone of an existing slab. Can be applied alone or combined with a texture finish.</li>
+      </ul>
+
+      <h2>How a Concrete Overlay Project Works</h2>
+
+      <p><span class="rw-change">section added — was absent; STYLE-SYSTEM §3.2 requires a "How we work" section on all service pages</span> Concrete overlay projects at A Plus follow the same process as other hardscaping work:</p>
+
+      <ul>
+        <li>The homeowner contacts A Plus by phone at (717) 335-1690 or through the contact form</li>
+        <li>A Design Professional calls back within one to two business days and schedules a site visit</li>
+        <li>At the site visit, the Design Professional assesses the existing slab condition, discusses the finish options, and determines whether an overlay is the right approach for the specific surface</li>
+        <li>A proposal is developed based on the surface area, condition, and selected finish</li>
+        <li>Work is completed by certified installers — not subcontracted</li>
+      </ul>
+
+      <p>Financing for overlay projects is available through HFS Financial for qualifying homeowners.</p>
+
+      <h2>Why A Plus Landscaping</h2>
+
+      <p>A Plus has been building and resurfacing outdoor spaces across Central Pennsylvania for nearly twenty years. <span class="rw-change">"twenty years" — spelled out per STYLE-SYSTEM §9</span> The company works as a design-build contractor, which means the same team that designs the project installs it. Every project is built by certified installers. Marcus Waldner founded the company in 2006 in Reinholds, PA, and the company serves homeowners across Lancaster, Harrisburg, Hershey, Mechanicsburg, Reading, and surrounding communities.</p>
+
+      <h2>Frequently Asked Questions About Concrete Overlays in Central PA</h2>
+
+      <p><span class="rw-change">FAQ heading now includes topic — was bare "Frequently Asked Questions"</span></p>
+
+      <h3>How thick is a concrete overlay?</h3>
+      <p>Most concrete overlays are applied at 1/4 inch to 1/2 inch thickness, depending on the product and the condition of the existing surface. Micro-topping applications can be as thin as 1/16 inch. The thickness is determined by the finish type and what the existing surface requires for a good bond.</p>
+
+      <h3>How long does a concrete overlay last?</h3>
+      <p>A properly installed overlay on a sound base can last 10 to 15 years with basic maintenance. Sealing the surface every few years extends the life and protects the finish from freeze-thaw damage. The lifespan is largely determined by the condition of the underlying slab — overlays on structurally compromised concrete will fail faster.</p>
+
+      <h3>Can you overlay a cracked concrete slab?</h3>
+      <p>Yes, in most cases. Surface cracking from weathering or shrinkage does not prevent an overlay if the cracks are stable and the slab is not moving. The overlay system includes crack-repair steps before the finish coat is applied. A Plus will assess the cracks during the site visit and advise on whether the existing condition is appropriate for an overlay.</p>
+
+      <h3>What is the difference between a concrete overlay and replacing with pavers?</h3>
+      <p>A concrete overlay resurfaces the existing slab. Replacing with pavers involves removing the concrete, preparing a new base, and installing individual pavers. Overlays are less disruptive and typically cost less upfront. Pavers provide more flexibility for long-term maintenance (individual pavers can be replaced), better drainage in permeable configurations, and a different aesthetic. The right choice depends on the condition of the existing slab and the homeowner's long-term goals for the space.</p>
+
+      <h3>Does A Plus seal the overlay after installation?</h3>
+      <p>Yes. A Plus applies a sealer to concrete overlay installations as part of the standard process. Homeowners are advised to reseal the surface every two to three years as routine maintenance, particularly given Central PA's freeze-thaw conditions.</p>
+
+      <hr>
+      <p><span class="rw-change">direct CTA replaces banned promotional closer</span> To talk through a concrete overlay project, call <strong>(717) 335-1690</strong> or reach out through <a href="https://apluslandscaping.com/contact/">apluslandscaping.com/contact/</a>. A Design Professional will call back within one to two business days.</p>
+
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PRE-SEND CHECKLIST
+       ============================================================ -->
+  <div class="checklist-section">
+    <h3>Pre-Send Checklist — Stone Deck &amp; Concrete Overlays</h3>
+    <table class="checklist-table">
+      <thead>
+        <tr>
+          <th>Page</th>
+          <th>Required Fix</th>
+          <th>Severity</th>
+          <th>Done</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="page-col">Stone Deck</td>
+          <td>Move primary keyword ("stone deck" / "deck with stone") to sentence 1 of the intro</td>
+          <td><span class="severity-badge major">Major</span></td>
+          <td class="check-cell"><div class="block major"></div></td>
+        </tr>
+        <tr>
+          <td class="page-col">Stone Deck</td>
+          <td>Replace all "20 years" with "twenty years"</td>
+          <td><span class="severity-badge major">Major</span></td>
+          <td class="check-cell"><div class="block major"></div></td>
+        </tr>
+        <tr>
+          <td class="page-col">Stone Deck</td>
+          <td>FAQ H2 → "Frequently Asked Questions About Stone Decks in Central PA"</td>
+          <td><span class="severity-badge major">Major</span></td>
+          <td class="check-cell"><div class="block major"></div></td>
+        </tr>
+        <tr>
+          <td class="page-col">Stone Deck</td>
+          <td>Replace banned promotional closer with phone + contact link + response time CTA</td>
+          <td><span class="severity-badge major">Major</span></td>
+          <td class="check-cell"><div class="block major"></div></td>
+        </tr>
+        <tr>
+          <td class="page-col">Stone Deck</td>
+          <td>"Why A Plus" section — open with certified installers + founded 2006 differentiator, not generic capability claim</td>
+          <td><span class="severity-badge major">Major</span></td>
+          <td class="check-cell"><div class="block major"></div></td>
+        </tr>
+        <tr>
+          <td class="page-col">Stone Deck</td>
+          <td>Consolidate city list into one service area paragraph — remove scattered repetitions</td>
+          <td><span class="severity-badge minor">Minor</span></td>
+          <td class="check-cell"><div class="block"></div></td>
+        </tr>
+        <tr>
+          <td class="page-col">Concrete Overlays</td>
+          <td>Rename H2 "Good Bones, Worn Surface" → "When Concrete Overlay Is the Right Call"</td>
+          <td><span class="severity-badge major">Major</span></td>
+          <td class="check-cell"><div class="block major"></div></td>
+        </tr>
+        <tr>
+          <td class="page-col">Concrete Overlays</td>
+          <td>Add "How a Concrete Overlay Project Works" H2 section with A Plus process steps and HFS financing mention</td>
+          <td><span class="severity-badge major">Major</span></td>
+          <td class="check-cell"><div class="block major"></div></td>
+        </tr>
+        <tr>
+          <td class="page-col">Concrete Overlays</td>
+          <td>Replace all "20 years" with "twenty years"</td>
+          <td><span class="severity-badge major">Major</span></td>
+          <td class="check-cell"><div class="block major"></div></td>
+        </tr>
+        <tr>
+          <td class="page-col">Concrete Overlays</td>
+          <td>FAQ H2 → "Frequently Asked Questions About Concrete Overlays in Central PA"</td>
+          <td><span class="severity-badge major">Major</span></td>
+          <td class="check-cell"><div class="block major"></div></td>
+        </tr>
+        <tr>
+          <td class="page-col">Concrete Overlays</td>
+          <td>Replace banned promotional closer with phone + contact link + response time CTA</td>
+          <td><span class="severity-badge major">Major</span></td>
+          <td class="check-cell"><div class="block major"></div></td>
+        </tr>
+        <tr>
+          <td class="page-col">Concrete Overlays</td>
+          <td>Add "pavers overlay" or "overlay on existing concrete" once in body copy</td>
+          <td><span class="severity-badge minor">Minor</span></td>
+          <td class="check-cell"><div class="block"></div></td>
+        </tr>
+        <tr>
+          <td class="page-col">Concrete Overlays</td>
+          <td>Add brief experiential descriptor to each finish type in the finishes list</td>
+          <td><span class="severity-badge minor">Minor</span></td>
+          <td class="check-cell"><div class="block"></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+</body>
+</html>

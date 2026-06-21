@@ -1,7 +1,7 @@
 {
   "client": "a-plus-landscaping",
   "scope": "client",
-  "generatedAt": "2026-06-16T20:58:52",
+  "generatedAt": "2026-06-21T22:56:17",
   "totalFiles": 3,
   "entries": [
     {
@@ -15,7 +15,7 @@
       "path": "STYLE-SYSTEM.md",
       "sizeBytes": 14107,
       "sizeHuman": "13.8 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "client-overview",
@@ -28,7 +28,7 @@
       "path": "raw/knowledge/client-overview.md",
       "sizeBytes": 2789,
       "sizeHuman": "2.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "content-agent-brief",
@@ -41,7 +41,7 @@
       "path": "raw/knowledge/content-agent-brief.md",
       "sizeBytes": 2432,
       "sizeHuman": "2.4 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     }
   ]
 }

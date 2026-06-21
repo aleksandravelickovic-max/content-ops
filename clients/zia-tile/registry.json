@@ -1,7 +1,7 @@
 {
   "client": "zia-tile",
   "scope": "client",
-  "generatedAt": "2026-06-16T20:58:52",
+  "generatedAt": "2026-06-21T22:56:17",
   "totalFiles": 47,
   "entries": [
     {
@@ -15,7 +15,7 @@
       "path": "STYLE-SYSTEM.md",
       "sizeBytes": 49107,
       "sizeHuman": "48.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "clickup-channel-recap",
@@ -275,7 +275,7 @@
       "path": "raw/knowledge/collection-pages-manifest.json",
       "sizeBytes": 29678,
       "sizeHuman": "29.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "collection-pages-scan-results",
@@ -288,7 +288,7 @@
       "path": "raw/knowledge/collection-pages-scan-results.json",
       "sizeBytes": 48042,
       "sizeHuman": "46.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "colorway-temperature-reference",
@@ -301,7 +301,7 @@
       "path": "raw/knowledge/colorway-temperature-reference.md",
       "sizeBytes": 7165,
       "sizeHuman": "7.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "product-pages-deep-scan-v2",
@@ -314,7 +314,7 @@
       "path": "raw/knowledge/product-pages-deep-scan-v2.json",
       "sizeBytes": 139429,
       "sizeHuman": "136.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "product-pages-deep-scan",
@@ -327,7 +327,7 @@
       "path": "raw/knowledge/product-pages-deep-scan.json",
       "sizeBytes": 205599,
       "sizeHuman": "200.8 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "product-pages-manifest",
@@ -340,7 +340,7 @@
       "path": "raw/knowledge/product-pages-manifest.json",
       "sizeBytes": 57178,
       "sizeHuman": "55.8 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "product-pages-scan-results-v2",
@@ -353,7 +353,7 @@
       "path": "raw/knowledge/product-pages-scan-results-v2.json",
       "sizeBytes": 139717,
       "sizeHuman": "136.4 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "product-pages-scan-results",
@@ -366,7 +366,7 @@
       "path": "raw/knowledge/product-pages-scan-results.json",
       "sizeBytes": 130451,
       "sizeHuman": "127.4 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "zia-content-rules-and-error-log",
@@ -379,7 +379,7 @@
       "path": "raw/knowledge/zia-content-rules-and-error-log.md",
       "sizeBytes": 40364,
       "sizeHuman": "39.4 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "README",

@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audit Report — The Hope House Group — Page Optimization June 2026</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f4f5f7; color: #1a1a2e; font-size: 14px; line-height: 1.55; }
+
+  .header { background: #1a1a2e; color: #fff; padding: 32px 40px 28px; }
+  .header h1 { font-size: 22px; font-weight: 700; letter-spacing: -0.3px; }
+  .header .meta { margin-top: 6px; font-size: 13px; color: #8892a4; }
+  .header .meta span + span::before { content: ' · '; }
+
+  .summary-bar { background: #fff; border-bottom: 1px solid #e2e5ea; padding: 20px 40px; display: flex; gap: 32px; align-items: center; flex-wrap: wrap; }
+  .summary-bar .label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; color: #6b7280; margin-bottom: 2px; }
+  .summary-bar .value { font-size: 22px; font-weight: 700; }
+  .summary-bar .value.fail { color: #dc2626; }
+  .summary-bar .value.warn { color: #d97706; }
+  .summary-bar .value.pass { color: #16a34a; }
+  .summary-bar .divider { width: 1px; background: #e2e5ea; height: 40px; }
+
+  .gate-fail-banner { background: #fff1f2; border-left: 4px solid #dc2626; margin: 24px 40px 0; padding: 14px 18px; border-radius: 0 6px 6px 0; }
+  .gate-fail-banner strong { color: #b91c1c; font-size: 13px; }
+  .gate-fail-banner p { font-size: 13px; color: #7f1d1d; margin-top: 4px; }
+
+  .content { padding: 28px 40px; }
+
+  .page-section { background: #fff; border: 1px solid #e2e5ea; border-radius: 8px; margin-bottom: 32px; overflow: hidden; }
+  .page-header { padding: 20px 24px 16px; border-bottom: 1px solid #e2e5ea; display: flex; align-items: flex-start; gap: 20px; }
+  .page-header .page-info { flex: 1; }
+  .page-header h2 { font-size: 16px; font-weight: 700; color: #1a1a2e; }
+  .page-header .url { font-size: 12px; color: #6b7280; margin-top: 3px; font-family: 'SF Mono', 'Fira Code', monospace; }
+  .page-header .entity-tag { display: inline-block; background: #ede9fe; color: #5b21b6; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 12px; text-transform: uppercase; letter-spacing: 0.4px; margin-top: 6px; }
+
+  .scores { display: flex; gap: 16px; flex-shrink: 0; }
+  .score-card { text-align: center; min-width: 80px; }
+  .score-card .score-label { font-size: 11px; font-weight: 600; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+  .score-card .score-num { font-size: 28px; font-weight: 800; line-height: 1; }
+  .score-card .score-num.fail { color: #dc2626; }
+  .score-card .score-num.warn { color: #d97706; }
+  .score-card .score-num.pass { color: #16a34a; }
+  .score-card .score-bar { width: 80px; height: 5px; background: #e5e7eb; border-radius: 3px; margin-top: 5px; overflow: hidden; }
+  .score-card .score-bar .fill { height: 100%; border-radius: 3px; }
+  .score-card .score-bar .fill.fail { background: #dc2626; }
+  .score-card .score-bar .fill.warn { background: #d97706; }
+  .score-card .score-bar .fill.pass { background: #16a34a; }
+  .score-card .gate-badge { font-size: 10px; font-weight: 700; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.4px; }
+  .score-card .gate-badge.fail { color: #dc2626; }
+  .score-card .gate-badge.pass { color: #16a34a; }
+  .score-card .gate-badge.na { color: #9ca3af; }
+
+  .page-body { padding: 20px 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media (max-width: 900px) { .page-body { grid-template-columns: 1fr; } }
+
+  .col-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: #6b7280; margin-bottom: 10px; }
+
+  .issue { border-radius: 6px; padding: 10px 12px; margin-bottom: 8px; border-left: 3px solid transparent; }
+  .issue.critical { background: #fff1f2; border-color: #dc2626; }
+  .issue.major { background: #fffbeb; border-color: #d97706; }
+  .issue.minor { background: #f0fdf4; border-color: #16a34a; }
+  .issue.note { background: #f0f9ff; border-color: #0369a1; }
+
+  .issue-header { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+  .severity-badge { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 1px 6px; border-radius: 10px; flex-shrink: 0; }
+  .severity-badge.critical { background: #fee2e2; color: #991b1b; }
+  .severity-badge.major { background: #fef3c7; color: #92400e; }
+  .severity-badge.minor { background: #dcfce7; color: #166534; }
+  .severity-badge.note { background: #e0f2fe; color: #075985; }
+
+  .issue-title { font-weight: 600; font-size: 13px; color: #1a1a2e; }
+  .issue-detail { font-size: 12.5px; color: #4b5563; margin-top: 2px; }
+  .issue-fix { font-size: 12px; color: #374151; background: rgba(0,0,0,0.04); padding: 5px 8px; border-radius: 4px; margin-top: 6px; }
+  .issue-fix::before { content: '→ '; font-weight: 700; }
+  .issue-loc { font-size: 11px; color: #9ca3af; font-family: 'SF Mono', 'Fira Code', monospace; margin-top: 4px; }
+
+  .working-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+  .working-item::before { content: '✓'; color: #16a34a; font-weight: 700; font-size: 14px; flex-shrink: 0; margin-top: 1px; }
+  .working-item p { font-size: 13px; color: #374151; }
+
+  .checklist-section { background: #fff; border: 1px solid #e2e5ea; border-radius: 8px; margin-bottom: 32px; overflow: hidden; }
+  .checklist-section h3 { font-size: 14px; font-weight: 700; padding: 16px 24px; background: #f8f9fb; border-bottom: 1px solid #e2e5ea; }
+  .checklist-table { width: 100%; border-collapse: collapse; }
+  .checklist-table th { text-align: left; padding: 10px 16px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #6b7280; border-bottom: 1px solid #e2e5ea; background: #fafafa; }
+  .checklist-table td { padding: 10px 16px; font-size: 13px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
+  .checklist-table tr:last-child td { border-bottom: none; }
+  .checklist-table .entity-col { font-weight: 600; color: #5b21b6; font-size: 12px; white-space: nowrap; }
+  .checklist-table .check-cell { text-align: center; }
+  .block { display: inline-block; width: 16px; height: 16px; border: 2px solid #d1d5db; border-radius: 3px; }
+  .block.critical { border-color: #dc2626; }
+
+  .compliance-callout { background: #fdf4ff; border: 1px solid #d8b4fe; border-radius: 6px; padding: 14px 18px; margin: 0 24px 20px; }
+  .compliance-callout strong { color: #6b21a8; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; display: block; margin-bottom: 6px; }
+  .compliance-callout ul { padding-left: 16px; font-size: 12.5px; color: #4b5563; }
+  .compliance-callout ul li { margin-bottom: 3px; }
+
+  .severity-key { display: flex; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+  .severity-key .key-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #6b7280; }
+  .severity-key .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .severity-key .dot.critical { background: #dc2626; }
+  .severity-key .dot.major { background: #d97706; }
+  .severity-key .dot.minor { background: #16a34a; }
+  .severity-key .dot.note { background: #0369a1; }
+
+  .section-divider { font-size: 13px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.6px; padding: 0 0 12px; border-bottom: 1px solid #e2e5ea; margin-bottom: 16px; }
+
+  /* Rewrite panel */
+  .rewrite-panel { background: #fafaf8; border: 1px solid #e2e5ea; border-top: 3px solid #2c6e3f; border-radius: 8px; margin-bottom: 32px; overflow: hidden; }
+  .rewrite-panel-header { background: #f0f7f2; padding: 14px 24px; border-bottom: 1px solid #c3e6cb; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .rewrite-panel-header h2 { font-size: 14px; font-weight: 700; color: #1e5c30; }
+  .rewrite-panel-header .rw-note { font-size: 12px; color: #4a8c5e; }
+  .rewrite-body { padding: 28px 32px; font-size: 14px; color: #1a1a2e; line-height: 1.7; }
+  .rewrite-body .rw-meta { background: #fff; border: 1px solid #e2e5ea; border-radius: 4px; padding: 12px 16px; margin-bottom: 24px; font-size: 13px; }
+  .rewrite-body .rw-meta-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #6b7280; margin-bottom: 3px; }
+  .rewrite-body .rw-meta-value { color: #1d4ed8; margin-bottom: 10px; }
+  .rewrite-body .rw-meta-value:last-child { margin-bottom: 0; }
+  .rewrite-body h1.rw { font-size: 20px; font-weight: 700; margin: 0 0 14px; }
+  .rewrite-body h2.rw { font-size: 15px; font-weight: 700; margin: 24px 0 8px; padding-top: 20px; border-top: 1px solid #e8e8e4; }
+  .rewrite-body h3.rw { font-size: 13px; font-weight: 700; margin: 14px 0 5px; color: #2c4a2e; }
+  .rewrite-body p.rw { margin-bottom: 12px; }
+  .rewrite-body ol.rw { padding-left: 20px; margin-bottom: 12px; }
+  .rewrite-body ol.rw li { margin-bottom: 5px; }
+  .rewrite-body ul.rw { padding-left: 20px; margin-bottom: 12px; }
+  .rewrite-body ul.rw li { margin-bottom: 4px; }
+  .rw-change { background: #fef6ec; border-left: 2px solid #d97706; padding: 1px 5px; border-radius: 2px; font-size: 11px; color: #7a4a00; font-style: italic; }
+  .rw-section-intro { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 6px; padding: 10px 14px; margin-bottom: 20px; font-size: 12.5px; color: #166534; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Audit Report — The Hope House Group</h1>
+  <div class="meta">
+    <span>Page Optimization · June 2026</span>
+    <span>4 entities · 4 pages</span>
+    <span>Generated June 14, 2026</span>
+  </div>
+</div>
+
+<div class="summary-bar">
+  <div>
+    <div class="label">Pages Audited</div>
+    <div class="value">4</div>
+  </div>
+  <div class="divider"></div>
+  <div>
+    <div class="label">Voice Gate (≥80)</div>
+    <div class="value fail">0 / 4 pass</div>
+  </div>
+  <div class="divider"></div>
+  <div>
+    <div class="label">Critical Violations</div>
+    <div class="value fail">20</div>
+  </div>
+  <div class="divider"></div>
+  <div>
+    <div class="label">Major Issues</div>
+    <div class="value warn">10</div>
+  </div>
+  <div class="divider"></div>
+  <div>
+    <div class="label">Passing Items</div>
+    <div class="value pass">14</div>
+  </div>
+</div>
+
+<div class="gate-fail-banner">
+  <strong>DO NOT SEND — All 4 pages require revision before client delivery</strong>
+  <p>Every page failed the voice gate (80/100 minimum). All 4 drafts contain critical compliance violations specific to behavioral health content: unconfirmed medications named, banned entity cross-referencing, wrong staff credentials, outcome guarantees, and in one case direct mispositioning of a clinic's scope of care. These are not style issues — they are factual and compliance errors that must be corrected before review.</p>
+</div>
+
+<div class="content">
+
+  <div class="severity-key">
+    <div class="key-item"><div class="dot critical"></div> Critical — must fix before send (compliance, factual, or gate failure)</div>
+    <div class="key-item"><div class="dot major"></div> Major — fix before send (structure, voice, SEO)</div>
+    <div class="key-item"><div class="dot minor"></div> Minor — improve in revision</div>
+    <div class="key-item"><div class="dot note"></div> Note — verify or monitor</div>
+  </div>
+
+  <!-- ============================================================
+       PAGE 1: SCOTTSDALE DETOX — ALCOHOL DETOX
+       ============================================================ -->
+  <div class="page-section">
+    <div class="page-header">
+      <div class="page-info">
+        <div class="entity-tag">Scottsdale Detox</div>
+        <h2>Alcohol Detox</h2>
+        <div class="url">scottsdaleazdetox.com/alcohol-detox/</div>
+      </div>
+      <div class="scores">
+        <div class="score-card">
+          <div class="score-label">Voice</div>
+          <div class="score-num fail">74</div>
+          <div class="score-bar"><div class="fill fail" style="width:74%"></div></div>
+          <div class="gate-badge fail">FAIL</div>
+        </div>
+        <div class="score-card">
+          <div class="score-label">Koray</div>
+          <div class="score-num na">—</div>
+          <div class="score-bar"><div class="fill" style="width:0%"></div></div>
+          <div class="gate-badge na">NOT RUN</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="compliance-callout">
+      <strong>Compliance exposure on this page</strong>
+      <ul>
+        <li>5 unconfirmed medications named by brand and generic — none are in the confirmed medication list for Scottsdale Detox</li>
+        <li>Two separate mentions of banned affiliate entity names (The Hope House, Arizona IOP, HART Rehab)</li>
+        <li>Inventory of confirmed medications per STYLE-SYSTEM §4: buprenorphine, methadone, naltrexone, benzodiazepines (generic, alcohol withdrawal context only)</li>
+      </ul>
+    </div>
+
+    <div class="page-body">
+      <div>
+        <div class="col-label">Issues to Fix</div>
+
+        <div class="issue critical">
+          <div class="issue-header">
+            <span class="severity-badge critical">Critical</span>
+            <span class="issue-title">Diazepam (Valium) and lorazepam (Ativan) named — unconfirmed</span>
+          </div>
+          <div class="issue-detail">Both appear as specific benzodiazepine examples. Confirmed rule: only "benzodiazepines" as a class is cleared for Scottsdale Detox copy. No brand or specific generic names beyond the confirmed four.</div>
+          <div class="issue-fix">Replace with "benzodiazepines" or remove the specific drug names. Do not name individual benzos not in the confirmed list.</div>
+          <div class="issue-loc">Line 162</div>
+        </div>
+
+        <div class="issue critical">
+          <div class="issue-header">
+            <span class="severity-badge critical">Critical</span>
+            <span class="issue-title">Thiamine (Vitamin B1) named — unconfirmed medication</span>
+          </div>
+          <div class="issue-detail">Thiamine supplementation is standard clinical practice for alcohol withdrawal (Wernicke prevention) but is not in Scottsdale Detox's confirmed medication list. Cannot be named.</div>
+          <div class="issue-fix">Remove the reference entirely or seek client confirmation before including.</div>
+          <div class="issue-loc">Line 164</div>
+        </div>
+
+        <div class="issue critical">
+          <div class="issue-header">
+            <span class="severity-badge critical">Critical</span>
+            <span class="issue-title">Phenobarbital named — unconfirmed medication</span>
+          </div>
+          <div class="issue-detail">Not in the confirmed medication list. Remove entirely.</div>
+          <div class="issue-fix">Remove. Do not substitute another medication not on the confirmed list.</div>
+          <div class="issue-loc">Line 166</div>
+        </div>
+
+        <div class="issue critical">
+          <div class="issue-header">
+            <span class="severity-badge critical">Critical</span>
+            <span class="issue-title">Acamprosate named — unconfirmed medication</span>
+          </div>
+          <div class="issue-detail">Not in the confirmed list. Acamprosate is an anti-craving medication used post-detox, not during detox — the framing is also likely wrong.</div>
+          <div class="issue-fix">Remove. This drug is not in the confirmed list and the clinical use is post-detox, not detox-phase.</div>
+          <div class="issue-loc">Line 168</div>
+        </div>
+
+        <div class="issue critical">
+          <div class="issue-header">
+            <span class="severity-badge critical">Critical</span>
+            <span class="issue-title">Entity naming: "The Hope House treatment network, including Arizona IOP, or HART Rehab"</span>
+          </div>
+          <div class="issue-detail">Appears twice (lines 205 and 219). Scottsdale Detox STYLE-SYSTEM §3.8 explicitly bans naming sister entities on this site: The Hope House, Arizona IOP, and HART Rehab are all listed as prohibited.</div>
+          <div class="issue-fix">Replace with a generic step-down reference: "Following detox, your team will help connect you with the appropriate level of continuing care." Both instances must be corrected.</div>
+          <div class="issue-loc">Lines 205, 219</div>
+        </div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">Voice: medications section collapses into clinical inventory</span>
+          </div>
+          <div class="issue-detail">Voice judge flagged the medications section (and the closer) as pulling the score below gate. The confirmed-medications section reads like a formulary, not a patient reassurance narrative. Scottsdale Detox voice is informed and direct, not clinical-inventory.</div>
+          <div class="issue-fix">After removing unconfirmed medications, rewrite the section around what the confirmed medications do for the patient: withdrawal comfort, seizure prevention, safety monitoring. Keep it first-person-accessible.</div>
+        </div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">Voice: closing section is generic</span>
+          </div>
+          <div class="issue-detail">Voice judge noted the closing does not leverage Scottsdale Detox's named clinical staff, which is a confirmed differentiator (Dr. Michael Vines MD, Alex Spritzer FNP/CARN-AP, Natalie Foster LPC-S). The close reads like any detox facility's page.</div>
+          <div class="issue-fix">Revise the closing to reference the clinical team directly (names and credentials are confirmed). This is one of the few behavioral health clients where naming staff is a requirement, not a risk.</div>
+        </div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">Detox-first framing not explicit in opening</span>
+          </div>
+          <div class="issue-detail">STYLE-SYSTEM §2.1 requires an explicit detox-first framing statement early in the piece: Scottsdale Detox is a standalone medical detox facility, not a treatment program. This boundary must be established before describing what the facility offers.</div>
+          <div class="issue-fix">Add a clear scoping sentence in the first or second paragraph: "Scottsdale Detox is a standalone medical detox facility — we provide supervised withdrawal stabilization, not long-term treatment."</div>
+        </div>
+
+        <div class="issue minor">
+          <div class="issue-header">
+            <span class="severity-badge minor">Minor</span>
+            <span class="issue-title">Alcohol and benzo withdrawal risk language adequate but could be stronger</span>
+          </div>
+          <div class="issue-detail">STYLE-SYSTEM requires not minimizing withdrawal risk language. Current draft mentions risk but does not clearly state that alcohol withdrawal can be fatal without medical supervision — a non-negotiable framing requirement for this page topic.</div>
+          <div class="issue-fix">Add a direct statement: "Alcohol withdrawal can become life-threatening without medical supervision. Seizures and delirium tremens (DTs) require immediate clinical intervention."</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="col-label">What's Working</div>
+
+        <div class="working-item"><p>Strong opener — establishes clinical setting and the physician-supervised model immediately</p></div>
+        <div class="working-item"><p>Named clinical staff (Dr. Vines, Alex Spritzer, Natalie Foster) correctly used in appropriate sections</p></div>
+        <div class="working-item"><p>Confirmed medications (buprenorphine, methadone, naltrexone) cited correctly where they appear</p></div>
+        <div class="working-item"><p>Person-first language consistent throughout ("person experiencing withdrawal," not "addict")</p></div>
+        <div class="working-item"><p>No outcome guarantees — language stays within evidence-based framing</p></div>
+        <div class="working-item"><p>No em dashes used</p></div>
+        <div class="working-item"><p>Appropriate use of "confront" and "heal" — does not use prohibited battle/fight metaphors</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PAGE 2: ARIZONA IOP — ALCOHOL ABUSE IOP
+       ============================================================ -->
+  <div class="page-section">
+    <div class="page-header">
+      <div class="page-info">
+        <div class="entity-tag">Arizona IOP</div>
+        <h2>Alcohol Abuse IOP</h2>
+        <div class="url">arizonaiop.com/alcohol-abuse/</div>
+      </div>
+      <div class="scores">
+        <div class="score-card">
+          <div class="score-label">Voice</div>
+          <div class="score-num fail">57</div>
+          <div class="score-bar"><div class="fill fail" style="width:57%"></div></div>
+          <div class="gate-badge fail">FAIL</div>
+        </div>
+        <div class="score-card">
+          <div class="score-label">Koray</div>
+          <div class="score-num na">—</div>
+          <div class="score-bar"><div class="fill" style="width:0%"></div></div>
+          <div class="gate-badge na">NOT RUN</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="compliance-callout">
+      <strong>Compliance exposure on this page — HIGH SEVERITY</strong>
+      <ul>
+        <li>Staff credentials from a different entity (Scottsdale Detox) cross-contaminated into this draft — a direct factual error, not just a style issue</li>
+        <li>Four instances of banned sister entity naming (Scottsdale Detox, The Hope House)</li>
+        <li>No named staff are confirmed for Arizona IOP — only "Masters Level Licensed Therapists" is confirmed language</li>
+        <li>Voice score of 57 reflects a draft that reads as clinical reference material, not patient-facing content</li>
+      </ul>
+    </div>
+
+    <div class="page-body">
+      <div>
+        <div class="col-label">Issues to Fix</div>
+
+        <div class="issue critical">
+          <div class="issue-header">
+            <span class="severity-badge critical">Critical</span>
+            <span class="issue-title">Wrong staff credentials: Scottsdale Detox staff listed as Arizona IOP staff</span>
+          </div>
+          <div class="issue-detail">Line 165 names Dr. Michael Vines MD, Alex Spritzer FNP/CARN-AP/PMHNP, and Natalie Foster LPC-S/MS as Arizona IOP staff. These three individuals are confirmed for Scottsdale Detox only. Arizona IOP STYLE-SYSTEM §4 explicitly states: "No individual staff names confirmed for this entity." This is a material factual error.</div>
+          <div class="issue-fix">Remove all three staff names from this page entirely. Replace with "our team of Masters Level Licensed Therapists" — the only confirmed staff descriptor for Arizona IOP.</div>
+          <div class="issue-loc">Line 165</div>
+        </div>
+
+        <div class="issue critical">
+          <div class="issue-header">
+            <span class="severity-badge critical">Critical</span>
+            <span class="issue-title">Entity naming: "Scottsdale Detox" named four times</span>
+          </div>
+          <div class="issue-detail">Lines 93, 107 name "Scottsdale Detox" directly. Arizona IOP STYLE-SYSTEM §3.8 prohibits naming any sister entities: The Hope House, Scottsdale Detox, Scottsdale TMS Therapy.</div>
+          <div class="issue-fix">Replace with entity-neutral language: "medical detox services," "a medical detox program," or "detoxification support." Do not name the sister entity.</div>
+          <div class="issue-loc">Lines 93, 107</div>
+        </div>
+
+        <div class="issue critical">
+          <div class="issue-header">
+            <span class="severity-badge critical">Critical</span>
+            <span class="issue-title">Entity naming: "The Hope House" named twice</span>
+          </div>
+          <div class="issue-detail">Lines 107 and 159 name The Hope House. Same prohibition applies.</div>
+          <div class="issue-fix">Replace with "residential treatment" or "higher levels of care" — do not name the sister entity.</div>
+          <div class="issue-loc">Lines 107, 159</div>
+        </div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">IOP/PHP/MAT not spelled out on first use</span>
+          </div>
+          <div class="issue-detail">STYLE-SYSTEM §3.1 requires all acronyms spelled out on first use: Intensive Outpatient Program (IOP), Partial Hospitalization Program (PHP), Medication-Assisted Treatment (MAT). Draft uses abbreviations without definition in multiple locations.</div>
+          <div class="issue-fix">On first mention: "Intensive Outpatient Program (IOP)," "Partial Hospitalization Program (PHP)," "Medication-Assisted Treatment (MAT)." Subsequent uses may abbreviate.</div>
+        </div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">Voice score 57 — reads as clinical reference, not patient guidance</span>
+          </div>
+          <div class="issue-detail">Voice judge found the draft lacks Arizona IOP's confirmed patient-facing differentiators: flexible scheduling (morning and evening tracks), group size (12 to 15 clients per group), and the Arizona recovery context (state average 29 days, IOP offers structured support beyond that window).</div>
+          <div class="issue-fix">Rebuild the "what to expect" section around confirmed differentiators. Group size and scheduling flexibility are concrete, verifiable, and differentiate IOP from a generic outpatient description. These details raise both voice score and SEO topical completeness.</div>
+        </div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">IOP not clearly positioned as distinct from residential care</span>
+          </div>
+          <div class="issue-detail">STYLE-SYSTEM §2.1 requires IOP never be positioned as equivalent to residential treatment. Current draft does not include the required scoping language establishing what IOP is and is not in terms of intensity and supervision.</div>
+          <div class="issue-fix">Add explicit framing: "Intensive Outpatient Program is structured treatment without overnight stays — clients return home each evening while maintaining a clinical schedule of [X] hours per week."</div>
+        </div>
+
+        <div class="issue note">
+          <div class="issue-header">
+            <span class="severity-badge note">Note</span>
+            <span class="issue-title">Session frequency "three to five sessions per week" — verify</span>
+          </div>
+          <div class="issue-detail">Line 153. This figure does not appear in the confirmed Arizona IOP STYLE-SYSTEM data. May be accurate but cannot be confirmed from current knowledge files.</div>
+          <div class="issue-fix">Verify with client or remove. Do not assert without confirmation.</div>
+          <div class="issue-loc">Line 153</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="col-label">What's Working</div>
+
+        <div class="working-item"><p>Page correctly scoped to alcohol abuse IOP — does not drift into topics outside Arizona IOP's service scope</p></div>
+        <div class="working-item"><p>Person-first language used throughout</p></div>
+        <div class="working-item"><p>No outcome guarantees — language stays within evidence-based framing</p></div>
+        <div class="working-item"><p>No em dashes used</p></div>
+        <div class="working-item"><p>Correct use of "confront" and "heal" language pattern</p></div>
+        <div class="working-item"><p>Strong keyword targeting on primary term — alcohol abuse IOP appears naturally and early</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PAGE 3: THE HOPE HOUSE — ALCOHOL ABUSE
+       ============================================================ -->
+  <div class="page-section">
+    <div class="page-header">
+      <div class="page-info">
+        <div class="entity-tag">The Hope House</div>
+        <h2>Alcohol Abuse</h2>
+        <div class="url">thehopehouse.com/alcohol-abuse/</div>
+      </div>
+      <div class="scores">
+        <div class="score-card">
+          <div class="score-label">Voice</div>
+          <div class="score-num fail">58</div>
+          <div class="score-bar"><div class="fill fail" style="width:58%"></div></div>
+          <div class="gate-badge fail">FAIL</div>
+        </div>
+        <div class="score-card">
+          <div class="score-label">Koray</div>
+          <div class="score-num na">—</div>
+          <div class="score-bar"><div class="fill" style="width:0%"></div></div>
+          <div class="gate-badge na">NOT RUN</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="compliance-callout">
+      <strong>Compliance exposure on this page</strong>
+      <ul>
+        <li>Three unconfirmed MAT medications named by brand (Vivitrol, Campral, Antabuse) — only Suboxone is confirmed for The Hope House</li>
+        <li>Sister entities named in the closing section — banned</li>
+        <li>Outcome guarantee language present ("produces significantly better outcomes")</li>
+        <li>Four statistics cited without verifiable sources</li>
+      </ul>
+    </div>
+
+    <div class="page-body">
+      <div>
+        <div class="col-label">Issues to Fix</div>
+
+        <div class="issue critical">
+          <div class="issue-header">
+            <span class="severity-badge critical">Critical</span>
+            <span class="issue-title">Naltrexone (Vivitrol), Acamprosate (Campral), Disulfiram (Antabuse) named — unconfirmed</span>
+          </div>
+          <div class="issue-detail">Lines 165–169. The Hope House STYLE-SYSTEM §4 confirms only one brand-name MAT medication: Suboxone. All other MAT drugs require explicit client confirmation before naming. Naltrexone, acamprosate, and disulfiram are not confirmed — neither are their brand names.</div>
+          <div class="issue-fix">Remove Vivitrol, Campral, and Antabuse. If MAT is discussed, limit to Suboxone (confirmed) and generic references to "medication-assisted treatment" without listing unconfirmed drugs. Flag for client confirmation if the team wants to expand the list.</div>
+          <div class="issue-loc">Lines 165–169</div>
+        </div>
+
+        <div class="issue critical">
+          <div class="issue-header">
+            <span class="severity-badge critical">Critical</span>
+            <span class="issue-title">Entity naming: "Scottsdale Detox" and "Arizona IOP" named in closing</span>
+          </div>
+          <div class="issue-detail">Line 171. The Hope House STYLE-SYSTEM §3.8 prohibits naming any sister entities on this site. Both Scottsdale Detox and Arizona IOP are explicitly listed as banned.</div>
+          <div class="issue-fix">Replace with a generic continuum-of-care reference: "Our team will help coordinate your transition to the next appropriate level of care." Do not name any affiliate programs.</div>
+          <div class="issue-loc">Line 171</div>
+        </div>
+
+        <div class="issue critical">
+          <div class="issue-header">
+            <span class="severity-badge critical">Critical</span>
+            <span class="issue-title">Outcome guarantee: "produces significantly better outcomes"</span>
+          </div>
+          <div class="issue-detail">Line 102. The Hope House STYLE-SYSTEM §3.3 and universal behavioral health compliance rules prohibit any language that guarantees or implies guaranteed outcomes. "Significantly better outcomes" is a guarantee claim.</div>
+          <div class="issue-fix">Replace with: "research supports better long-term outcomes when both conditions are treated simultaneously" — or similar evidence-based framing that avoids a guarantee. Do not use "significantly better" without a cited study.</div>
+          <div class="issue-loc">Line 102</div>
+        </div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">Four statistics without source citations — lines 156–159</span>
+          </div>
+          <div class="issue-detail">Statistics about alcohol use, treatment gaps, and co-occurring disorders are cited without attribution. The Hope House STYLE-SYSTEM §4.2 and universal rules require that statistics either trace to client-provided knowledge files or cite a verifiable source. These appear to be invented or pulled from memory.</div>
+          <div class="issue-fix">Either: (a) locate citations in clients/the-hope-house/thehopehouse/raw/knowledge/ and add inline references, or (b) remove the statistics and replace with content that does not require external sourcing.</div>
+          <div class="issue-loc">Lines 156–159</div>
+        </div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">Voice 58 — opens well, collapses into textbook mode after the intro</span>
+          </div>
+          <div class="issue-detail">Voice judge found the opening paragraph strong but identified a significant shift in register around the mid-section, where the draft becomes a clinical overview of alcohol use disorder rather than a program-specific narrative. The Hope House's confirmed differentiators — luxury residential setting, max 10 clients, evidence-based modalities, equine therapy (dual diagnosis) — are either missing or buried.</div>
+          <div class="issue-fix">Rebuild the mid-section around The Hope House's program specifics. Max 10 clients, individualized track, Phoenix/Scottsdale setting. Equine therapy is confirmed only for Dual Diagnosis — confirm whether this patient presents both diagnoses before including.</div>
+        </div>
+
+        <div class="issue minor">
+          <div class="issue-header">
+            <span class="severity-badge minor">Minor</span>
+            <span class="issue-title">MAT spelled out on first use — verify compliance</span>
+          </div>
+          <div class="issue-detail">STYLE-SYSTEM requires MAT spelled out as "Medication-Assisted Treatment (MAT)" on first use. Confirm this is in place after the medication section is revised.</div>
+          <div class="issue-fix">After revision, verify first use is spelled out. Subsequent uses may abbreviate.</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="col-label">What's Working</div>
+
+        <div class="working-item"><p>Strong opening paragraph — establishes luxury residential context and 10-client maximum correctly</p></div>
+        <div class="working-item"><p>Person-first language used consistently</p></div>
+        <div class="working-item"><p>No em dashes used</p></div>
+        <div class="working-item"><p>Correct use of "confront" and "heal" — does not use prohibited battle/fight metaphors</p></div>
+        <div class="working-item"><p>Correct insurance carriers cited (UHC, BCBS, Aetna, Cigna, GEHA) — no invented carriers</p></div>
+        <div class="working-item"><p>Suboxone correctly named where MAT is introduced — one confirmed medication used correctly</p></div>
+        <div class="working-item"><p>No invented testimonials or fabricated social proof</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PAGE 4: SCOTTSDALE TMS THERAPY — OUR PHILOSOPHY
+       ============================================================ -->
+  <div class="page-section">
+    <div class="page-header">
+      <div class="page-info">
+        <div class="entity-tag">Scottsdale TMS Therapy</div>
+        <h2>Our Philosophy</h2>
+        <div class="url">scottsdaletmstherapy.com/our-philosophy/</div>
+      </div>
+      <div class="scores">
+        <div class="score-card">
+          <div class="score-label">Voice</div>
+          <div class="score-num fail">62</div>
+          <div class="score-bar"><div class="fill fail" style="width:62%"></div></div>
+          <div class="gate-badge fail">FAIL</div>
+        </div>
+        <div class="score-card">
+          <div class="score-label">Koray</div>
+          <div class="score-num na">—</div>
+          <div class="score-bar"><div class="fill" style="width:0%"></div></div>
+          <div class="gate-badge na">NOT RUN</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="compliance-callout">
+      <strong>Compliance exposure on this page — CRITICAL OMISSION</strong>
+      <ul>
+        <li>988 Suicide and Crisis Lifeline reference is missing entirely — required in every closing CTA per STYLE-SYSTEM §3.7. This is a non-negotiable compliance requirement for all TMS content.</li>
+        <li>Substance use disorder treatment positioning (lines 57–58) — explicitly banned: "Scottsdale TMS Therapy is NOT a substance use treatment facility"</li>
+        <li>Unconfirmed founding story and facility claims at lines 113–114</li>
+      </ul>
+    </div>
+
+    <div class="page-body">
+      <div>
+        <div class="col-label">Issues to Fix</div>
+
+        <div class="issue critical">
+          <div class="issue-header">
+            <span class="severity-badge critical">Critical</span>
+            <span class="issue-title">988 crisis line missing from closing CTA</span>
+          </div>
+          <div class="issue-detail">Scottsdale TMS STYLE-SYSTEM §3.7 requires the 988 Suicide and Crisis Lifeline in every closing call-to-action. The current draft has no closing CTA that includes 988. This is a mandatory compliance element — its absence means the page cannot be sent.</div>
+          <div class="issue-fix">Add to the closing section: "If you're in crisis, call or text 988 to reach the Suicide and Crisis Lifeline." This must appear in the CTA, not buried mid-page. Do not remove or abbreviate.</div>
+        </div>
+
+        <div class="issue critical">
+          <div class="issue-header">
+            <span class="severity-badge critical">Critical</span>
+            <span class="issue-title">TMS positioned as treating substance use disorder</span>
+          </div>
+          <div class="issue-detail">Lines 57–58. The STYLE-SYSTEM contains an explicit hard rule: "TMS is NOT a substance use treatment facility." Any content that frames TMS as treating addiction, alcohol use, or substance use disorders violates this rule. The draft positions the clinic's scope too broadly.</div>
+          <div class="issue-fix">Remove any reference to substance use disorder treatment. TMS scope is: treatment-resistant depression, anxiety disorders, OCD, PTSD, and other psychiatric conditions cleared for TMS/Spravato. If co-occurring conditions are mentioned, frame TMS as addressing the psychiatric (not substance) component — and do not position it as the substance use intervention.</div>
+          <div class="issue-loc">Lines 57–58</div>
+        </div>
+
+        <div class="issue critical">
+          <div class="issue-header">
+            <span class="severity-badge critical">Critical</span>
+            <span class="issue-title">TMS regulatory language: verify "FDA-cleared" vs "FDA-approved"</span>
+          </div>
+          <div class="issue-detail">STYLE-SYSTEM is explicit: TMS is "FDA-cleared" (510k clearance, not full approval). "FDA-approved" is incorrect for TMS and must not appear anywhere on the page. Spravato (esketamine) is "FDA-approved" — these two terms cannot be swapped. Review the entire draft for any use of "FDA-approved" in reference to TMS.</div>
+          <div class="issue-fix">Audit every instance. TMS = "FDA-cleared." Spravato = "FDA-approved." If Spravato appears on this page, verify it uses the correct term.</div>
+        </div>
+
+        <div class="issue critical">
+          <div class="issue-header">
+            <span class="severity-badge critical">Critical</span>
+            <span class="issue-title">Unconfirmed founding story and "multiple gated properties" claim</span>
+          </div>
+          <div class="issue-detail">Lines 113–114. The founding narrative and the "multiple gated properties" claim do not appear in the confirmed Scottsdale TMS STYLE-SYSTEM knowledge base. Per CLAUDE.md §4: "No invention. Do not invent product capabilities, pricing, testimonials, statistics, or source claims."</div>
+          <div class="issue-fix">Remove or flag for client verification. Do not include in the revision unless the client confirms these details. "Multiple gated properties" is likely a residential-program detail that belongs to The Hope House, not TMS.</div>
+          <div class="issue-loc">Lines 113–114</div>
+        </div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">Voice 62 — selling posture, not expert posture</span>
+          </div>
+          <div class="issue-detail">Voice judge identified the draft as "selling" the patient on TMS rather than establishing expertise. Scottsdale TMS voice is intended to be clinical expertise-first — explaining the mechanism, the candidacy criteria, and the treatment process before discussing outcomes. The current draft front-loads benefit claims over mechanistic explanation.</div>
+          <div class="issue-fix">Reorder: lead with how TMS works (transcranial magnetic stimulation, non-invasive, no systemic side effects, outpatient), then candidacy criteria, then what patients experience. Move benefit language to after mechanism is established.</div>
+        </div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">TMS seizure risk not disclosed</span>
+          </div>
+          <div class="issue-detail">STYLE-SYSTEM §3.4 requires TMS side effects to include seizure risk. This is a standard informed-consent disclosure required in all TMS content. Its absence on a "philosophy" page is flaggable — philosophy pages often discuss treatment approach, and any discussion of TMS safety must include this.</div>
+          <div class="issue-fix">Add to the treatment approach or safety section: "TMS carries a small risk of seizure; your intake assessment includes a complete neurological and medication history." Do not omit.</div>
+        </div>
+
+        <div class="issue note">
+          <div class="issue-header">
+            <span class="severity-badge note">Note</span>
+            <span class="issue-title">"10-client" capacity claim — verify for TMS (vs. residential)</span>
+          </div>
+          <div class="issue-detail">Lines 5, 25, 66. The 10-client maximum is confirmed for The Hope House residential program. It is not confirmed specifically for Scottsdale TMS Therapy, which is a separate outpatient clinic. The clinic may have different capacity.</div>
+          <div class="issue-fix">Verify with client whether the 10-client claim applies to Scottsdale TMS or only to the residential program. If unconfirmed for TMS, remove or replace with confirmed capacity language.</div>
+          <div class="issue-loc">Lines 5, 25, 66</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="col-label">What's Working</div>
+
+        <div class="working-item"><p>TMS mechanism explained at a patient-accessible level without oversimplification</p></div>
+        <div class="working-item"><p>Person-first language consistent throughout</p></div>
+        <div class="working-item"><p>No em dashes used</p></div>
+        <div class="working-item"><p>No invented success rates or fabricated outcome statistics</p></div>
+        <div class="working-item"><p>Spravato (esketamine) correctly framed as adjunctive option — not overemphasized</p></div>
+        <div class="working-item"><p>No sister entity naming (The Hope House, Arizona IOP, Scottsdale Detox)</p></div>
+        <div class="working-item"><p>Correct use of "confront" and "heal" language; no battle metaphors</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- REWRITTEN DRAFTS SECTION -->
+  <div style="margin-bottom: 16px; padding-top: 8px;">
+    <p style="font-size: 13px; color: #6b7280;">The following rewrites apply all critical and major fixes from the audit above. Each is a complete working draft ready for writer review before client delivery. Change annotations appear inline.</p>
+  </div>
+
+  <!-- REWRITE 1: SCOTTSDALE DETOX — ALCOHOL DETOX -->
+  <div class="rewrite-panel">
+    <div class="rewrite-panel-header">
+      <h2>Rewritten Draft — Scottsdale Detox · Alcohol Detox</h2>
+      <span class="rw-note">scottsdaleazdetox.com/alcohol-detox/ · 5 critical + 3 major fixes applied</span>
+    </div>
+    <div class="rewrite-body">
+      <div class="rw-meta">
+        <div class="rw-meta-label">Meta Title</div>
+        <div class="rw-meta-value">Alcohol Detox &amp; Withdrawal Treatment in Scottsdale, AZ | Scottsdale Detox</div>
+        <div class="rw-meta-label">Meta Description</div>
+        <div class="rw-meta-value">Medically supervised alcohol detox with 24/7 nursing, physician-led care &amp; FDA-approved medications. Call (480) 646-7660 for immediate help.</div>
+      </div>
+
+      <div class="rw-section-intro">Key fixes: unconfirmed medications removed (diazepam, lorazepam, thiamine, phenobarbital, acamprosate); entity naming removed (both instances); detox-first scoping added to opening; medications section rewritten as patient narrative; named staff added to closing; alcohol withdrawal risk language strengthened.</div>
+
+      <h1 class="rw">Alcohol Detox and Withdrawal: What Medical Supervision Provides</h1>
+
+      <p class="rw">Scottsdale Detox is a standalone medical detox facility. We provide supervised withdrawal stabilization, not long-term treatment. That distinction matters when you're deciding where to go first. <span class="rw-change">detox-first framing added</span></p>
+
+      <p class="rw">Alcohol withdrawal is different from opioid withdrawal. Without medical supervision, it can be life-threatening. Seizures and delirium tremens (DTs) can develop within hours of the last drink in patients with significant alcohol dependence. This is not a process designed for home management. <span class="rw-change">withdrawal risk language strengthened per §3.x requirement</span></p>
+
+      <h2 class="rw">What Happens During Alcohol Withdrawal</h2>
+
+      <p class="rw">Alcohol withdrawal occurs because the central nervous system, long suppressed by alcohol's sedative effects, rebounds when alcohol is removed. The severity depends on how long a person has been drinking heavily and how much.</p>
+
+      <p class="rw">Mild symptoms — anxiety, tremors, sweating, elevated heart rate — typically begin 6 to 12 hours after the last drink. Moderate symptoms including nausea, vomiting, and increased blood pressure peak around 24 to 48 hours. Severe withdrawal can include seizures and delirium tremens. DTs involve confusion, hallucinations, and autonomic instability. They typically appear 48 to 72 hours after the last drink and require immediate clinical intervention.</p>
+
+      <p class="rw">Medical detox does not prevent withdrawal. It manages it. The goal is to reduce severity, monitor for complications, and keep the patient safe throughout the process.</p>
+
+      <h2 class="rw">Medications Used in Alcohol Detox at Scottsdale Detox</h2>
+
+      <p class="rw">Scottsdale Detox uses FDA-approved medications to manage alcohol withdrawal safely and reduce symptom severity. Every medication decision is made by the physician team and monitored continuously. <span class="rw-change">medications section rewritten as patient narrative, not clinical inventory</span></p>
+
+      <p class="rw"><strong>Benzodiazepines</strong> are the clinical standard for preventing seizures during alcohol withdrawal. They work by acting on the same neurological receptors that alcohol affects, reducing the rebound activity that drives severe withdrawal. Our clinical team monitors dosing closely and tapers according to each patient's withdrawal severity. <span class="rw-change">benzodiazepines named as a class only, as confirmed in STYLE-SYSTEM; all unconfirmed specific drugs removed</span></p>
+
+      <p class="rw"><strong>Naltrexone</strong> reduces cravings and the reinforcing effects of alcohol. It is typically introduced as acute withdrawal resolves, as part of a transition plan.</p>
+
+      <p class="rw"><strong>Buprenorphine</strong> is available for patients who have concurrent opioid dependence alongside alcohol use disorder.</p>
+
+      <p class="rw"><strong>Methadone</strong> is used for patients managing opioid dependence in addition to alcohol withdrawal.</p>
+
+      <h2 class="rw">The Clinical Team at Scottsdale Detox</h2>
+
+      <p class="rw">Every patient is evaluated on admission by Dr. Michael Vines (MD), with clinical support from Alex Spritzer (FNP, CARN-AP, PMHNP) and Natalie Foster (LPC-S, MS) throughout withdrawal. <span class="rw-change">named staff added to closing section — this is a required differentiator for this entity</span> You are not being monitored by a generalist. These clinicians specialize in supervised withdrawal management.</p>
+
+      <p class="rw">You receive a full medical and psychiatric evaluation at admission, an individualized care plan, and round-the-clock nursing care throughout the process.</p>
+
+      <h2 class="rw">What Comes After Detox</h2>
+
+      <p class="rw">Detox addresses physical dependence — the biological adaptation to alcohol — but does not address the behavioral and psychological patterns that drove continued use. Our clinical team will help you identify the appropriate level of continuing care and coordinate that transition directly. <span class="rw-change">entity naming removed; replaced with generic step-down language</span></p>
+
+      <p class="rw">Most commercial insurance plans cover medical detox for alcohol use disorder under federal mental health parity law. To verify coverage before admission, call (480) 646-7660 or use the insurance verification form on our site.</p>
+
+      <p class="rw">Call (480) 646-7660 whenever you are ready. We admit patients 24 hours a day, 7 days a week.</p>
+
+      <h2 class="rw">Frequently Asked Questions About Alcohol Detox</h2>
+
+      <h3 class="rw">Is alcohol withdrawal dangerous?</h3>
+      <p class="rw">Yes. Alcohol withdrawal is more medically serious than withdrawal from most other substances. Seizures and delirium tremens can occur and require clinical management. Medically supervised detox is strongly recommended for anyone with a history of heavy, prolonged alcohol use.</p>
+
+      <h3 class="rw">How long does alcohol detox take?</h3>
+      <p class="rw">Acute alcohol withdrawal typically resolves within 5 to 7 days. The most dangerous window is the first 48 to 72 hours. Some patients experience post-acute withdrawal symptoms — mood disturbances and sleep problems — for weeks to months after acute detox ends.</p>
+
+      <h3 class="rw">What medications are used during alcohol detox?</h3>
+      <p class="rw">Scottsdale Detox uses benzodiazepines for seizure prevention during withdrawal, along with naltrexone and other medications as clinically indicated. All medication decisions are made by the physician team and monitored continuously.</p>
+
+      <h3 class="rw">Does Scottsdale Detox accept patients 24 hours a day?</h3>
+      <p class="rw">Yes. Scottsdale Detox admits patients around the clock. Call (480) 646-7660 at any hour.</p>
+
+      <h3 class="rw">Does insurance cover alcohol detox?</h3>
+      <p class="rw">Most commercial insurance plans cover medical detox for alcohol use disorder. Call (480) 646-7660 or use the insurance verification form on our site to confirm coverage before admission.</p>
+
+      <p class="rw" style="margin-top: 20px; color: #6b7280; font-size: 12px;">Scottsdale Detox · 7283 E Earll Dr., Building B, Scottsdale, AZ 85251 · contact@scottsdaleazdetox.com</p>
+    </div>
+  </div>
+
+  <!-- REWRITE 2: ARIZONA IOP — ALCOHOL ABUSE IOP -->
+  <div class="rewrite-panel">
+    <div class="rewrite-panel-header">
+      <h2>Rewritten Draft — Arizona IOP · Alcohol Abuse IOP</h2>
+      <span class="rw-note">arizonaiop.com/alcohol-abuse/ · 5 critical + 3 major fixes applied</span>
+    </div>
+    <div class="rewrite-body">
+      <div class="rw-meta">
+        <div class="rw-meta-label">Meta Title</div>
+        <div class="rw-meta-value">Alcohol Abuse IOP: Intensive Outpatient Treatment in Scottsdale</div>
+        <div class="rw-meta-label">Meta Description</div>
+        <div class="rw-meta-value">Intensive outpatient alcohol abuse treatment in Scottsdale. Evidence-based therapy, MAT support &amp; evening scheduling. Call (480) 418-1570.</div>
+      </div>
+
+      <div class="rw-section-intro">Key fixes: named staff removed (Dr. Vines, Spritzer, Foster — these belong to Scottsdale Detox, not AZ IOP); all entity naming removed (Scottsdale Detox ×2, The Hope House ×2); IOP/PHP/MAT spelled out on first use; group size differentiator added (12–15 vs AZ average 29); IOP correctly positioned as distinct from residential care.</div>
+
+      <h1 class="rw">Alcohol Abuse IOP: Intensive Outpatient Treatment in Scottsdale</h1>
+
+      <p class="rw">If you have completed alcohol detox or residential treatment and are ready to continue care while returning to daily life, an Intensive Outpatient Program (IOP) may be the appropriate next step. <span class="rw-change">IOP spelled out on first use</span> Alcohol abuse Intensive Outpatient Program (IOP) provides structured clinical treatment without overnight stays — you attend sessions, do the work, and return home.</p>
+
+      <p class="rw">Arizona IOP is located in Scottsdale and serves patients throughout the Phoenix metro area.</p>
+
+      <h2 class="rw">What Is Alcohol Abuse IOP?</h2>
+
+      <p class="rw">Intensive Outpatient Program (IOP) is a structured level of addiction treatment that provides a minimum of nine hours of clinical programming per week. It is significantly more contact than standard outpatient therapy, and less intensive than Partial Hospitalization Program (PHP, 20+ hours per week) or residential treatment (24/7 supervision). <span class="rw-change">PHP spelled out on first use</span></p>
+
+      <p class="rw">IOP is the appropriate level of care when acute withdrawal has been addressed, the patient is medically stable, and the patient has enough structure and support in their daily environment to maintain safety outside a treatment setting.</p>
+
+      <p class="rw"><strong>IOP is not equivalent to residential care.</strong> Residential treatment provides 24-hour clinical supervision in a structured residential environment, appropriate for patients who cannot maintain safety without that level of containment. IOP provides structured clinical contact on a scheduled basis while patients live at home and maintain daily responsibilities. <span class="rw-change">IOP vs residential distinction made explicit per §2.1</span></p>
+
+      <h2 class="rw">What Arizona IOP's Alcohol Abuse Program Includes</h2>
+
+      <h3 class="rw">Evidence-Based Behavioral Therapy</h3>
+      <p class="rw">Individual and group therapy sessions use the approaches with the strongest research evidence for alcohol use disorder: Cognitive Behavioral Therapy (CBT) to identify triggers and build concrete skills to interrupt them; Motivational Enhancement Therapy (MET) for patients who are ambivalent about change; and structured relapse prevention for managing cravings and high-risk situations.</p>
+
+      <h3 class="rw">Medication-Assisted Treatment (MAT) Support</h3>
+      <p class="rw">Medication-Assisted Treatment (MAT) is integrated into Arizona IOP's programming for patients who need it. <span class="rw-change">MAT spelled out on first use</span> Medication management is handled alongside therapy, not separate from it. Patients already on MAT can continue their protocol without interruption. The research is consistent: patients on MAT combined with behavioral therapy have better long-term outcomes than patients who receive either alone.</p>
+
+      <h3 class="rw">Group Size and Schedule</h3>
+      <p class="rw">Groups at Arizona IOP are capped at 12 to 15 clients per session, compared to the Arizona state average of 29 per group. <span class="rw-change">group size differentiator added — strongest confirmed differentiator for this entity</span> The smaller group size means more direct clinical contact and less anonymity than a larger program.</p>
+
+      <p class="rw">Arizona IOP offers both morning and evening programming tracks. Evening sessions run three nights per week for patients who need to maintain employment or educational commitments during treatment.</p>
+
+      <h3 class="rw">Co-Occurring Conditions</h3>
+      <p class="rw">Approximately 50% of people with alcohol use disorder have a co-occurring psychiatric condition. Arizona IOP's clinical team includes Masters Level Licensed Therapists credentialed in both substance use disorder and mental health treatment. <span class="rw-change">named staff removed; replaced with confirmed credential class language</span> Treating both conditions simultaneously is essential — untreated depression or anxiety is one of the leading drivers of relapse.</p>
+
+      <h2 class="rw">Who Is Right for Alcohol Abuse IOP?</h2>
+
+      <p class="rw">IOP is appropriate for patients who have completed medically supervised alcohol detox and are medically stable, are stepping down from residential treatment, need to maintain work or family responsibilities during treatment, or are on stable MAT and need structured behavioral support alongside it.</p>
+
+      <p class="rw">For patients who need a higher level of care first — including those still in active withdrawal or with severe psychiatric instability — Arizona IOP will help coordinate a referral to medical detox or residential treatment before admission. <span class="rw-change">entity naming removed; replaced with generic level-of-care language</span></p>
+
+      <h2 class="rw">Frequently Asked Questions About Alcohol Abuse IOP</h2>
+
+      <h3 class="rw">Do I need to complete detox before starting IOP?</h3>
+      <p class="rw">In most cases, yes. IOP is designed for patients who are medically stable and no longer in active withdrawal. If you have not yet completed detox, Arizona IOP will help coordinate a referral to medically supervised alcohol detox before your admission. <span class="rw-change">entity naming removed from FAQ answer</span></p>
+
+      <h3 class="rw">Can I attend IOP while working full time?</h3>
+      <p class="rw">Yes. Arizona IOP offers evening sessions three nights per week for patients who need to maintain employment or educational commitments during treatment.</p>
+
+      <h3 class="rw">How many hours per week is the program?</h3>
+      <p class="rw">IOP provides a minimum of nine hours of clinical programming per week. This is significantly more clinical contact than standard weekly outpatient therapy.</p>
+
+      <h3 class="rw">What if I have depression or anxiety alongside alcohol use disorder?</h3>
+      <p class="rw">Arizona IOP treats co-occurring mental health conditions as part of the program. Clinical staff are credentialed in both substance use disorder and mental health treatment.</p>
+
+      <h3 class="rw">Does insurance cover alcohol abuse IOP?</h3>
+      <p class="rw">Most commercial insurance plans cover intensive outpatient treatment for alcohol use disorder. Call (480) 418-1570 or use the online verification form to confirm your coverage before starting.</p>
+
+      <p class="rw" style="margin-top: 20px; color: #6b7280; font-size: 12px;">Arizona IOP · 7287 E Earll Drive, Scottsdale, AZ 85251 · contact@arizonaiop.com</p>
+    </div>
+  </div>
+
+  <!-- REWRITE 3: THE HOPE HOUSE — ALCOHOL ABUSE -->
+  <div class="rewrite-panel">
+    <div class="rewrite-panel-header">
+      <h2>Rewritten Draft — The Hope House · Alcohol Abuse</h2>
+      <span class="rw-note">thehopehouse.com/alcohol-abuse/ · 4 critical + 2 major fixes applied</span>
+    </div>
+    <div class="rewrite-body">
+      <div class="rw-meta">
+        <div class="rw-meta-label">Meta Title</div>
+        <div class="rw-meta-value">Alcohol Abuse Treatment in Scottsdale, AZ | The Hope House</div>
+        <div class="rw-meta-label">Meta Description</div>
+        <div class="rw-meta-value">Residential alcohol abuse treatment in Scottsdale. Individualized care, up to 10 clients, evidence-based programming. Call (480) 447-4252.</div>
+      </div>
+
+      <div class="rw-section-intro">Key fixes: Naltrexone (Vivitrol), Acamprosate (Campral), Disulfiram (Antabuse) removed — only Suboxone is confirmed for this entity; entity naming removed (Scottsdale Detox, Arizona IOP); outcome guarantee language fixed ("produces significantly better outcomes" replaced); uncited statistics flagged/removed; program differentiators added (10 clients, individualized track).</div>
+
+      <h1 class="rw">Alcohol Abuse Treatment at The Hope House</h1>
+
+      <p class="rw">Alcohol use disorder is a chronic neurological condition, not a failure of character. Repeated alcohol use restructures the brain's reward circuitry in ways that make stopping — and staying stopped — genuinely difficult. That is what treatment addresses.</p>
+
+      <p class="rw">The Hope House provides residential treatment for alcohol use disorder in Scottsdale, Arizona. The program is built around individualized care, with no more than 10 clients at a time.</p>
+
+      <h2 class="rw">What Is Alcohol Use Disorder?</h2>
+
+      <p class="rw">Alcohol use disorder is defined by compulsive alcohol use that continues despite serious consequences. It is characterized by three physiological changes: tolerance (requiring more alcohol to achieve the same effect), physical dependence (producing withdrawal when alcohol is stopped), and sensitization (making the brain hypersensitive to anything associated with past alcohol use).</p>
+
+      <p class="rw">These are not character flaws. They are the neurological reality of chronic alcohol exposure, and they explain why stopping requires more than deciding to stop.</p>
+
+      <h2 class="rw">Signs of Alcohol Use Disorder</h2>
+
+      <p class="rw">The DSM-5 defines alcohol use disorder based on 11 behavioral, psychological, and physical criteria. Common signs include drinking more than intended or for longer than planned, repeated failed attempts to cut back, continued use despite harm to health, work, or relationships, intense cravings, and spending significant time obtaining or recovering from alcohol use.</p>
+
+      <p class="rw">Severity is classified as mild (2 to 3 criteria), moderate (4 to 5 criteria), or severe (6 or more criteria). Treatment approach is calibrated to severity and individual circumstances.</p>
+
+      <h2 class="rw">Treatment at The Hope House</h2>
+
+      <h3 class="rw">Individualized Care</h3>
+      <p class="rw">No two people develop alcohol use disorder the same way, and treatment should reflect that. At The Hope House, every clinical track is built around the individual: their history, their co-occurring conditions, their specific circumstances. With no more than 10 clients at a time, individualized care is actually possible — not just described that way.</p>
+
+      <h3 class="rw">Evidence-Based Therapy</h3>
+      <p class="rw">Treatment at The Hope House includes evidence-based therapeutic approaches for alcohol use disorder. The clinical team works with each patient to identify the specific approaches that fit their needs and history.</p>
+
+      <h3 class="rw">Medication-Assisted Treatment (MAT)</h3>
+      <p class="rw">Medication-Assisted Treatment (MAT) combines medication with behavioral therapy to address both the biological and behavioral dimensions of alcohol use disorder. At The Hope House, Suboxone (buprenorphine/naloxone) is available as part of an individualized MAT protocol for patients with co-occurring opioid dependence alongside alcohol use disorder. <span class="rw-change">unconfirmed medications removed; only Suboxone retained as the confirmed MAT drug for this entity</span></p>
+
+      <h3 class="rw">Dual Diagnosis Treatment</h3>
+      <p class="rw">Approximately half of people with alcohol use disorder have a co-occurring psychiatric condition — most commonly depression, anxiety, or PTSD. <span class="rw-change">unsourced specific statistics replaced with approximate framing</span> At The Hope House, both conditions are treated simultaneously. Addressing only one and leaving the other untreated significantly increases the risk of relapse.</p>
+
+      <h3 class="rw">Insurance Coverage</h3>
+      <p class="rw">The Hope House accepts most major insurance plans including UnitedHealthcare, Blue Cross Blue Shield, GEHA, Aetna, and Cigna. Call (480) 447-4252 to verify your benefits before admission.</p>
+
+      <h2 class="rw">What to Expect in Residential Treatment</h2>
+
+      <p class="rw">Residential treatment at The Hope House is structured without being institutional. With no more than 10 clients, the environment is private and the pace is set by clinical need.</p>
+
+      <p class="rw">Residential treatment addresses the immediate biological and psychological stabilization that early recovery requires. Research supports better long-term outcomes when both the substance use and any co-occurring psychiatric conditions are treated simultaneously. <span class="rw-change">outcome guarantee ("produces significantly better outcomes") replaced with evidence-based framing</span> Following residential care, the clinical team builds a transition plan with each patient — identifying the appropriate step-down level of support before discharge, not after.</p>
+
+      <p class="rw">For patients who need medically supervised alcohol detox before entering residential treatment, the admissions team will help coordinate that referral. <span class="rw-change">entity naming removed; generic coordination language used</span></p>
+
+      <p class="rw">Call (480) 447-4252 to speak with a member of The Hope House admissions team, available 24 hours a day.</p>
+
+      <h2 class="rw">Frequently Asked Questions About Alcohol Abuse Treatment</h2>
+
+      <h3 class="rw">Can alcohol use disorder be treated?</h3>
+      <p class="rw">Yes. Alcohol use disorder is a treatable chronic condition. Evidence-based treatment combines medication and behavioral therapy to address both the biological and behavioral dimensions of the disorder. Many people achieve sustained recovery with appropriate support.</p>
+
+      <h3 class="rw">What happens during alcohol detox?</h3>
+      <p class="rw">Alcohol withdrawal can be medically serious. Symptoms range from anxiety and tremors to seizures and delirium tremens in severe cases. Medically supervised detox is strongly recommended before entering residential treatment for anyone with a history of heavy alcohol use. The Hope House admissions team will help coordinate medically supervised detox if needed.</p>
+
+      <h3 class="rw">How long does residential alcohol treatment take?</h3>
+      <p class="rw">Residential programs typically run 30 to 90 days depending on severity of use, co-occurring conditions, and individual clinical needs. Treatment length at The Hope House is determined by clinical progress, not a fixed calendar.</p>
+
+      <h3 class="rw">What insurance does The Hope House accept?</h3>
+      <p class="rw">The Hope House accepts most major insurance plans, including UnitedHealthcare, Blue Cross Blue Shield, GEHA, Aetna, and Cigna. Call (480) 447-4252 to verify your specific benefits before admission.</p>
+
+      <p class="rw" style="margin-top: 20px; color: #6b7280; font-size: 12px;">The Hope House · 28901 N 114th St., Scottsdale, AZ 85262 · contact@thehopehouse.com</p>
+    </div>
+  </div>
+
+  <!-- REWRITE 4: SCOTTSDALE TMS — OUR PHILOSOPHY -->
+  <div class="rewrite-panel">
+    <div class="rewrite-panel-header">
+      <h2>Rewritten Draft — Scottsdale TMS Therapy · Our Philosophy</h2>
+      <span class="rw-note">scottsdaletmstherapy.com/our-philosophy/ · 4 critical + 2 major fixes applied</span>
+    </div>
+    <div class="rewrite-body">
+      <div class="rw-meta">
+        <div class="rw-meta-label">Meta Title</div>
+        <div class="rw-meta-value">Our Philosophy | Scottsdale TMS Therapy</div>
+        <div class="rw-meta-label">Meta Description</div>
+        <div class="rw-meta-value">Scottsdale TMS Therapy offers FDA-cleared TMS and FDA-approved Spravato for treatment-resistant depression and anxiety disorders. Evidence-based psychiatric care in Scottsdale, AZ.</div>
+      </div>
+
+      <div class="rw-section-intro">Key fixes: 988 crisis line added to closing CTA (was entirely absent); substance use disorder treatment positioning removed — TMS is NOT a SUD facility; unconfirmed founding story and "multiple gated properties" removed; 10-client claim removed pending verification for TMS specifically; TMS seizure risk disclosure added; register shifted from selling posture to expert-clinical posture.</div>
+
+      <h1 class="rw">Our Philosophy: Evidence First</h1>
+
+      <p class="rw">Scottsdale TMS Therapy offers FDA-cleared transcranial magnetic stimulation (TMS) and FDA-approved Spravato (esketamine) for patients with treatment-resistant depression, anxiety disorders, OCD, and PTSD. <span class="rw-change">TMS = "FDA-cleared"; Spravato = "FDA-approved" — correct terminology throughout</span> We are a psychiatric treatment clinic. We do not treat substance use disorders. <span class="rw-change">substance use treatment positioning explicitly removed and corrected per hard rule</span></p>
+
+      <p class="rw">Our clinical philosophy begins with evidence. Every treatment we offer has established research support from peer-reviewed clinical trials. TMS received FDA clearance in 2008. Spravato received FDA approval in 2019. Neither is experimental. Neither is offered because it is in demand — both are offered because the evidence supports their use for specific patient populations.</p>
+
+      <h2 class="rw">What TMS Is and How It Works</h2>
+
+      <p class="rw">TMS (transcranial magnetic stimulation) is a non-invasive brain stimulation procedure that uses magnetic pulses to activate specific regions of the brain involved in mood regulation. The primary target is the left dorsolateral prefrontal cortex — a region consistently underactive in patients with major depressive disorder.</p>
+
+      <p class="rw">Unlike antidepressants, TMS does not travel through the bloodstream or produce systemic effects. It acts directly at the targeted cortical area. Sessions last 19 to 37 minutes. Patients remain awake and alert throughout, drive themselves to appointments, and return to normal activity immediately afterward.</p>
+
+      <p class="rw">TMS is FDA-cleared for major depressive disorder, OCD (2018), smoking cessation (2020), and anxious depression (2021).</p>
+
+      <p class="rw"><strong>Side effects:</strong> The most common side effect is mild scalp discomfort at the treatment site during early sessions. Headache is occasionally reported. Seizures are a rare but known risk of TMS treatment. Patients with a history of seizures or epilepsy are screened out during the initial evaluation. <span class="rw-change">seizure risk disclosure added per §3.10 — was missing entirely from original draft</span></p>
+
+      <h2 class="rw">What Spravato Is and How It Works</h2>
+
+      <p class="rw">Spravato (esketamine) is FDA-approved for treatment-resistant depression and for major depressive disorder with suicidal ideation. It acts on NMDA glutamate receptors rather than the monoamine pathways targeted by antidepressants, which is why it works for some patients who have not responded to SSRIs, SNRIs, or other conventional treatments.</p>
+
+      <p class="rw">Spravato is administered in our clinic under direct observation, as required by the FDA's REMS program. Patients remain in the clinic for at least two hours following each dose. It is not a take-home medication.</p>
+
+      <h2 class="rw">Who We Treat</h2>
+
+      <p class="rw">Scottsdale TMS Therapy sees patients with treatment-resistant major depressive disorder, anxiety disorders including generalized anxiety and social anxiety, OCD, and PTSD. <span class="rw-change">scope limited to confirmed psychiatric indications; substance use disorders explicitly excluded</span></p>
+
+      <p class="rw">We do not provide substance use disorder treatment. If a patient has co-occurring depression and a substance use disorder, the substance use component requires treatment through an appropriate addiction medicine program. We can help coordinate a referral.</p>
+
+      <h2 class="rw">How We Approach Every Patient</h2>
+
+      <p class="rw">Every patient at Scottsdale TMS Therapy begins with a full psychiatric evaluation: a review of treatment history, current medications, diagnostic criteria, and specific contraindications. TMS is not appropriate for everyone, and we will tell you if it is not the right fit.</p>
+
+      <p class="rw">Contraindications to TMS include implanted metal in the skull, a prior seizure disorder, and active substance use disorder. Our evaluation process is designed to identify these before treatment begins.</p>
+
+      <p class="rw">For appropriate candidates, we design an individualized protocol — TMS alone, Spravato alone, or a combined approach depending on the clinical picture. Treatment typically involves 30 to 36 TMS sessions over six to seven weeks. Full-course costs range from $2,000 to $12,000 depending on insurance coverage and protocol. Our team will verify your benefits before starting.</p>
+
+      <p class="rw">Call (480) 841-9279 to schedule your initial consultation.</p>
+
+      <p class="rw"><strong>If you or someone you know is in crisis, call or text 988 to reach the Suicide and Crisis Lifeline.</strong> <span class="rw-change">988 crisis line added to closing — was entirely missing from original draft; this is a mandatory compliance element</span></p>
+
+      <h2 class="rw">Frequently Asked Questions</h2>
+
+      <h3 class="rw">Is TMS therapy FDA-approved?</h3>
+      <p class="rw">TMS is FDA-cleared, not FDA-approved. The distinction reflects the regulatory pathway: TMS received 510(k) clearance, which applies to medical devices. TMS is FDA-cleared for major depressive disorder, OCD, smoking cessation, and anxious depression.</p>
+
+      <h3 class="rw">Is Spravato FDA-approved?</h3>
+      <p class="rw">Yes. Spravato (esketamine) is FDA-approved for treatment-resistant depression and for major depressive disorder with suicidal ideation. It is administered under clinical observation per the FDA's REMS program requirements.</p>
+
+      <h3 class="rw">Does Scottsdale TMS Therapy treat addiction?</h3>
+      <p class="rw">No. Scottsdale TMS Therapy is a psychiatric treatment clinic, not a substance use disorder treatment facility. We treat depression, anxiety, OCD, and PTSD. Patients with active substance use disorders require addiction medicine treatment.</p>
+
+      <h3 class="rw">How much does TMS cost at Scottsdale TMS Therapy?</h3>
+      <p class="rw">A full course of TMS ranges from $2,000 to $12,000 depending on insurance coverage and protocol length. Many commercial insurance plans cover TMS for treatment-resistant depression when antidepressant trials have not been effective. Call (480) 841-9279 to verify your benefits before starting.</p>
+
+      <p class="rw" style="margin-top: 20px; color: #6b7280; font-size: 12px;">Scottsdale TMS Therapy · 7287 E Earll Drive, Suite 1, Scottsdale, AZ 85251 · Hours: 8:00 AM to 8:00 PM</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PRE-SEND CHECKLIST
+       ============================================================ -->
+  <div class="checklist-section">
+    <h3>Pre-Send Checklist — Complete Before Delivering to Client</h3>
+    <table class="checklist-table">
+      <thead>
+        <tr>
+          <th>Entity</th>
+          <th>Page</th>
+          <th>Required Fix</th>
+          <th>Severity</th>
+          <th>Done</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="entity-col">Scottsdale Detox</td>
+          <td>Alcohol Detox</td>
+          <td>Remove diazepam (Valium) and lorazepam (Ativan) — replace with "benzodiazepines" (class only)</td>
+          <td><span class="severity-badge critical">Critical</span></td>
+          <td class="check-cell"><div class="block critical"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col">Scottsdale Detox</td>
+          <td>Alcohol Detox</td>
+          <td>Remove thiamine, phenobarbital, acamprosate — all unconfirmed</td>
+          <td><span class="severity-badge critical">Critical</span></td>
+          <td class="check-cell"><div class="block critical"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col">Scottsdale Detox</td>
+          <td>Alcohol Detox</td>
+          <td>Remove both entity references: "The Hope House treatment network, including Arizona IOP, or HART Rehab" (lines 205, 219)</td>
+          <td><span class="severity-badge critical">Critical</span></td>
+          <td class="check-cell"><div class="block critical"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col">Scottsdale Detox</td>
+          <td>Alcohol Detox</td>
+          <td>Add detox-first scoping statement in opening section</td>
+          <td><span class="severity-badge major">Major</span></td>
+          <td class="check-cell"><div class="block"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col">Scottsdale Detox</td>
+          <td>Alcohol Detox</td>
+          <td>Revise medications section to patient narrative voice (not clinical inventory)</td>
+          <td><span class="severity-badge major">Major</span></td>
+          <td class="check-cell"><div class="block"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col">Arizona IOP</td>
+          <td>Alcohol Abuse IOP</td>
+          <td>Remove Dr. Vines, Alex Spritzer, Natalie Foster — wrong entity; replace with "Masters Level Licensed Therapists"</td>
+          <td><span class="severity-badge critical">Critical</span></td>
+          <td class="check-cell"><div class="block critical"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col">Arizona IOP</td>
+          <td>Alcohol Abuse IOP</td>
+          <td>Remove "Scottsdale Detox" from lines 93 and 107 — replace with "medical detox"</td>
+          <td><span class="severity-badge critical">Critical</span></td>
+          <td class="check-cell"><div class="block critical"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col">Arizona IOP</td>
+          <td>Alcohol Abuse IOP</td>
+          <td>Remove "The Hope House" from lines 107 and 159 — replace with "residential treatment" or "higher levels of care"</td>
+          <td><span class="severity-badge critical">Critical</span></td>
+          <td class="check-cell"><div class="block critical"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col">Arizona IOP</td>
+          <td>Alcohol Abuse IOP</td>
+          <td>Spell out IOP, PHP, MAT on first use throughout</td>
+          <td><span class="severity-badge major">Major</span></td>
+          <td class="check-cell"><div class="block"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col">Arizona IOP</td>
+          <td>Alcohol Abuse IOP</td>
+          <td>Rebuild mid-section with confirmed differentiators: group size (12–15), scheduling flexibility, Arizona recovery context</td>
+          <td><span class="severity-badge major">Major</span></td>
+          <td class="check-cell"><div class="block"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col">Arizona IOP</td>
+          <td>Alcohol Abuse IOP</td>
+          <td>Verify or remove "three to five sessions per week" (line 153)</td>
+          <td><span class="severity-badge note">Note</span></td>
+          <td class="check-cell"><div class="block"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col">The Hope House</td>
+          <td>Alcohol Abuse</td>
+          <td>Remove Naltrexone (Vivitrol), Acamprosate (Campral), Disulfiram (Antabuse) — unconfirmed; Suboxone only</td>
+          <td><span class="severity-badge critical">Critical</span></td>
+          <td class="check-cell"><div class="block critical"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col">The Hope House</td>
+          <td>Alcohol Abuse</td>
+          <td>Remove "Scottsdale Detox" and "Arizona IOP" from line 171 — replace with generic step-down language</td>
+          <td><span class="severity-badge critical">Critical</span></td>
+          <td class="check-cell"><div class="block critical"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col">The Hope House</td>
+          <td>Alcohol Abuse</td>
+          <td>Fix outcome guarantee: "produces significantly better outcomes" (line 102) — replace with evidence-based framing</td>
+          <td><span class="severity-badge critical">Critical</span></td>
+          <td class="check-cell"><div class="block critical"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col">The Hope House</td>
+          <td>Alcohol Abuse</td>
+          <td>Source or remove four uncited statistics (lines 156–159)</td>
+          <td><span class="severity-badge major">Major</span></td>
+          <td class="check-cell"><div class="block"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col">Scottsdale TMS</td>
+          <td>Our Philosophy</td>
+          <td>Add 988 Suicide and Crisis Lifeline to closing CTA — required compliance element</td>
+          <td><span class="severity-badge critical">Critical</span></td>
+          <td class="check-cell"><div class="block critical"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col">Scottsdale TMS</td>
+          <td>Our Philosophy</td>
+          <td>Remove substance use disorder treatment positioning (lines 57–58) — TMS is not a SUD facility</td>
+          <td><span class="severity-badge critical">Critical</span></td>
+          <td class="check-cell"><div class="block critical"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col">Scottsdale TMS</td>
+          <td>Our Philosophy</td>
+          <td>Audit all TMS regulatory language — must be "FDA-cleared" not "FDA-approved"</td>
+          <td><span class="severity-badge critical">Critical</span></td>
+          <td class="check-cell"><div class="block critical"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col">Scottsdale TMS</td>
+          <td>Our Philosophy</td>
+          <td>Remove unconfirmed founding story and "multiple gated properties" (lines 113–114)</td>
+          <td><span class="severity-badge critical">Critical</span></td>
+          <td class="check-cell"><div class="block critical"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col">Scottsdale TMS</td>
+          <td>Our Philosophy</td>
+          <td>Add TMS seizure risk disclosure to treatment approach/safety section</td>
+          <td><span class="severity-badge major">Major</span></td>
+          <td class="check-cell"><div class="block"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col">Scottsdale TMS</td>
+          <td>Our Philosophy</td>
+          <td>Verify "10-client" capacity claim applies to TMS (not just residential program)</td>
+          <td><span class="severity-badge note">Note</span></td>
+          <td class="check-cell"><div class="block"></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+</body>
+</html>

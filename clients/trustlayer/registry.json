@@ -1,7 +1,7 @@
 {
   "client": "trustlayer",
   "scope": "client",
-  "generatedAt": "2026-06-16T20:58:52",
+  "generatedAt": "2026-06-21T22:56:17",
   "totalFiles": 2,
   "entries": [
     {
@@ -15,7 +15,7 @@
       "path": "STYLE-SYSTEM.md",
       "sizeBytes": 19710,
       "sizeHuman": "19.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "overview",
@@ -28,7 +28,7 @@
       "path": "raw/knowledge/overview.md",
       "sizeBytes": 4273,
       "sizeHuman": "4.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     }
   ]
 }

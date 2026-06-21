@@ -1,7 +1,7 @@
 {
   "client": "us-self-storage",
   "scope": "client",
-  "generatedAt": "2026-06-16T20:58:52",
+  "generatedAt": "2026-06-21T22:56:17",
   "totalFiles": 2,
   "entries": [
     {
@@ -15,7 +15,7 @@
       "path": "STYLE-SYSTEM.md",
       "sizeBytes": 22437,
       "sizeHuman": "21.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "overview",
@@ -28,7 +28,7 @@
       "path": "raw/knowledge/overview.md",
       "sizeBytes": 9798,
       "sizeHuman": "9.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     }
   ]
 }

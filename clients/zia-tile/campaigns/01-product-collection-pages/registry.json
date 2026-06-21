@@ -1,7 +1,7 @@
 {
   "client": "zia-tile",
   "campaign": "01-product-collection-pages",
-  "generatedAt": "2026-06-19T18:12:19",
+  "generatedAt": "2026-06-21T22:56:17",
   "totalFiles": 661,
   "entries": [
     {
@@ -15,7 +15,7 @@
       "path": "README.md",
       "sizeBytes": 1322,
       "sizeHuman": "1.3 KB",
-      "lastModified": "2026-06-19"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "audit-report",
@@ -132,7 +132,7 @@
       "path": "drafts/05-ceramics-matte.md",
       "sizeBytes": 42570,
       "sizeHuman": "41.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "06-field-trip-japan",
@@ -145,7 +145,7 @@
       "path": "drafts/06-field-trip-japan.md",
       "sizeBytes": 42570,
       "sizeHuman": "41.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "07-cotto",
@@ -210,7 +210,7 @@
       "path": "drafts/11-marble-solids.md",
       "sizeBytes": 18593,
       "sizeHuman": "18.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "12-marble-patterns",
@@ -223,7 +223,7 @@
       "path": "drafts/12-marble-patterns.md",
       "sizeBytes": 19096,
       "sizeHuman": "18.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "13-cantera",
@@ -340,7 +340,7 @@
       "path": "drafts/product-pages/absinthe-4x4.md",
       "sizeBytes": 10069,
       "sizeHuman": "9.8 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "absinthe-trapezoid",
@@ -379,7 +379,7 @@
       "path": "drafts/product-pages/amber-4x4.md",
       "sizeBytes": 9853,
       "sizeHuman": "9.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "basilica-honed-6x6",
@@ -392,7 +392,7 @@
       "path": "drafts/product-pages/basilica-honed-6x6.md",
       "sizeBytes": 10563,
       "sizeHuman": "10.3 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "buff-honed-12x12",
@@ -405,7 +405,7 @@
       "path": "drafts/product-pages/buff-honed-12x12.md",
       "sizeBytes": 10459,
       "sizeHuman": "10.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "buff-honed-12x24",
@@ -418,7 +418,7 @@
       "path": "drafts/product-pages/buff-honed-12x24.md",
       "sizeBytes": 10860,
       "sizeHuman": "10.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "buff-honed-4x12",
@@ -431,7 +431,7 @@
       "path": "drafts/product-pages/buff-honed-4x12.md",
       "sizeBytes": 10514,
       "sizeHuman": "10.3 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "buff-honed-6x6",
@@ -444,7 +444,7 @@
       "path": "drafts/product-pages/buff-honed-6x6.md",
       "sizeBytes": 10504,
       "sizeHuman": "10.3 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "bungalow-12x12",
@@ -457,7 +457,7 @@
       "path": "drafts/product-pages/bungalow-12x12.md",
       "sizeBytes": 10537,
       "sizeHuman": "10.3 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "burnt-sugar-2x2",
@@ -470,7 +470,7 @@
       "path": "drafts/product-pages/burnt-sugar-2x2.md",
       "sizeBytes": 10994,
       "sizeHuman": "10.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "burnt-sugar-4x4",
@@ -483,7 +483,7 @@
       "path": "drafts/product-pages/burnt-sugar-4x4.md",
       "sizeBytes": 9841,
       "sizeHuman": "9.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "casablanca-white-2x2",
@@ -496,7 +496,7 @@
       "path": "drafts/product-pages/casablanca-white-2x2.md",
       "sizeBytes": 10569,
       "sizeHuman": "10.3 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "casablanca-white-2x6",
@@ -509,7 +509,7 @@
       "path": "drafts/product-pages/casablanca-white-2x6.md",
       "sizeBytes": 10589,
       "sizeHuman": "10.3 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "casablanca-white-4x4",
@@ -522,7 +522,7 @@
       "path": "drafts/product-pages/casablanca-white-4x4.md",
       "sizeBytes": 10017,
       "sizeHuman": "9.8 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "casablanca-white-trapezoid",
@@ -535,7 +535,7 @@
       "path": "drafts/product-pages/casablanca-white-trapezoid.md",
       "sizeBytes": 11286,
       "sizeHuman": "11.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "condesa-4x4",
@@ -548,7 +548,7 @@
       "path": "drafts/product-pages/condesa-4x4.md",
       "sizeBytes": 10005,
       "sizeHuman": "9.8 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "desert-bloom-4x4",
@@ -561,7 +561,7 @@
       "path": "drafts/product-pages/desert-bloom-4x4.md",
       "sizeBytes": 9873,
       "sizeHuman": "9.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "durango-madera",
@@ -574,7 +574,7 @@
       "path": "drafts/product-pages/durango-madera.md",
       "sizeBytes": 10327,
       "sizeHuman": "10.1 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "gambit-1",
@@ -587,7 +587,7 @@
       "path": "drafts/product-pages/gambit-1.md",
       "sizeBytes": 11247,
       "sizeHuman": "11.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "gambit-7",
@@ -600,7 +600,7 @@
       "path": "drafts/product-pages/gambit-7.md",
       "sizeBytes": 11197,
       "sizeHuman": "10.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "glazed-earth-2x2",
@@ -613,7 +613,7 @@
       "path": "drafts/product-pages/glazed-earth-2x2.md",
       "sizeBytes": 11238,
       "sizeHuman": "11.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "glazed-earth-2x6",
@@ -626,7 +626,7 @@
       "path": "drafts/product-pages/glazed-earth-2x6.md",
       "sizeBytes": 10594,
       "sizeHuman": "10.3 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "glazed-earth-4x4",
@@ -639,7 +639,7 @@
       "path": "drafts/product-pages/glazed-earth-4x4.md",
       "sizeBytes": 9759,
       "sizeHuman": "9.5 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "graphite-grey-4x4",
@@ -652,7 +652,7 @@
       "path": "drafts/product-pages/graphite-grey-4x4.md",
       "sizeBytes": 10292,
       "sizeHuman": "10.1 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "kelp-forest-2x8",
@@ -665,7 +665,7 @@
       "path": "drafts/product-pages/kelp-forest-2x8.md",
       "sizeBytes": 9784,
       "sizeHuman": "9.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "lattice-4",
@@ -678,7 +678,7 @@
       "path": "drafts/product-pages/lattice-4.md",
       "sizeBytes": 11548,
       "sizeHuman": "11.3 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "linen-2x8",
@@ -691,7 +691,7 @@
       "path": "drafts/product-pages/linen-2x8.md",
       "sizeBytes": 10016,
       "sizeHuman": "9.8 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "linen-4x4",
@@ -704,7 +704,7 @@
       "path": "drafts/product-pages/linen-4x4.md",
       "sizeBytes": 9661,
       "sizeHuman": "9.4 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "molasses-2x8",
@@ -717,7 +717,7 @@
       "path": "drafts/product-pages/molasses-2x8.md",
       "sizeBytes": 9752,
       "sizeHuman": "9.5 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "molasses-4x4",
@@ -730,7 +730,7 @@
       "path": "drafts/product-pages/molasses-4x4.md",
       "sizeBytes": 9797,
       "sizeHuman": "9.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "monument-honed-6x6",
@@ -743,7 +743,7 @@
       "path": "drafts/product-pages/monument-honed-6x6.md",
       "sizeBytes": 10979,
       "sizeHuman": "10.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "neutra-12x12",
@@ -756,7 +756,7 @@
       "path": "drafts/product-pages/neutra-12x12.md",
       "sizeBytes": 10399,
       "sizeHuman": "10.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "pure-white-2x2",
@@ -769,7 +769,7 @@
       "path": "drafts/product-pages/pure-white-2x2.md",
       "sizeBytes": 10487,
       "sizeHuman": "10.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "pure-white-2x6",
@@ -782,7 +782,7 @@
       "path": "drafts/product-pages/pure-white-2x6.md",
       "sizeBytes": 10499,
       "sizeHuman": "10.3 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "pure-white-4x4",
@@ -795,7 +795,7 @@
       "path": "drafts/product-pages/pure-white-4x4.md",
       "sizeBytes": 9743,
       "sizeHuman": "9.5 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "pure-white-trapezoid",
@@ -808,7 +808,7 @@
       "path": "drafts/product-pages/pure-white-trapezoid.md",
       "sizeBytes": 10812,
       "sizeHuman": "10.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "racing-green-2x6",
@@ -821,7 +821,7 @@
       "path": "drafts/product-pages/racing-green-2x6.md",
       "sizeBytes": 10396,
       "sizeHuman": "10.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "racing-green-4x4",
@@ -834,7 +834,7 @@
       "path": "drafts/product-pages/racing-green-4x4.md",
       "sizeBytes": 10061,
       "sizeHuman": "9.8 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "rouge-4x4",
@@ -847,7 +847,7 @@
       "path": "drafts/product-pages/rouge-4x4.md",
       "sizeBytes": 9893,
       "sizeHuman": "9.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "sequoia-4x4",
@@ -860,7 +860,7 @@
       "path": "drafts/product-pages/sequoia-4x4.md",
       "sizeBytes": 9824,
       "sizeHuman": "9.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "skylight-4x4",
@@ -873,7 +873,7 @@
       "path": "drafts/product-pages/skylight-4x4.md",
       "sizeBytes": 9905,
       "sizeHuman": "9.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "stars-cross-red-clay-6x6",
@@ -886,7 +886,7 @@
       "path": "drafts/product-pages/stars-cross-red-clay-6x6.md",
       "sizeBytes": 10220,
       "sizeHuman": "10.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "tidepool-2x6",
@@ -899,7 +899,7 @@
       "path": "drafts/product-pages/tidepool-2x6.md",
       "sizeBytes": 10547,
       "sizeHuman": "10.3 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "tidepool-4x4",
@@ -912,7 +912,7 @@
       "path": "drafts/product-pages/tidepool-4x4.md",
       "sizeBytes": 9974,
       "sizeHuman": "9.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "tidepool-trapezoid",
@@ -925,7 +925,7 @@
       "path": "drafts/product-pages/tidepool-trapezoid.md",
       "sizeBytes": 11082,
       "sizeHuman": "10.8 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "unglazed-natural-2x6",
@@ -938,7 +938,7 @@
       "path": "drafts/product-pages/unglazed-natural-2x6.md",
       "sizeBytes": 12255,
       "sizeHuman": "12.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "volcan-4x12",
@@ -951,7 +951,7 @@
       "path": "drafts/product-pages/volcan-4x12.md",
       "sizeBytes": 9795,
       "sizeHuman": "9.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "alcazar-madera",
@@ -964,7 +964,7 @@
       "path": "drafts/product-pages/May/alcazar-madera.md",
       "sizeBytes": 10577,
       "sizeHuman": "10.3 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "apollo-12x12",
@@ -977,7 +977,7 @@
       "path": "drafts/product-pages/May/apollo-12x12.md",
       "sizeBytes": 11111,
       "sizeHuman": "10.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "atomic-4x4",
@@ -990,7 +990,7 @@
       "path": "drafts/product-pages/May/atomic-4x4.md",
       "sizeBytes": 10311,
       "sizeHuman": "10.1 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "basilica-honed-4x12",
@@ -1003,7 +1003,7 @@
       "path": "drafts/product-pages/May/basilica-honed-4x12.md",
       "sizeBytes": 10869,
       "sizeHuman": "10.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "bone-2x8",
@@ -1016,7 +1016,7 @@
       "path": "drafts/product-pages/May/bone-2x8.md",
       "sizeBytes": 10318,
       "sizeHuman": "10.1 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "bone-hex",
@@ -1029,7 +1029,7 @@
       "path": "drafts/product-pages/May/bone-hex.md",
       "sizeBytes": 10769,
       "sizeHuman": "10.5 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "brighton-hyannis",
@@ -1042,7 +1042,7 @@
       "path": "drafts/product-pages/May/brighton-hyannis.md",
       "sizeBytes": 10743,
       "sizeHuman": "10.5 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "brownstone-4x4",
@@ -1055,7 +1055,7 @@
       "path": "drafts/product-pages/May/brownstone-4x4.md",
       "sizeBytes": 10876,
       "sizeHuman": "10.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "buckeye-flat",
@@ -1068,7 +1068,7 @@
       "path": "drafts/product-pages/May/buckeye-flat.md",
       "sizeBytes": 10358,
       "sizeHuman": "10.1 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "canvas-white",
@@ -1081,7 +1081,7 @@
       "path": "drafts/product-pages/May/canvas-white.md",
       "sizeBytes": 10364,
       "sizeHuman": "10.1 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "constellation-bone-white-24x24",
@@ -1094,7 +1094,7 @@
       "path": "drafts/product-pages/May/constellation-bone-white-24x24.md",
       "sizeBytes": 11469,
       "sizeHuman": "11.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "desert-grey-2x8",
@@ -1107,7 +1107,7 @@
       "path": "drafts/product-pages/May/desert-grey-2x8.md",
       "sizeBytes": 10558,
       "sizeHuman": "10.3 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "etna-carrara-verde-alpi",
@@ -1120,7 +1120,7 @@
       "path": "drafts/product-pages/May/etna-carrara-verde-alpi.md",
       "sizeBytes": 11690,
       "sizeHuman": "11.4 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "feather-flat",
@@ -1133,7 +1133,7 @@
       "path": "drafts/product-pages/May/feather-flat.md",
       "sizeBytes": 10217,
       "sizeHuman": "10.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "frogtown-flat",
@@ -1146,7 +1146,7 @@
       "path": "drafts/product-pages/May/frogtown-flat.md",
       "sizeBytes": 10286,
       "sizeHuman": "10.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "gambit-8",
@@ -1159,7 +1159,7 @@
       "path": "drafts/product-pages/May/gambit-8.md",
       "sizeBytes": 12153,
       "sizeHuman": "11.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "glazed-earth-trapezoid",
@@ -1172,7 +1172,7 @@
       "path": "drafts/product-pages/May/glazed-earth-trapezoid.md",
       "sizeBytes": 11426,
       "sizeHuman": "11.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "graphite-grey-2x6",
@@ -1185,7 +1185,7 @@
       "path": "drafts/product-pages/May/graphite-grey-2x6.md",
       "sizeBytes": 11098,
       "sizeHuman": "10.8 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "grigio-carnico-12x24",
@@ -1198,7 +1198,7 @@
       "path": "drafts/product-pages/May/grigio-carnico-12x24.md",
       "sizeBytes": 11165,
       "sizeHuman": "10.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "iconic-blue-4x4",
@@ -1211,7 +1211,7 @@
       "path": "drafts/product-pages/May/iconic-blue-4x4.md",
       "sizeBytes": 10293,
       "sizeHuman": "10.1 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "jade-2x6",
@@ -1224,7 +1224,7 @@
       "path": "drafts/product-pages/May/jade-2x6.md",
       "sizeBytes": 10965,
       "sizeHuman": "10.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "montana",
@@ -1237,7 +1237,7 @@
       "path": "drafts/product-pages/May/montana.md",
       "sizeBytes": 10522,
       "sizeHuman": "10.3 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "moonrock-12x12",
@@ -1250,7 +1250,7 @@
       "path": "drafts/product-pages/May/moonrock-12x12.md",
       "sizeBytes": 11244,
       "sizeHuman": "11.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "morning-light-furrowed",
@@ -1263,7 +1263,7 @@
       "path": "drafts/product-pages/May/morning-light-furrowed.md",
       "sizeBytes": 10750,
       "sizeHuman": "10.5 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "nouveau-alluvian",
@@ -1276,7 +1276,7 @@
       "path": "drafts/product-pages/May/nouveau-alluvian.md",
       "sizeBytes": 10855,
       "sizeHuman": "10.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "oslo-white",
@@ -1289,7 +1289,7 @@
       "path": "drafts/product-pages/May/oslo-white.md",
       "sizeBytes": 10623,
       "sizeHuman": "10.4 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "pacific-blue-2x8",
@@ -1302,7 +1302,7 @@
       "path": "drafts/product-pages/May/pacific-blue-2x8.md",
       "sizeBytes": 10112,
       "sizeHuman": "9.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "peyote-4x4",
@@ -1315,7 +1315,7 @@
       "path": "drafts/product-pages/May/peyote-4x4.md",
       "sizeBytes": 10669,
       "sizeHuman": "10.4 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "ponderosa-2x8",
@@ -1328,7 +1328,7 @@
       "path": "drafts/product-pages/May/ponderosa-2x8.md",
       "sizeBytes": 10145,
       "sizeHuman": "9.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "prismatic-1",
@@ -1341,7 +1341,7 @@
       "path": "drafts/product-pages/May/prismatic-1.md",
       "sizeBytes": 11832,
       "sizeHuman": "11.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "rubric-4",
@@ -1354,7 +1354,7 @@
       "path": "drafts/product-pages/May/rubric-4.md",
       "sizeBytes": 11947,
       "sizeHuman": "11.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "rust-2x8",
@@ -1367,7 +1367,7 @@
       "path": "drafts/product-pages/May/rust-2x8.md",
       "sizeBytes": 10456,
       "sizeHuman": "10.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "sedona-12x12",
@@ -1380,7 +1380,7 @@
       "path": "drafts/product-pages/May/sedona-12x12.md",
       "sizeBytes": 10671,
       "sizeHuman": "10.4 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "slate-cement-tile",
@@ -1393,7 +1393,7 @@
       "path": "drafts/product-pages/May/slate-cement-tile.md",
       "sizeBytes": 10168,
       "sizeHuman": "9.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "square-madera-8x8",
@@ -1406,7 +1406,7 @@
       "path": "drafts/product-pages/May/square-madera-8x8.md",
       "sizeBytes": 10098,
       "sizeHuman": "9.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "superior-blue-4x4",
@@ -1419,7 +1419,7 @@
       "path": "drafts/product-pages/May/superior-blue-4x4.md",
       "sizeBytes": 11121,
       "sizeHuman": "10.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "terra-rosa-4x4",
@@ -1432,7 +1432,7 @@
       "path": "drafts/product-pages/May/terra-rosa-4x4.md",
       "sizeBytes": 10956,
       "sizeHuman": "10.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "unglazed-natural-4x4",
@@ -1445,7 +1445,7 @@
       "path": "drafts/product-pages/May/unglazed-natural-4x4.md",
       "sizeBytes": 11180,
       "sizeHuman": "10.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "valverde-4x4",
@@ -1458,7 +1458,7 @@
       "path": "drafts/product-pages/May/valverde-4x4.md",
       "sizeBytes": 10217,
       "sizeHuman": "10.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "volcan-12x12",
@@ -1471,7 +1471,7 @@
       "path": "drafts/product-pages/May/volcan-12x12.md",
       "sizeBytes": 10436,
       "sizeHuman": "10.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "volcan-12x24",
@@ -1484,7 +1484,7 @@
       "path": "drafts/product-pages/May/volcan-12x24.md",
       "sizeBytes": 10826,
       "sizeHuman": "10.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "volcan-24x24",
@@ -1497,7 +1497,7 @@
       "path": "drafts/product-pages/May/volcan-24x24.md",
       "sizeBytes": 10910,
       "sizeHuman": "10.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "09-glass-mosaics",
@@ -5943,7 +5943,7 @@
       "path": "gdocs-content/product-pages-fresh/2x6-rectangle-oscura.txt",
       "sizeBytes": 10134,
       "sizeHuman": "9.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "8x9-hex-red-clay",
@@ -5956,7 +5956,7 @@
       "path": "gdocs-content/product-pages-fresh/8x9-hex-red-clay.txt",
       "sizeBytes": 9666,
       "sizeHuman": "9.4 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "absinthe-2x6-bejmat-zellige",
@@ -5969,7 +5969,7 @@
       "path": "gdocs-content/product-pages-fresh/absinthe-2x6-bejmat-zellige.txt",
       "sizeBytes": 9213,
       "sizeHuman": "9.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "absinthe-trapezoid",
@@ -5982,7 +5982,7 @@
       "path": "gdocs-content/product-pages-fresh/absinthe-trapezoid.txt",
       "sizeBytes": 10059,
       "sizeHuman": "9.8 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "aegean-4x4",
@@ -5995,7 +5995,7 @@
       "path": "gdocs-content/product-pages-fresh/aegean-4x4.txt",
       "sizeBytes": 9390,
       "sizeHuman": "9.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "alcazar-madera",
@@ -6008,7 +6008,7 @@
       "path": "gdocs-content/product-pages-fresh/alcazar-madera.txt",
       "sizeBytes": 9699,
       "sizeHuman": "9.5 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "amber-4x4",
@@ -6021,7 +6021,7 @@
       "path": "gdocs-content/product-pages-fresh/amber-4x4.txt",
       "sizeBytes": 8858,
       "sizeHuman": "8.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "apollo-12x12",
@@ -6034,7 +6034,7 @@
       "path": "gdocs-content/product-pages-fresh/apollo-12x12.txt",
       "sizeBytes": 9753,
       "sizeHuman": "9.5 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "atomic-4x4",
@@ -6047,7 +6047,7 @@
       "path": "gdocs-content/product-pages-fresh/atomic-4x4.txt",
       "sizeBytes": 8902,
       "sizeHuman": "8.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "basilica-12x24",
@@ -6060,7 +6060,7 @@
       "path": "gdocs-content/product-pages-fresh/basilica-12x24.txt",
       "sizeBytes": 10856,
       "sizeHuman": "10.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "basilica-4x12-honed",
@@ -6073,7 +6073,7 @@
       "path": "gdocs-content/product-pages-fresh/basilica-4x12-honed.txt",
       "sizeBytes": 10294,
       "sizeHuman": "10.1 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "basilica-6x6-honed",
@@ -6086,7 +6086,7 @@
       "path": "gdocs-content/product-pages-fresh/basilica-6x6-honed.txt",
       "sizeBytes": 9775,
       "sizeHuman": "9.5 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "bone-2x8",
@@ -6099,7 +6099,7 @@
       "path": "gdocs-content/product-pages-fresh/bone-2x8.txt",
       "sizeBytes": 9529,
       "sizeHuman": "9.3 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "bone-hex",
@@ -6112,7 +6112,7 @@
       "path": "gdocs-content/product-pages-fresh/bone-hex.txt",
       "sizeBytes": 11047,
       "sizeHuman": "10.8 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "brighton-hyannis",
@@ -6125,7 +6125,7 @@
       "path": "gdocs-content/product-pages-fresh/brighton-hyannis.txt",
       "sizeBytes": 10328,
       "sizeHuman": "10.1 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "brownstone-4x4",
@@ -6138,7 +6138,7 @@
       "path": "gdocs-content/product-pages-fresh/brownstone-4x4.txt",
       "sizeBytes": 9840,
       "sizeHuman": "9.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "buckeye-flat",
@@ -6151,7 +6151,7 @@
       "path": "gdocs-content/product-pages-fresh/buckeye-flat.txt",
       "sizeBytes": 9714,
       "sizeHuman": "9.5 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "bungalow-12x12-terrazzo",
@@ -6164,7 +6164,7 @@
       "path": "gdocs-content/product-pages-fresh/bungalow-12x12-terrazzo.txt",
       "sizeBytes": 9651,
       "sizeHuman": "9.4 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "burnt-sugar-2x2",
@@ -6177,7 +6177,7 @@
       "path": "gdocs-content/product-pages-fresh/burnt-sugar-2x2.txt",
       "sizeBytes": 9407,
       "sizeHuman": "9.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "burnt-sugar-2x6",
@@ -6190,7 +6190,7 @@
       "path": "gdocs-content/product-pages-fresh/burnt-sugar-2x6.txt",
       "sizeBytes": 10903,
       "sizeHuman": "10.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "burnt-sugar-4x4",
@@ -6203,7 +6203,7 @@
       "path": "gdocs-content/product-pages-fresh/burnt-sugar-4x4.txt",
       "sizeBytes": 9015,
       "sizeHuman": "8.8 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "burnt-sugar-glazed-earth-2x2",
@@ -6216,7 +6216,7 @@
       "path": "gdocs-content/product-pages-fresh/burnt-sugar-glazed-earth-2x2.txt",
       "sizeBytes": 10967,
       "sizeHuman": "10.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "cacao-4x4",
@@ -6229,7 +6229,7 @@
       "path": "gdocs-content/product-pages-fresh/cacao-4x4.txt",
       "sizeBytes": 10633,
       "sizeHuman": "10.4 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "canvas-white",
@@ -6242,7 +6242,7 @@
       "path": "gdocs-content/product-pages-fresh/canvas-white.txt",
       "sizeBytes": 10234,
       "sizeHuman": "10.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "carbon-black",
@@ -6255,7 +6255,7 @@
       "path": "gdocs-content/product-pages-fresh/carbon-black.txt",
       "sizeBytes": 10222,
       "sizeHuman": "10.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "carrara-12x12",
@@ -6268,7 +6268,7 @@
       "path": "gdocs-content/product-pages-fresh/carrara-12x12.txt",
       "sizeBytes": 10916,
       "sizeHuman": "10.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "casablanca-2x2-zellige",
@@ -6281,7 +6281,7 @@
       "path": "gdocs-content/product-pages-fresh/casablanca-2x2-zellige.txt",
       "sizeBytes": 9166,
       "sizeHuman": "9.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "casablanca-2x6-zellige",
@@ -6294,7 +6294,7 @@
       "path": "gdocs-content/product-pages-fresh/casablanca-2x6-zellige.txt",
       "sizeBytes": 9462,
       "sizeHuman": "9.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "casablanca-4x4-zellige-4-6-26",
@@ -6307,7 +6307,7 @@
       "path": "gdocs-content/product-pages-fresh/casablanca-4x4-zellige-4-6-26.txt",
       "sizeBytes": 8910,
       "sizeHuman": "8.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "casablanca-trapezoid-1x4-zellige",
@@ -6320,7 +6320,7 @@
       "path": "gdocs-content/product-pages-fresh/casablanca-trapezoid-1x4-zellige.txt",
       "sizeBytes": 9522,
       "sizeHuman": "9.3 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "ceramics-linen-2x8-matte-finish",
@@ -6333,7 +6333,7 @@
       "path": "gdocs-content/product-pages-fresh/ceramics-linen-2x8-matte-finish.txt",
       "sizeBytes": 8686,
       "sizeHuman": "8.5 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "condesa-4x4-square",
@@ -6346,7 +6346,7 @@
       "path": "gdocs-content/product-pages-fresh/condesa-4x4-square.txt",
       "sizeBytes": 9228,
       "sizeHuman": "9.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "constellation-bone-white-24x24",
@@ -6359,7 +6359,7 @@
       "path": "gdocs-content/product-pages-fresh/constellation-bone-white-24x24.txt",
       "sizeBytes": 9484,
       "sizeHuman": "9.3 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "desert-bloom-2x6",
@@ -6372,7 +6372,7 @@
       "path": "gdocs-content/product-pages-fresh/desert-bloom-2x6.txt",
       "sizeBytes": 9935,
       "sizeHuman": "9.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "desert-bloom-4x4-zellige",
@@ -6385,7 +6385,7 @@
       "path": "gdocs-content/product-pages-fresh/desert-bloom-4x4-zellige.txt",
       "sizeBytes": 9374,
       "sizeHuman": "9.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "desert-grey-2x8",
@@ -6398,7 +6398,7 @@
       "path": "gdocs-content/product-pages-fresh/desert-grey-2x8.txt",
       "sizeBytes": 9535,
       "sizeHuman": "9.3 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "durango-madera",
@@ -6411,7 +6411,7 @@
       "path": "gdocs-content/product-pages-fresh/durango-madera.txt",
       "sizeBytes": 9554,
       "sizeHuman": "9.3 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "ethereal-blue-2x8",
@@ -6424,7 +6424,7 @@
       "path": "gdocs-content/product-pages-fresh/ethereal-blue-2x8.txt",
       "sizeBytes": 10304,
       "sizeHuman": "10.1 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "etna-in-carrara-verde-alpi",
@@ -6437,7 +6437,7 @@
       "path": "gdocs-content/product-pages-fresh/etna-in-carrara-verde-alpi.txt",
       "sizeBytes": 10739,
       "sizeHuman": "10.5 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "eucalyptus-2x8",
@@ -6450,7 +6450,7 @@
       "path": "gdocs-content/product-pages-fresh/eucalyptus-2x8.txt",
       "sizeBytes": 9790,
       "sizeHuman": "9.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "feather-flat",
@@ -6463,7 +6463,7 @@
       "path": "gdocs-content/product-pages-fresh/feather-flat.txt",
       "sizeBytes": 9112,
       "sizeHuman": "8.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "french-cobblestone",
@@ -6476,7 +6476,7 @@
       "path": "gdocs-content/product-pages-fresh/french-cobblestone.txt",
       "sizeBytes": 10913,
       "sizeHuman": "10.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "frogtown-flat",
@@ -6489,7 +6489,7 @@
       "path": "gdocs-content/product-pages-fresh/frogtown-flat.txt",
       "sizeBytes": 9799,
       "sizeHuman": "9.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "gambit-1",
@@ -6502,7 +6502,7 @@
       "path": "gdocs-content/product-pages-fresh/gambit-1.txt",
       "sizeBytes": 9590,
       "sizeHuman": "9.4 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "gambit-7",
@@ -6515,7 +6515,7 @@
       "path": "gdocs-content/product-pages-fresh/gambit-7.txt",
       "sizeBytes": 9148,
       "sizeHuman": "8.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "gambit-8",
@@ -6528,7 +6528,7 @@
       "path": "gdocs-content/product-pages-fresh/gambit-8.txt",
       "sizeBytes": 10075,
       "sizeHuman": "9.8 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "glazed-earth-2x2",
@@ -6541,7 +6541,7 @@
       "path": "gdocs-content/product-pages-fresh/glazed-earth-2x2.txt",
       "sizeBytes": 9175,
       "sizeHuman": "9.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "glazed-earth-trapezoid",
@@ -6554,7 +6554,7 @@
       "path": "gdocs-content/product-pages-fresh/glazed-earth-trapezoid.txt",
       "sizeBytes": 10149,
       "sizeHuman": "9.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "graphite-grey-2x6",
@@ -6567,7 +6567,7 @@
       "path": "gdocs-content/product-pages-fresh/graphite-grey-2x6.txt",
       "sizeBytes": 10448,
       "sizeHuman": "10.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "graphite-grey-4x4",
@@ -6580,7 +6580,7 @@
       "path": "gdocs-content/product-pages-fresh/graphite-grey-4x4.txt",
       "sizeBytes": 9652,
       "sizeHuman": "9.4 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "grigio-carnico-12x24",
@@ -6593,7 +6593,7 @@
       "path": "gdocs-content/product-pages-fresh/grigio-carnico-12x24.txt",
       "sizeBytes": 10414,
       "sizeHuman": "10.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "iconic-blue-4x4-matte",
@@ -6606,7 +6606,7 @@
       "path": "gdocs-content/product-pages-fresh/iconic-blue-4x4-matte.txt",
       "sizeBytes": 8859,
       "sizeHuman": "8.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "jade-2x6",
@@ -6619,7 +6619,7 @@
       "path": "gdocs-content/product-pages-fresh/jade-2x6.txt",
       "sizeBytes": 10121,
       "sizeHuman": "9.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "jade",
@@ -6632,7 +6632,7 @@
       "path": "gdocs-content/product-pages-fresh/jade.txt",
       "sizeBytes": 9827,
       "sizeHuman": "9.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "kelp-forest-2x8",
@@ -6645,7 +6645,7 @@
       "path": "gdocs-content/product-pages-fresh/kelp-forest-2x8.txt",
       "sizeBytes": 8784,
       "sizeHuman": "8.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "kelp-forest-4x4",
@@ -6658,7 +6658,7 @@
       "path": "gdocs-content/product-pages-fresh/kelp-forest-4x4.txt",
       "sizeBytes": 10391,
       "sizeHuman": "10.1 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "lattice-4-zellige-mosaic-pure-white-casablanca",
@@ -6671,7 +6671,7 @@
       "path": "gdocs-content/product-pages-fresh/lattice-4-zellige-mosaic-pure-white-casablanca.txt",
       "sizeBytes": 9561,
       "sizeHuman": "9.3 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "limestone-buff-honed-12x12",
@@ -6684,7 +6684,7 @@
       "path": "gdocs-content/product-pages-fresh/limestone-buff-honed-12x12.txt",
       "sizeBytes": 9904,
       "sizeHuman": "9.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "limestone-buff-honed-12x24",
@@ -6697,7 +6697,7 @@
       "path": "gdocs-content/product-pages-fresh/limestone-buff-honed-12x24.txt",
       "sizeBytes": 9917,
       "sizeHuman": "9.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "limestone-buff-honed-4x12",
@@ -6710,7 +6710,7 @@
       "path": "gdocs-content/product-pages-fresh/limestone-buff-honed-4x12.txt",
       "sizeBytes": 9911,
       "sizeHuman": "9.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "limestone-buff-honed-6x6",
@@ -6723,7 +6723,7 @@
       "path": "gdocs-content/product-pages-fresh/limestone-buff-honed-6x6.txt",
       "sizeBytes": 9906,
       "sizeHuman": "9.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "linen-4x4",
@@ -6736,7 +6736,7 @@
       "path": "gdocs-content/product-pages-fresh/linen-4x4.txt",
       "sizeBytes": 8852,
       "sizeHuman": "8.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "madera-8x8",
@@ -6749,7 +6749,7 @@
       "path": "gdocs-content/product-pages-fresh/madera-8x8.txt",
       "sizeBytes": 9415,
       "sizeHuman": "9.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "molasses-2x8",
@@ -6762,7 +6762,7 @@
       "path": "gdocs-content/product-pages-fresh/molasses-2x8.txt",
       "sizeBytes": 8735,
       "sizeHuman": "8.5 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "molasses",
@@ -6775,7 +6775,7 @@
       "path": "gdocs-content/product-pages-fresh/molasses.txt",
       "sizeBytes": 8808,
       "sizeHuman": "8.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "montana",
@@ -6788,7 +6788,7 @@
       "path": "gdocs-content/product-pages-fresh/montana.txt",
       "sizeBytes": 10140,
       "sizeHuman": "9.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "monument-4x12",
@@ -6801,7 +6801,7 @@
       "path": "gdocs-content/product-pages-fresh/monument-4x12.txt",
       "sizeBytes": 11096,
       "sizeHuman": "10.8 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "monument-6x6-honed",
@@ -6814,7 +6814,7 @@
       "path": "gdocs-content/product-pages-fresh/monument-6x6-honed.txt",
       "sizeBytes": 9687,
       "sizeHuman": "9.5 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "moon-rock-12x12",
@@ -6827,7 +6827,7 @@
       "path": "gdocs-content/product-pages-fresh/moon-rock-12x12.txt",
       "sizeBytes": 10219,
       "sizeHuman": "10.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "moonlight-2x8",
@@ -6840,7 +6840,7 @@
       "path": "gdocs-content/product-pages-fresh/moonlight-2x8.txt",
       "sizeBytes": 10770,
       "sizeHuman": "10.5 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "morning-light-furrowed",
@@ -6853,7 +6853,7 @@
       "path": "gdocs-content/product-pages-fresh/morning-light-furrowed.txt",
       "sizeBytes": 10115,
       "sizeHuman": "9.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "nagano-2x8",
@@ -6866,7 +6866,7 @@
       "path": "gdocs-content/product-pages-fresh/nagano-2x8.txt",
       "sizeBytes": 10063,
       "sizeHuman": "9.8 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "neutra-12x12",
@@ -6879,7 +6879,7 @@
       "path": "gdocs-content/product-pages-fresh/neutra-12x12.txt",
       "sizeBytes": 9030,
       "sizeHuman": "8.8 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "neutra-24x24",
@@ -6892,7 +6892,7 @@
       "path": "gdocs-content/product-pages-fresh/neutra-24x24.txt",
       "sizeBytes": 10778,
       "sizeHuman": "10.5 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "nouveau-alluvian",
@@ -6905,7 +6905,7 @@
       "path": "gdocs-content/product-pages-fresh/nouveau-alluvian.txt",
       "sizeBytes": 9673,
       "sizeHuman": "9.4 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "oslo-white",
@@ -6918,7 +6918,7 @@
       "path": "gdocs-content/product-pages-fresh/oslo-white.txt",
       "sizeBytes": 10602,
       "sizeHuman": "10.4 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "pacific-blue-2x8-satin",
@@ -6931,7 +6931,7 @@
       "path": "gdocs-content/product-pages-fresh/pacific-blue-2x8-satin.txt",
       "sizeBytes": 8911,
       "sizeHuman": "8.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "peyote-4x4",
@@ -6944,7 +6944,7 @@
       "path": "gdocs-content/product-pages-fresh/peyote-4x4.txt",
       "sizeBytes": 9780,
       "sizeHuman": "9.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "piedra-4x4",
@@ -6957,7 +6957,7 @@
       "path": "gdocs-content/product-pages-fresh/piedra-4x4.txt",
       "sizeBytes": 11176,
       "sizeHuman": "10.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "pomelo-bone",
@@ -6970,7 +6970,7 @@
       "path": "gdocs-content/product-pages-fresh/pomelo-bone.txt",
       "sizeBytes": 9887,
       "sizeHuman": "9.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "ponderosa-2x8-glossy",
@@ -6983,7 +6983,7 @@
       "path": "gdocs-content/product-pages-fresh/ponderosa-2x8-glossy.txt",
       "sizeBytes": 8648,
       "sizeHuman": "8.4 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "prismatic-1",
@@ -6996,7 +6996,7 @@
       "path": "gdocs-content/product-pages-fresh/prismatic-1.txt",
       "sizeBytes": 10204,
       "sizeHuman": "10.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "puebla-4x4",
@@ -7009,7 +7009,7 @@
       "path": "gdocs-content/product-pages-fresh/puebla-4x4.txt",
       "sizeBytes": 10521,
       "sizeHuman": "10.3 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "pure-white-2x2",
@@ -7022,7 +7022,7 @@
       "path": "gdocs-content/product-pages-fresh/pure-white-2x2.txt",
       "sizeBytes": 9490,
       "sizeHuman": "9.3 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "pure-white-2x6",
@@ -7035,7 +7035,7 @@
       "path": "gdocs-content/product-pages-fresh/pure-white-2x6.txt",
       "sizeBytes": 9422,
       "sizeHuman": "9.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "pure-white-4x4-zellige-docx",
@@ -7048,7 +7048,7 @@
       "path": "gdocs-content/product-pages-fresh/pure-white-4x4-zellige-docx.txt",
       "sizeBytes": 9357,
       "sizeHuman": "9.1 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "pure-white-trapezoid-zellige",
@@ -7061,7 +7061,7 @@
       "path": "gdocs-content/product-pages-fresh/pure-white-trapezoid-zellige.txt",
       "sizeBytes": 9677,
       "sizeHuman": "9.5 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "racing-green-2x6-zellige",
@@ -7074,7 +7074,7 @@
       "path": "gdocs-content/product-pages-fresh/racing-green-2x6-zellige.txt",
       "sizeBytes": 9357,
       "sizeHuman": "9.1 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "red-clay-8x8-square",
@@ -7087,7 +7087,7 @@
       "path": "gdocs-content/product-pages-fresh/red-clay-8x8-square.txt",
       "sizeBytes": 4759,
       "sizeHuman": "4.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "rouge-4x4",
@@ -7100,7 +7100,7 @@
       "path": "gdocs-content/product-pages-fresh/rouge-4x4.txt",
       "sizeBytes": 9124,
       "sizeHuman": "8.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "rubric-4",
@@ -7113,7 +7113,7 @@
       "path": "gdocs-content/product-pages-fresh/rubric-4.txt",
       "sizeBytes": 9969,
       "sizeHuman": "9.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "rust-2x8",
@@ -7126,7 +7126,7 @@
       "path": "gdocs-content/product-pages-fresh/rust-2x8.txt",
       "sizeBytes": 9405,
       "sizeHuman": "9.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "sedona-12x12",
@@ -7139,7 +7139,7 @@
       "path": "gdocs-content/product-pages-fresh/sedona-12x12.txt",
       "sizeBytes": 10681,
       "sizeHuman": "10.4 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "sequoia-2x8",
@@ -7152,7 +7152,7 @@
       "path": "gdocs-content/product-pages-fresh/sequoia-2x8.txt",
       "sizeBytes": 10309,
       "sizeHuman": "10.1 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "sequoia-4x4",
@@ -7165,7 +7165,7 @@
       "path": "gdocs-content/product-pages-fresh/sequoia-4x4.txt",
       "sizeBytes": 8912,
       "sizeHuman": "8.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "skylight-4x4",
@@ -7178,7 +7178,7 @@
       "path": "gdocs-content/product-pages-fresh/skylight-4x4.txt",
       "sizeBytes": 8981,
       "sizeHuman": "8.8 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "slate",
@@ -7191,7 +7191,7 @@
       "path": "gdocs-content/product-pages-fresh/slate.txt",
       "sizeBytes": 9973,
       "sizeHuman": "9.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "stars-cross-red-clay",
@@ -7204,7 +7204,7 @@
       "path": "gdocs-content/product-pages-fresh/stars-cross-red-clay.txt",
       "sizeBytes": 9891,
       "sizeHuman": "9.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "superior-blue-4x4",
@@ -7217,7 +7217,7 @@
       "path": "gdocs-content/product-pages-fresh/superior-blue-4x4.txt",
       "sizeBytes": 10096,
       "sizeHuman": "9.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "terra-rosa-4x4",
@@ -7230,7 +7230,7 @@
       "path": "gdocs-content/product-pages-fresh/terra-rosa-4x4.txt",
       "sizeBytes": 9503,
       "sizeHuman": "9.3 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "tidepool-2x6",
@@ -7243,7 +7243,7 @@
       "path": "gdocs-content/product-pages-fresh/tidepool-2x6.txt",
       "sizeBytes": 9560,
       "sizeHuman": "9.3 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "tidepool-4x4-zellige",
@@ -7256,7 +7256,7 @@
       "path": "gdocs-content/product-pages-fresh/tidepool-4x4-zellige.txt",
       "sizeBytes": 8999,
       "sizeHuman": "8.8 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "tidepool",
@@ -7269,7 +7269,7 @@
       "path": "gdocs-content/product-pages-fresh/tidepool.txt",
       "sizeBytes": 9889,
       "sizeHuman": "9.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "toltec-red-clay",
@@ -7282,7 +7282,7 @@
       "path": "gdocs-content/product-pages-fresh/toltec-red-clay.txt",
       "sizeBytes": 10283,
       "sizeHuman": "10.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "unglazed-natural-2x6",
@@ -7295,7 +7295,7 @@
       "path": "gdocs-content/product-pages-fresh/unglazed-natural-2x6.txt",
       "sizeBytes": 10370,
       "sizeHuman": "10.1 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "unglazed-natural-4x4",
@@ -7308,7 +7308,7 @@
       "path": "gdocs-content/product-pages-fresh/unglazed-natural-4x4.txt",
       "sizeBytes": 10931,
       "sizeHuman": "10.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "valverde-4x4",
@@ -7321,7 +7321,7 @@
       "path": "gdocs-content/product-pages-fresh/valverde-4x4.txt",
       "sizeBytes": 9626,
       "sizeHuman": "9.4 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "volcan-12x12",
@@ -7334,7 +7334,7 @@
       "path": "gdocs-content/product-pages-fresh/volcan-12x12.txt",
       "sizeBytes": 10762,
       "sizeHuman": "10.5 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "volcan-24x24",
@@ -7347,7 +7347,7 @@
       "path": "gdocs-content/product-pages-fresh/volcan-24x24.txt",
       "sizeBytes": 10128,
       "sizeHuman": "9.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "volcan-4x12",
@@ -7360,7 +7360,7 @@
       "path": "gdocs-content/product-pages-fresh/volcan-4x12.txt",
       "sizeBytes": 9780,
       "sizeHuman": "9.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "zellige-absinthe-4x4",
@@ -7373,7 +7373,7 @@
       "path": "gdocs-content/product-pages-fresh/zellige-absinthe-4x4.txt",
       "sizeBytes": 9115,
       "sizeHuman": "8.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "zellige-glazed-earth-2x6",
@@ -7386,7 +7386,7 @@
       "path": "gdocs-content/product-pages-fresh/zellige-glazed-earth-2x6.txt",
       "sizeBytes": 9580,
       "sizeHuman": "9.4 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "zellige-glazed-earth-4x4",
@@ -7399,7 +7399,7 @@
       "path": "gdocs-content/product-pages-fresh/zellige-glazed-earth-4x4.txt",
       "sizeBytes": 9024,
       "sizeHuman": "8.8 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "zellige-racing-green-4x4",
@@ -7412,7 +7412,7 @@
       "path": "gdocs-content/product-pages-fresh/zellige-racing-green-4x4.txt",
       "sizeBytes": 9119,
       "sizeHuman": "8.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-1-zia-tile-april-2026-color-white",
@@ -7425,7 +7425,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-1-zia-tile-april-2026-color-white.txt",
       "sizeBytes": 5463,
       "sizeHuman": "5.3 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-1-zia-tile-march-2026-material-zellige",
@@ -7438,7 +7438,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-1-zia-tile-march-2026-material-zellige.txt",
       "sizeBytes": 10273,
       "sizeHuman": "10.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-10-zia-tile-april-2026-color-blue",
@@ -7451,7 +7451,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-10-zia-tile-april-2026-color-blue.txt",
       "sizeBytes": 4182,
       "sizeHuman": "4.1 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-10-zia-tile-march-2026-limestone",
@@ -7464,7 +7464,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-10-zia-tile-march-2026-limestone.txt",
       "sizeBytes": 7350,
       "sizeHuman": "7.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-11-zia-tile-april-2026-color-purple",
@@ -7477,7 +7477,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-11-zia-tile-april-2026-color-purple.txt",
       "sizeBytes": 3665,
       "sizeHuman": "3.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-11-zia-tile-march-2026-ceramics",
@@ -7490,7 +7490,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-11-zia-tile-march-2026-ceramics.txt",
       "sizeBytes": 6985,
       "sizeHuman": "6.8 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-12-zia-tile-april-2026-color-black",
@@ -7503,7 +7503,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-12-zia-tile-april-2026-color-black.txt",
       "sizeBytes": 3973,
       "sizeHuman": "3.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-12-zia-tile-march-2026-field-trip-japan",
@@ -7516,7 +7516,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-12-zia-tile-march-2026-field-trip-japan.txt",
       "sizeBytes": 5891,
       "sizeHuman": "5.8 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-13-zia-tile-april-2026-color-pattern",
@@ -7529,7 +7529,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-13-zia-tile-april-2026-color-pattern.txt",
       "sizeBytes": 3725,
       "sizeHuman": "3.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-13-zia-tile-march-2026-shape-square",
@@ -7542,7 +7542,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-13-zia-tile-march-2026-shape-square.txt",
       "sizeBytes": 6952,
       "sizeHuman": "6.8 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-14-zia-tile-april-2026-space-bathroom",
@@ -7555,7 +7555,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-14-zia-tile-april-2026-space-bathroom.txt",
       "sizeBytes": 5145,
       "sizeHuman": "5.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-14-zia-tile-march-2026-shape-rectangle",
@@ -7568,7 +7568,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-14-zia-tile-march-2026-shape-rectangle.txt",
       "sizeBytes": 7299,
       "sizeHuman": "7.1 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-15-zia-tile-april-2026-space-kitchen",
@@ -7581,7 +7581,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-15-zia-tile-april-2026-space-kitchen.txt",
       "sizeBytes": 6122,
       "sizeHuman": "6.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-15-zia-tile-march-2026-shape-subwa",
@@ -7594,7 +7594,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-15-zia-tile-march-2026-shape-subwa.txt",
       "sizeBytes": 5971,
       "sizeHuman": "5.8 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-16-zia-tile-april-2026-shape-hexagon",
@@ -7607,7 +7607,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-16-zia-tile-april-2026-shape-hexagon.txt",
       "sizeBytes": 5975,
       "sizeHuman": "5.8 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-16-zia-tile-april-2026-space-outdoor",
@@ -7620,7 +7620,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-16-zia-tile-april-2026-space-outdoor.txt",
       "sizeBytes": 5556,
       "sizeHuman": "5.4 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-17-zia-tile-april-2026-space-shower",
@@ -7633,7 +7633,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-17-zia-tile-april-2026-space-shower.txt",
       "sizeBytes": 5228,
       "sizeHuman": "5.1 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-17-zia-tile-march-2026-shape-large-format",
@@ -7646,7 +7646,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-17-zia-tile-march-2026-shape-large-format.txt",
       "sizeBytes": 4719,
       "sizeHuman": "4.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-18-zia-tile-april-2026-trade-program",
@@ -7659,7 +7659,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-18-zia-tile-april-2026-trade-program.txt",
       "sizeBytes": 3313,
       "sizeHuman": "3.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-18-zia-tile-march-2026-shape-special-shape",
@@ -7672,7 +7672,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-18-zia-tile-march-2026-shape-special-shape.txt",
       "sizeBytes": 5314,
       "sizeHuman": "5.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-2-zia-tile-april-2026-color-tan",
@@ -7685,7 +7685,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-2-zia-tile-april-2026-color-tan.txt",
       "sizeBytes": 3569,
       "sizeHuman": "3.5 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-2-zia-tile-march-2026-cement",
@@ -7698,7 +7698,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-2-zia-tile-march-2026-cement.txt",
       "sizeBytes": 7559,
       "sizeHuman": "7.4 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-3-zia-tile-april-2026-color-yellow",
@@ -7711,7 +7711,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-3-zia-tile-april-2026-color-yellow.txt",
       "sizeBytes": 4307,
       "sizeHuman": "4.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-3-zia-tile-march-2026-cotto",
@@ -7724,7 +7724,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-3-zia-tile-march-2026-cotto.txt",
       "sizeBytes": 8851,
       "sizeHuman": "8.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-4-zia-tile-april-2026-color-orange",
@@ -7737,7 +7737,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-4-zia-tile-april-2026-color-orange.txt",
       "sizeBytes": 3522,
       "sizeHuman": "3.4 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-4-zia-tile-march-2026-cotto-allende",
@@ -7750,7 +7750,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-4-zia-tile-march-2026-cotto-allende.txt",
       "sizeBytes": 7052,
       "sizeHuman": "6.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-5-zia-tile-april-2026-color-pink",
@@ -7763,7 +7763,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-5-zia-tile-april-2026-color-pink.txt",
       "sizeBytes": 3665,
       "sizeHuman": "3.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-5-zia-tile-march-2026-glass-mosaics",
@@ -7776,7 +7776,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-5-zia-tile-march-2026-glass-mosaics.txt",
       "sizeBytes": 6829,
       "sizeHuman": "6.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-6-zia-tile-april-2026-color-red",
@@ -7789,7 +7789,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-6-zia-tile-april-2026-color-red.txt",
       "sizeBytes": 3658,
       "sizeHuman": "3.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-6-zia-tile-march-2026-terrazzo",
@@ -7802,7 +7802,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-6-zia-tile-march-2026-terrazzo.txt",
       "sizeBytes": 7771,
       "sizeHuman": "7.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-7-zia-tile-april-2026-color-brown",
@@ -7815,7 +7815,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-7-zia-tile-april-2026-color-brown.txt",
       "sizeBytes": 4129,
       "sizeHuman": "4.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-7-zia-tile-march-2026-marble",
@@ -7828,7 +7828,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-7-zia-tile-march-2026-marble.txt",
       "sizeBytes": 7935,
       "sizeHuman": "7.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-8-zia-tile-april-2026-color-grey",
@@ -7841,7 +7841,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-8-zia-tile-april-2026-color-grey.txt",
       "sizeBytes": 3833,
       "sizeHuman": "3.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-8-zia-tile-march-2026-roman-mosaics",
@@ -7854,7 +7854,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-8-zia-tile-march-2026-roman-mosaics.txt",
       "sizeBytes": 6157,
       "sizeHuman": "6.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-9-zia-tile-april-2026-color-green",
@@ -7867,7 +7867,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-9-zia-tile-april-2026-color-green.txt",
       "sizeBytes": 3944,
       "sizeHuman": "3.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-9-zia-tile-march-2026-cantera",
@@ -7880,7 +7880,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-9-zia-tile-march-2026-cantera.txt",
       "sizeBytes": 6977,
       "sizeHuman": "6.8 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "core-page-zia-tile-march-2026-homepage",
@@ -7893,7 +7893,7 @@
       "path": "gdocs-content/collection-pages-fresh/core-page-zia-tile-march-2026-homepage.txt",
       "sizeBytes": 5130,
       "sizeHuman": "5.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "installation-guide-1-zia-tile-may-cantera",
@@ -7906,7 +7906,7 @@
       "path": "gdocs-content/collection-pages-fresh/installation-guide-1-zia-tile-may-cantera.txt",
       "sizeBytes": 7327,
       "sizeHuman": "7.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "installation-guide-10-zia-tile-may-roman-mosaics",
@@ -7919,7 +7919,7 @@
       "path": "gdocs-content/collection-pages-fresh/installation-guide-10-zia-tile-may-roman-mosaics.txt",
       "sizeBytes": 7524,
       "sizeHuman": "7.3 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "installation-guide-11-zia-tile-may-terrazzo",
@@ -7932,7 +7932,7 @@
       "path": "gdocs-content/collection-pages-fresh/installation-guide-11-zia-tile-may-terrazzo.txt",
       "sizeBytes": 7536,
       "sizeHuman": "7.4 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "installation-guide-12-zia-tile-may-zellige",
@@ -7945,7 +7945,7 @@
       "path": "gdocs-content/collection-pages-fresh/installation-guide-12-zia-tile-may-zellige.txt",
       "sizeBytes": 8935,
       "sizeHuman": "8.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "installation-guide-13-zia-tile-may-zellige-mosaic",
@@ -7958,7 +7958,7 @@
       "path": "gdocs-content/collection-pages-fresh/installation-guide-13-zia-tile-may-zellige-mosaic.txt",
       "sizeBytes": 8630,
       "sizeHuman": "8.4 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "installation-guide-2-zia-tile-may-cement",
@@ -7971,7 +7971,7 @@
       "path": "gdocs-content/collection-pages-fresh/installation-guide-2-zia-tile-may-cement.txt",
       "sizeBytes": 7161,
       "sizeHuman": "7.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "installation-guide-3-zia-tile-may-ceramics",
@@ -7984,7 +7984,7 @@
       "path": "gdocs-content/collection-pages-fresh/installation-guide-3-zia-tile-may-ceramics.txt",
       "sizeBytes": 5676,
       "sizeHuman": "5.5 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "installation-guide-4-zia-tile-may-cotto",
@@ -7997,7 +7997,7 @@
       "path": "gdocs-content/collection-pages-fresh/installation-guide-4-zia-tile-may-cotto.txt",
       "sizeBytes": 7205,
       "sizeHuman": "7.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "installation-guide-5-zia-tile-may-cotto-allende",
@@ -8010,7 +8010,7 @@
       "path": "gdocs-content/collection-pages-fresh/installation-guide-5-zia-tile-may-cotto-allende.txt",
       "sizeBytes": 6845,
       "sizeHuman": "6.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "installation-guide-6-zia-tile-may-field-trip",
@@ -8023,7 +8023,7 @@
       "path": "gdocs-content/collection-pages-fresh/installation-guide-6-zia-tile-may-field-trip.txt",
       "sizeBytes": 4665,
       "sizeHuman": "4.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "installation-guide-7-zia-tile-may-glass-mosaic",
@@ -8036,7 +8036,7 @@
       "path": "gdocs-content/collection-pages-fresh/installation-guide-7-zia-tile-may-glass-mosaic.txt",
       "sizeBytes": 4280,
       "sizeHuman": "4.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "installation-guide-8-zia-tile-may-limestone",
@@ -8049,7 +8049,7 @@
       "path": "gdocs-content/collection-pages-fresh/installation-guide-8-zia-tile-may-limestone.txt",
       "sizeBytes": 7310,
       "sizeHuman": "7.1 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "installation-guide-9-zia-tile-may-marble",
@@ -8062,7 +8062,7 @@
       "path": "gdocs-content/collection-pages-fresh/installation-guide-9-zia-tile-may-marble.txt",
       "sizeBytes": 7260,
       "sizeHuman": "7.1 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "installation-guide-page-zia-tile-may",
@@ -8075,7 +8075,7 @@
       "path": "gdocs-content/collection-pages-fresh/installation-guide-page-zia-tile-may.txt",
       "sizeBytes": 1059,
       "sizeHuman": "1.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "cantera",
@@ -8088,7 +8088,7 @@
       "path": "gdocs-content/collection-pages/cantera.md",
       "sizeBytes": 6727,
       "sizeHuman": "6.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "cement",
@@ -8101,7 +8101,7 @@
       "path": "gdocs-content/collection-pages/cement.md",
       "sizeBytes": 8015,
       "sizeHuman": "7.8 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "ceramics",
@@ -8114,7 +8114,7 @@
       "path": "gdocs-content/collection-pages/ceramics.md",
       "sizeBytes": 6721,
       "sizeHuman": "6.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "color-black",
@@ -8127,7 +8127,7 @@
       "path": "gdocs-content/collection-pages/color-black.md",
       "sizeBytes": 3833,
       "sizeHuman": "3.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "color-blue",
@@ -8140,7 +8140,7 @@
       "path": "gdocs-content/collection-pages/color-blue.md",
       "sizeBytes": 4124,
       "sizeHuman": "4.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "color-brown",
@@ -8153,7 +8153,7 @@
       "path": "gdocs-content/collection-pages/color-brown.md",
       "sizeBytes": 4090,
       "sizeHuman": "4.0 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "color-green",
@@ -8166,7 +8166,7 @@
       "path": "gdocs-content/collection-pages/color-green.md",
       "sizeBytes": 3791,
       "sizeHuman": "3.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "color-grey",
@@ -8179,7 +8179,7 @@
       "path": "gdocs-content/collection-pages/color-grey.md",
       "sizeBytes": 3785,
       "sizeHuman": "3.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "color-orange",
@@ -8192,7 +8192,7 @@
       "path": "gdocs-content/collection-pages/color-orange.md",
       "sizeBytes": 4287,
       "sizeHuman": "4.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "color-pattern",
@@ -8205,7 +8205,7 @@
       "path": "gdocs-content/collection-pages/color-pattern.md",
       "sizeBytes": 4026,
       "sizeHuman": "3.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "color-pink",
@@ -8218,7 +8218,7 @@
       "path": "gdocs-content/collection-pages/color-pink.md",
       "sizeBytes": 3639,
       "sizeHuman": "3.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "color-purple",
@@ -8231,7 +8231,7 @@
       "path": "gdocs-content/collection-pages/color-purple.md",
       "sizeBytes": 3573,
       "sizeHuman": "3.5 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "color-red",
@@ -8244,7 +8244,7 @@
       "path": "gdocs-content/collection-pages/color-red.md",
       "sizeBytes": 3978,
       "sizeHuman": "3.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "color-tan",
@@ -8257,7 +8257,7 @@
       "path": "gdocs-content/collection-pages/color-tan.md",
       "sizeBytes": 3524,
       "sizeHuman": "3.4 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "color-white",
@@ -8270,7 +8270,7 @@
       "path": "gdocs-content/collection-pages/color-white.md",
       "sizeBytes": 5505,
       "sizeHuman": "5.4 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "color-yellow",
@@ -8283,7 +8283,7 @@
       "path": "gdocs-content/collection-pages/color-yellow.md",
       "sizeBytes": 4267,
       "sizeHuman": "4.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "cotto-allende",
@@ -8296,7 +8296,7 @@
       "path": "gdocs-content/collection-pages/cotto-allende.md",
       "sizeBytes": 7371,
       "sizeHuman": "7.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "cotto",
@@ -8309,7 +8309,7 @@
       "path": "gdocs-content/collection-pages/cotto.md",
       "sizeBytes": 8620,
       "sizeHuman": "8.4 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "field-trip-japan",
@@ -8322,7 +8322,7 @@
       "path": "gdocs-content/collection-pages/field-trip-japan.md",
       "sizeBytes": 6042,
       "sizeHuman": "5.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "glass-mosaics",
@@ -8335,7 +8335,7 @@
       "path": "gdocs-content/collection-pages/glass-mosaics.md",
       "sizeBytes": 7248,
       "sizeHuman": "7.1 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "homepage",
@@ -8361,7 +8361,7 @@
       "path": "gdocs-content/collection-pages/limestone.md",
       "sizeBytes": 7574,
       "sizeHuman": "7.4 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "marble",
@@ -8374,7 +8374,7 @@
       "path": "gdocs-content/collection-pages/marble.md",
       "sizeBytes": 7875,
       "sizeHuman": "7.7 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "roman-mosaics",
@@ -8387,7 +8387,7 @@
       "path": "gdocs-content/collection-pages/roman-mosaics.md",
       "sizeBytes": 7113,
       "sizeHuman": "6.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "shape-hexagon",
@@ -8400,7 +8400,7 @@
       "path": "gdocs-content/collection-pages/shape-hexagon.md",
       "sizeBytes": 6207,
       "sizeHuman": "6.1 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "shape-large-format",
@@ -8413,7 +8413,7 @@
       "path": "gdocs-content/collection-pages/shape-large-format.md",
       "sizeBytes": 4754,
       "sizeHuman": "4.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "shape-rectangle",
@@ -8426,7 +8426,7 @@
       "path": "gdocs-content/collection-pages/shape-rectangle.md",
       "sizeBytes": 6735,
       "sizeHuman": "6.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "shape-special-shape",
@@ -8439,7 +8439,7 @@
       "path": "gdocs-content/collection-pages/shape-special-shape.md",
       "sizeBytes": 5232,
       "sizeHuman": "5.1 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "shape-square",
@@ -8452,7 +8452,7 @@
       "path": "gdocs-content/collection-pages/shape-square.md",
       "sizeBytes": 6723,
       "sizeHuman": "6.6 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "shape-subway",
@@ -8465,7 +8465,7 @@
       "path": "gdocs-content/collection-pages/shape-subway.md",
       "sizeBytes": 6360,
       "sizeHuman": "6.2 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "space-bathroom",
@@ -8478,7 +8478,7 @@
       "path": "gdocs-content/collection-pages/space-bathroom.md",
       "sizeBytes": 5236,
       "sizeHuman": "5.1 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "space-kitchen",
@@ -8491,7 +8491,7 @@
       "path": "gdocs-content/collection-pages/space-kitchen.md",
       "sizeBytes": 6086,
       "sizeHuman": "5.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "space-outdoor",
@@ -8504,7 +8504,7 @@
       "path": "gdocs-content/collection-pages/space-outdoor.md",
       "sizeBytes": 5562,
       "sizeHuman": "5.4 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "space-shower",
@@ -8517,7 +8517,7 @@
       "path": "gdocs-content/collection-pages/space-shower.md",
       "sizeBytes": 5273,
       "sizeHuman": "5.1 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "terrazzo",
@@ -8530,7 +8530,7 @@
       "path": "gdocs-content/collection-pages/terrazzo.md",
       "sizeBytes": 8286,
       "sizeHuman": "8.1 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "trade-program",
@@ -8556,7 +8556,7 @@
       "path": "gdocs-content/collection-pages/zellige.md",
       "sizeBytes": 9769,
       "sizeHuman": "9.5 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "RUN-SUMMARY",

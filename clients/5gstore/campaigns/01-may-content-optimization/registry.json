@@ -1,7 +1,7 @@
 {
   "client": "5gstore",
   "campaign": "01-may-content-optimization",
-  "generatedAt": "2026-06-19T18:12:19",
+  "generatedAt": "2026-06-21T22:56:17",
   "totalFiles": 9,
   "entries": [
     {
@@ -15,7 +15,7 @@
       "path": "README.md",
       "sizeBytes": 475,
       "sizeHuman": "475 B",
-      "lastModified": "2026-06-19"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "campaign-urls",

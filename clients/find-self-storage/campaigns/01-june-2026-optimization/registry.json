@@ -1,0 +1,86 @@
+{
+  "client": "find-self-storage",
+  "campaign": "01-june-2026-optimization",
+  "generatedAt": "2026-06-21T22:56:17",
+  "totalFiles": 6,
+  "entries": [
+    {
+      "id": "audit-report",
+      "filename": "audit-report.md",
+      "displayName": "Find Self Storage \u2014 Content Optimization Audit",
+      "type": "audit",
+      "category": "audit",
+      "status": "delivered",
+      "version": 1,
+      "path": "audit-report.md",
+      "sizeBytes": 11295,
+      "sizeHuman": "11.0 KB",
+      "lastModified": "2026-06-21"
+    },
+    {
+      "id": "boat-storage-units",
+      "filename": "boat-storage-units.md",
+      "displayName": "Boat Storage Units: Find Indoor, Covered & Outdoor Boat Storage Near You",
+      "type": "draft",
+      "category": "draft",
+      "status": "delivered",
+      "version": 1,
+      "path": "drafts/boat-storage-units.md",
+      "sizeBytes": 15353,
+      "sizeHuman": "15.0 KB",
+      "lastModified": "2026-06-21"
+    },
+    {
+      "id": "car-storage-units",
+      "filename": "car-storage-units.md",
+      "displayName": "Car Storage Units: Find Indoor, Covered & Outdoor Car Storage Near You",
+      "type": "draft",
+      "category": "draft",
+      "status": "delivered",
+      "version": 1,
+      "path": "drafts/car-storage-units.md",
+      "sizeBytes": 13608,
+      "sizeHuman": "13.3 KB",
+      "lastModified": "2026-06-21"
+    },
+    {
+      "id": "motorcycle-storage-units",
+      "filename": "motorcycle-storage-units.md",
+      "displayName": "Motorcycle Storage Units: Find Indoor & Covered Motorcycle Storage Near You",
+      "type": "draft",
+      "category": "draft",
+      "status": "delivered",
+      "version": 1,
+      "path": "drafts/motorcycle-storage-units.md",
+      "sizeBytes": 12365,
+      "sizeHuman": "12.1 KB",
+      "lastModified": "2026-06-21"
+    },
+    {
+      "id": "rv-storage-units",
+      "filename": "rv-storage-units.md",
+      "displayName": "RV Storage Units: Find Covered, Enclosed & Outdoor Motorhome Storage Near You",
+      "type": "draft",
+      "category": "draft",
+      "status": "delivered",
+      "version": 1,
+      "path": "drafts/rv-storage-units.md",
+      "sizeBytes": 15929,
+      "sizeHuman": "15.6 KB",
+      "lastModified": "2026-06-21"
+    },
+    {
+      "id": "wine-storage-units",
+      "filename": "wine-storage-units.md",
+      "displayName": "Wine Storage Units: Find Climate Controlled Wine Storage Near You",
+      "type": "draft",
+      "category": "draft",
+      "status": "delivered",
+      "version": 1,
+      "path": "drafts/wine-storage-units.md",
+      "sizeBytes": 10408,
+      "sizeHuman": "10.2 KB",
+      "lastModified": "2026-06-21"
+    }
+  ]
+}

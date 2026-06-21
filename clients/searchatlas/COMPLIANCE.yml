@@ -1,0 +1,198 @@
+# Compliance config — Search Atlas
+#
+# Fail-closed rule set for the compliance-gate / terminology-lint agents.
+# Derived from STYLE-SYSTEM.md, synced from the 2026-06-17 rebrand playbook
+# ("Search Atlas — Positioning & Messaging Guide").
+# severity: critical halts the pipeline before /ship; warning is reported but does not halt.
+#
+# NOTE on context-sensitive terms ("tool", "manage", antithesis fragments): the matcher is
+# exact-match and cannot read context, so these are warnings that flag every instance for a
+# human check rather than auto-halting. The genuinely unambiguous violations are critical.
+
+client: searchatlas
+schema_version: 1
+
+banned_terms:
+
+  # --- Naming (critical — unambiguous brand errors) ---
+  - term: "SearchAtlas"
+    severity: critical
+    reason: "Brand is two words: 'Search Atlas'. (URLs like searchatlas.com are lowercase and won't match this capitalized token.) (STYLE-SYSTEM §4)."
+  - term: "Atlas Agent"
+    severity: critical
+    reason: "The workspace agent is the 'Search Atlas Coworker'. 'Atlas Agent' is a retired name (STYLE-SYSTEM §4)."
+  - term: "Atlas Brain"
+    severity: critical
+    reason: "Retired name. The workspace agent is the 'Search Atlas Coworker' (STYLE-SYSTEM §4)."
+  - term: "co-worker"
+    severity: warning
+    reason: "Write 'coworker' (one word, no hyphen). Brand term is 'Search Atlas Coworker' (STYLE-SYSTEM §4)."
+  - term: "GMB"
+    severity: critical
+    reason: "Deprecated Google term. Use 'Google Business Profile' / 'GBP' / 'GBP Galactic' (STYLE-SYSTEM §7)."
+  - term: "Google My Business"
+    severity: critical
+    reason: "Deprecated Google term. Use 'Google Business Profile' / 'GBP' (STYLE-SYSTEM §7)."
+  - term: "domain authority"
+    severity: critical
+    reason: "That's a Moz metric. Use 'Domain Power' (Search Atlas) (STYLE-SYSTEM §7)."
+
+  # --- Never call it a tool (warning — "tools" is allowed only for the competitor stack we replace) ---
+  - term: "tool"
+    severity: warning
+    reason: "Search Atlas and its features are never a 'tool' (Manick is firm). Use platform, coworker, growth engine, channel, skill. 'Tools' is allowed ONLY for the fragmented stack we replace (e.g., 'you bought 15 tools'). Check every instance (STYLE-SYSTEM §5.2)."
+
+  # --- Command-and-control framing (warning — allowed only next to the autonomy promise) ---
+  - term: "command"
+    severity: warning
+    reason: "Command-and-control framing puts the customer back at the controls, contradicting 'does the work for you'. Allowed only next to the autonomy promise (STYLE-SYSTEM §5.3)."
+  - term: "take control"
+    severity: warning
+    reason: "Command-and-control framing — contradicts the autonomy promise (STYLE-SYSTEM §5.3)."
+  - term: "1 click"
+    severity: warning
+    reason: "'1 click' still needs a human action; autonomy means zero clicks. Allowed only next to the autonomy promise (STYLE-SYSTEM §5.3)."
+  - term: "in 1 click"
+    severity: warning
+    reason: "Autonomy means zero clicks. Allowed only next to the autonomy promise (STYLE-SYSTEM §5.3)."
+
+  # --- Antithesis pattern (warning — the loudest AI tell; voice rule 1) ---
+  - term: "not just"
+    severity: warning
+    reason: "Antithesis pattern ('not just X but Y'). State the claim straight (STYLE-SYSTEM §6.1)."
+  - term: "isn't just"
+    severity: warning
+    reason: "Antithesis pattern. State the claim straight (STYLE-SYSTEM §6.1)."
+  - term: "doesn't just"
+    severity: warning
+    reason: "Antithesis pattern ('doesn't just X, it Y'). State the claim straight (STYLE-SYSTEM §6.1)."
+  - term: "it's not about"
+    severity: warning
+    reason: "Antithesis pattern ('it's not about X, it's about Y'). State the claim straight (STYLE-SYSTEM §6.1)."
+
+  # --- Setup-payoff scaffolding (warning — voice rule 6) ---
+  - term: "Here's the thing"
+    severity: warning
+    reason: "Setup-payoff scaffolding. Say the point straight (STYLE-SYSTEM §6.6)."
+  - term: "The result?"
+    severity: warning
+    reason: "Setup-payoff scaffolding. Say the point straight (STYLE-SYSTEM §6.6)."
+
+  # --- Banned AI filler (warning — STYLE-SYSTEM §5.4) ---
+  - term: "delve"
+    severity: warning
+    reason: "AI fingerprint word. Use explore, examine, look at (STYLE-SYSTEM §5.4)."
+  - term: "leverage"
+    severity: warning
+    reason: "Use 'use,' 'apply' (STYLE-SYSTEM §5.4)."
+  - term: "harness"
+    severity: warning
+    reason: "Use 'use,' 'apply,' 'put to work' (STYLE-SYSTEM §5.4)."
+  - term: "robust"
+    severity: warning
+    reason: "Use 'strong,' 'reliable,' 'solid' (STYLE-SYSTEM §5.4)."
+  - term: "seamless"
+    severity: warning
+    reason: "Use 'smooth,' 'easy' (STYLE-SYSTEM §5.4)."
+  - term: "elevate"
+    severity: warning
+    reason: "Use 'improve,' 'raise,' 'strengthen' (STYLE-SYSTEM §5.4)."
+  - term: "unlock"
+    severity: warning
+    reason: "Use 'enable,' 'open up,' 'create' (STYLE-SYSTEM §5.4)."
+  - term: "supercharge"
+    severity: warning
+    reason: "Describe the actual gain instead (STYLE-SYSTEM §5.4)."
+  - term: "game-changing"
+    severity: warning
+    reason: "Describe what actually changed (STYLE-SYSTEM §5.4)."
+  - term: "cutting-edge"
+    severity: warning
+    reason: "Use 'modern,' 'new,' 'latest' (STYLE-SYSTEM §5.4)."
+  - term: "best-in-class"
+    severity: warning
+    reason: "Generic authority claim. Describe what it does (STYLE-SYSTEM §5.4)."
+  - term: "tapestry"
+    severity: critical
+    reason: "Delete entirely (STYLE-SYSTEM §5.4)."
+  - term: "boasts"
+    severity: warning
+    reason: "Use 'has,' 'includes' (STYLE-SYSTEM §5.4)."
+  - term: "testament"
+    severity: warning
+    reason: "Use 'proof,' 'evidence,' 'sign' (STYLE-SYSTEM §5.4)."
+  - term: "pivotal"
+    severity: warning
+    reason: "Use 'important,' 'key,' 'critical' (STYLE-SYSTEM §5.4)."
+  - term: "ever-evolving"
+    severity: warning
+    reason: "Delete or describe the actual change (STYLE-SYSTEM §5.4)."
+  - term: "in today's"
+    severity: warning
+    reason: "Banned opening phrase ('in today's world') (STYLE-SYSTEM §5.4)."
+  - term: "when it comes to"
+    severity: warning
+    reason: "Throat-clearing. Delete and start with the point (STYLE-SYSTEM §5.4)."
+  - term: "that being said"
+    severity: warning
+    reason: "Filler. Delete (STYLE-SYSTEM §5.4)."
+  - term: "it's worth noting"
+    severity: warning
+    reason: "Throat-clearing. Delete and start with the point (STYLE-SYSTEM §5.4)."
+  - term: "dive in"
+    severity: warning
+    reason: "Banned throat-clearing phrase (STYLE-SYSTEM §5.4)."
+  - term: "foster"
+    severity: warning
+    reason: "Say what it actually does (STYLE-SYSTEM §5.4)."
+  - term: "empower"
+    severity: warning
+    reason: "Say what capability it gives instead (STYLE-SYSTEM §5.4)."
+  - term: "streamline"
+    severity: warning
+    reason: "Use 'simplify,' 'speed up,' 'cut steps from' (STYLE-SYSTEM §5.4)."
+  - term: "holistic"
+    severity: warning
+    reason: "Use 'complete,' 'full,' 'whole' (STYLE-SYSTEM §5.4)."
+  - term: "synergy"
+    severity: warning
+    reason: "Delete and rewrite the sentence (STYLE-SYSTEM §5.4)."
+
+# Required presence / structural checks
+required_presence:
+  - rule: outcome_led_opening
+    severity: warning
+    check: "First-touch copy (homepage, ads, decks, first-touch emails) must lead with the outcome for the customer (what Search Atlas does FOR them), not the machine they operate."
+    source: "STYLE-SYSTEM §2"
+  - rule: brand_name_two_words
+    severity: critical
+    check: "The brand is written 'Search Atlas' (two words). 'SearchAtlas', 'Atlas' (standalone), and 'S/A' are errors in copy. Ignore lowercase URLs (searchatlas.com)."
+    source: "STYLE-SYSTEM §4"
+  - rule: agent_named_coworker
+    severity: critical
+    check: "The workspace agent is the 'Search Atlas Coworker'. Never 'Atlas Agent', 'Atlas Brain', or 'the bot'."
+    source: "STYLE-SYSTEM §4"
+  - rule: subproducts_not_co_equal
+    severity: warning
+    check: "OTTO, GBP Galactic, Smart Ads, Content Genius, Scholar, Site Explorer appear as features/skills of Search Atlas, not co-equal brands, in homepage/ads/first-touch copy. Sub-brand names are allowed on deep product pages."
+    source: "STYLE-SYSTEM §4, §7"
+  - rule: coworker_speaks_first
+    severity: warning
+    check: "In any Search Atlas Coworker example, show the agent surfacing something on its own, unprompted — never the customer prompting it."
+    source: "STYLE-SYSTEM §2 (pillar 3)"
+  - rule: pricing_anchor_verified
+    severity: critical
+    check: "Any '$99/month' or pricing/savings claim must match raw/knowledge/facts/search-atlas-pricing-range.md and search-atlas-plan-details.md. Anchor against a hire/agency, not a tool bundle."
+    source: "STYLE-SYSTEM §8"
+  - rule: competitor_wedge_grounded
+    severity: critical
+    check: "Competitor comparisons must use raw/knowledge/competitors/ — never invent feature gaps. Default framing is the approved wedge (every channel + self-healing)."
+    source: "STYLE-SYSTEM §2, §8"
+  - rule: autonomy_default_confirmed
+    severity: critical
+    check: "Any stated product default about autonomy (e.g., 'deploys fixes on its own') must match the real product default. Confirm with product before asserting a default that contradicts an approval-gated behavior."
+    source: "STYLE-SYSTEM §8"
+  - rule: testimonials_verbatim
+    severity: critical
+    check: "Testimonial quotes must be verbatim from raw/knowledge/testimonials/. Never paraphrase or fabricate."
+    source: "STYLE-SYSTEM §8"

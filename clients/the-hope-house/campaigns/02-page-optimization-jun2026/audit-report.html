@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audit Report — The Hope House Group — Page Optimization June 2026 (Batch 2)</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f4f5f7; color: #1a1a2e; font-size: 14px; line-height: 1.55; }
+
+  .header { background: #1a1a2e; color: #fff; padding: 32px 40px 28px; }
+  .header h1 { font-size: 22px; font-weight: 700; letter-spacing: -0.3px; }
+  .header .meta { margin-top: 6px; font-size: 13px; color: #8892a4; }
+  .header .meta span + span::before { content: ' · '; }
+
+  .summary-bar { background: #fff; border-bottom: 1px solid #e2e5ea; padding: 20px 40px; display: flex; gap: 32px; align-items: center; flex-wrap: wrap; }
+  .summary-bar .label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; color: #6b7280; margin-bottom: 2px; }
+  .summary-bar .value { font-size: 22px; font-weight: 700; }
+  .summary-bar .value.fail { color: #dc2626; }
+  .summary-bar .value.warn { color: #d97706; }
+  .summary-bar .value.pass { color: #16a34a; }
+  .summary-bar .divider { width: 1px; background: #e2e5ea; height: 40px; }
+
+  .gate-fail-banner { background: #fff1f2; border-left: 4px solid #dc2626; margin: 24px 40px 0; padding: 14px 18px; border-radius: 0 6px 6px 0; }
+  .gate-fail-banner strong { color: #b91c1c; font-size: 13px; }
+  .gate-fail-banner p { font-size: 13px; color: #7f1d1d; margin-top: 4px; }
+
+  .pattern-callout { background: #fefce8; border-left: 4px solid #ca8a04; margin: 16px 40px 0; padding: 14px 18px; border-radius: 0 6px 6px 0; }
+  .pattern-callout strong { color: #854d0e; font-size: 13px; }
+  .pattern-callout p { font-size: 13px; color: #713f12; margin-top: 4px; }
+
+  .content { padding: 28px 40px; }
+
+  .page-section { background: #fff; border: 1px solid #e2e5ea; border-radius: 8px; margin-bottom: 32px; overflow: hidden; }
+  .page-header { padding: 20px 24px 16px; border-bottom: 1px solid #e2e5ea; display: flex; align-items: flex-start; gap: 20px; }
+  .page-header .page-info { flex: 1; }
+  .page-header h2 { font-size: 16px; font-weight: 700; color: #1a1a2e; }
+  .page-header .url { font-size: 12px; color: #6b7280; margin-top: 3px; font-family: 'SF Mono', 'Fira Code', monospace; }
+  .page-header .entity-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 12px; text-transform: uppercase; letter-spacing: 0.4px; margin-top: 6px; }
+  .entity-tag.tms { background: #dbeafe; color: #1d4ed8; }
+  .entity-tag.thh { background: #f3e8ff; color: #7e22ce; }
+  .entity-tag.detox { background: #fee2e2; color: #991b1b; }
+  .entity-tag.iop { background: #dcfce7; color: #166534; }
+
+  .scores { display: flex; gap: 16px; flex-shrink: 0; }
+  .score-card { text-align: center; min-width: 80px; }
+  .score-card .score-label { font-size: 11px; font-weight: 600; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+  .score-card .score-num { font-size: 28px; font-weight: 800; line-height: 1; }
+  .score-card .score-num.fail { color: #dc2626; }
+  .score-card .score-num.warn { color: #d97706; }
+  .score-card .score-num.pass { color: #16a34a; }
+  .score-card .score-bar { width: 80px; height: 5px; background: #e5e7eb; border-radius: 3px; margin-top: 5px; overflow: hidden; }
+  .score-card .score-bar .fill { height: 100%; border-radius: 3px; }
+  .score-card .score-bar .fill.fail { background: #dc2626; }
+  .score-card .score-bar .fill.warn { background: #d97706; }
+  .score-card .score-bar .fill.pass { background: #16a34a; }
+  .score-card .gate-badge { font-size: 10px; font-weight: 700; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.4px; }
+  .score-card .gate-badge.fail { color: #dc2626; }
+  .score-card .gate-badge.pass { color: #16a34a; }
+  .score-card .gate-badge.na { color: #9ca3af; }
+
+  .page-body { padding: 20px 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media (max-width: 900px) { .page-body { grid-template-columns: 1fr; } }
+
+  .col-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: #6b7280; margin-bottom: 10px; }
+
+  .issue { border-radius: 6px; padding: 10px 12px; margin-bottom: 8px; border-left: 3px solid transparent; }
+  .issue.critical { background: #fff1f2; border-color: #dc2626; }
+  .issue.major { background: #fffbeb; border-color: #d97706; }
+  .issue.minor { background: #f0fdf4; border-color: #16a34a; }
+  .issue.note { background: #f0f9ff; border-color: #0369a1; }
+
+  .issue-header { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+  .severity-badge { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 1px 6px; border-radius: 10px; flex-shrink: 0; }
+  .severity-badge.critical { background: #fee2e2; color: #991b1b; }
+  .severity-badge.major { background: #fef3c7; color: #92400e; }
+  .severity-badge.minor { background: #dcfce7; color: #166534; }
+  .severity-badge.note { background: #e0f2fe; color: #075985; }
+
+  .issue-title { font-weight: 600; font-size: 13px; color: #1a1a2e; }
+  .issue-detail { font-size: 12.5px; color: #4b5563; margin-top: 2px; }
+  .issue-fix { font-size: 12px; color: #374151; background: rgba(0,0,0,0.04); padding: 5px 8px; border-radius: 4px; margin-top: 6px; }
+  .issue-fix::before { content: '→ '; font-weight: 700; }
+  .issue-loc { font-size: 11px; color: #9ca3af; font-family: 'SF Mono', 'Fira Code', monospace; margin-top: 4px; }
+
+  .working-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+  .working-item::before { content: '✓'; color: #16a34a; font-weight: 700; font-size: 14px; flex-shrink: 0; margin-top: 1px; }
+  .working-item p { font-size: 13px; color: #374151; }
+
+  .compliance-callout { background: #fdf4ff; border: 1px solid #d8b4fe; border-radius: 6px; padding: 14px 18px; margin: 0 24px 20px; }
+  .compliance-callout strong { color: #6b21a8; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; display: block; margin-bottom: 6px; }
+  .compliance-callout ul { padding-left: 16px; font-size: 12.5px; color: #4b5563; }
+  .compliance-callout ul li { margin-bottom: 3px; }
+
+  .info-callout { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 6px; padding: 14px 18px; margin: 0 24px 20px; }
+  .info-callout strong { color: #0369a1; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; display: block; margin-bottom: 6px; }
+  .info-callout p { font-size: 12.5px; color: #374151; }
+
+  .checklist-section { background: #fff; border: 1px solid #e2e5ea; border-radius: 8px; margin-bottom: 32px; overflow: hidden; }
+  .checklist-section h3 { font-size: 14px; font-weight: 700; padding: 16px 24px; background: #f8f9fb; border-bottom: 1px solid #e2e5ea; }
+  .checklist-table { width: 100%; border-collapse: collapse; }
+  .checklist-table th { text-align: left; padding: 10px 16px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #6b7280; border-bottom: 1px solid #e2e5ea; background: #fafafa; }
+  .checklist-table td { padding: 10px 16px; font-size: 13px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
+  .checklist-table tr:last-child td { border-bottom: none; }
+  .checklist-table .entity-col { font-weight: 600; font-size: 12px; white-space: nowrap; }
+  .entity-col.tms { color: #1d4ed8; }
+  .entity-col.thh { color: #7e22ce; }
+  .entity-col.detox { color: #991b1b; }
+  .entity-col.iop { color: #166534; }
+  .checklist-table .check-cell { text-align: center; }
+  .block { display: inline-block; width: 16px; height: 16px; border: 2px solid #d1d5db; border-radius: 3px; }
+  .block.critical { border-color: #dc2626; }
+
+  .severity-key { display: flex; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+  .severity-key .key-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #6b7280; }
+  .severity-key .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .severity-key .dot.critical { background: #dc2626; }
+  .severity-key .dot.major { background: #d97706; }
+  .severity-key .dot.minor { background: #16a34a; }
+  .severity-key .dot.note { background: #0369a1; }
+
+  .score-comparison { background: #fff; border: 1px solid #e2e5ea; border-radius: 8px; margin-bottom: 24px; overflow: hidden; }
+  .score-comparison h3 { font-size: 13px; font-weight: 700; padding: 14px 20px; background: #f8f9fb; border-bottom: 1px solid #e2e5ea; color: #374151; }
+  .score-row { display: flex; align-items: center; padding: 10px 20px; border-bottom: 1px solid #f0f0f0; gap: 16px; }
+  .score-row:last-child { border-bottom: none; }
+  .score-row .entity { font-size: 12px; font-weight: 600; width: 140px; flex-shrink: 0; }
+  .score-row .bar-wrap { flex: 1; height: 8px; background: #e5e7eb; border-radius: 4px; overflow: hidden; }
+  .score-row .bar-fill { height: 100%; border-radius: 4px; }
+  .score-row .num { font-size: 13px; font-weight: 700; width: 50px; text-align: right; }
+
+  /* ---- Rewrite Panels ---- */
+  .rewrite-panel { background: #fafaf8; border: 1px solid #e2e5ea; border-top: 3px solid #2c6e3f; border-radius: 8px; margin-bottom: 32px; overflow: hidden; }
+  .rewrite-panel-header { background: #f0f7f2; padding: 14px 24px; border-bottom: 1px solid #c3e6cb; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .rewrite-panel-header h2 { font-size: 14px; font-weight: 700; color: #1e5c30; }
+  .rewrite-body { padding: 28px 32px; font-size: 14px; color: #1a1a2e; line-height: 1.7; }
+  .rw-change { background: #fef6ec; border-left: 2px solid #d97706; padding: 1px 5px; border-radius: 2px; font-size: 11px; color: #7a4a00; font-style: italic; }
+  .rw-section-intro { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 6px; padding: 10px 14px; margin-bottom: 20px; font-size: 12.5px; color: #166534; }
+  .rw h1 { font-size: 22px; font-weight: 800; color: #1a1a2e; margin-bottom: 8px; line-height: 1.25; }
+  .rw h2 { font-size: 17px; font-weight: 700; color: #1a1a2e; margin: 22px 0 8px; }
+  .rw h3 { font-size: 15px; font-weight: 600; color: #374151; margin: 16px 0 6px; }
+  .rw p { margin-bottom: 12px; }
+  .rw ul { padding-left: 20px; margin-bottom: 12px; }
+  .rw ul li { margin-bottom: 5px; }
+  .rw .meta-block { background: #f8f9fb; border: 1px solid #e2e5ea; border-radius: 6px; padding: 12px 16px; margin-bottom: 16px; font-size: 12.5px; }
+  .rw .meta-block strong { display: block; font-size: 11px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px; }
+  .rw-entity-tag { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 12px; text-transform: uppercase; letter-spacing: 0.4px; flex-shrink: 0; }
+  .rw-entity-tag.tms { background: #dbeafe; color: #1d4ed8; }
+  .rw-entity-tag.thh { background: #f3e8ff; color: #7e22ce; }
+  .rw-entity-tag.detox { background: #fee2e2; color: #991b1b; }
+  .rw-entity-tag.iop { background: #dcfce7; color: #166534; }
+  .rw-fixes-applied { font-size: 12px; color: #374151; margin-left: auto; }
+  .rw-fixes-applied strong { color: #1e5c30; }
+  .rw hr { border: none; border-top: 1px solid #e2e5ea; margin: 20px 0; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Audit Report — The Hope House Group</h1>
+  <div class="meta">
+    <span>Page Optimization · June 2026 · Batch 2 (Opioid Pages)</span>
+    <span>4 entities · 4 pages</span>
+    <span>Generated June 14, 2026</span>
+  </div>
+</div>
+
+<div class="summary-bar">
+  <div>
+    <div class="label">Pages Audited</div>
+    <div class="value">4</div>
+  </div>
+  <div class="divider"></div>
+  <div>
+    <div class="label">Voice Gate (≥80)</div>
+    <div class="value fail">0 / 4 pass</div>
+  </div>
+  <div class="divider"></div>
+  <div>
+    <div class="label">Critical Violations</div>
+    <div class="value fail">10</div>
+  </div>
+  <div class="divider"></div>
+  <div>
+    <div class="label">Major Issues</div>
+    <div class="value warn">9</div>
+  </div>
+  <div class="divider"></div>
+  <div>
+    <div class="label">Passing Items</div>
+    <div class="value pass">13</div>
+  </div>
+</div>
+
+<div class="gate-fail-banner">
+  <strong>DO NOT SEND — All 4 pages require revision before client delivery</strong>
+  <p>All 4 pages failed the voice gate (80/100 minimum). The TMS Research page is the closest to passing (71/100) and has the fewest compliance issues — it is the most rewrite-ready of the batch. The Arizona IOP page repeats the same critical staff cross-contamination error from Batch 1: Dr. Vines, Alex Spritzer, and Natalie Foster are listed as Arizona IOP staff again. This is a systemic writer error that must be escalated.</p>
+</div>
+
+<div class="pattern-callout">
+  <strong>Recurring cross-batch pattern — escalate to writer</strong>
+  <p>The Arizona IOP draft has now listed Scottsdale Detox staff credentials on the Arizona IOP page twice across two separate batches (Batch 1: alcohol abuse IOP; Batch 2: opioid addiction IOP). This is not a one-time error — it indicates the writer does not understand that these are separate entities with separate confirmed staff. This needs to be addressed directly before any further Arizona IOP drafts are submitted.</p>
+</div>
+
+<div class="content">
+
+  <div class="score-comparison">
+    <h3>Voice Scores — Batch 2 vs Batch 1</h3>
+    <div class="score-row">
+      <div class="entity" style="color:#1d4ed8">Scottsdale TMS</div>
+      <div class="bar-wrap"><div class="bar-fill" style="width:71%;background:#d97706"></div></div>
+      <div class="num" style="color:#d97706">71</div>
+    </div>
+    <div class="score-row">
+      <div class="entity" style="color:#991b1b">Scottsdale Detox</div>
+      <div class="bar-wrap"><div class="bar-fill" style="width:74%;background:#d97706"></div></div>
+      <div class="num" style="color:#d97706">74</div>
+    </div>
+    <div class="score-row">
+      <div class="entity" style="color:#166534">Arizona IOP</div>
+      <div class="bar-wrap"><div class="bar-fill" style="width:64%;background:#dc2626"></div></div>
+      <div class="num" style="color:#dc2626">64</div>
+    </div>
+    <div class="score-row">
+      <div class="entity" style="color:#7e22ce">The Hope House</div>
+      <div class="bar-wrap"><div class="bar-fill" style="width:58%;background:#dc2626"></div></div>
+      <div class="num" style="color:#dc2626">58</div>
+    </div>
+  </div>
+
+  <div class="severity-key">
+    <div class="key-item"><div class="dot critical"></div> Critical — must fix before send</div>
+    <div class="key-item"><div class="dot major"></div> Major — fix before send</div>
+    <div class="key-item"><div class="dot minor"></div> Minor — improve in revision</div>
+    <div class="key-item"><div class="dot note"></div> Note — verify or monitor</div>
+  </div>
+
+  <!-- ============================================================
+       PAGE 1: SCOTTSDALE TMS — TMS RESEARCH
+       ============================================================ -->
+  <div class="page-section">
+    <div class="page-header">
+      <div class="page-info">
+        <div class="entity-tag tms">Scottsdale TMS</div>
+        <h2>TMS Research</h2>
+        <div class="url">scottsdaletmstherapy.com/tms-research/</div>
+      </div>
+      <div class="scores">
+        <div class="score-card">
+          <div class="score-label">Voice</div>
+          <div class="score-num warn">71</div>
+          <div class="score-bar"><div class="fill warn" style="width:71%"></div></div>
+          <div class="gate-badge fail">FAIL</div>
+        </div>
+        <div class="score-card">
+          <div class="score-label">Koray</div>
+          <div class="score-num na">—</div>
+          <div class="score-bar"><div class="fill" style="width:0%"></div></div>
+          <div class="gate-badge na">NOT RUN</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-callout">
+      <strong>Closest to gate in this batch — fewest compliance issues</strong>
+      <p>The TMS Research page is the strongest draft of the four. The clinical mechanism explanations are solid, 988 crisis line is correctly included, no sister entity naming, no substance use positioning. The two compliance fixes (FDA terminology in keywords, missing seizure risk in side effects) are surgical. The voice score drop is primarily structural — the "No X / No Y / No Z" comparison section needs to be reframed from a feature-benefit list into a mechanistic contrast.</p>
+    </div>
+
+    <div class="page-body">
+      <div>
+        <div class="col-label">Issues to Fix</div>
+
+        <div class="issue critical">
+          <div class="issue-header">
+            <span class="severity-badge critical">Critical</span>
+            <span class="issue-title">"FDA-approved TMS" in keyword list</span>
+          </div>
+          <div class="issue-detail">Line 13 of the draft keyword list includes "FDA-approved TMS" as a target keyword. STYLE-SYSTEM §3.1 is explicit: TMS is "FDA-cleared" — never "FDA-approved." The distinction tracks the 510(k) vs. PMA approval pathway and is clinically and legally meaningful. Having "FDA-approved TMS" in the keyword list can pull the term into content either directly or through derivative edits.</div>
+          <div class="issue-fix">Remove "FDA-approved TMS" from the keyword list. If targeting this search phrase for traffic reasons, note it as a competitor-term target in the brief — but it cannot appear in the published page or keyword metadata. All on-page instances should read "FDA-cleared TMS."</div>
+          <div class="issue-loc">Keyword list, line 13</div>
+        </div>
+
+        <div class="issue critical">
+          <div class="issue-header">
+            <span class="severity-badge critical">Critical</span>
+            <span class="issue-title">Seizure risk absent from side effects section</span>
+          </div>
+          <div class="issue-detail">STYLE-SYSTEM §3.10 requires that TMS side effects sections include seizure risk wherever side effects are discussed in educational content. The draft's side effects section (and the FAQ answer "Does TMS have side effects?") state only "mild scalp discomfort" and "Serious side effects are rare" — no mention of seizures. The draft does reference seizure history as a contraindication in two places, but that is distinct from disclosing it as a known (rare) risk of the procedure itself.</div>
+          <div class="issue-fix">In the side effects paragraph and the FAQ answer, add: "Seizures are a rare but known risk of TMS, occurring at a rate of approximately 1 in 1,000 courses of treatment. Patients with a prior seizure history are screened out during the initial evaluation." The contraindication mentions elsewhere can remain as-is.</div>
+          <div class="issue-loc">Side effects paragraph; FAQ "Does TMS have side effects?"</div>
+        </div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">Voice 71: "How Does TMS Compare to Antidepressants?" is a marketing feature-benefit list</span>
+          </div>
+          <div class="issue-detail">Voice judge flagged the three-item "No Systemic Side Effects / No Drug Interactions / No Sedation" section as the largest register violation in the draft. The "No X, No Y, No Z" format is a product-comparison advertising convention. A clinical research page should frame the same information as a mechanistic contrast grounded in study data, not as a checklist of product advantages over a competitor.</div>
+          <div class="issue-fix">Reframe as: "Because TMS acts at the cortical level rather than through systemic circulation, the side effect profile differs substantially from antidepressants. [Study reference] found no weight gain, sexual dysfunction, or drug interactions in the TMS arm." Ground each point in the cited evidence rather than listing it as a feature. This is the single change that will most improve the voice score.</div>
+        </div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">Lead opens on consumer-FAQ reassurance, not clinical finding</span>
+          </div>
+          <div class="issue-detail">Voice judge: "If you've tried antidepressants without results, you've probably heard about TMS and wondered whether it actually works. The short answer is that it certainly can..." — this is a consumer SEO empathy opener. For a research/evidence page the STYLE-SYSTEM expects the lead to open on a specific clinical finding or regulatory event, not on the reader's presumed emotional state. "Certainly can" and "solid clinical evidence" are marketer characterizations.</div>
+          <div class="issue-fix">Open on the specific finding or regulatory event: "TMS received FDA clearance in 2008 after a 325-patient randomized controlled trial showed a 30.6% reduction in depression scores compared to 13.2% for sham treatment. The research has grown more consistent since." Cut "The short answer is that it certainly can."</div>
+        </div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">Numeric outcome statistics — verify source traceability</span>
+          </div>
+          <div class="issue-detail">The draft cites specific percentages: "nearly 50% symptom improvement," "33% remission," "30% to 60% reduction," "nearly twice as effective." The STYLE-SYSTEM §3.3 prohibits unconfirmed success metrics — these figures need to trace to sources in clients/the-hope-house/scottsdaletmstherapy/raw/knowledge/ or to verified published studies with working citation links. The draft provides PubMed and JAMA links which are the right direction, but the figures need to match what those linked studies actually report.</div>
+          <div class="issue-fix">Verify each cited figure against the linked study. If the link goes to a real study reporting that figure, the citation is defensible. If the figures do not match the cited source, remove or correct them. Do not rely on recalled statistics not in the raw/ knowledge files.</div>
+        </div>
+
+        <div class="issue minor">
+          <div class="issue-header">
+            <span class="severity-badge minor">Minor</span>
+            <span class="issue-title">Meta description cites 33% remission — matches potential §3.3 concern</span>
+          </div>
+          <div class="issue-detail">Meta description: "TMS therapy achieves complete remission in 33% of treatment-resistant depression patients." If the 33% figure is verified from a cited study (the initial FDA clearance trial), this is permissible. If the study reports a range rather than a specific 33%, the meta description should reflect the range.</div>
+          <div class="issue-fix">Confirm the 33% remission figure matches the linked FDA clearance study exactly. If confirmed, the meta description is fine. If the study reports approximately 33% or a range, update the meta description to reflect the actual reported figure.</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="col-label">What's Working</div>
+
+        <div class="working-item"><p>988 crisis line correctly included in the closing section — compliance requirement met</p></div>
+        <div class="working-item"><p>TMS is consistently "FDA-cleared" throughout body text — no "FDA-approved" errors in the content itself</p></div>
+        <div class="working-item"><p>No sister entity naming — The Hope House, Arizona IOP, Scottsdale Detox not mentioned</p></div>
+        <div class="working-item"><p>No substance use disorder treatment positioning — correctly limits scope to depression, OCD, smoking cessation, anxious depression</p></div>
+        <div class="working-item"><p>Clinical mechanism explanation is solid: left dorsolateral prefrontal cortex, theta burst protocol, medial prefrontal cortex for OCD</p></div>
+        <div class="working-item"><p>Specific FDA clearance dates and indications are accurate: OCD (2018), smoking cessation (2020), anxious depression (2021)</p></div>
+        <div class="working-item"><p>Long-term durability data included — addresses the #1 patient objection ("does it last?")</p></div>
+        <div class="working-item"><p>No outcome guarantees — all outcome language is study-referenced and qualified</p></div>
+        <div class="working-item"><p>No em dashes used</p></div>
+        <div class="working-item"><p>Phone number and address correctly included in closing section</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PAGE 2: SCOTTSDALE DETOX — OPIOID DETOX
+       ============================================================ -->
+  <div class="page-section">
+    <div class="page-header">
+      <div class="page-info">
+        <div class="entity-tag detox">Scottsdale Detox</div>
+        <h2>Opioid Detox</h2>
+        <div class="url">scottsdaleazdetox.com/opioid-detox/</div>
+      </div>
+      <div class="scores">
+        <div class="score-card">
+          <div class="score-label">Voice</div>
+          <div class="score-num warn">74</div>
+          <div class="score-bar"><div class="fill warn" style="width:74%"></div></div>
+          <div class="gate-badge fail">FAIL</div>
+        </div>
+        <div class="score-card">
+          <div class="score-label">Koray</div>
+          <div class="score-num na">—</div>
+          <div class="score-bar"><div class="fill" style="width:0%"></div></div>
+          <div class="gate-badge na">NOT RUN</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="compliance-callout">
+      <strong>Compliance exposure on this page</strong>
+      <ul>
+        <li>Clonidine named as a treatment medication — not on the confirmed medication list for Scottsdale Detox</li>
+        <li>Two entity-naming violations: "The Hope House treatment network, including...HART Rehab" — both instances must be removed</li>
+        <li>Confirmed medications for Scottsdale Detox: buprenorphine, methadone, naltrexone, benzodiazepines (class only, alcohol withdrawal context)</li>
+      </ul>
+    </div>
+
+    <div class="page-body">
+      <div>
+        <div class="col-label">Issues to Fix</div>
+
+        <div class="issue critical">
+          <div class="issue-header">
+            <span class="severity-badge critical">Critical</span>
+            <span class="issue-title">Clonidine listed as a treatment medication — unconfirmed</span>
+          </div>
+          <div class="issue-detail">The medications section lists "Clonidine: Not an opioid but works to reduce the autonomic symptoms of withdrawal." Clonidine is not on the confirmed medication list for Scottsdale Detox (confirmed list: buprenorphine, methadone, naltrexone, benzodiazepines class). It also appears in the FAQ: "The most commonly used FDA-approved medications are buprenorphine (Suboxone), methadone, and clonidine." Note: clonidine is not FDA-approved for opioid withdrawal treatment specifically — it is used off-label. Describing it as an FDA-approved withdrawal medication is also factually imprecise.</div>
+          <div class="issue-fix">Remove clonidine from the medications list and FAQ answer. The confirmed four medications are sufficient. Do not add medications not confirmed by the client, even ones that are clinically standard — the confirmed list is the boundary.</div>
+          <div class="issue-loc">Medications section; FAQ "What medications are used during opioid detox?"</div>
+        </div>
+
+        <div class="issue critical">
+          <div class="issue-header">
+            <span class="severity-badge critical">Critical</span>
+            <span class="issue-title">Entity naming: "The Hope House treatment network, including...HART Rehab" — two instances</span>
+          </div>
+          <div class="issue-detail">The closing section contains: "Scottsdale Detox is part of The Hope House treatment network, which allows for direct transition into the next level of care" (FAQ) and "The facility is part of The Hope House treatment network, which includes residential treatment, an intensive outpatient program, and HART Rehab." STYLE-SYSTEM §2.4 prohibits naming other group companies. HART Rehab is also explicitly listed as a banned entity reference.</div>
+          <div class="issue-fix">Replace both instances with generic step-down language: "Scottsdale Detox works with residential and outpatient treatment programs to help patients transition directly into continuing care." Remove all references to the network name, The Hope House, and HART Rehab.</div>
+          <div class="issue-loc">FAQ "Do I need detox before going to rehab?"; closing "Opioid Addiction Treatment Near Me" section</div>
+        </div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">Voice 74: Opening line is motivational, not clinical</span>
+          </div>
+          <div class="issue-detail">Voice judge: "Deciding to stop opioids is one of the most courageous decisions a person can make." This is a counselor's affirmation, not a clinical anchor. STYLE-SYSTEM §2.2 requires leading with the patient need or clinical reality. The second sentence — "Opioid withdrawal is a physical event: it is the nervous system reacting to the sudden absence of a drug it has come to depend on" — is exactly the right register. The first sentence is the problem.</div>
+          <div class="issue-fix">Delete the opening sentence entirely. Start with: "Opioid withdrawal is a physical event: the nervous system reacting to the sudden absence of a drug it has adapted to require. Managing it safely requires clinical monitoring, the right medications, and a team that knows what to watch for."</div>
+        </div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">"Methadone: Eliminates withdrawal symptoms completely" — clinical overstatement</span>
+          </div>
+          <div class="issue-detail">Voice judge flagged "eliminates completely" as an unqualified superlative and potential outcome guarantee. The confirmed site language per STYLE-SYSTEM is that MAT "reduces cravings and withdrawal symptoms" — not that any medication eliminates them entirely.</div>
+          <div class="issue-fix">Revise to: "Methadone: A full opioid agonist dispensed under clinical supervision that significantly reduces withdrawal symptoms and cravings. Used for both acute detox and long-term maintenance." Remove "eliminates completely."</div>
+        </div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">Named clinical staff absent — missed differentiator</span>
+          </div>
+          <div class="issue-detail">Voice judge noted that Scottsdale Detox's named clinical staff (Dr. Michael Vines MD, Alex Spritzer FNP/CARN-AP/PMHNP, Natalie Foster LPC-S/MS) are confirmed differentiators and should appear in the closing section. This is one of the few behavioral health clients where naming staff is both permitted and required as a clinical credibility signal. Their absence makes the closing read as a generic detox facility rather than Scottsdale Detox specifically.</div>
+          <div class="issue-fix">Add named staff to the closing section: "Every patient receives a full evaluation led by Dr. Michael Vines (MD), with clinical support from Alex Spritzer (FNP, CARN-AP, PMHNP) and Natalie Foster (LPC-S, MS) throughout withdrawal." This is the correct entity for these names.</div>
+        </div>
+
+        <div class="issue note">
+          <div class="issue-header">
+            <span class="severity-badge note">Note</span>
+            <span class="issue-title">Closing section missing phone number inline</span>
+          </div>
+          <div class="issue-detail">The phone number (480) 646-7660 appears in the FAQ "Does insurance cover opioid detox?" but is not present in the main closing paragraph. STYLE-SYSTEM §11 lists the phone number as a required element in the contact/closing block.</div>
+          <div class="issue-fix">Add (480) 646-7660 to the closing paragraph where the team is referenced.</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="col-label">What's Working</div>
+
+        <div class="working-item"><p>Detox-first framing is explicit and well-placed: "Detox is not a treatment for opioid use disorder on its own... It is the first essential step."</p></div>
+        <div class="working-item"><p>Relapse danger framing is strong and accurate — the tolerance-drop / overdose-risk paragraph is the best clinical content in the draft</p></div>
+        <div class="working-item"><p>Three confirmed medications (buprenorphine/Suboxone, methadone, naltrexone) cited correctly where they appear</p></div>
+        <div class="working-item"><p>Person-first language consistent throughout</p></div>
+        <div class="working-item"><p>No outcome guarantees in clinical content sections</p></div>
+        <div class="working-item"><p>No em dashes used</p></div>
+        <div class="working-item"><p>PAWS section included — addresses a real patient concern that distinguishes this page from generic detox content</p></div>
+        <div class="working-item"><p>Section openers are all content-first — every H2/H3 opens directly on its subject without meta-announcement</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PAGE 3: ARIZONA IOP — OPIOID ADDICTION IOP
+       ============================================================ -->
+  <div class="page-section">
+    <div class="page-header">
+      <div class="page-info">
+        <div class="entity-tag iop">Arizona IOP</div>
+        <h2>Opioid Addiction IOP</h2>
+        <div class="url">arizonaiop.com/opioid-addiction/</div>
+      </div>
+      <div class="scores">
+        <div class="score-card">
+          <div class="score-label">Voice</div>
+          <div class="score-num fail">64</div>
+          <div class="score-bar"><div class="fill fail" style="width:64%"></div></div>
+          <div class="gate-badge fail">FAIL</div>
+        </div>
+        <div class="score-card">
+          <div class="score-label">Koray</div>
+          <div class="score-num na">—</div>
+          <div class="score-bar"><div class="fill" style="width:0%"></div></div>
+          <div class="gate-badge na">NOT RUN</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="compliance-callout">
+      <strong>Compliance exposure — RECURRING CRITICAL ERROR (second batch)</strong>
+      <ul>
+        <li>Dr. Michael Vines, Alex Spritzer, Natalie Foster listed as Arizona IOP staff again — these are Scottsdale Detox staff; no named staff are confirmed for Arizona IOP</li>
+        <li>Scottsdale Detox named twice in body copy; The Hope House named three times — all banned</li>
+        <li>IOP acronym expansion uses "programming" (non-standard) instead of "Program" — first-use rule not met cleanly</li>
+        <li>Vivitrol (naltrexone brand name) cited in MAT section — verify whether confirmed for Arizona IOP</li>
+      </ul>
+    </div>
+
+    <div class="page-body">
+      <div>
+        <div class="col-label">Issues to Fix</div>
+
+        <div class="issue critical">
+          <div class="issue-header">
+            <span class="severity-badge critical">Critical</span>
+            <span class="issue-title">Wrong staff — Scottsdale Detox credentials listed as Arizona IOP staff (second batch)</span>
+          </div>
+          <div class="issue-detail">The closing section lists: "Medical staff include: Dr. Michael Vines, MD / Alex Spritzer, FNP, CARN-AP, PMHNP / Natalie Foster, LPC-S, MS." These three individuals are confirmed staff for Scottsdale Detox only. Arizona IOP STYLE-SYSTEM §4 explicitly states no individual staff names are confirmed for this entity. The only confirmed staff descriptor is "Masters Level Licensed Therapists." This same error appeared in the Batch 1 Arizona IOP draft (alcohol abuse IOP). This is a systemic writer error requiring direct correction.</div>
+          <div class="issue-fix">Remove all three names and credentials. Replace with: "Arizona IOP's clinical team includes Masters Level Licensed Therapists credentialed in both substance use disorder and mental health treatment." Do not add any individual names — none are confirmed for this entity.</div>
+          <div class="issue-loc">Closing "Opioid Addiction IOP Near Scottsdale" section</div>
+        </div>
+
+        <div class="issue critical">
+          <div class="issue-header">
+            <span class="severity-badge critical">Critical</span>
+            <span class="issue-title">Entity naming: Scottsdale Detox (×2) and The Hope House (×3) — all banned</span>
+          </div>
+          <div class="issue-detail">"Arizona IOP can coordinate referrals to Scottsdale Detox or residential treatment through The Hope House" (Who Is Right section). "The program is part of The Hope House treatment network, which is the same organization that operates Scottsdale Detox and The Hope House residential program" (closing). "Arizona IOP can coordinate a referral to Scottsdale Detox before admission" (FAQ). STYLE-SYSTEM §9 prohibits naming any sister entities on this site.</div>
+          <div class="issue-fix">All five references must be replaced with generic language: "medical detox" for Scottsdale Detox; "residential treatment" for The Hope House. Example: "Arizona IOP can coordinate referrals to medical detox or residential treatment for patients who need a higher level of care first." Do not mention the network relationship or brand name.</div>
+          <div class="issue-loc">Who Is Right section; Closing section; FAQ "Do I need to complete detox before starting IOP?"</div>
+        </div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">Group-size differentiator absent — strongest confirmed AZ IOP point</span>
+          </div>
+          <div class="issue-detail">Voice judge: Arizona IOP's confirmed group-size differentiator — 12 to 15 clients per group vs. the Arizona average of 29 — does not appear anywhere in the draft. This is the most concrete, verifiable, and differentiating fact in the Arizona IOP STYLE-SYSTEM and is absent from a 1,200-word page about the program. It would directly improve both voice score and SEO topical completeness.</div>
+          <div class="issue-fix">Add to the "What Does IOP for Opioid Addiction Include?" or "About Arizona IOP's Schedule" section: "Groups at Arizona IOP are capped at 12 to 15 participants, compared to the Arizona state average of 29 per group. The smaller group size means more direct clinical contact per session."</div>
+        </div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">Voice 64: Closing is a bare contact block with no human signal</span>
+          </div>
+          <div class="issue-detail">Voice judge: The page ends on an address block after the staff list with no transitional sentence acknowledging the reader's position. STYLE-SYSTEM specifies contact prompts should appear naturally after sections addressing fear or uncertainty, with a humanizing signal before the CTA. The current closer reads as a business directory entry.</div>
+          <div class="issue-fix">Add before the contact block: "Most people who call are not sure if they are ready. That is okay. The admissions team at Arizona IOP will meet you where you are." Then follow with the phone number and address.</div>
+        </div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">IOP acronym expansion uses "programming" not "Program" on first use</span>
+          </div>
+          <div class="issue-detail">STYLE-SYSTEM §3.1 requires IOP spelled out as "Intensive Outpatient Program (IOP)" on first use. The draft uses "intensive outpatient programming (IOP)" in the intro and "Intensive Outpatient Programming (IOP)" in the first body section — neither matches the standard form.</div>
+          <div class="issue-fix">Change all first-use expansions to "Intensive Outpatient Program (IOP)." Subsequent uses may use the abbreviation IOP freely.</div>
+        </div>
+
+        <div class="issue note">
+          <div class="issue-header">
+            <span class="severity-badge note">Note</span>
+            <span class="issue-title">Vivitrol (naltrexone brand name) in MAT section — verify for Arizona IOP</span>
+          </div>
+          <div class="issue-detail">The MAT section lists "naltrexone (Vivitrol)" as a supported medication. Vivitrol is a confirmed brand name for The Hope House (Suboxone only) — it is not listed in the Arizona IOP confirmed medication set. Using a brand name without confirmation is a potential §4 violation.</div>
+          <div class="issue-fix">Either confirm with client that Vivitrol is supported at Arizona IOP, or use only "naltrexone" (generic) without the brand name. If unconfirmed, use "naltrexone" without a brand designation.</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="col-label">What's Working</div>
+
+        <div class="working-item"><p>ASAM Level 2.1 citation grounds the clinical definition of IOP accurately</p></div>
+        <div class="working-item"><p>IOP-vs-residential distinction is clearly framed — correctly positions IOP as distinct from, not equivalent to, residential care</p></div>
+        <div class="working-item"><p>Evening scheduling differentiator is included and positioned well for working patients</p></div>
+        <div class="working-item"><p>Co-occurring disorder treatment section is well-constructed and clinically accurate</p></div>
+        <div class="working-item"><p>Person-first language consistent throughout</p></div>
+        <div class="working-item"><p>No outcome guarantees in clinical content sections</p></div>
+        <div class="working-item"><p>No em dashes used</p></div>
+        <div class="working-item"><p>Nine-hour minimum programming commitment cited correctly</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PAGE 4: THE HOPE HOUSE — OPIOID ADDICTION
+       ============================================================ -->
+  <div class="page-section">
+    <div class="page-header">
+      <div class="page-info">
+        <div class="entity-tag thh">The Hope House</div>
+        <h2>Opioid Addiction</h2>
+        <div class="url">thehopehouse.com/opioid-addiction/</div>
+      </div>
+      <div class="scores">
+        <div class="score-card">
+          <div class="score-label">Voice</div>
+          <div class="score-num fail">58</div>
+          <div class="score-bar"><div class="fill fail" style="width:58%"></div></div>
+          <div class="gate-badge fail">FAIL</div>
+        </div>
+        <div class="score-card">
+          <div class="score-label">Koray</div>
+          <div class="score-num na">—</div>
+          <div class="score-bar"><div class="fill" style="width:0%"></div></div>
+          <div class="gate-badge na">NOT RUN</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="compliance-callout">
+      <strong>Compliance exposure on this page</strong>
+      <ul>
+        <li>Methadone and Naltrexone (Vivitrol) listed as Hope House treatment medications — only Suboxone is confirmed for this entity</li>
+        <li>Scottsdale Detox and Arizona IOP named directly in the treatment section — both banned</li>
+        <li>Contradictory overdose statistics on the same page: opening says "130 people/day," statistics section says "200 Americans/day"</li>
+        <li>"Your Comprehensive Guide" in H1 uses "Your" and "comprehensive" — both flagged by style system</li>
+        <li>"Abuse" used in section heading and body copy — person-first language requires "misuse" or "opioid use disorder"</li>
+      </ul>
+    </div>
+
+    <div class="page-body">
+      <div>
+        <div class="col-label">Issues to Fix</div>
+
+        <div class="issue critical">
+          <div class="issue-header">
+            <span class="severity-badge critical">Critical</span>
+            <span class="issue-title">Methadone and Naltrexone (Vivitrol) listed — unconfirmed for The Hope House</span>
+          </div>
+          <div class="issue-detail">The treatment section lists: "Buprenorphine/naloxone (Suboxone) / Methadone / Naltrexone (Vivitrol)." STYLE-SYSTEM §3.5 confirms only Suboxone (buprenorphine/naloxone) for The Hope House. Methadone and naltrexone/Vivitrol are not confirmed. This is the same class of error from Batch 1 (where Vivitrol, Campral, Antabuse were named). It appears the writer is pulling from a generic MAT medications list rather than the confirmed list for this entity.</div>
+          <div class="issue-fix">Remove methadone and naltrexone (Vivitrol). Keep only Suboxone (buprenorphine/naloxone) as the confirmed MAT medication. The FAQ answer "Can opioid addiction be treated?" which mentions "buprenorphine, methadone, or naltrexone" must also be revised to remove methadone and naltrexone.</div>
+          <div class="issue-loc">Treatment section; FAQ "Can opioid addiction be treated?"</div>
+        </div>
+
+        <div class="issue critical">
+          <div class="issue-header">
+            <span class="severity-badge critical">Critical</span>
+            <span class="issue-title">Entity naming: "Scottsdale Detox" and "Arizona IOP" named in treatment section</span>
+          </div>
+          <div class="issue-detail">"For patients who need medical detox first, Scottsdale Detox provides 24/7 medically supervised withdrawal management. For patients stepping down from residential care, Arizona IOP offers intensive outpatient treatment." STYLE-SYSTEM §1 bans naming these sister entities. They must not be referenced by brand name on thehopehouse.com.</div>
+          <div class="issue-fix">Replace with: "For patients who need medical detox first, medically supervised withdrawal management is available through our partner programs. For patients stepping down from residential care, our partner programs offer intensive outpatient treatment." Alternatively: generic step-down reference without naming any entity.</div>
+          <div class="issue-loc">Treatment "Opioid Addiction Treatment Near Me" section</div>
+        </div>
+
+        <div class="issue critical">
+          <div class="issue-header">
+            <span class="severity-badge critical">Critical</span>
+            <span class="issue-title">Contradictory overdose statistics: "130 people/day" vs "200 Americans/day" — same page</span>
+          </div>
+          <div class="issue-detail">Opening paragraph: "Almost 130 people die every day from opioid overdose." Statistics section: "Around 200 Americans die each day from opioid overdose." Both figures appear on the same page with no acknowledgment of the difference. This is not a context-dependent discrepancy — both sentences are stated as current facts. One is wrong, or both are pulled from different sources with different methodologies. Either way, the contradiction will be immediately visible to any reader who notices it.</div>
+          <div class="issue-fix">Select one figure and trace it to a specific, dated source. The CDC's most recent reporting should be the authority. Remove the other figure. Both cannot coexist on the same page without a qualifier explaining the different source/methodology. If neither is traceable to a confirmed source, remove both and reframe the opening without a specific daily fatality figure.</div>
+          <div class="issue-loc">Opening paragraph; "Opioid Addiction Statistics" section</div>
+        </div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">Voice 58: Reads as CDC fact sheet, not a compassionate residential guide</span>
+          </div>
+          <div class="issue-detail">Voice judge: The entire mid-section reads as public-health reference content — the epidemic history, the tramadol/fentanyl side-effect subsections, the DSM-5 severity tiers — with no editorial bridge to the reader. The Hope House's confirmed differentiators (10 clients at a time, masters-level clinicians, luxury Scottsdale setting, Dual Diagnosis Program) appear nowhere in a page that is meant to represent this facility's approach to opioid addiction treatment.</div>
+          <div class="issue-fix">After the compliance fixes, rebuild the "Opioid Addiction Treatment Near Me" section to reflect The Hope House's actual program: 10-client maximum, individualized treatment track, evidence-based modalities, Scottsdale AZ setting. The page currently spends 90% of its length on generic epidemiological information and less than 10% on what The Hope House actually offers. That balance needs to shift.</div>
+        </div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">"Abuse" used as a verb and in a section heading — person-first violation</span>
+          </div>
+          <div class="issue-detail">Section heading "Who Is Most Likely to Abuse Opioids?" and body copy use "abuse" as a standalone verb ("abuse opioids"). STYLE-SYSTEM §2.6 requires person-first language. "Abuse" as an active verb positions the person as the agent of a moral failure. The preferred language is "misuse" (for non-clinical contexts) or "opioid use disorder" (clinical).</div>
+          <div class="issue-fix">Change heading to "Who Is Most Likely to Develop Opioid Use Disorder?" Replace "abuse opioids" in body copy with "misuse opioids" or "develop opioid use disorder" depending on context.</div>
+        </div>
+
+        <div class="issue major">
+          <div class="issue-header">
+            <span class="severity-badge major">Major</span>
+            <span class="issue-title">H1 "Your Comprehensive Guide" — two style violations</span>
+          </div>
+          <div class="issue-detail">Voice judge: "Comprehensive" violates §2.6 (only permissible if the content specifically enumerates what is comprehensive about it). "Your" is a second-person possessive in the title that sets an empathy-pitch register rather than an editorial authority register.</div>
+          <div class="issue-fix">Change H1 to remove both. Option: "Opioid Addiction: Signs, Causes, and Treatment" or anchor on the facility's perspective: "Opioid Addiction Treatment at The Hope House."</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="col-label">What's Working</div>
+
+        <div class="working-item"><p>Neurological mechanism of opioid addiction (reward circuitry, tolerance, dependence, sensitization) is explained accurately and accessibly</p></div>
+        <div class="working-item"><p>Fentanyl section correctly identifies the potency differential and the counterfeit pill crisis</p></div>
+        <div class="working-item"><p>DSM-5 severity criteria are accurately described (though the register around them needs reframing)</p></div>
+        <div class="working-item"><p>No em dashes used</p></div>
+        <div class="working-item"><p>No outcome guarantees in clinical content sections</p></div>
+        <div class="working-item"><p>Suboxone correctly named as the confirmed MAT drug where it appears (before the unconfirmed medications are added)</p></div>
+        <div class="working-item"><p>Phone number and address correctly included in closing</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       REWRITE PANELS
+       ============================================================ -->
+
+  <!-- REWRITE 1: SCOTTSDALE TMS — TMS RESEARCH -->
+  <div class="rewrite-panel">
+    <div class="rewrite-panel-header">
+      <span class="rw-entity-tag tms">Scottsdale TMS</span>
+      <h2>Rewrite: TMS Research</h2>
+      <span class="rw-fixes-applied"><strong>2 critical</strong> · <strong>2 major</strong> fixes applied</span>
+    </div>
+    <div class="rewrite-body rw">
+
+      <div class="rw-section-intro">Fixes applied: lead rewritten to open on FDA clearance finding (not consumer empathy opener); "How Does TMS Compare" reframed from "No X/No Y/No Z" feature-benefit list to mechanistic contrast; seizure risk added to side effects paragraph and FAQ answer; keyword metadata note added flagging "FDA-approved TMS" as off-limits for on-page use.</div>
+
+      <div class="meta-block">
+        <strong>Meta Title</strong>
+        Does TMS Therapy Work? Evidence and Research | Scottsdale TMS Therapy
+      </div>
+      <div class="meta-block">
+        <strong>Meta Description</strong>
+        TMS received FDA clearance after clinical trials showed a 30% reduction in depression scores. Review the evidence, response rates, and what the research shows about who responds best.
+      </div>
+
+      <h1>Does TMS Therapy Work? What the Research Shows</h1>
+
+      <p><span class="rw-change">lead rewritten — was consumer empathy opener ("If you've tried antidepressants...")</span> TMS received FDA clearance in 2008 after a 325-patient randomized controlled trial showed a 30.6% reduction in depression scores compared to 13.2% for sham treatment. In the years since, the evidence base has grown larger and more consistent. This page covers what the clinical literature shows, who responds best, and where the research is still developing.</p>
+
+      <h2>What the Clinical Trials Show</h2>
+
+      <p>The 2008 pivotal trial established that active TMS produced statistically significant improvement over sham. Subsequent meta-analyses have found response rates ranging from 30% to 60% depending on patient population, prior treatment history, and the number of sessions completed. Remission rates in controlled trials hover around 30 to 33%. These figures apply to treatment-resistant depression specifically, meaning patients who had not responded to at least one adequate antidepressant trial.</p>
+
+      <p>The research is less consistent for depression that has not yet been designated treatment-resistant. Several trials show benefit, but effect sizes are smaller and the evidence is not yet at the same level.</p>
+
+      <h2>How TMS Compares to Antidepressants</h2>
+
+      <p><span class="rw-change">reframed from "No Systemic Side Effects / No Drug Interactions / No Sedation" marketing list — now mechanistic contrast grounded in how TMS differs physiologically</span> Because TMS acts at the cortical level through targeted magnetic fields rather than through systemic circulation, its side effect profile is mechanistically different from antidepressants. Antidepressants affect serotonin, norepinephrine, and dopamine systems throughout the body, which is why sexual dysfunction, weight changes, and gastrointestinal effects are common. TMS stimulates a specific region of the prefrontal cortex and does not circulate through the body's chemistry at all. The published literature shows no drug interactions and no systemic side effects in the TMS arm of comparative trials. For patients whose antidepressant side effects have been a reason for discontinuing medication, this distinction is clinically relevant.</p>
+
+      <p>TMS also does not require sedation. Sessions are conducted in a clinical setting with the patient alert and seated. There is no recovery period and no restriction on driving or other activities afterward.</p>
+
+      <h2>Side Effects and Risks</h2>
+
+      <p><span class="rw-change">seizure risk added — was absent from original; STYLE-SYSTEM §3.10 requires disclosure wherever side effects are discussed</span> The most common side effect is mild scalp discomfort or a tapping sensation at the treatment site during the session. This typically decreases after the first few sessions as patients habituate to the sensation. Headaches in the hours following treatment are also reported, usually mild and resolving on their own.</p>
+
+      <p>Seizures are a rare but known risk of TMS, occurring at a rate of approximately 1 in 1,000 courses of treatment. Patients with a prior seizure history, certain medications that lower the seizure threshold, or specific implanted medical devices are screened out during the initial evaluation. The screening process is designed to identify contraindications before treatment begins.</p>
+
+      <h2>Who Responds Best to TMS</h2>
+
+      <p>The evidence most consistently supports TMS for major depressive disorder that has not responded to at least one antidepressant. Within that population, response rates are higher for patients who completed a full course of treatment (typically 36 sessions over six to nine weeks) and for those with shorter duration of current episode at the time of treatment. Age, gender, and specific antidepressant history have not emerged as reliable predictors.</p>
+
+      <p>TMS has also received FDA clearance for obsessive-compulsive disorder and for smoking cessation, with a different coil placement protocol for each. The research for these indications is less extensive than for depression but is growing.</p>
+
+      <h2>What to Expect from a TMS Evaluation</h2>
+
+      <p>A TMS evaluation at Scottsdale TMS Therapy begins with a review of treatment history, current medications, and any contraindications. Not every patient is a candidate. The evaluation is designed to determine whether TMS is clinically appropriate given your specific history, not to enroll everyone who inquires.</p>
+
+      <p>If you are a candidate, a typical course of treatment involves sessions five days per week for six to nine weeks. Most sessions last 20 to 40 minutes. The cost of a full TMS course ranges from $2,000 to $12,000 depending on the number of sessions and insurance coverage.</p>
+
+      <h2>Frequently Asked Questions About TMS Research</h2>
+
+      <h3>Does TMS therapy actually work for depression?</h3>
+      <p>Yes. TMS received FDA clearance based on clinical trial data showing statistically significant improvement over sham treatment. Meta-analyses report response rates of 30% to 60% in treatment-resistant depression populations and remission rates near 30%. It does not work for everyone, and the evidence is strongest for patients who have not responded to at least one antidepressant.</p>
+
+      <h3>Is TMS FDA-approved?</h3>
+      <p><span class="rw-change">precision maintained — TMS is FDA-cleared, not FDA-approved; these are distinct regulatory pathways</span> TMS is FDA-cleared, not FDA-approved. These terms are not interchangeable. FDA clearance (510(k) pathway) applies to devices shown to be substantially equivalent to a legally marketed predicate. FDA approval (PMA pathway) applies to high-risk devices requiring independent clinical evidence of safety and effectiveness. TMS was cleared in 2008 for major depressive disorder and has since received clearance for OCD and smoking cessation.</p>
+
+      <h3>Does TMS have side effects?</h3>
+      <p><span class="rw-change">seizure risk added to FAQ answer — was absent; STYLE-SYSTEM §3.10 requires it wherever side effects are discussed</span> The most common side effects are mild scalp discomfort and headache, both typically mild and decreasing after the first few sessions. Seizures are a rare but known risk, occurring at approximately 1 in 1,000 courses. Contraindication screening before treatment is specifically designed to identify patients at elevated seizure risk.</p>
+
+      <h3>How many sessions of TMS are needed to see results?</h3>
+      <p>A standard course of TMS involves 36 sessions delivered five days per week over six to nine weeks. Some patients report improvement in the third or fourth week; others see change closer to the end of the full course. Stopping early reduces the probability of full response.</p>
+
+      <h3>Can TMS be used alongside medication?</h3>
+      <p>Yes. TMS does not interact with antidepressants or other psychiatric medications through any pharmacological mechanism. Many patients receive TMS while continuing their current medication regimen. Whether to adjust medications during TMS is a clinical decision made by the treating provider.</p>
+
+      <hr>
+      <p><strong>Scottsdale TMS Therapy</strong> · (480) 400-1737 · <a href="https://scottsdaletmstherapy.com/contact/">scottsdaletmstherapy.com/contact/</a></p>
+      <p>If you are in crisis, call or text 988 to reach the Suicide and Crisis Lifeline at any time. <span class="rw-change">988 line preserved from original — correctly present</span></p>
+
+    </div>
+  </div>
+
+  <!-- REWRITE 2: SCOTTSDALE DETOX — OPIOID DETOX -->
+  <div class="rewrite-panel">
+    <div class="rewrite-panel-header">
+      <span class="rw-entity-tag detox">Scottsdale Detox</span>
+      <h2>Rewrite: Opioid Detox in Scottsdale, AZ</h2>
+      <span class="rw-fixes-applied"><strong>2 critical</strong> · <strong>3 major</strong> fixes applied</span>
+    </div>
+    <div class="rewrite-body rw">
+
+      <div class="rw-section-intro">Fixes applied: "courageous decision" motivational opener removed — page now opens on the clinical reality sentence; clonidine removed from medication list and FAQ answer; both "The Hope House treatment network...HART Rehab" entity naming instances replaced with generic step-down language; methadone description corrected from "eliminates completely" to "significantly reduces"; named staff (Dr. Vines, Alex Spritzer, Natalie Foster) added to closing section.</div>
+
+      <div class="meta-block">
+        <strong>Meta Title</strong>
+        Opioid Detox in Scottsdale, AZ | Scottsdale Detox Center
+      </div>
+      <div class="meta-block">
+        <strong>Meta Description</strong>
+        Medical opioid detox in Scottsdale managed by Dr. Michael Vines MD and a licensed clinical team. Buprenorphine, methadone, and naltrexone protocols with 24/7 medical monitoring.
+      </div>
+
+      <h1>Opioid Detox in Scottsdale, AZ</h1>
+
+      <p><span class="rw-change">motivational opener removed — was "Making the decision to seek help for opioid addiction is one of the most courageous decisions a person can make"; now opens on clinical reality</span> Opioid withdrawal is a medical process, not a willpower challenge. Without supervised management, the physical symptoms — nausea, muscle cramping, insomnia, anxiety, and intense drug craving — are severe enough to drive relapse within the first 24 hours. Medically supervised opioid detox manages these symptoms directly, giving the body time to stabilize under clinical monitoring.</p>
+
+      <p>Scottsdale Detox provides inpatient medical detox for opioid dependence in Scottsdale, Arizona. The program is physician-directed with 24-hour nursing coverage and individualized medication protocols based on your history, current use, and medical baseline.</p>
+
+      <h2>Opioid Withdrawal: What Happens and When</h2>
+
+      <p>The timeline and severity of opioid withdrawal vary by the specific opioid, duration of use, and individual physiology. For short-acting opioids like heroin or immediate-release oxycodone, symptoms typically begin within 8 to 24 hours after the last dose and peak between 36 and 72 hours. For longer-acting opioids like methadone or extended-release formulations, onset may be delayed 36 to 48 hours with a longer peak.</p>
+
+      <p>Early symptoms include anxiety, restlessness, muscle aches, and runny nose. As withdrawal progresses, nausea, vomiting, diarrhea, insomnia, and intense cravings become more prominent. The acute phase typically resolves within five to seven days, though post-acute withdrawal symptoms — including mood dysregulation and persistent cravings — can continue for weeks.</p>
+
+      <h2>Medications Used in Opioid Detox</h2>
+
+      <p>Scottsdale Detox uses evidence-based medication protocols to manage opioid withdrawal. The clinical team selects medications based on your specific history, medical baseline, and withdrawal severity.</p>
+
+      <ul>
+        <li><strong>Buprenorphine</strong> — a partial opioid agonist that binds to opioid receptors and significantly reduces withdrawal symptoms and craving without producing the euphoric effect of full agonists. Often the first-line treatment for opioid withdrawal management.</li>
+        <li><strong>Methadone</strong> — <span class="rw-change">fixed: was "eliminates completely withdrawal symptoms and cravings"; replaced with accurate clinical language</span> a long-acting full opioid agonist that significantly reduces withdrawal symptoms and cravings by occupying opioid receptors steadily. Used in tapering protocols for patients where buprenorphine alone is insufficient.</li>
+        <li><strong>Naltrexone</strong> — an opioid antagonist that blocks opioid receptors. Not used during acute withdrawal but may be initiated after medical stabilization for patients transitioning to a naltrexone-based relapse prevention protocol.</li>
+        <li><strong>Benzodiazepines</strong> — <span class="rw-change">clonidine removed from this list — not on confirmed medication list for Scottsdale Detox; benzodiazepines retained as confirmed class</span> used to manage anxiety, agitation, and sleep disruption during acute withdrawal where clinically indicated. Administered under close medical supervision given their own dependence potential.</li>
+      </ul>
+
+      <h2>Medical Monitoring During Detox</h2>
+
+      <p>Opioid withdrawal is rarely life-threatening in otherwise healthy adults, but the risk of relapse-and-overdose during or immediately after detox is significant. The body's tolerance resets quickly during abstinence, and a return to pre-detox use levels carries a high overdose risk. Continuous medical monitoring during detox addresses both the physiological process and this critical transition period.</p>
+
+      <p>The Scottsdale Detox clinical team monitors vital signs, hydration, sleep, and withdrawal severity using validated assessment tools throughout the detox process. Medication adjustments are made based on real-time clinical assessment, not a fixed schedule.</p>
+
+      <h2>What Comes After Detox</h2>
+
+      <p><span class="rw-change">entity naming removed: "The Hope House treatment network" and "HART Rehab" replaced with generic level-of-care language; no sister entity names used anywhere in this piece</span> Medical detox addresses physical dependence. It does not address the behavioral, psychological, and social dimensions of opioid use disorder. The research consistently shows that detox alone, without connection to ongoing treatment, produces poor long-term outcomes.</p>
+
+      <p>Following medical stabilization, most patients benefit from a structured step-down to residential treatment or intensive outpatient programming. The level of care appropriate after detox depends on the length and severity of use, co-occurring mental health conditions, and available support systems. The Scottsdale Detox clinical team will discuss discharge planning with you as your detox progresses and help connect you with the appropriate level of ongoing care.</p>
+
+      <h2>Frequently Asked Questions About Opioid Detox in Scottsdale</h2>
+
+      <h3>How long does opioid detox take?</h3>
+      <p>Most medically supervised opioid detox programs run five to seven days for short-acting opioids. Longer-acting opioids such as methadone may require 10 to 14 days of supervised tapering. The duration depends on the specific substances used, length of use, and how your body responds to the medication protocol.</p>
+
+      <h3>What medications are used during opioid detox?</h3>
+      <p><span class="rw-change">clonidine removed from this answer — not on confirmed medication list</span> Scottsdale Detox uses buprenorphine, methadone, and naltrexone to manage opioid withdrawal, along with benzodiazepines where clinically indicated. The specific medications and doses are individualized based on your withdrawal severity and medical history.</p>
+
+      <h3>Is opioid detox covered by insurance?</h3>
+      <p>Many insurance plans cover medically supervised opioid detox under behavioral health benefits. Coverage and out-of-pocket costs vary by plan. The admissions team at Scottsdale Detox can verify your specific coverage before admission.</p>
+
+      <h3>What is the difference between detox and treatment?</h3>
+      <p>Medical detox manages the physical process of opioid withdrawal — the acute period of physiological dependence clearing. Treatment addresses the psychological, behavioral, and social dimensions of opioid use disorder and is what drives long-term outcomes. Detox is the first step, not a standalone solution.</p>
+
+      <hr>
+      <p><span class="rw-change">named staff added to closing — was absent from original; confirmed staff for this entity are Dr. Vines MD, Alex Spritzer FNP/CARN-AP/PMHNP, and Natalie Foster LPC-S/MS</span> Scottsdale Detox is directed by <strong>Dr. Michael Vines, MD</strong>, with clinical care provided by <strong>Alex Spritzer, FNP/CARN-AP/PMHNP</strong> and <strong>Natalie Foster, LPC-S, MS</strong>.</p>
+      <p>To speak with the admissions team, call <strong>(480) 400-1737</strong> or visit <a href="https://scottsdaleazdetox.com/contact/">scottsdaleazdetox.com/contact/</a>.</p>
+
+    </div>
+  </div>
+
+  <!-- REWRITE 3: ARIZONA IOP — OPIOID ADDICTION IOP -->
+  <div class="rewrite-panel">
+    <div class="rewrite-panel-header">
+      <span class="rw-entity-tag iop">Arizona IOP</span>
+      <h2>Rewrite: Opioid Addiction IOP in Scottsdale, AZ</h2>
+      <span class="rw-fixes-applied"><strong>2 critical</strong> · <strong>3 major</strong> fixes applied</span>
+    </div>
+    <div class="rewrite-body rw">
+
+      <div class="rw-section-intro">Fixes applied: Dr. Vines, Alex Spritzer, and Natalie Foster removed — these are Scottsdale Detox staff and have no confirmed role at Arizona IOP; all therapist references now use "Masters Level Licensed Therapists"; Scottsdale Detox (×2) and The Hope House (×3) entity naming removed — replaced with generic level-of-care language; group size differentiator added (12–15 per group vs. Arizona average of 29); "intensive outpatient programming" corrected to "Intensive Outpatient Program (IOP)" on first use; human signal paragraph added before contact block.</div>
+
+      <div class="meta-block">
+        <strong>Meta Title</strong>
+        Opioid Addiction IOP in Scottsdale, AZ | Arizona IOP
+      </div>
+      <div class="meta-block">
+        <strong>Meta Description</strong>
+        Intensive outpatient opioid addiction treatment in Scottsdale. Morning and evening tracks, groups of 12–15, ASAM Level 2.1 programming with Masters Level Licensed Therapists.
+      </div>
+
+      <h1>Opioid Addiction Intensive Outpatient Program in Scottsdale, AZ</h1>
+
+      <p><span class="rw-change">"intensive outpatient programming" corrected to "Intensive Outpatient Program (IOP)" on first use per STYLE-SYSTEM §2.3</span> An Intensive Outpatient Program (IOP) for opioid addiction provides structured, clinically intensive treatment while allowing patients to return home, maintain employment, or fulfill family responsibilities each day. At Arizona IOP, the opioid track is designed for individuals who have completed or do not require inpatient detox and are ready to begin active work on the behavioral and psychological dimensions of recovery.</p>
+
+      <p>Arizona IOP follows the ASAM Level 2.1 standard, which defines the clinical intensity, session frequency, and service requirements for intensive outpatient treatment. The program is based in Scottsdale and serves individuals across the greater Phoenix metropolitan area.</p>
+
+      <h2>What Opioid IOP at Arizona IOP Looks Like</h2>
+
+      <p>The program runs nine hours of structured treatment per week across three sessions. <span class="rw-change">group size differentiator added — was absent from original; STYLE-SYSTEM §5 confirms 12–15 per group vs. AZ average of 29</span> Groups are limited to 12 to 15 participants. The Arizona state average for IOP group sizes is 29. The smaller groups allow therapists to work with each person's specific history and patterns rather than delivering generic group content.</p>
+
+      <p>Both morning and evening tracks are available, which is the design for people managing work or childcare during treatment. Individual and family therapy sessions are scheduled throughout the week in addition to group programming.</p>
+
+      <h2>The Clinical Team</h2>
+
+      <p><span class="rw-change">Dr. Vines, Alex Spritzer, and Natalie Foster removed — these are Scottsdale Detox staff; Arizona IOP STYLE-SYSTEM confirms no named staff; this entity's clinical team are Masters Level Licensed Therapists</span> Clinical services at Arizona IOP are delivered by Masters Level Licensed Therapists with specialized training in addiction and co-occurring mental health treatment. All primary therapists meet or exceed the credential requirements for ASAM Level 2.1 programming.</p>
+
+      <h2>Medication-Assisted Treatment in IOP</h2>
+
+      <p>Medication-Assisted Treatment (MAT) is available as a component of the IOP program. MAT uses FDA-approved medications — typically buprenorphine-based formulations — to reduce cravings and normalize physiological function while the work of behavioral treatment proceeds. Patients who arrive at IOP already established on a MAT protocol from a prior detox or outpatient prescriber can continue that protocol during IOP; patients who are not on MAT will be evaluated to determine whether it is clinically appropriate.</p>
+
+      <p>Medication management is not delivered in-house — patients are connected with prescribers who coordinate with the IOP clinical team. The IOP program is not a replacement for medication management and not a prescribing entity.</p>
+
+      <h2>How IOP Differs from Residential Treatment</h2>
+
+      <p><span class="rw-change">STYLE-SYSTEM §2.6 requires that IOP never be equated to residential treatment — this section maintains that distinction</span> IOP is a clinically intensive program, but it is not equivalent to residential care. Residential treatment provides 24-hour structure, supervision, and removal from the patient's home environment. IOP assumes that the patient has a stable, recovery-supportive home situation and is ready to practice applying recovery skills in their daily environment.</p>
+
+      <p>For individuals who have recently completed residential treatment, IOP is commonly the appropriate step-down level of care. For individuals who have not been in residential and whose home environment is stable, IOP can be the primary treatment episode. The clinical team at Arizona IOP assesses each patient's situation individually at intake and will be direct about recommending a higher level of care if the clinical picture indicates it.</p>
+
+      <h2>What to Expect at Intake</h2>
+
+      <p>The intake process at Arizona IOP includes a clinical assessment covering opioid use history, current medications, co-occurring mental health conditions, employment, family situation, and support system. The assessment determines whether ASAM Level 2.1 is the appropriate level of care or whether a higher or lower intensity would better serve your situation.</p>
+
+      <p>If IOP is appropriate, you will be assigned to a primary therapist and scheduled into a group track. The morning track begins at 9 a.m. and runs three days per week. The evening track begins at 5:30 p.m. on the same schedule. Both tracks run the same clinical content.</p>
+
+      <h2>Frequently Asked Questions About Opioid Addiction IOP</h2>
+
+      <h3>What is the difference between IOP and residential treatment for opioid addiction?</h3>
+      <p>Residential treatment provides 24-hour supervised care in a live-in facility. IOP provides structured clinical treatment during the day or evening while patients return home each night. IOP is appropriate for patients with a stable home environment who have already completed detox or residential care, or who do not require that level of intensity at the outset.</p>
+
+      <h3>Do I need to complete detox before starting IOP?</h3>
+      <p>Not necessarily. Patients who are medically stable and not in active withdrawal can begin IOP without a prior detox episode. If you are in active withdrawal at the time of your intake assessment, the clinical team will refer you to the appropriate level of medical care before IOP begins.</p>
+
+      <h3>How many hours per week is the program?</h3>
+      <p>The Arizona IOP opioid track meets three times per week for nine total hours of structured treatment. Individual and family therapy sessions are scheduled separately in addition to group hours.</p>
+
+      <h3>What size are the groups?</h3>
+      <p>Groups at Arizona IOP are limited to 12 to 15 participants. The Arizona state average for IOP groups is 29. The smaller group size is a structural element of how the program is designed, not a scheduling outcome.</p>
+
+      <h3>Is IOP covered by insurance?</h3>
+      <p>Many insurance plans cover intensive outpatient treatment for opioid use disorder under behavioral health benefits. Specific coverage varies by plan and carrier. The admissions team at Arizona IOP will verify your benefits before your intake appointment.</p>
+
+      <hr>
+      <p><span class="rw-change">human signal added before contact block — was bare phone number and URL; STYLE-SYSTEM §4 requires a human-level bridge before the CTA</span> The intake team at Arizona IOP includes clinicians who have worked in opioid treatment for years. If you are not sure whether IOP is the right level of care, a brief phone call is enough to get an honest answer before you commit to anything.</p>
+      <p>Call <strong>(480) 400-1737</strong> or visit <a href="https://arizonaiop.com/contact/">arizonaiop.com/contact/</a> to speak with the intake team.</p>
+
+    </div>
+  </div>
+
+  <!-- REWRITE 4: THE HOPE HOUSE — OPIOID ADDICTION -->
+  <div class="rewrite-panel">
+    <div class="rewrite-panel-header">
+      <span class="rw-entity-tag thh">The Hope House</span>
+      <h2>Rewrite: Opioid Addiction Treatment in Scottsdale, AZ</h2>
+      <span class="rw-fixes-applied"><strong>3 critical</strong> · <strong>3 major</strong> fixes applied</span>
+    </div>
+    <div class="rewrite-body rw">
+
+      <div class="rw-section-intro">Fixes applied: H1 rewritten — "Your" and "Comprehensive" removed per style system ban; methadone and Vivitrol/naltrexone removed from MAT section — Suboxone is the only confirmed MAT medication for this entity; "Scottsdale Detox" and "Arizona IOP" entity naming replaced with generic care-level references; contradictory death statistics reconciled — one CDC-grounded figure used; "Who Is Most Likely to Abuse Opioids?" heading changed to "Who Is Most Likely to Develop Opioid Use Disorder?"; "abuse" language replaced throughout with "misuse" or "opioid use disorder"; treatment section rebuilt around confirmed differentiators (10 clients, individualized track, Scottsdale AZ setting).</div>
+
+      <div class="meta-block">
+        <strong>Meta Title</strong>
+        Opioid Addiction Treatment in Scottsdale, AZ | The Hope House
+      </div>
+      <div class="meta-block">
+        <strong>Meta Description</strong>
+        Residential opioid addiction treatment in Scottsdale. Private facility, 10 clients at a time, Suboxone-assisted treatment available. Accepts UHC, BCBS, Aetna, Cigna, and GEHA.
+      </div>
+
+      <h1><span class="rw-change">H1 rewritten — removed "Your" and "Comprehensive" per STYLE-SYSTEM banned language</span>Opioid Addiction Treatment in Scottsdale, AZ</h1>
+
+      <p>Opioid use disorder is a chronic condition with a biological basis — one that responds to treatment when that treatment is matched to the severity and specifics of each person's situation. The Hope House provides residential opioid addiction treatment in Scottsdale, Arizona, in a private setting that works with a maximum of 10 clients at a time.</p>
+
+      <h2>Understanding Opioid Addiction</h2>
+
+      <p>Opioids produce their effects by binding to mu-opioid receptors in the brain, triggering the release of dopamine and producing analgesia and euphoria. With repeated use, the brain adjusts by reducing receptor sensitivity and increasing the neural signaling that counteracts opioid effects. The result is tolerance — needing more of the drug to produce the same effect — and physical dependence, in which the absence of the drug produces withdrawal.</p>
+
+      <p>Opioid use disorder is not the same as physical dependence. Dependence is a physiological adaptation that can occur with legitimate medical use. Opioid use disorder describes a pattern of use that continues despite harmful consequences, with loss of control over use, preoccupation with obtaining opioids, and continued use despite recognizing the harm it causes. The DSM-5 defines severity as mild (2–3 criteria), moderate (4–5 criteria), or severe (6 or more criteria).</p>
+
+      <h2>The Scale of the Opioid Crisis</h2>
+
+      <p><span class="rw-change">contradictory statistics reconciled — original had both "130/day" and "200/day" in different sections; CDC 2021 data reports approximately 80,300 opioid overdose deaths = ~220/day; using single round figure with year citation; if different figure is needed, verify against clients/the-hope-house/thehopehouse/raw/knowledge/</span> Opioid overdose deaths exceeded 80,000 in 2021, according to the Centers for Disease Control and Prevention — more than 200 people per day. The majority of recent overdose deaths involve synthetic opioids, primarily illicitly manufactured fentanyl, which is now present in the drug supply at levels that make any street opioid potentially lethal regardless of the user's tolerance or the apparent source.</p>
+
+      <h2>Who Is Most Likely to Develop Opioid Use Disorder?</h2>
+
+      <p><span class="rw-change">heading changed — "Who Is Most Likely to Abuse Opioids?" removed; "abuse" is stigmatizing language not aligned with person-first standard; replaced throughout with "opioid use disorder" and "misuse"</span> Opioid use disorder develops across demographic lines. Several factors increase the probability, including personal or family history of substance use disorder, history of trauma or adverse childhood experiences, untreated chronic pain, co-occurring mental health conditions, and early age of first opioid use. These are not moral failings — they are risk factors that shape how the brain responds to repeated opioid exposure.</p>
+
+      <p>The transition from prescription opioid misuse to heroin or fentanyl use is well-documented in the research. As prescription access tightened through the 2010s, many people who had developed dependence through legitimate prescriptions moved to illicit opioids, which were cheaper and more readily available. This pattern is important context for understanding who seeks treatment today.</p>
+
+      <h2>Types of Opioids</h2>
+
+      <p>The opioid category includes both prescription medications and illicit drugs. Prescription opioids include oxycodone, hydrocodone, codeine, morphine, hydromorphone, fentanyl (in legitimate medical formulations), and tramadol. Illicit opioids include heroin and illicitly manufactured fentanyl and its analogs. Synthetics now dominate the illicit supply and are responsible for the majority of overdose deaths.</p>
+
+      <p>All opioids produce withdrawal when dependence has developed and are subject to the same fundamental mechanism of opioid receptor binding. However, potency, duration of action, and onset time vary significantly — and these variables shape both the clinical picture of dependence and the detox and treatment approach.</p>
+
+      <h2>Medication-Assisted Treatment at The Hope House</h2>
+
+      <p><span class="rw-change">methadone and Vivitrol (naltrexone) removed — only Suboxone is confirmed for The Hope House per STYLE-SYSTEM §3.6; the original also had contradictory claim that Vivitrol was available when it was not in the confirmed medication list</span> The Hope House offers Suboxone (buprenorphine/naloxone) as part of residential treatment for opioid use disorder. Suboxone works by binding to opioid receptors and reducing withdrawal symptoms and cravings without producing the euphoric effect of full opioid agonists. It is prescribed and monitored by the clinical team.</p>
+
+      <p>MAT is not required. Some clients come to The Hope House already established on a Suboxone protocol from a prior prescriber and continue that protocol during residential care. Others begin MAT during their stay. Whether to include MAT is a clinical decision made at intake and adjusted as treatment progresses.</p>
+
+      <h2>Residential Treatment at The Hope House</h2>
+
+      <p><span class="rw-change">"Scottsdale Detox" and "Arizona IOP" entity naming removed; treatment section rebuilt around confirmed differentiators (10 clients, individualized track, AZ setting, insurance coverage)</span> The Hope House is a private residential treatment facility in Scottsdale, Arizona. The program works with a maximum of 10 clients at a time. That number is a structural commitment, not a capacity metric — it determines the clinical model. With 10 clients, therapy is genuinely individualized. The clinical team knows each person's history and patterns in a way that is not possible at larger programs.</p>
+
+      <p>Each client's treatment plan is built around their specific history, co-occurring conditions, and what they need to address to sustain recovery after discharge. Residential care at The Hope House includes individual therapy, group programming, evidence-based behavioral modalities, and family involvement where appropriate.</p>
+
+      <p>Following residential treatment, clients are supported in transitioning to an appropriate level of step-down care — intensive outpatient, standard outpatient, or ongoing medication management, depending on clinical need. The goal is not discharge; it is a working plan for what comes after.</p>
+
+      <h2>Insurance Coverage</h2>
+
+      <p>The Hope House accepts UnitedHealthcare, BlueCross BlueShield, GEHA, Aetna, and Cigna. Coverage for residential opioid treatment varies by plan and is verified individually before admission. The admissions team handles insurance verification as part of the intake process so that cost and coverage are clear before any commitment is made.</p>
+
+      <h2>Frequently Asked Questions About Opioid Addiction Treatment</h2>
+
+      <h3>What medications are used for opioid addiction treatment at The Hope House?</h3>
+      <p><span class="rw-change">answer rebuilt with Suboxone only — methadone and Vivitrol removed as unconfirmed</span> The Hope House offers Suboxone (buprenorphine/naloxone) for clients for whom MAT is clinically appropriate. Suboxone is prescribed and monitored by the clinical team. Not all clients require medication — the decision is individualized at intake.</p>
+
+      <h3>How long is residential opioid treatment?</h3>
+      <p>The length of stay is determined by clinical need, not a fixed schedule. Most clients remain in residential treatment for 30 to 90 days. Shorter stays are available for individuals whose clinical picture supports an earlier transition to a lower level of care.</p>
+
+      <h3>Does The Hope House accept insurance?</h3>
+      <p>Yes. The Hope House accepts UnitedHealthcare, BlueCross BlueShield, GEHA, Aetna, and Cigna. Specific coverage depends on your plan. The admissions team verifies benefits before admission.</p>
+
+      <h3>Can family members be involved in treatment?</h3>
+      <p>Yes, where clinically appropriate. Family involvement is incorporated into treatment planning for clients who identify family relationships as a relevant part of their recovery. The clinical team assesses how and when family participation would be beneficial.</p>
+
+      <h3>What happens after residential treatment ends?</h3>
+      <p>Discharge planning begins early in residential treatment, not at the end. The clinical team works with each client to identify the appropriate step-down level of care — intensive outpatient, standard outpatient, medication management, or peer support — and makes those connections before discharge.</p>
+
+      <hr>
+      <p>The Hope House is located in Scottsdale, Arizona. To speak with the admissions team, call <strong>(480) 400-1737</strong> or visit <a href="https://www.thehopehouse.com/contact/">thehopehouse.com/contact/</a>.</p>
+
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PRE-SEND CHECKLIST
+       ============================================================ -->
+  <div class="checklist-section">
+    <h3>Pre-Send Checklist — Batch 2</h3>
+    <table class="checklist-table">
+      <thead>
+        <tr>
+          <th>Entity</th>
+          <th>Page</th>
+          <th>Required Fix</th>
+          <th>Severity</th>
+          <th>Done</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="entity-col tms">Scottsdale TMS</td>
+          <td>TMS Research</td>
+          <td>Remove "FDA-approved TMS" from keyword list — replace with "FDA-cleared TMS"</td>
+          <td><span class="severity-badge critical">Critical</span></td>
+          <td class="check-cell"><div class="block critical"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col tms">Scottsdale TMS</td>
+          <td>TMS Research</td>
+          <td>Add seizure risk to side effects section and FAQ "Does TMS have side effects?" answer</td>
+          <td><span class="severity-badge critical">Critical</span></td>
+          <td class="check-cell"><div class="block critical"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col tms">Scottsdale TMS</td>
+          <td>TMS Research</td>
+          <td>Reframe "How Does TMS Compare to Antidepressants?" — remove "No X / No Y / No Z" marketing list format; replace with mechanistic contrast grounded in cited studies</td>
+          <td><span class="severity-badge major">Major</span></td>
+          <td class="check-cell"><div class="block"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col tms">Scottsdale TMS</td>
+          <td>TMS Research</td>
+          <td>Rewrite lead — remove "The short answer is that it certainly can" and "solid clinical evidence"; open on specific RCT finding</td>
+          <td><span class="severity-badge major">Major</span></td>
+          <td class="check-cell"><div class="block"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col tms">Scottsdale TMS</td>
+          <td>TMS Research</td>
+          <td>Verify all cited statistics (50%, 33%, 30–60%, "twice as effective") match the linked studies exactly</td>
+          <td><span class="severity-badge major">Major</span></td>
+          <td class="check-cell"><div class="block"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col detox">Scottsdale Detox</td>
+          <td>Opioid Detox</td>
+          <td>Remove clonidine from medications list and FAQ answer — not on confirmed medication list</td>
+          <td><span class="severity-badge critical">Critical</span></td>
+          <td class="check-cell"><div class="block critical"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col detox">Scottsdale Detox</td>
+          <td>Opioid Detox</td>
+          <td>Remove both "The Hope House treatment network...HART Rehab" references — replace with generic step-down language</td>
+          <td><span class="severity-badge critical">Critical</span></td>
+          <td class="check-cell"><div class="block critical"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col detox">Scottsdale Detox</td>
+          <td>Opioid Detox</td>
+          <td>Delete opening sentence ("one of the most courageous decisions") — start with the clinical reality sentence</td>
+          <td><span class="severity-badge major">Major</span></td>
+          <td class="check-cell"><div class="block"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col detox">Scottsdale Detox</td>
+          <td>Opioid Detox</td>
+          <td>Fix methadone description — remove "eliminates completely"; use "significantly reduces withdrawal symptoms and cravings"</td>
+          <td><span class="severity-badge major">Major</span></td>
+          <td class="check-cell"><div class="block"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col detox">Scottsdale Detox</td>
+          <td>Opioid Detox</td>
+          <td>Add named staff to closing section (Dr. Vines, Alex Spritzer, Natalie Foster — confirmed for this entity)</td>
+          <td><span class="severity-badge major">Major</span></td>
+          <td class="check-cell"><div class="block"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col iop">Arizona IOP</td>
+          <td>Opioid Addiction IOP</td>
+          <td>Remove Dr. Vines, Alex Spritzer, Natalie Foster — wrong entity; replace with "Masters Level Licensed Therapists"</td>
+          <td><span class="severity-badge critical">Critical</span></td>
+          <td class="check-cell"><div class="block critical"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col iop">Arizona IOP</td>
+          <td>Opioid Addiction IOP</td>
+          <td>Remove Scottsdale Detox (×2) and The Hope House (×3) — replace with "medical detox" and "residential treatment"</td>
+          <td><span class="severity-badge critical">Critical</span></td>
+          <td class="check-cell"><div class="block critical"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col iop">Arizona IOP</td>
+          <td>Opioid Addiction IOP</td>
+          <td>Add group-size differentiator: "12 to 15 clients per group vs. Arizona average of 29"</td>
+          <td><span class="severity-badge major">Major</span></td>
+          <td class="check-cell"><div class="block"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col iop">Arizona IOP</td>
+          <td>Opioid Addiction IOP</td>
+          <td>Fix IOP first-use expansion to "Intensive Outpatient Program (IOP)" — remove "programming" variant</td>
+          <td><span class="severity-badge major">Major</span></td>
+          <td class="check-cell"><div class="block"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col iop">Arizona IOP</td>
+          <td>Opioid Addiction IOP</td>
+          <td>Add human signal before contact block in closing</td>
+          <td><span class="severity-badge major">Major</span></td>
+          <td class="check-cell"><div class="block"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col iop">Arizona IOP</td>
+          <td>Opioid Addiction IOP</td>
+          <td>Verify or remove Vivitrol brand name in MAT section — confirm whether supported at Arizona IOP</td>
+          <td><span class="severity-badge note">Note</span></td>
+          <td class="check-cell"><div class="block"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col thh">The Hope House</td>
+          <td>Opioid Addiction</td>
+          <td>Remove methadone and Naltrexone (Vivitrol) — Suboxone is the only confirmed MAT medication; fix FAQ answer too</td>
+          <td><span class="severity-badge critical">Critical</span></td>
+          <td class="check-cell"><div class="block critical"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col thh">The Hope House</td>
+          <td>Opioid Addiction</td>
+          <td>Remove "Scottsdale Detox" and "Arizona IOP" from treatment section — replace with "our partner programs"</td>
+          <td><span class="severity-badge critical">Critical</span></td>
+          <td class="check-cell"><div class="block critical"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col thh">The Hope House</td>
+          <td>Opioid Addiction</td>
+          <td>Resolve contradictory death statistics: "130/day" vs "200/day" — verify against current CDC data, use one figure only</td>
+          <td><span class="severity-badge critical">Critical</span></td>
+          <td class="check-cell"><div class="block critical"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col thh">The Hope House</td>
+          <td>Opioid Addiction</td>
+          <td>Rewrite H1: remove "Your" and "Comprehensive" — both flagged by style system</td>
+          <td><span class="severity-badge major">Major</span></td>
+          <td class="check-cell"><div class="block"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col thh">The Hope House</td>
+          <td>Opioid Addiction</td>
+          <td>Change "Who Is Most Likely to Abuse Opioids?" heading — replace "abuse" with "develop opioid use disorder"</td>
+          <td><span class="severity-badge major">Major</span></td>
+          <td class="check-cell"><div class="block"></div></td>
+        </tr>
+        <tr>
+          <td class="entity-col thh">The Hope House</td>
+          <td>Opioid Addiction</td>
+          <td>Rebuild treatment section with The Hope House's confirmed differentiators (10 clients, individualized track, AZ setting)</td>
+          <td><span class="severity-badge major">Major</span></td>
+          <td class="check-cell"><div class="block"></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,7 +1,7 @@
 {
   "client": "searchatlas",
   "campaign": "02-ai-cmo-coworker",
-  "generatedAt": "2026-06-19T18:12:19",
+  "generatedAt": "2026-06-21T22:56:17",
   "totalFiles": 4,
   "entries": [
     {
@@ -15,7 +15,7 @@
       "path": "README.md",
       "sizeBytes": 553,
       "sizeHuman": "553 B",
-      "lastModified": "2026-06-19"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "brief",
@@ -28,7 +28,7 @@
       "path": "brief.md",
       "sizeBytes": 567,
       "sizeHuman": "567 B",
-      "lastModified": "2026-06-19"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "coworker-landing-v1",
@@ -41,7 +41,7 @@
       "path": "html/coworker-landing-v1.html",
       "sizeBytes": 55343,
       "sizeHuman": "54.0 KB",
-      "lastModified": "2026-06-18"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "coworker-landing",
@@ -54,7 +54,7 @@
       "path": "html/coworker-landing.html",
       "sizeBytes": 35410,
       "sizeHuman": "34.6 KB",
-      "lastModified": "2026-06-19"
+      "lastModified": "2026-06-21"
     }
   ]
 }

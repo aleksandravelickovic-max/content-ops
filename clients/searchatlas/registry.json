@@ -1,21 +1,21 @@
 {
   "client": "searchatlas",
   "scope": "client",
-  "generatedAt": "2026-06-16T20:58:52",
+  "generatedAt": "2026-06-21T22:56:17",
   "totalFiles": 153,
   "entries": [
     {
       "id": "style-system",
       "filename": "STYLE-SYSTEM.md",
-      "displayName": "SearchAtlas \u2014 Style System",
+      "displayName": "Search Atlas \u2014 Style System",
       "type": "style-system",
       "category": "style-system",
       "status": "active",
       "version": 1,
       "path": "STYLE-SYSTEM.md",
-      "sizeBytes": 3435,
-      "sizeHuman": "3.4 KB",
-      "lastModified": "2026-05-13"
+      "sizeBytes": 9434,
+      "sizeHuman": "9.2 KB",
+      "lastModified": "2026-06-21"
     },
     {
       "id": "domain-power-llm-visibility-study",
@@ -28,7 +28,7 @@
       "path": "raw/knowledge/proof/domain-power-llm-visibility-study.md",
       "sizeBytes": 1129,
       "sizeHuman": "1.1 KB",
-      "lastModified": "2026-05-13"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "domain-power-study",
@@ -145,7 +145,7 @@
       "path": "raw/knowledge/products/atlas-coworker.md",
       "sizeBytes": 4664,
       "sizeHuman": "4.6 KB",
-      "lastModified": "2026-06-16"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "backlink-gap-analysis",

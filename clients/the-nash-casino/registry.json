@@ -1,7 +1,7 @@
 {
   "client": "the-nash-casino",
   "scope": "client",
-  "generatedAt": "2026-06-16T20:58:52",
+  "generatedAt": "2026-06-21T22:56:17",
   "totalFiles": 2,
   "entries": [
     {
@@ -15,7 +15,7 @@
       "path": "STYLE-SYSTEM.md",
       "sizeBytes": 17259,
       "sizeHuman": "16.9 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     },
     {
       "id": "knowledge-document",
@@ -28,7 +28,7 @@
       "path": "raw/knowledge/knowledge-document.md",
       "sizeBytes": 28824,
       "sizeHuman": "28.1 KB",
-      "lastModified": "2026-06-12"
+      "lastModified": "2026-06-21"
     }
   ]
 }
