@@ -140,6 +140,19 @@ voice_bans:
     severity: warning
   - term: "charming"
     severity: warning
+  # June 2026 — Brittany review: Tier 1 cliché/exaggerative adjectives, hard-banned (§2.7)
+  - term: "beautiful"
+    severity: warning
+    reason: "Tier 1 cliché adjective (§2.7). Show quality through specific detail."
+  - term: "stunning"
+    severity: warning
+    reason: "Tier 1 cliché adjective (§2.7). Show quality through specific detail."
+  - term: "gorgeous"
+    severity: warning
+    reason: "Tier 1 cliché adjective (§2.7). Show quality through specific detail."
+  - term: "exquisite"
+    severity: warning
+    reason: "Tier 1 exaggerative adjective (§2.7). Show quality through specific detail."
   - term: "defects"
     severity: critical
     reason: "Reframe as chips/pits/crazing characteristics (zellige) — never 'defects'."
