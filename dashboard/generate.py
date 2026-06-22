@@ -838,6 +838,118 @@ def fetch_sheets_weekly_metrics(n_weeks=SHEETS_N_WEEKS):
     }
 
 
+# ── Weighted content scorecard (Content Scoring Model) ─────────────────────────
+
+WEIGHTED_SCORECARD_GID = "1917611627"
+WEIGHTED_SCORECARD_URL = (
+    "https://docs.google.com/spreadsheets/d/"
+    "1IlrmXGJqHjiTtED0qu5QgnDRzD18kIW1kmBuRzZhcSI/export?format=csv"
+    f"&gid={WEIGHTED_SCORECARD_GID}"
+)
+
+# Search Atlas Q2 totals live in column A (label) / column B (value).
+_SA_TOTAL_LABELS = ["SEO Content (weighted)", "SEO Briefs", "Other Projects", "Landing Pages"]
+_MONTH_ABBR = {
+    "jan": "Jan", "feb": "Feb", "mar": "Mar", "apr": "Apr", "april": "Apr",
+    "may": "May", "jun": "Jun", "june": "Jun", "jul": "Jul", "aug": "Aug",
+    "sep": "Sep", "sept": "Sep", "oct": "Oct", "nov": "Nov", "dec": "Dec",
+}
+
+
+def fetch_weighted_content_scorecard():
+    """Pull the live weighted Content Scoring Model (Total SA vs 360 goal + weekly series)."""
+    import io
+    import csv as csv_mod
+    import urllib.request
+
+    log("Fetching weighted content scorecard (Content Scoring Model)…")
+    try:
+        req = urllib.request.Request(WEIGHTED_SCORECARD_URL, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=20) as r:
+            content = r.read().decode("utf-8")
+    except Exception as e:
+        log(f"  Weighted scorecard fetch failed: {e}")
+        return None
+
+    rows = list(csv_mod.reader(io.StringIO(content)))
+
+    def cell(row, i):
+        return row[i].strip().strip('"') if len(row) > i else ""
+
+    # Search Atlas Q2 totals: col A label, col B value
+    breakdown, total = [], None
+    for row in rows:
+        label = cell(row, 0)
+        if label in _SA_TOTAL_LABELS:
+            v = _parse_sheet_num(cell(row, 1))
+            if v is not None:
+                breakdown.append({"label": label, "value": v})
+        elif label == "Total SA":
+            total = _parse_sheet_num(cell(row, 1))
+
+    # Goal / Current Completion / Missing / Over live in col G (label) / col H (value)
+    goal = current = missing = over = None
+    for row in rows:
+        key = cell(row, 6).rstrip(":").strip()
+        val = _parse_sheet_num(cell(row, 7))
+        if key == "Goal":
+            goal = val
+        elif key == "Current Completion":
+            current = val
+        elif key == "Missing":
+            missing = val
+        elif key == "Over":
+            over = val
+
+    if current is None:
+        current = total
+
+    # Weekly "Sum for SAG" series — find the "Owner" header row and the month row above it
+    owner_idx = next((i for i, row in enumerate(rows) if cell(row, 0) == "Owner"), None)
+    weekly = []
+    if owner_idx is not None:
+        header = rows[owner_idx]
+        month_row = rows[owner_idx - 1] if owner_idx > 0 else []
+        sum_row = next((row for row in rows if cell(row, 0).startswith("Sum for")), None)
+
+        cur_month = ""
+        for ci in range(1, len(header)):
+            rng = cell(header, ci)
+            if not rng:
+                continue
+            m = cell(month_row, ci) if month_row else ""
+            if m:
+                cur_month = _MONTH_ABBR.get(m.strip().lower(), m.strip())
+            pts = _parse_sheet_num(cell(sum_row, ci)) if sum_row else None
+            label = f"{cur_month} {rng.replace(' ', '')}".strip()
+            weekly.append({"week": label, "points": pts})
+
+    filled = [w for w in weekly if w["points"] is not None]
+    latest = filled[-1] if filled else None
+
+    if total is None and current is None and not weekly:
+        log("  Weighted scorecard: no parseable data")
+        return None
+
+    log(f"  Weighted: Total SA={total} / goal {goal} (over {over}); latest week "
+        f"{latest['week'] if latest else 'n/a'}={latest['points'] if latest else 'n/a'}")
+    return {
+        "source": "google_sheets",
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "scorecard_url": WEIGHTED_SCORECARD_URL.split("/export")[0] + "/edit",
+        "quarter": "q2" if goal == 360 else ("q3" if goal == 420 else None),
+        "goal": goal,
+        "current": current,
+        "total": total,
+        "missing": missing,
+        "over": over,
+        "pct": round(current / goal * 100, 1) if (current and goal) else None,
+        "breakdown": breakdown,
+        "weekly": weekly,
+        "latest_week": latest,
+    }
+
+
 def fetch_quota():
     """Pull platform credit usage from SearchAtlas."""
     log("Fetching SA quota…")
@@ -1008,6 +1120,14 @@ def main():
         sources_status["sheets_scorecard"] = "connected"
     else:
         sources_status["sheets_scorecard"] = "error"
+
+    # ── Weighted content scorecard (Content Scoring Model) ───────────────────
+    weighted = fetch_weighted_content_scorecard()
+    if weighted:
+        existing["weighted_content"] = weighted
+        sources_status["weighted_scorecard"] = "connected"
+    else:
+        sources_status["weighted_scorecard"] = "error"
 
     # ── SA quota ─────────────────────────────────────────────────────────────
     credits = {"alerts": [], "highlights": []}

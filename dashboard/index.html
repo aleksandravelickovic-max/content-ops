@@ -348,14 +348,15 @@ function buildAll(){
     buildGoalsRow(Q),
     buildLeadingIndicators(Q),
     buildRocksAndAgenda(Q),
-    buildWeeklyProgress(Q),
     buildClickUp(),
     buildLLMV(),
     buildPerformance(),
+    buildWeeklyScorecard(),
     acc('gsc','GSC Organic Performance',gscSub(),gscBadge(),buildGSCInner()),
     acc('decay','Content Decay',decaySub(),decayBadge(),buildDecayInner()),
     acc('wins','Quick Win Keywords',winsSub(),winsBadge(),buildWinsInner()),
     buildResponsibilitiesAndContext(),
+    buildWeeklyProgress(Q),
     buildCoaching(),
   ].join('');
 }
@@ -448,13 +449,15 @@ function buildMetrics(){
 
 // ── WEEKLY PROGRESS CHART ──────────────────────────────────────────────────
 function buildWeeklyProgress(Q){
+  const WC=DATA?.weighted_content;
+  const live=!!(WC&&WC.quarter===activeQ&&(WC.weekly||[]).length);
   const CP=Q.content_production||{};
-  const weeks=CP.weekly_history||[];
+  const weeks=live?WC.weekly.map(w=>({week:w.week,points:w.points})):(CP.weekly_history||[]);
   if(!weeks.length)return '';
-  const goal=CP.goal||(activeQ==='q2'?360:420);
+  const goal=live?(WC.goal||CP.goal||360):(CP.goal||(activeQ==='q2'?360:420));
   const total13=goal/weeks.length;
   const filled=weeks.filter(w=>w.points!=null);
-  const runningTotal=filled.reduce((s,w)=>s+w.points,0);
+  const runningTotal=live&&WC.current!=null?WC.current:filled.reduce((s,w)=>s+w.points,0);
   const maxVal=Math.max(...filled.map(w=>w.points),total13,1);
   const goalPct=Math.min(100,Math.round(total13/maxVal*100));
 
@@ -470,13 +473,21 @@ function buildWeeklyProgress(Q){
   }).join('');
 
   const label=activeQ==='q2'?`Q2 Weekly Production · ${runningTotal.toFixed(1)} / ${goal} pts (${Math.round(runningTotal/goal*100)}%)`:`Q3 Weekly Production · ${runningTotal>0?runningTotal.toFixed(1)+' / '+goal+' pts recorded':'Tracking starts Jul 1'}`;
+  const scLink=live?WC.scorecard_url:CFG?.cnt_scorecard;
+  const badge=live
+    ?`<span class="bdg ${runningTotal>=goal?'bdg-green':'bdg-amber'}">${WC.over!=null&&WC.over>=0?'Over by '+WC.over.toFixed(1):runningTotal.toFixed(1)+' / '+goal} · live</span>`
+    :`<span class="bdg ${activeQ==='q2'&&runningTotal>=goal?'bdg-green':activeQ==='q2'?'bdg-blue':'bdg-gray'}">${activeQ==='q2'?'Q2 Final':scLink?'<a href="'+esc(scLink)+'" target="_blank" style="color:inherit">CNT Scorecard ↗</a>':''}</span>`;
+  const breakdownHtml=live&&(WC.breakdown||[]).length
+    ?`<div style="display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 10px">${WC.breakdown.map(b=>`<span class="bdg bdg-gray" style="font-weight:600">${esc(b.label)}: ${b.value}</span>`).join('')}<span class="bdg bdg-blue" style="font-weight:600">Total SA: ${(WC.total??runningTotal)}</span></div>`
+    :'';
 
   return `<div class="section">
     <div class="card">
       <div class="card-hd">
         <span class="card-title">${label}</span>
-        <span class="bdg ${activeQ==='q2'&&runningTotal>=goal?'bdg-green':activeQ==='q2'?'bdg-blue':'bdg-gray'}">${activeQ==='q2'?'Q2 Final':CFG?.cnt_scorecard?'<a href="'+esc(CFG.cnt_scorecard)+'" target="_blank" style="color:inherit">CNT Scorecard ↗</a>':''}</span>
+        ${badge}
       </div>
+      ${breakdownHtml}
       <div class="chart-wrap">
         <div class="chart-bars" style="position:relative">
           <div style="position:absolute;bottom:${goalPct}%;left:0;right:0;border-top:1px dashed var(--amber);pointer-events:none" title="Weekly target: ${total13.toFixed(1)} pts/wk"></div>
@@ -484,7 +495,7 @@ function buildWeeklyProgress(Q){
         </div>
         <div class="chart-meta">
           <span>— dashed line = weekly target (${total13.toFixed(1)} pts/wk)</span>
-          ${CP.scorecard_url?`<a href="${esc(CP.scorecard_url)}" target="_blank" style="font-size:10px">CNT Scorecard ↗</a>`:''}
+          ${scLink?`<a href="${esc(scLink)}" target="_blank" style="font-size:10px">CNT Scorecard ↗</a>`:''}
         </div>
         ${CP.scoring_model?`<div style="font-size:10px;color:var(--light);margin-top:6px;line-height:1.6">${esc(CP.scoring_model)}</div>`:''}
       </div>
@@ -502,6 +513,10 @@ function buildLeadingIndicators(Q){
     if((li.source||'').toLowerCase().includes('clickup') && (li.label||'').toLowerCase().includes('articles published')){
       const live=DATA?.clickup_stats?.articles_published_7d;
       if(live!=null) actual=live;
+    }
+    if((li.label||'').toLowerCase().includes('weighted points')){
+      const WC=DATA?.weighted_content;
+      if(WC&&WC.quarter===activeQ&&WC.latest_week&&WC.latest_week.points!=null) actual=WC.latest_week.points;
     }
     const target=li.target;
     const p=actual!=null?pct(actual,target):null;
@@ -616,6 +631,34 @@ function buildPerformance(){
       <div class="card-body" style="overflow-x:auto"><table class="tbl"><thead><tr><th>#</th><th>Page</th><th class="tr">Prior → Now</th><th class="tr">Growth</th></tr></thead><tbody>${climbRows||'<tr><td colspan="4" style="text-align:center;color:var(--muted);padding:14px">No significant climbers this period.</td></tr>'}</tbody></table></div>
     </div>
   </div>`;
+}
+
+// ── WEEKLY SCORECARD (Google Sheets — GSC & traffic) ────────────────────────
+function buildWeeklyScorecard(){
+  const W=DATA?.weekly_metrics;
+  if(!W||!(W.rows||[]).length)return '';
+  const weeks=W.weeks||[];
+  const groups={traffic:'Traffic',pipeline:'Pipeline',llm:'LLM / AI',branded:'Branded vs Non-Branded'};
+  const fmtv=v=>v==null?'<span style="color:var(--light)">—</span>':fmt(v);
+  let body='';
+  Object.keys(groups).forEach(g=>{
+    const rows=W.rows.filter(r=>r.group===g);
+    if(!rows.length)return;
+    body+=`<tr><td colspan="${weeks.length+2}" style="background:var(--bg);font-weight:700;font-size:10px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);padding:6px 8px">${groups[g]}</td></tr>`;
+    rows.forEach(r=>{
+      const vals=r.values||[];
+      const latest=vals[0],prior=vals[1];
+      let delta='';
+      if(latest!=null&&prior!=null&&prior!==0){const p=(latest-prior)/prior*100;delta=`<span class="bdg ${p>=0?'bdg-green':'bdg-red'}" style="font-size:9px">${sign(p)} ${abs(p).toFixed(0)}%</span>`;}
+      body+=`<tr><td style="font-weight:600">${esc(r.metric)}</td>`+vals.map((v,i)=>`<td class="tr tm"${i===0?' style="font-weight:700;color:var(--text)"':''}>${fmtv(v)}</td>`).join('')+`<td class="tr">${delta}</td></tr>`;
+    });
+  });
+  const head=`<tr><th>Metric</th>${weeks.map((w,i)=>`<th class="tr"${i===0?' style="color:var(--text)"':''}>${esc(w)}</th>`).join('')}<th class="tr">WoW</th></tr>`;
+  const link=CFG?.cnt_scorecard;
+  return `<div class="section"><div class="card">
+    <div class="card-hd"><span class="card-title">📊 Weekly Scorecard — GSC &amp; Traffic</span><span class="bdg bdg-blue">${weeks.length} wks${link?` · <a href="${esc(link)}" target="_blank" style="color:inherit">Sheet ↗</a>`:''}</span></div>
+    <div class="card-body" style="overflow-x:auto"><table class="tbl"><thead>${head}</thead><tbody>${body}</tbody></table></div>
+  </div></div>`;
 }
 
 // ── GSC ────────────────────────────────────────────────────────────────────
