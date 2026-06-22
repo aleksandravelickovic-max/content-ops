@@ -1,5 +1,5 @@
 ---
-Meta Title: Boat Storage Units Near You | All Boat Storage Types
+Meta Title: Boat Storage: Dry Stack to Land Storage | Find Self Storage
 Meta Description: Find boat storage units near you. Compare enclosed, covered, outdoor, and dry stack options for any boat size and budget. Search facilities and reserve online for free.
 Keywords:
 Boat storage units
@@ -15,6 +15,7 @@ How much does boat storage cost
 Boat storage size
 Boat winterization storage
 Enclosed boat storage
+---
 
 # Boat Storage Units: Find Indoor, Covered & Outdoor Boat Storage Near You
 
@@ -24,12 +25,12 @@ Dock fees add up fast, and most HOAs prohibit boats and trailers on residential 
 
 Boat storage is a practical solution for a wide range of watercraft owners:
 
-- Seasonal boaters: sailboats, fishing boats, and ski boats stored during winter months
-- Owners without driveway space: boats and trailers that are too large to park at home
-- HOA-restricted homeowners: communities that prohibit boat and trailer parking on residential lots
-- Saltwater boaters: boats that benefit from enclosed protection between outings to prevent corrosion
-- Cabin cruiser and pontoon owners: larger vessels that require dedicated sized spaces
-- Jet ski and PWC owners: personal watercraft stored away from direct weather exposure
+- **Seasonal boaters:** sailboats, fishing boats, and ski boats stored during winter months
+- **Owners without driveway space:** boats and trailers that are too large to park at home
+- **HOA-restricted homeowners:** communities that prohibit boat and trailer parking on residential lots
+- **Saltwater boaters:** boats that benefit from enclosed protection between outings to prevent corrosion
+- **Cabin cruiser and pontoon owners:** larger vessels that require dedicated sized spaces
+- **Jet ski and PWC owners:** personal watercraft stored away from direct weather exposure
 
 ## Types of Boat Storage Units
 
@@ -39,7 +40,7 @@ Boat storage comes in four main configurations. The right choice depends on your
 
 Enclosed boat storage places your vessel inside a sealed drive-up unit with a roll-up door, similar to a private garage. It provides the highest level of protection from weather, UV damage, dust, and pests.
 
-Best for: Boats stored for a full season, high-value watercraft, saltwater boats that benefit from drying out in a sealed environment, and boats with sensitive electronics or upholstery.
+**Best for:** Boats stored for a full season, high-value watercraft, saltwater boats that benefit from drying out in a sealed environment, and boats with sensitive electronics or upholstery.
 
 To use an enclosed unit, your boat and trailer must fit within the unit dimensions. Measure your boat's overall length on the trailer (including the hitch tongue), width, and height (including the motor if tilted) before comparing unit sizes.
 
@@ -47,15 +48,15 @@ To use an enclosed unit, your boat and trailer must fit within the unit dimensio
 
 Covered storage parks your boat under a roof structure with open sides. You get protection from rain, hail, and direct sun without the cost of a fully enclosed unit.
 
-Best for: Boaters who use their vessel regularly and want some weather protection between outings without paying for full enclosure. A good middle-ground option for mild climates.
+**Best for:** Boaters who use their vessel regularly and want some weather protection between outings without paying for full enclosure. A good middle-ground option for mild climates.
 
-Limitations: Limited protection from wind-driven rain, humidity, rodents, or temperature extremes. Most covered facilities use perimeter fencing and gated access for security.
+**Limitations:** Limited protection from wind-driven rain, humidity, rodents, or temperature extremes. Most covered facilities use perimeter fencing and gated access for security.
 
 ### Outdoor (Open) Boat Storage
 
 Outdoor storage is a secured, open-air lot with fencing and surveillance. No weather protection, but pricing is the most affordable option and access is typically flexible.
 
-Best for: Boat owners on a tight budget, boats already designed for outdoor exposure, or short-term storage in mild-weather climates where precipitation is low.
+**Best for:** Boat owners on a tight budget, boats already designed for outdoor exposure, or short-term storage in mild-weather climates where precipitation is low.
 
 If choosing outdoor storage, a quality boat cover is a worthwhile investment to protect the hull, cockpit, and motor from UV rays and moisture between uses.
 
@@ -63,11 +64,11 @@ If choosing outdoor storage, a quality boat cover is a worthwhile investment to 
 
 Dry stack (also called stack storage or rack storage) is a specialized system where a marina or facility uses large forklift-style equipment to store boats on steel racks, stacked several units high inside a large covered or enclosed building. When you want to use your boat, staff retrieve it with the forklift and launch it for you.
 
-Best for: Smaller to mid-size powerboats in coastal or lakefront markets. Ideal for boats stored for weeks or months at a time. Not practical for boaters who want spontaneous, self-service access.
+**Best for:** Smaller to mid-size powerboats in coastal or lakefront markets. Ideal for boats stored for weeks or months at a time. Not practical for boaters who want spontaneous, self-service access.
 
-Advantages: Excellent protection, efficient use of space, and many dry stack facilities are waterfront-adjacent, making launch and retrieval easy.
+**Advantages:** Excellent protection, efficient use of space, and many dry stack facilities are waterfront-adjacent, making launch and retrieval easy.
 
-Limitations: Access requires advance notice and is dependent on facility staffing hours. Not suitable for boats over a certain size or weight. Less common inland.
+**Limitations:** Access requires advance notice and is dependent on facility staffing hours. Not suitable for boats over a certain size or weight. Less common inland.
 
 Browse related vehicle storage: [RV and motorhome storage](/rv-storage-units) | [Car storage units](/car-storage-units) | [Motorcycle storage](/motorcycle-storage-units)
 
@@ -83,7 +84,7 @@ Boat storage sizing is based on your vessel's total length on the trailer, not j
 | Pontoon or deck boat | 20' to 26' | 10' x 30' |
 | Cabin cruiser or larger powerboat | 24'+ | 10' x 35'+ or outdoor lot |
 
-Important: Boats with T-tops, towers, radar arches, or outboard motors add height. Measure total rig height with the motor tilted up and compare it against the facility's door opening height before committing to a unit. Some facilities accommodate non-standard lengths on a case-by-case basis. Always call ahead to confirm the unit's size restrictions.
+**Important:** Boats with T-tops, towers, radar arches, or outboard motors add height. Measure total rig height with the motor tilted up and compare it against the facility's door opening height before committing to a unit. Some facilities accommodate non-standard lengths on a case-by-case basis. Always call ahead to confirm.
 
 ## Should You Look for Climate Controlled Boat Storage?
 
@@ -132,18 +133,18 @@ Boat storage prices vary by type, unit size, location, and amenities. These are 
 
 What drives the price up or down:
 
-- Location: Coastal and waterfront markets are significantly more expensive than inland areas
-- Boat size: A 10' x 30' unit costs substantially more than a 10' x 15'
-- Season: Demand peaks in fall as boating season ends in cold climates
-- Access hours: 24/7 self-access facilities typically charge more than staffed-hours-only locations
-- Lease term: Month-to-month rates are usually higher than seasonal or annual commitments
-- Marina vs. self storage: Dry stack at a marina is typically more expensive than equivalent self storage options
+- **Location:** Coastal and waterfront markets are significantly more expensive than inland areas
+- **Boat size:** A 10' x 30' unit costs substantially more than a 10' x 15'
+- **Season:** Demand peaks in fall as boating season ends in cold climates
+- **Access hours:** 24/7 self-access facilities typically charge more than staffed-hours-only locations
+- **Lease term:** Month-to-month rates are usually higher than seasonal or annual commitments
+- **Marina vs. self storage:** Dry stack at a marina is typically more expensive than equivalent self storage options
 
 Search facilities near you to compare real-time pricing and check for current move-in promotions.
 
 ## How to Prepare Your Boat for Storage
 
-Skipping prep costs more than the storage unit itself. Corrosion works through cooling passages over a single winter, osmotic blistering can compromise a fiberglass hull after one freeze/thaw cycle, and mold in upholstery and canvas rarely comes out cleanly. These steps are how you avoid those repairs.
+Skipping prep costs more than the storage unit itself. Corrosion works through cooling passages over a single winter, osmotic blistering can compromise a fiberglass hull after one freeze/thaw cycle, and mold in upholstery and canvas rarely comes out cleanly.
 
 **Flush the engine with fresh water:** Particularly critical for saltwater boats. Connect a flushing attachment to the lower unit and run the engine on fresh water for at least 10 minutes. This clears salt, sand, and debris from the cooling passages before they can cause corrosion.
 
@@ -171,7 +172,7 @@ Skipping prep costs more than the storage unit itself. Corrosion works through c
 
 ## Find Boat Storage Units Near You
 
-Ready to find a storage spot for your boat? Search [storage units near you](/storage-unit-near-me) to compare boat-friendly options by type, size, and price. The search is completely free with no credit card required and no obligation. Compare options side by side, check availability, and reserve online — no credit card needed.
+Search [storage units near you](/storage-unit-near-me) to compare boat-friendly options by type, size, and price. Free to search, no credit card required.
 
 Also looking for storage for other vehicles?
 
