@@ -57,6 +57,56 @@ Flags:
 - Verify-with-Alex: {list any draft/verify-confidence rules used, or "None"}
 ```
 
+## Sidecar: Semantic terms (mandatory — runs after self-check)
+
+After the self-check passes, generate a `{draft-slug}-semantic-terms.md` file alongside the draft. Write it to the same directory as the draft, replacing `.md` with `-semantic-terms.md` (e.g., `drafts/collection-zellige-semantic-terms.md`).
+
+**Step 1 — Identify expected NLP terms** for this material using your knowledge of the tile/design semantic field and the SERP vocabulary for the primary keyword. Draw from:
+- Material origin and provenance entities
+- Process and craft vocabulary (firing, glazing, cleft, calibrated, etc.)
+- Application contexts (floors, walls, exterior, wet areas, etc.)
+- Installation and trade terms
+- Finish, texture, and variation language
+- Design style references and interior design vocabulary
+- Long-tail buyer queries
+
+**Step 2 — Scan the finished draft** to determine which expected terms are present (exact match or clear variant counts as present).
+
+**Step 3 — Write the sidecar file** in this format:
+
+```markdown
+# Semantic / NLP Terms — {Material} Collection Page
+Zia Tile | {date}
+
+Terms marked ✓ are present in the draft.
+Terms marked ○ are not yet covered — incorporate naturally where they fit.
+
+## Material & Origin Entities
+- ✓ / ○ {term}
+
+## Technical & Process Terms
+- ✓ / ○ {term}
+
+## Application Contexts
+- ✓ / ○ {term}
+
+## Installation & Trade Terms
+- ✓ / ○ {term}
+
+## Design & Style References
+- ✓ / ○ {term}
+
+## Search Intent Phrases
+- ✓ / ○ {phrase}
+```
+
+Sidecar rules:
+- Include 25–40 terms total across all categories.
+- Mark ✓ only if the term (or a clear variant) appears in the draft body.
+- No editorial commentary — terms and status only.
+- Do not include terms that are intentionally excluded by the material config (e.g., "porcelain," "vinyl," "wood look" on a natural stone page).
+- If `campaign-path` is given, write the sidecar there. If no path was given and the draft was returned inline, note the sidecar path and output it inline as a second block after the draft.
+
 ## Constraints
 
 - Produce a finished page, not a brief or outline.
