@@ -49,6 +49,29 @@ CU_API_KEY   = os.environ.get("CLICKUP_API_TOKEN", "") or os.environ.get("CLICKU
 CU_WORKSPACE = os.environ.get("CLICKUP_WORKSPACE_ID", "9011399348")
 CHANNEL_ID   = os.environ.get("CHANNEL_ID", "8chy2nm-1554391")
 
+# Action-task creation (SEO Content list). Findings → tasks, assigned to a writer.
+SEO_CONTENT_LIST  = os.environ.get("SEO_CONTENT_LIST_ID", "901111125948")
+ASSIGNEE_DEFAULT  = int(os.environ.get("TASK_ASSIGNEE", "81531694"))   # Milena Barbaresco
+ASSIGNEE_HOMEPAGE = int(os.environ.get("TASK_ASSIGNEE_HOMEPAGE", "81501508"))  # Aleksandra
+TASK_STATUS       = "ready for writer"
+
+# Short diagnosis labels for traffic-drop task titles.
+DROP_SHORT = {
+    "Page disappeared from search results": "deindexed",
+    "Ranking loss": "ranking loss",
+    "Impression decline (possible search demand drop)": "impression decline",
+    "CTR collapse (rankings stable, fewer clicks)": "CTR collapse",
+}
+# Per-diagnosis refresh guidance for decay task titles + descriptions.
+DECAY_ACTION = {
+    "Ranking drop":   ("refresh to recover slipping rankings",
+                       "Rankings are slipping — refresh the content and internal links to recover position."),
+    "Demand decline": ("update for current search intent",
+                       "Rankings held but clicks fell — refresh for current search intent and adjacent queries; verify the keyword still has volume."),
+    "CTR collapse":   ("fix CTR collapse — snippet not converting",
+                       "Ranking is stable but the snippet isn't converting — test a new title/meta description; it may be losing to ads or AI overviews."),
+}
+
 DECAY_DIAGNOSIS = {
     "Rankings declining": "Ranking drop",
     "Rankings improved but traffic still dropped (possible search demand decline)": "Demand decline",
@@ -301,20 +324,137 @@ def post_to_clickup(text):
     return resp.json()
 
 
+# ── ClickUp action tasks (v2 REST) ─────────────────────────────────────────---
+
+def _dedup_key(slug):
+    """Normalized key used to detect an existing open task for a page."""
+    return "homepage" if slug == "/ (homepage)" else slug.lower()
+
+
+def _open_task_names():
+    """Names of all non-closed tasks in the SEO Content list (for dedup)."""
+    names, page = [], 0
+    while True:
+        url = f"https://api.clickup.com/api/v2/list/{SEO_CONTENT_LIST}/task"
+        resp = requests.get(url, headers={"Authorization": CU_API_KEY},
+                            params={"include_closed": "false", "subtasks": "false", "page": page},
+                            timeout=20)
+        resp.raise_for_status()
+        tasks = resp.json().get("tasks", [])
+        if not tasks:
+            break
+        names += [t.get("name", "").lower() for t in tasks]
+        if len(tasks) < 100:
+            break
+        page += 1
+    return names
+
+
+def _create_task(name, markdown, assignee, tags=None, priority=3, dry_run=False):
+    if dry_run:
+        log(f"  WOULD CREATE: {name}")
+        return
+    url = f"https://api.clickup.com/api/v2/list/{SEO_CONTENT_LIST}/task"
+    body = {"name": name, "markdown_content": markdown, "status": TASK_STATUS,
+            "assignees": [assignee], "priority": priority}
+    if tags:
+        body["tags"] = tags
+    resp = requests.post(url, headers={"Authorization": CU_API_KEY, "Content-Type": "application/json"},
+                         json=body, timeout=20)
+    resp.raise_for_status()
+    log(f"  created: {name}")
+
+
+def create_tasks(decay, drops, wins, dry_run=False):
+    """Create action tasks for the top findings, skipping pages/queries that
+    already have an open task. Drops first, then decay (one task per page)."""
+    existing = _open_task_names()
+    seen = set()                       # page keys handled this run
+    created = 0
+
+    def page_taken(key):
+        if key in seen:
+            return True
+        return any(key in n for n in existing)
+
+    # Traffic drops → Recover / Investigate
+    for d in drops[:5]:
+        slug = path_slug(d["page"])
+        key = _dedup_key(slug)
+        if page_taken(key):
+            continue
+        seen.add(key)
+        short = DROP_SHORT.get(d["diagnosis"], d["diagnosis"])
+        if key == "homepage":
+            name = f"Investigate homepage traffic drop — -{d['loss']:,} clicks ({d['pct']}%)"
+            assignee = ASSIGNEE_HOMEPAGE
+        else:
+            name = f"Recover {slug} — {short}, -{d['loss']:,} clicks ({d['pct']}%)"
+            assignee = ASSIGNEE_DEFAULT
+        md = (f"**Source:** Content Health Report — Recent Traffic Drops\n\n"
+              f"**Clicks:** {d['prior_clicks']:,} → {d['cur_clicks']:,} ({d['pct']}%)\n"
+              f"**Diagnosis:** {d['diagnosis']}\n\n"
+              f"**Action:** Diagnose the cause and refresh the page to recover the lost clicks.")
+        _create_task(name, md, assignee, priority=2, dry_run=dry_run)
+        created += 1
+
+    # Decaying pages → Refresh (tagged 'refresh')
+    for d in decay[:5]:
+        slug = path_slug(d["page"])
+        key = _dedup_key(slug)
+        if page_taken(key):
+            continue
+        seen.add(key)
+        diag = DECAY_DIAGNOSIS.get(d["trend"], d["trend"])
+        title_action, body_action = DECAY_ACTION.get(diag, ("refresh content", "Refresh the content."))
+        name = f"Refresh {slug} — {title_action}"
+        md = (f"**Source:** Content Health Report — Decaying Pages\n\n"
+              f"**Click loss:** {d['clicks_p3']} → {d['clicks_p2']} → {d['clicks_now']} (total: -{d['loss']})\n"
+              f"**Diagnosis:** {diag}\n\n**Action:** {body_action}")
+        assignee = ASSIGNEE_HOMEPAGE if key == "homepage" else ASSIGNEE_DEFAULT
+        _create_task(name, md, assignee, tags=["refresh"], priority=2, dry_run=dry_run)
+        created += 1
+
+    # Quick wins → Quick win (keyed by query, separate namespace)
+    for w in wins[:5]:
+        q = w["query"]
+        if any(q.lower() in n for n in existing):
+            continue
+        name = f'Quick win: "{q}" — pos {w["position"]}, {w["impressions"]:,} impressions'
+        md = (f"**Source:** Content Health Report — Quick Wins\n\n"
+              f"**Position:** {w['position']}\n**Impressions:** {w['impressions']:,}\n\n"
+              f"**Action:** Add a direct-answer section / FAQ targeting this exact query to capture the impressions.")
+        _create_task(name, md, ASSIGNEE_DEFAULT, priority=3, dry_run=dry_run)
+        created += 1
+
+    log(f"{'Would create' if dry_run else 'Created'} {created} task(s).")
+    return created
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--dry-run", action="store_true", help="Build and print, do not post.")
+    ap.add_argument("--dry-run", action="store_true", help="Build and print, do not post or create tasks.")
+    ap.add_argument("--no-tasks", action="store_true", help="Post the report but do not create tasks.")
+    ap.add_argument("--no-post", action="store_true", help="Skip posting the report; still create tasks.")
     args = ap.parse_args()
     auth = _load_gsc_auth()
     if not auth:
         raise SystemExit("GSC OAuth not available — check GSC_TOKEN_JSON / client_secrets.")
-    report = build_report(fetch_decay(auth), fetch_traffic_drops(auth), fetch_quick_wins(auth))
+    decay, drops, wins = fetch_decay(auth), fetch_traffic_drops(auth), fetch_quick_wins(auth)
+    report = build_report(decay, drops, wins)
     if args.dry_run:
         print("\n" + report + "\n")
         log("DRY RUN — not posted.")
+        if not args.no_tasks:
+            create_tasks(decay, drops, wins, dry_run=True)
         return
-    result = post_to_clickup(report)
-    log(f"Posted to channel {CHANNEL_ID} (message {result.get('data', {}).get('id', '?')}).")
+    if args.no_post:
+        log("Skipping report post (--no-post).")
+    else:
+        result = post_to_clickup(report)
+        log(f"Posted to channel {CHANNEL_ID} (message {result.get('data', {}).get('id', '?')}).")
+    if not args.no_tasks:
+        create_tasks(decay, drops, wins, dry_run=False)
 
 
 if __name__ == "__main__":
