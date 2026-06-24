@@ -4,17 +4,14 @@ Weekly Content Health Report for searchatlas.com.
 
 Replaces the cloud routine "SA Weekly Content Health Report", which broke when
 Search Atlas's built-in GSC integration was disconnected. This script pulls GSC
-data directly via the same OAuth token the dashboard uses (no Search Atlas
+data directly via OAuth (the same token the dashboard uses, no Search Atlas
 dependency) and posts the report to a ClickUp chat channel via the v3 REST API.
 
-Data sources (all reused from dashboard/generate.py):
-  - Content decay  — fetch_gsc_decay
-  - Quick wins     — fetch_gsc_quick_wins
-  - Traffic drops  — computed here from two 28-day periods
+Self-contained: depends only on `requests`. The GSC helpers are mirrored from
+dashboard/generate.py so this runs on `main` without the rest of the dashboard.
 
 Run locally (validate, no post):  python3 dashboard/content_health_report.py --dry-run
-Run + post:                       python3 dashboard/content_health_report.py
-Override channel:                 CHANNEL_ID=8chy2nm-1554391 python3 dashboard/content_health_report.py
+Run + post:                       CLICKUP_API_KEY=pk_... python3 dashboard/content_health_report.py
 
 CI: set GSC_TOKEN_JSON, GSC_CLIENT_SECRETS_JSON, and CLICKUP_API_KEY as secrets.
     The workflow writes the GSC files to the expected paths before running this.
@@ -22,26 +19,36 @@ CI: set GSC_TOKEN_JSON, GSC_CLIENT_SECRETS_JSON, and CLICKUP_API_KEY as secrets.
 
 import os
 import sys
+import json
 import argparse
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
 from urllib.parse import urlparse
 
-# Import the proven GSC + ClickUp machinery from the dashboard generator.
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import requests
-from generate import (
-    _load_gsc_auth,
-    _period_dates,
-    _gsc_pages_for_period,
-    fetch_gsc_decay,
-    fetch_gsc_quick_wins,
-    CU_API_KEY,
-    CU_WORKSPACE,
-)
+try:
+    import requests
+except ImportError:
+    sys.exit("Missing dependency: pip install requests")
 
-CHANNEL_ID = os.environ.get("CHANNEL_ID", "8chy2nm-1554391")
+# ── Config ───────────────────────────────────────────────────────────────────
+# Optional .env next to this script (for local runs); CI uses real env vars.
+_env = Path(__file__).parent / ".env"
+if _env.exists():
+    for _line in _env.read_text().splitlines():
+        _line = _line.strip()
+        if _line and not _line.startswith("#") and "=" in _line:
+            _k, _v = _line.split("=", 1)
+            os.environ.setdefault(_k.strip(), _v.strip())
 
-# Map the decay trend strings to the report's three-word diagnosis vocabulary.
+GSC_PROPERTY     = os.environ.get("GSC_PROPERTY", "sc-domain:searchatlas.com")
+GSC_TOKEN_FILE   = Path.home() / ".gsc-mcp" / "oauth-token.json"
+GSC_SECRETS_FILE = Path.home() / ".config" / "gsc" / "client_secrets.json"
+GSC_API_BASE     = "https://searchconsole.googleapis.com/webmasters/v3"
+
+CU_API_KEY   = os.environ.get("CLICKUP_API_TOKEN", "") or os.environ.get("CLICKUP_API_KEY", "")
+CU_WORKSPACE = os.environ.get("CLICKUP_WORKSPACE_ID", "9011399348")
+CHANNEL_ID   = os.environ.get("CHANNEL_ID", "8chy2nm-1554391")
+
 DECAY_DIAGNOSIS = {
     "Rankings declining": "Ranking drop",
     "Rankings improved but traffic still dropped (possible search demand decline)": "Demand decline",
@@ -53,26 +60,156 @@ def log(msg):
     print(f"[content-health] {msg}", flush=True)
 
 
-def path_slug(url):
-    """Path-only label, matching the report style (e.g. /blog/aio/). Off-site
-    hosts keep their subdomain (e.g. shop.searchatlas.com/)."""
-    p = urlparse(url)
-    host = p.netloc
-    path = p.path or "/"
-    if host in ("searchatlas.com", "www.searchatlas.com"):
-        return "/ (homepage)" if path == "/" else path
-    return host + ("/" if path in ("", "/") else path)
+# ── GSC (direct OAuth) — mirrored from dashboard/generate.py ───────────────────
+
+def _load_gsc_auth():
+    """Load and auto-refresh the stored GSC OAuth token. Returns headers or None."""
+    if not GSC_TOKEN_FILE.exists() or not GSC_SECRETS_FILE.exists():
+        return None
+    try:
+        token   = json.loads(GSC_TOKEN_FILE.read_text())
+        secrets = json.loads(GSC_SECRETS_FILE.read_text())
+        creds   = secrets.get("installed") or secrets.get("web") or {}
+        now_ms  = int(datetime.now(timezone.utc).timestamp() * 1000)
+        if token.get("expiry_date", 0) < now_ms + 60_000:
+            resp = requests.post(creds["token_uri"], data={
+                "client_id":     creds["client_id"],
+                "client_secret": creds["client_secret"],
+                "refresh_token": token["refresh_token"],
+                "grant_type":    "refresh_token",
+            }, timeout=15)
+            if resp.status_code == 200:
+                new = resp.json()
+                token["access_token"] = new["access_token"]
+                token["expiry_date"]  = now_ms + int(new.get("expires_in", 3600)) * 1000
+                GSC_TOKEN_FILE.write_text(json.dumps(token, indent=2))
+                log("  GSC token refreshed")
+            else:
+                log(f"  GSC token refresh failed: {resp.status_code}")
+        return {"Authorization": f"Bearer {token['access_token']}"}
+    except Exception as e:
+        log(f"  GSC auth error: {e}")
+        return None
+
+
+def _gsc_query(auth, body):
+    site = GSC_PROPERTY.replace(":", "%3A")
+    url  = f"{GSC_API_BASE}/sites/{site}/searchAnalytics/query"
+    try:
+        resp = requests.post(url, headers={**auth, "Content-Type": "application/json"},
+                             json=body, timeout=20)
+        if resp.status_code == 200:
+            return resp.json(), None
+        return None, f"HTTP {resp.status_code}: {resp.text[:200]}"
+    except Exception as e:
+        return None, str(e)
+
+
+def _gsc_pages_for_period(auth, start, end, limit=200):
+    data, err = _gsc_query(auth, {
+        "startDate": str(start), "endDate": str(end),
+        "dimensions": ["page"], "rowLimit": limit,
+    })
+    if err:
+        log(f"  GSC pages error ({start}→{end}): {err}")
+        return {}
+    out = {}
+    for r in (data or {}).get("rows", []):
+        url = (r.get("keys") or [None])[0]
+        if url:
+            out[url] = {
+                "clicks":      int(r.get("clicks", 0)),
+                "impressions": int(r.get("impressions", 0)),
+                "ctr":         round(float(r.get("ctr", 0)) * 100, 2),
+                "position":    round(float(r.get("position", 0)), 1),
+            }
+    return out
+
+
+def _period_dates():
+    """P1 = current 28d, P2 = prior 28d, P3 = oldest 28d. GSC lags ~3 days."""
+    today    = datetime.now(timezone.utc).date()
+    p1_end   = today - timedelta(days=3)
+    p1_start = p1_end - timedelta(days=27)
+    p2_end   = p1_start - timedelta(days=1)
+    p2_start = p2_end - timedelta(days=27)
+    p3_end   = p2_start - timedelta(days=1)
+    p3_start = p3_end - timedelta(days=27)
+    return p1_start, p1_end, p2_start, p2_end, p3_start, p3_end
+
+
+def fetch_decay(auth):
+    """Pages with net click decline across 3 consecutive 28-day periods."""
+    log("Fetching GSC content decay…")
+    p1s, p1e, p2s, p2e, p3s, p3e = _period_dates()
+    p1 = _gsc_pages_for_period(auth, p1s, p1e, limit=150)
+    p2 = _gsc_pages_for_period(auth, p2s, p2e, limit=150)
+    p3 = _gsc_pages_for_period(auth, p3s, p3e, limit=150)
+    if not p1:
+        return []
+    decay = []
+    for url, m1 in p1.items():
+        m3 = p3.get(url, {})
+        clicks_now, clicks_p3 = m1["clicks"], m3.get("clicks", 0)
+        if not clicks_p3:
+            continue
+        loss = clicks_p3 - clicks_now
+        if loss < 3 or loss / clicks_p3 < 0.10:
+            continue
+        pos_delta = m1["position"] - m3.get("position", m1["position"])
+        if pos_delta > 1.0:
+            trend = "Rankings declining"
+        elif pos_delta < -1.0:
+            trend = "Rankings improved but traffic still dropped (possible search demand decline)"
+        else:
+            trend = "Rankings stable (possible CTR or demand decline)"
+        decay.append({
+            "page": url, "clicks_now": clicks_now,
+            "clicks_p2": p2.get(url, {}).get("clicks", 0), "clicks_p3": clicks_p3,
+            "loss": loss, "trend": trend,
+        })
+    decay.sort(key=lambda r: -r["loss"])
+    log(f"  GSC decay: {len(decay)} pages")
+    return decay
+
+
+def fetch_quick_wins(auth):
+    """Keywords in position 4–15 with high impressions and low CTR."""
+    log("Fetching GSC quick wins…")
+    p1s, p1e, *_ = _period_dates()
+    data, err = _gsc_query(auth, {
+        "startDate": str(p1s), "endDate": str(p1e),
+        "dimensions": ["query"], "rowLimit": 250,
+    })
+    if err:
+        log(f"  GSC quick wins error: {err}")
+        return []
+    wins = []
+    for r in (data or {}).get("rows", []):
+        query    = (r.get("keys") or [None])[0]
+        position = round(float(r.get("position", 0)), 1)
+        if not query or position < 4 or position > 15:
+            continue
+        impressions = int(r.get("impressions", 0))
+        if impressions < 500:
+            continue
+        ctr = float(r.get("ctr", 0))
+        if max(0, round(impressions * (0.11 - ctr))) < 100:
+            continue
+        wins.append({"query": query, "position": position, "impressions": impressions})
+    wins.sort(key=lambda r: -r["impressions"])
+    log(f"  GSC quick wins: {len(wins)} keywords")
+    return wins
 
 
 def fetch_traffic_drops(auth):
-    """Pages that lost the most clicks: current 28d vs prior 28d, with a diagnosis."""
+    """Pages that lost the most clicks: current 28d vs prior 28d, with diagnosis."""
     log("Fetching GSC traffic drops…")
     p1s, p1e, p2s, p2e, *_ = _period_dates()
-    cur = _gsc_pages_for_period(auth, p1s, p1e, limit=200)
+    cur   = _gsc_pages_for_period(auth, p1s, p1e, limit=200)
     prior = _gsc_pages_for_period(auth, p2s, p2e, limit=200)
     if not prior:
         return []
-
     drops = []
     for url, pm in prior.items():
         prior_clicks = pm["clicks"]
@@ -83,12 +220,9 @@ def fetch_traffic_drops(auth):
         loss = prior_clicks - cur_clicks
         if loss <= 0:
             continue
-        cur_pos = cm.get("position", 0)
-        prior_pos = pm["position"]
-        cur_imp = cm.get("impressions", 0)
-        prior_imp = pm["impressions"]
+        cur_pos, prior_pos = cm.get("position", 0), pm["position"]
+        cur_imp, prior_imp = cm.get("impressions", 0), pm["impressions"]
         imp_pct = ((cur_imp - prior_imp) / prior_imp * 100) if prior_imp else 0
-
         if cur_clicks == 0:
             diagnosis = "Page disappeared from search results"
         elif cur_pos and prior_pos and (cur_pos - prior_pos) > 2:
@@ -97,111 +231,88 @@ def fetch_traffic_drops(auth):
             diagnosis = "Impression decline (possible search demand drop)"
         else:
             diagnosis = "CTR collapse (rankings stable, fewer clicks)"
-
-        pct = round((cur_clicks - prior_clicks) / prior_clicks * 100, 1)
         drops.append({
-            "page": url,
-            "prior_clicks": prior_clicks,
-            "cur_clicks": cur_clicks,
-            "loss": loss,
-            "pct": pct,
+            "page": url, "prior_clicks": prior_clicks, "cur_clicks": cur_clicks,
+            "loss": loss, "pct": round((cur_clicks - prior_clicks) / prior_clicks * 100, 1),
             "diagnosis": diagnosis,
         })
-
     drops.sort(key=lambda r: -r["loss"])
     log(f"  GSC traffic drops: {len(drops)} pages")
     return drops
 
 
+# ── Report ─────────────────────────────────────────────────────────────────--
+
+def path_slug(url):
+    """Path-only label (e.g. /blog/aio/). Off-site hosts keep their subdomain."""
+    p = urlparse(url)
+    host, path = p.netloc, (p.path or "/")
+    if host in ("searchatlas.com", "www.searchatlas.com"):
+        return "/ (homepage)" if path == "/" else path
+    return host + ("/" if path in ("", "/") else path)
+
+
 def build_report(decay, drops, wins):
-    """Format the report exactly like the cloud routine's output."""
     today = datetime.now(timezone.utc).date().isoformat()
-    L = []
     bar = "━" * 24
-    L.append("📉 Search Atlas — Weekly Content Health Report")
-    L.append(today)
-    L.append("")
-    L.append(bar)
-    L.append("DECAYING PAGES (3-period decline)")
-    L.append(bar)
-    for d in (decay or [])[:5]:
-        L.append(path_slug(d["page"]))
-        L.append(f"  Clicks: {d['clicks_p3']} → {d['clicks_p2']} → {d['clicks_now']} | Loss: -{d['loss']}")
-        L.append(f"  Diagnosis: {DECAY_DIAGNOSIS.get(d['trend'], d['trend'])}")
-        L.append("")
-
-    L.append(bar)
-    L.append("RECENT TRAFFIC DROPS (last 28 days)")
-    L.append(bar)
+    L = ["📉 Search Atlas — Weekly Content Health Report", today, "",
+         bar, "DECAYING PAGES (3-period decline)", bar]
+    for d in decay[:5]:
+        L += [path_slug(d["page"]),
+              f"  Clicks: {d['clicks_p3']} → {d['clicks_p2']} → {d['clicks_now']} | Loss: -{d['loss']}",
+              f"  Diagnosis: {DECAY_DIAGNOSIS.get(d['trend'], d['trend'])}", ""]
+    L += [bar, "RECENT TRAFFIC DROPS (last 28 days)", bar]
     for d in drops[:5]:
-        L.append(path_slug(d["page"]))
-        L.append(f"  Clicks: {d['prior_clicks']:,} → {d['cur_clicks']:,} ({d['pct']}%)")
-        L.append(f"  Diagnosis: {d['diagnosis']}")
-        L.append("")
-
-    L.append(bar)
-    L.append("QUICK WINS (position 4–15)")
-    L.append(bar)
-    by_impressions = sorted(wins or [], key=lambda r: -r["impressions"])[:5]
-    for w in by_impressions:
-        L.append(f'"{w["query"]}" — pos {w["position"]} — {w["impressions"]:,} impressions')
-        L.append("")
-
-    top_win = by_impressions[0] if by_impressions else None
-    L.append(bar)
-    L.append("SUMMARY")
-    L.append(bar)
-    L.append(f"- Total decaying pages found: {len(decay or [])}")
-    L.append(f"- Total recent drops flagged: {len(drops)}")
-    if top_win:
-        L.append(f'- Top quick win: "{top_win["query"]}" at position {top_win["position"]} '
-                 f'with {top_win["impressions"]:,} impressions')
+        L += [path_slug(d["page"]),
+              f"  Clicks: {d['prior_clicks']:,} → {d['cur_clicks']:,} ({d['pct']}%)",
+              f"  Diagnosis: {d['diagnosis']}", ""]
+    L += [bar, "QUICK WINS (position 4–15)", bar]
+    top5 = wins[:5]
+    for w in top5:
+        L += [f'"{w["query"]}" — pos {w["position"]} — {w["impressions"]:,} impressions', ""]
+    L += [bar, "SUMMARY", bar,
+          f"- Total decaying pages found: {len(decay)}",
+          f"- Total recent drops flagged: {len(drops)}"]
+    if top5:
+        t = top5[0]
+        L.append(f'- Top quick win: "{t["query"]}" at position {t["position"]} '
+                 f'with {t["impressions"]:,} impressions')
     gone = [d for d in drops if d["diagnosis"] == "Page disappeared from search results"]
     if gone:
         names = ", ".join(path_slug(d["page"]) for d in gone[:3])
         L.append(f"- Priority action this week: Investigate the pages that vanished from search "
                  f"results — {names} dropped from real traffic to 0 clicks, signaling possible deindexing.")
-    elif top_win:
-        L.append(f'- Priority action this week: Capture the "{top_win["query"]}" opportunity — '
-                 f'{top_win["impressions"]:,} impressions at position {top_win["position"]}.')
+    elif top5:
+        t = top5[0]
+        L.append(f'- Priority action this week: Capture the "{t["query"]}" opportunity — '
+                 f'{t["impressions"]:,} impressions at position {t["position"]}.')
     return "\n".join(L).rstrip()
 
 
 def post_to_clickup(text):
-    """Post the report to the ClickUp chat channel via the v3 REST API."""
     if not CU_API_KEY:
         raise SystemExit("CLICKUP_API_KEY / CLICKUP_API_TOKEN not set — cannot post.")
     url = (f"https://api.clickup.com/api/v3/workspaces/{CU_WORKSPACE}"
            f"/chat/channels/{CHANNEL_ID}/messages")
-    resp = requests.post(
-        url,
-        headers={"Authorization": CU_API_KEY, "Content-Type": "application/json"},
-        json={"type": "message", "content": text, "content_format": "text/plain"},
-        timeout=20,
-    )
+    resp = requests.post(url, headers={"Authorization": CU_API_KEY, "Content-Type": "application/json"},
+                         json={"type": "message", "content": text, "content_format": "text/plain"},
+                         timeout=20)
     resp.raise_for_status()
     return resp.json()
 
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--dry-run", action="store_true", help="Build and print the report, do not post.")
+    ap.add_argument("--dry-run", action="store_true", help="Build and print, do not post.")
     args = ap.parse_args()
-
     auth = _load_gsc_auth()
     if not auth:
         raise SystemExit("GSC OAuth not available — check GSC_TOKEN_JSON / client_secrets.")
-
-    decay = fetch_gsc_decay(auth)
-    drops = fetch_traffic_drops(auth)
-    wins = fetch_gsc_quick_wins(auth)
-    report = build_report(decay, drops, wins)
-
+    report = build_report(fetch_decay(auth), fetch_traffic_drops(auth), fetch_quick_wins(auth))
     if args.dry_run:
         print("\n" + report + "\n")
         log("DRY RUN — not posted.")
         return
-
     result = post_to_clickup(report)
     log(f"Posted to channel {CHANNEL_ID} (message {result.get('data', {}).get('id', '?')}).")
 
