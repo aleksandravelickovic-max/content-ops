@@ -6,6 +6,10 @@ Sources: raw/research/style-guide-v2.md, raw/research/editorial-voice-research-2
 
 Canonical source of truth for all Zia Tile content. Where prior sources conflict, **Jamie Greenspan's tracked edits and direct comments take precedence**. This document supersedes all earlier style guides and the reference-site HTML files; raw materials live in `raw/`.
 
+**Updated 2026-06-18:** Brittany Bronson's editorial review of the style guide applied — tiered adjective policy (§2.7), warm/aspirational tone allowed (§2.1, §2.5), sentence-structure and transition rules, blog-opening search-intent exception (§6.1), and H3 minimum length (§6.3). Two items left open pending Jamie's confirmation, marked **[Open — confirm with Jamie]** below.
+
+**Updated 2026-06-24:** Voice warmed further to fix over-corrected, cold spec copy — §1 and §2 opening name warmth as a brand quality, §2.1/§2.5 rows make warmth the target (with both spec-sheet flatness and hollow puffery as failure modes), and new §2.8 ("Warmth without fluff") gives the source-of-warmth guidance that complements §2.7's adjective policy. §12 gains positive warmth checks. Merged with Brittany's review — the two passes reinforce each other.
+
 ---
 
 ## 1. Brand & Audience
@@ -15,12 +19,14 @@ Canonical source of truth for all Zia Tile content. Where prior sources conflict
 - **Trade audience (55-60% revenue):** Architects, designers, contractors, installers managing $20k-$80k+ projects. Need technical precision and no hand-holding.
 - **Consumer audience (40-45%):** Affluent first-time buyers, ages 30-60. Need clear guidance and confidence-building detail.
 - **Brand pillars:** Authoritative, Artisanal, Approachable, Inspirational. Authority through specificity, never through adjectives. Show quality; never claim it.
-- **Warmth is a brand quality, not a banned one.** Zia is warm, artisanal, and aspirational. The voice should feel that way. Warmth is earned through sensory specificity, craft, place, and the feeling a material creates — never through vague lifestyle phrases or empty adjectives. See §2.7.
+- **Warmth is a brand quality, not a banned one.** Zia is warm, artisanal, and aspirational. The voice should feel that way. Warmth is earned through sensory specificity, craft, place, and the feeling a material creates — never through vague lifestyle phrases or empty adjectives. See §2.8.
 - **Two-audience test:** All copy must respect the expertise of a senior design professional while remaining clear and useful to a first-time buyer.
 
 ### 1.1 The editorial benchmark
 
 > Jamie's benchmark: copy should read closer to Architectural Digest than an AI content dump. A useful test: paste a paragraph into ChatGPT, prompt it to rewrite as Architectural Digest editorial. That should be closer than what was submitted. That is the floor, not the ceiling.
+
+Architectural Digest is **one directional reference**, not a strict template to copy. Jamie described Zia's tone as **warm and aspirational** — the rules should prompt that warmth, not flatten it into clinical spec copy. Use AD/Wallpaper* for register and specificity; keep the warmth and aspiration that are part of Zia's own voice.
 
 ---
 
@@ -34,13 +40,13 @@ Voice: trusted senior design editor -- authoritative, warm, precise. The bar is 
 
 | Rule | Do this | Not this |
 |---|---|---|
-| Register | Warm and aspirational, earned through craft and sensory detail; polished and confident, never stiff or corporate | Cool, neutral, or spec-sheet flat on one side; faux-warmth built from lifestyle-marketing phrases on the other |
-| Authority | Earned through specificity and accurate technical detail | Claimed through adjectives: "stunning," "beautiful," "exquisite," "charming" |
+| Register | Warm, aspirational, and confident — polished without being stiff or corporate; aspiration grounded in specific craft and sensory detail | Cool, neutral, or spec-sheet flat on one side; hollow lifestyle/luxury-brand puffery with no specific detail on the other |
+| Authority | Earned through specificity and accurate technical detail. Adjectives allowed when they carry design meaning and are backed by detail (see §2.7). | Claimed through cliché adjectives: "stunning," "beautiful," "exquisite" |
 | Atmosphere | Created by precise nouns and active verbs | Created by stacking descriptors before a noun |
-| Sentence length | Short to medium. One idea per sentence. Active voice. | Long, clause-heavy constructions that bury the point |
-| Filler words | Remove: "truly," "really," "simply," "of course," "unique," "charming" | Allow filler to soften or pad sentences |
+| Sentence length | Short to medium. One idea per sentence, but use transition words to connect related sentences. Vary sentence openings. Active voice. | Long, clause-heavy constructions that bury the point |
+| Filler words | Remove: "truly," "really," "simply," "of course," "unique" | Allow filler to soften or pad sentences |
 | Fragments | Never -- complete sentences only throughout body copy | Standalone fragments for rhythm or stylistic effect |
-| Emotional register | Genuine, warm appreciation of craft; let the specific detail carry the feeling | Cold neutrality that strips all feeling on one side; sentimental or romantic overlay on top of practical information on the other |
+| Emotional register | Warm, aspirational appreciation of craft; let the specific detail carry the feeling | Cold neutrality that strips all feeling on one side; sentimental or romantic overlay on top of practical information (with no specific detail) on the other |
 | Prepositions | Restructure sentences to avoid ending on a preposition | "the place it came from" -- rewrite as "from which it came" |
 | Person | No second person (you/your) anywhere in the piece | Addressing the reader directly |
 
@@ -91,11 +97,11 @@ The same failure appears inside sections as report-style labels: "The practical 
 
 ### 2.5 Editorial voice benchmarks
 
-These patterns, drawn from Architectural Digest, Wallpaper*, Remodelista, and Domino, define the register Zia content should occupy.
+These patterns, drawn from Architectural Digest, Wallpaper*, Remodelista, and Domino, define the register Zia content should occupy. Treat these as reference models for register and specificity, not strict templates — Zia's own voice is warmer and more aspirational than a literal AD rewrite.
 
 **Leads:** Anchor on person + place, or a single specific material detail. Never open with a generic category claim.
 
-**Sentence rhythm:** Medium-length, one to two clauses. Long enough to carry a specific detail, short enough to scan. Subordinate clauses only when they earn their weight with a second specific.
+**Sentence rhythm:** Medium-length, one to two clauses. Long enough to carry a specific detail, short enough to scan. Subordinate clauses only when they earn their weight with a second specific. **Vary sentence openings** — do not start consecutive sentences with the same subject + verb pattern, and use transition words to connect related sentences. Editorial prose varies its structure; mechanical repetition of "subject + verb" reads as AI-generated.
 
 **Vocabulary palette (use naturally, never force):** clad, wrapped, stacked, fluted, sculpted, carved, layered, muted, drippy, chalky, matte, glossy, hand-molded, hand-cut, hand-glazed, irregular, undulating, cascading, monolithic.
 
@@ -125,9 +131,25 @@ Frame material attributes in terms of what the tile brings to the room, not what
 
 > Jamie: "not ideal to skew negative." (Blog #3, kitchen backsplash)
 
-### 2.7 Warmth without fluff — how to be aspirational
+### 2.7 Adjective policy (tiered)
 
-Zia is warm and aspirational. Earlier drafts lost that warmth because the anti-fluff edits over-corrected into flat, neutral spec copy. The target is not less feeling — it is feeling that is earned rather than asserted. Jamie's "plainer than aspirational" note bans vague lifestyle phrases, not warmth itself.
+Adjectives are not banned outright. The brand voice is warm and aspirational, and design writing sometimes needs an adjective to name a quality a noun or verb can't carry alone. The rule is about *which* adjectives and *whether they earn their place* — not blanket avoidance.
+
+**The test:** Does the adjective do work a precise noun or verb can't, and is it backed by a specific detail? If yes, keep it. If it's doing the work alone — claiming quality instead of showing it — cut it.
+
+**Tier 1 — hard-banned (never use, no exceptions):**
+Cliché and exaggerative adjectives that claim quality without earning it: *beautiful, stunning, gorgeous, exquisite, luxurious, sophisticated, charming.* These show up in §3.2 and `COMPLIANCE.yml` as exact-match bans.
+
+**Tier 2 — allowed when backed by specific detail:**
+Design-register and neutral evaluative adjectives that establish design hierarchy or describe how something reads in a room — e.g. *muted, matte, fluted, contemporary* (as a design style), *understated, considered, well-suited.* Use them to support a specific detail, not to replace one. "A great choice" is acceptable as a neutral evaluation; don't stack it with more adjectives.
+
+**Adjective order:** Follow Jamie's convention — "traditional, deep warm red," not "a deep, traditional warm red."
+
+> **[Open — confirm with Jamie]** Brittany flagged that Zia's own live content uses "charm"/"charming" frequently, and questioned whether "sophisticated" and "charming" should stay fully banned. Per Jamie's tracked edits these remain Tier 1 banned for now. Revisit at the next Jamie review before relaxing — do not un-ban without his sign-off.
+
+### 2.8 Warmth without fluff — how to be aspirational
+
+Zia is warm and aspirational. Earlier drafts lost that warmth because the anti-fluff edits over-corrected into flat, neutral spec copy. The target is not less feeling — it is feeling that is earned rather than asserted. Jamie's "plainer than aspirational" note bans vague lifestyle phrases, not warmth itself. This section is the warmth companion to the §2.7 adjective policy: §2.7 governs *which words* earn their place; this section governs *where warmth comes from*.
 
 **Where warmth comes from (use these):**
 - **Sensory and material detail.** Warmth lives in how a surface reads — chalky, drippy, sun-bleached, the way a glaze catches light unevenly. Name what the eye and hand register.
@@ -172,7 +194,7 @@ Zia is warm and aspirational. Earlier drafts lost that warmth because the anti-f
 | Cotto | Always capitalized. Zia's proprietary collection name, not a generic material term. |
 | Cotto Allende | Always capitalized. The glazed line. Distinct application rules from unglazed Cotto. Do not call it a "sub-line" -- use "glazed terra cotta tile" or "glazed line." |
 | Terra cotta (lowercase) | The general material category. Use when referring to the material broadly, not the Zia collection. |
-| Unexpected tones | Jamie's preferred framing for the contemporary Cotto colorways (Blanco, Madera, Oscura). Not "bold" or "contemporary." |
+| Unexpected tones | Jamie's preferred framing for the contemporary Cotto colorways (Blanco, Madera, Oscura). Not "bold" or "contemporary" **for these colorways specifically**. "Contemporary" is fine as a design-style term in other contexts — the restriction is scoped to Cotto colorway framing only. |
 | Classic range | Jamie's preferred framing for the three traditional Cotto colorways. Not "traditional range" when "traditional" has already appeared nearby. |
 | Open and mix | Correct instruction for preparing Cotto before installation. Not "blend." |
 | Curation and cuts | Correct overage rationale for Cotto. Not "natural variation inherent to handmade tile." |
@@ -184,8 +206,8 @@ Zia is warm and aspirational. Earlier drafts lost that warmth because the anti-f
 | Avoid | Use instead | Reason |
 |---|---|---|
 | Luxury | Show quality through craft narrative and specific detail | Show it, don't say it |
-| Sophisticated | Describe the design, process, or result specifically | Show it, don't say it |
-| Charming | Describe what makes the tile appealing with a specific detail | Too precious for this brand |
+| Sophisticated | Describe the design, process, or result specifically | Show it, don't say it. Tier 1 banned (§2.7) — **[Open — confirm with Jamie]** |
+| Charming | Describe what makes the tile appealing with a specific detail | Too precious for this brand. Tier 1 banned (§2.7); Brittany flagged Zia's content uses it — **[Open — confirm with Jamie]** |
 | Defects | Chips, pits, and crazing (zellige only) | Characteristics of handmade tile, not manufacturing errors |
 | Unique look (without context) | Name the specific variation: color, sheen, thickness | Vague -- "unique" without a noun is meaningless |
 | Slightly different | Describe the actual range: color, shape, thickness | Understates a celebrated product quality |
@@ -404,6 +426,8 @@ The opening paragraph sets the tone for the entire piece. Do not open with a pro
 - Do not open with "families pressing clay into molds" or similar process-first framing. Jamie flagged this as generic and present in every terra cotta brand's copy.
 - The standard: fix the entry point, keep what works.
 
+**Exception — match the search intent, not just the material.** Material-first openings apply when the topic is a material. When the search term and SEO-set title center on a **pattern** or **color** (e.g. "herringbone patterns," "sage green tiles"), the opening must lead with that pattern or color and tie directly to the search intent and the title the SEO team set — not to the material. Search intent comes first; force-fitting a material-first lead onto a pattern or color topic misses what the reader searched for.
+
 ### 6.2 Introducing the collection early
 
 Blog posts should introduce Zia's specific collection -- and name it -- in the opening or first body section. Do not make the reader wait several sections to understand what Zia's specific collection looks like.
@@ -413,6 +437,7 @@ Blog posts should introduce Zia's specific collection -- and name it -- in the o
 ### 6.3 Structure and redundancy
 
 - Each H2/H3 section should approach the material from a different angle: history, performance, application, care, design context. Do not repeat the same information in different words.
+- **An H3 needs at least 3 sentences to justify it.** One-sentence or one-line H3s do not happen in editorial writing — either develop the section or fold it into a neighboring one. The same minimum applies to H2 sections.
 - Do a word audit before submitting. If the same noun or descriptor appears more than twice in a section, find a variation.
 - Every blog post needs a proper concluding paragraph. Do not end abruptly.
 - Each section header should introduce a new dimension, not restate the intro.
@@ -601,7 +626,7 @@ Terracotta (one word) and terra cotta (two words) -- both forms should be consid
 Answer yes to every item before submitting for Aleksandra's review. If any item cannot be confirmed, the draft is not ready.
 
 ### Voice & Tone
-- [ ] Reads warm — like an expert who loves the material — not cold, neutral, or spec-sheet flat (§2.7)
+- [ ] Reads warm — like an expert who loves the material — not cold, neutral, or spec-sheet flat (§2.8)
 - [ ] Warmth is earned through sensory detail, place, feeling, or quoted emotion — not empty adjectives
 - [ ] Every sentence reads like an expert, not a marketer
 - [ ] Filler removed (truly, really, simply, of course, unqualified "unique," charming)
