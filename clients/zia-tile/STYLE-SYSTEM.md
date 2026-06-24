@@ -10,6 +10,8 @@ Canonical source of truth for all Zia Tile content. Where prior sources conflict
 
 **Updated 2026-06-24:** Voice warmed further to fix over-corrected, cold spec copy — §1 and §2 opening name warmth as a brand quality, §2.1/§2.5 rows make warmth the target (with both spec-sheet flatness and hollow puffery as failure modes), and new §2.8 ("Warmth without fluff") gives the source-of-warmth guidance that complements §2.7's adjective policy. §12 gains positive warmth checks. Merged with Brittany's review — the two passes reinforce each other.
 
+**Updated 2026-06-24 (SEO structure):** Restores the SEO-structural floor that the editorial passes left unstated, after Brittany flagged long, uniform paragraphs and missing first-paragraph keywords in the new drafts. The voice work stays; these rules sit beside it as co-requirements, not a trade-off. New keyword-placement rule in §6.1, paragraph-rhythm rule in §6.3, new §10.4 ("Body structure and keyword placement"), and two §12 SEO checks. Editorial voice and SEO structure are both required — neither overrides the other.
+
 ---
 
 ## 1. Brand & Audience
@@ -426,7 +428,9 @@ The opening paragraph sets the tone for the entire piece. Do not open with a pro
 - Do not open with "families pressing clay into molds" or similar process-first framing. Jamie flagged this as generic and present in every terra cotta brand's copy.
 - The standard: fix the entry point, keep what works.
 
-**Exception — match the search intent, not just the material.** Material-first openings apply when the topic is a material. When the search term and SEO-set title center on a **pattern** or **color** (e.g. "herringbone patterns," "sage green tiles"), the opening must lead with that pattern or color and tie directly to the search intent and the title the SEO team set — not to the material. Search intent comes first; force-fitting a material-first lead onto a pattern or color topic misses what the reader searched for.
+**Exception — match the search intent, not just the material.** Material-first openings apply when the topic is a material. When the search term and SEO-set title center on a **pattern** or **color** (e.g. "herringbone patterns," "sage green tiles"), the opening must lead with that pattern or color and tie directly to the search intent and the title the SEO team set — not to the material. Search intent comes first; force-fitting a material-first lead onto a pattern or color topic misses what the reader searched for. For these pattern/color/style topics this is the default, not an edge case.
+
+**Keyword placement — the warm lead and the keyword are not in conflict.** The primary keyword (exact match, taken from the SEO-set title) must appear in the **first paragraph of body copy, ideally the first sentence** — on every piece, not only pattern/color topics. This holds alongside the editorial-lead rules above and in §2.5: open warm, on person + place or a specific detail, *and* name the term the reader searched for in that same opening. A warm, aspirational lead that omits the keyword is a miss; so is a keyword stuffed into a flat, clinical sentence. Write one sentence that does both. See §10.4 for the full body-structure rule.
 
 ### 6.2 Introducing the collection early
 
@@ -438,6 +442,7 @@ Blog posts should introduce Zia's specific collection -- and name it -- in the o
 
 - Each H2/H3 section should approach the material from a different angle: history, performance, application, care, design context. Do not repeat the same information in different words.
 - **An H3 needs at least 3 sentences to justify it.** One-sentence or one-line H3s do not happen in editorial writing — either develop the section or fold it into a neighboring one. The same minimum applies to H2 sections.
+- **Vary paragraph length; keep paragraphs scannable.** Most paragraphs run 2–4 sentences, and their lengths should differ across a section — a run of long, equal-length blocks reads as machine-generated and buries the point. The transition-word and sentence-variation rules (§2.1, §2.5) connect sentences *within* a paragraph; they are not a license to fuse everything into uniform blocks. The 3-sentence section minimum can be met with two short paragraphs, not one long one. Scannability is part of the editorial standard, not opposed to it.
 - Do a word audit before submitting. If the same noun or descriptor appears more than twice in a section, find a variation.
 - Every blog post needs a proper concluding paragraph. Do not end abruptly.
 - Each section header should introduce a new dimension, not restate the intro.
@@ -583,6 +588,16 @@ Terracotta (one word) and terra cotta (two words) -- both forms should be consid
 - **Description:** 140-160 chars; include primary keyword + format + >=2 use cases. Example: `Shop Zia's Casablanca 4x4 zellige. These handcrafted Moroccan clay tiles offer innate variation and dynamic glazes for kitchens, showers, floors, and fireplace walls.`
 - Primary keyword in first sentence of description; never force secondary keywords.
 
+### 10.4 Body structure and keyword placement
+
+The editorial voice and SEO structure are **co-requirements**. A piece is not done if it reads beautifully but drops the structure that makes it findable, and it is not done if it ranks-on-paper but reads like a spec sheet. Both, every time. These rules hold alongside the voice rules in §2 and the blog rules in §6 — where it looks like a tension, write the sentence that satisfies both.
+
+- **Primary keyword in the first paragraph.** The exact-match primary keyword (from the SEO-set title) appears in the first paragraph of body copy, ideally the first sentence — on blog posts, collection pages, and product pages alike. The warm, specific lead (§2.5, §6.1) carries the keyword; it does not replace it.
+- **Keyword in at least one heading.** The primary keyword or its close variant appears in at least one H2/H3 where it fits naturally. Do not force it into every header.
+- **Paragraph rhythm.** Paragraphs run 2–4 sentences and vary in length across the piece (see §6.3). Uniform long blocks are an SEO and readability failure, not an editorial choice.
+- **Direct answer early in each section.** Each H2/H3 opens by addressing its own topic before widening into design context — the section's subject in its first sentence. This satisfies both the editorial "new dimension per header" rule (§6.3) and extraction-based search.
+- **No trade-off framing.** If a draft sacrifices keyword placement or scannable structure "for the voice," it has misread this guide. The voice work in §2 was never meant to remove SEO structure; restore both.
+
 ---
 
 ## 11. Product Collections
@@ -695,6 +710,9 @@ Answer yes to every item before submitting for Aleksandra's review. If any item 
 - [ ] Prop 65 warning present in the Installation section with the correct link
 
 ### SEO
+- [ ] Primary keyword (exact match) appears in the first paragraph of body copy — not only in the meta (§6.1, §10.4)
+- [ ] Primary keyword or close variant appears in at least one H2/H3 where natural (§10.4)
+- [ ] Paragraphs run 2–4 sentences and vary in length — no run of uniform long blocks (§6.3, §10.4)
 - [ ] SEO-critical phrases highlighted in the draft for client review
 - [ ] Keywords appear naturally and do not disrupt brand voice
 - [ ] Meta description includes primary keyword + >=2 use cases
