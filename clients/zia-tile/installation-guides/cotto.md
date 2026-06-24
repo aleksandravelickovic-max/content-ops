@@ -18,7 +18,7 @@ For extensive cutting, work outdoors or in a well-ventilated area. Wash hands wi
 
 - Inspect all tiles upon receipt. Zia Tile cannot address issues with tiles that have already been installed.
 - Cotto is a handmade tile. Each piece will have tonal and textural variation. Subtle differences in shape and size are natural and expected.
-- Order at least 15% more than your measured area to account for cuts, variation, and breakage.
+- Order at least 15% more than your measured area to account for cuts, variation.
 
 ---
 

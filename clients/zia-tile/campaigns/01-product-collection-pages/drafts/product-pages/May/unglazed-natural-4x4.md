@@ -24,7 +24,7 @@ Unglazed Natural 4x4 zellige is hand-formed in Morocco and fired without glaze i
 
 #### Order Details \+ Installation \[Locked\]
 
-We recommend ordering 15–25% overage so the installation has room for hand-selection, color blending, and the tile breakage inherent to the material. Before laying any piece, unpack every box and mix the tiles on a flat surface to plan the layout and confirm the color balance.
+We recommend ordering 15–25% overage so the installation has room for hand-selection, color blending, and the tile's inherent characteristics. Before laying any piece, unpack every box and mix the tiles on a flat surface to plan the layout and confirm the color balance.
 
 Do not pre-soak Unglazed Natural zellige. Unlike glazed zellige, which benefits from a brief soak before installation, the unglazed surface absorbs water readily, and pre-soaking can cause installation problems. Seal with 511 Porous Plus before grouting to protect the raw clay surface. For interior applications, finish with Fila Matte Wax as a top coat after grouting. For exterior applications in non-freeze/thaw climates, apply a second coat of 511 Porous Plus in place of wax, as UV exposure causes wax to discolor over time outdoors. Wedge spacers help keep layouts consistent given the natural variation in tile size.
 

@@ -26,7 +26,7 @@ The line is offered in eight earthy colorways, each carrying its own mineral sig
 
 Open every box and blend pieces across the order before any thinset goes down. Lay out a dry run in the installation area, face up, to confirm the mineral and color variation reads the way it should across the room; Cantera has a face and an underside, and the underside may carry cut marks from finishing.
 
-We recommend a 15 to 20% overage on all Cantera orders to account for cuts, breakage in transit, and the natural variation across the stone. For installations where a more uniform appearance is the priority, plan for a 25% overage so the installer can set aside the small share of pieces that drift furthest from the average.
+We recommend a 15 to 20% overage on all Cantera orders to account for cuts and the natural variation across the stone. For installations where a more uniform appearance is the priority, plan for a 25% overage so the installer can set aside the small share of pieces that drift furthest from the average.
 
 ## Installation and Finishing
 

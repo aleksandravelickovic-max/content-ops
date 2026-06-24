@@ -100,7 +100,7 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 * Please inspect your order thoroughly, upon receipt. Zia Tile cannot be held responsible for the stone that has already been installed.  
 * Cantera is a naturally formed volcanic stone; therefore, significant variations in color, oxidation markings, inclusions and subtle variations in shape and size are natural and should be expected in your stone pieces. You may see minor imperfections on edges or in the corners, which are a natural part of the look and feel of this volcanic stone. Please see grouting instructions below for recommendations for your installation.  
-* To account for cuts, pattern, inherent variation, and potential breakage in transit, it is strongly recommended that all orders include a minimum of 15-20% overage to avoid costly add-on shipping and schedule delays. If a more uniform look is desired, we suggest increasing the order size by 20-25% to reduce the amount of variation during installation. It is also important to note that the matching grout color will fill these pits and chips to blend the overall aesthetic.
+* To account for cuts, pattern, inherent variation, it is strongly recommended that all orders include a minimum of 15-20% overage to avoid costly add-on shipping and schedule delays. If a more uniform look is desired, we suggest increasing the order size by 20-25% to reduce the amount of variation during installation. It is also important to note that the matching grout color will fill these pits and chips to blend the overall aesthetic.
 
 **BEFORE BEGINNING YOUR INSTALLATION**
 

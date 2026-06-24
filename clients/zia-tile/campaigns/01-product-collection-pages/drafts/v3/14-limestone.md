@@ -26,7 +26,7 @@ The line includes five colorways: Buff, Monument, Basilica, French Limestone, an
 
 Open every box and blend pieces across the order before any thinset goes down. Lay out a dry run in the installation area, face up, to confirm the tonal variation reads the way it should across the floor; limestone has a face and an underside, and the underside may carry cut marks from finishing.
 
-We recommend a 15 to 20% overage on all limestone orders to account for cuts, breakage in transit, and the natural variation across the stone. For installations where a more uniform appearance is the priority, plan for a 25% overage so the installer can set aside the small share of pieces that drift furthest from the average.
+We recommend a 15 to 20% overage on all limestone orders to account for cuts and the natural variation across the stone. For installations where a more uniform appearance is the priority, plan for a 25% overage so the installer can set aside the small share of pieces that drift furthest from the average.
 
 ## Installation and Finishing
 

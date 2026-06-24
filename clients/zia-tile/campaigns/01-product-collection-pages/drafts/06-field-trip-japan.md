@@ -10,7 +10,7 @@ High-fired in a potters' village outside Nagoya, where the practice extends back
 
 #### Order Details \+ Installation *\[Locked\]*
 
-We recommend 10 to 15% overage to account for cuts, shape variation, and potential transit breakage. Before installation, mix tiles from all boxes and arrange them dry in the installation area to spread any variation evenly. Plan for 3/16" grout joints (1/8" minimum). Matte finishes require a penetrating sealer applied before grouting as a grout release; satin and glossy finishes do not.  
+We recommend 10 to 15% overage to account for cuts, shape variation. Before installation, mix tiles from all boxes and arrange them dry in the installation area to spread any variation evenly. Plan for 3/16" grout joints (1/8" minimum). Matte finishes require a penetrating sealer applied before grouting as a grout release; satin and glossy finishes do not.  
 ---
 
 ## About
@@ -92,7 +92,7 @@ To ensure proper installation based on unique project and/or site conditions, cl
 ### **Reviewing Your Order**
 
 * Please inspect your order thoroughly upon receipt. Zia Tile cannot be held responsible for tiles that have already been installed.  
-* To account for cuts, pattern, inherent variation in high fired ceramics, and potential breakage in transit, it is strongly recommended that all orders include a minimum of 10-15% overage to avoid costly add-on shipping and schedule delays.  
+* To account for cuts, pattern, inherent variation in high fired ceramics, it is strongly recommended that all orders include a minimum of 10-15% overage to avoid costly add-on shipping and schedule delays.  
 * Due to the inherent color variation of high fired ceramics, it is very important to blend the tiles from all boxes in your order and verify layout before beginning your installation.
 
 ### **Installation**

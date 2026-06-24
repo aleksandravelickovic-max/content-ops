@@ -97,7 +97,7 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 **REVIEWING YOUR ORDER**
 
 * Please inspect your order thoroughly, upon receipt.  Zia Tile cannot be held responsible for tiles that have already been installed.  
-* To account for cuts, pattern, inherent variation in glass mosaics, and potential breakage in transit, it is strongly recommended that all orders include a minimum of 10-15% overage to avoid costly add-on shipping and schedule delays.  
+* To account for cuts, pattern, inherent variation in glass mosaics, it is strongly recommended that all orders include a minimum of 10-15% overage to avoid costly add-on shipping and schedule delays.  
 
 **BEFORE BEGINNING YOUR INSTALLATION**
 

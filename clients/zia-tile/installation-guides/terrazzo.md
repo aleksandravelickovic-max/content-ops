@@ -18,7 +18,7 @@ For extensive cutting, work outdoors or in a well-ventilated area. Wash hands wi
 
 - Inspect all tiles upon receipt. Zia Tile cannot address issues with tiles that have already been installed.
 - Each piece of terrazzo is handmade. Subtle variation in color, shape, and thickness is expected. Irregular edges and minor crazing are normal.
-- Order at least 15% more than your measured area to account for cuts, pattern, variation, and breakage.
+- Order at least 15% more than your measured area to account for cuts, pattern, variation.
 - A 1/8" grout joint is recommended. Grout joint spacing may need slight adjustment (shimming) or wedge spacers to maintain straight lines. Where necessary, tile edges may be trimmed with a wet saw to assist with alignment.
 
 ---

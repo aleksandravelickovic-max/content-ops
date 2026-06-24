@@ -17,7 +17,7 @@ For extensive cutting, work outdoors or in a well-ventilated area. Wash hands wi
 ## Inspecting Your Order
 
 - Inspect all tiles upon receipt. Zia Tile cannot address issues with tiles that have already been installed.
-- Order 10–15% more than your measured area to account for cuts, pattern variation, and breakage.
+- Order 10–15% more than your measured area to account for cuts, pattern variation.
 - 1×1 tiles arrive on mesh backing. Individual tiles can be separated and mixed to distribute variation before installation.
 
 ---

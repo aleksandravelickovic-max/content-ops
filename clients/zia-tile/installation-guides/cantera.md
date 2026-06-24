@@ -18,7 +18,7 @@ For extensive cutting, work outdoors or in a well-ventilated area. Wash hands wi
 
 - Inspect all pieces upon receipt. Zia Tile cannot address issues with stone that has already been installed.
 - Cantera is a naturally formed volcanic stone. Significant variation in color, oxidation markings, inclusions, and subtle differences in shape and size are normal and should be expected. Minor imperfections on edges and corners are a natural part of this stone.
-- Order at least 15–20% more than your measured area to account for cuts, pattern, variation, and breakage. For a more uniform result, order 20–25% extra. Grout fills the natural pits and chips and blends the overall aesthetic.
+- Order at least 15–20% more than your measured area to account for cuts, pattern, variation. For a more uniform result, order 20–25% extra. Grout fills the natural pits and chips and blends the overall aesthetic.
 
 ---
 

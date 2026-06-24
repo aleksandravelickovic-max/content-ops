@@ -98,7 +98,7 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 * Please inspect your order thoroughly, upon receipt. Zia Tile cannot be held responsible for the stone that have already been installed.  
 * Limestone is a natural stone; therefore, significant variations in color, and subtle variations in shape and size are natural and should be expected in your stone pieces.  
-* To account for cuts, pattern, inherent variation, and potential breakage in transit, it is strongly recommended that all orders include a minimum of 15% overage to avoid costly add-on shipping and schedule delays.
+* To account for cuts, pattern, inherent variation, it is strongly recommended that all orders include a minimum of 15% overage to avoid costly add-on shipping and schedule delays.
 
 ### **BEFORE BEGINNING YOUR INSTALLATION**
 

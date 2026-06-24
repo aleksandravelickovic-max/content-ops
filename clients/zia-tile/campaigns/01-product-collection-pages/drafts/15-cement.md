@@ -92,7 +92,7 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 * Please inspect your order thoroughly, upon receipt. Zia Tile cannot be held responsible for tiles that have already been installed.  
 * Each piece of cement tile is made by hand, and subtle variations in color, shape and thickness are to be expected. Irregular edges and minor crazing are normal and to be expected.  
-* To account for cuts, pattern, inherent variation, and potential breakage in transit, it is strongly recommended that all orders include a minimum of 15% overage to avoid costly add-on shipping and schedule delays.
+* To account for cuts, pattern, inherent variation, it is strongly recommended that all orders include a minimum of 15% overage to avoid costly add-on shipping and schedule delays.
 
 ### **BEFORE BEGINNING YOUR INSTALLATION**
 

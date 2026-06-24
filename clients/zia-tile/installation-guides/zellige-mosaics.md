@@ -31,7 +31,7 @@ Samples may not exactly match later orders due to the handmade nature of the til
 ## Inspecting Your Order
 
 - Inspect all sheets upon receipt. Zia Tile cannot address issues with tiles that have already been installed.
-- Order at least 15–20% more than your measured area to account for cuts, variation, and breakage. Order 20–25% more if you prefer a more curated, uniform appearance.
+- Order at least 15–20% more than your measured area to account for cuts, variation. Order 20–25% more if you prefer a more curated, uniform appearance.
 
 ---
 

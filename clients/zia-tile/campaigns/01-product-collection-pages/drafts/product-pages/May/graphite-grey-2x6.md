@@ -24,7 +24,7 @@ Graphite Grey 2x6 zellige is hand-formed, dipped in glaze, and fired in earthen 
 
 #### Order Details \+ Installation \[Locked\]
 
-We recommend ordering 15–25% overage so the installation has room for hand-selection, color blending, and the tile breakage inherent to the material. Before laying any piece, unpack every box and mix the tiles on a flat surface to plan the layout and confirm the color balance.
+We recommend ordering 15–25% overage so the installation has room for hand-selection, color blending, and the tile's inherent characteristics. Before laying any piece, unpack every box and mix the tiles on a flat surface to plan the layout and confirm the color balance.
 
 Zellige tile installation is labor-intensive, often likened more to masonry than traditional tiling due to the irregular nature of the handmade material. The traditional method sets pieces edge-to-edge with minimal grout, but irregular shapes mean wedge spacers help keep layouts consistent and protect chamfered edges as the tiles are set. Plan for installations 2–3 times longer than standard ceramic. Every piece needs to be sorted, soaked, arranged, and hand-adjusted for size.
 
