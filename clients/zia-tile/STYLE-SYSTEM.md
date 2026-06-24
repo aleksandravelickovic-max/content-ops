@@ -8,6 +8,8 @@ Canonical source of truth for all Zia Tile content. Where prior sources conflict
 
 **Updated 2026-06-18:** Brittany Bronson's editorial review of the style guide applied — tiered adjective policy (§2.7), warm/aspirational tone allowed (§2.1, §2.5), sentence-structure and transition rules, blog-opening search-intent exception (§6.1), and H3 minimum length (§6.3). Two items left open pending Jamie's confirmation, marked **[Open — confirm with Jamie]** below.
 
+**Updated 2026-06-24:** Voice warmed further to fix over-corrected, cold spec copy — §1 and §2 opening name warmth as a brand quality, §2.1/§2.5 rows make warmth the target (with both spec-sheet flatness and hollow puffery as failure modes), and new §2.8 ("Warmth without fluff") gives the source-of-warmth guidance that complements §2.7's adjective policy. §12 gains positive warmth checks. Merged with Brittany's review — the two passes reinforce each other.
+
 ---
 
 ## 1. Brand & Audience
@@ -17,6 +19,7 @@ Canonical source of truth for all Zia Tile content. Where prior sources conflict
 - **Trade audience (55-60% revenue):** Architects, designers, contractors, installers managing $20k-$80k+ projects. Need technical precision and no hand-holding.
 - **Consumer audience (40-45%):** Affluent first-time buyers, ages 30-60. Need clear guidance and confidence-building detail.
 - **Brand pillars:** Authoritative, Artisanal, Approachable, Inspirational. Authority through specificity, never through adjectives. Show quality; never claim it.
+- **Warmth is a brand quality, not a banned one.** Zia is warm, artisanal, and aspirational. The voice should feel that way. Warmth is earned through sensory specificity, craft, place, and the feeling a material creates — never through vague lifestyle phrases or empty adjectives. See §2.8.
 - **Two-audience test:** All copy must respect the expertise of a senior design professional while remaining clear and useful to a first-time buyer.
 
 ### 1.1 The editorial benchmark
@@ -29,21 +32,21 @@ Architectural Digest is **one directional reference**, not a strict template to 
 
 ## 2. Voice & Tone
 
-Voice: trusted senior design editor -- authoritative, warm, precise. The bar is Architectural Digest and Wallpaper*, not generic SaaS SEO.
+Voice: trusted senior design editor -- authoritative, warm, precise. The bar is Architectural Digest and Wallpaper*, not generic SaaS SEO. Warm does not mean soft or sentimental, and precise does not mean cold. The register should feel like an expert who genuinely loves the material, not a spec sheet and not a brochure.
 
-**Litmus test:** Does this read like an expert talking, or a marketer selling?
+**Litmus test:** Does this read like an expert talking, or a marketer selling? **Second litmus:** Does it feel like anyone cares about this tile, or has the warmth been edited out until only neutral facts remain? Both failures are equally bad.
 
 ### 2.1 Core voice rules
 
 | Rule | Do this | Not this |
 |---|---|---|
-| Register | Warm, aspirational, and confident — polished without being stiff or corporate. Aspiration grounded in specific detail. | Hollow lifestyle/luxury-brand puffery with no specific detail behind it |
+| Register | Warm, aspirational, and confident — polished without being stiff or corporate; aspiration grounded in specific craft and sensory detail | Cool, neutral, or spec-sheet flat on one side; hollow lifestyle/luxury-brand puffery with no specific detail on the other |
 | Authority | Earned through specificity and accurate technical detail. Adjectives allowed when they carry design meaning and are backed by detail (see §2.7). | Claimed through cliché adjectives: "stunning," "beautiful," "exquisite" |
 | Atmosphere | Created by precise nouns and active verbs | Created by stacking descriptors before a noun |
 | Sentence length | Short to medium. One idea per sentence, but use transition words to connect related sentences. Vary sentence openings. Active voice. | Long, clause-heavy constructions that bury the point |
 | Filler words | Remove: "truly," "really," "simply," "of course," "unique" | Allow filler to soften or pad sentences |
 | Fragments | Never -- complete sentences only throughout body copy | Standalone fragments for rhythm or stylistic effect |
-| Emotional register | Warm, aspirational appreciation of craft; let specific detail carry the feeling | Sentimental or romantic overlay layered on top of practical information with no specific detail |
+| Emotional register | Warm, aspirational appreciation of craft; let the specific detail carry the feeling | Cold neutrality that strips all feeling on one side; sentimental or romantic overlay on top of practical information (with no specific detail) on the other |
 | Prepositions | Restructure sentences to avoid ending on a preposition | "the place it came from" -- rewrite as "from which it came" |
 | Person | No second person (you/your) anywhere in the piece | Addressing the reader directly |
 
@@ -143,6 +146,30 @@ Design-register and neutral evaluative adjectives that establish design hierarch
 **Adjective order:** Follow Jamie's convention — "traditional, deep warm red," not "a deep, traditional warm red."
 
 > **[Open — confirm with Jamie]** Brittany flagged that Zia's own live content uses "charm"/"charming" frequently, and questioned whether "sophisticated" and "charming" should stay fully banned. Per Jamie's tracked edits these remain Tier 1 banned for now. Revisit at the next Jamie review before relaxing — do not un-ban without his sign-off.
+
+### 2.8 Warmth without fluff — how to be aspirational
+
+Zia is warm and aspirational. Earlier drafts lost that warmth because the anti-fluff edits over-corrected into flat, neutral spec copy. The target is not less feeling — it is feeling that is earned rather than asserted. Jamie's "plainer than aspirational" note bans vague lifestyle phrases, not warmth itself. This section is the warmth companion to the §2.7 adjective policy: §2.7 governs *which words* earn their place; this section governs *where warmth comes from*.
+
+**Where warmth comes from (use these):**
+- **Sensory and material detail.** Warmth lives in how a surface reads — chalky, drippy, sun-bleached, the way a glaze catches light unevenly. Name what the eye and hand register.
+- **Place and origin.** San Miguel de Allende, the courtyards where Cotto sun-dries, Fez. A real place carries more feeling than any adjective.
+- **The feeling a material creates in a room.** Jamie's own rule: lead with the material, the place, or the feeling. The feeling is allowed — anchor it to something specific.
+- **Quoted emotion.** Let a designer or homeowner deliver the aspirational line in their own words; the brand reports it plainly.
+- **Craft appreciation.** Write like someone who admires how the tile is made, not someone neutral to it.
+
+**What still counts as fluff (do not bring these back):**
+- Vague lifestyle openers ("where families have pressed clay for generations").
+- Empty adjectives standing in for detail (stunning, charming, exquisite, luxurious).
+- Sentimental or romantic overlay on top of practical information.
+- Rule-of-three intensifiers and "transform your space" register.
+
+**The test:** A warm sentence and a fluffy sentence both feel good to read. The difference is that the warm one leaves the reader knowing something specific about the tile, and the fluffy one does not. If you removed the warmth and a real fact remains, it was earned. If nothing remains, it was fluff.
+
+| Cold (over-corrected) | Warm and earned | Fluff (still banned) |
+|---|---|---|
+| "Cotto is an unglazed terra cotta tile fired in San Miguel de Allende." | "Fired in the open courtyards of San Miguel de Allende, Cotto carries the chalky, sun-bleached warmth of the clay it is pressed from." | "Cotto brings timeless beauty and effortless charm to any space." |
+| "The glaze produces color variation across the surface." | "The glaze pools and breaks across each tile, so the color shifts as the light moves through the room." | "These stunning glazes create a truly breathtaking effect." |
 
 ---
 
@@ -599,6 +626,8 @@ Terracotta (one word) and terra cotta (two words) -- both forms should be consid
 Answer yes to every item before submitting for Aleksandra's review. If any item cannot be confirmed, the draft is not ready.
 
 ### Voice & Tone
+- [ ] Reads warm — like an expert who loves the material — not cold, neutral, or spec-sheet flat (§2.8)
+- [ ] Warmth is earned through sensory detail, place, feeling, or quoted emotion — not empty adjectives
 - [ ] Every sentence reads like an expert, not a marketer
 - [ ] Filler removed (truly, really, simply, of course, unqualified "unique," charming)
 - [ ] No fragments
