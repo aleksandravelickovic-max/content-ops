@@ -15,6 +15,7 @@ Canonical source of truth for all Zia Tile content. Where prior sources conflict
 - **Trade audience (55-60% revenue):** Architects, designers, contractors, installers managing $20k-$80k+ projects. Need technical precision and no hand-holding.
 - **Consumer audience (40-45%):** Affluent first-time buyers, ages 30-60. Need clear guidance and confidence-building detail.
 - **Brand pillars:** Authoritative, Artisanal, Approachable, Inspirational. Authority through specificity, never through adjectives. Show quality; never claim it.
+- **Warmth is a brand quality, not a banned one.** Zia is warm, artisanal, and aspirational. The voice should feel that way. Warmth is earned through sensory specificity, craft, place, and the feeling a material creates — never through vague lifestyle phrases or empty adjectives. See §2.7.
 - **Two-audience test:** All copy must respect the expertise of a senior design professional while remaining clear and useful to a first-time buyer.
 
 ### 1.1 The editorial benchmark
@@ -25,21 +26,21 @@ Canonical source of truth for all Zia Tile content. Where prior sources conflict
 
 ## 2. Voice & Tone
 
-Voice: trusted senior design editor -- authoritative, warm, precise. The bar is Architectural Digest and Wallpaper*, not generic SaaS SEO.
+Voice: trusted senior design editor -- authoritative, warm, precise. The bar is Architectural Digest and Wallpaper*, not generic SaaS SEO. Warm does not mean soft or sentimental, and precise does not mean cold. The register should feel like an expert who genuinely loves the material, not a spec sheet and not a brochure.
 
-**Litmus test:** Does this read like an expert talking, or a marketer selling?
+**Litmus test:** Does this read like an expert talking, or a marketer selling? **Second litmus:** Does it feel like anyone cares about this tile, or has the warmth been edited out until only neutral facts remain? Both failures are equally bad.
 
 ### 2.1 Core voice rules
 
 | Rule | Do this | Not this |
 |---|---|---|
-| Register | Polished and confident without being stiff or corporate | Warm and aspirational, as a lifestyle or luxury brand would be |
+| Register | Warm and aspirational, earned through craft and sensory detail; polished and confident, never stiff or corporate | Cool, neutral, or spec-sheet flat on one side; faux-warmth built from lifestyle-marketing phrases on the other |
 | Authority | Earned through specificity and accurate technical detail | Claimed through adjectives: "stunning," "beautiful," "exquisite," "charming" |
 | Atmosphere | Created by precise nouns and active verbs | Created by stacking descriptors before a noun |
 | Sentence length | Short to medium. One idea per sentence. Active voice. | Long, clause-heavy constructions that bury the point |
 | Filler words | Remove: "truly," "really," "simply," "of course," "unique," "charming" | Allow filler to soften or pad sentences |
 | Fragments | Never -- complete sentences only throughout body copy | Standalone fragments for rhythm or stylistic effect |
-| Emotional register | Matter-of-fact appreciation of craft; let the detail carry the feeling | Sentimental or romantic overlay on top of practical information |
+| Emotional register | Genuine, warm appreciation of craft; let the specific detail carry the feeling | Cold neutrality that strips all feeling on one side; sentimental or romantic overlay on top of practical information on the other |
 | Prepositions | Restructure sentences to avoid ending on a preposition | "the place it came from" -- rewrite as "from which it came" |
 | Person | No second person (you/your) anywhere in the piece | Addressing the reader directly |
 
@@ -123,6 +124,30 @@ Frame material attributes in terms of what the tile brings to the room, not what
 | chips, pits, and crazing framed as things the tile "overcomes" | chips, pits, and crazing framed as intentional characteristics |
 
 > Jamie: "not ideal to skew negative." (Blog #3, kitchen backsplash)
+
+### 2.7 Warmth without fluff — how to be aspirational
+
+Zia is warm and aspirational. Earlier drafts lost that warmth because the anti-fluff edits over-corrected into flat, neutral spec copy. The target is not less feeling — it is feeling that is earned rather than asserted. Jamie's "plainer than aspirational" note bans vague lifestyle phrases, not warmth itself.
+
+**Where warmth comes from (use these):**
+- **Sensory and material detail.** Warmth lives in how a surface reads — chalky, drippy, sun-bleached, the way a glaze catches light unevenly. Name what the eye and hand register.
+- **Place and origin.** San Miguel de Allende, the courtyards where Cotto sun-dries, Fez. A real place carries more feeling than any adjective.
+- **The feeling a material creates in a room.** Jamie's own rule: lead with the material, the place, or the feeling. The feeling is allowed — anchor it to something specific.
+- **Quoted emotion.** Let a designer or homeowner deliver the aspirational line in their own words; the brand reports it plainly.
+- **Craft appreciation.** Write like someone who admires how the tile is made, not someone neutral to it.
+
+**What still counts as fluff (do not bring these back):**
+- Vague lifestyle openers ("where families have pressed clay for generations").
+- Empty adjectives standing in for detail (stunning, charming, exquisite, luxurious).
+- Sentimental or romantic overlay on top of practical information.
+- Rule-of-three intensifiers and "transform your space" register.
+
+**The test:** A warm sentence and a fluffy sentence both feel good to read. The difference is that the warm one leaves the reader knowing something specific about the tile, and the fluffy one does not. If you removed the warmth and a real fact remains, it was earned. If nothing remains, it was fluff.
+
+| Cold (over-corrected) | Warm and earned | Fluff (still banned) |
+|---|---|---|
+| "Cotto is an unglazed terra cotta tile fired in San Miguel de Allende." | "Fired in the open courtyards of San Miguel de Allende, Cotto carries the chalky, sun-bleached warmth of the clay it is pressed from." | "Cotto brings timeless beauty and effortless charm to any space." |
+| "The glaze produces color variation across the surface." | "The glaze pools and breaks across each tile, so the color shifts as the light moves through the room." | "These stunning glazes create a truly breathtaking effect." |
 
 ---
 
@@ -576,6 +601,8 @@ Terracotta (one word) and terra cotta (two words) -- both forms should be consid
 Answer yes to every item before submitting for Aleksandra's review. If any item cannot be confirmed, the draft is not ready.
 
 ### Voice & Tone
+- [ ] Reads warm — like an expert who loves the material — not cold, neutral, or spec-sheet flat (§2.7)
+- [ ] Warmth is earned through sensory detail, place, feeling, or quoted emotion — not empty adjectives
 - [ ] Every sentence reads like an expert, not a marketer
 - [ ] Filler removed (truly, really, simply, of course, unqualified "unique," charming)
 - [ ] No fragments
