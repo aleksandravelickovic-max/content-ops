@@ -1,0 +1,48 @@
+type,query_or_page,impressions_90d,clicks_90d,avg_position,ctr_pct,signal,gsc_diagnosis,recommended_action,est_upside_clicks,effort,priority,notes
+quick-win,seo automation platform,6027,21,6.3,0.35,pos 4-15 high impr,near page-one,Refresh snippet + link OTTO page,medium,low,P0,Core product intent already at pos 6.3
+quick-win,automated seo software,9762,12,8.8,0.12,pos 4-15,within reach,Strengthen OTTO page + listicle inclusion,high,med,P0,OTTO + homepage already rank for this family
+quick-win,seo automation,9597,23,11.5,0.24,pos 4-15,within reach,Hub page + internal links,medium,med,P1,Whole automation family pos 9-11
+quick-win,seo automation tools,8694,17,9.7,0.20,pos 4-15,near page-one,Snippet + product link,medium,low,P0,
+quick-win,seo automation software,5764,24,8.8,0.42,pos 4-15,near page-one,Snippet fix,medium,low,P0,
+quick-win,seo software for agencies,11184,24,13.6,0.21,pos 4-15,page-two,Build agency/white-label hub,high,high,P1,Agency intent; large white-label cluster
+quick-win,seo platform for agencies,9948,1,12.7,0.01,pos 4-15,page-two,Agency hub,high,high,P1,Near-zero CTR
+quick-win,agency seo software,9126,20,10.2,0.22,pos 4-15,page-two,Agency hub + product link,medium,med,P1,
+quick-win,ai seo software,12811,7,13.5,0.05,pos 4-15,page-two,AI-SEO commercial page + snippet,high,med,P1,Strategic 2026 term; weak CTR
+quick-win,site explorer,16969,40,7.2,0.24,pos 4-15,page-one,Snippet fix on /site-explorer/,high,low,P0,Product term at pos 7 with 0.24% CTR
+quick-win,local citation builder,9566,5,6.9,0.05,pos 4-15,page-one,Snippet fix on /local-citations/,high,low,P0,Product page ranks; CTR near zero
+quick-win,seo citation builder,6890,2,7.1,0.03,pos 4-15,page-one,Snippet fix,medium,low,P0,
+quick-win,automated internal links,4830,0,4.9,0.0,pos 4-15,page-one zero-click,Snippet/title rewrite on automated-internal-linking,medium,low,P0,Page-one with 0 clicks = pure snippet problem
+quick-win,schema markup generator,5820,3,9.6,0.05,pos 4-15,page-one,Snippet + tie to OTTO schema,medium,low,P1,
+quick-win,automated seo tools,6595,4,10.2,0.06,pos 4-15,page-two,Product link,low,low,P1,
+quick-win,bulk da pa checker,6469,64,10.3,0.99,pos 4-15,page-two,Keep; reframe to Domain Power,low,low,P2,Best CTR in set; free-tool magnet
+quick-win,seo management platform,7446,0,12.8,0.0,pos 4-15,page-two,New commercial page or reposition,medium,med,P2,Zero clicks
+quick-win,enterprise seo agency software,6431,6,12.7,0.09,pos 4-15,page-two,Agency/enterprise hub,medium,med,P2,
+quick-win,seoclarity compared to brightedge,7192,0,5.0,0.0,pos 4-15,page-one zero-click,Snippet fix on conductor-alternatives-2/brightedge,low,low,P2,Enterprise comparison intent
+decay,/otto-seo/,N/A,2699,20.5,N/A,-574 clicks,Impression decline,Refresh flagship product page,high,med,P0,Highest-traffic product page declining
+decay,/blog/ahrefs-review/,136320,166,29.2,0.12,-544 clicks,Impression decline,Refresh + re-verify Ahrefs facts,high,med,P0,136k impr 0.12% CTR; high recovery value
+decay,/da-checker/,N/A,573,19.8,N/A,-214 clicks,Impression decline,Refresh; reframe to Domain Power,medium,low,P1,Free-tool magnet
+decay,/otto-google-ads/,N/A,154,24.2,N/A,-180 clicks,Impression decline,Refresh; tie to every-channel pillar,medium,med,P1,
+decay,/blog/holistic-seo/,5176,426,19.5,8.23,-100 clicks,Ranking loss 9.3->19.5,Refresh to recover page-one,medium,low,P1,Was page-one; high CTR when ranking
+decay,/white-label-seo-software/,N/A,284,32.7,N/A,-100 clicks,Ranking loss 26->32.7,Expand into agency/white-label hub,high,high,P1,Anchors large white-label cluster
+decay,/blog/best-ai-tools/,32072,31,8.5,0.10,-87 clicks,Impression decline,Reposition; resolve google-ai-mode cannibal,low,med,P2,
+decay,/enterprise-agency/,N/A,30,34.2,N/A,-83 clicks,CTR collapse,Reposition into agency hub + snippet,medium,med,P2,
+decay,/seo-topical-maps/,N/A,61,13.7,N/A,-75 clicks,CTR collapse,Refresh snippet; tie to Topical Dominance,medium,low,P2,
+decay,/google-my-business-management-software/,N/A,106,24.8,N/A,-64 clicks,Impression decline,Refresh; never GMB use GBP,medium,med,P1,Local cluster
+decay,/local-seo-software/,N/A,76,30.6,N/A,-59 clicks,Impression decline,Refresh; local cluster build-out,medium,med,P1,
+decay,/otto-pixel/,N/A,92,10.1,N/A,-57 clicks,Impression decline,Keep; monitor,low,low,P2,
+decay,/blog/seo-vs-sco/,23777,55,10.3,0.23,-30 clicks,Ranking loss 5.8->10.3,Refresh; AI-search cluster,medium,low,P1,
+decay,/llm-visibility/,N/A,66,26.8,N/A,-26 clicks,CTR collapse,Refresh + cluster links in,high,med,P0,Conversion destination for AEO cluster
+decay,/careers/,60734,879,2.4,1.45,-152 clicks,CTR/demand,Monitor only,none,none,Monitor,Non-commercial brand/jobs traffic
+decay,/latest-updates/,N/A,0,0,N/A,-23 clicks,Disappeared from results,Investigate indexing,unknown,low,P1,Page dropped out entirely; technical check
+ctr-fix,/features/,190063,88,7.3,0.05,7515 recoverable,below-benchmark CTR,Rewrite title + meta + add structured snippet,high,low,P0,Largest product-page CTR opportunity
+ctr-fix,/case-studies/,108802,34,7.2,0.03,4318 recoverable,below-benchmark CTR,Rewrite title/meta; surface outcomes,high,low,P0,BOFU proof asset under-clicked
+ctr-fix,/pricing/,248717,1223,11.7,0.49,4153 recoverable,below-benchmark CTR,Title/meta + push pos 11->page-one,high,low,P0,Decision-stage page
+ctr-fix,/blog/google-ai-mode/,81484,16,6.6,0.02,4140 recoverable,below-benchmark CTR,Title/meta rewrite; resolve cannibal,medium,low,P0,Highest single blog CTR gap
+ctr-fix,/blog/perplexityai-alternatives/,78103,157,6.3,0.20,3826 recoverable,below-benchmark CTR,Snippet fix after consolidation,high,low,P0,Canonical of perplexity-alt cluster
+ctr-fix,/blog/ahrefs-features/,168118,1944,9.4,1.16,2763 recoverable,below-benchmark CTR,Title/meta refinement,high,low,P0,Top earner; still has CTR headroom
+ctr-fix,/blog/blog-setup/,31110,34,5.4,0.11,2206 recoverable,below-benchmark CTR,Title/meta rewrite,medium,low,P1,Pos 5.4 0.11% CTR
+ctr-fix,/blog/chatgpt-vs-claude/,12476,13,3.2,0.10,1359 recoverable,below-benchmark CTR,Title/meta rewrite,low,low,P2,Pos 3.2; low ICP
+ctr-fix,/blog/seobility-vs-semrush/,20007,2,6.1,0.01,1018 recoverable,below-benchmark CTR,Title/meta rewrite,medium,low,P1,
+ctr-fix,/blog/brightedge-review/,137200,27,16.4,0.02,1642 recoverable,below-benchmark CTR,Refresh + snippet,medium,med,P1,Enterprise competitor intent
+ctr-fix,/blog/best-ai-content-writing-tools/,49664,5,9.0,0.01,1386 recoverable,below-benchmark CTR,Refresh; tie to Content Genius,medium,med,P1,
+ctr-fix,/blog/buzzsumo-vs-ahrefs/,8618,0,5.5,0.0,620 recoverable,zero-click at pos 5.5,Title/meta + remove anchor cannibalization,low,low,P1,FAQ-anchor URLs absorbing impressions

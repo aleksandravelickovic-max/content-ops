@@ -1,0 +1,27 @@
+source_page,target_page,anchor_text_suggestion,link_type,rationale,priority,sprint_week
+ALL ~20 AEO/GEO/AIO cluster posts,/ai-search-discoverability hub (Brief 1),AI search visibility,up-to-hub,Cluster currently orphaned + mis-linked to AI-CMO; route up to new hub (blog-cluster-audit S2),P0,W5 Jul
+AI Search hub,/blog/aeo,answer engine optimization,down-to-spoke,Hub must link to each cluster member,P0,W4 Jul
+AI Search hub,/blog/geo,generative engine optimization,down-to-spoke,Hub spoke; /geo has 46.9k impr to feed,P0,W4 Jul
+AI Search hub,/blog/aio,AI optimization (AIO),down-to-spoke,Hub spoke,P0,W4 Jul
+AI Search hub,/blog/agentic-seo,agentic SEO,down-to-spoke,Hub spoke,P0,W4 Jul
+AI Search hub,/llm-visibility,track your AI visibility,hub-to-product,Route hub readers to conversion destination,P0,W4 Jul
+ALL AEO measurement-intent posts (how-to-win-ai-visibility brand-ai-visibility track-llm-traffic),/llm-visibility,track your brand's AI visibility in Search Atlas,content-to-product CTA,Add tool-specific CTA adjacent to every LLM Visibility mention (cluster audit S1),P0,W5 Jul
+/llm-visibility,/blog/aeo + /geo + /track-llm-traffic,learn AEO/GEO,product-to-content,Product page was orphaned; link back into cluster to share equity,P0,W3 Jul
+REMOVE: AEO/GEO cluster posts -> AI-CMO 'Related Reads',n/a,n/a,remove-mislink,Stop linking AEO cluster to unrelated AI-CMO cluster (cluster audit S2),P0,W5 Jul
+/blog/aeo-vs-geo workflow (Brief 6),AI Search hub + /blog/aeo-aio-geo,AEO vs GEO,sibling+up,Glossary hub feeds the pillar,P1,W5 Jul
+/blog/ahrefs-features (top earner 1944 cl),/searchatlas-vs-ahrefs,Search Atlas vs Ahrefs,content-to-comparison,Pass equity from top blog earner to BOFU comparison,P1,W2 Jul
+/blog/ahrefs-features,/blog/ahrefs-cons + /blog/perplexityai-alternatives,Ahrefs limitations,content-to-content,Strengthen comparison cluster internal mesh,P1,W2 Jul
+/blog/ahrefs-cons,/searchatlas-vs-ahrefs,see how Search Atlas compares,content-to-comparison,Decision-stage routing,P1,W3 Jul
+SEO Automation hub (Brief 4),/otto-seo,automate execution with OTTO,hub-to-product,Route automation demand to OTTO,P1,W7 Aug
+SEO Automation hub,/blog/automated-internal-linking + /blog/schema-markup-tools,automated internal linking,hub-to-spoke,Build automation cluster mesh,P1,W7 Aug
+/blog/automated-internal-linking,/otto-seo (internal linking feature),OTTO internal linking,content-to-product,Page-1 fragment page should route to product,P1,W2 Jul
+Agentic SEO proof (Brief 3),/otto-seo + SEO Automation hub,see OTTO run,content-to-product,Execution proof routes to product,P1,W5 Jul
+DA cluster (da-vs-ta-2026 domain-authority-tools domain-rating-vs-domain-authority),/blog/domain-power,Domain Power explained,spoke-to-pillar,Consolidate DA cluster around Domain Power entity (file 06),P1,W6 Aug
+/blog/domain-power,/da-checker + /llm-visibility,check your Domain Power,pillar-to-product,Route metric explainer to free tool + product,P1,W6 Aug
+white-label pages (white-label-seo-software enterprise-agency white-label-reporting-tools),Agency hub (Brief 9),agency SEO platform,spoke-to-hub,Consolidate white-label family into agency hub (file 06/07),P1,W7 Aug
+Agency hub,/otto-seo + /pricing + /local-seo,run every channel,hub-to-product,Route agency demand to product + pricing,P1,W7 Aug
+Local pages (local-seo local-seo-software google-my-business-management-software),Local SEO hub,local SEO platform,spoke-to-hub,Coordinate local cluster (use GBP not GMB),P2,W10 Sep
+Local SEO hub,/local-citations + /blog/local-citation-services,local citation builder,hub-to-product,Route local demand to Local Citation Builder,P2,W10 Sep
+AEO/GEO benchmark (Brief 5) + State of AI Search (Brief 7),/blog/domain-power + /llm-visibility,Domain Power + LLM Visibility,research-to-product,Original-research assets route to product,P1,W8-W12
+How B2B buyers shortlist (Brief 10),AI Search hub + /llm-visibility,track if AI recommends you,content-to-product,Demand-gen piece routes to measurement,P1,W9 Aug
+/pricing + /features + /case-studies,relevant product pages (OTTO LLM-Visibility Site-Explorer),explore the platform,nav-mesh,High-impression BOFU pages should cross-link product depth after CTR fixes,P1,W1-W2 Jul

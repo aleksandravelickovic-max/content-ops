@@ -1,0 +1,343 @@
+<title>Search Atlas — Q3 2026 Content Strategy</title>
+<style>
+  :root{
+    --paper:#F3F4F7; --surface:#FFFFFF; --band:#13151D; --band-soft:#1E212C;
+    --ink:#14161D; --ink-soft:#3B4250; --muted:#6A7280; --faint:#9AA1AD;
+    --hairline:#E4E7EC; --hairline-band:#2C303C;
+    --accent:#2A47D6; --accent-soft:#E9ECFB;
+    --pos:#14855E; --pos-soft:#E2F1EB; --neg:#C2382A; --neg-soft:#F8E7E4; --warn:#A9710F; --warn-soft:#F6EDDC;
+    --mono:ui-monospace,"SF Mono",SFMono-Regular,"Cascadia Mono","JetBrains Mono",Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0}
+  .page{background:var(--paper);color:var(--ink);font-family:var(--sans);
+    font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased;padding-bottom:64px}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+  .tnum{font-variant-numeric:tabular-nums}
+  .mono{font-family:var(--mono)}
+
+  /* ---- masthead (the one bold place) ---- */
+  .mast{background:var(--band);color:#EEF0F5;padding:34px 0 30px;border-bottom:3px solid var(--accent)}
+  .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8C93A4}
+  .mast h1{font-size:clamp(26px,3.4vw,36px);line-height:1.08;font-weight:680;letter-spacing:-.02em;
+    margin:12px 0 0;text-wrap:balance;max-width:18ch}
+  .mast h1 b{color:#fff}
+  .mast-meta{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:18px;font-family:var(--mono);font-size:12px;color:#9AA1B2}
+  .mast-meta span b{color:#D6DAE4;font-weight:500}
+  .thesis{margin-top:24px;padding:18px 20px;background:var(--band-soft);border:1px solid var(--hairline-band);
+    border-left:3px solid var(--accent);border-radius:8px;max-width:74ch}
+  .thesis .eyebrow{color:#7E86F0}
+  .thesis p{margin:8px 0 0;font-size:17px;line-height:1.45;color:#E7E9F0}
+  .thesis p b{color:#fff;font-weight:650}
+
+  /* ---- section scaffolding ---- */
+  section{margin-top:38px}
+  .sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:16px}
+  .sec-head h2{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0}
+  .sec-head .rule{flex:1;height:1px;background:var(--hairline)}
+  .sec-head .n{font-family:var(--mono);font-size:12px;color:var(--faint)}
+
+  /* ---- KPI strip ---- */
+  .kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+  .kpi{background:var(--surface);border:1px solid var(--hairline);border-radius:10px;padding:16px 16px 14px}
+  .kpi .lab{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .kpi .val{font-family:var(--mono);font-size:30px;font-weight:600;letter-spacing:-.02em;margin:8px 0 2px}
+  .kpi .sub{font-size:12.5px;color:var(--ink-soft)}
+  .delta{display:inline-flex;align-items:center;gap:4px;font-family:var(--mono);font-size:12px;font-weight:600;
+    padding:2px 7px;border-radius:999px;margin-top:8px}
+  .d-pos{background:var(--pos-soft);color:var(--pos)} .d-neg{background:var(--neg-soft);color:var(--neg)}
+  .d-warn{background:var(--warn-soft);color:var(--warn)}
+
+  /* ---- two-column: findings + moves ---- */
+  .cols{display:grid;grid-template-columns:1.15fr .85fr;gap:24px}
+  .card{background:var(--surface);border:1px solid var(--hairline);border-radius:12px;padding:22px 24px}
+  .find{display:flex;gap:14px;padding:15px 0;border-bottom:1px solid var(--hairline)}
+  .find:last-child{border-bottom:0;padding-bottom:2px} .find:first-child{padding-top:2px}
+  .find .idx{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--accent);flex:none;width:22px}
+  .find h3{font-size:15px;margin:0 0 3px;font-weight:650;line-height:1.3}
+  .find p{margin:0;font-size:13.5px;color:var(--ink-soft);line-height:1.46}
+  .find .data{font-family:var(--mono);color:var(--ink);font-weight:550}
+
+  .moves{display:flex;flex-direction:column;gap:14px}
+  .move{background:var(--surface);border:1px solid var(--hairline);border-left:3px solid var(--accent);
+    border-radius:10px;padding:15px 17px}
+  .move .step{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+  .move h3{font-size:15.5px;margin:5px 0 4px;font-weight:650}
+  .move p{margin:0;font-size:13px;color:var(--ink-soft);line-height:1.45}
+
+  /* ---- scorecard table ---- */
+  .scroll{overflow-x:auto;border:1px solid var(--hairline);border-radius:12px;background:var(--surface)}
+  table{border-collapse:collapse;width:100%;min-width:680px;font-size:13.5px}
+  thead th{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);
+    text-align:left;font-weight:600;padding:13px 16px;border-bottom:1px solid var(--hairline);white-space:nowrap}
+  thead th.num{text-align:right} tbody td{padding:12px 16px;border-bottom:1px solid var(--hairline);vertical-align:middle}
+  tbody tr:last-child td{border-bottom:0}
+  td.asset{font-weight:550;color:var(--ink)} td.type{color:var(--muted);font-size:12.5px;white-space:nowrap}
+  .scorecell{display:flex;align-items:center;gap:10px;justify-content:flex-end}
+  .scorebar{width:86px;height:6px;border-radius:3px;background:var(--hairline);overflow:hidden;flex:none}
+  .scorebar i{display:block;height:100%;background:var(--accent);border-radius:3px}
+  .scoreval{font-family:var(--mono);font-weight:600;width:38px;text-align:right}
+  .pill{font-family:var(--mono);font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px;white-space:nowrap}
+  .p0{background:var(--accent-soft);color:var(--accent)} .p1{background:#EEF0F3;color:var(--ink-soft)}
+  .ft{font-family:var(--mono);font-size:10px;color:var(--faint);margin-left:6px}
+
+  /* ---- roadmap ---- */
+  .road{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .mon{background:var(--surface);border:1px solid var(--hairline);border-radius:12px;padding:0 0 16px;overflow:hidden}
+  .mon header{padding:14px 18px;border-bottom:1px solid var(--hairline);display:flex;justify-content:space-between;align-items:baseline}
+  .mon header h3{margin:0;font-size:16px;font-weight:680;letter-spacing:-.01em}
+  .mon header .tag{font-family:var(--mono);font-size:10.5px;color:var(--accent);letter-spacing:.04em}
+  .mon .obj{padding:12px 18px 4px;font-size:12.5px;color:var(--muted);font-style:normal;line-height:1.4}
+  .mon ul{margin:8px 0 0;padding:0 18px 0 34px}
+  .mon li{font-size:13.5px;line-height:1.5;margin:6px 0;color:var(--ink-soft)}
+  .mon li b{color:var(--ink);font-weight:600}
+
+  /* ---- capacity bars ---- */
+  .cap{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .capcell{background:var(--surface);border:1px solid var(--hairline);border-radius:10px;padding:14px 16px}
+  .capcell .lab{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+  .capcell .fig{font-family:var(--mono);font-size:15px;margin:7px 0 9px;font-weight:600}
+  .capcell .fig b{color:var(--accent)} .capcell .fig span{color:var(--faint)}
+  .captrack{height:7px;border-radius:4px;background:var(--hairline);overflow:hidden}
+  .captrack i{display:block;height:100%;background:var(--accent);border-radius:4px}
+
+  /* ---- footer cards ---- */
+  .foot{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .foot h3{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+  .foot ol,.foot ul{margin:0;padding-left:20px} .foot li{font-size:13.5px;line-height:1.55;margin:7px 0;color:var(--ink-soft)}
+  .foot li b{color:var(--ink)}
+  .flag{display:inline-block;font-family:var(--mono);font-size:10.5px;color:var(--warn);background:var(--warn-soft);
+    padding:1px 6px;border-radius:4px;margin-right:4px}
+  .files{margin-top:38px;padding:18px 22px;background:var(--surface);border:1px solid var(--hairline);border-radius:12px;
+    font-size:12.5px;color:var(--muted);line-height:1.7}
+  .files b{color:var(--ink-soft)} .files code{font-family:var(--mono);font-size:12px;color:var(--accent);background:var(--accent-soft);padding:1px 6px;border-radius:4px}
+
+  .anim{opacity:0;transform:translateY(8px);animation:rise .5s cubic-bezier(.2,.7,.3,1) forwards}
+  @keyframes rise{to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.anim{animation:none;opacity:1;transform:none}.scorebar i,.captrack i{transition:none}}
+
+  @media (max-width:880px){
+    .kpis{grid-template-columns:repeat(2,1fr)} .cols{grid-template-columns:1fr}
+    .road{grid-template-columns:1fr} .cap{grid-template-columns:repeat(2,1fr)} .foot{grid-template-columns:1fr}
+  }
+</style>
+
+<div class="page">
+  <header class="mast">
+    <div class="wrap">
+      <div class="eyebrow">Search Atlas &nbsp;·&nbsp; Content Strategy &nbsp;·&nbsp; searchatlas.com</div>
+      <h1>Q3 2026: <b>consolidate &amp; route</b>, don't scale wider</h1>
+      <div class="mast-meta tnum">
+        <span><b>Window</b> &nbsp;Jul 1 – Sep 30 2026</span>
+        <span><b>Data</b> &nbsp;live Google Search Console</span>
+        <span><b>Prepared</b> &nbsp;2026-06-25</span>
+        <span><b>Capacity</b> &nbsp;Aggressive (confirmed)</span>
+      </div>
+      <div class="thesis">
+        <div class="eyebrow">The recommendation</div>
+        <p>The site is <b>past its peak, not growing</b>. The Q3 win is to <b>fix snippets, consolidate duplicates, and build one real AI-Search cluster</b> on content Search Atlas already ranks for — not to publish more.</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap">
+
+    <section class="anim">
+      <div class="sec-head"><h2>Where the site stands</h2><div class="rule"></div><span class="n">90-day GSC · vs prior 90 days</span></div>
+      <div class="kpis">
+        <div class="kpi">
+          <div class="lab">Clicks</div><div class="val tnum">45,767</div>
+          <div class="sub">holding steady</div><div class="delta d-warn tnum">▲ +1.6% flat</div>
+        </div>
+        <div class="kpi">
+          <div class="lab">Impressions</div><div class="val tnum">17.2M</div>
+          <div class="sub">low-value long tail deflating</div><div class="delta d-neg tnum">▼ −38%</div>
+        </div>
+        <div class="kpi">
+          <div class="lab">Avg position</div><div class="val tnum">30.9</div>
+          <div class="sub">was 39.3</div><div class="delta d-pos tnum">▲ improving</div>
+        </div>
+        <div class="kpi">
+          <div class="lab">Branded share</div><div class="val tnum">~50%</div>
+          <div class="sub">of all clicks (est.)</div><div class="delta d-warn tnum">brand carries it</div>
+        </div>
+        <div class="kpi">
+          <div class="lab">H1-26 vs H2-25</div><div class="val tnum">−33%</div>
+          <div class="sub">clicks; peaked late 2025</div><div class="delta d-neg tnum">▼ decelerating</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="anim">
+      <div class="cols">
+        <div>
+          <div class="sec-head"><h2>Why — the four findings</h2><div class="rule"></div></div>
+          <div class="card">
+            <div class="find"><div class="idx">01</div><div>
+              <h3>Flat clicks, deflating impressions, brand carries the site</h3>
+              <p>Clicks flat <span class="data">(+1.6%)</span> while impressions fell <span class="data">−38%</span> and position improved. Branded queries are <span class="data">~half</span> of all clicks. The lever is non-branded demand SA already ranks 4–20 for — not more impressions.</p>
+            </div></div>
+            <div class="find"><div class="idx">02</div><div>
+              <h3>Thousands of clicks sit in broken snippets</h3>
+              <p><span class="data">/features</span> — 190k impr, pos 7.3, <span class="data">0.05% CTR</span> — models ~7,500 recoverable clicks alone. A ~30-page title/meta sprint is the highest-ROI, lowest-effort work in Q3.</p>
+            </div></div>
+            <div class="find"><div class="idx">03</div><div>
+              <h3>The AI-Search cluster is best-fit and orphaned</h3>
+              <p>SA already ranks for aeo, geo, aio, agentic — but 20+ posts have no hub, mis-link to AI-CMO, and never route to the LLM Visibility product (itself orphaned at pos 26.8). The durable 2026 demand shift, with a product to match.</p>
+            </div></div>
+            <div class="find"><div class="idx">04</div><div>
+              <h3>Duplicates &amp; a staging subdomain split equity</h3>
+              <p>Perplexity-alternatives ×2, Claude-review ×2, a 4-way Domain-Authority split, and <span class="data">labs.searchatlas.com</span> staging leaking into the index. Cheap to fix, immediate recovery.</p>
+            </div></div>
+          </div>
+        </div>
+        <div>
+          <div class="sec-head"><h2>The three moves</h2><div class="rule"></div></div>
+          <div class="moves">
+            <div class="move">
+              <div class="step">Move 01 · recover</div>
+              <h3>Fix the snippets</h3>
+              <p>Title / meta / answer-snippet sprint on ~30 high-impression, low-CTR pages. Target ≥8,000 recovered clicks at near-zero effort.</p>
+            </div>
+            <div class="move">
+              <div class="step">Move 02 · clean</div>
+              <h3>Consolidate &amp; de-index</h3>
+              <p>Merge + 301 the duplicates, canonicalize FAQ-anchor URLs, and block the leaking staging subdomain. Six cannibalization clusters resolved.</p>
+            </div>
+            <div class="move">
+              <div class="step">Move 03 · build</div>
+              <h3>Stand up AI-Search discoverability</h3>
+              <p>One hub + internal-linking sprint + tool routing across the existing AEO/GEO cluster, into the LLM Visibility product. Target +30% cluster clicks.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="anim">
+      <div class="sec-head"><h2>Top 10 opportunities</h2><div class="rule"></div><span class="n">12-dimension weighted score · /100</span></div>
+      <div class="scroll">
+        <table>
+          <thead><tr>
+            <th>Asset</th><th>Type</th><th class="num">Opportunity score</th><th>Priority</th><th>Month</th>
+          </tr></thead>
+          <tbody>
+            <tr><td class="asset">Track LLM referral traffic (+ Looker template)</td><td class="type">White-space how-to</td>
+              <td><div class="scorecell"><div class="scorebar"><i style="width:87%"></i></div><span class="scoreval tnum">87.4</span></div></td>
+              <td><span class="pill p0">P0</span></td><td class="type">July</td></tr>
+            <tr><td class="asset">AI Search Discoverability hub</td><td class="type">Pillar</td>
+              <td><div class="scorecell"><div class="scorebar"><i style="width:87%"></i></div><span class="scoreval tnum">87.2</span></div></td>
+              <td><span class="pill p0">P0</span></td><td class="type">July</td></tr>
+            <tr><td class="asset">Agentic SEO execution proof (OTTO before/after)</td><td class="type">Product-led</td>
+              <td><div class="scorecell"><div class="scorebar"><i style="width:83%"></i></div><span class="scoreval tnum">83.4</span></div></td>
+              <td><span class="pill p0">P0</span></td><td class="type">July</td></tr>
+            <tr><td class="asset">SEO Automation hub</td><td class="type">Pillar</td>
+              <td><div class="scorecell"><div class="scorebar"><i style="width:81%"></i></div><span class="scoreval tnum">81.0</span></div></td>
+              <td><span class="pill p0">P0</span></td><td class="type">August</td></tr>
+            <tr><td class="asset">CTR / snippet sprint</td><td class="type">Refresh · 30 pages</td>
+              <td><div class="scorecell"><div class="scorebar"><i style="width:80%"></i></div><span class="scoreval tnum">79.6</span></div></td>
+              <td><span class="pill p0">P0</span><span class="ft">fast-track</span></td><td class="type">July</td></tr>
+            <tr><td class="asset">AEO/GEO measurement benchmark</td><td class="type">Original research</td>
+              <td><div class="scorecell"><div class="scorebar"><i style="width:79%"></i></div><span class="scoreval tnum">79.4</span></div></td>
+              <td><span class="pill p1">P1</span></td><td class="type">August</td></tr>
+            <tr><td class="asset">AEO vs GEO vs SEO — one workflow</td><td class="type">Glossary hub</td>
+              <td><div class="scorecell"><div class="scorebar"><i style="width:78%"></i></div><span class="scoreval tnum">77.6</span></div></td>
+              <td><span class="pill p1">P1</span></td><td class="type">July</td></tr>
+            <tr><td class="asset">State of AI Search Visibility report</td><td class="type">Flagship data</td>
+              <td><div class="scorecell"><div class="scorebar"><i style="width:78%"></i></div><span class="scoreval tnum">77.6</span></div></td>
+              <td><span class="pill p1">P1</span></td><td class="type">September</td></tr>
+            <tr><td class="asset">Refresh LLM Visibility product page</td><td class="type">Refresh</td>
+              <td><div class="scorecell"><div class="scorebar"><i style="width:77%"></i></div><span class="scoreval tnum">76.8</span></div></td>
+              <td><span class="pill p0">P0</span><span class="ft">fast-track</span></td><td class="type">July</td></tr>
+            <tr><td class="asset">Refresh OTTO SEO page</td><td class="type">Refresh</td>
+              <td><div class="scorecell"><div class="scorebar"><i style="width:76%"></i></div><span class="scoreval tnum">75.8</span></div></td>
+              <td><span class="pill p1">P1</span></td><td class="type">July</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="anim">
+      <div class="sec-head"><h2>The quarter</h2><div class="rule"></div><span class="n">refresh / consolidate first, then build</span></div>
+      <div class="road">
+        <div class="mon">
+          <header><h3>July</h3><span class="tag">Recover + stand up</span></header>
+          <div class="obj">Recover equity and stand up the AI-Search cluster.</div>
+          <ul>
+            <li><b>CTR/snippet sprint</b> + de-index staging + anchor fix</li>
+            <li>Consolidate Perplexity &amp; Claude duplicates</li>
+            <li><b>Build AI Search hub</b> + linking sprint + tool CTAs</li>
+            <li>White-space: LLM-traffic how-to, agentic OTTO proof</li>
+            <li>Refresh /llm-visibility &amp; /otto-seo</li>
+          </ul>
+        </div>
+        <div class="mon">
+          <header><h3>August</h3><span class="tag">Hubs + data</span></header>
+          <div class="obj">Build commercial hubs and original-data authority.</div>
+          <ul>
+            <li><b>SEO Automation hub</b> + <b>Agency/White-label hub</b></li>
+            <li>AI SEO software commercial page</li>
+            <li>AEO/GEO measurement benchmark (proof studies)</li>
+            <li>How B2B buyers shortlist software in 2026</li>
+            <li>Consolidate DA cluster → Domain Power</li>
+          </ul>
+        </div>
+        <div class="mon">
+          <header><h3>September</h3><span class="tag">Verticalize + flagship</span></header>
+          <div class="obj">Verticalize and ship the flagship data asset.</div>
+          <ul>
+            <li><b>State of AI Search Visibility report</b></li>
+            <li>Local SEO hub + refresh local pages</li>
+            <li>Start Search Atlas Coworker content</li>
+            <li>Unblock: LLM-Visibility setup, tools comparison</li>
+            <li>Q3 measurement review (clean read ~Oct 8)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="anim">
+      <div class="sec-head"><h2>Capacity used</h2><div class="rule"></div><span class="n">deliberately under the Aggressive ceiling</span></div>
+      <div class="cap">
+        <div class="capcell"><div class="lab">Net-new long-form</div><div class="fig tnum"><b>14</b> <span>/ 30</span></div><div class="captrack"><i style="width:47%"></i></div></div>
+        <div class="capcell"><div class="lab">Substantial refreshes</div><div class="fig tnum"><b>9</b> <span>/ 18</span></div><div class="captrack"><i style="width:50%"></i></div></div>
+        <div class="capcell"><div class="lab">Light optimizations</div><div class="fig tnum"><b>30</b> <span>/ 36</span></div><div class="captrack"><i style="width:83%"></i></div></div>
+        <div class="capcell"><div class="lab">Data-led assets</div><div class="fig tnum"><b>3</b> <span>/ 3</span></div><div class="captrack"><i style="width:100%"></i></div></div>
+      </div>
+    </section>
+
+    <section class="anim">
+      <div class="sec-head"><h2>Before production starts</h2><div class="rule"></div></div>
+      <div class="foot">
+        <div class="card">
+          <h3>Decisions needed from leadership</h3>
+          <ol>
+            <li>Endorse <b>"consolidate, don't scale"</b> — publish fewer net-new than capacity allows.</li>
+            <li>Unblock the <b>LLM-Visibility setup SME</b> + <b>AI-visibility competitor research</b> (Profound / Peec / Scrunch not in knowledge — no invention until then).</li>
+            <li>Stand up an <b>LLM Visibility project for searchatlas.com itself</b> to make AI-citation measurable.</li>
+            <li>Confirm naming (LLM Visibility vs QUEST; Coworker vs Atlas Brain).</li>
+            <li>Engineering ticket: de-index staging subdomain + fix FAQ-anchor URLs.</li>
+          </ol>
+        </div>
+        <div class="card">
+          <h3>What the data can't say yet</h3>
+          <ul>
+            <li><span class="flag">inferred</span>No conversion / signup data connected — funnel labels are inferred from intent, not measured.</li>
+            <li><span class="flag">snapshot</span>No AI-citation tracking for searchatlas.com — assessed via point-in-time SERP inspection.</li>
+            <li><span class="flag">estimate</span>No reliable keyword volume — demand is anchored on real GSC impressions only.</li>
+            <li><span class="flag">GSC</span>SA-platform GSC is disconnected; all data via the standalone GSC integration.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="files">
+      <b>Full strategy:</b> 16 files in <code>strategy/q3-2026/</code> — start at <code>README.md</code>, then <code>01-executive-summary.md</code>.
+      Evidence: inventory, GSC analysis, decay/quick-wins, cannibalization, cluster/gap, trends, competitor SERP.
+      Decision layer: opportunity scorecard, portfolio, week-by-week calendar, top-10 briefs, internal-linking plan, measurement framework.
+      Every figure traces to a live GSC pull; facts, estimates, and inferences are labeled throughout.
+    </div>
+
+  </div>
+</div>
