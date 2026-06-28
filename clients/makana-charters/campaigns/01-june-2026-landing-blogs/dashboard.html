@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Makana Charters — Campaign Dashboard | June 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Open Sans',system-ui,sans-serif;background:#0a1420;color:#2d2d2d}
+
+/* === DASHBOARD BAR === */
+.dash-bar{position:fixed;top:0;left:0;right:0;height:50px;background:#0a141f;border-bottom:1px solid #182a3a;z-index:9999;display:flex;align-items:center;padding:0 14px;gap:5px;overflow-x:auto;scrollbar-width:thin;scrollbar-color:#1e3a56 #0a141f}
+.dash-bar::-webkit-scrollbar{height:3px}
+.dash-bar::-webkit-scrollbar-thumb{background:#1e3a56;border-radius:2px}
+.dash-label{color:#3a6a88;font-size:10.5px;font-family:'Montserrat',sans-serif;font-weight:700;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;padding-right:12px;border-right:1px solid #182a3a;margin-right:6px;flex-shrink:0}
+.dt{background:transparent;border:1px solid #1a3050;color:#5a8aaa;font-size:11px;font-family:'Open Sans',sans-serif;padding:5px 12px;border-radius:4px;cursor:pointer;white-space:nowrap;transition:all .15s;flex-shrink:0}
+.dt:hover{background:#142030;color:#90c0d8;border-color:#2a4a6a}
+.dt.g.active{background:#2a5a8a;border-color:#2a5a8a;color:#fff;font-weight:700}
+.dt.g:hover{background:#1a3a5a;color:#90c0d8}
+.dt.lp.active{background:#c84040;border-color:#c84040;color:#fff;font-weight:700}
+.dt.lp:hover{background:#3a1520;color:#f09090;border-color:#c84040}
+.dt.bl.active{background:#00a896;border-color:#00a896;color:#fff;font-weight:700}
+.dt.bl:hover{background:#0a3830;color:#5dd8c8;border-color:#00a896}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+
+/* === GENERAL TAB === */
+.gen-wrap{margin-top:50px;background:#eef2f7;min-height:calc(100vh - 50px);padding:32px 40px}
+.gen-hero{background:linear-gradient(135deg,#152030 0%,#1a3a55 60%,#1a4a60 100%);border-radius:12px;padding:36px 44px;margin-bottom:28px;position:relative;overflow:hidden}
+.gen-hero::after{content:'';position:absolute;right:-50px;top:-50px;width:260px;height:260px;background:radial-gradient(circle,rgba(0,168,150,.1) 0%,transparent 70%);border-radius:50%}
+.gen-hero h1{font-family:'Montserrat',sans-serif;font-size:24px;font-weight:800;color:#fff;margin-bottom:10px;position:relative;z-index:1}
+.gen-meta{display:flex;flex-wrap:wrap;gap:18px;position:relative;z-index:1}
+.gm{font-size:12.5px;color:#7aacca;display:flex;align-items:center;gap:5px}
+.gm strong{color:rgba(255,255,255,.88)}
+.gsec{margin-bottom:28px}
+.gsec-title{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:#2a4a68;margin-bottom:14px;padding-bottom:7px;border-bottom:2px solid #ccd8e8}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.pc{background:#fff;border:1px solid #d0dcea;border-radius:9px;padding:18px 20px;border-top:4px solid #00a896}
+.pc.lp{border-top-color:#c84040}
+.pct{font-size:10px;font-weight:800;font-family:'Montserrat',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#00a896;margin-bottom:7px}
+.pc.lp .pct{color:#c84040}
+.pc h3{font-family:'Montserrat',sans-serif;font-size:13.5px;font-weight:700;color:#1a2e4a;margin-bottom:9px;line-height:1.4}
+.pckw{display:inline-block;font-size:10.5px;font-weight:600;padding:2px 8px;border-radius:3px;margin-bottom:10px;background:#e8f8f5;color:#0a8a7a}
+.pc.lp .pckw{background:#fef0f0;color:#b83030}
+.pc p{font-size:12px;line-height:1.65;color:#4a5a6a}
+.gbox{background:#fff;border:1px solid #d0dcea;border-radius:9px;padding:24px 28px}
+.gbox p{font-size:13.5px;line-height:1.75;color:#3a4a5a;margin-bottom:12px}
+.gbox p:last-child{margin-bottom:0}
+.gbox ul{padding-left:20px;margin:8px 0 12px}
+.gbox li{font-size:13px;line-height:1.65;color:#4a5a6a;margin-bottom:6px}
+.gbox strong{color:#1a2e4a}
+.gbox code{font-family:monospace;font-size:11.5px;background:#f0f4f8;padding:1px 5px;border-radius:3px;color:#2a6a4a}
+.gbox em{color:#b03030;font-style:italic}
+
+/* === SITE CHROME === */
+.site-wrap{margin-top:50px;background:#fff}
+.s-hdr{background:#162535;position:sticky;top:50px;z-index:800;border-bottom:1px solid #1c3448}
+.s-nav{max-width:1200px;margin:0 auto;padding:0 36px;height:68px;display:flex;align-items:center}
+.s-logo{font-family:'Montserrat',sans-serif;font-size:16px;font-weight:800;color:#fff;letter-spacing:.08em;text-transform:uppercase;line-height:1.1;margin-right:44px;flex-shrink:0}
+.s-logo span{display:block;font-size:7.5px;font-weight:400;letter-spacing:.25em;color:#5a90b0}
+.s-nav-links{display:flex;list-style:none;gap:24px;flex:1}
+.s-nav-links li{font-size:12.5px;font-weight:600;color:#7aacca;cursor:pointer;letter-spacing:.03em}
+.s-nav-links li:hover{color:#fff}
+.s-nav-cta{display:flex;gap:9px}
+.btn{display:inline-block;font-family:'Montserrat',sans-serif;font-weight:700;text-decoration:none;cursor:pointer;border-radius:5px;transition:all .15s;letter-spacing:.04em;border:none}
+.btn-sm{font-size:12px;padding:8px 16px}
+.btn-md{font-size:14px;padding:12px 26px}
+.btn-lg{font-size:15px;padding:15px 32px}
+.btn-teal{background:#00a896;color:#fff;border:2px solid #00a896}
+.btn-teal:hover{background:#009080;border-color:#009080}
+.btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.3)}
+.btn-ghost:hover{border-color:rgba(255,255,255,.65);background:rgba(255,255,255,.06)}
+.btn-outline-dark{background:transparent;color:#1a2e4a;border:2px solid #1a2e4a}
+.btn-outline-dark:hover{background:#1a2e4a;color:#fff}
+
+/* === LP HERO === */
+.lp-hero{background:linear-gradient(160deg,#071828 0%,#0a3858 30%,#0a5860 60%,#087848 85%,#063828 100%);padding:90px 40px 104px;position:relative;overflow:hidden}
+.lp-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:72px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 72'%3E%3Cpath fill='%23fff' d='M0,48L60,42.7C120,37,240,27,360,26.7C480,27,600,37,720,42.7C840,48,960,48,1080,42.7C1200,37,1320,27,1380,21.3L1440,16L1440,72L0,72Z'/%3E%3C/svg%3E") no-repeat bottom;background-size:cover}
+.lp-hero-in{max-width:720px;margin:0 auto;text-align:center;position:relative;z-index:1}
+.hero-pill{display:inline-block;background:rgba(0,168,150,.16);border:1px solid rgba(0,168,150,.42);color:#4dd8c8;font-size:10px;font-weight:700;font-family:'Montserrat',sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:20px}
+.lp-hero h1{font-family:'Montserrat',sans-serif;font-size:46px;font-weight:800;color:#fff;line-height:1.13;margin-bottom:18px;letter-spacing:-.015em}
+.lp-hero .sub{font-size:17px;color:rgba(255,255,255,.7);line-height:1.65;margin-bottom:32px}
+.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:36px}
+.hero-trust{display:flex;justify-content:center;gap:28px;flex-wrap:wrap}
+.ti{font-size:11.5px;color:rgba(255,255,255,.52);display:flex;align-items:center;gap:5px}
+.ti strong{color:rgba(255,255,255,.82)}
+
+/* === FEATURES STRIP === */
+.feat-strip{background:#f0f9f7;border-bottom:1px solid #c0e4dc;padding:24px 40px}
+.feat-in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.fi{text-align:center}
+.fi-icon{width:42px;height:42px;background:#00a896;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 9px;font-size:19px}
+.fi-title{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;color:#1a2e4a;margin-bottom:3px}
+.fi-desc{font-size:11px;color:#5a7888;line-height:1.5}
+
+/* === BLOG HERO === */
+.blog-hero{background:linear-gradient(160deg,#081828 0%,#0a3858 45%,#085858 100%);padding:68px 40px 84px;position:relative;overflow:hidden}
+.blog-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:56px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 56'%3E%3Cpath fill='%23fff' d='M0,28L80,32C160,37,320,45,480,45.3C640,45,800,37,960,32C1120,27,1280,27,1360,29.3L1440,32L1440,56L0,56Z'/%3E%3C/svg%3E") no-repeat bottom;background-size:cover}
+.blog-hero-in{max-width:720px;position:relative;z-index:1}
+.bcat{display:inline-block;background:rgba(0,168,150,.16);border:1px solid rgba(0,168,150,.38);color:#4dd8c8;font-size:9.5px;font-weight:700;font-family:'Montserrat',sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:4px 11px;border-radius:3px;margin-bottom:16px}
+.blog-hero h1{font-family:'Montserrat',sans-serif;font-size:38px;font-weight:800;color:#fff;line-height:1.18;margin-bottom:14px}
+.blog-hero .sub{font-size:16.5px;color:rgba(255,255,255,.65);line-height:1.6}
+
+/* === PAGE META === */
+.pmeta{background:#f7f9fb;border-bottom:1px solid #e2eaf4;padding:9px 40px}
+.pmeta-in{max-width:840px;margin:0 auto;font-size:11px;color:#6a8aa0;display:flex;gap:6px;align-items:center}
+.pmeta-in .sep{color:#aabbc8}
+.pmeta-in .cur{color:#1a2e4a;font-weight:600}
+
+/* === MAIN CONTENT === */
+.s-main{max-width:840px;margin:0 auto;padding:52px 40px 60px}
+.cb h2{font-family:'Montserrat',sans-serif;font-size:24px;font-weight:700;color:#1a2e4a;margin:40px 0 13px;line-height:1.3}
+.cb h2:first-child{margin-top:0}
+.cb h3{font-family:'Montserrat',sans-serif;font-size:18.5px;font-weight:700;color:#1a2e4a;margin:28px 0 10px;line-height:1.35}
+.cb p{font-size:16px;line-height:1.78;color:#3a3a3a;margin-bottom:15px}
+.cb p:last-child{margin-bottom:0}
+.cb strong{color:#1a2e4a;font-weight:600}
+.cb ul{margin:6px 0 16px 22px}
+.cb li{font-size:15.5px;line-height:1.7;color:#3a3a3a;margin-bottom:5px}
+.sdiv{border:none;border-top:1px solid #e6edf6;margin:32px 0}
+.qi{font-size:15.5px;color:#5a7888;font-style:italic;margin-bottom:9px!important}
+.la{font-size:16px;font-weight:600;color:#1a2e4a;line-height:1.65;margin-bottom:12px!important}
+
+/* === PRICE BLOCK === */
+.price-block{background:#f2f7fd;border:1px solid #ccdcee;border-radius:10px;padding:26px 30px;margin:20px 0}
+.price-block h3{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;color:#1a2e4a;margin-bottom:14px}
+.price-row{display:flex;gap:14px;flex-wrap:wrap}
+.pi{background:#fff;border:1px solid #c0d4e8;border-radius:8px;padding:14px 18px;min-width:155px}
+.pi-boat{font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;color:#1a2e4a;margin-bottom:3px}
+.pi-price{font-family:'Montserrat',sans-serif;font-size:21px;font-weight:800;color:#00a896}
+.pi-label{font-size:10.5px;color:#8a9aaa;margin-bottom:7px}
+.pi-detail{font-size:11.5px;color:#5a6a7a;line-height:1.5}
+
+/* === MAP EMBED === */
+.map-embed{background:linear-gradient(135deg,#e4eff8 0%,#d4e4f2 100%);border:1px solid #c0d4e8;border-radius:10px;height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:24px 0;gap:7px}
+.map-icon{font-size:30px}
+.map-label{font-size:13.5px;font-weight:700;color:#1a4a6a;font-family:'Montserrat',sans-serif}
+.map-sub{font-size:11.5px;color:#6a90a8}
+
+/* === CTA BLOCK === */
+.cta-block{background:linear-gradient(135deg,#111e2e 0%,#182e4a 100%);border-radius:12px;padding:40px 44px;margin:44px 0;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.cta-txt h2{font-family:'Montserrat',sans-serif;font-size:21px;font-weight:700;color:#fff;margin-bottom:6px}
+.cta-txt p{font-size:14.5px;color:rgba(255,255,255,.68);margin:0}
+.cta-acts{display:flex;gap:10px;flex-shrink:0;flex-wrap:wrap}
+
+/* === FAQ === */
+.faq-wrap{background:#f4f8fb;border-radius:12px;padding:36px 40px;margin:44px 0}
+.faq-wrap>h2{font-family:'Montserrat',sans-serif;font-size:21px;font-weight:700;color:#1a2e4a;margin-bottom:24px}
+.faq-item{border-bottom:1px solid #d4e0ec;padding:16px 0}
+.faq-item:first-of-type{padding-top:0}
+.faq-item:last-child{border-bottom:none;padding-bottom:0}
+.faq-q{font-family:'Montserrat',sans-serif;font-size:14.5px;font-weight:700;color:#1a2e4a;margin-bottom:9px}
+.faq-a{font-size:14.5px;line-height:1.72;color:#3a4a5a}
+
+/* === CALL BAR === */
+.call-bar{background:#00a896;padding:16px 40px;text-align:center}
+.call-bar p{font-size:15.5px;font-weight:600;font-family:'Montserrat',sans-serif;color:#fff}
+.call-bar a{color:#fff;font-weight:800}
+
+/* === FOOTER === */
+.s-foot{background:#090f17;color:#567080;padding:48px 40px 24px}
+.sf-in{max-width:1200px;margin:0 auto}
+.sf-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:36px;margin-bottom:36px}
+.sf-brand h3{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:800;color:#fff;letter-spacing:.08em;text-transform:uppercase;margin-bottom:9px}
+.sf-brand p{font-size:12.5px;line-height:1.65;color:#3a5a6a}
+.sf-col h4{font-family:'Montserrat',sans-serif;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#2e5870;margin-bottom:12px}
+.sf-col ul{list-style:none}
+.sf-col li{font-size:12.5px;color:#3a5a6a;margin-bottom:7px;cursor:pointer}
+.sf-col li:hover{color:#7aa8c0}
+.sf-phone{font-family:'Montserrat',sans-serif;font-size:19px;font-weight:800;color:#00a896;display:block;margin-bottom:5px}
+.sf-hours{font-size:11.5px;color:#2e5070}
+.sf-addr{font-size:12px;color:#3a5a6a;line-height:1.55;margin-top:8px}
+.sf-bot{border-top:1px solid #111e2a;padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.sf-bot p{font-size:11.5px;color:#2a4a5a}
+.sf-badge{background:rgba(0,168,150,.1);border:1px solid rgba(0,168,150,.22);color:#3a9888;font-size:10.5px;font-weight:600;font-family:'Montserrat',sans-serif;padding:4px 11px;border-radius:10px}
+</style>
+</head>
+<body>
+
+<!-- DASHBOARD NAV -->
+<nav class="dash-bar">
+  <div class="dash-label">Makana · Jun 2026</div>
+  <button class="dt g active" onclick="showTab('general',this)">General</button>
+  <button class="dt lp" onclick="showTab('lp1',this)">LP 1 — Na Pali Tour</button>
+  <button class="dt lp" onclick="showTab('lp2',this)">LP 2 — Snorkeling</button>
+  <button class="dt lp" onclick="showTab('lp3',this)">LP 3 — Sunset Cruise</button>
+  <button class="dt bl" onclick="showTab('blog1',this)">Blog 1 — Snorkeling Guide</button>
+  <button class="dt bl" onclick="showTab('blog2',this)">Blog 2 — What to Pack</button>
+  <button class="dt bl" onclick="showTab('blog3',this)">Blog 3 — Private Charters</button>
+  <button class="dt bl" onclick="showTab('blog4',this)">Blog 4 — Sunset Guide</button>
+  <button class="dt bl" onclick="showTab('blog5',this)">Blog 5 — Sea Caves</button>
+  <button class="dt bl" onclick="showTab('blog6',this)">Blog 6 — Summer Booking</button>
+</nav>
+
+<!-- ===================== GENERAL TAB ===================== -->
+<div id="general" class="tab-panel active">
+<div class="gen-wrap">
+  <div class="gen-hero">
+    <h1>Makana Charters — June 2026 Campaign</h1>
+    <div class="gen-meta">
+      <div class="gm">📋 <strong>Task:</strong> 868jzd8v5</div>
+      <div class="gm">📅 <strong>Due:</strong> June 29, 2026</div>
+      <div class="gm">✍️ <strong>Deliverables:</strong> 3 Landing Pages + 6 Blogs</div>
+      <div class="gm">👤 <strong>CSM:</strong> Wendy Alinor</div>
+      <div class="gm">🔗 <strong>Contact:</strong> Cain Robinson</div>
+    </div>
+  </div>
+
+  <div class="gsec">
+    <div class="gsec-title">Campaign Context</div>
+    <div class="gbox">
+      <p><strong>Client:</strong> Makana Charters is a Native Hawaiian family-owned Na Pali Coast boat tour operator based in Kekaha, Kauai, HI. The family's documented history on these waters spans over 200 years. They continue the legacy of Liko Kauai Cruises. "Makana" is the Hawaiian word for gift.</p>
+      <p><strong>Campaign goal:</strong> Post-migration SEO recovery. A CMS migration disrupted existing rankings. These 9 pieces target the highest-priority recovery keywords — landing pages to recapture commercial intent traffic, blogs to rebuild topical authority and support long-tail informational queries.</p>
+      <p><strong>Key differentiators reinforced across all pieces:</strong></p>
+      <ul>
+        <li>Kikiaola Harbor departure — the closest launch point to the Na Pali Coast (up to 1 hour more on the cliffs vs. Port Allen operators)</li>
+        <li>200+ year Native Hawaiian family legacy continuing Liko Kauai Cruises</li>
+        <li>Fleet sized for sea cave access (12–32 guests vs. 50–100 on competing boats)</li>
+        <li>Local-born captains: Mike, Rob, Darrel, Chris, Dave, Phil</li>
+        <li>Weather cancellation policy: reschedule, credit, or full refund</li>
+      </ul>
+      <p><strong>Non-negotiable accuracy rules applied throughout:</strong></p>
+      <ul>
+        <li>Wildlife sightings are <em>never</em> guaranteed — "commonly spotted," "rare that we don't see them"</li>
+        <li>Sea cave access is always conditional — "as long as ocean conditions allow"</li>
+        <li>"Na Pali" always two words, both capitalized — never "Napali" or "na pali"</li>
+        <li>Hawaiian terms (honu, makana, waiahuakua) defined on first use</li>
+        <li>Age minimums enforced: Na Pali Kai III age 4+; all other boats age 9+</li>
+        <li>Phone: (808) 338-9980 | Hours: 7AM–9PM | Departs: Kikiaola Small Boat Harbor, Kekaha, HI</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="gsec">
+    <div class="gsec-title">Landing Pages (3)</div>
+    <div class="pgrid">
+      <div class="pc lp">
+        <div class="pct">Landing Page 1</div>
+        <h3>Na Pali Coast Boat Tour: Why Makana Charters Stands Apart</h3>
+        <div class="pckw">Na Pali coast boat tour</div>
+        <p>Primary recovery page. Captures the highest-volume search for Makana's core product. Builds the case for Makana through family legacy, Kikiaola proximity, fleet size, cave-access design, and local crew. Commercial intent with informational depth. Word count: ~1,700.</p>
+      </div>
+      <div class="pc lp">
+        <div class="pct">Landing Page 2</div>
+        <h3>Kauai Snorkeling Tours: What to Look For in an Operator</h3>
+        <div class="pckw">Kauai snorkeling tours</div>
+        <p>Comparison/shopping intent. Framed as a buyer's guide — what to evaluate in any operator — rather than head-to-head competitor comparison (avoids invented facts). Departure point, group size, crew knowledge, and gear are the four criteria. Makana wins all four. Word count: ~1,100.</p>
+      </div>
+      <div class="pc lp">
+        <div class="pct">Landing Page 3</div>
+        <h3>Kauai Sunset Cruise on the Na Pali Coast</h3>
+        <div class="pckw">Kauai sunset cruise</div>
+        <p>Experience-led commercial page. The departure proximity advantage is most critical here — the golden-hour window is fixed, and Port Allen boats waste it in transit. Sea cave access at sunset is a secondary differentiator. Photographer angle: 360° walk-around deck on Na Pali Kai III. Word count: ~1,000.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="gsec">
+    <div class="gsec-title">Blog Posts (6)</div>
+    <div class="pgrid">
+      <div class="pc">
+        <div class="pct">Blog 1 — Informational</div>
+        <h3>Snorkeling the Na Pali Coast: What to Expect Before You Go</h3>
+        <div class="pckw">Na Pali coast snorkeling</div>
+        <p>Pre-trip informational piece. Covers the 5 snorkel sites (chosen daily by conditions), marine life commonly seen (dolphins, honu, reef fish), gear included, seasonal guidance (summer = calmest). Answers the AEO query "what is Na Pali snorkeling like?" directly. Supports LP 2 internally.</p>
+      </div>
+      <div class="pc">
+        <div class="pct">Blog 2 — Informational</div>
+        <h3>What to Pack for a Na Pali Coast Snorkel Tour</h3>
+        <div class="pckw">Na Pali Coast snorkel tour</div>
+        <p>Practical pre-trip packing guide. Opens with what Makana provides (gear, food, drinks — list is lighter than expected), then what to bring yourself. Reef-safe sunscreen, seasickness prep, waterproof camera. Targets booked guests searching pre-departure. High intent, low competition.</p>
+      </div>
+      <div class="pc">
+        <div class="pct">Blog 3 — Informational/Commercial</div>
+        <h3>Private Catamaran Charter on Kauai: What to Know Before Booking</h3>
+        <div class="pckw">Kauai catamaran tours</div>
+        <p>Research-stage group planner content. Covers the two private charter options (Makana ≤12, Na Pali Kai III ≤32), what's included, booking process (online for small groups, phone for large). Targets families, wedding parties, corporate groups in research mode.</p>
+      </div>
+      <div class="pc">
+        <div class="pct">Blog 4 — Informational</div>
+        <h3>Kauai Sunset Cruise: What the Na Pali Coast Looks Like at Golden Hour</h3>
+        <div class="pckw">Kauai sunset cruise</div>
+        <p>Informational companion to LP 3. Covers what the coast looks like at golden hour, the full route, photographer tips (360° deck on Na Pali Kai III, low-angle directional light, gear for spray), and what to bring for an evening tour. Builds topical depth around the sunset keyword.</p>
+      </div>
+      <div class="pc">
+        <div class="pct">Blog 5 — Informational</div>
+        <h3>The Na Pali Coast Sea Caves: What They Are and How to See Them</h3>
+        <div class="pckw">Na Pali coast sea caves boat tour</div>
+        <p>Education + differentiation. The three named caves (Pirates Cave / Waiahuakua, Rainbow Falls, Honopu Archway) plus honest access conditions framing. Boat design section makes the case that only small catamarans can enter. Also serves searches for each cave by name (film location recognition).</p>
+      </div>
+      <div class="pc">
+        <div class="pct">Blog 6 — Informational</div>
+        <h3>How Far in Advance Should You Book a Na Pali Coast Tour in Summer?</h3>
+        <div class="pckw">Na Pali coast boat tour</div>
+        <p>Seasonality + booking logistics. Answers "how far in advance?" directly: book before you arrive. Covers why summer is peak season (calmer NW swell, highest visitor volume), last-minute options, weather cancellation policy, and private charter as flexibility for small groups.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="gsec">
+    <div class="gsec-title">QA Pipeline Applied</div>
+    <div class="gbox">
+      <p>All 9 drafts passed through a three-stage QA pipeline before this dashboard was built:</p>
+      <ul>
+        <li><strong>Terminology lint:</strong> Required terms present (Na Pali, honu, Kikiaola, waiahuakua); banned terms absent; Hawaiian terms defined on first use; wildlife and cave-access language correctly hedged throughout.</li>
+        <li><strong>Claims grounding:</strong> All product facts (fleet specs, pricing, phone, captain names, cave names, film titles) traced to <code>clients/makana-charters/raw/knowledge/</code>. Six geographic claims removed as unverified (coast length, cliff heights) — flagged for future research and knowledge base addition.</li>
+        <li><strong>Voice scoring (gate ≥80):</strong> All 9 pieces scored 82–90. Primary fixes applied: removed setup sentences announcing what follows; replaced spec-language cave/boat descriptions with sensory and observational prose; tightened FAQ answers to open with a direct one-sentence response.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ===================== LP 1: NA PALI COAST BOAT TOUR ===================== -->
+<div id="lp1" class="tab-panel">
+<div class="site-wrap">
+  <header class="s-hdr">
+    <nav class="s-nav">
+      <div class="s-logo">Makana<span>Charters</span></div>
+      <ul class="s-nav-links"><li>Home</li><li>Private Tours</li><li>Na Pali Tours</li><li>About</li><li>Resources</li></ul>
+      <div class="s-nav-cta">
+        <a href="#" class="btn btn-ghost btn-sm">Call Us</a>
+        <a href="#" class="btn btn-teal btn-sm">Book Now</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="lp-hero">
+    <div class="lp-hero-in">
+      <div class="hero-pill">Native Hawaiian · 200+ Years on These Waters</div>
+      <h1>Na Pali Coast Boat Tour: Why Makana Charters Stands Apart</h1>
+      <p class="sub">The only way to see most of the Na Pali Coast is from the water. We have been running these tours for over 200 years — departing from the closest harbor to the cliffs on the island.</p>
+      <div class="hero-btns">
+        <a href="#" class="btn btn-teal btn-lg">Book Your Tour</a>
+        <a href="#" class="btn btn-ghost btn-lg">Call (808) 338-9980</a>
+      </div>
+      <div class="hero-trust">
+        <div class="ti">⚓ <strong>Departs Kikiaola Harbor</strong> — closest to Na Pali</div>
+        <div class="ti">👥 <strong>12–32 Guests</strong> per tour</div>
+        <div class="ti">🌊 <strong>Sea Cave Access</strong> (conditions permitting)</div>
+        <div class="ti">📅 <strong>Daily Tours</strong> · 7AM–9PM</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="feat-strip">
+    <div class="feat-in">
+      <div class="fi"><div class="fi-icon">⛵</div><div class="fi-title">Closest Departure</div><div class="fi-desc">Kikiaola Harbor — up to 1 hr more on Na Pali vs. Port Allen</div></div>
+      <div class="fi"><div class="fi-icon">👨‍👩‍👧</div><div class="fi-title">Smaller Groups</div><div class="fi-desc">12–32 guests — more deck space, better crew attention</div></div>
+      <div class="fi"><div class="fi-icon">🦋</div><div class="fi-title">Sea Cave Entry</div><div class="fi-desc">Catamarans built to navigate cave entries other boats can't</div></div>
+      <div class="fi"><div class="fi-icon">🐬</div><div class="fi-title">Wildlife Commonly Seen</div><div class="fi-desc">Dolphins, honu, reef fish — rare we don't see dolphins</div></div>
+    </div>
+  </div>
+
+  <div class="pmeta"><div class="pmeta-in"><span>Home</span><span class="sep">›</span><span>Na Pali Tours</span><span class="sep">›</span><span class="cur">Na Pali Coast Boat Tour</span></div></div>
+
+  <main class="s-main">
+    <div class="cb">
+      <h2>What the Na Pali Coast Actually Looks Like From the Water</h2>
+      <p class="qi">What does a Na Pali Coast boat tour route cover?</p>
+      <p class="la"><strong>A standard tour departs Kikiaola Harbor and moves along the coast through Polihale, Kalalau Valley, the Honopu Archway, sea caves, and back — covering the full northwestern face of the cliffs over 4.5 to 5 hours.</strong></p>
+      <p>The coast reveals itself gradually from the water. Polihale, where the sand meets the cliffs at the island's western edge, marks the start of the Na Pali section. From there, the ridgeline rises into the fluted green walls of the cliffs, deepening as the boat moves northeast. Kalalau Valley opens on the port side — carved by a stream that has been running for millions of years, visible now only by boat or a multi-day hike.</p>
+      <p class="qi">What is the Honopu Archway?</p>
+      <p class="la"><strong>The Honopu Archway is a natural rock arch at the base of the Na Pali cliffs, known as a filming location for King Kong, Six Days Seven Nights, a James Bond film, and Pirates of the Caribbean.</strong></p>
+      <p>The arch connects two beaches that have no road access and no hiking trail in. The only way to reach Honopu on your own is to swim ashore. On the tour, you see it from the water — close enough to understand why film crews kept returning.</p>
+      <p class="qi">What sea caves does the Na Pali Coast boat tour enter?</p>
+      <p class="la"><strong>We enter Pirates Cave, also known by its Hawaiian name Waiahuakua, and Rainbow Falls — as long as ocean conditions allow.</strong></p>
+      <p>Sea caves on the Na Pali Coast form where the ocean has carved into volcanic rock over centuries. Pirates Cave is large enough for the catamaran to enter when conditions are right. Our captains read the swell before approaching; if the ocean says no, we move on. Rainbow Falls takes its name from the light that refracts through the mist inside the cave on the right day.</p>
+      <p class="qi">What wildlife is commonly seen on the Na Pali Coast?</p>
+      <p class="la"><strong>Spinner dolphins and Pacific Bottlenose dolphins are commonly spotted along the route, and it is rare that we do not see them.</strong></p>
+      <p>Hawaiian green sea turtles, known as honu, surface regularly near the snorkel stop. Diverse reef fish and coral appear underwater during the roughly one-hour snorkel. Our guides know the tides and habitats, which is why they tend to find the animals before guests notice anything at all. Sightings are never guaranteed; the ocean decides.</p>
+      <hr class="sdiv">
+
+      <h2>What Makes Makana Different</h2>
+      <h3>200-Year Native Hawaiian Family History</h3>
+      <p class="qi">What is the history behind Makana Charters?</p>
+      <p class="la"><strong>Makana Charters continues the legacy of Liko Kauai Cruises, a Native Hawaiian family enterprise with documented roots on the Na Pali Coast going back over 200 years.</strong></p>
+      <p>"Makana" is the Hawaiian word for gift. The name reflects what this family has been passing down through generations: knowledge of these waters, their tides, their caves, their history. Our office at Hale Pili sits on Waimea River, the same land the family has operated from for generations. When you book with Makana, you are going out with a family for whom this coast is home.</p>
+
+      <h3>Closest Departure Point to the Coast</h3>
+      <p class="qi">Why does the departure harbor matter for a Na Pali Coast tour?</p>
+      <p class="la"><strong>We depart from Kikiaola Harbor in Kekaha — the closest launch point to the Na Pali Coast — which means up to an hour more time on the cliffs compared to boats leaving from Port Allen.</strong></p>
+      <p>Most operators on Kauai depart from Port Allen, on the south shore. Getting from Port Allen to the Na Pali Coast takes time, and that time cuts directly into how long you spend at the cliffs, the caves, and the snorkel spot. Kikiaola Harbor sits at the island's western edge, minutes from where the Na Pali cliffs begin. Less transit, more coast.</p>
+
+      <h3>Smaller Groups</h3>
+      <p class="la"><strong>Our tours carry between 12 and 32 guests depending on the boat — smaller than most operators on the island.</strong></p>
+      <p>Fewer guests means more room on deck, fewer people competing for the same view, and more time for the crew to spend with you rather than managing a crowd. On private charters, the group size is entirely your own.</p>
+
+      <h3>Boats Built for Sea Cave Access</h3>
+      <p class="la"><strong>Our catamarans are built to enter the Na Pali Coast sea caves safely — a capability most larger tour boats do not have.</strong></p>
+      <p>When conditions are right, our catamaran moves into the cave mouth and the daylight drops away. The walls close in, the sound of the water amplifies off the rock, and light comes back from the far side. Larger high-capacity boats stay at the entrance — their size prevents them from following us in. Access still depends on what the ocean is doing that day. Our captains make the call on the water.</p>
+
+      <h3>All Crew Are Lifelong Kauai Locals</h3>
+      <p class="la"><strong>Every captain on our boats has lived on Kauai for most or all of their lives, and they are on the water on their own time when they are not on tour.</strong></p>
+      <p>Our confirmed captains are Mike, Rob, Darrel, Chris, Dave, and Phil. They are not seasonal hires. They know this coastline the way a person knows their own neighborhood — where the dolphins tend to run, how the swell reads at each cave entrance, which valley walls catch the light at what time of day.</p>
+      <hr class="sdiv">
+
+      <h2>The Boats</h2>
+      <p class="la"><strong>Makana Charters operates a fleet of power catamarans built for the Na Pali Coast; the primary options for shared tours are the Na Pali Kai III and the smaller Makana catamaran.</strong></p>
+      <div class="price-block">
+        <h3>Fleet &amp; Pricing (Confirmed June 2026)</h3>
+        <div class="price-row">
+          <div class="pi"><div class="pi-boat">Na Pali Kai III</div><div class="pi-price">$199</div><div class="pi-label">per adult</div><div class="pi-detail">Up to 32 guests · Age 4+<br>360° walk-around deck<br>$169 / child · Kikiaola</div></div>
+          <div class="pi"><div class="pi-boat">Seiko 1 &amp; Seiko 2</div><div class="pi-price">$219</div><div class="pi-label">per adult</div><div class="pi-detail">Up to 16 guests each · Age 9+<br>Power catamaran<br>$189 / child · Kikiaola</div></div>
+          <div class="pi"><div class="pi-boat">Leialoha</div><div class="pi-price">$219</div><div class="pi-label">per adult</div><div class="pi-detail">Up to 18 guests · Age 9+<br>Power catamaran<br>$189 / child · Kikiaola</div></div>
+          <div class="pi"><div class="pi-boat">Makana (Private)</div><div class="pi-price">$219</div><div class="pi-label">per adult</div><div class="pi-detail">Up to 12 guests · Age 9+<br>Private charter<br>$189 / child · Kikiaola</div></div>
+        </div>
+      </div>
+      <p>All tours include snorkel gear, flotation devices, a deli-style lunch, soft drinks, and local juices. All boats have an onboard restroom; larger boats also have freshwater showers. Guests may bring their own alcohol, consumed only after snorkeling.</p>
+      <hr class="sdiv">
+
+      <h2>How to Book Your Na Pali Coast Boat Tour</h2>
+      <p class="la"><strong>Makana Charters departs from Kikiaola Small Boat Harbor in Kekaha, HI. Book by phone at (808) 338-9980, available daily from 7AM to 9PM.</strong></p>
+      <p>For Na Pali Kai III shared tours, tickets are $199 per adult and $169 per child (age 4+). For questions about which boat has availability on your dates or to arrange a private charter, our team is the fastest way to get answers.</p>
+
+      <div class="map-embed"><div class="map-icon">📍</div><div class="map-label">Kikiaola Small Boat Harbor, Kekaha, HI</div><div class="map-sub">Google Business Profile Map Embed</div></div>
+    </div>
+
+    <div class="cta-block">
+      <div class="cta-txt"><h2>Ready to Get on the Water?</h2><p>Call us or book online. Our team is available daily 7AM–9PM to check availability across the fleet.</p></div>
+      <div class="cta-acts"><a href="#" class="btn btn-teal btn-md">Book Now</a><a href="#" class="btn btn-ghost btn-md">Call (808) 338-9980</a></div>
+    </div>
+
+    <div class="faq-wrap">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item"><div class="faq-q">What is included in a Na Pali Coast boat tour with Makana Charters?</div><div class="faq-a">Every tour includes snorkel gear, flotation devices, a deli-style lunch, soft drinks, and local juices. Lunch options are turkey, ham, roast beef, or vegetarian, served with fruit and snacks. Cultural narration from Native Hawaiian crew is part of every tour. Guests can bring their own alcohol, consumed only after the snorkel stop.</div></div>
+      <div class="faq-item"><div class="faq-q">What is the minimum age for a Makana Charters Na Pali Coast tour?</div><div class="faq-a">The minimum age is 4 years old for the Na Pali Kai III. For the Makana catamaran, Seiko 1, Seiko 2, and Leialoha, the minimum age is 9. If you are traveling with young children, the Na Pali Kai III is the right choice. Call (808) 338-9980 to confirm which boat is running on your preferred date.</div></div>
+      <div class="faq-item"><div class="faq-q">What should I bring on a Na Pali Coast boat tour?</div><div class="faq-a">Bring sunscreen (reef-safe preferred), a light jacket or windbreaker for the return leg, a towel, and sandals that can get wet. The larger boats have freshwater showers on board. Leave valuables ashore — everything on deck will get some sea spray.</div></div>
+      <div class="faq-item"><div class="faq-q">What is Makana Charters' cancellation policy?</div><div class="faq-a">If Makana Charters cancels due to weather or ocean conditions, guests receive the option to reschedule, apply the amount as a credit, or receive a full refund. Confirm current terms directly with the team at (808) 338-9980.</div></div>
+      <div class="faq-item"><div class="faq-q">Will we see dolphins on the tour?</div><div class="faq-a">Spinner dolphins and Pacific Bottlenose dolphins are commonly spotted along the Na Pali Coast route, and it is rare that our tours do not see them. Sightings are never guaranteed. Our guides know the tides and habitats, and they spend time in these waters on their own time as well as on tour.</div></div>
+      <div class="faq-item"><div class="faq-q">Can we enter the Na Pali Coast sea caves?</div><div class="faq-a">We enter Pirates Cave (Waiahuakua) and Rainbow Falls as long as ocean conditions allow. Our captains assess swell and conditions at each cave entrance before approaching. If conditions are not safe, we move on. No operator can guarantee sea cave access on any given day.</div></div>
+    </div>
+  </main>
+
+  <div class="call-bar"><p>Questions? Call us daily 7AM–9PM: <a href="tel:8083389980">(808) 338-9980</a> · Kikiaola Small Boat Harbor, Kekaha, HI</p></div>
+  <footer class="s-foot">
+    <div class="sf-in">
+      <div class="sf-grid">
+        <div class="sf-brand"><h3>Makana Charters</h3><p>Native Hawaiian family-owned. Continuing the legacy of Liko Kauai Cruises — over 200 years documented on the Na Pali Coast. Departing Kikiaola Small Boat Harbor, Kekaha, HI.</p></div>
+        <div class="sf-col"><h4>Tours</h4><ul><li>Na Pali Coast Tours</li><li>Sunset Cruise</li><li>Snorkeling Tours</li><li>Private Charters</li></ul></div>
+        <div class="sf-col"><h4>Resources</h4><ul><li>What to Pack</li><li>Sea Cave Guide</li><li>Booking FAQ</li><li>About Makana</li></ul></div>
+        <div class="sf-col"><h4>Contact</h4><a class="sf-phone">(808) 338-9980</a><div class="sf-hours">Daily 7AM–9PM</div><div class="sf-addr">Kikiaola Small Boat Harbor<br>Kekaha, HI<br>info@makanacharters.com</div></div>
+      </div>
+      <div class="sf-bot"><p>© 2026 Makana Charters. Native Hawaiian Family-Owned.</p><div class="sf-badge">200+ Years on the Na Pali Coast</div></div>
+    </div>
+  </footer>
+</div>
+</div>
+
+<!-- ===================== LP 2: KAUAI SNORKELING TOURS ===================== -->
+<div id="lp2" class="tab-panel">
+<div class="site-wrap">
+  <header class="s-hdr">
+    <nav class="s-nav">
+      <div class="s-logo">Makana<span>Charters</span></div>
+      <ul class="s-nav-links"><li>Home</li><li>Private Tours</li><li>Na Pali Tours</li><li>About</li><li>Resources</li></ul>
+      <div class="s-nav-cta"><a href="#" class="btn btn-ghost btn-sm">Call Us</a><a href="#" class="btn btn-teal btn-sm">Book Now</a></div>
+    </nav>
+  </header>
+  <section class="lp-hero">
+    <div class="lp-hero-in">
+      <div class="hero-pill">Na Pali Coast Reef · Departing Kikiaola Harbor</div>
+      <h1>Kauai Snorkeling Tours: What to Look For in an Operator</h1>
+      <p class="sub">Not all Kauai snorkeling tours put you in the same water. Where a boat departs from, how many people are on board, and who is guiding you through the reef all shape what you experience.</p>
+      <div class="hero-btns"><a href="#" class="btn btn-teal btn-lg">Book Your Tour</a><a href="#" class="btn btn-ghost btn-lg">Call (808) 338-9980</a></div>
+      <div class="hero-trust">
+        <div class="ti">📍 <strong>Kikiaola Harbor</strong> — less transit, more reef time</div>
+        <div class="ti">🐢 <strong>Honu</strong> (Hawaiian green sea turtles) commonly seen</div>
+        <div class="ti">🤿 <strong>Gear Included</strong> for every guest</div>
+        <div class="ti">👶 <strong>Ages 4+</strong> on Na Pali Kai III</div>
+      </div>
+    </div>
+  </section>
+  <div class="feat-strip">
+    <div class="feat-in">
+      <div class="fi"><div class="fi-icon">⛵</div><div class="fi-title">Closest Departure</div><div class="fi-desc">Kikiaola Harbor = more time at the reef</div></div>
+      <div class="fi"><div class="fi-icon">👥</div><div class="fi-title">12–32 Guests</div><div class="fi-desc">Less crowding in and out of the water</div></div>
+      <div class="fi"><div class="fi-icon">🤿</div><div class="fi-title">Gear Included</div><div class="fi-desc">Snorkel gear + flotation for every guest</div></div>
+      <div class="fi"><div class="fi-icon">🐬</div><div class="fi-title">Local Crew</div><div class="fi-desc">Captains who grew up on this coast</div></div>
+    </div>
+  </div>
+  <div class="pmeta"><div class="pmeta-in"><span>Home</span><span class="sep">›</span><span>Na Pali Tours</span><span class="sep">›</span><span class="cur">Kauai Snorkeling Tours</span></div></div>
+  <main class="s-main">
+    <div class="cb">
+      <h2>Where to Snorkel on Kauai</h2>
+      <p>The snorkel sites we visit depend on ocean conditions on the day of your tour. The locations we access most often along the Na Pali Coast include Makole, Ke'e Beach (also called Tunnels), and Nualolo Kai. Each of these sites sits along the north and northwest shore of Kauai, inside marine habitat that south-shore snorkel spots do not reach.</p>
+      <p>The Na Pali Coast's remoteness keeps boat traffic lower than south-shore areas. The reef systems at Nualolo Kai see far less daily visitor pressure, and the water quality and fish populations reflect that.</p>
+      <p>Spinner dolphins and Pacific Bottlenose dolphins are commonly spotted along the Na Pali Coast on our tours — it's rare that we don't see them on a run. Honu (Hawaiian green sea turtles) are frequently seen near the reef. Wildlife sightings are never guaranteed, as ocean conditions and animal behavior vary, but our crew knows the habitats and tides that put guests in the right place.</p>
+      <hr class="sdiv">
+
+      <h2>What to Look For in a Kauai Snorkeling Tour</h2>
+      <h3>Departure Point</h3>
+      <p class="la"><strong>We depart from Kikiaola Small Boat Harbor in Kekaha — the closest departure point to the Na Pali Coast on Kauai. That proximity translates to up to an hour more on the coast compared to tours leaving from Port Allen.</strong></p>
+      <p>Ask any operator you're considering: where exactly do you depart from, and how long does it take to reach your snorkel site? The answer tells you a great deal about how your tour day will actually be structured.</p>
+
+      <h3>Group Size</h3>
+      <p class="la"><strong>Our tours carry 12 to 32 guests depending on the boat — smaller than most operators on the island.</strong></p>
+      <p>Smaller groups create a different experience in the water. At a crowded snorkel stop, more people in the water means more surface disruption and less time near the reef. Smaller groups enter the water faster and stay longer. Group size also affects the crew's ability to watch guests in the water.</p>
+
+      <h3>Gear and Instruction</h3>
+      <p>Snorkel gear and flotation devices are included on every Makana tour. Before the snorkel stop, the crew walks guests through proper gear fit and technique. Guests who do not want to snorkel stay on board — the boat remains anchored at the snorkel site for about one hour. Gear fit matters more than most guests expect. Our crew checks gear before guests enter.</p>
+
+      <h3>Crew Knowledge</h3>
+      <p>Our captains and crew have lived on Kauai for years — most their entire lives. Our confirmed captains include Mike, Rob, Darrel, Chris, Dave, and Phil. Crew who grew up here notice things seasonal hires do not: a turtle resting on a particular coral head, a school of fish holding at depth before surfacing, a shift in current that signals when to wrap the snorkel stop. That local knowledge changes what guests see.</p>
+
+      <h3>Cultural Context</h3>
+      <p>Makana — the Hawaiian word for gift — is a name our family chose deliberately. Our family's connection to the Na Pali Coast extends over 200 years, documented through generations of navigation on these same waters. Snorkeling at Nualolo Kai carries a different weight when the person in the water next to you grew up hearing stories about this specific place.</p>
+      <hr class="sdiv">
+
+      <h2>What's Included on a Makana Snorkeling Tour</h2>
+      <p>Every Makana snorkeling tour includes snorkel gear, flotation devices, a deli-style lunch, and soft drinks and local juices. The deli lunch options are turkey, ham, roast beef, or vegetarian, served with fruit and snacks. The snorkel stop runs about one hour.</p>
+      <p>Snorkeling tours run on the Na Pali Kai III, our 32-guest catamaran departing from Kikiaola Harbor. The Na Pali Kai III has a 360-degree walk-around deck and accepts guests ages 4 and older. For guests who prefer a smaller group, our Seiko 1, Seiko 2, and Leialoha catamarans also depart from Kikiaola Harbor, carrying 16 to 18 guests with an age minimum of 9.</p>
+      <hr class="sdiv">
+
+      <h2>How to Book a Kauai Snorkeling Tour</h2>
+      <p>We depart from Kikiaola Small Boat Harbor in Kekaha, HI. All boats except the Amelia K leave from Kikiaola — you do not check in at Port Allen.</p>
+      <div class="price-block">
+        <h3>Pricing (Confirmed June 2026)</h3>
+        <div class="price-row">
+          <div class="pi"><div class="pi-boat">Na Pali Kai III</div><div class="pi-price">$199</div><div class="pi-label">per adult</div><div class="pi-detail">Up to 32 guests · Age 4+<br>$169 / child</div></div>
+          <div class="pi"><div class="pi-boat">Seiko 1 &amp; 2 / Leialoha</div><div class="pi-price">$219</div><div class="pi-label">per adult</div><div class="pi-detail">16–18 guests · Age 9+<br>$189 / child</div></div>
+        </div>
+      </div>
+      <div class="map-embed"><div class="map-icon">📍</div><div class="map-label">Kikiaola Small Boat Harbor, Kekaha, HI</div><div class="map-sub">Google Business Profile Map Embed</div></div>
+    </div>
+
+    <div class="cta-block">
+      <div class="cta-txt"><h2>Book a Kauai Snorkeling Tour</h2><p>Call (808) 338-9980 or book online. Daily 7AM–9PM.</p></div>
+      <div class="cta-acts"><a href="#" class="btn btn-teal btn-md">Book Now</a><a href="#" class="btn btn-ghost btn-md">Call (808) 338-9980</a></div>
+    </div>
+
+    <div class="faq-wrap">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item"><div class="faq-q">Do I need to know how to swim to join a Kauai snorkeling tour?</div><div class="faq-a">No. Flotation devices are included and available for all guests. You do not need to be a confident swimmer to participate, and guests who prefer to stay on board during the snorkel stop are welcome to do so.</div></div>
+      <div class="faq-item"><div class="faq-q">What marine life will I see on a Kauai snorkeling tour?</div><div class="faq-a">Spinner dolphins and Pacific Bottlenose dolphins are commonly spotted along the Na Pali Coast, and it's rare that we don't see them on a run. Honu (Hawaiian green sea turtles) are frequently seen near the reef. Wildlife sightings are never guaranteed — ocean conditions and animal behavior change daily.</div></div>
+      <div class="faq-item"><div class="faq-q">Is snorkel gear provided on the tour?</div><div class="faq-a">Yes. Snorkel gear and flotation devices are included in the tour price. You do not need to rent gear separately. The crew checks gear fit before guests enter the water.</div></div>
+      <div class="faq-item"><div class="faq-q">How long do we snorkel?</div><div class="faq-a">The snorkel stop runs about one hour. The full tour runs 4.5 to 5 hours, which includes the route along the Na Pali Coast, time in the water, and the return to Kikiaola Harbor.</div></div>
+      <div class="faq-item"><div class="faq-q">Is a Kauai snorkeling tour a good activity for kids?</div><div class="faq-a">Yes. The Na Pali Kai III accepts guests ages 4 and older. Flotation devices are provided, and guests who are not yet comfortable in the ocean stay on the boat during the snorkel stop. Families with children as young as 4 book this tour regularly.</div></div>
+      <div class="faq-item"><div class="faq-q">Where exactly does the snorkeling take place?</div><div class="faq-a">The snorkel site varies by ocean conditions on the day of your tour. We most often stop at Makole, Ke'e Beach (Tunnels), or Nualolo Kai — all along the Na Pali Coast. Nualolo Kai sees far less boat traffic than south-shore locations, and the reef health reflects that difference.</div></div>
+    </div>
+  </main>
+
+  <div class="call-bar"><p>Call daily 7AM–9PM: <a href="tel:8083389980">(808) 338-9980</a> · Kikiaola Small Boat Harbor, Kekaha, HI</p></div>
+  <footer class="s-foot"><div class="sf-in"><div class="sf-grid"><div class="sf-brand"><h3>Makana Charters</h3><p>Native Hawaiian family-owned. Over 200 years documented on the Na Pali Coast. Departing Kikiaola Small Boat Harbor, Kekaha, HI.</p></div><div class="sf-col"><h4>Tours</h4><ul><li>Na Pali Coast Tours</li><li>Sunset Cruise</li><li>Snorkeling Tours</li><li>Private Charters</li></ul></div><div class="sf-col"><h4>Resources</h4><ul><li>What to Pack</li><li>Sea Cave Guide</li><li>Booking FAQ</li><li>About Makana</li></ul></div><div class="sf-col"><h4>Contact</h4><a class="sf-phone">(808) 338-9980</a><div class="sf-hours">Daily 7AM–9PM</div><div class="sf-addr">Kikiaola Small Boat Harbor<br>Kekaha, HI<br>info@makanacharters.com</div></div></div><div class="sf-bot"><p>© 2026 Makana Charters. Native Hawaiian Family-Owned.</p><div class="sf-badge">200+ Years on the Na Pali Coast</div></div></div></footer>
+</div>
+</div>
+
+<!-- ===================== LP 3: KAUAI SUNSET CRUISE ===================== -->
+<div id="lp3" class="tab-panel">
+<div class="site-wrap">
+  <header class="s-hdr">
+    <nav class="s-nav">
+      <div class="s-logo">Makana<span>Charters</span></div>
+      <ul class="s-nav-links"><li>Home</li><li>Private Tours</li><li>Na Pali Tours</li><li>About</li><li>Resources</li></ul>
+      <div class="s-nav-cta"><a href="#" class="btn btn-ghost btn-sm">Call Us</a><a href="#" class="btn btn-teal btn-sm">Book Now</a></div>
+    </nav>
+  </header>
+  <section class="lp-hero">
+    <div class="lp-hero-in">
+      <div class="hero-pill">Golden Hour · Na Pali Coast · Kikiaola Harbor</div>
+      <h1>Kauai Sunset Cruise on the Na Pali Coast</h1>
+      <p class="sub">The cliffs face west. When the light drops, they shift from deep green to burnt orange and violet — and we are already positioned close to the coast when that happens.</p>
+      <div class="hero-btns"><a href="#" class="btn btn-teal btn-lg">Book the Sunset Cruise</a><a href="#" class="btn btn-ghost btn-lg">Call (808) 338-9980</a></div>
+      <div class="hero-trust">
+        <div class="ti">🌅 <strong>Golden Hour</strong> on Na Pali cliffs</div>
+        <div class="ti">🌊 <strong>Sea Cave Access</strong> (conditions permitting)</div>
+        <div class="ti">📸 <strong>360° Deck</strong> on Na Pali Kai III</div>
+        <div class="ti">⏱️ <strong>4.5–5 Hours</strong> on the water</div>
+      </div>
+    </div>
+  </section>
+  <div class="feat-strip">
+    <div class="feat-in">
+      <div class="fi"><div class="fi-icon">⛵</div><div class="fi-title">Kikiaola Departure</div><div class="fi-desc">Closer harbor = more golden-hour time on Na Pali</div></div>
+      <div class="fi"><div class="fi-icon">🌅</div><div class="fi-title">West-Facing Cliffs</div><div class="fi-desc">Na Pali faces the setting sun directly</div></div>
+      <div class="fi"><div class="fi-icon">🌊</div><div class="fi-title">Sea Caves</div><div class="fi-desc">Accessible conditions permitting</div></div>
+      <div class="fi"><div class="fi-icon">📸</div><div class="fi-title">360° Deck</div><div class="fi-desc">Move freely for every shot on Na Pali Kai III</div></div>
+    </div>
+  </div>
+  <div class="pmeta"><div class="pmeta-in"><span>Home</span><span class="sep">›</span><span>Na Pali Tours</span><span class="sep">›</span><span class="cur">Kauai Sunset Cruise</span></div></div>
+  <main class="s-main">
+    <div class="cb">
+      <h2>The Route: Na Pali Coast in Evening Light</h2>
+      <p>We follow the coastline from Polihale, where the sand meets the base of the cliffs at the end of the road, northwest toward the Kalalau Valley. Kalalau Valley is accessible only from the water or by a long backcountry trail — most visitors never see it. At sunset, the valley's waterfall threads down through vegetation that catches every color in the fading light.</p>
+      <p>Further along, the Honopu Archway comes into view. Two beaches sit separated by a massive stone arch that you cannot reach by land. Film crews kept returning to this stretch: the Archway served as a location for King Kong, James Bond, Pirates of the Caribbean, and Six Days Seven Nights.</p>
+      <p>Spinner dolphins and Pacific Bottlenose dolphins are commonly seen along the route. Hawaiian green sea turtles (honu) surface near the caves and along the shore. We do not guarantee sightings, but it is rare that we complete a full coastal run without seeing dolphins at some point.</p>
+      <hr class="sdiv">
+
+      <h2>The Sea Caves: What You Can Actually Access</h2>
+      <p>Can you go inside the Na Pali Coast sea caves on a sunset cruise? Yes, as long as ocean conditions allow on the day of your tour.</p>
+      <p>The sea caves on this stretch of coast include Pirates Cave (Waiahuakua in Hawaiian), Rainbow Falls, and the Honopu Archway. Our catamarans are built low and narrow enough to enter the caves and position close to the archway. Most larger boats running tours from Port Allen cannot do this. Their decks stay at the cave mouth while ours goes dark inside the walls.</p>
+      <p>Makana gets inside the sea caves more often than most operators on the island because of the boats we run and where we depart from. We do not promise cave access on any specific tour, because the ocean decides that on the morning of your trip. Swell height, surge, and visibility all factor in. Our captains have been reading these conditions their entire lives, and they push as far in as the water safely allows.</p>
+      <hr class="sdiv">
+
+      <h2>Why the Departure Point Matters</h2>
+      <p class="la"><strong>Departing from Kikiaola Harbor instead of Port Allen translates to up to an hour more time on the Na Pali Coast.</strong></p>
+      <p>Port Allen is the main commercial harbor on Kauai's south shore and the departure point for most tour operators. Kikiaola Small Boat Harbor sits further west, significantly closer to where the Na Pali cliffs actually begin. For a sunset cruise, that extra time on the coast is not a bonus. It is the whole point. The golden-hour window is fixed. A boat spending extra time getting to and from the coast reaches the caves as the light is already fading, or turns back before the color peaks.</p>
+      <hr class="sdiv">
+
+      <h2>The Boats: Which Catamarans Run the Sunset Cruise</h2>
+      <p>The sunset cruise runs on Na Pali Kai III, our largest catamaran, and on the Seiko 1 and Seiko 2 power catamarans.</p>
+      <p>Na Pali Kai III holds up to 32 guests and has a 360-degree walk-around deck. Photographers specifically request this boat — you can move freely to both sides and the bow without asking anyone to shift, which matters when the cave entrance is on the port side and the cliff face catching color is to starboard. The age minimum is 4 years old.</p>
+      <p>The Seiko 1 and Seiko 2 each hold up to 16 guests and are power catamarans built specifically for the Na Pali Coast. The smaller group size means less time at the boarding ladder and more room at the rail. The age minimum for both is 9 years old.</p>
+      <div class="price-block">
+        <h3>Pricing (Confirmed June 2026)</h3>
+        <div class="price-row">
+          <div class="pi"><div class="pi-boat">Na Pali Kai III</div><div class="pi-price">$199</div><div class="pi-label">per adult</div><div class="pi-detail">Up to 32 guests · Age 4+<br>360° deck · $169 / child</div></div>
+          <div class="pi"><div class="pi-boat">Seiko 1 &amp; Seiko 2</div><div class="pi-price">$219</div><div class="pi-label">per adult</div><div class="pi-detail">Up to 16 guests · Age 9+<br>$189 / child</div></div>
+        </div>
+      </div>
+      <div class="map-embed"><div class="map-icon">📍</div><div class="map-label">Kikiaola Small Boat Harbor, Kekaha, HI</div><div class="map-sub">Google Business Profile Map Embed</div></div>
+    </div>
+
+    <div class="cta-block">
+      <div class="cta-txt"><h2>Book Your Kauai Sunset Cruise</h2><p>Call (808) 338-9980 or book online. Confirm departure time for your date — it adjusts seasonally with the sunset.</p></div>
+      <div class="cta-acts"><a href="#" class="btn btn-teal btn-md">Book Now</a><a href="#" class="btn btn-ghost btn-md">Call (808) 338-9980</a></div>
+    </div>
+
+    <div class="faq-wrap">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item"><div class="faq-q">What time does the sunset cruise depart?</div><div class="faq-a">The departure time adjusts seasonally with the sunset. Call (808) 338-9980 to confirm the exact departure time for your preferred date.</div></div>
+      <div class="faq-item"><div class="faq-q">Do we go inside the sea caves on the sunset cruise?</div><div class="faq-a">Yes, as long as ocean conditions allow on the day of your tour. Our catamarans are built to enter Pirates Cave (Waiahuakua), reach Rainbow Falls, and position at the Honopu Archway. Ocean swell and surge determine access on any given day. Our captains make that call on the water.</div></div>
+      <div class="faq-item"><div class="faq-q">What should I bring on the sunset cruise?</div><div class="faq-a">Bring a light jacket or warm layer — temperatures drop on the water after the sun goes down, even in summer. Wear clothing you can move in. Reef-safe sunscreen is encouraged. A camera with a good lens performs better than a phone in cave and low-light conditions.</div></div>
+      <div class="faq-item"><div class="faq-q">Is the sunset cruise good for photography?</div><div class="faq-a">Yes. The Na Pali cliffs in late afternoon and early evening light produce shooting conditions that photographers plan trips around: long shadows, saturated color, and a low sun angle that lights up the cave walls. Na Pali Kai III has a 360-degree walk-around deck that lets you move freely to either side of the boat and the bow as the coast changes. Book Na Pali Kai III specifically if deck access is your priority.</div></div>
+      <div class="faq-item"><div class="faq-q">What happens if the tour gets cancelled?</div><div class="faq-a">If conditions force a cancellation, we offer a reschedule, a credit, or a full refund. Call (808) 338-9980 or email info@makanacharters.com to confirm current cancellation terms at the time of booking.</div></div>
+      <div class="faq-item"><div class="faq-q">Is the sunset cruise appropriate for children?</div><div class="faq-a">Na Pali Kai III accepts guests ages 4 and up. The Seiko 1 and Seiko 2 have a minimum age of 9 years old. If you are traveling with young children, Na Pali Kai III is the right boat.</div></div>
+    </div>
+  </main>
+
+  <div class="call-bar"><p>Call daily 7AM–9PM: <a href="tel:8083389980">(808) 338-9980</a> · Kikiaola Small Boat Harbor, Kekaha, HI</p></div>
+  <footer class="s-foot"><div class="sf-in"><div class="sf-grid"><div class="sf-brand"><h3>Makana Charters</h3><p>Native Hawaiian family-owned. Over 200 years documented on the Na Pali Coast. Departing Kikiaola Small Boat Harbor, Kekaha, HI.</p></div><div class="sf-col"><h4>Tours</h4><ul><li>Na Pali Coast Tours</li><li>Sunset Cruise</li><li>Snorkeling Tours</li><li>Private Charters</li></ul></div><div class="sf-col"><h4>Resources</h4><ul><li>What to Pack</li><li>Sea Cave Guide</li><li>Booking FAQ</li><li>About Makana</li></ul></div><div class="sf-col"><h4>Contact</h4><a class="sf-phone">(808) 338-9980</a><div class="sf-hours">Daily 7AM–9PM</div><div class="sf-addr">Kikiaola Small Boat Harbor<br>Kekaha, HI<br>info@makanacharters.com</div></div></div><div class="sf-bot"><p>© 2026 Makana Charters. Native Hawaiian Family-Owned.</p><div class="sf-badge">200+ Years on the Na Pali Coast</div></div></div></footer>
+</div>
+</div>
+
+<!-- BLOG TABS PLACEHOLDER - will be appended -->
+<!-- ===================== BLOG 1: NA PALI SNORKELING GUIDE ===================== -->
+<div id="blog1" class="tab-panel">
+<div class="site-wrap">
+  <header class="s-hdr">
+    <nav class="s-nav">
+      <div class="s-logo">Makana<span>Charters</span></div>
+      <ul class="s-nav-links"><li>Home</li><li>Private Tours</li><li>Na Pali Tours</li><li>About</li><li>Resources</li></ul>
+      <div class="s-nav-cta"><a href="#" class="btn btn-ghost btn-sm">Call Us</a><a href="#" class="btn btn-teal btn-sm">Book Now</a></div>
+    </nav>
+  </header>
+  <section class="blog-hero">
+    <div class="blog-hero-in">
+      <div class="bcat">Na Pali Coast Guide</div>
+      <h1>Snorkeling the Na Pali Coast: What to Expect Before You Go</h1>
+      <p class="sub">Snorkeling is included on every Makana Charters Na Pali Coast tour. About one hour in the water, gear provided, spinner dolphins and honu commonly seen. Departs Kikiaola Harbor.</p>
+    </div>
+  </section>
+  <div class="pmeta"><div class="pmeta-in"><span>Home</span><span class="sep">›</span><span>Resources</span><span class="sep">›</span><span class="cur">Na Pali Coast Snorkeling Guide</span></div></div>
+  <main class="s-main">
+    <div class="cb">
+      <h2>Is Snorkeling Included in Na Pali Coast Tours?</h2>
+      <p class="qi">What does a Makana Charters Na Pali Coast tour include for snorkeling?</p>
+      <p class="la"><strong>Yes, snorkeling is included on all Makana Charters Na Pali Coast tours.</strong> We provide snorkel gear and flotation devices for every guest. The snorkel stop runs about one hour.</p>
+      <p>Guests who prefer not to snorkel stay on the boat. There is no pressure to get in the water. Non-swimmers go out with us regularly and spend that hour on deck watching the coast from the water while others snorkel.</p>
+      <hr class="sdiv">
+
+      <h2>Where You'll Snorkel</h2>
+      <h3>Which reef sites do Makana guides use for Na Pali Coast snorkeling?</h3>
+      <p class="la"><strong>We snorkel at one of five sites along the Na Pali Coast and south shore: Makole, Ke'e Beach (Tunnels), Nualolo Kai, Kekaha, or Kaumakani.</strong> The site we use on any given day depends on what the ocean is doing that morning.</p>
+      <p>This is not a limitation. It is how we put you in the best water. Our captains grew up on Kauai, and they check the tides, wind, and swell before departure. A calmer site in good visibility beats a marquee location with poor conditions.</p>
+
+      <h3>What makes these snorkel spots good for snorkeling?</h3>
+      <p class="la"><strong>Each site sits within the Na Pali reef system, where protected shallows give you access to coral formations and reef fish without significant current.</strong> Nualolo Kai sees far less daily boat traffic than south-shore spots, and the reef health reflects that.</p>
+      <p>Ke'e Beach at Tunnels is known for its reef structure and visibility. The sites near Kekaha and Kaumakani give you calmer water when conditions on the north shore are rough.</p>
+      <hr class="sdiv">
+
+      <h2>What Marine Life You're Likely to See</h2>
+      <h3>What marine life do guests commonly see snorkeling on the Na Pali Coast?</h3>
+      <p class="la"><strong>Spinner dolphins, Pacific Bottlenose dolphins, honu (Hawaiian green sea turtles), and diverse reef fish are all commonly spotted on Na Pali Coast snorkeling tours.</strong> We cannot guarantee any wildlife sighting, but it's rare that we don't see dolphins on the water.</p>
+      <p>Honu are the ones guests talk about most. These Hawaiian green sea turtles feed on the reef and regularly appear at several of our snorkel sites. Sighting one in the water, a few feet from you, tends to hold people still.</p>
+
+      <h3>Do guides know where to find wildlife on the Na Pali Coast?</h3>
+      <p class="la"><strong>Our captains and crew know the tides and habitats along this coast from years of daily time on the water.</strong> They are not following a script. They know where dolphins travel in the morning, which reef sections the honu prefer, and how conditions shift through the day.</p>
+      <p>That knowledge comes from working these waters year-round, not from a training manual. Our family has been on this coast for over 200 years. The crew is an extension of that continuity.</p>
+      <hr class="sdiv">
+
+      <h2>What You Need to Know Before You Get in the Water</h2>
+      <h3>Do you need to know how to swim to snorkel on a Na Pali Coast tour?</h3>
+      <p class="la"><strong>We recommend basic swimming ability, but non-swimmers do join us.</strong> We provide flotation devices, and guests are always supervised. If you are uncertain about your ability in open water, call us before you book at (808) 338-9980 and we can talk through your options.</p>
+      <p>The water at our snorkel sites is not rough by Na Pali standards, but it is the open ocean. Swell and surge vary by site and season. Summer months, June through August, bring the calmest conditions for snorkeling on the north shore.</p>
+
+      <h3>What snorkel gear is provided, and what should you bring?</h3>
+      <p class="la"><strong>We provide snorkel gear and flotation devices for all guests. You do not need to bring your own gear.</strong> If you prefer your own mask or fins, you are welcome to bring them.</p>
+      <p>Bring reef-safe sunscreen. Standard chemical sunscreen is harmful to Hawaiian coral reefs and is not allowed at several of the sites we use. Wear or bring water shoes if you want them, though you enter the water from the boat rather than a beach. A change of clothes for after the snorkel is always a good idea.</p>
+
+      <h3>When is the best time of year to snorkel the Na Pali Coast?</h3>
+      <p class="la"><strong>Summer months give you the calmest conditions for Na Pali Coast snorkeling.</strong> June, July, and August bring lower swell on the north shore, better visibility, and more protected entry at sites like Ke'e Beach and Nualolo Kai.</p>
+      <p>Winter tours still operate and the coast itself is dramatic year-round, but north shore snorkel sites can see more surge from November through March. We adjust our site selection based on conditions, so winter guests still get in the water when the reef is accessible.</p>
+      <hr class="sdiv">
+
+      <h2>Book a Na Pali Coast Snorkeling Tour with Makana</h2>
+      <p>Makana — the Hawaiian word for gift — is a Native Hawaiian family-owned operation that has been sailing these waters for over 200 years. Our Na Pali Coast tours depart from Kikiaola Small Boat Harbor in Kekaha, the closest departure point to the Na Pali Coast on Kauai.</p>
+      <p>Na Pali Kai III carries up to 32 guests with a 360-degree walk-around deck. Adult pricing is $199; children 4 and older are $169. All tours include snorkel gear, flotation devices, and a deli-style lunch.</p>
+      <div class="map-embed"><div class="map-icon">📍</div><div class="map-label">Kikiaola Small Boat Harbor, Kekaha, HI</div><div class="map-sub">Google Business Profile Map Embed</div></div>
+    </div>
+
+    <div class="cta-block">
+      <div class="cta-txt"><h2>Ready to Book?</h2><p>Call us or book online. Daily 7AM–9PM.</p></div>
+      <div class="cta-acts"><a href="#" class="btn btn-teal btn-md">Book Now</a><a href="#" class="btn btn-ghost btn-md">Call (808) 338-9980</a></div>
+    </div>
+
+    <div class="faq-wrap">
+      <h2>Frequently Asked Questions About Na Pali Coast Snorkeling</h2>
+      <div class="faq-item"><div class="faq-q">Is snorkel gear provided on Makana Charters tours?</div><div class="faq-a">Yes, snorkel gear and flotation devices are included on every Na Pali Coast tour. You do not need to bring your own gear, though guests who prefer their own mask or fins are welcome to use them.</div></div>
+      <div class="faq-item"><div class="faq-q">What if I can't swim — can I still go on the tour?</div><div class="faq-a">Yes. Non-swimmers join our tours regularly. You are not required to snorkel, and guests who stay on the boat have a full view of the coast during the snorkel stop. If you want to be in the water but are not a confident swimmer, we provide flotation devices and you'll have crew nearby. Call us at (808) 338-9980 if you want to talk through what works best for your situation.</div></div>
+      <div class="faq-item"><div class="faq-q">Will I see sea turtles snorkeling on the Na Pali Coast?</div><div class="faq-a">Honu (Hawaiian green sea turtles) are commonly spotted at several of our snorkel sites, but we cannot guarantee a sighting. Our guides know the reef sections the honu frequent, and encounters happen often enough that most guests do see them. Wildlife follows its own schedule, and we never promise specific sightings.</div></div>
+      <div class="faq-item"><div class="faq-q">What time of year is best for snorkeling the Na Pali Coast?</div><div class="faq-a">Summer, June through August, gives you the calmest conditions and best visibility for Na Pali Coast snorkeling. The north shore swells settle down significantly during these months, which makes sites like Ke'e Beach and Nualolo Kai easier to access. We operate year-round and adjust our snorkel site based on daily conditions throughout every season.</div></div>
+    </div>
+  </main>
+
+  <div class="call-bar"><p>Call daily 7AM–9PM: <a href="tel:8083389980">(808) 338-9980</a> · Kikiaola Small Boat Harbor, Kekaha, HI</p></div>
+  <footer class="s-foot"><div class="sf-in"><div class="sf-grid"><div class="sf-brand"><h3>Makana Charters</h3><p>Native Hawaiian family-owned. Over 200 years documented on the Na Pali Coast. Departing Kikiaola Small Boat Harbor, Kekaha, HI.</p></div><div class="sf-col"><h4>Tours</h4><ul><li>Na Pali Coast Tours</li><li>Sunset Cruise</li><li>Snorkeling Tours</li><li>Private Charters</li></ul></div><div class="sf-col"><h4>Resources</h4><ul><li>What to Pack</li><li>Sea Cave Guide</li><li>Booking FAQ</li><li>About Makana</li></ul></div><div class="sf-col"><h4>Contact</h4><a class="sf-phone">(808) 338-9980</a><div class="sf-hours">Daily 7AM–9PM</div><div class="sf-addr">Kikiaola Small Boat Harbor<br>Kekaha, HI<br>info@makanacharters.com</div></div></div><div class="sf-bot"><p>© 2026 Makana Charters. Native Hawaiian Family-Owned.</p><div class="sf-badge">200+ Years on the Na Pali Coast</div></div></div></footer>
+</div>
+</div>
+
+<!-- ===================== BLOG 2: WHAT TO PACK ===================== -->
+<div id="blog2" class="tab-panel">
+<div class="site-wrap">
+  <header class="s-hdr">
+    <nav class="s-nav">
+      <div class="s-logo">Makana<span>Charters</span></div>
+      <ul class="s-nav-links"><li>Home</li><li>Private Tours</li><li>Na Pali Tours</li><li>About</li><li>Resources</li></ul>
+      <div class="s-nav-cta"><a href="#" class="btn btn-ghost btn-sm">Call Us</a><a href="#" class="btn btn-teal btn-sm">Book Now</a></div>
+    </nav>
+  </header>
+  <section class="blog-hero">
+    <div class="blog-hero-in">
+      <div class="bcat">Travel Tips</div>
+      <h1>What to Pack for a Na Pali Coast Snorkel Tour</h1>
+      <p class="sub">Snorkel gear, lunch, and drinks are all included. Your packing list is lighter than you might expect — here's what to actually bring.</p>
+    </div>
+  </section>
+  <div class="pmeta"><div class="pmeta-in"><span>Home</span><span class="sep">›</span><span>Resources</span><span class="sep">›</span><span class="cur">What to Pack</span></div></div>
+  <main class="s-main">
+    <div class="cb">
+      <p>Snorkel gear is included on your Na Pali Coast tour. Makana Charters provides snorkel gear, flotation devices, a deli-style lunch, soft drinks, and local juices for every guest. Your packing list is lighter than you might expect. What you bring yourself comes down to sun protection, a towel, and a few personal items for comfort on the water.</p>
+      <hr class="sdiv">
+
+      <h2>What Makana Provides</h2>
+      <p>Your Na Pali coast snorkel tour includes everything you need for the water and the meal. We outfit every guest with snorkel gear and flotation devices before the snorkel stop, so there is no need to rent equipment separately on the island.</p>
+      <p>Lunch is served onboard. We put out a deli-style spread with turkey, ham, roast beef, and a vegetarian option, along with fruits and snacks. Soft drinks and local juices are included throughout the tour.</p>
+      <p>Every boat has an onboard restroom. Our larger catamarans also have freshwater showers, so you can rinse off after snorkeling before the return to Kikiaola Harbor. The full tour runs 4.5 to 5 hours. From the time you board to the time you return, your basics are covered.</p>
+      <hr class="sdiv">
+
+      <h2>What to Wear on a Na Pali Coast Tour</h2>
+      <p>Wear your swimsuit or beachwear under your clothes. You will be in the water for about one hour at the snorkel stop, so plan on getting wet. A hat matters more than most guests realize — sun exposure on the water is direct and sustained across the full tour.</p>
+      <p>Bring a light layer for the boat ride. The catamaran moves fast, and the wind off the ocean is cooler than the air on shore, especially in the morning. A lightweight shirt or a thin cover-up works.</p>
+      <p>Wear shoes or sandals you are comfortable walking in at the harbor, even if you plan to go barefoot on the boat. Kikiaola Small Boat Harbor has uneven surfaces near the dock.</p>
+      <p>For sunscreen: reef-safe formulas are the considerate choice near coral. The snorkel stop puts you directly above reef habitat, and non-reef-safe sunscreen washes off into the water. We recommend switching to a reef-safe formula before your tour.</p>
+      <hr class="sdiv">
+
+      <h2>What to Bring</h2>
+      <p>Bring a towel. We provide freshwater showers on our larger boats, but we do not supply towels. A quick-dry travel towel packs flat and works well.</p>
+      <p>Bring extra sunscreen. What you apply at the harbor will wear off during the tour. Reef-safe sunscreen is preferred near the coral.</p>
+      <p>A hat and sunglasses protect you on the water. UV exposure reflects off the ocean surface and hits harder than it feels on land.</p>
+      <p>If you want photos, bring a waterproof phone case or a waterproof camera. Phones are the most common item lost overboard. A case with a lanyard or float attachment gives you peace of mind.</p>
+      <p>If you are prone to seasickness, consult your doctor before the tour and take any medication as directed before you board. Do not wait until you are already on the water.</p>
+      <p>You are welcome to bring your own snorkel mask if you have a preferred fit. We provide gear for every guest, but if you use prescription lenses or have a mask that fits better, bring it along.</p>
+      <p>Light personal snacks or an extra drink are fine if you want something not on the lunch spread. Space on the boat is shared among all guests, so keep any bag small.</p>
+      <hr class="sdiv">
+
+      <h2>What to Leave Behind</h2>
+      <p>Leave valuables at your hotel. Phones and cameras can be secured in a waterproof case, but jewelry, watches, and anything you cannot afford to lose or get wet should stay ashore. The boat is active on the water and spray comes aboard regularly.</p>
+      <p>Do not bring bulky luggage or large bags. Storage space on the catamaran is shared. A small dry bag or a backpack is enough for everything on this list.</p>
+      <hr class="sdiv">
+
+      <h2>A Note on Seasickness</h2>
+      <p>Most guests on a Na Pali coast snorkel tour do not have issues. Our catamarans are stable and built specifically for these waters. The route does include open ocean, and conditions vary by day and season.</p>
+      <p>If you have a history of motion sickness on boats, consult a doctor before your tour. Over-the-counter options work best when taken before boarding, not after symptoms start. If your doctor prescribes a patch, those take time to reach full effect, so plan ahead.</p>
+      <hr class="sdiv">
+
+      <h2>Book Your Na Pali Coast Tour</h2>
+      <p>Makana — the Hawaiian word for gift — is a Native Hawaiian family-owned business with over 200 years of documented history on these waters. Our tours depart from Kikiaola Small Boat Harbor in Kekaha, the closest departure point to the Na Pali Coast on Kauai.</p>
+      <p>Tours run $199 per adult and $169 per child on our larger boats, and $219 per adult and $189 per child on our power catamarans. The minimum age is 4 years and older on the Na Pali Kai III.</p>
+      <div class="map-embed"><div class="map-icon">📍</div><div class="map-label">Kikiaola Small Boat Harbor, Kekaha, HI</div><div class="map-sub">Google Business Profile Map Embed</div></div>
+    </div>
+
+    <div class="cta-block">
+      <div class="cta-txt"><h2>Ready to Book?</h2><p>Call (808) 338-9980. Daily 7AM–9PM.</p></div>
+      <div class="cta-acts"><a href="#" class="btn btn-teal btn-md">Book Now</a><a href="#" class="btn btn-ghost btn-md">Call (808) 338-9980</a></div>
+    </div>
+
+    <div class="faq-wrap">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item"><div class="faq-q">Is snorkel gear included on a Na Pali Coast tour?</div><div class="faq-a">Yes. Makana Charters includes snorkel gear and flotation devices for every guest on every tour. You do not need to rent or bring your own unless you prefer a specific fit or use a prescription mask.</div></div>
+      <div class="faq-item"><div class="faq-q">Can I bring my own snorkel mask?</div><div class="faq-a">Yes. You are welcome to bring your own snorkel mask. We provide gear for all guests, but if you have a mask that fits better or corrects your vision, yours works fine onboard.</div></div>
+      <div class="faq-item"><div class="faq-q">What food is served on the tour?</div><div class="faq-a">We serve a deli-style lunch onboard. Options include turkey, ham, roast beef, and a vegetarian selection, plus fruits and snacks. Soft drinks and local juices are included throughout the tour.</div></div>
+      <div class="faq-item"><div class="faq-q">What if it rains during the tour?</div><div class="faq-a">We operate in light rain. Na Pali Coast weather changes quickly, and most guests stay on the water through passing showers. If conditions require cancellation, we offer a reschedule, credit, or full refund. Call (808) 338-9980 for current cancellation terms before your tour date.</div></div>
+    </div>
+  </main>
+
+  <div class="call-bar"><p>Call daily 7AM–9PM: <a href="tel:8083389980">(808) 338-9980</a> · Kikiaola Small Boat Harbor, Kekaha, HI</p></div>
+  <footer class="s-foot"><div class="sf-in"><div class="sf-grid"><div class="sf-brand"><h3>Makana Charters</h3><p>Native Hawaiian family-owned. Over 200 years documented on the Na Pali Coast. Departing Kikiaola Small Boat Harbor, Kekaha, HI.</p></div><div class="sf-col"><h4>Tours</h4><ul><li>Na Pali Coast Tours</li><li>Sunset Cruise</li><li>Snorkeling Tours</li><li>Private Charters</li></ul></div><div class="sf-col"><h4>Resources</h4><ul><li>What to Pack</li><li>Sea Cave Guide</li><li>Booking FAQ</li><li>About Makana</li></ul></div><div class="sf-col"><h4>Contact</h4><a class="sf-phone">(808) 338-9980</a><div class="sf-hours">Daily 7AM–9PM</div><div class="sf-addr">Kikiaola Small Boat Harbor<br>Kekaha, HI<br>info@makanacharters.com</div></div></div><div class="sf-bot"><p>© 2026 Makana Charters. Native Hawaiian Family-Owned.</p><div class="sf-badge">200+ Years on the Na Pali Coast</div></div></div></footer>
+</div>
+</div>
+<!-- ===================== BLOG 3: PRIVATE CATAMARAN GROUPS ===================== -->
+<div id="blog3" class="tab-panel">
+<div class="site-wrap">
+  <header class="s-hdr">
+    <nav class="s-nav">
+      <div class="s-logo">Makana<span>Charters</span></div>
+      <ul class="s-nav-links"><li>Home</li><li>Private Tours</li><li>Na Pali Tours</li><li>About</li><li>Resources</li></ul>
+      <div class="s-nav-cta"><a href="#" class="btn btn-ghost btn-sm">Call Us</a><a href="#" class="btn btn-teal btn-sm">Book Now</a></div>
+    </nav>
+  </header>
+  <section class="blog-hero">
+    <div class="blog-hero-in">
+      <div class="bcat">Private Charters</div>
+      <h1>Private Catamaran Charter on Kauai: What to Know Before Booking for a Group</h1>
+      <p class="sub">Groups of 2 to 32. Same Na Pali Coast route, exclusive boat. Book online for groups up to 12, or call (808) 338-9980 for larger groups.</p>
+    </div>
+  </section>
+  <div class="pmeta"><div class="pmeta-in"><span>Home</span><span class="sep">›</span><span>Private Tours</span><span class="sep">›</span><span class="cur">Private Catamaran Charters</span></div></div>
+  <main class="s-main">
+    <div class="cb">
+      <p>Yes, you can rent a private catamaran for your group on Kauai. Makana Charters offers private Na Pali Coast charters on two boats — one for groups up to 12, one for groups up to 32. The route, the crew, and the inclusions are the same as the shared tour. The difference is simple: the boat belongs to your group for the day.</p>
+      <hr class="sdiv">
+
+      <h2>Who Books Private Charters</h2>
+      <p>Private Kauai catamaran charters work for any group that wants the Na Pali Coast without sharing the boat with strangers. Most bookings come from families traveling together, wedding parties, friend groups marking a milestone, and corporate teams looking for a day on the water that doesn't involve a conference room.</p>
+      <p>This is not a special product with a different itinerary. It is the same Na Pali Coast tour — the same sea caves, the same snorkel stop, the same deli lunch, the same crew. The only difference is that your group has the whole boat. What they share is that they want the coast to themselves.</p>
+      <hr class="sdiv">
+
+      <h2>Which Boats Are Available for Private Charters</h2>
+      <p>The right boat depends on the size of your group.</p>
+      <h3>Makana (up to 12 guests)</h3>
+      <p>The Makana is the smallest boat in the fleet. It is the right choice for intimate groups: a family of eight, a couple celebrating with close friends, a small wedding party. The age minimum is 9 and older. Pricing is $219 per adult and $189 per child. Groups up to 12 can book directly online by purchasing the standard tickets for your party.</p>
+      <h3>Na Pali Kai III (up to 32 guests)</h3>
+      <p>The Na Pali Kai III carries up to 32 guests and accepts children as young as 4. It has a 360-degree walk-around deck and freshwater showers. Pricing is $199 per adult and $169 per child. For groups over 12, call (808) 338-9980 to arrange the private charter. The team will confirm availability and work through the details with you.</p>
+      <p>Both boats depart from Kikiaola Small Boat Harbor in Kekaha.</p>
+      <hr class="sdiv">
+
+      <h2>The Na Pali Coast Route</h2>
+      <p>The Na Pali Coast is the western shore of Kauai, a stretch of sea cliffs that rise steeply from the water. It is not accessible by road. A catamaran is one of the few ways to see it from the water.</p>
+      <p>The route runs from Kikiaola Harbor north along the coast. You pass Polihale, the long shoreline at the base of the cliffs. The tour continues into Kalalau Valley, where waterfalls come down from the ridgeline. Sea caves follow: Pirates Cave (Waiahuakua in Hawaiian), Rainbow Falls, and the Honopu Archway, the filming location for King Kong, Six Days Seven Nights, James Bond, and Pirates of the Caribbean. Sea cave entry depends on ocean conditions on the day of the tour.</p>
+      <p>After the coast section, the tour stops for about one hour of snorkeling. Spinner dolphins, Pacific Bottlenose dolphins, and honu (Hawaiian green sea turtles) are commonly spotted along the way. Wildlife sightings are never guaranteed, but it is rare that the crew doesn't see dolphins. The full tour runs 4.5 to 5 hours.</p>
+      <hr class="sdiv">
+
+      <h2>Why Departure Point Matters for Groups</h2>
+      <p>Makana Charters departs from Kikiaola Small Boat Harbor, the closest harbor to the Na Pali Coast on Kauai. Most competing operators leave from Port Allen, which adds significant transit time in each direction. Departing from Kikiaola means your group spends more time on the Na Pali cliffs and less time moving through open water to reach them. When you have paid for a private charter, that difference is meaningful.</p>
+      <hr class="sdiv">
+
+      <h2>What's Included</h2>
+      <p>Every Makana Charters tour includes snorkel gear and flotation devices, a deli-style lunch with turkey, ham, roast beef, or vegetarian options, plus fruit, snacks, soft drinks, and local juices. Both boats have onboard restrooms. The Na Pali Kai III has freshwater showers.</p>
+      <p>Cultural narration from the Native Hawaiian crew is part of every tour. Our family has been sailing these waters for over 200 years. The captains grew up on Kauai. The narration reflects that history.</p>
+      <p>Guests are welcome to bring their own alcohol, but it stays sealed until after the snorkel stop.</p>
+      <hr class="sdiv">
+
+      <h2>How to Book Your Private Catamaran Charter</h2>
+      <p><strong>Groups up to 12:</strong> Book online at makanacharters.com. Purchase standard tickets for each person in your group. The Makana boat holds a maximum of 12 guests, so a full purchase covers the private charter.</p>
+      <p><strong>Groups over 12:</strong> Call (808) 338-9980. The team is available from 7AM to 9PM. They will confirm which dates have availability on the Na Pali Kai III, go over the details with your group, and get you set up.</p>
+      <div class="map-embed"><div class="map-icon">📍</div><div class="map-label">Kikiaola Small Boat Harbor, Kekaha, HI</div><div class="map-sub">Google Business Profile Map Embed</div></div>
+    </div>
+
+    <div class="cta-block">
+      <div class="cta-txt"><h2>Book a Private Charter</h2><p>Groups up to 12: book online. Groups over 12: call (808) 338-9980.</p></div>
+      <div class="cta-acts"><a href="#" class="btn btn-teal btn-md">Book Online</a><a href="#" class="btn btn-ghost btn-md">Call (808) 338-9980</a></div>
+    </div>
+
+    <div class="faq-wrap">
+      <h2>Frequently Asked Questions About Private Kauai Catamaran Charters</h2>
+      <div class="faq-item"><div class="faq-q">How many people can book a private catamaran charter on Kauai?</div><div class="faq-a">Groups of 2 to 32 guests can book a private Na Pali Coast charter through Makana Charters. Groups up to 12 use the Makana boat and can book online. Groups of 13 to 32 use the Na Pali Kai III and should call (808) 338-9980 to arrange.</div></div>
+      <div class="faq-item"><div class="faq-q">Can we customize the itinerary for a private charter?</div><div class="faq-a">The core Na Pali Coast route is the same for private charters as for shared tours. The crew works with your group on the details when you call. Contact Makana Charters at (808) 338-9980 to talk through what is possible for your specific group.</div></div>
+      <div class="faq-item"><div class="faq-q">Is there a minimum group size for a private charter?</div><div class="faq-a">No. There is no minimum group size for a private Kauai catamaran charter. A private charter means your group has the boat to itself. Two people booking the Makana boat get the same private experience as a group of twelve. Pricing is per person at the standard rate.</div></div>
+      <div class="faq-item"><div class="faq-q">Is a deposit required to hold a private charter booking?</div><div class="faq-a">For groups over 12 booking the Na Pali Kai III, call (808) 338-9980 to confirm booking requirements. The team handles group reservations directly and will walk you through the process.</div></div>
+    </div>
+  </main>
+
+  <div class="call-bar"><p>Call daily 7AM–9PM: <a href="tel:8083389980">(808) 338-9980</a> · Kikiaola Small Boat Harbor, Kekaha, HI</p></div>
+  <footer class="s-foot"><div class="sf-in"><div class="sf-grid"><div class="sf-brand"><h3>Makana Charters</h3><p>Native Hawaiian family-owned. Over 200 years documented on the Na Pali Coast. Departing Kikiaola Small Boat Harbor, Kekaha, HI.</p></div><div class="sf-col"><h4>Tours</h4><ul><li>Na Pali Coast Tours</li><li>Sunset Cruise</li><li>Snorkeling Tours</li><li>Private Charters</li></ul></div><div class="sf-col"><h4>Resources</h4><ul><li>What to Pack</li><li>Sea Cave Guide</li><li>Booking FAQ</li><li>About Makana</li></ul></div><div class="sf-col"><h4>Contact</h4><a class="sf-phone">(808) 338-9980</a><div class="sf-hours">Daily 7AM–9PM</div><div class="sf-addr">Kikiaola Small Boat Harbor<br>Kekaha, HI<br>info@makanacharters.com</div></div></div><div class="sf-bot"><p>© 2026 Makana Charters. Native Hawaiian Family-Owned.</p><div class="sf-badge">200+ Years on the Na Pali Coast</div></div></div></footer>
+</div>
+</div>
+
+<!-- ===================== BLOG 4: SUNSET CRUISE GUIDE ===================== -->
+<div id="blog4" class="tab-panel">
+<div class="site-wrap">
+  <header class="s-hdr">
+    <nav class="s-nav">
+      <div class="s-logo">Makana<span>Charters</span></div>
+      <ul class="s-nav-links"><li>Home</li><li>Private Tours</li><li>Na Pali Tours</li><li>About</li><li>Resources</li></ul>
+      <div class="s-nav-cta"><a href="#" class="btn btn-ghost btn-sm">Call Us</a><a href="#" class="btn btn-teal btn-sm">Book Now</a></div>
+    </nav>
+  </header>
+  <section class="blog-hero">
+    <div class="blog-hero-in">
+      <div class="bcat">Na Pali Coast Guide</div>
+      <h1>Kauai Sunset Cruise: What the Na Pali Coast Looks Like at Golden Hour</h1>
+      <p class="sub">At sunset, the Na Pali Coast cliffs shift from deep green to burnt orange and violet as the sun drops behind the horizon. Our afternoon departure from Kikiaola Harbor puts you on the coast when that light is at its peak.</p>
+    </div>
+  </section>
+  <div class="pmeta"><div class="pmeta-in"><span>Home</span><span class="sep">›</span><span>Resources</span><span class="sep">›</span><span class="cur">Kauai Sunset Cruise Guide</span></div></div>
+  <main class="s-main">
+    <div class="cb">
+      <p>A Kauai sunset cruise on the Na Pali Coast is worth booking. The cliffs face west, which means the last light of the day hits the rock face directly — deep amber, burnt orange, violet, colors the same ridgelines do not show at any other hour. Our afternoon departure from Kikiaola Harbor puts you on the coast when that light is at its peak.</p>
+      <hr class="sdiv">
+
+      <h2>What the Na Pali Coast Looks Like at Sunset</h2>
+      <p class="qi">What does the Na Pali Coast look like at sunset?</p>
+      <p class="la"><strong>At sunset, the Na Pali Coast cliffs shift from deep green to burnt orange and violet as the sun drops behind the horizon.</strong> The color change moves across the rock face in real time. Guests on the water often go quiet watching it.</p>
+      <p>The Kalalau Valley is one of the most visible landmarks during the evening tour. The upper ridgelines catch the late-day sun long after the valley floor has gone to shadow. The contrast is sharper in the evening than at midday.</p>
+      <p>Polihale — the long stretch of coastline at the western end of Na Pali — is where the sun sets directly over the water. Spinner dolphins are commonly spotted along this stretch in the evening hours. Honu (Hawaiian green sea turtles) are also seen regularly near the shoreline. Neither is guaranteed, but it is rare that we do not see dolphins on the water during an evening run.</p>
+      <hr class="sdiv">
+
+      <h2>The Route</h2>
+      <p class="qi">What route does the Na Pali Coast sunset cruise follow?</p>
+      <p class="la"><strong>We depart from Kikiaola Small Boat Harbor in Kekaha and run the full Na Pali Coast heading northwest toward Polihale and the Kalalau Valley.</strong> The route covers the same coastline as our daytime tours. The difference is the light.</p>
+      <p>Along the way, we pass the sea caves, including Pirates Cave (Waiahuakua) and the Honopu Archway, as long as ocean conditions allow. Honopu is the natural arch that has appeared in King Kong, Pirates of the Caribbean, and several other productions. Seeing it at golden hour, with the last light coming through the arch, is a different experience than seeing it at noon.</p>
+      <p>Because the sun is moving during the tour, the light on the cliffs changes from the time we leave Kikiaola to the time we turn back. The first hour looks different from the last.</p>
+      <hr class="sdiv">
+
+      <h2>Why Departure Point Matters</h2>
+      <p class="qi">Why does it matter where a Kauai sunset cruise departs from?</p>
+      <p class="la"><strong>A sunset cruise that departs from Port Allen spends up to an hour in transit before reaching the Na Pali Coast. That is time taken directly from your golden-hour window on the cliffs.</strong> Kikiaola Harbor sits at the closest point to the Na Pali Coast on the island. We reach the cliffs faster and stay longer.</p>
+      <p>For a daytime tour, the transit difference is noticeable. For a sunset cruise, it is critical. The golden-hour window on the Na Pali Coast runs roughly 45 to 60 minutes before the sun meets the horizon. Departing from Port Allen means some guests arrive as the color is already fading.</p>
+      <hr class="sdiv">
+
+      <h2>Tips for Photographers</h2>
+      <p class="qi">What should photographers know about the sunset cruise?</p>
+      <p class="la"><strong>Na Pali Kai III has a 360-degree walk-around deck, which gives photographers access to every angle of the coast without repositioning around other guests.</strong> That matters when the light is coming from one direction and the shot requires moving quickly.</p>
+      <p>Evening light on Na Pali is directional and low. The cliffs face west, so the light hits them head-on in the last hour before sunset. Colors are warmer and shadows are longer than during midday shooting.</p>
+      <p>Bring equipment that handles spray and wind. The deck is exposed and the catamaran moves at speed. A waterproof bag or housing for your camera is practical, not optional. A wide lens captures the cliff faces well. A longer lens helps isolate the Honopu Archway or the sea cave openings.</p>
+      <hr class="sdiv">
+
+      <h2>What to Bring for a Sunset Cruise</h2>
+      <p class="qi">What should guests pack for an evening Na Pali Coast tour?</p>
+      <p class="la"><strong>Bring a light layer for the return leg.</strong> Once the sun is down, the temperature on the water drops noticeably. A windbreaker or light jacket makes the difference between a comfortable ride back and a cold one.</p>
+      <p>Beyond that: sunscreen, a camera, and a bag that closes securely. For a full packing breakdown, our Na Pali Coast tour guide covers everything you need for a day on the water.</p>
+      <hr class="sdiv">
+
+      <h2>Book a Kauai Sunset Cruise with Makana</h2>
+      <p>Our family has been on these waters for over 200 years. Makana, the Hawaiian word for gift, is the name we chose because this coast is something we have always believed in sharing. Native Hawaiian-owned, departing from Kikiaola Harbor, with captains who have lived on Kauai their whole lives.</p>
+      <p>To check availability or ask about the sunset cruise schedule, call us at (808) 338-9980 or reach us at info@makanacharters.com. Our team is available 7AM to 9PM.</p>
+      <div class="map-embed"><div class="map-icon">📍</div><div class="map-label">Kikiaola Small Boat Harbor, Kekaha, HI</div><div class="map-sub">Google Business Profile Map Embed</div></div>
+    </div>
+
+    <div class="cta-block">
+      <div class="cta-txt"><h2>Book the Sunset Cruise</h2><p>Call to confirm departure time for your date — it adjusts seasonally. Daily 7AM–9PM.</p></div>
+      <div class="cta-acts"><a href="#" class="btn btn-teal btn-md">Book Now</a><a href="#" class="btn btn-ghost btn-md">Call (808) 338-9980</a></div>
+    </div>
+
+    <div class="faq-wrap">
+      <h2>Frequently Asked Questions About the Kauai Sunset Cruise</h2>
+      <div class="faq-item"><div class="faq-q">What time does the Kauai sunset cruise depart?</div><div class="faq-a">The sunset cruise runs on an afternoon departure schedule. We do not publish a fixed time here because availability varies by season and date. Call (808) 338-9980 or check current scheduling at makanacharters.com to confirm the time for your travel dates.</div></div>
+      <div class="faq-item"><div class="faq-q">How long is the Na Pali Coast sunset cruise?</div><div class="faq-a">The sunset cruise runs approximately 4.5 to 5 hours, covering the full Na Pali Coast from Kikiaola Harbor to the Kalalau Valley and Polihale shoreline and back.</div></div>
+      <div class="faq-item"><div class="faq-q">Are dolphins more active at sunset on the Na Pali Coast?</div><div class="faq-a">Spinner dolphins are commonly spotted during evening hours along the Na Pali Coast and near the Polihale shoreline. We cannot guarantee sightings, but it is rare that we run an evening tour without seeing dolphins on the water.</div></div>
+      <div class="faq-item"><div class="faq-q">Is it colder on the evening tour than on a daytime Na Pali Coast tour?</div><div class="faq-a">Yes. Once the sun drops below the horizon, temperatures on the water fall faster than most guests expect. A light jacket or windbreaker is worth bringing. The boat is open deck, and the ride back after sunset is cooler than the outbound leg.</div></div>
+    </div>
+  </main>
+
+  <div class="call-bar"><p>Call daily 7AM–9PM: <a href="tel:8083389980">(808) 338-9980</a> · Kikiaola Small Boat Harbor, Kekaha, HI</p></div>
+  <footer class="s-foot"><div class="sf-in"><div class="sf-grid"><div class="sf-brand"><h3>Makana Charters</h3><p>Native Hawaiian family-owned. Over 200 years documented on the Na Pali Coast. Departing Kikiaola Small Boat Harbor, Kekaha, HI.</p></div><div class="sf-col"><h4>Tours</h4><ul><li>Na Pali Coast Tours</li><li>Sunset Cruise</li><li>Snorkeling Tours</li><li>Private Charters</li></ul></div><div class="sf-col"><h4>Resources</h4><ul><li>What to Pack</li><li>Sea Cave Guide</li><li>Booking FAQ</li><li>About Makana</li></ul></div><div class="sf-col"><h4>Contact</h4><a class="sf-phone">(808) 338-9980</a><div class="sf-hours">Daily 7AM–9PM</div><div class="sf-addr">Kikiaola Small Boat Harbor<br>Kekaha, HI<br>info@makanacharters.com</div></div></div><div class="sf-bot"><p>© 2026 Makana Charters. Native Hawaiian Family-Owned.</p><div class="sf-badge">200+ Years on the Na Pali Coast</div></div></div></footer>
+</div>
+</div>
+<!-- ===================== BLOG 5: NA PALI SEA CAVES ===================== -->
+<div id="blog5" class="tab-panel">
+<div class="site-wrap">
+  <header class="s-hdr">
+    <nav class="s-nav">
+      <div class="s-logo">Makana<span>Charters</span></div>
+      <ul class="s-nav-links"><li>Home</li><li>Private Tours</li><li>Na Pali Tours</li><li>About</li><li>Resources</li></ul>
+      <div class="s-nav-cta"><a href="#" class="btn btn-ghost btn-sm">Call Us</a><a href="#" class="btn btn-teal btn-sm">Book Now</a></div>
+    </nav>
+  </header>
+  <section class="blog-hero">
+    <div class="blog-hero-in">
+      <div class="bcat">Na Pali Coast Guide</div>
+      <h1>The Na Pali Coast Sea Caves: What They Are and How to See Them by Boat</h1>
+      <p class="sub">Yes, boats can go inside the Na Pali sea caves. Our catamarans are built to navigate in and out of the caves — as long as ocean conditions allow on the day of your tour.</p>
+    </div>
+  </section>
+  <div class="pmeta"><div class="pmeta-in"><span>Home</span><span class="sep">›</span><span>Resources</span><span class="sep">›</span><span class="cur">Na Pali Coast Sea Caves</span></div></div>
+  <main class="s-main">
+    <div class="cb">
+      <p>Yes, boats can go inside the Na Pali sea caves. Our catamarans are built specifically to navigate in and out of the caves along the Na Pali Coast — as long as ocean conditions allow on the day of your tour.</p>
+      <p>Three caves draw the most attention from guests: Pirates Cave, Rainbow Falls, and the Honopu Archway. Each one is different in shape, light, and scale. The only way to see them from the water is by boat.</p>
+      <hr class="sdiv">
+
+      <h2>The Na Pali Coast Sea Caves</h2>
+      <p class="qi">What are the named sea caves on the Na Pali Coast?</p>
+      <p class="la"><strong>The Na Pali Coast has three main sea caves that boats visit on a standard tour: Pirates Cave (Waiahuakua), Rainbow Falls, and the Honopu Archway.</strong></p>
+      <p>Pirates Cave carries both its common name and its Hawaiian name, Waiahuakua. The cave has an open ceiling that lets in natural light, which makes the experience inside feel more like a cathedral than a tunnel. Our catamarans enter when the ocean allows.</p>
+      <p>Rainbow Falls is named for the light effect that forms inside the cave when conditions are right. Sunlight refracts through the water and cave walls and produces the color effect that gives it the name. It is one of the more photographed moments on the tour.</p>
+      <p>The Honopu Archway is an open arch formation rather than an enclosed cave, and it has a long history as a film location. King Kong, Six Days Seven Nights, James Bond, and Pirates of the Caribbean have all been filmed here. It is one of the most photographed spots on the island. Guests who know the films recognize it immediately.</p>
+      <hr class="sdiv">
+
+      <h2>Can You Actually Go Inside the Caves?</h2>
+      <p class="la"><strong>Our catamarans are built to navigate in and out of the Na Pali sea caves. Access on any given tour depends on ocean conditions — swell height, wind, and sea state on that day.</strong></p>
+      <p>We do not promise cave entry. What we can say is that our captains have navigated these caves hundreds of times, they read ocean conditions from departure, and they make decisions at the water. Most tours reach the caves. There are days when conditions push us back.</p>
+      <p>Larger boats face a different problem: they physically cannot maneuver inside many of the caves regardless of conditions. Our design removes that limitation. The ocean conditions remain the deciding factor.</p>
+      <hr class="sdiv">
+
+      <h2>Why Boat Size and Design Matters</h2>
+      <p class="la"><strong>Makana's catamarans are built for the Na Pali Coast — smaller, faster, and more maneuverable than most of the boats operating out of Kauai's harbors.</strong></p>
+      <p>Our tours carry 12 to 32 guests. Many operators run boats with significantly higher passenger counts. A boat carrying 50 or 100 people does not attempt the cave entries we do. The physics of the approach, the turning radius, and the draft all matter when the entrance to a cave is narrow and the swell is running.</p>
+      <p>This is not a marketing distinction. It is a design and operational one. We built and chose our boats with the Na Pali Coast in mind — the caves included.</p>
+      <hr class="sdiv">
+
+      <h2>Why Departure Point Matters for Sea Cave Access</h2>
+      <p class="la"><strong>We depart from Kikiaola Small Boat Harbor in Kekaha — the closest departure point to the Na Pali Coast sea caves. That means up to an hour more time on the coast compared to boats leaving from Port Allen.</strong></p>
+      <p>Port Allen is the departure point for most Kauai tour operators. It is further south along the coast. Boats leaving from there spend a significant portion of the trip in transit before they reach the caves. By the time they arrive, turnaround time is already pressing.</p>
+      <p>Kikiaola puts you at the caves faster. Our standard tour runs 4.5 to 5 hours, and you spend more of those hours at the formations that brought you here. Only one of our boats, the Amelia K, departs from Port Allen. All other Makana catamarans leave from Kikiaola.</p>
+      <hr class="sdiv">
+
+      <h2>The Family History Behind These Waters</h2>
+      <p class="la"><strong>Makana — the Hawaiian word for gift — is a Native Hawaiian family-owned operation with documented roots on the Na Pali Coast going back over 200 years.</strong></p>
+      <p>Our family continued what began as Liko Kauai Cruises. The captains on our boats — Mike, Rob, Darrel, Chris, Dave, Phil — grew up on Kauai. Most have spent their whole lives on these waters. When they are not on the water with guests, they are on it on their own time.</p>
+      <p>They know where Pirates Cave sits at low swell. They know how the light moves through Rainbow Falls at different hours. They know when Honopu is approachable and when it is not. That knowledge is not trained in a briefing room. It comes from a lifetime on the coast.</p>
+      <hr class="sdiv">
+
+      <h2>Book a Na Pali Sea Cave Tour</h2>
+      <p>Makana Charters operates daily tours along the Na Pali Coast. Most boats depart from Kikiaola Small Boat Harbor, Kekaha, HI.</p>
+      <div class="price-block">
+        <h3>Tour Pricing (Confirmed June 2026)</h3>
+        <div class="price-row">
+          <div class="pi"><div class="pi-boat">Na Pali Kai III</div><div class="pi-price">$199</div><div class="pi-label">per adult</div><div class="pi-detail">Up to 32 guests · Age 4+<br>$169 / child</div></div>
+          <div class="pi"><div class="pi-boat">Seiko 1, 2, Leialoha</div><div class="pi-price">$219</div><div class="pi-label">per adult</div><div class="pi-detail">16–18 guests · Age 9+<br>$189 / child</div></div>
+          <div class="pi"><div class="pi-boat">Makana (Private)</div><div class="pi-price">$219</div><div class="pi-label">per adult</div><div class="pi-detail">Up to 12 guests · Age 9+<br>$189 / child</div></div>
+        </div>
+      </div>
+      <p>All standard tours include snorkel gear, deli-style lunch, soft drinks, and cultural narration from our crew. Hours: 7AM–9PM.</p>
+      <div class="map-embed"><div class="map-icon">📍</div><div class="map-label">Kikiaola Small Boat Harbor, Kekaha, HI</div><div class="map-sub">Google Business Profile Map Embed</div></div>
+    </div>
+
+    <div class="cta-block">
+      <div class="cta-txt"><h2>Book a Na Pali Sea Cave Tour</h2><p>Call (808) 338-9980 or book online. Daily 7AM–9PM.</p></div>
+      <div class="cta-acts"><a href="#" class="btn btn-teal btn-md">Book Now</a><a href="#" class="btn btn-ghost btn-md">Call (808) 338-9980</a></div>
+    </div>
+
+    <div class="faq-wrap">
+      <h2>Frequently Asked Questions About the Na Pali Sea Caves</h2>
+      <div class="faq-item"><div class="faq-q">Can all boats enter the Na Pali sea caves?</div><div class="faq-a">No. Larger boats with high passenger counts typically cannot maneuver inside the caves. Makana's catamarans are built for the Na Pali Coast and are sized to navigate cave entries. Ocean conditions still determine access on any given day.</div></div>
+      <div class="faq-item"><div class="faq-q">What are the names of the sea caves on the Na Pali Coast?</div><div class="faq-a">The three named sea caves on the Na Pali Coast are Pirates Cave (Hawaiian name: Waiahuakua), Rainbow Falls, and the Honopu Archway. Pirates Cave has an open ceiling. Rainbow Falls is named for its interior light effect. The Honopu Archway is an open arch formation and a well-documented film location.</div></div>
+      <div class="faq-item"><div class="faq-q">How do I know if the caves will be accessible on my tour day?</div><div class="faq-a">You will not know before departure. Our captains assess swell height, wind, and sea state on the morning of the tour and make the call at the water. Cave access is not guaranteed. What we can say is that our boats are built for it and our captains have navigated these waters their entire lives.</div></div>
+      <div class="faq-item"><div class="faq-q">Is it safe to go inside the Na Pali sea caves by boat?</div><div class="faq-a">Yes, on the right boat and with an experienced crew reading the conditions. Our captains navigate these caves regularly and only enter when the ocean allows it safely. Conditions that make entry unsafe also make the decision straightforward — we do not go in.</div></div>
+    </div>
+  </main>
+
+  <div class="call-bar"><p>Call daily 7AM–9PM: <a href="tel:8083389980">(808) 338-9980</a> · Kikiaola Small Boat Harbor, Kekaha, HI</p></div>
+  <footer class="s-foot"><div class="sf-in"><div class="sf-grid"><div class="sf-brand"><h3>Makana Charters</h3><p>Native Hawaiian family-owned. Over 200 years documented on the Na Pali Coast. Departing Kikiaola Small Boat Harbor, Kekaha, HI.</p></div><div class="sf-col"><h4>Tours</h4><ul><li>Na Pali Coast Tours</li><li>Sunset Cruise</li><li>Snorkeling Tours</li><li>Private Charters</li></ul></div><div class="sf-col"><h4>Resources</h4><ul><li>What to Pack</li><li>Sea Cave Guide</li><li>Booking FAQ</li><li>About Makana</li></ul></div><div class="sf-col"><h4>Contact</h4><a class="sf-phone">(808) 338-9980</a><div class="sf-hours">Daily 7AM–9PM</div><div class="sf-addr">Kikiaola Small Boat Harbor<br>Kekaha, HI<br>info@makanacharters.com</div></div></div><div class="sf-bot"><p>© 2026 Makana Charters. Native Hawaiian Family-Owned.</p><div class="sf-badge">200+ Years on the Na Pali Coast</div></div></div></footer>
+</div>
+</div>
+
+<!-- ===================== BLOG 6: SUMMER BOOKING GUIDE ===================== -->
+<div id="blog6" class="tab-panel">
+<div class="site-wrap">
+  <header class="s-hdr">
+    <nav class="s-nav">
+      <div class="s-logo">Makana<span>Charters</span></div>
+      <ul class="s-nav-links"><li>Home</li><li>Private Tours</li><li>Na Pali Tours</li><li>About</li><li>Resources</li></ul>
+      <div class="s-nav-cta"><a href="#" class="btn btn-ghost btn-sm">Call Us</a><a href="#" class="btn btn-teal btn-sm">Book Now</a></div>
+    </nav>
+  </header>
+  <section class="blog-hero">
+    <div class="blog-hero-in">
+      <div class="bcat">Booking Tips</div>
+      <h1>How Far in Advance Should You Book a Na Pali Coast Tour in Summer?</h1>
+      <p class="sub">Summer is peak season for Na Pali Coast boat tours. Learn how early to book, what to do last minute, and how Makana Charters handles weather cancellations.</p>
+    </div>
+  </section>
+  <div class="pmeta"><div class="pmeta-in"><span>Home</span><span class="sep">›</span><span>Resources</span><span class="sep">›</span><span class="cur">Summer Booking Guide</span></div></div>
+  <main class="s-main">
+    <div class="cb">
+      <p>Book your Na Pali Coast boat tour before you arrive on Kauai. Summer (June through August) is the busiest stretch of the year on the water, and tours sell out. The earlier you lock in a date, the more options you have for timing, boat size, and group type.</p>
+      <p>This guide covers how summer demand works, what to do if you're booking close to your trip, and how our weather cancellation policy protects you either way.</p>
+      <hr class="sdiv">
+
+      <h2>Why Summer Is Peak Season for Na Pali Coast Tours</h2>
+      <p class="qi">What makes summer the busiest time for Na Pali Coast boat tours?</p>
+      <p class="la"><strong>Summer brings calmer ocean conditions to the Na Pali Coast.</strong> The northwest swell that rolls in during winter settles significantly from June through August, which means fewer cancelled tours and more consistent access to the coast's signature features.</p>
+      <p>Calmer water opens up the sea caves. Pirates Cave (Waiahuakua), Rainbow Falls, and the Honopu Archway become accessible as long as ocean conditions allow. Snorkeling at locations like Nualolo Kai and Tunnels runs more reliably when the sea is settled. Summer is also when spinner dolphins, Pacific Bottlenose dolphins, and honu (Hawaiian green sea turtle) are commonly spotted along the route.</p>
+      <p class="qi">What drives the summer booking crunch specifically?</p>
+      <p class="la"><strong>Summer is when Kauai sees its highest visitor volume.</strong> Families travel between school years. West Coast visitors make the flight. More visitors on the island, more stable days on the water, and a finite number of boats means spots fill early. We run a fleet that carries between 12 and 32 guests per tour, smaller than many operators on the island. That's by design. It also means there are fewer available spots per departure.</p>
+      <hr class="sdiv">
+
+      <h2>How Far in Advance to Book</h2>
+      <p class="qi">How early should you realistically book a Na Pali Coast boat tour in summer?</p>
+      <p class="la"><strong>The practical rule is to book before you arrive on Kauai.</strong> Trips often sell out, and we suggest purchasing your ticket early. If you have a specific date in mind, waiting until you land puts you at risk of finding that date fully booked across the fleet.</p>
+      <p>Booking early also gives you more control over which boat fits your group. The Na Pali Kai III carries up to 32 guests and has a 360-degree walk-around deck, which works well for photographers. The Makana carries 12 and is built for private charters. The Seiko 1, Seiko 2, and Leialoha seat 16 to 18 guests each on fast power catamarans. If you have a preference, earlier booking means more choice.</p>
+      <p>To check current availability, call us at (808) 338-9980 (hours: 7AM to 9PM) or book online at makanacharters.com. Our team can walk you through which boats have space on your dates.</p>
+      <hr class="sdiv">
+
+      <h2>What to Do If You're Booking Last Minute</h2>
+      <p class="qi">Are last-minute Na Pali Coast tickets ever available?</p>
+      <p class="la"><strong>Yes. Cancellations happen, and spots do open up.</strong> The best move if you're booking close to your travel dates is to call us directly at (808) 338-9980. We can tell you what's available across the fleet in real time, which is faster than checking online availability.</p>
+      <p>Weekday departures tend to have more availability than weekends. Morning tours typically fill before afternoon ones, so if mornings are booked out, an afternoon departure on a power catamaran is worth asking about. Flexibility on the exact day within a two or three day window gives you a better chance of finding an open slot.</p>
+      <p>We depart from Kikiaola Small Boat Harbor in Kekaha, the closest departure point to the Na Pali Coast on the island. That proximity advantage holds whether you're booking three months out or three days out.</p>
+      <hr class="sdiv">
+
+      <h2>What Happens If Your Tour Is Cancelled</h2>
+      <p class="qi">What is Makana Charters' policy if a tour gets cancelled due to weather?</p>
+      <p class="la"><strong>If your tour is cancelled due to weather or ocean conditions, you have three options: reschedule, receive a credit, or get a full refund.</strong> You are not charged for a tour that doesn't run. This matters especially for travelers booking close to their departure date, since Kauai weather can shift quickly even in summer.</p>
+      <p>We monitor conditions closely before each departure. When we call a cancellation, it's because the coast isn't safe or accessible. The same conditions that close the tour would prevent sea cave entry and make snorkeling difficult anyway. If you have questions about the cancellation policy for your specific booking, call (808) 338-9980.</p>
+      <hr class="sdiv">
+
+      <h2>The Advantage of Booking a Private Charter Last Minute</h2>
+      <p class="qi">Can a private charter offer more scheduling flexibility for late bookings?</p>
+      <p class="la"><strong>For groups of 12 or fewer, booking the Makana as a private charter sometimes opens scheduling options that shared tours don't.</strong> Private charters run on your group alone, which means we have more flexibility around departure time and date alignment than a shared boat filling seat by seat.</p>
+      <p>If you're traveling with a family or a small group and find that shared tour spots are limited on your dates, call us to ask about private charter availability on the Makana. Private charters include the same Na Pali Coast route, snorkel gear, deli-style lunch, and cultural narration from our crew. The boat belongs entirely to your group.</p>
+      <hr class="sdiv">
+
+      <h2>Book Your Na Pali Coast Tour</h2>
+      <p class="la"><strong>Call (808) 338-9980 or book online at makanacharters.com/napali-coast-tours/.</strong> Our team is available seven days a week from 7AM to 9PM. We can check availability across the full fleet, answer questions about specific boats, and help you find the right tour for your group size and schedule.</p>
+      <p>Makana — the Hawaiian word for gift — is a Native Hawaiian family-owned operation with more than 200 years of documented history on these waters. Our captains grew up on Kauai. We depart from Kikiaola Small Boat Harbor in Kekaha, the closest point to the Na Pali Coast on the island.</p>
+      <div class="map-embed"><div class="map-icon">📍</div><div class="map-label">Kikiaola Small Boat Harbor, Kekaha, HI</div><div class="map-sub">Google Business Profile Map Embed</div></div>
+    </div>
+
+    <div class="cta-block">
+      <div class="cta-txt"><h2>Ready to Book for Summer?</h2><p>Call before you arrive — summer dates fill fast. Daily 7AM–9PM.</p></div>
+      <div class="cta-acts"><a href="#" class="btn btn-teal btn-md">Book Now</a><a href="#" class="btn btn-ghost btn-md">Call (808) 338-9980</a></div>
+    </div>
+
+    <div class="faq-wrap">
+      <h2>Frequently Asked Questions About Booking Na Pali Coast Tours</h2>
+      <div class="faq-item"><div class="faq-q">How early should I book a Na Pali Coast tour in summer?</div><div class="faq-a">Book before you arrive on Kauai. Summer is peak season, tours often sell out, and waiting until you land reduces your options for dates, boats, and timing. The earlier you book, the more flexibility you have across our fleet.</div></div>
+      <div class="faq-item"><div class="faq-q">Is there a cancellation policy if my tour doesn't run?</div><div class="faq-a">Yes. If Makana Charters cancels your tour due to weather or ocean conditions, you can reschedule, receive a credit, or get a full refund. You are not charged for a tour that doesn't operate.</div></div>
+      <div class="faq-item"><div class="faq-q">Can I book a Na Pali Coast tour for the same day?</div><div class="faq-a">It depends on availability. Call us directly at (808) 338-9980 to find out what's open. Same-day spots are rare in summer but do become available when other guests cancel. Calling is faster than checking online for last-minute needs.</div></div>
+      <div class="faq-item"><div class="faq-q">Does Makana Charters have a waitlist for sold-out tours?</div><div class="faq-a">Call us at (808) 338-9980 and ask about specific dates. We track cancellations and our team can advise you on the best approach if your target date is full.</div></div>
+    </div>
+  </main>
+
+  <div class="call-bar"><p>Call daily 7AM–9PM: <a href="tel:8083389980">(808) 338-9980</a> · Kikiaola Small Boat Harbor, Kekaha, HI</p></div>
+  <footer class="s-foot"><div class="sf-in"><div class="sf-grid"><div class="sf-brand"><h3>Makana Charters</h3><p>Native Hawaiian family-owned. Over 200 years documented on the Na Pali Coast. Departing Kikiaola Small Boat Harbor, Kekaha, HI.</p></div><div class="sf-col"><h4>Tours</h4><ul><li>Na Pali Coast Tours</li><li>Sunset Cruise</li><li>Snorkeling Tours</li><li>Private Charters</li></ul></div><div class="sf-col"><h4>Resources</h4><ul><li>What to Pack</li><li>Sea Cave Guide</li><li>Booking FAQ</li><li>About Makana</li></ul></div><div class="sf-col"><h4>Contact</h4><a class="sf-phone">(808) 338-9980</a><div class="sf-hours">Daily 7AM–9PM</div><div class="sf-addr">Kikiaola Small Boat Harbor<br>Kekaha, HI<br>info@makanacharters.com</div></div></div><div class="sf-bot"><p>© 2026 Makana Charters. Native Hawaiian Family-Owned.</p><div class="sf-badge">200+ Years on the Na Pali Coast</div></div></div></footer>
+</div>
+</div>
+
+<script>
+function showTab(id, btn) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.dt').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  if (btn) btn.classList.add('active');
+}
+</script>
+</body>
+</html>
