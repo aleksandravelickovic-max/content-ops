@@ -16,7 +16,7 @@ draft_date: 2026-06-26
 
 ---
 
-Zia's Stars & Cross Blanco is a handmade terra cotta tile produced in San Miguel de Allende, Mexico, in the Stars & Cross specialty shape — a 6" × 6" eight-pointed star paired with a cross tile, drawn from the Moorish geometric tradition that moves through the courtyard architecture of Granada and Puebla alike. The Blanco colorway applies a whitewashed finish over the natural clay body, brightening and softening the tone without masking the clay beneath — the natural terra cotta body shows through the finish, keeping the warmth of the material present beneath the lighter surface. Where a standard terra cotta field reads warm and saturated, the Blanco reads as airy and open, the Moorish geometry emerging in relief between the whitewashed surface and the natural clay edge. The interlocking star and cross pattern builds as a continuous geometric field across the installation, with the Blanco finish allowing the pattern to read across a wide range of interior environments. The unglazed surface deepens into patina with wear, bringing beauty to the material's aging process. Images shown represent a sample of this tile and do not display every potential variation.
+Zia's Stars & Cross Blanco is a handmade terra cotta tile produced in San Miguel de Allende, Mexico, in the Stars & Cross specialty shape — a 6" × 6" eight-pointed star paired with a cross tile, drawn from the Moorish geometric tradition that moves through the courtyard architecture of Granada and Puebla alike. The Blanco colorway applies a whitewashed finish over the natural clay body, brightening and softening the tone without masking the clay beneath — the natural terra cotta body shows through the finish, keeping the warmth of the material present beneath the lighter surface. The interlocking star and cross pattern builds as a continuous geometric field across the installation. The unglazed surface deepens into patina with wear, bringing beauty to the material's aging process. Images shown represent a sample of this tile and do not display every potential variation.
 
 \[IMAGE: SIZE/THICKNESS DIAGRAM\]
 
@@ -102,40 +102,44 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ### How does the Stars & Cross Blanco colorway read in a room?
 
-The Blanco colorway applies a whitewashed finish over the natural clay body, brightening and softening the terra cotta tone without covering the clay beneath. The warmth of the material remains present beneath the lighter surface — the result is not a pure white tile but a whitewashed field where the clay body shows through. Against white plaster or light stone, Blanco integrates as a quiet field while the Moorish star geometry carries the visual interest. Against darker materials — wood, iron, charcoal stone — the lighter tone creates contrast that sharpens the geometric pattern.
+The Blanco colorway applies a whitewashed finish over the natural clay body, brightening and softening the terra cotta tone without covering the clay beneath. The warmth of the material remains present beneath the lighter surface — the result is not a pure white tile but a whitewashed field where the clay body shows through. The Moorish star geometry carries the visual interest across the interlocking pattern.
 
 ### How does the Blanco finish develop patina compared to Red Clay or Fired Earth?
 
-The Blanco whitewashed finish develops patina differently from the unfinished Cotto colorways. On Red Clay and Fired Earth, wear deepens the natural clay tone toward a richer, more saturated version of the original surface character. On Blanco, the same process brings the natural clay body closer to the surface, gradually warming the whitewashed tone as the finish deepens. Over time, the installation moves from a bright, whitewashed surface toward a warmer, more integrated clay tone. Expect the tone to deepen with wear: that patina is the point.
+The Blanco whitewashed finish develops patina differently from the unfinished Cotto colorways. On Red Clay and Fired Earth, wear deepens the natural clay tone toward a richer, more saturated version of the original surface character. On Blanco, the same process brings the natural clay body closer to the surface, gradually warming the whitewashed tone as the finish deepens. Over time, the installation moves from a bright, whitewashed surface toward a warmer, more integrated clay tone. Expect the tone to deepen with wear — that patina is the point.
 
-### Does the Blanco finish change the sealing requirement?
+### Does the Blanco finish change the sealing sequence for Stars & Cross Blanco?
 
-No. Blanco is an unglazed surface — the whitewash is part of the clay body's finish, not a protective glaze coat. All unglazed Cotto requires the same two-stage sealing sequence regardless of colorway: a pre-grout sealer applied before grouting to act as a grout release, and a post-grout top coat (matte wax for interior; second coat of pre-grout sealer for exterior). Refer to Zia's installation guide for the full specification, or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions.
+No. Blanco is an unglazed surface — the whitewash is part of the clay body's finish, not a protective glaze coat. All unglazed Cotto requires the same two-stage sealing sequence regardless of colorway: a pre-grout sealer applied before grouting to act as a grout release, and a post-grout top coat (matte wax for interior; second coat of pre-grout sealer for exterior). The Blanco finish does not require any deviation from the standard sequence. Refer to Zia's installation guide for the full specification, or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions.
 
-### Can Stars & Cross Blanco be used outdoors in freezing climates?
+### How does the Blanco whitewash affect freeze/thaw performance compared to unfinished Cotto?
 
-Yes. Unglazed Cotto is suited for exterior floors in any climate, including regions with freeze/thaw cycles. The Blanco colorway carries the same freeze/thaw capability as the rest of the unglazed Cotto line — a key distinction from glazed Cotto Allende and zellige, which are not rated for freeze/thaw exterior use. Proper sealing is required for all outdoor Cotto installations.
+The Blanco finish does not alter the freeze/thaw performance of the underlying unglazed Cotto body. Unglazed Cotto — including the Blanco colorway — is suited for exterior floors in any climate, including regions with freeze/thaw cycles. This is a key distinction from glazed Cotto Allende and zellige, which are not rated for freeze/thaw exterior use. Proper sealing is required for all outdoor Cotto installations regardless of colorway.
 
-### How often should Stars & Cross Blanco be resealed?
+### Can Stars & Cross Blanco be mixed with other Cotto colorways in the same installation?
 
-Resealing frequency depends on traffic and exposure. High-traffic interior floors typically benefit from resealing every one to two years; exterior and shower applications may require more frequent attention. A practical indicator: when water no longer beads on the surface and begins to absorb into the clay, it is time to reseal. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for guidance specific to the installation environment.
+Yes. The Stars & Cross shape is available in Red Clay and other Cotto colorways. A field of Blanco with a border or inset of Red Clay creates tonal contrast within the same geometric pattern — the clay body beneath both is the same material, so the two read as a coherent set. Contact [info@ziatile.com](mailto:info@ziatile.com) to discuss colorway combinations for a specific project before ordering.
 
-### How does the Stars & Cross specialty shape install?
+### How does the Stars & Cross specialty shape install, and how does the overage increase account for the format?
 
 The Stars & Cross shape interlocks across tile edges — the pattern resolves as a continuous geometric field only when each piece is oriented consistently. A full dry layout before installation is essential to confirm how the star and cross geometry reads across the space and to locate perimeter cuts. The interlocking edges require additional cuts compared to standard square formats; increasing overage to 20% or more is advisable for all Stars & Cross orders. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for installation guidance specific to this format.
 
-### Are there companion shapes or trim pieces for the Stars & Cross?
+### Are there companion shapes required, or does the Stars & Cross set work alone?
 
-The Stars & Cross set — the eight-pointed star paired with its cross tile — is self-contained as a geometric pattern. The two pieces interlock to form the full Moorish composition; no additional companion shapes are required for a field installation. At the perimeter, the irregular star and cross edges will require partial cuts to meet straight walls cleanly, which is the primary reason for the increased overage recommendation on all specialty shape orders.
+The Stars & Cross set — the eight-pointed star paired with its cross tile — is self-contained as a geometric pattern. The two pieces interlock to form the full Moorish composition; no additional companion shapes are required for a field installation. At the perimeter, the irregular star and cross edges will require partial cuts to meet straight walls cleanly, which is the primary reason for the increased overage recommendation.
 
 ### How does Blanco compare to the Fired Earth colorway in the Stars & Cross format?
 
-Blanco and Fired Earth are at opposite ends of the classic Cotto tonal range within the Stars & Cross format. Fired Earth carries the mid-range warm terra cotta tone — an ash-fired surface with textured variation across the clay base. Blanco is lighter and airier, with a whitewashed finish that softens the natural clay body. In the same geometric pattern, Blanco reads as open and graphic; Fired Earth reads as warm and materially present. Zia's team can advise on which suits a specific space — contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+Blanco and Fired Earth sit at opposite ends of the Cotto tonal range within the Stars & Cross format. Fired Earth carries the mid-range warm terra cotta tone — an ash-fired surface with textured variation across the clay base. Blanco is lighter, with a whitewashed finish that softens the natural clay body. In the same geometric pattern, Blanco reads as open and graphic; Fired Earth reads as warm and materially present. Zia's team can advise on which suits a specific space — contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
 
 ### Can Stars & Cross Blanco be used in a shower?
 
 Yes. Cotto tiles are suited for shower walls and shower floors with proper sealing. Apply the pre-grout sealer before grouting, then apply a matte wax as the post-grout top coat for interior wet areas. For shower floor installations, maintain a minimum 1/8" grout joint and apply an anti-slip treatment after installation. The interlocking star and cross geometry produces additional grout joint length per square foot compared to a standard square tile, which supports drainage and traction in wet floor applications.
 
-### Can Stars & Cross Blanco be mixed with other Stars & Cross colorways?
+### Can Stars & Cross Blanco be installed outdoors in freezing climates?
 
-Yes. The Stars & Cross shape is available in Red Clay and other colorways in the Zia Cotto collection. A field of Blanco with a border or inset of Red Clay creates tonal contrast within the same geometric pattern. Contact [info@ziatile.com](mailto:info@ziatile.com) to discuss colorway combinations for a specific project before ordering.
+Yes. Unglazed Cotto is suited for exterior floors in any climate, including regions with freeze/thaw cycles. The Blanco colorway carries the same freeze/thaw rating as the rest of the unglazed Cotto line. Proper sealing is required for all outdoor Cotto installations.
+
+### How often should Stars & Cross Blanco be resealed?
+
+Resealing frequency depends on traffic and exposure. High-traffic interior floors typically benefit from resealing every one to two years; exterior and shower applications may require more frequent attention. A practical indicator: when water no longer beads on the surface and begins to absorb into the clay, it is time to reseal. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for guidance specific to the installation environment.

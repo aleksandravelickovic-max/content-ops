@@ -16,7 +16,7 @@ draft_date: 2026-06-26
 
 ---
 
-Zia's 8x9 Hex Fired Earth is a handmade terra cotta tile produced in San Miguel de Allende, Mexico, in the 8" × 9" hexagon format. The Fired Earth colorway is a warm, mid-range terra cotta with a surface shaped by wood ash applied during firing — the ash contact produces varied, textured patterning across the warm clay base that reads differently across each tile. The hexagon format gives this surface variation a distinct spatial register: where a square field would read as grid-organized, the hexagonal geometry distributes the ash-fired variation across a more complex tiling plane, producing a floor that holds visual interest across the full surface area. In a kitchen or primary bathroom, the 8x9 hex scale allows the clay tone and the tile geometry to carry the floor without additional pattern. On an outdoor patio, the hexagon format resists the monotony of a standard grid and the Fired Earth tone weathers naturally with wear. The unglazed surface deepens into patina with wear, bringing beauty to the material's aging process. Images shown represent a sample of this tile and do not display every potential variation.
+Zia's 8x9 Hex Fired Earth is a handmade terra cotta tile produced in San Miguel de Allende, Mexico, in the 8" × 9" hexagon format. The Fired Earth colorway is a warm, mid-range terra cotta with a surface shaped by wood ash applied during firing — the ash contact produces varied, textured patterning across the warm clay base that reads differently across each tile. The unglazed surface deepens into patina with wear, bringing beauty to the material's aging process. Images shown represent a sample of this tile and do not display every potential variation.
 
 \[IMAGE: SIZE/THICKNESS DIAGRAM\]
 
@@ -100,46 +100,42 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ## Frequently Asked Questions
 
-### How does the 8x9 Hex Fired Earth read in a room?
+### How does the Fired Earth colorway read in the 8x9 hexagon format?
 
-The Fired Earth colorway sits in the mid-range of the classic Cotto palette — a warm terra cotta tone with surface patterning produced by wood ash applied during firing. The ash contact creates textured coloration across the clay base, so each tile reads differently within the field. In the hexagonal format, that variation is distributed across a non-grid tiling plane, producing a floor that holds visual interest from multiple angles and distances. On a kitchen or bathroom floor, the warm clay tone and the hex geometry together carry the room without additional ornament.
+Fired Earth is a warm, mid-range terra cotta with surface patterning produced by wood ash applied during firing. The ash contact creates textured coloration across the clay base — each tile carries its own variation in tone and surface character. In the hexagonal format, that variation is distributed across a non-grid tiling plane: where square tiles align their variation along consistent vertical and horizontal axes, the hex grid offsets each tile's contribution across six directions, producing a surface that reads as more organically varied across the full field.
 
-### How do I seal the 8x9 Hex Fired Earth Cotto tile?
+### How does the hexagon format behave at straight walls and room edges?
 
-Cotto requires a two-stage sealing process. Apply a pre-grout sealer before grouting to saturate the surface and act as a grout release. After grouting, apply the post-grout top coat: a matte wax for interior installations, or a second coat of the pre-grout sealer for exterior, as UV exposure causes wax to discolor outdoors. Periodic resealing maintains resistance to moisture and staining over time. Refer to Zia's Cotto installation guide for specific product recommendations, or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions.
+The hexagonal edge does not terminate flush with a straight wall the way a square tile does. The alternating points and flat sides of the perimeter require partial cuts to meet a straight boundary cleanly — some points will be cut to flat, and partial tiles along the edge will be narrower than they appear in the field. A full dry layout before installation is essential to plan where perimeter cuts fall. Increasing overage to 20% or more is advisable for hex installations; edge cuts consume more tile than they would in a standard square or rectangular format.
 
-### How often does the 8x9 Hex Fired Earth need to be resealed?
+### How does the 8x9 hex scale compare to small hex options in other materials?
 
-Resealing frequency depends on traffic and exposure. Interior floors in high-traffic kitchens typically benefit from resealing every one to two years. Exterior installations and shower applications may require more frequent attention. A good indicator: when water no longer beads on the surface and instead begins to absorb into the clay, it is time to reseal. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for guidance specific to the installation environment.
+The 8x9 format is a large-format hexagon by any measure. Small hex tiles — typically 1" to 4" — read as a surface texture, with the grout grid as prominent as the tile face. At 8x9", the tile face dominates: the hexagonal geometry registers as shape rather than texture, and the Fired Earth surface variation reads across the full face of each tile rather than being miniaturized. The result is a format that behaves more like a field tile than a mosaic, while retaining the geometric interest of the hex grid.
+
+### Can the 8x9 Hex be used on a shower floor?
+
+Yes. Cotto tiles are suited for shower floors with proper sealing. Apply the pre-grout sealer before grouting, then apply a matte wax as the post-grout top coat for interior wet areas. Maintain a minimum 1/8" grout joint and apply an anti-slip treatment after installation. For the 8x9 hexagon specifically, the perimeter cuts along the shower curb and drain field require planning during the dry layout — partial hex tiles at the edges will produce irregular shapes that need to be fitted cleanly. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for installer guidance on the perimeter detail.
 
 ### Can the 8x9 Hex Fired Earth be used outdoors in freezing climates?
 
-Yes. Unglazed Cotto is suited for exterior floors in any climate, including regions with freeze/thaw cycles — a key distinction from glazed materials like Cotto Allende and zellige, which are not rated for freeze/thaw exterior use. Proper sealing is required. For outdoor installations, apply the pre-grout sealer before grouting and a second coat of the same sealer (not wax) as the post-grout top coat.
-
-### Can the 8x9 Hex be used in a shower?
-
-Yes. Cotto tiles are suited for shower walls and shower floors with proper sealing. Apply the pre-grout sealer before grouting, then apply a matte wax as the post-grout top coat for interior wet areas. For shower floor installations, maintain a minimum 1/8" grout joint and apply an anti-slip treatment after installation. The hexagonal perimeter of the 8x9 format creates more grout joint surface area than a square tile of equivalent coverage, which supports traction in wet floor applications. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for installer guidance.
-
-### How does the hexagon perimeter behave against straight walls and room edges?
-
-The hexagonal edge does not terminate flush with a straight wall the way a square tile does — the alternating points and flat sides of the perimeter require partial cuts to meet a straight boundary. A full dry layout before installation is essential to plan the perimeter geometry and identify where cuts fall. Increasing overage to 20% or more is advisable for hex installations; edge cuts consume more tile than they would in a standard square or rectangular format.
+Yes. Unglazed Cotto is suited for exterior floors in any climate, including regions with freeze/thaw cycles — a key distinction from glazed materials like Cotto Allende and zellige, which are not rated for freeze/thaw exterior use. For an exterior patio or courtyard in a cold climate, the hex format's perimeter geometry means edge cuts at steps and borders require more planning than a square tile would. Proper sealing is required for all outdoor installations: apply the pre-grout sealer before grouting and a second coat of the same sealer (not wax) as the post-grout top coat.
 
 ### How does patina develop on Fired Earth Cotto?
 
 The ash-fired surface of Fired Earth deepens in tone with wear and time. The warm clay base becomes more pronounced as the patina builds, and the variable ash coloration that reads as distinct across individual tiles at installation gradually integrates into a unified, aged surface field. Expect the tone to deepen over time: that patina is the point.
 
-### How is Cotto different from mass-produced terracotta?
+### How do I seal the 8x9 Hex Fired Earth?
 
-Zia's Cotto is hand-pressed from natural Mexican clay and sun-dried in open courtyards before firing — a process that produces inherent variation in tone, edge profile, shape, and thickness from tile to tile. Mass-produced terra cotta is typically machine-pressed and kiln-fired under controlled, uniform conditions, producing tiles of near-identical dimension and surface character. The variation in Cotto is not incidental; it is the result of the handmade process and a defining characteristic of the material.
+Cotto requires a two-stage sealing process. Apply a pre-grout sealer before grouting to saturate the surface and act as a grout release. After grouting, apply the post-grout top coat: a matte wax for interior installations, or a second coat of the pre-grout sealer for exterior, as UV exposure causes wax to discolor outdoors. Refer to Zia's Cotto installation guide for specific product recommendations, or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions.
 
-### What thinset is recommended for the 8x9 Hex Fired Earth?
+### What is the recommended grout joint width for the 8x9 hex?
 
-Use a polymer-modified thinset appropriate for unglazed terra cotta and porous tile bodies. The porous clay surface requires a thinset with adequate bond strength for the material. Refer to Zia's installation guide for the full specification, or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for product-specific recommendations before beginning the installation.
-
-### What is the recommended grout joint width for Cotto hex tile?
-
-Zia recommends a minimum 1/8" grout joint, applied with 1/8" tile spacers. The 8x9 hexagonal format produces more total grout joint length per square foot than a standard square tile of equivalent size, which reinforces surface drainage and traction — particularly relevant in shower floor and exterior patio applications.
+Zia recommends a minimum 1/8" grout joint, applied with 1/8" tile spacers. The 8x9 hexagonal format produces more total grout joint length per square foot than a square tile of equivalent coverage area, which reinforces surface drainage and traction — particularly relevant in shower floor and exterior patio applications.
 
 ### How should the 8x9 Hex Fired Earth be cleaned?
 
 Use a pH-neutral cleaner with warm water. Avoid acidic cleaners — vinegar, citrus-based products, and bleach — as these strip the sealer and degrade the clay surface over time. Sweep or vacuum regularly to remove grit before mopping, and dry the surface after mopping to prevent residue buildup. Reseal periodically per the installation guide, with frequency depending on traffic and exposure.
+
+### Can the 8x9 Hex Fired Earth be mixed with other Cotto formats?
+
+The Fired Earth colorway is available in other Cotto formats, including the 4x4 square and the Durango specialty set. Mixing the 8x9 hex with a square or rectangular format in Fired Earth produces tonal continuity across two distinct geometries. Contact [info@ziatile.com](mailto:info@ziatile.com) to discuss multi-format combinations before ordering.

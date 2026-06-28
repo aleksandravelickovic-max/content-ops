@@ -16,7 +16,7 @@ draft_date: 2026-06-26
 
 ---
 
-Zia's Night Blue zellige sits at the deepest end of the blue spectrum — a rich, near-indigo blue that reads as fully saturated, anchored, and deliberate in any room it occupies. The glaze carries the quality of a deep-dyed textile or a night sky at the edge of darkness, and the dynamic glazes across the field mean individual tiles shift between depths of the same dark blue rather than reading uniformly flat. The 4x4 square format suits bathroom walls, kitchen backsplashes, fireplace surrounds, and pool waterlines across both residential and commercial installations.
+Zia's Night Blue zellige sits at the deepest end of the blue spectrum — a rich, near-indigo blue that is the darkest colorway in Zia's zellige blue range. The glaze is fully saturated, and tonal shifts across the field mean individual tiles move between depths of the same dark blue rather than reading uniformly flat. The 4x4 square format suits bathroom walls, kitchen backsplashes, fireplace surrounds, and pool waterlines across both residential and commercial installations.
 
 Zia's Night Blue 4x4 zellige is hand-formed, dipped in glaze, and fired in earthen kilns in Morocco, where the method has been refined over more than 800 years. Each tile carries the chips, pits, hairline crazing, and tonal shifts that come from working at this scale by hand. Photographs shown are representative of a sample of this tile, but do not display all potential variations.
 
@@ -106,7 +106,15 @@ Local pickup is free at our Los Angeles area warehouse. Our team will reach out 
 
 ### What does Night Blue zellige look like in a room?
 
-Zia's Night Blue reads as a deep, near-indigo blue — the darkest and most saturated blue in the zellige collection. In a room, the colorway absorbs light rather than reflecting it, which gives a Night Blue surface a quality of depth and enclosure. Against white plaster or pale stone, the contrast is significant and deliberate. Against warm brass fixtures or natural wood, the deep blue reads as the anchoring element in the palette. The glaze variation across the field shifts tiles between a deeper, cooler blue and a marginally brighter indigo register — enough movement to read as rich rather than flat.
+Zia's Night Blue reads as a deep, near-indigo blue — the darkest and most saturated blue in Zia's zellige collection. The glaze variation across the field shifts tiles between a deeper, cooler blue and a marginally brighter indigo register. On a deep colorway like Night Blue, the chips, pits, and hairline crazing catch shadow in low light, adding texture to what might otherwise read as a flat, monolithic color.
+
+### Is Night Blue the darkest blue in the zellige range? How does it compare to Maya Blue and Moroccan Blue?
+
+Night Blue is the deepest colorway in Zia's blue zellige range. Moroccan Blue is a classic saturated blue that carries the concentrated color of traditional Fez and Marrakech tilework — intense, but not as deep as Night Blue. Maya Blue sits at a different register entirely: a vivid, medium blue with warmth and clarity rather than depth. Night Blue is for installations where the deepest, most saturated blue is the goal; the other two represent progressively lighter registers. Ordering samples of all three side by side is the most reliable way to identify which suits the specific context.
+
+### How does Night Blue read on floors versus walls?
+
+On walls, Night Blue's depth and the tonal shifts between tiles create a surface that reads as rich and layered at close range. On floors, the same chips, pits, and hairline crazing interact with raking light from a low angle, adding texture that registers as the surface changes with foot traffic and overhead lighting. Both applications are suited to Night Blue; the key difference is that floors require grout joints of at least ⅛" on wet surfaces and an anti-slip treatment after installation. Sealing is required for all applications.
 
 ### Can Night Blue 4x4 zellige be used in a shower?
 
@@ -114,40 +122,28 @@ Yes. Zia's Night Blue 4x4 is suited for shower walls, shower floors, and steam s
 
 ### Is Night Blue zellige approved for pool and spa applications?
 
-Yes. Night Blue zellige is approved for pool waterlines, spa interiors, and fountains in both saltwater and chlorine environments. Sealing is required per the installation instructions. At a pool waterline, the deep blue glaze reads as a strong, graphic band that draws the eye along the waterline — a different visual effect from the lighter blues in the range.
-
-### How does Night Blue compare to Moroccan Blue and Maya Blue in the collection?
-
-Night Blue sits at the deep end of the blue spectrum — near-indigo, fully saturated, the darkest of the three. Moroccan Blue is a classic saturated blue that reads with intensity but less depth than Night Blue. Maya Blue has the warmth and clarity of the ancient Mesoamerican pigment — a vivid, medium blue that reads as bright and clear rather than deep. The three colorways represent different registers of blue, and comparing samples in the installation space is the most reliable way to identify which one suits the specific context.
-
-### What grout tone works with Night Blue zellige?
-
-A white or pale grey grout creates a sharp contrast with the dark field, defining the grid clearly and emphasizing the small-scale tonal variation across the tiles. A dark grout in a navy or charcoal tone integrates the joints into the surface and reads as a continuous deep-blue field — suitable for installations where a monolithic effect is the goal. Mid-tone brown or tan grouts can work against the cool quality of the deep blue glaze.
+Yes. Night Blue zellige is approved for pool waterlines, spa interiors, and fountains in both saltwater and chlorine environments. Sealing is required per the installation instructions. At a pool waterline, the deep blue glaze reads as a strong, graphic band — a different visual effect from the lighter blues in the range. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for outdoor and wet-environment sealing guidance.
 
 ### Can Night Blue 4x4 be combined with other zellige formats in the collection?
 
 Yes. Night Blue is available in 2x2, 2x6, and hexagon formats in addition to the 4x4. Combining the 4x4 with the 2x2 or hexagon in one installation works well for border accents, niche details, or mosaic insets within a larger field. Each format in the collection is produced using the same traditional methods, so surface character and material quality remain consistent across the range.
 
-### How thick is Night Blue 4x4 zellige?
+### What grout tone works with Night Blue zellige?
 
-Zellige tiles measure approximately ⅜" thick on average. Because each tile is hand-formed and fired individually, thickness varies piece to piece — a characteristic of the material that contributes to the undulating surface relief of a finished installation. That variation in plane is what allows a Night Blue wall to catch light at different angles across the field, giving the surface its depth rather than reading as a flat painted color.
+A white or pale grey grout creates a sharp contrast with the dark field, defining the grid clearly and emphasizing the small-scale tonal variation across the tiles. A dark grout in a navy or charcoal tone integrates the joints into the surface and reads as a continuous deep-blue field — suited to installations where a monolithic effect is the goal. Mid-tone brown or tan grouts can work against the cool quality of the deep blue glaze.
 
-### How does light affect how Night Blue reads throughout the day?
-
-At a deep, near-indigo saturation, Night Blue is one of the colorways most responsive to changing light conditions. In strong direct light, the glaze lifts slightly and individual tiles can read with distinct blue-to-indigo shifts. In lower or diffused light, the field reads as a unified, dark surface with the tonal variation visible only on closer inspection. The chips, pits, and hairline crazing catch shadow in low light, adding texture to what might otherwise read as a flat, monolithic color. Observing a sample across morning, afternoon, and evening light in the intended space gives the clearest picture of how the colorway will perform.
-
-### What adhesive or thinset does Zia recommend for zellige?
+### What thinset does Zia recommend for Night Blue 4x4 zellige?
 
 Zellige requires a white polymer-modified thinset, applied with full back-butter coverage to account for the irregular backs of handmade pieces. Grey thinset can show through the glaze, particularly at areas where chips or pits break the glaze surface. Refer to Zia's installation guide for the recommended products and application method, or contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with installation questions.
+
+### How thick is Night Blue 4x4 zellige?
+
+Zellige tiles measure approximately ⅜" thick on average. Because each tile is hand-formed and fired individually, thickness varies piece to piece — a characteristic of the material that contributes to the undulating surface relief of a finished installation. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions about substrate preparation and setting depth.
+
+### What does variation look like across a full Night Blue wall installation?
+
+Across a full installation, the surface carries the chips, pits, and hairline crazing characteristic of zellige. On a deep colorway like Night Blue, these marks are more legible as textural detail than on lighter colorways — the shift between a deeper indigo and a brighter blue registers more clearly across a saturated field. Mixing tiles from all boxes during the dry layout ensures the variation disperses evenly rather than clustering by production sequence.
 
 ### Is Night Blue zellige suitable for a steam shower?
 
 Yes. Night Blue 4x4 is approved for steam shower walls. Sealing is required for all steam shower applications, and the installation guide covers the recommended sealer and application sequence for high-humidity environments. Contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for guidance specific to a steam enclosure.
-
-### What does variation look like across a full Night Blue wall installation?
-
-Because each zellige tile is hand-dipped in glaze and fired individually in an earthen kiln, the surface across a full installation carries the chips, pits, and hairline crazing that are characteristic of the material. On a deep colorway like Night Blue, these marks are more legible as textural detail than on lighter colorways — the shift between a deeper indigo and a brighter blue registers more clearly across a saturated field. Mixing tiles from all boxes during the dry layout ensures the variation disperses evenly rather than clustering by production sequence.
-
-### How often should Night Blue zellige be resealed?
-
-The resealing schedule depends on the application. Shower walls, pool waterlines, and other moisture-exposed surfaces benefit from periodic resealing following the intervals in Zia's installation guide. In dry interior applications, resealing is needed less frequently but remains part of standard long-term maintenance. The installation guide covers sealer selection and resealing timing for each application type.

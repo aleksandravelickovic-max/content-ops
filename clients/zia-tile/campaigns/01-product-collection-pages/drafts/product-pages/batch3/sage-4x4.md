@@ -16,9 +16,9 @@ draft_date: 2026-06-26
 
 ---
 
-Hand-poured in Vietnam using techniques refined in the 1850s, Zia's Sage 4x4 is a muted grey-green in a 4" × 4" square format. The colorway is the same soft, grey-green tone as the rest of the Sage line — a hue with grey undertones that sits between green and neutral — but the 4x4 format introduces more grout lines across a field, producing a more articulated grid than the larger formats. On a backsplash, the compact square presents the grey-green in a classic tile grid that suits both contemporary and transitional interiors. On a floor, the closer grid scale adds a fine geometry to the surface that the 8x8 does not. Against white plaster and warm wood, the muted tone settles without competing.
+Hand-poured in Vietnam using techniques refined in the 1850s, Zia's Sage 4x4 is a muted grey-green in a 4" × 4" square format. The colorway is the same soft grey-green as the rest of the Sage line — a hue with grey undertones that sits between green and neutral — but the 4x4 format introduces more grout joints across a field, producing a more articulated grid than the 8x8. On a backsplash, the compact square presents the grey-green in a classic tile grid suited to contemporary and transitional interiors. On a floor, the closer grid scale adds a fine geometry to the surface. Sage is also available in 2x8 and 8x8 formats.
 
-Each cement tile is made by hand, and subtle variations in color, shape, and thickness are to be expected. Irregular edges and minor surface variation are natural to the material. The patina that develops over time marks the material's true character — a graceful nod to the worn cement floors of European cafés and public squares shaped by everyday life. Images shown are representative of a sample of this tile, but do not display every potential variation.
+Each cement tile is made by hand, and subtle variations in color, shape, and thickness are to be expected. Irregular edges and minor surface variation are natural to the material. The patina that develops over time is characteristic of hand-poured pigmented cement. Images shown are representative of a sample of this tile, but do not display every potential variation.
 
 \[IMAGE: SIZE/THICKNESS DIAGRAM\]
 
@@ -104,48 +104,44 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ### How does the Sage 4x4 read compared to the 2x8 and 8x8 formats?
 
-The Sage colorway is consistent across all three formats, but each produces a different surface character. The 4x4 introduces more grout joints than the 8x8, creating a more structured, articulated grid. Compared to the 2x8 subway, the square format removes the directional quality of the horizontal register — the surface reads as an even grid rather than a linear field. The 4x4 suits backsplashes, bathroom walls, and compact floor areas where a close grid scale is appropriate.
+The Sage colorway is consistent across all three formats, but each produces a different surface character. The 4x4 produces more grout joints than the 8x8, creating a more structured, articulated grid across the surface. Compared to the 2x8 subway, the square format removes the directional quality of the horizontal register — the 4x4 reads as an even, non-directional grid rather than a lateral field. The 4x4 suits backsplashes, bathroom walls, and compact floor areas where a close, regular grid is the intent.
 
-### Does Zia's Sage 4x4 cement tile require sealing?
+### How does the 4x4 grid scale read on a backsplash versus a floor?
 
-Yes. All cement tile requires sealing before grouting and again after grouting — in every installation, including dry spaces. Follow Zia's cement installation guide for the recommended sealers and application sequence. For questions about sealer selection, contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
-
-### What sealers does Zia recommend for cement tile?
-
-Zia's cement installation guide specifies a two-stage sealing process: an impregnating sealer is applied before grouting, and a topcoat sealer is applied after the grout has fully cured. Both stages are required in every installation. The specific products are listed in the installation guide; for project-specific sealer questions, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+On a backsplash, the 4x4 grid produces a classic tile layout at a scale that suits most standard kitchen wall heights — the geometry is clear without being oversized. On a floor, the smaller format produces a denser grid than either the 2x8 or the 8x8, which gives the surface more visible texture at floor level and suits bathroom floors, smaller rooms, or any application where a tighter pattern is the design intent.
 
 ### Can Sage 4x4 be used in a shower?
 
-Yes. Zia's Sage 4x4 is suited for shower walls and shower floors. Seal the tile before grouting and again after, following the cement installation guide. For shower floor applications, apply an anti-slip treatment after installation to support traction in wet conditions.
+Yes. Zia's Sage 4x4 is suited for shower walls and shower floors. Seal the tile before grouting and again after, following the cement installation guide. For shower floor applications, apply an anti-slip treatment after installation. The 4x4 format produces more grout joints than the 8x8 on a shower floor, which increases grip surface — a consideration that favors the smaller format in wet floor applications.
 
 ### Can Sage 4x4 be installed outdoors?
 
 Sage 4x4 cement tile is suited for exterior floors and walls in non-freeze/thaw climates — patios, courtyards, and covered outdoor spaces in mild climates. It is not suitable for installation in climates where the surface may be subject to freeze/thaw cycles.
 
-### What thinset is recommended for cement tile installation?
+### What grout color works best with the Sage 4x4?
 
-A latex-modified or polymer-modified white thinset is generally recommended for cement tile. Standard grey thinset can bleed through the porous pigmented surface and affect the tile's color, particularly in lighter colorways such as Sage. Zia's cement installation guide provides specific thinset guidance; contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for installer-specific questions.
+A grout close in tone to the sage grey-green allows the tile field to read as a near-continuous surface — the grid recedes and the color carries the wall or floor. A white or light grey grout emphasizes the grid structure and makes the square pattern more visible. On a compact backsplash or bathroom wall where the grid's regularity is part of the design intent, the contrasting grout option suits the 4x4's close geometry well.
+
+### What thinset is recommended for the Sage 4x4?
+
+A white latex-modified or polymer-modified thinset is recommended. Standard grey thinset can bleed through the porous pigmented surface and affect the tile's color, particularly in lighter colorways such as Sage. Zia's cement installation guide provides specific thinset guidance; contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with installer-specific questions.
 
 ### What grout joint width does Zia recommend for the 4x4 format?
 
-Zia recommends 1/16" grout joints for the Sage 4x4 in standard interior applications. For wet commercial floor applications, grout joints should measure at least 1/8" to meet slip-resistance standards. The grout color choice matters here: a grout close in tone to the sage grey-green allows the tile field to read as continuous, while a contrasting grout emphasizes the grid structure.
+Zia recommends 1/16" grout joints for the Sage 4x4 in standard interior applications. For wet commercial floor applications, grout joints should measure at least 1/8" to meet slip-resistance standards.
 
 ### How does tonal variation distribute across a Sage 4x4 installation?
 
 The grey-green of Sage carries inherent tonal variation tile to tile, a characteristic of hand-poured cement pigment. In a 4x4 format, the closer grid means variation between adjacent tiles is more visible than in a large-format installation. Opening tiles from multiple boxes and blending them before setting is essential — concentrating tiles from a single box produces visible tonal clusters in the finished surface.
 
-### How does the Sage 4x4 work with other materials?
+### What materials pair well with the Sage 4x4?
 
-The muted grey-green of Sage pairs well with warm plaster, pale oak, and honed stone countertops. In a kitchen, the 4x4 on a backsplash works alongside the Sage 8x8 on the floor — the colorway stays consistent while the grid scale shifts. The grey undertone keeps Sage from reading as a botanical green and suits contemporary interiors where a grounding, neutral-adjacent color is the intent.
+The muted grey-green of Sage pairs well with warm plaster, pale oak, and honed stone countertops. In a kitchen, the 4x4 on a backsplash works alongside the Sage 8x8 on the floor — the colorway stays consistent while the grid scale shifts. Sage is also available in the 2x8 subway format for a directional alternative on a kitchen backsplash.
 
-### How does cement tile differ from ceramic or porcelain?
+### Is Sage cement tile available in other formats?
 
-Cement tile is never fired. A 3 mm layer of mineral pigment and cement is hydraulically pressed and water-cured, not kiln-fired. This gives the surface a matte, porous character with real color depth throughout the top layer — not a glaze over a ceramic body. Ceramic and porcelain carry color only in the fired glaze; a cement tile's pigmented surface develops a patina over time rather than wearing to a white ceramic body beneath.
+Yes. Sage is available in 2x8 subway and 8x8 square formats in addition to the 4x4. The colorway is consistent across all three; the format determines the grout joint density and the scale of the grid pattern.
 
-### How does cement tile age and develop patina?
+### What is the coverage per box for Sage 4x4 cement tile?
 
-The matte surface of Sage cement tile softens with wear and time. Heavy foot traffic develops a gentle sheen in the most-used areas, producing a natural tonal gradient that reads as depth rather than damage. This patina is characteristic of cement tile and deepens the material's presence over years. Periodic resealing per the installation guide maintains the surface and supports this process.
-
-### How should cement tile be cleaned?
-
-Sweep or dry-mop regularly to remove grit from the surface. For routine cleaning, use warm water and a pH-neutral cleaner. Avoid acidic cleaners — vinegar, citrus-based products, and bleach will damage the cement surface and strip the sealer. Reseal periodically following the cement installation guide, with frequency depending on traffic and exposure.
+Coverage per box depends on the tile count and format size. For current box count and square footage per box for the Sage 4x4, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170. Plan a 15–20% overage above the measured square footage to account for cuts and curation during installation.

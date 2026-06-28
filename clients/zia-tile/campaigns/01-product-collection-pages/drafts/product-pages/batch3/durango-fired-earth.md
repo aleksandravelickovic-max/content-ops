@@ -100,42 +100,42 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ## Frequently Asked Questions
 
-### How does the Durango + Fired Earth read in a room?
+### How many tiles make up one Durango set?
 
-The Fired Earth colorway reads as a warm, mid-range terra cotta with surface variation produced by wood ash applied during firing. The ash contact creates textured patterning across the clay base, so each tile in the set carries its own tonal character. The Durango geometry adds a second layer of visual movement: the four-tile set builds an abstract interlocking pattern that becomes more pronounced as additional sets extend across the field. The ash-fired surface and the Durango geometry together produce a floor that reads as architecturally composed and materially varied.
+The Durango is a four-tile set. The pattern resolves only when all four tiles are oriented correctly relative to one another — the geometry is invisible in a single tile and emerges only through the relationship of the set. As sets accumulate across the field, the interlocking geometry builds in complexity. A full dry layout before setting any tile is essential, both to confirm how the pattern reads across the full space and to plan perimeter cuts.
 
-### How many tiles are in a Durango set, and how does the pattern work?
+### How does the four-tile geometric repeat center in a room?
 
-The Durango is a four-tile set that produces an abstract geometric pattern across the installation. The pattern resolves only when all four tiles are oriented correctly relative to one another — meaning the geometry is invisible in a single tile and emerges only through the relationship of the set. As sets accumulate across the field, the interlocking geometry builds in complexity. A full dry layout before setting any tile is essential, both to confirm how the pattern reads across the full space and to plan perimeter cuts.
+The Durango's abstract geometric pattern requires planning for the room's visual center before installation begins. Because the pattern repeats across four-tile sets, the point from which the sets radiate affects how the pattern reads from the main entry point of the room. Dry-laying from the center out — rather than starting from a wall — gives the most symmetrical result and ensures the most complete sets appear in the primary field of view. At the perimeter, partial sets are expected; the question is where those partial sets land.
 
-### How do I seal Durango + Fired Earth Cotto tile?
+### What happens at room edges where the Durango pattern cannot complete its full repeat?
 
-Cotto requires a two-stage sealing process. Apply a pre-grout sealer before grouting to saturate the surface and act as a grout release. After grouting, apply the post-grout top coat: a matte wax for interior installations, or a second coat of the pre-grout sealer for exterior, as UV exposure causes wax to discolor outdoors. Periodic resealing maintains resistance to moisture and staining. Refer to Zia's Cotto installation guide for specific product recommendations, or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions.
+At the perimeter, the four-tile set will almost always require partial cuts to meet straight walls cleanly. The Durango's abstract geometry does not have a natural half-repeat the way a simple rectangular pattern does — partial sets at the edge will read as fragments of the overall pattern rather than as independent tiles. Planning these cuts during the dry layout phase is the primary way to control how the perimeter reads. Increasing overage to 20% or more for Durango orders is advisable because edge cuts consume significantly more tile than in a standard square or rectangular installation. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 to discuss perimeter solutions for a specific project.
 
-### How often does Durango + Fired Earth need to be resealed?
+### Is the Durango available in other colorways?
 
-Resealing frequency depends on traffic and exposure. High-traffic interior floors typically benefit from resealing every one to two years. Exterior installations may require more frequent resealing based on climate conditions and exposure. A reliable field test: when water no longer beads on the surface and instead absorbs into the clay, resealing is due. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for guidance.
+Yes. The Durango shape is available in additional Cotto colorways in the Zia collection. Fired Earth pairs with Red Clay for a warmer, deeper palette across the geometric field, or with Adobe for a lighter tonal contrast. Contact [info@ziatile.com](mailto:info@ziatile.com) to discuss colorway options for the Durango before ordering.
 
 ### Can Durango + Fired Earth be used outdoors in freezing climates?
 
-Yes. Unglazed Cotto is suited for exterior floors in any climate, including regions with freeze/thaw cycles — a key distinction from glazed Cotto Allende and zellige, which are not rated for freeze/thaw exterior use. Proper sealing is required. For outdoor installations, apply the pre-grout sealer before grouting and a second coat of the same sealer (not wax) as the post-grout top coat.
-
-### Are there companion shapes or trim pieces for the Durango format?
-
-The Durango is a specialty shape within Zia's Cotto collection. Because the four-tile set produces a self-contained geometric pattern, companion trim pieces are not typically required for field installations. At the perimeter, the set's geometry will require partial cuts to meet straight walls cleanly — planning these cuts during the dry layout phase is particularly important for the Durango to avoid disrupting the pattern at the edges of the installation. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 to discuss perimeter solutions for a specific project.
+Yes. Unglazed Cotto is suited for exterior floors in any climate, including regions with freeze/thaw cycles — a key distinction from glazed Cotto Allende and zellige, which are not rated for freeze/thaw exterior use. For an exterior patio installation, the Durango's perimeter edge planning becomes more important because exterior cuts need to be sealed thoroughly to prevent moisture ingress at the edges. Proper sealing is required for all outdoor installations: apply the pre-grout sealer before grouting and a second coat of the same sealer (not wax) as the post-grout top coat.
 
 ### How does patina develop on Fired Earth Cotto?
 
 The ash-fired surface of Fired Earth deepens in tone with wear and time. The warm clay base and the variable ash coloration both become more pronounced as patina builds — individual tile variation that is visible at installation gradually integrates into a unified, aged surface across the full field. Expect the tone to deepen over time: that patina is the point.
 
+### How do I seal Durango + Fired Earth Cotto tile?
+
+Cotto requires a two-stage sealing process. Apply a pre-grout sealer before grouting to saturate the surface and act as a grout release. After grouting, apply the post-grout top coat: a matte wax for interior installations, or a second coat of the pre-grout sealer for exterior. Refer to Zia's Cotto installation guide for specific product recommendations, or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions.
+
 ### What is the recommended grout joint width for the Durango set?
 
-Zia recommends a minimum 1/8" grout joint, applied with 1/8" tile spacers. Because the Durango's irregular geometry produces angles and joins that differ from a standard square tile, the dry layout is also the right moment to confirm how grout lines will read across the full pattern before any mortar is set.
+Zia recommends a minimum 1/8" grout joint, applied with 1/8" tile spacers. Because the Durango's geometry produces angles and joins that differ from a standard square tile, the dry layout is also the right moment to confirm how grout lines will read across the full pattern before any mortar is set.
 
-### What thinset is recommended for Durango + Fired Earth?
+### What is efflorescence and how is it prevented?
 
-Use a polymer-modified thinset appropriate for unglazed terra cotta and porous tile bodies. The Durango's 10" × 10.5" dimensions make back-buttering each tile advisable to ensure full coverage, particularly given the shape's irregular edge profiles. Refer to Zia's installation guide for the full specification, or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for product recommendations specific to the installation.
+Efflorescence appears as white crystalline deposits on the tile surface when mineral salts from the subfloor or mortar migrate through the clay body and settle on the face. Installing Cotto over a subfloor that has not fully cured is the most common cause. Zia's installation guide specifies a minimum 30-day subfloor cure before setting tile. A proper pre-grout seal prevents the conditions that allow efflorescence to develop.
 
-### Can Durango + Fired Earth be mixed with other Cotto colorways?
+### How should Durango + Fired Earth be cleaned?
 
-Yes. The Durango shape is available in additional Cotto colorways in the Zia collection. Fired Earth pairs with Red Clay for a warmer, deeper palette across the geometric field, or with Adobe for a lighter tonal contrast. Contact [info@ziatile.com](mailto:info@ziatile.com) to discuss colorway combinations for a specific project before ordering.
+Use a pH-neutral cleaner with warm water. Avoid acidic cleaners — vinegar, citrus-based products, and bleach — as these strip the sealer and degrade the clay surface over time. Sweep or vacuum regularly to remove grit before mopping, and dry the surface after mopping to prevent residue buildup. Reseal periodically per the installation guide, with frequency depending on traffic and exposure.

@@ -16,7 +16,7 @@ draft_date: 2026-06-26
 
 ---
 
-Zia's Moroccan Blue zellige carries the concentrated, deeply saturated blue that defines the tilework of Fez and Marrakech — the blue of riads, hammams, and courtyard fountains that has been at the center of Moroccan decorative tradition for centuries. In a kitchen or bathroom, the colorway makes an immediate statement, holding the intensity of saturated blue across the surface while the dynamic glazes introduce enough tonal movement to keep the field from reading flat. The 4x4 square format suits kitchen backsplashes, bathroom walls, pool waterlines, and shower enclosures.
+Zia's Moroccan Blue zellige carries the concentrated, deeply saturated blue that defines the tilework of Fez and Marrakech — the blue of riads, hammams, and courtyard fountains that has been at the center of Moroccan decorative tradition for centuries. The glaze holds its saturation across the field while tonal variation tile to tile keeps the surface from reading flat. The 4x4 square format suits kitchen backsplashes, bathroom walls, pool waterlines, and shower enclosures.
 
 Zia's Moroccan Blue 4x4 zellige is hand-formed, dipped in glaze, and fired in earthen kilns in Morocco, where the method has been refined over more than 800 years. Each tile carries the chips, pits, hairline crazing, and tonal shifts that come from working at this scale by hand. Photographs shown are representative of a sample of this tile, but do not display all potential variations.
 
@@ -106,7 +106,15 @@ Local pickup is free at our Los Angeles area warehouse. Our team will reach out 
 
 ### What does Moroccan Blue zellige look like in a room?
 
-Zia's Moroccan Blue reads as a deeply saturated, classic blue — the concentrated color of traditional Moroccan zellige panels in the medinas of Fez and Marrakech. In a room, the colorway commands the surface it occupies, but the glaze variation means the field reads as layered and varied rather than flat. Some tiles shift toward a deeper, near-indigo register; others carry a brighter, cleaner blue. Against white grout, white plaster, or pale stone, the contrast is immediate and graphic. Against warm woods or brass fixtures, the intensity of the blue creates a deliberate counterpoint.
+Zia's Moroccan Blue reads as a deeply saturated, classic blue — the concentrated color of traditional Moroccan zellige panels in the medinas of Fez and Marrakech. Some tiles shift toward a deeper, near-indigo register; others carry a brighter, cleaner blue. The chips, pits, and hairline crazing at the surface catch and scatter light, so the field reads with texture rather than as a flat plane.
+
+### How does Moroccan Blue zellige read differently at a pool waterline versus a backsplash versus a floor?
+
+At a pool waterline, the saturated blue reads against the water tone and tile borders create a graphic horizontal band — the deeply concentrated blue reinforces the color of the water rather than contrasting against it. On a backsplash, the field is viewed at close range and the tonal variation tile to tile — from a near-indigo to a cleaner primary blue — becomes the main visual interest. On a floor, the chamfered edges and chips, pits, and hairline crazing catch raking light from a low angle, giving the surface texture that a saturated glaze on a flat tile would not produce. All three applications are approved; sealing is required for each.
+
+### How does Moroccan Blue compare to Portuguese Blue and Night Blue in the collection?
+
+Moroccan Blue sits between the two in terms of depth. Portuguese Blue has a softer, more Iberian quality — a mid-range saturation that draws on the azulejo tradition rather than the concentrated zellige palette of Fez. Night Blue is the darkest and most saturated of the three, a near-indigo that reads significantly deeper. Moroccan Blue carries the concentrated blue of traditional Moroccan tilework — more intensity than Portuguese Blue, not as deep as Night Blue. Ordering samples of multiple colorways is the most reliable way to see how each reads in the installation context.
 
 ### Can Moroccan Blue 4x4 zellige be used in a shower?
 
@@ -116,29 +124,21 @@ Yes. Zia's Moroccan Blue 4x4 is suited for shower walls, shower floors, and stea
 
 Yes. Moroccan Blue zellige is approved for pool waterlines, spa interiors, and fountains in both saltwater and chlorine environments. Sealing is required per the installation instructions. The deeply saturated blue at a pool waterline references the same tradition as the zellige-clad riads and hammams from which the tile originates.
 
-### How does Moroccan Blue compare to Portuguese Blue in the collection?
-
-Both are mid-range blue zellige colorways, but they read differently in a room. Moroccan Blue carries more saturation and depth — closer to the concentrated blue of traditional North African tilework. Portuguese Blue has a softer, more Iberian quality, drawing on the azulejo tradition rather than the zellige palette of Fez. Ordering samples of both side by side is the most reliable way to see how each reads against the specific materials in the installation.
-
-### What grout works best with Moroccan Blue zellige?
-
-A white or pale cream grout creates the strongest contrast and draws on the graphic quality of traditional Moroccan tilework, where white grout joints between blue tiles define the grid. A grey grout allows the surface to read as a more unified blue field with less emphasis on the tile boundaries. Avoid grouts in warm or earthy tones, which can flatten the quality of a deeply saturated blue glaze.
-
 ### Can Moroccan Blue 4x4 be combined with other formats in the zellige collection?
 
 Yes. Moroccan Blue is also available in 2x2, 2x6, and hexagon formats. Each format is produced using the same traditional methods and shares consistent surface character across the range. Combining the 4x4 with the 2x2 or hexagon in one installation works well for border details, niche accents, or mosaic insets within a larger 4x4 field.
 
+### What grout works best with Moroccan Blue zellige?
+
+A white or pale cream grout creates the strongest contrast and draws on the graphic quality of traditional Moroccan tilework, where white grout joints between blue tiles define the grid. A grey grout allows the surface to read as a more unified blue field with less emphasis on the tile boundaries. Warm or earthy grout tones can flatten the quality of a deeply saturated blue glaze.
+
+### What grout joint width does Zia recommend for Moroccan Blue 4x4?
+
+For wall applications, a joint as tight as 1/16" is achievable, though ⅛" is more practical given the inherent size variation of handmade zellige. For shower floors and other wet floor applications, ⅛" is the minimum required, with anti-slip treatment applied after installation. Wedge spacers help maintain consistent spacing. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with installation-specific questions.
+
 ### How thick is Moroccan Blue 4x4 zellige?
 
 Moroccan Blue 4x4 zellige is approximately ⅜" thick, consistent with the standard for Zia's handmade zellige collection. Individual tiles vary slightly in thickness as a characteristic of the hand-forming process. The thinset setting bed accommodates this variation during installation. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions about substrate and setting depth.
-
-### How does light affect how Moroccan Blue reads throughout the day?
-
-Moroccan Blue is a saturated glaze, and its intensity shifts meaningfully with light. In strong, direct natural light, the blue reads at its fullest saturation — close to the concentrated blues of traditional Moroccan panel work. In lower light or north-facing conditions, the same glaze reads as deeper and richer, with the near-indigo register of the darker tiles in the field becoming more prominent. The chips, pits, and hairline crazing at the surface catch and scatter light, so the field reads with texture rather than as a flat plane.
-
-### Does Moroccan Blue vary between production runs?
-
-Yes. The colorway can shift between batches. Each run of zellige is produced by hand, and the clay, glaze, and kiln conditions change from one production run to the next. Tiles from separate orders may differ in tone and surface character. For projects requiring tiles from multiple orders, ordering the full quantity at once gives the most consistent result across the installation. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 to discuss quantity planning.
 
 ### What does variation look like across a full Moroccan Blue installation?
 
@@ -146,4 +146,4 @@ Across a field, Moroccan Blue ranges from tiles with a deeper, slightly purple-i
 
 ### Can Moroccan Blue 4x4 zellige be used on an exterior wall in a non-freeze/thaw climate?
 
-Yes. Moroccan Blue 4x4 is suited for exterior walls in non-freeze/thaw climates. Glazed zellige is not suitable for outdoor installation where surfaces are exposed to freezing temperatures. In mild-climate installations, the deep blue glaze on an exterior courtyard or feature wall reads with strong presence against pale stucco or natural stone surrounds. Sealing is required for all outdoor applications; contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for guidance on exterior sealing requirements.
+Yes. Moroccan Blue 4x4 is suited for exterior walls in non-freeze/thaw climates. Glazed zellige is not suitable for outdoor installation where surfaces are exposed to freezing temperatures. Sealing is required for all outdoor applications; contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for guidance on exterior sealing requirements.

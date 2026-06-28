@@ -16,7 +16,7 @@ draft_date: 2026-06-26
 
 ---
 
-Zia's Glacier Blue zellige occupies the lighter, cooler end of the blue spectrum — a mid-to-light blue that reads with an airy, clear quality rather than the depth of deeper blues like Night Blue or the saturation of Moroccan Blue. In a bathroom or kitchen, Glacier Blue opens up the surface it covers, introducing a tone that sits closer to pale sky or still water. The 4x4 square format suits bathroom walls, kitchen backsplashes, shower enclosures, and pool waterlines, where the lightness of the glaze reads well against both white and natural stone surrounds.
+Zia's Glacier Blue zellige occupies the lighter, cooler end of the blue spectrum — a mid-to-light blue that reads with an airy, clear quality rather than the depth of deeper blues like Night Blue or the saturation of Moroccan Blue. The glaze is the lightest blue in Zia's zellige range, a cool pale tone without crossing into a washed-out or greyed register. The 4x4 square format suits bathroom walls, kitchen backsplashes, shower enclosures, and pool waterlines, where the lightness of the glaze reads well against both white and natural stone surrounds.
 
 Zia's Glacier Blue 4x4 zellige is hand-formed, dipped in glaze, and fired in earthen kilns in Morocco, where the method has been refined over more than 800 years. Each tile carries the chips, pits, hairline crazing, and tonal shifts that come from working at this scale by hand. Photographs shown are representative of a sample of this tile, but do not display all potential variations.
 
@@ -106,7 +106,15 @@ Local pickup is free at our Los Angeles area warehouse. Our team will reach out 
 
 ### What does Glacier Blue zellige look like in a room?
 
-Zia's Glacier Blue reads as a clear, mid-to-light blue — lighter and more open than the deeper colorways in the range, without crossing into a washed-out or greyed-out register. The name references the particular quality of the glaze: a cool, clean blue with depth behind it rather than flatness. In a bathroom, the tile reads as airy and mineral. Against white or cream surrounds, the colorway brings the room toward a cleaner, brighter palette. Against natural stone or pale wood, it reads as a considered blue accent without competing for dominance.
+Zia's Glacier Blue reads as a clear, mid-to-light blue — the lightest blue in Zia's zellige range, without crossing into a washed-out or greyed-out register. The name references the particular quality of the glaze: a cool, clean blue with depth behind it rather than flatness. The chips, pits, and hairline crazing at the surface catch light at different angles, so the field reads with texture and depth rather than as a uniform plane of color.
+
+### Is Glacier Blue the lightest blue offered in the zellige collection? How does it compare to the other blues?
+
+Glacier Blue is the lightest blue in Zia's zellige range. Portuguese Blue sits above it — a mid-range saturation with a more historically grounded Iberian quality. Moroccan Blue carries the concentrated, deeply saturated blue of traditional North African tilework. Maya Blue is a vivid medium blue with a warm undertone. Night Blue is the deepest: a near-indigo at the opposite end of the spectrum. Glacier Blue suits installations where a pale, cool blue presence is the goal. Ordering samples of multiple colorways is the most reliable way to see how each reads in the specific context.
+
+### Does the pale glaze of Glacier Blue read differently on floors versus walls?
+
+On walls, Glacier Blue reads as a clear, airy color field where the tonal variation between tiles — from a slightly paler, more washed register to a cleaner mid-blue — carries the visual interest. On floors, the same pale glaze interacts with raking light from a low angle, and the chamfered edges between tiles create shadow lines that add texture at close range. Both applications are suited to Glacier Blue; on wet floors, grout joints must measure at least ⅛" and anti-slip treatment is required after installation. Sealing is required for all applications.
 
 ### Can Glacier Blue 4x4 zellige be used in a shower?
 
@@ -114,36 +122,28 @@ Yes. Zia's Glacier Blue 4x4 is suited for shower walls, shower floors, and steam
 
 ### Is Glacier Blue zellige approved for pools and spas?
 
-Yes. Glacier Blue zellige is approved for pool waterlines, spa interiors, and fountains in both saltwater and chlorine environments. Sealing is required per the installation instructions. The lighter blue glaze reads well at a pool interior, where the color complements the water tone rather than contrasting against it.
-
-### How does Glacier Blue compare to Portuguese Blue and Night Blue in the collection?
-
-Glacier Blue sits at the lighter end of the blue range — a clear, mid-to-light blue that reads with more openness than Portuguese Blue and significantly less depth than Night Blue. Portuguese Blue has a mid-range saturation with a more historically grounded Iberian quality. Night Blue sits at the deep, near-indigo end of the range. Glacier Blue suits installations that call for a blue presence without the intensity of the deeper colorways. Ordering samples of multiple colorways is the most reliable way to see how each reads in the specific context of the installation.
+Yes. Glacier Blue zellige is approved for pool waterlines, spa interiors, and fountains in both saltwater and chlorine environments. Sealing is required per the installation instructions. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for wet-environment and outdoor sealing guidance.
 
 ### What grout pairs well with Glacier Blue zellige?
 
-A white grout creates a clean, crisp surface that keeps the Glacier Blue field bright and open — the same approach used in many pool and shower installations where a light, fresh palette is the goal. A grey grout matched to the cooler end of the blue glaze integrates the joints more quietly and reads as a continuous surface. Warmer grout tones can flatten the cool quality of the Glacier Blue glaze and are generally not the first choice for this colorway.
-
-### Does Glacier Blue vary between production runs?
-
-Yes. The colorway can shift between batches. Each run of zellige is produced by hand, and the clay, glaze, and kiln conditions change from one production run to the next. Tiles from separate orders may differ in tone and surface character. For projects requiring tiles from multiple orders, ordering the full quantity at once gives the most consistent result across the installation.
-
-### How thick is Glacier Blue 4x4 zellige?
-
-Glacier Blue 4x4 zellige is approximately ⅜" thick, consistent with the standard for Zia's handmade zellige collection. Individual tiles vary slightly in thickness as a characteristic of hand-forming. The thinset setting bed accommodates this variation during installation. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions about substrate preparation and setting depth.
-
-### How does light affect how Glacier Blue reads throughout the day?
-
-Glacier Blue is a light glaze, and the quality of the light source has a pronounced effect on how the color reads. In cool natural light or north-facing rooms, the glaze reads at its clearest — a crisp, airy blue. In warm afternoon or incandescent light, the same glaze picks up warmth and reads as slightly more muted and soft. The chips, pits, and hairline crazing at the surface catch light at different angles, so the field reads with texture and depth rather than as a uniform plane of color. Evaluating a sample in the actual installation space, at different times of day, is the most reliable preview.
+A white grout creates a clean, crisp surface that keeps the Glacier Blue field bright and open. A grey grout matched to the cooler end of the blue glaze integrates the joints more quietly and reads as a continuous surface. Warmer grout tones can flatten the cool quality of the Glacier Blue glaze.
 
 ### What thinset is recommended for Glacier Blue 4x4 zellige?
 
 A white polymer-modified thinset is the correct choice. On lighter glaze colorways like Glacier Blue, white thinset is particularly important — it prevents visible bleed at the chamfered edges and through the grout joints. The setting bed should be flat and fully supporting each tile. Full thinset guidance is in the Zellige Installation Guide; direct installation questions to [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
 
+### What grout joint width does Zia recommend for Glacier Blue 4x4?
+
+For wall applications, a joint as tight as 1/16" is achievable, though ⅛" is more practical given the inherent size variation of handmade zellige. For shower floors and other wet floor applications, ⅛" is the minimum required, with anti-slip treatment applied after installation. Wedge spacers help maintain consistent spacing. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with installation-specific questions.
+
+### How thick is Glacier Blue 4x4 zellige?
+
+Glacier Blue 4x4 zellige is approximately ⅜" thick, consistent with the standard for Zia's handmade zellige collection. Individual tiles vary slightly in thickness as a characteristic of hand-forming. The thinset setting bed accommodates this variation during installation. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions about substrate preparation and setting depth.
+
 ### What does variation look like across a full Glacier Blue installation?
 
-Across a field, the Glacier Blue glaze ranges from tiles with a slightly paler, more washed register to those with a cleaner, more saturated mid-blue. The chips, pits, and hairline crazing characteristic of zellige are present at the surface. The chamfered edges create subtle shadow lines between tiles. On a lighter glaze like Glacier Blue, this variation reads as a quietly textured surface rather than a flat, uniform color field. Mixing tiles from all boxes before installation distributes the tonal range evenly across the surface.
+Across a field, the Glacier Blue glaze ranges from tiles with a slightly paler, more washed register to those with a cleaner, more saturated mid-blue. The chips, pits, and hairline crazing characteristic of zellige are present at the surface. The chamfered edges create subtle shadow lines between tiles. Mixing tiles from all boxes before installation distributes the tonal range evenly across the surface.
 
 ### Can Glacier Blue 4x4 zellige be used on an exterior wall in a non-freeze/thaw climate?
 
-Yes. Glacier Blue 4x4 is suited for exterior walls in non-freeze/thaw climates. Glazed zellige is not suitable for outdoor installation where surfaces are exposed to freezing temperatures. In mild climates, the light blue glaze on an exterior garden or courtyard wall reads with a fresh, mineral quality against pale stucco or natural stone. Sealing is required for all outdoor applications; contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for guidance.
+Yes. Glacier Blue 4x4 is suited for exterior walls in non-freeze/thaw climates. Glazed zellige is not suitable for outdoor installation where surfaces are exposed to freezing temperatures. Sealing is required for all outdoor applications; contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for guidance.

@@ -18,7 +18,7 @@ draft_date: 2026-06-26
 
 Carrara 6x6 is a honed marble tile cut to a 6x6 square format, 3/8" thick, quarried in Italy and Spain and cut near Verona. The stone is white to light grey with soft grey veining — the same quarry stone seen in architecture and art from the Duomo to the Statue of David — in a compact square format that suits floor patterns, shower walls, and detailed installations where the 6x6 grid defines the composition. The honed finish produces a smooth, non-reflective surface that brings the stone's natural grey-white palette forward without glare, so the material reads as matte and quiet rather than declarative.
 
-Zia's Carrara 6x6 is the compact format of Zia's Carrara marble line. At 6x6, the gridded layout is dense enough that the veining on each individual tile contributes to the overall surface composition — tiles with sweeping grey veins read against tiles where the veining runs close to the surface or recedes into the white ground, producing a surface that coheres as a stone field rather than a pattern. In a classic checkerboard installation with Nero Marquina, the 6x6 format produces tight, even geometry. In a monolithic Carrara installation, the white-grey palette and honed finish produce a surface that recalls the oldest stone floors of antiquity.
+Zia's Carrara 6x6 is the compact format of Zia's Carrara marble line. At 6x6, the gridded layout is dense enough that the veining on each individual tile contributes to the overall surface composition — tiles with sweeping grey veins read against tiles where the veining runs close to the surface or recedes into the white ground, producing a surface that coheres as a stone field rather than a pattern. In a classic checkerboard installation with Nero Marquina, the 6x6 format produces tight, even geometry where the contrast between the white-grey and deep black defines the surface at close range and across the room.
 
 Zia's Carrara 6x6 includes significant variations in color, tone, veining, and surface texture across tiles. These are inherent characteristics of natural marble and should be expected across the order. Images shown are representative of a sample of this tile and may not display all potential variation in veining character and tone.
 
@@ -104,25 +104,17 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ## Frequently Asked Questions
 
-### How does Carrara 6x6 read in a room?
+### How does the 6x6 square format read differently from a subway or 12x12 format in the Carrara colorway?
 
-Carrara 6x6 reads as a quiet, white-to-light-grey stone field where the soft grey veining varies in density and direction across the surface. Some tiles carry a faint grey trace against a nearly white ground; others show more pronounced vein movement through the body. No two tiles are identical, which gives the installed surface a material depth that a uniform tile cannot produce. The honed finish keeps the palette non-reflective and composed, and the 6x6 square format introduces a gridded rhythm that suits both architectural minimalism and classically proportioned rooms.
+The 6x6 square produces a dense, even grid across the floor or wall — more grout joints per square foot than a 12x12, and a different visual rhythm than the rectangular offset of subway tile. Each 6x6 tile carries its own veining character, and at this scale the individual tile unit is more visible within the composition. A 12x12 allows the veining to resolve across a wider field; a subway format introduces a horizontal directional rhythm. The 6x6 square is particularly suited to patterned installations and checkerboard applications because the compact geometry works cleanly within multi-colorway compositions.
 
-### How does the veining distribute across a large installation?
+### What is the typical vein character of Carrara — light grey on white, or blue-grey on white?
 
-Veining density, direction, and character differ tile to tile because each piece is cut from a different cross-section of the quarried block. Across a large installation, some areas of the floor or wall will read more white and open; others will carry more grey vein movement. Unpacking and blending tiles from all boxes before setting — and dry-laying the full composition before fixing any stone — is the correct method for balancing the veining distribution across the space and placing the most visually active tiles where they serve the design.
+Carrara's veining is soft grey against a white-to-light-grey ground — not blue-grey, which is more characteristic of certain Bardiglio and Calacatta marbles. The grey tones in Carrara stay in a warm-to-neutral grey range without strong blue or cool undertones. Some tiles carry faint grey traces against a nearly white ground; others show more pronounced vein movement. This variation is inherent to the quarried stone, and the range across tiles in a single order is part of what gives the installed surface its depth.
 
-### Does Carrara 6x6 marble require sealing?
+### How does Carrara compare to Nero Marquina in terms of drama, vein density, and room effect?
 
-Yes. Marble requires sealing before and after grouting. Apply a penetrating sealer in thin layers until the stone is fully saturated before grouting, wiping off any excess before it dries. After grouting and allowing the grout to cure fully, apply a top coat sealer appropriate for the installation environment. Carrara's lighter palette makes staining more visible than it would be on darker stone, so proper sealing and prompt spill cleanup matter particularly here. Refer to the Marble Installation Guide for the full sequence, or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions.
-
-### How often does Carrara marble need to be resealed?
-
-Resealing frequency depends on exposure and use. Interior bathroom and shower installations typically benefit from resealing every one to two years; high-traffic floors may need attention more frequently. A penetrating sealer that has worn down will allow liquids to absorb into the stone rather than bead on the surface — that change in behavior is the practical signal that resealing is needed. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for guidance on sealer selection and timing.
-
-### What causes etching on marble, and how is it prevented?
-
-Etching occurs when acidic substances — citrus juice, vinegar, wine, certain cleaning products — contact the calcium carbonate in the marble and chemically react with the surface. The result is a dull mark in the stone that differs from a stain in that it cannot be wiped away; it is a surface change in the stone itself. Using pH-neutral cleaners exclusively and cleaning spills promptly before acidic liquids have time to react with the stone are the primary means of prevention. In heavily etched areas, professional honing can restore the surface.
+Carrara and Nero Marquina sit at opposite ends of the marble palette. Carrara is a quiet, white-to-light-grey stone with soft grey veining; its room effect is open and light. Nero Marquina is a near-black ground with high-contrast white veining; it reads as graphic and bold. Vein density in Carrara runs lighter overall than Nero Marquina's bright white calcite lines. Paired in a 6x6 checkerboard, the two produce tight, even geometry where the contrast between white-grey and deep black defines the surface from across the room.
 
 ### Can Carrara 6x6 be used in a shower?
 
@@ -130,20 +122,24 @@ Yes. Carrara 6x6 can be used on shower walls and shower floors with proper seali
 
 ### Can Carrara 6x6 be used in pools and spas?
 
-Yes. Carrara marble is approved for pool and spa applications, including saltwater and chlorinated pools. Seal the stone before and after grouting per the installation guide and reseal periodically based on exposure and water chemistry. In pool and spa contexts, the white-grey palette of Carrara produces a clean, architectural water surface, and the honed finish suits pool surround and pool wall installations where a non-reflective surface is preferred.
+Yes. Carrara marble is approved for pool and spa applications, including saltwater and chlorinated pools. Seal the stone before and after grouting per the installation guide and reseal periodically based on exposure and water chemistry. The honed finish suits pool surround and pool wall installations where a non-reflective surface is preferred.
+
+### Does Carrara 6x6 marble require sealing?
+
+Yes. Marble requires sealing before and after grouting. Apply a penetrating sealer in thin layers until the stone is fully saturated before grouting, wiping off any excess before it dries. After grouting and allowing the grout to cure fully, apply a top coat sealer appropriate for the installation environment. Carrara's lighter palette makes staining more visible than it would be on darker stone, so proper sealing and prompt spill cleanup are particularly important. Refer to the Marble Installation Guide for the full sequence, or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions.
 
 ### Can Carrara 6x6 be used in an exterior application?
 
 Carrara 6x6 is suited for exterior floors and walls in non-freeze/thaw climates — patios, courtyards, and covered outdoor spaces in mild-climate regions. Marble is not rated for exterior use in freeze/thaw climates, where freeze cycles can damage the stone through water absorption and expansion. In appropriate climates, seal before and after grouting and reseal periodically based on exposure.
 
-### How does Carrara 6x6 compare to Nero Marquina in terms of maintenance and room effect?
+### How does the veining distribute across a Carrara 6x6 installation?
 
-Carrara and Nero Marquina occupy opposite ends of the marble palette and are often used together. Maintenance requirements are comparable — both require sealing, pH-neutral cleaning, and care with acidic substances. In terms of room effect, Carrara reads as light and open; Nero Marquina reads as deep and graphic. The two paired in a checkerboard at the 6x6 format produce tight, even geometry where the contrast between the white-grey and deep black defines the surface. Either can be specified alone or in combination with other colorways from the Marble Solids line.
-
-### What thinset is recommended for Carrara marble?
-
-Use a white polymer-modified thinset for light-colored marble. Grey thinset can bleed through to the stone surface and affect the appearance of Carrara's lighter palette, particularly at thinner slab sections. Back-butter each tile to ensure full mortar coverage, which prevents hollow spots that can crack the stone under load. Refer to Zia's marble installation guide for the full specification, or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 before beginning the installation.
+Veining density, direction, and character differ tile to tile because each piece is cut from a different cross-section of the quarried block. Across a large installation, some areas will read more white and open; others will carry more grey vein movement. Unpacking and blending tiles from all boxes before setting — and dry-laying the full composition before fixing any stone — is the correct method for balancing the veining distribution across the space.
 
 ### How does Carrara 6x6 work in a multi-colorway marble installation?
 
-Carrara 6x6 pairs directly with the other colorways in Zia's Marble Solids line — Nero Marquina, Grigio Carnico, Rosso Alicante, Verde Alpi, and Giallo Reale — and with the full Marble Patterns collection. In a classic checkerboard with Nero Marquina, the 6x6 format produces tight, even geometry. In multi-format marble pattern compositions, the 6x6 functions as both a field tile and a pattern piece, depending on the geometry of the chosen composition. Contact [info@ziatile.com](mailto:info@ziatile.com) to discuss colorway and pattern combinations before ordering.
+Carrara 6x6 pairs directly with the other colorways in Zia's Marble Solids line — Nero Marquina, Grigio Carnico, Rosso Alicante, Verde Alpi, and Giallo Reale — and with the full Marble Patterns collection. In classic checkerboard with Nero Marquina, the 6x6 format produces tight, even geometry. In multi-format marble pattern compositions, the 6x6 functions as both a field tile and a pattern piece depending on the geometry of the chosen composition. Contact [info@ziatile.com](mailto:info@ziatile.com) to discuss colorway and pattern combinations before ordering.
+
+### What thinset is recommended for Carrara marble?
+
+Use a white polymer-modified thinset for Carrara. Grey thinset can bleed through to the stone surface and affect the appearance of Carrara's lighter palette, particularly at thinner slab sections. Back-butter each tile to ensure full mortar coverage, which prevents hollow spots that can crack the stone under load. Refer to Zia's marble installation guide for the full specification, or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 before beginning the installation.

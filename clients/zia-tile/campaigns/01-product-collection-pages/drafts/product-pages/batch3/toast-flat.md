@@ -16,7 +16,7 @@ draft_date: 2026-06-26
 
 ---
 
-Extruded in central Japan and fired once, Zia's Toast Flat is a golden-brown ceramic tile in a 9.45" × 2.36" rectangle format with a smooth, flat surface. The color references the warm caramel-brown of toast: a golden, amber-inflected tan that sits between honey and dark wheat, warmer than a standard beige and more grounded than a yellow. Where Toast Furrowed uses raised ridges to introduce surface texture, Toast Flat presents the same colorway as a continuous, even plane — the warm golden-brown reads across the field as an undivided ground without the light-and-shadow play of a textured surface. In a room, the effect is warmer and more settled than a cool white or grey ceramic, with the elongated 9.45" × 2.36" rectangle format drawing a strong horizontal register across the wall when set in a standard stack. On a feature wall or kitchen backsplash, the flat surface allows the color and the tile line to carry the composition. On an exterior wall, the smooth surface sheds water cleanly without channels or ridges. The tile is 1/2" thick — slightly thicker than standard ceramic at 3/8" — which should be accounted for in transitions between materials and at finished edges. High variations in color, shade, and surface texture are natural characteristics of this extruded ceramic, and part of the material's identity, even in the flat version where the variation reads as tonal rather than textural. Images shown represent a sample of this tile and finish.
+Extruded in central Japan and fired once, Zia's Toast Flat is a golden-brown ceramic tile in a 9.45" × 2.36" rectangle format with a smooth, flat surface. The color references the warm caramel-brown of toast: a golden, amber-inflected tan that sits between honey and dark wheat, warmer than a standard beige and more grounded than a yellow. Where Toast Furrowed uses raised ridges to introduce surface texture, Toast Flat presents the same colorway as a continuous, even plane — the warm golden-brown reads across the field as an undivided ground without the light-and-shadow play of a textured surface. The elongated 9.45" × 2.36" rectangle format draws a strong horizontal register across the wall when set in a standard stack. On an exterior wall, the smooth surface sheds water cleanly without channels or ridges. The tile is 1/2" thick — slightly thicker than standard ceramic at 3/8" — which should be accounted for in transitions between materials and at finished edges. High variations in color, shade, and surface texture are natural characteristics of this extruded ceramic, and part of the material's identity, even in the flat version where the variation reads as tonal rather than textural. Images shown represent a sample of this tile and finish.
 
 \[IMAGE: SIZE/THICKNESS DIAGRAM\]
 
@@ -102,13 +102,13 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ## Frequently Asked Questions
 
-### How does the Toast Flat colorway read in a room?
-
-Toast Flat is a golden-brown — a warm, amber-inflected tan that sits between honey and dark wheat. The flat surface presents the color as an even, continuous field across the installation, without the light-and-shadow play of the furrowed version. Against warm materials like natural oak or aged plaster, the golden-brown reads as a complementary tone in the same warm register. Against cooler materials — white stone, concrete, grey linen — the warmth of Toast Flat comes forward clearly. The 9.45" × 2.36" rectangle format introduces a strong horizontal direction when set in a standard stack layout.
-
 ### How does Toast Flat differ from Toast Furrowed?
 
 Both tiles share the same golden-brown color, the same 9.45" × 2.36" rectangle format, the same extruded production method, and the same high variation characteristics of the Field Trip: Japan series. The difference is entirely on the surface: Toast Flat is smooth, and the color reads as an even plane across the wall. Toast Furrowed has raised linear ridges that catch light at an angle and introduce shadow and depth across the field. Toast Flat is the quieter of the two — a surface where color and tile line lead, rather than texture.
+
+### How does the flat extruded surface of Toast Flat compare to standard molded ceramics?
+
+Standard Zia ceramics are pressed into a mold, which produces a consistent face geometry and a body depth of approximately 3/8". Toast Flat is extruded through a die-cut mold and cut to length — a process that produces a slightly different surface density, a thicker body at 1/2", and higher tonal variation than a mold-pressed tile. Even though Toast Flat has no surface texture, the clay's movement through the die introduces more inherent irregularity than molding does. This difference is visible at the tile edge as well as across the face.
 
 ### Does Toast Flat require sealing?
 
@@ -116,32 +116,32 @@ Toast Flat does not require a penetrating sealer before grouting. For specific i
 
 ### Can Toast Flat be used on a shower floor or wall?
 
-Yes. Zia's Toast Flat is suited for shower walls and shower floors. Plan for a minimum 1/8" grout joint on the shower floor surface. An anti-slip treatment applied after installation increases traction in high-exposure wet floor areas. The elongated tile format suits a vertical wall stack or a horizontal field with strong directional grout lines in shower applications.
+Yes. Zia's Toast Flat is suited for shower walls and shower floors. Plan for a minimum 1/8" grout joint on the shower floor surface, and apply an anti-slip treatment after installation in high-exposure wet floor areas. The elongated format suits a vertical wall stack or a horizontal field with strong directional grout lines in shower applications.
 
-### What does high variation mean for Toast Flat, and how should it be managed during installation?
+### Which orientation is more common for the 9.45" × 2.36" format — horizontal or vertical?
 
-High variation in color, shade, and surface texture is inherent to extruded ceramics and applies to Toast Flat even though the surface is smooth rather than textured. In the flat version, variation expresses as tonal shifts from tile to tile — each reading slightly warmer or lighter within the same golden-brown range. Mixing tiles from all boxes thoroughly before installation and laying out a full dry arrangement before setting distributes these tonal differences evenly across the field.
+A horizontal stack is the more common orientation, which emphasizes the elongated tile length across the wall and creates a layered ground similar to traditional brick coursing. Vertical stacking shifts the emphasis upward and suits narrower spaces and taller applications. A dry layout before setting confirms the directional read before the tile is fixed.
+
+### How does tonal variation distribute in Toast Flat across a large installation?
+
+High variation is a defining quality of the Field Trip: Japan line, more pronounced than in Zia's standard molded ceramics. In the flat version, variation expresses as tonal shifts — individual tiles reading closer to honey or closer to dark wheat within the golden-brown range. Opening all boxes and mixing thoroughly before setting, then arranging a full dry layout, distributes the variation so that darker and lighter tiles are dispersed across the field rather than clustered. This step is more consequential for Field Trip: Japan tiles than for standard ceramics.
 
 ### How should the 1/2" body thickness of Toast Flat be handled at tile transitions?
 
 At transitions to adjacent flooring or wall materials, the 1/2" body thickness — compared to the 3/8" standard for most ceramics — requires planning. Options include a Schluter strip designed for the height differential, a mitered edge where tiles meet at an exposed corner, or aligning adjacent materials to match the finished height of the Toast Flat surface. Bring drywall flush with the finished surface of the tile where the tile terminates at a wall edge. For any transition questions, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
 
-### Which orientation is more common for the 9.45" × 2.36" format — horizontal or vertical?
+### Can Toast Flat be combined with Toast Furrowed or standard Zia ceramics in the same installation?
 
-A horizontal stack is the more common orientation for the Toast Flat format, which emphasizes the elongated tile length across the wall and creates a strong, layered ground similar to traditional brick coursing. Vertical stacking is also achievable and shifts the emphasis upward, making walls read as taller. The choice depends on the spatial geometry: horizontal runs tend to suit wider walls and lower-ceilinged rooms; vertical runs suit narrower spaces and taller applications. Laying out a dry arrangement before setting confirms the directional read before committing.
-
-### How does the extrusion process distinguish Toast Flat from standard molded Zia ceramics?
-
-Standard Zia ceramics are pressed into a mold, which produces a consistent, well-defined face geometry and a body depth of approximately 3/8". The Field Trip: Japan tiles — including Toast Flat — are pushed through a die-cut mold and cut to length, a process that creates a slightly different surface density and a thicker body at 1/2". The extruded process is also what produces the higher tonal and surface variation characteristic of the Field Trip: Japan line: the clay moves through the die in a way that introduces more inherent irregularity than a mold-pressed tile. This difference is visible at the tile edge as well as across the face.
-
-### How does the tonal variation in Toast Flat distribute across a large installation?
-
-High variation is a defining quality of the Field Trip: Japan line, and it is more pronounced here than in Zia's standard molded ceramics. Across a large wall, tiles may range within the golden-brown spectrum — some reading closer to honey, others closer to dark wheat — without any single tile departing from the overall warm range. Opening all boxes and mixing thoroughly before setting, then arranging a full dry layout, distributes the variation so that darker and lighter tiles are dispersed across the field rather than clustered. This step is more consequential for Field Trip: Japan tiles than for standard ceramics.
+Toast Flat can be used alongside Toast Furrowed — a flat field with a furrowed border, for instance — as the two share the same colorway and format. The 1/2" body thickness of both Field Trip: Japan tiles is thicker than the standard Zia ceramic at 3/8", so transitions between Field Trip tiles and standard ceramics in the same plane require a transition detail. A Schluter strip at the boundary or a substrate offset to match finished face heights are both valid approaches. Contact [info@ziatile.com](mailto:info@ziatile.com) for specific installation guidance on mixed-format applications.
 
 ### Can Toast Flat be used on an exterior wall?
 
-Yes. Toast Flat is approved for exterior wall applications. The high-fired ceramic body is suited to exterior wall installation in non-freeze/thaw and freeze/thaw climates for wall applications. It is not specified for exterior floors. For exterior applications involving specific climate conditions or substrate questions, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+Yes. Toast Flat is approved for exterior wall applications. The high-fired ceramic body is suited to exterior wall installation in non-freeze/thaw and freeze/thaw climates. It is not specified for exterior floors. For exterior applications involving specific climate conditions or substrate questions, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
 
-### Can Toast Flat be combined with other Zia ceramics in the same installation?
+### Can Toast Flat be installed in a pool or spa?
 
-Toast Flat can be used alongside other ceramics from the Zia collection — a standard ceramic field with a Toast Flat border, or a mixed-format application where the format and colorway differences are intentional. The 1/2" body thickness of the Field Trip: Japan tiles is thicker than the standard ceramic at 3/8", so transitions between the two in the same plane require a transition detail. A Schluter strip at the boundary or an offset in the substrate to match finished face heights are both valid approaches. Contact [info@ziatile.com](mailto:info@ziatile.com) for specific installation guidance on mixed-format applications.
+Yes. Zia's Field Trip: Japan ceramics are approved for pool and spa applications, including pool waterline tile and spa interior walls. The high-fired ceramic body is compatible with saltwater and chlorine environments. For pool and spa installation specifics, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+
+### What grout joint is recommended for Toast Flat, and how does the joint choice affect the surface?
+
+Plan for 3/16" grout joints as the standard, with a minimum of 1/8". At the 9.45" × 2.36" scale, the grout joint is a secondary compositional element — narrower joints keep the focus on the tile length; wider joints create more visible coursing. For shower floor applications, the 1/8" minimum joint is required, and an anti-slip treatment after installation is recommended for high-exposure wet areas.

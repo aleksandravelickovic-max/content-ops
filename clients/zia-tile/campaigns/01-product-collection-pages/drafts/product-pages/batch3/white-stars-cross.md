@@ -16,9 +16,9 @@ draft_date: 2026-06-26
 
 ---
 
-Hand-poured in Vietnam using techniques refined in the 1850s, Zia's White Stars & Cross is a cement tile built on the eight-pointed star geometry that has organized decorative tilework across Moorish architecture — from the palaces of Andalucía to the courtyards of Puebla. A white star on a light grey ground, outlined by thin geometric lines, produces a quiet, structured pattern that builds into a continuous interlocking field across the installation. The contrast here is measured rather than bold: the pattern registers as graphic geometry without asserting strong color contrast, giving the tile a precision that works in spaces where the composition should read as refined rather than pronounced. Against white plaster, the field reads almost tonal. Against warm stone or wood, the grey ground pulls cool and the star geometry takes on greater definition.
+Hand-poured in Vietnam using techniques refined in the 1850s, Zia's White Stars & Cross is a cement tile built on the eight-pointed star geometry that has organized decorative tilework across Moorish architecture — from the palaces of Andalucía to the courtyards of Puebla. A white star on a light grey ground, outlined by thin geometric lines, produces a quiet, structured pattern that builds into a continuous interlocking field across the installation. The contrast is measured: the pattern registers as graphic geometry without asserting strong color contrast.
 
-Each cement tile is made by hand, and subtle variations in color, shape, and thickness are to be expected. Irregular edges and minor surface variation are natural to the material. The patina that develops over time marks the material's true character — a graceful nod to the worn cement floors of European cafés and public squares shaped by everyday life. Images shown are representative of a sample of this tile, but do not display every potential variation.
+Each cement tile is made by hand, and subtle variations in color, shape, and thickness are to be expected. Irregular edges and minor surface variation are natural to the material. The patina that develops with wear marks the material's true character. Images shown are representative of a sample of this tile, but do not display every potential variation.
 
 \[IMAGE: SIZE/THICKNESS DIAGRAM\]
 
@@ -104,31 +104,31 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ### How does White Stars & Cross read in a room?
 
-White Stars & Cross produces a quiet, structured geometric field — a white eight-pointed star on a light grey ground with thin geometric outlines connecting the repeat. The contrast is measured: the pattern registers as precise geometry without strong color differentiation, which means the tile works well in spaces where the composition should lead with refinement rather than boldness. Against white walls, the field reads as near-tonal and almost textural. Against warm stone, wood, or a darker grout joint, the geometry sharpens and takes on more definition.
+White Stars & Cross produces a quiet, structured geometric field — a white eight-pointed star on a light grey ground with thin geometric outlines connecting the repeat. The contrast is measured: the pattern registers as precise geometry without strong color differentiation. The light grey and white palette works naturally against warm materials — unlacquered brass, natural wood, waxed plaster — where the cool ground provides measured contrast. White Stars & Cross also pairs with Zia's other Moorish-inspired cement patterns, where the interlocking geometry can create a frame around a central field or transition between two pattern zones. Contact [info@ziatile.com](mailto:info@ziatile.com) to discuss pattern combinations before ordering.
 
 ### How should the Stars & Cross pattern be centered in a room?
 
 Centering a Moorish interlocking pattern like Stars & Cross starts with a dry layout. Snap chalk lines at the room's center point and work outward, checking that cut pieces at opposite walls are equal in width and that the star geometry is not interrupted mid-point at the perimeter. Because the pattern depends on the continuous relationship between the star and cross tiles, a misaligned entry cut reads across the full field. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 before starting the layout — the team can advise on centering strategy for the specific room dimensions.
 
-### Does Zia's White Stars & Cross cement tile require sealing?
+### Is a companion cross tile required, or can the star tile be used alone?
 
-Yes. All cement tile requires sealing before grouting and again after grouting — in every installation, including dry spaces. Follow Zia's cement installation guide for the recommended sealers and application sequence. For specific questions about sealer selection, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+The White Stars & Cross pattern requires both the eight-pointed star tile and the cross tile to resolve as a complete geometric field. The cross tile fills the spaces between the star points; without it, the pattern does not interlock. Both pieces are ordered together as part of the Stars & Cross set. At the perimeter, partial cuts of both shapes are needed to meet straight walls — this is the primary reason for the increased overage recommendation on all specialty shape orders.
 
-### What happens if cement tile is not sealed before grouting?
+### How does the Moorish star geometry read at different room scales?
 
-Grout will penetrate the unsealed cement surface and stain it permanently. The pre-grout seal saturates the surface layer and creates a release, so grout can be wiped from the face of the tile during cleanup without embedding in the material. Skipping the pre-grout step is the most common and most difficult-to-reverse installation error on cement tile.
+In a larger room, the 6x6 star scale produces a repeating pattern that reads as a continuous field of geometry. In a compact bathroom or entry, the same tile reads with more graphic weight per square foot, so the pattern registers more prominently. The measured contrast between the white star and the light grey ground keeps the pattern from overwhelming a smaller space — the quiet palette does the work that a higher-contrast colorway would need a larger format to absorb. Zia's team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 can advise on layout scale for a specific room.
+
+### What grout joint width does Zia recommend for White Stars & Cross?
+
+Use 1/16" tile spacers for the standard grout joint. At this joint width, the Moorish star geometry reads as a continuous interlocking field, with the thin geometric outlines in the pattern doing the visual work of separating the repeat. For shower floor installations, a minimum 1/8" grout joint is required to support slip resistance.
 
 ### Can White Stars & Cross be used in a shower?
 
-Yes. Zia's White Stars & Cross is suited for shower walls and shower floors. Apply sealer before grouting and again after, following the cement installation guide. For shower floor applications, apply an anti-slip treatment after installation and maintain a minimum 1/8" grout joint.
+Yes. Zia's White Stars & Cross is suited for shower walls and shower floors. Apply sealer before grouting and again after, following the cement installation guide. For shower floor applications, apply an anti-slip treatment after installation and maintain a minimum 1/8" grout joint. The interlocking star and cross edges produce additional grout joint length per square foot compared to a standard square tile, which supports drainage and traction in wet floor applications.
 
 ### Can White Stars & Cross be installed outdoors?
 
 White Stars & Cross cement tile is suited for exterior floors and walls in non-freeze/thaw climates — patios, courtyards, and covered outdoor surfaces in mild climates. The tile is not suitable for installation in climates where the surface may freeze.
-
-### What grout joint width does Zia recommend?
-
-Use 1/16" tile spacers for the standard grout joint. At this joint width, the Moorish star geometry reads as a continuous interlocking field, with the thin geometric outlines in the pattern doing the visual work of separating the repeat. For shower floor installations, a minimum 1/8" grout joint is required to support slip resistance.
 
 ### Is White Stars & Cross compatible with underfloor radiant heating?
 
@@ -136,16 +136,8 @@ Yes. White Stars & Cross cement tile is compatible with all heated floor systems
 
 ### How does cement tile differ from ceramic or porcelain?
 
-Cement tile is never fired. Mineral pigments are pressed into the surface layer under hydraulic pressure and the tile cures through a water-based process. There is no kiln, no glaze, and no fired clay body. The result is a matte, slightly porous surface with real color depth, a tile that requires sealing and develops patina over time in ways that ceramic and porcelain do not.
+Cement tile is never fired. Mineral pigments are pressed into the surface layer under hydraulic pressure and the tile cures through a water-based process. There is no kiln, no glaze, and no fired clay body. The result is a matte, slightly porous surface with real color depth — a tile that requires sealing and develops patina over time in ways that ceramic and porcelain do not.
 
-### How does White Stars & Cross cement tile age?
+### How does White Stars & Cross cement tile develop patina?
 
-The light grey ground and white star mellow gradually as the surface develops patina, softening the contrast over time without losing the geometry. Against materials that warm with age — wood, plaster, brass — the pattern integrates rather than receding. Periodic resealing maintains the surface and lets the patina develop evenly across the field.
-
-### What materials pair well with White Stars & Cross?
-
-The light grey and white palette works naturally against warm materials — unlacquered brass, natural wood, waxed plaster — where the cool ground provides measured contrast. Against white or light grey stone, the pattern integrates into a tonal field. White Stars & Cross also pairs with Zia's other Moorish-inspired cement patterns, where the interlocking geometry can create a frame around a central field or transition between two pattern zones. Contact [info@ziatile.com](mailto:info@ziatile.com) to discuss pattern combinations before ordering.
-
-### How should White Stars & Cross cement tile be cleaned?
-
-Sweep or dry-mop regularly to remove grit from the matte surface. Clean with warm water and a pH-neutral cleaner. Avoid vinegar, citrus-based products, and bleach — these will damage the cement surface and strip the sealer. Reseal periodically per the installation guide, with frequency depending on traffic and exposure.
+The light grey ground and white star mellow gradually as the surface develops patina with wear, softening the contrast over time without losing the geometry. Periodic resealing maintains the surface and lets the patina develop evenly across the field.

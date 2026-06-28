@@ -18,7 +18,7 @@ draft_date: 2026-06-26
 
 Hand-poured in Vietnam using techniques refined in the 1850s, Zia's Black 8x8 is a matte black cement tile in an 8" × 8" square format. The color is a deep, uniform black — the large format and matte surface together produce a non-reflective ground that anchors a room with material weight rather than visual complexity. On a floor, the Black 8x8 creates a strong, monolithic base from which other materials — light stone countertops, pale plaster, natural wood — gain their definition by contrast. The matte surface eliminates glare and holds the depth of the black evenly across the installation. Subtle tonal variation from tile to tile, inherent to hand-poured pigmented cement, keeps the surface from reading as flat or mechanical.
 
-Each cement tile is made by hand, and subtle variations in color, shape, and thickness are to be expected. Irregular edges and minor surface variation are natural to the material. The patina that develops over time marks the material's true character — a graceful nod to the worn cement floors of European cafés and public squares shaped by everyday life. Images shown are representative of a sample of this tile, but do not display every potential variation.
+Each cement tile is made by hand, and subtle variations in color, shape, and thickness are to be expected. Irregular edges and minor surface variation are natural to the material. Images shown are representative of a sample of this tile, but do not display every potential variation.
 
 \[IMAGE: SIZE/THICKNESS DIAGRAM\]
 
@@ -106,13 +106,25 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 Zia's Black 8x8 reads as a deep, non-reflective black across a floor or wall. The matte surface holds the color without glare, giving the room a grounded, material quality that a polished or high-sheen black surface does not produce. The large format means fewer grout joints interrupt the field, allowing the black to read as a continuous surface. Subtle tonal variation tile to tile — inherent to hand-poured pigmented cement — keeps the surface from reading as flat or mechanical.
 
-### Does the Black 8x8 cement tile require sealing?
+### How does the Black 8x8 read differently in a small room versus a large space?
 
-Yes. All cement tile requires sealing before grouting and again after grouting — in every installation, including dry spaces. Follow Zia's cement installation guide for the recommended sealers and application sequence. For questions about sealer selection, contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+In a large open-plan space — a kitchen, a wide entryway, a commercial floor — the 8x8 format reads as an unbroken dark field. The minimal grout joint count at this scale allows the matte black to register as a single material plane rather than a grid. In a smaller room, the large format means fewer tiles and fewer joints, which tends to simplify the surface and emphasize the depth of the black rather than its pattern. The absence of the busy grid is what small rooms gain from the larger format.
 
-### What sealers does Zia recommend for cement tile?
+### Is Black cement tile available in other formats?
 
-Zia's cement installation guide specifies a two-stage sealing process: an impregnating sealer applied before grouting, and a topcoat sealer applied after the grout has fully cured. Both stages are required in every installation. The specific products are listed in the installation guide; contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with project-specific questions.
+Yes. Black is available in the 4x4 square and the 2x8 subway format within Zia's cement range. The 4x4 produces a denser grout grid for the same area, making the joint lines a more active part of the surface. The 2x8 subway can be set in a running bond for a directional, linear pattern. The 8x8 is the largest of the three and the format that most reduces the visible grid across a floor.
+
+### What grout color choices change the visual result with a black field — and how?
+
+Grout close in tone to the black tile allows the surface to read as a single matte plane with the grid almost invisible. A light or contrasting grout — pale grey, off-white — draws the grid into visibility and produces a strong geometric pattern. The 8x8 format amplifies this choice: fewer, larger tiles mean fewer joints, so each grout line covers more relative area than it would in a 4x4 layout. For wet commercial floor applications, grout joints should measure at least 1/8". Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for project-specific guidance.
+
+### How does the large 8x8 format affect the grid density compared to a 4x4 layout?
+
+The 8x8 format covers four times the area of a single 4x4 tile, which means a given floor area contains one-quarter the number of tiles and grout joints. At 1/16" joints, the grid is minimal and widely spaced. The practical effect is that the black reads as a material rather than a pattern — the surface is dominated by the color and finish of the tile rather than the rhythm of the joints. In a 4x4 layout, the closer grid reads as more active and geometric.
+
+### Nova Black 8x8 is also in the cement range — how does Nova Black differ from solid Black?
+
+Nova Black is a patterned cement tile in the 8x8 format featuring a geometric Nova design, with the pattern rendered in two colors — typically black with a contrasting field tone. Zia's solid Black 8x8 is a single uniform colorway with no pattern geometry; the tile reads as a flat matte black field, with variation coming from inherent tonal shifts in the pigment rather than from a pattern. The solid Black suits installations where the material itself is the composition; Nova Black introduces an active geometric element.
 
 ### Can Black 8x8 be used in a shower?
 
@@ -126,26 +138,10 @@ Black 8x8 cement tile is suited for exterior floors and walls in non-freeze/thaw
 
 Yes. Zia's Black 8x8 cement tile is compatible with radiant floor heating systems. Thinset and membrane specifications for heated substrates should follow both the heating system manufacturer's guidance and Zia's cement installation guide. For project-specific questions, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
 
-### What grout joint width does Zia recommend for the 8x8 format?
-
-Zia recommends 1/16" grout joints for the Black 8x8 in standard interior applications. The fine joint allows the large format to read as a nearly continuous dark field. The grout color choice matters: a grout close in tone to the black tile allows the surface to read as a single matte plane, while a contrasting light grout emphasizes the grid. For wet commercial floor applications, grout joints should measure at least 1/8".
-
 ### How does tonal variation distribute across a black cement tile installation?
 
 Deep colorways like black carry inherent tonal variation — the pigment density in each tile shifts slightly, producing subtle depth variations across the field. This variation is characteristic of hand-poured cement and is most visible at raking or oblique light angles. Blending tiles from multiple boxes before setting ensures the variation distributes evenly. On a large-format tile, each piece covers more area, so differences between adjacent tiles are worth evaluating in a dry layout before setting.
 
 ### What materials pair well with the Black 8x8?
 
-The deep matte black produces strong contrast against light materials: white marble, pale limestone, cream plaster, and natural or blonde wood all gain definition against a black floor. In a kitchen, the Black 8x8 reads as a grounding element that allows countertops and cabinetry to carry the palette. The Black 8x8 also combines with Zia's White 4x4 or White 2x8 cement tile in adjacent areas for a high-contrast, monochrome installation. Black is also available in the 2x8 subway and 4x4 square formats.
-
-### How does cement tile age and develop patina on a dark colorway?
-
-Dark cement tile develops patina more subtly than lighter colorways. The matte black surface softens and settles with wear, and the areas of highest traffic develop a slight sheen that deepens the color's presence over time. Water marks and mineral deposits are more visible on dark surfaces than on lighter ones — a pH-neutral cleaner applied with a soft cloth addresses these without damaging the surface or sealer.
-
-### What happens if cement tile is not sealed before grouting?
-
-Grout can penetrate the porous pigmented surface and leave residue that is difficult to remove. On a dark tile, grout haze appears as a lightening of the black field rather than a uniform color shift, which can be particularly visible. The pre-grout sealing step is essential — following the two-stage sequence in Zia's installation guide protects the surface during the grouting process.
-
-### How should black cement tile be cleaned?
-
-Sweep or dry-mop regularly to remove grit and dust — light-colored particles show more readily on a dark surface. For routine cleaning, use warm water and a pH-neutral cleaner. Avoid acidic cleaners — vinegar, citrus-based products, and bleach will damage the cement surface and strip the sealer. Water marks and mineral deposits can be more visible on dark cement surfaces; a pH-neutral cleaner applied with a soft cloth addresses these without damaging the surface. Reseal periodically following the cement installation guide, with frequency depending on traffic and exposure.
+The deep matte black produces strong contrast against light materials: white marble, pale limestone, cream plaster, and natural or blonde wood all gain definition against a black floor. In a kitchen, the Black 8x8 reads as a grounding element that allows countertops and cabinetry to carry the palette. The Black 8x8 also combines with Zia's White 4x4 or White 2x8 cement tile in adjacent areas for a high-contrast, monochrome installation.

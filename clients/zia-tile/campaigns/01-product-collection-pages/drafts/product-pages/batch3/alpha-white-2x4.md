@@ -102,9 +102,9 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ## Frequently Asked Questions
 
-### How does the 2x4 format change the visual character of Alpha White compared to the larger formats?
+### How does the 2x4 scale compare to the 2x8 and 4x4 formats in the Alpha White range, and where does it work best?
 
-The 2×4 is the smallest rectangle in the Alpha White range, and the smaller format produces a tighter, more articulate grid across the surface. With more grout joints per square foot than the 2×8 or 4×4, the grid itself becomes a stronger visual element — the pattern of tile and joint creates surface texture that the larger formats handle more quietly. The color is the same bright satin white across all formats; the format choice changes the rhythm and scale of the surface composition.
+The 2×4 is the smallest rectangle in the Alpha White range. With more grout joints per square foot than the 2×8 or 4×4, the grid itself becomes a stronger visual element — the pattern of tile and joint creates surface texture that the larger formats handle more quietly. The 2×4 suits accent areas, niches, and wainscot applications where a fine grid creates visual interest at a smaller scale. It is also a practical choice for backsplash applications where the 2×8 would produce a single or two-course field across the height of the wall.
 
 ### Does Alpha White 2x4 require sealing before installation?
 
@@ -120,24 +120,28 @@ Yes. Zia's satin-finish ceramics are approved for pool and spa applications. The
 
 ### What layout orientations work well with Alpha White 2x4?
 
-At the 2×4 scale, horizontal stack layouts read as a fine, even grid; vertical stacks emphasize height; herringbone creates a strong woven pattern with the proportionally shorter tile. Because the tile is small, the herringbone layout produces a more compact, tighter geometric result than herringbone in a 2×8 format. For a kitchen backsplash, a running-bond horizontal layout or a simple stacked grid are the most common applications, each producing a different level of visual activity.
+At the 2×4 scale, horizontal stack layouts read as a fine, even grid; vertical stacks emphasize height; herringbone creates a woven pattern. The proportionally shorter tile produces a more compact, tighter herringbone result than the same pattern in a 2×8 format. For a kitchen backsplash, a running-bond horizontal layout or a simple stacked grid are the most common applications. For a shower wall accent strip or niche, the small scale of the tile suits the proportion of the surface section.
 
-### How does the Alpha White 2x4 tile count affect order planning?
+### How does the 2x4 format work as an accent or border alongside larger Alpha White formats?
 
-Each box contains 200 tiles, which covers more area per box than the larger formats due to the smaller tile size. Calculating coverage by square footage rather than tile count is the standard approach: multiply the installation area by 1.15 to 1.20 for the recommended 15 to 20% overage. For questions about order quantities, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
-
-### How do the three Alpha White formats work together in a single installation?
-
-The Alpha White 2×4, 2×8, and 4×4 share the same satin finish and colorway, making them well suited to use across a single space. The 2×4 suits accent areas and niches where a finer grid introduces visual distinction. The 2×8 works well as a field tile on a main wall or backsplash where a directional format is the intent. The 4×4 suits floor applications alongside either rectangle. Laying out the combined formats dry before setting confirms the compositional and proportional relationships before any tile is fixed.
-
-### Is Alpha White 2x4 compatible with waterproofing membranes in shower applications?
-
-Yes. Standard waterproofing membranes applied to the substrate before tiling are fully compatible with Alpha White 2x4. The membrane is installed prior to setting the tile and does not affect the satin glaze or tile body. For specific substrate and waterproofing guidance, consult the installation guide or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+The 2×4 suits accent areas and niches where a finer grid introduces visual distinction within the same colorway. A common approach: the 2×8 on the main shower wall field, the 2×4 on a built-in niche or shelf return. The format shift distinguishes areas without a color change. The 4×4 works on floors alongside either rectangle. Laying out the combined formats dry before setting confirms the compositional relationships before any tile is fixed.
 
 ### How does the satin finish affect the Alpha White 2x4 in a kitchen backsplash application?
 
-The satin surface is well suited to kitchen conditions — it holds up to heat, moisture, and cleaning without requiring pre-grout sealing. The low-level sheen returns light without producing the glare of a full gloss tile, which is an advantage in kitchens where overhead lighting is often directed toward the backsplash surface. The 2×4 scale produces a grid of grout lines that creates visual texture on the backsplash wall without relying on color contrast to do so.
+The satin surface holds up to heat, moisture, and cleaning without requiring pre-grout sealing. The low-level sheen returns light without producing the glare of a full gloss tile. At the 2×4 scale, the grid of grout lines creates visual texture on the backsplash wall without relying on color contrast to do so. For kitchens where the backsplash spans a limited height, the small format reads as a complete, proportional installation at narrower wall heights where a 2×8 would produce only one or two courses.
 
-### What grout joint is recommended for the Alpha White 2x4 format?
+### What grout joint is recommended for the Alpha White 2x4 format, and how does grout color affect the surface?
 
-The standard recommendation is 3/16" grout joints, with a minimum of 1/8". At the smaller 2×4 scale, the grout joint occupies a proportionally larger share of the visible surface than it does in a 2×8 layout, so the grout color is a more consequential design decision. A tone-on-tone white joint produces a nearly seamless white field; a warm or contrasting joint makes the tile grid the dominant visual element of the surface. For shower floor applications, the 1/8" minimum joint is required and an anti-slip treatment after installation is recommended.
+The standard recommendation is 3/16" grout joints, with a minimum of 1/8". At the smaller 2×4 scale, the grout joint occupies a proportionally larger share of the visible surface than in a 2×8 layout — so the grout color is a more consequential design decision here than in larger formats. A tone-on-tone white joint produces a nearly seamless white field; a warm or contrasting joint makes the tile grid the dominant visual element. For shower floor applications, the 1/8" minimum is required and an anti-slip treatment after installation is recommended.
+
+### How does the Alpha White 2x4 tile count affect order planning?
+
+Each box contains 200 tiles. Calculating coverage by square footage rather than tile count is the standard approach: multiply the installation area by 1.15 to 1.20 for the recommended 15 to 20% overage. At this small format, the overage recommendation matters — edge cuts produce more waste per linear foot of boundary than larger tiles do. For questions about order quantities, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+
+### How does tonal variation distribute across a full Alpha White 2x4 installation?
+
+High-fired ceramics carry very minor variation in size, color, tone, and surface texture. In Alpha White, variation expresses as subtle differences in brightness or surface quality from tile to tile. At the 2×4 scale, with more tiles per square foot, any tonal differences across the batch are more finely distributed across the field. Mixing tiles from all boxes before installation and arranging a dry layout distributes these differences evenly, preventing any cluster from reading as a patch.
+
+### Can Alpha White 2x4 be used on an exterior wall?
+
+Yes. Alpha White 2x4 is approved for exterior wall applications. The high-fired ceramic body is suited to exterior wall installation in both freeze/thaw and non-freeze/thaw climates. It is not specified for exterior floors. For exterior project questions, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.

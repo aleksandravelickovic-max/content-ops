@@ -16,9 +16,9 @@ draft_date: 2026-06-26
 
 ---
 
-Hand-poured in Vietnam using techniques refined in the 1850s, Zia's Nile 2x8 is a pale, quiet green in a 2" × 8" subway format. The color sits near the edge of green and grey — a soft, watery tone that recedes in a room rather than asserts itself. Against natural stone, it reads as a complement; against warm wood and white plaster, it settles into the background and allows other materials to lead. In a backsplash stack, the horizontal lines of the subway format give the pale green a gentle directionality without introducing a strong visual statement. On a shower wall, the matte pigmented surface carries the tone evenly across the field.
+Hand-poured in Vietnam using techniques refined in the 1850s, Zia's Nile 2x8 is a pale green in a 2" × 8" subway format. The color sits near the edge of green and grey — a soft, watery tone. On a shower wall, the matte pigmented surface carries the tone evenly across the field. Nile is also available in 4x4 and 8x8 formats.
 
-Each cement tile is made by hand, and subtle variations in color, shape, and thickness are to be expected. Irregular edges and minor surface variation are natural to the material. The patina that develops over time marks the material's true character — a graceful nod to the worn cement floors of European cafés and public squares shaped by everyday life. Images shown are representative of a sample of this tile, but do not display every potential variation.
+Each cement tile is made by hand, and subtle variations in color, shape, and thickness are to be expected. Irregular edges and minor surface variation are natural to the material. The patina that develops over time is characteristic of hand-poured pigmented cement. Images shown are representative of a sample of this tile, but do not display every potential variation.
 
 \[IMAGE: SIZE/THICKNESS DIAGRAM\]
 
@@ -102,50 +102,46 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ## Frequently Asked Questions
 
-### How does the Nile colorway read in a room?
+### How does Nile differ from Sage and White in the cement collection?
 
-Nile is a pale, watery green that sits at the edge of green and grey — a tone that settles into a space rather than asserting itself. Against white walls or natural stone, it contributes a quiet color note without pulling the eye. Against warm wood tones, the pale green recedes and lets the warmer material carry the room. The subway format adds a subtle horizontal register across the surface that reinforces the understated quality of the color.
+Nile, Sage, and White are the three lightest colorways in the cement range, but each occupies a different position in the spectrum. Nile is a pale green with a watery quality — closer to the green end of a green-grey range. Sage is a deeper grey-green; the grey undertone is more pronounced, and the tone reads as more neutral than Nile. White is a pure, pigment-free matte white. In a bathroom or kitchen, Nile reads as the most clearly green of the three, while Sage reads as the most neutral.
 
-### Does Zia's Nile 2x8 cement tile require sealing?
+### How does Nile's green register compare to Sage?
 
-Yes. All cement tile requires sealing before grouting and again after grouting — in every installation, dry spaces included. Follow Zia's cement installation guide for the recommended sealers and application sequence. For specific questions about sealer selection, contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
-
-### What sealers does Zia recommend for cement tile?
-
-Zia's cement installation guide specifies a two-stage sealing process. An impregnating sealer — applied before grouting — protects the surface during the grouting process. A topcoat sealer is applied after grouting and curing. The specific products recommended are listed in the installation guide; for project-specific sealer questions, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+Nile sits closer to the pale, watery end of a green-grey spectrum; Sage carries more grey in the mix and reads as a more muted, receding tone. Side by side, Nile reads as the warmer and more distinctly green of the two — Sage is further from botanical green and closer to a cool neutral. The difference is visible in a dry layout before installation.
 
 ### Can Nile 2x8 be used in a shower?
 
-Yes. Zia's Nile 2x8 is suited for shower walls and shower floors. Seal the tile before grouting and again after, following the cement installation guide. Maintain 1/16" grout joints at minimum, and apply an anti-slip treatment after installation for shower floor surfaces.
+Yes. Zia's Nile 2x8 is suited for shower walls and shower floors. Seal the tile before grouting and again after, following the cement installation guide. For shower floor applications, maintain 1/16" grout joints at minimum and apply an anti-slip treatment after installation to support traction in wet conditions.
 
 ### Can Nile 2x8 be installed outdoors?
 
 Nile 2x8 cement tile is suited for exterior floors and walls in non-freeze/thaw climates — patios, courtyards, and covered outdoor spaces in mild climates. It is not suitable for installation in climates where the surface may freeze.
 
-### What grout joint width does Zia recommend for this tile?
+### Which bond pattern works best for the Nile 2x8 subway format?
 
-Zia recommends 1/16" grout joints for the Nile 2x8 in standard interior applications. The fine joint keeps the grout line from competing with the subway format's horizontal register. For wet commercial floor applications, grout joints should measure at least 1/8" to meet slip-resistance standards.
+The two most common layouts are horizontal brick offset (each row shifted by half a tile length) and horizontal stacked (grout joints lining up directly above one another). Brick offset produces a familiar, active subway quality; stacked bond reads as more architectural and grid-forward. Vertical layouts are occasionally used in narrow applications such as a range hood surround. In a pale colorway like Nile, the grout color choice interacts closely with the bond pattern: a grout close to the tile tone keeps the grid quiet; a contrasting grout makes the pattern more visible.
 
-### Which bond pattern is most common for a 2x8 subway cement tile?
+### What grout colors work well with Nile?
 
-The most common layouts for a 2x8 subway are horizontal stacked (each tile set directly above the one below, grout joints lining up perfectly) and horizontal brick offset (each row shifted half a tile length). Stacked bond emphasizes the vertical and horizontal grid; brick offset produces a more active, traditional subway feel. Vertical stacked layouts are less common but used in narrow applications like a range hood surround. A dry layout before setting helps determine which orientation suits the space.
+A grout that matches the pale green-grey tone of Nile allows the tile field to read as a continuous, soft surface — the grid recedes and the color carries the wall. A contrasting grout (medium grey or white) emphasizes the subway grid and gives the installation more structure. A warm-toned grout in the taupe or sand range can pull the pale green toward a warmer reading. The choice depends on how much grid articulation is the intent.
 
-### How does tonal variation distribute across a full installation of Nile?
+### How does tonal variation distribute across a Nile installation?
 
-The pale green of Nile carries subtle tonal shifts from tile to tile — the pigment depth in each piece differs slightly, and this variation is characteristic of hand-poured cement. Opening tiles from multiple boxes and blending them before setting allows the variation to distribute naturally across the installation. Concentrating tiles from a single box in one area can produce visible patches of lighter or deeper tone.
+The pale green of Nile carries subtle tonal shifts from tile to tile — the pigment depth in each piece differs slightly, which is characteristic of hand-poured cement. In a lighter colorway, this variation can be more perceptible than in deeper tones. Opening tiles from multiple boxes and blending them before setting allows the variation to distribute naturally across the installation. Concentrating tiles from a single box in one area can produce visible patches of lighter or deeper tone.
+
+### How does the Nile 2x8 compare to the 4x4 and 8x8 formats for a backsplash?
+
+In a 2x8 subway layout, the horizontal register of the format gives the backsplash a directional quality — the eye follows the long axis of each tile across the surface. The 4x4 produces an even grid with no dominant direction. The 8x8 on a backsplash is less common but produces a larger, less articulated surface with fewer grout joints. For a kitchen backsplash where a familiar subway look is the intent, the 2x8 is the most direct format choice within the Nile range.
 
 ### What materials pair well with Nile?
 
-Nile pairs well with natural stone in light tones — honed limestone, travertine, and unlacquered marble — where the pale green and the stone's natural cream read as a coherent palette. Warm wood and white plaster suit this colorway as well; the green settles into a neutral role and allows the warmer materials to define the room's temperature. Nile is also available in 4x4 and 8x8 formats for floors or larger-format wall applications.
+Nile pairs well with natural stone in light tones — honed limestone, travertine — where the pale green and the stone's natural cream read as a coherent palette. Warm wood and white plaster are also compatible; the pale green holds its color without competing with warmer materials.
 
-### How does cement tile age and develop patina over time?
+### Is Nile cement tile available in other formats?
 
-Cement tile deepens and settles with wear and time. The matte surface develops a gentle sheen in high-traffic areas — not a gloss, but a gradual smoothing of the surface that gives the tile a worn, inhabited quality similar to the cement floors of historic European cafés and public markets. Resealing at regular intervals, per the installation guide, preserves the surface and supports this natural aging process.
+Yes. Nile is also available in 4x4 and 8x8 formats for floors or larger-format wall applications. The colorway is consistent across all three formats; the format choice affects the grid density and the scale of the surface pattern.
 
-### What happens if cement tile is not sealed before grouting?
+### What is the coverage per box for Nile 2x8 cement tile?
 
-Grout can penetrate an unsealed cement surface and leave a haze that is difficult to remove. The pigmented layer is porous until sealed, making the pre-grout sealing step as important as the post-grout coat. Once grout haze sets into an unsealed surface, remediation requires specialized cleaners that may affect the tile's appearance. Following the installation guide's sealing sequence prevents this.
-
-### How should cement tile be cleaned?
-
-Sweep or dry-mop regularly to remove grit from the surface. Clean with warm water and a pH-neutral cleaner. Avoid acidic cleaners — vinegar, citrus-based products, and bleach will damage the cement surface and strip the sealer. Reseal periodically according to the installation guide, with frequency depending on traffic and exposure.
+Coverage per box depends on the tile count and the format size. For the Nile 2x8, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for the current box count and square footage per box. Plan a 15–20% overage above the measured square footage to account for cuts and curation during installation.

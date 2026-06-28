@@ -16,9 +16,9 @@ draft_date: 2026-06-26
 
 ---
 
-Hand-poured in Vietnam using techniques refined in the 1850s, Zia's Terracotta 2x8 is a warm clay red-orange cement tile in a 2" × 8" subway format. The color is not the bright orange of fired unglazed clay but the deeper, earthier register of pigmented cement in a warm red-orange palette — a muted, settled clay tone that reads more like a mineral deposit than a saturated pigment. In a room, it introduces warmth without the full intensity of a true orange, sitting closer to the tones of sun-baked earth and aged plaster walls in Mediterranean interiors. Against white walls and natural stone, the clay tone anchors without dominating. Against warm wood, the shared earth-tone palette reads as coherent. The 2x8 subway format gives the terracotta a horizontal orientation across a backsplash or wall that suits its earthy, low-key quality.
+Hand-poured in Vietnam using techniques refined in the 1850s, Zia's Terracotta 2x8 is a warm clay red-orange cement tile in a 2" × 8" subway format. The color is not the bright orange of fired unglazed clay but the deeper, earthier register of pigmented cement in a warm red-orange palette — a muted, settled clay tone that reads closer to a mineral deposit than a saturated pigment. The 2x8 subway format presents the terracotta color in a horizontal field across a backsplash or wall.
 
-Each cement tile is made by hand, and subtle variations in color, shape, and thickness are to be expected. Irregular edges and minor surface variation are natural to the material. The patina that develops over time marks the material's true character — a graceful nod to the worn cement floors of European cafés and public squares shaped by everyday life. Images shown are representative of a sample of this tile, but do not display every potential variation.
+Each cement tile is made by hand, and subtle variations in color, shape, and thickness are to be expected. Irregular edges and minor surface variation are natural to the material. The patina that develops with wear marks the material's true character. Images shown are representative of a sample of this tile, but do not display every potential variation.
 
 \[IMAGE: SIZE/THICKNESS DIAGRAM\]
 
@@ -104,11 +104,23 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ### How does the Terracotta 2x8 read in a room?
 
-Zia's Terracotta 2x8 is a muted, earthy red-orange — closer to the tone of sun-dried clay than to a fired or saturated orange. In a room, it introduces warmth without the full intensity of a bright color: the matte surface keeps the tone settled, and the depth of the cement pigment gives the color a mineral quality. Against white walls, it reads as the warmest element in the room. Against warm plaster or aged wood, the terracotta tone is in dialogue rather than in contrast. The 2x8 subway format presents the color in a horizontal field that reinforces the understated, earthy quality of the colorway.
+Zia's Terracotta 2x8 is a muted, earthy red-orange — closer to the tone of sun-dried clay than to a fired or saturated orange. The matte surface keeps the tone settled, and the depth of the cement pigment gives the color a mineral quality. The 2x8 subway format presents the color in a horizontal field across a backsplash or wall.
 
-### Does Zia's Terracotta 2x8 cement tile require sealing?
+### How does the Terracotta cement colorway compare to Zia's Cotto tiles with similar warm clay tones?
 
-Yes. All cement tile requires sealing before grouting and again after grouting. Sealing is required in every installation, including dry spaces. A penetrating impregnating sealer applied before grouting prevents grout from staining the porous surface; a second coat after grouting and curing protects the finished installation. Follow Zia's cement installation guide for the recommended sealers and application sequence. For questions about sealer selection, contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+Zia's Terracotta cement tile achieves its color through mineral pigments pressed into a cement base — the tile is never fired. Zia's Cotto line is an unglazed terra cotta where the color comes from the fired clay body itself rather than from added pigment. The two materials produce different surface characters: cement tile has a flat matte surface that develops a gentle patina with wear, while Cotto has the grain and texture of fired clay that deepens in character over time. Cotto's tone also varies from tile to tile through inherent variation in the clay — the cement Terracotta colorway is more consistent tile to tile, with variation in shade and surface texture rather than in clay tone.
+
+### What distinguishes cement terracotta from terra cotta clay tile in terms of maintenance and use?
+
+Cement tile and terra cotta clay tile are distinct materials with different sealing and maintenance requirements. Both require sealing, but the sealer chemistry and sequence differ — cement tile uses an impregnating sealer applied before and after grouting; unglazed Cotto uses a two-stage sequence with a matte wax finish for interior applications. Cement tile is not suitable for freeze/thaw exterior use; unglazed Cotto is rated for any climate including freeze/thaw. For the Terracotta 2x8 cement specifically, follow Zia's cement installation guide. For questions, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+
+### What layout orientation is most common for the Terracotta 2x8 subway format?
+
+The horizontal brick offset is the most common layout — each row set with a half-tile offset from the row above, producing a running bond. A horizontal stacked layout, with tiles aligned directly above each other, gives a more architectural, grid-like quality. A vertical orientation is less typical for a 2x8 format but creates a taller, more expansive character on a backsplash or feature wall. Zia's team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 can advise on layout planning for a specific installation.
+
+### What grout joint width does Zia recommend for Terracotta 2x8?
+
+Zia recommends 1/16" tile spacers for the Terracotta 2x8, producing a tight, minimal grout joint consistent with the subway format's clean, horizontal line. A grout tone close in color to the terracotta keeps the joint from reading as a dominant grid; a contrasting grout in white or cream emphasizes the grid and gives the subway field a more graphic quality. The visual outcome of the grout choice should be confirmed with a sample before committing to a full installation.
 
 ### Can Terracotta 2x8 be used in a shower?
 
@@ -118,21 +130,9 @@ Yes. Zia's Terracotta 2x8 is suited for shower walls and shower floors. Seal the
 
 Terracotta 2x8 cement tile is suited for exterior floors and walls in non-freeze/thaw climates — patios, courtyards, and covered outdoor spaces in mild climates. It is not suitable for installation in climates where the surface may be subject to freeze/thaw cycles. In outdoor applications, the cement installation guide covers the sealing sequence and the sealer types suited to exterior exposure.
 
-### How does the Terracotta cement colorway differ from Zia's Cotto line?
-
-Zia's Terracotta cement tile achieves its color through mineral pigments pressed into a cement base and never fired. Zia's Cotto line is an unglazed terra cotta — natural Mexican clay, hand-pressed and high-fired — where the color comes from the clay body itself rather than from added pigment. The two materials produce different surface characters: cement tile has a flat matte surface that develops a gentle patina with wear, while Cotto has the grain and texture of fired clay that deepens in character over time. The cement Terracotta colorway introduces a warmer, clay-like palette without the surface variation of an unglazed fired tile.
-
-### How should cement tile be cleaned?
-
-Sweep or dry-mop regularly to remove grit from the surface. For routine cleaning, use warm water and a pH-neutral cleaner. Avoid acidic cleaners — vinegar, citrus-based products, and bleach will damage the cement surface and strip the sealer. The warm terracotta tone makes certain stains less visible than on lighter colorways, but the same care regimen applies. Reseal periodically following the cement installation guide, with frequency depending on traffic and exposure.
-
-### How does Terracotta 2x8 cement tile develop patina over time?
+### How does Terracotta 2x8 cement tile develop patina with wear?
 
 The 3 mm pigmented layer in each tile carries real color depth — not a surface coating — which means the tile develops character with wear rather than fading. On a floor, the areas of highest traffic develop a gentle softening of the matte surface and a slightly richer tone over time. On a backsplash or wall, the patina is more subtle, appearing as a quiet deepening of the clay-red pigment. Regular sealing maintains the surface and preserves the development of that patina evenly across the installation.
-
-### What layout orientation is most common for the 2x8 subway format?
-
-The horizontal brick offset is the most common layout for a 2x8 subway tile — each row set with a half-tile offset from the row above, producing the classic running bond pattern familiar from historic café and kitchen applications. A horizontal stacked layout, with tiles aligned directly above each other, gives a more architectural, grid-like quality that suits contemporary interiors. A vertical orientation is less typical for a 2x8 format but creates a taller, more expansive feel on a backsplash or feature wall. The choice depends on the character of the space and the surrounding materials. Zia's team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 can advise on layout planning for a specific installation.
 
 ### What causes efflorescence in cement tile, and how is it prevented?
 
@@ -140,8 +140,4 @@ Efflorescence is a white mineral deposit that can appear when moisture migrates 
 
 ### Can Terracotta 2x8 cement tile be used with underfloor radiant heating?
 
-Yes. Terracotta 2x8 is compatible with all heated floor systems. Cement tile transmits heat efficiently and holds warmth well, which makes it a considered choice for radiant heating installations in kitchens and bathrooms. The substrate and radiant system should be fully cured and stabilized before tile installation begins. Follow the heating system manufacturer's guidelines for temperature ramp-up after the installation is complete.
-
-### What grout joint width does Zia recommend for Terracotta 2x8?
-
-Zia recommends 1/16" tile spacers for the Terracotta 2x8, producing a tight, minimal grout joint consistent with the subway format's clean, horizontal line. A grout tone that is close in color to the terracotta keeps the joint from reading as a dominant grid; a contrasting grout in white or cream emphasizes the grid and gives the subway field a more graphic quality. The visual outcome of the grout choice should be confirmed with a sample before committing to a full installation.
+Yes. Terracotta 2x8 is compatible with all heated floor systems. The substrate and radiant system should be fully cured and stabilized before tile installation begins. Follow the heating system manufacturer's guidelines for temperature ramp-up after the installation is complete. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with installation questions.

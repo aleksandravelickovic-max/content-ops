@@ -102,9 +102,13 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ## Frequently Asked Questions
 
-### How does the Alpha White colorway read in a room?
+### How does the 2x8 subway format work differently from the 2x4 and 4x4 formats in the Alpha White range?
 
-Alpha White is a bright, architectural white — a clean, true white without strong warm or cool undertones. In the 2×8 satin finish, the surface reads as crisp without the full reflectivity of a gloss tile. The satin finish sits in a middle register: smooth and clean with a low-level sheen that returns light evenly rather than producing a mirror-like surface. In a room, the 2×8 subway format adds a horizontal register when set in a standard stack, which suits both minimal and transitional interiors.
+The 2×8 is the longest rectangle in the Alpha White line. Its length produces a strongly directional surface when set horizontally or vertically — the tile line registers as a horizontal course across the wall, or as a vertical run that draws the eye upward. The 2×4 creates a tighter, more articulated grid with more grout lines per square foot and a less pronounced directional read. The 4×4 square produces a balanced, symmetric grid with no dominant direction. The format choice changes the visual rhythm and spatial quality of the surface; the color and satin finish are the same across all three.
+
+### What layout orientations work best with Alpha White 2x8?
+
+The 2×8 rectangle supports four main layout orientations: horizontal stack at 50% offset (the most common subway layout), vertical stack, one-third offset, and herringbone. A horizontal stack at 50% offset is the most common; a vertical stack draws the eye upward and reads well in narrow shower enclosures. Herringbone introduces movement across the surface and suits feature walls or kitchen backsplash applications where a more active layout is the intent. Laying out the pattern dry before setting confirms the direction before the tile is fixed.
 
 ### Does Alpha White 2x8 require sealing before installation?
 
@@ -112,32 +116,28 @@ No. The Alpha White 2x8 is a satin finish and does not require a penetrating sea
 
 ### Can Alpha White 2x8 be used on a shower floor?
 
-Yes. Zia's Alpha White 2x8 is suited for shower walls and shower floors. Plan for a minimum 1/8" grout joint on the shower floor to support traction underfoot. An anti-slip treatment applied after installation increases slip resistance in high-exposure wet areas.
+Yes. Zia's Alpha White 2x8 is suited for shower walls and shower floors. The 2×8 format set in a vertical stack or herringbone on a shower wall produces a strong directional read; on a shower floor, the elongated tile works well in a running-bond orientation aligned with the slope. Plan for a minimum 1/8" grout joint on the shower floor to support traction underfoot, and apply an anti-slip treatment after installation in high-exposure wet areas.
 
 ### Can Alpha White 2x8 be installed in a pool or spa?
 
 Yes. Zia's satin-finish ceramics are approved for pool and spa applications. The Alpha White 2x8 is compatible with saltwater and chlorine environments and suits pool waterline tile and spa interior wall applications.
 
-### What layout orientations work well with Alpha White 2x8?
+### How does the horizontal register of the 2x8 change the character of a large wall versus a narrow shower?
 
-The 2×8 rectangle supports four main layout orientations: horizontal stack (standard subway offset at one-third or one-half), vertical stack, and herringbone. A horizontal stack at 50% offset is the most common; a vertical stack draws the eye upward and reads well in narrow shower enclosures. Herringbone introduces movement across the surface and suits feature walls or kitchen backsplash applications where a more active layout is the intent. Laying out the pattern dry before setting confirms the direction before the tile is fixed.
-
-### How does the 2x8 format compare to the 2x4 and 4x4 in the Alpha White range?
-
-All three formats share the same bright white satin colorway. The 2×8 is the longest rectangle in the line — its length produces a strongly directional surface when set horizontally or vertically. The 2×4 creates a tighter, more articulated grid with more grout lines per square foot. The 4×4 square produces a balanced, symmetric grid where horizontal and vertical grout lines carry equal weight. The format choice changes the visual rhythm of the surface without changing the color.
+On a wide wall — a kitchen backsplash or a full bathroom wall — a horizontal stack creates a continuous coursing pattern that draws the eye across the surface and reads as calm and orderly. In a narrow shower enclosure, the same horizontal stack can feel compressive; a vertical stack or herringbone orientation typically suits narrower spaces better, using the format's length to pull the eye upward rather than across. The 2×8 is format-sensitive in a way that the 4×4 is not.
 
 ### How do the three Alpha White formats work together in a single installation?
 
-The Alpha White 2×4, 2×8, and 4×4 share the same color and satin finish, which makes them well suited to combined use across a single space. A common approach is to use the larger 2×8 on the main shower wall and the 2×4 on a niche or accent surface, using the format shift to distinguish areas within the same installation without a color change. The 4×4 works on floors alongside either rectangle format. Confirming the layout relationships in a dry arrangement before setting is the recommended approach when combining formats.
+The Alpha White 2×4, 2×8, and 4×4 share the same color and satin finish, which makes them well suited to combined use across a single space. A common approach is the 2×8 on the main shower wall and the 2×4 on a niche or accent surface — the format shift distinguishes areas without a color change. The 4×4 works on floors alongside either rectangle. Confirming layout relationships in a dry arrangement before setting is the recommended approach when combining formats.
 
-### How does the satin finish affect the Alpha White 2x8 in different lighting conditions?
-
-The satin finish returns light with a low-level sheen rather than a hard gloss reflection. Under directional natural light, the surface reads as clean and crisp without producing strong highlights or glare. Under warm artificial light in the evening, the satin surface holds the bright white tone and reads as consistent across the field. In kitchens and bathrooms where lighting changes throughout the day, the satin finish keeps the Alpha White stable — brighter than matte but quieter than gloss in any condition.
-
-### What grout joint width is recommended for Alpha White 2x8?
+### What grout joint width is recommended for Alpha White 2x8, and how does grout color affect the surface?
 
 Plan for 3/16" grout joints as the standard, with a minimum of 1/8". The grout joint is a compositional element in a 2×8 installation — its width and color affect how the tile line reads across the surface. A narrow joint in a tone-on-tone white recedes and keeps the focus on the tile. A wider joint in a contrasting tone makes the tile line itself a graphic feature. For shower floors, the 1/8" minimum applies and an anti-slip treatment after installation is recommended for high-exposure wet areas.
 
-### Is Alpha White 2x8 compatible with a waterproofing membrane in shower construction?
+### Can Alpha White 2x8 be used on an exterior wall?
 
-Yes. Standard waterproofing membranes applied to the substrate before setting are fully compatible with Alpha White 2x8. The membrane is installed prior to tiling and does not affect the tile body or satin finish. For project-specific waterproofing and substrate guidance, consult the installation guide or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+Yes. Alpha White 2x8 is approved for exterior wall applications. The high-fired ceramic body is suited to exterior wall installation in both freeze/thaw and non-freeze/thaw climates. It is not specified for exterior floor applications. For exterior project questions — particularly around substrate conditions or waterproofing — contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+
+### How does tonal variation distribute across a full Alpha White 2x8 installation?
+
+High-fired ceramics carry very minor variation in size, color, tone, and surface texture. In Alpha White, variation expresses as subtle differences in brightness or surface quality from tile to tile. In a 2×8 installation, any variation is distributed along the horizontal courses of the tile. Mixing tiles from all boxes and arranging a dry layout before setting prevents any cluster of tiles reading as a patch within the field.

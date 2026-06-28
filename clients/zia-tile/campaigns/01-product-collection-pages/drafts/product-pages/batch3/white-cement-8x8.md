@@ -16,9 +16,9 @@ draft_date: 2026-06-26
 
 ---
 
-Hand-poured in Vietnam using techniques refined in the 1850s, Zia's White Cement 8x8 is a patterned cement tile in an 8" × 8" square format. Each tile presents a white field bisected by thin black lines running horizontally and vertically through the center, dividing the surface into four equal white quadrants. The pattern is architectural and minimal — the black hairlines provide a structural grid without introducing a strong graphic statement. At a distance, the surface reads as white with a subtle internal geometry. Up close, the crisp black lines against the matte white field produce a clean, ordered surface. The large format and quiet pattern suit contemporary interiors where structure is desired without color, and the matte cement surface gives the grid a material quality that a printed ceramic equivalent does not produce.
+Hand-poured in Vietnam using techniques refined in the 1850s, Zia's White Cement 8x8 is a patterned cement tile in an 8" × 8" square format. Each tile presents a white field bisected by thin black lines running horizontally and vertically through the center, dividing the surface into four equal white quadrants. The pattern is architectural and minimal — the black hairlines provide a structural grid without introducing a strong graphic statement. At a distance, the surface reads as white with a subtle internal geometry. Up close, the crisp black lines against the matte white field produce a clean, ordered surface.
 
-Each cement tile is made by hand, and subtle variations in color, shape, and thickness are to be expected. Irregular edges and minor surface variation are natural to the material. The patina that develops over time marks the material's true character — a graceful nod to the worn cement floors of European cafés and public squares shaped by everyday life. Images shown are representative of a sample of this tile, but do not display every potential variation.
+Each cement tile is made by hand, and subtle variations in color, shape, and thickness are to be expected. Irregular edges and minor surface variation are natural to the material. The patina that develops with wear marks the material's true character. Images shown are representative of a sample of this tile, but do not display every potential variation.
 
 \[IMAGE: SIZE/THICKNESS DIAGRAM\]
 
@@ -106,46 +106,38 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 Each tile is a white matte field with thin black lines crossing horizontally and vertically through the center, dividing the surface into four equal white quadrants. When the tiles are set side by side, the black lines from adjacent tiles align to form a continuous grid across the installation. At scale, the surface reads as white with a fine black grid running through it — the pattern is present but not dominant, and the matte white field remains the primary visual element.
 
-### Does Zia's White Cement 8x8 require sealing?
+### How does the White Cement 8x8 read differently from the same colorway in a smaller format?
 
-Yes. All cement tile requires sealing before grouting and again after grouting — in every installation, including dry spaces. The light surface on the White Cement 8x8 makes careful sealing before grouting especially important: the pale field can show grout haze if the grout is not released before it sets. Follow Zia's cement installation guide for the recommended sealers and application sequence. For questions, contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+The 8x8 format presents the quadrant grid at a scale where the four white fields within each tile are immediately legible and the black dividing lines read with full architectural weight. In a smaller format — such as a 4x4 in a comparable white-and-black pattern — the grid detail compresses and the surface reads as more textural than architectural. The 8x8 scale suits larger floor fields and wall surfaces where the grid's geometry is intended to carry the visual structure of the room.
 
-### What sealers does Zia recommend for cement tile?
+### What grout joint width and color works best with the White Cement 8x8?
 
-Zia's cement installation guide specifies a two-stage sealing process: an impregnating sealer applied before grouting, and a topcoat sealer applied after the grout has fully cured. For the White Cement 8x8, a non-yellowing, water-based topcoat sealer is advisable to keep the white field clear. The specific products are listed in the installation guide; contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with project-specific questions.
+Use 1/16" tile spacers for the standard grout joint. Because the tile carries a black grid in the pattern itself, the grout color significantly affects how the overall surface reads. A grout close to the white field allows the pattern's black lines to remain the dominant visual element. A dark or contrasting grout introduces a second grid — the grout joints — on top of the pattern, which competes visually. Evaluating a dry sample layout before committing to the installation sequence helps clarify the combined effect.
+
+### What thinset is recommended for the White Cement 8x8?
+
+A white latex-modified or polymer-modified thinset is recommended. Standard grey thinset can bleed through the porous cement surface and alter the white field's tone. Zia's cement installation guide provides specific thinset guidance; contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for installer-specific questions.
 
 ### Can White Cement 8x8 be used in a shower?
 
-Yes. Zia's White Cement 8x8 is suited for shower walls and shower floors. Seal the tile before grouting and again after, following the cement installation guide. For shower floor applications, apply an anti-slip treatment after installation to support traction in wet conditions.
+Yes. Zia's White Cement 8x8 is suited for shower walls and shower floors. Seal the tile before grouting and again after, following the cement installation guide. For shower floor applications, apply an anti-slip treatment after installation to support traction in wet conditions. The pale white field on this tile makes careful pre-grout sealing especially important — the surface can show grout haze if the grout is not released before it sets.
 
 ### Can White Cement 8x8 be installed outdoors?
 
 White Cement 8x8 is suited for exterior floors and walls in non-freeze/thaw climates — patios, courtyards, and covered outdoor spaces in mild climates. It is not suitable for installation in climates where the surface may be subject to freeze/thaw cycles.
 
-### What grout color works best with the White Cement 8x8?
+### How does tonal variation affect the White Cement 8x8's pattern?
 
-Because the tile carries a black grid in the pattern itself, the grout color significantly affects how the overall surface reads. A grout close to the white field allows the pattern's black lines to remain the dominant visual element. A dark or contrasting grout introduces a second grid — the grout joints — on top of the pattern, which competes visually and can make the surface feel busy. Evaluating a dry sample layout before committing to the installation sequence helps clarify the combined effect.
-
-### What thinset is recommended for this tile?
-
-A white latex-modified or polymer-modified thinset is recommended for the White Cement 8x8. Standard grey thinset can bleed through the porous cement surface and alter the white field's tone. Zia's cement installation guide provides specific thinset guidance; contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for installer-specific questions.
-
-### What materials pair well with the White Cement 8x8?
-
-The white-and-black grid suits rooms where a minimal, architectural palette is the intent. Against natural wood, the pattern reads as a clean counterpoint to the grain. Against dark stone countertops, the white field holds its ground without competing. The tile anchors a floor or backsplash in a contemporary kitchen or bathroom where structure and restraint are the design priorities.
+The white field in the White Cement 8x8 carries subtle tonal variation from tile to tile — a characteristic of hand-poured pigmented cement. On a white surface, small differences in tone are more perceptible than on darker colorways. One tile may read slightly cooler and the next slightly warmer, though both remain clearly white. Blending tiles from multiple boxes before setting distributes this variation naturally and keeps the pattern reading as consistent across the installation.
 
 ### How does cement tile differ from ceramic or porcelain?
 
 Cement tile is never fired. The pattern is produced by laying mineral pigments into a steel mold and hydraulically pressing them at 3,000 lbs psi; the tile is then water-cured for seven days. A ceramic or porcelain tile's pattern is fired into a glaze at high temperature. The difference in the finished surface is visible: cement produces a matte, porous surface that develops patina over time, while ceramic and porcelain carry their pattern in a fixed, non-porous glaze.
 
-### How does tonal variation affect the White Cement 8x8's pattern?
+### How does the White Cement 8x8 develop patina with wear?
 
-The white field in the White Cement 8x8 carries subtle tonal variation from tile to tile — a characteristic of hand-poured pigmented cement. On a white surface, small differences in tone are more perceptible than on darker colorways. One tile may read slightly cooler and the next slightly warmer, though both remain clearly white. Blending tiles from multiple boxes before setting distributes this variation naturally and keeps the pattern reading as consistent across the installation.
+The matte surface softens and settles with wear and time. High-traffic areas develop a gentle sheen in the white field first, which deepens the material's presence over years rather than diminishing it. The black grid lines remain as crisp as the cement pigment allows. Periodic resealing per the installation guide maintains the surface and supports this aging process.
 
-### How does cement tile age and develop patina?
+### Is White Cement 8x8 compatible with underfloor radiant heating?
 
-The matte surface of the White Cement 8x8 softens and settles with wear and time. High-traffic areas develop a gentle sheen in the white field first, which deepens the material's presence over years rather than diminishing it. The black grid lines remain as crisp as the cement pigment allows. Periodic resealing per the installation guide maintains the surface and supports this aging process.
-
-### How should cement tile be cleaned?
-
-Sweep or dry-mop regularly to remove grit. For routine cleaning, use warm water and a pH-neutral cleaner. Avoid acidic cleaners — vinegar, citrus-based products, and bleach will damage the cement surface and strip the sealer. The white field shows marks and staining more readily than darker colorways, so prompt attention to spills helps maintain the surface. Reseal periodically following the cement installation guide, with frequency depending on traffic and exposure.
+Yes. White Cement 8x8 is compatible with all heated floor systems. Follow thinset manufacturer specifications for radiant floor applications and confirm that the subfloor is fully cured before setting tile. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for installation questions.

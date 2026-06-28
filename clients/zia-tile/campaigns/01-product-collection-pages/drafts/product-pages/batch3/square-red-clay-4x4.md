@@ -100,37 +100,29 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ## Frequently Asked Questions
 
-### How does Red Clay 4x4 read in a room?
+### How does the Red Clay 4x4 compare to the Square Fired Earth 4x4 — same format, different finish depth?
 
-Red Clay 4x4 reads as a saturated, warm field — brick-red with movement between deep copper and earth-orange tones across the fired surface. In the 4x4 format, the color density builds quickly across the installation, making the tone the dominant element in the room. Against white plaster, the red creates strong contrast that grounds the space. Against natural wood and unlacquered brass, the red integrates into an earthy, warm composition. The tile is also available in 8x8 square, 2x6 rectangle, and 8x9 hexagon formats for larger fields or multi-format installations.
-
-### How do I seal Red Clay 4x4 Cotto tile?
-
-Cotto requires a two-stage sealing process. Apply a pre-grout sealer before grouting to saturate the surface and act as a grout release. After grouting, apply the post-grout top coat: a matte wax for interior installations, or a second coat of the pre-grout sealer for exterior, since UV exposure causes wax to discolor outdoors. Periodic resealing maintains resistance to moisture and staining. Refer to Zia's Cotto installation guide for specific product recommendations, or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions.
-
-### How often does Cotto need to be resealed after installation?
-
-Resealing frequency depends on traffic and exposure. Interior high-traffic floors — kitchens, entryways, primary bathrooms — typically benefit from resealing every one to two years. Low-traffic surfaces and walls require attention less frequently. Exterior installations may need more regular resealing depending on climate and exposure. When water no longer beads on the tile surface, the sealer needs to be refreshed.
-
-### Can Red Clay 4x4 be used outdoors in freezing climates?
-
-Yes. Unglazed Cotto is suitable for exterior floors in any climate, including regions with freeze/thaw cycles. This is a meaningful performance distinction — glazed tiles and cement tiles are not suited for freeze/thaw exterior use. Proper sealing is required. For outdoor installations, apply the pre-grout sealer before grouting and a second coat of the same sealer (not wax) as the post-grout top coat.
-
-### How does Cotto differ from mass-produced terracotta?
-
-Zia's Cotto is hand-pressed from natural Mexican clay in San Miguel de Allende, sun-dried in open courtyards, and high-fired in traditional kilns. Each tile carries inherent variation in tone, shape, edge, and thickness — the result of the hand-making process. Mass-produced terracotta is typically machine-formed with tighter dimensional tolerances and a more uniform surface. The two read differently in a room: Cotto has depth and material presence that machine-formed tile does not.
+Both are 4x4 square Cotto tiles from San Miguel de Allende in the same hand-pressed clay body. The difference is surface character and tonal depth. Fired Earth carries wood-ash surface patterning applied during firing — the ash contact produces varied, layered coloration across the warm clay base, so the tile reads as textured and tonally complex at close range. Red Clay has no ash treatment: the tone comes directly from the fired clay itself, producing a deeper, more saturated brick-red that reads as consistent and warm across the field. In the same 4x4 format, Fired Earth reads as varied; Red Clay reads as rich and saturated.
 
 ### How does patina develop on Red Clay Cotto?
 
 Red Clay develops patina with wear and time. The saturated brick-red tone deepens as the unglazed surface builds character — tonal variation that reads across individual tiles at installation gradually integrates into a unified surface across the full field. Because Red Clay is already the deepest, most saturated colorway in the collection, its patina is the most visible. Expect the tone to deepen over time: that patina is the point.
 
+### Can Red Clay 4x4 be used outdoors in freezing climates?
+
+Yes. Unglazed Cotto is suitable for exterior floors in any climate, including regions with freeze/thaw cycles. This is a meaningful performance distinction — glazed tiles and cement tiles are not suited for freeze/thaw exterior use. Proper sealing is required. For outdoor installations, apply the pre-grout sealer before grouting and a second coat of the same sealer (not wax) as the post-grout top coat.
+
 ### Can Red Clay 4x4 be used in a shower?
 
-Yes. Cotto tiles are suited for shower walls and shower floors with proper sealing. Apply the pre-grout sealer before grouting, then apply a matte wax as the post-grout top coat for interior wet areas. For shower floor installations, maintain a minimum 1/8" grout joint and apply an anti-slip treatment after installation. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for installer guidance.
+Yes. Cotto tiles are suited for shower walls and shower floors with proper sealing. In the 4x4 format, the smaller tile size means more grout joints per square foot on a shower floor — this supports traction and drainage. Apply the pre-grout sealer before grouting, then apply a matte wax as the post-grout top coat for interior wet areas. Maintain a minimum 1/8" grout joint and apply an anti-slip treatment after installation. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for installer guidance.
+
+### How do I seal Red Clay 4x4 Cotto tile?
+
+Cotto requires a two-stage sealing process. Apply a pre-grout sealer before grouting to saturate the surface and act as a grout release. After grouting, apply the post-grout top coat: a matte wax for interior installations, or a second coat of the pre-grout sealer for exterior. Refer to Zia's Cotto installation guide for specific product recommendations, or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions.
 
 ### What grout joint width does Zia recommend for the 4x4 square?
 
-Use 1/8" tile spacers for the recommended grout joint on Cotto tiles. This joint width is consistent with the material's inherent edge variation — the hand-pressed clay produces edges that are not perfectly uniform, and a minimum 1/8" joint accommodates that variation while maintaining a tight, considered look across the field.
+Use 1/8" tile spacers for the recommended grout joint on Cotto tiles. This joint width accommodates the material's inherent edge variation — the hand-pressed clay produces edges that are not perfectly uniform, and a minimum 1/8" joint allows for that variation while maintaining a tight, considered look across the field.
 
 ### What is efflorescence and how is it prevented?
 
@@ -138,4 +130,12 @@ Efflorescence appears as white crystalline deposits on the tile surface when min
 
 ### How should Red Clay 4x4 Cotto be cleaned?
 
-Use a pH-neutral cleaner with warm water and avoid acidic or abrasive products. Sweep or vacuum regularly to remove grit from the surface. Mop with a damp cloth rather than excess water and dry the surface after cleaning to prevent residue buildup. Periodic resealing is required to maintain long-term performance — frequency depends on traffic and exposure.
+Use a pH-neutral cleaner with warm water and avoid acidic or abrasive products. Sweep or vacuum regularly to remove grit from the surface. Mop with a damp cloth rather than excess water and dry the surface after cleaning to prevent residue buildup. Periodic resealing is required to maintain long-term performance.
+
+### What other formats is Red Clay available in?
+
+Red Clay is available across multiple Cotto formats including 8x8 square, 2x6 rectangle, and 8x9 hexagon, as well as the Zocalo specialty shape. Each format shares the same clay body and deep brick-red tone while offering a distinct tiling geometry. Contact [info@ziatile.com](mailto:info@ziatile.com) to discuss format combinations for a specific project.
+
+### Can Red Clay 4x4 be mixed with other Cotto colorways?
+
+Yes. The Red Clay 4x4 pairs with Fired Earth for a warmer, more tonally varied field, or with Adobe for a lighter tonal contrast across the same square format. Contact [info@ziatile.com](mailto:info@ziatile.com) to discuss colorway combinations before ordering.

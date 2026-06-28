@@ -16,7 +16,7 @@ draft_date: 2026-06-26
 
 ---
 
-Zia's Maya Blue zellige takes its reference from the ancient Mesoamerican pigment — a vivid, medium blue with the warmth and clarity of a primary color rather than the greyness of a contemporary mid-tone. In a room, the colorway reads as clear and saturated without the near-indigo depth of Night Blue or the traditional Iberian register of Portuguese Blue. It brings an immediate, luminous quality to kitchen backsplashes, bathroom walls, shower enclosures, and pool waterlines, where the warmth in the glaze distinguishes it from cooler blues in the range.
+Zia's Maya Blue zellige takes its reference from the ancient Mesoamerican pigment — a vivid, medium blue with the warmth and clarity of a primary color rather than the greyness of a contemporary mid-tone. The colorway reads as clear and saturated without the near-indigo depth of Night Blue or the traditional Iberian register of Portuguese Blue. The 4x4 square format suits kitchen backsplashes, bathroom walls, shower enclosures, and pool waterlines, where the warmth in the glaze distinguishes it from cooler blues in the range.
 
 Zia's Maya Blue 4x4 zellige is hand-formed, dipped in glaze, and fired in earthen kilns in Morocco, where the method has been refined over more than 800 years. Each tile carries the chips, pits, hairline crazing, and tonal shifts that come from working at this scale by hand. Photographs shown are representative of a sample of this tile, but do not display all potential variations.
 
@@ -106,7 +106,15 @@ Local pickup is free at our Los Angeles area warehouse. Our team will reach out 
 
 ### What does Maya Blue zellige look like in a room?
 
-Zia's Maya Blue reads as a vivid, medium blue with clarity and warmth — the quality of the ancient Mesoamerican pigment for which it is named, which is known for its durability and the way it holds its vividness over time. In a room, the colorway reads as clear and present without the near-indigo weight of Night Blue. The warmth in the glaze means it reads differently from cool-toned blues in the collection: less steely, more luminous. Against white or cream, Maya Blue holds its color clearly. Against terracotta or warm stone, the warmth in the blue and the warmth in the material create a palette with historic resonance.
+Zia's Maya Blue reads as a vivid, medium blue with clarity and warmth — the quality of the ancient Mesoamerican pigment for which it is named, which is known for its durability and the way it holds its vividness over time. The warmth in the glaze means it reads differently from cool-toned blues in the collection: less steely, warmer in register. The chips, pits, and hairline crazing across the surface catch light at different angles, keeping the field from reading as a flat plane of color.
+
+### What is the historical reference behind the Maya Blue name?
+
+Maya Blue is named for the ancient Mesoamerican pigment developed by pre-Columbian civilizations, known for its exceptional stability — the original pigment resisted fading over centuries due to its unique mineral composition. Zia's Maya Blue zellige draws on that color reference: a vivid, warm-toned medium blue that is distinct from the cooler, greyer blues common in modern palettes. The historical reference is in the colorway's position in the blue spectrum and the warm character of the glaze, not a reproduction of the original pigment.
+
+### How does Maya Blue compare to Night Blue and Glacier Blue in the range?
+
+Maya Blue sits between the two in terms of saturation and depth. Night Blue is the deepest colorway in Zia's blue zellige range — near-indigo, the darkest of the collection. Glacier Blue is the lightest and coolest: a clear, airy blue at the pale end of the range. Maya Blue occupies a vivid medium register, distinguished from both by its warm undertone. Ordering samples of all three side by side is the most reliable way to see how each reads in the installation context.
 
 ### Can Maya Blue 4x4 zellige be used in a shower?
 
@@ -114,40 +122,28 @@ Yes. Zia's Maya Blue 4x4 is suited for shower walls, shower floors, and steam sh
 
 ### Is Maya Blue zellige approved for pool and spa applications?
 
-Yes. Maya Blue zellige is approved for pool waterlines, spa interiors, and fountains in both saltwater and chlorine environments. Sealing is required per the installation instructions. The vivid, clear quality of the blue reads well at a pool waterline or spa interior, where the glaze and the water tone reinforce each other.
-
-### How does Maya Blue compare to Glacier Blue and Moroccan Blue in the collection?
-
-Maya Blue is a vivid, medium blue with warmth — sitting at higher saturation than Glacier Blue and with less depth than Moroccan Blue. Glacier Blue is the lightest and coolest of the three, reading as a pale, airy blue. Moroccan Blue is a classic saturated blue in the traditional North African palette with a slightly cooler, more serious quality. Maya Blue is distinguished from both by the warm undertone in the glaze, which gives it a livelier, more luminous character. Ordering samples of multiple colorways is the most reliable way to see how each reads in the specific context.
-
-### What grout pairs well with Maya Blue zellige?
-
-A white grout against Maya Blue creates a clean, graphic contrast that lets the vibrancy of the glaze carry the surface. A grout in a warm grey or stone tone — rather than a cool grey — preserves the warmth of the blue glaze while introducing a quieter joint. Cool-toned or blue-grey grouts can flatten the warm character that distinguishes Maya Blue from other blues in the range.
+Yes. Maya Blue zellige is approved for pool waterlines, spa interiors, and fountains in both saltwater and chlorine environments. Sealing is required per the installation instructions. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions about wet-environment sealing.
 
 ### Can Maya Blue 4x4 be combined with other zellige formats?
 
 Yes. Maya Blue is available in 2x2 and hexagon formats in addition to the 4x4. Each format is produced using the same traditional methods and shares consistent surface character across the range. The 4x4 field can be combined with a 2x2 or hexagon accent in the same installation for format-change details at niches, borders, or mosaic insets. Contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions about combining formats.
 
-### How thick is Maya Blue 4x4 zellige, and how does that affect installation?
+### What grout pairs well with Maya Blue zellige?
 
-Zellige tiles are approximately ⅜" thick on average, though the handmade nature of the material means thickness varies piece to piece. That variation is part of what gives a finished zellige installation its characteristic undulating surface and the way it catches light unevenly across the field. Setting the tiles requires wedge spacers and a skilled hand to manage the relief across the surface — planning for installations two to three times longer than standard ceramic is the appropriate baseline.
-
-### How does light affect how Maya Blue reads throughout the day?
-
-The warm undertone in Maya Blue's glaze shifts with the quality of light in the room. In direct morning or afternoon light, the color reads as vivid and clear. Under warmer incandescent or candlelight, the warmth in the glaze becomes more pronounced and the blue reads slightly deeper. In lower or diffused light, the surface variation from chips, pits, and hairline crazing creates textural shadow that makes the field read as richer than in flat bright conditions. Ordering a sample and observing it across multiple lighting conditions in the intended space is the most reliable preparation.
-
-### What adhesive or thinset does Zia recommend for zellige?
-
-Zellige requires a white polymer-modified thinset, applied as a full back-butter coverage on each tile given the irregular backs of handmade pieces. Grey thinset can show through the glaze on lighter colorways, which is why white thinset is the standard for glazed zellige. Refer to Zia's installation guide for the recommended products and method, or contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with installation questions.
+A white grout against Maya Blue creates a clean, graphic contrast that lets the vibrancy of the glaze carry the surface. A grout in a warm grey or stone tone — rather than a cool grey — preserves the warmth of the blue glaze while introducing a quieter joint. Cool-toned or blue-grey grouts can flatten the warm character that distinguishes Maya Blue from other blues in the range.
 
 ### What grout joint width does Zia recommend for Maya Blue 4x4 zellige?
 
-Zellige is traditionally set with minimal grout joints — as close to edge-to-edge as the tile's inherent size variation allows. In practice, wedge spacers are used to maintain a consistent joint and protect the chamfered edges during setting. For shower floors, grout joints should measure a minimum of ⅛" to support slip resistance. Zia's installation guide covers the recommended joint width and grouting sequence in detail.
+Zellige is traditionally set with minimal grout joints — as close to edge-to-edge as the tile's inherent size variation allows. In practice, wedge spacers are used to maintain a consistent joint and protect the chamfered edges during setting. For shower floors, grout joints should measure a minimum of ⅛" to support slip resistance. Zia's installation guide covers the recommended joint width and grouting sequence in detail. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with installation-specific questions.
+
+### What thinset does Zia recommend for Maya Blue zellige?
+
+Zellige requires a white polymer-modified thinset, applied as a full back-butter coverage on each tile given the irregular backs of handmade pieces. Grey thinset can show through the glaze on lighter colorways, which is why white thinset is the standard for glazed zellige. Refer to Zia's installation guide for the recommended products and method, or contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with installation questions.
 
 ### Can Maya Blue zellige be used on a countertop?
 
 Zellige is not typically recommended for countertop applications. The chips, pits, and hairline crazing that give the material its character also create a surface that is less suited to the repeated impact, abrasion, and acidic contact that countertops encounter. For kitchen and bathroom surfaces, zellige performs well as a backsplash, wall, or shower application where those conditions are not a factor. The team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 can advise on the right application for a specific project.
 
-### How often should Maya Blue zellige be resealed after installation?
+### What does variation look like across a full Maya Blue installation?
 
-The resealing frequency depends on the application and the level of exposure. Shower installations and areas exposed to continuous moisture benefit from periodic resealing following the installation guide's recommended schedule. In dry interior applications, resealing is less frequent but still required as part of long-term care. Zia's installation guide outlines the sealer selection and resealing sequence for each application type.
+Across a field, Maya Blue ranges from tiles with a slightly more saturated, vivid blue to those with a warmer, slightly softer register. The chips, pits, and hairline crazing characteristic of zellige are present at the surface of each tile. Mixing tiles from all boxes during the dry layout ensures the tonal range distributes evenly across the installation rather than clustering by production sequence.

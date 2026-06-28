@@ -16,9 +16,9 @@ draft_date: 2026-06-26
 
 ---
 
-Hand-poured in Vietnam using techniques refined in the 1850s, Zia's Sage 2x8 is a muted grey-green in a 2" × 8" subway format. The color carries grey undertones that pull it away from a botanical green and into quieter territory — a tone that grounds a space without asserting strong color. Against white walls, it reads as a soft, receding field. Against warm plaster or aged wood, the grey in the green comes forward slightly, creating a calm dialogue between the cooler tile and the warmer surround. In a kitchen backsplash or bathroom wall application, the 2x8 subway format presents the muted green in a familiar, low-key grid that suits contemporary and transitional interiors.
+Hand-poured in Vietnam using techniques refined in the 1850s, Zia's Sage 2x8 is a muted grey-green in a 2" × 8" subway format. The color carries grey undertones that pull it away from a botanical green — a tone that sits between green and grey rather than leaning clearly into either. On a kitchen backsplash or bathroom wall, the 2x8 subway format presents the muted green in a horizontal grid suited to both contemporary and transitional interiors. Sage is also available in 4x4 and 8x8 formats.
 
-Each cement tile is made by hand, and subtle variations in color, shape, and thickness are to be expected. Irregular edges and minor surface variation are natural to the material. The patina that develops over time marks the material's true character — a graceful nod to the worn cement floors of European cafés and public squares shaped by everyday life. Images shown are representative of a sample of this tile, but do not display every potential variation.
+Each cement tile is made by hand, and subtle variations in color, shape, and thickness are to be expected. Irregular edges and minor surface variation are natural to the material. The patina that develops over time is characteristic of hand-poured pigmented cement. Images shown are representative of a sample of this tile, but do not display every potential variation.
 
 \[IMAGE: SIZE/THICKNESS DIAGRAM\]
 
@@ -102,50 +102,46 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ## Frequently Asked Questions
 
-### How does the Sage colorway read in a room?
+### How does the Sage 2x8 read differently from the Sage 4x4 and Sage 8x8?
 
-Sage is a muted grey-green — a tone that sits between green and grey rather than leaning clearly into either. In a room, it reads as a grounding neutral that contributes color without drawing the eye. Against white, it holds back and produces a quiet contrast. Against warm plaster and wood, the grey undertone comes forward and creates a calm dialogue with the warmer materials. The 2x8 subway format gives the color a horizontal, understated field that suits contemporary and transitional interiors.
+The grey-green colorway is consistent across all three Sage formats, but the 2x8 produces a distinctly different surface from either square format. The horizontal subway register gives the muted green a directional quality — the eye follows the long axis of each tile across the backsplash or wall. The 4x4 produces an even grid with no dominant direction, and the 8x8 reads as a broader, less articulated plane with fewer grout joints. For a kitchen backsplash where a familiar subway layout is the intent, the 2x8 is the most directional of the three formats.
 
-### Does Zia's Sage 2x8 cement tile require sealing?
+### How does the grout color affect the visual result for Sage 2x8?
 
-Yes. All cement tile requires sealing before grouting and again after grouting — in every installation, including dry spaces. Follow Zia's cement installation guide for the recommended sealers and application sequence. For questions about sealer selection, contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
-
-### What sealers does Zia recommend for cement tile?
-
-Zia's cement installation guide specifies a two-stage sealing process: an impregnating sealer applied before grouting protects the surface during the grouting process, and a topcoat sealer is applied after the grout has fully cured. The specific products are listed in the installation guide. For project-specific questions, contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+A grout close in tone to the sage grey-green allows the tile field to read as a near-continuous surface — the subway grid quiets down and the color carries the wall. A white or light grey grout emphasizes the horizontal lines of the subway pattern and adds visible structure to the surface. A warm-toned grout in the sand or tan range can pull the grey-green slightly warmer. The grout choice interacts with the bond pattern: in a brick offset, a contrasting grout makes the staggered joints more legible; in a stacked layout, it emphasizes the grid's regularity.
 
 ### Can Sage 2x8 be used in a shower?
 
-Yes. Zia's Sage 2x8 is suited for shower walls and shower floors. Seal the tile before grouting and again after, following the cement installation guide. For shower floor applications, apply an anti-slip treatment after installation to support traction in wet conditions.
+Yes. Zia's Sage 2x8 is suited for shower walls and shower floors. Seal the tile before grouting and again after, following the cement installation guide. For shower floor applications, apply an anti-slip treatment after installation. On a shower floor, the 1/16" grout joint specified for interior walls may be increased to 1/8" for wet commercial installations; consult the installation guide for the correct specification in each context.
 
 ### Can Sage 2x8 be installed outdoors?
 
 Sage 2x8 cement tile is suited for exterior floors and walls in non-freeze/thaw climates — patios, courtyards, and covered outdoor spaces in mild climates. It is not suitable for installation in climates where the surface may freeze.
 
-### Which bond pattern is most common for the Sage 2x8 subway format?
+### Which bond pattern suits the Sage 2x8 in a backsplash application?
 
-The two most common layouts for a 2x8 subway are horizontal brick offset (each row shifted half a tile length) and horizontal stacked (grout joints lining up directly above one another). Brick offset gives the surface a familiar, active quality; stacked bond reads as more architectural and grid-forward. For wall applications, the choice is primarily a design decision. A dry layout before setting allows evaluation of both orientations in the actual space.
+Horizontal brick offset (each row shifted by half a tile length) is the most common layout for a kitchen backsplash in this format — it reads as a familiar, active subway field. Horizontal stacked bond produces a more architectural result where the grout lines are fully aligned, which suits contemporary interiors where the grid's geometry is part of the design intent. Vertical layouts are less common but work in narrow applications such as a range hood surround, where the vertical stack draws the eye upward.
 
 ### What grout joint width does Zia recommend?
 
-Zia recommends 1/16" grout joints for the Sage 2x8 in standard interior applications. For wet commercial floor applications, grout joints should measure at least 1/8" to meet slip-resistance specifications. The grout color choice also affects how the surface reads: a grout close to the sage tone allows the tile field to register as continuous, while a contrasting grout emphasizes the grid.
+Zia recommends 1/16" grout joints for the Sage 2x8 in standard interior applications. For wet commercial floor applications, grout joints should measure at least 1/8" to meet slip-resistance specifications.
 
-### How does tonal variation distribute across a Sage installation?
+### How does tonal variation distribute across a Sage 2x8 installation?
 
 The grey-green of Sage carries subtle tonal shifts from tile to tile — the pigment depth in each piece varies slightly, as is characteristic of hand-poured cement. Opening and blending tiles from multiple boxes before setting allows the variation to distribute naturally across the field. Setting tiles from a single box in sequence without blending can concentrate lighter or deeper tones in one area.
 
+### What thinset is recommended for the Sage 2x8?
+
+A white latex-modified or polymer-modified thinset is recommended. Standard grey thinset can bleed through the porous pigmented surface and affect the tile's color, particularly in lighter colorways such as Sage. Zia's cement installation guide provides specific thinset guidance; contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with installer-specific questions.
+
 ### What materials pair well with Sage?
 
-Sage pairs well with warm plaster walls, pale oak, and unlacquered brass hardware — the grey-green occupies the cooler edge of a warm palette without disrupting the warmth of the room. Against white marble or limestone countertops, Sage reads as a considered color note that holds its ground. The Sage colorway is also available in 4x4 and 8x8 formats; mixing formats across a kitchen floor and backsplash, for example, allows variation in grid scale while keeping the palette consistent.
+Sage pairs well with warm plaster walls, pale oak, and unlacquered brass hardware — the grey-green occupies the cooler edge of a warm palette. Against white marble or limestone countertops, Sage holds its color without competing. The Sage colorway is also available in 4x4 and 8x8 formats; using the 2x8 on a backsplash with the 8x8 on the floor keeps the palette consistent while varying the grid scale.
 
-### How does cement tile age over time?
+### Is Sage cement tile available in other formats?
 
-The matte surface of cement tile develops a gentle patina with wear and time — a gradual settling and softening of the surface that gives the tile an inhabited character. High-traffic areas develop this patina more quickly, which produces a natural tonal gradient across the floor that reads as material depth rather than uneven wear. Periodic resealing, per the installation guide, maintains the surface and supports the aging process.
+Yes. Sage is available in 4x4 and 8x8 square formats in addition to the 2x8 subway. The colorway is consistent across all three; the format choice determines the grout joint density and the scale of the grid pattern.
 
-### What happens if cement tile is not sealed before grouting?
+### What is the coverage per box for Sage 2x8 cement tile?
 
-Grout can penetrate the porous cement surface and leave a haze that sets into the tile. Because the pigmented layer is open until sealed, the pre-grout sealing step is as critical as the post-grout application. Once grout haze sets, removal requires specialized products that may affect the tile's appearance. Following the two-stage sealing sequence in Zia's installation guide prevents this outcome.
-
-### How should cement tile be cleaned?
-
-Sweep or dry-mop regularly to remove grit from the surface. For routine cleaning, use warm water and a pH-neutral cleaner. Avoid acidic cleaners — vinegar, citrus-based products, and bleach will damage the cement surface and strip the sealer. Reseal periodically following the cement installation guide, with frequency depending on traffic and exposure.
+Coverage per box depends on the tile count and format size. For current box count and square footage per box for the Sage 2x8, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170. Plan a 15–20% overage above the measured square footage to account for cuts and curation during installation.

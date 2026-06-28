@@ -18,7 +18,7 @@ draft_date: 2026-06-26
 
 Nero Marquina 12x24 is a honed marble tile cut to a 12x24 rectangular format, 3/8" thick, quarried in Italy and Spain and cut near Verona by stone masons who have worked this material for generations. The defining characteristic of Nero Marquina is the contrast: a deep, near-black ground interrupted by bright white veining that moves across the surface in patterns no two tiles share. The honed finish produces a smooth, non-reflective plane that allows the stone's natural composition — the tonal depth of the black ground, the clarity of the white vein — to read without the distraction of glare.
 
-Zia's Nero Marquina 12x24 reads as a graphic architectural material. The 12x24 rectangular format produces a directional layout — set in a stacked bond or running configuration — and the veining movement across tiles shifts with each piece, so the white lines resolve into a continuous, non-repeating composition across the installation. In wet areas including pools and spa walls, the black and white contrast holds its character without diminishment. On a bathroom floor or shower wall, Nero Marquina produces a surface where the geological record of each tile is visible at close range and the overall graphic field registers from across the room.
+Zia's Nero Marquina 12x24 is a graphic architectural material. The 12x24 rectangular format produces a directional layout — set in a stacked bond or running configuration — and the veining movement across tiles shifts with each piece, so the white lines resolve into a continuous, non-repeating composition across the installation. The honed finish and deep black ground are consistent characteristics of this colorway and format.
 
 Zia's Nero Marquina 12x24 includes significant variations in color, tone, veining, and surface texture across tiles. These are inherent characteristics of natural marble and should be expected across the order. Images shown are representative of a sample of this tile and may not display all potential variation in veining movement and density.
 
@@ -104,21 +104,21 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ## Frequently Asked Questions
 
-### What makes Nero Marquina marble visually distinctive?
+### How does the 12x24 format affect pattern matching and veining continuity across large installations?
 
-Nero Marquina is defined by the contrast between its deep, near-black ground and the bright white veining that moves across the surface. The veining pattern differs on each tile — some pieces carry long, sweeping white lines, others a denser, more fractured arrangement — because the white calcite formed under the same geological pressures that produced the black ground, but at different densities and directions through the original block. The honed finish holds the tonal depth of the black without adding glare, keeping the contrast clean and the composition readable.
+The 12x24 format is directional — it can be set in a running bond, stacked bond, or vertical configuration — and the orientation of the long edge defines how the veining resolves across the installation. Laid horizontally in a running bond, the white calcite lines tend to carry laterally from tile to tile, producing a compositional flow across the field. Set vertically in a stacked bond, the long dimension of each tile reads upright and the composition becomes more structured and graphic. Because veining direction and density differ across tiles, dry-laying the full arrangement before setting is the reliable method for managing how the composition reads at grout joints.
 
-### How does the white veining density vary across a Nero Marquina order?
+### What is the typical white vein density in Nero Marquina — tight and sparse, or wide and distributed?
 
-The veining in Nero Marquina forms through the original geological block rather than across a uniform surface, so each tile presents a different arrangement of white calcite lines. Some tiles carry a few long, sweeping veins that traverse the full face. Others show a denser, branching network where the calcite fractured in multiple directions. Dry-laying the full arrangement before setting allows the installer to manage veining density across the field — distributing heavily veined tiles across the installation rather than concentrating them in a single area.
+The veining in Nero Marquina ranges across tiles from the same order. Some tiles carry a few long, sweeping white calcite lines that traverse the full 12x24 face. Others show a denser, branching network where the calcite fractured in multiple directions through the original block. Within a single order, both sparse and dense tiles are present, and the installed surface reads as a non-repeating composition because no two tiles share the same veining arrangement. Managing that variation through dry layout before setting is standard practice.
+
+### For a feature wall: how does the large 12x24 format in Nero Marquina create a bookmatching opportunity?
+
+Adjacent tiles cut from the same quarry block — or from sections with similar veining movement — can be positioned to mirror each other, producing a bookmatched composition where the white vein continues across the joint in a symmetrical arrangement. The 12x24 format, with its larger face, makes this matching more apparent than smaller formats. Because the veining direction and density vary by tile, the bookmatching effect depends on tile selection and placement during dry layout rather than a guaranteed product characteristic — Zia recommends reviewing the full order on a flat surface before setting to identify bookmatching opportunities.
 
 ### Does Nero Marquina 12x24 marble require sealing?
 
 Yes. Marble requires sealing before and after grouting. Apply a penetrating sealer in thin layers until the stone is fully saturated before grouting, wiping off any excess before it dries. After grouting and allowing the grout to cure fully, apply a matte wax top coat for interior installations. For exterior installations in non-freeze/thaw climates, apply a second coat of penetrating sealer in place of wax. Refer to the Marble Installation Guide for the complete sealing sequence. For questions, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
-
-### Does marble require resealing, and how often?
-
-Yes. Resealing frequency depends on the installation environment and traffic level. In showers and pool surrounds, resealing annually — or when the stone begins to absorb rather than bead water — is a reliable interval. In lower-traffic applications, every two to three years is typical. A water-drop test is the practical indicator: if a drop absorbs into the surface rather than beading, the sealer has worn through and the stone needs attention.
 
 ### Can Nero Marquina 12x24 be used in a shower?
 
@@ -128,21 +128,17 @@ Yes. Nero Marquina 12x24 is suited for shower walls and shower floors. Seal the 
 
 Yes. Nero Marquina marble is approved for pool and spa applications, including saltwater and chlorinated pools. Seal the stone before and after grouting according to the installation guide and reseal periodically based on exposure and water chemistry. The black ground and white veining hold their visual contrast in submerged and wet conditions, and the honed finish provides a surface suited to pool surround and pool wall applications.
 
-### How do I clean honed Nero Marquina marble?
+### How does the veining density vary across a Nero Marquina order, and how should it be managed during installation?
 
-Clean regularly with a pH-neutral stone cleaner and warm water using a soft cloth or mop. Acidic products — vinegar, bleach, lemon juice, and citrus-based cleaners — will etch the marble surface permanently and should not be used. Spills from light-colored liquids are worth addressing promptly, since they can show against the dark ground if they penetrate the stone before the sealer has fully cured. Reseal periodically based on traffic and moisture exposure.
+The veining in Nero Marquina forms through the original geological block, so each tile presents a different arrangement of white calcite lines. Some tiles carry long, sweeping veins that traverse the full face; others show a denser, branching network. Dry-laying the full arrangement before setting allows the installer to distribute heavily veined tiles across the installation rather than concentrating them in a single area, producing a balanced composition across the field.
 
-### What causes etching on marble, and how is it prevented?
+### What makes Nero Marquina marble visually distinctive compared to other marble colorways?
 
-Etching occurs when acid contacts the calcium-based stone and dissolves the surface, leaving dull marks visible against the honed plane. Any acidic substance — citrus juice, wine, vinegar, coffee, and many household cleaning products — can cause etching on marble. Sealing reduces the risk by slowing absorption, but it does not make the stone impervious. The practical prevention is a pH-neutral cleaning routine and prompt cleanup of spills, particularly in kitchen and bathroom environments where the stone contacts food and personal care products.
+Nero Marquina is defined by the contrast between its deep, near-black ground and bright white veining — among the highest-contrast natural stones in the marble category. The honed finish holds the tonal depth of the black without adding glare, keeping the contrast clean and readable. The other colorways in Zia's Marble Solids line — Carrara, Grigio Carnico, Rosso Alicante, Giallo Reale, and Verde Alpi — each occupy a different range of the stone palette; Nero Marquina sits at the dramatic, high-contrast end.
 
-### How does the 12x24 format work in a Nero Marquina installation?
+### How does the 12x24 format compare to the 12x12 in terms of veining read and installation behavior?
 
-The 12x24 rectangular format is directional — it can be set in a running bond, stacked bond, or vertical configuration — and the orientation of the long edge defines how the veining reads across the installation. Laid horizontally in a running bond, the white veining tends to resolve into a continuous lateral composition. Set vertically in a stacked bond, the composition becomes more graphic and structured, with the long dimension of each tile reading upright. Dry-laying the arrangement before setting is recommended to confirm how the veining balances across joints.
-
-### Which layout orientation — horizontal or vertical — is more common for Nero Marquina 12x24?
-
-Horizontal running bond is the most specified orientation for Nero Marquina 12x24, particularly in bathrooms and shower walls where the horizontal line follows the natural horizon of the room and the veining reads as a continuous lateral composition across the field. Vertical stacked bond is less common but produces a more graphic, structured surface well-suited to feature walls and entry applications where height is the architectural emphasis. The choice depends on the room's proportions and the visual rhythm intended. Dry-laying both orientations with the actual tiles before committing is the most reliable way to compare the two.
+The 12x24 format gives each tile a larger face, which means more veining movement is visible within a single piece and the directional character of the stone is more apparent. The rectangular format is also more sensitive to layout orientation — horizontal versus vertical — than the square 12x12, which reads the same regardless of rotation. Both formats require dry-laying before setting to manage veining distribution, and both use the same sealing, grout joint, and installation specifications.
 
 ### Is Nero Marquina marble suitable for freeze/thaw climates?
 

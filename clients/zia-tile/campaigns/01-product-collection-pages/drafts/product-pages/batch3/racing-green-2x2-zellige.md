@@ -16,7 +16,7 @@ draft_date: 2026-06-26
 
 ---
 
-Zia's Racing Green 2x2 zellige is a deep, richly saturated green — the classic British racing green of motorsport and country-house interiors — delivered in a small-format mosaic tile mounted on 8" × 8" mesh sheets, with twenty-five sheets per box. In a room, the colorway reads as anchored and deliberate, with the depth of a dark green that holds its intensity without pulling toward black or olive. The small 2x2 format, mesh-mounted for ease of setting, suits detailed mosaic fields, pool waterlines, shower niches, and kitchen backsplashes where a finely scaled surface with significant color presence is the goal.
+Zia's Racing Green 2x2 zellige is a deep, richly saturated green — the classic British racing green of motorsport and country-house interiors — delivered in a small-format mosaic tile mounted on 8" × 8" mesh sheets, with twenty-five sheets per box. The glaze holds its intensity across the field, a dark green that sits apart from black and olive in the spectrum. The small 2x2 format, mesh-mounted for ease of setting, suits detailed mosaic fields, pool waterlines, shower niches, and kitchen backsplashes where a finely scaled surface with significant color presence is the goal.
 
 Zia's Racing Green 2x2 zellige is hand-formed, dipped in glaze, and fired in earthen kilns in Morocco, where the method has been refined over more than 800 years. Each tile carries the chips, pits, hairline crazing, and tonal shifts that come from working at this scale by hand. Photographs shown are representative of a sample of this tile, but do not display all potential variations.
 
@@ -106,7 +106,19 @@ Local pickup is free at our Los Angeles area warehouse. Our team will reach out 
 
 ### What does Racing Green 2x2 zellige look like in a room?
 
-Zia's Racing Green reads as a deep, richly saturated green — anchored and present across the surface without pulling toward black or olive. In a kitchen or bathroom, the colorway commands attention without overwhelming the room when the surrounding materials are pale or neutral. Against white plaster, cream cabinetry, or marble, the contrast is sharp and deliberate. Against dark stone or charcoal fixtures, the deep green reads as part of a monolithic palette. The small 2x2 tiles on mesh sheets create a finely scaled field, and the tonal variation across individual pieces — from a deeper forest register to a slightly brighter olive-inflected green — keeps the surface from reading flat.
+Zia's Racing Green reads as a deep, richly saturated green — a dark classic British racing green that sits apart from black and olive. The small 2x2 tiles on mesh sheets create a finely scaled field, and the tonal variation across individual pieces — from a deeper forest register to a slightly brighter, olive-inflected green — keeps the surface from reading flat. The chips, pits, and hairline crazing across the surface catch light at different angles, keeping the mosaic-scaled field visually active.
+
+### How many tiles are on each mesh sheet, and how does sheet handling work in a shower niche?
+
+Racing Green 2x2 tiles are mounted on 8" × 8" mesh backing sheets at a density that covers the full sheet in a consistent 2x2 grid. At perimeter cuts, niche edges, and shower corners, individual tiles can be removed from the mesh as needed — a utility of the mesh-mounted format that makes tight or irregular cuts more manageable. For shower niches specifically, plan the sheet layout before cutting so seams fall at the back wall center rather than at the exposed edges. Grout joints on shower floors should measure a minimum of ⅛" and an anti-slip treatment should be applied after installation.
+
+### How does the 2x2 format affect grout joint density and the overall look of the installation?
+
+The 2x2 format produces significantly more grout line per square foot than the 4x4 — approximately four times the linear footage of joints across the same surface area. That density gives the finished field a mosaic-like quality, where the grout lines and the tonal variation between small tiles create the visual texture rather than the tile surface alone. The effect reads differently from a 4x4 field: at close range, individual chips, pits, and crazing marks register clearly; at a distance, the surface reads as a continuous color field with texture.
+
+### Can Racing Green 2x2 be combined with the Racing Green 4x4 or other formats?
+
+Yes. Racing Green is available in 4x4, 2x6, and hexagon formats in addition to the 2x2. The 2x2 mesh-mounted tile suits detail work, mosaic insets, and feature niches within a larger field set in a bigger format. Combining the 2x2 with the 4x4 in the same installation — a 4x4 field with a 2x2 niche or border, for example — creates a format variation that emphasizes the mosaic quality of the material. Each format in the collection is produced using the same traditional methods and shares consistent surface character across the range.
 
 ### Can Racing Green 2x2 zellige be used in a shower?
 
@@ -114,36 +126,24 @@ Yes. Zia's Racing Green 2x2 is suited for shower walls, shower floors, and steam
 
 ### Is Racing Green 2x2 zellige approved for pool and spa use?
 
-Yes. Racing Green 2x2 zellige is approved for pool waterlines, spa interiors, and fountains in both saltwater and chlorine environments. Sealing is required per the installation instructions. The deep green glaze at a pool waterline introduces a natural, botanical quality to a wet surround — different in character from blue and white waterline traditions, and well-suited to gardens and outdoor entertaining spaces in mild climates.
+Yes. Racing Green 2x2 zellige is approved for pool waterlines, spa interiors, and fountains in both saltwater and chlorine environments. Sealing is required per the installation instructions. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions about wet-environment sealing.
 
-### How are the mesh sheets used in installation?
+### What thinset does Zia recommend for the 2x2 mesh-mounted tiles?
 
-Racing Green 2x2 is mounted on 8" × 8" mesh backing sheets, with twenty-five sheets per box. Each mesh sheet is set as a unit, which keeps the 2x2 pieces in consistent alignment and reduces the handling time of individual small tiles. Before installation, mix sheets from all boxes to distribute tonal variation evenly across the surface. At perimeter cuts and borders, individual tiles can be removed from the mesh as needed. The mesh is set face-up into the thinset.
-
-### Can Racing Green 2x2 be combined with the Racing Green 4x4 or other formats?
-
-Yes. Racing Green is available in 4x4, 2x6, and hexagon formats in addition to the 2x2. The 2x2 mesh-mounted tile suits detail work, mosaic insets, and feature niches within a larger field set in a bigger format. Combining the 2x2 with the 4x4 in the same installation — for example, a 4x4 field with a 2x2 niche or border — creates a format variation that emphasizes the mosaic quality of the material. Each format in the collection is produced using the same traditional methods, so they share consistent surface character across the range.
-
-### Does Racing Green 2x2 vary between production runs?
-
-Yes. The colorway can shift between batches. Each run of zellige is produced by hand, and the clay, glaze, and kiln conditions change from one production run to the next. Tiles from separate orders may carry differences in tone and surface character. For projects requiring tiles from multiple orders, ordering the full quantity at once gives the most consistent result across the installation. Contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 to discuss quantity planning before ordering.
-
-### How thick are the Racing Green 2x2 zellige tiles?
-
-Each tile measures approximately ⅜" thick on average. As with all handmade zellige, thickness varies piece to piece — a characteristic of individual hand-forming and kiln firing that contributes to the textural relief of the finished surface. On a 2x2 format, that variation reads as a fine-grained mosaic texture that shifts with light across the field.
-
-### What adhesive or thinset does Zia recommend for the 2x2 mesh-mounted tiles?
-
-White polymer-modified thinset is the correct choice for zellige, applied in a full back-butter coverage beneath each mesh sheet. Because the mesh holds the individual tiles in alignment, the thinset application covers the full sheet as a unit rather than each tile separately. Check that coverage is complete at the edges and corners of each sheet before pressing. Refer to Zia's installation guide for the recommended products and application sequence.
-
-### How does light affect how Racing Green reads throughout the day?
-
-Racing Green is one of the more light-responsive colorways in the zellige range. In strong direct light, the saturation in the glaze becomes more vivid and individual tiles can shift between a deeper forest tone and a brighter, slightly olive-inflected green. In diffused or lower light, the field reads as a unified deep green with the tonal variation visible only on close inspection. The chips, pits, and hairline crazing across the surface catch light at different angles throughout the day, keeping the mosaic-scaled field visually active. Observing a sample in the actual space across different times of day is the most reliable preparation before ordering.
+White polymer-modified thinset is the correct choice for zellige, applied in full back-butter coverage beneath each mesh sheet. Because the mesh holds the individual tiles in alignment, the thinset application covers the full sheet as a unit rather than each tile separately. Check that coverage is complete at the edges and corners of each sheet before pressing. Refer to Zia's installation guide for the recommended products and application sequence, or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions.
 
 ### What grout joint width does Zia recommend for the 2x2 format?
 
 Zellige is traditionally set with minimal grout joints — as close to edge-to-edge as the inherent size variation of handmade tiles allows. Wedge spacers keep the joints consistent and protect the chamfered edges while the thinset cures. For shower floor applications, grout joints should measure a minimum of ⅛" to support slip resistance. Zia's installation guide covers the recommended joint width and grouting sequence in detail. Contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with installation questions.
 
+### How thick are the Racing Green 2x2 zellige tiles?
+
+Each tile measures approximately ⅜" thick on average. As with all handmade zellige, thickness varies piece to piece — a characteristic of individual hand-forming and kiln firing that contributes to the textural relief of the finished surface. On a 2x2 format, that variation reads as a fine-grained mosaic texture that shifts with light across the field.
+
 ### Is Racing Green 2x2 zellige suitable for a high-humidity steam shower?
 
-Yes. Racing Green 2x2 is approved for steam shower walls. Sealing is required for all steam shower applications, and Zia's installation guide covers the recommended sealer and resealing schedule for high-humidity environments. Ensuring a watertight membrane behind the tile and proper ventilation are part of a sound steam enclosure installation. Contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for guidance specific to a steam application.
+Yes. Racing Green 2x2 is approved for steam shower walls. Sealing is required for all steam shower applications, and Zia's installation guide covers the recommended sealer and application sequence for high-humidity environments. A watertight membrane behind the tile and proper ventilation are part of a sound steam enclosure installation. Contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for guidance specific to a steam application.
+
+### What does variation look like across a full Racing Green 2x2 installation?
+
+Across a field, Racing Green ranges from a deeper forest register to tiles with a slightly brighter, olive-inflected green. The chips, pits, and hairline crazing characteristic of zellige are present at the surface of each tile. Mixing sheets from all boxes during the dry layout ensures the tonal range distributes evenly across the installation rather than clustering by production sequence.

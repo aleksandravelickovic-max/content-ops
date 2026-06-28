@@ -16,7 +16,7 @@ draft_date: 2026-06-26
 
 ---
 
-Zia's Prairie Green Hex zellige is an earthy, desaturated green in a 3.5" × 4" hexagon format — closer to sage or dry-grass olive than to a vivid garden green. The glaze draws from the natural palette of open landscapes and reads in a room as a grounded, organic tone that pairs with natural wood, stone, and terracotta without forcing a direction. The hexagon format builds an open, mosaic-style field well-suited to kitchen backsplashes, bathroom walls, and outdoor walls in mild climates.
+Zia's Prairie Green Hex zellige is an earthy, desaturated green in a 3.5" × 4" hexagon format — closer to sage or dry-grass olive than to a vivid garden green. The glaze sits at the desaturated, organic end of the green spectrum, pairing with natural wood, stone, and terracotta. The hexagon format builds an open, mosaic-style field well-suited to kitchen backsplashes, bathroom walls, and outdoor walls in mild climates.
 
 Zia's Prairie Green Hex zellige is hand-formed, dipped in glaze, and fired in earthen kilns in Morocco, where the method has been refined over more than 800 years. Each tile carries the chips, pits, hairline crazing, and tonal shifts that come from working at this scale by hand. Photographs shown are representative of a sample of this tile, but do not display all potential variations.
 
@@ -106,44 +106,40 @@ Local pickup is free at our Los Angeles area warehouse. Our team will reach out 
 
 ### What does Prairie Green Hex zellige look like in a room?
 
-Zia's Prairie Green reads as an earthy, desaturated green — the kind of tone that sits between sage and dry olive, with the quality of a botanical element drawn into a mineral surface. The hexagonal field does not impose a directional grid, so the glaze variation across tiles reads as texture rather than pattern. Against natural wood cabinetry or stone counters, Prairie Green functions as a grounded, organic tone that complements rather than announces. Against white or cream, the desaturation of the green becomes more legible as a considered color choice.
-
-### Can Prairie Green Hex zellige be used in a shower?
-
-Yes. Zia's Prairie Green Hex is suited for shower walls, shower floors, and steam showers. Sealing is required for all shower applications. On shower floors, grout joints should measure a minimum of ⅛" and an anti-slip treatment should be applied after installation is complete. Contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with installation or sealing questions.
-
-### Is Prairie Green Hex zellige approved for pool and spa use?
-
-Yes. Prairie Green Hex zellige is approved for pool waterlines, spa interiors, and fountains in both saltwater and chlorine environments. Sealing is required per the installation instructions. The earthy green at a pool or spa surround creates a natural, garden-adjacent palette suited to outdoor living environments in mild climates.
-
-### What materials pair well with Prairie Green Hex?
-
-Prairie Green sits at ease with natural wood, terracotta, limestone, and plaster in cream or ochre tones — any material that carries an organic, earth-referenced quality. The desaturated green glaze reads as part of a natural material palette and holds its ground without competing. Aged brass and copper hardware reinforce the botanical reference in the colorway. The hexagon format adds geometric interest that suits patterned or textured surroundings without overwhelming them.
+Zia's Prairie Green reads as an earthy, desaturated green — the kind of tone that sits between sage and dry olive. The hexagonal field does not impose a directional grid, so the glaze variation across tiles reads as texture rather than pattern. The tonal shifts between tiles — from a slightly cooler sage to a warmer, more olive-tinged green — are visible but understated.
 
 ### How does Prairie Green Hex compare to Racing Green in the collection?
 
-Prairie Green and Racing Green are at opposite ends of the green spectrum. Prairie Green is desaturated and earthy — a muted, sage-adjacent tone. Racing Green is deep, richly saturated, a dark classic British racing green. Prairie Green suits installations that call for a quiet, natural palette; Racing Green suits installations that call for a deep, anchored color statement. Both are available in hexagon formats, which makes a sample comparison practical before committing to a full order.
+Prairie Green and Racing Green are at opposite ends of the green spectrum. Prairie Green is desaturated and earthy — a muted, sage-adjacent tone. Racing Green is deep and richly saturated — the dark, classic British racing green. Prairie Green is available in the hexagon format; Racing Green is available in 2x2 and additional formats. Ordering samples of both side by side is the most reliable way to see how each reads in the installation context.
 
-### Does the hex format require specific overage planning?
+### What materials pair well with Prairie Green Hex?
 
-Yes. Hexagonal formats require more careful perimeter planning than square tiles because cut angles at walls, cabinets, and fixtures depend on the orientation of the hex grid relative to the surface edge. A full dry layout before setting is essential. The inherent size variation of handmade zellige means each perimeter tile needs to be evaluated individually. Plan for 15–25% overage to account for curation and the volume of perimeter cuts a hex layout generates.
+Prairie Green sits at ease with natural wood, terracotta, limestone, and plaster in cream or ochre tones — materials that carry an organic, earth-referenced quality. Aged brass and copper hardware reinforce the botanical character of the colorway. The hexagon format adds geometric interest without overpowering patterned or textured surroundings.
 
-### How is the hexagonal layout typically set — is there a standard orientation?
+### How does the hex format affect perimeter cuts and layout planning?
 
-Hex zellige is most commonly set with a flat edge along the bottom, creating a horizontal row alignment that allows the field to read as an organized mosaic rather than a random arrangement. Point-down orientation is an alternative that some designers use to give the field a more diamond-like quality. The irregular sizes of handmade zellige mean that orientation choice is confirmed during the dry layout, when tiles are arranged before any adhesive is applied. Zia's installation guide covers layout planning for hex formats, and the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 can advise on approach for a specific project.
+Hexagonal formats require more careful perimeter planning than square tiles because cut angles at walls, cabinets, and fixtures depend on the orientation of the hex grid relative to the surface edge. A full dry layout before setting is essential. The inherent size variation of handmade zellige means each perimeter tile needs to be evaluated individually. Plan for 15–25% overage to account for curation and the volume of perimeter cuts a hex layout generates. Contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with layout-specific questions.
+
+### What orientation options exist for Prairie Green Hex — flat-edge or point-down?
+
+Hex zellige is most commonly set with a flat edge along the bottom, creating a horizontal row alignment that lets the field read as an organized mosaic. Point-down orientation gives the field a more diamond-like quality and is used by some designers for a different visual effect. The irregular sizes of handmade zellige mean that orientation is confirmed during the dry layout, before any adhesive is applied. Zia's installation guide covers layout planning for hex formats, and the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 can advise on approach for a specific project.
+
+### What companion shapes or field tiles work well with Prairie Green Hex as an accent?
+
+Prairie Green Hex works well as an accent within a larger field of square or rectangular zellige in a complementary colorway — a Prairie Green hex niche or border within a cream, white, or terracotta field, for example. It also works as a standalone field tile on a kitchen backsplash or bathroom wall where the hex geometry carries the visual interest. Pairing the hex format with a 4x4 square in a contrasting colorway at a border or transition point is a format combination supported by Zia's standard range. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for project-specific guidance on format combinations.
+
+### Can Prairie Green Hex zellige be used in a shower?
+
+Yes. Zia's Prairie Green Hex is suited for shower walls, shower floors, and steam showers. Sealing is required for all shower applications. On shower floors, the hexagonal perimeter produces more grout line coverage per square foot than a square format — a practical benefit for slip resistance. Grout joints should measure a minimum of ⅛" and an anti-slip treatment should be applied after installation is complete. Contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with installation or sealing questions.
+
+### Is Prairie Green Hex zellige approved for pool and spa use?
+
+Yes. Prairie Green Hex zellige is approved for pool waterlines, spa interiors, and fountains in both saltwater and chlorine environments. Sealing is required per the installation instructions. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions about wet-environment sealing.
 
 ### How thick is Prairie Green Hex zellige?
 
 Zellige tiles measure approximately ⅜" thick on average. Each tile is hand-formed and fired individually, which produces natural variation in thickness across the field. On a hexagonal format, that variation creates the undulating, mosaic-like surface relief characteristic of the material — the depth reads more clearly at the tile edges, where the chamfered profile catches light at different angles.
 
-### What adhesive or thinset does Zia recommend for hex zellige?
+### What thinset does Zia recommend for Prairie Green Hex zellige?
 
 White polymer-modified thinset is the correct choice for glazed zellige, applied with full back-butter coverage on each tile. The irregular backs of handmade pieces require complete thinset contact to support the tile across its full surface. Grey thinset risks showing through the glaze where chips or pits break the surface. Refer to Zia's installation guide for the recommended products, or contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with any installation questions.
-
-### What does variation look like across a full Prairie Green Hex wall installation?
-
-The chips, pits, and hairline crazing characteristic of zellige read across a hex field as a textural surface that shifts with the light rather than as a uniform color block. On Prairie Green, the desaturated glaze means that tonal shifts between tiles — from a slightly cooler sage to a warmer, more olive-tinged green — are visible but understated. The variation reads as botanical rather than graphic. Mixing tiles from all boxes during the dry layout ensures variation disperses evenly across the full installation.
-
-### How does light affect how Prairie Green reads throughout the day?
-
-Prairie Green's desaturated glaze is relatively stable across lighting conditions compared to more saturated colorways, but it does respond to light temperature. In warm afternoon light or under incandescent fixtures, the olive quality in the green becomes more present. In cooler, northern light or under daylight-balanced LEDs, the sage register comes forward and the tone reads slightly cooler. The chips, pits, and hairline crazing across each tile catch light at different angles throughout the day, keeping the surface reading as textural rather than flat.

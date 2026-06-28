@@ -100,42 +100,46 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ## Frequently Asked Questions
 
-### How does the Fired Earth colorway read in a room?
+### How does the Fired Earth colorway read differently from Red Clay in the Zocalo shape?
 
-Fired Earth sits in the mid-range of the classic Cotto palette — a warm terra cotta tone with a surface shaped by wood ash applied during firing. The ash contact produces textured patterning across the clay base, so the tone reads as layered rather than flat. Against whitewashed or plastered walls, Fired Earth anchors the room in earthy warmth. Against stone or wood, it integrates without competing. The surface deepens with wear, and the ash-fired texture becomes more pronounced as patina develops.
-
-### How do I seal Zocalo + Fired Earth Cotto tile?
-
-Cotto requires a two-stage sealing process. Apply a pre-grout sealer before grouting to saturate the surface and act as a grout release. After grouting, apply the post-grout top coat: a matte wax for interior installations, or a second coat of the pre-grout sealer for exterior installations, since UV exposure causes wax to discolor outdoors. Periodic resealing maintains resistance to moisture and staining. Refer to Zia's Cotto installation guide for specific product recommendations, or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions.
-
-### How often does Cotto need to be resealed after installation?
-
-Resealing frequency depends on traffic and exposure. Interior floors in high-use areas — kitchens, entryways, primary bathrooms — typically benefit from resealing every one to two years. Low-traffic interior surfaces and walls can go longer between applications. Exterior surfaces may need more frequent attention depending on climate and exposure. The surface appearance is a reliable guide: when water no longer beads on the tile, it is time to reseal.
-
-### Can Zocalo + Fired Earth be used outdoors in freezing climates?
-
-Yes. Unglazed Cotto is suitable for exterior floors in any climate, including regions with freeze/thaw cycles. This is one of the meaningful distinctions between Cotto and other handmade tile materials — glazed tiles and cement tiles are not suitable for freeze/thaw exterior use, but unglazed Cotto performs in any climate with proper sealing. For outdoor installations, apply the pre-grout sealer before grouting and a second coat of the same sealer (not wax) as the post-grout top coat.
-
-### How does the patina develop on Fired Earth Cotto?
-
-The unglazed surface deepens in tone with wear and time. The warm clay base and the wood ash surface coloration both become more defined as the patina builds — the texture and tonal variation that read across individual tiles at installation gradually integrate into a unified surface across the full field. Expect the tone to deepen over time: that patina is the point.
+Fired Earth and Red Clay are both classic Cotto colorways, but they read differently in the Zocalo's interlocking geometry. Fired Earth carries surface patterning produced by wood ash applied during firing — the ash contact creates varied, layered coloration across the warm clay base, so each tile in the installation contributes its own tonal character to the interlocking pattern. Red Clay brings the deepest, most saturated tone in the classic range, with a more consistent warm ground across the field. In the Zocalo shape, Fired Earth reads as warm and materially varied; Red Clay reads as rich and tonally unified.
 
 ### How does the Zocalo specialty shape install?
 
 The Zocalo is an asymmetrical design where two pieces interlock to form a unified rectangle. Consistent orientation between adjacent tiles is essential — a full dry layout before installation is required to confirm how the interlocking resolves across the space and where cuts fall at the perimeter. The additional edge cuts required by the interlocking geometry are why increasing overage to 20% or more is advisable for Zocalo orders.
 
-### How does Cotto compare to mass-produced terracotta?
+### Can Zocalo + Fired Earth be used outdoors in freezing climates?
 
-Zia's Cotto is hand-pressed from natural Mexican clay in San Miguel de Allende, sun-dried in open courtyards, and high-fired in traditional kilns. The result is a tile with inherent variation in tone, shape, edge, and thickness — characteristics that come from the hand-making process and that read as material depth across an installed field. Mass-produced terracotta is typically machine-formed and kiln-fired at industrial scale, with tighter dimensional tolerances and more uniform surfaces. The two materials read quite differently in a room.
+Yes. Unglazed Cotto is suitable for exterior floors in any climate, including regions with freeze/thaw cycles. This is a meaningful distinction from glazed tiles and cement tiles, which are not suitable for freeze/thaw exterior use. For outdoor installations, apply the pre-grout sealer before grouting and a second coat of the same sealer (not wax) as the post-grout top coat.
+
+### Can Zocalo + Fired Earth be used in a shower?
+
+Yes. Cotto tiles are suited for shower walls and shower floors with proper sealing. The Zocalo's asymmetrical geometry requires a full dry layout before installation — in a shower floor, the tile-to-drain relationship determines where cuts fall, and planning those cuts in advance is essential with an interlocking shape. Apply the pre-grout sealer before grouting, then apply a matte wax as the post-grout top coat. Maintain a minimum 1/8" grout joint and apply an anti-slip treatment after installation. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for installer guidance.
+
+### How does the patina develop on Fired Earth Cotto?
+
+The unglazed surface deepens in tone with wear and time. The warm clay base and the wood ash surface coloration both become more defined as the patina builds — the texture and tonal variation that read across individual tiles at installation gradually integrate into a unified surface across the full field. Expect the tone to deepen over time: that patina is the point.
+
+### How do I seal Zocalo + Fired Earth Cotto tile?
+
+Cotto requires a two-stage sealing process. Apply a pre-grout sealer before grouting to saturate the surface and act as a grout release. After grouting, apply the post-grout top coat: a matte wax for interior installations, or a second coat of the pre-grout sealer for exterior installations. Periodic resealing maintains resistance to moisture and staining. Refer to Zia's Cotto installation guide for specific product recommendations, or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions.
 
 ### What is efflorescence and how is it prevented?
 
-Efflorescence is a white crystalline deposit that can appear on the surface of Cotto when mineral salts from the subfloor or mortar migrate through the tile body and deposit on the face. It is most common when tiles are installed over a subfloor that has not fully cured. Zia's Cotto installation guide specifies a minimum 30-day subfloor cure before setting tile; this is the primary preventive measure. Efflorescence can be removed, but the prevention — a fully cured subfloor and proper sealing before grouting — is far easier to manage than the correction.
+Efflorescence is a white crystalline deposit that can appear on the surface of Cotto when mineral salts from the subfloor or mortar migrate through the tile body and deposit on the face. It is most common when tiles are installed over a subfloor that has not fully cured. Zia's Cotto installation guide specifies a minimum 30-day subfloor cure before setting tile; this is the primary preventive measure. Proper sealing before grouting is the second line of defense.
 
-### Can Zocalo + Fired Earth Cotto be used in a commercial kitchen?
+### How does Cotto compare to mass-produced terracotta?
 
-Cotto is suited to commercial kitchen environments on floors and walls. The DCOF (Dynamic Coefficient of Friction) for Cotto is 0.98, well above the 0.42 threshold for level interior floors. For wet commercial floor areas, maintain a minimum 1/8" grout joint and apply an anti-slip treatment after installation. The warm, earthy surface holds the lived-in character that kitchen and hospitality environments develop over time, and the ash-fired Fired Earth colorway reads as more varied and materially present in commercial settings than a uniform tile would.
+Zia's Cotto is hand-pressed from natural Mexican clay in San Miguel de Allende, sun-dried in open courtyards, and high-fired in traditional kilns. The result is a tile with inherent variation in tone, shape, edge, and thickness — characteristics that come from the hand-making process and that read as material depth across an installed field. Mass-produced terracotta is typically machine-formed and kiln-fired at industrial scale, with tighter dimensional tolerances and more uniform surfaces.
 
 ### Can Zocalo + Fired Earth be mixed with other Cotto colorways?
 
 Yes. The Fired Earth tone pairs with Adobe for a lighter contrast or with Red Clay for a deeper, more traditional palette across the Zocalo field. Contact [info@ziatile.com](mailto:info@ziatile.com) to discuss colorway combinations before ordering.
+
+### What is the recommended grout joint width for the Zocalo shape?
+
+Zia recommends a minimum 1/8" grout joint, applied with 1/8" tile spacers. Because the Zocalo's asymmetrical interlocking geometry produces joins at different angles than a standard square tile, the dry layout is also the right moment to confirm how grout lines will read across the full pattern before any mortar is set.
+
+### Can Zocalo + Fired Earth be used in a commercial kitchen?
+
+Yes. Cotto is suited to commercial kitchen environments on floors and walls. The DCOF for Cotto is 0.98, well above the 0.42 threshold for level interior floors. For wet commercial floor areas, maintain a minimum 1/8" grout joint and apply an anti-slip treatment after installation. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for commercial specification guidance.

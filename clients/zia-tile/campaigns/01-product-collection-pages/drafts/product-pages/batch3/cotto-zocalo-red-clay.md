@@ -16,7 +16,7 @@ draft_date: 2026-06-26
 
 ---
 
-Zia's Zocalo + Red Clay is a handmade terra cotta tile produced in San Miguel de Allende, Mexico, in the Zocalo specialty shape — an asymmetrical puzzle design where two pieces interlock to form a unified rectangle, named for the main public square in Mexico City. The Red Clay colorway is the traditional, deepest red in the classic Cotto range — the tone closest to the raw material itself, a brick-red with warmth that shifts toward deep copper and earth-orange across the fired surface. At installation, the field reads as a saturated, warm-toned ground with the Zocalo geometry creating a continuous, flowing composition across the plane. The unglazed surface deepens into patina with wear, and Red Clay — already the most saturated colorway in the collection — registers that deepening with the most visible tonal shift over time. Images shown represent a sample of this tile and do not display every potential variation.
+Zia's Zocalo + Red Clay is a handmade terra cotta tile produced in San Miguel de Allende, Mexico, in the Zocalo specialty shape — an asymmetrical puzzle design where two pieces interlock to form a unified rectangle, named for the main public square in Mexico City. The Red Clay colorway is the traditional, deepest red in the classic Cotto range — the tone closest to the raw material itself, a brick-red with warmth that shifts toward deep copper and earth-orange across the fired surface. The unglazed surface deepens into patina with wear, and Red Clay — already the most saturated colorway in the collection — registers that deepening with the most visible tonal shift over time. Images shown represent a sample of this tile and do not display every potential variation.
 
 \[IMAGE: SIZE/THICKNESS DIAGRAM\]
 
@@ -100,42 +100,42 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ## Frequently Asked Questions
 
-### How does the Red Clay colorway read in a room?
+### What makes the Red Clay colorway the most saturated in the Cotto range?
 
-Red Clay is the traditional, deepest red in the Cotto collection — the tone closest to the raw clay before firing. It reads as a saturated, warm ground that shifts between brick-red, deep copper, and earth-orange across the fired surface. In a kitchen, it grounds the room with a strong warm note that works against white plaster, natural wood, and unlacquered brass. Against cooler materials — grey stone, concrete, matte black metal — the red reads as the dominant warm element. The tone deepens with wear, and Red Clay shows that patina with the most visible tonal shift in the Cotto line.
+Red Clay is the tone closest to the raw clay before firing — no ash surface treatment, no whitewashing, no darkening agent. The deep brick-red comes directly from the iron content of the San Miguel de Allende clay, and the firing process concentrates rather than modifies that base tone. Adobe and Fired Earth both sit lighter in the classic palette because their surface characters introduce variation that breaks the saturation; Red Clay holds the tone intact across the full face. The result is the most visibly warm and saturated reading in the classic range.
 
-### What is the difference between the Fired Earth and Red Clay colorways?
+### How does Red Clay patina compare to Fired Earth over time?
 
-Fired Earth is a mid-range warm terra cotta, its surface varied by wood ash applied during firing — the ash contact produces a textured, layered tone that reads as complex rather than saturated. Red Clay is the deepest and most saturated colorway in the classic range, closer to the raw clay material before any surface treatment. Where Fired Earth reads as warm and nuanced, Red Clay reads as rich and direct. In the same room, Fired Earth would pair or transition well with Adobe at the lighter end; Red Clay anchors the darker end of the classic palette with the most visible patina development over time.
+Both colorways deepen with wear and time, but the patina registers differently. Fired Earth begins with layered, ash-varied tones — as patina builds, the warm clay base becomes more unified and the surface reads as richer rather than more varied. Red Clay begins as the deepest, most saturated colorway in the collection, and patina deepens that saturation further: the brick-red tone shifts toward a more burnished, warmer copper-brown as the unglazed surface builds character. The tonal shift is the most visible in the Cotto line because there is more saturation to deepen.
 
-### How do I seal Zocalo + Red Clay Cotto tile?
+### How does the Fired Earth colorway differ from Red Clay in the Zocalo shape?
 
-Cotto requires a two-stage sealing process. Apply a pre-grout sealer before grouting to saturate the surface and act as a grout release. After grouting and allowing the grout to cure, apply the post-grout top coat: a matte wax for interior installations, or a second coat of the pre-grout sealer for exterior installations, since UV exposure causes wax to discolor outdoors. Periodic resealing maintains resistance to moisture and staining. Refer to Zia's Cotto installation guide for specific product recommendations, or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions.
-
-### How often does Cotto need to be resealed?
-
-Resealing frequency depends on traffic and exposure. Interior high-traffic floors — kitchens, entryways — typically benefit from resealing every one to two years. Low-traffic surfaces and walls require less frequent attention. Exterior installations may need more regular resealing depending on climate. The practical indicator: when water no longer beads on the surface, the sealer needs to be refreshed.
-
-### Can Zocalo + Red Clay be used outdoors in freezing climates?
-
-Yes. Unglazed Cotto is suitable for exterior floors in any climate, including regions with freeze/thaw cycles. Proper sealing is required. For outdoor installations, use the pre-grout sealer before grouting and a second coat of the same sealer (not wax) as the post-grout top coat.
-
-### How does patina develop on Red Clay Cotto?
-
-Red Clay deepens in tone with wear and time. The saturation that makes this the boldest colorway in the collection becomes more pronounced as the unglazed surface builds patina. Individual tonal variation across tiles at installation gradually reads as a unified, aged surface across the full field. Expect the tone to deepen over time: that patina is the point.
+In the Zocalo shape, the asymmetrical interlocking geometry means that each piece contributes to a shared rectangular composition. Fired Earth brings wood-ash surface patterning to that composition — each tile reads as tonally varied, so the Zocalo geometry and the ash-fired variation reinforce one another across the field. Red Clay brings a more saturated, consistent base tone to the same geometry: the Zocalo pattern becomes more legible against the uniform warmth of Red Clay, while Fired Earth introduces a second layer of tile-to-tile variation across the interlocking shape.
 
 ### How does the Zocalo specialty shape install?
 
 The Zocalo is an asymmetrical design where two pieces interlock to form a unified rectangle. Consistent orientation between adjacent tiles is essential — a full dry layout before installation is required to confirm how the interlocking resolves across the space and to locate the perimeter cuts. The additional edge cuts required by the asymmetrical shape are why increasing overage to 20% or more is recommended for Zocalo orders.
 
+### Can Zocalo + Red Clay be used in a shower?
+
+Yes. Cotto tiles are suited for shower walls and shower floors with proper sealing. Apply the pre-grout sealer before grouting, then apply a matte wax as the post-grout top coat for interior wet areas. The Zocalo's asymmetrical interlocking geometry requires careful dry layout before installation — this is particularly important in a shower floor where the tile-to-drain relationship determines cut placement. Maintain a minimum 1/8" grout joint and apply an anti-slip treatment after installation. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for installer guidance.
+
+### Can Zocalo + Red Clay be used outdoors in freezing climates?
+
+Yes. Unglazed Cotto is suitable for exterior floors in any climate, including regions with freeze/thaw cycles. Proper sealing is required: for outdoor installations, use the pre-grout sealer before grouting and a second coat of the same sealer (not wax) as the post-grout top coat.
+
+### How do I seal Zocalo + Red Clay Cotto tile?
+
+Cotto requires a two-stage sealing process. Apply a pre-grout sealer before grouting to saturate the surface and act as a grout release. After grouting and allowing the grout to cure, apply the post-grout top coat: a matte wax for interior installations, or a second coat of the pre-grout sealer for exterior installations. Refer to Zia's Cotto installation guide for specific product recommendations, or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions.
+
 ### What is efflorescence and how is it prevented?
 
 Efflorescence appears as white crystalline deposits on the tile surface when mineral salts from the subfloor or mortar migrate through the clay body and deposit on the face. The primary cause is installing Cotto over a subfloor that has not fully cured. Zia's installation guide specifies a minimum 30-day subfloor cure before setting tile. Combined with a proper pre-grout seal, this step prevents the conditions that produce efflorescence in the first place.
 
-### Can Zocalo + Red Clay be used in a shower?
-
-Yes. Cotto tiles are suited for shower walls and shower floors with proper sealing. Apply the pre-grout sealer before grouting, then apply a matte wax as the post-grout top coat for interior wet areas. For shower floor installations, maintain a minimum 1/8" grout joint and apply an anti-slip treatment after installation. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for installer guidance.
-
 ### Can Zocalo + Red Clay be mixed with other Cotto colorways or formats?
 
 The Red Clay Zocalo pairs with Fired Earth for a warmer, more varied palette, or with Adobe for a lighter tonal contrast within the same interlocking geometry. The Zocalo shape is also available in other Cotto colorways. Contact [info@ziatile.com](mailto:info@ziatile.com) to discuss colorway and format combinations for a specific project before ordering.
+
+### How does patina develop on Red Clay Cotto?
+
+Red Clay deepens in tone with wear and time. The saturation that makes this the boldest colorway in the collection becomes more pronounced as the unglazed surface builds character. Individual tonal variation across tiles at installation gradually reads as a unified, aged surface across the full field. Expect the tone to deepen over time: that patina is the point.

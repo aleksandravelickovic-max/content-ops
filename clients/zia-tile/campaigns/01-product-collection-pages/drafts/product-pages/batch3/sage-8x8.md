@@ -16,9 +16,9 @@ draft_date: 2026-06-26
 
 ---
 
-Hand-poured in Vietnam using techniques refined in the 1850s, Zia's Sage 8x8 is a muted grey-green in an 8" × 8" square format. The color is the same soft, grey-green tone as Zia's Sage line — a hue that grounds a space without asserting strong color — but the larger format changes how the color is experienced across an installation. With fewer grout joints across a field, the grey-green reads as a broader, quieter plane, allowing the matte surface texture and the subtle tonal variation tile to tile to carry the visual interest. On an interior floor, the 8x8 format produces a considered, unhurried grid suited to kitchens, entryways, and open living areas where a calm floor tone is the intent.
+Hand-poured in Vietnam using techniques refined in the 1850s, Zia's Sage 8x8 is a muted grey-green in an 8" × 8" square format. The colorway is the same soft grey-green as the rest of the Sage line — a tone with grey undertones that sits between green and neutral — but the larger format produces fewer grout joints across a field, so the grey-green reads as a broader, more continuous plane on an interior floor. Suited to kitchens, entryways, and open living areas. Sage is also available in 2x8 and 4x4 formats.
 
-Each cement tile is made by hand, and subtle variations in color, shape, and thickness are to be expected. Irregular edges and minor surface variation are natural to the material. The patina that develops over time marks the material's true character — a graceful nod to the worn cement floors of European cafés and public squares shaped by everyday life. Images shown are representative of a sample of this tile, but do not display every potential variation.
+Each cement tile is made by hand, and subtle variations in color, shape, and thickness are to be expected. Irregular edges and minor surface variation are natural to the material. The patina that develops over time is characteristic of hand-poured pigmented cement. Images shown are representative of a sample of this tile, but do not display every potential variation.
 
 \[IMAGE: SIZE/THICKNESS DIAGRAM\]
 
@@ -102,50 +102,46 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ## Frequently Asked Questions
 
-### How does the Sage 8x8 read differently from the 2x8 and 4x4 formats?
+### How does the Sage 8x8 read differently from the Sage 2x8 and 4x4 formats?
 
-The color is the same muted grey-green across all three formats, but the 8x8 changes what the surface looks like at scale. Fewer grout joints mean the grey-green reads as a broader, more continuous plane — the surface variation tile to tile becomes the primary texture rather than the grout grid. In an open kitchen or entryway floor, the 8x8 format produces a calmer, less articulated surface than either of the smaller formats.
+The grey-green colorway is consistent across all three formats, but the 8x8 produces a noticeably different surface on a floor. Fewer grout joints mean the surface reads as a broader, more continuous plane — the tonal variation tile to tile becomes the primary texture rather than the grout grid. The 4x4 produces a closer, more articulated grid, and the 2x8 adds a horizontal directional quality. The 8x8 is the format with the least grid interruption across a large floor.
 
-### Does Zia's Sage 8x8 cement tile require sealing?
+### How does the large format affect grout joint density on a floor?
 
-Yes. All cement tile requires sealing before grouting and again after grouting — in every installation, including dry spaces. Follow Zia's cement installation guide for the recommended sealers and application sequence. For questions about sealer selection, contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
-
-### What sealers does Zia recommend for cement tile?
-
-Zia's cement installation guide specifies a two-stage sealing process: an impregnating sealer is applied before grouting, and a topcoat sealer follows after the grout has fully cured. Both stages are required. The specific products are listed in the installation guide; for project-specific sealer questions, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+At 8" × 8", the Sage 8x8 produces significantly fewer grout joints per square foot than either the 4x4 or the 2x8 on a floor. This means the grey-green reads as a broader, flatter plane — the tile's own tonal variation becomes more prominent relative to the grout lines. For open kitchens, entryways, and living areas where a continuous floor tone is the intent, the 8x8 format is the most effective of the three Sage options.
 
 ### Can Sage 8x8 be used in a shower?
 
-Yes. Zia's Sage 8x8 is suited for shower walls and shower floors. Seal the tile before grouting and again after, following the cement installation guide. For shower floor applications, apply an anti-slip treatment after installation to support traction in wet conditions.
+Yes. Zia's Sage 8x8 is suited for shower walls and shower floors. Seal the tile before grouting and again after, following the cement installation guide. For shower floor applications, apply an anti-slip treatment after installation. The larger format means fewer grout joints across the shower floor, which reduces the grip surface the joints provide — the anti-slip treatment after installation is particularly important for this format in wet floor applications.
 
 ### Can Sage 8x8 be installed outdoors?
 
 Sage 8x8 cement tile is suited for exterior floors and walls in non-freeze/thaw climates — patios, courtyards, and covered outdoor spaces in mild climates. It is not suitable for installation in climates where the surface may be subject to freeze/thaw cycles.
 
-### Can Sage 8x8 be used with underfloor radiant heating?
-
-Yes. Zia's Sage 8x8 cement tile is compatible with radiant floor heating systems. The thinset and membrane specifications for heated substrates should follow the heating system manufacturer's guidance and Zia's cement installation guide. For project-specific questions, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
-
 ### What grout joint width does Zia recommend for the 8x8 format?
 
-Zia recommends 1/16" grout joints for the Sage 8x8 in standard interior applications. The fine joint allows the large format to read as a nearly continuous grey-green plane without the grout grid interrupting the surface. For wet commercial floor applications, grout joints should measure at least 1/8" to meet slip-resistance standards.
+Zia recommends 1/16" grout joints for the Sage 8x8 in standard interior applications. The fine joint allows the large format to read as a nearly continuous grey-green plane. For wet commercial floor applications, grout joints should measure at least 1/8" to meet slip-resistance standards.
 
-### How does tonal variation distribute across a full Sage 8x8 installation?
+### How does tonal variation distribute on a large-format tile?
 
-The grey-green of Sage carries inherent tonal variation from tile to tile — a characteristic of hand-poured cement pigment. On a large-format tile, this variation registers differently than on smaller formats: each tile covers more surface area, so slight differences in depth or tone are more visible across adjacent tiles. Blending from multiple boxes before setting ensures the variation distributes evenly across the field rather than clustering.
+The grey-green of Sage carries inherent tonal variation from tile to tile — a characteristic of hand-poured cement pigment. On an 8x8, each tile covers more surface area than a 4x4 or 2x8, so slight differences in pigment depth between adjacent tiles are more visible. Blending from multiple boxes before setting ensures the variation distributes evenly across the field rather than clustering in one area.
+
+### Can Sage 8x8 be used with underfloor radiant heating?
+
+Yes. Zia's Sage 8x8 cement tile is compatible with radiant floor heating systems. Thinset and membrane specifications for heated substrates should follow the heating system manufacturer's guidance and Zia's cement installation guide. For project-specific questions, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
 
 ### What materials pair well with the Sage 8x8?
 
-The grey-green of Sage pairs well with natural materials that carry warmth: pale oak, unlacquered brass, and warm white plaster. Against white marble or honed limestone countertops, the muted green reads as a considered color note. In a kitchen, the 8x8 on the floor mixes well with the Sage 2x8 or 4x4 on a backsplash — the colorway stays consistent while the format scale shifts.
+The grey-green of Sage pairs well with natural materials that carry warmth: pale oak, unlacquered brass, and warm white plaster. Against white marble or honed limestone countertops, the muted green holds its color without competing. In a kitchen, the 8x8 on the floor mixes well with the Sage 2x8 or 4x4 on a backsplash — the colorway stays consistent while the format scale shifts.
 
 ### How does cement tile differ from ceramic or porcelain?
 
-Cement tile is never fired. The pigmented surface is hydraulically pressed at 3,000 lbs psi and cured over seven days, not kiln-fired. The result is a matte, porous surface with real mineral pigment depth — not a glaze over a ceramic body. Ceramic and porcelain tiles carry color only in a thin fired glaze; a cement tile's 3 mm pigmented layer means the color is present throughout the top surface and develops a patina rather than wearing off.
+Cement tile is never fired. The pigmented surface is hydraulically pressed at 3,000 lbs psi and cured over seven days, not kiln-fired. The result is a matte, porous surface with real mineral pigment depth — not a glaze over a ceramic body. A cement tile's 3 mm pigmented layer means the color is present throughout the top surface and develops a patina with wear rather than wearing to a white ceramic body beneath.
 
-### How does cement tile age and develop patina?
+### Is Sage cement tile available in other formats?
 
-The matte surface of cement tile develops a gentle sheen with wear and time. High-traffic areas soften and settle first, producing a gradual, natural tonal gradient across the floor. This patina deepens the material's character over years rather than diminishing it. Periodic resealing, per the installation guide, maintains the surface and supports the aging process.
+Yes. Sage is also available in 2x8 subway and 4x4 square formats. The colorway is consistent across all three; the format choice determines the grout joint density and the visual scale of the grid pattern on the floor or wall.
 
-### How should cement tile be cleaned?
+### What is the coverage per box for Sage 8x8 cement tile?
 
-Sweep or dry-mop regularly to remove grit from the surface. For routine cleaning, use warm water and a pH-neutral cleaner. Avoid acidic cleaners — vinegar, citrus-based products, and bleach will damage the cement surface and strip the sealer. Reseal periodically following the cement installation guide, with frequency depending on traffic and exposure.
+Coverage per box depends on the tile count and format size. For current box count and square footage per box for the Sage 8x8, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170. Plan a 15–20% overage above the measured square footage to account for cuts and curation during installation.
