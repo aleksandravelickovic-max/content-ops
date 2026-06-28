@@ -3,7 +3,7 @@ sku: maya-blue-4x4-zellige
 material: zellige
 url: https://ziatile.com/products/maya-blue-zellige-tile
 title_tag: Maya Blue 4x4 Zellige Tile | Zia Tile
-meta_description: Shop Zia's Maya Blue 4x4 zellige. A vivid, medium Mesoamerican-referenced blue handcrafted Moroccan tile suited for kitchen backsplashes, bathrooms, showers, and pools.
+meta_description: Shop Zia's Maya Blue 4x4 zellige. A vivid, warm-toned medium blue handcrafted Moroccan tile suited for kitchen backsplashes, bathrooms, showers, and pools.
 keywords: maya blue zellige tile, vivid blue zellige 4x4, medium blue zellige
 draft_date: 2026-06-26
 ---
@@ -16,7 +16,7 @@ draft_date: 2026-06-26
 
 ---
 
-Zia's Maya Blue zellige takes its reference from the ancient Mesoamerican pigment — a vivid, medium blue with the warmth and clarity of a primary color rather than the greyness of a contemporary mid-tone. The colorway reads as clear and saturated without the near-indigo depth of Night Blue or the traditional Iberian register of Portuguese Blue. The 4x4 square format suits kitchen backsplashes, bathroom walls, shower enclosures, and pool waterlines, where the warmth in the glaze distinguishes it from cooler blues in the range.
+Zia's Maya Blue is a vivid, warm-toned medium blue zellige in a 4x4 square format. The colorway sits in a clear, saturated register — warmer than the cooler, greyer blues in the collection, and distinct from the near-indigo depth of Night Blue and the softer European register of Portuguese Blue. The 4x4 format suits kitchen backsplashes, bathroom walls, shower enclosures, and pool waterlines.
 
 Zia's Maya Blue 4x4 zellige is hand-formed, dipped in glaze, and fired in earthen kilns in Morocco, where the method has been refined over more than 800 years. Each tile carries the chips, pits, hairline crazing, and tonal shifts that come from working at this scale by hand. Photographs shown are representative of a sample of this tile, but do not display all potential variations.
 
@@ -104,13 +104,13 @@ Local pickup is free at our Los Angeles area warehouse. Our team will reach out 
 
 ## Frequently Asked Questions
 
-### What does Maya Blue zellige look like in a room?
+### What color is Maya Blue zellige?
 
-Zia's Maya Blue reads as a vivid, medium blue with clarity and warmth — the quality of the ancient Mesoamerican pigment for which it is named, which is known for its durability and the way it holds its vividness over time. The warmth in the glaze means it reads differently from cool-toned blues in the collection: less steely, warmer in register. The chips, pits, and hairline crazing across the surface catch light at different angles, keeping the field from reading as a flat plane of color.
+Zia's Maya Blue is a vivid, warm-toned medium blue — clear and saturated, with a warmth that distinguishes it from the cooler, greyer blues in the range. The glaze sits in a direct blue register without strong purple or green undertones. The chips, pits, and hairline crazing across the surface catch light at different angles, keeping the field from reading as a flat plane of color.
 
-### What is the historical reference behind the Maya Blue name?
+### What formats is Maya Blue zellige available in?
 
-Maya Blue is named for the ancient Mesoamerican pigment developed by pre-Columbian civilizations, known for its exceptional stability — the original pigment resisted fading over centuries due to its unique mineral composition. Zia's Maya Blue zellige draws on that color reference: a vivid, warm-toned medium blue that is distinct from the cooler, greyer blues common in modern palettes. The historical reference is in the colorway's position in the blue spectrum and the warm character of the glaze, not a reproduction of the original pigment.
+Maya Blue is available in 4x4 square, 2x2 square, and hexagon formats. Each is produced using the same traditional Moroccan methods and shares consistent glaze character and surface quality across the range. The formats can be combined in a single installation — a 4x4 field with a 2x2 or hexagon accent at a niche, border, or mosaic inset, for example. Contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions about combining formats.
 
 ### How does Maya Blue compare to Night Blue and Glacier Blue in the range?
 
