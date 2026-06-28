@@ -106,7 +106,7 @@ Local pickup is free at our Los Angeles area warehouse. Our team will reach out 
 
 ### What does Portuguese Blue zellige look like in a room?
 
-Zia's Portuguese Blue reads as a classic, resolved blue — a mid-range tone with the same quality found in traditional azulejo panels from Lisbon, where the blue glaze carries depth and history without veering into navy or sky. In a room, the colorway reads as deliberate and grounded. Against white plaster walls or cream cabinetry, it establishes the palette without dominating it. The dynamic glazes across the field mean individual tiles carry tonal variation from a slightly more saturated blue to a paler, hazier register.
+Zia's Portuguese Blue reads as a classic, resolved blue — a mid-range tone with the same quality found in traditional azulejo panels from Lisbon, where the blue glaze carries depth and history without veering into navy or sky. In a room, the colorway reads as deliberate and grounded. Against white plaster walls or cream cabinetry, it establishes the palette without dominating it. The glaze variation across the field means individual tiles carry tonal range from a slightly more saturated blue to a paler, hazier register.
 
 ### Can Portuguese Blue 4x4 zellige be used in a shower?
 
@@ -127,3 +127,23 @@ A white or cream grout creates a clean contrast with the blue field, drawing on 
 ### Can Portuguese Blue 4x4 be combined with other formats in the collection?
 
 Yes. Portuguese Blue is also available in 2x2, 2x6, and hexagon formats. Combining the 4x4 with the 2x2 or hexagon format in the same installation is suited to installations that call for a format change at a border, niche, or accent detail. Each format is produced using the same traditional methods, so surface character and material quality remain consistent across the range.
+
+### How thick is Portuguese Blue 4x4 zellige?
+
+Portuguese Blue 4x4 zellige is approximately ⅜" thick, consistent with the standard for Zia's handmade zellige collection. Inherent thickness variation from tile to tile is characteristic of the material — the thinset setting bed accommodates this during installation. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions about substrate depth.
+
+### How does light affect how Portuguese Blue reads throughout the day?
+
+Portuguese Blue is a mid-range blue with a slightly soft, European quality that responds to the warmth or coolness of the light source. In warm afternoon or incandescent light, the glaze reads with a slightly more muted, Iberian quality — closer to a washed, aged blue. In cool northern light, the same glaze reads as crisper and more saturated. The tonal shifts across the field become more apparent in directional light, giving the surface depth. Ordering a sample and evaluating it in the actual space is the most accurate way to preview the installed result.
+
+### Does Portuguese Blue vary between production runs?
+
+Yes. The colorway can shift between batches. Each run of zellige is produced by hand, and the clay, glaze, and kiln conditions change from one production run to the next. Tiles from separate orders may differ in tone and surface character. For projects requiring tiles from multiple orders, ordering the full quantity at once gives the most consistent result across the installation. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for assistance with quantity planning.
+
+### What grout joint width does Zia recommend for Portuguese Blue 4x4?
+
+For wall applications, a joint as tight as 1/16" is achievable, though ⅛" is more practical given the inherent size variation of handmade zellige. For shower floors and other wet floor applications, ⅛" is the minimum required, with anti-slip treatment applied after installation. Wedge spacers help maintain consistent spacing. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with installation-specific questions.
+
+### Is Portuguese Blue 4x4 zellige suited for a steam shower?
+
+Yes. Portuguese Blue 4x4 is suited for steam shower walls and floors. The glaze and clay body are stable in high-humidity, high-heat environments when the substrate is fully waterproofed and the installation is properly sealed. Sealing is required before use. Contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 to discuss waterproofing specifications for steam shower installations.

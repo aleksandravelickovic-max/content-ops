@@ -114,7 +114,7 @@ Yes. Zia's Racing Green 2x2 is suited for shower walls, shower floors, and steam
 
 ### Is Racing Green 2x2 zellige approved for pool and spa use?
 
-Yes. Racing Green 2x2 zellige is approved for pool waterlines, spa interiors, and fountains in both saltwater and chlorine environments. Sealing is required per the installation instructions. The deep green glaze at a pool waterline introduces a natural, botanical quality to a wet surround — different in character from the blue and white waterline traditions, and well-suited to gardens and outdoor entertaining spaces in mild climates.
+Yes. Racing Green 2x2 zellige is approved for pool waterlines, spa interiors, and fountains in both saltwater and chlorine environments. Sealing is required per the installation instructions. The deep green glaze at a pool waterline introduces a natural, botanical quality to a wet surround — different in character from blue and white waterline traditions, and well-suited to gardens and outdoor entertaining spaces in mild climates.
 
 ### How are the mesh sheets used in installation?
 
@@ -127,3 +127,23 @@ Yes. Racing Green is available in 4x4, 2x6, and hexagon formats in addition to t
 ### Does Racing Green 2x2 vary between production runs?
 
 Yes. The colorway can shift between batches. Each run of zellige is produced by hand, and the clay, glaze, and kiln conditions change from one production run to the next. Tiles from separate orders may carry differences in tone and surface character. For projects requiring tiles from multiple orders, ordering the full quantity at once gives the most consistent result across the installation. Contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 to discuss quantity planning before ordering.
+
+### How thick are the Racing Green 2x2 zellige tiles?
+
+Each tile measures approximately ⅜" thick on average. As with all handmade zellige, thickness varies piece to piece — a characteristic of individual hand-forming and kiln firing that contributes to the textural relief of the finished surface. On a 2x2 format, that variation reads as a fine-grained mosaic texture that shifts with light across the field.
+
+### What adhesive or thinset does Zia recommend for the 2x2 mesh-mounted tiles?
+
+White polymer-modified thinset is the correct choice for zellige, applied in a full back-butter coverage beneath each mesh sheet. Because the mesh holds the individual tiles in alignment, the thinset application covers the full sheet as a unit rather than each tile separately. Check that coverage is complete at the edges and corners of each sheet before pressing. Refer to Zia's installation guide for the recommended products and application sequence.
+
+### How does light affect how Racing Green reads throughout the day?
+
+Racing Green is one of the more light-responsive colorways in the zellige range. In strong direct light, the saturation in the glaze becomes more vivid and individual tiles can shift between a deeper forest tone and a brighter, slightly olive-inflected green. In diffused or lower light, the field reads as a unified deep green with the tonal variation visible only on close inspection. The chips, pits, and hairline crazing across the surface catch light at different angles throughout the day, keeping the mosaic-scaled field visually active. Observing a sample in the actual space across different times of day is the most reliable preparation before ordering.
+
+### What grout joint width does Zia recommend for the 2x2 format?
+
+Zellige is traditionally set with minimal grout joints — as close to edge-to-edge as the inherent size variation of handmade tiles allows. Wedge spacers keep the joints consistent and protect the chamfered edges while the thinset cures. For shower floor applications, grout joints should measure a minimum of ⅛" to support slip resistance. Zia's installation guide covers the recommended joint width and grouting sequence in detail. Contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with installation questions.
+
+### Is Racing Green 2x2 zellige suitable for a high-humidity steam shower?
+
+Yes. Racing Green 2x2 is approved for steam shower walls. Sealing is required for all steam shower applications, and Zia's installation guide covers the recommended sealer and resealing schedule for high-humidity environments. Ensuring a watertight membrane behind the tile and proper ventilation are part of a sound steam enclosure installation. Contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for guidance specific to a steam application.

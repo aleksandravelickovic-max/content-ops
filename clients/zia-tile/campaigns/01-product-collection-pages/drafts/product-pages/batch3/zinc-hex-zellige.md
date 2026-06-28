@@ -106,24 +106,44 @@ Local pickup is free at our Los Angeles area warehouse. Our team will reach out 
 
 ### What does Zinc Hex zellige look like in a room?
 
-Zia's Zinc zellige reads as a refined, cool grey — neither blue-grey nor charcoal, but the kind of neutral that holds its ground against both dark and pale materials. On a backsplash behind stainless appliances or a stone counter, the Zinc glaze picks up the cool undertone in the surrounding surfaces. Against natural wood or warm-toned plaster, it reads as a deliberate counterpoint, grounding the palette without competing.
+Zia's Zinc zellige reads as a refined, cool grey — neither blue-grey nor charcoal, but a neutral that holds its ground against both dark and pale materials. On a backsplash behind stainless appliances or a stone counter, the glaze picks up the cool undertone in the surrounding surfaces. Against natural wood or warm-toned plaster, it reads as a deliberate counterpoint, grounding the palette without competing.
 
 ### Can Zinc Hex zellige be used in a shower?
 
-Yes. Zia's Zinc Hex is suitable for shower walls and shower floors. Sealing is required for all shower applications. For shower floor installations, grout joints should measure a minimum of ⅛" and an anti-slip treatment should be applied after installation is complete. Refer to the Zellige Installation Guide for sealing instructions, or contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions.
+Yes. Zia's Zinc Hex is suited for shower walls and shower floors. Sealing is required for all shower applications. For shower floor installations, grout joints should measure a minimum of ⅛" and an anti-slip treatment should be applied after installation is complete. Refer to the Zellige Installation Guide for sealing instructions, or contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions.
 
-### Is Zinc Hex zellige suitable for a pool or spa?
+### Is Zinc Hex zellige suited for a pool or spa?
 
-Yes. Zinc Hex zellige is approved for pool and spa applications, including pool waterlines, spa interiors, and fountains in both saltwater and chlorine environments. Sealing is required per the installation instructions. As with all zellige applications, grout joints should be consistent and the full installation should be sealed before use.
+Yes. Zinc Hex zellige is approved for pool waterlines, spa interiors, and fountains in both saltwater and chlorine environments. Sealing is required per the installation instructions. The cool grey glaze suits pool surrounds where the goal is a mineral, stone-adjacent palette rather than a traditional blue waterline tile.
 
 ### What grout approach works with Zinc Hex?
 
-A grout matched closely to the Zinc glaze — a cool grey — allows the hexagonal geometry to read as a continuous field, with the tile-to-tile variation becoming the visual interest rather than the grid lines. A contrasting light or dark grout defines each hexagon more sharply and emphasizes the mosaic quality of the format. Either approach reads well; the choice depends on whether the goal is a quiet, tone-on-tone surface or a more graphic pattern.
+A grout matched closely to the Zinc glaze — a cool grey — allows the hexagonal geometry to read as a continuous field, with the tile-to-tile variation carrying the visual interest rather than the grid lines. A contrasting light or dark grout defines each hexagon more sharply and emphasizes the mosaic quality of the format. The choice depends on whether the goal is a quiet, tone-on-tone surface or a more graphic pattern.
 
 ### Can Zinc Hex be combined with other zellige formats or colorways?
 
-Yes. Zinc Hex can be mixed with other zellige formats in the same installation. The hexagon format works alongside square and rectangular zellige pieces at field-to-border transitions. Within the grey range, Zinc pairs with Slate Grey in either 4x4 or 2x6 formats for installations that call for a tonal variation across a surface. Each format in the collection is produced using the same traditional methods, so they share consistent thickness and surface character.
+Yes. Zinc Hex can be mixed with other zellige formats in the same installation. The hexagon format works alongside square and rectangular zellige pieces at field-to-border transitions. Within the grey range, Zinc pairs with Slate Grey in either 4x4 or 2x6 formats for installations that call for tonal variation across a surface. Each format in the collection is produced using the same traditional methods, so they share consistent thickness and surface character.
 
 ### Does the hexagon format affect how cuts are handled at installation?
 
 Yes. Hexagonal formats require more planning at the perimeter than square or rectangular tiles because cut angles at walls, cabinets, and fixtures depend on the orientation of the hex grid relative to the surface edge. A full dry layout before setting any tile is essential. The chamfered edges and inherent size variation of handmade zellige mean each cut needs to be evaluated individually. Wedge spacers help maintain consistent joint width across the hex field. Plan for 15–25% overage to account for curation and perimeter cuts.
+
+### How thick is Zinc Hex zellige?
+
+Zinc Hex zellige is approximately ⅜" thick — consistent with the standard thickness for Zia's handmade zellige collection. The hexagon format does not alter the thickness relative to square and rectangular formats, though the chamfered edges and inherent size variation of individual tiles require careful substrate preparation and thinset bed management. Contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions about substrate and setting depth.
+
+### What thinset does Zia recommend for zellige installation?
+
+Zellige should be set with a white polymer-modified thinset. A white thinset prevents bleed-through at the chamfered edges and grout joints, which can be more visible on lighter glazes. The thinset bed needs to be flat and consistent — zellige's inherent thickness variation means the setting layer does some of the leveling work. Refer to the Zellige Installation Guide for detailed thinset guidance, or contact [info@ziatile.com](mailto:info@ziatile.com) with installation-specific questions.
+
+### How does the Zinc Hex format handle a steam shower environment?
+
+Zinc Hex zellige is suited for steam showers. The glaze and clay body are stable in high-humidity, high-heat environments when the installation is properly sealed and the substrate is fully waterproofed. Sealing is required before use. Contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 to discuss substrate and waterproofing specifications for steam shower installations.
+
+### What does variation look like across a full Zinc Hex installation?
+
+Across a field, the Zinc glaze ranges from a slightly lighter, more silver-adjacent grey to a deeper, more slate-toned grey. The chamfered edges catch light differently at each tile, so the surface reads with texture and movement rather than as a uniform plane. Individual tiles also vary in size — inherent in hand-forming — which means the hex grid reads as organic rather than mechanical. Mixing tiles from all boxes before installation distributes the range of tones evenly across the surface.
+
+### Can Zinc Hex zellige be installed on a countertop?
+
+Zellige on horizontal surfaces such as countertops requires careful consideration. The chips, pits, and hairline crazing that characterize the material's surface make it harder to keep clean under daily cooking conditions than on a wall or floor. For questions about horizontal applications, reach out to the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 before ordering.

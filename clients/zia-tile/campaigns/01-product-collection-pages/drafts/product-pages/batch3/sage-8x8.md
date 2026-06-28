@@ -104,23 +104,47 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ### How does the Sage 8x8 read differently from the 2x8 and 4x4 formats?
 
-The color is the same muted grey-green across all three formats, but the 8x8 changes what the surface looks like at scale. Fewer grout joints mean the grey-green reads as a broader, more continuous plane — the surface variation tile to tile becomes the primary texture rather than the grout grid. In an open kitchen or entryway floor, the 8x8 format produces a calmer, less articulated surface than the smaller formats.
+The color is the same muted grey-green across all three formats, but the 8x8 changes what the surface looks like at scale. Fewer grout joints mean the grey-green reads as a broader, more continuous plane — the surface variation tile to tile becomes the primary texture rather than the grout grid. In an open kitchen or entryway floor, the 8x8 format produces a calmer, less articulated surface than either of the smaller formats.
 
 ### Does Zia's Sage 8x8 cement tile require sealing?
 
-Yes. All cement tile requires sealing before grouting and again after grouting. Sealing is required in every installation, including dry spaces. Follow Zia's cement installation guide for the recommended sealers and application sequence. For questions about sealer selection, contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+Yes. All cement tile requires sealing before grouting and again after grouting — in every installation, including dry spaces. Follow Zia's cement installation guide for the recommended sealers and application sequence. For questions about sealer selection, contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+
+### What sealers does Zia recommend for cement tile?
+
+Zia's cement installation guide specifies a two-stage sealing process: an impregnating sealer is applied before grouting, and a topcoat sealer follows after the grout has fully cured. Both stages are required. The specific products are listed in the installation guide; for project-specific sealer questions, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
 
 ### Can Sage 8x8 be used in a shower?
 
-Yes. Zia's Sage 8x8 is suited for shower walls and shower floors. Seal the tile before grouting and again after, following the cement installation guide. For shower floor applications, apply an anti-slip treatment after installation.
+Yes. Zia's Sage 8x8 is suited for shower walls and shower floors. Seal the tile before grouting and again after, following the cement installation guide. For shower floor applications, apply an anti-slip treatment after installation to support traction in wet conditions.
 
 ### Can Sage 8x8 be installed outdoors?
 
 Sage 8x8 cement tile is suited for exterior floors and walls in non-freeze/thaw climates — patios, courtyards, and covered outdoor spaces in mild climates. It is not suitable for installation in climates where the surface may be subject to freeze/thaw cycles.
 
+### Can Sage 8x8 be used with underfloor radiant heating?
+
+Yes. Zia's Sage 8x8 cement tile is compatible with radiant floor heating systems. The thinset and membrane specifications for heated substrates should follow the heating system manufacturer's guidance and Zia's cement installation guide. For project-specific questions, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+
+### What grout joint width does Zia recommend for the 8x8 format?
+
+Zia recommends 1/16" grout joints for the Sage 8x8 in standard interior applications. The fine joint allows the large format to read as a nearly continuous grey-green plane without the grout grid interrupting the surface. For wet commercial floor applications, grout joints should measure at least 1/8" to meet slip-resistance standards.
+
+### How does tonal variation distribute across a full Sage 8x8 installation?
+
+The grey-green of Sage carries inherent tonal variation from tile to tile — a characteristic of hand-poured cement pigment. On a large-format tile, this variation registers differently than on smaller formats: each tile covers more surface area, so slight differences in depth or tone are more visible across adjacent tiles. Blending from multiple boxes before setting ensures the variation distributes evenly across the field rather than clustering.
+
 ### What materials pair well with the Sage 8x8?
 
-The grey-green tone of Sage pairs well with natural materials that carry warmth: pale oak, unlacquered brass, and warm white plaster. Against white marble or honed limestone countertops, the muted green reads as a considered color note. In a kitchen, the 8x8 format on the floor can be mixed with the Sage 2x8 or 4x4 on a backsplash, creating variation in grid scale while keeping the colorway consistent.
+The grey-green of Sage pairs well with natural materials that carry warmth: pale oak, unlacquered brass, and warm white plaster. Against white marble or honed limestone countertops, the muted green reads as a considered color note. In a kitchen, the 8x8 on the floor mixes well with the Sage 2x8 or 4x4 on a backsplash — the colorway stays consistent while the format scale shifts.
+
+### How does cement tile differ from ceramic or porcelain?
+
+Cement tile is never fired. The pigmented surface is hydraulically pressed at 3,000 lbs psi and cured over seven days, not kiln-fired. The result is a matte, porous surface with real mineral pigment depth — not a glaze over a ceramic body. Ceramic and porcelain tiles carry color only in a thin fired glaze; a cement tile's 3 mm pigmented layer means the color is present throughout the top surface and develops a patina rather than wearing off.
+
+### How does cement tile age and develop patina?
+
+The matte surface of cement tile develops a gentle sheen with wear and time. High-traffic areas soften and settle first, producing a gradual, natural tonal gradient across the floor. This patina deepens the material's character over years rather than diminishing it. Periodic resealing, per the installation guide, maintains the surface and supports the aging process.
 
 ### How should cement tile be cleaned?
 

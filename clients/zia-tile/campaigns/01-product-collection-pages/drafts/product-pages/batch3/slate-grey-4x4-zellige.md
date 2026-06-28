@@ -106,13 +106,13 @@ Local pickup is free at our Los Angeles area warehouse. Our team will reach out 
 
 ### What does Slate Grey zellige look like in a room?
 
-Zia's Slate Grey reads as a clean, resolved neutral — present enough to register as a design choice, restrained enough to support rather than direct the rest of the room. Against white cabinetry or plaster walls, the glaze takes on depth without going dark. Against stone, concrete, or charcoal fixtures, it holds its middle ground. The dynamic glazes across the field mean no two tiles read exactly the same, so the installed surface carries movement and tonal range rather than a flat, uniform grey.
+Zia's Slate Grey reads as a clean, resolved neutral — present enough to register as a design choice, restrained enough to support rather than direct the rest of the room. Against white cabinetry or plaster walls, the glaze takes on depth without going dark. Against stone, concrete, or charcoal fixtures, it holds its middle ground. The glaze variation across the field means no two tiles read exactly the same, so the installed surface carries movement and tonal range rather than a flat, uniform grey.
 
 ### Can Slate Grey 4x4 zellige be used in a shower?
 
 Yes. Zia's Slate Grey 4x4 is suited for shower walls, shower floors, and steam showers. Sealing is required for all shower applications. On shower floors, grout joints should measure a minimum of ⅛" and an anti-slip treatment should be applied after installation is complete. Refer to the Zellige Installation Guide for sealing specifications, or contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with installation questions.
 
-### Is Slate Grey zellige suitable for pool and spa applications?
+### Is Slate Grey zellige suited for pool and spa applications?
 
 Yes. Slate Grey zellige is approved for pool waterlines, spa interiors, and fountains in both saltwater and chlorine environments. Sealing is required per the installation instructions. The grey glaze suits pool surrounds that call for a mineral, stone-adjacent palette rather than a traditional blue or white waterline tile.
 
@@ -127,3 +127,23 @@ Both formats carry the same Slate Grey colorway and are produced using the same 
 ### Can Slate Grey 4x4 be mixed with other zellige colorways?
 
 Yes. Slate Grey 4x4 can be combined with other zellige colorways in the same installation. It pairs well with deeper greys, blue-toned colorways, and warm neutrals, where it functions as the anchoring middle tone in a palette. Each colorway in Zia's zellige collection is produced using the same traditional methods, so formats and surface character remain consistent across the range.
+
+### How thick is Slate Grey 4x4 zellige?
+
+Slate Grey 4x4 zellige is approximately ⅜" thick — standard across Zia's handmade zellige collection. Because each tile is hand-formed, slight variation in thickness from piece to piece is inherent to the material. The thinset setting bed accommodates this variation during installation. The Slate Grey 2x6 bejmat is ¾" thick and requires separate substrate planning.
+
+### What thinset is recommended for Slate Grey 4x4 zellige?
+
+A white polymer-modified thinset is the correct choice for Slate Grey 4x4 zellige. White thinset prevents visible bleed at the chamfered edges and grout joints. The setting bed should be flat and consistently applied, as the inherent thickness variation in handmade zellige means the thinset layer handles some of the leveling. Full thinset instructions are in the Zellige Installation Guide; direct questions to [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+
+### How does light affect how Slate Grey reads across the day?
+
+In morning or warm artificial light, the Slate Grey glaze carries a slightly warmer undertone and reads as a softer, more stone-adjacent grey. In cool natural light or north-facing rooms, the same glaze reads with more clarity and resolve — closer to a true cool grey. The tonal shifts within the field also become more or less visible depending on the angle and intensity of the light source. Ordering a sample and observing it in the actual installation space before committing is the most reliable step.
+
+### How often should Slate Grey zellige be resealed after installation?
+
+Resealing frequency depends on the application and level of use. In shower and wet-area installations, inspect the seal annually and reseal as needed when water no longer beads on the surface. In dry interior applications, resealing is less frequent but still required at intervals — refer to the Zellige Installation Guide for sealer-specific guidance. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions about the appropriate sealer for the application.
+
+### Can Slate Grey 4x4 zellige be used on an exterior wall in a non-freeze/thaw climate?
+
+Yes. Slate Grey 4x4 zellige is suited for exterior walls in non-freeze/thaw climates. Glazed zellige is not suitable for outdoor installation in climates where surfaces are exposed to freezing temperatures, as the glaze is not rated for freeze/thaw cycling. In mild climates, Slate Grey on an exterior courtyard or garden wall reads as a resolved, mineral tone that weathers naturally in outdoor conditions.

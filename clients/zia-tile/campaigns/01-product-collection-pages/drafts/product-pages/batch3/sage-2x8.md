@@ -104,11 +104,15 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ### How does the Sage colorway read in a room?
 
-Sage is a muted grey-green — a tone that sits between green and grey rather than leaning clearly into either. In a room, it reads as a grounding neutral that contributes color without drawing the eye. Against white, it holds back and produces a quiet contrast. Against warm plaster and wood, the grey undertone comes forward and creates a cool counterpoint to the warmer materials. The 2x8 subway format gives the color a horizontal, understated field that suits contemporary and transitional interiors.
+Sage is a muted grey-green — a tone that sits between green and grey rather than leaning clearly into either. In a room, it reads as a grounding neutral that contributes color without drawing the eye. Against white, it holds back and produces a quiet contrast. Against warm plaster and wood, the grey undertone comes forward and creates a calm dialogue with the warmer materials. The 2x8 subway format gives the color a horizontal, understated field that suits contemporary and transitional interiors.
 
 ### Does Zia's Sage 2x8 cement tile require sealing?
 
-Yes. All cement tile requires sealing before grouting and again after grouting. Sealing is required for every installation, including dry spaces. Follow Zia's cement installation guide for the recommended sealers and application sequence. For questions about sealer selection, contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+Yes. All cement tile requires sealing before grouting and again after grouting — in every installation, including dry spaces. Follow Zia's cement installation guide for the recommended sealers and application sequence. For questions about sealer selection, contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+
+### What sealers does Zia recommend for cement tile?
+
+Zia's cement installation guide specifies a two-stage sealing process: an impregnating sealer applied before grouting protects the surface during the grouting process, and a topcoat sealer is applied after the grout has fully cured. The specific products are listed in the installation guide. For project-specific questions, contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
 
 ### Can Sage 2x8 be used in a shower?
 
@@ -118,9 +122,29 @@ Yes. Zia's Sage 2x8 is suited for shower walls and shower floors. Seal the tile 
 
 Sage 2x8 cement tile is suited for exterior floors and walls in non-freeze/thaw climates — patios, courtyards, and covered outdoor spaces in mild climates. It is not suitable for installation in climates where the surface may freeze.
 
+### Which bond pattern is most common for the Sage 2x8 subway format?
+
+The two most common layouts for a 2x8 subway are horizontal brick offset (each row shifted half a tile length) and horizontal stacked (grout joints lining up directly above one another). Brick offset gives the surface a familiar, active quality; stacked bond reads as more architectural and grid-forward. For wall applications, the choice is primarily a design decision. A dry layout before setting allows evaluation of both orientations in the actual space.
+
+### What grout joint width does Zia recommend?
+
+Zia recommends 1/16" grout joints for the Sage 2x8 in standard interior applications. For wet commercial floor applications, grout joints should measure at least 1/8" to meet slip-resistance specifications. The grout color choice also affects how the surface reads: a grout close to the sage tone allows the tile field to register as continuous, while a contrasting grout emphasizes the grid.
+
+### How does tonal variation distribute across a Sage installation?
+
+The grey-green of Sage carries subtle tonal shifts from tile to tile — the pigment depth in each piece varies slightly, as is characteristic of hand-poured cement. Opening and blending tiles from multiple boxes before setting allows the variation to distribute naturally across the field. Setting tiles from a single box in sequence without blending can concentrate lighter or deeper tones in one area.
+
 ### What materials pair well with Sage?
 
-Sage pairs well with warm plaster walls, pale oak, and unlacquered brass hardware — the grey-green tone occupies the cool side of a warm palette without disrupting the warmth of the room. Against white marble or limestone countertops, Sage reads as a considered color choice that holds its ground. The Sage colorway is also available in 4x4 and 8x8 formats; mixing formats allows for different grid scales across the same installation.
+Sage pairs well with warm plaster walls, pale oak, and unlacquered brass hardware — the grey-green occupies the cooler edge of a warm palette without disrupting the warmth of the room. Against white marble or limestone countertops, Sage reads as a considered color note that holds its ground. The Sage colorway is also available in 4x4 and 8x8 formats; mixing formats across a kitchen floor and backsplash, for example, allows variation in grid scale while keeping the palette consistent.
+
+### How does cement tile age over time?
+
+The matte surface of cement tile develops a gentle patina with wear and time — a gradual settling and softening of the surface that gives the tile an inhabited character. High-traffic areas develop this patina more quickly, which produces a natural tonal gradient across the floor that reads as material depth rather than uneven wear. Periodic resealing, per the installation guide, maintains the surface and supports the aging process.
+
+### What happens if cement tile is not sealed before grouting?
+
+Grout can penetrate the porous cement surface and leave a haze that sets into the tile. Because the pigmented layer is open until sealed, the pre-grout sealing step is as critical as the post-grout application. Once grout haze sets, removal requires specialized products that may affect the tile's appearance. Following the two-stage sealing sequence in Zia's installation guide prevents this outcome.
 
 ### How should cement tile be cleaned?
 

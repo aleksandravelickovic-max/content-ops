@@ -104,11 +104,15 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ### How does the White 2x8 read differently from the White 4x4?
 
-The colorway is the same pure matte white, but the 2x8 format introduces a directional quality that the square does not have. The eye follows the long axis of each tile, reading the surface as a horizontal field — similar to the way a ceramic subway tile registers. In a stack bond or offset pattern, the horizontal lines of the grout joints reinforce the lateral movement across the wall. The 4x4 produces an even grid where no direction dominates.
+The colorway is the same pure matte white, but the 2x8 format introduces a directional quality that the square does not have. The eye follows the long axis of each tile, reading the surface as a horizontal field — similar to the way a ceramic subway tile registers. In a stacked or offset pattern, the grout joints reinforce that lateral movement across the wall. The 4x4 produces an even grid where no direction dominates.
 
 ### Does Zia's White 2x8 cement tile require sealing?
 
-Yes. All cement tile requires sealing before grouting and again after grouting. Sealing is required in every installation, including dry spaces. White cement tile is particularly important to seal carefully before grouting, as the light surface can show grout haze if the grout is not released before it sets. Follow Zia's cement installation guide for the recommended sealers and application sequence. For questions, contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+Yes. All cement tile requires sealing before grouting and again after grouting — in every installation, including dry spaces. White cement tile is particularly important to seal carefully before grouting: the light surface can show grout haze if the grout is not released before it sets. Follow Zia's cement installation guide for the recommended sealers and application sequence. For questions, contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+
+### What sealers does Zia recommend for cement tile?
+
+Zia's cement installation guide specifies a two-stage sealing process: an impregnating sealer applied before grouting, and a topcoat sealer applied after the grout has fully cured. For the White 2x8, using a non-yellowing, water-based topcoat sealer is advisable to preserve the clarity of the white surface. The specific products are listed in the installation guide; contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with project-specific questions.
 
 ### Can White 2x8 be used in a shower?
 
@@ -118,9 +122,29 @@ Yes. Zia's White 2x8 is suited for shower walls and shower floors. Seal the tile
 
 White 2x8 cement tile is suited for exterior floors and walls in non-freeze/thaw climates — patios, courtyards, and covered outdoor spaces in mild climates. It is not suitable for installation in climates where the surface may be subject to freeze/thaw cycles.
 
+### Which bond pattern is most common for the White 2x8 subway format?
+
+The most common layouts for a 2x8 subway are horizontal brick offset (each row shifted by half a tile length) and horizontal stacked (grout joints lining up directly above one another). Brick offset gives the surface a familiar, active subway character; stacked bond reads as more architectural and grid-forward. Vertical layouts are occasionally used for a more contemporary effect — in narrow spaces such as a range hood surround, a vertical stack can draw the eye upward. A dry layout before setting helps evaluate the options in context.
+
+### What grout joint width does Zia recommend?
+
+Zia recommends 1/16" grout joints for the White 2x8 in standard interior applications. The grout color has a visible effect on the surface: a grout close to white produces a quiet, nearly continuous field; a darker grout emphasizes the subway grid. For wet commercial floor applications, grout joints should measure at least 1/8" to meet slip-resistance standards.
+
+### What thinset is recommended for white cement tile?
+
+A white latex-modified or polymer-modified thinset is recommended for light-colored cement tile. Standard grey thinset can bleed through the porous pigmented surface and alter the white tone. Zia's cement installation guide provides specific thinset guidance; contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for installer-specific questions.
+
 ### What materials pair well with White 2x8?
 
-The pure matte white of the 2x8 suits pairings where a clean, neutral ground is the intent. Against dark wood or black hardware, it produces a high-contrast surface. Against pale stone countertops and plaster walls, it contributes a bright, matte note without introducing a second color. The White 2x8 can also be combined with the White 4x4 on a floor or backsplash where varying the format scale adds dimension while keeping the palette monochrome.
+The pure matte white suits pairings where a clean, neutral ground is the intent. Against dark wood or black hardware, it produces a high-contrast surface. Against pale stone countertops and plaster walls, it contributes a bright, matte note without introducing a second color. The White 2x8 also combines well with the White 4x4 on a floor or backsplash — varying the format scale adds surface dimension while keeping the palette monochrome.
+
+### How does tonal variation distribute across a white subway installation?
+
+The White 2x8 carries subtle tonal variation from tile to tile, as is characteristic of hand-poured cement pigment. On a white field, small differences in tone between adjacent tiles are more visible than on darker colorways. Opening tiles from multiple boxes and blending before setting distributes this variation naturally across the surface. Dry-laying a representative section before committing to the installation sequence helps reveal how the variation reads at scale.
+
+### How does cement tile age and develop patina?
+
+White cement tile develops a gentle patina with wear and time. The matte surface softens in high-traffic areas, taking on a slight sheen that distinguishes lived-in surfaces from newly installed ones. This is characteristic of the material and deepens rather than diminishes over years. Periodic resealing, per the installation guide, maintains the surface and supports this natural aging process.
 
 ### How should white cement tile be cleaned?
 

@@ -104,15 +104,15 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ### How does the Ponderosa colorway read in a room?
 
-Ponderosa is a light beige with a warm, cream-neutral quality — a tone that sits closer to a warm white than to a tan or ochre, without going stark. The glossy finish gives the surface a luminous, reflective quality that lifts the beige and makes it read as brighter and more open than the same color in a matte or satin finish would. Against warm materials like natural oak or waxed plaster, the cream-beige registers as a complementary tone. Against darker or cooler materials, the gloss adds light to the composition.
+Ponderosa is a light beige with a warm, cream-neutral quality — a tone that sits closer to a warm white than to a tan or ochre. The glossy finish gives the surface a luminous, reflective character that lifts the beige and makes it read as brighter and more open than the same color in a matte or satin finish would. Against warm materials like natural oak or waxed plaster, the cream-beige registers as a complementary tone. Against darker or cooler materials, the gloss adds light to the composition.
 
 ### Does Ponderosa 4x4 require sealing before installation?
 
-No. The Ponderosa 4x4 is a glossy finish and does not require a penetrating sealer before grouting. Glossy and satin ceramics skip the pre-grout sealing step required for matte tiles. For any installation questions, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+No. The Ponderosa 4x4 carries a glossy finish and does not require a penetrating sealer before grouting. Glossy and satin ceramics skip the pre-grout sealing step required for matte tiles. For any installation questions, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
 
 ### Can Ponderosa 4x4 be used on a shower floor?
 
-Yes. Zia's Ponderosa 4x4 is suited for shower walls and shower floors. The glossy finish does not require pre-grout sealing. Plan for a minimum 1/8" grout joint on the shower floor surface. An anti-slip treatment applied after installation increases traction in high-exposure wet floor areas.
+Yes. Zia's Ponderosa 4x4 is suited for shower walls and shower floors. Plan for a minimum 1/8" grout joint on the shower floor surface. An anti-slip treatment applied after installation increases traction in high-exposure wet floor areas. The glossy finish does not require pre-grout sealing in shower applications.
 
 ### Can Ponderosa 4x4 be installed in a pool or spa?
 
@@ -120,8 +120,32 @@ Yes. Zia's glossy-finish ceramics are approved for pool and spa applications. Th
 
 ### What materials pair well with Ponderosa?
 
-Ponderosa's warm cream-beige works well with natural oak, pale stone, unlacquered brass, and warm plaster. The tone is versatile enough to sit alongside both pale and medium-toned natural materials without requiring a strong contrast to read clearly. For grout, a tone-on-tone cream or warm white keeps the surface quiet; a contrasting greige or light stone grout articulates the tile grid while staying within the warm register.
+Ponderosa's warm cream-beige works well with natural oak, pale stone, unlacquered brass, and warm plaster. The tone is versatile enough to sit alongside both pale and medium-toned natural materials without requiring a strong contrast to read clearly. A tone-on-tone cream or warm white grout keeps the surface quiet; a contrasting greige or light stone grout articulates the tile grid while staying within the warm register.
 
 ### How does Ponderosa compare to Alabaster White in the Zia ceramic range?
 
-Both Ponderosa and Alabaster White are glossy-finish ceramics in a 4×4 format, but the color registers are distinct. Alabaster White is a bright, clear white — a tone without warm undertones that reads as crisp and clean. Ponderosa is a warm cream-beige — a tone with enough warmth to register as beige rather than white, producing a softer, warmer result across the installation. Alabaster White suits rooms where a bright, cool white is the intent; Ponderosa suits rooms where warmth and the gloss surface should work together.
+Ponderosa and Alabaster White are both glossy-finish ceramics in a 4×4 format, but their color registers are distinct. Alabaster White is a bright, clear white — a tone without warm undertones that reads as crisp. Ponderosa is a warm cream-beige — a tone with enough warmth to register as beige rather than white, producing a softer, warmer result across the installation. Alabaster White suits rooms where a bright, neutral white is the intent; Ponderosa suits rooms where warmth and the gloss surface should work together.
+
+### How does the glossy finish affect how light reads across the room?
+
+A glossy finish returns light directly from the surface, which makes the tile's cream-beige color read as brighter and more open than a matte or satin tile in the same colorway would. In rooms with natural light, the reflected light from the Ponderosa surface can contribute to the brightness of the overall room. In rooms with directional or artificial light, the gloss introduces a luminous quality that makes the warm beige come forward clearly. Rooms that lack natural light often benefit from glossy-finish tiles for this reason.
+
+### What is the DCOF rating for Ponderosa 4x4, and what does it mean for floor use?
+
+Glossy ceramics carry a lower DCOF than matte finishes, which register at 0.74. Ponderosa 4x4 is suited for interior floor applications in residential and commercial contexts, including wet areas, with a minimum 1/8" grout joint on shower floors. On shower floors, an anti-slip treatment applied after installation is recommended for high-exposure wet areas. For specific DCOF figures, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+
+### What grout joint width is recommended for the Ponderosa 4x4?
+
+The standard for the 4×4 format is 3/16" grout joints, with a 1/8" minimum. A tone-on-tone cream or warm white grout keeps the joint line quiet and lets the surface read as a continuous warm field. A contrasting grout adds graphic weight to the square grid, making the format itself a more deliberate design element. On shower floors, the 1/8" minimum is required and should not be reduced.
+
+### Is the Ponderosa colorway available in other formats?
+
+The Ponderosa colorway is available in a 12×12 sheet and a 2×8 rectangle in addition to the 4×4 square. The 2×8 format introduces a strong directional register — horizontal or vertical depending on orientation — that the 4×4 does not carry. The 12×12 sheet is useful for larger wall fields or where fewer grout lines are preferred. All three formats share the same warm cream-beige colorway and glossy finish.
+
+### Can Ponderosa 4x4 be mixed with other Zia ceramic formats in the same installation?
+
+Zia's standard ceramics share the same body depth and finish categories, so combining formats in one installation is achievable. A Ponderosa 4×4 field with a 2×8 border, or a mixed-format floor, can be planned with a dry layout before setting. The warm cream-beige colorway in the Ponderosa does not appear in other standard ceramic colorways, so cross-format mixing within the Ponderosa line is the most cohesive approach. For design questions on combining formats, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+
+### How does the finish on Ponderosa compare to Zia's matte and satin ceramic finishes?
+
+Zia's ceramics come in three finish levels: matte, satin, and glossy. Matte diffuses light evenly and requires pre-grout sealing as a grout release; the surface reads as absorbed and flat. Satin carries a low-level sheen — reflective under strong light, not visually intense. Glossy, which is the Ponderosa finish, returns light directly and reads as luminous across the full surface. The Ponderosa colorway is currently only available in a glossy finish; the matte and satin finishes appear across other colorways in the Zia ceramic collection.

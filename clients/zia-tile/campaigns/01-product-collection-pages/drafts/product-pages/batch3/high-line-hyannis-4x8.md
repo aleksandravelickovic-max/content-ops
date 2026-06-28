@@ -104,11 +104,19 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ### How does the Hyannis pattern read in a room?
 
-The Hyannis is a blue and white geometric repeat — a clean, structured pattern that reads as graphic and precise at scale. On a kitchen backsplash, the color contrast between the blue and white registers across the field and gives the wall a strong visual character. On a bathroom floor, the pattern introduces a formal geometry that works against neutral walls, chrome fixtures, and white stone without overwhelming the space. The 4x8 rectangular format allows the pattern to be set in a stack bond, staggered bond, or herringbone, each of which shifts how the geometry reads across the surface.
+The Hyannis is a blue and white geometric repeat — a clean, structured pattern that reads as graphic and precise at scale. On a kitchen backsplash, the color contrast between blue and white registers across the field and gives the wall a strong visual character. On a bathroom floor, the pattern introduces a formal geometry that works against neutral walls, chrome fixtures, and white stone without overwhelming the space. The 4x8 rectangular format can be set in a stack bond, staggered bond, or herringbone, each of which shifts how the geometry reads across the surface.
+
+### How does the Hyannis pattern scale visually in a smaller room?
+
+In a compact bathroom or powder room, the 4x8 format allows the geometric repeat to tile across a limited area without overscaling. The blue and white palette keeps the field light and open, and the pattern reads with enough definition at close range to carry visual interest without the room feeling busy. Running the tile vertically on a single feature wall, rather than across the full floor, is one way to introduce the pattern in smaller spaces while keeping the overall composition balanced.
 
 ### Does Zia's High Line Hyannis cement tile require sealing?
 
 Yes. All cement tile requires sealing before grouting and again after grouting — including in dry spaces. Follow Zia's cement installation guide for the recommended sealers and application sequence. For specific questions about sealer selection, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+
+### What happens if cement tile is not sealed before grouting?
+
+Grout penetrates directly into the unsealed cement surface, staining the tile permanently. The pre-grout seal saturates the surface and acts as a release, so grout can be wiped from the face of the tile during cleanup without bonding into the material. Skipping this step is the most common installation error on cement tile and one of the hardest to reverse.
 
 ### Can High Line Hyannis be used in a shower?
 
@@ -116,11 +124,27 @@ Yes. Zia's High Line Hyannis 4x8 is suited for shower walls and shower floors. A
 
 ### Can High Line Hyannis be installed outdoors?
 
-High Line Hyannis cement tile is suited for exterior floors and walls in non-freeze/thaw climates — patios, courtyards, and covered outdoor surfaces in mild climates. It is not suitable for installation in climates where the surface may freeze.
+High Line Hyannis cement tile is suited for exterior floors and walls in non-freeze/thaw climates — patios, courtyards, and covered outdoor surfaces in mild climates. The tile is not suitable for installation in climates where the surface may freeze.
+
+### What grout joint width does Zia recommend for the Hyannis 4x8?
+
+Use 1/16" tile spacers for the standard grout joint. A tight grout joint allows the pattern's geometry to read as a continuous field across the surface. For shower floor applications, a minimum 1/8" grout joint is required to support slip resistance.
+
+### Is High Line Hyannis compatible with underfloor radiant heating?
+
+Yes. The Hyannis 4x8 is compatible with all heated floor systems. The cement body holds and distributes heat gradually, which suits radiant systems well. Follow thinset manufacturer specifications for heated-floor applications and confirm the subfloor is fully cured before setting tile.
+
+### How does cement tile differ from ceramic or porcelain?
+
+Cement tile is never fired. Mineral pigments are pressed into the surface under hydraulic pressure and the tile cures through a water-based hardening process rather than in a kiln. This produces a matte, slightly porous tile with real color depth in the surface layer — not a glaze on a fired body. The surface requires sealing, responds differently to acidic cleaners than ceramic does, and develops a patina over time that ceramic or porcelain does not.
+
+### How does High Line Hyannis cement tile age?
+
+The blue and white pigments hold well over time — the matte surface softens with wear rather than fading sharply. Periodic resealing maintains the surface and keeps the color reading cleanly. In high-traffic areas, the patina concentrates in the most-traveled zones first; resealing more frequently in those areas keeps the installation looking even.
 
 ### What materials pair well with High Line Hyannis?
 
-The blue and white palette of Hyannis pairs well with white plaster, honed marble, and unlacquered brass. Against white surfaces, the blue geometry holds visual priority. Against natural stone or warm wood, the blue reads as a cooler accent. The pattern also works alongside other Zia cement tiles in solid white or a complementary blue for border or field combinations. Contact [info@ziatile.com](mailto:info@ziatile.com) to discuss pattern combinations before ordering.
+The blue and white palette pairs well with white plaster, honed marble, and unlacquered brass. Against white surfaces, the blue geometry holds visual priority. Against natural stone or warm wood, the blue reads as a cooler accent. High Line Hyannis also works alongside other Zia cement tiles in solid white or a complementary blue for border or field combinations. Contact [info@ziatile.com](mailto:info@ziatile.com) to discuss pattern combinations before ordering.
 
 ### How should patterned cement tile be cleaned?
 

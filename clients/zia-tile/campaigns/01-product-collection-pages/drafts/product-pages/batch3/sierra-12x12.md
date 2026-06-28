@@ -104,26 +104,46 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ## Frequently Asked Questions
 
-### What is cantera stone?
+### What is cantera stone, and where does it come from?
 
-Cantera is a Mexican volcanic stone formed over millions of years from volcanic rock and ash. It is quarried and cut in Mexico and has served as a primary building material in the region for centuries — used in colonial churches, haciendas, and courtyard walls where its workability and earthy palette made it the material of choice. Zia's Sierra colorway presents the stone in its naturally speckled light brown character, with visible aggregate inclusions and moderate tonal variation that are inherent to volcanic stone.
+Cantera is a Mexican volcanic stone formed over millions of years from volcanic rock and ash. Quarried and cut in Mexico, it has served as a primary building material in the region for centuries — used in colonial churches, haciendas, and courtyard walls where its workability and earthy palette made it the material of choice for structure and surface alike. Zia's Sierra colorway presents the stone in its naturally speckled light brown character, with visible aggregate inclusions and moderate tonal variation that are inherent to volcanic stone.
+
+### How does cantera differ from limestone or marble in porosity, texture, and maintenance?
+
+Cantera is a volcanic stone — formed from compressed ash and rock — which gives it a more porous structure and a coarser, more mineral-textured surface than either limestone or marble. Limestone is a sedimentary stone; marble is a metamorphic stone formed under heat and pressure. All three require sealing, but cantera's higher porosity means it absorbs moisture more readily and benefits from thorough sealing before grouting and periodic resealing thereafter. In terms of surface character, cantera's visible aggregate and oxidation variation are more pronounced than the veining in marble or the subtle pitting in limestone — the surface is more active and mineral-present.
 
 ### How does Sierra 12x12 read as a surface?
 
-Sierra reads as a light brown, mineralically complex field with dark and light speckles distributed through the body. The volcanic aggregate inclusions give the surface a composition that shifts from tile to tile — denser clusters of dark aggregate on some pieces, a more evenly distributed pattern on others. No two tiles carry the same surface composition. In context, Sierra reads as a grounded, earthy neutral that contributes material texture to a space rather than presenting a uniform background.
+Sierra reads as a light brown, mineralically complex field with dark and light speckles distributed through the body. The volcanic aggregate inclusions give the surface a composition that shifts tile to tile — denser clusters of dark aggregate on some pieces, a more evenly distributed pattern on others. No two tiles carry the same aggregate composition. In a room, Sierra reads as a grounded, earthy neutral that contributes material texture to a space rather than presenting a uniform background.
+
+### How many tiles are in a box of Sierra 12x12?
+
+Sierra 12x12 ships five tiles per box. Confirm the total quantity needed before ordering — calculate based on the square footage of the installation plus the recommended 15 to 20% overage — and order in full-box increments. For questions about quantities for a specific project, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
 
 ### Does Sierra 12x12 cantera require sealing?
 
-Yes. Cantera is a naturally porous volcanic stone and requires sealing before and after grouting. Apply a penetrating sealer in thin layers until the tiles are fully saturated before grouting, wiping off any excess before it dries. After grouting and allowing the grout to cure, apply a top coat sealer appropriate for the installation environment. Refer to Zia's cantera installation guide for the full sealing sequence, or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions.
+Yes. Cantera is a naturally porous volcanic stone and requires sealing before and after grouting. Apply a penetrating sealer in thin layers until the tiles are fully saturated before grouting, wiping off any excess before it dries on the surface. After grouting and allowing the grout to cure, apply a top coat sealer appropriate for the installation environment. Refer to Zia's cantera installation guide for the full sealing sequence, or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions.
 
-### Can Sierra 12x12 be used outdoors?
+### Does cantera need to be resealed after the initial seal?
 
-Sierra 12x12 is suited for exterior installations in non-freeze/thaw climates — patios, courtyards, garden walls, and covered outdoor floors in mild-climate regions. Cantera is not rated for exterior use in freeze/thaw climates, where water penetrating the porous volcanic stone during freeze cycles can cause damage. In appropriate climates, seal the stone before and after grouting and reseal periodically based on exposure.
+Yes. The initial sealing sequence is not a one-time treatment. For interior floors in normal use, resealing every one to two years is a reasonable starting point; exterior applications may require more frequent attention depending on climate and exposure. When water begins to absorb into the surface rather than beading, the sealer has worn down and resealing is due. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for guidance on sealer selection and maintenance intervals.
 
-### How do I clean Sierra cantera stone?
+### Can Sierra 12x12 be used in exterior applications?
 
-To clean Sierra cantera stone, remove debris regularly with a soft brush or vacuum to prevent surface abrasion. For routine cleaning, use a pH-neutral stone cleaner with warm water and a soft cloth or mop. Avoid acidic and abrasive products — including vinegar, bleach, and citrus-based cleaners — which can damage the porous volcanic stone surface. Keeping the stone properly sealed reduces staining and simplifies routine maintenance.
+Sierra 12x12 is suited for exterior floors and walls in non-freeze/thaw climates — patios, courtyards, garden walls, and covered outdoor floors in mild-climate regions. Cantera is not rated for exterior use in freeze/thaw climates, where freeze cycles can damage the porous volcanic stone through water absorption and expansion. In appropriate climates, seal before and after grouting and reseal periodically based on exposure.
+
+### How do I clean Sierra cantera stone day to day?
+
+Remove debris regularly with a soft brush or vacuum before mopping to prevent surface abrasion. For routine cleaning, use a pH-neutral stone cleaner with warm water and a soft mop or cloth. Avoid acidic and abrasive products — vinegar, bleach, and citrus-based cleaners — which degrade the porous volcanic surface over time. Keeping the stone properly sealed is the most effective way to reduce staining and simplify routine maintenance.
+
+### How does the natural surface texture in cantera distribute across a full floor?
+
+Because each Sierra tile is cut through a different cross-section of the volcanic body, aggregate density, oxidation marking, and tonal variation shift from tile to tile across the installation. Some tiles will carry denser dark speckle clusters; others will read lighter and more open. Blending tiles from all boxes before setting and dry-laying the full arrangement before fixing any stone is the correct method for distributing the variation evenly across the floor.
+
+### What grout joint width is recommended for Sierra 12x12?
+
+Zia recommends a minimum 1/8" grout joint for cantera stone. The 12x12 format — with its natural variation in edge character from piece to piece — benefits from a consistent joint width established during the dry layout. For wet floor applications, including shower floors, the 1/8" minimum also supports drainage and traction.
 
 ### What design styles suit Sierra 12x12?
 
-Sierra 12x12 suits interiors and exteriors where natural, earthy materials carry the design. The light brown volcanic base and mineral speckles integrate with adobe plaster, raw wood, exposed concrete, and handmade clay tile — materials common in Mexican, Southwestern, and rustic design traditions. Sierra also works in contemporary interiors that draw on natural stone and volcanic materials for surface texture without introducing pattern or high-contrast color. The 12x12 square format is well-suited to continuous floor fields, interior accent walls, and exterior patio installations in mild climates.
+Sierra suits interiors and exteriors where natural, earthy materials carry the design. The light brown volcanic base and mineral speckles integrate with adobe plaster, raw wood, exposed concrete, and handmade clay tile — materials common in Mexican, Southwestern, and natural material design traditions. Sierra also works in contemporary interiors that draw on volcanic stone for surface texture without introducing pattern or high-contrast color. The 12x12 square format suits continuous floor fields, interior accent walls, and exterior patio installations in mild climates.

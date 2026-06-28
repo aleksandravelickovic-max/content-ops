@@ -104,11 +104,15 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ### How does the White 4x4 read in a room?
 
-The White 4x4 is a pure white in a matte surface — a clean, non-reflective plane that reads as bright without the cold, hard quality of a polished or glossy white tile. The matte finish diffuses light evenly, so the surface holds its white consistently across the installation rather than reflecting it back. Against a dark or contrasting grout, the white field reads as a high-contrast grid. Against a grout close in tone, the surface approaches a more continuous, quieter white plane.
+The White 4x4 is a pure white in a matte surface — a clean, non-reflective plane that reads as bright without the cold, hard quality of a polished or glossy white tile. The matte finish diffuses light evenly across the installation rather than reflecting it back. Against a dark or contrasting grout, the white field reads as a high-contrast grid. Against a grout close in tone, the surface settles into a quieter, nearly continuous white plane.
 
 ### Does Zia's White 4x4 cement tile require sealing?
 
-Yes. All cement tile requires sealing before grouting and again after grouting. Sealing is required in every installation, including dry spaces. White cement is particularly important to seal carefully before grouting, as the light surface can show grout haze if the grout is not fully released before it sets. Follow Zia's cement installation guide for the recommended sealers and application sequence. For questions, contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+Yes. All cement tile requires sealing before grouting and again after grouting — in every installation, including dry spaces. White cement tile is particularly important to seal carefully before grouting: the light surface can show grout haze if the grout is not fully released before it sets. Follow Zia's cement installation guide for the recommended sealers and application sequence. For questions, contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+
+### What sealers does Zia recommend for cement tile?
+
+Zia's cement installation guide specifies a two-stage sealing process. An impregnating sealer is applied before grouting, and a topcoat sealer follows after the grout has fully cured. For the White 4x4, using a non-yellowing, water-based sealer is advisable to preserve the clarity of the white. The specific products are listed in the installation guide; contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with project-specific questions.
 
 ### Can White 4x4 be used in a shower?
 
@@ -118,10 +122,30 @@ Yes. Zia's White 4x4 is suited for shower walls and shower floors. Seal the tile
 
 White 4x4 cement tile is suited for exterior floors and walls in non-freeze/thaw climates — patios, courtyards, and covered outdoor spaces in mild climates. It is not suitable for installation in climates where the surface may be subject to freeze/thaw cycles.
 
+### Can the White 4x4 be used on a kitchen countertop?
+
+Cement tile is not recommended for kitchen countertop surfaces. The porous pigmented layer is susceptible to staining from acids, oils, and food products even when sealed, and the surface requires more care than countertop use typically allows. The White 4x4 is suited to floors, backsplashes, shower walls, and bathroom walls where a white matte ground is the intent.
+
+### What thinset is recommended for white cement tile?
+
+A white latex-modified or polymer-modified thinset is recommended for light-colored cement tile. Standard grey thinset can bleed through the porous pigmented surface and gray the tile's white tone. Zia's cement installation guide provides specific thinset guidance; contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for installer-specific questions.
+
+### What grout joint width does Zia recommend?
+
+Zia recommends 1/16" grout joints for the White 4x4 in standard interior applications. The grout color choice has a significant effect on the surface: a grout close to the white of the tile produces a near-continuous white field, while a darker grout produces a clear grid. For wet commercial floor applications, grout joints should measure at least 1/8" to meet slip-resistance standards.
+
 ### What materials pair well with White 4x4?
 
-The pure white matte of the White 4x4 suits pairings where contrast or a clean foundation is the intent. Against natural wood cabinetry, the white reads as a crisp, modern ground. Against black hardware and fixtures, it produces a high-contrast palette. The White 4x4 also works well alongside Zia's Black 8x8 cement tile — the two colorways occupy opposite ends of the tonal range and can be used in adjacent areas of the same installation. White is also available in the 2x8 format for a subway alternative.
+The pure matte white suits pairings where contrast or a clean foundation is the intent. Against natural wood cabinetry, the white reads as a crisp modern ground. Against black hardware and fixtures, it produces a high-contrast palette. The White 4x4 also works well alongside Zia's Black 8x8 cement tile — the two colorways occupy opposite ends of the tonal range and can be used in adjacent areas of the same installation. White is also available in the 2x8 format for a subway alternative.
+
+### How does tonal variation distribute across a white cement tile installation?
+
+The White 4x4 carries subtle tonal variation from tile to tile — small differences in pigment density that are characteristic of hand-poured cement. On a white field, this variation is more perceptible than on darker colorways: one tile may read as slightly cooler, another slightly warmer. Blending tiles from multiple boxes before setting distributes this variation naturally and prevents visible tonal patches in the finished installation.
+
+### How does cement tile age and develop patina?
+
+White cement tile develops a gentle patina with wear and time — the matte surface softens slightly in high-traffic areas and takes on a lived-in quality that distinguishes it from the harder, more fixed surface of a ceramic or porcelain tile. Periodic resealing maintains the surface and supports the aging process. The white tone deepens subtly over time rather than remaining static, which is characteristic of the material.
 
 ### How should white cement tile be cleaned?
 
-Sweep or dry-mop regularly to remove grit from the surface. For routine cleaning, use warm water and a pH-neutral cleaner. White cement tile shows marks and staining more readily than darker colorways, so prompt attention to spills is important. Avoid acidic cleaners — vinegar, citrus-based products, and bleach will damage the cement surface and strip the sealer. Reseal periodically following the cement installation guide, with frequency depending on traffic and exposure.
+Sweep or dry-mop regularly to remove grit from the surface. For routine cleaning, use warm water and a pH-neutral cleaner. White cement tile shows marks and staining more readily than darker colorways, so prompt attention to spills matters. Avoid acidic cleaners — vinegar, citrus-based products, and bleach will damage the cement surface and strip the sealer. Reseal periodically following the cement installation guide, with frequency depending on traffic and exposure.

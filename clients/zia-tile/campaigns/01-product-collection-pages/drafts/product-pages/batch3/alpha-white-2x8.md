@@ -125,3 +125,19 @@ The 2×8 rectangle supports four main layout orientations: horizontal stack (sta
 ### How does the 2x8 format compare to the 2x4 and 4x4 in the Alpha White range?
 
 All three formats share the same bright white satin colorway. The 2×8 is the longest rectangle in the line — its length produces a strongly directional surface when set horizontally or vertically. The 2×4 creates a tighter, more articulated grid with more grout lines per square foot. The 4×4 square produces a balanced, symmetric grid where horizontal and vertical grout lines carry equal weight. The format choice changes the visual rhythm of the surface without changing the color.
+
+### How do the three Alpha White formats work together in a single installation?
+
+The Alpha White 2×4, 2×8, and 4×4 share the same color and satin finish, which makes them well suited to combined use across a single space. A common approach is to use the larger 2×8 on the main shower wall and the 2×4 on a niche or accent surface, using the format shift to distinguish areas within the same installation without a color change. The 4×4 works on floors alongside either rectangle format. Confirming the layout relationships in a dry arrangement before setting is the recommended approach when combining formats.
+
+### How does the satin finish affect the Alpha White 2x8 in different lighting conditions?
+
+The satin finish returns light with a low-level sheen rather than a hard gloss reflection. Under directional natural light, the surface reads as clean and crisp without producing strong highlights or glare. Under warm artificial light in the evening, the satin surface holds the bright white tone and reads as consistent across the field. In kitchens and bathrooms where lighting changes throughout the day, the satin finish keeps the Alpha White stable — brighter than matte but quieter than gloss in any condition.
+
+### What grout joint width is recommended for Alpha White 2x8?
+
+Plan for 3/16" grout joints as the standard, with a minimum of 1/8". The grout joint is a compositional element in a 2×8 installation — its width and color affect how the tile line reads across the surface. A narrow joint in a tone-on-tone white recedes and keeps the focus on the tile. A wider joint in a contrasting tone makes the tile line itself a graphic feature. For shower floors, the 1/8" minimum applies and an anti-slip treatment after installation is recommended for high-exposure wet areas.
+
+### Is Alpha White 2x8 compatible with a waterproofing membrane in shower construction?
+
+Yes. Standard waterproofing membranes applied to the substrate before setting are fully compatible with Alpha White 2x8. The membrane is installed prior to tiling and does not affect the tile body or satin finish. For project-specific waterproofing and substrate guidance, consult the installation guide or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.

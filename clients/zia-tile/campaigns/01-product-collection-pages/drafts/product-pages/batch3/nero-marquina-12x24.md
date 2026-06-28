@@ -106,24 +106,44 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ### What makes Nero Marquina marble visually distinctive?
 
-Nero Marquina is defined by the contrast between its deep, near-black ground and the bright white veining that moves across the surface. The veining pattern differs on each tile — some pieces carry long, sweeping white lines, others a denser, more fractured arrangement — because the white calcite formed under the same geological pressures that produced the black ground, but at different densities and directions through the original block. The honed finish holds the tonal depth of the black without adding glare, which keeps the contrast clean and the composition readable.
+Nero Marquina is defined by the contrast between its deep, near-black ground and the bright white veining that moves across the surface. The veining pattern differs on each tile — some pieces carry long, sweeping white lines, others a denser, more fractured arrangement — because the white calcite formed under the same geological pressures that produced the black ground, but at different densities and directions through the original block. The honed finish holds the tonal depth of the black without adding glare, keeping the contrast clean and the composition readable.
+
+### How does the white veining density vary across a Nero Marquina order?
+
+The veining in Nero Marquina forms through the original geological block rather than across a uniform surface, so each tile presents a different arrangement of white calcite lines. Some tiles carry a few long, sweeping veins that traverse the full face. Others show a denser, branching network where the calcite fractured in multiple directions. Dry-laying the full arrangement before setting allows the installer to manage veining density across the field — distributing heavily veined tiles across the installation rather than concentrating them in a single area.
 
 ### Does Nero Marquina 12x24 marble require sealing?
 
 Yes. Marble requires sealing before and after grouting. Apply a penetrating sealer in thin layers until the stone is fully saturated before grouting, wiping off any excess before it dries. After grouting and allowing the grout to cure fully, apply a matte wax top coat for interior installations. For exterior installations in non-freeze/thaw climates, apply a second coat of penetrating sealer in place of wax. Refer to the Marble Installation Guide for the complete sealing sequence. For questions, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
 
+### Does marble require resealing, and how often?
+
+Yes. Resealing frequency depends on the installation environment and traffic level. In showers and pool surrounds, resealing annually — or when the stone begins to absorb rather than bead water — is a reliable interval. In lower-traffic applications, every two to three years is typical. A water-drop test is the practical indicator: if a drop absorbs into the surface rather than beading, the sealer has worn through and the stone needs attention.
+
 ### Can Nero Marquina 12x24 be used in a shower?
 
-Yes. Nero Marquina 12x24 can be used on shower walls and shower floors. Seal the stone before and after grouting, and size grout joints to a minimum of ⅛". In wet floor applications, an anti-slip treatment applied after installation is recommended to increase traction. In shower applications, the white veining on the dark ground remains clearly visible after sealing, and the honed finish produces a surface that does not require polishing to maintain its character.
+Yes. Nero Marquina 12x24 is suited for shower walls and shower floors. Seal the stone before and after grouting, and size grout joints to a minimum of ⅛". In wet floor applications, an anti-slip treatment applied after installation is recommended to increase traction. The white veining on the dark ground remains clearly visible after sealing, and the honed finish produces a surface that holds its character without polishing or special treatment.
 
 ### Can Nero Marquina be used in pools and spas?
 
-Yes. Nero Marquina marble is approved for pool and spa applications, including saltwater and chlorinated pools. Seal the stone before and after grouting according to the installation guide and reseal periodically based on exposure and water chemistry. The black ground and white veining hold their visual contrast in wet conditions, and the honed finish provides a non-slip surface character suited to pool surround installations.
+Yes. Nero Marquina marble is approved for pool and spa applications, including saltwater and chlorinated pools. Seal the stone before and after grouting according to the installation guide and reseal periodically based on exposure and water chemistry. The black ground and white veining hold their visual contrast in submerged and wet conditions, and the honed finish provides a surface suited to pool surround and pool wall applications.
 
-### How do I care for honed Nero Marquina marble?
+### How do I clean honed Nero Marquina marble?
 
-To care for honed Nero Marquina marble, clean regularly with a pH-neutral stone cleaner and warm water using a soft cloth or mop. Avoid acidic products — including vinegar, bleach, and lemon juice — which will etch the marble surface permanently. Remove spills promptly to prevent staining, particularly from light-colored liquids that show against the dark ground. Reseal periodically based on traffic and moisture exposure to maintain stain resistance.
+Clean regularly with a pH-neutral stone cleaner and warm water using a soft cloth or mop. Acidic products — vinegar, bleach, lemon juice, and citrus-based cleaners — will etch the marble surface permanently and should not be used. Spills from light-colored liquids are worth addressing promptly, since they can show against the dark ground if they penetrate the stone before the sealer has fully cured. Reseal periodically based on traffic and moisture exposure.
+
+### What causes etching on marble, and how is it prevented?
+
+Etching occurs when acid contacts the calcium-based stone and dissolves the surface, leaving dull marks visible against the honed plane. Any acidic substance — citrus juice, wine, vinegar, coffee, and many household cleaning products — can cause etching on marble. Sealing reduces the risk by slowing absorption, but it does not make the stone impervious. The practical prevention is a pH-neutral cleaning routine and prompt cleanup of spills, particularly in kitchen and bathroom environments where the stone contacts food and personal care products.
 
 ### How does the 12x24 format work in a Nero Marquina installation?
 
-The 12x24 rectangular format is directional — it can be set in a running bond, stacked bond, or vertical configuration — and the orientation of the long edge defines how the veining movement reads across the installation. Laid horizontally in a running bond, the white veining tends to read as a continuous lateral composition. Laid vertically in a stacked bond, the composition becomes more graphic and structured. Dry-laying the arrangement before setting is recommended to confirm the visual balance and to identify how the veining aligns across joints.
+The 12x24 rectangular format is directional — it can be set in a running bond, stacked bond, or vertical configuration — and the orientation of the long edge defines how the veining reads across the installation. Laid horizontally in a running bond, the white veining tends to resolve into a continuous lateral composition. Set vertically in a stacked bond, the composition becomes more graphic and structured, with the long dimension of each tile reading upright. Dry-laying the arrangement before setting is recommended to confirm how the veining balances across joints.
+
+### Which layout orientation — horizontal or vertical — is more common for Nero Marquina 12x24?
+
+Horizontal running bond is the most specified orientation for Nero Marquina 12x24, particularly in bathrooms and shower walls where the horizontal line follows the natural horizon of the room and the veining reads as a continuous lateral composition across the field. Vertical stacked bond is less common but produces a more graphic, structured surface well-suited to feature walls and entry applications where height is the architectural emphasis. The choice depends on the room's proportions and the visual rhythm intended. Dry-laying both orientations with the actual tiles before committing is the most reliable way to compare the two.
+
+### Is Nero Marquina marble suitable for freeze/thaw climates?
+
+No. Marble is not rated for exterior installation in freeze/thaw climates. Water absorbed into the stone during freeze cycles can cause cracking and surface damage. In non-freeze/thaw climates, Nero Marquina is suited for exterior floors and walls with appropriate sealing. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with any climate or application questions before specifying for an outdoor project.

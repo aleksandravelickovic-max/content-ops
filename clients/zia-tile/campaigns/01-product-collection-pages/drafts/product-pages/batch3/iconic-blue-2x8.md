@@ -125,3 +125,23 @@ Iconic Blue pairs well with white marble, honed limestone, and natural stone in 
 ### How does the 2x8 format affect the layout options for Iconic Blue?
 
 The 2×8 rectangle offers four main layout configurations: horizontal stack (standard subway), vertical stack, offset at 50%, and herringbone. Each layout changes the directional register of the surface without changing the color. A horizontal stack emphasizes width; a vertical stack draws the eye upward; herringbone introduces movement across the field. For large walls, laying out the pattern in a dry run before setting helps confirm the layout direction before the tile is fixed.
+
+### How does the matte finish affect how Iconic Blue reads under different lighting conditions?
+
+The matte surface diffuses light evenly across the deep blue ground, which means the color stays consistent as lighting conditions change throughout the day. A glossy blue would shift more visibly under directional light — reflecting bright patches and dark areas depending on the source angle. The matte finish holds the color as a flat, settled field whether under natural light from a window or warm incandescent light in the evening. In spaces with mixed lighting, the matte surface keeps Iconic Blue from reading inconsistently across the wall.
+
+### What is the DCOF rating for Iconic Blue 2x8, and what does the matte finish mean for floor use?
+
+Matte ceramics carry a DCOF of 0.74, which exceeds the 0.42 minimum threshold for level interior floor applications. Of the three ceramic finish types Zia carries, matte has the highest slip resistance rating, making it the preferred choice when the tile will be used on a floor — particularly in wet floor applications like shower floors. Plan for a minimum 1/8" grout joint on shower floors and apply an anti-slip treatment after installation in high-exposure wet areas.
+
+### Does Iconic Blue 2x8 require waterproofing membrane in a shower?
+
+Ceramic tile is not itself a waterproofing layer. A waterproofing membrane applied to the substrate before tiling is standard practice for shower installations. The membrane goes on before the tile is set; Iconic Blue 2x8 is fully compatible with standard waterproofing systems used in shower construction. For specific substrate and waterproofing guidance, consult the installation guide or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+
+### How does tonal variation distribute in a full Iconic Blue installation?
+
+High-fired ceramics carry very minor variation in size, color, tone, and surface texture. In Iconic Blue, this expresses as subtle shifts within the deep blue range — individual tiles may read slightly deeper or slightly lighter than the adjacent tile. Mixing tiles from all boxes thoroughly before installation and arranging a dry layout before setting distributes these tonal differences evenly across the field. The variation is characteristic of high-fired ceramics and is not a quality issue.
+
+### Can Iconic Blue 2x8 be mixed with the 2x4 or 4x4 formats of the same colorway?
+
+Yes. The Iconic Blue colorway is available in 2×4, 4×4, and 12×12 sheet formats, all sharing the same matte finish and color. Combining the 2×8 with a smaller format — for example, a 2×8 field on a shower wall with a 2×4 border or floor — introduces a format change without a color shift. Lay out the mixed formats dry before setting to confirm the proportional and visual relationship across the two tile sizes.

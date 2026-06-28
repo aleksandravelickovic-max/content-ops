@@ -104,24 +104,44 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ### How does the Toast Furrowed colorway and texture read in a room?
 
-Toast Furrowed is a golden-brown — a warm, amber-inflected tan that sits between honey and dark wheat. The furrowed surface adds a three-dimensional register to the color: the raised ridges catch light at an angle and produce a pattern of highlights and shadow that shifts as light moves across the wall. Against a raking light source — a window to the side, a directional pendant — the texture becomes more pronounced. In a room with diffuse overhead light, the ridges read as a subtle relief. The color and texture work together to give the field visual depth without requiring a contrasting material alongside it.
+Toast Furrowed is a golden-brown — a warm, amber-inflected tan that sits between honey and dark wheat. The furrowed surface adds a three-dimensional register to the color: the raised ridges catch light at an angle and produce a pattern of highlights and shadow that shifts as light moves across the wall. Against a raking light source — a window to the side, a directional pendant — the texture becomes more pronounced. In a room with diffuse overhead light, the ridges read as a subtle relief. The color and texture together give the field visual depth without requiring a contrasting material alongside it.
 
 ### How does Toast Furrowed differ from Toast Flat?
 
-Both tiles share the same golden-brown color and are produced in the same 9.45" × 2.36" rectangle from the same extruded ceramic body. The furrowed surface has raised linear ridges that introduce shadow and depth across the field. The flat version has a smooth surface that reads as a continuous, even plane of color. On a wall, the furrowed tile is more active and textural; the flat tile is quieter and more uniform. The two can be combined in an installation — for example, a furrowed field with a flat border — but should be laid out dry first to confirm the visual relationship.
+Both tiles share the same golden-brown color and are produced in the same 9.45" × 2.36" rectangle from the same extruded ceramic body. The furrowed surface has raised linear ridges that introduce shadow and depth across the field. The flat version has a smooth surface that reads as a continuous, even plane of color. On a wall, the furrowed tile is more active and textural; the flat tile is quieter and more uniform. The two can be combined in an installation — a furrowed field with a flat border, for instance — but should be laid out dry first to confirm the visual relationship.
 
 ### Does Toast Furrowed require sealing?
 
-Toast Furrowed is produced without a glaze that would require pre-grout sealing. No penetrating sealer is required before grouting for this material. For specific installation questions regarding this tile and its finish, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+No penetrating sealer is required before grouting for Toast Furrowed. For specific installation questions regarding this tile and its finish, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
 
 ### Can Toast Furrowed be used on a shower floor or wall?
 
-Yes. Zia's Toast Furrowed is suited for shower walls and shower floors. The furrowed surface texture provides a natural surface variation underfoot that contributes to traction on the shower floor. Plan for a minimum 1/8" grout joint, and apply an anti-slip treatment after installation in high-exposure wet floor areas.
+Yes. Zia's Toast Furrowed is suited for shower walls and shower floors. The furrowed surface texture introduces a natural surface variation underfoot that contributes to traction on the shower floor. Plan for a minimum 1/8" grout joint, and apply an anti-slip treatment after installation in high-exposure wet floor areas.
 
 ### What does the high variation in Field Trip: Japan tiles mean for installation planning?
 
-High variation in color, shade, and surface texture is inherent to extruded ceramics and more pronounced in Field Trip: Japan tiles than in Zia's standard molded ceramic line. In practice, this means tiles from the same box may differ more noticeably in tone than standard ceramics do. Mixing tiles from all boxes thoroughly before installation and arranging a dry layout across the full installation area distributes the variation evenly across the field. This step is critical for Field Trip: Japan tiles and should not be skipped.
+High variation in color, shade, and surface texture is inherent to extruded ceramics and more pronounced in Field Trip: Japan tiles than in Zia's standard molded ceramic line. In practice, tiles from the same box may differ more noticeably in tone than standard ceramics do. Mixing tiles from all boxes thoroughly before installation and arranging a dry layout across the full installation area distributes the variation evenly across the field. This step is critical for Field Trip: Japan tiles.
 
 ### How should the 1/2" body thickness of Toast Furrowed be handled at tile transitions?
 
-At transitions to adjacent flooring or wall materials, the 1/2" body thickness — compared to the 3/8" standard for most ceramics — requires careful transition planning. Options include a Schluter strip designed for the appropriate height differential, a mitered edge where tiles meet at a corner, or bringing adjacent materials to a matching finished height. Bring drywall flush with the finished surface of the tile where the tile terminates at a wall edge.
+At transitions to adjacent flooring or wall materials, the 1/2" body thickness — compared to the 3/8" standard for most ceramics — requires careful transition planning. Options include a Schluter strip designed for the appropriate height differential, a mitered edge where tiles meet at a corner, or bringing adjacent materials to a matching finished height. Bring drywall flush with the finished surface of the tile where the tile terminates at a wall edge. For any transition questions specific to this application, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+
+### How does the furrowed texture affect water management in a shower application?
+
+The raised ridges of the furrowed surface run the length of the tile and, when the tile is installed on a shower wall, the ridges run in the direction of the grout lines. Water moves down the field between ridges and carries off the wall surface. On a shower floor, the surface variation of the furrowed texture contributes to traction underfoot — a quality that is enhanced further by the 1/8" minimum grout joint and by an anti-slip treatment applied after installation. The texture is a formed feature of the clay body rather than a surface coating, so it does not wear or change over time.
+
+### How does the extrusion process affect grout joint behavior and setting time for Toast Furrowed?
+
+The extruded edge profile of Field Trip: Japan tiles is slightly less uniform than a mold-pressed ceramic edge, which means tile-to-tile spacing may require more attention during the set to maintain consistent grout joints. The standard recommendation of 3/16" grout joints (1/8" minimum) holds for Toast Furrowed. The ridges of the furrowed surface mean thinset coverage and adhesion at the tile back should be confirmed during installation — back-buttering is advisable to ensure full contact across the tile body. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for installer-specific questions.
+
+### Which orientation works best for the 9.45" × 2.36" furrowed format?
+
+A horizontal stack is the more common orientation, running the ridges parallel to the wall's horizontal plane and creating a layered, course-like field that emphasizes the elongated format. Vertical stacking is achievable and reads as a more unusual installation, with the ridges running floor to ceiling. Both orientations work; the choice affects the degree to which the ridges register as part of a larger directional composition. A horizontal set on a tall wall, in particular, draws the eye along the length of the surface rather than upward. A dry layout before setting confirms the final read.
+
+### What tonal variation should be expected in Toast Furrowed tile to tile?
+
+High variation is a defining characteristic of the Field Trip: Japan line, and it is more pronounced than in Zia's standard molded ceramics. Across an installation, individual tiles may range within the golden-brown spectrum from one end to the other — warmer or lighter in individual pieces — without departing from the overall colorway. The variation is particularly visible in the furrowed version, where the ridge-and-shadow profile changes with each tile's tonal quality. Opening and mixing all boxes before the set, and arranging a full dry layout, is the most effective way to spread this variation across the field so that no area reads as distinctly darker or lighter.
+
+### Can Toast Furrowed be used on an exterior wall?
+
+Yes. Toast Furrowed is approved for exterior wall applications. The high-fired ceramic body is suited to exterior wall installation in both freeze/thaw and non-freeze/thaw climates for wall use. It is not specified for exterior floor applications. For exterior project questions — particularly around substrate conditions, waterproofing, or climate-specific details — contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.

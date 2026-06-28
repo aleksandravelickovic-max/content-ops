@@ -106,11 +106,19 @@ Red Clay 4x4 reads as a saturated, warm field — brick-red with movement betwee
 
 ### How do I seal Red Clay 4x4 Cotto tile?
 
-Cotto requires a two-stage sealing process. Apply a pre-grout sealer before grouting to saturate the surface and act as a grout release. After grouting, apply the post-grout top coat: a matte wax for interior installations, or a second coat of the pre-grout sealer for exterior — UV exposure causes wax to discolor outdoors. Periodic resealing maintains resistance to moisture and staining. Refer to Zia's Cotto installation guide for specific product recommendations, or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions.
+Cotto requires a two-stage sealing process. Apply a pre-grout sealer before grouting to saturate the surface and act as a grout release. After grouting, apply the post-grout top coat: a matte wax for interior installations, or a second coat of the pre-grout sealer for exterior, since UV exposure causes wax to discolor outdoors. Periodic resealing maintains resistance to moisture and staining. Refer to Zia's Cotto installation guide for specific product recommendations, or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions.
+
+### How often does Cotto need to be resealed after installation?
+
+Resealing frequency depends on traffic and exposure. Interior high-traffic floors — kitchens, entryways, primary bathrooms — typically benefit from resealing every one to two years. Low-traffic surfaces and walls require attention less frequently. Exterior installations may need more regular resealing depending on climate and exposure. When water no longer beads on the tile surface, the sealer needs to be refreshed.
 
 ### Can Red Clay 4x4 be used outdoors in freezing climates?
 
-Yes. Unglazed Cotto is suitable for exterior floors in any climate, including regions with freeze/thaw cycles. Proper sealing is required. For outdoor installations, apply the pre-grout sealer before grouting and a second coat of the same sealer (not wax) as the post-grout top coat.
+Yes. Unglazed Cotto is suitable for exterior floors in any climate, including regions with freeze/thaw cycles. This is a meaningful performance distinction — glazed tiles and cement tiles are not suited for freeze/thaw exterior use. Proper sealing is required. For outdoor installations, apply the pre-grout sealer before grouting and a second coat of the same sealer (not wax) as the post-grout top coat.
+
+### How does Cotto differ from mass-produced terracotta?
+
+Zia's Cotto is hand-pressed from natural Mexican clay in San Miguel de Allende, sun-dried in open courtyards, and high-fired in traditional kilns. Each tile carries inherent variation in tone, shape, edge, and thickness — the result of the hand-making process. Mass-produced terracotta is typically machine-formed with tighter dimensional tolerances and a more uniform surface. The two read differently in a room: Cotto has depth and material presence that machine-formed tile does not.
 
 ### How does patina develop on Red Clay Cotto?
 
@@ -120,6 +128,14 @@ Red Clay develops patina with wear and time. The saturated brick-red tone deepen
 
 Yes. Cotto tiles are suited for shower walls and shower floors with proper sealing. Apply the pre-grout sealer before grouting, then apply a matte wax as the post-grout top coat for interior wet areas. For shower floor installations, maintain a minimum 1/8" grout joint and apply an anti-slip treatment after installation. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for installer guidance.
 
+### What grout joint width does Zia recommend for the 4x4 square?
+
+Use 1/8" tile spacers for the recommended grout joint on Cotto tiles. This joint width is consistent with the material's inherent edge variation — the hand-pressed clay produces edges that are not perfectly uniform, and a minimum 1/8" joint accommodates that variation while maintaining a tight, considered look across the field.
+
+### What is efflorescence and how is it prevented?
+
+Efflorescence appears as white crystalline deposits on the tile surface when mineral salts from the subfloor or mortar migrate through the clay body and settle on the face. Installing Cotto over a subfloor that has not fully cured is the most common cause. Zia's installation guide specifies a minimum 30-day subfloor cure before setting tile. Combined with a proper pre-grout seal, this step prevents the conditions that allow efflorescence to develop.
+
 ### How should Red Clay 4x4 Cotto be cleaned?
 
-Use a pH-neutral cleaner with warm water and avoid acidic or abrasive products. Sweep or vacuum regularly to remove grit from the surface. Mop with a damp cloth or sponge rather than excess water, and dry the surface after cleaning to prevent residue buildup. Periodic resealing is required to maintain long-term performance — frequency depends on traffic and exposure.
+Use a pH-neutral cleaner with warm water and avoid acidic or abrasive products. Sweep or vacuum regularly to remove grit from the surface. Mop with a damp cloth rather than excess water and dry the surface after cleaning to prevent residue buildup. Periodic resealing is required to maintain long-term performance — frequency depends on traffic and exposure.

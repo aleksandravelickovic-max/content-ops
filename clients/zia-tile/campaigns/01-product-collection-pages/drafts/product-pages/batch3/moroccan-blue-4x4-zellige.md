@@ -106,7 +106,7 @@ Local pickup is free at our Los Angeles area warehouse. Our team will reach out 
 
 ### What does Moroccan Blue zellige look like in a room?
 
-Zia's Moroccan Blue reads as a deeply saturated, classic blue — the concentrated color of traditional Moroccan zellige panels in the medinas of Fez and Marrakech. In a room, the colorway commands the surface it occupies, but the dynamic glazes mean the field reads as layered and varied rather than flat. Some tiles will shift toward a deeper, near-indigo register; others carry a brighter, cleaner blue. Against white grout, white plaster, or pale stone, the contrast is immediate and graphic. Against warm woods or brass fixtures, the intensity of the blue creates a deliberate counterpoint.
+Zia's Moroccan Blue reads as a deeply saturated, classic blue — the concentrated color of traditional Moroccan zellige panels in the medinas of Fez and Marrakech. In a room, the colorway commands the surface it occupies, but the glaze variation means the field reads as layered and varied rather than flat. Some tiles shift toward a deeper, near-indigo register; others carry a brighter, cleaner blue. Against white grout, white plaster, or pale stone, the contrast is immediate and graphic. Against warm woods or brass fixtures, the intensity of the blue creates a deliberate counterpoint.
 
 ### Can Moroccan Blue 4x4 zellige be used in a shower?
 
@@ -127,3 +127,23 @@ A white or pale cream grout creates the strongest contrast and draws on the grap
 ### Can Moroccan Blue 4x4 be combined with other formats in the zellige collection?
 
 Yes. Moroccan Blue is also available in 2x2, 2x6, and hexagon formats. Each format is produced using the same traditional methods and shares consistent surface character across the range. Combining the 4x4 with the 2x2 or hexagon in one installation works well for border details, niche accents, or mosaic insets within a larger 4x4 field.
+
+### How thick is Moroccan Blue 4x4 zellige?
+
+Moroccan Blue 4x4 zellige is approximately ⅜" thick, consistent with the standard for Zia's handmade zellige collection. Individual tiles vary slightly in thickness as a characteristic of the hand-forming process. The thinset setting bed accommodates this variation during installation. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions about substrate and setting depth.
+
+### How does light affect how Moroccan Blue reads throughout the day?
+
+Moroccan Blue is a saturated glaze, and its intensity shifts meaningfully with light. In strong, direct natural light, the blue reads at its fullest saturation — close to the concentrated blues of traditional Moroccan panel work. In lower light or north-facing conditions, the same glaze reads as deeper and richer, with the near-indigo register of the darker tiles in the field becoming more prominent. The chips, pits, and hairline crazing at the surface catch and scatter light, so the field reads with texture rather than as a flat plane.
+
+### Does Moroccan Blue vary between production runs?
+
+Yes. The colorway can shift between batches. Each run of zellige is produced by hand, and the clay, glaze, and kiln conditions change from one production run to the next. Tiles from separate orders may differ in tone and surface character. For projects requiring tiles from multiple orders, ordering the full quantity at once gives the most consistent result across the installation. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 to discuss quantity planning.
+
+### What does variation look like across a full Moroccan Blue installation?
+
+Across a field, Moroccan Blue ranges from tiles with a deeper, slightly purple-inflected blue to those with a cleaner, more primary blue register. The chips, pits, and hairline crazing that characterize zellige are present at the surface. The chamfered edges create shadow lines between tiles that shift in depth as the light source moves. Mixing tiles from all boxes before installation ensures the full range of tones is distributed evenly across the surface rather than concentrated in any single zone.
+
+### Can Moroccan Blue 4x4 zellige be used on an exterior wall in a non-freeze/thaw climate?
+
+Yes. Moroccan Blue 4x4 is suited for exterior walls in non-freeze/thaw climates. Glazed zellige is not suitable for outdoor installation where surfaces are exposed to freezing temperatures. In mild-climate installations, the deep blue glaze on an exterior courtyard or feature wall reads with strong presence against pale stucco or natural stone surrounds. Sealing is required for all outdoor applications; contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for guidance on exterior sealing requirements.

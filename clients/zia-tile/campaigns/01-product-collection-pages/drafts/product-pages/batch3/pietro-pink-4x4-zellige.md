@@ -127,3 +127,23 @@ A grout that closely matches the blush midpoint of the Pietro Pink field allows 
 ### Does Pietro Pink vary between production runs?
 
 Yes. The Pietro Pink colorway can shift between batches. Each run of zellige is produced by hand, and the clay, glaze, and kiln conditions change from one production run to the next. Tiles from separate orders may differ in tone and surface character. For projects requiring tiles across multiple orders, ordering the full quantity at once gives the most consistent result across the installation.
+
+### How thick is Pietro Pink 4x4 zellige?
+
+Pietro Pink 4x4 zellige is approximately ⅜" thick, consistent with the standard for Zia's handmade zellige collection. Inherent thickness variation from tile to tile is characteristic of the hand-forming process — the thinset setting bed accommodates this during installation. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions about substrate preparation.
+
+### How does light affect the Pietro Pink glaze across the day?
+
+The Pietro Pink glaze reads differently in warm and cool light. In morning or incandescent light, the blush quality of the glaze is more apparent and the tone reads closer to the stone reference in the name. In cool natural light or north-facing rooms, the same glaze shifts toward a slightly more saturated rose. The tonal variation across individual tiles — some carrying paler blush, others more concentrated pink — becomes more visible in directional light, giving the field dimension and depth.
+
+### What grout joint width does Zia recommend for Pietro Pink 4x4?
+
+For wall applications, grout joints can be as tight as 1/16" when a near-seamless surface is the goal, though a joint of ⅛" is more practical given the inherent size variation of handmade zellige. For shower floors and other wet floor applications, a minimum of ⅛" is required, with anti-slip treatment applied after installation. Wedge spacers help maintain consistent spacing across the field. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for guidance specific to the installation.
+
+### Can Pietro Pink 4x4 zellige be cut on-site?
+
+Yes. Zellige can be cut on-site with a wet saw equipped with a diamond blade. The chamfered edges and inherent variation of handmade tiles mean each cut should be measured and evaluated individually rather than assumed to be uniform. Installers should wear protective face and eye coverings when cutting, in accordance with [California Prop 65](https://www.ziatile.com/proposition-65-warnings). Plan for 15–25% overage to account for curation and cuts.
+
+### What does variation look like across a full Pietro Pink installation?
+
+Across a field, the Pietro Pink glaze ranges from a paler, more cream-adjacent blush to a more saturated dusty rose. The chamfered edges catch light at different angles, adding texture to the surface. Some tiles carry a slightly more matte finish; others hold more sheen from the glaze pooling during firing. Mixing tiles from all boxes before installation distributes the range of tones and surface characters evenly, so no single zone of the wall reads heavier or lighter than the rest.

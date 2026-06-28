@@ -120,8 +120,28 @@ Yes. Zia's satin-finish ceramics are approved for pool and spa applications, inc
 
 ### What materials pair well with Sepia?
 
-Sepia's warm brown pairs well with natural oak and walnut, plaster walls in cream or warm white tones, and aged or blackened metal fixtures. For a grout color approach, a tone-on-tone choice in the warm brown range keeps the surface quiet; a contrasting near-white grout articulates the grid and emphasizes the tile format. The Sepia colorway is also available in a 2×8 rectangle for wall applications where a directional format is preferred.
+Sepia's warm brown pairs well with natural oak and walnut, plaster walls in cream or warm white tones, and aged or blackened metal fixtures. For a grout approach, a tone-on-tone choice in the warm brown range keeps the surface quiet; a contrasting near-white grout articulates the grid and emphasizes the tile format. The Sepia colorway is also available in a 2×8 rectangle for wall applications where a directional format is preferred.
 
 ### Is Sepia 4x4 suited for a kitchen backsplash?
 
-Yes. The 4×4 square format in Sepia produces a clean, symmetrical grid on a backsplash that suits kitchens with warm material palettes — dark wood cabinetry, natural stone counters, and brass or bronze hardware. The satin finish is durable in kitchen conditions and does not require pre-grout sealing, which simplifies the installation sequence.
+Yes. The 4×4 square format in Sepia produces a clean, symmetrical grid on a backsplash that suits kitchens with warm material palettes — dark wood cabinetry, natural stone counters, and brass or bronze hardware. The satin finish holds up well in kitchen conditions and does not require pre-grout sealing, which simplifies the installation sequence.
+
+### How does the satin finish affect how Sepia reads in different lighting conditions?
+
+The satin finish sits between matte and glossy, returning light with a low-level sheen rather than a hard gloss. In warm natural light, the sheen softens and the reddish undertones of Sepia read more prominently. Under cool or artificial light, the deep brown ground comes forward and the sheen reads as a clean, quiet luster. The finish prevents the color from going flat under low light, which is part of why it works in interior floor applications where overhead lighting is the primary source.
+
+### What is the DCOF rating for Sepia 4x4, and can it be used on floors?
+
+The Sepia 4x4 satin ceramic carries a DCOF of 0.42 — the standard minimum threshold for level interior floor applications. It is approved for interior floors at that rating. For wet commercial floors, grout joints should be sized to a minimum of 1/8", and an anti-slip treatment should be applied after installation for additional traction. Satin finishes carry a lower DCOF than matte ceramics (which rate at 0.74) due to the smoother surface. For project-specific guidance, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+
+### How does tonal variation distribute across a full Sepia installation?
+
+High-fired ceramics carry very minor variation in size, color, tone, and surface texture from tile to tile. In Sepia, that variation expresses as subtle shifts within the warm brown range — some tiles reading slightly deeper or more red-inflected than others. Mixing tiles from all boxes and arranging a dry layout before setting distributes these tonal differences evenly across the field, preventing clusters of darker or lighter tiles in one area.
+
+### Can Sepia 4x4 be used on a kitchen countertop?
+
+No. Ceramic tile is not suited for kitchen countertop applications, where the tile and grout joints are subject to direct food contact, cutting, and impact in a way that exceeds what the surface is designed to handle. Sepia 4x4 is well suited for backsplash, floor, and wall applications in the kitchen. For countertop applications, Zia's stone materials are the appropriate category. Contact [info@ziatile.com](mailto:info@ziatile.com) for guidance on stone options.
+
+### Can Sepia be mixed with other ceramic formats from Zia's collection?
+
+Yes. The Sepia colorway is available in a 2×8 rectangle and a 4×4 square, which share the same satin finish and colorway and can be combined in a single installation. Mixing formats within a room — for example, the 2×8 on a shower wall and the 4×4 on the shower floor — creates a considered compositional shift without introducing a color change. Mixing ceramics from different colorways within the same project is also an option; laying out a dry arrangement before setting confirms the color and tone relationships before the tile is fixed.

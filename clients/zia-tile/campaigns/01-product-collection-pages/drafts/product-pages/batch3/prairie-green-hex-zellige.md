@@ -122,8 +122,28 @@ Prairie Green sits at ease with natural wood, terracotta, limestone, and plaster
 
 ### How does Prairie Green Hex compare to Racing Green in the collection?
 
-Prairie Green and Racing Green are at opposite ends of the green spectrum. Prairie Green is desaturated and earthy — a muted, sage-adjacent tone. Racing Green is deep, rich, and saturated — a dark, classic British racing green. Prairie Green suits installations that call for a quiet, natural palette; Racing Green suits installations that call for a deep, anchored color statement. Both are available in hexagon formats, which makes a sample comparison practical before committing to a full order.
+Prairie Green and Racing Green are at opposite ends of the green spectrum. Prairie Green is desaturated and earthy — a muted, sage-adjacent tone. Racing Green is deep, richly saturated, a dark classic British racing green. Prairie Green suits installations that call for a quiet, natural palette; Racing Green suits installations that call for a deep, anchored color statement. Both are available in hexagon formats, which makes a sample comparison practical before committing to a full order.
 
 ### Does the hex format require specific overage planning?
 
 Yes. Hexagonal formats require more careful perimeter planning than square tiles because cut angles at walls, cabinets, and fixtures depend on the orientation of the hex grid relative to the surface edge. A full dry layout before setting is essential. The inherent size variation of handmade zellige means each perimeter tile needs to be evaluated individually. Plan for 15–25% overage to account for curation and the volume of perimeter cuts a hex layout generates.
+
+### How is the hexagonal layout typically set — is there a standard orientation?
+
+Hex zellige is most commonly set with a flat edge along the bottom, creating a horizontal row alignment that allows the field to read as an organized mosaic rather than a random arrangement. Point-down orientation is an alternative that some designers use to give the field a more diamond-like quality. The irregular sizes of handmade zellige mean that orientation choice is confirmed during the dry layout, when tiles are arranged before any adhesive is applied. Zia's installation guide covers layout planning for hex formats, and the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 can advise on approach for a specific project.
+
+### How thick is Prairie Green Hex zellige?
+
+Zellige tiles measure approximately ⅜" thick on average. Each tile is hand-formed and fired individually, which produces natural variation in thickness across the field. On a hexagonal format, that variation creates the undulating, mosaic-like surface relief characteristic of the material — the depth reads more clearly at the tile edges, where the chamfered profile catches light at different angles.
+
+### What adhesive or thinset does Zia recommend for hex zellige?
+
+White polymer-modified thinset is the correct choice for glazed zellige, applied with full back-butter coverage on each tile. The irregular backs of handmade pieces require complete thinset contact to support the tile across its full surface. Grey thinset risks showing through the glaze where chips or pits break the surface. Refer to Zia's installation guide for the recommended products, or contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with any installation questions.
+
+### What does variation look like across a full Prairie Green Hex wall installation?
+
+The chips, pits, and hairline crazing characteristic of zellige read across a hex field as a textural surface that shifts with the light rather than as a uniform color block. On Prairie Green, the desaturated glaze means that tonal shifts between tiles — from a slightly cooler sage to a warmer, more olive-tinged green — are visible but understated. The variation reads as botanical rather than graphic. Mixing tiles from all boxes during the dry layout ensures variation disperses evenly across the full installation.
+
+### How does light affect how Prairie Green reads throughout the day?
+
+Prairie Green's desaturated glaze is relatively stable across lighting conditions compared to more saturated colorways, but it does respond to light temperature. In warm afternoon light or under incandescent fixtures, the olive quality in the green becomes more present. In cooler, northern light or under daylight-balanced LEDs, the sage register comes forward and the tone reads slightly cooler. The chips, pits, and hairline crazing across each tile catch light at different angles throughout the day, keeping the surface reading as textural rather than flat.

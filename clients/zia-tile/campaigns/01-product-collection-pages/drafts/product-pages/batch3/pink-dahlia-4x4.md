@@ -125,3 +125,23 @@ Pink Dahlia pairs well with natural materials in warm, pale registers — unlacq
 ### How does the 4x4 format compare to the 2x4 and 2x8 options in Pink Dahlia?
 
 The 4×4 square produces a symmetrical grid where both horizontal and vertical grout lines carry equal visual weight — a balanced, even field across the wall or floor. The 2×4 rectangle produces a smaller, more articulated grid with greater visual activity at the grout lines. The 2×8 introduces a clear horizontal or vertical direction depending on layout orientation. All three share the same dusty pink tone and matte finish.
+
+### How does the matte finish affect how Pink Dahlia reads under warm versus cool lighting?
+
+The matte surface diffuses light evenly rather than reflecting it, which keeps the dusty pink stable across changing lighting conditions. Under warm incandescent light, the pale pink reads slightly warmer and closer to a blush. Under cool natural light or daylight-balanced fixtures, the dusty quality of the tone comes forward and the color reads as more neutral and recessive. In either case, the matte finish prevents the light pink from brightening into a candy-like or saturated range — which is one of its strengths on a bathroom wall or shower surround.
+
+### What is the DCOF rating for Pink Dahlia 4x4, and how does the matte finish affect floor use?
+
+Matte ceramics carry a DCOF of 0.74, well above the 0.42 threshold required for level interior floor applications. The matte surface is the highest-traction of Zia's three ceramic finish types, which makes Pink Dahlia 4x4 a sound choice for bathroom floors and shower floors in addition to wall applications. For wet commercial floors, plan for a minimum 1/8" grout joint and apply an anti-slip treatment after installation.
+
+### Is Pink Dahlia 4x4 compatible with a waterproofing membrane for shower construction?
+
+Yes. Standard waterproofing membranes applied to the substrate before tiling are fully compatible with Pink Dahlia 4x4. The membrane is installed over the substrate and before the tile is set — it does not interact with the tile body or the matte glaze. For project-specific waterproofing guidance, consult the installation guide or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+
+### How does Pink Dahlia compare to Zia's other matte ceramic colorways in terms of how it sits in a room?
+
+Pink Dahlia occupies a distinct position in the Zia matte ceramic range — it carries color where the other matte ceramics tend toward neutrality. Iconic Blue is a deep, saturated cool tone; Alpha White and Alabaster White are bright neutrals. Pink Dahlia introduces warmth and hue at a low volume, making it the choice where a specific color register is wanted without a strong graphic contrast. Against pale stone, plaster, or natural oak, it reads as a material accent rather than a color statement.
+
+### Can Pink Dahlia 4x4 be used on a kitchen countertop?
+
+No. Ceramic tile is not suited for countertop applications, where the surface is subject to cutting, impact, and direct food contact beyond the material's appropriate use range. Pink Dahlia 4x4 is well suited for kitchen backsplashes and adjacent wall applications. For countertop material guidance, contact [info@ziatile.com](mailto:info@ziatile.com).

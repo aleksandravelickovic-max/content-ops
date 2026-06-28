@@ -102,24 +102,40 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ### How does Fired Earth 4x4 read in a room?
 
-Fired Earth sits in the mid-range of the classic Cotto palette — a warm terra cotta tone with surface patterning produced by wood ash applied during firing. The ash contact creates varied coloration across the clay base, so the tile reads as textured and animated rather than flat. In the 4x4 format, this variation is visible at close range on walls and backsplashes, and builds into a layered, continuous field on floors. Against whitewashed plaster, Fired Earth reads as a warm anchor. Against natural stone and wood, it integrates into an earthy composition without competing.
+Fired Earth sits in the mid-range of the classic Cotto palette — a warm terra cotta tone with surface patterning produced by wood ash applied during firing. The ash contact creates varied coloration across the clay base, so the tile reads as textured and animated rather than flat. In the 4x4 format, this variation is visible at close range on walls and backsplashes, and builds into a layered, continuous field on floors. Against whitewashed plaster, Fired Earth reads as a warm anchor; against natural stone and wood, it integrates into an earthy composition without competing.
 
 ### How do I seal Fired Earth 4x4 Cotto tile?
 
-Cotto requires a two-stage sealing process. Apply a pre-grout sealer before grouting to saturate the surface and act as a grout release. After grouting, apply the post-grout top coat: a matte wax for interior installations, or a second coat of the pre-grout sealer for exterior — UV exposure causes wax to discolor outdoors over time. Periodic resealing maintains resistance to moisture and staining. Refer to Zia's Cotto installation guide for specific product recommendations, or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions.
+Cotto requires a two-stage sealing process. Apply a pre-grout sealer before grouting to saturate the surface and act as a grout release. After grouting, apply the post-grout top coat: a matte wax for interior installations, or a second coat of the pre-grout sealer for exterior, as UV exposure causes wax to discolor outdoors over time. Periodic resealing maintains resistance to moisture and staining. Refer to Zia's Cotto installation guide for specific product recommendations, or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions.
+
+### How often should Fired Earth 4x4 be resealed?
+
+Interior floors in high-traffic areas typically benefit from resealing every one to two years. Wall and backsplash installations require less frequent attention, depending on moisture exposure. The most reliable field indicator: when water stops beading and begins to absorb into the clay surface, resealing is due. Always use products specified in Zia's installation guide, or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for guidance.
 
 ### Can Fired Earth 4x4 be used outdoors in freezing climates?
 
-Yes. Unglazed Cotto is suitable for exterior floors in any climate, including regions with freeze/thaw cycles. Proper sealing is required. For outdoor installations, apply the pre-grout sealer before grouting and a second coat of the same sealer (not wax) as the post-grout top coat.
+Yes. Unglazed Cotto is suited for exterior floors in any climate, including regions with freeze/thaw cycles. This is a meaningful distinction from glazed materials — Cotto Allende and zellige are not rated for freeze/thaw exterior use, but unglazed Cotto is. Proper sealing is required. For outdoor installations, apply the pre-grout sealer before grouting and a second coat of the same sealer (not wax) as the post-grout top coat.
 
 ### How does patina develop on Fired Earth Cotto?
 
-Fired Earth deepens in tone with wear and time. The warm clay base and the ash-fired surface coloration both become more defined as patina builds — the textured variation that is visible tile by tile at installation gradually reads as a unified, aged surface across the full field. Expect the tone to deepen over time: that patina is the point.
+Fired Earth deepens in tone with wear and time. The warm clay base and the ash-fired surface coloration both become more defined as patina builds — the textured variation that reads tile by tile at installation gradually coheres into a unified, aged surface across the full field. Expect the tone to deepen over time: that patina is the point.
 
 ### Can Fired Earth 4x4 be used in a shower?
 
 Yes. Cotto tiles are suited for shower walls and shower floors with proper sealing. Apply the pre-grout sealer before grouting, then apply a matte wax as the post-grout top coat for interior wet areas. For shower floor installations, maintain a minimum 1/8" grout joint and apply an anti-slip treatment after installation. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for installer guidance.
 
+### Can Fired Earth 4x4 be used in a commercial kitchen?
+
+Yes. The Fired Earth 4x4 is suited for commercial kitchen floors and walls. In high-traffic commercial floor applications, maintain a minimum 1/8" grout joint and apply an anti-slip treatment after installation. The warm clay surface and ash-fired variation hold up well in kitchen environments, and the patina that develops with wear contributes to the lived-in character that makes Cotto well-suited to active hospitality spaces.
+
+### What is the difference between Fired Earth and Red Clay colorways?
+
+Fired Earth sits in the mid-range of the classic Cotto palette — a warm, varied terra cotta tone shaped by wood ash applied during firing. Red Clay is the deepest of the three classic colorways, closest to the raw clay material itself, with a traditional, saturated warm red tone. Fired Earth reads as warmer and more variable across the surface; Red Clay reads as deeper and more uniform in base hue. The two can be combined in a single installation for tonal range across the field. Contact [info@ziatile.com](mailto:info@ziatile.com) for a sample of each before specifying.
+
+### What thinset is recommended for Fired Earth 4x4?
+
+Use a polymer-modified thinset formulated for unglazed terra cotta and porous tile bodies. The porous clay surface requires a thinset with adequate bond strength. Refer to Zia's installation guide for the full specification, or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 before beginning the installation.
+
 ### What other Cotto formats are available in Fired Earth?
 
-The Fired Earth colorway is available across multiple Cotto formats in the Zia collection, including the 8x9 hexagon, the Durango specialty shape set, the Zocalo specialty shape, and other square sizes. Each format offers a different surface geometry while sharing the same clay body and ash-fired surface character. Contact [info@ziatile.com](mailto:info@ziatile.com) to discuss format combinations for a specific project.
+The Fired Earth colorway is available across multiple Cotto formats in the Zia collection, including the 8x9 hexagon, the Durango specialty shape set, the Zocalo specialty shape, and other square sizes. Each format shares the same clay body and ash-fired surface character while offering a distinct tiling geometry. Contact [info@ziatile.com](mailto:info@ziatile.com) to discuss format combinations for a specific project.

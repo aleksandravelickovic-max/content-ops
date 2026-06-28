@@ -125,3 +125,19 @@ At the 2×4 scale, horizontal stack layouts read as a fine, even grid; vertical 
 ### How does the Alpha White 2x4 tile count affect order planning?
 
 Each box contains 200 tiles, which covers more area per box than the larger formats due to the smaller tile size. Calculating coverage by square footage rather than tile count is the standard approach: multiply the installation area by 1.15 to 1.20 for the recommended 15 to 20% overage. For questions about order quantities, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+
+### How do the three Alpha White formats work together in a single installation?
+
+The Alpha White 2×4, 2×8, and 4×4 share the same satin finish and colorway, making them well suited to use across a single space. The 2×4 suits accent areas and niches where a finer grid introduces visual distinction. The 2×8 works well as a field tile on a main wall or backsplash where a directional format is the intent. The 4×4 suits floor applications alongside either rectangle. Laying out the combined formats dry before setting confirms the compositional and proportional relationships before any tile is fixed.
+
+### Is Alpha White 2x4 compatible with waterproofing membranes in shower applications?
+
+Yes. Standard waterproofing membranes applied to the substrate before tiling are fully compatible with Alpha White 2x4. The membrane is installed prior to setting the tile and does not affect the satin glaze or tile body. For specific substrate and waterproofing guidance, consult the installation guide or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+
+### How does the satin finish affect the Alpha White 2x4 in a kitchen backsplash application?
+
+The satin surface is well suited to kitchen conditions — it holds up to heat, moisture, and cleaning without requiring pre-grout sealing. The low-level sheen returns light without producing the glare of a full gloss tile, which is an advantage in kitchens where overhead lighting is often directed toward the backsplash surface. The 2×4 scale produces a grid of grout lines that creates visual texture on the backsplash wall without relying on color contrast to do so.
+
+### What grout joint is recommended for the Alpha White 2x4 format?
+
+The standard recommendation is 3/16" grout joints, with a minimum of 1/8". At the smaller 2×4 scale, the grout joint occupies a proportionally larger share of the visible surface than it does in a 2×8 layout, so the grout color is a more consequential design decision. A tone-on-tone white joint produces a nearly seamless white field; a warm or contrasting joint makes the tile grid the dominant visual element of the surface. For shower floor applications, the 1/8" minimum joint is required and an anti-slip treatment after installation is recommended.

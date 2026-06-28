@@ -127,3 +127,19 @@ The 2x6 rectangle lends itself to horizontal stacked layouts, which emphasize th
 ### Can Slate Grey 2x6 be combined with the Slate Grey 4x4 in one installation?
 
 Yes. The two formats share the same Slate Grey colorway and are produced using the same traditional Moroccan methods. Combining them in one installation — for example, a 4x4 field with a 2x6 border or niche accent — requires accounting for the difference in thickness between the two formats. The 2x6 bejmat at ¾" is thicker than the 4x4, so transitions between the two formats need to be planned at the substrate and setting layer. Contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 to discuss installation details before ordering.
+
+### What thinset is recommended for Slate Grey 2x6 zellige?
+
+A white polymer-modified thinset is the correct choice for this format. The ¾" depth of the bejmat requires careful thinset bed management — the setting layer should be level and fully supporting each tile to prevent rocking or lippage. White thinset prevents bleed at the chamfered edges and joints. Full thinset and setting guidance is in the Zellige Installation Guide; contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with installation-specific questions.
+
+### How does light affect how the Slate Grey 2x6 reads across the day?
+
+The elongated format concentrates light reflection along the horizontal axis, which makes the chamfered edges more noticeable as the light source moves. In strong directional light — morning sun, for example, or raking artificial light — the surface reads with more texture and shadow. In diffuse light, the grey glaze reads as flatter and more resolved. Both readings are characteristic of the material. Observing a sample in the actual space at different times of day gives the most accurate preview of how the field will look installed.
+
+### How often should Slate Grey 2x6 zellige be resealed?
+
+Resealing frequency depends on the application. In shower and wet-area installations, inspect the seal annually and reseal when water no longer beads on the surface. In dry applications — fireplace surrounds, backsplashes — resealing is less frequent. Refer to the Zellige Installation Guide for sealer-specific intervals, or contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions about the appropriate sealer for the application.
+
+### What does variation look like across a full Slate Grey 2x6 installation?
+
+Across a field, the Slate Grey bejmat glaze ranges from a lighter, silver-adjacent grey to a deeper slate. The chips, pits, and hairline crazing characteristic of zellige are visible at the surface, and the chamfered edges introduce shadow lines between tiles. Individual pieces also vary in length — inherent in hand-forming — which means the horizontal runs read as slightly staggered rather than mechanically uniform. Mixing tiles from all boxes before installation distributes this variation evenly across the surface.

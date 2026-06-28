@@ -108,15 +108,15 @@ Zia's Terracotta 2x8 is a muted, earthy red-orange — closer to the tone of sun
 
 ### Does Zia's Terracotta 2x8 cement tile require sealing?
 
-Yes. All cement tile requires sealing before grouting and again after grouting. Sealing is required in every installation, including dry spaces. Follow Zia's cement installation guide for the recommended sealers and application sequence. For questions about sealer selection, contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+Yes. All cement tile requires sealing before grouting and again after grouting. Sealing is required in every installation, including dry spaces. A penetrating impregnating sealer applied before grouting prevents grout from staining the porous surface; a second coat after grouting and curing protects the finished installation. Follow Zia's cement installation guide for the recommended sealers and application sequence. For questions about sealer selection, contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
 
 ### Can Terracotta 2x8 be used in a shower?
 
-Yes. Zia's Terracotta 2x8 is suited for shower walls and shower floors. Seal the tile before grouting and again after, following the cement installation guide. For shower floor applications, apply an anti-slip treatment after installation to support traction in wet conditions.
+Yes. Zia's Terracotta 2x8 is suited for shower walls and shower floors. Seal the tile before grouting and again after, following the cement installation guide. For shower floor applications, apply an anti-slip treatment after installation to support traction in wet conditions. In shower applications, consistent resealing on a schedule appropriate to the level of use is the most important maintenance task.
 
 ### Can Terracotta 2x8 be installed outdoors?
 
-Terracotta 2x8 cement tile is suited for exterior floors and walls in non-freeze/thaw climates — patios, courtyards, and covered outdoor spaces in mild climates. It is not suitable for installation in climates where the surface may be subject to freeze/thaw cycles.
+Terracotta 2x8 cement tile is suited for exterior floors and walls in non-freeze/thaw climates — patios, courtyards, and covered outdoor spaces in mild climates. It is not suitable for installation in climates where the surface may be subject to freeze/thaw cycles. In outdoor applications, the cement installation guide covers the sealing sequence and the sealer types suited to exterior exposure.
 
 ### How does the Terracotta cement colorway differ from Zia's Cotto line?
 
@@ -125,3 +125,23 @@ Zia's Terracotta cement tile achieves its color through mineral pigments pressed
 ### How should cement tile be cleaned?
 
 Sweep or dry-mop regularly to remove grit from the surface. For routine cleaning, use warm water and a pH-neutral cleaner. Avoid acidic cleaners — vinegar, citrus-based products, and bleach will damage the cement surface and strip the sealer. The warm terracotta tone makes certain stains less visible than on lighter colorways, but the same care regimen applies. Reseal periodically following the cement installation guide, with frequency depending on traffic and exposure.
+
+### How does Terracotta 2x8 cement tile develop patina over time?
+
+The 3 mm pigmented layer in each tile carries real color depth — not a surface coating — which means the tile develops character with wear rather than fading. On a floor, the areas of highest traffic develop a gentle softening of the matte surface and a slightly richer tone over time. On a backsplash or wall, the patina is more subtle, appearing as a quiet deepening of the clay-red pigment. Regular sealing maintains the surface and preserves the development of that patina evenly across the installation.
+
+### What layout orientation is most common for the 2x8 subway format?
+
+The horizontal brick offset is the most common layout for a 2x8 subway tile — each row set with a half-tile offset from the row above, producing the classic running bond pattern familiar from historic café and kitchen applications. A horizontal stacked layout, with tiles aligned directly above each other, gives a more architectural, grid-like quality that suits contemporary interiors. A vertical orientation is less typical for a 2x8 format but creates a taller, more expansive feel on a backsplash or feature wall. The choice depends on the character of the space and the surrounding materials. Zia's team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 can advise on layout planning for a specific installation.
+
+### What causes efflorescence in cement tile, and how is it prevented?
+
+Efflorescence is a white mineral deposit that can appear when moisture migrates through a cement tile and carries soluble salts to the surface. It is most likely to occur when the tile is installed over a substrate with residual moisture, or when the tile is not sealed before grouting. Sealing before grouting is the primary prevention — it closes the porous surface and blocks the path for moisture and salt migration. If efflorescence appears after installation, consult the cement installation guide or contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+
+### Can Terracotta 2x8 cement tile be used with underfloor radiant heating?
+
+Yes. Terracotta 2x8 is compatible with all heated floor systems. Cement tile transmits heat efficiently and holds warmth well, which makes it a considered choice for radiant heating installations in kitchens and bathrooms. The substrate and radiant system should be fully cured and stabilized before tile installation begins. Follow the heating system manufacturer's guidelines for temperature ramp-up after the installation is complete.
+
+### What grout joint width does Zia recommend for Terracotta 2x8?
+
+Zia recommends 1/16" tile spacers for the Terracotta 2x8, producing a tight, minimal grout joint consistent with the subway format's clean, horizontal line. A grout tone that is close in color to the terracotta keeps the joint from reading as a dominant grid; a contrasting grout in white or cream emphasizes the grid and gives the subway field a more graphic quality. The visual outcome of the grout choice should be confirmed with a sample before committing to a full installation.

@@ -104,11 +104,15 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ### How does the Black 8x8 read in a room?
 
-Zia's Black 8x8 reads as a deep, non-reflective black across a floor or wall. The matte surface holds the color without glare, giving the room a grounded, material quality that a polished or high-sheen black surface does not produce. The large format means fewer grout joints interrupt the field, allowing the black to read as a continuous surface. Subtle tonal variation tile to tile — inherent to hand-poured pigmented cement — keeps the surface from reading as flat or monotonous.
+Zia's Black 8x8 reads as a deep, non-reflective black across a floor or wall. The matte surface holds the color without glare, giving the room a grounded, material quality that a polished or high-sheen black surface does not produce. The large format means fewer grout joints interrupt the field, allowing the black to read as a continuous surface. Subtle tonal variation tile to tile — inherent to hand-poured pigmented cement — keeps the surface from reading as flat or mechanical.
 
 ### Does the Black 8x8 cement tile require sealing?
 
-Yes. All cement tile requires sealing before grouting and again after grouting. Sealing is required in every installation, including dry spaces. Follow Zia's cement installation guide for the recommended sealers and application sequence. For questions about sealer selection, contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+Yes. All cement tile requires sealing before grouting and again after grouting — in every installation, including dry spaces. Follow Zia's cement installation guide for the recommended sealers and application sequence. For questions about sealer selection, contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+
+### What sealers does Zia recommend for cement tile?
+
+Zia's cement installation guide specifies a two-stage sealing process: an impregnating sealer applied before grouting, and a topcoat sealer applied after the grout has fully cured. Both stages are required in every installation. The specific products are listed in the installation guide; contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with project-specific questions.
 
 ### Can Black 8x8 be used in a shower?
 
@@ -118,10 +122,30 @@ Yes. Zia's Black 8x8 is suited for shower walls and shower floors. Seal the tile
 
 Black 8x8 cement tile is suited for exterior floors and walls in non-freeze/thaw climates — patios, courtyards, and covered outdoor spaces in mild climates. It is not suitable for installation in climates where the surface may be subject to freeze/thaw cycles.
 
+### Can Black 8x8 be used with underfloor radiant heating?
+
+Yes. Zia's Black 8x8 cement tile is compatible with radiant floor heating systems. Thinset and membrane specifications for heated substrates should follow both the heating system manufacturer's guidance and Zia's cement installation guide. For project-specific questions, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+
+### What grout joint width does Zia recommend for the 8x8 format?
+
+Zia recommends 1/16" grout joints for the Black 8x8 in standard interior applications. The fine joint allows the large format to read as a nearly continuous dark field. The grout color choice matters: a grout close in tone to the black tile allows the surface to read as a single matte plane, while a contrasting light grout emphasizes the grid. For wet commercial floor applications, grout joints should measure at least 1/8".
+
+### How does tonal variation distribute across a black cement tile installation?
+
+Deep colorways like black carry inherent tonal variation — the pigment density in each tile shifts slightly, producing subtle depth variations across the field. This variation is characteristic of hand-poured cement and is most visible at raking or oblique light angles. Blending tiles from multiple boxes before setting ensures the variation distributes evenly. On a large-format tile, each piece covers more area, so differences between adjacent tiles are worth evaluating in a dry layout before setting.
+
 ### What materials pair well with the Black 8x8?
 
-The deep matte black of the 8x8 produces strong contrast against light materials: white marble, pale limestone, cream plaster, and natural or blonde wood all gain definition against a black floor. In a kitchen, the Black 8x8 floor reads as a grounding element that allows countertops and cabinetry to carry the palette. The Black 8x8 can also be combined with Zia's White 4x4 or White 2x8 cement tile in adjacent areas for a high-contrast, monochrome installation. Black is also available in the 2x8 subway and 4x4 square formats.
+The deep matte black produces strong contrast against light materials: white marble, pale limestone, cream plaster, and natural or blonde wood all gain definition against a black floor. In a kitchen, the Black 8x8 reads as a grounding element that allows countertops and cabinetry to carry the palette. The Black 8x8 also combines with Zia's White 4x4 or White 2x8 cement tile in adjacent areas for a high-contrast, monochrome installation. Black is also available in the 2x8 subway and 4x4 square formats.
+
+### How does cement tile age and develop patina on a dark colorway?
+
+Dark cement tile develops patina more subtly than lighter colorways. The matte black surface softens and settles with wear, and the areas of highest traffic develop a slight sheen that deepens the color's presence over time. Water marks and mineral deposits are more visible on dark surfaces than on lighter ones — a pH-neutral cleaner applied with a soft cloth addresses these without damaging the surface or sealer.
+
+### What happens if cement tile is not sealed before grouting?
+
+Grout can penetrate the porous pigmented surface and leave residue that is difficult to remove. On a dark tile, grout haze appears as a lightening of the black field rather than a uniform color shift, which can be particularly visible. The pre-grout sealing step is essential — following the two-stage sequence in Zia's installation guide protects the surface during the grouting process.
 
 ### How should black cement tile be cleaned?
 
-Sweep or dry-mop regularly to remove grit and dust — light-colored dust shows more readily on a dark surface. For routine cleaning, use warm water and a pH-neutral cleaner. Avoid acidic cleaners — vinegar, citrus-based products, and bleach will damage the cement surface and strip the sealer. Water marks and mineral deposits can be more visible on dark cement surfaces; a pH-neutral cleaner applied with a soft cloth addresses these without damaging the surface. Reseal periodically following the cement installation guide.
+Sweep or dry-mop regularly to remove grit and dust — light-colored particles show more readily on a dark surface. For routine cleaning, use warm water and a pH-neutral cleaner. Avoid acidic cleaners — vinegar, citrus-based products, and bleach will damage the cement surface and strip the sealer. Water marks and mineral deposits can be more visible on dark cement surfaces; a pH-neutral cleaner applied with a soft cloth addresses these without damaging the surface. Reseal periodically following the cement installation guide, with frequency depending on traffic and exposure.

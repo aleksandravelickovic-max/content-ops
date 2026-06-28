@@ -104,24 +104,48 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ### How does the Alpha White 4x4 read differently from the 2x4 and 2x8 formats?
 
-The 4×4 square is the largest format in the Alpha White rectangle and square range. Its balanced proportions mean horizontal and vertical grout lines carry equal visual weight, producing a symmetrical grid without a dominant direction. The 2×4 creates a tighter grid with more visual activity at the grout lines. The 2×8 introduces a strong horizontal or vertical directional register depending on layout orientation. All three share the same bright satin white; the format determines the surface rhythm.
+The 4×4 square is the largest format in the Alpha White rectangle and square range. Its balanced proportions mean horizontal and vertical grout lines carry equal visual weight, producing a symmetrical grid without a dominant direction. The 2×4 creates a tighter grid with more visual activity at the grout joints. The 2×8 introduces a strong horizontal or vertical directional register depending on layout orientation. All three share the same bright satin white; the format determines the surface rhythm. An installation that combines formats — a 4×4 field with a 2×8 border, for instance — can be laid out dry first to confirm the proportional relationship before setting.
 
 ### Does Alpha White 4x4 require sealing before installation?
 
-No. The Alpha White 4x4 is a satin finish and does not require a penetrating sealer before grouting. Only matte-finish ceramics require pre-grout sealing as a grout release. For any installation questions, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+No. The Alpha White 4x4 carries a satin finish and does not require a penetrating sealer before grouting. Only matte-finish ceramics require pre-grout sealing as a grout release. For any installation questions, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
 
 ### Can Alpha White 4x4 be used on a shower floor?
 
-Yes. Zia's Alpha White 4x4 is suited for shower walls and shower floors. Plan for a minimum 1/8" grout joint on the shower floor to support traction underfoot. An anti-slip treatment applied after installation increases slip resistance in high-exposure wet floor areas.
+Yes. Zia's Alpha White 4x4 is suited for shower walls and shower floors. Plan for a minimum 1/8" grout joint on the shower floor to support traction underfoot. An anti-slip treatment applied after installation increases slip resistance in high-exposure wet floor areas. The satin finish does not require pre-grout sealing in shower applications.
 
 ### Can Alpha White 4x4 be installed in a pool or spa?
 
-Yes. Zia's satin-finish ceramics are approved for pool and spa applications. The Alpha White 4x4 is compatible with saltwater and chlorine environments and suits pool waterline tile and spa interior wall applications, where the bright white and balanced square format produce a clean, even result.
+Yes. Zia's satin-finish ceramics are approved for pool and spa applications. The Alpha White 4x4 is compatible with saltwater and chlorine environments and suits pool waterline and spa interior wall applications, where the bright white and balanced square format produce a clean, even result.
 
 ### What materials pair well with Alpha White 4x4?
 
-Alpha White pairs well across a wide range of material palettes — warm wood, cool stone, plaster, and metal — because the bright, undertone-neutral white holds without pulling the room in a warm or cool direction. A grout in a tone-on-tone white keeps the surface quiet and lets the grid recede. A dark or warm-toned grout articulates the grid pattern clearly, making the 4×4 tile format a stronger graphic element in the composition.
+Alpha White pairs well across a wide range of material palettes — warm wood, cool stone, plaster, and metal — because the bright, undertone-neutral white holds without pulling the room in a warm or cool direction. A tone-on-tone white grout keeps the surface quiet and lets the grid recede. A dark or warm-toned grout articulates the grid pattern clearly, making the 4×4 format a stronger graphic element in the composition.
 
 ### Is the Alpha White 4x4 suited for a kitchen floor?
 
-Yes. The 4×4 format produces a measured, even grid on a kitchen floor — consistent enough to read as orderly, small enough to suit the scale of a residential kitchen without the floor dominating the room. The satin finish cleans easily and does not require pre-grout sealing, which simplifies the kitchen installation sequence. For kitchens with in-floor radiant heating, the Alpha White 4x4 is compatible with all heated floor systems.
+Yes. The 4×4 format produces a measured, even grid on a kitchen floor — consistent enough to read as orderly, small enough to suit the scale of a residential kitchen without the floor dominating the room. The satin finish does not require pre-grout sealing, which simplifies the installation sequence. For kitchens with in-floor radiant heating, the Alpha White 4x4 is compatible with all heated floor systems.
+
+### How does the satin finish affect how the room reads compared to matte or glossy?
+
+The satin finish sits between matte and glossy in reflectivity. Matte ceramics diffuse light evenly across the surface, producing a flat, absorbed result. Glossy finishes return light directly, creating a luminous, sometimes mirror-like surface. The satin finish returns a low-level sheen — enough to register as a reflective surface under strong light, not enough to read as glossy or to produce glare. In rooms with natural light, the satin Alpha White reads as bright and clean without the visual weight that a glossy finish can introduce.
+
+### What is the DCOF rating for the Alpha White 4x4, and what does that mean for floor use?
+
+The satin finish carries a lower DCOF than a matte ceramic, which registers at 0.74. Satin and glossy ceramics are suited for floor use in residential and commercial dry and wet interior applications with a minimum 1/8" grout joint; the grout joint contributes meaningfully to traction on the shower floor. For high-traffic wet commercial floors, an anti-slip treatment applied after installation is recommended. For specific DCOF data, reach out to [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+
+### What grout joint width is recommended for the Alpha White 4x4?
+
+Plan for 3/16" grout joints as the standard for the 4×4 format, with a 1/8" minimum. Tighter joints emphasize the tile body over the grid. A slightly wider joint — at or above the 3/16" recommendation — gives the grout line more presence and can be used to frame the square format deliberately. On a shower floor, the 1/8" minimum supports traction and should not be reduced.
+
+### Can this tile be used on a kitchen countertop?
+
+The Alpha White 4x4 is not specified for countertop applications. Ceramic tile countertop installations involve specific requirements around edge finishing, substrate preparation, and surface hardness that go beyond standard floor and wall use. For countertop application guidance specific to this tile, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+
+### How does tonal variation distribute across a full installation?
+
+Very minor variation in size, color, tone, and surface texture is inherent to high-fired ceramics. In the Alpha White, variation expresses as subtle differences in brightness or surface quality from tile to tile — less pronounced than in handmade zellige, but present. Mixing tiles from all boxes before installation and arranging a dry layout across the full area before setting distributes these differences evenly, preventing any cluster of lighter or slightly different tiles from reading as a patch.
+
+### How does the Alpha White 4x4 read under warm versus cool light?
+
+The Alpha White colorway carries no strong warm or cool undertone, which means the tile reads differently depending on the light source rather than pulling consistently in one direction. Under warm incandescent or warm LED sources, the bright white picks up a slightly warm cast from the room. Under cool daylight or blue-white LEDs, the tile reads as a crisper, cooler white. This tonal responsiveness makes the Alpha White adaptable across varied interior lighting conditions — the tile holds the surface without fighting the light source.

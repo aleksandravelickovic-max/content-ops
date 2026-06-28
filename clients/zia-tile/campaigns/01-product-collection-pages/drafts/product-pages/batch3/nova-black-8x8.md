@@ -104,11 +104,19 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ### How does the Nova Black pattern read in a room?
 
-The Nova Black pattern places a white eight-pointed star on a black ground — a high-contrast geometry that reads as a graphic field across the full installation rather than as an isolated motif. In an entryway, the pattern holds the floor without requiring additional decoration. Against a fireplace surround in stone or plaster, the star introduces a formal, geometric character to the composition. The 8x8 format gives the star enough scale to read at full visual strength rather than compressing the geometry into fine detail.
+The Nova Black pattern places a white eight-pointed star on a black ground — a high-contrast geometry that reads as a graphic field across the full installation rather than as an isolated motif. In an entryway, the pattern holds the floor without requiring additional decoration. Against a fireplace surround in stone or plaster, the star introduces a formal geometric character to the composition. The 8x8 format gives the star enough scale to read at full visual strength rather than compressing the geometry into fine detail.
+
+### How should the Nova Black pattern be centered in a room?
+
+Centering a repeat pattern like Nova Black starts with a dry layout before any tile is set. Snap chalk lines at the center of the room and work outward in all four directions, adjusting until the cut pieces at opposite walls are equal in width. For the star pattern, an asymmetric border cut on one wall but not the other creates a visual imbalance that is difficult to correct after installation. Zia recommends contacting [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 before starting — the team can walk through layout strategy for the specific room dimensions.
 
 ### Does Nova Black cement tile require sealing?
 
 Yes. All cement tile requires sealing before grouting and again after grouting — in dry spaces as well as in areas exposed to moisture, such as showers. Follow Zia's cement installation guide for the recommended sealers and application sequence. For specific questions about sealer selection, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+
+### What happens if cement tile is not sealed before grouting?
+
+Grout will penetrate directly into the unsealed cement surface, staining the tile permanently. The pre-grout seal saturates the surface layer and acts as a release, allowing grout to be cleaned from the face of the tile without bonding. Skipping the pre-grout step is the most common and most difficult-to-reverse installation error on cement tile. Always seal first, following the sequence in Zia's cement installation guide.
 
 ### Can Nova Black be used in a shower?
 
@@ -118,10 +126,26 @@ Yes. Zia's Nova Black 8x8 is suited for shower walls and shower floors. Apply se
 
 Nova Black cement tile is suited for exterior floors and walls in non-freeze/thaw climates — patios, courtyard surfaces, and covered outdoor spaces in mild climates. The tile is not suitable for installation in climates where the surface may freeze.
 
+### Is Nova Black compatible with underfloor radiant heating?
+
+Yes. Nova Black cement tile is compatible with all heated floor systems. The thermal mass of the cement body holds and releases heat gradually, which suits radiant systems well. Follow the thinset manufacturer's specifications for heated-floor installations and confirm that the subfloor is fully cured before setting tile.
+
+### What grout joint width does Zia recommend for Nova Black?
+
+Use 1/16" tile spacers for the recommended grout joint. A tight joint reads as a more continuous field and lets the black-and-white star pattern carry across the surface without interruption. For shower floor applications, a minimum 1/8" grout joint is required to support slip resistance.
+
+### How does cement tile differ from ceramic or porcelain?
+
+Cement tile is never fired. The pigment is pressed into the surface under hydraulic pressure and cured through a water-based hardening process — there is no kiln involved. This produces a tile with a matte, slightly porous surface and real color depth in the top layer, rather than a glaze applied over a fired clay body. The trade-off is that cement tile requires sealing, responds to acidic cleaners differently than ceramic, and develops a surface patina over time that fired tiles do not.
+
+### How does Nova Black cement tile age?
+
+The matte pigmented surface softens and deepens with time and traffic. The black ground holds its depth well, and the contrast with the white star remains legible as the surface develops patina. In high-traffic areas — entryways, kitchen floors — the patina develops faster and concentrates in the most-traveled zones first. Periodic resealing maintains the surface and allows the patina to develop evenly.
+
 ### What materials pair well with Nova Black?
 
-Nova Black's black-and-white geometry works in two modes: contrasting and anchoring. Against warm materials — terracotta, oak, waxed plaster — the contrast sharpens and the pattern takes a leading role. Against cooler materials — white marble, grey stone, brushed metal — the black ground integrates and the star pattern reads as a quieter geometric detail. The patterned 8x8 can also be mixed with Zia's solid black or white cement tiles to frame a field or create a border.
+Against warm materials — terracotta, oak, waxed plaster — the black-and-white contrast sharpens and the pattern takes a leading role. Against cooler materials — white marble, grey stone, brushed metal — the black ground integrates and the star reads as a quieter geometric detail. Nova Black can also be combined with Zia's solid black or white cement tiles to frame a field or create a border.
 
 ### How should Nova Black cement tile be cleaned?
 
-For routine maintenance, sweep or dry-mop regularly to remove grit from the surface. Clean with warm water and a pH-neutral cleaner. Acidic cleaners — including vinegar, citrus-based products, and bleach — will damage the cement surface and strip the sealer. Reseal periodically according to the installation guide, with frequency depending on traffic and exposure.
+Sweep or dry-mop regularly to remove grit from the surface. Clean with warm water and a pH-neutral cleaner. Acidic cleaners — including vinegar, citrus-based products, and bleach — will damage the cement surface and strip the sealer. Reseal periodically according to the installation guide, with frequency depending on traffic and exposure.

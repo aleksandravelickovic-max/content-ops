@@ -108,15 +108,15 @@ Zia's Taupe 8x8 is a warm neutral that sits between grey and beige — a tone th
 
 ### Does the Taupe 8x8 cement tile require sealing?
 
-Yes. All cement tile requires sealing before grouting and again after grouting. Sealing is required in every installation, including dry spaces. Follow Zia's cement installation guide for the recommended sealers and application sequence. For questions about sealer selection, contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+Yes. All cement tile requires sealing before grouting and again after grouting. Sealing is required in every installation, including dry spaces. A penetrating impregnating sealer applied before grouting prevents grout from absorbing into the tile surface; a second sealer coat applied after grouting and curing protects the finished surface. Follow Zia's cement installation guide for the recommended sealers and application sequence. For questions about sealer selection, contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
 
 ### Can Taupe 8x8 be used in a shower?
 
-Yes. Zia's Taupe 8x8 is suited for shower walls and shower floors. Seal the tile before grouting and again after, following the cement installation guide. For shower floor applications, apply an anti-slip treatment after installation to support traction in wet conditions.
+Yes. Zia's Taupe 8x8 is suited for shower walls and shower floors. Seal the tile before grouting and again after, following the cement installation guide. For shower floor applications, apply an anti-slip treatment after installation to support traction in wet conditions. Because cement tile is porous, consistent sealing in shower environments is particularly important to maintain the surface and manage moisture over time.
 
 ### Can Taupe 8x8 be installed outdoors?
 
-Taupe 8x8 cement tile is suited for exterior floors and walls in non-freeze/thaw climates — patios, courtyards, and covered outdoor spaces in mild climates. It is not suitable for installation in climates where the surface may be subject to freeze/thaw cycles.
+Taupe 8x8 cement tile is suited for exterior floors and walls in non-freeze/thaw climates — patios, courtyards, and covered outdoor spaces in mild climates. It is not suitable for installation in climates where the surface may be subject to freeze/thaw cycles. In outdoor applications, a sealer with appropriate UV and moisture protection is recommended; the cement installation guide covers the outdoor sealing sequence.
 
 ### What materials pair well with Taupe 8x8?
 
@@ -125,3 +125,23 @@ The warm neutral of Taupe suits pairings across a wide range of materials. Again
 ### How should cement tile be cleaned?
 
 Sweep or dry-mop regularly to remove grit from the surface. For routine cleaning, use warm water and a pH-neutral cleaner. Avoid acidic cleaners — vinegar, citrus-based products, and bleach will damage the cement surface and strip the sealer. Reseal periodically following the cement installation guide, with frequency depending on traffic and exposure.
+
+### How does cement tile develop patina over time?
+
+Cement tile deepens in character with wear and time. The 3 mm pigmented layer pressed into each tile is not a topcoat — it is genuine color depth, which means the tile wears into its surface rather than losing it. On a floor, the areas of highest foot traffic develop a subtle softening of tone and a gentle sheen that differs from the matte freshness of a new installation. That shift is the material expressing itself, not a sign of wear to reverse. Regular sealing maintains the surface and keeps the patina development even across the floor.
+
+### What causes efflorescence in cement tile, and how is it prevented?
+
+Efflorescence is a white, powdery deposit that can appear on cement tile when moisture migrates through the tile and carries soluble salts to the surface. It is most common when tile is installed over a substrate with residual moisture, or when the tile is not properly sealed before grouting. Sealing before grouting is the primary prevention measure: it closes the porous surface so that moisture and salts cannot migrate through. If efflorescence appears after installation, consult the cement installation guide or contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+
+### What grout joint width does Zia recommend for Taupe 8x8?
+
+Zia recommends 1/16" tile spacers for the Taupe 8x8, producing a tight, minimal grout joint that allows the large format to read as a continuous field rather than a visibly gridded surface. A tight joint suits the neutral, composed character of the taupe colorway, keeping the grout from becoming a dominant visual element across the floor.
+
+### How is cement tile different from ceramic or porcelain tile?
+
+Cement tile is never fired. Each tile is hydraulically pressed from a pigmented cement surface layer and a powdered concrete base, then cured on drying racks for seven days. The absence of kiln firing is what gives cement tile its matte surface, its porosity, and its characteristic patina behavior — none of which are present in fired ceramic or porcelain. Ceramic and porcelain tiles are fired at high temperature, which vitrifies the clay body and produces a denser, less porous surface. Cement tile requires sealing that ceramic and porcelain do not; in return, it develops a depth of surface character over time that fired tile cannot.
+
+### Can Taupe 8x8 cement tile be used with underfloor radiant heating?
+
+Yes. Taupe 8x8 is compatible with all heated floor systems. Cement tile conducts and releases heat efficiently, making it a considered choice for radiant heating installations. Allow the substrate and radiant system to fully cure and stabilize before tile installation, and follow the heating system manufacturer's guidelines for temperature ramp-up after installation is complete.

@@ -104,24 +104,48 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ### How does the Nile colorway read in a room?
 
-Nile is a pale, watery green that sits at the edge of green and grey — a tone that recedes rather than leads in a space. Against white walls or natural stone, it contributes a quiet color note without drawing the eye. Against warm wood tones, it holds back and allows the warmer material to carry the room. The subway format adds a subtle horizontal register across the surface that reinforces the understated quality of the color.
+Nile is a pale, watery green that sits at the edge of green and grey — a tone that settles into a space rather than asserting itself. Against white walls or natural stone, it contributes a quiet color note without pulling the eye. Against warm wood tones, the pale green recedes and lets the warmer material carry the room. The subway format adds a subtle horizontal register across the surface that reinforces the understated quality of the color.
 
 ### Does Zia's Nile 2x8 cement tile require sealing?
 
-Yes. All cement tile requires sealing before grouting and again after grouting. Sealing is required for every installation — dry spaces included. Follow Zia's cement installation guide for the recommended sealers and application sequence. For specific questions about sealer selection, contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+Yes. All cement tile requires sealing before grouting and again after grouting — in every installation, dry spaces included. Follow Zia's cement installation guide for the recommended sealers and application sequence. For specific questions about sealer selection, contact the team at [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+
+### What sealers does Zia recommend for cement tile?
+
+Zia's cement installation guide specifies a two-stage sealing process. An impregnating sealer — applied before grouting — protects the surface during the grouting process. A topcoat sealer is applied after grouting and curing. The specific products recommended are listed in the installation guide; for project-specific sealer questions, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
 
 ### Can Nile 2x8 be used in a shower?
 
-Yes. Zia's Nile 2x8 is suited for shower walls and shower floors. Seal the tile before grouting and again after, following the cement installation guide. Use 1/16" grout joints at minimum, and apply an anti-slip treatment after installation for shower floor surfaces.
+Yes. Zia's Nile 2x8 is suited for shower walls and shower floors. Seal the tile before grouting and again after, following the cement installation guide. Maintain 1/16" grout joints at minimum, and apply an anti-slip treatment after installation for shower floor surfaces.
 
 ### Can Nile 2x8 be installed outdoors?
 
 Nile 2x8 cement tile is suited for exterior floors and walls in non-freeze/thaw climates — patios, courtyards, and covered outdoor spaces in mild climates. It is not suitable for installation in climates where the surface may freeze.
 
+### What grout joint width does Zia recommend for this tile?
+
+Zia recommends 1/16" grout joints for the Nile 2x8 in standard interior applications. The fine joint keeps the grout line from competing with the subway format's horizontal register. For wet commercial floor applications, grout joints should measure at least 1/8" to meet slip-resistance standards.
+
+### Which bond pattern is most common for a 2x8 subway cement tile?
+
+The most common layouts for a 2x8 subway are horizontal stacked (each tile set directly above the one below, grout joints lining up perfectly) and horizontal brick offset (each row shifted half a tile length). Stacked bond emphasizes the vertical and horizontal grid; brick offset produces a more active, traditional subway feel. Vertical stacked layouts are less common but used in narrow applications like a range hood surround. A dry layout before setting helps determine which orientation suits the space.
+
+### How does tonal variation distribute across a full installation of Nile?
+
+The pale green of Nile carries subtle tonal shifts from tile to tile — the pigment depth in each piece differs slightly, and this variation is characteristic of hand-poured cement. Opening tiles from multiple boxes and blending them before setting allows the variation to distribute naturally across the installation. Concentrating tiles from a single box in one area can produce visible patches of lighter or deeper tone.
+
 ### What materials pair well with Nile?
 
-Nile pairs well with natural stone in light tones — honed limestone, travertine, and unlacquered marble — where the pale green and stone's natural cream reads as a coherent palette. Warm wood and white plaster also work well with this colorway; the green settles into a neutral role and allows those warmer materials to define the room's temperature. Nile is also available in 4x4 and 8x8 formats for floors or larger-format wall applications.
+Nile pairs well with natural stone in light tones — honed limestone, travertine, and unlacquered marble — where the pale green and the stone's natural cream read as a coherent palette. Warm wood and white plaster suit this colorway as well; the green settles into a neutral role and allows the warmer materials to define the room's temperature. Nile is also available in 4x4 and 8x8 formats for floors or larger-format wall applications.
+
+### How does cement tile age and develop patina over time?
+
+Cement tile deepens and settles with wear and time. The matte surface develops a gentle sheen in high-traffic areas — not a gloss, but a gradual smoothing of the surface that gives the tile a worn, inhabited quality similar to the cement floors of historic European cafés and public markets. Resealing at regular intervals, per the installation guide, preserves the surface and supports this natural aging process.
+
+### What happens if cement tile is not sealed before grouting?
+
+Grout can penetrate an unsealed cement surface and leave a haze that is difficult to remove. The pigmented layer is porous until sealed, making the pre-grout sealing step as important as the post-grout coat. Once grout haze sets into an unsealed surface, remediation requires specialized cleaners that may affect the tile's appearance. Following the installation guide's sealing sequence prevents this.
 
 ### How should cement tile be cleaned?
 
-For routine maintenance, sweep or dry-mop regularly to remove grit from the surface. Clean with warm water and a pH-neutral cleaner. Avoid acidic cleaners — vinegar, citrus-based products, and bleach — as these will damage the cement surface and strip the sealer. Reseal periodically according to the installation guide, with frequency depending on traffic and exposure.
+Sweep or dry-mop regularly to remove grit from the surface. Clean with warm water and a pH-neutral cleaner. Avoid acidic cleaners — vinegar, citrus-based products, and bleach will damage the cement surface and strip the sealer. Reseal periodically according to the installation guide, with frequency depending on traffic and exposure.

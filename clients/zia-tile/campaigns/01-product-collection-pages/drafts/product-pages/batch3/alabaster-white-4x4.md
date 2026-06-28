@@ -125,3 +125,19 @@ Alabaster White pairs well with any material that benefits from a clean white co
 ### How does the glossy finish on Alabaster White compare to the satin Alpha White?
 
 Alabaster White in glossy finish produces a high-reflectivity surface that returns light actively across the wall. Zia's Alpha White in satin finish carries less reflectivity — the surface is smooth without the full gloss result, producing a cleaner read than matte but a quieter one than gloss. In rooms where light reflection is a priority — small bathrooms, windowless powder rooms — the Alabaster White glossy is the stronger choice. In rooms where a clean white is desired without glare or strong reflectivity, the Alpha White satin occupies a middle register.
+
+### How does the glossy finish affect the appearance of Alabaster White under different light sources?
+
+Glossy finishes respond actively to light direction. Under a strong directional source — a window to one side, a pendant fixture above — the surface returns a bright highlight that shifts as the viewer moves. Under diffuse overhead lighting, the gloss reads as an even sheen across the field. In small bathrooms with a single ceiling fixture, the glossy surface distributes that light widely across the wall, which is one reason Alabaster White glossy performs well in compact spaces without natural light.
+
+### What grout joint width is recommended for Alabaster White 4x4?
+
+Plan for 3/16" grout joints as the standard recommendation, with a minimum of 1/8". The grout joint width affects how the tile grid reads across the surface: a narrow joint in a tone-on-tone white keeps the grid subtle and the surface reads as a nearly continuous white field. A wider joint in a contrasting tone makes the 4×4 grid a stronger graphic element. For shower floor applications, the minimum 1/8" joint applies, and an anti-slip treatment after installation is recommended for high-exposure wet areas.
+
+### Is Alabaster White 4x4 suited for a small bathroom or powder room?
+
+Yes. The 4×4 square format and glossy finish work well in compact spaces. The gloss surface reflects available light and increases the sense of brightness and volume — a particular advantage in bathrooms or powder rooms without a window. The square format produces a balanced, measured grid that reads without strong directionality, which suits rooms where the tile covers all or most of the wall surface.
+
+### Can Alabaster White 4x4 be mixed with Alpha White formats in the same installation?
+
+The Alabaster White 4x4 and the Alpha White formats share a similar bright white register, but they differ in finish: Alabaster White is glossy and Alpha White is satin. Combining a glossy and a satin surface in the same room will read as a difference in surface quality rather than a difference in color. This can be a considered design choice — a glossy shower wall tile next to a satin floor tile, for example. The visual relationship should be confirmed with sample tiles in the actual light conditions of the space. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 for sample ordering.

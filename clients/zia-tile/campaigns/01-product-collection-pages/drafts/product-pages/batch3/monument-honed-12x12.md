@@ -104,24 +104,48 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ### What are the natural characteristics of Monument honed limestone?
 
-Monument limestone is a sedimentary stone, and its characteristics come directly from how it forms. Color, tone, surface texture, fossil impressions, subtle fissures, and oxidation patterns vary from tile to tile because no two sections of stone share the same geological history. These differences are inherent to the material and should be expected across an order. The neutral grey palette is consistent in overall register but carries moderate tonal variation — some tiles reading cooler, some warmer — that gives the installed surface its mineral depth.
+Monument limestone is a sedimentary stone, and its surface qualities come directly from how it forms over geological time. Color, tone, surface texture, fossil impressions, subtle fissures, and oxidation patterns vary from tile to tile because no two sections of stone share the same geological history. The neutral grey palette is consistent in overall register but carries moderate tonal variation — some tiles reading cooler, some warmer — that gives the installed surface its mineral depth. These are inherent characteristics of natural sedimentary stone and should be expected across an order.
 
 ### Does Monument 12x12 limestone require sealing?
 
-Yes. Limestone requires sealing before and after grouting. Apply a penetrating sealer before grouting until the tiles are fully saturated, wiping off any excess before it dries. For interior installations, apply a matte wax top coat after grouting. For exterior installations in non-freeze/thaw climates, apply a second pass of the pre-grout sealer in place of wax, as UV exposure discolors wax over time. Refer to the Limestone Installation Guide for the full sealing sequence. For questions, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+Yes. Limestone requires sealing before and after grouting. Apply a penetrating sealer before grouting until the tiles are fully saturated, wiping off any excess before it dries. For interior installations, apply a matte wax top coat after grouting. For exterior installations in non-freeze/thaw climates, apply a second pass of the penetrating sealer in place of wax, as UV exposure discolors wax over time. Refer to the Limestone Installation Guide for the full sealing sequence. For questions, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+
+### How often does Monument Honed limestone need to be resealed?
+
+Resealing frequency depends on traffic volume and moisture exposure. High-traffic floors and shower installations benefit from resealing annually or when the stone begins to absorb liquids rather than bead them. In lower-traffic applications — feature walls, fireplace surrounds, bedroom floors — the interval extends to every two to three years. A simple water-drop test confirms when resealing is needed: if a drop absorbs into the stone rather than sitting on the surface, it is time to reseal.
 
 ### Can Monument 12x12 be used on a shower floor?
 
-Yes. Monument 12x12 can be used on shower floors and shower walls. Sealing is required for all shower applications to protect the natural stone from continuous moisture exposure. Size grout joints to a minimum of ⅛" and apply an anti-slip product after installation to increase traction on the shower floor. The 12x12 format produces a continuous stone field with fewer grout joints than smaller formats, and the honed finish provides a consistent underfoot surface once sealed.
+Yes. Monument 12x12 can be used on shower floors and shower walls. Sealing is required for all shower applications to protect the stone from continuous moisture exposure. Size grout joints to a minimum of ⅛" and apply an anti-slip treatment after installation to increase traction on the shower floor. The 12x12 format produces fewer grout joints than smaller formats, and the honed finish provides a consistent, gently matte underfoot surface once sealed.
 
-### How do I clean honed limestone?
+### How do I clean honed limestone without dulling the surface?
 
-To clean honed limestone, remove dust and grit regularly with a soft brush or vacuum to prevent surface abrasion. For routine cleaning, use a pH-neutral stone cleaner with warm water and a soft cloth or mop. Avoid acidic and abrasive products — including vinegar, bleach, lemon juice, and citrus-based cleaners — which will etch the stone permanently. Reseal periodically based on traffic and moisture exposure to maintain stain resistance.
+Remove dust and grit regularly with a soft brush or vacuum — fine abrasive particles underfoot are the most common cause of surface wear on honed stone. For routine cleaning, use a pH-neutral stone cleaner with warm water and a soft cloth or mop. Abrasive scrubbing pads, vinegar, bleach, lemon juice, and citrus-based cleaners will etch the honed surface permanently and should be avoided entirely. Reseal periodically based on traffic and moisture exposure to maintain stain resistance.
+
+### What causes etching on limestone, and how is it avoided?
+
+Etching occurs when acidic substances contact the calcium-based stone and dissolve the surface minerals, leaving dull marks that are visible against the honed finish. Cooking oils, citrus juices, wine, vinegar, and many household cleaners are acidic enough to etch limestone on contact. The practical response is to clean spills promptly and use only pH-neutral products for routine maintenance. Sealing provides an initial buffer but does not make the stone impervious to acid — it reduces the risk and slows the reaction, not eliminates it.
+
+### How does the honed finish differ from a polished finish in appearance and performance?
+
+A honed finish is ground to a smooth, flat, matte plane — the stone's minerals are visible but without glare. A polished finish continues that grinding process through progressively finer abrasives until the surface reaches a high-reflective sheen. Honed limestone reads quieter in a room, shows scratches less readily than polished stone, and carries the fossil impressions and mineral markings of Monument's grey ground without the distraction of reflected light. Polished finishes amplify color depth and surface gloss but require more careful maintenance in high-traffic applications.
 
 ### What design styles suit Monument 12x12?
 
-Monument 12x12 suits restrained architectural palettes where material tone defines the space rather than surface pattern. The neutral grey honed surface works in contemporary, modern rustic, and Mediterranean-influenced interiors where continuity across floor or wall planes is part of the design direction. At the 12x12 scale, the format produces a structured grid that works as a primary surface across bathrooms, entryways, and feature walls without requiring additional pattern to carry the design.
+Monument 12x12 suits restrained architectural palettes where material tone carries the space. The neutral grey honed surface works in contemporary, modern rustic, and Mediterranean-influenced interiors where continuity across floor or wall planes is the design intent. At 12x12, the format produces a structured grid that functions as a primary surface in bathrooms, entryways, and feature walls without needing additional pattern to hold the composition.
 
 ### How does Monument 12x12 differ from Monument 6x6?
 
-Monument 12x12 and Monument 6x6 are the same stone — natural sedimentary limestone quarried near Fez, Morocco — cut to different format dimensions. The 12x12 produces a wider-spaced grid with fewer grout joints, which allows the stone's tonal variation to read across a larger continuous field. The 6x6 introduces more joint lines, which works well in checkerboard layouts and smaller-scale applications. Both formats follow the same installation and sealing protocol.
+Monument 12x12 and Monument 6x6 are the same stone — natural sedimentary limestone quarried near Fez, Morocco — cut to different format dimensions. The 12x12 produces a wider-spaced grid with fewer grout joints, allowing the stone's tonal variation to read across a larger continuous field. The 6x6 introduces more joint lines, which works well in checkerboard layouts and smaller-scale applications where the gridded rhythm is part of the design language. Both formats follow the same installation and sealing protocol.
+
+### Does limestone have a face and an underside, and does orientation matter at installation?
+
+Yes. Limestone has a distinct face and underside that are not reversible. The face — the finished, honed surface — must be installed face up. Setting a tile upside down produces an unfinished, rough surface that cannot be corrected without replacement. Inspecting orientation before setting each piece is a standard step in the installation procedure; Zia's installation guide covers this specifically. For any installation questions, contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
+
+### How does Monument Honed read differently in natural versus artificial light?
+
+In natural light, Monument's cool grey ground and tonal variation across tiles become more apparent — the fossil impressions and subtle fissures cast faint shadows that give the surface a three-dimensional mineral quality. Under warmer artificial light, the grey base can pull slightly warm, and the cooler mineral markings recede. Viewing a sample under both lighting conditions before specifying is a reliable way to confirm how the stone will perform in the specific light environment of the installation.
+
+### Is Monument limestone suitable for freeze/thaw climates?
+
+No. Limestone is not rated for outdoor installation in freeze/thaw climates. Water penetrating the stone's porous structure during freeze cycles can cause internal damage and surface deterioration. In non-freeze/thaw climates, Monument Honed is suited for exterior floor and wall applications with appropriate sealing and periodic maintenance. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with any climate-specific questions before specifying for an exterior project.

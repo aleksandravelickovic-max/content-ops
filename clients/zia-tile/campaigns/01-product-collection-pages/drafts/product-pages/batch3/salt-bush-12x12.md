@@ -108,7 +108,7 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ### How does Salt Bush 12x12 read in a room?
 
-Salt Bush reads as a refined grey field with faint speckled movement across its surface. The grey base carries a subtle dusty grey-green undertone that shifts with natural and artificial light, keeping the surface from reading as a flat neutral. In rooms with plaster walls, natural wood, or stone countertops, the stone aggregate flecks in the tile add material depth without introducing pattern or color that demands attention.
+Salt Bush reads as a refined grey field with faint speckled movement distributed across its surface. The grey base carries a subtle dusty grey-green undertone that shifts with natural and artificial light, keeping the surface from reading as a flat neutral. In rooms with plaster walls, natural wood, or stone countertops, the stone aggregate flecks add material depth without introducing pattern or color that competes with the surrounding architecture.
 
 ### Does Salt Bush 12x12 terrazzo require sealing?
 
@@ -118,14 +118,38 @@ Yes. Cement terrazzo requires sealing before and after grouting. Apply 511 Porou
 
 Yes. Salt Bush 12x12 can be used on shower floors and shower walls. Terrazzo carries a DCOF of 0.51, which meets the wet area slip resistance threshold for floor applications. Seal the tile before and after grouting as required, and size grout joints to a minimum of ⅛". An anti-slip product can be applied after installation to further increase traction in high-exposure wet floor areas.
 
-### How do I clean Salt Bush terrazzo tile?
+### How do I clean Salt Bush terrazzo tile day to day?
 
-To clean Salt Bush terrazzo tile, vacuum or sweep regularly to remove abrasive debris that can scratch the surface. For routine cleaning, use a pH-neutral cleaner with warm water and a soft cloth or mop. Avoid acidic and abrasive products — including vinegar, lemon juice, and bleach — as these will damage the cement matrix over time. Reseal periodically, particularly in moisture-exposed areas or high-traffic floors.
+Vacuum or sweep regularly to remove abrasive grit that can scratch the matte surface. For routine cleaning, a pH-neutral stone cleaner with warm water and a soft cloth or mop is all that is needed. Harsh or gritty scrubbing pads should be avoided. Reseal periodically in high-traffic or moisture-exposed areas to maintain stain resistance.
+
+### Why must acidic cleaners be avoided on terrazzo?
+
+Terrazzo's cement matrix is sensitive to acid. Vinegar, lemon juice, bleach, and citrus-based cleaners will break down the cement binder over time, dulling the surface and compromising its integrity. The damage is cumulative and not always visible immediately — which is why establishing a pH-neutral cleaning routine from the start protects the surface for the life of the installation.
 
 ### What design styles pair well with Salt Bush?
 
-Salt Bush pairs well with interiors where a quiet, neutral ground is part of the design intent. The grey base and speckled aggregate complement natural plaster walls, matte concrete surfaces, warm wood cabinetry, and minimal stone countertops without competing with any of them. The grey-green undertone in the base makes it particularly well-suited to interiors drawing on earthy, organic, or desert-influenced palettes.
+Salt Bush suits interiors where a quiet, neutral ground defines the space. The grey base and speckled aggregate complement natural plaster walls, matte concrete surfaces, warm wood cabinetry, and honed stone countertops without competing with any of them. The grey-green undertone makes it particularly well-suited to earthy, organic, and desert-influenced palettes, and it holds its own in contemporary minimalist spaces where material texture carries the design interest.
 
 ### How does the 12x12 format work in a terrazzo installation?
 
-The 12x12 format produces a continuous surface with fewer grout joints than smaller formats, which allows the grey field and stone aggregate of Salt Bush to read across a wider area. Aggregate distribution across the layout becomes more visible at this scale, which is why blending tiles from all boxes and arranging a dry layout before setting is essential. A 1/8" grout joint is recommended, and installers should plan for minor shimming and wedge spacer adjustments to maintain straight grout lines across the field.
+The 12x12 format produces a continuous surface with fewer grout joints than smaller formats, which allows the grey field and stone aggregate of Salt Bush to resolve across a wider area. Aggregate distribution becomes more visible at this scale, which is why blending tiles from all boxes and arranging a dry layout before setting is essential. A 1/8" grout joint is recommended, and installers should plan for minor shimming and wedge spacer adjustments to maintain straight lines across the field.
+
+### What does blending tiles from multiple boxes involve on site?
+
+Before setting, each box in the order should be opened and the tiles intermixed across the full delivery. The aggregate distribution in terrazzo varies from tile to tile, and pulling pieces from a single box creates clusters of similar aggregate density on the installed floor. Dry-laying the full arrangement — or as much of it as the site allows — before setting gives the installer the chance to balance the speckled composition across the field and identify where individual tiles need repositioning.
+
+### How does terrazzo compare to polished concrete in appearance and maintenance?
+
+Both read as flat, continuous field materials, but the aggregate in terrazzo is a curated mix of crushed stone set intentionally into the cement matrix, whereas polished concrete's surface character depends on the aggregate already present in the slab. Terrazzo offers a consistent, designed composition — the specific aggregate type, size, and density are determined when the tile is made. Maintenance for both requires pH-neutral cleaners and periodic resealing, but terrazzo tiles can be individually replaced if one is damaged, which is not straightforward with poured concrete.
+
+### What causes crazing on terrazzo, and is it a structural concern?
+
+Crazing — a fine network of surface-level cracks in the cement matrix — is a characteristic of hand-pressed cement terrazzo that results from the curing and pressing process. It does not affect the structural integrity of the tile or the bond to the substrate when properly installed. Crazing is visible at close range on some tiles and less apparent on others; it is part of what distinguishes hand-pressed terrazzo from machine-manufactured composite tile.
+
+### Can a terrazzo tile be repaired if it is cracked or chipped?
+
+A cracked or chipped terrazzo tile can be replaced individually without disturbing the surrounding installation, provided overage was retained from the original order. This is one advantage of tile format over poured terrazzo systems, where repairs require matching and grinding an in-place surface. Zia recommends retaining extra tiles from the original batch for this reason — aggregate composition can vary between production runs, and a tile from the original order will provide the closest match. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 with questions about replacement ordering.
+
+### Is Salt Bush terrazzo suitable for a freeze/thaw climate?
+
+No. Cement terrazzo is not rated for outdoor installation in freeze/thaw climates. Water can penetrate the porous cement matrix and expand during freeze cycles, causing surface damage. In non-freeze/thaw climates, Salt Bush 12x12 is suited for exterior floors, courtyards, and covered outdoor spaces with appropriate sealing. For any climate or application questions specific to a project, reach out to [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170.
