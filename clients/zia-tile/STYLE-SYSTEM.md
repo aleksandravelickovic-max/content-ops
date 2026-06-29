@@ -463,6 +463,23 @@ Each application section should reference specific Zia shapes or formats in cont
 - **Exterior:** specify that unglazed Cotto performs in any climate including freeze/thaw. Note that Cotto Allende is the right choice for pools and wet spaces.
 - **Bathrooms:** require proper sealing. Remove language that positions Cotto Allende as the lower-maintenance alternative -- Jamie deleted this from the blog post.
 
+### 6.7 Design-ideas blog pattern (multi-material topics)
+
+For pattern, format, or room-idea topics that span more than one material (e.g. "checkerboard tile," "kitchen backsplash ideas"), follow this skeleton. The golden reference is `campaigns/04-may-batch/drafts/checkerboard-tile-design-ideas-v5.md` — the approved blend of the team's v1 (structure) and v2 (warmth). Brittany signed off on this rule set on 2026-06-29.
+
+**Section order:**
+1. **Opening** — lead with the design decision the topic poses (the §6.1 search-intent rule), tie to the search term and the room context, name Zia's relevant materials/collections in the first or second paragraph.
+2. **What Is [topic]?** — short definition section. One rule of the pattern, then how its character is governed (tone relationship, surface behavior).
+3. **[Topic] at Zia** — one H3 per material path (e.g. Roman Mosaic, Zellige, Cotto). Each H3 covers: what it is, the verified colorways/formats, and its suitability (freeze/thaw, pool/spa, exterior, sealing) stated affirmatively.
+4. **Application sections** — by room (Kitchen, Bathroom), with H3s by surface (Floors, Backsplashes, Shower Walls). Name specific Zia formats and colorways in context.
+5. **Design-decision sections** — e.g. Color and Contrast, Grout. Give the reader the trade-off, not a rule.
+6. **[Topic] at Zia** — recap that ties the materials back together, then the contact line (info@ziatile.com + 310-844-1170).
+7. **FAQ** — exactly the questions a buyer searches: size/scale, "can it go in a shower / wet use," product-difference, and overage/how-much. Each answer is one direct-answer paragraph.
+
+**Prose discipline (the v2 lesson):** paragraphs 1-4 lines; short-to-medium sentences; almost no semicolons; vary sentence openings (§2.5). Warm and aspirational, grounded in a specific detail (§2.1, §2.7).
+
+**Material accuracy (non-negotiable):** every suitability claim (freeze/thaw, pool/spa, exterior, sealing) must match the material's config in `materials/{material}.md`. Roman Mosaics ≠ Marble. Only use **verified** colorway names — zellige colorways are gated `verify`; do not invent combinations (this is what made the team's v3/v4 fail).
+
 ---
 
 ## 7. Collection Page Standards

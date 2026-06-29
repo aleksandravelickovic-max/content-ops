@@ -31,6 +31,14 @@ Every blog post needs a proper conclusion. Do not end abruptly. Close on the mak
 
 ---
 
+## Multi-material "design ideas" topics (§6.7)
+For pattern/format/room-idea topics spanning more than one material (e.g. "checkerboard tile"), use the §6.7 skeleton instead of a single-material structure. Golden reference: `campaigns/04-may-batch/drafts/checkerboard-tile-design-ideas-v5.md`.
+- Opening leads with the design decision + search intent (§6.1), names the materials early.
+- "What Is [topic]?" → "[topic] at Zia" (one H3 per material) → room applications (Kitchen/Bathroom, H3 per surface) → design-decision sections (Color/Contrast, Grout) → recap + contact line → FAQ.
+- FAQ = the four buyer searches: size/scale, shower/wet use, product-difference, overage.
+- Prose discipline: 1-4 line paragraphs, short-to-medium sentences, near-zero semicolons, varied openings.
+- Every suitability claim must match `materials/{material}.md`; only verified colorways (zellige colorways are gated `verify`).
+
 ## Person consistency (§6.4) — flagged in every review
 Choose first person ("our Cotto") or third person ("Zia's Cotto") and hold it for the entire piece. No switching within a paragraph or between sections. No second person (you/your) anywhere. Pipeline gates this via person-consistency.
 
