@@ -18,7 +18,7 @@ draft_date: 2026-06-26
 
 Zia's Salt Bush 12x12 is a cement terrazzo tile with a grey base and subtle stone aggregate flecks distributed throughout. For over 500 years, terrazzo has defined iconic design, from historic Italian architecture to the sunlit modernism of Palm Springs. Equally at home in Classic, Mid-Century Modern, and contemporary minimalist interiors, this multifaceted material is available in 12x12 and 24x24 square sizes. Authentic terrazzo tiles are crafted by setting a curated blend of natural stone aggregates into a base, then cement is poured, cured, ground, and polished to achieve a smooth and distinctive finish.
 
-Salt Bush reads as a refined, understated field — a grey that carries the faint mineral presence of scattered stone aggregate across its surface. The name references the desert shrub: there is a quiet, dusty grey-green quality in the base that shifts with the angle of light. The stone aggregate flecks are distributed evenly across the grey ground, producing speckled movement across the surface.
+Salt Bush is a grey cement terrazzo with multi-colored stone aggregate chips distributed through the matrix. The grey base reads as a muted, neutral ground; the aggregate introduces tonal variation across the surface. Aggregate distribution shifts tile to tile, which is characteristic of hand-pressed terrazzo.
 
 Salt Bush 12x12 terrazzo tile includes minor variations in size, color, tone, and aggregate mix, which are natural characteristics of terrazzo tile and should be expected across the order. Images shown are representative of a sample of this tile but may not display all potential variation.
 
@@ -108,7 +108,7 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 ### What is the aggregate composition of Salt Bush — what colors and materials make up the stone and marble mix?
 
-Salt Bush is built on a grey cement base with a mix of crushed stone and marble aggregate in muted tones — grey, off-white, and occasional pale mineral flecks — distributed through the matrix. The aggregate is neither densely packed nor sparse; it reads as scattered stone detail across the grey field. The grey-green undertone in the base comes from the cement formulation and the mineral character of the aggregate, not from added pigment.
+Salt Bush is built on a grey cement base with a mix of crushed stone and marble aggregate in muted tones — grey, off-white, and occasional pale mineral flecks — distributed through the matrix. The aggregate is neither densely packed nor sparse; it reads as scattered stone detail across the grey field. The tonal character of the base comes from the cement formulation and the mineral character of the aggregate, not from added pigment.
 
 ### How does the 12x12 format work in a Salt Bush terrazzo installation?
 
@@ -140,7 +140,7 @@ Crazing — a fine network of surface-level cracks in the cement matrix — is a
 
 ### Can a Salt Bush tile be replaced individually if one is cracked or chipped?
 
-Yes. A cracked or chipped terrazzo tile can be replaced individually without disturbing the surrounding installation, provided overage was retained from the original order. Zia recommends retaining extra tiles from the original batch for this reason — aggregate composition and the grey-green base tone can vary between production runs, and a tile from the same order will provide the closest match. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 to discuss replacement options.
+Yes. A cracked or chipped terrazzo tile can be replaced individually without disturbing the surrounding installation, provided overage was retained from the original order. Zia recommends retaining extra tiles from the original batch for this reason — aggregate composition and base tone can vary between production runs, and a tile from the same order will provide the closest match. Contact [info@ziatile.com](mailto:info@ziatile.com) or 310-844-1170 to discuss replacement options.
 
 ### Is Salt Bush terrazzo suitable for a freeze/thaw climate?
 
