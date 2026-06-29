@@ -16,11 +16,11 @@ Makana — the Hawaiian word for gift — is a Native Hawaiian family-owned oper
 
 ## The Route: Na Pali Coast in Evening Light
 
-What does the Na Pali Coast look like from the water as the sun moves toward the horizon? The cliffs line the northwest shore, walls of green rising directly from the ocean. In the evening, the angle of the light cuts across the cliff faces at a low pitch, deepening the greens and pulling out textures that mid-day sun washes flat.
+The cliffs line the northwest shore, walls of green rising directly from the ocean. In the evening, the light cuts across the cliff faces at a low pitch, deepening the greens and pulling out textures that midday sun washes flat.
 
 We follow the coastline from Polihale, where the sand meets the base of the cliffs at the end of the road, northwest toward the Kalalau Valley. Kalalau Valley is accessible only from the water or by a long backcountry trail — most visitors never see it. At sunset, the valley's waterfall threads down through vegetation that catches every color in the fading light.
 
-Further along, the Honopu Archway comes into view. Two beaches sit separated by a massive stone arch that you cannot reach by land. Film crews kept returning to this stretch: the Archway served as a location for King Kong, James Bond, Pirates of the Caribbean, and Six Days Seven Nights.
+Past Kalalau, the Honopu Archway comes into view. Two beaches sit separated by a massive stone arch that you cannot reach by land. Film crews kept returning to this stretch — the Archway served as a location for King Kong, James Bond, Pirates of the Caribbean, and Six Days Seven Nights.
 
 Spinner dolphins and Pacific Bottlenose dolphins are commonly seen along the route. Hawaiian green sea turtles (honu) surface near the caves and along the shore. We do not guarantee sightings, but it is rare that we complete a full coastal run without seeing dolphins at some point.
 
@@ -28,31 +28,31 @@ Spinner dolphins and Pacific Bottlenose dolphins are commonly seen along the rou
 
 ## The Sea Caves: What You Can Actually Access
 
-Can you go inside the Na Pali Coast sea caves on a sunset cruise? Yes, as long as ocean conditions allow on the day of your tour.
+On the sunset cruise, you can go inside the Na Pali Coast sea caves as long as ocean conditions allow on the day of your tour.
 
-The sea caves on this stretch of coast include Pirates Cave (Waiahuakua in Hawaiian), Rainbow Falls, and the Honopu Archway. Our catamarans are built low and narrow enough to enter the caves and position close to the archway. Most larger boats running tours from Port Allen cannot do this. Their decks stay at the cave mouth while ours goes dark inside the walls.
+The sea caves on this stretch of coast include Pirates Cave (Waiahuakua in Hawaiian), Rainbow Falls, and the Honopu Archway. Our catamarans are built low and narrow enough to enter the caves and position close to the archway. Most larger boats running tours from Port Allen cannot do this — their decks stay at the cave mouth while ours goes dark inside the walls.
 
-Here is the honest answer to the question you may have come here asking: Makana gets inside the sea caves more often than most operators on the island because of the boats we run and where we depart from. We do not promise cave access on any specific tour, because the ocean decides that on the morning of your trip. Swell height, surge, and visibility all factor in. Our captains have been reading these conditions their entire lives, and they push as far in as the water safely allows.
+Makana gets inside the sea caves more often than most operators on the island because of the boats we run and where we depart from. We do not promise cave access on any specific tour, because the ocean decides that on the morning of your trip. Swell height and surge both factor in. Our captains have been reading these conditions their entire lives and push as far in as the water safely allows.
 
-When conditions cooperate, the Pirates Cave entry involves the boat going dark inside the cave walls, sound amplifying off the rock, and light returning from the other side. A photograph captures the shape of it, not the full experience.
+When conditions cooperate, the Pirates Cave entry involves the boat going dark inside the cave walls, sound amplifying off the rock, and light entering from the other side. A photograph captures the shape of it, not the full experience.
 
 ---
 
 ## Why the Departure Point Matters
 
-How much does it matter that Makana departs from Kikiaola Harbor instead of Port Allen? It translates to up to an hour more time on the Na Pali Coast.
+Departing from Kikiaola Harbor instead of Port Allen translates to up to an hour more time on the Na Pali Coast.
 
 Port Allen is the main commercial harbor on Kauai's south shore and the departure point for most tour operators on the island. Kikiaola Small Boat Harbor sits further west, significantly closer to where the Na Pali cliffs actually begin. The transit difference between the two harbors is roughly 30 minutes each direction.
 
-For a sunset cruise, that extra time on the coast is not a bonus. It is the whole point. The golden-hour window is fixed. A boat spending an extra 30 to 60 minutes getting to and from the coast reaches the caves as the light is already fading, or turns back before the color peaks. We are already positioned close to the coast when the light starts working those cliff walls.
+For a sunset cruise, that extra time on the coast is not a bonus — it is the whole point. The golden-hour window is fixed. A boat spending an extra 30 to 60 minutes getting to and from the coast reaches the caves as the light is already fading, or turns back before the color peaks. We are already positioned close to the coast when the light starts working those cliff walls.
 
 ---
 
 ## The Boats: Which Catamarans Run the Sunset Cruise
 
-What boats does Makana use for the sunset cruise? The sunset cruise runs on the Na Pali Kai III and on the Seiko 1 and Seiko 2 power catamarans.
+The sunset cruise runs on the Na Pali Kai III and on the Seiko 1 and Seiko 2 power catamarans.
 
-Na Pali Kai III holds up to 32 guests and has a 360-degree walk-around deck. Photographers specifically request this boat. You can move freely to both sides and the bow without asking anyone to shift, which matters when the cave entrance is on the port side and the cliff face catching color is to starboard. The age minimum is 4 years old.
+Na Pali Kai III holds up to 32 guests and has a 360-degree walk-around deck. Photographers specifically request this boat — you can move freely to both sides and the bow without asking anyone to shift, so when the cave entrance is on the port side and the cliff face catching color is to starboard, you can cover both. The age minimum is 4 years old.
 
 The Seiko 1 and Seiko 2 each hold up to 16 guests and are power catamarans built specifically for the Na Pali Coast. The smaller group size means less time at the boarding ladder and more room at the rail. The age minimum for both is 9 years old.
 

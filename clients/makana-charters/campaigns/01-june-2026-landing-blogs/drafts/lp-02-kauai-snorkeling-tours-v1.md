@@ -14,11 +14,11 @@ Not all Kauai snorkeling tours put you in the same water. Where the boat departs
 
 ## Where to Snorkel on Kauai
 
-The snorkel sites we visit depend on ocean conditions on the day of your tour. The locations we access most often along the Na Pali Coast include Makole, Ke'e Beach (also called Tunnels), and Nualolo Kai. Each of these sites sits along the north and northwest shore of Kauai, inside marine habitat that south-shore snorkel spots do not reach.
+The snorkel sites we visit depend on ocean conditions on the day of your tour. We access Makole, Ke'e Beach (also called Tunnels), and Nualolo Kai most often — all along the north and northwest shore of Kauai, in marine habitat that south-shore snorkel spots do not reach.
 
-The Na Pali Coast's remoteness keeps boat traffic lower than south-shore areas. The reef systems at Nualolo Kai see far less daily visitor pressure than south-shore spots. South-shore locations see more daily volume.
+Na Pali Coast reef systems, particularly Nualolo Kai, see a fraction of the daily boat traffic that south-shore locations handle. That lower pressure shows in the water.
 
-Spinner dolphins and Pacific Bottlenose dolphins are commonly spotted along the Na Pali Coast on our tours — it's rare that we don't see them on a run. Honu (Hawaiian green sea turtles) are frequently seen near the reef. Diverse reef fish species and coral formations are a consistent part of the snorkel stop. Wildlife sightings are never guaranteed, as ocean conditions and animal behavior vary, but our crew knows the habitats and tides that put guests in the right place.
+Spinner dolphins and Pacific Bottlenose dolphins are commonly spotted along the Na Pali Coast on our tours — it's rare that we don't see them on a run. Honu (Hawaiian green sea turtles) are frequently seen near the reef, and reef fish and coral formations are a consistent part of the snorkel stop. Wildlife sightings are never guaranteed, as ocean conditions and animal behavior vary, but our crew knows the habitats and tides that put guests in the right place.
 
 ---
 
@@ -26,27 +26,27 @@ Spinner dolphins and Pacific Bottlenose dolphins are commonly spotted along the 
 
 ### Departure Point
 
-Where a boat leaves from determines how much time it actually spends near the snorkel sites. We depart from Kikiaola Small Boat Harbor in Kekaha — the closest departure point to the Na Pali Coast on Kauai. That proximity translates to up to an hour more on the coast compared to tours leaving from Port Allen, which sits farther south. Less time in transit means more time at the reef.
+Where a boat leaves from determines how much time it actually spends near the snorkel sites. We depart from Kikiaola Small Boat Harbor in Kekaha — the closest departure point to the Na Pali Coast on Kauai. That means up to an hour more on the coast compared to tours leaving from Port Allen, which sits farther south.
 
-Ask any operator you're considering: where exactly do you depart from, and how long does it take to reach your snorkel site? The answer tells you a great deal about how your tour day will actually be structured.
+When comparing operators, ask where they depart from and how long it takes to reach the snorkel site. That single detail shapes the whole day.
 
 ### Group Size
 
-Smaller groups create a different experience in the water. Our tours carry 12 to 32 guests depending on the boat — smaller than most operators on the island. At a crowded snorkel stop, more people in the water means more surface disruption, more noise, and less time near the reef. Smaller groups enter the water faster and stay longer without the coordination challenges that come with large tour headcounts.
+Our tours carry 12 to 32 guests depending on the boat — smaller than most operators on the island. At a crowded snorkel stop, more people in the water means more surface disruption and less time near the reef. Smaller groups enter faster and stay longer without the coordination overhead that comes with larger headcounts.
 
-Group size also affects the catamaran's stability and the crew's ability to watch guests in the water. On a 32-guest boat, every guest gets attention. On a larger boat, that ratio changes.
+Group size also affects how well the crew can watch guests in the water. On a 32-guest boat, every guest gets attention. Larger boats change that ratio.
 
 ### Gear and Instruction
 
 Snorkel gear and flotation devices are included on every Makana tour — you do not need to bring your own or rent separately. Before the snorkel stop, the crew walks guests through proper gear fit and technique. Guests who do not want to snorkel are not required to enter the water. You stay on board and watch from the deck, and the boat remains anchored at the snorkel site for about one hour.
 
-Gear fit matters more than most guests expect. Poorly fitted gear leads to leaking masks, saltwater ingestion, and shortened time in the water. Our crew checks gear before guests enter.
+Poorly fitted gear leads to leaking masks and shortened time in the water. Our crew checks fit before guests enter.
 
 ### Crew Knowledge
 
-Our captains and crew have lived on Kauai for years — most their entire lives. They know the seasonal patterns of the reef, which conditions favor the Nualolo Kai site over Makole, and when ocean swells make a different location the better call. That judgment comes from time on these specific waters, not from a training manual. Our confirmed captains include Mike, Rob, Darrel, Chris, Dave, and Phil.
+Our captains and crew have lived on Kauai for years — most their entire lives. They know which conditions favor Nualolo Kai over Makole, and when ocean swells mean a different location is the better call. Our confirmed captains include Mike, Rob, Darrel, Chris, Dave, and Phil.
 
-Crew who grew up here also notice things seasonal hires do not: a turtle resting on a particular coral head, a school of fish holding at depth before surfacing, a shift in current that signals when to wrap the snorkel stop. That local knowledge changes what guests see.
+Crew who grew up here notice things seasonal hires do not: a turtle resting on a particular coral head, a school of fish holding at depth before surfacing, a current shift that signals when to wrap the snorkel stop.
 
 ### Cultural Context
 
@@ -58,7 +58,7 @@ Snorkeling at Nualolo Kai carries a different weight when the person in the wate
 
 ## What's Included on a Makana Snorkeling Tour
 
-Every Makana snorkeling tour includes snorkel gear, flotation devices, a deli-style lunch, and soft drinks and local juices. The deli lunch options are turkey, ham, roast beef, or vegetarian, served with fruit and snacks.
+Snorkel gear, flotation devices, a deli-style lunch, and soft drinks and local juices are included on every tour. Deli lunch options are turkey, ham, roast beef, or vegetarian, served with fruit and snacks.
 
 The snorkel stop runs about one hour. During that time, guests are free to snorkel, float with flotation devices, or remain on board.
 
@@ -78,9 +78,9 @@ We depart from Kikiaola Small Boat Harbor in Kekaha, HI. You do not check in at 
 
 Prices are confirmed as of June 2026. Call to confirm current availability and any seasonal adjustments before booking.
 
-**Phone:** (808) 338-9980
-**Booking phone:** 808-201-2495
-**Hours:** 7AM–9PM
+Phone: (808) 338-9980
+Booking: 808-201-2495
+Hours: 7AM–9PM
 
 [GBP MAP EMBED: https://maps.app.goo.gl/sPMvfmjJULiaZfWn11]
 

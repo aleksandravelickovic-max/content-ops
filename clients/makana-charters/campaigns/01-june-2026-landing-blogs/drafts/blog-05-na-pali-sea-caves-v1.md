@@ -7,7 +7,7 @@ meta_description: Discover Kauai's famous Na Pali sea caves by boat. Makana Char
 
 Yes, boats can go inside the Na Pali sea caves. Our catamarans are built specifically to navigate in and out of the caves along the Na Pali Coast — as long as ocean conditions allow on the day of your tour.
 
-Three caves draw the most attention from guests: Pirates Cave, Rainbow Falls, and the Honopu Archway. Each one is different in shape, light, and scale. The only way to see them from the water is by boat.
+Three caves draw the most attention from guests: Pirates Cave, Rainbow Falls, and the Honopu Archway. They differ in shape, light, and scale, and none of them are visible from shore.
 
 ---
 
@@ -15,7 +15,7 @@ Three caves draw the most attention from guests: Pirates Cave, Rainbow Falls, an
 
 What are the named sea caves on the Na Pali Coast?
 
-**The Na Pali Coast has three main sea caves that boats visit on a standard tour: Pirates Cave (Waiahuakua), Rainbow Falls, and the Honopu Archway.**
+The Na Pali Coast has three main sea caves that boats visit on a standard tour: Pirates Cave (Waiahuakua), Rainbow Falls, and the Honopu Archway.
 
 Pirates Cave carries both its common name and its Hawaiian name, Waiahuakua. The cave has an open ceiling that lets in natural light. Our catamarans enter when the ocean allows.
 
@@ -27,41 +27,41 @@ The Honopu Archway is an open arch formation rather than an enclosed cave, and i
 
 ## Can You Actually Go Inside the Caves?
 
-**Our catamarans are built to navigate in and out of the Na Pali sea caves. Access on any given tour depends on ocean conditions — swell height, wind, and sea state on that day.**
+Our catamarans are built to navigate in and out of the Na Pali sea caves. Access on any given tour depends on ocean conditions: swell height, wind, and sea state on that day.
 
-We do not promise cave entry. What we can say is that our captains have navigated these caves hundreds of times, they read ocean conditions from departure, and they make decisions at the water. Most tours reach the caves. There are days when conditions push us back.
+We do not promise cave entry. Our captains have navigated these caves hundreds of times, they read conditions from departure, and they make the call at the water. Most tours reach the caves. There are days when conditions push us back.
 
-Larger boats face a different problem: they physically cannot maneuver inside many of the caves regardless of conditions. Our design removes that limitation. The ocean conditions remain the deciding factor.
+Larger boats face a different problem: they physically cannot maneuver inside many of the caves regardless of conditions. Our design removes that constraint, but the ocean is still the deciding factor.
 
 ---
 
 ## Why Boat Size and Design Matters
 
-**Makana's catamarans are built for the Na Pali Coast — smaller, faster, and more maneuverable than most of the boats operating out of Kauai's harbors.**
+Makana's catamarans are built for the Na Pali Coast: smaller, faster, and more maneuverable than most of the boats operating out of Kauai's harbors.
 
-Most of our tours carry 12 to 32 guests. Many operators run boats with significantly higher passenger counts. A boat carrying that many people does not attempt the cave entries we do. The physics of the approach, the turning radius, and the draft all matter when the entrance to a cave is narrow and the swell is running.
+Most of our tours carry 12 to 32 guests. Many operators run boats with significantly higher passenger counts, and a boat that size does not attempt the cave entries we do. The turning radius, the draft, and the width of the approach all matter when a cave entrance is narrow and the swell is running.
 
-This is not a marketing distinction. It is a design and operational one. We built and chose our boats with the Na Pali Coast in mind — the caves included.
+We built and chose our boats with the Na Pali Coast in mind, the caves included.
 
 ---
 
 ## Why Departure Point Matters for Sea Cave Access
 
-**We depart from Kikiaola Small Boat Harbor in Kekaha — the closest departure point to the Na Pali Coast sea caves. That means up to an hour more time on the coast compared to boats leaving from Port Allen.**
+We depart from Kikiaola Small Boat Harbor in Kekaha, the closest departure point to the Na Pali Coast sea caves. That means up to an hour more time on the coast compared to boats leaving from Port Allen.
 
-Port Allen is the departure point for most Kauai tour operators. It is further south along the coast. Boats leaving from there spend a significant portion of the trip in transit before they reach the caves. By the time they arrive, turnaround time is already pressing.
+Most Kauai tour operators leave from Port Allen, further south along the coast. Boats from there spend a significant portion of the trip in transit before they reach the caves, and by the time they arrive, turnaround is already pressing.
 
-Kikiaola puts you at the caves faster. Our standard tour runs 4.5 to 5 hours, and you spend more of those hours at the formations that brought you here. Only one of our boats, the Amelia K, departs from Port Allen. All other Makana catamarans leave from Kikiaola.
+Leaving from Kikiaola means more of a 4.5 to 5-hour tour is spent at the formations you came to see. Only the Amelia K departs from Port Allen. All other Makana catamarans leave from Kikiaola.
 
 ---
 
 ## The Family History Behind These Waters
 
-**Makana — the Hawaiian word for gift — is a Native Hawaiian family-owned operation with documented roots on the Na Pali Coast going back over 200 years.**
+Makana, the Hawaiian word for gift, is a Native Hawaiian family-owned operation with documented roots on the Na Pali Coast going back over 200 years.
 
-Our family continued what began as Liko Kauai Cruises. The captains on our boats — Mike, Rob, Darrel, Chris, Dave, Phil — grew up on Kauai. Most have spent their whole lives on these waters. When they are not on the water with guests, they are on it on their own time.
+Our family continued what began as Liko Kauai Cruises. The captains on our boats, Mike, Rob, Darrel, Chris, Dave, and Phil, grew up on Kauai. Most have spent their whole lives on these waters, and when they are not on the water with guests, they are on it on their own time.
 
-They know where Pirates Cave sits at low swell. They know how the light moves through Rainbow Falls at different hours. They know when Honopu is approachable and when it is not. That knowledge is not trained in a briefing room. It comes from a lifetime on the coast.
+They know where Pirates Cave sits at low swell, how the light moves through Rainbow Falls at different hours, and when Honopu is approachable. That knowledge does not come from a briefing room. It comes from a lifetime on the coast.
 
 ---
 
@@ -69,7 +69,7 @@ They know where Pirates Cave sits at low swell. They know how the light moves th
 
 Makana Charters operates daily tours along the Na Pali Coast. Most boats depart from Kikiaola Small Boat Harbor, Kekaha, HI.
 
-**Tour pricing (confirmed June 2026):**
+Tour pricing (confirmed June 2026):
 
 - Na Pali Kai III (up to 32 guests, age 4+): $199 adult / $169 child
 - Seiko 1, Seiko 2 (up to 16 guests each, age 9+): $219 adult / $189 child

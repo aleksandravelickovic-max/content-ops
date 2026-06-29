@@ -7,7 +7,7 @@ page_type: informational/commercial blog
 
 # Private Catamaran Charter on Kauai: What to Know Before Booking for a Group
 
-Yes, you can rent a private catamaran for your group on Kauai. Makana Charters offers private Na Pali Coast charters on two boats — one for groups up to 12, one for groups up to 32. The route, the crew, and the inclusions are the same as the shared tour. The difference is simple: the boat belongs to your group for the day.
+Yes, you can rent a private catamaran for your group on Kauai. Makana Charters offers private Na Pali Coast charters on two boats: one for groups up to 12, one for groups up to 32. The route, the crew, and the inclusions are the same as the shared tour. The boat belongs to your group for the day.
 
 ---
 
@@ -15,9 +15,7 @@ Yes, you can rent a private catamaran for your group on Kauai. Makana Charters o
 
 Private Kauai catamaran charters work for any group that wants the Na Pali Coast without sharing the boat with strangers. Most bookings come from families traveling together, wedding parties, friend groups marking a milestone, and corporate teams looking for a day on the water that doesn't involve a conference room.
 
-This is not a special product with a different itinerary. It is the same Na Pali Coast tour — the same sea caves, the same snorkel stop, the same deli lunch, the same crew. The only difference is that your group has the whole boat.
-
-What they share is that they want the coast to themselves.
+The tour itself is the same: same sea caves, same snorkel stop, same deli lunch, same crew. Your group just has the whole boat.
 
 ---
 
@@ -31,7 +29,7 @@ The Makana is the smallest boat in the fleet. It is the right choice for intimat
 
 **Na Pali Kai III (up to 32 guests)**
 
-The Na Pali Kai III carries up to 32 guests and accepts children as young as 4. It has a 360-degree walk-around deck and freshwater showers. Pricing is $199 per adult and $169 per child. For groups over 12, call (808) 338-9980 to arrange the private charter. The team will confirm availability and work through the details with you.
+The Na Pali Kai III carries up to 32 guests and accepts children as young as 4. It has a 360-degree walk-around deck and freshwater showers. Pricing is $199 per adult and $169 per child. For groups over 12, call (808) 338-9980 to arrange the private charter. The team will confirm availability and go through the details with you.
 
 Both boats depart from Kikiaola Small Boat Harbor in Kekaha.
 
@@ -39,11 +37,11 @@ Both boats depart from Kikiaola Small Boat Harbor in Kekaha.
 
 ## The Na Pali Coast Route
 
-The Na Pali Coast is the western shore of Kauai, a stretch of sea cliffs that rise steeply from the water. It is not accessible by road. A catamaran is one of the few ways to see it from the water.
+The Na Pali Coast is the western shore of Kauai, a stretch of sea cliffs that rise steeply from the water. There is no road access. A catamaran is one of the few ways to see it up close.
 
-The route runs from Kikiaola Harbor north along the coast. You pass Polihale, the long shoreline at the base of the cliffs. The tour continues into Kalalau Valley, where waterfalls come down from the ridgeline. Sea caves follow: Pirates Cave (Waiahuakua in Hawaiian), Rainbow Falls, and the Honopu Archway, the filming location for King Kong, Six Days Seven Nights, James Bond, and Pirates of the Caribbean. Sea cave entry depends on ocean conditions on the day of the tour.
+From Kikiaola Harbor, the route runs north along the coast. You pass Polihale, the long shoreline at the base of the cliffs, then into Kalalau Valley, where waterfalls come down from the ridgeline. Sea caves follow: Pirates Cave (Waiahuakua in Hawaiian), Rainbow Falls, and the Honopu Archway, the filming location for King Kong, Six Days Seven Nights, James Bond, and Pirates of the Caribbean. Cave entry is as long as ocean conditions allow.
 
-After the coast section, the tour stops for about one hour of snorkeling. Spinner dolphins, Pacific Bottlenose dolphins, and honu (Hawaiian green sea turtles) are commonly spotted along the way. Wildlife sightings are never guaranteed, but it is rare that the crew doesn't see dolphins.
+After the cliffs, the tour stops for about one hour of snorkeling. Spinner dolphins, Pacific Bottlenose dolphins, and honu (Hawaiian green sea turtles) are commonly spotted along the way. Sightings are never guaranteed, but it is rare that the crew doesn't see dolphins.
 
 The full tour runs 4.5 to 5 hours.
 
@@ -53,7 +51,7 @@ The full tour runs 4.5 to 5 hours.
 
 Makana Charters departs from Kikiaola Small Boat Harbor, the closest harbor to the Na Pali Coast on Kauai. Most competing operators leave from Port Allen, which adds significant transit time in each direction.
 
-Departing from Kikiaola means your group spends more time on the Na Pali cliffs and less time moving through open water to reach them. When you have paid for a private charter, that difference is meaningful. More time on the coast is the point.
+Departing from Kikiaola means your group spends more time on the Na Pali cliffs and less time moving through open water to reach them. On a private charter, that extra time on the coast is what you are paying for.
 
 ---
 
@@ -61,7 +59,7 @@ Departing from Kikiaola means your group spends more time on the Na Pali cliffs 
 
 Every Makana Charters tour includes snorkel gear and flotation devices, a deli-style lunch with turkey, ham, roast beef, or vegetarian options, plus fruit, snacks, soft drinks, and local juices. Both boats have onboard restrooms. The Na Pali Kai III has freshwater showers.
 
-Cultural narration from the Native Hawaiian crew is part of every tour. Makana's family has been sailing these waters for over 200 years. The captains grew up on Kauai. The narration reflects that history.
+Cultural narration from the Native Hawaiian crew is part of every tour. Makana's family has been sailing these waters for over 200 years, and the captains grew up on Kauai. The narration reflects that history.
 
 Guests are welcome to bring their own alcohol, but it stays sealed until after the snorkel stop.
 
@@ -71,7 +69,7 @@ Guests are welcome to bring their own alcohol, but it stays sealed until after t
 
 **Groups up to 12:** Book online at makanacharters.com. Purchase standard tickets for each person in your group. The Makana boat holds a maximum of 12 guests, so a full purchase covers the private charter.
 
-**Groups over 12:** Call (808) 338-9980. The team is available from 7AM to 9PM. They will confirm which dates have availability on the Na Pali Kai III, go over the details with your group, and get you set up.
+**Groups over 12:** Call (808) 338-9980. The team is available from 7AM to 9PM. They will confirm availability on the Na Pali Kai III and walk you through the booking from there.
 
 [GBP MAP EMBED: https://maps.app.goo.gl/sPMvfmjJULiaZfWn11]
 
@@ -93,4 +91,4 @@ No. There is no minimum group size for a private Kauai catamaran charter. A priv
 
 ### Is a deposit required to hold a private charter booking?
 
-For groups over 12 booking the Na Pali Kai III, call (808) 338-9980 to confirm booking requirements. The team handles group reservations directly and will walk you through the process.
+For groups over 12 booking the Na Pali Kai III, call (808) 338-9980 to confirm booking requirements. Group reservations are handled directly by the team, who will walk you through the process.
