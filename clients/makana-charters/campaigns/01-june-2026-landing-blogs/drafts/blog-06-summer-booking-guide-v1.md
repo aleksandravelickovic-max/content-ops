@@ -61,7 +61,7 @@ If shared tour spots are limited on your dates, call us to ask about private cha
 
 Call (808) 338-9980 or book online at makanacharters.com/napali-coast-tours/. Our team is available seven days a week from 7AM to 9PM and can check availability across the full fleet and answer questions about specific boats.
 
-Makana — the Hawaiian word for gift — is a Native Hawaiian family-owned operation with more than 200 years of documented history on these waters. Our captains grew up on Kauai. We depart from Kikiaola Small Boat Harbor in Kekaha, the closest point to the Na Pali Coast on the island.
+Makana (the Hawaiian word for gift) is a Native Hawaiian family-owned operation with more than 200 years of documented history on these waters. Our captains grew up on Kauai. We depart from Kikiaola Small Boat Harbor in Kekaha, the closest point to the Na Pali Coast on the island.
 
 [GBP MAP EMBED: https://maps.app.goo.gl/sPMvfmjJULiaZfWn11]
 

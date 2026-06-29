@@ -1,11 +1,11 @@
 ---
 meta_title: Na Pali Coast Sea Caves Boat Tour | Makana Charters
-meta_description: Discover Kauai's famous Na Pali sea caves by boat. Makana Charters catamarans are built to enter the caves — departing from the closest harbor to the coast.
+meta_description: Discover Kauai's famous Na Pali sea caves by boat. Makana Charters catamarans are built to enter the caves, departing from the closest harbor to the coast.
 ---
 
 # The Na Pali Coast Sea Caves: What They Are and How to See Them by Boat
 
-Yes, boats can go inside the Na Pali sea caves. Our catamarans are built specifically to navigate in and out of the caves along the Na Pali Coast — as long as ocean conditions allow on the day of your tour.
+Yes, boats can go inside the Na Pali sea caves. Our catamarans are built specifically to navigate in and out of the caves along the Na Pali Coast, as long as ocean conditions allow on the day of your tour.
 
 Three caves draw the most attention from guests: Pirates Cave, Rainbow Falls, and the Honopu Archway. They differ in shape, light, and scale, and none of them are visible from shore.
 
@@ -21,7 +21,7 @@ Pirates Cave carries both its common name and its Hawaiian name, Waiahuakua. The
 
 Rainbow Falls is named for the light effect that forms inside the cave when conditions are right.
 
-The Honopu Archway is an open arch formation rather than an enclosed cave, and it has a long history as a film location. King Kong, Six Days Seven Nights, James Bond, and Pirates of the Caribbean have all been filmed here. It is one of the most photographed spots on the island. Guests who know the films recognize it immediately.
+The Honopu Archway is an open arch formation rather than an enclosed cave, and it has a long history as a film location. King Kong, Six Days Seven Nights, James Bond, and Pirates of the Caribbean have all been filmed here. Most guests who have seen any of those films recognize it the moment they round the point.
 
 ---
 
@@ -29,7 +29,7 @@ The Honopu Archway is an open arch formation rather than an enclosed cave, and i
 
 Our catamarans are built to navigate in and out of the Na Pali sea caves. Access on any given tour depends on ocean conditions: swell height, wind, and sea state on that day.
 
-We do not promise cave entry. Our captains have navigated these caves hundreds of times, they read conditions from departure, and they make the call at the water. Most tours reach the caves. There are days when conditions push us back.
+We do not promise cave entry. Our captains have navigated these caves hundreds of times, they read conditions before departure, and they make the call at the water. Most tours reach the caves. There are days when conditions push us back.
 
 Larger boats face a different problem: they physically cannot maneuver inside many of the caves regardless of conditions. Our design removes that constraint, but the ocean is still the deciding factor.
 
@@ -96,8 +96,8 @@ The three named sea caves on the Na Pali Coast are Pirates Cave (Hawaiian name: 
 
 ### How do I know if the caves will be accessible on my tour day?
 
-You will not know before departure. Our captains assess swell height, wind, and sea state on the morning of the tour and make the call at the water. Cave access is not guaranteed. What we can say is that our boats are built for it and our captains have navigated these waters their entire lives.
+You will not know before departure. Our captains assess swell height, wind, and sea state on the morning of the tour and make the call at the water. Cave access is not guaranteed. Our boats are built for it, and our captains have navigated these waters their entire lives.
 
 ### Is it safe to go inside the Na Pali sea caves by boat?
 
-Yes, on the right boat and with an experienced crew reading the conditions. Our captains navigate these caves regularly and only enter when the ocean allows it safely. Conditions that make entry unsafe also make the decision straightforward — we do not go in.
+Yes, on the right boat and with an experienced crew reading the conditions. Our captains navigate these caves regularly and only enter when the ocean allows it safely. Conditions that make entry unsafe also make the decision straightforward: we do not go in.

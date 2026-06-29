@@ -83,7 +83,7 @@ The minimum age is 4 years old for the Na Pali Kai III. For the Makana catamaran
 
 ### What should I bring on a Na Pali Coast boat tour?
 
-Bring sunscreen, a light jacket or windbreaker for the return leg, a towel, and water shoes or sandals that can get wet. The larger boats have freshwater showers on board. Leave valuables ashore — the open-water environment means everything on deck will get some sea spray.
+Bring sunscreen, a light jacket or windbreaker for the return leg, a towel, and water shoes or sandals that can get wet. The larger boats have freshwater showers on board. Leave valuables ashore; the open-water environment means everything on deck will get some sea spray.
 
 ### What is Makana Charters' cancellation policy?
 
