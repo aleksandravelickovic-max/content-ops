@@ -55,10 +55,19 @@ ASSIGNEE_DEFAULT  = int(os.environ.get("TASK_ASSIGNEE", "81531694"))   # Milena 
 ASSIGNEE_HOMEPAGE = int(os.environ.get("TASK_ASSIGNEE_HOMEPAGE", "81501508"))  # Aleksandra
 TASK_STATUS       = "ready for writer"
 
+# Intentional URL renames — the old path is excluded from drops/decay so a
+# planned migration isn't flagged as a deindex/decline. Add future renames here.
+MIGRATED_URLS = {
+    "/atlas-brain/": "/atlas-agent/",
+}
+
+DROP_RANKING_SLIP = "Ranking slip (page-2 position, demand holding — CTR lockout)"
+
 # Short diagnosis labels for traffic-drop task titles.
 DROP_SHORT = {
     "Page disappeared from search results": "deindexed",
     "Ranking loss": "ranking loss",
+    DROP_RANKING_SLIP: "ranking slip",
     "Impression decline (possible search demand drop)": "impression decline",
     "CTR collapse (rankings stable, fewer clicks)": "CTR collapse",
 }
@@ -81,6 +90,11 @@ DECAY_DIAGNOSIS = {
 
 def log(msg):
     print(f"[content-health] {msg}", flush=True)
+
+
+def _is_migrated(url):
+    """True if the URL is the retired side of an intentional rename (ignore it)."""
+    return urlparse(url).path in MIGRATED_URLS
 
 
 # ── GSC (direct OAuth) — mirrored from dashboard/generate.py ───────────────────
@@ -172,6 +186,8 @@ def fetch_decay(auth):
         return []
     decay = []
     for url, m1 in p1.items():
+        if _is_migrated(url):
+            continue
         m3 = p3.get(url, {})
         clicks_now, clicks_p3 = m1["clicks"], m3.get("clicks", 0)
         if not clicks_p3:
@@ -235,6 +251,8 @@ def fetch_traffic_drops(auth):
         return []
     drops = []
     for url, pm in prior.items():
+        if _is_migrated(url):
+            continue
         prior_clicks = pm["clicks"]
         if prior_clicks <= 0:
             continue
@@ -252,6 +270,10 @@ def fetch_traffic_drops(auth):
             diagnosis = "Ranking loss"
         elif imp_pct <= -15:
             diagnosis = "Impression decline (possible search demand drop)"
+        elif cur_pos > 10:
+            # Page sits on page 2 with demand holding — the ranking, not the
+            # snippet, is locking out the clicks (often a page mid-recovery).
+            diagnosis = DROP_RANKING_SLIP
         else:
             diagnosis = "CTR collapse (rankings stable, fewer clicks)"
         drops.append({
