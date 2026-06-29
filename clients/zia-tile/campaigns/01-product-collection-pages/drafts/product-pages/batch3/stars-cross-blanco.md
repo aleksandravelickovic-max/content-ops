@@ -3,8 +3,8 @@ sku: stars-cross-blanco
 material: cotto
 url: https://ziatile.com/products/stars-cross-blanco
 title_tag: Stars & Cross Blanco Terra Cotta Tile | Zia Tile
-meta_description: Shop Zia's Stars & Cross Blanco Cotto. Handcrafted Mexican terra cotta in a whitewashed finish with Moorish star geometry — suited for floors, walls, outdoor spaces, and showers in any climate.
-keywords: Stars & Cross Blanco cotto tile, whitewashed terra cotta tile, Moorish pattern terra cotta tile
+meta_description: Zia's Stars & Cross Blanco is a handmade Mexican terra cotta in a light tan/beige colorway with an interlocking star and cross pattern, suited for floors, walls, showers, and outdoor use in any climate.
+keywords: Stars & Cross Blanco cotto tile, light terra cotta tile, Stars & Cross pattern terra cotta tile
 draft_date: 2026-06-26
 ---
 
@@ -16,7 +16,7 @@ draft_date: 2026-06-26
 
 ---
 
-Zia's Stars & Cross Blanco is a handmade terra cotta tile produced in San Miguel de Allende, Mexico, in the Stars & Cross specialty shape — a 6" × 6" eight-pointed star paired with a cross tile, drawn from the Moorish geometric tradition that moves through the courtyard architecture of Granada and Puebla alike. The Blanco colorway applies a whitewashed finish over the natural clay body, brightening and softening the tone without masking the clay beneath — the natural terra cotta body shows through the finish, keeping the warmth of the material present beneath the lighter surface. The interlocking star and cross pattern builds as a continuous geometric field across the installation. The unglazed surface deepens into patina with wear, bringing beauty to the material's aging process. Images shown represent a sample of this tile and do not display every potential variation.
+Zia's Stars & Cross Blanco is a handmade terra cotta tile produced in San Miguel de Allende, Mexico, in the Stars & Cross specialty shape — an eight-pointed star paired with a cross tile that interlock to build a continuous geometric field across the installation. The Blanco colorway is the lightest in the Stars & Cross range, a light tan/beige that reads noticeably softer than the Red Clay and Fired Earth colorways while retaining the warmth of the unglazed clay body. The unglazed surface deepens into patina with wear. Images shown represent a sample of this tile and do not display every potential variation.
 
 \[IMAGE: SIZE/THICKNESS DIAGRAM\]
 
