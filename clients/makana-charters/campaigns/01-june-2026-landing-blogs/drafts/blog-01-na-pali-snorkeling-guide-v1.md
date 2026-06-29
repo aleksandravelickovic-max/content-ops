@@ -5,15 +5,15 @@ meta_description: Na Pali Coast snorkeling is included on every Makana Charters 
 
 # Snorkeling the Na Pali Coast: What to Expect Before You Go
 
-Snorkeling is included on every Makana Charters Na Pali Coast tour. You spend about one hour in the water at a protected reef site chosen that morning based on ocean conditions. The water is clear, the reef is active, and the sites sit along the Na Pali Coast.
+If you're planning a Na Pali Coast tour and wondering what the snorkeling is actually like, here's the short version: it's included, the gear is provided, and you'll spend about one hour in the water at a protected reef site our captains choose that morning based on conditions. The water is clear, the reef is active, and the sites sit right along the Na Pali Coast — not a detour to somewhere else entirely.
 
 ---
 
 ## Is Snorkeling Included in Na Pali Coast Tours?
 
-Yes, snorkeling is included on all Makana Charters Na Pali Coast tours. We provide snorkel gear and flotation devices for every guest. The snorkel stop runs about one hour.
+Yes — snorkeling is included on all Makana Charters Na Pali Coast tours. We provide snorkel gear and flotation devices for every guest. The snorkel stop runs about one hour.
 
-Guests who prefer not to snorkel stay on the boat. There is no pressure to get in the water. Non-swimmers go out with us regularly and spend that hour on deck watching the coast while others snorkel.
+And if you'd rather stay dry? That's fine too. Guests who prefer not to snorkel stay on the boat — no pressure to get in the water. Non-swimmers go out with us regularly and spend that hour on deck watching the coast while others snorkel below.
 
 ---
 
@@ -21,15 +21,15 @@ Guests who prefer not to snorkel stay on the boat. There is no pressure to get i
 
 ### Which reef sites do Makana guides use for Na Pali Coast snorkeling?
 
-We snorkel at one of five sites along the Na Pali Coast and south shore: Makole, Ke'e Beach (Tunnels), Nualolo Kai, Kekaha, or Kaumakani. The site we use on any given day depends on what the ocean is doing that morning.
+We snorkel at one of five sites along the Na Pali Coast and south shore: Makole, Ke'e Beach (Tunnels), Nualolo Kai, Kekaha, or Kaumakani. Which one we use on any given day depends on what the ocean is doing that morning.
 
-That is not a limitation — it is how we put you in the best water. Our captains grew up on Kauai, and they check the tides, wind, and swell before departure. A calmer site in good visibility beats a marquee location with poor conditions.
+That's not a limitation — it's how we put you in the best water. Our captains grew up on Kauai, and they check the tides, wind, and swell before departure. A calmer site in good visibility beats a marquee location with poor conditions every time.
 
 ### What makes these snorkel spots good for snorkeling?
 
-Each site gives you access to coral formations and reef fish. Nualolo Kai sees far less daily boat traffic than south-shore spots.
+Each site gives you access to coral formations and reef fish. Nualolo Kai sees far less daily boat traffic than south-shore spots, which makes a real difference in the water.
 
-Ke'e Beach at Tunnels is known for its reef structure and visibility. The sites near Kekaha and Kaumakani give you calmer water when conditions on the north shore are rough.
+Ke'e Beach at Tunnels is known for its reef structure and visibility. The sites near Kekaha and Kaumakani give you calmer water when conditions on the north shore are rough — and, of course, our crew knows exactly when to use which one.
 
 ---
 
@@ -37,15 +37,15 @@ Ke'e Beach at Tunnels is known for its reef structure and visibility. The sites 
 
 ### What marine life do guests commonly see snorkeling on the Na Pali Coast?
 
-Spinner dolphins, Pacific Bottlenose dolphins, honu (Hawaiian green sea turtles), and diverse reef fish are all commonly spotted on Na Pali Coast snorkeling tours. We cannot guarantee any wildlife sighting, but it's rare that we don't see dolphins on the water.
+Spinner dolphins, Pacific Bottlenose dolphins, honu (Hawaiian green sea turtles), and diverse reef fish are all commonly spotted on Na Pali Coast snorkeling tours. We can't guarantee any wildlife sighting, but it's rare that we don't see dolphins on the water.
 
-Honu are the ones guests talk about most. They feed on the reef and regularly appear at several of our snorkel sites. Seeing one in the water a few feet from you tends to hold people still.
+Honu are the ones guests talk about most. They feed on the reef and regularly appear at several of our snorkel sites. Seeing one in the water a few feet away from you tends to hold people still — and that's something you just don't get from a helicopter.
 
 ### Do guides know where to find wildlife on the Na Pali Coast?
 
 Our captains and crew know the tides and habitats along this coast from years of daily time on the water. They know where dolphins travel in the morning, which reef sections the honu prefer, and how conditions shift through the day.
 
-That knowledge comes from working these waters year-round, not from a training manual. Our family has been on this coast for over 200 years, and the crew carries that continuity forward.
+That knowledge isn't from a training manual. Our family has been on this coast for over 200 years, and the crew carries that continuity forward.
 
 ---
 
@@ -53,21 +53,21 @@ That knowledge comes from working these waters year-round, not from a training m
 
 ### Do you need to know how to swim to snorkel on a Na Pali Coast tour?
 
-We recommend basic swimming ability, but non-swimmers do join us. We provide flotation devices, and guests are always supervised. If you are uncertain about your ability in open water, call us before you book at (808) 338-9980 and we can talk through your options.
+We recommend basic swimming ability, but non-swimmers do join us. We provide flotation devices, and guests are always supervised. If you're uncertain about your ability in open water, call us before you book at (808) 338-9980 and we can talk through your options.
 
-The water at our snorkel sites is not rough by Na Pali standards, but it is the open ocean. Swell and surge vary by site and season. Summer months, June through August, bring the calmest conditions for snorkeling on the north shore.
+The water at our snorkel sites is not rough by Na Pali standards, but it is the open ocean. Swell and surge vary by site and season. Summer months — June through August — bring the calmest conditions for snorkeling on the north shore.
 
 ### What snorkel gear is provided, and what should you bring?
 
-We provide snorkel gear and flotation devices for all guests. You do not need to bring your own gear, though guests who prefer their own mask or fins are welcome to use them.
+We provide snorkel gear and flotation devices for all guests. You don't need to bring your own gear, though guests who prefer their own mask or fins are welcome to use them.
 
-Bring reef-safe sunscreen. Standard chemical sunscreen is harmful to Hawaiian coral reefs. You enter the water from the boat rather than a beach, so water shoes are optional. A change of clothes after the snorkel stop is always a good idea.
+Bring reef-safe sunscreen. Standard chemical sunscreen is harmful to Hawaiian coral reefs, and you'll be right above that reef. You enter the water from the boat rather than a beach, so water shoes are optional. A change of clothes after the snorkel stop is always a good idea.
 
 ### When is the best time of year to snorkel the Na Pali Coast?
 
 Summer gives you the calmest conditions for Na Pali Coast snorkeling. June, July, and August bring lower swell on the north shore, better visibility, and more protected entry at sites like Ke'e Beach and Nualolo Kai.
 
-Winter tours still operate and the coast is dramatic year-round, but north shore snorkel sites can see more surge from November through March. We adjust our site selection based on conditions, so winter guests still get in the water when the reef is accessible.
+Winter tours still operate, and the coast is dramatic year-round — but north shore snorkel sites can see more surge from November through March. We adjust our site selection based on conditions, so winter guests still get in the water when the reef is accessible.
 
 ---
 
@@ -87,16 +87,16 @@ Call us to book or ask questions: **(808) 338-9980**
 
 ### Is snorkel gear provided on Makana Charters tours?
 
-Yes, snorkel gear and flotation devices are included on every Na Pali Coast tour. You do not need to bring your own gear, though guests who prefer their own mask or fins are welcome to use them.
+Yes, snorkel gear and flotation devices are included on every Na Pali Coast tour. You don't need to bring your own gear, though guests who prefer their own mask or fins are welcome to use them.
 
 ### What if I can't swim — can I still go on the tour?
 
-Yes. Non-swimmers join our tours regularly. You are not required to snorkel, and guests who stay on the boat have a full view of the coast during the snorkel stop. If you want to be in the water but are not a confident swimmer, we provide flotation devices and you'll have crew nearby. Call us at (808) 338-9980 if you want to talk through what works best for your situation.
+Yes. Non-swimmers join our tours regularly. You're not required to snorkel, and guests who stay on the boat have a full view of the coast during the snorkel stop. If you want to be in the water but aren't a confident swimmer, we provide flotation devices and you'll have crew nearby. Call us at (808) 338-9980 if you want to talk through what works best for your situation.
 
 ### Will I see sea turtles snorkeling on the Na Pali Coast?
 
-Honu (Hawaiian green sea turtles) are commonly spotted at several of our snorkel sites, but we cannot guarantee a sighting. Our guides know the reef sections the honu frequent, and encounters happen often enough that most guests do see them. Wildlife follows its own schedule, and we never promise specific sightings.
+Honu (Hawaiian green sea turtles) are commonly spotted at several of our snorkel sites, but we can't guarantee a sighting. Our guides know the reef sections the honu frequent, and encounters happen often enough that most guests do see them. Wildlife follows its own schedule, and we never promise specific sightings.
 
 ### What time of year is best for snorkeling the Na Pali Coast?
 
-Summer, June through August, gives you the calmest conditions and best visibility for Na Pali Coast snorkeling. The north shore swells settle down significantly during these months, which makes sites like Ke'e Beach and Nualolo Kai easier to access. We operate year-round and adjust our snorkel site based on daily conditions throughout every season.
+Summer — June through August — gives you the calmest conditions and best visibility for Na Pali Coast snorkeling. The north shore swells settle down significantly during these months, which makes sites like Ke'e Beach and Nualolo Kai easier to access. We operate year-round and adjust our snorkel site based on daily conditions throughout every season.

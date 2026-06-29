@@ -8,7 +8,7 @@ status: draft-v1
 
 # Kauai Sunset Cruise on the Na Pali Coast: What to Expect with Makana Charters
 
-A Kauai sunset cruise with Makana Charters runs along the Na Pali Coast in the afternoon and early evening, when the cliffs shift from green to deep amber and the shadows pool inside the sea caves. We depart from Kikiaola Small Boat Harbor in Kekaha — the closest harbor to the Na Pali Coast on the island — and spend the time we save in transit actually on the coast, working the coastline while the light is at its best.
+A Kauai sunset cruise with Makana Charters runs along the Na Pali Coast in the afternoon and early evening, when the cliffs shift from green to deep amber and the shadows pool inside the sea caves. We depart from Kikiaola Small Boat Harbor in Kekaha — the closest harbor to the Na Pali Coast on the island — so the time we'd otherwise spend in transit gets spent on the coast, working the coastline while the light is at its best.
 
 Makana — the Hawaiian word for gift — is a Native Hawaiian family-owned operation. Our family has been sailing these waters for over 200 years. This is our backyard, and a sunset cruise is one of the best ways to see it.
 
@@ -16,13 +16,13 @@ Makana — the Hawaiian word for gift — is a Native Hawaiian family-owned oper
 
 ## The Route: Na Pali Coast in Evening Light
 
-The cliffs line the northwest shore, walls of green rising directly from the ocean. In the evening, the light cuts across the cliff faces at a low pitch, deepening the greens and pulling out textures that midday sun washes flat.
+The cliffs line the northwest shore — walls of green rising directly from the ocean. In the evening, the light cuts across the cliff faces at a low pitch, deepening the greens and pulling out textures that midday sun washes flat.
 
 We follow the coastline from Polihale, where the sand meets the base of the cliffs at the end of the road, northwest toward the Kalalau Valley. Kalalau Valley is accessible only from the water or by a long backcountry trail — most visitors never see it. At sunset, the valley's waterfall threads down through vegetation that catches every color in the fading light.
 
-Past Kalalau, the Honopu Archway comes into view. Two beaches sit separated by a massive stone arch that you cannot reach by land. Film crews kept returning to this stretch — the Archway served as a location for King Kong, James Bond, Pirates of the Caribbean, and Six Days Seven Nights.
+Past Kalalau, the Honopu Archway comes into view. Two beaches sit separated by a massive stone arch that you can't reach by land. Film crews kept returning to this stretch — the Archway served as a location for King Kong, James Bond, Pirates of the Caribbean, and Six Days Seven Nights.
 
-Spinner dolphins and Pacific Bottlenose dolphins are commonly seen along the route. Hawaiian green sea turtles (honu) surface near the caves and along the shore. We do not guarantee sightings, but it is rare that we complete a full coastal run without seeing dolphins at some point.
+Spinner dolphins and Pacific Bottlenose dolphins are commonly seen along the route. Hawaiian green sea turtles (honu) surface near the caves and along the shore. We don't guarantee sightings, but it's rare that we complete a full coastal run without seeing dolphins at some point.
 
 ---
 
