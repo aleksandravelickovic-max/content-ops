@@ -50,7 +50,7 @@ For a sunset cruise, that extra time on the coast is not a bonus. It is the whol
 
 ## The Boats: Which Catamarans Run the Sunset Cruise
 
-What boats does Makana use for the sunset cruise? The sunset cruise runs on Na Pali Kai III, our largest catamaran, and on the Seiko 1 and Seiko 2 power catamarans.
+What boats does Makana use for the sunset cruise? The sunset cruise runs on the Na Pali Kai III and on the Seiko 1 and Seiko 2 power catamarans.
 
 Na Pali Kai III holds up to 32 guests and has a 360-degree walk-around deck. Photographers specifically request this boat. You can move freely to both sides and the bow without asking anyone to shift, which matters when the cave entrance is on the port side and the cliff face catching color is to starboard. The age minimum is 4 years old.
 

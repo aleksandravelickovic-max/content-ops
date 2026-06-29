@@ -5,7 +5,7 @@ meta_description: Na Pali Coast snorkeling is included on every Makana Charters 
 
 # Snorkeling the Na Pali Coast: What to Expect Before You Go
 
-Snorkeling is included on every Makana Charters Na Pali Coast tour. You spend about one hour in the water at a protected reef site chosen that morning based on ocean conditions. The water is clear, the reef is active, and the sites sit along the Na Pali Coast's north shore — a stretch that sees a fraction of the boat traffic the south shore handles daily.
+Snorkeling is included on every Makana Charters Na Pali Coast tour. You spend about one hour in the water at a protected reef site chosen that morning based on ocean conditions. The water is clear, the reef is active, and the sites sit along the Na Pali Coast.
 
 ---
 
@@ -29,7 +29,7 @@ This is not a limitation. It is how we put you in the best water. Our captains g
 
 ### What makes these snorkel spots good for snorkeling?
 
-**Each site sits within the Na Pali reef system, where protected shallows give you access to coral formations and reef fish without significant current.** Nualolo Kai sees far less daily boat traffic than south-shore spots, and the reef health reflects that.
+**Each site gives you access to coral formations and reef fish.** Nualolo Kai sees far less daily boat traffic than south-shore spots.
 
 Ke'e Beach at Tunnels is known for its reef structure and visibility. The sites near Kekaha and Kaumakani give you calmer water when conditions on the north shore are rough.
 
@@ -63,7 +63,7 @@ The water at our snorkel sites is not rough by Na Pali standards, but it is the 
 
 **We provide snorkel gear and flotation devices for all guests. You do not need to bring your own gear.** If you prefer your own mask or fins, you are welcome to bring them.
 
-Bring reef-safe sunscreen. Standard chemical sunscreen is harmful to Hawaiian coral reefs and is not allowed at several of the sites we use. Wear or bring water shoes if you want them, though you enter the water from the boat rather than a beach. A change of clothes for after the snorkel is always a good idea.
+Bring reef-safe sunscreen. Standard chemical sunscreen is harmful to Hawaiian coral reefs. We recommend reef-safe sunscreen for any tour that includes snorkeling. Wear or bring water shoes if you want them, though you enter the water from the boat rather than a beach. A change of clothes for after the snorkel is always a good idea.
 
 ### When is the best time of year to snorkel the Na Pali Coast?
 

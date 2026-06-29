@@ -16,7 +16,7 @@ Not all Kauai snorkeling tours put you in the same water. Where the boat departs
 
 The snorkel sites we visit depend on ocean conditions on the day of your tour. The locations we access most often along the Na Pali Coast include Makole, Ke'e Beach (also called Tunnels), and Nualolo Kai. Each of these sites sits along the north and northwest shore of Kauai, inside marine habitat that south-shore snorkel spots do not reach.
 
-The Na Pali Coast's remoteness keeps boat traffic lower than south-shore areas. The reef systems at Nualolo Kai see far less daily visitor pressure than south-shore spots, and the water quality and fish populations reflect that. South-shore locations see more daily volume, which affects the underwater environment.
+The Na Pali Coast's remoteness keeps boat traffic lower than south-shore areas. The reef systems at Nualolo Kai see far less daily visitor pressure than south-shore spots. South-shore locations see more daily volume.
 
 Spinner dolphins and Pacific Bottlenose dolphins are commonly spotted along the Na Pali Coast on our tours — it's rare that we don't see them on a run. Honu (Hawaiian green sea turtles) are frequently seen near the reef. Diverse reef fish species and coral formations are a consistent part of the snorkel stop. Wildlife sightings are never guaranteed, as ocean conditions and animal behavior vary, but our crew knows the habitats and tides that put guests in the right place.
 
@@ -34,7 +34,7 @@ Ask any operator you're considering: where exactly do you depart from, and how l
 
 Smaller groups create a different experience in the water. Our tours carry 12 to 32 guests depending on the boat — smaller than most operators on the island. At a crowded snorkel stop, more people in the water means more surface disruption, more noise, and less time near the reef. Smaller groups enter the water faster and stay longer without the coordination challenges that come with large tour headcounts.
 
-Group size also affects the catamaran's stability and the crew's ability to watch guests in the water. On a 32-guest boat, every guest gets attention. On a boat carrying 50 or more, that ratio changes.
+Group size also affects the catamaran's stability and the crew's ability to watch guests in the water. On a 32-guest boat, every guest gets attention. On a larger boat, that ratio changes.
 
 ### Gear and Instruction
 
@@ -62,7 +62,7 @@ Every Makana snorkeling tour includes snorkel gear, flotation devices, a deli-st
 
 The snorkel stop runs about one hour. During that time, guests are free to snorkel, float with flotation devices, or remain on board.
 
-Snorkeling tours run on the Na Pali Kai III, our 32-guest catamaran departing from Kikiaola Harbor. The Na Pali Kai III has a 360-degree walk-around deck, which gives guests clear sightlines to the coast and reef from all positions on the boat. The age minimum for the Na Pali Kai III is 4 years old.
+Snorkeling tours run on the Na Pali Kai III, our 32-guest catamaran departing from Kikiaola Harbor. The Na Pali Kai III has a 360-degree walk-around deck. The age minimum for the Na Pali Kai III is 4 years old.
 
 For guests who want a smaller group setting, our Seiko 1, Seiko 2, and Leialoha catamarans also depart from Kikiaola Harbor. Those boats carry 16 to 18 guests with an age minimum of 9.
 
@@ -110,4 +110,4 @@ Yes. The Na Pali Kai III accepts guests ages 4 and older. Flotation devices are 
 
 ### Where exactly does the snorkeling take place?
 
-The snorkel site varies by ocean conditions on the day of your tour. We most often stop at Makole, Ke'e Beach (Tunnels), or Nualolo Kai — all along the Na Pali Coast. Nualolo Kai sees far less boat traffic than south-shore locations, and the reef health reflects that difference. Our crew selects the site based on conditions that morning.
+The snorkel site varies by ocean conditions on the day of your tour. We most often stop at Makole, Ke'e Beach (Tunnels), or Nualolo Kai — all along the Na Pali Coast. Nualolo Kai sees far less boat traffic than south-shore locations. Our crew selects the site based on conditions that morning.

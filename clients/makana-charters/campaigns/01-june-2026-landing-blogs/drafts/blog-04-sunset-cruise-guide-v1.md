@@ -27,7 +27,7 @@ What route does the Na Pali Coast sunset cruise follow?
 
 **We depart from Kikiaola Small Boat Harbor in Kekaha and run the full Na Pali Coast heading northwest toward Polihale and the Kalalau Valley.** The route covers the same coastline as our daytime tours. The difference is the light.
 
-Along the way, we pass the sea caves, including Pirates Cave (Waiahuakua) and the Honopu Archway, as long as ocean conditions allow. Honopu is the natural arch that has appeared in King Kong, Pirates of the Caribbean, and several other productions. Seeing it at golden hour, with the last light coming through the arch, is a different experience than seeing it at noon.
+Along the way, we pass the sea caves, including Pirates Cave (Waiahuakua) and the Honopu Archway, as long as ocean conditions allow. Honopu is the natural arch that has appeared in King Kong, Six Days Seven Nights, a James Bond film, and Pirates of the Caribbean. Seeing it at golden hour, with the last light coming through the arch, is a different experience than seeing it at noon.
 
 Because the sun is moving during the tour, the light on the cliffs changes from the time we leave Kikiaola to the time we turn back. The first hour looks different from the last.
 
@@ -39,7 +39,7 @@ Why does it matter where a Kauai sunset cruise departs from?
 
 **A sunset cruise that departs from Port Allen spends up to an hour in transit before reaching the Na Pali Coast. That is time taken directly from your golden-hour window on the cliffs.** Kikiaola Harbor sits at the closest point to the Na Pali Coast on the island. We reach the cliffs faster and stay longer.
 
-For a daytime tour, the transit difference is noticeable. For a sunset cruise, it is critical. The golden-hour window on the Na Pali Coast runs roughly 45 to 60 minutes before the sun meets the horizon. Departing from Port Allen means some guests arrive as the color is already fading.
+For a daytime tour, the transit difference is noticeable. For a sunset cruise, it is critical. The golden-hour window on the Na Pali Coast is fixed. Departing from Port Allen means some guests arrive as the color is already fading.
 
 We depart from Kikiaola. That extra time on the coast is built into every tour we run.
 

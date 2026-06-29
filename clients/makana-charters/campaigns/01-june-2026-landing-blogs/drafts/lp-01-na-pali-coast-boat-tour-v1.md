@@ -5,7 +5,7 @@ meta_description: "Na Pali Coast boat tour from Kikiaola Harbor — the closest 
 
 # Na Pali Coast Boat Tour: Why Makana Charters Stands Apart
 
-The Na Pali Coast runs along Kauai's northwest shore — sheer green cliffs, hidden sea caves, and waterfalls that drop directly into the Pacific. A Na Pali Coast boat tour is the only way to see most of it. Makana Charters has been running these tours from the same waters for over 200 years, continuing the legacy of a Native Hawaiian family whose connection to this coastline is documented back to the 1800s. This page covers the route, our fleet, what separates us from other operators, and how to book.
+The Na Pali Coast runs along Kauai's northwest shore — sheer green cliffs, hidden sea caves, and waterfalls that drop directly into the Pacific. A Na Pali Coast boat tour is the only way to see most of it. Makana Charters continues the legacy of a Native Hawaiian family whose connection to this coastline is documented back to the 1800s — more than 200 years of navigation on these same waters. This page covers the route, our fleet, what separates us from other operators, and how to book.
 
 ---
 
@@ -85,11 +85,11 @@ Our confirmed captains are Mike, Rob, Darrel, Chris, Dave, and Phil. They are no
 
 What boats does Makana Charters use for Na Pali Coast tours?
 
-**Makana Charters operates a fleet of power catamarans built for the Na Pali Coast; the primary options for shared tours are the Na Pali Kai III and the smaller Makana catamaran.**
+**Makana Charters operates a fleet of power catamarans built for the Na Pali Coast; the primary option for shared tours is the Na Pali Kai III.**
 
 The Na Pali Kai III carries up to 32 guests and departs from Kikiaola Harbor. It is the right boat for families, groups, and photographers — the 360-degree walk-around deck gives you unobstructed views from every angle. The age minimum is 4 years old, making it one of the most family-accessible boats in the fleet. Adult tickets are $199; children are $169.
 
-The Makana catamaran carries up to 12 guests and is ideal for private charters. The age minimum is 9 years old. It is a smaller boat with less deck space, and it is not handicap accessible. For guests who require accessibility support, the Na Pali Kai III is the recommended option, as guests can be lifted aboard.
+The Makana catamaran carries up to 12 guests and is ideal for private charters. The age minimum is 9 years old. It is not handicap accessible. For guests who require accessibility support, the Na Pali Kai III is the recommended option, as guests can be lifted aboard.
 
 The Seiko 1, Seiko 2, and Leialoha are additional power catamarans in the fleet, each carrying 16 to 18 guests, also departing from Kikiaola Harbor, with a 9-year age minimum. Pricing for those boats is $219 per adult and $189 per child.
 
@@ -99,9 +99,9 @@ The Seiko 1, Seiko 2, and Leialoha are additional power catamarans in the fleet,
 
 Where does Makana Charters depart, and how do you book?
 
-**Makana Charters departs from Kikiaola Small Boat Harbor in Kekaha, HI. Book by phone at (808) 338-9980, available daily from 7AM to 9PM.**
+**Makana Charters departs from Kikiaola Small Boat Harbor in Kekaha, HI. Book by phone, available daily from 7AM to 9PM.**
 
-The booking line is 808-201-2495. Our email is info@makanacharters.com. Our office address is 4516 Alawai Road, Waimea, HI 96796. For the Na Pali Kai III shared tour, tickets are $199 per adult and $169 per child. The age minimum for that boat is 4 years old.
+Main line: (808) 338-9980. Booking line: (808) 201-2495. Email: info@makanacharters.com. Our office address is 4516 Alawai Road, Waimea, HI 96796. For the Na Pali Kai III shared tour, tickets are $199 per adult and $169 per child. The age minimum for that boat is 4 years old.
 
 [GBP MAP EMBED: https://maps.app.goo.gl/sPMvfmjJULiaZfWn11]
 

@@ -17,9 +17,9 @@ What are the named sea caves on the Na Pali Coast?
 
 **The Na Pali Coast has three main sea caves that boats visit on a standard tour: Pirates Cave (Waiahuakua), Rainbow Falls, and the Honopu Archway.**
 
-Pirates Cave carries both its common name and its Hawaiian name, Waiahuakua. The cave has an open ceiling that lets in natural light, which makes the experience inside feel more like a cathedral than a tunnel. Our catamarans enter when the ocean allows.
+Pirates Cave carries both its common name and its Hawaiian name, Waiahuakua. The cave has an open ceiling that lets in natural light. Our catamarans enter when the ocean allows.
 
-Rainbow Falls is named for the light effect that forms inside the cave when conditions are right. The name is descriptive: sunlight refracts through the water and cave walls and produces the color effect that gives it the name. It is one of the more photographed moments on the tour.
+Rainbow Falls is named for the light effect that forms inside the cave when conditions are right.
 
 The Honopu Archway is an open arch formation rather than an enclosed cave, and it has a long history as a film location. King Kong, Six Days Seven Nights, James Bond, and Pirates of the Caribbean have all been filmed here. It is one of the most photographed spots on the island. Guests who know the films recognize it immediately.
 
@@ -39,7 +39,7 @@ Larger boats face a different problem: they physically cannot maneuver inside ma
 
 **Makana's catamarans are built for the Na Pali Coast — smaller, faster, and more maneuverable than most of the boats operating out of Kauai's harbors.**
 
-Our tours carry 12 to 32 guests. Many operators run boats with significantly higher passenger counts. A boat carrying 50 or 100 people does not attempt the cave entries we do. The physics of the approach, the turning radius, and the draft all matter when the entrance to a cave is narrow and the swell is running.
+Most of our tours carry 12 to 32 guests. Many operators run boats with significantly higher passenger counts. A boat carrying that many people does not attempt the cave entries we do. The physics of the approach, the turning radius, and the draft all matter when the entrance to a cave is narrow and the swell is running.
 
 This is not a marketing distinction. It is a design and operational one. We built and chose our boats with the Na Pali Coast in mind — the caves included.
 
@@ -72,8 +72,9 @@ Makana Charters operates daily tours along the Na Pali Coast. Most boats depart 
 **Tour pricing (confirmed June 2026):**
 
 - Na Pali Kai III (up to 32 guests, age 4+): $199 adult / $169 child
-- Seiko 1, Seiko 2, Leialoha (up to 16-18 guests, age 9+): $219 adult / $189 child
-- Makana private charter (up to 12 guests, age 9+): $219 adult / $189 child
+- Seiko 1, Seiko 2 (up to 16 guests each, age 9+): $219 adult / $189 child
+- Leialoha (up to 18 guests, age 9+): $219 adult / $189 child
+- Makana (up to 12 guests, age 9+): $219 adult / $189 child
 
 All standard tours include snorkel gear, deli-style lunch, soft drinks, and cultural narration from our crew. Hours: 7AM-9PM.
 

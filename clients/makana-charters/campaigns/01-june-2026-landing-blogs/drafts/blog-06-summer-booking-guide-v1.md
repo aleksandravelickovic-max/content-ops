@@ -19,13 +19,13 @@ This guide covers how summer demand works, what to do if you're booking close to
 
 What makes summer the busiest time for Na Pali Coast boat tours?
 
-**Summer brings calmer ocean conditions to the Na Pali Coast.** The northwest swell that rolls in during winter settles significantly from June through August, which means fewer cancelled tours and more consistent access to the coast's signature features.
+**Summer brings calmer ocean conditions to the Na Pali Coast.** The swell that rolls in during winter settles significantly from June through August, which means fewer cancelled tours and more consistent access to the coast's signature features.
 
 Calmer water opens up the sea caves. Pirates Cave (Waiahuakua), Rainbow Falls, and the Honopu Archway become accessible as long as ocean conditions allow. Snorkeling at locations like Nualolo Kai and Tunnels runs more reliably when the sea is settled. Summer is also when spinner dolphins, Pacific Bottlenose dolphins, and honu (Hawaiian green sea turtle) are commonly spotted along the route.
 
 What drives the summer booking crunch specifically?
 
-**Summer is when Kauai sees its highest visitor volume.** Families travel between school years. West Coast visitors make the flight. More visitors on the island, more stable days on the water, and a finite number of boats means spots fill early. We run a fleet that carries between 12 and 32 guests per tour, smaller than many operators on the island. That's by design. It also means there are fewer available spots per departure.
+**Summer brings some of the highest visitor counts of the year to Kauai.** Families travel between school years. West Coast visitors make the flight. More visitors on the island, more stable days on the water, and a finite number of boats means spots fill early. We run a fleet that carries between 12 and 32 guests per tour, smaller than many operators on the island. That's by design. It also means there are fewer available spots per departure.
 
 ---
 
@@ -35,7 +35,7 @@ How early should you realistically book a Na Pali Coast boat tour in summer?
 
 **The practical rule is to book before you arrive on Kauai.** Trips often sell out, and we suggest purchasing your ticket early. If you have a specific date in mind, waiting until you land puts you at risk of finding that date fully booked across the fleet.
 
-Booking early also gives you more control over which boat fits your group. The Na Pali Kai III carries up to 32 guests and has a 360-degree walk-around deck, which works well for photographers. The Makana carries 12 and is built for private charters. The Seiko 1, Seiko 2, and Leialoha seat 16 to 18 guests each on fast power catamarans. If you have a preference, earlier booking means more choice.
+Booking early also gives you more control over which boat fits your group. The Na Pali Kai III carries up to 32 guests and has a 360-degree walk-around deck, which works well for photographers. The Makana carries 12 and is built for private charters. The Seiko 1 and Seiko 2 each carry 16 guests; the Leialoha carries 18. If you have a preference, earlier booking means more choice.
 
 To check current availability, call us at (808) 338-9980 (hours: 7AM to 9PM) or book online at makanacharters.com/napali-coast-tours/. Our team can walk you through which boats have space on your dates.
 
@@ -47,7 +47,7 @@ Are last-minute Na Pali Coast tickets ever available?
 
 **Yes. Cancellations happen, and spots do open up.** The best move if you're booking close to your travel dates is to call us directly at (808) 338-9980. We can tell you what's available across the fleet in real time, which is faster than checking online availability.
 
-Weekday departures tend to have more availability than weekends. Morning tours typically fill before afternoon ones, so if mornings are booked out, an afternoon departure on a power catamaran is worth asking about. Flexibility on the exact day within a two or three day window gives you a better chance of finding an open slot.
+Flexibility on the exact day within a two or three day window gives you a better chance of finding an open slot. Call us directly at (808) 338-9980 for the most current picture of what's available across the fleet.
 
 We depart from Kikiaola Small Boat Harbor in Kekaha, the closest departure point to the Na Pali Coast on the island. That proximity advantage holds whether you're booking three months out or three days out.
 
@@ -57,7 +57,7 @@ We depart from Kikiaola Small Boat Harbor in Kekaha, the closest departure point
 
 What is Makana Charters' policy if a tour gets cancelled due to weather?
 
-**If your tour is cancelled due to weather or ocean conditions, you have three options: reschedule, receive a credit, or get a full refund.** You are not charged for a tour that doesn't run. This matters especially for travelers booking close to their departure date, since Kauai weather can shift quickly even in summer.
+**If your tour is cancelled due to weather or ocean conditions, you have three options: reschedule (subject to availability), receive a credit, or get a full refund.** You are not charged for a tour that doesn't run. This matters especially for travelers booking close to their departure date, since Kauai weather can shift quickly even in summer.
 
 We monitor conditions closely before each departure. When we call a cancellation, it's because the coast isn't safe or accessible. The same conditions that close the tour would prevent sea cave entry and make snorkeling difficult anyway. If you have questions about the cancellation policy for your specific booking, call (808) 338-9980.
 
@@ -93,7 +93,7 @@ Book before you arrive on Kauai. Summer is peak season, tours often sell out, an
 
 ### Is there a cancellation policy if my tour doesn't run?
 
-Yes. If Makana Charters cancels your tour due to weather or ocean conditions, you can reschedule, receive a credit, or get a full refund. You are not charged for a tour that doesn't operate.
+Yes. If Makana Charters cancels your tour due to weather or ocean conditions, you can reschedule (subject to availability), receive a credit, or get a full refund. You are not charged for a tour that doesn't operate.
 
 ### Can I book a Na Pali Coast tour for the same day?
 

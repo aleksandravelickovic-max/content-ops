@@ -64,7 +64,7 @@ Do not bring bulky luggage or large bags. Storage space on the catamaran is shar
 
 ## A Note on Seasickness
 
-Most guests on a Na Pali coast snorkel tour do not have issues. Our catamarans are stable and built specifically for these waters. The route does include open ocean, and conditions vary by day and season.
+Most guests on a Na Pali coast snorkel tour do not have issues. Our catamarans are built specifically for these waters. The route does include open ocean, and conditions vary by day and season.
 
 If you have a history of motion sickness on boats, consult a doctor before your tour. Over-the-counter options work best when taken before boarding, not after symptoms start. If your doctor prescribes a patch, those take time to reach full effect, so plan ahead.
 
@@ -74,7 +74,7 @@ If you have a history of motion sickness on boats, consult a doctor before your 
 
 Makana — the Hawaiian word for gift — is a Native Hawaiian family-owned business with over 200 years of documented history on these waters. Our tours depart from Kikiaola Small Boat Harbor in Kekaha, the closest departure point to the Na Pali Coast on Kauai.
 
-Tours run $199 per adult and $169 per child on our larger boats, and $219 per adult and $189 per child on our power catamarans. The minimum age is 4 years and older on the Na Pali Kai III.
+Tours run $199 per adult and $169 per child on the Na Pali Kai III (ages 4 and up), and $219 per adult and $189 per child on the Seiko 1, Seiko 2, Leialoha, and Makana (ages 9 and up).
 
 Call (808) 338-9980 to book or to ask questions before your tour. Our hours are 7AM to 9PM.
 

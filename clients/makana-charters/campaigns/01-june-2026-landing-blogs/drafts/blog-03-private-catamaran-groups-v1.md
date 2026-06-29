@@ -1,6 +1,6 @@
 ---
 meta_title: "Private Catamaran Charter Kauai | Makana Charters"
-meta_description: "Book a private catamaran charter on Kauai for groups of 2 to 32. Same Na Pali Coast route, exclusive boat. Call (808) 338-9980 or book online."
+meta_description: "Book a private catamaran charter on Kauai for groups up to 32. Same Na Pali Coast route, exclusive boat. Call (808) 338-9980 or book online."
 focus_keyword: Kauai catamaran tours
 page_type: informational/commercial blog
 ---
@@ -61,7 +61,7 @@ Departing from Kikiaola means your group spends more time on the Na Pali cliffs 
 
 Every Makana Charters tour includes snorkel gear and flotation devices, a deli-style lunch with turkey, ham, roast beef, or vegetarian options, plus fruit, snacks, soft drinks, and local juices. Both boats have onboard restrooms. The Na Pali Kai III has freshwater showers.
 
-Cultural narration from the Native Hawaiian crew is part of every tour. Our family has been sailing these waters for over 200 years. The captains grew up on Kauai. The narration reflects that history.
+Cultural narration from the Native Hawaiian crew is part of every tour. Makana's family has been sailing these waters for over 200 years. The captains grew up on Kauai. The narration reflects that history.
 
 Guests are welcome to bring their own alcohol, but it stays sealed until after the snorkel stop.
 
@@ -81,7 +81,7 @@ Guests are welcome to bring their own alcohol, but it stays sealed until after t
 
 ### How many people can book a private catamaran charter on Kauai?
 
-Groups of 2 to 32 guests can book a private Na Pali Coast charter through Makana Charters. Groups up to 12 use the Makana boat and can book online. Groups of 13 to 32 use the Na Pali Kai III and should call (808) 338-9980 to arrange.
+Groups up to 32 guests can book a private Na Pali Coast charter through Makana Charters. Groups up to 12 use the Makana boat and can book online. Groups of 13 to 32 use the Na Pali Kai III and should call (808) 338-9980 to arrange.
 
 ### Can we customize the itinerary for a private charter?
 
