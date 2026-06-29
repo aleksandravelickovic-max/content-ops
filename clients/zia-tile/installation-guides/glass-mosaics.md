@@ -17,7 +17,7 @@ For extensive cutting, work outdoors or in a well-ventilated area. Wash hands wi
 ## Inspecting Your Order
 
 - Inspect all sheets upon receipt. Zia Tile cannot address issues with tiles that have already been installed.
-- Glass mosaics have inherent variation. Order 10–15% more than your measured area to account for cuts, pattern, and breakage.
+- Glass mosaics have inherent variation. Order 10–15% more than your measured area to account for cuts, pattern.
 
 ---
 

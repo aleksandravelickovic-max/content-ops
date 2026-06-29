@@ -26,7 +26,7 @@ Alongside the patterns, the line carries fifteen solid colorways, from quiet neu
 
 Open every box on arrival and blend sheets across the order before laying anything on thinset. The colorways are uniform tile to tile, but patterns gain dimension when sheets from different boxes are interleaved across a single wall or floor.
 
-We recommend a 15 to 20% overage on all glass mosaic orders to account for cuts, breakage in transit, and pattern alignment. For installations where a more uniform pattern read is the priority, plan for a 25% overage so the installer can set aside the small share of sheets that drift furthest from the average.
+We recommend a 15 to 20% overage on all glass mosaic orders to account for cuts and pattern alignment. For installations where a more uniform pattern read is the priority, plan for a 25% overage so the installer can set aside the small share of sheets that drift furthest from the average.
 
 ## Installation and Finishing
 

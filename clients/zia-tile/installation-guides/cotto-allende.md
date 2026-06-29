@@ -24,7 +24,7 @@ Hairline cracks on the tile surface — called crazing — are a natural charact
 
 - Inspect all tiles upon receipt. Zia Tile cannot address issues with tiles that have already been installed.
 - Each piece of Cotto Allende is handmade. Significant variation in color, shape, and thickness is expected. Irregular edges, crazing, and small hairline cracks may be present.
-- Order at least 15% more than your measured area to account for cuts, variation, and breakage.
+- Order at least 15% more than your measured area to account for cuts, variation.
 
 ---
 

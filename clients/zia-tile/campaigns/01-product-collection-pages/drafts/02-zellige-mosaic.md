@@ -102,7 +102,7 @@ THESE INSTRUCTIONS APPLY TO GLAZED ZELLIGE TILE INSTALLATIONS – IF YOU ARE INS
 * Each piece of zellige is made by hand, and extreme variations in color, shape and thickness are to be expected. Irregular edges, crazing, pits and small hairline cracks are common, to be expected, and part of the traditional aesthetic of zellige installations.  
 * Traditional zellige tile will have approximately 15-20% of these perfect imperfections. If a more uniform look is desired, we suggest increasing the order size by 20-25% to reduce the amount of variation during installation; however, if zellige tiles with these chips and pits are discarded, your install will lose the feel of an authentic zellige installation. It is also important to note that the matching grout color will fill these pits and chips to blend the overall aesthetic.  
 * Please note, you may see ink marks on the surface of your tile from the handmade cutting process. These markings are standard and can be easily removed with a damp cloth or curated out using your overage.  
-* To account for cuts, inherent variation, and potential breakage in transit, it is strongly recommended that all orders include a minimum of 15% overage to avoid costly add-on shipping and schedule delays.
+* To account for cuts, inherent variation, it is strongly recommended that all orders include a minimum of 15% overage to avoid costly add-on shipping and schedule delays.
 
 ### BEFORE BEGINNING YOUR INSTALLATION
 

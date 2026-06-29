@@ -18,7 +18,7 @@ For extensive cutting, work outdoors or in a well-ventilated area. Wash hands wi
 
 - Inspect all pieces upon receipt. Zia Tile cannot address issues with stone that has already been installed.
 - Limestone is a natural stone. Significant variation in color and subtle differences in shape and size are normal and expected.
-- Order at least 15% more than your measured area to account for cuts, pattern, variation, and breakage.
+- Order at least 15% more than your measured area to account for cuts, pattern, variation.
 
 ---
 

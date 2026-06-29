@@ -26,7 +26,7 @@ Each pattern can be ordered in any combination of the six core marble colorways:
 
 Open every box and blend pieces across the order before any thinset goes down. Lay the pattern out in advance in the installation area to confirm alignment, especially at room corners and at any cuts that interrupt the geometry; marble has a face and an underside, and pieces should be set face up.
 
-We recommend a 15 to 20% overage on all marble pattern orders to account for cuts, breakage in transit, and pattern alignment. For installations where a more uniform appearance is the priority, plan for a 25% overage so the installer can set aside the small share of pieces that drift furthest from the average. Match grout color closely to the field of the stone to keep the pattern reading as a continuous design.
+We recommend a 15 to 20% overage on all marble pattern orders to account for cuts and pattern alignment. For installations where a more uniform appearance is the priority, plan for a 25% overage so the installer can set aside the small share of pieces that drift furthest from the average. Match grout color closely to the field of the stone to keep the pattern reading as a continuous design.
 
 ## Installation and Finishing
 

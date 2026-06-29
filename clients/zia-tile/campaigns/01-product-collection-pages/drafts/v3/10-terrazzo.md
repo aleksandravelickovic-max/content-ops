@@ -26,7 +26,7 @@ The line spans solids such as Neutra, Mirage, and Savoye and patterns including 
 
 Open every box and blend tiles across the order before any thinset goes down. Lay out a dry run of two to three square yards in advance to confirm the aggregate distribution reads the way it should across the room.
 
-We recommend a 15 to 20% overage on every terrazzo order to account for cuts and any breakage in transit. For installations where a more uniform appearance is the priority, plan for a 25% overage so the installer can set aside the small share of tiles that drift furthest from the average.
+We recommend a 15 to 20% overage on every terrazzo order to account for cuts. For installations where a more uniform appearance is the priority, plan for a 25% overage so the installer can set aside the small share of tiles that drift furthest from the average.
 
 ## Installation and Finishing
 

@@ -18,7 +18,7 @@ For extensive cutting, work outdoors or in a well-ventilated area. Wash hands wi
 
 - Inspect all tiles upon receipt. Zia Tile cannot address issues with tiles that have already been installed.
 - Cement tiles are handmade. Subtle variations in color, shape, and thickness are expected. Irregular edges and minor crazing are a normal part of this tile.
-- Order at least 15% more than your measured area to account for cuts, pattern, variation, and breakage.
+- Order at least 15% more than your measured area to account for cuts, pattern, variation.
 
 ---
 

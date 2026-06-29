@@ -98,7 +98,7 @@ To ensure proper installation based on unique project and/or site conditions, cl
 
 * Please inspect your order thoroughly, upon receipt. Zia Tile cannot be held responsible for tiles that have already been installed.  
 * Each piece of terrazzo tile is made by hand, and subtle variations in color, shape and thickness are to be expected. Irregular edges and minor crazing are normal and to be expected.  
-* To account for cuts, pattern, inherent variation, and potential breakage in transit, it is strongly recommended that all orders include a minimum of 15% overage to avoid costly add-on shipping and schedule delays.  
+* To account for cuts, pattern, inherent variation, it is strongly recommended that all orders include a minimum of 15% overage to avoid costly add-on shipping and schedule delays.  
 * 1/8" grout joint is recommended. Installers will need to slightly adjust grout joint spacing (shim) or use wedge spacers to maintain straight grout lines. Where necessary, tile edges may be trimmed with a wet saw to assist with alignment.
 
 ### **BEFORE BEGINNING YOUR INSTALLATION**

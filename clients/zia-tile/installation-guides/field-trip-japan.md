@@ -18,7 +18,7 @@ For extensive cutting, work outdoors or in a well-ventilated area. Wash hands wi
 
 - Inspect all tiles upon receipt. Zia Tile cannot address issues with tiles that have already been installed.
 - Field Trip: Japan tiles have significant variation in color and texture between pieces. This is a defining characteristic of the collection.
-- Order 15–20% more than your measured area to account for cuts, pattern variation, and breakage.
+- Order 15–20% more than your measured area to account for cuts, pattern variation.
 
 ---
 

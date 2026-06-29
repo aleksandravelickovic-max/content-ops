@@ -26,7 +26,7 @@ The line is cut from the same Italian and Spanish marble as Marble Solids and Ma
 
 Open every box and blend sheets across the order before any thinset goes down. Lay out a dry run in the installation area, with film face up, to confirm the veining and tonal variation read the way they should across the floor or wall.
 
-We recommend a 15 to 20% overage on all Roman Mosaic orders to account for cuts, breakage in transit, and pattern alignment. For installations where a more uniform appearance is the priority, plan for a 25% overage so the installer can set aside the small share of sheets that drift furthest from the average.
+We recommend a 15 to 20% overage on all Roman Mosaic orders to account for cuts and pattern alignment. For installations where a more uniform appearance is the priority, plan for a 25% overage so the installer can set aside the small share of sheets that drift furthest from the average.
 
 ## Installation and Finishing
 

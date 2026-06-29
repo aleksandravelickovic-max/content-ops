@@ -10,7 +10,7 @@
 
 ####  Order Details \+ Installation \[Locked\]
 
-We recommend ordering 15-25% overage so the installation has room for hand-selection, color blending, and the tile breakage inherent to the material. Before laying any piece, unpack every box and mix the tiles on a flat surface to plan the layout and confirm the color balance.
+We recommend ordering a 15-25% overage so the installation has room for hand-selection, color blending, and the tile's inherent characteristics. Before laying any piece, unpack every box and mix the tiles on a flat surface to plan the layout and confirm the color balance.
 
 Zellige tile installation is labor-intensive, often likened more to masonry than traditional tiling due to the irregular nature of the handmade material. The traditional method sets pieces edge-to-edge with minimal grout, but irregular shapes mean wedge spacers help keep layouts consistent and protect chamfered edges as the tiles are set. Plan for installations 2-3 times longer than standard ceramic. Every piece needs to be sorted, soaked, arranged, and hand-adjusted for size.
 
@@ -39,7 +39,7 @@ Seal zellige according to our installation instructions, whether the application
 | **Interior Walls** *Ex: Kitchen backsplash, bathroom wall, accent wall, range hood* | **✓** |
 | **Exterior Walls** *Ex: Garden wall, courtyard wall in non-freeze/thaw climates* | **✓** |
 | **Shower Walls \+ Floors** *Ex: Walk-in shower, steam shower, tub surround* | **✓** |
-| **Pools \+ Spas** *Ex: Pool waterline, spa interior, fountain (saltwater or chlorine)* | **✗** |
+| **Pools \+ Spas** *Ex: Pool waterline, spa interior, fountain (saltwater or chlorine)* | **✓** |
 | **Fireplace Surround** *Ex: Living room fireplace, bedroom fireplace (not inside firebox)* | **✓** |
 | **Radiant Heating Compatible** *Compatible with all heated floor systems* | **✓** |
 | **Sealing Required** *See install guide for recommended sealers* | **✓** |
@@ -106,7 +106,7 @@ THESE INSTRUCTIONS APPLY TO GLAZED ZELLIGE TILE INSTALLATIONS – IF YOU ARE INS
 
 * Please note, you may see ink marks on the surface of your tile from the handmade cutting process. These markings are standard and can be easily removed with a damp cloth or curated out using your overage.
 
-* To account for cuts, inherent variation, and potential breakage in transit, it is strongly recommended that all orders include a minimum of 15% overage to avoid costly add-on shipping and schedule delays.
+* To account for cuts, inherent variation, it is strongly recommended that all orders include a minimum of 15% overage to avoid costly add-on shipping and schedule delays.
 
 ### BEFORE BEGINNING YOUR INSTALLATION
 

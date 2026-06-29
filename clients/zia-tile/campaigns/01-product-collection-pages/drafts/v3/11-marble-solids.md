@@ -26,7 +26,7 @@ Together the six cover the full register of designed marble work, from the quiet
 
 Open every box and blend tiles across the order before any thinset goes down. Lay out a dry run in the installation area and arrange the pieces face up; marble has a face and an underside, and the underside may carry cut marks from the finishing process.
 
-We recommend a 15 to 20% overage on all marble orders to account for cuts and breakage in transit. For installations where a more uniform appearance is the priority, plan for a 25% overage so the installer can set aside the small share of pieces that drift furthest from the average. Matching grout color to the field of the stone helps blend any minor pits or fissures into the overall surface.
+We recommend a 15 to 20% overage on all marble orders to account for cuts. For installations where a more uniform appearance is the priority, plan for a 25% overage so the installer can set aside the small share of pieces that drift furthest from the average. Matching grout color to the field of the stone helps blend any minor pits or fissures into the overall surface.
 
 ## Installation and Finishing
 

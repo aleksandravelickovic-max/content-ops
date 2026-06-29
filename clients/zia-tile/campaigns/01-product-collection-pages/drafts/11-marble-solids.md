@@ -100,7 +100,7 @@ To ensure proper installation based on unique project and/or site conditions, cl
 
 * Please inspect your order thoroughly, upon receipt. Zia Tile cannot be held responsible for the stone that has already been installed.  
 * Marble is a naturally occurring stone. Significant variations in size, color, tone, veining, and surface texture are inherent qualities of this unique material and should be expected. You may see minor imperfections on the surface of the marble, which are a natural part of the look and feel of this stone. Please see grouting instructions below for recommendations for your installation.  
-* To account for cuts, pattern, inherent variation, and potential breakage in transit, it is strongly recommended that all orders include a minimum of 15-20% overage to avoid costly add-on shipping and schedule delays. If a more uniform look is desired, we suggest increasing the order size by 20-25% to reduce the amount of variation during installation. It is also important to note that the matching grout color will fill these pits and chips to blend the overall aesthetic.
+* To account for cuts, pattern, inherent variation, it is strongly recommended that all orders include a minimum of 15-20% overage to avoid costly add-on shipping and schedule delays. If a more uniform look is desired, we suggest increasing the order size by 20-25% to reduce the amount of variation during installation. It is also important to note that the matching grout color will fill these pits and chips to blend the overall aesthetic.
 
 **BEFORE BEGINNING YOUR INSTALLATION**
 

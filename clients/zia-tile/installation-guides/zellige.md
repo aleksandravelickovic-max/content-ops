@@ -32,7 +32,7 @@ Samples may not exactly match later orders due to the handmade nature of the til
 
 - Inspect all tiles upon receipt. Zia Tile cannot address issues with tiles that have already been installed.
 - Handmade zellige has significant variation in color, shape, and thickness. Irregular edges, crazing, pits, and hairline cracks are all standard. Ink marks from cutting can be removed with a damp cloth.
-- Order at least 15% more than your measured area to account for cuts, variation, and breakage. Order 20–25% more if you prefer a more curated appearance — the extra allows your installer to select and arrange tiles during the dry layout.
+- Order at least 15% more than your measured area to account for cuts, variation. Order 20–25% more if you prefer a more curated appearance — the extra allows your installer to select and arrange tiles during the dry layout.
 
 ---
 

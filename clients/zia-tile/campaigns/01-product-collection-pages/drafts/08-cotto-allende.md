@@ -99,7 +99,7 @@ Please inspect your order thoroughly, upon receipt. Zia Tile cannot be held resp
 
 Each piece of Cotto Allende is made by hand, and extreme variations in color, shape and thickness are to be expected. Irregular edges, crazing and small hairline cracks may be present.
 
-To account for cuts, texture, inherent variation, and potential breakage in transit, it is strongly recommended that all orders include a minimum of 15% overage to avoid costly add-on shipping and schedule delays.
+To account for cuts, texture, inherent variation, it is strongly recommended that all orders include a minimum of 15% overage to avoid costly add-on shipping and schedule delays.
 
 BEFORE BEGINNING YOUR INSTALLATION  
 Residue and dust from shipping are typical. Tiles should be cleaned with a pH neutral cleaner and a soft cloth prior to beginning your installation.

@@ -97,7 +97,7 @@ No. Natural stone (marble, limestone, cantera), cement tile, terrazzo, Cotto, an
 
 ### How much overage should the installation team order?
 
-Natural stone and zellige: 15–20% standard, with 20–25% for installations where the team is selecting and arranging tiles during the dry layout for a more uniform result. Cotto, Cotto Allende, cement tile, and terrazzo: 15%. Ceramic tile and glass mosaics: 10–15%. Overage accounts for cuts, breakage, and the material available for selection during installation — not all tiles in the order will be set.
+Natural stone and zellige: 15–20% standard, with 20–25% for installations where the team is selecting and arranging tiles during the dry layout for a more uniform result. Cotto, Cotto Allende, cement tile, and terrazzo: 15%. Ceramic tile and glass mosaics: 10–15%. Overage accounts for cuts and the material available for selection during installation — not all tiles in the order will be set.
 
 ### Which materials are not suitable for freeze/thaw climates?
 

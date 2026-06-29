@@ -22,7 +22,7 @@ High-fired in a potters' village outside Nagoya, where the practice extends back
 
 #### Order Details \+ Installation \[Locked\]
 
-We recommend 15 to 20% overage to account for cuts, shape variation, and potential transit breakage. Before installation, mix tiles from all boxes and arrange them dry in the installation area to spread any variation evenly. Plan for 3/16" grout joints (1/8" minimum). Matte finishes require a penetrating sealer applied before grouting as a grout release; satin and glossy finishes do not.
+We recommend 15 to 20% overage to account for cuts, shape variation. Before installation, mix tiles from all boxes and arrange them dry in the installation area to spread any variation evenly. Plan for 3/16" grout joints (1/8" minimum). Matte finishes require a penetrating sealer applied before grouting as a grout release; satin and glossy finishes do not.
 
 ---
 

@@ -28,7 +28,7 @@ Roman Mosaics ship with a transparent film covering the tile face. This film has
 
 - Inspect all sheets upon receipt. Zia Tile cannot address issues with stone that has already been installed.
 - Marble is a naturally occurring stone. Significant variation in size, color, tone, veining, and surface texture is inherent to this material. Minor surface imperfections are a natural part of the look.
-- Order at least 15–20% more than your measured area to account for cuts, pattern, variation, and breakage. For a more uniform result, order 20–25% extra. Matching grout color helps blend the overall aesthetic.
+- Order at least 15–20% more than your measured area to account for cuts, pattern, variation. For a more uniform result, order 20–25% extra. Matching grout color helps blend the overall aesthetic.
 
 ---
 

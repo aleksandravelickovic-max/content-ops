@@ -26,7 +26,7 @@ The line spans 68 colors across a deep catalog of patterns and solids, all in th
 
 Open every box and blend tiles across the order before any thinset goes down. Lay out a dry run in the installation area, especially for patterns, to confirm the layout reads the way it should across the room.
 
-We recommend a 15 to 20% overage on all cement tile orders to account for cuts, breakage in transit, and the natural variation across the line. For installations where a more uniform appearance is the priority, plan for a 25% overage so the installer can set aside the small share of tiles that drift furthest from the average. Cement tile carries a 10 to 12 week lead time on special order, so plan curation against the project schedule before placing the order.
+We recommend a 15 to 20% overage on all cement tile orders to account for cuts and the natural variation across the line. For installations where a more uniform appearance is the priority, plan for a 25% overage so the installer can set aside the small share of tiles that drift furthest from the average. Cement tile carries a 10 to 12 week lead time on special order, so plan curation against the project schedule before placing the order.
 
 ## Installation and Finishing
 

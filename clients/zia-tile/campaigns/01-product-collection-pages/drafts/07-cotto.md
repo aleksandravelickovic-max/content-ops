@@ -94,7 +94,7 @@ Free full order pickup is available at our Los Angeles area warehouse for local 
 
 * Please inspect your order thoroughly, upon receipt. Zia Tile cannot be held responsible for tiles that have already been installed.  
 * Cotto is a handmade tile; therefore, each piece will have tonal and textural variation. Subtle variations in shape and size are also natural and should be expected in your tiles.  
-* To account for cuts, texture, inherent variation, and potential breakage in transit, it is strongly recommended that all orders include a minimum of 15% overage to avoid costly add-on shipping and schedule delays.
+* To account for cuts, texture, inherent variation, it is strongly recommended that all orders include a minimum of 15% overage to avoid costly add-on shipping and schedule delays.
 
 ### 
 

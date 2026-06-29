@@ -1,10 +1,13 @@
 # Portugal Pathways — Client Overview
 
-Source: client brief provided May 2026
+Source: client brief provided May 2026; brand guidelines + persona doc provided June 2026
 CSM: Arianna Trabanino
 Website: https://www.portugalpathways.io/
 Care Level: High Touch
 ClickUp: https://app.clickup.com/9011399348/v/f/90116591290/90112058391
+
+**Founder / Chairman:** Paul Stannard (used for press release quote attribution)
+**PR Contact:** Oakie Britcher — oakie.britcher@portugalpathways.io (email may be included; phone not provided)
 
 ---
 
@@ -17,6 +20,20 @@ The team includes professionals who have relocated from regions such as the UK, 
 Services commonly involve coordination with licensed legal, tax, and financial professionals. Portugal Pathways helps clients understand available options and connect with appropriate specialists while planning their transition to Portugal.
 
 **Critical compliance note:** Portugal Pathways does not provide regulated investment, tax, or legal advice. Content must reflect this distinction at all times.
+
+**Verified scale claim (compliant):** "Portugal Pathways has supported hundreds of Golden Visa residency-by-investment applications." Use this exact phrasing. Do not inflate to "thousands" — that phrasing is banned as unverifiable.
+
+**Upcoming products (as of June 2026):** Property platform and a Golden Visa fund index are in development. These can be referenced as forthcoming but must not be described as live until confirmed.
+
+## Competitive Landscape
+
+Named competitors (from client brief):
+- Henley & Partners
+- Immigrant Invest
+- Global Citizen Solution
+- GetGoldenVisa
+
+**Differentiation:** Portugal Pathways positions itself as an end-to-end advisory platform — covering visas, relocation, property, tax and wealth planning coordination, FX, concierge, and healthcare — versus competitors who tend to specialise in one or two services. The fragmentation of the market is the explicit gap the firm addresses.
 
 ## Primary Audience
 
@@ -82,6 +99,36 @@ Writers must:
 **Relocation guidance:** Support may include property searches, healthcare access, banking setup, and relocation logistics.
 **Financial coordination:** Cross-border tax and investment considerations often require collaboration with licensed advisors.
 **Long-term planning:** Clients typically evaluate Portugal as part of broader wealth, lifestyle, and residency strategies.
+
+## Keyword Strategy
+
+**Priority focus:** Golden Visa and luxury property in Portugal. Avoid ranking in holiday-focused or short-stay travel searches.
+
+**Success metrics (client-stated):** More qualified Golden Visa leads and Post-NHR Planning leads. Traffic volume is not the objective.
+
+**Indirect keyword architecture — five layers to develop beyond "Portugal Golden Visa":**
+
+1. **Tax & Structuring Layer** — UK inheritance tax mitigation abroad; EU tax residency options; moving assets to Europe legally; cross-border wealth structuring; EU tax-efficient jurisdictions
+2. **Mobility & Freedom Layer** — How to live in Europe without residency; Schengen stay limits explained; multiple residency strategy; living between countries legally
+3. **Wealth Behaviour Layer** — Second citizenship vs residency; portfolio diversification Europe; holding property through fund structures; borrowing against US assets abroad; offshore diversification EU
+4. **Family Strategy Layer** — Best EU countries for international schools; EU education access for non-Europeans; global mobility planning for families; raising children in Europe
+5. **Regulatory & Market Timing Layer** — NHR replacement 2026; IFICI explained; UK IHT changes 2026; Irish pension reforms expats; EU residency programme changes
+
+**Rationale (from client):** Owning adjacent intent before it converges on a Golden Visa search allows Portugal Pathways to engage prospects at the Discover stage — before competitors can intercept them at the bottom-of-funnel search.
+
+## Priority Solutions Pages
+
+In order of client priority:
+1. https://www.portugalpathways.io/solutions/golden-visa-solutions
+2. https://www.portugalpathways.io/golden-visa-investment-fund-index
+3. https://www.portugalpathways.io/end-of-nhr-status
+4. https://www.portugalpathways.io/solutions/real-estate-solutions
+5. https://www.portugalpathways.io/solutions/nhr-2-0-ifici-tax-programme
+6. https://www.portugalpathways.io/solutions/financial-planning
+7. https://www.portugalpathways.io/solutions/foreign-currency-exchange
+8. https://www.portugalpathways.io/solutions/d2-visa-solutions
+9. https://www.portugalpathways.io/solutions/d7-visa-solutions
+10. https://www.portugalpathways.io/solutions/healthcare-and-wellbeing
 
 ## Old PR Feedback (Critical Compliance Record)
 
