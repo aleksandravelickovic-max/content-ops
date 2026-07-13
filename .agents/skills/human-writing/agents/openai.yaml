@@ -1,0 +1,4 @@
+interface:
+  display_name: "Human Writing"
+  short_description: "Client-safe prose without AI slop"
+  default_prompt: "Use $human-writing to revise this client draft so it sounds human, specific, and compliant with the client's style system."

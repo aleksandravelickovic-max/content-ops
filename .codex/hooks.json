@@ -1,0 +1,74 @@
+{
+  "hooks": {
+    "PostCompact": [
+      {
+        "hooks": [
+          {
+            "command": "bd codex-hook PostCompact",
+            "statusMessage": "Scheduling Beads context refresh",
+            "type": "command"
+          }
+        ],
+        "matcher": "manual|auto"
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "command": "python3 '/Users/aleksandravelickovic/content-ops/.codex/hooks/hw_mark.py' || true",
+            "type": "command"
+          }
+        ],
+        "matcher": "Skill"
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "command": "bd codex-hook PreCompact",
+            "statusMessage": "Checking Beads context",
+            "type": "command"
+          }
+        ],
+        "matcher": "manual|auto"
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "command": "python3 '/Users/aleksandravelickovic/content-ops/.codex/hooks/hw_gate.py' || true",
+            "statusMessage": "Checking human-writing gate",
+            "type": "command"
+          }
+        ],
+        "matcher": "Write|Edit"
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "command": "bd codex-hook SessionStart",
+            "statusMessage": "Loading Beads context",
+            "type": "command"
+          }
+        ],
+        "matcher": "startup|resume|clear"
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "command": "bd codex-hook UserPromptSubmit",
+            "statusMessage": "Refreshing Beads context",
+            "type": "command"
+          }
+        ]
+      }
+    ]
+  }
+}
