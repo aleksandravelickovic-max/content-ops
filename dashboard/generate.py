@@ -144,6 +144,114 @@ def _load_gsc_auth():
         return None
 
 
+# ── Google GA4 (direct OAuth) ────────────────────────────────────────────────
+# Reuses the GSC OAuth client (GSC_SECRETS_FILE) with a separate token file —
+# run dashboard/reauth_ga4.py once to mint it. Stdlib/requests only, no Google
+# client libraries, so this stays launchd/CI-safe like the GSC path above.
+
+GA4_TOKEN_FILE  = Path.home() / ".ga4-mcp" / "oauth-token.json"
+GA4_API_BASE    = "https://analyticsdata.googleapis.com/v1beta"
+GA4_PROPERTY_ID = os.environ.get("GA4_PROPERTY_ID", "389295631")  # searchatlas.com
+
+
+def _load_ga4_auth():
+    """Load and auto-refresh the stored GA4 OAuth token. Returns headers dict or None."""
+    if not GA4_TOKEN_FILE.exists() or not GSC_SECRETS_FILE.exists():
+        return None
+    try:
+        token   = json.loads(GA4_TOKEN_FILE.read_text())
+        secrets = json.loads(GSC_SECRETS_FILE.read_text())
+        creds   = secrets.get("installed") or secrets.get("web") or {}
+        now_ms  = int(datetime.now(timezone.utc).timestamp() * 1000)
+
+        if token.get("expiry_date", 0) < now_ms + 60_000:
+            resp = requests.post(creds["token_uri"], data={
+                "client_id":     creds["client_id"],
+                "client_secret": creds["client_secret"],
+                "refresh_token": token["refresh_token"],
+                "grant_type":    "refresh_token",
+            }, timeout=15)
+            if resp.status_code == 200:
+                new = resp.json()
+                token["access_token"] = new["access_token"]
+                token["expiry_date"]  = now_ms + int(new.get("expires_in", 3600)) * 1000
+                GA4_TOKEN_FILE.write_text(json.dumps(token, indent=2))
+                log("  GA4 token refreshed")
+            else:
+                log(f"  GA4 token refresh failed: {resp.status_code}")
+
+        return {"Authorization": f"Bearer {token['access_token']}"}
+    except Exception as e:
+        log(f"  GA4 auth error: {e}")
+        return None
+
+
+def _ga4_run_report(auth, body):
+    """POST to GA4 Data API :runReport for GA4_PROPERTY_ID."""
+    url = f"{GA4_API_BASE}/properties/{GA4_PROPERTY_ID}:runReport"
+    try:
+        resp = requests.post(url, headers={**auth, "Content-Type": "application/json"},
+                             json=body, timeout=20)
+        if DEBUG:
+            log(f"  GA4 POST → {resp.status_code}")
+        if resp.status_code == 200:
+            return resp.json(), None
+        return None, f"HTTP {resp.status_code}: {resp.text[:200]}"
+    except Exception as e:
+        return None, str(e)
+
+
+def fetch_ga4(auth):
+    """Site-level session totals: current vs prior 28-day period, total + organic."""
+    log("Fetching GA4 sessions…")
+    p1s, p1e, p2s, p2e, *_ = _period_dates()
+
+    def pull(start, end, organic_only):
+        body = {
+            "dateRanges": [{"startDate": str(start), "endDate": str(end)}],
+            "metrics": [{"name": "sessions"}],
+        }
+        if organic_only:
+            body["dimensions"] = [{"name": "sessionDefaultChannelGroup"}]
+            body["dimensionFilter"] = {
+                "filter": {
+                    "fieldName": "sessionDefaultChannelGroup",
+                    "stringFilter": {"matchType": "EXACT", "value": "Organic Search"},
+                }
+            }
+        data, err = _ga4_run_report(auth, body)
+        if err:
+            log(f"  GA4 totals error: {err}")
+            return None
+        rows = (data or {}).get("rows", [])
+        if not rows:
+            return 0
+        return sum(int(r["metricValues"][0]["value"]) for r in rows)
+
+    cur_total     = pull(p1s, p1e, organic_only=False)
+    prior_total   = pull(p2s, p2e, organic_only=False)
+    cur_organic   = pull(p1s, p1e, organic_only=True)
+    prior_organic = pull(p2s, p2e, organic_only=True)
+
+    if cur_total is None:
+        return None
+
+    def pct(cur, prior):
+        return round((cur - prior) / prior * 100, 2) if prior else None
+
+    log(f"  GA4: sessions={cur_total}, organic_sessions={cur_organic}")
+    return {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "period": f"{p1s} to {p1e}",
+        "current": {"sessions": cur_total, "organic_sessions": cur_organic},
+        "prior":   {"sessions": prior_total, "organic_sessions": prior_organic},
+        "change": {
+            "sessions_pct":         pct(cur_total, prior_total),
+            "organic_sessions_pct": pct(cur_organic, prior_organic) if cur_organic is not None and prior_organic else None,
+        },
+    }
+
+
 def _gsc_query(auth, body):
     """POST to GSC searchAnalytics/query for GSC_PROPERTY."""
     site = GSC_PROPERTY.replace(":", "%3A")
@@ -1084,6 +1192,16 @@ def main():
         log("  GSC token not found — skipping (existing data preserved)")
         sources_status["gsc"] = "token_not_found"
 
+    # ── GA4 (Google OAuth direct) ─────────────────────────────────────────────
+    ga4_auth = _load_ga4_auth()
+    ga4 = None
+    if ga4_auth:
+        ga4 = fetch_ga4(ga4_auth)
+        sources_status["ga4"] = "connected" if ga4 else "error"
+    else:
+        log("  GA4 token not found — run dashboard/reauth_ga4.py (existing data preserved)")
+        sources_status["ga4"] = "token_not_found"
+
     # ── ClickUp ──────────────────────────────────────────────────────────────
     clickup_stats = None
     if CU_API_KEY:
@@ -1146,6 +1264,8 @@ def main():
     }
     if gsc is not None:
         existing["gsc"] = gsc
+    if ga4 is not None:
+        existing["ga4"] = ga4
     if gsc_perf is not None:
         existing["content_performance"] = gsc_perf
     if gsc_decay is not None:

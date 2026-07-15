@@ -17,9 +17,9 @@
 
     "content_production": {
       "goal": 360,
-      "final": 400.69,
+      "final": 444.53,
       "status": "exceeded",
-      "note": "Exceeded Q2 goal by 11.3% (400.69 vs 360). Strategy shift to quality over volume worked.",
+      "note": "Exceeded Q2 goal by 23.5% (444.53 vs 360). Strategy shift to quality over volume worked.",
       "scoring_model": "4k words = 1pt | LP = 3pt | case study = 3pt | brief = 1pt | email campaign = 1pt | news/thought leadership = 1pt | research = 1pt | LP edit = 1pt | guest post = 1pt",
       "weekly_history": [
         { "week": "Mar 30–Apr 5",   "points": 29.84 },
