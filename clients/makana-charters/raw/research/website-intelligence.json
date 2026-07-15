@@ -1,0 +1,420 @@
+{
+  "client": "makana-charters",
+  "display_name": "Makana Charters",
+  "generated_at": "2026-07-13T23:01:30.396704+00:00",
+  "website_urls": [
+    "https://makanacharters.com/"
+  ],
+  "status": "ok",
+  "sitemaps": [
+    "https://makanacharters.com/sitemap_index.xml",
+    "https://makanacharters.com/sitemap.xml"
+  ],
+  "sitemap_errors": [],
+  "url_count": 345,
+  "page_type_counts": {
+    "home": 1,
+    "page": 344
+  },
+  "sample_pages": [
+    {
+      "url": "https://makanacharters.com/",
+      "requested_url": "https://makanacharters.com/",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "page_type": "home",
+      "title": "Makana Charters | Na Pali Coast Boat Tours in Kauai",
+      "meta_description": "Makana Charters: 5-hour Na Pali Coast catamaran tours with amenities & cultural insights. Book your small-group adventure today!",
+      "headings": [
+        "Na Pali Coast Boat Tours with Kauai's Cultural Captains",
+        "Na Pali Coast Boat Tours with Over 10,000 5-Star Reviews",
+        "Choose Your Na Pali Coast Boat Tour",
+        "Na Pali Kai III",
+        "Seiko 1 & 2",
+        "Leialoha",
+        "Makana",
+        "Amelia K",
+        "Private Na Pali Coast Boat Tours",
+        "Two hundred years ago, as a native, we were the first to showcase the breathtaking Na Pali Coast to a foreign family on our double-hull sailing vessel right from our office (till today)",
+        "Why Book Your Na Pali Coast Boat Tour with Makana Charters?",
+        "See a Na Pali Coast Boat Tour in Action"
+      ],
+      "links_seen": 196,
+      "elapsed_ms": 2038
+    },
+    {
+      "url": "https://makanacharters.com/tag/charters/",
+      "requested_url": "https://makanacharters.com/tag/charters/",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "page_type": "page",
+      "title": "charters Archives - Makana Charters Na Pali Boat Tours",
+      "meta_description": "",
+      "headings": [
+        "All Blog Posts",
+        "Private Charters For Wedding Groups | Na Pali Coast, Kauai",
+        "Your Na Pali Coast Adventure Awaits!"
+      ],
+      "links_seen": 138,
+      "elapsed_ms": 459
+    },
+    {
+      "url": "https://makanacharters.com/tour/makana/",
+      "requested_url": "https://makanacharters.com/tour/makana/",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "page_type": "page",
+      "title": "Makana - Makana Charters Na Pali Boat Tours",
+      "meta_description": "With just 12 guests aboard, the Makana is the most intimate way to see the Na Pali Coast. This 32' custom-built catamaran was designed for room to spread out",
+      "headings": [
+        "Makana"
+      ],
+      "links_seen": 124,
+      "elapsed_ms": 1255
+    },
+    {
+      "url": "https://makanacharters.com/tour/amelia-k/",
+      "requested_url": "https://makanacharters.com/tour/amelia-k/",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "page_type": "page",
+      "title": "Amelia K - Makana Charters Na Pali Boat Tours",
+      "meta_description": "At 47' and seating up to 36, the Amelia K is our largest and most luxurious catamaran — plush seating throughout and a smooth, stable ride that makes for the",
+      "headings": [
+        "Amelia K"
+      ],
+      "links_seen": 124,
+      "elapsed_ms": 1095
+    },
+    {
+      "url": "https://makanacharters.com/tour/leialoha/",
+      "requested_url": "https://makanacharters.com/tour/leialoha/",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "page_type": "page",
+      "title": "Leialoha - Makana Charters Na Pali Boat Tours",
+      "meta_description": "Leialoha is the newest boat in our fleet — a 36' power catamaran that seats up to 18 on a regular small-group departure, so a slightly larger family or friend",
+      "headings": [
+        "Leialoha"
+      ],
+      "links_seen": 123,
+      "elapsed_ms": 1026
+    },
+    {
+      "url": "https://makanacharters.com/category/events/",
+      "requested_url": "https://makanacharters.com/category/events/",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "page_type": "page",
+      "title": "Makana Charters Events Archive: Na Pali Coast & Kauai Happenings",
+      "meta_description": "Explore Makana Charters' events archive for Na Pali Coast happenings and Kauai articles. Discover local insights and stunning coastal photography. Learn more.",
+      "headings": [
+        "Events",
+        "5 Beautiful Wedding Destinations in Kauai",
+        "What does “Aloha” Mean? | The Local’s Guide to Kauai",
+        "The Art and History of the Hawaiian Hula",
+        "Hanapepe Art Night | Top Things to Do on Kauai",
+        "Why are there Chickens Everywhere in Kauai?",
+        "Your Na Pali Coast Adventure Awaits!"
+      ],
+      "links_seen": 154,
+      "elapsed_ms": 1117
+    },
+    {
+      "url": "https://makanacharters.com/tour/seioko-1-2/",
+      "requested_url": "https://makanacharters.com/tour/seioko-1-2/",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "page_type": "page",
+      "title": "Seiko 1 & 2 - Makana Charters Na Pali Boat Tours",
+      "meta_description": "The Seiko is a 34' power catamaran built for a small-group Na Pali Coast tour. Coast Guard certified for 20, we hold each trip to 16 so there's always room to",
+      "headings": [
+        "Seiko 1 & 2"
+      ],
+      "links_seen": 124,
+      "elapsed_ms": 1005
+    },
+    {
+      "url": "https://makanacharters.com/category/wildlife/",
+      "requested_url": "https://makanacharters.com/category/wildlife/",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "page_type": "page",
+      "title": "Na Pali Coast Wildlife Viewing | Makana Charters",
+      "meta_description": "Explore Na Pali Coast wildlife with Makana Charters. Discover sea turtles, marine life, and tour tips. Learn more about Kauai's natural beauty.",
+      "headings": [
+        "Wildlife",
+        "The Honu (Sea Turtle) and Its Importance to Hawaii",
+        "Tips for a Great Na Pali Coast Boat Tour",
+        "Your Na Pali Coast Adventure Awaits!"
+      ],
+      "links_seen": 145,
+      "elapsed_ms": 976
+    },
+    {
+      "url": "https://makanacharters.com/category/adventure/",
+      "requested_url": "https://makanacharters.com/category/adventure/",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "page_type": "page",
+      "title": "Adventure Archives - Makana Charters Na Pali Boat Tours",
+      "meta_description": "Welcome to the \"Adventure\" archives of the Makana Charters blog. Here you'll find interesting articles and awesome pictures of the Na Pali coastline from Makana Charters and Tours.",
+      "headings": [
+        "Adventure",
+        "The Honu (Sea Turtle) and Its Importance to Hawaii",
+        "Honopu Ridge Trail: The Most Scenic Napali Coast Hike In Kokee State Park",
+        "Opaekaa Falls – One of Kauai’s Most Easily Accessible Waterfalls",
+        "Luau Kalamaku: What You Need to Know",
+        "5 Best Easy Hikes in Kauai",
+        "5 Must-See Jurassic Park Locations in Kauai",
+        "Kalalea Mountain – The World Famous King Kong Peak",
+        "The Town of Puhi: What to See and Do",
+        "Snorkeling for Beginners: What to Bring, What to Remember",
+        "Hanakoa Falls: A Secluded Treasure Along the Kalalau Trail",
+        "Camping in Kauai: Quick Guide and Top Spots"
+      ],
+      "links_seen": 220,
+      "elapsed_ms": 594
+    },
+    {
+      "url": "https://makanacharters.com/category/west-side/",
+      "requested_url": "https://makanacharters.com/category/west-side/",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "page_type": "page",
+      "title": "West Side Kauai Archives: Na Pali Coast & Local Insights | Makana Charters",
+      "meta_description": "Explore Kauai's West Side archives: Na Pali Coast insights, local attractions & Waimea Canyon from Makana Charters. Discover Hawaiian experiences.",
+      "headings": [
+        "West Side",
+        "The 7+ Best Easy-to-View Waterfalls in Kauai (With Map)",
+        "Why Kauai’s Na Pali Coast Should Be #1 On Your Hawaii Bucket List",
+        "The Best Kauai Snorkel Spots",
+        "Hanapepe Art Night | Top Things to Do on Kauai",
+        "Awa Awaapuhi Trail – A World Class Kauai Hike From Mountains to Sea",
+        "Napali Coast Hike: Hanakapia’i Beach and Falls",
+        "Exploring Koke’e State Park & Waimea Canyon – The Ultimate Guide",
+        "Visit Waimea Canyon – “The Grand Canyon of the Pacific”",
+        "Your Na Pali Coast Adventure Awaits!"
+      ],
+      "links_seen": 177,
+      "elapsed_ms": 1146
+    },
+    {
+      "url": "https://makanacharters.com/category/restaurants/",
+      "requested_url": "https://makanacharters.com/category/restaurants/",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "page_type": "page",
+      "title": "Kauai Restaurants Guide: Dining & Food Experiences | Makana Charters",
+      "meta_description": "Explore Kauai's dining scene with Makana Charters' restaurant guide. Discover local eateries, bars, and food experiences. Learn more.",
+      "headings": [
+        "Restaurants",
+        "Nightlife in Kauai: The 7 Best Bars You Must Visit in Kauai",
+        "Top 8 Breakfast and Brunch Spots in Kauai",
+        "A Wine Guide to Kauai: 5 Best Wine Bars in Kauai",
+        "Where to Find the Best Tropical Cocktails in Kauai",
+        "6 Best Hawaiian Sweets and Where to Find Them in Kauai",
+        "Must-Try Hawaiian Fish and Where to Find Them in Kauai",
+        "Monchong – One of Kauai’s Favorite Seafood (Recipes Included)",
+        "Kilohana Plantation – Step Back in Time | Things to do on Kauai",
+        "Koloa Fish Market | Places to Eat on Kauai",
+        "Your Na Pali Coast Adventure Awaits!"
+      ],
+      "links_seen": 172,
+      "elapsed_ms": 1022
+    },
+    {
+      "url": "https://makanacharters.com/category/south-shore/",
+      "requested_url": "https://makanacharters.com/category/south-shore/",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "page_type": "page",
+      "title": "South Shore Kauai Blog Archives | Makana Charters",
+      "meta_description": "Makana Charters South Shore blog archives: Discover articles and photos of Kauai's Na Pali coastline. Learn about local attractions and plan your adventure.",
+      "headings": [
+        "South Shore",
+        "Top 6 Family-Friendly Beaches on Kauai",
+        "Nightlife in Kauai: The 7 Best Bars You Must Visit in Kauai",
+        "Nawiliwili Harbor – The Gateway of Kauai",
+        "5 Must-See Jurassic Park Locations in Kauai",
+        "Makauwahi Cave Reserve, Kauai: What to Know Before You Go",
+        "Popular Filming Locations in Kauai",
+        "The Town of Puhi: What to See and Do",
+        "5 Best Activities to Enjoy in Poipu",
+        "4 Things You Must Do in the Enchanting Town of Hanapepe",
+        "In Full Bloom: The Hawaiian Islands’ Iconic Flowers",
+        "8 Perfect Spots for a Honeymoon in Kauai"
+      ],
+      "links_seen": 234,
+      "elapsed_ms": 1113
+    },
+    {
+      "url": "https://makanacharters.com/tour/na-pali-kai-iii/",
+      "requested_url": "https://makanacharters.com/tour/na-pali-kai-iii/",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "page_type": "page",
+      "title": "Na Pali Kai III - Makana Charters Na Pali Boat Tours",
+      "meta_description": "Na Pali Kai III is the boat for photographers and families. Its 360° walk-around deck — the only one in our fleet — lets you move freely for unobstructed",
+      "headings": [
+        "Na Pali Kai III"
+      ],
+      "links_seen": 123,
+      "elapsed_ms": 1111
+    },
+    {
+      "url": "https://makanacharters.com/category/things-to-do/",
+      "requested_url": "https://makanacharters.com/category/things-to-do/",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "page_type": "page",
+      "title": "Things to Do on Kauai: Na Pali Coast Adventures | Makana Charters",
+      "meta_description": "Makana Charters Blog: Explore Kauai's best things to do, from Na Pali Coast adventures to local insights. Plan your island trip.",
+      "headings": [
+        "Things To Do: Makana Charters Blog",
+        "Snorkeling for Beginners: What to Bring, What to Remember",
+        "5 Beautiful Wedding Destinations in Kauai",
+        "Camping in Kauai: Quick Guide and Top Spots",
+        "Hawaiian Sea Turtles: Where to Spot Them in Kauai",
+        "4 Things You Must Do in the Enchanting Town of Hanapepe",
+        "The 7+ Best Easy-to-View Waterfalls in Kauai (With Map)",
+        "9 Kauai Whale Watching Tips for an Unforgettable Vacation",
+        "8 Perfect Spots for a Honeymoon in Kauai",
+        "5 Events in Kauai You Shouldn’t Miss",
+        "Things to Do on South Shore of Kauai",
+        "Top 10 Must-Try Breathtaking Kauai Hikes in Hawaii"
+      ],
+      "links_seen": 221,
+      "elapsed_ms": 1322
+    },
+    {
+      "url": "https://makanacharters.com/category/na-pali-coast/",
+      "requested_url": "https://makanacharters.com/category/na-pali-coast/",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "page_type": "page",
+      "title": "Na Pali Coast Archives: Kauai Tour Information | Makana Charters",
+      "meta_description": "Na Pali Coast Archives: Explore Makana Charters' blog for Kauai coastline tours, wildlife, and Hawaiian experiences. Plan your adventure!",
+      "headings": [
+        "Na Pali Coast",
+        "The Honu (Sea Turtle) and Its Importance to Hawaii",
+        "7 Reasons to Choose Makana Charters for Your Na Pali Coast Cruise",
+        "What is a Catamaran? | Makana Charters NaPali Coast Cruises | Kauai, Hawaii",
+        "Open Ceiling Cave: The Treasure of Kauai’s Na Pali Coast",
+        "The Ultimate Guide to Napali Coast Whale Watching Tours in Kauai",
+        "Top 5 Kauai Experiences That Will Make Your Trip",
+        "Kauai’s Hawaiian Monk Seals: Everything You Need to Know",
+        "6 Tips for Photographing the Na Pali Coast",
+        "5 Interesting Facts about the Na Pali Coast",
+        "5 Must-See Museums in Kauai",
+        "30+ Things To Do In Kauai By Category: The Local’s Guide"
+      ],
+      "links_seen": 213,
+      "elapsed_ms": 1093
+    },
+    {
+      "url": "https://makanacharters.com/category/eastside-places/",
+      "requested_url": "https://makanacharters.com/category/eastside-places/",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "page_type": "page",
+      "title": "Eastside Places Archives - Makana Charters Na Pali Boat Tours",
+      "meta_description": "Welcome to the \"Eastside Places\" archives of the Makana Charters blog. Here you'll find interesting articles and awesome pictures of the Na Pali coastline from Makana Charters and Tours.",
+      "headings": [
+        "Eastside Places",
+        "Top 6 Family-Friendly Beaches on Kauai",
+        "Top 8 Breakfast and Brunch Spots in Kauai",
+        "Honopu Ridge Trail: The Most Scenic Napali Coast Hike In Kokee State Park",
+        "Opaekaa Falls – One of Kauai’s Most Easily Accessible Waterfalls",
+        "Nawiliwili Harbor – The Gateway of Kauai",
+        "5 Must-See Jurassic Park Locations in Kauai",
+        "Kalalea Mountain – The World Famous King Kong Peak",
+        "The Town of Puhi: What to See and Do",
+        "4 Things You Must Do in the Enchanting Town of Hanapepe",
+        "Tunnels Beach: How to Explore the Secluded Makua Beach",
+        "8 Perfect Spots for a Honeymoon in Kauai"
+      ],
+      "links_seen": 240,
+      "elapsed_ms": 523
+    },
+    {
+      "url": "https://makanacharters.com/category/north-shore-places/",
+      "requested_url": "https://makanacharters.com/category/north-shore-places/",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "page_type": "page",
+      "title": "North Shore Places: Kauai Attractions & Guide | Makana Charters",
+      "meta_description": "Discover Kauai's North Shore with Makana Charters' blog. Explore Na Pali coast articles and photos. Learn more.",
+      "headings": [
+        "North Shore Places",
+        "Top 6 Family-Friendly Beaches on Kauai",
+        "Top 8 Breakfast and Brunch Spots in Kauai",
+        "Nawiliwili Harbor – The Gateway of Kauai",
+        "Dragon’s Breath, Kauai: What You Need to Know",
+        "5 Must-See Jurassic Park Locations in Kauai",
+        "6 Best Caves of Kauai That You Must Visit",
+        "Kalalea Mountain – The World Famous King Kong Peak",
+        "Popular Filming Locations in Kauai",
+        "The Town of Puhi: What to See and Do",
+        "Kauai in History: Hawaii’s Oldest Paradise",
+        "Rock Quarry Beach – A Rustic Beach Along Kauai’s North Shore"
+      ],
+      "links_seen": 228,
+      "elapsed_ms": 1081
+    },
+    {
+      "url": "https://makanacharters.com/category/eastside-things-to-do/",
+      "requested_url": "https://makanacharters.com/category/eastside-things-to-do/",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "page_type": "page",
+      "title": "Eastside Things To Do Archives - Makana Charters Na Pali Boat Tours",
+      "meta_description": "Welcome to the \"Eastside Things To Do\" archives of the Makana Charters blog. Here you'll find interesting articles and awesome pictures of the Na Pali coastline from Makana Charters and Tours.",
+      "headings": [
+        "Eastside Things To Do",
+        "The 7+ Best Easy-to-View Waterfalls in Kauai (With Map)",
+        "The Best Kauai Snorkel Spots",
+        "Kilohana Plantation – Step Back in Time | Things to do on Kauai",
+        "Hiking Sleeping Giant Trail (Nounou Trail) | Local Guide To Kauai",
+        "Your Na Pali Coast Adventure Awaits!"
+      ],
+      "links_seen": 161,
+      "elapsed_ms": 490
+    }
+  ],
+  "offering_pages": [],
+  "top_terms": [
+    "kauai",
+    "pali",
+    "coast",
+    "makana",
+    "charters",
+    "boat",
+    "tours",
+    "for",
+    "things",
+    "you",
+    "archives",
+    "adventure",
+    "top",
+    "spots",
+    "local",
+    "explore",
+    "hawaiian",
+    "shore",
+    "tour",
+    "hawaii",
+    "park",
+    "town",
+    "catamaran",
+    "see",
+    "awaits",
+    "most",
+    "articles",
+    "discover",
+    "sea",
+    "find"
+  ],
+  "product_or_service_urls": [],
+  "blockers": []
+}

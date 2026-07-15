@@ -1,0 +1,139 @@
+{
+  "client": "the-hope-house/scottsdaleazdetox",
+  "display_name": "Scottsdale Detox",
+  "generated_at": "2026-07-14T15:59:27.914767+00:00",
+  "offerings": [
+    {
+      "name": "24/7 Medical Staff",
+      "description": "Round-the-clock medical staff support during detox.",
+      "sources": [
+        "clients/the-hope-house/scottsdaleazdetox/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Facility Differentiators"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Alcohol Detox",
+      "description": "Supervised detox program for alcohol withdrawal needs.",
+      "sources": [
+        "clients/the-hope-house/scottsdaleazdetox/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Detox Programs"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Benzodiazepine Detox",
+      "description": "Supervised detox program for benzodiazepine withdrawal needs.",
+      "sources": [
+        "clients/the-hope-house/scottsdaleazdetox/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Detox Programs"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Fentanyl Detox",
+      "description": "Supervised detox program for fentanyl withdrawal needs.",
+      "sources": [
+        "clients/the-hope-house/scottsdaleazdetox/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Detox Programs"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Insurance Verification",
+      "description": "Admissions support for checking insurance options before treatment.",
+      "sources": [
+        "clients/the-hope-house/scottsdaleazdetox/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Facility Differentiators"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Medical Detox",
+      "description": "Medically supervised detox with 24/7 staff support and individualized planning.",
+      "sources": [
+        "clients/the-hope-house/scottsdaleazdetox/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Detox Programs"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Medication-Assisted Treatment",
+      "description": "Medication support where clinically appropriate. Spell out before MAT.",
+      "sources": [
+        "clients/the-hope-house/scottsdaleazdetox/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Facility Differentiators"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Methadone Detox",
+      "description": "Supervised detox program for methadone withdrawal needs.",
+      "sources": [
+        "clients/the-hope-house/scottsdaleazdetox/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Detox Programs"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Opioid / Heroin Detox",
+      "description": "Supervised detox program for opioid and heroin withdrawal needs.",
+      "sources": [
+        "clients/the-hope-house/scottsdaleazdetox/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Detox Programs"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Polysubstance Addiction Treatment",
+      "description": "Treatment support for clients dealing with more than one substance.",
+      "sources": [
+        "clients/the-hope-house/scottsdaleazdetox/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Detox Programs"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Prescription Drug Misuse Treatment",
+      "description": "Treatment support for prescription drug misuse, limited to confirmed program language.",
+      "sources": [
+        "clients/the-hope-house/scottsdaleazdetox/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Detox Programs"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Private Rooms",
+      "description": "Private-room detox setting for comfort and privacy.",
+      "sources": [
+        "clients/the-hope-house/scottsdaleazdetox/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Facility Differentiators"
+      ],
+      "score": 6
+    }
+  ]
+}

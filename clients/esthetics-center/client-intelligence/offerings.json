@@ -1,0 +1,94 @@
+{
+  "client": "esthetics-center",
+  "display_name": "Esthetics Center",
+  "generated_at": "2026-07-14T15:59:27.887809+00:00",
+  "offerings": [
+    {
+      "name": "Facial plastic surgery",
+      "description": "Surgical facial aesthetics services performed by qualified clinical providers.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/esthetics-center/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Services"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Injectable Treatments",
+      "description": "Botox, filler, and related injectable treatments for wrinkle softening, facial balancing, and volume restoration.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/esthetics-center/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Services"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Medical spa services",
+      "description": "Non-surgical aesthetic services delivered in a medical spa setting.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/esthetics-center/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Services"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Professional skincare treatments",
+      "description": "Clinical skincare treatments for texture, tone, maintenance, and skin quality.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/esthetics-center/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Services"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Skin rejuvenation procedures",
+      "description": "Procedures focused on improving skin texture, tone, collagen response, and visible aging concerns.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/esthetics-center/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Services"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Laser and Energy-Based Treatments",
+      "description": "Device-based treatments for resurfacing, pigmentation, redness, hair reduction, or skin quality, where confirmed per page.",
+      "sources": [
+        "clients/esthetics-center/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Services"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Lead physician: Dr. Reginald Rice (credentials listed in §1).",
+      "description": "Lead physician: Dr. Reginald Rice (credentials listed in §1). is listed under 8. Service Reference in the Esthetics Center client context. Check the source links before adding specific claims.",
+      "sources": [
+        "STYLE-SYSTEM.md"
+      ],
+      "sections": [
+        "8. Service Reference"
+      ],
+      "score": 3
+    }
+  ]
+}

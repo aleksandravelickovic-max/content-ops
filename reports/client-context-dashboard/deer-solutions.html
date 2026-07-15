@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deer Solutions Context</title>
+  <style>
+    :root {
+      --bg:#f4f7f5; --panel:#ffffff; --ink:#09110f; --muted:#63716c; --line:#dce5df;
+      --black:#050907; --graph:#14d878; --graph-dark:#079d55; --soft:#eaf8f0; --soft-ink:#19392a;
+      --accent:#087a47; --red:#b5362d; --shadow:0 18px 46px rgba(5,9,7,.08);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:
+      linear-gradient(180deg, #ffffff 0, var(--bg) 360px); color:var(--ink); line-height:1.45; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .topnav { min-height:64px; padding:14px max(32px, calc((100vw - 1380px) / 2 + 32px)); background:var(--black); border-bottom:1px solid rgba(255,255,255,.08); position:sticky; top:0; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { color:#fff; display:inline-flex; align-items:center; gap:10px; font-weight:800; letter-spacing:0; }
+    .brand:hover { text-decoration:none; }
+    .brand span { width:32px; height:32px; border-radius:8px; background:var(--graph); color:var(--black); display:inline-grid; place-items:center; font-size:13px; font-weight:900; }
+    .nav-meta, .nav-link { color:#b8c6c0; font-size:13px; font-weight:700; }
+    .hero { margin:0; padding:42px max(32px, calc((100vw - 1380px) / 2 + 32px)) 38px; background:var(--black); color:#fff; border-bottom:1px solid rgba(255,255,255,.08); }
+    .index-hero, .client-hero { display:flex; justify-content:space-between; gap:28px; align-items:flex-start; }
+    .hero h1 { margin:0 0 12px; font-size:clamp(32px, 5vw, 62px); line-height:.98; letter-spacing:0; max-width:900px; }
+    .hero p { margin:0; color:#c7d5cf; max-width:840px; font-size:17px; }
+    .hero-copy { max-width:940px; }
+    .kicker { color:var(--graph); font-size:12px; text-transform:uppercase; letter-spacing:.08em; font-weight:900; }
+    .report-meta { display:flex; flex-wrap:wrap; gap:10px; padding:14px 32px; background:#fff; border-bottom:1px solid var(--line); color:var(--muted); font-size:13px; max-width:1380px; margin:0 auto; }
+    .report-meta span { background:var(--soft); color:var(--soft-ink); border-radius:999px; padding:6px 10px; font-weight:700; }
+    .grid.cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(290px, 1fr)); gap:16px; padding:24px 32px 42px; max-width:1380px; margin:0 auto; }
+    .card, .panel, .context-card { background:var(--panel); border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow); }
+    .client-card { display:block; padding:20px; color:inherit; min-height:184px; transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease; }
+    .client-card:hover { text-decoration:none; transform:translateY(-2px); border-color:rgba(20,216,120,.55); box-shadow:0 24px 58px rgba(5,9,7,.12); }
+    .card-topline { display:flex; justify-content:space-between; gap:10px; align-items:center; }
+    .client-card h2 { margin:14px 0 8px; font-size:23px; line-height:1.1; }
+    .client-card p { margin:0; color:var(--muted); }
+    .metrics { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+    .metrics span, .evidence, .status-pill { background:var(--soft); border:1px solid rgba(20,216,120,.22); border-radius:999px; padding:5px 9px; font-size:12px; color:var(--soft-ink); font-weight:800; }
+    .topic-chips { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 18px; }
+    .topic-chips span { background:#f6fbf8; border:1px solid var(--line); border-radius:999px; color:#183a2a; padding:7px 10px; font-size:13px; font-weight:750; }
+    .layout { display:block; padding:22px 32px 46px; max-width:1380px; margin:0 auto; }
+    main { min-width:0; }
+    .context-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; margin-bottom:20px; }
+    .context-card { padding:18px; min-height:220px; }
+    .context-card ul { margin-bottom:0; }
+    .context-note { color:var(--muted); font-size:13px; margin:4px 0 12px; }
+    .aside-label { color:var(--graph-dark); font-size:11px; text-transform:uppercase; font-weight:900; letter-spacing:.08em; margin-bottom:5px; }
+    .panel h2 { margin-top:0; }
+    .panel { padding:22px; margin-bottom:20px; }
+    .panel h2 { font-size:26px; letter-spacing:0; }
+    .offerings { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:13px; margin-top:16px; }
+    .offering, .sample { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .offering { position:relative; overflow:hidden; }
+    .offering-marker { position:absolute; inset:0 auto 0 0; width:4px; background:var(--graph); }
+    .offering h3, .sample h4 { margin:0 0 6px; }
+    .offering p { margin:0 0 10px; }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .stat-stack { display:grid; grid-template-columns:repeat(3, minmax(100px, 1fr)); gap:8px; min-width:340px; }
+    .stat-stack div { border:1px solid rgba(255,255,255,.15); border-radius:8px; padding:14px; background:rgba(255,255,255,.06); }
+    .stat-stack strong { display:block; font-size:26px; color:#fff; }
+    .stat-stack span, .muted { color:var(--muted); font-size:13px; }
+    .hero .stat-stack span { color:#b8c6c0; }
+    ul { padding-left:20px; }
+    li { margin:4px 0; }
+    code { background:var(--soft); color:var(--soft-ink); padding:2px 4px; border-radius:4px; }
+    details { margin:10px 0; }
+    summary { cursor:pointer; font-weight:700; }
+    .style-section { border-top:1px solid var(--line); padding-top:10px; }
+    .markdown { color:#2d2f35; }
+    @media (max-width: 980px) {
+      .layout, .split, .client-hero, .index-hero { grid-template-columns:1fr; display:block; }
+      .context-grid { grid-template-columns:1fr; }
+      .stat-stack { min-width:0; margin-top:16px; }
+      .hero, .grid.cards, .layout, .topnav, .report-meta { padding-left:16px; padding-right:16px; }
+      .hero h1 { font-size:36px; }
+      .stat-stack { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+    <nav class="topnav">
+      <a class="brand" href="index.html"><span>LG</span>LinkGraph</a>
+      <a class="nav-link" href="index.html">All clients</a>
+    </nav>
+    <section class="hero client-hero">
+      <div class="hero-copy">
+        <div class="kicker">deer-solutions</div>
+        <h1>Deer Solutions</h1>
+        <p>13 extracted offerings, 614 sitemap URLs, and 8 local source documents for client-specific writing context.</p>
+      </div>
+      <div class="stat-stack">
+        <div><strong>ok</strong><span>crawl status</span></div>
+        <div><strong>614</strong><span>URLs found</span></div>
+        <div><strong>0</strong><span>product/service URLs</span></div>
+      </div>
+    </section>
+    <section class="layout">
+      <main>
+        <section class="context-grid">
+    <article class="context-card">
+      <div class="aside-label">Quick Facts</div>
+      <p class="context-note">Company, audience, and proof points.</p>
+      <p class="muted">No clean lines extracted yet.</p>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Voice</div>
+      <p class="context-note">How this client should sound.</p>
+      <ul><li>plants and shrubs</li><li>flower buds</li><li>expensive landscaping</li><li>deer damage</li><li>customized protection plan</li><li>deer control repellent service</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Avoid / Compliance</div>
+      <p class="context-note">Claims, terms, and wording to avoid.</p>
+      <p class="muted">No clean lines extracted yet.</p>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Terminology</div>
+      <p class="context-note">Client-specific naming and required language.</p>
+      <p class="muted">No clean lines extracted yet.</p>
+    </article>
+    </section>
+        <section class="panel">
+          <h2>Offerings, Services, Goods</h2>
+          <p class="muted">Writer-facing catalog from the client style system, approved source files, and usable product/service pages. Raw crawl evidence is separated below.</p>
+          <div class="offerings">
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Customized Deer Control Protection Plan</h3>
+      <p>Property-specific plan built around the customer&#x27;s landscape and deer damage problem.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/deer-solutions/raw/knowledge/service-taxonomy.md · Sections: Core Offerings, Deer Control Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Deer Control Repellent Service</h3>
+      <p>Professional service that applies deer repellent to help protect plants and shrubs from deer damage.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/deer-solutions/raw/knowledge/service-taxonomy.md · Sections: Core Offerings, Deer Control Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Franchise Opportunity</h3>
+      <p>Separate business ownership path linked from the main site. Do not mix this with homeowner service pages unless the brief is franchise-focused.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/deer-solutions/raw/knowledge/service-taxonomy.md · Sections: Core Offerings, Business / Franchise Context</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Free At-Home Consultation and Estimate</h3>
+      <p>Initial visit where a Certified Deer Damage Expert evaluates the property and creates a customized deer control protection plan.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/deer-solutions/raw/knowledge/service-taxonomy.md · Sections: Core Offerings, Deer Control Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Certified Deer Damage Expert Visit</h3>
+      <p>Service consultation performed by a trained deer control professional who evaluates the landscape and deer damage concern.</p>
+      <div class="evidence">Sources: clients/deer-solutions/raw/knowledge/service-taxonomy.md · Sections: Deer Control Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Clear-Drying, Low-Odor Application</h3>
+      <p>Website positioning that the repellent dries clear and does not have foul odors.</p>
+      <div class="evidence">Sources: clients/deer-solutions/raw/knowledge/service-taxonomy.md · Sections: Repellent Positioning</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Family, Pet, and Environment-Friendly Framing</h3>
+      <p>Website positioning for the repellent. Keep this wording tied to the source; do not add unsupported safety claims.</p>
+      <div class="evidence">Sources: clients/deer-solutions/raw/knowledge/service-taxonomy.md · Sections: Repellent Positioning</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Independently Owned Local Branches</h3>
+      <p>Deer Solution locations are independently owned and operated.</p>
+      <div class="evidence">Sources: clients/deer-solutions/raw/knowledge/service-taxonomy.md · Sections: Business / Franchise Context</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Plant and Shrub Protection</h3>
+      <p>Core customer outcome category focused on protecting flowers, shrubs, and landscaping from deer browsing.</p>
+      <div class="evidence">Sources: clients/deer-solutions/raw/knowledge/service-taxonomy.md · Sections: Repellent Positioning</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Professional Repellent Application</h3>
+      <p>Ongoing application service using Deer Solution&#x27;s proprietary deer repellent.</p>
+      <div class="evidence">Sources: clients/deer-solutions/raw/knowledge/service-taxonomy.md · Sections: Deer Control Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Proprietary Deer Repellent</h3>
+      <p>Deer repellent described by the company as all-natural and designed to deter deer by taste and smell.</p>
+      <div class="evidence">Sources: clients/deer-solutions/raw/knowledge/service-taxonomy.md · Sections: Repellent Positioning</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Deer Solutions</h3>
+      <p>Source: https://www.deersolution.com/ reviewed on 2026-07-14.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md · Sections: Deer Solutions</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Professional Application Service</h3>
+      <p>Deer repellent service performed by trained and licensed deer control professionals.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md · Sections: Core Offerings</div>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Website Intelligence</h2>
+          <div class="split">
+            <div>
+              <h3>Website URLs</h3><ul><li><a href="https://www.deersolution.com/">https://www.deersolution.com/</a></li></ul>
+              <h3>Sitemaps</h3><ul><li><a href="https://www.deersolution.com/sitemap_index.xml">https://www.deersolution.com/sitemap_index.xml</a></li><li><a href="https://www.deersolution.com/sitemap.xml">https://www.deersolution.com/sitemap.xml</a></li></ul>
+            </div>
+            <div>
+              <h3>Semantic / Topical Terms</h3><div class="topic-chips"><span>Customized Deer Control Protection Plan</span><span>Deer Control Repellent Service</span><span>Franchise Opportunity</span><span>Free At-Home Consultation and Estimate</span><span>Certified Deer Damage Expert Visit</span><span>Clear-Drying, Low-Odor Application</span><span>Family, Pet, and Environment-Friendly Framing</span><span>Independently Owned Local Branches</span><span>Plant and Shrub Protection</span><span>Professional Repellent Application</span><span>Proprietary Deer Repellent</span><span>Deer Solutions</span><span>Professional Application Service</span></div>
+              <h3>Blockers</h3><p class="muted">None</p>
+            </div>
+          </div>
+          <h3>Product / Service URLs</h3><p class="muted">No product/service URLs classified from sitemap paths.</p>
+          <h3>Sampled Pages</h3><div class="sample-pages">
+    <article class="sample">
+      <h4>Deer Solution: Deer Control - Repellent Service Company</h4>
+      <a href="https://www.deersolution.com/">https://www.deersolution.com/</a>
+      <p>Deer Solution is your local Deer Control &amp; Deer Repellent Service Company. The Authority in Deer Control™ for Over 40 years. Request a service estimate today and help keep the deer from eating your plants, flowers, and shrubs.</p>
+      <ul><li>Deer Control Repellent Service</li><li>More Freedom to Plant What You Want</li><li>Do You Struggle With:</li><li>The Deer Solution Difference</li><li>Help Keep Deer from Eating!</li><li>The Deer Damage Issue</li><li>What Our Deer Control Does</li><li>The Deer Solution Plan</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Locations – Deer Solution</h4>
+      <a href="https://www.deersolution.com/locations/">https://www.deersolution.com/locations/</a>
+      <p></p>
+      <ul><li>Locations</li><li>Find Us in Your Area</li><li>New Jersey</li><li>Central Jersey</li><li>North Jersey</li><li>South Jersey</li><li>Georgia</li><li>Northeast Georgia</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Deer Solution of Detroit, Michigan - Repellent Service</h4>
+      <a href="https://www.deersolution.com/locations/detroit/">https://www.deersolution.com/locations/detroit/</a>
+      <p>Deer Solution® - Repellent Service. Serving NJ, NY, PA, DE, MD, SC, VA. Receive a property analysis and consultation from a deer damage expert.</p>
+      <ul><li>Helping to Protect Your Beautiful Landscaping From Deer Damage</li><li>Deer Solution of Detroit, Michigan</li><li>More Freedom to Plant What You Want</li><li>Do You Struggle With:</li><li>The Deer Solution Difference</li><li>Curb the Damage Now!</li><li>The Issue</li><li>What We Do</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Deer Solution of the Main Line, Pennsylvania - Repellent Service</h4>
+      <a href="https://www.deersolution.com/locations/mainline/">https://www.deersolution.com/locations/mainline/</a>
+      <p>Deer Solution® - Repellent Service. Serving NJ, NY, PA, DE, MD, SC, VA. Receive a property analysis and consultation from a deer damage expert.</p>
+      <ul><li>Helping to Protect Your Beautiful Landscaping From Deer Damage</li><li>Deer Solution of the Main Line, Pennsylvania</li><li>More Freedom to Plant What You Want</li><li>Do You Struggle With:</li><li>The Deer Solution Difference</li><li>Curb the Damage Now!</li><li>The Issue</li><li>What We Do</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Deer Solution of the New Hope, Pennsylvania - Repellent Service</h4>
+      <a href="https://www.deersolution.com/locations/new-hope/">https://www.deersolution.com/locations/new-hope/</a>
+      <p>Deer Solution® - Repellent Service. Serving NJ, NY, PA, DE, MD, SC, VA. Receive a property analysis and consultation from a deer damage expert.</p>
+      <ul><li>Deer Solution of New Hope – Local Deer Repellent Services for Bucks &amp; Montgomery Counties</li><li>Deer Solution of New Hope, Pennsylvania</li><li>More Freedom to Plant What You Love</li><li>— Advice from Local Deer Control Experts —</li><li>Our New Hope Service Area</li><li>Frequently Asked Questions</li><li>Are Deer Ruining Your Landscape?</li><li>The Deer Solution Difference</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Deer Solution of Piedmont - Repellent Service</h4>
+      <a href="https://www.deersolution.com/locations/piedmont/">https://www.deersolution.com/locations/piedmont/</a>
+      <p>Deer Solution® - Repellent Service. Serving NJ, NY, PA, DE, MD, SC, VA. Receive a property analysis and consultation from a deer damage expert.</p>
+      <ul><li>Deer Solution of the Piedmont Local Deer Repellent Services for the the Piedmont area</li><li>Deer Solution of the Piedmont</li><li>More Freedom to Plant What You Want</li><li>Our the Piedmont Service Area</li><li>Frequently Asked Questions</li><li>Are Deer Ruining Your Landscape?</li><li>The Deer Solution Difference</li><li>How Our Deer Repellent Service Works in the Piedmont</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Deer Solution of the Central PA - Repellent Service</h4>
+      <a href="https://www.deersolution.com/locations/central-pa/">https://www.deersolution.com/locations/central-pa/</a>
+      <p>Deer Solution® - Repellent Service. Serving NJ, NY, PA, DE, MD, SC, VA. Receive a property analysis and consultation from a deer damage expert.</p>
+      <ul><li>Helping to Protect Your Beautiful Landscaping From Deer Damage</li><li>Deer Solution of Central PA</li><li>More Freedom to Plant What You Want</li><li>Our Central PA Service Area</li><li>Frequently Asked Questions</li><li>Do You Struggle With:</li><li>The Deer Solution Difference</li><li>Curb the Damage Now!</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Deer Solution of Long Island, New York - Repellent Service</h4>
+      <a href="https://www.deersolution.com/locations/longisland/">https://www.deersolution.com/locations/longisland/</a>
+      <p>Deer Solution® - Repellent Service. Serving NJ, NY, PA, DE, MD, SC, VA. Receive a property analysis and consultation from a deer damage expert.</p>
+      <ul><li>Helping to Protect Your Beautiful Landscaping From Deer Damage</li><li>Deer Solution of Long Island, New York</li><li>More Freedom to Plant What You Want</li><li>Do You Struggle With:</li><li>The Deer Solution Difference</li><li>Curb the Damage Now!</li><li>The Issue</li><li>What We Do</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Deer Solution of the Lowcountry, South Carolina - Repellent Service</h4>
+      <a href="https://www.deersolution.com/locations/lowcountry/">https://www.deersolution.com/locations/lowcountry/</a>
+      <p>Deer Solution® - Repellent Service. Serving NJ, NY, PA, DE, MD, SC, VA. Receive a property analysis and consultation from a deer damage expert.</p>
+      <ul><li>Deer Solution of the Lowcountry Local Deer Repellent Services for the the Lowcountry area</li><li>Deer Solution of the Lowcountry</li><li>More Freedom to Plant What You Want</li><li>Our the Lowcountry Service Area</li><li>Frequently Asked Questions</li><li>Are Deer Ruining Your Landscape?</li><li>The Deer Solution Difference</li><li>How Our Deer Repellent Service Works in the Lowcountry</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Deer Solution of Wilmington - Repellent Service</h4>
+      <a href="https://www.deersolution.com/locations/wilmington/">https://www.deersolution.com/locations/wilmington/</a>
+      <p>Deer Solution® - Repellent Service. Serving NJ, NY, PA, DE, MD, SC, VA. Receive a property analysis and consultation from a deer damage expert.</p>
+      <ul><li>Helping to Protect Your Beautiful Landscaping From Deer Damage</li><li>Deer Solution of Wilmington, North Carolina</li><li>More Freedom to Plant What You Want</li><li>Do You Struggle With:</li><li>The Deer Solution Difference</li><li>Curb the Damage Now!</li><li>The Issue</li><li>What We Do</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Deer Solution of North Jersey - Repellent Service</h4>
+      <a href="https://www.deersolution.com/locations/northjersey/">https://www.deersolution.com/locations/northjersey/</a>
+      <p>Deer Solution® - Repellent Service. Serving NJ, NY, PA, DE, MD, SC, VA. Receive a property analysis and consultation from a deer damage expert.</p>
+      <ul><li>Helping to Protect Your Beautiful Landscaping From Deer Damage</li><li>Deer Solution of North Jersey</li><li>More Freedom to Plant What You Want</li><li>Do You Struggle With:</li><li>The Deer Solution Difference</li><li>Curb the Damage Now!</li><li>The Issue</li><li>What We Do</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Deer Solution of the Texas Hill Country - Repellent Service</h4>
+      <a href="https://www.deersolution.com/locations/texashillcountry/">https://www.deersolution.com/locations/texashillcountry/</a>
+      <p>Deer Solution® - Repellent Service. Serving NJ, NY, PA, DE, MD, SC, VA. Receive a property analysis and consultation from a deer damage expert.</p>
+      <ul><li>Deer Solution of the Texas Hill Country – Deer Repellent &amp; Damage Control</li><li>Deer Solution of the Texas Hill Country</li><li>More Freedom to Plant What You Love</li><li>— Advice from Local Deer Control Experts —</li><li>Our Texas Hill Country Service Area</li><li>Frequently Asked Questions</li><li>Are Deer Ruining Your Landscape?</li><li>The Deer Solution Difference</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Deer Solution of South Jersey - Repellent Service</h4>
+      <a href="https://www.deersolution.com/locations/southjersey/">https://www.deersolution.com/locations/southjersey/</a>
+      <p>Deer Solution® - Repellent Service. Serving NJ, NY, PA, DE, MD, SC, VA. Receive a property analysis and consultation from a deer damage expert.</p>
+      <ul><li>Helping to Protect Your Beautiful Landscaping From Deer Damage</li><li>Deer Solution of South Jersey</li><li>More Freedom to Plant What You Want</li><li>Do You Struggle With:</li><li>The Deer Solution Difference</li><li>Curb the Damage Now!</li><li>The Issue</li><li>What We Do</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Deer Solution of Southwest VA - Repellent Service</h4>
+      <a href="https://www.deersolution.com/locations/southwest-va/">https://www.deersolution.com/locations/southwest-va/</a>
+      <p>Deer Solution® - Repellent Service. Serving NJ, NY, PA, DE, MD, SC, VA. Receive a property analysis and consultation from a deer damage expert.</p>
+      <ul><li>Helping to Protect Your Beautiful Landscaping From Deer Damage</li><li>Deer Solution of Southwest VA</li><li>More Freedom to Plant What You Want</li><li>Do You Struggle With:</li><li>The Deer Solution Difference</li><li>Curb the Damage Now!</li><li>The Issue</li><li>What We Do</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Deer Solution of the Lehigh Valley - Repellent Service</h4>
+      <a href="https://www.deersolution.com/locations/lehigh-valley/">https://www.deersolution.com/locations/lehigh-valley/</a>
+      <p>Deer Solution® - Repellent Service. Serving NJ, NY, PA, DE, MD, SC, VA. Receive a property analysis and consultation from a deer damage expert.</p>
+      <ul><li>Helping to Protect Your Beautiful Landscaping From Deer Damage</li><li>Deer Solution of the Lehigh Valley, Pennsylvania</li><li>More Freedom to Plant What You Want</li><li>Do You Struggle With:</li><li>The Deer Solution Difference</li><li>Curb the Damage Now!</li><li>The Issue</li><li>What We Do</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Deer Solution of Staten Island, New York - Repellent Service</h4>
+      <a href="https://www.deersolution.com/locations/staten-island/">https://www.deersolution.com/locations/staten-island/</a>
+      <p>Deer Solution® - Repellent Service. Serving NJ, NY, PA, DE, MD, SC, VA. Receive a property analysis and consultation from a deer damage expert.</p>
+      <ul><li>Helping to Protect Your Beautiful Landscaping From Deer Damage</li><li>Deer Solution of Staten Island, New York</li><li>More Freedom to Plant What You Want</li><li>Do You Struggle With:</li><li>The Deer Solution Difference</li><li>Curb the Damage Now!</li><li>The Issue</li><li>What We Do</li></ul>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Full Style System</h2>
+          <details open><summary>Show style-system sections</summary>
+    <details class="style-section">
+      <summary>Deer Solutions</summary>
+      <div class="markdown"><p>Source: https://www.deersolution.com/ reviewed on 2026-07-14.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Client Snapshot</summary>
+      <div class="markdown"><p>Deer Solution is a deer control repellent service company. The core offer is professional deer control for homeowners who want to protect flowers, shrubs, and expensive landscaping from deer damage.</p><p>The company positions itself around customized deer control plans, Certified Deer Damage Experts, free at-home consultations and estimates, and a proprietary deer repellent that works by taste and smell. Locations are independently owned and operated.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Core Offerings</summary>
+      <div class="markdown"><p><li>Deer Control Repellent Service: Professional recurring service that helps deter deer from eating plants and shrubs.</li><br><li>Free At-Home Consultation and Estimate: Initial visit where a Certified Deer Damage Expert evaluates the property and creates a customized deer control protection plan.</li><br><li>Customized Deer Control Protection Plan: Property-specific plan built around the customer&#x27;s landscape and deer damage problem.</li><br><li>Professional Application Service: Deer repellent service performed by trained and licensed deer control professionals.</li><br><li>Franchise Opportunity: Separate franchise ownership offer linked from the main site. Treat this as a business opportunity, not a homeowner service.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Voice</summary>
+      <div class="markdown"><p>Practical, reassuring, and homeowner-focused. The writing should sound like a specialist who understands how frustrating deer damage is and can explain the plan plainly.</p><p>Use concrete homeowner language:</p><ul><li>plants and shrubs</li><br><li>flower buds</li><br><li>expensive landscaping</li><br><li>deer damage</li><br><li>customized protection plan</li><br><li>deer control repellent service</li></ul><p>Avoid broad pest-control language. Deer Solution is not a general pest control company in our writing.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Positioning Rules</summary>
+      <div class="markdown"><p><li>Say `Deer Solution` as the brand name unless source material requires a specific location/franchise name.</li><br><li>The service is deer control and deer repellent service.</li><br><li>Do not expand the client into lawn care, landscaping, mosquito control, tick control, or general pest control.</li><br><li>Do not guarantee that deer will disappear, never return, or cause zero damage in all cases.</li><br><li>Claims about the repellent should stay close to the mechanism: it works by taste and smell to deter deer from eating treated plants.</li><br><li>Any customer-result language should be framed as testimonial or example, not a universal promise.</li><br><li>Mention that branches are independently owned and operated when writing about local branches, franchise coverage, or service availability.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Avoid</summary>
+      <div class="markdown"><p><li>guaranteed deer removal</li><br><li>permanent deer elimination</li><br><li>chemical-heavy pest control framing</li><br><li>lawn care or landscaping provider framing</li><br><li>claims that the service works for every property or every plant without conditions</li><br><li>implying Deer Solution offers services beyond deer control and deer repellent service</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Open Items</summary>
+      <div class="markdown"><p><li>Confirm CSM / point of contact.</li><br><li>Confirm active monthly volume.</li><br><li>Confirm priority and production cadence.</li><br><li>Confirm whether content is for national pages, local franchise pages, blogs, or optimizations.</li><br><li>Confirm whether any location-specific terminology or service-area disclaimers are required.</li></p></div>
+    </details>
+    </details>
+        </section>
+        <section class="panel">
+          <h2>Local Source Files Read</h2>
+          <ul><li><code>clients/deer-solutions/STYLE-SYSTEM.md</code> — Deer Solutions</li>
+<li><code>clients/deer-solutions/client-intelligence/README.md</code> — Deer Solution - Client Intelligence</li>
+<li><code>clients/deer-solutions/client-intelligence/STYLE-GUIDE.md</code> — Deer Solutions</li>
+<li><code>clients/deer-solutions/client-intelligence/offerings.md</code> — Deer Solution - Offerings</li>
+<li><code>clients/deer-solutions/client-intelligence/source-files.md</code> — Deer Solution - Source Files</li>
+<li><code>clients/deer-solutions/deliverables/README.md</code> — Deer Solution - Deliverables</li>
+<li><code>clients/deer-solutions/raw/knowledge/client-overview.md</code> — Deer Solution Client Overview</li>
+<li><code>clients/deer-solutions/raw/knowledge/service-taxonomy.md</code> — Deer Solution Service Taxonomy</li></ul>
+        </section>
+      </main>
+    </section>
+    </body>
+</html>

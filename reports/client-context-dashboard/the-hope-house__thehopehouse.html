@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Hope House Context</title>
+  <style>
+    :root {
+      --bg:#f4f7f5; --panel:#ffffff; --ink:#09110f; --muted:#63716c; --line:#dce5df;
+      --black:#050907; --graph:#14d878; --graph-dark:#079d55; --soft:#eaf8f0; --soft-ink:#19392a;
+      --accent:#087a47; --red:#b5362d; --shadow:0 18px 46px rgba(5,9,7,.08);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:
+      linear-gradient(180deg, #ffffff 0, var(--bg) 360px); color:var(--ink); line-height:1.45; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .topnav { min-height:64px; padding:14px max(32px, calc((100vw - 1380px) / 2 + 32px)); background:var(--black); border-bottom:1px solid rgba(255,255,255,.08); position:sticky; top:0; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { color:#fff; display:inline-flex; align-items:center; gap:10px; font-weight:800; letter-spacing:0; }
+    .brand:hover { text-decoration:none; }
+    .brand span { width:32px; height:32px; border-radius:8px; background:var(--graph); color:var(--black); display:inline-grid; place-items:center; font-size:13px; font-weight:900; }
+    .nav-meta, .nav-link { color:#b8c6c0; font-size:13px; font-weight:700; }
+    .hero { margin:0; padding:42px max(32px, calc((100vw - 1380px) / 2 + 32px)) 38px; background:var(--black); color:#fff; border-bottom:1px solid rgba(255,255,255,.08); }
+    .index-hero, .client-hero { display:flex; justify-content:space-between; gap:28px; align-items:flex-start; }
+    .hero h1 { margin:0 0 12px; font-size:clamp(32px, 5vw, 62px); line-height:.98; letter-spacing:0; max-width:900px; }
+    .hero p { margin:0; color:#c7d5cf; max-width:840px; font-size:17px; }
+    .hero-copy { max-width:940px; }
+    .kicker { color:var(--graph); font-size:12px; text-transform:uppercase; letter-spacing:.08em; font-weight:900; }
+    .report-meta { display:flex; flex-wrap:wrap; gap:10px; padding:14px 32px; background:#fff; border-bottom:1px solid var(--line); color:var(--muted); font-size:13px; max-width:1380px; margin:0 auto; }
+    .report-meta span { background:var(--soft); color:var(--soft-ink); border-radius:999px; padding:6px 10px; font-weight:700; }
+    .grid.cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(290px, 1fr)); gap:16px; padding:24px 32px 42px; max-width:1380px; margin:0 auto; }
+    .card, .panel, .context-card { background:var(--panel); border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow); }
+    .client-card { display:block; padding:20px; color:inherit; min-height:184px; transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease; }
+    .client-card:hover { text-decoration:none; transform:translateY(-2px); border-color:rgba(20,216,120,.55); box-shadow:0 24px 58px rgba(5,9,7,.12); }
+    .card-topline { display:flex; justify-content:space-between; gap:10px; align-items:center; }
+    .client-card h2 { margin:14px 0 8px; font-size:23px; line-height:1.1; }
+    .client-card p { margin:0; color:var(--muted); }
+    .metrics { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+    .metrics span, .evidence, .status-pill { background:var(--soft); border:1px solid rgba(20,216,120,.22); border-radius:999px; padding:5px 9px; font-size:12px; color:var(--soft-ink); font-weight:800; }
+    .topic-chips { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 18px; }
+    .topic-chips span { background:#f6fbf8; border:1px solid var(--line); border-radius:999px; color:#183a2a; padding:7px 10px; font-size:13px; font-weight:750; }
+    .layout { display:block; padding:22px 32px 46px; max-width:1380px; margin:0 auto; }
+    main { min-width:0; }
+    .context-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; margin-bottom:20px; }
+    .context-card { padding:18px; min-height:220px; }
+    .context-card ul { margin-bottom:0; }
+    .context-note { color:var(--muted); font-size:13px; margin:4px 0 12px; }
+    .aside-label { color:var(--graph-dark); font-size:11px; text-transform:uppercase; font-weight:900; letter-spacing:.08em; margin-bottom:5px; }
+    .panel h2 { margin-top:0; }
+    .panel { padding:22px; margin-bottom:20px; }
+    .panel h2 { font-size:26px; letter-spacing:0; }
+    .offerings { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:13px; margin-top:16px; }
+    .offering, .sample { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .offering { position:relative; overflow:hidden; }
+    .offering-marker { position:absolute; inset:0 auto 0 0; width:4px; background:var(--graph); }
+    .offering h3, .sample h4 { margin:0 0 6px; }
+    .offering p { margin:0 0 10px; }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .stat-stack { display:grid; grid-template-columns:repeat(3, minmax(100px, 1fr)); gap:8px; min-width:340px; }
+    .stat-stack div { border:1px solid rgba(255,255,255,.15); border-radius:8px; padding:14px; background:rgba(255,255,255,.06); }
+    .stat-stack strong { display:block; font-size:26px; color:#fff; }
+    .stat-stack span, .muted { color:var(--muted); font-size:13px; }
+    .hero .stat-stack span { color:#b8c6c0; }
+    ul { padding-left:20px; }
+    li { margin:4px 0; }
+    code { background:var(--soft); color:var(--soft-ink); padding:2px 4px; border-radius:4px; }
+    details { margin:10px 0; }
+    summary { cursor:pointer; font-weight:700; }
+    .style-section { border-top:1px solid var(--line); padding-top:10px; }
+    .markdown { color:#2d2f35; }
+    @media (max-width: 980px) {
+      .layout, .split, .client-hero, .index-hero { grid-template-columns:1fr; display:block; }
+      .context-grid { grid-template-columns:1fr; }
+      .stat-stack { min-width:0; margin-top:16px; }
+      .hero, .grid.cards, .layout, .topnav, .report-meta { padding-left:16px; padding-right:16px; }
+      .hero h1 { font-size:36px; }
+      .stat-stack { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+    <nav class="topnav">
+      <a class="brand" href="index.html"><span>LG</span>LinkGraph</a>
+      <a class="nav-link" href="index.html">All clients</a>
+    </nav>
+    <section class="hero client-hero">
+      <div class="hero-copy">
+        <div class="kicker">the-hope-house/thehopehouse</div>
+        <h1>The Hope House</h1>
+        <p>15 extracted offerings, 851 sitemap URLs, and 9 local source documents for client-specific writing context.</p>
+      </div>
+      <div class="stat-stack">
+        <div><strong>ok</strong><span>crawl status</span></div>
+        <div><strong>851</strong><span>URLs found</span></div>
+        <div><strong>2</strong><span>product/service URLs</span></div>
+      </div>
+    </section>
+    <section class="layout">
+      <main>
+        <section class="context-grid">
+    <article class="context-card">
+      <div class="aside-label">Quick Facts</div>
+      <p class="context-note">Company, audience, and proof points.</p>
+      <ul><li>Address: 28901 N 114th St., Scottsdale, AZ 85262</li><li>A licensed residential addiction treatment center with a clinical foundation</li><li>A luxury setting where low client-to-staff ratios support individualized care</li><li>A dual-diagnosis provider addressing both addiction and co-occurring mental health conditions</li><li>A facility serving clients who require privacy, schedule flexibility, and personalized care plans</li><li>A spa or wellness retreat (luxury is the setting, not the treatment)</li><li>A detox-only facility (residential treatment is the core offer)</li><li>A group or network with Arizona IOP, Scottsdale Detox, or other companies — do not reference these by name unless a page specifically covers step-down care, and even then write &quot;our partner programs&quot; or &quot;outpatient care is available after residential treatment&quot;</li><li>A budget or mid-tier option (the luxury tier is real; never undercut it)</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Voice</div>
+      <p class="context-note">How this client should sound.</p>
+      <ul><li>Professional: Accurate, credential-grounded, never vague</li><li>Compassionate: Acknowledge difficulty without minimizing it</li><li>Hopeful: &quot;Recovery is possible&quot; framing — never outcome guarantees</li><li>Client-centered: Individualized care is the recurring theme; avoid generic group language</li><li>Aspirational, not flashy: Describe quality; do not gush</li><li>&quot;The Hope House limits each facility to 10 clients at a time — well below the Arizona average of 29 — so every person receives focused, individual attention from masters-level clinicians.&quot; — accurate, differentiating, specific</li><li>&quot;Recovery looks different for every person. Treatment at The Hope House is built around that reality.&quot; — client-centered, honest</li><li>&quot;The dual diagnosis program addresses mental health and addiction at the same time, because treating one without the other rarely produces lasting results.&quot; — clear mechanism, no guarantee</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Avoid / Compliance</div>
+      <p class="context-note">Claims, terms, and wording to avoid.</p>
+      <ul><li>These are non-negotiable. Inaccurate behavioral health content can cause harm and expose the client to regulatory risk.</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Terminology</div>
+      <p class="context-note">Client-specific naming and required language.</p>
+      <p class="muted">No clean lines extracted yet.</p>
+    </article>
+    </section>
+        <section class="panel">
+          <h2>Offerings, Services, Goods</h2>
+          <p class="muted">Writer-facing catalog from the client style system, approved source files, and usable product/service pages. Raw crawl evidence is separated below.</p>
+          <div class="offerings">
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Adderall Treatment</h3>
+      <p>Treatment content category for Adderall use concerns.</p>
+      <div class="evidence">Sources: clients/the-hope-house/thehopehouse/raw/knowledge/service-taxonomy.md · Sections: Conditions Treated</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Alcohol Treatment</h3>
+      <p>Treatment content category for alcohol use concerns.</p>
+      <div class="evidence">Sources: clients/the-hope-house/thehopehouse/raw/knowledge/service-taxonomy.md · Sections: Conditions Treated</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Benzodiazepine Treatment</h3>
+      <p>Treatment content category for benzodiazepine use concerns.</p>
+      <div class="evidence">Sources: clients/the-hope-house/thehopehouse/raw/knowledge/service-taxonomy.md · Sections: Conditions Treated</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Cocaine Treatment</h3>
+      <p>Treatment content category for cocaine use concerns.</p>
+      <div class="evidence">Sources: clients/the-hope-house/thehopehouse/raw/knowledge/service-taxonomy.md · Sections: Conditions Treated</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Dual Diagnosis Program</h3>
+      <p>Treatment for addiction and co-occurring mental health conditions, with assessment on arrival.</p>
+      <div class="evidence">Sources: clients/the-hope-house/thehopehouse/raw/knowledge/service-taxonomy.md · Sections: Programs</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Executive Golf Rehab</h3>
+      <p>Treatment program that combines recovery programming with golf.</p>
+      <div class="evidence">Sources: clients/the-hope-house/thehopehouse/raw/knowledge/service-taxonomy.md · Sections: Programs</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Executive Treatment Program</h3>
+      <p>Treatment program for clients maintaining professional obligations, with private rooms, electronics access, and modified schedules.</p>
+      <div class="evidence">Sources: clients/the-hope-house/thehopehouse/raw/knowledge/service-taxonomy.md · Sections: Programs</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Fentanyl Treatment</h3>
+      <p>Treatment content category for fentanyl use concerns.</p>
+      <div class="evidence">Sources: clients/the-hope-house/thehopehouse/raw/knowledge/service-taxonomy.md · Sections: Conditions Treated</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Heroin Treatment</h3>
+      <p>Treatment content category for heroin use concerns.</p>
+      <div class="evidence">Sources: clients/the-hope-house/thehopehouse/raw/knowledge/service-taxonomy.md · Sections: Conditions Treated</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Luxury Rehab Program</h3>
+      <p>Individualized evidence-based care in an upscale treatment setting with privacy as a confirmed feature.</p>
+      <div class="evidence">Sources: clients/the-hope-house/thehopehouse/raw/knowledge/service-taxonomy.md · Sections: Programs</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Luxury Spa Rehab</h3>
+      <p>Spa-focused recovery program within The Hope House offering set.</p>
+      <div class="evidence">Sources: clients/the-hope-house/thehopehouse/raw/knowledge/service-taxonomy.md · Sections: Programs</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Marijuana Treatment</h3>
+      <p>Treatment content category for marijuana use concerns.</p>
+      <div class="evidence">Sources: clients/the-hope-house/thehopehouse/raw/knowledge/service-taxonomy.md · Sections: Conditions Treated</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>MDMA / Ecstasy Treatment</h3>
+      <p>Treatment content category for MDMA or ecstasy use concerns.</p>
+      <div class="evidence">Sources: clients/the-hope-house/thehopehouse/raw/knowledge/service-taxonomy.md · Sections: Conditions Treated</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Methamphetamine Treatment</h3>
+      <p>Treatment content category for methamphetamine use concerns.</p>
+      <div class="evidence">Sources: clients/the-hope-house/thehopehouse/raw/knowledge/service-taxonomy.md · Sections: Conditions Treated</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Opioid Treatment</h3>
+      <p>Treatment content category for opioid use concerns.</p>
+      <div class="evidence">Sources: clients/the-hope-house/thehopehouse/raw/knowledge/service-taxonomy.md · Sections: Conditions Treated</div>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Website Intelligence</h2>
+          <div class="split">
+            <div>
+              <h3>Website URLs</h3><ul><li><a href="https://thehopehouse.com/">https://thehopehouse.com/</a></li></ul>
+              <h3>Sitemaps</h3><ul><li><a href="https://www.thehopehouse.com/sitemap_index.xml">https://www.thehopehouse.com/sitemap_index.xml</a></li><li><a href="https://www.thehopehouse.com/sitemap.xml">https://www.thehopehouse.com/sitemap.xml</a></li></ul>
+            </div>
+            <div>
+              <h3>Semantic / Topical Terms</h3><div class="topic-chips"><span>Adderall Treatment</span><span>Alcohol Treatment</span><span>Benzodiazepine Treatment</span><span>Cocaine Treatment</span><span>Dual Diagnosis Program</span><span>Executive Golf Rehab</span><span>Executive Treatment Program</span><span>Fentanyl Treatment</span><span>Heroin Treatment</span><span>Luxury Rehab Program</span><span>Luxury Spa Rehab</span><span>Marijuana Treatment</span><span>MDMA / Ecstasy Treatment</span><span>Methamphetamine Treatment</span><span>Opioid Treatment</span><span>Luxury Setting</span><span>Individualized Care</span><span>Mental Health</span><span>Residential Treatment</span><span>Hope House</span><span>Every Person</span></div>
+              <h3>Blockers</h3><p class="muted">None</p>
+            </div>
+          </div>
+          <h3>Product / Service URLs</h3><ul><li><a href="https://www.thehopehouse.com/topiramate-addiction/treatment/">https://www.thehopehouse.com/topiramate-addiction/treatment/</a></li><li><a href="https://www.thehopehouse.com/drug-addiction/treatment/">https://www.thehopehouse.com/drug-addiction/treatment/</a></li></ul>
+          <h3>Sampled Pages</h3><div class="sample-pages">
+    <article class="sample">
+      <h4>The Hope House: Personalized Drug &amp; Alcohol Rehab in Arizona</h4>
+      <a href="https://www.thehopehouse.com/">https://www.thehopehouse.com/</a>
+      <p>Experience personalized addiction treatment at The Hope House in Scottsdale, AZ. Discover luxurious amenities and expert care for lasting recovery.</p>
+      <ul><li>Personalized Drug &amp; Alcohol Rehab Call Today | 480-447-4252</li><li>Our Mission: Committed to Personalized Addiction Recovery</li><li>The Hope House Named &quot;Top Treatment Destination&quot;</li><li>The Hope House Difference</li><li>Small Group Recovery</li><li>Personalized Holistic Treatment</li><li>Luxury Amenities</li><li>Call Now</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Drug Addiction Treatment Options: A Comprehensive Guide | The Hope House</h4>
+      <a href="https://www.thehopehouse.com/drug-addiction/treatment/">https://www.thehopehouse.com/drug-addiction/treatment/</a>
+      <p>The Hope House: Explore drug addiction treatment options in Scottsdale, AZ. Find your path to recovery with personalized care.</p>
+      <ul><li>Drug Addiction Treatment: Types of Addiction Treatment</li><li>Questions Answered in This Article:</li><li>Our Addiction Treatment Centers</li><li>Scottsdale Rehab</li><li>HART Rehab</li><li>Scottsdale Detox</li><li>Discover a drug-free future. Connect with us today.</li><li>Understanding Drug Addiction Treatment</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Topiramate Addiction Treatment: Understanding Recovery Options | The Hope House</h4>
+      <a href="https://www.thehopehouse.com/topiramate-addiction/treatment/">https://www.thehopehouse.com/topiramate-addiction/treatment/</a>
+      <p>Topiramate addiction treatment at The Hope House in Scottsdale, AZ. Personalized care &amp; luxury rehab. Contact us.</p>
+      <ul><li>Topiramate Addiction Treatment: Topiramate Abuse Medication</li><li>Questions Answered in This Article:</li><li>Our Topiramate Addiction Treatment Centers</li><li>Scottsdale Rehab</li><li>HART Rehab</li><li>Scottsdale Detox</li><li>Begin your journey to recovery. Contact us today for topiramate abuse treatment.</li><li>Topiramate Treatment Explained</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>The Hope House: Personalized Drug &amp; Alcohol Rehab in Arizona</h4>
+      <a href="https://www.thehopehouse.com/">https://www.thehopehouse.com/</a>
+      <p>Experience personalized addiction treatment at The Hope House in Scottsdale, AZ. Discover luxurious amenities and expert care for lasting recovery.</p>
+      <ul><li>Personalized Drug &amp; Alcohol Rehab Call Today | 480-447-4252</li><li>Our Mission: Committed to Personalized Addiction Recovery</li><li>The Hope House Named &quot;Top Treatment Destination&quot;</li><li>The Hope House Difference</li><li>Small Group Recovery</li><li>Personalized Holistic Treatment</li><li>Luxury Amenities</li><li>Call Now</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Effective Drug &amp; Alcohol Rehab in Arizona | The Hope House</h4>
+      <a href="https://www.thehopehouse.com/locations/arizona/">https://www.thehopehouse.com/locations/arizona/</a>
+      <p>Discover quality Arizona rehab at The Hope House. Our expert team provides personalized care for drug and alcohol addiction. Start your recovery today!</p>
+      <ul><li>Drug &amp; Alcohol Rehab in Arizona Begin Your Recovery Today</li><li>At The Hope House we’ve established 1 luxury Arizona detox &amp; 2 luxury inpatient Arizona rehab centers that provide personalized treatment in a small group recovery settings.</li><li>Our Arizona Rehab Centers</li><li>Scottsdale Rehab</li><li>HART Rehab</li><li>Scottsdale Detox</li><li>“Chances are addiction, in some form, has touched the lives of everyone here today. None of us can overcome challenges in life without a support system.”</li><li>Arizona Residential Inpatient Rehab</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>The Hope House: Personalized Drug &amp; Alcohol Rehab in Arizona</h4>
+      <a href="https://www.thehopehouse.com/">https://www.thehopehouse.com/</a>
+      <p>Experience personalized addiction treatment at The Hope House in Scottsdale, AZ. Discover luxurious amenities and expert care for lasting recovery.</p>
+      <ul><li>Personalized Drug &amp; Alcohol Rehab Call Today | 480-447-4252</li><li>Our Mission: Committed to Personalized Addiction Recovery</li><li>The Hope House Named &quot;Top Treatment Destination&quot;</li><li>The Hope House Difference</li><li>Small Group Recovery</li><li>Personalized Holistic Treatment</li><li>Luxury Amenities</li><li>Call Now</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Scottsdale Detox Center | Medical Detox in Scottsdale, AZ | The Hope House</h4>
+      <a href="https://www.thehopehouse.com/locations/arizona/scottsdale-detox/">https://www.thehopehouse.com/locations/arizona/scottsdale-detox/</a>
+      <p>The Hope House Scottsdale detox center offers medically supervised alcohol and drug detox in Arizona. 24/7 clinical care, private rooms, insurance accepted. Call today.</p>
+      <ul><li>Drug &amp; Alcohol Detox in Scottsdale Where Healing Begins</li><li>Scottsdale Detox: Comprehensive Treatment for Addiction Recovery</li><li>Scottsdale Detox National Accreditations</li><li>Tour Our Scottsdale Detox Treatment Center</li><li>Scottsdale Detox Named Best Suboxone Treatment Center in Scottsdale</li><li>Most Insurances Accepted</li><li>Scottsdale Detox Amenities</li><li>Private Rooms</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Holistic Addiction Recovery at The Hope House: Start Healing</h4>
+      <a href="https://www.thehopehouse.com/locations/arizona/hart-rehab/">https://www.thehopehouse.com/locations/arizona/hart-rehab/</a>
+      <p>Discover exceptional addiction recovery at HART Rehab in Scottsdale. Enjoy luxury treatment with expert clinicians. Call now for help!</p>
+      <ul><li>Holistic Addiction Recovery Treatment HART Rehab in Scottsdale</li><li>HART Rehab by The Hope House</li><li>The Hope House Accreditations</li><li>Explore Our Virtual Tour of HART Rehab in Scottsdale</li><li>HART Rehab Named Best Suboxone Treatment Center in Scottsdale</li><li>Most Insurances Accepted</li><li>Our Amenities</li><li>Sport Court</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Mesa Rehab Centers For Drug &amp; Alcohol Abuse | The Hope House</h4>
+      <a href="https://www.thehopehouse.com/locations/arizona/mesa-rehab/">https://www.thehopehouse.com/locations/arizona/mesa-rehab/</a>
+      <p>Discover transformative care at Mesa rehab centers, where our dedicated team provides personalized support to guide you toward a healthier, addiction-free life.</p>
+      <ul><li>Mesa Rehab Centers for Drug &amp; Alcohol Abuse Start Your Recovery Today</li><li>The Hope House presents two luxury inpatient rehab programs near Mesa, Arizona, delivering individualized care for substance abuse, and promoting holistic healing for both the mind and body.</li><li>Our Mesa Rehab Programs</li><li>Scottsdale Rehab</li><li>HART Rehab</li><li>Substance Abuse Mesa Rehab Centers</li><li>Detox</li><li>Inpatient Rehab</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Tempe Rehab For Drug &amp; Alochol: Start Your Recovery Today</h4>
+      <a href="https://www.thehopehouse.com/locations/arizona/tempe-rehab/">https://www.thehopehouse.com/locations/arizona/tempe-rehab/</a>
+      <p>Looking for effective addiction recovery? Our Tempe rehab provides top-notch care and customized programs to support your journey to recovery.</p>
+      <ul><li>Tempe Rehab for Drug &amp; Alochol Start Your Recovery Today</li><li>The Hope House has two upscale rehab programs near Tempe, Arizona, offering tailored care for substance abuse and promoting overall healing for both mind and body.</li><li>Our Tempe Rehab Programs</li><li>Scottsdale Rehab</li><li>HART Rehab</li><li>Scottsdale Detox</li><li>Take the first step toward a brighter future. Contact us today for an alcohol recovery plan.</li><li>Tempe Rehab Centers for Substance Abuse</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Peoria Rehab Centers For Drug &amp; Alcohol Abuse | The Hope House</h4>
+      <a href="https://www.thehopehouse.com/locations/arizona/peoria-rehab/">https://www.thehopehouse.com/locations/arizona/peoria-rehab/</a>
+      <p>Find transformative support at Peoria rehab centers, where our dedicated team offers personalized care to help you achieve a healthier, addiction-free life.</p>
+      <ul><li>Peoria Rehab Centers for Drug &amp; Alcohol Abuse Start Your Recovery Today</li><li>The Hope House presents two luxury inpatient rehab programs near Peoria, Arizona, delivering individualized care for substance abuse, and promoting holistic healing for both the mind and body.</li><li>Our Peoria Rehab Programs</li><li>Scottsdale Rehab</li><li>HART Rehab</li><li>Substance Abuse Peoria Rehab Centers</li><li>Detox</li><li>Inpatient Rehab</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Tucson Rehab Centers: Your Path To Recovery</h4>
+      <a href="https://www.thehopehouse.com/locations/arizona/tucson-rehab/">https://www.thehopehouse.com/locations/arizona/tucson-rehab/</a>
+      <p>Discover top Tucson rehab centers for drug &amp; alcohol abuse. Personalized inpatient treatment, detox, and recovery support just 2 hours from Tucson.</p>
+      <ul><li>Tucson Rehab: Detox, Inpatient &amp; Long-Term Care</li><li>The Hope House presents two luxury inpatient rehab programs near Tucson, Arizona, delivering individualized care for substance abuse, and promoting holistic healing for both the mind and body.</li><li>Our Tucson Rehab Programs</li><li>Scottsdale Rehab</li><li>HART Rehab</li><li>Scottsdale Detox</li><li>Substance Abuse Tucson Rehab Centers</li><li>Detox</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Buckeye Rehab Centers For Drug &amp; Alcohol Abuse | The Hope House</h4>
+      <a href="https://www.thehopehouse.com/locations/arizona/buckeye-rehab/">https://www.thehopehouse.com/locations/arizona/buckeye-rehab/</a>
+      <p>Transform your life at Buckeye rehab centers, where our dedicated team provides personalized support for a healthier, addiction-free future.</p>
+      <ul><li>Buckeye Rehab Centers for Drug &amp; Alcohol Abuse Start Your Recovery Today</li><li>The Hope House presents two luxury inpatient rehab programs near Buckeye, Arizona, delivering individualized care for substance abuse, and promoting holistic healing for both the mind and body.</li><li>Our Buckeye Rehab Programs</li><li>Scottsdale Rehab</li><li>HART Rehab</li><li>Scottsdale Detox</li><li>Substance Abuse Buckeye Rehab Centers</li><li>Detox</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Gilbert Rehab Centers For Drug &amp; Alcohol Abuse | The Hope House</h4>
+      <a href="https://www.thehopehouse.com/locations/arizona/gilbert-rehab/">https://www.thehopehouse.com/locations/arizona/gilbert-rehab/</a>
+      <p>Transform your life at Gilbert rehab centers, where our committed team provides personalized support to help you achieve a healthier, addiction-free future.</p>
+      <ul><li>Gilbert Rehab Centers for Drug &amp; Alcohol Abuse Start Your Recovery Today</li><li>The Hope House presents two luxury inpatient rehab programs near Gilbert, Arizona, delivering individualized care for substance abuse, and promoting holistic healing for both the mind and body.</li><li>Our Gilbert Rehab Programs</li><li>Scottsdale Rehab</li><li>HART Rehab</li><li>Substance Abuse Gilbert Rehab Centers</li><li>Detox</li><li>Inpatient Rehab</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Phoenix Drug &amp; Alcohol Rehab: Luxury Inpatient Treatment | The Hope House</h4>
+      <a href="https://www.thehopehouse.com/locations/arizona/phoenix-rehab/">https://www.thehopehouse.com/locations/arizona/phoenix-rehab/</a>
+      <p>Phoenix luxury rehab: The Hope House offers discreet, accredited drug &amp; alcohol treatment with master&#x27;s-level clinicians. Call 24/7 for support.</p>
+      <ul><li>Phoenix Rehab for Drug &amp; Alcohol Addiction Begin Your Recovery Today</li><li>The Hope House offers two luxury, inpatient rehab programs in Phoenix, Arizona, providing personalized treatment for drug and alcohol addiction to heal the mind &amp; body.</li><li>Our Phoenix Rehab Programs</li><li>Scottsdale Rehab</li><li>HART Rehab</li><li>Substance Abuse Programs in Phoenix</li><li>Detox</li><li>Inpatient Rehab</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Chandler Rehab Centers For Drug &amp; Alcohol Abuse | The Hope House</h4>
+      <a href="https://www.thehopehouse.com/locations/arizona/chandler-rehab/">https://www.thehopehouse.com/locations/arizona/chandler-rehab/</a>
+      <p>Experience life-changing support at Chandler rehab centers, where our dedicated team offers personalized care to help you achieve a healthier, addiction-free life.</p>
+      <ul><li>Chandler Rehab Centers for Drug &amp; Alcohol Abuse Start Your Recovery Today</li><li>The Hope House presents two luxury inpatient rehab programs near Chandler, Arizona, delivering individualized care for substance abuse, and promoting holistic healing for both the mind and body.</li><li>Our Chandler Rehab Programs</li><li>Scottsdale Rehab</li><li>HART Rehab</li><li>Substance Abuse Chandler Rehab Centers</li><li>Detox</li><li>Inpatient Rehab</li></ul>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Full Style System</h2>
+          <details open><summary>Show style-system sections</summary>
+    <details class="style-section">
+      <summary>The Hope House — Style System</summary>
+      <div class="markdown"><p>Generated: 2026-06-08<br>Sources: raw/knowledge/overview.md, thehopehouse.com (site research)<br>Base rules: universal-rules/UNIVERSAL-RULES.md</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>1. Brand &amp; Audience</summary>
+      <div class="markdown"><p>The Hope House is a luxury residential addiction treatment facility in Scottsdale, Arizona. Founded in 2017, the facility serves adults seeking private, individualized addiction and dual-diagnosis treatment in an upscale environment. The client maximum is 10 people per facility at any time — this is a confirmed differentiator and should be used in content.</p><p>Website: https://thehopehouse.com/<br>Phone: 480-447-4252<br>Address: 28901 N 114th St., Scottsdale, AZ 85262<br>Email: contact@thehopehouse.com</p><p>**What The Hope House is:**<br><li>A licensed residential addiction treatment center with a clinical foundation</li><br><li>A luxury setting where low client-to-staff ratios support individualized care</li><br><li>A dual-diagnosis provider addressing both addiction and co-occurring mental health conditions</li><br><li>A facility serving clients who require privacy, schedule flexibility, and personalized care plans</li></ul><p>**What The Hope House is NOT — never position as:**<br><li>A spa or wellness retreat (luxury is the setting, not the treatment)</li><br><li>A detox-only facility (residential treatment is the core offer)</li><br><li>A group or network with Arizona IOP, Scottsdale Detox, or other companies — do not reference these by name unless a page specifically covers step-down care, and even then write &quot;our partner programs&quot; or &quot;outpatient care is available after residential treatment&quot;</li><br><li>A budget or mid-tier option (the luxury tier is real; never undercut it)</li></ul><p>**Primary audience:**</p><p>| Segment | Content angle |<br>|---|---|<br>| Adults in active addiction | Private, stigma-free path to treatment; clinical rigor + personal comfort |<br>| Executives and professionals | Maintain professional obligations; electronics access; schedule flexibility |<br>| Families of people in addiction | Trust signals; clinical credentials; what to expect from the process |<br>| Dual-diagnosis clients | Mental health treated alongside addiction; not an afterthought |<br>| Self-pay / high-income clients | Quality of setting and care; low census; privacy |<br>| Insurance-eligible clients | Accepted carriers listed; insurance verification available |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2. Brand Voice &amp; Tone</summary>
+      <div class="markdown"><p>Voice: professional, compassionate, hopeful, and client-centered. The Hope House speaks to people at a serious moment in their lives. Content should feel like an informed guide — not a hard sell, not clinical coldness, and not cheerful recovery marketing.</p><p>Luxury is present without being the headline. The clinical offer leads; amenities support and differentiate.</p><p>| Attribute | Rule |<br>|---|---|<br>| Professional | Accurate, credential-grounded, never vague |<br>| Compassionate | Acknowledge difficulty without minimizing it |<br>| Hopeful | &quot;Recovery is possible&quot; framing — never outcome guarantees |<br>| Client-centered | Individualized care is the recurring theme; avoid generic group language |<br>| Aspirational, not flashy | Describe quality; do not gush |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.1 Tagline</summary>
+      <div class="markdown"><p>**&quot;Personalized drug &amp; alcohol rehab&quot;**</p><p>This is the confirmed site tagline. Use it in brand-level contexts where the positioning of individualized care is relevant. Do not force it into every piece.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.2 Key brand phrases (confirmed on site)</summary>
+      <div class="markdown"><p>These phrases are cleared for use and reflect the site&#x27;s own language:</p><ul><li>&quot;Confront addiction at the source&quot;</li><br><li>&quot;Heal their mind and body&quot;</li><br><li>&quot;Personalized care&quot;</li><br><li>&quot;Evidence-based treatment options&quot;</li><br><li>&quot;Masters-level clinicians&quot;</li><br><li>&quot;20+ forms of therapy&quot; (use with this exact qualifier — not &quot;over 20&quot; in running text)</li><br><li>&quot;10 clients at a time&quot; (confirmed differentiator — use precisely; never inflate)</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.3 Voice in practice</summary>
+      <div class="markdown"><p>Do this:<br><li>&quot;The Hope House limits each facility to 10 clients at a time — well below the Arizona average of 29 — so every person receives focused, individual attention from masters-level clinicians.&quot; — accurate, differentiating, specific</li><br><li>&quot;Recovery looks different for every person. Treatment at The Hope House is built around that reality.&quot; — client-centered, honest</li><br><li>&quot;The dual diagnosis program addresses mental health and addiction at the same time, because treating one without the other rarely produces lasting results.&quot; — clear mechanism, no guarantee</li></ul><p>Not this:<br><li>&quot;Our transformative, holistic approach will change your life.&quot; — banned puff language; guarantee framing; &quot;holistic&quot; without modality reference</li><br><li>&quot;Our team of expert therapists will help you win your battle against addiction.&quot; — &quot;battle&quot; is off-brand; outcome guarantee; vague claim</li><br><li>&quot;At The Hope House, we leverage cutting-edge, evidence-based therapies...&quot; — anti-slop violations</li><br><li>&quot;Our group network includes Scottsdale Detox...&quot; — do not reference affiliated companies by name</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.4 Metaphor and framing rules</summary>
+      <div class="markdown"><p><li>Use &quot;confront&quot; and &quot;heal&quot; — the brand&#x27;s confirmed language</li><br><li>Do not use &quot;battle&quot; or &quot;fight&quot; as metaphors for addiction</li><br><li>Do not use &quot;journey&quot; as a standalone recovery noun (it is overused in this space and carries no meaning)</li><br><li>&quot;Recovery is possible&quot; is approved; &quot;you will recover&quot; is not</li><br><li>Results vary; individual outcomes differ — this must be implicit whenever outcomes are discussed</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.5 Sentence and paragraph rules</summary>
+      <div class="markdown"><p><li>Paragraphs: 2–4 lines maximum. One idea per sentence.</li><br><li>First sentence of every section directly answers the heading.</li><br><li>No em dashes. Restructure or use a period.</li><br><li>Lead with the clinical offer or client outcome; follow with setting and amenities.</li><br><li>Do not start sections or paragraphs with a hyperlink.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.6 Banned language</summary>
+      <div class="markdown"><p>**Anti-slop list (universal — applies to all clients):**</p><p>| Banned term | Why |<br>|---|---|<br>| utilize | Use &quot;use&quot; |<br>| leverage | Use &quot;use&quot; or describe the mechanism |<br>| robust | Vague intensifier |<br>| seamless | Vague promotional language |<br>| comprehensive (as puff) | Only use if specifically enumerating what is included |<br>| cutting-edge | Vague superlative |<br>| holistic (as puff) | Banned unless followed by a specific modality reference |<br>| synergy | Corporate filler |<br>| transformative | Vague; describe the actual change |<br>| innovative | Vague; describe what is actually different |<br>| game-changing | Prohibited |<br>| empower (as puff) | Vague; describe what specifically happens |<br>| revolutionary | Prohibited |</p><p>**Behavioral health specific — banned:**</p><p>| Banned term | Why |<br>|---|---|<br>| battle (for addiction) | Off-brand; brand uses &quot;confront&quot; |<br>| fight (for addiction) | Off-brand; brand uses &quot;confront&quot; |<br>| cure | Addiction is a chronic condition — no cure framing |<br>| guaranteed recovery | Cannot guarantee outcomes |<br>| will recover | Outcome guarantee |<br>| success rate (uncited) | Not confirmed on site — do not invent |<br>| treatment-resistant | Clinical language reserved for TMS; do not apply here |<br>| holistic (without modality) | Must be paired with a specific therapy name or practice |<br>| journey (as standalone noun) | Overused; replace with specific process language |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3. Clinical Accuracy Rules</summary>
+      <div class="markdown"><p>**These are non-negotiable.** Inaccurate behavioral health content can cause harm and expose the client to regulatory risk.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.1 Staff references</summary>
+      <div class="markdown"><p><li>Never invent or cite individual staff names — none are published on the site</li><br><li>The only approved credential reference is &quot;masters-level clinicians&quot;</li><br><li>&quot;24/7 addiction specialists&quot; is an approved supporting claim (confirmed on site)</li><br><li>Do not claim degrees, certifications, or named credentials beyond the above</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.2 Programs — approved list</summary>
+      <div class="markdown"><p>Reference programs by their confirmed names only:</p><p>| Program name | Key facts |<br>|---|---|<br>| Executive Treatment Program | Clients maintain professional obligations; private rooms with electronics access; modified treatment schedules |<br>| Dual Diagnosis Program | Treats addiction and co-occurring mental health conditions concurrently; mental health assessment on arrival; uses equine therapy; covers anxiety, depression, trauma |<br>| Luxury Rehab Program | Evidence-based care in an upscale setting; individualized plans; privacy guaranteed |<br>| Executive Golf Rehab | Combines treatment with golf |<br>| Luxury Spa Rehab | Spa-focused recovery experience |</p><p>Do not invent programs or sub-programs not listed above.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.3 Conditions treated — approved list</summary>
+      <div class="markdown"><p>Only reference conditions confirmed on the site:</p><ul><li>Alcohol</li><br><li>Opioids</li><br><li>Fentanyl</li><br><li>Heroin</li><br><li>Cocaine</li><br><li>Methamphetamine (meth)</li><br><li>MDMA / ecstasy</li><br><li>Marijuana</li><br><li>Adderall</li><br><li>Benzodiazepines</li><br><li>Dual diagnosis (addiction with co-occurring mental health conditions)</li></ul><p>Do not add conditions not on this list.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.4 Therapeutic modalities — approved list</summary>
+      <div class="markdown"><p>| Modality | Notes |<br>|---|---|<br>| Behavioral therapy | Broadly approved |<br>| Alternative therapy / alternative approaches | Acceptable; do not call &quot;holistic&quot; without specific example |<br>| Trauma-informed treatment | Approved |<br>| Mental health treatment | Approved |<br>| Medication-Assisted Treatment (MAT) | Full name on first reference; MAT on second reference |<br>| Suboxone | Brand name approved — confirmed on site |<br>| Equine therapy | Confirmed only for the Dual Diagnosis Program; do not apply to other programs |<br>| Massage therapy | Confirmed amenity/wellness modality |<br>| Yoga therapy | Confirmed |<br>| Sound bath therapy | Confirmed |<br>| Chiropractic care | Confirmed |</p><p>Do not claim specific therapy types (e.g., CBT, DBT, EMDR) that are not confirmed on the site.</p><p>Do not apply equine therapy to any program other than Dual Diagnosis.</p><p>&quot;20+ forms of therapy&quot; is a confirmed site claim. Use this framing when describing therapy breadth — do not enumerate more than the confirmed list above.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.5 Medication-Assisted Treatment (MAT) rules</summary>
+      <div class="markdown"><p><li>Full name &quot;Medication-Assisted Treatment&quot; on first reference</li><br><li>&quot;MAT&quot; is acceptable on second reference and beyond</li><br><li>&quot;Suboxone&quot; is acceptable as a brand name reference</li><br><li>Do not invent withdrawal timelines, dosing information, or medication protocols</li><br><li>Do not make claims about MAT efficacy beyond what the site states</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.6 Insurance — approved carriers only</summary>
+      <div class="markdown"><p>Accepted insurance plans confirmed on site:</p><ul><li>UnitedHealthcare</li><br><li>Blue Cross Blue Shield</li><br><li>GEHA</li><br><li>Aetna</li><br><li>Cigna</li></ul><p>Do not claim coverage for any carrier not on this list. &quot;Insurance verification is available&quot; is an approved supporting phrase.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4. Trust Signals</summary>
+      <div class="markdown"><p>Use these when relevant to establish credibility. Do not invent additional credentials.</p><p>| Trust signal | How to use |<br>|---|---|<br>| &quot;Top Treatment Destination&quot; — Luxury Rehabs (5-star rating) | Cite source when using |<br>| &quot;Best Suboxone Treatment Center in Scottsdale&quot; — Addiction Group | Cite source when using |<br>| LegitScript Certified Treatment Center | Approved for use; no elaboration needed |<br>| Founded 2017 | Factual background; use when establishing history |<br>| Founders motivated by personal experience with addiction | Approved; establishes authenticity; do not add details not confirmed |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5. Differentiators</summary>
+      <div class="markdown"><p>| Differentiator | How to use |<br>|---|---|<br>| 10 clients per facility maximum | Always use this exact figure; Arizona average of 29 is confirmed for context |<br>| Masters-level clinicians | Staff credential — always use this phrasing |<br>| 24/7 addiction specialists | Supporting staff claim |<br>| Personalized care plans | Supported by the low census; tie them together |<br>| Dual diagnosis capacity | Clinical differentiator for mental health audience |<br>| Executive treatment flexibility | Key for professional/C-suite audience |<br>| Confirmed amenities (see §3.4) | Support the luxury positioning; never lead with amenities |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6. Page Templates</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6.1 Blog posts</summary>
+      <div class="markdown"><p>Target length: 900–1,500 words.</p><p>Structure:<br>1. Meta title (55–60 characters): primary keyword near front; include &quot;The Hope House&quot; where natural<br>2. Meta description (140–160 characters): primary keyword, client benefit, brand name<br>3. 3 primary keywords defined<br>4. H1: direct, keyword-forward; addresses the reader&#x27;s real question without sensationalism<br>5. Short intro (2–3 sentences): acknowledge the situation; state what the piece covers; no filler<br>6. H2 sections: each a distinct question or topic; first sentence directly answers the heading<br>7. H3 for subsections; no H4 unless deep reference content<br>8. Closing CTA: specific, compassionate, action-based — never a hard sell<br>9. Compliance check required before publishing (see §3 and COMPLIANCE.yml)</p><p>**Tone note for blog posts:** The audience may be a person in crisis or a family member in distress. Write with care. Do not minimize difficulty; do not manufacture optimism. State what is true and what options exist.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6.2 Program and service pages</summary>
+      <div class="markdown"><p>Structure:<br>1. H1: program name or primary keyword; client-outcome framing<br>2. Problem paragraph (2–4 sentences): what the client is dealing with; acknowledge difficulty<br>3. What the program provides (2–4 sentences): mechanism, not just claims<br>4. Key elements or differentiators (3–5 bullet points)<br>5. Insurance / access information (where relevant)<br>6. CTA: specific next step — &quot;Call Now,&quot; &quot;Check Coverage,&quot; or &quot;Download Brochure&quot;</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>7. SEO Keywords by Topic</summary>
+      <div class="markdown"><p>| Content topic | Example keywords |<br>|---|---|<br>| Luxury rehab | &quot;luxury rehab Arizona,&quot; &quot;luxury rehab Scottsdale,&quot; &quot;luxury addiction treatment&quot; |<br>| Executive treatment | &quot;executive rehab program,&quot; &quot;rehab for executives,&quot; &quot;addiction treatment for professionals&quot; |<br>| Dual diagnosis | &quot;dual diagnosis treatment Scottsdale,&quot; &quot;addiction and mental health treatment Arizona&quot; |<br>| Substance-specific | &quot;alcohol rehab Scottsdale,&quot; &quot;opioid treatment Arizona,&quot; &quot;fentanyl treatment center&quot; |<br>| MAT / Suboxone | &quot;Suboxone treatment Scottsdale,&quot; &quot;medication-assisted treatment Arizona&quot; |<br>| Insurance coverage | &quot;UnitedHealthcare rehab coverage,&quot; &quot;does insurance cover rehab,&quot; &quot;rehab with Aetna&quot; |</p><p>**Keyword usage rules:**<br><li>Match search intent before adding keywords</li><br><li>Do not keyword stuff condition lists</li><br><li>Use plain language when writing for people in crisis — clinical jargon creates distance</li><br><li>Prioritize entity clarity and topical completeness over keyword density</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>8. Internal Linking Rules</summary>
+      <div class="markdown"><p>**Placement — what is forbidden:**<br><li>Do not add an internal link to the first word of a sentence</li><br><li>Do not add an internal link to the first sentence of a paragraph</li><br><li>Do not add an internal link to the first line of a paragraph</li><br><li>Build context around the linked concept before placing the link</li></ul><p>**Anchor text:**<br><li>Use descriptive anchor text that matches the topic of the target page</li><br><li>Never use &quot;learn more,&quot; &quot;click here,&quot; or similar generic anchors</li></ul><p>**Target URLs:** Pull from raw/knowledge/ or verify against thehopehouse.com. Do not invent internal URLs.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>9. Behavioral Health Content Standards</summary>
+      <div class="markdown"><p>These apply to every piece of content produced for The Hope House.</p><ul><li>Symptoms, withdrawal timelines, and medication protocols must not be invented — only what is confirmed on the site</li><br><li>Do not minimize the difficulty or risk of addiction or withdrawal</li><br><li>Do not present recovery as linear or guaranteed</li><br><li>&quot;Results vary&quot; and &quot;individual outcomes differ&quot; must be implicit in all outcome language</li><br><li>Never use stigmatizing language (addict, junkie, alcoholic as identity labels) — use &quot;person with addiction,&quot; &quot;person in recovery,&quot; or equivalent person-first language</li><br><li>Sensitive populations: some readers may be in active crisis. Content should direct them toward action (call, contact) rather than prolonged decision-making content</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>10. Pre-Publish Checklist</summary>
+      <div class="markdown"><p>| Check | Requirement |<br>|---|---|<br>| Brand name | &quot;The Hope House&quot; — always spelled out; no abbreviation (THH, HH) |<br>| Staff language | No invented names or credentials; &quot;masters-level clinicians&quot; only |<br>| Outcome language | No guarantees; &quot;recovery is possible&quot; framing; results vary implied |<br>| Insurance | Only confirmed carriers (§3.6); no invented coverage claims |<br>| Program names | Exact program names only (§3.2) |<br>| Modality accuracy | Only confirmed modalities (§3.4); equine therapy only for dual diagnosis |<br>| Affiliated companies | Not named; &quot;partner programs&quot; or &quot;outpatient care available&quot; if step-down context |<br>| Anti-slop | Zero banned terms from §2.6 |<br>| Addiction metaphors | No &quot;battle,&quot; &quot;fight&quot; — use &quot;confront,&quot; &quot;heal&quot; |<br>| MAT terminology | &quot;Medication-Assisted Treatment&quot; on first reference; MAT second reference |<br>| Em dashes | Zero em dashes anywhere in the piece |<br>| Person-first language | No identity labels for addiction (addict, alcoholic) |<br>| Meta fields | Title (55–60 chars), description (140–160 chars), 3 keywords defined |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>11. Key Facts at a Glance</summary>
+      <div class="markdown"><p>| Detail | Value |<br>|---|---|<br>| Founded | 2017 |<br>| Location | Scottsdale, AZ (28901 N 114th St., Scottsdale, AZ 85262) |<br>| Website | thehopehouse.com |<br>| Phone | 480-447-4252 |<br>| Email | contact@thehopehouse.com |<br>| Client maximum | 10 per facility (Arizona average: 29) |<br>| Staff credential | Masters-level clinicians |<br>| Insurance accepted | UnitedHealthcare, Blue Cross Blue Shield, GEHA, Aetna, Cigna |<br>| Certifications | LegitScript Certified Treatment Center |<br>| Awards | &quot;Top Treatment Destination&quot; (Luxury Rehabs); &quot;Best Suboxone Treatment Center in Scottsdale&quot; (Addiction Group) |<br>| Primary tagline | &quot;Personalized drug &amp; alcohol rehab&quot; |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>12. Approved Content Examples</summary>
+      <div class="markdown"><p>Published content lives in `_approved/`. No approved pieces added at onboarding — add to this directory as content is signed off.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>13. Operator Notes</summary>
+      <div class="markdown"><p>*Section for team-specific additions. Use `### {Operator} — {scope}` headings. Promote a note to the main numbered sections once it has been reinforced across two or more pieces.*</p></div>
+    </details>
+    </details>
+        </section>
+        <section class="panel">
+          <h2>Local Source Files Read</h2>
+          <ul><li><code>clients/the-hope-house/thehopehouse/STYLE-SYSTEM.md</code> — The Hope House — Style System</li>
+<li><code>clients/the-hope-house/thehopehouse/client-intelligence/README.md</code> — The Hope House Client Intelligence</li>
+<li><code>clients/the-hope-house/thehopehouse/client-intelligence/STYLE-GUIDE.md</code> — The Hope House — Style System</li>
+<li><code>clients/the-hope-house/thehopehouse/client-intelligence/offerings.md</code> — The Hope House Offerings</li>
+<li><code>clients/the-hope-house/thehopehouse/client-intelligence/source-files.md</code> — The Hope House Source Files</li>
+<li><code>clients/the-hope-house/thehopehouse/contact-block.md</code> — Contact block — The Hope House</li>
+<li><code>clients/the-hope-house/thehopehouse/deliverables/README.md</code> — The Hope House Deliverables</li>
+<li><code>clients/the-hope-house/thehopehouse/raw/knowledge/overview.md</code> — The Hope House — Client Overview</li>
+<li><code>clients/the-hope-house/thehopehouse/raw/knowledge/service-taxonomy.md</code> — The Hope House Service Taxonomy</li></ul>
+        </section>
+      </main>
+    </section>
+    </body>
+</html>

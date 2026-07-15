@@ -1,0 +1,428 @@
+{
+  "client": "thera",
+  "display_name": "Thera",
+  "generated_at": "2026-07-13T23:04:30.134619+00:00",
+  "website_urls": [
+    "https://www.thera-rehab.com/"
+  ],
+  "status": "ok",
+  "sitemaps": [
+    "https://www.thera-rehab.com/sitemap.xml"
+  ],
+  "sitemap_errors": [],
+  "url_count": 260,
+  "page_type_counts": {
+    "content": 50,
+    "page": 209,
+    "service": 1
+  },
+  "sample_pages": [
+    {
+      "url": "https://www.thera-rehab.com/",
+      "requested_url": "https://www.thera-rehab.com/",
+      "status_code": 200,
+      "content_type": "text/html;charset=utf-8",
+      "page_type": "home",
+      "title": "Physical and Occupational Therapy in NYC | Thera",
+      "meta_description": "We are bringing rehabilitation and wellness to the forefront of medicine in NYC. We are skilled therapy practitioners who provide quality rehabilitation and specialty services for breast cancer recovery, plastic reconstruction, scarring, lymphedema, axillary web syndrome, and more.",
+      "headings": [
+        "Thera Physical and Occupational Therapy",
+        "A modern approach",
+        "Customized, In-person, 1:1 Sessions",
+        "Our Services",
+        "Why Choose Thera?",
+        "Testimonials",
+        "Understanding Lymphedema: Causes, Symptoms, and Management",
+        "Getting Ready: Tips pre and post breast reconstruction",
+        "Understanding Your Breasts",
+        "Mastitis 101",
+        "Motherhood is a lot. Its nice to have support: Resources for new moms in the NYC area",
+        "Healing Tips for Radiation Burns and Reducing Chest Tightness After Radiation Therapy"
+      ],
+      "links_seen": 86,
+      "elapsed_ms": 405
+    },
+    {
+      "url": "https://www.thera-rehab.com/services",
+      "requested_url": "https://www.thera-rehab.com/services",
+      "status_code": 200,
+      "content_type": "text/html;charset=utf-8",
+      "page_type": "service",
+      "title": "Physical & Occupational Therapy NYC | Conditions We Treat | Thera Rehab<br/> — Thera",
+      "meta_description": "Explore conditions we treat at Thera Rehab in NYC, including lymphedema, post-surgical recovery, breast cancer rehab, and women’s health with expert PT & OT care.",
+      "headings": [
+        "Speciality Services",
+        "Rehabilitation Services",
+        "Physical and Occupational Therapy",
+        "Questions before getting started?",
+        "Get in touch."
+      ],
+      "links_seen": 78,
+      "elapsed_ms": 650
+    },
+    {
+      "url": "https://www.thera-rehab.com/location-midtown-manhattan",
+      "requested_url": "https://www.thera-rehab.com/location-midtown-manhattan",
+      "status_code": 200,
+      "content_type": "text/html;charset=utf-8",
+      "page_type": "page",
+      "title": "Physical & Occupational Therapy Midtown Manhattan NYC | Thera Rehab — Thera",
+      "meta_description": "Get expert physical and occupational therapy in Midtown Manhattan near Penn Station. One-on-one care to reduce pain, restore function, and recover faster. Book today.",
+      "headings": [
+        "Physical & Occupational Therapy in Midtown Manhattan, NY | Thera",
+        "Expert Physical & Occupational Therapy Near Penn Station & Midtown Manhattan",
+        "Serving Midtown Manhattan & Nearby Areas",
+        "We proudly serve patients from:",
+        "Why Choose Thera Rehab in Midtown Manhattan?",
+        "What to Expect at Your First Visit",
+        "Convenient Midtown Location",
+        "Physical & Occupational Therapy Services",
+        "Book Your Appointment Today"
+      ],
+      "links_seen": 69,
+      "elapsed_ms": 449
+    },
+    {
+      "url": "https://www.thera-rehab.com/team",
+      "requested_url": "https://www.thera-rehab.com/team",
+      "status_code": 200,
+      "content_type": "text/html;charset=utf-8",
+      "page_type": "page",
+      "title": "Thera therapists provide specialized care to meet all your needs — Thera",
+      "meta_description": "Breast rehabilitation, certified cosmetic and lymphatic rehabilitation services in Midtown Manhattan. Personalized care for post-surgical recovery, lymphedema, and more.",
+      "headings": [
+        "Megan McCarthy, MS OTR/L CLT CCST",
+        "Sabrina Rana Vaishnavi, MPT CLT",
+        "About",
+        "Megan McCarthy, MS OTR/L CLT CCST",
+        "Sabrina Rana Vaishnavi, MPT CLT",
+        "Get started today."
+      ],
+      "links_seen": 76,
+      "elapsed_ms": 551
+    },
+    {
+      "url": "https://www.thera-rehab.com/contact",
+      "requested_url": "https://www.thera-rehab.com/contact",
+      "status_code": 200,
+      "content_type": "text/html;charset=utf-8",
+      "page_type": "page",
+      "title": "Contact — Thera Breast Rehabilitation, Lymphedema Therapy & Cosmetic Surgery Recovery in NYC | BreastHab",
+      "meta_description": "Contact us for Specialized breast, lymphatic, and cosmetic sugery rehabilitation services in Midtown Manhattan. We look forward to helping you along your journey.",
+      "headings": [
+        "Let’s quickly help verify your insurance benefits to get you started!",
+        "Let’s quickly help verify your insurance benefits to get you started! Let’s quickly help verify your insurance benefits to get you started!",
+        "Any Questions?",
+        "Contact us"
+      ],
+      "links_seen": 70,
+      "elapsed_ms": 524
+    },
+    {
+      "url": "https://www.thera-rehab.com/homepage",
+      "requested_url": "https://www.thera-rehab.com/homepage",
+      "status_code": 200,
+      "content_type": "text/html;charset=utf-8",
+      "page_type": "page",
+      "title": "Physical and Occupational Therapy in NYC | Thera",
+      "meta_description": "We are bringing rehabilitation and wellness to the forefront of medicine in NYC. We are skilled therapy practitioners who provide quality rehabilitation and specialty services for breast cancer recovery, plastic reconstruction, scarring, lymphedema, axillary web syndrome, and more.",
+      "headings": [
+        "Thera Physical and Occupational Therapy",
+        "A modern approach",
+        "Customized, In-person, 1:1 Sessions",
+        "Our Services",
+        "Why Choose Thera?",
+        "Testimonials",
+        "Understanding Lymphedema: Causes, Symptoms, and Management",
+        "Getting Ready: Tips pre and post breast reconstruction",
+        "Understanding Your Breasts",
+        "Mastitis 101",
+        "Motherhood is a lot. Its nice to have support: Resources for new moms in the NYC area",
+        "Healing Tips for Radiation Burns and Reducing Chest Tightness After Radiation Therapy"
+      ],
+      "links_seen": 86,
+      "elapsed_ms": 525
+    },
+    {
+      "url": "https://www.thera-rehab.com/resources",
+      "requested_url": "https://www.thera-rehab.com/resources",
+      "status_code": 200,
+      "content_type": "text/html;charset=utf-8",
+      "page_type": "content",
+      "title": "Breast Rehabilitation, Plastic Surgery Recovery & Lymphedema Resources & Guides | Thera NYC — Thera",
+      "meta_description": "Breast rehabilitation, certified cosmetic and lymphatic rehabilitation services in Midtown Manhattan. Personalized care for post-surgical recovery, lymphedema, and more.",
+      "headings": [
+        "Our Resources",
+        "Lipedema Stages Explained: What Does Progression Look Like?",
+        "What Is the Foam in Lymphedema Wrapping and Why Does It Matter?",
+        "The Best Products for Post-Surgical Scars: What Actually Works",
+        "When Should You Monitor Limb Swelling? Understanding Discrepancy Thresholds in Lymphedema",
+        "Lymphedema Stages Explained: What Each Stage Means for Your Treatment",
+        "Radiation Fibrosis Syndrome: What It Is and How PT and OT Treat It",
+        "Recovering from a Tummy Tuck (Abdominoplasty): How PT and OT Help",
+        "What Is Fibrosis After Liposuction and How Is It Treated?",
+        "Choosing a Compression Garment in NYC: Why Professional Fitting Matters",
+        "Why Is My Arm Heavy After a Lumpectomy? Early Signs of Lymphedema and When to Seek Care"
+      ],
+      "links_seen": 98,
+      "elapsed_ms": 481
+    },
+    {
+      "url": "https://www.thera-rehab.com/lymphedema",
+      "requested_url": "https://www.thera-rehab.com/lymphedema",
+      "status_code": 200,
+      "content_type": "text/html;charset=utf-8",
+      "page_type": "page",
+      "title": "Lymphedema Treatment, Prevention and Management — Thera Lymphedema Treatment, Prevention and Management in NYC | BreastHab",
+      "meta_description": "Offering skilled and certified lymphedema treatment, complete decongestive therapy, lymphatic drainage massage, and custom compression wear fitting.",
+      "headings": [
+        "for Lymphedema & Expert Care",
+        "Lymphedema Prevention, Treatment, and Management in NYC",
+        "What We Offer: An Informed Approach to Lymphedema Management",
+        "Why Manual Lymphatic Drainage Works",
+        "Who Can Benefit from lymphatic care?",
+        "Why Choose Thera Rehab for Lymphedema Support?",
+        "Take a Step Forward: We’re Here for You",
+        "Frequently Asked Questions"
+      ],
+      "links_seen": 88,
+      "elapsed_ms": 451
+    },
+    {
+      "url": "https://www.thera-rehab.com/privacy-policy",
+      "requested_url": "https://www.thera-rehab.com/privacy-policy",
+      "status_code": 200,
+      "content_type": "text/html;charset=utf-8",
+      "page_type": "page",
+      "title": "Privacy Policy | Physical & Occupational Therapy NYC | Thera — Thera",
+      "meta_description": "Learn how Thera Physical & Occupational Therapy collects, uses, and protects your personal information. Our privacy policy explains data security, communication practices, and your rights when using our NYC physical and occupational therapy services.",
+      "headings": [
+        "PRIVACY POLICY"
+      ],
+      "links_seen": 67,
+      "elapsed_ms": 366
+    },
+    {
+      "url": "https://www.thera-rehab.com/how-things-work",
+      "requested_url": "https://www.thera-rehab.com/how-things-work",
+      "status_code": 200,
+      "content_type": "text/html;charset=utf-8",
+      "page_type": "page",
+      "title": "How Things Work | Thera NYC — Thera",
+      "meta_description": "FAQs, Treat time, out of network benefits and payment reimbursement information for our therapy services",
+      "headings": [
+        "Transforming Healthcare: Physical & Occupational Therapy in NYC",
+        "How Thera Rehabilitation Services Work",
+        "Concierge PT & OTServices in NYC",
+        "Need to work out a payment plan?",
+        "Get better health today."
+      ],
+      "links_seen": 74,
+      "elapsed_ms": 424
+    },
+    {
+      "url": "https://www.thera-rehab.com/thera-pt-ot-faq",
+      "requested_url": "https://www.thera-rehab.com/thera-pt-ot-faq",
+      "status_code": 200,
+      "content_type": "text/html;charset=utf-8",
+      "page_type": "page",
+      "title": "FAQ | Physical Therapy & Occupational Therapy in Midtown Manhattan | Thera Rehab NYC — Thera FAQ | Physical Therapy & Occupational Therapy in Midtown Manhattan | Thera Rehab NYC Frequently Asked Questions | Thera Rehab — Lymphedema, Oncology & Post-Surgical Therapy",
+      "meta_description": "Answers to common questions about axillary web syndrome (cording), lymphedema, DIEP flap and post-surgical recovery, mastitis care, and specialized physical & occupational therapy at Thera Rehab.",
+      "headings": [
+        "Frequently Asked Questions",
+        "Location & Access",
+        "Insurance & Cost",
+        "Services & Conditions",
+        "Sessions & Your Care",
+        "Our Specialties",
+        "Ready to start your recovery?",
+        "Questions, answered — by our therapists.",
+        "Axillary Web Syndrome (Cording)",
+        "Lymphedema",
+        "Reconstruction & Post-Surgical Recovery",
+        "Breastfeeding & Breast Health"
+      ],
+      "links_seen": 88,
+      "elapsed_ms": 431
+    },
+    {
+      "url": "https://www.thera-rehab.com/terms-of-service",
+      "requested_url": "https://www.thera-rehab.com/terms-of-service",
+      "status_code": 200,
+      "content_type": "text/html;charset=utf-8",
+      "page_type": "page",
+      "title": "Terms of Service | Physical & Occupational Therapy NYC | Thera — Thera",
+      "meta_description": "Review the Terms of Service for Thera Rehab. Learn about the conditions, responsibilities, and guidelines for using our NYC physical and occupational therapy services and website.",
+      "headings": [
+        "TERMS OF SERVICE"
+      ],
+      "links_seen": 67,
+      "elapsed_ms": 376
+    },
+    {
+      "url": "https://www.thera-rehab.com/concierge-medicine",
+      "requested_url": "https://www.thera-rehab.com/concierge-medicine",
+      "status_code": 200,
+      "content_type": "text/html;charset=utf-8",
+      "page_type": "page",
+      "title": "Concierge Physical & Occupational Therapy NYC | Thera Rehab — Thera",
+      "meta_description": "Experience concierge physical and occupational therapy in NYC with one-on-one care, flexible scheduling, and expert support for post-surgical and women’s health needs.",
+      "headings": [
+        "Concierge Rehabilitation Services",
+        "Condition We Treat"
+      ],
+      "links_seen": 67,
+      "elapsed_ms": 525
+    },
+    {
+      "url": "https://www.thera-rehab.com/team/megan-mccarthy",
+      "requested_url": "https://www.thera-rehab.com/team/megan-mccarthy",
+      "status_code": 200,
+      "content_type": "text/html;charset=utf-8",
+      "page_type": "page",
+      "title": "Breast Rehabilitation, Certified Lymphedema Therapists and Certified Cosmetic Surgery Therapist — Thera Breast Rehabilitation, Mastitis, Lymphedema Therapy & Cosmetic Surgery Recovery in NYC | BreastHab",
+      "meta_description": "Occupational Therapist providing breast rehabilitation, certified cosmetic and lymphatic rehabilitation services in Midtown Manhattan. Personalized care for post-surgical recovery, axillary web syndrome, lymphedema, mastitis, and more.",
+      "headings": [
+        "About",
+        "Megan McCarthy, MS OTR/L CLT CCST",
+        "Get started today."
+      ],
+      "links_seen": 68,
+      "elapsed_ms": 489
+    },
+    {
+      "url": "https://www.thera-rehab.com/diep-flap-recovery-nyc",
+      "requested_url": "https://www.thera-rehab.com/diep-flap-recovery-nyc",
+      "status_code": 200,
+      "content_type": "text/html;charset=utf-8",
+      "page_type": "page",
+      "title": "DIEP Flap Recovery Physical Therapy NYC | Breast Reconstruction Rehab | Thera PT & OT Manhattan — Thera DIEP Flap Recovery Physical Therapy NYC | Breast Reconstruction Rehab | Thera PT & OT Manhattan",
+      "meta_description": "Specialized physical and occupational therapy for DIEP flap breast reconstruction recovery in Midtown Manhattan, NYC. Abdominal core rehab, scar management, donor & recipient site care after DIEP surgery. 115 W 30th St. Free consult.",
+      "headings": [
+        "DIEP Flap Breast Reconstruction Recovery & Rehabilitation in NYC",
+        "What Is DIEP Flap Reconstruction & Why Rehabilitation Matters",
+        "Recipient & Donor Site: What We Address at Each",
+        "Common Functional Challenges After DIEP Flap Surgery",
+        "DIEP Flap Recovery: A Phased Approach",
+        "Our DIEP Flap Rehabilitation Program",
+        "Pre-Surgical Consultation (Pre-Hab)",
+        "Scar Management — Breast & Abdomen",
+        "Abdominal Core Rehabilitation",
+        "Shoulder & Chest Wall Mobility",
+        "Postural Correction",
+        "Lymphedema Prevention & Monitoring"
+      ],
+      "links_seen": 82,
+      "elapsed_ms": 500
+    },
+    {
+      "url": "https://www.thera-rehab.com/lymphatic-care-wellness",
+      "requested_url": "https://www.thera-rehab.com/lymphatic-care-wellness",
+      "status_code": 200,
+      "content_type": "text/html;charset=utf-8",
+      "page_type": "page",
+      "title": "Lymphatic Care & Wellness NYC | Manual Lymphatic Drainage | Thera Rehab — Thera Lymphatic Care & Wellness NYC | Manual Lymphatic Drainage | Thera Rehab",
+      "meta_description": "Expert lymphatic care in Midtown Manhattan — for post-surgical recovery, postpartum wellness, lipedema, and lymphedema. Certified therapists. Book online today.",
+      "headings": [
+        "Lymphatic Care & Wellness in New York City",
+        "Lymphatic Care Beyond Lymphedema : How MLD Supports Your Whole Body",
+        "Who Benefits from Lymphatic Drainage Treatment",
+        "Lymphatic Drainage After Surgery in NYC",
+        "Postpartum Lymphatic Drainage & C-Section Recovery",
+        "Lymphatic Wellness Sessions: Immune & Detox Support",
+        "Lipedema Treatment in NYC: MLD & Conservative Management",
+        "Chronic Edema & Inflammation: Lymphatic Therapy for Relief",
+        "Cancer-Related Lymphatic Care & Lymphedema Risk Reduction",
+        "What Is Manual Lymphatic Drainage (MLD)?",
+        "Conditions We Treat",
+        "What to Expect at Your First Appointment"
+      ],
+      "links_seen": 135,
+      "elapsed_ms": 502
+    },
+    {
+      "url": "https://www.thera-rehab.com/lymphedema-treatment-nyc",
+      "requested_url": "https://www.thera-rehab.com/lymphedema-treatment-nyc",
+      "status_code": 200,
+      "content_type": "text/html;charset=utf-8",
+      "page_type": "page",
+      "title": "Lymphedema Treatment NYC | Complete Decongestive Therapy | Thera PT & OT Midtown Manhattan — Thera Lymphedema Treatment NYC | Complete Decongestive Therapy | Thera PT & OT Midtown Manhattan",
+      "meta_description": "Certified lymphedema treatment in Midtown Manhattan, NYC. CLT-therapists provide Complete Decongestive Therapy, MLD, compression fitting and self-management for all stages and regions of lymphedema. 115 W 30th St.",
+      "headings": [
+        "Lymphedema Treatment & Management in New York City",
+        "What Is Lymphedema?",
+        "Classification & What Each Stage Means",
+        "Our Treatment Approach",
+        "Comprehensive Lymphedema Evaluation",
+        "Manual Lymphatic Drainage",
+        "Compression Therapy",
+        "Therapeutic Exercise",
+        "Self-Management Education",
+        "Specialist Care in Midtown Manhattan",
+        "Frequently Asked Questions"
+      ],
+      "links_seen": 77,
+      "elapsed_ms": 469
+    },
+    {
+      "url": "https://www.thera-rehab.com/plastic-surgery-recovery",
+      "requested_url": "https://www.thera-rehab.com/plastic-surgery-recovery",
+      "status_code": 200,
+      "content_type": "text/html;charset=utf-8",
+      "page_type": "page",
+      "title": "Cosmetic Surgery Rehabilitation — Thera Cosmetic Surgery Rehabilitation in NYC | BreastHab",
+      "meta_description": "Providing rehabilitation after plastic surgery by a certified cosmetic surgery therapist to decrease swelling, reduce scarring and speed up recovery to achieve your desired look.",
+      "headings": [
+        "Plastic Surgery Recovery & Rehabilitation in NYC",
+        "Why Does Quality Recovery Matter?",
+        "What We Treat",
+        "Conditions We Treat",
+        "Procedures We Rehabilitate",
+        "Specialized Care for Breast Surgery Patients",
+        "What We Offer for Plastic Surgery Recovery",
+        "Ideal for Patients Recovering From:",
+        "Why Choose Thera Physical and Occupational Therapy for Your Recovery?",
+        "Frequently Asked Questions"
+      ],
+      "links_seen": 167,
+      "elapsed_ms": 465
+    }
+  ],
+  "offering_pages": [],
+  "top_terms": [
+    "thera",
+    "therapy",
+    "nyc",
+    "lymphedema",
+    "for",
+    "physical",
+    "rehabilitation",
+    "occupational",
+    "recovery",
+    "lymphatic",
+    "breast",
+    "manhattan",
+    "midtown",
+    "rehab",
+    "surgery",
+    "treatment",
+    "why",
+    "reconstruction",
+    "management",
+    "post-surgical",
+    "cosmetic",
+    "diep",
+    "questions",
+    "certified",
+    "drainage",
+    "flap",
+    "treat",
+    "wellness",
+    "how",
+    "plastic"
+  ],
+  "product_or_service_urls": [
+    "https://www.thera-rehab.com/services"
+  ],
+  "blockers": []
+}

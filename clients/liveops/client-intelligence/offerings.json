@@ -1,0 +1,179 @@
+{
+  "client": "liveops",
+  "display_name": "Liveops",
+  "generated_at": "2026-07-14T15:59:27.896242+00:00",
+  "offerings": [
+    {
+      "name": "Call Center Outsourcing in India",
+      "description": "Liveops: Offshore call center outsourcing in India for scalable, omnichannel CX. Explore cost-effective solutions & expert agents.",
+      "sources": [
+        "clients/liveops/raw/knowledge/service-taxonomy.md",
+        "website sitemap sample"
+      ],
+      "sections": [
+        "Delivery Models and Locations",
+        "https://liveops.com/services/locations/india/"
+      ],
+      "score": 7
+    },
+    {
+      "name": "Call Center Outsourcing in South Africa",
+      "description": "Liveops South Africa: High-empathy, voice-first call center outsourcing. Discover expert agents & scalable solutions.",
+      "sources": [
+        "clients/liveops/raw/knowledge/service-taxonomy.md",
+        "website sitemap sample"
+      ],
+      "sections": [
+        "Delivery Models and Locations",
+        "https://liveops.com/services/locations/south-africa/"
+      ],
+      "score": 7
+    },
+    {
+      "name": "Call Center Outsourcing in the Philippines",
+      "description": "Liveops Philippines: Cost-effective, high-quality remote call center outsourcing. Scale with certified agents.",
+      "sources": [
+        "clients/liveops/raw/knowledge/service-taxonomy.md",
+        "website sitemap sample"
+      ],
+      "sections": [
+        "Delivery Models and Locations",
+        "https://liveops.com/services/locations/philippines-call-center-outsourcing/"
+      ],
+      "score": 7
+    },
+    {
+      "name": "Call Center Outsourcing in the UK",
+      "description": "Liveops UK call center outsourcing: high-quality, brand-aligned support. Flexible & governed solutions.",
+      "sources": [
+        "clients/liveops/raw/knowledge/service-taxonomy.md",
+        "website sitemap sample"
+      ],
+      "sections": [
+        "Delivery Models and Locations",
+        "https://liveops.com/services/locations/uk-call-center-outsourcing/"
+      ],
+      "score": 7
+    },
+    {
+      "name": "Customer Service Outsourcing",
+      "description": "Liveops offers customer service outsourcing. Access U.S.-based agents, scale your business, and enhance customer satisfaction today.",
+      "sources": [
+        "clients/liveops/raw/knowledge/service-taxonomy.md",
+        "website offering page"
+      ],
+      "sections": [
+        "Customer Support Services",
+        "https://liveops.com/services/customer-service-outsourcing-services/"
+      ],
+      "score": 7
+    },
+    {
+      "name": "Nearshore Call Center Services",
+      "description": "Nearshore support model for closer time-zone alignment and scalable customer service coverage.",
+      "sources": [
+        "clients/liveops/raw/knowledge/service-taxonomy.md",
+        "website sitemap sample"
+      ],
+      "sections": [
+        "Delivery Models and Locations",
+        "https://liveops.com/services/locations/nearshore-call-center-services/"
+      ],
+      "score": 7
+    },
+    {
+      "name": "Nearshore Call Center Solution in Mexico",
+      "description": "Liveops' nearshore call center in Mexico offers bilingual, scalable, cost-effective support. to enhance your customer experience.",
+      "sources": [
+        "clients/liveops/raw/knowledge/service-taxonomy.md",
+        "website sitemap sample"
+      ],
+      "sections": [
+        "Delivery Models and Locations",
+        "https://liveops.com/services/locations/nearshore-call-center-mexico/"
+      ],
+      "score": 7
+    },
+    {
+      "name": "Offshore Call Center Services",
+      "description": "Liveops offshore call center services offer cost reduction and scalability with a global, flexible model. to enhance your customer support.",
+      "sources": [
+        "clients/liveops/raw/knowledge/service-taxonomy.md",
+        "website sitemap sample"
+      ],
+      "sections": [
+        "Delivery Models and Locations",
+        "https://liveops.com/services/locations/offshore-call-center-services/"
+      ],
+      "score": 7
+    },
+    {
+      "name": "Onshore Call Center Services in the US",
+      "description": "Liveops offers US onshore call center services for agile, compliant customer support. Scale with skilled domestic agents.",
+      "sources": [
+        "clients/liveops/raw/knowledge/service-taxonomy.md",
+        "website sitemap sample"
+      ],
+      "sections": [
+        "Delivery Models and Locations",
+        "https://liveops.com/services/locations/united-states-onshore-call-center-services/"
+      ],
+      "score": 7
+    },
+    {
+      "name": "Back Office Support",
+      "description": "Operational support work that helps customer programs handle volume and administrative tasks.",
+      "sources": [
+        "clients/liveops/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Customer Support Services"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Customer Service",
+      "description": "Customer support across voice, chat, email, text, and other supported channels.",
+      "sources": [
+        "clients/liveops/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Customer Support Services"
+      ],
+      "score": 6
+    },
+    {
+      "name": "LiveNexus by Liveops",
+      "description": "AI service offering for assessing, integrating, and calibrating AI in customer experience operations.",
+      "sources": [
+        "clients/liveops/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Customer Support Services"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Sales and Lead Generation",
+      "description": "Support for sales conversations, lead follow-up, and revenue-related customer interactions.",
+      "sources": [
+        "clients/liveops/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Customer Support Services"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Technical Support",
+      "description": "Customer technical support services for brands that need scalable help capacity.",
+      "sources": [
+        "clients/liveops/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Customer Support Services"
+      ],
+      "score": 6
+    }
+  ]
+}

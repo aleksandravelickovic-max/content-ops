@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Liveops Context</title>
+  <style>
+    :root {
+      --bg:#f4f7f5; --panel:#ffffff; --ink:#09110f; --muted:#63716c; --line:#dce5df;
+      --black:#050907; --graph:#14d878; --graph-dark:#079d55; --soft:#eaf8f0; --soft-ink:#19392a;
+      --accent:#087a47; --red:#b5362d; --shadow:0 18px 46px rgba(5,9,7,.08);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:
+      linear-gradient(180deg, #ffffff 0, var(--bg) 360px); color:var(--ink); line-height:1.45; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .topnav { min-height:64px; padding:14px max(32px, calc((100vw - 1380px) / 2 + 32px)); background:var(--black); border-bottom:1px solid rgba(255,255,255,.08); position:sticky; top:0; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { color:#fff; display:inline-flex; align-items:center; gap:10px; font-weight:800; letter-spacing:0; }
+    .brand:hover { text-decoration:none; }
+    .brand span { width:32px; height:32px; border-radius:8px; background:var(--graph); color:var(--black); display:inline-grid; place-items:center; font-size:13px; font-weight:900; }
+    .nav-meta, .nav-link { color:#b8c6c0; font-size:13px; font-weight:700; }
+    .hero { margin:0; padding:42px max(32px, calc((100vw - 1380px) / 2 + 32px)) 38px; background:var(--black); color:#fff; border-bottom:1px solid rgba(255,255,255,.08); }
+    .index-hero, .client-hero { display:flex; justify-content:space-between; gap:28px; align-items:flex-start; }
+    .hero h1 { margin:0 0 12px; font-size:clamp(32px, 5vw, 62px); line-height:.98; letter-spacing:0; max-width:900px; }
+    .hero p { margin:0; color:#c7d5cf; max-width:840px; font-size:17px; }
+    .hero-copy { max-width:940px; }
+    .kicker { color:var(--graph); font-size:12px; text-transform:uppercase; letter-spacing:.08em; font-weight:900; }
+    .report-meta { display:flex; flex-wrap:wrap; gap:10px; padding:14px 32px; background:#fff; border-bottom:1px solid var(--line); color:var(--muted); font-size:13px; max-width:1380px; margin:0 auto; }
+    .report-meta span { background:var(--soft); color:var(--soft-ink); border-radius:999px; padding:6px 10px; font-weight:700; }
+    .grid.cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(290px, 1fr)); gap:16px; padding:24px 32px 42px; max-width:1380px; margin:0 auto; }
+    .card, .panel, .context-card { background:var(--panel); border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow); }
+    .client-card { display:block; padding:20px; color:inherit; min-height:184px; transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease; }
+    .client-card:hover { text-decoration:none; transform:translateY(-2px); border-color:rgba(20,216,120,.55); box-shadow:0 24px 58px rgba(5,9,7,.12); }
+    .card-topline { display:flex; justify-content:space-between; gap:10px; align-items:center; }
+    .client-card h2 { margin:14px 0 8px; font-size:23px; line-height:1.1; }
+    .client-card p { margin:0; color:var(--muted); }
+    .metrics { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+    .metrics span, .evidence, .status-pill { background:var(--soft); border:1px solid rgba(20,216,120,.22); border-radius:999px; padding:5px 9px; font-size:12px; color:var(--soft-ink); font-weight:800; }
+    .topic-chips { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 18px; }
+    .topic-chips span { background:#f6fbf8; border:1px solid var(--line); border-radius:999px; color:#183a2a; padding:7px 10px; font-size:13px; font-weight:750; }
+    .layout { display:block; padding:22px 32px 46px; max-width:1380px; margin:0 auto; }
+    main { min-width:0; }
+    .context-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; margin-bottom:20px; }
+    .context-card { padding:18px; min-height:220px; }
+    .context-card ul { margin-bottom:0; }
+    .context-note { color:var(--muted); font-size:13px; margin:4px 0 12px; }
+    .aside-label { color:var(--graph-dark); font-size:11px; text-transform:uppercase; font-weight:900; letter-spacing:.08em; margin-bottom:5px; }
+    .panel h2 { margin-top:0; }
+    .panel { padding:22px; margin-bottom:20px; }
+    .panel h2 { font-size:26px; letter-spacing:0; }
+    .offerings { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:13px; margin-top:16px; }
+    .offering, .sample { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .offering { position:relative; overflow:hidden; }
+    .offering-marker { position:absolute; inset:0 auto 0 0; width:4px; background:var(--graph); }
+    .offering h3, .sample h4 { margin:0 0 6px; }
+    .offering p { margin:0 0 10px; }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .stat-stack { display:grid; grid-template-columns:repeat(3, minmax(100px, 1fr)); gap:8px; min-width:340px; }
+    .stat-stack div { border:1px solid rgba(255,255,255,.15); border-radius:8px; padding:14px; background:rgba(255,255,255,.06); }
+    .stat-stack strong { display:block; font-size:26px; color:#fff; }
+    .stat-stack span, .muted { color:var(--muted); font-size:13px; }
+    .hero .stat-stack span { color:#b8c6c0; }
+    ul { padding-left:20px; }
+    li { margin:4px 0; }
+    code { background:var(--soft); color:var(--soft-ink); padding:2px 4px; border-radius:4px; }
+    details { margin:10px 0; }
+    summary { cursor:pointer; font-weight:700; }
+    .style-section { border-top:1px solid var(--line); padding-top:10px; }
+    .markdown { color:#2d2f35; }
+    @media (max-width: 980px) {
+      .layout, .split, .client-hero, .index-hero { grid-template-columns:1fr; display:block; }
+      .context-grid { grid-template-columns:1fr; }
+      .stat-stack { min-width:0; margin-top:16px; }
+      .hero, .grid.cards, .layout, .topnav, .report-meta { padding-left:16px; padding-right:16px; }
+      .hero h1 { font-size:36px; }
+      .stat-stack { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+    <nav class="topnav">
+      <a class="brand" href="index.html"><span>LG</span>LinkGraph</a>
+      <a class="nav-link" href="index.html">All clients</a>
+    </nav>
+    <section class="hero client-hero">
+      <div class="hero-copy">
+        <div class="kicker">liveops</div>
+        <h1>Liveops</h1>
+        <p>14 extracted offerings, 778 sitemap URLs, and 9 local source documents for client-specific writing context.</p>
+      </div>
+      <div class="stat-stack">
+        <div><strong>ok</strong><span>crawl status</span></div>
+        <div><strong>778</strong><span>URLs found</span></div>
+        <div><strong>22</strong><span>product/service URLs</span></div>
+      </div>
+    </section>
+    <section class="layout">
+      <main>
+        <section class="context-grid">
+    <article class="context-card">
+      <div class="aside-label">Quick Facts</div>
+      <p class="context-note">Company, audience, and proof points.</p>
+      <ul><li>A marketplace and management platform for flexible, remote customer service agents</li><li>A workforce solution that enables enterprises to scale support capacity up or down without fixed headcount</li><li>A provider of omnichannel customer service (voice, chat, email, text) across industries</li><li>A call center</li><li>A CCaaS (cloud contact center as a service) platform</li><li>A staffing agency</li><li>A traditional outsourcing company</li><li>Verticals served: Retail and ecommerce, healthcare, financial services, insurance, travel and hospitality.</li><li>Company scale context: Liveops works with Fortune 500 brands and mid-to-large enterprises. Do not reference specific client names unless provided in raw/knowledge/.</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Voice</div>
+      <p class="context-note">How this client should sound.</p>
+      <ul><li>Confident: State facts. No hedging language unless accuracy requires qualification.</li><li>Direct: Lead with the business outcome, then explain how. No throat-clearing.</li><li>Strategic: Frame everything in terms of business impact, not features.</li><li>Human: Avoid corporate stiffness; write for real decision-makers, not procurement bots.</li><li>Precise: Exact terminology matters here — especially around agents. See §3.</li><li>&quot;Agents within our network become certified to handle your specific program before their first interaction.&quot; — accurate, compliant, human</li><li>&quot;Liveops scales capacity in hours, not weeks — without adding headcount.&quot; — outcome-forward, specific</li><li>&quot;The Liveops model replaces fixed staffing costs with a flexible, usage-based structure.&quot; — clear business framing</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Avoid / Compliance</div>
+      <p class="context-note">Claims, terms, and wording to avoid.</p>
+      <p class="muted">No clean lines extracted yet.</p>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Terminology</div>
+      <p class="context-note">Client-specific naming and required language.</p>
+      <p class="muted">No clean lines extracted yet.</p>
+    </article>
+    </section>
+        <section class="panel">
+          <h2>Offerings, Services, Goods</h2>
+          <p class="muted">Writer-facing catalog from the client style system, approved source files, and usable product/service pages. Raw crawl evidence is separated below.</p>
+          <div class="offerings">
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Call Center Outsourcing in India</h3>
+      <p>Liveops: Offshore call center outsourcing in India for scalable, omnichannel CX. Explore cost-effective solutions &amp; expert agents.</p>
+      <div class="evidence">Sources: clients/liveops/raw/knowledge/service-taxonomy.md, website sitemap sample · Sections: Delivery Models and Locations, https://liveops.com/services/locations/india/</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Call Center Outsourcing in South Africa</h3>
+      <p>Liveops South Africa: High-empathy, voice-first call center outsourcing. Discover expert agents &amp; scalable solutions.</p>
+      <div class="evidence">Sources: clients/liveops/raw/knowledge/service-taxonomy.md, website sitemap sample · Sections: Delivery Models and Locations, https://liveops.com/services/locations/south-africa/</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Call Center Outsourcing in the Philippines</h3>
+      <p>Liveops Philippines: Cost-effective, high-quality remote call center outsourcing. Scale with certified agents.</p>
+      <div class="evidence">Sources: clients/liveops/raw/knowledge/service-taxonomy.md, website sitemap sample · Sections: Delivery Models and Locations, https://liveops.com/services/locations/philippines-call-center-outsourcing/</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Call Center Outsourcing in the UK</h3>
+      <p>Liveops UK call center outsourcing: high-quality, brand-aligned support. Flexible &amp; governed solutions.</p>
+      <div class="evidence">Sources: clients/liveops/raw/knowledge/service-taxonomy.md, website sitemap sample · Sections: Delivery Models and Locations, https://liveops.com/services/locations/uk-call-center-outsourcing/</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Customer Service Outsourcing</h3>
+      <p>Liveops offers customer service outsourcing. Access U.S.-based agents, scale your business, and enhance customer satisfaction today.</p>
+      <div class="evidence">Sources: clients/liveops/raw/knowledge/service-taxonomy.md, website offering page · Sections: Customer Support Services, https://liveops.com/services/customer-service-outsourcing-services/</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Nearshore Call Center Services</h3>
+      <p>Nearshore support model for closer time-zone alignment and scalable customer service coverage.</p>
+      <div class="evidence">Sources: clients/liveops/raw/knowledge/service-taxonomy.md, website sitemap sample · Sections: Delivery Models and Locations, https://liveops.com/services/locations/nearshore-call-center-services/</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Nearshore Call Center Solution in Mexico</h3>
+      <p>Liveops&#x27; nearshore call center in Mexico offers bilingual, scalable, cost-effective support. to enhance your customer experience.</p>
+      <div class="evidence">Sources: clients/liveops/raw/knowledge/service-taxonomy.md, website sitemap sample · Sections: Delivery Models and Locations, https://liveops.com/services/locations/nearshore-call-center-mexico/</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Offshore Call Center Services</h3>
+      <p>Liveops offshore call center services offer cost reduction and scalability with a global, flexible model. to enhance your customer support.</p>
+      <div class="evidence">Sources: clients/liveops/raw/knowledge/service-taxonomy.md, website sitemap sample · Sections: Delivery Models and Locations, https://liveops.com/services/locations/offshore-call-center-services/</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Onshore Call Center Services in the US</h3>
+      <p>Liveops offers US onshore call center services for agile, compliant customer support. Scale with skilled domestic agents.</p>
+      <div class="evidence">Sources: clients/liveops/raw/knowledge/service-taxonomy.md, website sitemap sample · Sections: Delivery Models and Locations, https://liveops.com/services/locations/united-states-onshore-call-center-services/</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Back Office Support</h3>
+      <p>Operational support work that helps customer programs handle volume and administrative tasks.</p>
+      <div class="evidence">Sources: clients/liveops/raw/knowledge/service-taxonomy.md · Sections: Customer Support Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Customer Service</h3>
+      <p>Customer support across voice, chat, email, text, and other supported channels.</p>
+      <div class="evidence">Sources: clients/liveops/raw/knowledge/service-taxonomy.md · Sections: Customer Support Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>LiveNexus by Liveops</h3>
+      <p>AI service offering for assessing, integrating, and calibrating AI in customer experience operations.</p>
+      <div class="evidence">Sources: clients/liveops/raw/knowledge/service-taxonomy.md · Sections: Customer Support Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Sales and Lead Generation</h3>
+      <p>Support for sales conversations, lead follow-up, and revenue-related customer interactions.</p>
+      <div class="evidence">Sources: clients/liveops/raw/knowledge/service-taxonomy.md · Sections: Customer Support Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Technical Support</h3>
+      <p>Customer technical support services for brands that need scalable help capacity.</p>
+      <div class="evidence">Sources: clients/liveops/raw/knowledge/service-taxonomy.md · Sections: Customer Support Services</div>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Website Intelligence</h2>
+          <div class="split">
+            <div>
+              <h3>Website URLs</h3><ul><li><a href="https://liveops.com/">https://liveops.com/</a></li></ul>
+              <h3>Sitemaps</h3><ul><li><a href="https://liveops.com/sitemap_index.xml">https://liveops.com/sitemap_index.xml</a></li><li><a href="https://liveops.com/sitemap.xml">https://liveops.com/sitemap.xml</a></li></ul>
+            </div>
+            <div>
+              <h3>Semantic / Topical Terms</h3><div class="topic-chips"><span>Call Center Outsourcing in India</span><span>Call Center Outsourcing in South Africa</span><span>Call Center Outsourcing in the Philippines</span><span>Call Center Outsourcing in the UK</span><span>Customer Service Outsourcing</span><span>Nearshore Call Center Services</span><span>Nearshore Call Center Solution in Mexico</span><span>Offshore Call Center Services</span><span>Onshore Call Center Services in the US</span><span>Back Office Support</span><span>Customer Service</span><span>LiveNexus by Liveops</span><span>Sales and Lead Generation</span><span>Technical Support</span></div>
+              <h3>Blockers</h3><p class="muted">None</p>
+            </div>
+          </div>
+          <h3>Product / Service URLs</h3><ul><li><a href="https://liveops.com/services/talent-sourcing/">https://liveops.com/services/talent-sourcing/</a></li><li><a href="https://liveops.com/services/customer-service-outsourcing-services/">https://liveops.com/services/customer-service-outsourcing-services/</a></li><li><a href="https://liveops.com/services/locations/offshore-call-center-services/">https://liveops.com/services/locations/offshore-call-center-services/</a></li><li><a href="https://liveops.com/services/locations/nearshore-call-center-services/">https://liveops.com/services/locations/nearshore-call-center-services/</a></li><li><a href="https://liveops.com/services/locations/nearshore-call-center-mexico/">https://liveops.com/services/locations/nearshore-call-center-mexico/</a></li><li><a href="https://liveops.com/services/locations/united-states-onshore-call-center-services/">https://liveops.com/services/locations/united-states-onshore-call-center-services/</a></li><li><a href="https://liveops.com/services/back-office-support/">https://liveops.com/services/back-office-support/</a></li><li><a href="https://liveops.com/services/">https://liveops.com/services/</a></li><li><a href="https://liveops.com/services/sales-support-services/">https://liveops.com/services/sales-support-services/</a></li><li><a href="https://liveops.com/services/agent-experience/">https://liveops.com/services/agent-experience/</a></li><li><a href="https://liveops.com/services/learning-as-a-service/">https://liveops.com/services/learning-as-a-service/</a></li><li><a href="https://liveops.com/services/how-it-works/learning-and-development/">https://liveops.com/services/how-it-works/learning-and-development/</a></li><li><a href="https://liveops.com/services/locations/india/">https://liveops.com/services/locations/india/</a></li><li><a href="https://liveops.com/services/locations/south-africa/">https://liveops.com/services/locations/south-africa/</a></li><li><a href="https://liveops.com/services/locations/uk-call-center-outsourcing/">https://liveops.com/services/locations/uk-call-center-outsourcing/</a></li><li><a href="https://liveops.com/services/locations/philippines-call-center-outsourcing/">https://liveops.com/services/locations/philippines-call-center-outsourcing/</a></li><li><a href="https://liveops.com/services/locations/">https://liveops.com/services/locations/</a></li><li><a href="https://liveops.com/services/digital-outsourced-customer-service/">https://liveops.com/services/digital-outsourced-customer-service/</a></li><li><a href="https://liveops.com/services/technical-support-services/">https://liveops.com/services/technical-support-services/</a></li><li><a href="https://liveops.com/services/how-it-works/">https://liveops.com/services/how-it-works/</a></li><li><a href="https://liveops.com/services/how-it-works/agent-scheduling/">https://liveops.com/services/how-it-works/agent-scheduling/</a></li><li><a href="https://liveops.com/services/client-results/">https://liveops.com/services/client-results/</a></li></ul>
+          <h3>Sampled Pages</h3><div class="sample-pages">
+    <article class="sample">
+      <h4>Customer Service Outsourcing | Liveops</h4>
+      <a href="https://liveops.com/">https://liveops.com/</a>
+      <p>Liveops: Customer service outsourcing solutions. Access experienced agents, scale fast, and deliver high-quality support.</p>
+      <ul><li>It’s not outsourcing, it’s outsmarting</li><li>Where empathy meets innovation</li><li>AI Maturity Assessment for CX</li><li>Global services designed to scale with you</li><li>Turn bold AI ideas into business outcomes with LiveNexus by Liveops</li><li>Assess best-in-class AI</li><li>Integrate into your environment</li><li>Calibrate with real interactions</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Global Customer Support Services | Liveops</h4>
+      <a href="https://liveops.com/services/locations/">https://liveops.com/services/locations/</a>
+      <p>Liveops provides flexible, high-quality customer service in the U.S., Mexico, and the Philippines. Get the support you need.</p>
+      <ul><li>Liveops global service locations</li><li>Scalable customer support—anywhere you need it</li><li>Global talent, proven impact</li><li>Domestic and global outsourced support solutions we offer</li><li>Talent locations</li><li>Selecting the right contact center model: onshore, nearshore, or offshore?</li><li>Optimizing global support with offshore delivery</li><li>Benefits with results</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Call Center Outsourcing in India | Liveops</h4>
+      <a href="https://liveops.com/services/locations/india/">https://liveops.com/services/locations/india/</a>
+      <p>Liveops: Offshore call center outsourcing in India for scalable, omnichannel CX. Explore cost-effective solutions &amp; expert agents. Contact us.</p>
+      <ul><li>Elevate CX with call center outsourcing in India</li><li>A mature offshore destination for scalable, cost-efficient customer support</li><li>Why enterprise brands turn to India</li><li>A hybrid delivery model built around your business</li><li>How to build a smarter India call center outsourcing strategy</li><li>Define your CX priorities</li><li>Build the right program</li><li>Certify and launch</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Call Center Outsourcing in South Africa | Liveops</h4>
+      <a href="https://liveops.com/services/locations/south-africa/">https://liveops.com/services/locations/south-africa/</a>
+      <p>Liveops South Africa: High-empathy, voice-first call center outsourcing. Discover expert agents &amp; scalable solutions. Contact us.</p>
+      <ul><li>Elevate CX interactions with call center outsourcing in South Africa</li><li>A leading destination for high-empathy, voice-first customer support</li><li>Why enterprise brands turn to South Africa</li><li>A hybrid delivery model built around your business</li><li>How to build a smarter South Africa call center outsourcing strategy</li><li>Define your CX priorities</li><li>Build the right program</li><li>Certify and launch</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Call Center Outsourcing in the UK | Liveops</h4>
+      <a href="https://liveops.com/services/locations/uk-call-center-outsourcing/">https://liveops.com/services/locations/uk-call-center-outsourcing/</a>
+      <p>Liveops UK call center outsourcing: high-quality, brand-aligned support. Flexible &amp; governed solutions. Contact us.</p>
+      <ul><li>UK call center outsourcing built for high-quality interactions</li><li>Customer service expertise, based in the United Kingdom</li><li>Why enterprise brands turn to the UK</li><li>A hybrid delivery model built around your business</li><li>How to build a smarter UK outsourcing strategy</li><li>Define your CX priorities</li><li>Build the right program</li><li>Certify and launch</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Nearshore Call Center Solution in Mexico | Liveops</h4>
+      <a href="https://liveops.com/services/locations/nearshore-call-center-mexico/">https://liveops.com/services/locations/nearshore-call-center-mexico/</a>
+      <p>Liveops&#x27; nearshore call center in Mexico offers bilingual, scalable, cost-effective support. Contact us to enhance your customer experience.</p>
+      <ul><li>Call center outsourcing in Mexico</li><li>Bilingual support, stronger alignment, and real-time collaboration</li><li>Why businesses should choose Liveops’ call center outsourcing in Mexico</li><li>Remote nearshore model outperforms traditional call centers</li><li>Nationwide access to top talent</li><li>Lower turnover, higher satisfaction</li><li>Seamless scalability</li><li>Customizable support for your industry</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Offshore Call Center Services | Liveops</h4>
+      <a href="https://liveops.com/services/locations/offshore-call-center-services/">https://liveops.com/services/locations/offshore-call-center-services/</a>
+      <p>Liveops offshore call center services offer cost reduction and scalability with a global, flexible model. Contact us to enhance your customer support.</p>
+      <ul><li>Offshore call center services that scale smarter</li><li>Enterprise-ready support with global flexibility</li><li>Why offshore call center services work</li><li>Offshore call center services that outperform traditional models</li><li>Broader access to talent</li><li>Lower fixed overhead</li><li>Faster, more responsive scalability</li><li>Tailored support design</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Nearshore Call Center Services | Liveops</h4>
+      <a href="https://liveops.com/services/locations/nearshore-call-center-services/">https://liveops.com/services/locations/nearshore-call-center-services/</a>
+      <p>Liveops Nearshore: Scalable, cost-efficient customer care with bilingual support. Contact us today!</p>
+      <ul><li>Nearshore call center outsourcing services for growing brands</li><li>Cultural alignment, real-time support</li><li>Why businesses should invest in nearshore call center outsourcing services</li><li>A remote nearshore model built for better performance</li><li>Access to talent beyond one metro area</li><li>A model that supports stronger continuity</li><li>Scalable support without the usual constraints</li><li>Tailored programs for industry-specific needs</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Call Center Outsourcing in the Philippines | Liveops</h4>
+      <a href="https://liveops.com/services/locations/philippines-call-center-outsourcing/">https://liveops.com/services/locations/philippines-call-center-outsourcing/</a>
+      <p>Liveops Philippines: Cost-effective, high-quality remote call center outsourcing. Scale with certified agents. Contact us.</p>
+      <ul><li>Philippines call center outsourcing built for voice, quality, and scale</li><li>Global support strength, rooted in the Philippines</li><li>Why enterprise brands turn to the Philippines</li><li>A hybrid delivery model built around your business</li><li>Cutting onboarding costs with offshore Philippines delivery</li><li>How to build a smarter Philippines outsourcing strategy</li><li>Define your CX priorities</li><li>Build the right program</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Onshore Call Center Services in the US | Liveops</h4>
+      <a href="https://liveops.com/services/locations/united-states-onshore-call-center-services/">https://liveops.com/services/locations/united-states-onshore-call-center-services/</a>
+      <p>Liveops offers US onshore call center services for agile, compliant customer support. Scale with skilled domestic agents. Contact us.</p>
+      <ul><li>US call center outsourcing services</li><li>Premium customer service, powered by top US talent</li><li>Why businesses choose onshore call center services in the US</li><li>Remote US model outperforms traditional call centers</li><li>Highly experienced agents</li><li>Lower attrition rates</li><li>Effortless scalability</li><li>Customized service offerings</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Call Center Outsourcing Services | Liveops</h4>
+      <a href="https://liveops.com/services/">https://liveops.com/services/</a>
+      <p>Outsource customer experience with Liveops. Get flexible solutions, experienced agents, and measurable results for your business.</p>
+      <ul><li>Call center outsourcing services designed to scale with your business</li><li>On-demand call center outsourcing services, delivered with precision and care</li><li>Customer service</li><li>Sales and lead generation</li><li>Technical support</li><li>Back office support</li><li>Talent locations</li><li>Benefits with results</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Customer Service Outsourcing: How It Works | Liveops</h4>
+      <a href="https://liveops.com/services/how-it-works/">https://liveops.com/services/how-it-works/</a>
+      <p>Launch customer service outsourcing with Liveops. Get precision staffing and certified talent for measurable results today.</p>
+      <ul><li>How Liveops’ virtual call center works</li><li>Customer service is our science</li><li>Liveops’ support model is built around five core functions that drive results from day one</li><li>Talent acquisition</li><li>Precision scheduling and demand forecasting</li><li>Learning and development</li><li>Dedicated agent experience</li><li>Client results</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Liveops | Client Results</h4>
+      <a href="https://liveops.com/services/client-results/">https://liveops.com/services/client-results/</a>
+      <p>Discover how Liveops delivers customer service outsourcing services tailored to your needs. Access skilled U.S.-based agents, scale with confidence, and boost satisfaction.</p>
+      <ul><li>Client results powered by partnership</li><li>Turn strategy into measurable outcomes</li><li>Results you can measure</li><li>Services that drive results</li><li>CRT: From kickoff to steady state</li><li>Transparent performance management for a remote model</li><li>Tech that turns insights into action</li><li>Observe.AI</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Talent Sourcing Services | Liveops</h4>
+      <a href="https://liveops.com/services/talent-sourcing/">https://liveops.com/services/talent-sourcing/</a>
+      <p>Liveops provides talent sourcing services, connecting you with skilled, U.S.-based agents for exceptional customer service.</p>
+      <ul><li>AI-powered customer service talent sourcing</li><li>Smarter ways to find, match, and prepare customer service talent</li><li>The difference is in people</li><li>How Liveops builds a world-class CX talent network</li><li>AI-powered tools that support better customer service talent sourcing</li><li>Built for brand-aligned customer service talent</li><li>From sourcing to readiness</li><li>The business impact of AI-powered customer service talent sourcing</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Agent Experience: Empowering Your CX Team | Liveops</h4>
+      <a href="https://liveops.com/services/agent-experience/">https://liveops.com/services/agent-experience/</a>
+      <p>Liveops enhances agent experience for top CX. We boost readiness, community, and recognition. Contact us to learn more.</p>
+      <ul><li>Investing in agents to elevate every interaction</li><li>The Liveops difference: a team focused solely on agent experience</li><li>Built with heart: a community agents choose</li><li>Agent experience p rograms that power performance</li><li>Dedicated to empowering every agent, every day</li><li>AI that supports a stronger agent experience</li><li>Real-time guidance during customer interactions</li><li>Knowledge prompts and next-best-step support</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Back Office Support Outsourcing Services | Liveops</h4>
+      <a href="https://liveops.com/services/back-office-support/">https://liveops.com/services/back-office-support/</a>
+      <p>Liveops delivers flexible back office support, streamlining operations and reducing costs. Contact us for expert solutions.</p>
+      <ul><li>Back office outsourcing that scales with precision</li><li>Back office support: efficient processes, expert execution</li><li>Where back-end precision drives front-end success</li><li>Back office outsourcing services we offer</li><li>Why choose Liveops’ back office outsourcing?</li><li>Urgent back office outsourcing support for a leading healthcare payer</li><li>Benefits with results</li><li>Experts in your field</li></ul>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Full Style System</h2>
+          <details open><summary>Show style-system sections</summary>
+    <details class="style-section">
+      <summary>Liveops — Style System</summary>
+      <div class="markdown"><p>Generated: 2026-06-03<br>Sources: raw/knowledge/external-messaging-guidelines.md, raw/knowledge/agent-speak-doc.md, raw/knowledge/client-repository-overview.md<br>Base rules: universal-rules/UNIVERSAL-RULES.md<br>CSM: Chanakya Thakkar</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>1. Brand &amp; Audience</summary>
+      <div class="markdown"><p>Liveops is a cloud-based workforce solutions company that connects enterprises with an on-demand network of independent agents. Founded 25+ years ago, Liveops serves Fortune 500 companies and mid-to-large enterprises with $100M–$1B+ in revenue.</p><p>Website: https://liveops.com/</p><p>**What Liveops is:**<br><li>A marketplace and management platform for flexible, remote customer service agents</li><br><li>A workforce solution that enables enterprises to scale support capacity up or down without fixed headcount</li><br><li>A provider of omnichannel customer service (voice, chat, email, text) across industries</li></ul><p>**What Liveops is NOT — never position as:**<br><li>A call center</li><br><li>A CCaaS (cloud contact center as a service) platform</li><br><li>A staffing agency</li><br><li>A traditional outsourcing company</li></ul><p>**Target audiences:**</p><p>| Segment | Content angle |<br>|---|---|<br>| CX leaders / VP of Customer Experience | Strategic partnership; scalability without risk; quality outcomes |<br>| Customer Support Directors | Operational efficiency; flexible capacity; cost reduction |<br>| Operations leaders | Speed to deploy; workforce flexibility; precision scheduling |<br>| Contact Center leaders | Alternative to fixed headcount; workforce model modernization |<br>| Procurement / Finance | Cost efficiency; no idle capacity; variable cost model |</p><p>**Verticals served:** Retail and ecommerce, healthcare, financial services, insurance, travel and hospitality.</p><p>**Company scale context:** Liveops works with Fortune 500 brands and mid-to-large enterprises. Do not reference specific client names unless provided in raw/knowledge/.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2. Brand Voice &amp; Tone</summary>
+      <div class="markdown"><p>Voice: confident, strategic, direct, human. Liveops speaks to enterprise leaders who have already seen traditional outsourcing fail. Content should feel like a peer conversation between CX professionals, not a vendor pitch.</p><p>| Attribute | Rule |<br>|---|---|<br>| Confident | State facts. No hedging language unless accuracy requires qualification. |<br>| Direct | Lead with the business outcome, then explain how. No throat-clearing. |<br>| Strategic | Frame everything in terms of business impact, not features. |<br>| Human | Avoid corporate stiffness; write for real decision-makers, not procurement bots. |<br>| Precise | Exact terminology matters here — especially around agents. See §3. |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.1 Tagline</summary>
+      <div class="markdown"><p>**&quot;It&#x27;s not outsourcing, it&#x27;s outsmarting.&quot;**</p><p>Use this in brand-level content where positioning against traditional outsourcing is relevant. Do not force it into every piece.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.2 Voice in practice</summary>
+      <div class="markdown"><p>Do this:<br><li>&quot;Agents within our network become certified to handle your specific program before their first interaction.&quot; — accurate, compliant, human</li><br><li>&quot;Liveops scales capacity in hours, not weeks — without adding headcount.&quot; — outcome-forward, specific</li><br><li>&quot;The Liveops model replaces fixed staffing costs with a flexible, usage-based structure.&quot; — clear business framing</li></ul><p>Not this:<br><li>&quot;Our team of Liveops agents is trained and ready to help.&quot; — violates agent language rules (team, Liveops agents, trained)</li><br><li>&quot;We hire top-tier customer service talent for your brand.&quot; — violates agent language rules (hire, talent as hiring framing)</li><br><li>&quot;Liveops is a leading CCaaS platform.&quot; — prohibited positioning</li><br><li>&quot;Our cutting-edge, world-class call center solution...&quot; — generic superlatives; also prohibited as &quot;call center&quot;</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.3 Sentence and paragraph rules</summary>
+      <div class="markdown"><p><li>Paragraphs: 2–4 lines maximum. One idea per sentence.</li><br><li>First sentence of every section directly answers the heading.</li><br><li>No em dashes. Restructure or use a period.</li><br><li>Lead with business outcomes; follow with mechanism.</li><br><li>Do not start sections or paragraphs with a hyperlink.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.4 Banned language (general)</summary>
+      <div class="markdown"><p>| Category | Banned |<br>|---|---|<br>| Positioning violations | call center, CCaaS, staffing agency, outsourcing (without &quot;outsmarting&quot; reframe) |<br>| Agent language violations | See §3 — extensive list; any violation is a legal/compliance error |<br>| Generic superlatives | world-class, best-in-class, leading, cutting-edge, innovative, seamless |<br>| AI filler | in the world of, as we know, it&#x27;s worth noting, delve into, dive into, furthermore, in conclusion |<br>| Filler intensifiers | truly, really, simply, of course, literally, incredibly |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3. Agent Language — Critical Compliance Rules</summary>
+      <div class="markdown"><p>**These are legal requirements, not style preferences.** Incorrect agent language has regulatory implications due to independent contractor classification. Every piece of content must pass this check before publication.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.1 Agent relationship framing</summary>
+      <div class="markdown"><p>Liveops agents are independent contractors, not employees. Content must never imply an employment relationship.</p><p>| Never use | Always use instead |<br>|---|---|<br>| hire / hiring agents | agents join our network / agents become part of the network |<br>| employee / employees | agent / agents |<br>| associate / associates | agent / agents |<br>| partner (for agents) | agent / agents within our network |<br>| work for Liveops | provide services through the Liveops platform |<br>| staff on / staffed | placed, deployed, certified for a program |<br>| our agents / Liveops agents | agents within our network / our network of agents |<br>| team / our team (for agents) | network / the Liveops network |<br>| family / our family | network |<br>| workforce (when implying employment) | network; agent pool |<br>| gig (as a descriptor for Liveops work) | flexible remote work; independent contractor opportunity |<br>| VirtualFlex | do not use — retired term |<br>| right-time scheduling | precision scheduling |<br>| training | certification; becoming certified |<br>| CCaaS | do not use |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.2 Approved agent status terms</summary>
+      <div class="markdown"><p>| Approved | Never use |<br>|---|---|<br>| active | employed, working |<br>| contracted | hired |<br>| inactive | terminated, fired |<br>| source | recruit |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.3 How to talk about agents doing things</summary>
+      <div class="markdown"><p>| Never write | Write instead |<br>|---|---|<br>| Agents are trained by Liveops | Agents become certified through the Liveops platform |<br>| We train agents to handle... | Agents complete certification to handle... |<br>| Liveops agents work on your account | Agents within our network provide services for your program |<br>| We hire the best agents | Agents who join our network meet [criteria] |<br>| Agents schedule shifts | Agents schedule themselves using precision scheduling |<br>| Our agents are ready | Certified agents within our network are available |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.4 Approved external-facing terms</summary>
+      <div class="markdown"><p>These terms are cleared for public content:</p><p>| Term | Usage note |<br>|---|---|<br>| remote | Preferred over &quot;virtual&quot; for agent work location |<br>| customer service / customer support | Core service description |<br>| flexible / scalable / agile | Use in this priority order |<br>| modern customer service model | Approved positioning phrase |<br>| empathetic support | Approved service descriptor |<br>| certified / certification | Approved for agent qualification language |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.5 Context-only terms (use sparingly)</summary>
+      <div class="markdown"><p>These terms may appear for SEO or character-limit purposes but must not define the brand:</p><p>| Term | Constraint |<br>|---|---|<br>| CX | Abbreviation only; do not use &quot;CX company&quot; as a descriptor |<br>| call center | May appear in keyword context (e.g., &quot;alternative to a call center&quot;) but never as self-description |<br>| contact center | Same constraint as &quot;call center&quot; |<br>| on-demand | Use only in context of workforce model, not as a brand label |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4. Unique Value Propositions</summary>
+      <div class="markdown"><p>Use these when building content around business outcomes. Lead with the outcome, then the mechanism.</p><p>**Core UVPs:**</p><p>| UVP | What it means |<br>|---|---|<br>| Rapid scalability | Scale agent capacity up or down in hours, not weeks; no headcount risk |<br>| Marketplace for top talent | Network of independently certified agents compete for programs; quality through market mechanics |<br>| Cost efficiency without compromise | Variable cost model eliminates idle capacity costs; no compromise on CSAT or service quality |<br>| First-mover advantage | 25+ years of operational learning; proprietary processes and platform maturity |<br>| Versatile geographic coverage | Agents distributed across US (and where applicable, international); coverage without fixed location costs |<br>| Highly adaptable | Supports omnichannel (voice, chat, email, text); platform agnostic; enterprise-grade security |<br>| AI-empowered | AI tools embedded in agent support, not replacing agents |</p><p>**Framing guidance:** Liveops solves real business problems. Anchor UVPs to these problems when relevant:<br><li>Scaling during demand spikes (retail peaks, open enrollment, product launches)</li><br><li>Maintaining service quality through rapid scale-up</li><br><li>Reducing fixed overhead of in-house call centers</li><br><li>Gaining staffing flexibility without losing control</li><br><li>Meeting rising customer expectations without proportional headcount growth</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5. What Liveops Replaces</summary>
+      <div class="markdown"><p>Use this section to position against alternatives. Never name specific competitors.</p><p>| What enterprises often rely on | Liveops alternative |<br>|---|---|<br>| Fixed in-house call center teams | Flexible network of certified agents; scales with demand |<br>| Traditional BPO / outsourcers | Cloud-based model with direct performance visibility |<br>| Temp or staffing agency fills | Certified, program-specific agents — not generalist temps |<br>| CCaaS platforms (tech only, no agents) | Full workforce solution: platform + agent network |</p><p>Do not frame Liveops as &quot;better than&quot; named competitors. Frame as a different model that solves the problems traditional approaches cannot.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6. Industries and Use Cases</summary>
+      <div class="markdown"><p>**Core verticals:**</p><p>| Vertical | Key use cases |<br>|---|---|<br>| Retail and ecommerce | Seasonal volume spikes; peak capacity (Q4, sales events); order management |<br>| Healthcare | Patient scheduling; insurance verification; empathetic, compliant interactions |<br>| Financial services | Account servicing; compliance-sensitive interactions; high-volume inquiry handling |<br>| Insurance | Claims intake; policy servicing; open enrollment support |<br>| Travel and hospitality | Booking support; disruption response; high-empathy interactions |</p><p>When writing for a specific industry, pull use cases from raw/knowledge/ if available. Do not invent use cases.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>7. Platform and Technology</summary>
+      <div class="markdown"><p>Liveops is platform agnostic — agents work within client systems, not in a proprietary silo. Technology content should emphasize:<br><li>Omnichannel capability (voice, chat, email, text, social)</li><br><li>Integration with client CRMs and ticketing systems</li><br><li>AI-empowered tooling that augments agent performance</li><br><li>Enterprise-grade security and compliance (SOC 2, HIPAA where relevant — verify before stating)</li></ul><p>Do not claim specific technology certifications (SOC 2, HIPAA) without verification from raw/knowledge/.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>8. Page Templates</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>8.1 Blog posts</summary>
+      <div class="markdown"><p>Target length: 800–1,500 words.</p><p>Structure:<br>1. Meta title (55–60 characters): primary keyword near front; include &quot;Liveops&quot; where natural<br>2. Meta description (140–160 characters): primary keyword, business outcome, brand name<br>3. 3 primary keywords defined<br>4. H1: direct, keyword-forward; answers the CX leader&#x27;s question without clickbait<br>5. Short intro (2–3 sentences): state the problem and what the piece covers; no filler<br>6. H2 sections: each a distinct business question; first sentence directly answers the heading<br>7. H3 for subsections; no H4 unless deep reference content<br>8. Closing CTA: specific, action-based; no generic &quot;learn more&quot; framing<br>9. Agent language check required before publishing (see §3)</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>8.2 Service pages / solution pages</summary>
+      <div class="markdown"><p>Structure:<br>1. H1: primary keyword; outcome-first framing<br>2. Problem paragraph (2–4 sentences): the pain state the page addresses<br>3. How Liveops solves it (2–4 sentences): mechanism, not just claims<br>4. Key capabilities or differentiators (3–5 bullet points or a table)<br>5. Industry fit (where relevant)<br>6. CTA: specific next step (demo, consultation, contact)</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>9. SEO Keywords by Topic</summary>
+      <div class="markdown"><p>| Content topic | Example keywords |<br>|---|---|<br>| Workforce solutions | &quot;flexible workforce solutions,&quot; &quot;on-demand customer service,&quot; &quot;remote agent network&quot; |<br>| Scalability | &quot;scale customer service,&quot; &quot;flexible contact center staffing,&quot; &quot;seasonal call center support&quot; |<br>| Outsourcing alternative | &quot;outsourcing alternative,&quot; &quot;call center alternative,&quot; &quot;BPO alternative&quot; |<br>| Industry-specific | &quot;healthcare customer support,&quot; &quot;insurance call center outsourcing,&quot; &quot;retail seasonal support&quot; |<br>| Agent model | &quot;independent contractor agents,&quot; &quot;remote customer service agents,&quot; &quot;certified CX agents&quot; |<br>| Cost efficiency | &quot;reduce call center costs,&quot; &quot;variable cost customer service,&quot; &quot;eliminate idle capacity&quot; |</p><p>**Keyword usage rules:**<br><li>&quot;Call center&quot; and &quot;contact center&quot; are permitted in keyword contexts (competitive terms, alternative positioning)</li><br><li>Never use these terms to describe Liveops as a company</li><br><li>Prioritize entity clarity and intent matching over keyword density</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>10. Internal Linking Rules</summary>
+      <div class="markdown"><p>**Placement — what is forbidden:**<br><li>Do not add an internal link to the first word of a sentence</li><br><li>Do not add an internal link to the first sentence of a paragraph</li><br><li>Do not add an internal link to the first line of a paragraph</li><br><li>Build context around the linked concept before placing the link</li></ul><p>**Anchor text:**<br><li>Use descriptive anchor text that matches the topic of the target page</li><br><li>Never use &quot;learn more,&quot; &quot;click here,&quot; or similar generic anchors</li></ul><p>**Target URLs:** Pull from raw/knowledge/ or verify against liveops.com. Do not invent internal URLs.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>11. Pre-Publish Checklist</summary>
+      <div class="markdown"><p>| Check | Requirement |<br>|---|---|<br>| Brand name | &quot;Liveops&quot; — never &quot;LiveOps&quot; (capital O) |<br>| Agent language | No banned terms from §3 — zero tolerance |<br>| Positioning | Not described as call center, CCaaS, or staffing agency |<br>| Voice | Confident, strategic, direct — not salesy or superlative |<br>| Outcome framing | Business outcomes lead; features/mechanisms follow |<br>| Tagline | &quot;It&#x27;s not outsourcing, it&#x27;s outsmarting&quot; — used only where appropriate |<br>| No invented claims | No product capabilities, metrics, or client names not in raw/knowledge/ |<br>| Em dashes | Zero em dashes anywhere in the piece |<br>| Meta fields | Title (55–60 chars), description (140–160 chars), 3 keywords defined |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>12. Key Facts at a Glance</summary>
+      <div class="markdown"><p>| Detail | Value |<br>|---|---|<br>| Founded | 25+ years ago |<br>| Headquarters | Scottsdale, AZ (verify from raw/knowledge/ before stating) |<br>| Website | liveops.com |<br>| Client range | Fortune 500 and mid-to-large enterprises ($100M–$1B+ revenue) |<br>| Model | Cloud-based, remote agent network (independent contractors) |<br>| Channels | Voice, chat, email, text (omnichannel) |<br>| Scheduling | Precision scheduling — agents schedule themselves |<br>| Agent status terms | Active, contracted, inactive, source |<br>| CSM | Chanakya Thakkar |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>13. Approved Content Examples</summary>
+      <div class="markdown"><p>Published content lives in `_approved/`. No approved pieces added at onboarding — add to this directory as Jamie signs off pieces.</p><p>Reference the External Messaging Guidelines (`raw/knowledge/external-messaging-guidelines.md`) and Agent Speak Doc (`raw/knowledge/agent-speak-doc.md`) directly for voice and compliance guidance until approved pieces are available.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>14. Operator Notes</summary>
+      <div class="markdown"><p>*Section for team-specific additions. Use `### {Operator} — {scope}` headings. Promote a note to the main numbered sections once it has been reinforced across two or more pieces.*</p></div>
+    </details>
+    </details>
+        </section>
+        <section class="panel">
+          <h2>Local Source Files Read</h2>
+          <ul><li><code>clients/liveops/STYLE-SYSTEM.md</code> — Liveops — Style System</li>
+<li><code>clients/liveops/client-intelligence/README.md</code> — Liveops Client Intelligence</li>
+<li><code>clients/liveops/client-intelligence/STYLE-GUIDE.md</code> — Liveops — Style System</li>
+<li><code>clients/liveops/client-intelligence/offerings.md</code> — Liveops Offerings</li>
+<li><code>clients/liveops/client-intelligence/source-files.md</code> — Liveops Source Files</li>
+<li><code>clients/liveops/deliverables/README.md</code> — Liveops Deliverables</li>
+<li><code>clients/liveops/raw/knowledge/agent-speak-doc.md</code> — Liveops — Agent Speak Doc</li>
+<li><code>clients/liveops/raw/knowledge/external-messaging-guidelines.md</code> — Liveops — External Messaging Guidelines</li>
+<li><code>clients/liveops/raw/knowledge/service-taxonomy.md</code> — Liveops Service Taxonomy</li></ul>
+        </section>
+      </main>
+    </section>
+    </body>
+</html>

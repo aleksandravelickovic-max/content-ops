@@ -1,0 +1,32 @@
+# Esthetics Center Source Files
+
+- `clients/esthetics-center/STYLE-SYSTEM.md`
+- `clients/esthetics-center/campaigns/01-blog-content/README.md`
+- `clients/esthetics-center/campaigns/01-blog-content/briefs/01-botox-aftercare.md`
+- `clients/esthetics-center/campaigns/01-blog-content/briefs/02-laser-vs-waxing.md`
+- `clients/esthetics-center/campaigns/01-blog-content/briefs/03-jawline-filler.md`
+- `clients/esthetics-center/campaigns/01-blog-content/briefs/04-non-surgical-body-contouring.md`
+- `clients/esthetics-center/campaigns/01-blog-content/briefs/05-rhinoplasty-recovery.md`
+- `clients/esthetics-center/campaigns/01-blog-content/briefs/06-botox-consultation.md`
+- `clients/esthetics-center/campaigns/01-blog-content/briefs/07-laser-hair-removal-skin-tones.md`
+- `clients/esthetics-center/campaigns/01-blog-content/briefs/08-filler-swelling-timeline.md`
+- `clients/esthetics-center/campaigns/01-blog-content/briefs/09-coolsculpting-fat.md`
+- `clients/esthetics-center/campaigns/01-blog-content/briefs/10-brow-lift.md`
+- `clients/esthetics-center/client-intelligence/README.md`
+- `clients/esthetics-center/client-intelligence/STYLE-GUIDE.md`
+- `clients/esthetics-center/client-intelligence/offerings.md`
+- `clients/esthetics-center/client-intelligence/source-files.md`
+- `clients/esthetics-center/contact-block.md`
+- `clients/esthetics-center/deliverables/README.md`
+- `clients/esthetics-center/deliverables/drafts/01-blog-content/01-botox-aftercare.md`
+- `clients/esthetics-center/deliverables/drafts/01-blog-content/02-laser-vs-waxing.md`
+- `clients/esthetics-center/deliverables/drafts/01-blog-content/03-jawline-filler.md`
+- `clients/esthetics-center/deliverables/drafts/01-blog-content/04-non-surgical-body-contouring.md`
+- `clients/esthetics-center/deliverables/drafts/01-blog-content/05-rhinoplasty-recovery.md`
+- `clients/esthetics-center/deliverables/drafts/01-blog-content/06-botox-consultation.md`
+- `clients/esthetics-center/deliverables/drafts/01-blog-content/07-laser-hair-removal-skin-tones.md`
+- `clients/esthetics-center/deliverables/drafts/01-blog-content/08-filler-swelling-timeline.md`
+- `clients/esthetics-center/deliverables/drafts/01-blog-content/09-coolsculpting-fat.md`
+- `clients/esthetics-center/deliverables/drafts/01-blog-content/10-brow-lift.md`
+- `clients/esthetics-center/raw/knowledge/overview.md`
+- `clients/esthetics-center/raw/knowledge/service-taxonomy.md`

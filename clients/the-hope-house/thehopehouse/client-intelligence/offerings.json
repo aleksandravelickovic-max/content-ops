@@ -1,0 +1,172 @@
+{
+  "client": "the-hope-house/thehopehouse",
+  "display_name": "The Hope House",
+  "generated_at": "2026-07-14T15:59:27.919013+00:00",
+  "offerings": [
+    {
+      "name": "Adderall Treatment",
+      "description": "Treatment content category for Adderall use concerns.",
+      "sources": [
+        "clients/the-hope-house/thehopehouse/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Conditions Treated"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Alcohol Treatment",
+      "description": "Treatment content category for alcohol use concerns.",
+      "sources": [
+        "clients/the-hope-house/thehopehouse/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Conditions Treated"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Benzodiazepine Treatment",
+      "description": "Treatment content category for benzodiazepine use concerns.",
+      "sources": [
+        "clients/the-hope-house/thehopehouse/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Conditions Treated"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Cocaine Treatment",
+      "description": "Treatment content category for cocaine use concerns.",
+      "sources": [
+        "clients/the-hope-house/thehopehouse/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Conditions Treated"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Dual Diagnosis Program",
+      "description": "Treatment for addiction and co-occurring mental health conditions, with assessment on arrival.",
+      "sources": [
+        "clients/the-hope-house/thehopehouse/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Programs"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Executive Golf Rehab",
+      "description": "Treatment program that combines recovery programming with golf.",
+      "sources": [
+        "clients/the-hope-house/thehopehouse/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Programs"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Executive Treatment Program",
+      "description": "Treatment program for clients maintaining professional obligations, with private rooms, electronics access, and modified schedules.",
+      "sources": [
+        "clients/the-hope-house/thehopehouse/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Programs"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Fentanyl Treatment",
+      "description": "Treatment content category for fentanyl use concerns.",
+      "sources": [
+        "clients/the-hope-house/thehopehouse/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Conditions Treated"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Heroin Treatment",
+      "description": "Treatment content category for heroin use concerns.",
+      "sources": [
+        "clients/the-hope-house/thehopehouse/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Conditions Treated"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Luxury Rehab Program",
+      "description": "Individualized evidence-based care in an upscale treatment setting with privacy as a confirmed feature.",
+      "sources": [
+        "clients/the-hope-house/thehopehouse/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Programs"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Luxury Spa Rehab",
+      "description": "Spa-focused recovery program within The Hope House offering set.",
+      "sources": [
+        "clients/the-hope-house/thehopehouse/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Programs"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Marijuana Treatment",
+      "description": "Treatment content category for marijuana use concerns.",
+      "sources": [
+        "clients/the-hope-house/thehopehouse/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Conditions Treated"
+      ],
+      "score": 6
+    },
+    {
+      "name": "MDMA / Ecstasy Treatment",
+      "description": "Treatment content category for MDMA or ecstasy use concerns.",
+      "sources": [
+        "clients/the-hope-house/thehopehouse/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Conditions Treated"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Methamphetamine Treatment",
+      "description": "Treatment content category for methamphetamine use concerns.",
+      "sources": [
+        "clients/the-hope-house/thehopehouse/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Conditions Treated"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Opioid Treatment",
+      "description": "Treatment content category for opioid use concerns.",
+      "sources": [
+        "clients/the-hope-house/thehopehouse/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Conditions Treated"
+      ],
+      "score": 6
+    }
+  ]
+}

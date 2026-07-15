@@ -1,0 +1,45 @@
+{
+  "client": "us-self-storage",
+  "display_name": "US Self Storage",
+  "generated_at": "2026-07-13T23:04:44.470610+00:00",
+  "website_urls": [
+    "https://usselfstorage.com/"
+  ],
+  "status": "partial",
+  "sitemaps": [],
+  "sitemap_errors": [
+    "https://usselfstorage.com/sitemap.xml: HTTP 403",
+    "https://usselfstorage.com/sitemap_index.xml: HTTP 403",
+    "https://usselfstorage.com/wp-sitemap.xml: HTTP 403",
+    "https://usselfstorage.com/sitemap-pages.xml: HTTP 403",
+    "https://usselfstorage.com/sitemap_products_1.xml: HTTP 403",
+    "https://usselfstorage.com/sitemap_collections_1.xml: HTTP 403"
+  ],
+  "url_count": 1,
+  "page_type_counts": {
+    "home": 1
+  },
+  "sample_pages": [
+    {
+      "url": "https://usselfstorage.com/",
+      "requested_url": "https://usselfstorage.com/",
+      "status_code": 403,
+      "content_type": "text/html; charset=UTF-8",
+      "page_type": "home",
+      "title": "Just a moment...",
+      "meta_description": "",
+      "headings": [],
+      "links_seen": 0,
+      "elapsed_ms": 71
+    }
+  ],
+  "offering_pages": [],
+  "top_terms": [
+    "just",
+    "moment"
+  ],
+  "product_or_service_urls": [],
+  "blockers": [
+    "No usable sitemap found for https://usselfstorage.com/; sampled homepage only."
+  ]
+}

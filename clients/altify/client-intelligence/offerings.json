@@ -1,0 +1,224 @@
+{
+  "client": "altify",
+  "display_name": "Altify",
+  "generated_at": "2026-07-14T15:59:27.873507+00:00",
+  "offerings": [
+    {
+      "name": "Altify Accounts",
+      "description": "Account planning for strategic accounts, relationship visibility, whitespace analysis, account objectives, and expansion planning inside Salesforce.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/altify/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "4.3 Altify Accounts",
+        "Enterprise Solutions"
+      ],
+      "score": 10
+    },
+    {
+      "name": "Altify Sales Process",
+      "description": "Sales process management that aligns seller activity to the customer buying cycle inside Salesforce.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/altify/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "4.2 Altify Sales Process",
+        "Enterprise Solutions"
+      ],
+      "score": 10
+    },
+    {
+      "name": "MaxAI",
+      "description": "Salesforce-native AI for account planning and deal management. It surfaces buying insights, maps relationships, flags deal risk, and guides sellers through next actions.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/altify/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "4.1 MaxAI",
+        "AI And Platform"
+      ],
+      "score": 10
+    },
+    {
+      "name": "Revenue Enablement Services",
+      "description": "Consulting and enablement support for methodology adoption, sales process development, coaching, KPI measurement, analytics, and Salesforce execution.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/altify/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "4.4 Revenue Enablement Services",
+        "Enterprise Solutions"
+      ],
+      "score": 10
+    },
+    {
+      "name": "Account Planning AI Cloud",
+      "description": "Altify's platform category for account planning, opportunity execution, relationship intelligence, methodology, AI workflows, and enablement services.",
+      "sources": [
+        "clients/altify/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "AI And Platform"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Altify Insights",
+      "description": "Salesforce-native insight mapping for buyer priorities, stakeholder motivation, and relationship context inside complex B2B deals.",
+      "sources": [
+        "clients/altify/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Enterprise Solutions"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Altify Opportunities",
+      "description": "Opportunity management for complex deals, deal risk, stakeholder coverage, and disciplined execution.",
+      "sources": [
+        "clients/altify/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Enterprise Solutions"
+      ],
+      "score": 6
+    },
+    {
+      "name": "CRO & Sales Leadership",
+      "description": "Revenue execution and forecast visibility for leaders responsible for predictable growth, risk visibility, and board-level accountability.",
+      "sources": [
+        "clients/altify/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Solutions By Role"
+      ],
+      "score": 6
+    },
+    {
+      "name": "CTO / IT",
+      "description": "Salesforce-native revenue execution for technical leaders who care about architecture, governance, data security, and avoiding disconnected systems.",
+      "sources": [
+        "clients/altify/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Solutions By Role"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Insight Map",
+      "description": "Buyer insight mapping that connects customer goals, pressures, initiatives, and obstacles to the seller's strategy.",
+      "sources": [
+        "clients/altify/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Feature Modules"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Opportunity Map",
+      "description": "Whitespace and opportunity visualization for current, potential, and closed-won revenue across an account.",
+      "sources": [
+        "clients/altify/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Feature Modules"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Relationship Map",
+      "description": "Buying group and stakeholder mapping that shows roles, influence, sentiment, champions, blockers, and relationship gaps.",
+      "sources": [
+        "clients/altify/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Feature Modules"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Sales Enablement",
+      "description": "Methodology adoption, coaching at scale, measurable behavior change, and consistent seller execution.",
+      "sources": [
+        "clients/altify/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Solutions By Role"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Sales Operations",
+      "description": "CRM alignment, process adherence, pipeline hygiene, data quality, and operational visibility for RevOps and Sales Ops teams.",
+      "sources": [
+        "clients/altify/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Solutions By Role"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Sales Representative / Account Executive",
+      "description": "Account strategy, buying group visibility, deal progression, and relationship mapping for sellers working complex B2B opportunities.",
+      "sources": [
+        "clients/altify/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Solutions By Role"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Sales Velocity Calculator",
+      "description": "Interactive calculator for B2B revenue teams to estimate sales velocity and find execution breakdowns.",
+      "sources": [
+        "clients/altify/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Content And Tools"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Strategic Revenue Execution",
+      "description": "Core positioning category for turning account and opportunity strategy into daily Salesforce execution.",
+      "sources": [
+        "clients/altify/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Content And Tools"
+      ],
+      "score": 6
+    },
+    {
+      "name": "TeamView",
+      "description": "Collaborative account review and peer coaching view for account plans and opportunity strategy.",
+      "sources": [
+        "clients/altify/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Feature Modules"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Test and Improve",
+      "description": "Review and coaching workflow that tracks how account or deal strategy changes after feedback.",
+      "sources": [
+        "clients/altify/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Feature Modules"
+      ],
+      "score": 6
+    }
+  ]
+}

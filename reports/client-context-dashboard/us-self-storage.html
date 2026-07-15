@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>US Self Storage Context</title>
+  <style>
+    :root {
+      --bg:#f4f7f5; --panel:#ffffff; --ink:#09110f; --muted:#63716c; --line:#dce5df;
+      --black:#050907; --graph:#14d878; --graph-dark:#079d55; --soft:#eaf8f0; --soft-ink:#19392a;
+      --accent:#087a47; --red:#b5362d; --shadow:0 18px 46px rgba(5,9,7,.08);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:
+      linear-gradient(180deg, #ffffff 0, var(--bg) 360px); color:var(--ink); line-height:1.45; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .topnav { min-height:64px; padding:14px max(32px, calc((100vw - 1380px) / 2 + 32px)); background:var(--black); border-bottom:1px solid rgba(255,255,255,.08); position:sticky; top:0; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { color:#fff; display:inline-flex; align-items:center; gap:10px; font-weight:800; letter-spacing:0; }
+    .brand:hover { text-decoration:none; }
+    .brand span { width:32px; height:32px; border-radius:8px; background:var(--graph); color:var(--black); display:inline-grid; place-items:center; font-size:13px; font-weight:900; }
+    .nav-meta, .nav-link { color:#b8c6c0; font-size:13px; font-weight:700; }
+    .hero { margin:0; padding:42px max(32px, calc((100vw - 1380px) / 2 + 32px)) 38px; background:var(--black); color:#fff; border-bottom:1px solid rgba(255,255,255,.08); }
+    .index-hero, .client-hero { display:flex; justify-content:space-between; gap:28px; align-items:flex-start; }
+    .hero h1 { margin:0 0 12px; font-size:clamp(32px, 5vw, 62px); line-height:.98; letter-spacing:0; max-width:900px; }
+    .hero p { margin:0; color:#c7d5cf; max-width:840px; font-size:17px; }
+    .hero-copy { max-width:940px; }
+    .kicker { color:var(--graph); font-size:12px; text-transform:uppercase; letter-spacing:.08em; font-weight:900; }
+    .report-meta { display:flex; flex-wrap:wrap; gap:10px; padding:14px 32px; background:#fff; border-bottom:1px solid var(--line); color:var(--muted); font-size:13px; max-width:1380px; margin:0 auto; }
+    .report-meta span { background:var(--soft); color:var(--soft-ink); border-radius:999px; padding:6px 10px; font-weight:700; }
+    .grid.cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(290px, 1fr)); gap:16px; padding:24px 32px 42px; max-width:1380px; margin:0 auto; }
+    .card, .panel, .context-card { background:var(--panel); border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow); }
+    .client-card { display:block; padding:20px; color:inherit; min-height:184px; transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease; }
+    .client-card:hover { text-decoration:none; transform:translateY(-2px); border-color:rgba(20,216,120,.55); box-shadow:0 24px 58px rgba(5,9,7,.12); }
+    .card-topline { display:flex; justify-content:space-between; gap:10px; align-items:center; }
+    .client-card h2 { margin:14px 0 8px; font-size:23px; line-height:1.1; }
+    .client-card p { margin:0; color:var(--muted); }
+    .metrics { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+    .metrics span, .evidence, .status-pill { background:var(--soft); border:1px solid rgba(20,216,120,.22); border-radius:999px; padding:5px 9px; font-size:12px; color:var(--soft-ink); font-weight:800; }
+    .topic-chips { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 18px; }
+    .topic-chips span { background:#f6fbf8; border:1px solid var(--line); border-radius:999px; color:#183a2a; padding:7px 10px; font-size:13px; font-weight:750; }
+    .layout { display:block; padding:22px 32px 46px; max-width:1380px; margin:0 auto; }
+    main { min-width:0; }
+    .context-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; margin-bottom:20px; }
+    .context-card { padding:18px; min-height:220px; }
+    .context-card ul { margin-bottom:0; }
+    .context-note { color:var(--muted); font-size:13px; margin:4px 0 12px; }
+    .aside-label { color:var(--graph-dark); font-size:11px; text-transform:uppercase; font-weight:900; letter-spacing:.08em; margin-bottom:5px; }
+    .panel h2 { margin-top:0; }
+    .panel { padding:22px; margin-bottom:20px; }
+    .panel h2 { font-size:26px; letter-spacing:0; }
+    .offerings { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:13px; margin-top:16px; }
+    .offering, .sample { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .offering { position:relative; overflow:hidden; }
+    .offering-marker { position:absolute; inset:0 auto 0 0; width:4px; background:var(--graph); }
+    .offering h3, .sample h4 { margin:0 0 6px; }
+    .offering p { margin:0 0 10px; }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .stat-stack { display:grid; grid-template-columns:repeat(3, minmax(100px, 1fr)); gap:8px; min-width:340px; }
+    .stat-stack div { border:1px solid rgba(255,255,255,.15); border-radius:8px; padding:14px; background:rgba(255,255,255,.06); }
+    .stat-stack strong { display:block; font-size:26px; color:#fff; }
+    .stat-stack span, .muted { color:var(--muted); font-size:13px; }
+    .hero .stat-stack span { color:#b8c6c0; }
+    ul { padding-left:20px; }
+    li { margin:4px 0; }
+    code { background:var(--soft); color:var(--soft-ink); padding:2px 4px; border-radius:4px; }
+    details { margin:10px 0; }
+    summary { cursor:pointer; font-weight:700; }
+    .style-section { border-top:1px solid var(--line); padding-top:10px; }
+    .markdown { color:#2d2f35; }
+    @media (max-width: 980px) {
+      .layout, .split, .client-hero, .index-hero { grid-template-columns:1fr; display:block; }
+      .context-grid { grid-template-columns:1fr; }
+      .stat-stack { min-width:0; margin-top:16px; }
+      .hero, .grid.cards, .layout, .topnav, .report-meta { padding-left:16px; padding-right:16px; }
+      .hero h1 { font-size:36px; }
+      .stat-stack { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+    <nav class="topnav">
+      <a class="brand" href="index.html"><span>LG</span>LinkGraph</a>
+      <a class="nav-link" href="index.html">All clients</a>
+    </nav>
+    <section class="hero client-hero">
+      <div class="hero-copy">
+        <div class="kicker">us-self-storage</div>
+        <h1>US Self Storage</h1>
+        <p>8 extracted offerings, 1 sitemap URLs, and 9 local source documents for client-specific writing context.</p>
+      </div>
+      <div class="stat-stack">
+        <div><strong>partial</strong><span>crawl status</span></div>
+        <div><strong>1</strong><span>URLs found</span></div>
+        <div><strong>0</strong><span>product/service URLs</span></div>
+      </div>
+    </section>
+    <section class="layout">
+      <main>
+        <section class="context-grid">
+    <article class="context-card">
+      <div class="aside-label">Quick Facts</div>
+      <p class="context-note">Company, audience, and proof points.</p>
+      <ul><li>Critical platform fact: USSelfStorage.com is a marketplace aggregator. It does not own, operate, or manage any storage facility. Every piece of content must maintain this distinction. See §4 for enforcement rules.</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Voice</div>
+      <p class="context-note">How this client should sound.</p>
+      <ul><li>Goal: Not this</li><li>Open a consumer blog post: &quot;Have you ever wondered which storage unit is right for you?&quot;</li><li>Reference the platform: &quot;Our climate-controlled units keep your items safe&quot;</li><li>Describe pricing: &quot;Get the guaranteed lowest prices on storage&quot;</li><li>Reference facility count: &quot;Hundreds of storage facilities&quot;</li><li>Write a B2B post: &quot;Find the storage unit that fits your needs&quot;</li><li>Reference the site: &quot;USSelfStorage owns and operates...&quot;</li><li>Register: Helpful, educational, informative, and practical. More advisory and content-rich than purely transactional. The site functions as both a marketplace and an information resource. Writers should write as a knowledgeable guide, not a salesperson.</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Avoid / Compliance</div>
+      <p class="context-note">Claims, terms, and wording to avoid.</p>
+      <ul><li>Kill: Replace with</li><li>delve: explore, examine, look at</li><li>moreover: (delete — start the next sentence)</li><li>furthermore: (delete)</li><li>albeit: though, even though</li><li>indeed: (delete)</li><li>utilize: use</li><li>leverage (verb): use</li><li>facilitate: help, enable</li><li>robust: strong, reliable, solid</li><li>seamless: smooth, easy</li><li>comprehensive: full, complete, thorough</li><li>cutting-edge: modern, new, latest</li><li>holistic: complete, full, whole</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Terminology</div>
+      <p class="context-note">Client-specific naming and required language.</p>
+      <p class="muted">No clean lines extracted yet.</p>
+    </article>
+    </section>
+        <section class="panel">
+          <h2>Offerings, Services, Goods</h2>
+          <p class="muted">Writer-facing catalog from the client style system, approved source files, and usable product/service pages. Raw crawl evidence is separated below.</p>
+          <div class="offerings">
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Boat storage</h3>
+      <p>Storage options for boats and related trailers.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/us-self-storage/raw/knowledge/service-taxonomy.md · Sections: Storage types (confirmed), Storage Types</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Car storage</h3>
+      <p>Storage options for cars depending on facility availability.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/us-self-storage/raw/knowledge/service-taxonomy.md · Sections: Storage types (confirmed), Storage Types</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Climate-controlled storage</h3>
+      <p>Storage units with temperature or humidity control where available.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/us-self-storage/raw/knowledge/service-taxonomy.md · Sections: Storage types (confirmed), Storage Types</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Drive-up access units</h3>
+      <p>Ground-level storage units with direct vehicle access.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/us-self-storage/raw/knowledge/service-taxonomy.md · Sections: Storage types (confirmed), Storage Types</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Month-to-month rentals</h3>
+      <p>Flexible rental terms for storage users who do not need long contracts.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/us-self-storage/raw/knowledge/service-taxonomy.md · Sections: Storage types (confirmed), Storage Types</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>RV storage</h3>
+      <p>Storage options for recreational vehicles.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/us-self-storage/raw/knowledge/service-taxonomy.md · Sections: Storage types (confirmed), Storage Types</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Standard self-storage</h3>
+      <p>General storage units for personal or business storage needs.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/us-self-storage/raw/knowledge/service-taxonomy.md · Sections: Storage types (confirmed), Storage Types</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Vehicle Storage</h3>
+      <p>Broader category covering cars, RVs, boats, and similar vehicles.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/us-self-storage/raw/knowledge/service-taxonomy.md · Sections: Storage types (confirmed), Storage Types</div>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Website Intelligence</h2>
+          <div class="split">
+            <div>
+              <h3>Website URLs</h3><ul><li><a href="https://usselfstorage.com/">https://usselfstorage.com/</a></li></ul>
+              <h3>Sitemaps</h3><p class="muted">No usable sitemaps found.</p>
+            </div>
+            <div>
+              <h3>Semantic / Topical Terms</h3><div class="topic-chips"><span>Boat Storage</span><span>Car Storage</span><span>Climate-Controlled Storage</span><span>Drive-Up Access Units</span><span>Month-To-Month Rentals</span><span>RV storage</span><span>Standard Self-Storage</span><span>Vehicle Storage</span><span>Storage Unit</span></div>
+              <h3>Blockers</h3><ul><li>No usable sitemap found for https://usselfstorage.com/; sampled homepage only.</li></ul>
+            </div>
+          </div>
+          <h3>Product / Service URLs</h3><p class="muted">No product/service URLs classified from sitemap paths.</p>
+          <h3>Sampled Pages</h3><div class="sample-pages">
+    <article class="sample">
+      <h4>Just a moment...</h4>
+      <a href="https://usselfstorage.com/">https://usselfstorage.com/</a>
+      <p></p>
+      <p class="muted">No headings captured.</p>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Full Style System</h2>
+          <details open><summary>Show style-system sections</summary>
+    <details class="style-section">
+      <summary>US Self Storage — Style System</summary>
+      <div class="markdown"><p>Generated: 2026-06-08<br>Sources: raw/knowledge/overview.md, client brief (June 2026)<br>Base rules: universal-rules/UNIVERSAL-RULES.md</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>1. Brand &amp; Audience</summary>
+      <div class="markdown"><p>US Self Storage (USSelfStorage.com) is a self-storage comparison marketplace and editorial resource. It aggregates 20,000+ storage facilities and 2,000,000+ storage units nationwide. Users search, compare, and reserve storage units online. The platform also operates a substantial editorial section covering storage, packing, moving, and organization topics.</p><p>**Critical platform fact:** USSelfStorage.com is a marketplace aggregator. It does not own, operate, or manage any storage facility. Every piece of content must maintain this distinction. See §4 for enforcement rules.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Dual audience</summary>
+      <div class="markdown"><p>This client serves two distinct audiences. Identify which audience a piece targets before writing anything.</p><p>**Consumer audience** (marketplace pages, consumer blog, storage info hub):<br><li>People planning a move or mid-relocation</li><br><li>Homeowners storing seasonal or excess items</li><br><li>Renters between apartments needing short-term storage</li><br><li>People downsizing (long-term storage)</li><br><li>Small business owners storing inventory, equipment, or records</li><br><li>Vehicle owners seeking car, RV, or boat storage</li><br><li>Anyone seeking packing, moving, or organization guidance</li></ul><p>**B2B audience** (Storage Promoter Blog only):<br><li>Storage facility owners and operators</li><br><li>Property managers overseeing storage facilities</li><br><li>Investors evaluating the self-storage market</li><br><li>Storage industry professionals seeking operational or marketing guidance</li></ul><p>Do not mix B2B framing and consumer framing in a single piece. When writing the Storage Promoter Blog, treat the reader as a business operator — not as someone looking for storage.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2. Voice &amp; Tone</summary>
+      <div class="markdown"><p>**Register:** Helpful, educational, informative, and practical. More advisory and content-rich than purely transactional. The site functions as both a marketplace and an information resource. Writers should write as a knowledgeable guide, not a salesperson.</p><p>**Consumer blog tone:** Warm and advisory. Educational without being condescending. Use &quot;you&quot; consistently when addressing the reader. Start with the user&#x27;s problem — not with the platform. Keep practical advice front and center. Use active voice and direct sentences. Short sentences alongside fuller explanations.</p><p>**Marketplace/landing page tone:** Clear, functional, and direct. Lead with utility. The reader wants to find a unit — do not add noise. State what the platform does, what the user can find, and why comparing here is worth their time.</p><p>**B2B blog tone (Storage Promoter Blog):** Professional and operator-focused. Treats the reader as a business owner. Uses industry terminology. Emphasis is on revenue, occupancy, marketing ROI, and operational efficiency — not on finding a storage unit.</p><p>| Goal | Not this | Use this |<br>|---|---|---|<br>| Open a consumer blog post | &quot;Have you ever wondered which storage unit is right for you?&quot; | Call out the specific situation; make the reader feel understood |<br>| Reference the platform | &quot;Our climate-controlled units keep your items safe&quot; | &quot;Climate-controlled facilities in the network maintain consistent temperature and humidity&quot; |<br>| Describe pricing | &quot;Get the guaranteed lowest prices on storage&quot; | &quot;Compare current pricing across facilities and find available monthly discounts&quot; |<br>| Reference facility count | &quot;Hundreds of storage facilities&quot; | &quot;20,000+ storage facilities nationwide&quot; |<br>| Write a B2B post | &quot;Find the storage unit that fits your needs&quot; | &quot;Increase facility occupancy by optimizing your listing and pricing strategy&quot; |<br>| Reference the site | &quot;USSelfStorage owns and operates...&quot; | &quot;USSelfStorage.com is a marketplace where you can search, compare, and reserve...&quot; |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3. Terminology</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.1 Required terms</summary>
+      <div class="markdown"><p><li>**USSelfStorage.com** — the full brand name on first reference in a piece; &quot;US Self Storage&quot; acceptable after first use</li><br><li>**marketplace** or **comparison marketplace** — the correct description of the platform&#x27;s function</li><br><li>**storage facilities** or **facilities in the network** — correct framing; never &quot;our facilities&quot;</li><br><li>**storage units** (generic) — correct; never &quot;our storage units&quot;</li><br><li>**reserve online** or **free online reservation** — the confirmed CTA action; no booking fee</li><br><li>**20,000+ facilities** — confirmed network size claim; use this exact figure</li><br><li>**2,000,000+ storage units** — confirmed inventory claim; use this exact figure</li><br><li>**climate-controlled storage** — the correct term; not &quot;temperature-controlled&quot; unless quoting</li><br><li>**drive-up access** — preferred over &quot;drive-up units&quot; when describing the access feature</li><br><li>**month-to-month rental** — confirmed lease model; do not add long-term commitment language</li><br><li>**Storage Promoter Blog** — the exact name of the B2B content section; capitalize as shown</li><br><li>**consumer blog** (internal usage only) — to distinguish from the Storage Promoter Blog</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.2 Strict avoidance list (Anti-Slop Rules)</summary>
+      <div class="markdown"><p>These words are banned. Replace as indicated.</p><p>| Kill | Replace with |<br>|---|---|<br>| delve | explore, examine, look at |<br>| moreover | (delete — start the next sentence) |<br>| furthermore | (delete) |<br>| albeit | though, even though |<br>| indeed | (delete) |<br>| utilize | use |<br>| leverage (verb) | use |<br>| facilitate | help, enable |<br>| robust | strong, reliable, solid |<br>| seamless | smooth, easy |<br>| comprehensive | full, complete, thorough |<br>| cutting-edge | modern, new, latest |<br>| holistic | complete, full, whole |<br>| synergy | (delete and rewrite the sentence) |<br>| paradigm | model, approach, framework |<br>| innovative | (describe what&#x27;s actually new) |<br>| transformative | (describe the actual change) |<br>| empower | (say what capability it gives) |<br>| realm | area, field, space |<br>| tapestry | (delete entirely) |<br>| landscape (metaphorical) | situation, environment, field |<br>| multifaceted | complex, varied |<br>| nuanced | (usually delete — show the nuance instead) |<br>| underscore | show, highlight, reveal |<br>| testament | proof, evidence, sign |<br>| myriad | many, countless |<br>| plethora | many, a lot of |<br>| illuminate | show, reveal, clarify |<br>| foster | build, encourage, grow |<br>| cultivate | build, develop |<br>| spearhead | lead, start, drive |<br>| bolster | strengthen, support |<br>| pivotal | important, key, critical |<br>| embark | start, begin |<br>| navigate (metaphorical) | handle, manage, deal with |<br>| stakeholder | (name the actual group) |<br>| bandwidth | time, capacity |<br>| actionable | practical, useful |<br>| ecosystem | system, community, market |<br>| craft (verb) | write, build, make, design |<br>| curate | choose, pick, collect, organize |<br>| resonate | connect, land, work, matter |<br>| streamline | simplify, speed up, cut steps from |<br>| elevate | improve, raise, strengthen |<br>| harness | use, apply, put to work |<br>| unlock | enable, open up, create |<br>| tailor | adjust, fit, customize |<br>| journey | process, experience, path |<br>| compelling | strong, persuasive, interesting |<br>| powerful | strong, effective, useful |<br>| impactful | effective, significant (or rewrite) |<br>| crucial | important (or delete — is it really?) |<br>| significant | large, meaningful, real (be specific) |<br>| ensure/ensuring | make sure, confirm, check |<br>| optimal | best, ideal |<br>| drives (as in &quot;drives results&quot;) | produces, causes, leads to |<br>| enables | lets, allows |<br>| aligned/aligns with | matches, fits, supports |<br>| key (adj. — &quot;key insights&quot;) | main, important, central |<br>| space (as in &quot;the storage space&quot;) | field, industry, market |<br>| stands out | (describe what&#x27;s different instead) |<br>| double down | commit to, increase, focus on |<br>| deep dive | close look, analysis, review |<br>| circle back | return to, revisit, follow up |<br>| unpack | explain, break down, examine |<br>| shed light on | show, explain, reveal |<br>| pave the way | make possible, lead to, open up |<br>| set the stage | prepare, create conditions for |<br>| raise the bar | improve standards, do better |<br>| move the needle | make a difference, change results |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.3 Banned phrases (throat-clearing, hedges, closers)</summary>
+      <div class="markdown"><p>Delete entirely:</p><ul><li>&quot;It&#x27;s important to note that...&quot; / &quot;It&#x27;s worth mentioning that...&quot;</li><br><li>&quot;In today&#x27;s [X] landscape...&quot;</li><br><li>&quot;Let&#x27;s dive/delve into...&quot;</li><br><li>&quot;In this article, we will...&quot;</li><br><li>&quot;To be fair...&quot; / &quot;To be honest...&quot;</li><br><li>&quot;At the end of the day...&quot;</li><br><li>&quot;When it comes to...&quot;</li><br><li>&quot;In terms of...&quot;</li><br><li>&quot;In conclusion...&quot; / &quot;To sum up...&quot; / &quot;To wrap up...&quot;</li><br><li>&quot;Feel free to reach out&quot; / &quot;Don&#x27;t hesitate to...&quot;</li><br><li>&quot;Moving forward&quot; / &quot;Going forward&quot;</li><br><li>&quot;Due to the fact that&quot; → because</li><br><li>&quot;In order to&quot; → to</li><br><li>&quot;Has the ability to&quot; → can</li><br><li>&quot;With that in mind...&quot; / &quot;Building on this foundation...&quot; / &quot;That being said...&quot;</li><br><li>&quot;Imagine a world where...&quot; / &quot;Picture this:&quot; / &quot;Have you ever wondered...&quot;</li><br><li>&quot;Here are X things you need to know about Y&quot;</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.4 Banned structures</summary>
+      <div class="markdown"><p>**The &quot;Not just X — it&#x27;s Y&quot; pattern:** Never frame something as more than it is by negating a lesser version.<br><li>Bad: &quot;USSelfStorage.com isn&#x27;t just a search tool — it&#x27;s a complete storage resource.&quot;</li><br><li>Good: State what it is and what it does.</li></ul><p>**Rule of three:** AI defaults to grouping in threes. Vary it — use one, two, or four. Match the number to what you have to say.</p><p>**Synonym stacking:** Do not list near-synonyms as padding.<br><li>Bad: &quot;a full, complete, and thorough comparison of facilities&quot;</li><br><li>Good: &quot;a comparison of facilities&quot; (or describe the specific attributes compared)</li></ul><p>**Ownership-implying constructions:** Any sentence structured as &quot;our [storage noun]&quot; is banned. This includes &quot;our facilities,&quot; &quot;our units,&quot; &quot;our storage options,&quot; &quot;our climate-controlled storage.&quot; The platform does not own any storage — it is a marketplace. See §4 for all accuracy rules.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.5 Tone and rhythm tells</summary>
+      <div class="markdown"><p><li>**Uniform sentence length:** Mix short and long. Let some run. Cut others hard.</li><br><li>**Participial phrases:** &quot;Leveraging advanced search tools, the platform...&quot; is an AI fingerprint. Restructure: &quot;The platform&#x27;s search tools let you filter by...&quot; or just state the result.</li><br><li>**&quot;Ensuring&quot; clauses:** &quot;...ensuring you find the best price.&quot; These trailing clauses are filler. If the claim is important, give it its own sentence with evidence.</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4. Accuracy &amp; Technical Standards</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.1 Marketplace ownership rule (critical)</summary>
+      <div class="markdown"><p>USSelfStorage.com is a marketplace aggregator. It does not own, operate, or manage any storage facility. This distinction must hold in every sentence. Writers who blur this line create false advertising exposure.</p><p>**Prohibited constructions (critical — do not use):**<br><li>&quot;our storage facilities&quot; / &quot;our facilities&quot;</li><br><li>&quot;our storage units&quot; / &quot;our units&quot;</li><br><li>&quot;our climate-controlled storage&quot;</li><br><li>&quot;our drive-up units&quot;</li><br><li>&quot;USSelfStorage.com&#x27;s facilities&quot;</li><br><li>Any sentence that implies the platform stores people&#x27;s belongings or operates physical locations</li></ul><p>**Correct framing:**<br><li>&quot;facilities in the network&quot;</li><br><li>&quot;storage facilities available through USSelfStorage.com&quot;</li><br><li>&quot;facilities listed on the platform&quot;</li><br><li>&quot;storage units available in your area&quot; (when combined with search context)</li><br><li>&quot;find climate-controlled facilities near [city]&quot;</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.2 Pricing accuracy</summary>
+      <div class="markdown"><p><li>Do not state specific prices, price ranges, or average costs for storage units.</li><br><li>Do not imply that USSelfStorage.com sets or controls pricing.</li><br><li>Correct framing: &quot;Compare current pricing from facilities in your area&quot; or &quot;monthly pricing varies by facility, location, and unit size.&quot;</li><br><li>Never use &quot;guaranteed lowest prices&quot; — this is the sister site&#x27;s (USStorageUnits.com) brand claim and does not belong to this platform.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.3 Availability accuracy</summary>
+      <div class="markdown"><p><li>Do not assert that specific units are available.</li><br><li>Correct framing: &quot;check real-time availability&quot; or &quot;see current availability at facilities near you.&quot;</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.4 Unit size data</summary>
+      <div class="markdown"><p>The unit sizes and descriptions in §8 (and in `raw/knowledge/overview.md`) are confirmed. Writers may state these as facts. Do not invent additional unit sizes or modify the confirmed descriptions.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.5 Network size claims</summary>
+      <div class="markdown"><p><li>20,000+ facilities: confirmed, use as stated</li><br><li>2,000,000+ storage units: confirmed, use as stated</li><br><li>Do not round these up, down, or substitute alternate figures.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.6 Sister site separation</summary>
+      <div class="markdown"><p>US Storage Units (USStorageUnits.com) is a separate platform. Do not reference, link to, or compare with it in content. Do not use USStorageUnits.com copy patterns or claims in USSelfStorage.com content. In particular: &quot;guaranteed lowest prices&quot; belongs to the sister site — never use this phrase here.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.7 B2B content accuracy</summary>
+      <div class="markdown"><p>Storage Promoter Blog content addresses facility operators. Do not invent statistics about the self-storage industry, occupancy rates, revenue figures, or operational benchmarks. Flag any statistics for CSM confirmation before publishing.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5. Blog Post Rules</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.1 Consumer blog: opening hook pattern (first 3–5 lines must)</summary>
+      <div class="markdown"><p>1. Identify the specific situation or problem the reader is in<br>2. Make the reader feel understood — not lectured<br>3. Transition to what this piece will help them do or decide</p><p>Do not open with: a definition of self-storage, a generic statement about moving being stressful, a rhetorical question, or a fact about the industry.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.2 Consumer blog: structure</summary>
+      <div class="markdown"><p><li>Up to 8 H2 sections</li><br><li>H3 only when necessary; if used, include a short bridge sentence between the H2 heading and first H3</li><br><li>No H4</li><br><li>Capitalize headings per AP style</li><br><li>No section over 300 words</li><br><li>At least one table or structured comparison where the topic supports it (unit size comparisons, climate-controlled vs. standard, etc.)</li><br><li>2–3 lists per article</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.3 Consumer blog: CTA requirements</summary>
+      <div class="markdown"><p>Every consumer blog post ends with a CTA directing the reader to search or reserve on USSelfStorage.com.</p><ul><li>Direct the reader to search by city or ZIP code</li><br><li>Mention the free online reservation</li><br><li>Mention the ability to compare pricing, amenities, and reviews</li><br><li>Tone: helpful and practical — not a hard sell</li><br><li>See contact-block.md for confirmed CTA elements and approved phrasing</li></ul><p>Do not end a consumer post with a generic &quot;contact us&quot; or an open-ended &quot;learn more.&quot; The CTA must give the reader a clear next step on the platform.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.4 Storage Promoter Blog (B2B): structure and rules</summary>
+      <div class="markdown"><p><li>Audience is facility operators — write to their business objectives</li><br><li>Lead with an operational problem or opportunity, not consumer advice</li><br><li>Use industry metrics where they exist (occupancy, revenue per square foot) — but only cite figures from provided inputs, not invented ones</li><br><li>CTA directs operators to list their facility on USSelfStorage.com or to a relevant operator resource — not to search for a storage unit</li><br><li>Do not use consumer-facing copy patterns in B2B posts</li><br><li>Structure follows the same H2/H3 rules as consumer posts</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6. Page Structure</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6.1 City/state landing pages</summary>
+      <div class="markdown"><p>These pages serve consumers searching for storage in a specific location. They are functional, not editorial.</p><p>Structure:<br>1. H1: primary keyword (e.g., &quot;Self Storage in [City], [State]&quot;)<br>2. Short intro: what the user can do on this page (search, compare, reserve) — 2–3 sentences max<br>3. Overview of storage options available in the area (types, unit sizes) — reference network, not owned facilities<br>4. Why compare on USSelfStorage.com (platform value props)<br>5. Unit size guide section (link to `/unit-size-guide` or embed a brief size table)<br>6. CTA: search/compare/reserve — free online reservation</p><p>Rules for city/state pages:<br><li>Lead with the location keyword in the H1 and first sentence</li><br><li>Do not invent specific facility names, addresses, pricing, or availability</li><br><li>Do not make claims about the number of facilities in a specific city unless confirmed</li><br><li>Do not use &quot;our facilities&quot; (see §4.1)</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6.2 Consumer blog posts</summary>
+      <div class="markdown"><p>See §5 for full rules. Summary:<br><li>Up to 8 H2 sections; no H4</li><br><li>Opening hook: situation → understanding → transition</li><br><li>300 words per section max</li><br><li>End with a platform CTA (search, compare, reserve)</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6.3 Storage information pages (storage-info, storage-tips)</summary>
+      <div class="markdown"><p>Hub pages and standalone informational pieces. Structure follows the same H2/H3 rules as blog posts. These pages are not campaign content — they are durable reference resources.</p><ul><li>Prioritize accuracy and usefulness over length</li><br><li>Answer the main question in the first paragraph</li><br><li>Link to relevant unit size guide, city pages, or blog content where appropriate</li><br><li>CTA: direct to search or relevant section of the platform</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6.4 Unit size guide page</summary>
+      <div class="markdown"><p>The unit size guide at `/unit-size-guide` uses the confirmed size data in §8. Structure:</p><p>1. H1: Unit Size Guide (or variant with keyword)<br>2. Brief intro: how to choose the right unit size<br>3. Size-by-size breakdown using confirmed specs (table format preferred)<br>4. Guidance section: what factors affect size selection (how long you&#x27;re storing, what type of items, access frequency)<br>5. CTA: search for available units by size in your area</p><p>Do not add unit sizes not listed in §8. Do not modify confirmed descriptions.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6.5 Storage Promoter Blog posts (B2B)</summary>
+      <div class="markdown"><p>See §5.4. These pages use the URL pattern `/storage-promoter-blog/{slug}` and are written entirely for facility operators. They should not resemble consumer content in tone, framing, or CTA.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>7. SEO Standards</summary>
+      <div class="markdown"><p>**Before writing any piece:** Run a real SERP analysis. Do not simulate it. Steps:<br>1. Access the internet and search the primary keyword (language: English, location: United States)<br>2. Analyze the top 5 ranking pages for: search intent, LSI terms, content format patterns, subtopics, micro-queries, content gaps<br>3. Identify which gaps deserve full sections vs. brief paragraphs<br>4. Present findings before proceeding to the outline</p><p>**Meta deliverables (provide before writing the introduction):**<br><li>3 meta title options: 55–60 characters, include primary keyword, drive clicks</li><br><li>3 meta description options: 130–150 characters, include primary keyword, state a benefit or utility, highlight a platform advantage (compare, free reservation, review-based selection)</li><br><li>3 H1 title options: SEO-oriented, CTR-driven</li></ul><p>**Outline requirements:**<br><li>Build only after SERP analysis</li><br><li>Cover all critical topics from competitor pages; expand beyond their depth where the content supports it</li><br><li>Mark where coverage matches competitors vs. where it adds new value</li><br><li>Include 2–3 micro-queries under each H2 (internal structure only — not visible in output)</li><br><li>Each paragraph answers one micro-query</li><br><li>1 table per article where the topic supports comparison or structured data</li><br><li>2–3 lists per article</li></ul><p>**Keyword placement:**<br><li>Primary keyword in the first sentence</li><br><li>Use location keywords naturally in city/state page content — do not force them into every paragraph</li><br><li>For blog posts: use semantic variants; avoid repeating the exact keyword phrase in every heading</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>8. Service Reference</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Storage types (confirmed)</summary>
+      <div class="markdown"><p><li>Standard self-storage</li><br><li>Climate-controlled storage</li><br><li>Drive-up access units</li><br><li>Car storage</li><br><li>Vehicle storage (broader category)</li><br><li>RV storage</li><br><li>Boat storage</li><br><li>Month-to-month rentals</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Unit sizes (confirmed)</summary>
+      <div class="markdown"><p>| Size | Category | What fits |<br>|---|---|---|<br>| 5x5 | Small | Boxes, small furniture, seasonal items, closet overflow |<br>| 5x10 | Medium-small | Contents of a small room, small furniture, boxes |<br>| 10x10 | Medium | Studio apartment or 1-bedroom apartment contents |<br>| 10x15 | Medium-large | Contents of a 1–2 bedroom home |<br>| 10x20 | Large | Contents of a 2–3 bedroom home |<br>| 10x30 | Extra large | Vehicles, large household contents, commercial inventory |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Editorial content categories (consumer)</summary>
+      <div class="markdown"><p><li>Storage tips and packing guides</li><br><li>Moving advice (budgeting, timelines, checklists)</li><br><li>Organization and unit layout guides</li><br><li>Unit size selection guidance</li><br><li>Climate-controlled storage explainers</li><br><li>Moving guides for specific audiences (accessibility, families, seniors)</li><br><li>Self-storage news and industry updates</li><br><li>Seasonal storage (holiday items, sports equipment, etc.)</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Editorial content categories (B2B — Storage Promoter Blog)</summary>
+      <div class="markdown"><p><li>Marketing and SEO for storage facility operators</li><br><li>Pricing strategy and revenue management</li><br><li>Technology tools for storage management</li><br><li>Self-storage industry trends and data</li><br><li>Customer acquisition and retention for storage operators</li></ul><p>Do not invent specific product names, partner integrations, facility details, or pricing. If content requires claims not confirmed in `raw/knowledge/overview.md` or provided inputs, flag the gap to the CSM.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>9. Pre-Submission Checklist</summary>
+      <div class="markdown"><p>**Marketplace framing:**<br><li>[ ] No &quot;our facilities&quot; / &quot;our storage units&quot; / &quot;our climate-controlled units&quot; anywhere in the piece</li><br><li>[ ] Platform described as a marketplace or comparison platform — not as a storage operator</li><br><li>[ ] &quot;Guaranteed lowest prices&quot; not used anywhere (that is the sister site&#x27;s claim)</li><br><li>[ ] No invented pricing, availability, or facility-specific details</li></ul><p>**Voice &amp; Slop:**<br><li>[ ] No banned words from §3.2 anywhere in the piece</li><br><li>[ ] No banned phrases from §3.3</li><br><li>[ ] No &quot;Not just X — it&#x27;s Y&quot; patterns</li><br><li>[ ] No synonym stacking</li><br><li>[ ] Sentence length varied — not uniform</li><br><li>[ ] No participial-phrase AI fingerprints (&quot;Leveraging X, the platform...&quot;)</li></ul><p>**Audience check:**<br><li>[ ] Consumer content does not use B2B framing</li><br><li>[ ] B2B content (Storage Promoter Blog) does not use consumer framing</li><br><li>[ ] Audience identified before writing began</li></ul><p>**Accuracy:**<br><li>[ ] Network size figures exact: 20,000+ facilities, 2,000,000+ units</li><br><li>[ ] Unit sizes match confirmed specs in §8 — no invented sizes</li><br><li>[ ] Storage types match confirmed list in §8 — no invented types</li><br><li>[ ] No invented statistics, pricing, or facility details</li></ul><p>**Blog post (consumer):**<br><li>[ ] Opening hook: specific situation → reader feels understood → transition</li><br><li>[ ] CTA at end: directs to search/compare/reserve on USSelfStorage.com; mentions free online reservation</li><br><li>[ ] At least 1 table or comparison structure where topic supports it</li><br><li>[ ] 2–3 lists in the piece</li></ul><p>**Blog post (B2B — Storage Promoter Blog):**<br><li>[ ] Written for facility operators, not consumers</li><br><li>[ ] CTA directs to operator resources or facility listing — not to search for storage</li><br><li>[ ] No consumer framing or consumer CTAs in the piece</li></ul><p>**SEO:**<br><li>[ ] Real SERP analysis run (not simulated)</li><br><li>[ ] Meta titles, descriptions, H1 options delivered before writing began</li><br><li>[ ] Primary keyword in first sentence</li></p></div>
+    </details>
+    </details>
+        </section>
+        <section class="panel">
+          <h2>Local Source Files Read</h2>
+          <ul><li><code>clients/us-self-storage/STYLE-SYSTEM.md</code> — US Self Storage — Style System</li>
+<li><code>clients/us-self-storage/client-intelligence/README.md</code> — US Self Storage Client Intelligence</li>
+<li><code>clients/us-self-storage/client-intelligence/STYLE-GUIDE.md</code> — US Self Storage — Style System</li>
+<li><code>clients/us-self-storage/client-intelligence/offerings.md</code> — US Self Storage Offerings</li>
+<li><code>clients/us-self-storage/client-intelligence/source-files.md</code> — US Self Storage Source Files</li>
+<li><code>clients/us-self-storage/contact-block.md</code> — Contact block — US Self Storage</li>
+<li><code>clients/us-self-storage/deliverables/README.md</code> — US Self Storage Deliverables</li>
+<li><code>clients/us-self-storage/raw/knowledge/overview.md</code> — US Self Storage — Client Overview</li>
+<li><code>clients/us-self-storage/raw/knowledge/service-taxonomy.md</code> — US Self Storage Service Taxonomy</li></ul>
+        </section>
+      </main>
+    </section>
+    </body>
+</html>

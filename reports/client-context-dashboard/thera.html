@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thera Context</title>
+  <style>
+    :root {
+      --bg:#f4f7f5; --panel:#ffffff; --ink:#09110f; --muted:#63716c; --line:#dce5df;
+      --black:#050907; --graph:#14d878; --graph-dark:#079d55; --soft:#eaf8f0; --soft-ink:#19392a;
+      --accent:#087a47; --red:#b5362d; --shadow:0 18px 46px rgba(5,9,7,.08);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:
+      linear-gradient(180deg, #ffffff 0, var(--bg) 360px); color:var(--ink); line-height:1.45; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .topnav { min-height:64px; padding:14px max(32px, calc((100vw - 1380px) / 2 + 32px)); background:var(--black); border-bottom:1px solid rgba(255,255,255,.08); position:sticky; top:0; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { color:#fff; display:inline-flex; align-items:center; gap:10px; font-weight:800; letter-spacing:0; }
+    .brand:hover { text-decoration:none; }
+    .brand span { width:32px; height:32px; border-radius:8px; background:var(--graph); color:var(--black); display:inline-grid; place-items:center; font-size:13px; font-weight:900; }
+    .nav-meta, .nav-link { color:#b8c6c0; font-size:13px; font-weight:700; }
+    .hero { margin:0; padding:42px max(32px, calc((100vw - 1380px) / 2 + 32px)) 38px; background:var(--black); color:#fff; border-bottom:1px solid rgba(255,255,255,.08); }
+    .index-hero, .client-hero { display:flex; justify-content:space-between; gap:28px; align-items:flex-start; }
+    .hero h1 { margin:0 0 12px; font-size:clamp(32px, 5vw, 62px); line-height:.98; letter-spacing:0; max-width:900px; }
+    .hero p { margin:0; color:#c7d5cf; max-width:840px; font-size:17px; }
+    .hero-copy { max-width:940px; }
+    .kicker { color:var(--graph); font-size:12px; text-transform:uppercase; letter-spacing:.08em; font-weight:900; }
+    .report-meta { display:flex; flex-wrap:wrap; gap:10px; padding:14px 32px; background:#fff; border-bottom:1px solid var(--line); color:var(--muted); font-size:13px; max-width:1380px; margin:0 auto; }
+    .report-meta span { background:var(--soft); color:var(--soft-ink); border-radius:999px; padding:6px 10px; font-weight:700; }
+    .grid.cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(290px, 1fr)); gap:16px; padding:24px 32px 42px; max-width:1380px; margin:0 auto; }
+    .card, .panel, .context-card { background:var(--panel); border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow); }
+    .client-card { display:block; padding:20px; color:inherit; min-height:184px; transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease; }
+    .client-card:hover { text-decoration:none; transform:translateY(-2px); border-color:rgba(20,216,120,.55); box-shadow:0 24px 58px rgba(5,9,7,.12); }
+    .card-topline { display:flex; justify-content:space-between; gap:10px; align-items:center; }
+    .client-card h2 { margin:14px 0 8px; font-size:23px; line-height:1.1; }
+    .client-card p { margin:0; color:var(--muted); }
+    .metrics { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+    .metrics span, .evidence, .status-pill { background:var(--soft); border:1px solid rgba(20,216,120,.22); border-radius:999px; padding:5px 9px; font-size:12px; color:var(--soft-ink); font-weight:800; }
+    .topic-chips { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 18px; }
+    .topic-chips span { background:#f6fbf8; border:1px solid var(--line); border-radius:999px; color:#183a2a; padding:7px 10px; font-size:13px; font-weight:750; }
+    .layout { display:block; padding:22px 32px 46px; max-width:1380px; margin:0 auto; }
+    main { min-width:0; }
+    .context-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; margin-bottom:20px; }
+    .context-card { padding:18px; min-height:220px; }
+    .context-card ul { margin-bottom:0; }
+    .context-note { color:var(--muted); font-size:13px; margin:4px 0 12px; }
+    .aside-label { color:var(--graph-dark); font-size:11px; text-transform:uppercase; font-weight:900; letter-spacing:.08em; margin-bottom:5px; }
+    .panel h2 { margin-top:0; }
+    .panel { padding:22px; margin-bottom:20px; }
+    .panel h2 { font-size:26px; letter-spacing:0; }
+    .offerings { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:13px; margin-top:16px; }
+    .offering, .sample { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .offering { position:relative; overflow:hidden; }
+    .offering-marker { position:absolute; inset:0 auto 0 0; width:4px; background:var(--graph); }
+    .offering h3, .sample h4 { margin:0 0 6px; }
+    .offering p { margin:0 0 10px; }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .stat-stack { display:grid; grid-template-columns:repeat(3, minmax(100px, 1fr)); gap:8px; min-width:340px; }
+    .stat-stack div { border:1px solid rgba(255,255,255,.15); border-radius:8px; padding:14px; background:rgba(255,255,255,.06); }
+    .stat-stack strong { display:block; font-size:26px; color:#fff; }
+    .stat-stack span, .muted { color:var(--muted); font-size:13px; }
+    .hero .stat-stack span { color:#b8c6c0; }
+    ul { padding-left:20px; }
+    li { margin:4px 0; }
+    code { background:var(--soft); color:var(--soft-ink); padding:2px 4px; border-radius:4px; }
+    details { margin:10px 0; }
+    summary { cursor:pointer; font-weight:700; }
+    .style-section { border-top:1px solid var(--line); padding-top:10px; }
+    .markdown { color:#2d2f35; }
+    @media (max-width: 980px) {
+      .layout, .split, .client-hero, .index-hero { grid-template-columns:1fr; display:block; }
+      .context-grid { grid-template-columns:1fr; }
+      .stat-stack { min-width:0; margin-top:16px; }
+      .hero, .grid.cards, .layout, .topnav, .report-meta { padding-left:16px; padding-right:16px; }
+      .hero h1 { font-size:36px; }
+      .stat-stack { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+    <nav class="topnav">
+      <a class="brand" href="index.html"><span>LG</span>LinkGraph</a>
+      <a class="nav-link" href="index.html">All clients</a>
+    </nav>
+    <section class="hero client-hero">
+      <div class="hero-copy">
+        <div class="kicker">thera</div>
+        <h1>Thera</h1>
+        <p>12 extracted offerings, 260 sitemap URLs, and 8 local source documents for client-specific writing context.</p>
+      </div>
+      <div class="stat-stack">
+        <div><strong>ok</strong><span>crawl status</span></div>
+        <div><strong>260</strong><span>URLs found</span></div>
+        <div><strong>1</strong><span>product/service URLs</span></div>
+      </div>
+    </section>
+    <section class="layout">
+      <main>
+        <section class="context-grid">
+    <article class="context-card">
+      <div class="aside-label">Quick Facts</div>
+      <p class="context-note">Company, audience, and proof points.</p>
+      <ul><li>Services: one-on-one, in-person therapy sessions. Physical and occupational therapists work directly with each patient. Treatment plans are tailored to restore mobility, reduce swelling, and improve quality of life during recovery.</li><li>Patients travel from across the Tri-State Area.</li><li>Audience: Breast cancer survivors and individuals recovering from breast surgery. This includes people who have undergone mastectomy, lumpectomy, or breast reconstruction; those managing post-surgical complications (swelling, pain, restricted movement); people searching for specialized rehabilitation after cancer treatment; and patients who found insufficient support through general physical therapy.</li><li>Content must address someone actively navigating recovery — not someone researching treatment academically. These are patients dealing with real physical challenges and looking for guidance on their options.</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Voice</div>
+      <p class="context-note">How this client should sound.</p>
+      <ul><li>Goal: Not this</li><li>Introduce a service: &quot;We offer cutting-edge lymphedema therapy&quot;</li><li>Acknowledge difficulty: &quot;Recovery is a journey&quot;</li><li>Establish expertise: &quot;Our experienced team&quot;</li><li>Frame outcomes: &quot;We&#x27;ll help you feel like yourself again&quot;</li><li>Register: Empathetic, expert, and patient-centered. Supportive and informative without being clinical, cold, or distant.</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Avoid / Compliance</div>
+      <p class="context-note">Claims, terms, and wording to avoid.</p>
+      <ul><li>&quot;cure&quot; / &quot;cured&quot;: Cannot claim curative outcomes</li><li>&quot;guaranteed results&quot;: Cannot guarantee rehabilitation outcomes</li><li>&quot;eliminate&quot; (for a condition): Therapy reduces or improves — not eliminates</li><li>Generic &quot;physical therapy&quot; (as a synonym for Thera): Thera does specialized, not general, PT</li><li>&quot;cutting-edge&quot; / &quot;innovative&quot; / &quot;revolutionary&quot;: Vague promotional language</li><li>Clinical coldness (jargon-heavy descriptions without patient-centered framing): Contradicts the empathetic register</li><li>Minimizing patient experience (&quot;It&#x27;s a simple recovery&quot;): Disrespects the audience&#x27;s actual situation</li><li>&quot;journey&quot;: Overused, vague — describe the actual process</li><li>Thera is located in Midtown Manhattan — do not claim other locations without confirmation.</li><li>The practice provides physical and occupational therapy. Do not claim other modalities (e.g., massage therapy, chiropractic) without confirmation.</li><li>Lymphedema therapy requires specific certification (CLT — Certified Lymphedema Therapist). Do not claim certifications without CSM confirmation of which practitioners hold them.</li><li>The audience includes patients who have undergone mastectomy, lumpectomy, and breast reconstruction. These are distinct procedures with distinct recovery profiles — do not conflate them.</li><li>Do not invent specific treatment protocols, session structures, or recovery timelines.</li><li>&quot;Tri-State Area&quot; is the geographic reference for where patients travel from. Do not expand beyond this without confirmation.</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Terminology</div>
+      <p class="context-note">Client-specific naming and required language.</p>
+      <p class="muted">No clean lines extracted yet.</p>
+    </article>
+    </section>
+        <section class="panel">
+          <h2>Offerings, Services, Goods</h2>
+          <p class="muted">Writer-facing catalog from the client style system, approved source files, and usable product/service pages. Raw crawl evidence is separated below.</p>
+          <div class="offerings">
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Lymphedema</h3>
+      <p>Therapy support for lymphedema management and related swelling concerns.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/thera/raw/knowledge/service-taxonomy.md · Sections: 8. Service Reference, Conditions and Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Pain affecting daily movement</h3>
+      <p>Therapy support for pain that limits daily movement.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/thera/raw/knowledge/service-taxonomy.md · Sections: 8. Service Reference, Conditions and Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Limited Shoulder and Arm Mobility</h3>
+      <p>Support for shoulder and arm mobility limitations after breast surgery.</p>
+      <div class="evidence">Sources: clients/thera/raw/knowledge/service-taxonomy.md · Sections: Conditions and Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Lymphatic Complications</h3>
+      <p>Treatment support for lymphatic complications after cosmetic or medical procedures.</p>
+      <div class="evidence">Sources: clients/thera/raw/knowledge/service-taxonomy.md · Sections: Conditions and Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Post-Mastectomy Recovery</h3>
+      <p>Therapy support after mastectomy, lumpectomy, or reconstruction.</p>
+      <div class="evidence">Sources: clients/thera/raw/knowledge/service-taxonomy.md · Sections: Conditions and Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Post-Surgical Swelling</h3>
+      <p>Treatment support for swelling and restricted movement after surgery.</p>
+      <div class="evidence">Sources: clients/thera/raw/knowledge/service-taxonomy.md · Sections: Conditions and Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Scar Tissue Restrictions</h3>
+      <p>Therapy for scar tissue and soft tissue restrictions affecting movement or comfort.</p>
+      <div class="evidence">Sources: clients/thera/raw/knowledge/service-taxonomy.md · Sections: Conditions and Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Limited shoulder and arm mobility after breast surgery</h3>
+      <p>Limited shoulder and arm mobility after breast surgery is listed under 8. Service Reference in the Thera client context. Check the source links before adding specific claims.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md · Sections: 8. Service Reference</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Lymphatic complications from cosmetic or medical procedures</h3>
+      <p>Lymphatic complications from cosmetic or medical procedures is listed under 8. Service Reference in the Thera client context. Check the source links before adding specific claims.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md · Sections: 8. Service Reference</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Post-mastectomy, post-lumpectomy, post-reconstruction recovery</h3>
+      <p>Post-mastectomy, post-lumpectomy, post-reconstruction recovery is listed under 8. Service Reference in the Thera client context. Check the source links before adding specific claims.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md · Sections: 8. Service Reference</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Post-surgical swelling and restricted movement</h3>
+      <p>Post-surgical swelling and restricted movement is listed under 8. Service Reference in the Thera client context. Check the source links before adding specific claims.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md · Sections: 8. Service Reference</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Scar tissue and soft tissue restrictions</h3>
+      <p>Scar tissue and soft tissue restrictions is listed under 8. Service Reference in the Thera client context. Check the source links before adding specific claims.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md · Sections: 8. Service Reference</div>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Website Intelligence</h2>
+          <div class="split">
+            <div>
+              <h3>Website URLs</h3><ul><li><a href="https://www.thera-rehab.com/">https://www.thera-rehab.com/</a></li></ul>
+              <h3>Sitemaps</h3><ul><li><a href="https://www.thera-rehab.com/sitemap.xml">https://www.thera-rehab.com/sitemap.xml</a></li></ul>
+            </div>
+            <div>
+              <h3>Semantic / Topical Terms</h3><div class="topic-chips"><span>Pain Affecting Daily Movement</span><span>Limited Shoulder and Arm Mobility</span><span>Lymphatic Complications</span><span>Post-Mastectomy Recovery</span><span>Post-Surgical Swelling</span><span>Scar Tissue Restrictions</span><span>Limited Shoulder And Arm Mobility After Breast Surgery</span><span>Lymphatic Complications From Cosmetic Or Medical Procedures</span><span>Post-Mastectomy, Post-Lumpectomy, Post-Reconstruction Recovery</span><span>Post-Surgical Swelling And Restricted Movement</span><span>Scar Tissue And Soft Tissue Restrictions</span></div>
+              <h3>Blockers</h3><p class="muted">None</p>
+            </div>
+          </div>
+          <h3>Product / Service URLs</h3><ul><li><a href="https://www.thera-rehab.com/services">https://www.thera-rehab.com/services</a></li></ul>
+          <h3>Sampled Pages</h3><div class="sample-pages">
+    <article class="sample">
+      <h4>Physical and Occupational Therapy in NYC | Thera</h4>
+      <a href="https://www.thera-rehab.com/">https://www.thera-rehab.com/</a>
+      <p>We are bringing rehabilitation and wellness to the forefront of medicine in NYC. We are skilled therapy practitioners who provide quality rehabilitation and specialty services for breast cancer recovery, plastic reconstruction, scarring, lymphedema, axillary web syndrome, and more.</p>
+      <ul><li>Thera Physical and Occupational Therapy</li><li>A modern approach</li><li>Customized, In-person, 1:1 Sessions</li><li>Our Services</li><li>Why Choose Thera?</li><li>Testimonials</li><li>Understanding Lymphedema: Causes, Symptoms, and Management</li><li>Getting Ready: Tips pre and post breast reconstruction</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Physical &amp; Occupational Therapy NYC | Conditions We Treat | Thera Rehab&lt;br/&gt; — Thera</h4>
+      <a href="https://www.thera-rehab.com/services">https://www.thera-rehab.com/services</a>
+      <p>Explore conditions we treat at Thera Rehab in NYC, including lymphedema, post-surgical recovery, breast cancer rehab, and women’s health with expert PT &amp; OT care.</p>
+      <ul><li>Speciality Services</li><li>Rehabilitation Services</li><li>Physical and Occupational Therapy</li><li>Questions before getting started?</li><li>Get in touch.</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Physical &amp; Occupational Therapy Midtown Manhattan NYC | Thera Rehab — Thera</h4>
+      <a href="https://www.thera-rehab.com/location-midtown-manhattan">https://www.thera-rehab.com/location-midtown-manhattan</a>
+      <p>Get expert physical and occupational therapy in Midtown Manhattan near Penn Station. One-on-one care to reduce pain, restore function, and recover faster. Book today.</p>
+      <ul><li>Physical &amp; Occupational Therapy in Midtown Manhattan, NY | Thera</li><li>Expert Physical &amp; Occupational Therapy Near Penn Station &amp; Midtown Manhattan</li><li>Serving Midtown Manhattan &amp; Nearby Areas</li><li>We proudly serve patients from:</li><li>Why Choose Thera Rehab in Midtown Manhattan?</li><li>What to Expect at Your First Visit</li><li>Convenient Midtown Location</li><li>Physical &amp; Occupational Therapy Services</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Thera therapists provide specialized care to meet all your needs — Thera</h4>
+      <a href="https://www.thera-rehab.com/team">https://www.thera-rehab.com/team</a>
+      <p>Breast rehabilitation, certified cosmetic and lymphatic rehabilitation services in Midtown Manhattan. Personalized care for post-surgical recovery, lymphedema, and more.</p>
+      <ul><li>Megan McCarthy, MS OTR/L CLT CCST</li><li>Sabrina Rana Vaishnavi, MPT CLT</li><li>About</li><li>Megan McCarthy, MS OTR/L CLT CCST</li><li>Sabrina Rana Vaishnavi, MPT CLT</li><li>Get started today.</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Contact — Thera Breast Rehabilitation, Lymphedema Therapy &amp; Cosmetic Surgery Recovery in NYC | BreastHab</h4>
+      <a href="https://www.thera-rehab.com/contact">https://www.thera-rehab.com/contact</a>
+      <p>Contact us for Specialized breast, lymphatic, and cosmetic sugery rehabilitation services in Midtown Manhattan. We look forward to helping you along your journey.</p>
+      <ul><li>Let’s quickly help verify your insurance benefits to get you started!</li><li>Let’s quickly help verify your insurance benefits to get you started! Let’s quickly help verify your insurance benefits to get you started!</li><li>Any Questions?</li><li>Contact us</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Physical and Occupational Therapy in NYC | Thera</h4>
+      <a href="https://www.thera-rehab.com/homepage">https://www.thera-rehab.com/homepage</a>
+      <p>We are bringing rehabilitation and wellness to the forefront of medicine in NYC. We are skilled therapy practitioners who provide quality rehabilitation and specialty services for breast cancer recovery, plastic reconstruction, scarring, lymphedema, axillary web syndrome, and more.</p>
+      <ul><li>Thera Physical and Occupational Therapy</li><li>A modern approach</li><li>Customized, In-person, 1:1 Sessions</li><li>Our Services</li><li>Why Choose Thera?</li><li>Testimonials</li><li>Understanding Lymphedema: Causes, Symptoms, and Management</li><li>Getting Ready: Tips pre and post breast reconstruction</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Breast Rehabilitation, Plastic Surgery Recovery &amp; Lymphedema Resources &amp; Guides | Thera NYC — Thera</h4>
+      <a href="https://www.thera-rehab.com/resources">https://www.thera-rehab.com/resources</a>
+      <p>Breast rehabilitation, certified cosmetic and lymphatic rehabilitation services in Midtown Manhattan. Personalized care for post-surgical recovery, lymphedema, and more.</p>
+      <ul><li>Our Resources</li><li>Lipedema Stages Explained: What Does Progression Look Like?</li><li>What Is the Foam in Lymphedema Wrapping and Why Does It Matter?</li><li>The Best Products for Post-Surgical Scars: What Actually Works</li><li>When Should You Monitor Limb Swelling? Understanding Discrepancy Thresholds in Lymphedema</li><li>Lymphedema Stages Explained: What Each Stage Means for Your Treatment</li><li>Radiation Fibrosis Syndrome: What It Is and How PT and OT Treat It</li><li>Recovering from a Tummy Tuck (Abdominoplasty): How PT and OT Help</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Lymphedema Treatment, Prevention and Management — Thera Lymphedema Treatment, Prevention and Management in NYC | BreastHab</h4>
+      <a href="https://www.thera-rehab.com/lymphedema">https://www.thera-rehab.com/lymphedema</a>
+      <p>Offering skilled and certified lymphedema treatment, complete decongestive therapy, lymphatic drainage massage, and custom compression wear fitting.</p>
+      <ul><li>for Lymphedema &amp; Expert Care</li><li>Lymphedema Prevention, Treatment, and Management in NYC</li><li>What We Offer: An Informed Approach to Lymphedema Management</li><li>Why Manual Lymphatic Drainage Works</li><li>Who Can Benefit from lymphatic care?</li><li>Why Choose Thera Rehab for Lymphedema Support?</li><li>Take a Step Forward: We’re Here for You</li><li>Frequently Asked Questions</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Privacy Policy | Physical &amp; Occupational Therapy NYC | Thera — Thera</h4>
+      <a href="https://www.thera-rehab.com/privacy-policy">https://www.thera-rehab.com/privacy-policy</a>
+      <p>Learn how Thera Physical &amp; Occupational Therapy collects, uses, and protects your personal information. Our privacy policy explains data security, communication practices, and your rights when using our NYC physical and occupational therapy services.</p>
+      <ul><li>PRIVACY POLICY</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>How Things Work | Thera NYC — Thera</h4>
+      <a href="https://www.thera-rehab.com/how-things-work">https://www.thera-rehab.com/how-things-work</a>
+      <p>FAQs, Treat time, out of network benefits and payment reimbursement information for our therapy services</p>
+      <ul><li>Transforming Healthcare: Physical &amp; Occupational Therapy in NYC</li><li>How Thera Rehabilitation Services Work</li><li>Concierge PT &amp; OTServices in NYC</li><li>Need to work out a payment plan?</li><li>Get better health today.</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>FAQ | Physical Therapy &amp; Occupational Therapy in Midtown Manhattan | Thera Rehab NYC — Thera FAQ | Physical Therapy &amp; Occupational Therapy in Midtown Manhattan | Thera Rehab NYC Frequently Asked Questions | Thera Rehab — Lymphedema, Oncology &amp; Post-Surgical Therapy</h4>
+      <a href="https://www.thera-rehab.com/thera-pt-ot-faq">https://www.thera-rehab.com/thera-pt-ot-faq</a>
+      <p>Answers to common questions about axillary web syndrome (cording), lymphedema, DIEP flap and post-surgical recovery, mastitis care, and specialized physical &amp; occupational therapy at Thera Rehab.</p>
+      <ul><li>Frequently Asked Questions</li><li>Location &amp; Access</li><li>Insurance &amp; Cost</li><li>Services &amp; Conditions</li><li>Sessions &amp; Your Care</li><li>Our Specialties</li><li>Ready to start your recovery?</li><li>Questions, answered — by our therapists.</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Terms of Service | Physical &amp; Occupational Therapy NYC | Thera — Thera</h4>
+      <a href="https://www.thera-rehab.com/terms-of-service">https://www.thera-rehab.com/terms-of-service</a>
+      <p>Review the Terms of Service for Thera Rehab. Learn about the conditions, responsibilities, and guidelines for using our NYC physical and occupational therapy services and website.</p>
+      <ul><li>TERMS OF SERVICE</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Concierge Physical &amp; Occupational Therapy NYC | Thera Rehab — Thera</h4>
+      <a href="https://www.thera-rehab.com/concierge-medicine">https://www.thera-rehab.com/concierge-medicine</a>
+      <p>Experience concierge physical and occupational therapy in NYC with one-on-one care, flexible scheduling, and expert support for post-surgical and women’s health needs.</p>
+      <ul><li>Concierge Rehabilitation Services</li><li>Condition We Treat</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Breast Rehabilitation, Certified Lymphedema Therapists and Certified Cosmetic Surgery Therapist — Thera Breast Rehabilitation, Mastitis, Lymphedema Therapy &amp; Cosmetic Surgery Recovery in NYC | BreastHab</h4>
+      <a href="https://www.thera-rehab.com/team/megan-mccarthy">https://www.thera-rehab.com/team/megan-mccarthy</a>
+      <p>Occupational Therapist providing breast rehabilitation, certified cosmetic and lymphatic rehabilitation services in Midtown Manhattan. Personalized care for post-surgical recovery, axillary web syndrome, lymphedema, mastitis, and more.</p>
+      <ul><li>About</li><li>Megan McCarthy, MS OTR/L CLT CCST</li><li>Get started today.</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>DIEP Flap Recovery Physical Therapy NYC | Breast Reconstruction Rehab | Thera PT &amp; OT Manhattan — Thera DIEP Flap Recovery Physical Therapy NYC | Breast Reconstruction Rehab | Thera PT &amp; OT Manhattan</h4>
+      <a href="https://www.thera-rehab.com/diep-flap-recovery-nyc">https://www.thera-rehab.com/diep-flap-recovery-nyc</a>
+      <p>Specialized physical and occupational therapy for DIEP flap breast reconstruction recovery in Midtown Manhattan, NYC. Abdominal core rehab, scar management, donor &amp; recipient site care after DIEP surgery. 115 W 30th St. Free consult.</p>
+      <ul><li>DIEP Flap Breast Reconstruction Recovery &amp; Rehabilitation in NYC</li><li>What Is DIEP Flap Reconstruction &amp; Why Rehabilitation Matters</li><li>Recipient &amp; Donor Site: What We Address at Each</li><li>Common Functional Challenges After DIEP Flap Surgery</li><li>DIEP Flap Recovery: A Phased Approach</li><li>Our DIEP Flap Rehabilitation Program</li><li>Pre-Surgical Consultation (Pre-Hab)</li><li>Scar Management — Breast &amp; Abdomen</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Lymphatic Care &amp; Wellness NYC | Manual Lymphatic Drainage | Thera Rehab — Thera Lymphatic Care &amp; Wellness NYC | Manual Lymphatic Drainage | Thera Rehab</h4>
+      <a href="https://www.thera-rehab.com/lymphatic-care-wellness">https://www.thera-rehab.com/lymphatic-care-wellness</a>
+      <p>Expert lymphatic care in Midtown Manhattan — for post-surgical recovery, postpartum wellness, lipedema, and lymphedema. Certified therapists. Book online today.</p>
+      <ul><li>Lymphatic Care &amp; Wellness in New York City</li><li>Lymphatic Care Beyond Lymphedema : How MLD Supports Your Whole Body</li><li>Who Benefits from Lymphatic Drainage Treatment</li><li>Lymphatic Drainage After Surgery in NYC</li><li>Postpartum Lymphatic Drainage &amp; C-Section Recovery</li><li>Lymphatic Wellness Sessions: Immune &amp; Detox Support</li><li>Lipedema Treatment in NYC: MLD &amp; Conservative Management</li><li>Chronic Edema &amp; Inflammation: Lymphatic Therapy for Relief</li></ul>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Full Style System</h2>
+          <details open><summary>Show style-system sections</summary>
+    <details class="style-section">
+      <summary>Thera — Style System</summary>
+      <div class="markdown"><p>Generated: 2026-05-29<br>Sources: raw/knowledge/overview.md<br>Base rules: universal-rules/UNIVERSAL-RULES.md</p><p>**⚠ VIP Client — handle all content with particular care.**</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>1. Brand &amp; Audience</summary>
+      <div class="markdown"><p>Thera Physical and Occupational Therapy is a specialized rehabilitation clinic in Midtown Manhattan. The practice focuses on post-surgical recovery after breast surgery, cancer treatment, and procedures affecting lymphatic function and mobility.</p><p>Services: one-on-one, in-person therapy sessions. Physical and occupational therapists work directly with each patient. Treatment plans are tailored to restore mobility, reduce swelling, and improve quality of life during recovery.</p><p>Patients travel from across the Tri-State Area.</p><p>**Audience:** Breast cancer survivors and individuals recovering from breast surgery. This includes people who have undergone mastectomy, lumpectomy, or breast reconstruction; those managing post-surgical complications (swelling, pain, restricted movement); people searching for specialized rehabilitation after cancer treatment; and patients who found insufficient support through general physical therapy.</p><p>**Content must address someone actively navigating recovery** — not someone researching treatment academically. These are patients dealing with real physical challenges and looking for guidance on their options.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2. Voice &amp; Tone</summary>
+      <div class="markdown"><p>**Register:** Empathetic, expert, and patient-centered. Supportive and informative without being clinical, cold, or distant.</p><p>The audience is facing significant health challenges. Content must honor that reality. It should not minimize what patients are going through, oversell outcomes, or sound like a general healthcare marketing piece.</p><p>| Goal | Not this | Use this |<br>|---|---|---|<br>| Introduce a service | &quot;We offer cutting-edge lymphedema therapy&quot; | &quot;Thera specializes in lymphedema therapy for people recovering from breast surgery or cancer treatment&quot; |<br>| Acknowledge difficulty | &quot;Recovery is a journey&quot; | Describe the specific challenges (restricted movement, persistent swelling) that bring patients here |<br>| Establish expertise | &quot;Our experienced team&quot; | &quot;Our therapists hold advanced certifications in lymphedema therapy and post-surgical recovery&quot; |<br>| Frame outcomes | &quot;We&#x27;ll help you feel like yourself again&quot; | &quot;Treatment programs are designed to restore mobility, reduce swelling, and improve daily movement&quot; |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3. Terminology</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.1 Required terms</summary>
+      <div class="markdown"><p><li>**Physical and occupational therapists** — the correct descriptor for the Thera team; do not use &quot;specialist&quot; alone without specifying the credential</li><br><li>**Lymphedema therapy** — the specific therapy for lymphatic complications</li><br><li>**Post-surgical recovery** — preferred phrase for the recovery context</li><br><li>**One-on-one therapy** / **individualized therapy** — key differentiator; maintain in all content</li><br><li>**Breast rehabilitation** — Thera&#x27;s specialty focus area</li><br><li>**Certified lymphedema therapist** (if confirmed by CSM) — use credential accurately</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.2 Strict avoidance list</summary>
+      <div class="markdown"><p>| Term | Reason |<br>|---|---|<br>| &quot;cure&quot; / &quot;cured&quot; | Cannot claim curative outcomes |<br>| &quot;guaranteed results&quot; | Cannot guarantee rehabilitation outcomes |<br>| &quot;eliminate&quot; (for a condition) | Therapy reduces or improves — not eliminates |<br>| Generic &quot;physical therapy&quot; (as a synonym for Thera) | Thera does specialized, not general, PT |<br>| &quot;cutting-edge&quot; / &quot;innovative&quot; / &quot;revolutionary&quot; | Vague promotional language |<br>| Clinical coldness (jargon-heavy descriptions without patient-centered framing) | Contradicts the empathetic register |<br>| Minimizing patient experience (&quot;It&#x27;s a simple recovery&quot;) | Disrespects the audience&#x27;s actual situation |<br>| &quot;journey&quot; | Overused, vague — describe the actual process |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4. Accuracy &amp; Technical Standards</summary>
+      <div class="markdown"><p><li>Thera is located in Midtown Manhattan — do not claim other locations without confirmation.</li><br><li>The practice provides physical and occupational therapy. Do not claim other modalities (e.g., massage therapy, chiropractic) without confirmation.</li><br><li>Lymphedema therapy requires specific certification (CLT — Certified Lymphedema Therapist). Do not claim certifications without CSM confirmation of which practitioners hold them.</li><br><li>The audience includes patients who have undergone mastectomy, lumpectomy, and breast reconstruction. These are distinct procedures with distinct recovery profiles — do not conflate them.</li><br><li>Do not invent specific treatment protocols, session structures, or recovery timelines.</li><br><li>&quot;Tri-State Area&quot; is the geographic reference for where patients travel from. Do not expand beyond this without confirmation.</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5. Specificity Rules</summary>
+      <div class="markdown"><p><li>Name specific conditions and their effects rather than using vague terms. &quot;Limited shoulder mobility after mastectomy&quot; is more useful than &quot;post-surgical limitations.&quot;</li><br><li>When describing what Thera treats, be specific: lymphedema, scar tissue restrictions, soft tissue restrictions, limited range of motion, post-surgical swelling. Use the accurate clinical terms where they serve clarity.</li><br><li>Attribute outcomes to individualized care — not general statements about the practice.</li><br><li>When writing about what makes Thera different from general physical therapy: describe the specific gap that general PT doesn&#x27;t fill (lymphatic complications, post-mastectomy mobility, specialized cert levels).</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6. Page Structure</summary>
+      <div class="markdown"><p>No approved templates established yet. Follow universal rules for page and section structure.</p><p>When a new campaign establishes approved structure, document it in `campaigns/{campaign}/brief.md` and promote to `page-templates/` once confirmed by client.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>7. SEO Standards</summary>
+      <div class="markdown"><p><li>Primary keyword in first sentence.</li><br><li>Title tags: under 60 characters, primary keyword near the front.</li><br><li>Meta descriptions: 140–160 characters, include primary keyword, at least one specific outcome or patient concern.</li><br><li>Local terms: &quot;Midtown Manhattan,&quot; &quot;New York City,&quot; &quot;Tri-State Area&quot; as supporting terms where appropriate.</li><br><li>Target condition-specific search intent: &quot;lymphedema therapy after mastectomy,&quot; &quot;physical therapy after breast surgery,&quot; &quot;breast rehabilitation NYC.&quot;</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>8. Service Reference</summary>
+      <div class="markdown"><p>Conditions treated (from client brief):<br><li>Lymphedema</li><br><li>Post-surgical swelling and restricted movement</li><br><li>Scar tissue and soft tissue restrictions</li><br><li>Limited shoulder and arm mobility after breast surgery</li><br><li>Lymphatic complications from cosmetic or medical procedures</li><br><li>Post-mastectomy, post-lumpectomy, post-reconstruction recovery</li><br><li>Pain affecting daily movement</li></ul><p>Do not invent treatment protocols, equipment references, or session details without confirmation from `raw/` or the CSM.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>9. Pre-Submission Checklist</summary>
+      <div class="markdown"><p><li>[ ] VIP client — extra review pass for tone before submitting</li><br><li>[ ] Audience framing: content addresses someone in active recovery, not an academic reader</li><br><li>[ ] No guaranteed outcome claims</li><br><li>[ ] No clinical coldness — empathy is present throughout</li><br><li>[ ] Specific conditions named accurately (lymphedema, post-mastectomy, etc.)</li><br><li>[ ] &quot;Individualized&quot; / &quot;one-on-one&quot; maintained as core differentiator</li><br><li>[ ] No minimizing of patient experience</li><br><li>[ ] Location is Midtown Manhattan — no other locations implied</li><br><li>[ ] Therapist credentials accurate — no unconfirmed certifications claimed</li></p></div>
+    </details>
+    </details>
+        </section>
+        <section class="panel">
+          <h2>Local Source Files Read</h2>
+          <ul><li><code>clients/thera/STYLE-SYSTEM.md</code> — Thera — Style System</li>
+<li><code>clients/thera/client-intelligence/README.md</code> — Thera Client Intelligence</li>
+<li><code>clients/thera/client-intelligence/STYLE-GUIDE.md</code> — Thera — Style System</li>
+<li><code>clients/thera/client-intelligence/offerings.md</code> — Thera Offerings</li>
+<li><code>clients/thera/client-intelligence/source-files.md</code> — Thera Source Files</li>
+<li><code>clients/thera/deliverables/README.md</code> — Thera Deliverables</li>
+<li><code>clients/thera/raw/knowledge/overview.md</code> — Thera — Client Overview</li>
+<li><code>clients/thera/raw/knowledge/service-taxonomy.md</code> — Thera Service Taxonomy</li></ul>
+        </section>
+      </main>
+    </section>
+    </body>
+</html>

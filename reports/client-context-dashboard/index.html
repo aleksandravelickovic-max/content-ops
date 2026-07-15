@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LinkGraph Client Context Dashboard</title>
+  <style>
+    :root {
+      --bg:#f4f7f5; --panel:#ffffff; --ink:#09110f; --muted:#63716c; --line:#dce5df;
+      --black:#050907; --graph:#14d878; --graph-dark:#079d55; --soft:#eaf8f0; --soft-ink:#19392a;
+      --accent:#087a47; --red:#b5362d; --shadow:0 18px 46px rgba(5,9,7,.08);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:
+      linear-gradient(180deg, #ffffff 0, var(--bg) 360px); color:var(--ink); line-height:1.45; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .topnav { min-height:64px; padding:14px max(32px, calc((100vw - 1380px) / 2 + 32px)); background:var(--black); border-bottom:1px solid rgba(255,255,255,.08); position:sticky; top:0; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { color:#fff; display:inline-flex; align-items:center; gap:10px; font-weight:800; letter-spacing:0; }
+    .brand:hover { text-decoration:none; }
+    .brand span { width:32px; height:32px; border-radius:8px; background:var(--graph); color:var(--black); display:inline-grid; place-items:center; font-size:13px; font-weight:900; }
+    .nav-meta, .nav-link { color:#b8c6c0; font-size:13px; font-weight:700; }
+    .hero { margin:0; padding:42px max(32px, calc((100vw - 1380px) / 2 + 32px)) 38px; background:var(--black); color:#fff; border-bottom:1px solid rgba(255,255,255,.08); }
+    .index-hero, .client-hero { display:flex; justify-content:space-between; gap:28px; align-items:flex-start; }
+    .hero h1 { margin:0 0 12px; font-size:clamp(32px, 5vw, 62px); line-height:.98; letter-spacing:0; max-width:900px; }
+    .hero p { margin:0; color:#c7d5cf; max-width:840px; font-size:17px; }
+    .hero-copy { max-width:940px; }
+    .kicker { color:var(--graph); font-size:12px; text-transform:uppercase; letter-spacing:.08em; font-weight:900; }
+    .report-meta { display:flex; flex-wrap:wrap; gap:10px; padding:14px 32px; background:#fff; border-bottom:1px solid var(--line); color:var(--muted); font-size:13px; max-width:1380px; margin:0 auto; }
+    .report-meta span { background:var(--soft); color:var(--soft-ink); border-radius:999px; padding:6px 10px; font-weight:700; }
+    .grid.cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(290px, 1fr)); gap:16px; padding:24px 32px 42px; max-width:1380px; margin:0 auto; }
+    .card, .panel, .context-card { background:var(--panel); border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow); }
+    .client-card { display:block; padding:20px; color:inherit; min-height:184px; transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease; }
+    .client-card:hover { text-decoration:none; transform:translateY(-2px); border-color:rgba(20,216,120,.55); box-shadow:0 24px 58px rgba(5,9,7,.12); }
+    .card-topline { display:flex; justify-content:space-between; gap:10px; align-items:center; }
+    .client-card h2 { margin:14px 0 8px; font-size:23px; line-height:1.1; }
+    .client-card p { margin:0; color:var(--muted); }
+    .metrics { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+    .metrics span, .evidence, .status-pill { background:var(--soft); border:1px solid rgba(20,216,120,.22); border-radius:999px; padding:5px 9px; font-size:12px; color:var(--soft-ink); font-weight:800; }
+    .topic-chips { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 18px; }
+    .topic-chips span { background:#f6fbf8; border:1px solid var(--line); border-radius:999px; color:#183a2a; padding:7px 10px; font-size:13px; font-weight:750; }
+    .layout { display:block; padding:22px 32px 46px; max-width:1380px; margin:0 auto; }
+    main { min-width:0; }
+    .context-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; margin-bottom:20px; }
+    .context-card { padding:18px; min-height:220px; }
+    .context-card ul { margin-bottom:0; }
+    .context-note { color:var(--muted); font-size:13px; margin:4px 0 12px; }
+    .aside-label { color:var(--graph-dark); font-size:11px; text-transform:uppercase; font-weight:900; letter-spacing:.08em; margin-bottom:5px; }
+    .panel h2 { margin-top:0; }
+    .panel { padding:22px; margin-bottom:20px; }
+    .panel h2 { font-size:26px; letter-spacing:0; }
+    .offerings { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:13px; margin-top:16px; }
+    .offering, .sample { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .offering { position:relative; overflow:hidden; }
+    .offering-marker { position:absolute; inset:0 auto 0 0; width:4px; background:var(--graph); }
+    .offering h3, .sample h4 { margin:0 0 6px; }
+    .offering p { margin:0 0 10px; }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .stat-stack { display:grid; grid-template-columns:repeat(3, minmax(100px, 1fr)); gap:8px; min-width:340px; }
+    .stat-stack div { border:1px solid rgba(255,255,255,.15); border-radius:8px; padding:14px; background:rgba(255,255,255,.06); }
+    .stat-stack strong { display:block; font-size:26px; color:#fff; }
+    .stat-stack span, .muted { color:var(--muted); font-size:13px; }
+    .hero .stat-stack span { color:#b8c6c0; }
+    ul { padding-left:20px; }
+    li { margin:4px 0; }
+    code { background:var(--soft); color:var(--soft-ink); padding:2px 4px; border-radius:4px; }
+    details { margin:10px 0; }
+    summary { cursor:pointer; font-weight:700; }
+    .style-section { border-top:1px solid var(--line); padding-top:10px; }
+    .markdown { color:#2d2f35; }
+    @media (max-width: 980px) {
+      .layout, .split, .client-hero, .index-hero { grid-template-columns:1fr; display:block; }
+      .context-grid { grid-template-columns:1fr; }
+      .stat-stack { min-width:0; margin-top:16px; }
+      .hero, .grid.cards, .layout, .topnav, .report-meta { padding-left:16px; padding-right:16px; }
+      .hero h1 { font-size:36px; }
+      .stat-stack { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+        <nav class="topnav">
+          <a class="brand" href="https://www.linkgraph.com/"><span>LG</span>LinkGraph</a>
+          <div class="nav-meta">Client delivery intelligence</div>
+        </nav>
+        <section class="hero index-hero">
+          <div class="hero-copy">
+            <div class="kicker">LinkGraph Content Ops</div>
+            <h1>Client Context Command Center</h1>
+            <p>Style systems, offerings, services, goods, sitemap context, and delivery folders for LinkGraph writers working across active client accounts.</p>
+          </div>
+          <div class="stat-stack hero-stats">
+            <div><strong>25</strong><span>clients</span></div>
+            <div><strong>330</strong><span>offerings mapped</span></div>
+            <div><strong>22</strong><span>clean crawls</span></div>
+          </div>
+        </section>
+        <section class="report-meta">
+          <span>Generated 2026-07-14T16:00:01.031976+00:00</span>
+          <span>SearchAtlas internal context excluded</span>
+        </section>
+        <section class="grid cards">
+    <a class="card client-card" href="5gstore.html">
+      <div class="card-topline">
+        <div class="kicker">5gstore</div>
+        <span class="status-pill">ok</span>
+      </div>
+      <h2>5Gstore</h2>
+      <p>6 offerings, services, goods, or product lines captured for writers.</p>
+      <div class="metrics">
+        <span>1200 URLs</span>
+        <span>80 product/service URLs</span>
+      </div>
+    </a>
+    
+
+    <a class="card client-card" href="a-plus-landscaping.html">
+      <div class="card-topline">
+        <div class="kicker">a-plus-landscaping</div>
+        <span class="status-pill">ok</span>
+      </div>
+      <h2>A Plus Landscaping</h2>
+      <p>39 offerings, services, goods, or product lines captured for writers.</p>
+      <div class="metrics">
+        <span>214 URLs</span>
+        <span>2 product/service URLs</span>
+      </div>
+    </a>
+    
+
+    <a class="card client-card" href="altify.html">
+      <div class="card-topline">
+        <div class="kicker">altify</div>
+        <span class="status-pill">ok</span>
+      </div>
+      <h2>Altify</h2>
+      <p>19 offerings, services, goods, or product lines captured for writers.</p>
+      <div class="metrics">
+        <span>372 URLs</span>
+        <span>0 product/service URLs</span>
+      </div>
+    </a>
+    
+
+    <a class="card client-card" href="anne-therese.html">
+      <div class="card-topline">
+        <div class="kicker">anne-therese</div>
+        <span class="status-pill">ok</span>
+      </div>
+      <h2>Anne Therese</h2>
+      <p>14 offerings, services, goods, or product lines captured for writers.</p>
+      <div class="metrics">
+        <span>169 URLs</span>
+        <span>25 product/service URLs</span>
+      </div>
+    </a>
+    
+
+    <a class="card client-card" href="the-hope-house__arizonaiop.html">
+      <div class="card-topline">
+        <div class="kicker">the-hope-house/arizonaiop</div>
+        <span class="status-pill">ok</span>
+      </div>
+      <h2>Arizona IOP</h2>
+      <p>11 offerings, services, goods, or product lines captured for writers.</p>
+      <div class="metrics">
+        <span>579 URLs</span>
+        <span>2 product/service URLs</span>
+      </div>
+    </a>
+    
+
+    <a class="card client-card" href="axiom-hrs.html">
+      <div class="card-topline">
+        <div class="kicker">axiom-hrs</div>
+        <span class="status-pill">ok</span>
+      </div>
+      <h2>Axiom HRS</h2>
+      <p>8 offerings, services, goods, or product lines captured for writers.</p>
+      <div class="metrics">
+        <span>370 URLs</span>
+        <span>19 product/service URLs</span>
+      </div>
+    </a>
+    
+
+    <a class="card client-card" href="deer-solutions.html">
+      <div class="card-topline">
+        <div class="kicker">deer-solutions</div>
+        <span class="status-pill">ok</span>
+      </div>
+      <h2>Deer Solutions</h2>
+      <p>13 offerings, services, goods, or product lines captured for writers.</p>
+      <div class="metrics">
+        <span>614 URLs</span>
+        <span>0 product/service URLs</span>
+      </div>
+    </a>
+    
+
+    <a class="card client-card" href="esthetics-center.html">
+      <div class="card-topline">
+        <div class="kicker">esthetics-center</div>
+        <span class="status-pill">ok</span>
+      </div>
+      <h2>Esthetics Center</h2>
+      <p>7 offerings, services, goods, or product lines captured for writers.</p>
+      <div class="metrics">
+        <span>419 URLs</span>
+        <span>48 product/service URLs</span>
+      </div>
+    </a>
+    
+
+    <a class="card client-card" href="find-self-storage.html">
+      <div class="card-topline">
+        <div class="kicker">find-self-storage</div>
+        <span class="status-pill">ok</span>
+      </div>
+      <h2>Find Self Storage</h2>
+      <p>13 offerings, services, goods, or product lines captured for writers.</p>
+      <div class="metrics">
+        <span>1200 URLs</span>
+        <span>0 product/service URLs</span>
+      </div>
+    </a>
+    
+
+    <a class="card client-card" href="laser-center-of-marin.html">
+      <div class="card-topline">
+        <div class="kicker">laser-center-of-marin</div>
+        <span class="status-pill">ok</span>
+      </div>
+      <h2>Laser Center of Marin</h2>
+      <p>5 offerings, services, goods, or product lines captured for writers.</p>
+      <div class="metrics">
+        <span>155 URLs</span>
+        <span>24 product/service URLs</span>
+      </div>
+    </a>
+    
+
+    <a class="card client-card" href="liveops.html">
+      <div class="card-topline">
+        <div class="kicker">liveops</div>
+        <span class="status-pill">ok</span>
+      </div>
+      <h2>Liveops</h2>
+      <p>14 offerings, services, goods, or product lines captured for writers.</p>
+      <div class="metrics">
+        <span>778 URLs</span>
+        <span>22 product/service URLs</span>
+      </div>
+    </a>
+    
+
+    <a class="card client-card" href="loti-labs.html">
+      <div class="card-topline">
+        <div class="kicker">loti-labs</div>
+        <span class="status-pill">ok</span>
+      </div>
+      <h2>Loti Labs</h2>
+      <p>38 offerings, services, goods, or product lines captured for writers.</p>
+      <div class="metrics">
+        <span>506 URLs</span>
+        <span>80 product/service URLs</span>
+      </div>
+    </a>
+    
+
+    <a class="card client-card" href="makana-charters.html">
+      <div class="card-topline">
+        <div class="kicker">makana-charters</div>
+        <span class="status-pill">ok</span>
+      </div>
+      <h2>Makana Charters</h2>
+      <p>11 offerings, services, goods, or product lines captured for writers.</p>
+      <div class="metrics">
+        <span>345 URLs</span>
+        <span>0 product/service URLs</span>
+      </div>
+    </a>
+    
+
+    <a class="card client-card" href="pekas-smith.html">
+      <div class="card-topline">
+        <div class="kicker">pekas-smith</div>
+        <span class="status-pill">ok</span>
+      </div>
+      <h2>Pekas Smith</h2>
+      <p>4 offerings, services, goods, or product lines captured for writers.</p>
+      <div class="metrics">
+        <span>200 URLs</span>
+        <span>0 product/service URLs</span>
+      </div>
+    </a>
+    
+
+    <a class="card client-card" href="portugal-pathways.html">
+      <div class="card-topline">
+        <div class="kicker">portugal-pathways</div>
+        <span class="status-pill">ok</span>
+      </div>
+      <h2>Portugal Pathways</h2>
+      <p>10 offerings, services, goods, or product lines captured for writers.</p>
+      <div class="metrics">
+        <span>711 URLs</span>
+        <span>16 product/service URLs</span>
+      </div>
+    </a>
+    
+
+    <a class="card client-card" href="print-and-cheques-now.html">
+      <div class="card-topline">
+        <div class="kicker">print-and-cheques-now</div>
+        <span class="status-pill">partial</span>
+      </div>
+      <h2>Print &amp; Cheques Now</h2>
+      <p>11 offerings, services, goods, or product lines captured for writers.</p>
+      <div class="metrics">
+        <span>1 URLs</span>
+        <span>0 product/service URLs</span>
+      </div>
+    </a>
+    
+
+    <a class="card client-card" href="the-hope-house__scottsdaleazdetox.html">
+      <div class="card-topline">
+        <div class="kicker">the-hope-house/scottsdaleazdetox</div>
+        <span class="status-pill">ok</span>
+      </div>
+      <h2>Scottsdale Detox</h2>
+      <p>12 offerings, services, goods, or product lines captured for writers.</p>
+      <div class="metrics">
+        <span>929 URLs</span>
+        <span>0 product/service URLs</span>
+      </div>
+    </a>
+    
+
+    <a class="card client-card" href="the-hope-house__scottsdaletmstherapy.html">
+      <div class="card-topline">
+        <div class="kicker">the-hope-house/scottsdaletmstherapy</div>
+        <span class="status-pill">ok</span>
+      </div>
+      <h2>Scottsdale TMS Therapy</h2>
+      <p>4 offerings, services, goods, or product lines captured for writers.</p>
+      <div class="metrics">
+        <span>383 URLs</span>
+        <span>0 product/service URLs</span>
+      </div>
+    </a>
+    
+
+    <a class="card client-card" href="the-hope-house__thehopehouse.html">
+      <div class="card-topline">
+        <div class="kicker">the-hope-house/thehopehouse</div>
+        <span class="status-pill">ok</span>
+      </div>
+      <h2>The Hope House</h2>
+      <p>15 offerings, services, goods, or product lines captured for writers.</p>
+      <div class="metrics">
+        <span>851 URLs</span>
+        <span>2 product/service URLs</span>
+      </div>
+    </a>
+    
+
+    <a class="card client-card" href="the-nash-casino.html">
+      <div class="card-topline">
+        <div class="kicker">the-nash-casino</div>
+        <span class="status-pill">ok</span>
+      </div>
+      <h2>The Nash Casino</h2>
+      <p>11 offerings, services, goods, or product lines captured for writers.</p>
+      <div class="metrics">
+        <span>8 URLs</span>
+        <span>0 product/service URLs</span>
+      </div>
+    </a>
+    
+
+    <a class="card client-card" href="thera.html">
+      <div class="card-topline">
+        <div class="kicker">thera</div>
+        <span class="status-pill">ok</span>
+      </div>
+      <h2>Thera</h2>
+      <p>12 offerings, services, goods, or product lines captured for writers.</p>
+      <div class="metrics">
+        <span>260 URLs</span>
+        <span>1 product/service URLs</span>
+      </div>
+    </a>
+    
+
+    <a class="card client-card" href="trustlayer.html">
+      <div class="card-topline">
+        <div class="kicker">trustlayer</div>
+        <span class="status-pill">ok</span>
+      </div>
+      <h2>TrustLayer</h2>
+      <p>13 offerings, services, goods, or product lines captured for writers.</p>
+      <div class="metrics">
+        <span>496 URLs</span>
+        <span>0 product/service URLs</span>
+      </div>
+    </a>
+    
+
+    <a class="card client-card" href="us-self-storage.html">
+      <div class="card-topline">
+        <div class="kicker">us-self-storage</div>
+        <span class="status-pill">partial</span>
+      </div>
+      <h2>US Self Storage</h2>
+      <p>8 offerings, services, goods, or product lines captured for writers.</p>
+      <div class="metrics">
+        <span>1 URLs</span>
+        <span>0 product/service URLs</span>
+      </div>
+    </a>
+    
+
+    <a class="card client-card" href="us-storage-units.html">
+      <div class="card-topline">
+        <div class="kicker">us-storage-units</div>
+        <span class="status-pill">partial</span>
+      </div>
+      <h2>US Storage Units</h2>
+      <p>12 offerings, services, goods, or product lines captured for writers.</p>
+      <div class="metrics">
+        <span>1 URLs</span>
+        <span>0 product/service URLs</span>
+      </div>
+    </a>
+    
+
+    <a class="card client-card" href="zia-tile.html">
+      <div class="card-topline">
+        <div class="kicker">zia-tile</div>
+        <span class="status-pill">ok</span>
+      </div>
+      <h2>Zia Tile</h2>
+      <p>20 offerings, services, goods, or product lines captured for writers.</p>
+      <div class="metrics">
+        <span>1200 URLs</span>
+        <span>80 product/service URLs</span>
+      </div>
+    </a>
+    </section>
+        </body>
+</html>

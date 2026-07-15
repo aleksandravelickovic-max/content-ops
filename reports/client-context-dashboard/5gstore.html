@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>5Gstore Context</title>
+  <style>
+    :root {
+      --bg:#f4f7f5; --panel:#ffffff; --ink:#09110f; --muted:#63716c; --line:#dce5df;
+      --black:#050907; --graph:#14d878; --graph-dark:#079d55; --soft:#eaf8f0; --soft-ink:#19392a;
+      --accent:#087a47; --red:#b5362d; --shadow:0 18px 46px rgba(5,9,7,.08);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:
+      linear-gradient(180deg, #ffffff 0, var(--bg) 360px); color:var(--ink); line-height:1.45; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .topnav { min-height:64px; padding:14px max(32px, calc((100vw - 1380px) / 2 + 32px)); background:var(--black); border-bottom:1px solid rgba(255,255,255,.08); position:sticky; top:0; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { color:#fff; display:inline-flex; align-items:center; gap:10px; font-weight:800; letter-spacing:0; }
+    .brand:hover { text-decoration:none; }
+    .brand span { width:32px; height:32px; border-radius:8px; background:var(--graph); color:var(--black); display:inline-grid; place-items:center; font-size:13px; font-weight:900; }
+    .nav-meta, .nav-link { color:#b8c6c0; font-size:13px; font-weight:700; }
+    .hero { margin:0; padding:42px max(32px, calc((100vw - 1380px) / 2 + 32px)) 38px; background:var(--black); color:#fff; border-bottom:1px solid rgba(255,255,255,.08); }
+    .index-hero, .client-hero { display:flex; justify-content:space-between; gap:28px; align-items:flex-start; }
+    .hero h1 { margin:0 0 12px; font-size:clamp(32px, 5vw, 62px); line-height:.98; letter-spacing:0; max-width:900px; }
+    .hero p { margin:0; color:#c7d5cf; max-width:840px; font-size:17px; }
+    .hero-copy { max-width:940px; }
+    .kicker { color:var(--graph); font-size:12px; text-transform:uppercase; letter-spacing:.08em; font-weight:900; }
+    .report-meta { display:flex; flex-wrap:wrap; gap:10px; padding:14px 32px; background:#fff; border-bottom:1px solid var(--line); color:var(--muted); font-size:13px; max-width:1380px; margin:0 auto; }
+    .report-meta span { background:var(--soft); color:var(--soft-ink); border-radius:999px; padding:6px 10px; font-weight:700; }
+    .grid.cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(290px, 1fr)); gap:16px; padding:24px 32px 42px; max-width:1380px; margin:0 auto; }
+    .card, .panel, .context-card { background:var(--panel); border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow); }
+    .client-card { display:block; padding:20px; color:inherit; min-height:184px; transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease; }
+    .client-card:hover { text-decoration:none; transform:translateY(-2px); border-color:rgba(20,216,120,.55); box-shadow:0 24px 58px rgba(5,9,7,.12); }
+    .card-topline { display:flex; justify-content:space-between; gap:10px; align-items:center; }
+    .client-card h2 { margin:14px 0 8px; font-size:23px; line-height:1.1; }
+    .client-card p { margin:0; color:var(--muted); }
+    .metrics { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+    .metrics span, .evidence, .status-pill { background:var(--soft); border:1px solid rgba(20,216,120,.22); border-radius:999px; padding:5px 9px; font-size:12px; color:var(--soft-ink); font-weight:800; }
+    .topic-chips { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 18px; }
+    .topic-chips span { background:#f6fbf8; border:1px solid var(--line); border-radius:999px; color:#183a2a; padding:7px 10px; font-size:13px; font-weight:750; }
+    .layout { display:block; padding:22px 32px 46px; max-width:1380px; margin:0 auto; }
+    main { min-width:0; }
+    .context-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; margin-bottom:20px; }
+    .context-card { padding:18px; min-height:220px; }
+    .context-card ul { margin-bottom:0; }
+    .context-note { color:var(--muted); font-size:13px; margin:4px 0 12px; }
+    .aside-label { color:var(--graph-dark); font-size:11px; text-transform:uppercase; font-weight:900; letter-spacing:.08em; margin-bottom:5px; }
+    .panel h2 { margin-top:0; }
+    .panel { padding:22px; margin-bottom:20px; }
+    .panel h2 { font-size:26px; letter-spacing:0; }
+    .offerings { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:13px; margin-top:16px; }
+    .offering, .sample { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .offering { position:relative; overflow:hidden; }
+    .offering-marker { position:absolute; inset:0 auto 0 0; width:4px; background:var(--graph); }
+    .offering h3, .sample h4 { margin:0 0 6px; }
+    .offering p { margin:0 0 10px; }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .stat-stack { display:grid; grid-template-columns:repeat(3, minmax(100px, 1fr)); gap:8px; min-width:340px; }
+    .stat-stack div { border:1px solid rgba(255,255,255,.15); border-radius:8px; padding:14px; background:rgba(255,255,255,.06); }
+    .stat-stack strong { display:block; font-size:26px; color:#fff; }
+    .stat-stack span, .muted { color:var(--muted); font-size:13px; }
+    .hero .stat-stack span { color:#b8c6c0; }
+    ul { padding-left:20px; }
+    li { margin:4px 0; }
+    code { background:var(--soft); color:var(--soft-ink); padding:2px 4px; border-radius:4px; }
+    details { margin:10px 0; }
+    summary { cursor:pointer; font-weight:700; }
+    .style-section { border-top:1px solid var(--line); padding-top:10px; }
+    .markdown { color:#2d2f35; }
+    @media (max-width: 980px) {
+      .layout, .split, .client-hero, .index-hero { grid-template-columns:1fr; display:block; }
+      .context-grid { grid-template-columns:1fr; }
+      .stat-stack { min-width:0; margin-top:16px; }
+      .hero, .grid.cards, .layout, .topnav, .report-meta { padding-left:16px; padding-right:16px; }
+      .hero h1 { font-size:36px; }
+      .stat-stack { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+    <nav class="topnav">
+      <a class="brand" href="index.html"><span>LG</span>LinkGraph</a>
+      <a class="nav-link" href="index.html">All clients</a>
+    </nav>
+    <section class="hero client-hero">
+      <div class="hero-copy">
+        <div class="kicker">5gstore</div>
+        <h1>5Gstore</h1>
+        <p>6 extracted offerings, 1200 sitemap URLs, and 11 local source documents for client-specific writing context.</p>
+      </div>
+      <div class="stat-stack">
+        <div><strong>ok</strong><span>crawl status</span></div>
+        <div><strong>1200</strong><span>URLs found</span></div>
+        <div><strong>80</strong><span>product/service URLs</span></div>
+      </div>
+    </section>
+    <section class="layout">
+      <main>
+        <section class="context-grid">
+    <article class="context-card">
+      <div class="aside-label">Quick Facts</div>
+      <p class="context-note">Company, audience, and proof points.</p>
+      <ul><li>What 5Gstore is: A specialized online retailer for 4G and 5G cellular networking equipment — routers, antennas, signal boosters, and accessories. Differentiated by non-commissioned technical staff who guide customers from product selection through post-purchase troubleshooting.</li><li>Parent company: MDG Connected Solutions (acquired by Connected Solutions Group on January 27, 2026; founders Michael and Julia Ginsberg remain in brand leadership).</li><li>A+ BBB rating (15+ consecutive years)</li><li>Thousands of verified 5-star reviews on Shopper Approved and Google Shopping</li><li>GSA-approved contractor</li><li>EV SSL security</li><li>Content must speak to technical buyers. These audiences research before purchasing and expect specificity — model numbers, band compatibility, throughput specs, use case fit.</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Voice</div>
+      <p class="context-note">How this client should sound.</p>
+      <ul><li>Technical: Specify bands, throughput, ports, certifications — not vague claims</li><li>Direct: Lead with the problem or the product capability, not a preamble</li><li>Expert without jargon overload: Define terms on first use when writing for mixed audiences</li><li>Trustworthy: Cite specs from verified sources; flag anything unconfirmed</li><li>Practical: Focus on setup, compatibility, real-world use cases</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Avoid / Compliance</div>
+      <p class="context-note">Claims, terms, and wording to avoid.</p>
+      <ul><li>Marketing fluff: &quot;cutting-edge,&quot; &quot;next-generation,&quot; &quot;best-in-class&quot;</li><li>Vague connectivity language: &quot;stay connected,&quot; &quot;blazing speeds,&quot; &quot;seamless internet&quot;</li><li>Overpromising signal improvement without stating conditions</li><li>Reproducing manufacturer manual text verbatim</li><li>5GStore: Wrong capitalization</li><li>5G Store: Wrong — two words</li><li>Blazing fast / lightning fast: Generic, unverifiable</li><li>Seamless connectivity: Filler claim</li><li>Game-changing: Banned per universal rules</li><li>Simply plug in: Oversimplifies technical setup</li><li>Revolutionary: Generic authority claim</li><li>Specs must come from verified sources in raw/ or clearly identified product documentation. Do not invent specs.</li><li>Band compatibility must be stated explicitly when writing about routers, hotspots, and boosters — do not generalize.</li><li>Capacity claims (e.g., &quot;supports up to 500 users&quot;) must match the product spec sheet.</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Terminology</div>
+      <p class="context-note">Client-specific naming and required language.</p>
+      <ul><li>5Gstore: Always written exactly as: 5Gstore — capital G, lowercase s, no space</li><li>Cellular connectivity: Preferred over &quot;wireless internet&quot; when referring to mobile broadband</li><li>Signal strength: Use over &quot;signal quality&quot; unless specifically referring to quality metrics</li><li>Mobile broadband: Use for general cellular internet references</li><li>Non-commissioned: Use when referencing 5Gstore&#x27;s sales staff differentiator</li><li>SpeedFusion bonding: Exact Peplink product name — do not paraphrase</li><li>FirstNet Band 14: Exact name for emergency-priority LTE band — use when relevant</li></ul>
+    </article>
+    </section>
+        <section class="panel">
+          <h2>Offerings, Services, Goods</h2>
+          <p class="muted">Writer-facing catalog from the client style system, approved source files, and usable product/service pages. Raw crawl evidence is separated below.</p>
+          <div class="offerings">
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Antennas</h3>
+      <p>External cellular and networking antennas for routers, modems, hotspots, and booster setups.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/5gstore/raw/knowledge/service-taxonomy.md · Sections: Key product categories, Product Categories</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Enterprise Routers</h3>
+      <p>Peplink and related business routers for cellular, WAN, failover, and multi-location networking.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/5gstore/raw/knowledge/service-taxonomy.md · Sections: Key product categories, Product Categories</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Hardware Accessories</h3>
+      <p>Cables, splitters, mounts, adapters, and device-specific networking accessories.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/5gstore/raw/knowledge/service-taxonomy.md · Sections: Key product categories, Product Categories</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Mobile Hotspots</h3>
+      <p>Portable 4G and 5G hotspot devices for mobile broadband use cases.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/5gstore/raw/knowledge/service-taxonomy.md · Sections: Key product categories, Product Categories</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Signal Boosters</h3>
+      <p>Cellular signal booster hardware. Writers must describe mechanism and conditions, not guaranteed signal outcomes.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/5gstore/raw/knowledge/service-taxonomy.md · Sections: Key product categories, Product Categories</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Software Licenses / Cloud Services</h3>
+      <p>Peplink SpeedFusion Connect and related licenses or cloud services, with firmware and license limits verified before writing.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/5gstore/raw/knowledge/service-taxonomy.md · Sections: Key product categories, Product Categories</div>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Website Intelligence</h2>
+          <div class="split">
+            <div>
+              <h3>Website URLs</h3><ul><li><a href="https://5gstore.com/">https://5gstore.com/</a></li></ul>
+              <h3>Sitemaps</h3><ul><li><a href="https://5gstore.com/sitemap.xml">https://5gstore.com/sitemap.xml</a></li></ul>
+            </div>
+            <div>
+              <h3>Semantic / Topical Terms</h3><div class="topic-chips"><span>Antennas</span><span>Enterprise Routers</span><span>Hardware Accessories</span><span>Mobile Hotspots</span><span>Signal Boosters</span><span>Software Licenses / Cloud Services</span><span>Cellular Connectivity</span><span>Signal Strength</span><span>Mobile Broadband</span><span>SpeedFusion bonding</span></div>
+              <h3>Blockers</h3><p class="muted">None</p>
+            </div>
+          </div>
+          <h3>Product / Service URLs</h3><ul><li><a href="https://5gstore.com/product/1589_antenna_tip_sheet_c777.html">https://5gstore.com/product/1589_antenna_tip_sheet_c777.html</a></li><li><a href="https://5gstore.com/product/12119_5gstore_data_plan.html">https://5gstore.com/product/12119_5gstore_data_plan.html</a></li><li><a href="https://5gstore.com/product/16387_amm_client_license_aleos_devices_per_device.html">https://5gstore.com/product/16387_amm_client_license_aleos_devices_per_device.html</a></li><li><a href="https://5gstore.com/product/8468_airlink_support_preferred.html">https://5gstore.com/product/8468_airlink_support_preferred.html</a></li><li><a href="https://5gstore.com/product/9979_airlink_management_service_avms.html">https://5gstore.com/product/9979_airlink_management_service_avms.html</a></li><li><a href="https://5gstore.com/product/9980_airlink_management_service_avms.html">https://5gstore.com/product/9980_airlink_management_service_avms.html</a></li><li><a href="https://5gstore.com/product/16388_amm_server_software_license_enterprise_lite.html">https://5gstore.com/product/16388_amm_server_software_license_enterprise_lite.html</a></li><li><a href="https://5gstore.com/product/16389_amm_server_software_license_enterprise.html">https://5gstore.com/product/16389_amm_server_software_license_enterprise.html</a></li><li><a href="https://5gstore.com/product/9637_amm_license.html">https://5gstore.com/product/9637_amm_license.html</a></li><li><a href="https://5gstore.com/product/16392_acm_client_license_non-fips_xr_rx_mg90_aleos_devices_per_device.html">https://5gstore.com/product/16392_acm_client_license_non-fips_xr_rx_mg90_aleos_devices_per_device.html</a></li><li><a href="https://5gstore.com/product/8314_airlink_support_preferred.html">https://5gstore.com/product/8314_airlink_support_preferred.html</a></li><li><a href="https://5gstore.com/product/16393_am_server_software_license_enterprise_lite.html">https://5gstore.com/product/16393_am_server_software_license_enterprise_lite.html</a></li><li><a href="https://5gstore.com/product/16394_am_server_software_license_enterprise.html">https://5gstore.com/product/16394_am_server_software_license_enterprise.html</a></li><li><a href="https://5gstore.com/product/16395_am_client_license_aleos_devices_per_device.html">https://5gstore.com/product/16395_am_client_license_aleos_devices_per_device.html</a></li><li><a href="https://5gstore.com/product/8725_airlink_complete_renewal_1_year_rx_lx_rv_mp_xr60.html">https://5gstore.com/product/8725_airlink_complete_renewal_1_year_rx_lx_rv_mp_xr60.html</a></li><li><a href="https://5gstore.com/product/8727_airlink_complete_amm.html">https://5gstore.com/product/8727_airlink_complete_amm.html</a></li><li><a href="https://5gstore.com/product/16396_airlink_support_for_amm_on_prem_device_technical_support_for_aleos_devices.html">https://5gstore.com/product/16396_airlink_support_for_amm_on_prem_device_technical_support_for_aleos_devices.html</a></li><li><a href="https://5gstore.com/product/9985_airlink_complete_renewal_rx_lx_rv_mp_xr60.html">https://5gstore.com/product/9985_airlink_complete_renewal_rx_lx_rv_mp_xr60.html</a></li><li><a href="https://5gstore.com/product/9986_airlink_complete_renewal_5_years_rx_lx_rv_mp_xr60.html">https://5gstore.com/product/9986_airlink_complete_renewal_5_years_rx_lx_rv_mp_xr60.html</a></li><li><a href="https://5gstore.com/product/16397_airlink_support_for_amm_hosted_for_aleos_devices_includes_amm_cloud_management_and_technical_support.html">https://5gstore.com/product/16397_airlink_support_for_amm_hosted_for_aleos_devices_includes_amm_cloud_management_and_technical_support.html</a></li><li><a href="https://5gstore.com/product/16398_airlink_support_for_amm_hosted_for_aleos_devices_includes_amm_cloud_management_and_technical_support.html">https://5gstore.com/product/16398_airlink_support_for_amm_hosted_for_aleos_devices_includes_amm_cloud_management_and_technical_support.html</a></li><li><a href="https://5gstore.com/product/8990_extend_airlink_complete_3_year.html">https://5gstore.com/product/8990_extend_airlink_complete_3_year.html</a></li><li><a href="https://5gstore.com/product/8992_airlink_complete_alms_support_and_warranty_5_years.html">https://5gstore.com/product/8992_airlink_complete_alms_support_and_warranty_5_years.html</a></li><li><a href="https://5gstore.com/product/16399_airlink_support_for_amm_hosted_for_mg_devices_includes_amm_cloud_device_management_and_technical_support.html">https://5gstore.com/product/16399_airlink_support_for_amm_hosted_for_mg_devices_includes_amm_cloud_device_management_and_technical_support.html</a></li><li><a href="https://5gstore.com/product/16400_airlink_support_for_amm_hosted_for_mg_devices_includes_amm_cloud_device_management_and_technical_support_with_hardware_warrantyu.html">https://5gstore.com/product/16400_airlink_support_for_amm_hosted_for_mg_devices_includes_amm_cloud_device_management_and_technical_support_with_hardware_warrantyu.html</a></li><li><a href="https://5gstore.com/product/16401_airlink_support_for_amm_on_prem_device_technical_support_for_mg_devices.html">https://5gstore.com/product/16401_airlink_support_for_amm_on_prem_device_technical_support_for_mg_devices.html</a></li><li><a href="https://5gstore.com/product/16402_airlink_support_for_amm_on_prem_device_technical_support_for_mg_devices.html">https://5gstore.com/product/16402_airlink_support_for_amm_on_prem_device_technical_support_for_mg_devices.html</a></li><li><a href="https://5gstore.com/product/16403_airlink_support_for_amm_on_prem_device_technical_support_for_aleos_devices.html">https://5gstore.com/product/16403_airlink_support_for_amm_on_prem_device_technical_support_for_aleos_devices.html</a></li><li><a href="https://5gstore.com/product/16404_airlink_support_for_amm_on_prem_device_technical_support_for_aleos_devices.html">https://5gstore.com/product/16404_airlink_support_for_amm_on_prem_device_technical_support_for_aleos_devices.html</a></li><li><a href="https://5gstore.com/product/13289_renewal_airlink_premium_xr90_1_year.html">https://5gstore.com/product/13289_renewal_airlink_premium_xr90_1_year.html</a></li><li><a href="https://5gstore.com/product/13290_renewal_airlink_premium_xr80_xr90_3_year.html">https://5gstore.com/product/13290_renewal_airlink_premium_xr80_xr90_3_year.html</a></li><li><a href="https://5gstore.com/product/13291_renewal_airlink_premium_xr80_xr90_5_year.html">https://5gstore.com/product/13291_renewal_airlink_premium_xr80_xr90_5_year.html</a></li><li><a href="https://5gstore.com/product/13282_renewals_airlink_complete_xr80_1_year.html">https://5gstore.com/product/13282_renewals_airlink_complete_xr80_1_year.html</a></li><li><a href="https://5gstore.com/product/13284_renewals_airlink_complete_xr80_3_year.html">https://5gstore.com/product/13284_renewals_airlink_complete_xr80_3_year.html</a></li><li><a href="https://5gstore.com/product/13285_renewals_airlink_complete_xr80_5_year.html">https://5gstore.com/product/13285_renewals_airlink_complete_xr80_5_year.html</a></li><li><a href="https://5gstore.com/product/13297_extend_airlink_complete_to_3_year_xr80_new_device.html">https://5gstore.com/product/13297_extend_airlink_complete_to_3_year_xr80_new_device.html</a></li><li><a href="https://5gstore.com/product/13299_extend_airlink_complete_to_5_year_xr80_new_device.html">https://5gstore.com/product/13299_extend_airlink_complete_to_5_year_xr80_new_device.html</a></li><li><a href="https://5gstore.com/product/11580_upgrade_extend_airlink_premium_xr80_xr90_new_3_year.html">https://5gstore.com/product/11580_upgrade_extend_airlink_premium_xr80_xr90_new_3_year.html</a></li><li><a href="https://5gstore.com/product/11581_upgrade_extend_airlink_premium_xr80_xr90_5_year.html">https://5gstore.com/product/11581_upgrade_extend_airlink_premium_xr80_xr90_5_year.html</a></li><li><a href="https://5gstore.com/product/16405_am_annual_sm_server_enterprise_lite_1_year.html">https://5gstore.com/product/16405_am_annual_sm_server_enterprise_lite_1_year.html</a></li><li><a href="https://5gstore.com/product/16406_am_annual_sm_server_enterprise_lite_3_year.html">https://5gstore.com/product/16406_am_annual_sm_server_enterprise_lite_3_year.html</a></li><li><a href="https://5gstore.com/product/16407_am_annual_sm_server_enterprise_lite_5_year.html">https://5gstore.com/product/16407_am_annual_sm_server_enterprise_lite_5_year.html</a></li><li><a href="https://5gstore.com/product/16408_am_annual_sm_server_enterprise_1_year.html">https://5gstore.com/product/16408_am_annual_sm_server_enterprise_1_year.html</a></li><li><a href="https://5gstore.com/product/16409_am_annual_sm_server_enterprise_3_year.html">https://5gstore.com/product/16409_am_annual_sm_server_enterprise_3_year.html</a></li><li><a href="https://5gstore.com/product/16410_am_annual_sm_server_enterprise_5_year.html">https://5gstore.com/product/16410_am_annual_sm_server_enterprise_5_year.html</a></li><li><a href="https://5gstore.com/product/16411_am_annual_sm_server_enterprise_unlimited_1_year.html">https://5gstore.com/product/16411_am_annual_sm_server_enterprise_unlimited_1_year.html</a></li><li><a href="https://5gstore.com/product/16413_am_annual_sm_client_license_aleos_per_device_1_year.html">https://5gstore.com/product/16413_am_annual_sm_client_license_aleos_per_device_1_year.html</a></li><li><a href="https://5gstore.com/product/16414_am_annual_sm_client_license_aleos_per_device_3_year.html">https://5gstore.com/product/16414_am_annual_sm_client_license_aleos_per_device_3_year.html</a></li><li><a href="https://5gstore.com/product/16415_am_annual_sm_client_license_aleos_per_device_5_year.html">https://5gstore.com/product/16415_am_annual_sm_client_license_aleos_per_device_5_year.html</a></li><li><a href="https://5gstore.com/product/16416_amm_annual_sm_server_enterprise_lite_1_year.html">https://5gstore.com/product/16416_amm_annual_sm_server_enterprise_lite_1_year.html</a></li><li><a href="https://5gstore.com/product/16417_amm_annual_sm_server_enterprise_lite_3_year.html">https://5gstore.com/product/16417_amm_annual_sm_server_enterprise_lite_3_year.html</a></li><li><a href="https://5gstore.com/product/16418_amm_annual_sm_server_enterprise_lite_5_year.html">https://5gstore.com/product/16418_amm_annual_sm_server_enterprise_lite_5_year.html</a></li><li><a href="https://5gstore.com/product/16419_amm_annual_sm_server_enterprise_1_year.html">https://5gstore.com/product/16419_amm_annual_sm_server_enterprise_1_year.html</a></li><li><a href="https://5gstore.com/product/16420_amm_annual_sm_server_enterprise_3_year.html">https://5gstore.com/product/16420_amm_annual_sm_server_enterprise_3_year.html</a></li><li><a href="https://5gstore.com/product/16421_amm_annual_sm_server_enterprise_5_year.html">https://5gstore.com/product/16421_amm_annual_sm_server_enterprise_5_year.html</a></li><li><a href="https://5gstore.com/product/16422_amm_annual_sm_client_license_mg90_per_device_1_year.html">https://5gstore.com/product/16422_amm_annual_sm_client_license_mg90_per_device_1_year.html</a></li><li><a href="https://5gstore.com/product/16423_amm_annual_sm_client_license_mg90_per_device_3_year.html">https://5gstore.com/product/16423_amm_annual_sm_client_license_mg90_per_device_3_year.html</a></li><li><a href="https://5gstore.com/product/16424_amm_annual_sm_client_license_mg90_per_device_5_year.html">https://5gstore.com/product/16424_amm_annual_sm_client_license_mg90_per_device_5_year.html</a></li><li><a href="https://5gstore.com/product/16425_amm_annual_sm_client_license_aleos_per_device_1_year.html">https://5gstore.com/product/16425_amm_annual_sm_client_license_aleos_per_device_1_year.html</a></li><li><a href="https://5gstore.com/product/16426_amm_annual_sm_client_license_aleos_per_device_3_year.html">https://5gstore.com/product/16426_amm_annual_sm_client_license_aleos_per_device_3_year.html</a></li><li><a href="https://5gstore.com/product/16427_amm_annual_sm_client_license_aleos_per_device_5_year.html">https://5gstore.com/product/16427_amm_annual_sm_client_license_aleos_per_device_5_year.html</a></li><li><a href="https://5gstore.com/product/16428_amm_annual_sm_client_license_genx_per_device_1_year.html">https://5gstore.com/product/16428_amm_annual_sm_client_license_genx_per_device_1_year.html</a></li><li><a href="https://5gstore.com/product/16429_acm_annual_sm_vm_server_software_max_2_vm_instances_1_year.html">https://5gstore.com/product/16429_acm_annual_sm_vm_server_software_max_2_vm_instances_1_year.html</a></li><li><a href="https://5gstore.com/product/16430_acm_annual_sm_vm_server_software_max_2_vm_instances_3_year.html">https://5gstore.com/product/16430_acm_annual_sm_vm_server_software_max_2_vm_instances_3_year.html</a></li><li><a href="https://5gstore.com/product/16431_acm_annual_sm_vm_server_software_max_2_vm_instances_5_year.html">https://5gstore.com/product/16431_acm_annual_sm_vm_server_software_max_2_vm_instances_5_year.html</a></li><li><a href="https://5gstore.com/product/16432_acm_annual_sm_vm_server_software_fips_max_2_vm_instances_1_year.html">https://5gstore.com/product/16432_acm_annual_sm_vm_server_software_fips_max_2_vm_instances_1_year.html</a></li><li><a href="https://5gstore.com/product/16433_acm_annual_sm_vm_server_software_fips_max_2_vm_instances_3_year.html">https://5gstore.com/product/16433_acm_annual_sm_vm_server_software_fips_max_2_vm_instances_3_year.html</a></li><li><a href="https://5gstore.com/product/16434_acm_annual_sm_vm_server_software_fips_max_2_vm_instances_5_year.html">https://5gstore.com/product/16434_acm_annual_sm_vm_server_software_fips_max_2_vm_instances_5_year.html</a></li><li><a href="https://5gstore.com/product/16435_acm_annual_sm_non-fips_per_client_1_year.html">https://5gstore.com/product/16435_acm_annual_sm_non-fips_per_client_1_year.html</a></li><li><a href="https://5gstore.com/product/16436_acm_annual_sm_non-fips_per_client_3_year.html">https://5gstore.com/product/16436_acm_annual_sm_non-fips_per_client_3_year.html</a></li><li><a href="https://5gstore.com/product/16437_acm_annual_sm_non-fips_per_client_5_year.html">https://5gstore.com/product/16437_acm_annual_sm_non-fips_per_client_5_year.html</a></li><li><a href="https://5gstore.com/product/16438_acm_annual_sm_fips_per_client_1_year.html">https://5gstore.com/product/16438_acm_annual_sm_fips_per_client_1_year.html</a></li><li><a href="https://5gstore.com/product/16439_acm_annual_sm_fips_per_client_3_year.html">https://5gstore.com/product/16439_acm_annual_sm_fips_per_client_3_year.html</a></li><li><a href="https://5gstore.com/product/16440_acm_annual_sm_fips_per_client_5_year.html">https://5gstore.com/product/16440_acm_annual_sm_fips_per_client_5_year.html</a></li><li><a href="https://5gstore.com/product/16441_amm_annual_sm_hardware_enterprise_lite_1_year.html">https://5gstore.com/product/16441_amm_annual_sm_hardware_enterprise_lite_1_year.html</a></li><li><a href="https://5gstore.com/product/16442_amm_annual_sm_hardware_enterprise_lite_3_year.html">https://5gstore.com/product/16442_amm_annual_sm_hardware_enterprise_lite_3_year.html</a></li><li><a href="https://5gstore.com/product/16443_amm_annual_sm_hardware_enterprise_lite_5_year.html">https://5gstore.com/product/16443_amm_annual_sm_hardware_enterprise_lite_5_year.html</a></li><li><a href="https://5gstore.com/product/16444_amm_annual_sm_hardware_enterprise_1_year.html">https://5gstore.com/product/16444_amm_annual_sm_hardware_enterprise_1_year.html</a></li><li><a href="https://5gstore.com/product/16445_amm_annual_sm_hardware_enterprise_3_year.html">https://5gstore.com/product/16445_amm_annual_sm_hardware_enterprise_3_year.html</a></li><li><a href="https://5gstore.com/product/16446_amm_annual_sm_hardware_enterprise_5_year.html">https://5gstore.com/product/16446_amm_annual_sm_hardware_enterprise_5_year.html</a></li></ul>
+          <h3>Sampled Pages</h3><div class="sample-pages">
+    <article class="sample">
+      <h4>5Gstore.com, 4G/5G Routers, Antennas, Boosters, WiFi, IP Switches</h4>
+      <a href="https://5gstore.com/">https://5gstore.com/</a>
+      <p>5GStore.com offers the latest in 4G &amp; 5G Routers, 5G modems, 5G antennas, and more.</p>
+      <ul><li>Router Landing Pages</li><li>Antenna &amp; Booster Landing Pages</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Peplink Balance One Core 1- Yr EssentialCare</h4>
+      <a href="https://5gstore.com/product/6779_warranty.html">https://5gstore.com/product/6779_warranty.html</a>
+      <p>5Gstore - Warranty &amp; Returns</p>
+      <ul><li>Peplink 1-Year EssentialCare for Balance One Core</li><li>Latest Blog Posts About This Product</li><li>Latest YouTube Videos About This Product</li><li>Click here to submit a new question</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Peplink Balance One Core 2-Yr EssentialCare</h4>
+      <a href="https://5gstore.com/product/6781_warranty.html">https://5gstore.com/product/6781_warranty.html</a>
+      <p>5GStore offers a 1-year warranty on all of our products!</p>
+      <ul><li>Peplink 2-Year EssentialCare for Balance One Core</li><li>Latest Blog Posts About This Product</li><li>Latest YouTube Videos About This Product</li><li>Click here to submit a new question</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>2-Year Extended Warranty for SureCall Force5</h4>
+      <a href="https://5gstore.com/product/6799_warranty.html">https://5gstore.com/product/6799_warranty.html</a>
+      <p>5GStore offers a warranty on all of the products that we sell. If you have any problems with your product, we will do our best to help you out.</p>
+      <ul><li>2-Year Extended Warranty for SureCall Force5</li><li>Click here to submit a new question</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>3 Years Digi Technical Support</h4>
+      <a href="https://5gstore.com/product/7418_digi-care.html">https://5gstore.com/product/7418_digi-care.html</a>
+      <p>The Digi-Care warranty is the perfect way to protect your new Digi-Tab tablet. This warranty offers coverage for accidental damage, mechanical breakdown, and even theft.</p>
+      <ul><li>3 Years Digi Technical Support</li><li>Latest Blog Posts About This Product</li><li>Latest YouTube Videos About This Product</li><li>Click here to submit a new question</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>AMM Client License - MG90 (per device)</h4>
+      <a href="https://5gstore.com/product/9637_amm_license.html">https://5gstore.com/product/9637_amm_license.html</a>
+      <p>Ammunition license for 5.56 and 7.62 ammo.</p>
+      <ul><li>Semtech (formerly Sierra Wireless) AMM Client License - MG90 (per device)</li><li>Latest Blog Posts About This Product</li><li>Latest YouTube Videos About This Product</li><li>Click here to submit a new question</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>1 Year Digi Technical Support</h4>
+      <a href="https://5gstore.com/product/7417_digi-support.html">https://5gstore.com/product/7417_digi-support.html</a>
+      <p>A one-stop-shop for Digi support products and resources.</p>
+      <ul><li>1 Year Digi Technical Support</li><li>Latest Blog Posts About This Product</li><li>Latest YouTube Videos About This Product</li><li>Click here to submit a new question</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>FIPS License for Pepwave Max HD2</h4>
+      <a href="https://5gstore.com/product/8892_pepwave-fips.html">https://5gstore.com/product/8892_pepwave-fips.html</a>
+      <p>5Gstore is your one-stop-shop for 5G products and information! We carry a wide range of 5G products, from antennas to routers to modems, and everything in between!</p>
+      <ul><li>Peplink FIPS License for Pepwave Max HD2</li><li>Latest Blog Posts About This Product</li><li>Latest YouTube Videos About This Product</li><li>Click here to submit a new question</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>FIPS License for Pepwave Max Transit Duo</h4>
+      <a href="https://5gstore.com/product/8893_pepwave-fips.html">https://5gstore.com/product/8893_pepwave-fips.html</a>
+      <p>5GStore offers the best wireless and cellular gear, like the FIPS License for Pepwave Max Transit Duo, and premium customer service. Visit us to learn more!</p>
+      <ul><li>Peplink FIPS License for Pepwave Max Transit Duo</li><li>Latest Blog Posts About This Product</li><li>Latest YouTube Videos About This Product</li><li>Click here to submit a new question</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>FIPS License for Peplink Balance 305</h4>
+      <a href="https://5gstore.com/product/9692_pepwave-fips.html">https://5gstore.com/product/9692_pepwave-fips.html</a>
+      <p>5GStore - Pepwave FIPS - The Pepwave FIPS is a hardware security module (HSM) that provides FIPS 140-2 Level 3 security for your network.</p>
+      <ul><li>FIPS License for Peplink Balance 305</li><li>Latest Blog Posts About This Product</li><li>Latest YouTube Videos About This Product</li><li>Click here to submit a new question</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>FIPS License for Pepwave Max HD2 Mini</h4>
+      <a href="https://5gstore.com/product/9693_pepwave-fips.html">https://5gstore.com/product/9693_pepwave-fips.html</a>
+      <p>5Gstore.com - Pepwave FIPS - The Pepwave FIPS is a ruggedized 4G LTE router that can be used in a variety of applications such as industrial, transportation, and government.</p>
+      <ul><li>Peplink FIPS License for Pepwave Max HD2 Mini</li><li>Latest Blog Posts About This Product</li><li>Latest YouTube Videos About This Product</li><li>Click here to submit a new question</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>FIPS License for Peplink Balance 210</h4>
+      <a href="https://5gstore.com/product/10033_pepwave-fips.html">https://5gstore.com/product/10033_pepwave-fips.html</a>
+      <p>Find FIPS-certified routers from Pepwave for secure and reliable connectivity. Protect your network with high-performance routers designed for data security.</p>
+      <ul><li>FIPS License for Peplink Balance 210</li><li>Latest Blog Posts About This Product</li><li>Latest YouTube Videos About This Product</li><li>Click here to submit a new question</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>FIPS License for Peplink Balance 580</h4>
+      <a href="https://5gstore.com/product/10102_pepwave-fips.html">https://5gstore.com/product/10102_pepwave-fips.html</a>
+      <p>Explore Pepwave&#x27;s FIPS-certified routers, providing secure network solutions. Ensure data protection and network integrity with reliable routers.</p>
+      <ul><li>FIPS License for Peplink Balance 580</li><li>Latest Blog Posts About This Product</li><li>Latest YouTube Videos About This Product</li><li>Click here to submit a new question</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>FIPS License for Pepwave Max Transit</h4>
+      <a href="https://5gstore.com/product/10583_pepwave-fips.html">https://5gstore.com/product/10583_pepwave-fips.html</a>
+      <p>Pepwave FIPS is a secure 4G LTE router with a built-in firewall and VPN.</p>
+      <ul><li>Peplink FIPS License for Pepwave Max Transit</li><li>Latest Blog Posts About This Product</li><li>Latest YouTube Videos About This Product</li><li>Click here to submit a new question</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>FIPS License for Pepwave BR1 ENT</h4>
+      <a href="https://5gstore.com/product/10584_pepwave-fips.html">https://5gstore.com/product/10584_pepwave-fips.html</a>
+      <p>5GStore offers Pepwave FIPS secure routers to keep your data safe.</p>
+      <ul><li>Peplink FIPS License for Pepwave BR1 ENT</li><li>Latest Blog Posts About This Product</li><li>Latest YouTube Videos About This Product</li><li>Click here to submit a new question</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>FIPS License for Peplink Balance 380</h4>
+      <a href="https://5gstore.com/product/11011_pepwave-fips.html">https://5gstore.com/product/11011_pepwave-fips.html</a>
+      <p>5Gstore.com - Pepwave FIPS - The most secure and reliable mobile broadband gateway on the market.</p>
+      <ul><li>FIPS License for Peplink Balance 380</li><li>Latest Blog Posts About This Product</li><li>Latest YouTube Videos About This Product</li><li>Click here to submit a new question</li></ul>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Full Style System</h2>
+          <details open><summary>Show style-system sections</summary>
+    <details class="style-section">
+      <summary>5Gstore — Style System</summary>
+      <div class="markdown"><p>Generated: 2026-05-17<br>Sources: raw/research/client-overview.md, raw/research/company-profile.md<br>Base rules: universal-rules/UNIVERSAL-RULES.md</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>1. Brand &amp; Audience</summary>
+      <div class="markdown"><p>**What 5Gstore is:** A specialized online retailer for 4G and 5G cellular networking equipment — routers, antennas, signal boosters, and accessories. Differentiated by non-commissioned technical staff who guide customers from product selection through post-purchase troubleshooting.</p><p>**Parent company:** MDG Connected Solutions (acquired by Connected Solutions Group on January 27, 2026; founders Michael and Julia Ginsberg remain in brand leadership).</p><p>**Trust signals to reference when relevant:**<br><li>A+ BBB rating (15+ consecutive years)</li><br><li>Thousands of verified 5-star reviews on Shopper Approved and Google Shopping</li><br><li>GSA-approved contractor</li><br><li>EV SSL security</li></ul><p>**Primary audiences:**</p><p>| Segment | Core Need |<br>|---|---|<br>| Remote workers / home users | Fix weak indoor cellular signal |<br>| RV owners / mobile internet users | Maintain connectivity on the move |<br>| Small businesses | Reliable cellular backup internet |<br>| Enterprise IT teams | Scalable mobile connectivity deployments |<br>| System integrators / network pros | Technical compatibility and sourcing |</p><p>Content must speak to technical buyers. These audiences research before purchasing and expect specificity — model numbers, band compatibility, throughput specs, use case fit.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2. Voice &amp; Tone</summary>
+      <div class="markdown"><p>**Core tone attributes:**</p><p>| Attribute | Writing Rule |<br>|---|---|<br>| Technical | Specify bands, throughput, ports, certifications — not vague claims |<br>| Direct | Lead with the problem or the product capability, not a preamble |<br>| Expert without jargon overload | Define terms on first use when writing for mixed audiences |<br>| Trustworthy | Cite specs from verified sources; flag anything unconfirmed |<br>| Practical | Focus on setup, compatibility, real-world use cases |</p><p>**Avoid:**<br><li>Marketing fluff: &quot;cutting-edge,&quot; &quot;next-generation,&quot; &quot;best-in-class&quot;</li><br><li>Vague connectivity language: &quot;stay connected,&quot; &quot;blazing speeds,&quot; &quot;seamless internet&quot;</li><br><li>Overpromising signal improvement without stating conditions</li><br><li>Reproducing manufacturer manual text verbatim</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3. Terminology</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.1 Required terms</summary>
+      <div class="markdown"><p>| Term | Rule |<br>|---|---|<br>| **5Gstore** | Always written exactly as: `5Gstore` — capital G, lowercase s, no space |<br>| Cellular connectivity | Preferred over &quot;wireless internet&quot; when referring to mobile broadband |<br>| Signal strength | Use over &quot;signal quality&quot; unless specifically referring to quality metrics |<br>| Mobile broadband | Use for general cellular internet references |<br>| Non-commissioned | Use when referencing 5Gstore&#x27;s sales staff differentiator |<br>| SpeedFusion bonding | Exact Peplink product name — do not paraphrase |<br>| FirstNet Band 14 | Exact name for emergency-priority LTE band — use when relevant |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.2 Strict avoidance list</summary>
+      <div class="markdown"><p>| Banned | Reason |<br>|---|---|<br>| 5GStore | Wrong capitalization |<br>| 5G Store | Wrong — two words |<br>| Blazing fast / lightning fast | Generic, unverifiable |<br>| Seamless connectivity | Filler claim |<br>| Game-changing | Banned per universal rules |<br>| Simply plug in | Oversimplifies technical setup |<br>| Revolutionary | Generic authority claim |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4. Accuracy &amp; Technical Standards</summary>
+      <div class="markdown"><p><li>**Specs must come from verified sources** in `raw/` or clearly identified product documentation. Do not invent specs.</li><br><li>**Band compatibility** must be stated explicitly when writing about routers, hotspots, and boosters — do not generalize.</li><br><li>**Capacity claims** (e.g., &quot;supports up to 500 users&quot;) must match the product spec sheet.</li><br><li>**Firmware requirements** for software products (e.g., SpeedFusion Connect licenses) must be stated.</li><br><li>**Restrictions and limitations** must be disclosed — e.g., license stacking rules, SIM slot limitations, PoE requirements.</li><br><li>When writing about signal improvement, do not guarantee outcomes. State what the hardware does, not what signal levels the customer will achieve.</li><br><li>Flag any product capability not confirmed in `raw/` with `⚠ UNVERIFIED`.</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5. Specificity Rules</summary>
+      <div class="markdown"><p><li>State model numbers in full on first reference. Example: &quot;Peplink Balance 310 5G Router&quot; — not &quot;the Balance 310&quot; or &quot;the Peplink router.&quot;</li><br><li>When citing throughput, include the conditions. Example: &quot;1 Gbps router throughput&quot; — not &quot;gigabit speeds.&quot;</li><br><li>When citing temperature range for industrial hardware, use exact values. Example: &quot;-40°C to +70°C&quot; — not &quot;wide operating temperature.&quot;</li><br><li>When referencing the BBB rating, write: &quot;A+ rating with the Better Business Bureau&quot; — not &quot;top-rated.&quot;</li><br><li>When referencing customer reviews, reference the platform (Shopper Approved, Google Shopping) — not just &quot;thousands of reviews.&quot;</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6. Page Structure</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Product pages</summary>
+      <div class="markdown"><p>Follow the four-component framework:</p><p>**Component 1 — Product Header &amp; Cart Module**<br><li>Title format: `[Brand] [Model Name] | [Primary Benefit/Core Spec Line]`</li><br><li>Status flags directly below cart (special order, license requirements, serial number notices)</li></ul><p>**Component 2 — Core Narrative (Problem → Solution)**<br><li>Open with the problem the product solves (dropped calls, POS downtime, no wired option)</li><br><li>Explain the mechanism: how this specific hardware or software addresses the problem</li><br><li>Do not reproduce manufacturer documentation verbatim</li></ul><p>**Component 3 — Scannable Features &amp; Vertical Use Cases**<br>Break into audience-specific blocks:<br><li>Retail/Hospitality: POS continuity, failover speed</li><br><li>Remote Work/Power Users: bandwidth aggregation, video conferencing reliability, cloud access</li><br><li>Industrial/Mobile: fanless build, temperature range, FirstNet Band 14</li></ul><p>**Component 4 — Technical Specification Table**<br>Always include a Markdown attribute/value table for:<br><li>Frequency bands</li><br><li>Input/output power specs</li><br><li>Port configurations</li><br><li>Capacity (users, throughput)</li><br><li>Build specs (dimensions, operating temp, ingress rating if applicable)</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Landing pages</summary>
+      <div class="markdown"><p>Use the reusable structure below:</p><p>1. **Hero** — H1 with primary keyword, short subheadline, primary CTA<br>2. **Core Pain** — H2 intro, H3 pain points with short explanations<br>3. **Solution** — H2 intro, H3 solution blocks, short explanation each<br>4. **Trust / Social Proof** — outcomes, trust signals (BBB, reviews, GSA), stats<br>5. **FAQ** — persona-specific questions, expanded answers, no repetition from above sections</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>7. SEO Standards</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Meta titles</summary>
+      <div class="markdown"><p>Format: `[Product Name] [Core Feature] | 5Gstore`<br>Length: 50–60 characters maximum</p><p>Example: `Peplink Balance 310 5G Router with PrimeCare | 5Gstore`</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Meta descriptions</summary>
+      <div class="markdown"><p>Format: Actionable, problem-solving phrasing. Include at least one technical differentiator (throughput, band, port config) to prevent cannibalization across similar product pages.<br>Length: 150–160 characters maximum</p><p>Example: `Deploy the Peplink Balance 310 5G with dual modems (5G/Cat 20 &amp; Cat 12 LTE). Features 1Gbps throughput and SpeedFusion bonding. Order now at 5Gstore.`</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Keyword usage</summary>
+      <div class="markdown"><p><li>Primary keyword in H1 and first sentence of body content</li><br><li>Use exact-match product names and model numbers — these are high-intent search terms</li><br><li>Do not duplicate meta descriptions across product categories — use dynamic technical differentiators</li><br><li>Internal links: place the focus link as high in the content as it naturally fits</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Audience-to-keyword mapping</summary>
+      <div class="markdown"><p>| Persona | Primary Keyword | Usage |<br>|---|---|---|<br>| CRO / CSO | CRO Revenue Predictability Software | H1 + 5x in content |<br>| VP Sales Operations | Sales Ops CRM Alignment Tool | H1 + 5x in content |<br>| Account Executive | Enterprise Account Strategy Tool | H1 + 5x in content |<br>| CTO / Head of IT | Salesforce-Native Revenue Execution Platform | H1 + 5x in content |<br>| VP Sales Enablement | Sales Methodology Enforcement Tool | H1 + 5x in content |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>8. Product / Collection Reference</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Key product categories</summary>
+      <div class="markdown"><p>| Category | Examples |<br>|---|---|<br>| Enterprise Routers | Peplink Balance 310 5G, Peplink Balance 310X 5G |<br>| Mobile Hotspots | Inseego MiFi X PRO 5G |<br>| Hardware Accessories | Peplink Splitter MAX |<br>| Software Licenses / Cloud Services | Peplink SpeedFusion Connect |<br>| Antennas | Referenced in use cases; specific models TBD in campaigns |<br>| Signal Boosters | Referenced in use cases; specific models TBD in campaigns |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Notable product specs (verified)</summary>
+      <div class="markdown"><p>**Peplink Balance 310 5G Router**<br><li>1x Global 5G/Cat 20 modem + 1x Cat 12 LTE modem</li><br><li>1 Gbps router throughput</li><br><li>Capacity: 50–500 users</li><br><li>Includes 1-Year PrimeCare (InControl2, SpeedFusion bonding, WAN smoothing)</li><br><li>No built-in Wi-Fi — requires external access point</li></ul><p>**Peplink Balance 310X 5G Router**<br><li>Built-in 5G modem + 2x Ethernet WAN</li><br><li>2.5 Gbps router throughput</li><br><li>Capacity: up to 500 users</li><br><li>Fanless, industrial temperature range, FirstNet Ready (Band 14)</li><br><li>2x Mini-SIM (2FF) slots — 1 active at a time</li></ul><p>**Inseego MiFi X PRO 5G Mobile Hotspot**<br><li>5G Sub-6, C-Band, LTE Cat 20</li><br><li>Wi-Fi 6</li><br><li>1 Gbps RJ45 Ethernet Port</li><br><li>5050 mAh Li-Ion battery with Quick Charge 3.0</li></ul><p>**Peplink Splitter MAX**<br><li>PoE Input: 802.3bt 48W</li><br><li>DC Output: 12V 48W</li><br><li>2.5 Gbps Ethernet interface</li><br><li>Industrial metal, fanless, -40°C to +70°C</li></ul><p>**Peplink SpeedFusion Connect — Unlimited Plan (1 Year)**<br><li>Unlimited cloud traffic, speeds up to 400 Mbps</li><br><li>Firmware requirement: 8.1.0 or higher</li><br><li>Does NOT stack with other SFC-CLD plans</li><br><li>Max accumulated validity: 3 years</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>9. Pre-Submission Checklist</summary>
+      <div class="markdown"><p>Before submitting any content for 5Gstore:</p><ul><li>[ ] Company name written as `5Gstore` throughout (not 5GStore or 5G Store)</li><br><li>[ ] Product model numbers written in full on first reference</li><br><li>[ ] All specs sourced from `raw/` or verified product documentation — nothing invented</li><br><li>[ ] Unverified claims flagged with `⚠ UNVERIFIED`</li><br><li>[ ] Meta title: 50–60 characters, format `[Product Name] [Core Feature] | 5Gstore`</li><br><li>[ ] Meta description: 150–160 characters, includes technical differentiator</li><br><li>[ ] No duplicate meta descriptions across product pages</li><br><li>[ ] Technical spec table included on product pages</li><br><li>[ ] No manufacturer manual text reproduced verbatim</li><br><li>[ ] Status flags included below cart for special-order items or license requirements</li><br><li>[ ] Internal links placed as high in content as naturally fits</li><br><li>[ ] No banned language (see §3.2 and universal rules §2.2)</li><br><li>[ ] Signal improvement claims describe mechanism — do not guarantee outcomes</li></p></div>
+    </details>
+    </details>
+        </section>
+        <section class="panel">
+          <h2>Local Source Files Read</h2>
+          <ul><li><code>clients/5gstore/STYLE-SYSTEM.md</code> — 5Gstore — Style System</li>
+<li><code>clients/5gstore/campaigns/01-may-content-optimization/README.md</code> — 01 — May Content Optimization</li>
+<li><code>clients/5gstore/campaigns/01-may-content-optimization/campaign-urls.md</code> — 5Gstore — Content Optimization Campaign</li>
+<li><code>clients/5gstore/client-intelligence/README.md</code> — 5Gstore Client Intelligence</li>
+<li><code>clients/5gstore/client-intelligence/STYLE-GUIDE.md</code> — 5Gstore — Style System</li>
+<li><code>clients/5gstore/client-intelligence/offerings.md</code> — 5Gstore Offerings</li>
+<li><code>clients/5gstore/client-intelligence/source-files.md</code> — 5Gstore Source Files</li>
+<li><code>clients/5gstore/deliverables/README.md</code> — 5Gstore Deliverables</li>
+<li><code>clients/5gstore/raw/knowledge/service-taxonomy.md</code> — 5Gstore Service Taxonomy</li>
+<li><code>clients/5gstore/raw/research/client-overview.md</code> — 5Gstore</li>
+<li><code>clients/5gstore/raw/research/company-profile.md</code> — 5Gstore Company Profile &amp; Data Structure</li></ul>
+        </section>
+      </main>
+    </section>
+    </body>
+</html>

@@ -1,0 +1,128 @@
+{
+  "client": "the-nash-casino",
+  "display_name": "The Nash Casino",
+  "generated_at": "2026-07-14T15:59:27.921385+00:00",
+  "offerings": [
+    {
+      "name": "Club Nash Rewards",
+      "description": "Rewards program with Silver, Gold, and Platinum tiers, Free Play, dining credits, and merchandise redemptions.",
+      "sources": [
+        "clients/the-nash-casino/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Dining and Rewards"
+      ],
+      "score": 6
+    },
+    {
+      "name": "DraftKings Sportsbook",
+      "description": "Two-story sportsbook for American and international sports betting, viewing, food, and drinks.",
+      "sources": [
+        "clients/the-nash-casino/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Gaming"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Electric Pheasant",
+      "description": "Cocktail lounge with drinks and live music.",
+      "sources": [
+        "clients/the-nash-casino/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Dining and Rewards"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Historical Horse Racing Machines",
+      "description": "1,000+ HHR gaming machines. Do not call them traditional slot machines.",
+      "sources": [
+        "clients/the-nash-casino/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Gaming"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Lucky Lantern",
+      "description": "Asian broths and noodle dishes.",
+      "sources": [
+        "clients/the-nash-casino/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Dining and Rewards"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Poker Room",
+      "description": "19-table poker room for experienced players and beginners.",
+      "sources": [
+        "clients/the-nash-casino/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Gaming"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Proper Chophouse",
+      "description": "Upscale dining venue with fine cuts and cocktails.",
+      "sources": [
+        "clients/the-nash-casino/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Dining and Rewards"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Stadium Social",
+      "description": "Sports bar tied to live game viewing and the Sportsbook.",
+      "sources": [
+        "clients/the-nash-casino/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Dining and Rewards"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Table Games",
+      "description": "37 table games including Blackjack, SP21, Roulette, Baccarat, Jackpot Holdem, Open Face Pai Gow, Trifecta, Live Craps, Crapless Craps, and Midi Baccarat.",
+      "sources": [
+        "clients/the-nash-casino/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Gaming"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Topgolf Swing Suite",
+      "description": "Private lounge-style golf simulator and game space for groups and private events.",
+      "sources": [
+        "clients/the-nash-casino/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Gaming"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Woodlands Cafe",
+      "description": "Comfort food venue with locally inspired flavors.",
+      "sources": [
+        "clients/the-nash-casino/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Dining and Rewards"
+      ],
+      "score": 6
+    }
+  ]
+}

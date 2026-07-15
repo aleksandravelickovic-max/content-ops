@@ -1,0 +1,140 @@
+{
+  "client": "print-and-cheques-now",
+  "display_name": "Print & Cheques Now",
+  "generated_at": "2026-07-14T15:59:27.910705+00:00",
+  "offerings": [
+    {
+      "name": "Cheque binders",
+      "description": "Supply item for organizing cheque products.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/print-and-cheques-now/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Products (confirmed)",
+        "Products"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Deposit books",
+      "description": "Deposit book supplies for business banking workflows.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/print-and-cheques-now/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Products (confirmed)",
+        "Products"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Endorsement stamps",
+      "description": "Stamp products for cheque endorsement and office payment handling.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/print-and-cheques-now/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Products (confirmed)",
+        "Products"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Laser / computer cheques",
+      "description": "Computer-compatible cheque products for accounting and business systems.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/print-and-cheques-now/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Products (confirmed)",
+        "Products"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Manual business cheques",
+      "description": "Manual business cheque products for business payment workflows.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/print-and-cheques-now/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Products (confirmed)",
+        "Products"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Personal cheques",
+      "description": "Personal cheque products with pricing claims verified against current site data.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/print-and-cheques-now/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Products (confirmed)",
+        "Products"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Bank Acceptance Guarantee",
+      "description": "Accepted-or-reprinted/refunded guarantee for eligible cheque products.",
+      "sources": [
+        "clients/print-and-cheques-now/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Services and Guarantees"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Free Shipping",
+      "description": "Free shipping offer on personal cheques, subject to current site terms.",
+      "sources": [
+        "clients/print-and-cheques-now/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Services and Guarantees"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Next-Day Delivery",
+      "description": "Delivery option available where service terms and location support it.",
+      "sources": [
+        "clients/print-and-cheques-now/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Services and Guarantees"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Price Match Guarantee",
+      "description": "Price matching offer that should be checked against current policy before publishing.",
+      "sources": [
+        "clients/print-and-cheques-now/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Services and Guarantees"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Same-Day Printing",
+      "description": "Printing service available for qualifying orders placed by 2 PM EST, Monday through Friday.",
+      "sources": [
+        "clients/print-and-cheques-now/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Services and Guarantees"
+      ],
+      "score": 6
+    }
+  ]
+}

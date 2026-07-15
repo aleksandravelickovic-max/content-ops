@@ -1,0 +1,174 @@
+{
+  "client": "find-self-storage",
+  "display_name": "Find Self Storage",
+  "generated_at": "2026-07-14T15:59:27.891025+00:00",
+  "offerings": [
+    {
+      "name": "24-hour access storage",
+      "description": "Storage facilities or units that allow access outside standard office hours, when available.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/find-self-storage/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Self storage types (confirmed on-site)",
+        "Storage Types"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Boat storage",
+      "description": "Storage for boats and marine trailers, with facility-specific access and space limits.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/find-self-storage/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Vehicle storage types (confirmed on-site)",
+        "Storage Types"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Business storage",
+      "description": "Storage for business inventory, equipment, documents, or supplies.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/find-self-storage/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Self storage types (confirmed on-site)",
+        "Storage Types"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Car storage",
+      "description": "Vehicle storage for cars, with indoor, covered, or outdoor options depending on facility.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/find-self-storage/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Vehicle storage types (confirmed on-site)",
+        "Storage Types"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Climate-controlled storage",
+      "description": "Storage units with temperature or humidity control where facility features support it.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/find-self-storage/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Self storage types (confirmed on-site)",
+        "Storage Types"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Drive-up storage",
+      "description": "Ground-level units with direct vehicle access for loading and unloading.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/find-self-storage/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Self storage types (confirmed on-site)",
+        "Storage Types"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Motorcycle storage",
+      "description": "Storage options for motorcycles and small recreational vehicles.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/find-self-storage/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Vehicle storage types (confirmed on-site)",
+        "Storage Types"
+      ],
+      "score": 9
+    },
+    {
+      "name": "RV storage",
+      "description": "Storage for recreational vehicles, with size and coverage options depending on facility.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/find-self-storage/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Vehicle storage types (confirmed on-site)",
+        "Storage Types"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Student storage",
+      "description": "Short-term or seasonal storage for students between housing terms.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/find-self-storage/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Self storage types (confirmed on-site)",
+        "Storage Types"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Trailer storage",
+      "description": "Storage for utility trailers, travel trailers, and other towable vehicles.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/find-self-storage/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Vehicle storage types (confirmed on-site)",
+        "Storage Types"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Vehicle Storage",
+      "description": "Storage category for cars, RVs, boats, motorcycles, trailers, and similar vehicles.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/find-self-storage/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Vehicle storage types (confirmed on-site)",
+        "Storage Types"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Wine storage",
+      "description": "Specialized storage for wine where climate and facility features support it.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/find-self-storage/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Self storage types (confirmed on-site)",
+        "Storage Types"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Standard Self Storage",
+      "description": "General storage units for household, personal, or business belongings.",
+      "sources": [
+        "clients/find-self-storage/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Storage Types"
+      ],
+      "score": 6
+    }
+  ]
+}

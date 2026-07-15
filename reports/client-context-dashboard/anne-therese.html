@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anne Therese Context</title>
+  <style>
+    :root {
+      --bg:#f4f7f5; --panel:#ffffff; --ink:#09110f; --muted:#63716c; --line:#dce5df;
+      --black:#050907; --graph:#14d878; --graph-dark:#079d55; --soft:#eaf8f0; --soft-ink:#19392a;
+      --accent:#087a47; --red:#b5362d; --shadow:0 18px 46px rgba(5,9,7,.08);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:
+      linear-gradient(180deg, #ffffff 0, var(--bg) 360px); color:var(--ink); line-height:1.45; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .topnav { min-height:64px; padding:14px max(32px, calc((100vw - 1380px) / 2 + 32px)); background:var(--black); border-bottom:1px solid rgba(255,255,255,.08); position:sticky; top:0; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { color:#fff; display:inline-flex; align-items:center; gap:10px; font-weight:800; letter-spacing:0; }
+    .brand:hover { text-decoration:none; }
+    .brand span { width:32px; height:32px; border-radius:8px; background:var(--graph); color:var(--black); display:inline-grid; place-items:center; font-size:13px; font-weight:900; }
+    .nav-meta, .nav-link { color:#b8c6c0; font-size:13px; font-weight:700; }
+    .hero { margin:0; padding:42px max(32px, calc((100vw - 1380px) / 2 + 32px)) 38px; background:var(--black); color:#fff; border-bottom:1px solid rgba(255,255,255,.08); }
+    .index-hero, .client-hero { display:flex; justify-content:space-between; gap:28px; align-items:flex-start; }
+    .hero h1 { margin:0 0 12px; font-size:clamp(32px, 5vw, 62px); line-height:.98; letter-spacing:0; max-width:900px; }
+    .hero p { margin:0; color:#c7d5cf; max-width:840px; font-size:17px; }
+    .hero-copy { max-width:940px; }
+    .kicker { color:var(--graph); font-size:12px; text-transform:uppercase; letter-spacing:.08em; font-weight:900; }
+    .report-meta { display:flex; flex-wrap:wrap; gap:10px; padding:14px 32px; background:#fff; border-bottom:1px solid var(--line); color:var(--muted); font-size:13px; max-width:1380px; margin:0 auto; }
+    .report-meta span { background:var(--soft); color:var(--soft-ink); border-radius:999px; padding:6px 10px; font-weight:700; }
+    .grid.cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(290px, 1fr)); gap:16px; padding:24px 32px 42px; max-width:1380px; margin:0 auto; }
+    .card, .panel, .context-card { background:var(--panel); border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow); }
+    .client-card { display:block; padding:20px; color:inherit; min-height:184px; transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease; }
+    .client-card:hover { text-decoration:none; transform:translateY(-2px); border-color:rgba(20,216,120,.55); box-shadow:0 24px 58px rgba(5,9,7,.12); }
+    .card-topline { display:flex; justify-content:space-between; gap:10px; align-items:center; }
+    .client-card h2 { margin:14px 0 8px; font-size:23px; line-height:1.1; }
+    .client-card p { margin:0; color:var(--muted); }
+    .metrics { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+    .metrics span, .evidence, .status-pill { background:var(--soft); border:1px solid rgba(20,216,120,.22); border-radius:999px; padding:5px 9px; font-size:12px; color:var(--soft-ink); font-weight:800; }
+    .topic-chips { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 18px; }
+    .topic-chips span { background:#f6fbf8; border:1px solid var(--line); border-radius:999px; color:#183a2a; padding:7px 10px; font-size:13px; font-weight:750; }
+    .layout { display:block; padding:22px 32px 46px; max-width:1380px; margin:0 auto; }
+    main { min-width:0; }
+    .context-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; margin-bottom:20px; }
+    .context-card { padding:18px; min-height:220px; }
+    .context-card ul { margin-bottom:0; }
+    .context-note { color:var(--muted); font-size:13px; margin:4px 0 12px; }
+    .aside-label { color:var(--graph-dark); font-size:11px; text-transform:uppercase; font-weight:900; letter-spacing:.08em; margin-bottom:5px; }
+    .panel h2 { margin-top:0; }
+    .panel { padding:22px; margin-bottom:20px; }
+    .panel h2 { font-size:26px; letter-spacing:0; }
+    .offerings { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:13px; margin-top:16px; }
+    .offering, .sample { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .offering { position:relative; overflow:hidden; }
+    .offering-marker { position:absolute; inset:0 auto 0 0; width:4px; background:var(--graph); }
+    .offering h3, .sample h4 { margin:0 0 6px; }
+    .offering p { margin:0 0 10px; }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .stat-stack { display:grid; grid-template-columns:repeat(3, minmax(100px, 1fr)); gap:8px; min-width:340px; }
+    .stat-stack div { border:1px solid rgba(255,255,255,.15); border-radius:8px; padding:14px; background:rgba(255,255,255,.06); }
+    .stat-stack strong { display:block; font-size:26px; color:#fff; }
+    .stat-stack span, .muted { color:var(--muted); font-size:13px; }
+    .hero .stat-stack span { color:#b8c6c0; }
+    ul { padding-left:20px; }
+    li { margin:4px 0; }
+    code { background:var(--soft); color:var(--soft-ink); padding:2px 4px; border-radius:4px; }
+    details { margin:10px 0; }
+    summary { cursor:pointer; font-weight:700; }
+    .style-section { border-top:1px solid var(--line); padding-top:10px; }
+    .markdown { color:#2d2f35; }
+    @media (max-width: 980px) {
+      .layout, .split, .client-hero, .index-hero { grid-template-columns:1fr; display:block; }
+      .context-grid { grid-template-columns:1fr; }
+      .stat-stack { min-width:0; margin-top:16px; }
+      .hero, .grid.cards, .layout, .topnav, .report-meta { padding-left:16px; padding-right:16px; }
+      .hero h1 { font-size:36px; }
+      .stat-stack { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+    <nav class="topnav">
+      <a class="brand" href="index.html"><span>LG</span>LinkGraph</a>
+      <a class="nav-link" href="index.html">All clients</a>
+    </nav>
+    <section class="hero client-hero">
+      <div class="hero-copy">
+        <div class="kicker">anne-therese</div>
+        <h1>Anne Therese</h1>
+        <p>14 extracted offerings, 169 sitemap URLs, and 8 local source documents for client-specific writing context.</p>
+      </div>
+      <div class="stat-stack">
+        <div><strong>ok</strong><span>crawl status</span></div>
+        <div><strong>169</strong><span>URLs found</span></div>
+        <div><strong>25</strong><span>product/service URLs</span></div>
+      </div>
+    </section>
+    <section class="layout">
+      <main>
+        <section class="context-grid">
+    <article class="context-card">
+      <div class="aside-label">Quick Facts</div>
+      <p class="context-note">Company, audience, and proof points.</p>
+      <ul><li>Locations: Lewis Center, Gahanna, Cape Coral, and Bonita Springs.</li><li>Services include: Botox, Hydrafacial, CoolSculpting, laser-based skin treatments, professional skincare.</li><li>Audience: Patients in communities surrounding the clinic locations. Typically individuals interested in non-surgical treatments, facial rejuvenation, injectable treatments, and medically guided aesthetic care. Many are focused on confidence and natural-looking results — not dramatic changes.</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Voice</div>
+      <p class="context-note">How this client should sound.</p>
+      <ul><li>Goal: Not this</li><li>Communicate results: &quot;Dramatic transformation guaranteed&quot;</li><li>Reference the team: &quot;Experts&quot; (vague)</li><li>Describe procedures: &quot;Cutting-edge treatments&quot;</li><li>Frame outcomes: &quot;Look 10 years younger&quot;</li><li>Register: A balance of medical professionalism and aesthetic sophistication. Credible and approachable, with a premium aesthetic feel.</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Avoid / Compliance</div>
+      <p class="context-note">Claims, terms, and wording to avoid.</p>
+      <ul><li>&quot;guaranteed results&quot; / &quot;guarantee&quot;: Cannot guarantee cosmetic outcomes</li><li>&quot;dramatic transformation&quot;: Exaggerated claim — patients seek subtle improvements</li><li>&quot;look younger&quot; (as outcome promise): Not medically responsible</li><li>&quot;best medspa in [city]&quot;: Unsupported superlative</li><li>&quot;revolutionary&quot; / &quot;cutting-edge&quot;: Vague promotional language</li><li>&quot;aggressive marketing&quot; phrasing: Contradicts the premium, approachable register</li><li>&quot;eliminate&quot; (for a condition): Treatments improve or reduce — not eliminate</li><li>Do not promise specific outcomes for any procedure.</li><li>Do not present any treatment as universally effective or risk-free.</li><li>Treatments are performed by either licensed medical professionals or licensed estheticians — match the correct title to the treatment type. Injectables require medical professionals; facials may be performed by estheticians.</li><li>Do not make comparative claims against other practices.</li><li>When referencing specific treatments (Botox, Hydrafacial, CoolSculpting), use their correct brand names. Do not invent specifications.</li><li>Multiple locations span different states (Ohio: Lewis Center, Gahanna; Florida: Cape Coral, Bonita Springs). Do not imply all services are available at all locations without confirmation.</li><li>Name specific treatments rather than vague categories. &quot;CoolSculpting for body contouring&quot; is more credible than &quot;body contouring procedures.&quot;</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Terminology</div>
+      <p class="context-note">Client-specific naming and required language.</p>
+      <p class="muted">No clean lines extracted yet.</p>
+    </article>
+    </section>
+        <section class="panel">
+          <h2>Offerings, Services, Goods</h2>
+          <p class="muted">Writer-facing catalog from the client style system, approved source files, and usable product/service pages. Raw crawl evidence is separated below.</p>
+          <div class="offerings">
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Hydrafacial</h3>
+      <p>Cleansing, exfoliation, extraction, and hydration facial treatment for skin refresh and maintenance.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/anne-therese/raw/knowledge/service-taxonomy.md, website sitemap sample · Sections: 8. Service Reference, Treatments, https://www.annetherese.com/treatment/hydrafacial</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Advanced skincare services</h3>
+      <p>Skin treatments beyond basic facials, including device-based and clinical-grade options.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/anne-therese/raw/knowledge/service-taxonomy.md · Sections: 8. Service Reference, Treatments</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Botox injections</h3>
+      <p>Neuromodulator treatment for expression lines and wrinkle softening.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/anne-therese/raw/knowledge/service-taxonomy.md · Sections: 8. Service Reference, Treatments</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>CoolSculpting</h3>
+      <p>Non-surgical body contouring treatment for reducing targeted fat areas through controlled cooling.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/anne-therese/raw/knowledge/service-taxonomy.md · Sections: 8. Service Reference, Treatments</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Facials</h3>
+      <p>Professional facial treatments selected for skin type, concerns, and treatment goals.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/anne-therese/raw/knowledge/service-taxonomy.md · Sections: 8. Service Reference, Treatments</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Laser-based skin treatments</h3>
+      <p>Laser and light services for tone, texture, discoloration, hair reduction, and skin refresh.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/anne-therese/raw/knowledge/service-taxonomy.md · Sections: 8. Service Reference, Treatments</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Clear + Brilliant</h3>
+      <p>Refresh and rejuvenate your skin with gentle laser resurfacing that improves tone, texture, and radiance while preventing early signs of aging</p>
+      <div class="evidence">Sources: clients/anne-therese/raw/knowledge/service-taxonomy.md, website offering page · Sections: Treatments, https://www.annetherese.com/treatment/clear-brilliant</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Dermal Filler</h3>
+      <p>Smooth wrinkles &amp; restore volume. Get dermal filler at Anne Therese Aesthetic Medicine in Gahanna, OH, Lewis Center, OH, Cape Coral, FL, and Bonita Springs, FL.</p>
+      <div class="evidence">Sources: clients/anne-therese/raw/knowledge/service-taxonomy.md, website offering page · Sections: Treatments, https://www.annetherese.com/treatment/dermal-filler</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>IPL/BBL Photofacial</h3>
+      <p>Reduce sun damage, redness, and discoloration with intense pulsed light technology for a clearer, more even complexion</p>
+      <div class="evidence">Sources: clients/anne-therese/raw/knowledge/service-taxonomy.md, website offering page · Sections: Treatments, https://www.annetherese.com/treatment/ipl-photofacial</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Laser Hair Reduction</h3>
+      <p>Achieve smooth, hair-free skin with a long-term solution that eliminates unwanted hair and reduces future growth</p>
+      <div class="evidence">Sources: clients/anne-therese/raw/knowledge/service-taxonomy.md, website offering page · Sections: Treatments, https://www.annetherese.com/treatment/laser-hair-removal</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Medical Grade Skincare</h3>
+      <p>Transform your skin with high-quality, clinically tested ingredients that deliver deeper penetration, faster results, and long-term improvements</p>
+      <div class="evidence">Sources: clients/anne-therese/raw/knowledge/service-taxonomy.md, website offering page · Sections: Treatments, https://www.annetherese.com/treatment/medical-grade-skincare</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Microneedling</h3>
+      <p>Boost collagen production and improve skin texture with tiny controlled micro-injuries that stimulate natural healing</p>
+      <div class="evidence">Sources: clients/anne-therese/raw/knowledge/service-taxonomy.md, website offering page · Sections: Treatments, https://www.annetherese.com/treatment/microneedling</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>PRX Derm Perfexion</h3>
+      <p>PRX Derm Perfexion is a no-peel skin rejuvenation treatment that stimulates collagen and improves tone, texture, and radiance without downtime.</p>
+      <div class="evidence">Sources: clients/anne-therese/raw/knowledge/service-taxonomy.md, website offering page · Sections: Treatments, https://www.annetherese.com/treatment/prx-derm-perfexion</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Spotless Peel</h3>
+      <p>Erase sun damage and smooth skin texture with a dual-action treatment that combines BBL and Erbium laser for brighter, more even-toned skin in one powerful session.</p>
+      <div class="evidence">Sources: clients/anne-therese/raw/knowledge/service-taxonomy.md, website offering page · Sections: Treatments, https://www.annetherese.com/treatment/spotless-peel</div>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Website Intelligence</h2>
+          <div class="split">
+            <div>
+              <h3>Website URLs</h3><ul><li><a href="https://www.annetherese.com/">https://www.annetherese.com/</a></li></ul>
+              <h3>Sitemaps</h3><ul><li><a href="https://www.annetherese.com/sitemap.xml">https://www.annetherese.com/sitemap.xml</a></li></ul>
+            </div>
+            <div>
+              <h3>Semantic / Topical Terms</h3><div class="topic-chips"><span>Hydrafacial</span><span>Advanced Skincare Services</span><span>Botox Injections</span><span>CoolSculpting</span><span>Facials</span><span>Laser-Based Skin Treatments</span><span>Clear + Brilliant</span><span>Dermal Filler</span><span>IPL/BBL Photofacial</span><span>Laser Hair Reduction</span><span>Medical Grade Skincare</span><span>PRX Derm Perfexion</span><span>Spotless Peel</span></div>
+              <h3>Blockers</h3><p class="muted">None</p>
+            </div>
+          </div>
+          <h3>Product / Service URLs</h3><ul><li><a href="https://www.annetherese.com/treatment/aquagold">https://www.annetherese.com/treatment/aquagold</a></li><li><a href="https://www.annetherese.com/treatment/botox">https://www.annetherese.com/treatment/botox</a></li><li><a href="https://www.annetherese.com/treatment/clear-brilliant">https://www.annetherese.com/treatment/clear-brilliant</a></li><li><a href="https://www.annetherese.com/treatment/coolsculpting">https://www.annetherese.com/treatment/coolsculpting</a></li><li><a href="https://www.annetherese.com/treatment/dermal-filler">https://www.annetherese.com/treatment/dermal-filler</a></li><li><a href="https://www.annetherese.com/treatment/dermaplane">https://www.annetherese.com/treatment/dermaplane</a></li><li><a href="https://www.annetherese.com/treatment/diamond-glow">https://www.annetherese.com/treatment/diamond-glow</a></li><li><a href="https://www.annetherese.com/treatment/dysport">https://www.annetherese.com/treatment/dysport</a></li><li><a href="https://www.annetherese.com/treatment/emsculpt">https://www.annetherese.com/treatment/emsculpt</a></li><li><a href="https://www.annetherese.com/treatment/erbium">https://www.annetherese.com/treatment/erbium</a></li><li><a href="https://www.annetherese.com/treatment/facials">https://www.annetherese.com/treatment/facials</a></li><li><a href="https://www.annetherese.com/treatment/filler">https://www.annetherese.com/treatment/filler</a></li><li><a href="https://www.annetherese.com/treatment/fraxel-laser">https://www.annetherese.com/treatment/fraxel-laser</a></li><li><a href="https://www.annetherese.com/treatment/hydrafacial">https://www.annetherese.com/treatment/hydrafacial</a></li><li><a href="https://www.annetherese.com/treatment/ipl-photofacial">https://www.annetherese.com/treatment/ipl-photofacial</a></li><li><a href="https://www.annetherese.com/treatment/kybella">https://www.annetherese.com/treatment/kybella</a></li><li><a href="https://www.annetherese.com/treatment/laser-hair-removal">https://www.annetherese.com/treatment/laser-hair-removal</a></li><li><a href="https://www.annetherese.com/treatment/lip-flip">https://www.annetherese.com/treatment/lip-flip</a></li><li><a href="https://www.annetherese.com/treatment/medical-grade-skincare">https://www.annetherese.com/treatment/medical-grade-skincare</a></li><li><a href="https://www.annetherese.com/treatment/microneedling">https://www.annetherese.com/treatment/microneedling</a></li><li><a href="https://www.annetherese.com/treatment/peel">https://www.annetherese.com/treatment/peel</a></li><li><a href="https://www.annetherese.com/treatment/prx-derm-perfexion">https://www.annetherese.com/treatment/prx-derm-perfexion</a></li><li><a href="https://www.annetherese.com/treatment/sculptra">https://www.annetherese.com/treatment/sculptra</a></li><li><a href="https://www.annetherese.com/treatment/spotless-peel">https://www.annetherese.com/treatment/spotless-peel</a></li><li><a href="https://www.annetherese.com/treatment/thermismooth">https://www.annetherese.com/treatment/thermismooth</a></li></ul>
+          <h3>Sampled Pages</h3><div class="sample-pages">
+    <article class="sample">
+      <h4>Anne Therese Aesthetic Medicine | Columbus &amp; Cape Coral</h4>
+      <a href="https://www.annetherese.com/">https://www.annetherese.com/</a>
+      <p>Discover rejuvenation at Anne Therese Aesthetic Medicine, with locations in Lewis Center, Gahanna, and Cape Coral. Specializing in injectables, laser treatments, facials, and body contouring. Experience transformative beauty services like Botox, Hydrafacial, CoolSculpting, and more. Book your appointment today!</p>
+      <ul><li>look as young as you feel</li><li>Medical Spa located in Central Ohio and Southwest Florida</li><li>popular treatments</li><li>Dysport</li><li>Lip Filler</li><li>IPL/BBL photofacial</li><li>Medical Facials</li><li>why anne therese?</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Chemical Peels | Columbus Ohio &amp; Cape Coral Florida</h4>
+      <a href="https://www.annetherese.com/treatment/peel">https://www.annetherese.com/treatment/peel</a>
+      <p>Exfoliate and rejuvenate your skin with customized chemical peels that improve texture, tone, and overall radiance</p>
+      <ul><li>Chemical Peels</li><li>What is</li><li>what are</li><li>Chemical Peels</li><li>?</li><li>Chemical Peels</li><li>Results</li><li>What To Expect</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Botox Treatment | Anne Therese Aesthetic Medicine</h4>
+      <a href="https://www.annetherese.com/treatment/botox">https://www.annetherese.com/treatment/botox</a>
+      <p>Get botox at Anne Therese Aesthetic Medicine in Gahanna, OH, Lewis Center, OH, Cape Coral, FL, and Bonita Springs, FL. Smooth wrinkles with natural results.</p>
+      <ul><li>Botox Injections: Smooth Wrinkles &amp; Refresh Your Look</li><li>What is</li><li>what are</li><li>Botox</li><li>?</li><li>Botox</li><li>Results</li><li>What To Expect</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Microlaser Peel | Columbus Ohio &amp; Cape Coral Florida</h4>
+      <a href="https://www.annetherese.com/treatment/erbium">https://www.annetherese.com/treatment/erbium</a>
+      <p>Resurface and rejuvenate your skin by reducing fine lines, sun damage, and uneven texture with minimal downtime</p>
+      <ul><li>Microlaser Peel</li><li>What is</li><li>what are</li><li>Microlaser Peel</li><li>?</li><li>Microlaser Peel</li><li>Results</li><li>What To Expect</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Lip Filler for Fuller Lips | Anne Therese Aesthetic Medicine</h4>
+      <a href="https://www.annetherese.com/treatment/filler">https://www.annetherese.com/treatment/filler</a>
+      <p>Enhance your smile with natural-looking lip filler at Anne Therese Aesthetic Medicine in Gahanna, OH, Lewis Center, OH, Cape Coral, FL, and Bonita Springs, FL.</p>
+      <ul><li>Lip Filler</li><li>What is</li><li>what are</li><li>Lip Filler</li><li>?</li><li>Lip Filler</li><li>Results</li><li>What To Expect</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Dysport Treatment | Anne Therese Aesthetic Medicine</h4>
+      <a href="https://www.annetherese.com/treatment/dysport">https://www.annetherese.com/treatment/dysport</a>
+      <p>Smooth wrinkles with ease. Discover Dysport at Anne Therese Aesthetic Medicine in Gahanna, OH, Lewis Center, OH, Cape Coral, FL, and Bonita Springs, FL.</p>
+      <ul><li>Dysport: Fast-Acting Wrinkle Relaxer for Natural Results</li><li>What is</li><li>what are</li><li>Dysport</li><li>?</li><li>Dysport</li><li>Results</li><li>What To Expect</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Medical Facials | Columbus Ohio &amp; Cape Coral Florida</h4>
+      <a href="https://www.annetherese.com/treatment/facials">https://www.annetherese.com/treatment/facials</a>
+      <p>Cleanse, exfoliate, and nourish your skin with customized facials designed to address hydration, acne, and overall skin health</p>
+      <ul><li>What is</li><li>what are</li><li>Medical Facials</li><li>?</li><li>Medical Facials</li><li>Results</li><li>What To Expect</li><li>Benefits of</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Kybella | Columbus Ohio &amp; Cape Coral Florida</h4>
+      <a href="https://www.annetherese.com/treatment/kybella">https://www.annetherese.com/treatment/kybella</a>
+      <p>Permanently reduce chin fat and define your jawline with Kybella, a non-surgical fat-dissolving treatment</p>
+      <ul><li>Kybella</li><li>What is</li><li>what are</li><li>Kybella</li><li>?</li><li>Kybella</li><li>Results</li><li>What To Expect</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Aquagold | Columbus Ohio &amp; Cape Coral Florida</h4>
+      <a href="https://www.annetherese.com/treatment/aquagold">https://www.annetherese.com/treatment/aquagold</a>
+      <p>Achieve a radiant, hydrated glow with a customized micro-infusion of Botox, hyaluronic acid, and skin-nourishing ingredients</p>
+      <ul><li>Aquagold</li><li>What is</li><li>what are</li><li>Aquagold</li><li>?</li><li>Aquagold</li><li>Results</li><li>What To Expect</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Emsculpt | Columbus Ohio &amp; Cape Coral Florida</h4>
+      <a href="https://www.annetherese.com/treatment/emsculpt">https://www.annetherese.com/treatment/emsculpt</a>
+      <p>Build muscle and burn fat simultaneously with high-intensity electromagnetic technology for a stronger, more sculpted body</p>
+      <ul><li>Emsculpt</li><li>What is</li><li>what are</li><li>Emsculpt</li><li>?</li><li>Emsculpt</li><li>Results</li><li>What To Expect</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Lip flip | Columbus Ohio &amp; Cape Coral Florida</h4>
+      <a href="https://www.annetherese.com/treatment/lip-flip">https://www.annetherese.com/treatment/lip-flip</a>
+      <p>Achieve a subtle lip enhancement by relaxing the upper lip for a fuller, more defined appearance without adding volume</p>
+      <ul><li>Lip flip</li><li>What is</li><li>what are</li><li>Lip flip</li><li>?</li><li>Lip flip</li><li>Results</li><li>What To Expect</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Sculptra | Columbus Ohio &amp; Cape Coral Florida</h4>
+      <a href="https://www.annetherese.com/treatment/sculptra">https://www.annetherese.com/treatment/sculptra</a>
+      <p>Restore facial volume and stimulate collagen production with an injectable that gradually improves skin firmness and elasticity for long-lasting, natural results</p>
+      <ul><li>Sculptra</li><li>What is</li><li>what are</li><li>Sculptra</li><li>?</li><li>Sculptra</li><li>Results</li><li>What To Expect</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Dermaplane | Columbus Ohio &amp; Cape Coral Florida</h4>
+      <a href="https://www.annetherese.com/treatment/dermaplane">https://www.annetherese.com/treatment/dermaplane</a>
+      <p>Instantly smooth and brighten your skin by removing dead cells and peach fuzz for a radiant, flawless complexion</p>
+      <ul><li>Dermaplane</li><li>What is</li><li>what are</li><li>Dermaplane</li><li>?</li><li>Dermaplane</li><li>Results</li><li>What To Expect</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Hydrafacial | Columbus Ohio &amp; Cape Coral Florida</h4>
+      <a href="https://www.annetherese.com/treatment/hydrafacial">https://www.annetherese.com/treatment/hydrafacial</a>
+      <p>Deeply cleanse, exfoliate, and hydrate your skin for an instant glow and long-term skin health</p>
+      <ul><li>Hydrafacial</li><li>What is</li><li>what are</li><li>Hydrafacial</li><li>?</li><li>Hydrafacial</li><li>Results</li><li>What To Expect</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Diamond Glow | Columbus Ohio &amp; Cape Coral Florida</h4>
+      <a href="https://www.annetherese.com/treatment/diamond-glow">https://www.annetherese.com/treatment/diamond-glow</a>
+      <p>Exfoliate, extract, and infuse skin-nourishing serums with DiamondGlow, a next-level facial that delivers deep hydration and a radiant, refreshed complexion</p>
+      <ul><li>Diamond Glow</li><li>What is</li><li>what are</li><li>Diamond Glow</li><li>?</li><li>Diamond Glow</li><li>Results</li><li>What To Expect</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Fraxel laser | Columbus Ohio &amp; Cape Coral Florida</h4>
+      <a href="https://www.annetherese.com/treatment/fraxel-laser">https://www.annetherese.com/treatment/fraxel-laser</a>
+      <p>Resurface and rejuvenate skin by reducing fine lines, acne scars, and pigmentation with fractional laser technology</p>
+      <ul><li>Fraxel laser</li><li>What is</li><li>what are</li><li>Fraxel laser</li><li>?</li><li>Fraxel laser</li><li>Results</li><li>What To Expect</li></ul>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Full Style System</h2>
+          <details open><summary>Show style-system sections</summary>
+    <details class="style-section">
+      <summary>Anne Therese — Style System</summary>
+      <div class="markdown"><p>Generated: 2026-05-29<br>Sources: raw/knowledge/overview.md<br>Base rules: universal-rules/UNIVERSAL-RULES.md</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>1. Brand &amp; Audience</summary>
+      <div class="markdown"><p>Anne Therese Aesthetic Medicine is a medical aesthetics practice offering non-surgical cosmetic treatments: injectables, laser treatments, facials, and body contouring. Treatments performed by licensed medical professionals and licensed estheticians using clinically guided protocols.</p><p>Locations: Lewis Center, Gahanna, Cape Coral, and Bonita Springs.</p><p>Services include: Botox, Hydrafacial, CoolSculpting, laser-based skin treatments, professional skincare.</p><p>**Audience:** Patients in communities surrounding the clinic locations. Typically individuals interested in non-surgical treatments, facial rejuvenation, injectable treatments, and medically guided aesthetic care. Many are focused on confidence and natural-looking results — not dramatic changes.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2. Voice &amp; Tone</summary>
+      <div class="markdown"><p>**Register:** A balance of medical professionalism and aesthetic sophistication. Credible and approachable, with a premium aesthetic feel.</p><p>Content should feel refined without being cold, and medically grounded without being clinical or technical. It should not feel sales-driven or promotional.</p><p>| Goal | Not this | Use this |<br>|---|---|---|<br>| Communicate results | &quot;Dramatic transformation guaranteed&quot; | &quot;Subtle improvements designed around your goals&quot; |<br>| Reference the team | &quot;Experts&quot; (vague) | &quot;Licensed medical professionals and licensed estheticians&quot; |<br>| Describe procedures | &quot;Cutting-edge treatments&quot; | &quot;[Treatment name] for [specific skin concern]&quot; |<br>| Frame outcomes | &quot;Look 10 years younger&quot; | &quot;A refreshed, natural-looking result&quot; |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3. Terminology</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.1 Required terms</summary>
+      <div class="markdown"><p><li>**Licensed medical professionals** or **licensed estheticians** — use the correct descriptor for the staff performing the treatment</li><br><li>**Medically supervised** or **medically guided** — not &quot;medical-grade&quot; without confirmation</li><br><li>**Clinically guided protocols** — for describing the treatment approach</li><br><li>Reference treatment names by brand when appropriate: Botox, Hydrafacial, CoolSculpting</li><br><li>**Individualized treatment plan** — not &quot;personalized&quot; alone (overused)</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.2 Strict avoidance list</summary>
+      <div class="markdown"><p>| Term | Reason |<br>|---|---|<br>| &quot;guaranteed results&quot; / &quot;guarantee&quot; | Cannot guarantee cosmetic outcomes |<br>| &quot;dramatic transformation&quot; | Exaggerated claim — patients seek subtle improvements |<br>| &quot;look younger&quot; (as outcome promise) | Not medically responsible |<br>| &quot;best medspa in [city]&quot; | Unsupported superlative |<br>| &quot;revolutionary&quot; / &quot;cutting-edge&quot; | Vague promotional language |<br>| &quot;aggressive marketing&quot; phrasing | Contradicts the premium, approachable register |<br>| &quot;eliminate&quot; (for a condition) | Treatments improve or reduce — not eliminate |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4. Accuracy &amp; Technical Standards</summary>
+      <div class="markdown"><p><li>Do not promise specific outcomes for any procedure.</li><br><li>Do not present any treatment as universally effective or risk-free.</li><br><li>Treatments are performed by either licensed medical professionals or licensed estheticians — match the correct title to the treatment type. Injectables require medical professionals; facials may be performed by estheticians.</li><br><li>Do not make comparative claims against other practices.</li><br><li>When referencing specific treatments (Botox, Hydrafacial, CoolSculpting), use their correct brand names. Do not invent specifications.</li><br><li>Multiple locations span different states (Ohio: Lewis Center, Gahanna; Florida: Cape Coral, Bonita Springs). Do not imply all services are available at all locations without confirmation.</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5. Specificity Rules</summary>
+      <div class="markdown"><p><li>Name specific treatments rather than vague categories. &quot;CoolSculpting for body contouring&quot; is more credible than &quot;body contouring procedures.&quot;</li><br><li>Reference specific locations when writing location-specific content. Do not apply Ohio content to Florida locations or vice versa.</li><br><li>Attribute outcomes to individual factors: skin type, treatment history, individual goals.</li><br><li>Frame confidence and appearance goals in terms of how the patient wants to feel — not how they will look.</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6. Page Structure</summary>
+      <div class="markdown"><p>No approved templates established yet. Follow universal rules for page and section structure.</p><p>When a new campaign establishes approved structure, document it in `campaigns/{campaign}/brief.md` and promote to `page-templates/` once confirmed by client.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>7. SEO Standards</summary>
+      <div class="markdown"><p><li>Primary keyword in first sentence.</li><br><li>Title tags: under 60 characters, primary keyword near the front.</li><br><li>Meta descriptions: 140–160 characters, include primary keyword, at least one outcome or use case.</li><br><li>Target local intent for each location: &quot;Lewis Center Ohio,&quot; &quot;Gahanna,&quot; &quot;Cape Coral,&quot; &quot;Bonita Springs.&quot;</li><br><li>Do not mix location names across location-specific pages.</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>8. Service Reference</summary>
+      <div class="markdown"><p>Treatments offered (from client brief):<br><li>Botox injections</li><br><li>Hydrafacial treatments</li><br><li>CoolSculpting</li><br><li>Laser-based skin treatments</li><br><li>Advanced skincare services</li><br><li>Facials</li></ul><p>Do not invent specific protocols, session durations, or pricing. If a campaign requires specifics, confirm from `raw/` or with the CSM.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>9. Pre-Submission Checklist</summary>
+      <div class="markdown"><p><li>[ ] No guaranteed outcome claims</li><br><li>[ ] No exaggerated transformation language</li><br><li>[ ] Correct staff title used for the treatment described (medical professional vs. esthetician)</li><br><li>[ ] Location-specific content references the correct location — Ohio vs. Florida content is not interchangeable</li><br><li>[ ] Tone is professional and approachable — not promotional</li><br><li>[ ] Treatment brand names spelled correctly (Botox, Hydrafacial, CoolSculpting)</li><br><li>[ ] No comparative claims against other practices</li><br><li>[ ] All treatment claims sourced from raw/ or client brief</li></p></div>
+    </details>
+    </details>
+        </section>
+        <section class="panel">
+          <h2>Local Source Files Read</h2>
+          <ul><li><code>clients/anne-therese/STYLE-SYSTEM.md</code> — Anne Therese — Style System</li>
+<li><code>clients/anne-therese/client-intelligence/README.md</code> — Anne Therese Client Intelligence</li>
+<li><code>clients/anne-therese/client-intelligence/STYLE-GUIDE.md</code> — Anne Therese — Style System</li>
+<li><code>clients/anne-therese/client-intelligence/offerings.md</code> — Anne Therese Offerings</li>
+<li><code>clients/anne-therese/client-intelligence/source-files.md</code> — Anne Therese Source Files</li>
+<li><code>clients/anne-therese/deliverables/README.md</code> — Anne Therese Deliverables</li>
+<li><code>clients/anne-therese/raw/knowledge/overview.md</code> — Anne Therese — Client Overview</li>
+<li><code>clients/anne-therese/raw/knowledge/service-taxonomy.md</code> — Anne Therese Service Taxonomy</li></ul>
+        </section>
+      </main>
+    </section>
+    </body>
+</html>

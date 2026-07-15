@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Altify Context</title>
+  <style>
+    :root {
+      --bg:#f4f7f5; --panel:#ffffff; --ink:#09110f; --muted:#63716c; --line:#dce5df;
+      --black:#050907; --graph:#14d878; --graph-dark:#079d55; --soft:#eaf8f0; --soft-ink:#19392a;
+      --accent:#087a47; --red:#b5362d; --shadow:0 18px 46px rgba(5,9,7,.08);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:
+      linear-gradient(180deg, #ffffff 0, var(--bg) 360px); color:var(--ink); line-height:1.45; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .topnav { min-height:64px; padding:14px max(32px, calc((100vw - 1380px) / 2 + 32px)); background:var(--black); border-bottom:1px solid rgba(255,255,255,.08); position:sticky; top:0; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { color:#fff; display:inline-flex; align-items:center; gap:10px; font-weight:800; letter-spacing:0; }
+    .brand:hover { text-decoration:none; }
+    .brand span { width:32px; height:32px; border-radius:8px; background:var(--graph); color:var(--black); display:inline-grid; place-items:center; font-size:13px; font-weight:900; }
+    .nav-meta, .nav-link { color:#b8c6c0; font-size:13px; font-weight:700; }
+    .hero { margin:0; padding:42px max(32px, calc((100vw - 1380px) / 2 + 32px)) 38px; background:var(--black); color:#fff; border-bottom:1px solid rgba(255,255,255,.08); }
+    .index-hero, .client-hero { display:flex; justify-content:space-between; gap:28px; align-items:flex-start; }
+    .hero h1 { margin:0 0 12px; font-size:clamp(32px, 5vw, 62px); line-height:.98; letter-spacing:0; max-width:900px; }
+    .hero p { margin:0; color:#c7d5cf; max-width:840px; font-size:17px; }
+    .hero-copy { max-width:940px; }
+    .kicker { color:var(--graph); font-size:12px; text-transform:uppercase; letter-spacing:.08em; font-weight:900; }
+    .report-meta { display:flex; flex-wrap:wrap; gap:10px; padding:14px 32px; background:#fff; border-bottom:1px solid var(--line); color:var(--muted); font-size:13px; max-width:1380px; margin:0 auto; }
+    .report-meta span { background:var(--soft); color:var(--soft-ink); border-radius:999px; padding:6px 10px; font-weight:700; }
+    .grid.cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(290px, 1fr)); gap:16px; padding:24px 32px 42px; max-width:1380px; margin:0 auto; }
+    .card, .panel, .context-card { background:var(--panel); border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow); }
+    .client-card { display:block; padding:20px; color:inherit; min-height:184px; transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease; }
+    .client-card:hover { text-decoration:none; transform:translateY(-2px); border-color:rgba(20,216,120,.55); box-shadow:0 24px 58px rgba(5,9,7,.12); }
+    .card-topline { display:flex; justify-content:space-between; gap:10px; align-items:center; }
+    .client-card h2 { margin:14px 0 8px; font-size:23px; line-height:1.1; }
+    .client-card p { margin:0; color:var(--muted); }
+    .metrics { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+    .metrics span, .evidence, .status-pill { background:var(--soft); border:1px solid rgba(20,216,120,.22); border-radius:999px; padding:5px 9px; font-size:12px; color:var(--soft-ink); font-weight:800; }
+    .topic-chips { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 18px; }
+    .topic-chips span { background:#f6fbf8; border:1px solid var(--line); border-radius:999px; color:#183a2a; padding:7px 10px; font-size:13px; font-weight:750; }
+    .layout { display:block; padding:22px 32px 46px; max-width:1380px; margin:0 auto; }
+    main { min-width:0; }
+    .context-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; margin-bottom:20px; }
+    .context-card { padding:18px; min-height:220px; }
+    .context-card ul { margin-bottom:0; }
+    .context-note { color:var(--muted); font-size:13px; margin:4px 0 12px; }
+    .aside-label { color:var(--graph-dark); font-size:11px; text-transform:uppercase; font-weight:900; letter-spacing:.08em; margin-bottom:5px; }
+    .panel h2 { margin-top:0; }
+    .panel { padding:22px; margin-bottom:20px; }
+    .panel h2 { font-size:26px; letter-spacing:0; }
+    .offerings { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:13px; margin-top:16px; }
+    .offering, .sample { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .offering { position:relative; overflow:hidden; }
+    .offering-marker { position:absolute; inset:0 auto 0 0; width:4px; background:var(--graph); }
+    .offering h3, .sample h4 { margin:0 0 6px; }
+    .offering p { margin:0 0 10px; }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .stat-stack { display:grid; grid-template-columns:repeat(3, minmax(100px, 1fr)); gap:8px; min-width:340px; }
+    .stat-stack div { border:1px solid rgba(255,255,255,.15); border-radius:8px; padding:14px; background:rgba(255,255,255,.06); }
+    .stat-stack strong { display:block; font-size:26px; color:#fff; }
+    .stat-stack span, .muted { color:var(--muted); font-size:13px; }
+    .hero .stat-stack span { color:#b8c6c0; }
+    ul { padding-left:20px; }
+    li { margin:4px 0; }
+    code { background:var(--soft); color:var(--soft-ink); padding:2px 4px; border-radius:4px; }
+    details { margin:10px 0; }
+    summary { cursor:pointer; font-weight:700; }
+    .style-section { border-top:1px solid var(--line); padding-top:10px; }
+    .markdown { color:#2d2f35; }
+    @media (max-width: 980px) {
+      .layout, .split, .client-hero, .index-hero { grid-template-columns:1fr; display:block; }
+      .context-grid { grid-template-columns:1fr; }
+      .stat-stack { min-width:0; margin-top:16px; }
+      .hero, .grid.cards, .layout, .topnav, .report-meta { padding-left:16px; padding-right:16px; }
+      .hero h1 { font-size:36px; }
+      .stat-stack { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+    <nav class="topnav">
+      <a class="brand" href="index.html"><span>LG</span>LinkGraph</a>
+      <a class="nav-link" href="index.html">All clients</a>
+    </nav>
+    <section class="hero client-hero">
+      <div class="hero-copy">
+        <div class="kicker">altify</div>
+        <h1>Altify</h1>
+        <p>19 extracted offerings, 372 sitemap URLs, and 37 local source documents for client-specific writing context.</p>
+      </div>
+      <div class="stat-stack">
+        <div><strong>ok</strong><span>crawl status</span></div>
+        <div><strong>372</strong><span>URLs found</span></div>
+        <div><strong>0</strong><span>product/service URLs</span></div>
+      </div>
+    </section>
+    <section class="layout">
+      <main>
+        <section class="context-grid">
+    <article class="context-card">
+      <div class="aside-label">Quick Facts</div>
+      <p class="context-note">Company, audience, and proof points.</p>
+      <ul><li>Company: Altify — the Account Planning AI Cloud for enterprise revenue teams.</li><li>Brand promise: Plan smarter. Execute consistently. Grow predictably.</li><li>Positioning: Not positioned as &quot;just software.&quot; Altify is a combination of Salesforce-native software, AI-enhanced workflows, proven sales methodology, relationship intelligence, account planning, opportunity management, and revenue enablement services.</li><li>Care level: High Touch / High Value client. Maintain strict terminology adherence and a professional enterprise tone at all times.</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Voice</div>
+      <p class="context-note">How this client should sound.</p>
+      <ul><li>Litmus test: Does this read like a senior revenue strategist, or a vendor selling?</li><li>Confident: Speak with authority about enterprise sales strategy</li><li>Educational: Explain frameworks, methodology, and revenue strategy — don&#x27;t just assert</li><li>Results-focused: Emphasize measurable outcomes: win rate, deal size, revenue growth, forecast accuracy</li><li>Strategic: Focus on planning, execution, and long-term customer relationships</li><li>Practical: Ground claims in specific business impact, not abstract capability</li><li>Use first-person plural when Altify is the speaker (&quot;we help,&quot; &quot;our platform,&quot; &quot;Altify gives teams&quot;).</li><li>Do not copy guideline sentences verbatim into output.</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Avoid / Compliance</div>
+      <p class="context-note">Claims, terms, and wording to avoid.</p>
+      <ul><li>Do not copy guideline sentences verbatim into output.</li><li>Do not repeat &quot;AI-powered&quot; more than once per page.</li><li>Limit em dashes to one per page.</li><li>Avoid: Use instead</li><li>Tool: Solution, platform, engine, system</li><li>&quot;Just software&quot; framing: Altify is technology + methodology + services</li><li>Salesforce as insufficient: Altify operationalizes strategy inside Salesforce</li><li>AI-powered (repeated): Use once maximum per page</li><li>Em dash overuse: Limit to one per page</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Terminology</div>
+      <p class="context-note">Client-specific naming and required language.</p>
+      <p class="muted">No clean lines extracted yet.</p>
+    </article>
+    </section>
+        <section class="panel">
+          <h2>Offerings, Services, Goods</h2>
+          <p class="muted">Writer-facing catalog from the client style system, approved source files, and usable product/service pages. Raw crawl evidence is separated below.</p>
+          <div class="offerings">
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Altify Accounts</h3>
+      <p>Account planning for strategic accounts, relationship visibility, whitespace analysis, account objectives, and expansion planning inside Salesforce.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/altify/raw/knowledge/service-taxonomy.md · Sections: 4.3 Altify Accounts, Enterprise Solutions</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Altify Sales Process</h3>
+      <p>Sales process management that aligns seller activity to the customer buying cycle inside Salesforce.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/altify/raw/knowledge/service-taxonomy.md · Sections: 4.2 Altify Sales Process, Enterprise Solutions</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>MaxAI</h3>
+      <p>Salesforce-native AI for account planning and deal management. It surfaces buying insights, maps relationships, flags deal risk, and guides sellers through next actions.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/altify/raw/knowledge/service-taxonomy.md · Sections: 4.1 MaxAI, AI And Platform</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Revenue Enablement Services</h3>
+      <p>Consulting and enablement support for methodology adoption, sales process development, coaching, KPI measurement, analytics, and Salesforce execution.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/altify/raw/knowledge/service-taxonomy.md · Sections: 4.4 Revenue Enablement Services, Enterprise Solutions</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Account Planning AI Cloud</h3>
+      <p>Altify&#x27;s platform category for account planning, opportunity execution, relationship intelligence, methodology, AI workflows, and enablement services.</p>
+      <div class="evidence">Sources: clients/altify/raw/knowledge/service-taxonomy.md · Sections: AI And Platform</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Altify Insights</h3>
+      <p>Salesforce-native insight mapping for buyer priorities, stakeholder motivation, and relationship context inside complex B2B deals.</p>
+      <div class="evidence">Sources: clients/altify/raw/knowledge/service-taxonomy.md · Sections: Enterprise Solutions</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Altify Opportunities</h3>
+      <p>Opportunity management for complex deals, deal risk, stakeholder coverage, and disciplined execution.</p>
+      <div class="evidence">Sources: clients/altify/raw/knowledge/service-taxonomy.md · Sections: Enterprise Solutions</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>CRO &amp; Sales Leadership</h3>
+      <p>Revenue execution and forecast visibility for leaders responsible for predictable growth, risk visibility, and board-level accountability.</p>
+      <div class="evidence">Sources: clients/altify/raw/knowledge/service-taxonomy.md · Sections: Solutions By Role</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>CTO / IT</h3>
+      <p>Salesforce-native revenue execution for technical leaders who care about architecture, governance, data security, and avoiding disconnected systems.</p>
+      <div class="evidence">Sources: clients/altify/raw/knowledge/service-taxonomy.md · Sections: Solutions By Role</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Insight Map</h3>
+      <p>Buyer insight mapping that connects customer goals, pressures, initiatives, and obstacles to the seller&#x27;s strategy.</p>
+      <div class="evidence">Sources: clients/altify/raw/knowledge/service-taxonomy.md · Sections: Feature Modules</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Opportunity Map</h3>
+      <p>Whitespace and opportunity visualization for current, potential, and closed-won revenue across an account.</p>
+      <div class="evidence">Sources: clients/altify/raw/knowledge/service-taxonomy.md · Sections: Feature Modules</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Relationship Map</h3>
+      <p>Buying group and stakeholder mapping that shows roles, influence, sentiment, champions, blockers, and relationship gaps.</p>
+      <div class="evidence">Sources: clients/altify/raw/knowledge/service-taxonomy.md · Sections: Feature Modules</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Sales Enablement</h3>
+      <p>Methodology adoption, coaching at scale, measurable behavior change, and consistent seller execution.</p>
+      <div class="evidence">Sources: clients/altify/raw/knowledge/service-taxonomy.md · Sections: Solutions By Role</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Sales Operations</h3>
+      <p>CRM alignment, process adherence, pipeline hygiene, data quality, and operational visibility for RevOps and Sales Ops teams.</p>
+      <div class="evidence">Sources: clients/altify/raw/knowledge/service-taxonomy.md · Sections: Solutions By Role</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Sales Representative / Account Executive</h3>
+      <p>Account strategy, buying group visibility, deal progression, and relationship mapping for sellers working complex B2B opportunities.</p>
+      <div class="evidence">Sources: clients/altify/raw/knowledge/service-taxonomy.md · Sections: Solutions By Role</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Sales Velocity Calculator</h3>
+      <p>Interactive calculator for B2B revenue teams to estimate sales velocity and find execution breakdowns.</p>
+      <div class="evidence">Sources: clients/altify/raw/knowledge/service-taxonomy.md · Sections: Content And Tools</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Strategic Revenue Execution</h3>
+      <p>Core positioning category for turning account and opportunity strategy into daily Salesforce execution.</p>
+      <div class="evidence">Sources: clients/altify/raw/knowledge/service-taxonomy.md · Sections: Content And Tools</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>TeamView</h3>
+      <p>Collaborative account review and peer coaching view for account plans and opportunity strategy.</p>
+      <div class="evidence">Sources: clients/altify/raw/knowledge/service-taxonomy.md · Sections: Feature Modules</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Test and Improve</h3>
+      <p>Review and coaching workflow that tracks how account or deal strategy changes after feedback.</p>
+      <div class="evidence">Sources: clients/altify/raw/knowledge/service-taxonomy.md · Sections: Feature Modules</div>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Website Intelligence</h2>
+          <div class="split">
+            <div>
+              <h3>Website URLs</h3><ul><li><a href="https://altify.com/">https://altify.com/</a></li></ul>
+              <h3>Sitemaps</h3><ul><li><a href="https://altify.com/sitemap_index.xml">https://altify.com/sitemap_index.xml</a></li><li><a href="https://altify.com/post-sitemap.xml">https://altify.com/post-sitemap.xml</a></li><li><a href="https://altify.com/page-sitemap.xml">https://altify.com/page-sitemap.xml</a></li><li><a href="https://altify.com/resource-sitemap.xml">https://altify.com/resource-sitemap.xml</a></li><li><a href="https://altify.com/news-sitemap.xml">https://altify.com/news-sitemap.xml</a></li><li><a href="https://altify.com/glossary-sitemap.xml">https://altify.com/glossary-sitemap.xml</a></li><li><a href="https://altify.com/category-sitemap.xml">https://altify.com/category-sitemap.xml</a></li></ul>
+            </div>
+            <div>
+              <h3>Semantic / Topical Terms</h3><div class="topic-chips"><span>Altify Accounts</span><span>Altify Sales Process</span><span>Revenue Enablement Services</span><span>Account Planning AI Cloud</span><span>Altify Insights</span><span>Altify Opportunities</span><span>CRO &amp; Sales Leadership</span><span>CTO / IT</span><span>Insight Map</span><span>Opportunity Map</span><span>Relationship Map</span><span>Sales Enablement</span><span>Sales Operations</span><span>Sales Representative / Account Executive</span><span>Sales Velocity Calculator</span><span>Strategic Revenue Execution</span><span>Test and Improve</span><span>Account Planning</span></div>
+              <h3>Blockers</h3><p class="muted">None</p>
+            </div>
+          </div>
+          <h3>Product / Service URLs</h3><p class="muted">No product/service URLs classified from sitemap paths.</p>
+          <h3>Sampled Pages</h3><div class="sample-pages">
+    <article class="sample">
+      <h4>Product Updates: Essential Insights | Altify</h4>
+      <a href="https://altify.com/blog/category/product-update/">https://altify.com/blog/category/product-update/</a>
+      <p>Stay up-to-date with the latest Altify product updates. Discover new features and enhancements designed to empower your sales team.</p>
+      <ul><li>Articles</li><li>Introducing the Altify 9.16 Upgrade</li><li>Get To Know Altify’s Spring ’22 Release</li><li>Ready to close the execution gap?</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Altify: Sales Enablement &amp; Account Planning Solutions</h4>
+      <a href="https://altify.com/">https://altify.com/</a>
+      <p>Altify: Sales enablement software. Get actionable insights and data-driven strategies to boost sales performance. Request a demo now.</p>
+      <ul><li>Strategic Revenue Execution</li><li>Turn strategy into execution across complex deals and accounts.</li><li>Strategy Doesn’t Fail. Execution Does.</li><li>This is the Execution Gap.</li><li>What Happens When Teams Execute</li><li>Align the Buying Group</li><li>Understand What Drives Decisions</li><li>Execute Deals with Discipline &amp; Precision</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>AI Archives | Altify</h4>
+      <a href="https://altify.com/blog/category/ai/">https://altify.com/blog/category/ai/</a>
+      <p>Discover AI in sales with Altify. Explore strategies and tools to enhance your sales performance. Learn more.</p>
+      <ul><li>Articles</li><li>Why AI-Assisted Sales Forecasting Outperforms Gut Feel Every Time</li><li>From CRM Data to Revenue Guidance: How AI Closes the Gap Between Strategy and Execution</li><li>Always-On Sales Coaching: How AI Improves Execution Without More Managers</li><li>How AI Sales Agents Identify Deal Risk Before It&#x27;s Too Late</li><li>Unlock Sales Success: The Essential AI Strategy Your Team Needs Now</li><li>Ultimate Guide to Dreamforce 2025</li><li>Why Generative AI and Sales Are the Ultimate Deal-Making Duo</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>CRM Archives | Altify</h4>
+      <a href="https://altify.com/blog/category/crm/">https://altify.com/blog/category/crm/</a>
+      <p>Discover CRM insights and sales strategies from Altify. Learn how to improve sales effectiveness and customer relationships. Explore our CRM resources.</p>
+      <ul><li>Articles</li><li>From CRM Data to Revenue Guidance: How AI Closes the Gap Between Strategy and Execution</li><li>A Guide to Sales Enablement AI</li><li>Altify Insights Has Arrived, and it’s Helping Sellers Solve Customer Problems</li><li>Account Planning Template – Five Components for Success</li><li>Sandbagging in Sales – is it a Relationship Problem?</li><li>Five things to look for in a B2B sales reference app</li><li>Building Relationship Strategies: Time To Get Personal</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>CRO Archives | Altify</h4>
+      <a href="https://altify.com/blog/category/cro/">https://altify.com/blog/category/cro/</a>
+      <p>Discover CRO insights for sales leaders on the Altify blog. Learn how to improve sales and drive revenue. Explore now.</p>
+      <ul><li>Articles</li><li>Revenue Execution in Salesforce: Enterprise Guide</li><li>What Revenue Predictability Really Means for CROs</li><li>Five Challenges Facing CROs and Sales Leaders in 2026</li><li>From Strategy to Execution: Closing the Gap in Modern B2B Sales</li><li>How to Boost Sales Productivity with Account Planning</li><li>5 Ways to use ChatGPT with Altify for High Value Insights</li><li>Ready to close the execution gap?</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>MaxAI Archives | Altify</h4>
+      <a href="https://altify.com/blog/category/maxai/">https://altify.com/blog/category/maxai/</a>
+      <p>Explore MaxAI: Altify&#x27;s insights for enterprise sellers. Learn how to boost sales with AI.</p>
+      <ul><li>Articles</li><li>Enterprise Sellers: Unleash the power of MaxAI</li><li>Ready to close the execution gap?</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>How-To Archives | Altify</h4>
+      <a href="https://altify.com/blog/category/how-to/">https://altify.com/blog/category/how-to/</a>
+      <p>Altify&#x27;s How-To guides: Boost sales with actionable account planning and sales strategies. Learn more.</p>
+      <ul><li>Articles</li><li>How to Boost Sales Productivity with Account Planning</li><li>How to Choose the Best Account Planning Software</li><li>Sales Forecasting 101: How to Accurately Predict Revenue</li><li>Get more sales references without a traditional program</li><li>Ready to close the execution gap?</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Altify: Sales Enablement Insights &amp; Strategies</h4>
+      <a href="https://altify.com/blog/category/article/">https://altify.com/blog/category/article/</a>
+      <p>Altify offers sales enablement insights and strategies. Explore articles on sales best practices and tools. Drive performance and request a demo!</p>
+      <ul><li>Articles</li><li>Revenue Execution in Salesforce: Enterprise Guide</li><li>Your Reps Already Work in AI. Altify Works There, Too.</li><li>Revenue Execution in Salesforce: Enterprise Guide</li><li>Why Deal Slippage isn&#x27;t a &quot;Tool&quot; Problem: It&#x27;s a Failure in Execution</li><li>Strategic Revenue Execution: The Answer to Sales Complexity</li><li>Five Challenges Facing CROs and Sales Leaders in 2026</li><li>From CRM Data to Revenue Guidance: How AI Closes the Gap Between Strategy and Execution</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Research Archives | Altify</h4>
+      <a href="https://altify.com/blog/category/research/">https://altify.com/blog/category/research/</a>
+      <p>Discover sales insights and research from Altify. Explore strategies for sales performance, including whitespace analysis and AI in sales. Learn more.</p>
+      <ul><li>Articles</li><li>What is Whitespace Analysis?</li><li>Get more sales references without a traditional program</li><li>Ready to close the execution gap?</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Dreamforce Archives | Altify</h4>
+      <a href="https://altify.com/blog/category/dreamforce/">https://altify.com/blog/category/dreamforce/</a>
+      <p>Explore Dreamforce insights from Altify! Discover sales strategies, guides, and tips to maximize your event experience.</p>
+      <ul><li>Articles</li><li>Ultimate Guide to Dreamforce 2025</li><li>Ready to close the execution gap?</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Salesforce Archives | Altify</h4>
+      <a href="https://altify.com/blog/category/salesforce/">https://altify.com/blog/category/salesforce/</a>
+      <p>Discover Salesforce insights and account planning strategies from Altify. Transform your sales approach today.</p>
+      <ul><li>Articles</li><li>Revenue Execution in Salesforce: Enterprise Guide</li><li>Always-On Sales Coaching: How AI Improves Execution Without More Managers</li><li>Opportunity Management Inside Salesforce</li><li>Ultimate Guide to Dreamforce 2025</li><li>Altify and Salesforce – What&#x27;s Next for Selling Simplified with AI</li><li>Altify Insights Has Arrived, and it’s Helping Sellers Solve Customer Problems</li><li>Salesforce Account Planning Guide: Selling Simplified</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>2026 Sales Trends: Essential Insights | Altify</h4>
+      <a href="https://altify.com/blog/category/2026-trends/">https://altify.com/blog/category/2026-trends/</a>
+      <p>Explore 2026 sales trends and prepare your team for future challenges. Discover actionable insights on AI in sales and account planning to drive revenue growth.</p>
+      <ul><li>Articles</li><li>Five Challenges Facing CROs and Sales Leaders in 2026</li><li>From CRM Data to Revenue Guidance: How AI Closes the Gap Between Strategy and Execution</li><li>Always-On Sales Coaching: How AI Improves Execution Without More Managers</li><li>How AI Sales Agents Identify Deal Risk Before It&#x27;s Too Late</li><li>Opportunity Management Inside Salesforce</li><li>Why Deals Stall When Relationship Mapping Is Manual</li><li>Mapping Buying Committees in Complex Enterprise Deals</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Sales Leader Insights: Essential Strategies | Altify</h4>
+      <a href="https://altify.com/blog/category/sales-leader/">https://altify.com/blog/category/sales-leader/</a>
+      <p>Sales Leadership: Actionable insights for sales leaders. Explore sales management best practices and strategies.</p>
+      <ul><li>Articles</li><li>Why Sales Forecasts Fail Without Execution Discipline</li><li>The Execution Gap: Why Strategy Alone Doesn’t Drive Revenue</li><li>Why AI-Assisted Sales Forecasting Outperforms Gut Feel Every Time</li><li>Five Challenges Facing CROs and Sales Leaders in 2026</li><li>The Relationship Premium in Sales</li><li>What is Sales Qualification?</li><li>Account Planning Best Practices Learned from Sales Leaders</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Deal Strategy: Essential Insights | Altify</h4>
+      <a href="https://altify.com/blog/category/deal-strategy/">https://altify.com/blog/category/deal-strategy/</a>
+      <p>Explore deal strategy insights from Altify. Learn sales strategies and methodologies to improve your deal-making.</p>
+      <ul><li>Articles</li><li>Deal Qualification Done Right: How Enterprise Teams Avoid Wasting Pipeline</li><li>The Execution Gap: Why Strategy Alone Doesn’t Drive Revenue</li><li>How AI Sales Agents Identify Deal Risk Before It&#x27;s Too Late</li><li>How Sales Teams Spot Opportunity Risk Before the Forecast Breaks</li><li>How Multi-Threaded Selling Prevents Late-Stage Deal Loss</li><li>Why Generative AI and Sales Are the Ultimate Deal-Making Duo</li><li>How sellers can use AI to improve whitespace analysis</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Execution Gap: Essential Strategies | Altify</h4>
+      <a href="https://altify.com/blog/category/execution-gap/">https://altify.com/blog/category/execution-gap/</a>
+      <p>Close the execution gap with Altify. Explore sales strategies and solutions to boost your B2B sales performance.</p>
+      <ul><li>Articles</li><li>Why Sales Forecasts Fail Without Execution Discipline</li><li>The Execution Gap: Why Strategy Alone Doesn’t Drive Revenue</li><li>From CRM Data to Revenue Guidance: How AI Closes the Gap Between Strategy and Execution</li><li>From Strategy to Execution: Closing the Gap in Modern B2B Sales</li><li>Ready to close the execution gap?</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Generative AI: Essential Sales Insights | Altify</h4>
+      <a href="https://altify.com/blog/category/generative-ai/">https://altify.com/blog/category/generative-ai/</a>
+      <p>Explore generative AI for sales with Altify. Learn how to leverage AI to boost sales and productivity. Discover more.</p>
+      <ul><li>Articles</li><li>Why Generative AI and Sales Are the Ultimate Deal-Making Duo</li><li>Unleash Your Sales Potential: How AI Can Boost Productivity</li><li>Generative AI for Sales – A Guide to the New World of Selling</li><li>Ready to close the execution gap?</li></ul>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Full Style System</h2>
+          <details open><summary>Show style-system sections</summary>
+    <details class="style-section">
+      <summary>Altify — Style System</summary>
+      <div class="markdown"><p>Generated: 2026-05-15<br>Base rules: universal-rules/UNIVERSAL-RULES.md<br>Sources: raw/research/client-overview.md, raw/research/content-directory-brief.md, raw/research/content-directory-readme.md</p><p>Canonical source of truth for all Altify content. This document supersedes all earlier briefs and guidelines; raw source materials live in `raw/`.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>1. Brand &amp; Audience</summary>
+      <div class="markdown"><p><li>**Company:** Altify — the Account Planning AI Cloud for enterprise revenue teams.</li><br><li>**Brand promise:** Plan smarter. Execute consistently. Grow predictably.</li><br><li>**Positioning:** Not positioned as &quot;just software.&quot; Altify is a combination of Salesforce-native software, AI-enhanced workflows, proven sales methodology, relationship intelligence, account planning, opportunity management, and revenue enablement services.</li><br><li>**Care level:** High Touch / High Value client. Maintain strict terminology adherence and a professional enterprise tone at all times.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>1.1 Personas</summary>
+      <div class="markdown"><p>| Persona | Core focus | Primary keyword |<br>|---|---|---|<br>| CRO / CSO | Predictable growth, forecast confidence, risk visibility, board accountability | CRO Revenue Predictability Software |<br>| VP Sales Operations | Salesforce data quality, pipeline hygiene, process adherence, operational efficiency | Sales Ops CRM Alignment Tool |<br>| Account Executive / Sales Rep | Winning bigger deals, navigating buying groups, stakeholder visibility | Enterprise Account Strategy Tool |<br>| CTO / Head of IT | Salesforce-native architecture, security, data governance, stack simplification | Salesforce-Native Revenue Execution Platform |<br>| VP Sales Enablement | Methodology adoption, coaching at scale, measurable behavior change | Sales Methodology Enforcement Tool |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>1.2 Typical customer profile</summary>
+      <div class="markdown"><p><li>Enterprise B2B organizations</li><br><li>Complex, multi-stakeholder sales cycles with long deal timelines</li><br><li>High deal values</li><br><li>Already using Salesforce</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2. Voice &amp; Tone</summary>
+      <div class="markdown"><p>Altify content should sound: enterprise-ready, clear, direct, confident, strategic, practical, outcome-driven.</p><p>**Litmus test:** Does this read like a senior revenue strategist, or a vendor selling?</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.1 Core tone attributes</summary>
+      <div class="markdown"><p>| Attribute | Writing rule |<br>|---|---|<br>| Confident | Speak with authority about enterprise sales strategy |<br>| Educational | Explain frameworks, methodology, and revenue strategy — don&#x27;t just assert |<br>| Results-focused | Emphasize measurable outcomes: win rate, deal size, revenue growth, forecast accuracy |<br>| Strategic | Focus on planning, execution, and long-term customer relationships |<br>| Practical | Ground claims in specific business impact, not abstract capability |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.2 Voice rules</summary>
+      <div class="markdown"><p><li>Use first-person plural when Altify is the speaker (&quot;we help,&quot; &quot;our platform,&quot; &quot;Altify gives teams&quot;).</li><br><li>Avoid casual or generic language — this is enterprise content for senior buyers.</li><br><li>Do not copy guideline sentences verbatim into output.</li><br><li>Do not repeat &quot;AI-powered&quot; more than once per page.</li><br><li>Limit em dashes to one per page.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.3 Avoid</summary>
+      <div class="markdown"><p><li>Generic AI buzzwords</li><br><li>Long abstract claims without business impact</li><br><li>Excessive hype or promotional padding</li><br><li>The word &quot;tool&quot; — replace with: solution, platform, engine, system</li><br><li>Fluffy language without a grounded outcome</li><br><li>Content that sounds like basic sales tips rather than enterprise strategy</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3. Terminology</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.1 Preferred terms</summary>
+      <div class="markdown"><p>| Term | Notes |<br>|---|---|<br>| Salesforce-native | Core differentiator — always reinforce that Altify lives inside Salesforce |<br>| Relationship Mapping | Capitalize. Core product capability. |<br>| Revenue Team | Preferred over &quot;sales team&quot; |<br>| Strategic Account Planning | Capitalize as a named discipline |<br>| Revenue Execution | Preferred framing for the category Altify serves |<br>| Customer-centric selling | Core philosophy — customer priorities at the center of every interaction |<br>| Account Planning AI Cloud | Altify&#x27;s primary positioning phrase |<br>| Whitespace | One word. Untapped pipeline expansion opportunities. |<br>| Buying group | Preferred over &quot;decision-makers&quot; when referring to the full stakeholder network |<br>| Multithreading | One word. Building relationships across multiple stakeholders in a deal. |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.2 Avoidance list</summary>
+      <div class="markdown"><p>| Avoid | Use instead | Reason |<br>|---|---|---|<br>| Tool | Solution, platform, engine, system | Client-specified rule |<br>| &quot;Just software&quot; framing | Altify is technology + methodology + services | Undersells the offering |<br>| Salesforce as insufficient | Altify operationalizes strategy inside Salesforce | Never frame Salesforce as the problem |<br>| AI-powered (repeated) | Use once maximum per page | Avoid generic AI buzzword saturation |<br>| Em dash overuse | Limit to one per page | Client-specified style rule |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.3 Salesforce framing rule</summary>
+      <div class="markdown"><p>Never frame Salesforce as insufficient or as a problem Altify solves around. Position Altify as what turns Salesforce into a system of action.</p><p>Preferred language:<br><li>&quot;Built inside Salesforce&quot;</li><br><li>&quot;Works where sellers already work&quot;</li><br><li>&quot;Turns Salesforce into a system of action&quot;</li><br><li>&quot;No new data silos&quot;</li><br><li>&quot;No disconnected workflows&quot;</li><br><li>&quot;Native execution layer&quot;</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4. Products &amp; Solutions</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.1 MaxAI</summary>
+      <div class="markdown"><p>AI-powered account planning and deal management. Automates research, surfaces insights, maps relationships, and guides sellers through real-time recommendations.</p><p>**Core value:** Sellers spend less time on manual work and more time building relationships and progressing deals.</p><p>**Key capabilities:** auto-populate key players, surface buying insights, real-time AI coaching, competitive research simplification, admin reduction, strategic planning support.</p><p>**Differentiators:** Built on Altify methodology. Salesforce-native. Designed specifically for B2B revenue teams.</p><p>**Primary keyword:** account planning software<br>**Related:** sales account planning software, best account planning software</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.2 Altify Sales Process</summary>
+      <div class="markdown"><p>Aligns sales execution with the customer buying cycle inside Salesforce.</p><p>**Core value:** Turns sales execution into a repeatable, buyer-aligned process.</p><p>**Key capabilities:** repeatable sales process guidance, buyer-cycle alignment, forecast accuracy, pipeline visibility, multi-motion support, manager coaching context, team-wide standardization.</p><p>**Primary keyword:** Sales Process Management Software</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.3 Altify Accounts</summary>
+      <div class="markdown"><p>Account planning for deepening relationships, identifying whitespace, and growing strategic accounts inside Salesforce.</p><p>**Core value:** Operationalizes account-based sales strategy with visibility into account progress, relationships, objectives, actions, and opportunities.</p><p>**Key capabilities:** account transparency, cross-sell/upsell identification, white space analysis, relationship footprint development, account plan reviews, cross-team collaboration.</p><p>**Primary keyword:** account planning software<br>**Secondary:** key account management software<br>**Tertiary:** salesforce account planning software</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.4 Revenue Enablement Services</summary>
+      <div class="markdown"><p>Consulting support to implement, optimize, and sustain revenue execution programs.</p><p>**Core value:** Moves organizations from training and tool adoption to measurable business impact.</p><p>**Key services:** change management, sales process development, opportunity and account methodology, leadership alignment, coaching, KPI measurement, analytics, Tableau/Power BI integration, Salesforce dashboards.</p><p>**Primary keyword:** revenue enablement services<br>**Secondary:** sales enablement consulting<br>**Tertiary:** sales coaching and training</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5. Core Content Themes</summary>
+      <div class="markdown"><p>Use these five themes consistently across all Altify pages.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.1 Salesforce-native execution</summary>
+      <div class="markdown"><p>Altify lives inside Salesforce — not alongside it. Every page should reinforce this.</p><p>Use: built inside Salesforce, works where sellers already work, turns Salesforce into a system of action, no new data silos, no disconnected workflows, native execution layer.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.2 Methodology becomes execution</summary>
+      <div class="markdown"><p>Sales methodology should not live in decks, documents, or training sessions. Altify embeds it into daily workflows.</p><p>Use: embed methodology into daily workflows, turn training into execution, reinforce best practices in the flow of work, standardize seller behavior, guide sellers through proven steps, make coaching consistent and measurable.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.3 Relationship intelligence</summary>
+      <div class="markdown"><p>Altify maps buying groups, influence networks, and stakeholder relationships.</p><p>Use: map buying groups, identify decision-makers, influencers, blockers, and champions, understand political dynamics, build multithreaded relationships, expose relationship gaps, navigate complex stakeholder networks.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.4 Predictable revenue</summary>
+      <div class="markdown"><p>For executive personas: position around consistency, risk visibility, and forecast confidence.</p><p>Use: predictable revenue growth, forecasts leaders can defend, earlier risk visibility, cleaner pipeline, stronger commit accuracy, more reliable deal health, consistent execution across teams.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.5 Reducing manual work</summary>
+      <div class="markdown"><p>For sellers and operators: reduced admin, less manual research, fewer spreadsheets, more selling time.</p><p>Use: reduce admin drag, eliminate manual account planning, stop rebuilding org charts, replace static plans, automate research, spend more time selling, keep insights current inside Salesforce.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6. Keyword Rules</summary>
+      <div class="markdown"><p>Required keyword usage per persona landing page.</p><p>| Persona | Primary keyword | Rule | Secondary keyword | Rule |<br>|---|---|---|---|---|<br>| CRO / CSO | CRO Revenue Predictability Software | H1 + 5x in content | AI Sales Execution Platform | Once |<br>| VP Sales Operations | Sales Ops CRM Alignment Tool | H1 + 5x in content | Forecast Accuracy Software | Once |<br>| Account Executive | Enterprise Account Strategy Tool | H1 + 5x in content | Relationship Mapping for AE | Once |<br>| CTO / Head of IT | Salesforce-Native Revenue Execution Platform | H1 + 5x in content | Salesforce Data Governance Software | Twice |<br>| VP Sales Enablement | Sales Methodology Enforcement Tool | H1 + 5x in content | Sales Coaching at Scale | Once |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>7. Landing Page Structure</summary>
+      <div class="markdown"><p>Use this structure for all persona-driven landing pages.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Section 1 — Hero</summary>
+      <div class="markdown"><p>Elements: H1 with primary keyword, short subheadline, primary CTA.</p><p>Purpose: state the main value proposition immediately.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Section 2 — Core Pain</summary>
+      <div class="markdown"><p>Elements: H2, intro paragraph, H3 pain points with short explanations.</p><p>Purpose: show the reader Altify understands their specific problems.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Section 3 — Altify Solution</summary>
+      <div class="markdown"><p>Elements: H2, H3 solution blocks, short explanation under each, optional micro-CTA.</p><p>Purpose: connect Altify&#x27;s capabilities directly to the persona&#x27;s problems.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Section 4 — Trust / Social Proof</summary>
+      <div class="markdown"><p>Elements: H2, bullet-point outcomes, stats, or proof points.</p><p>Purpose: make the claims credible.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Section 5 — FAQ</summary>
+      <div class="markdown"><p>Elements: persona-specific questions, slightly expanded answers, no repetition of the page body.</p><p>Purpose: handle objections and clarify fit.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>8. CTAs by Page Type</summary>
+      <div class="markdown"><p>| Page / Persona | CTA options |<br>|---|---|<br>| AE pages | Map Your Key Account Buying Group / See How Altify Helps You Win Bigger Deals |<br>| CRO pages | Build a More Predictable Revenue Engine / See How Altify Improves Forecast Confidence |<br>| Sales Ops pages | Close the Salesforce Execution Gap / Operationalize Your Pipeline Risk |<br>| Enablement pages | Scale Methodology Adoption / Turn Training Into Execution |<br>| IT pages | Reduce Stack Complexity / Keep Revenue Execution Native to Salesforce |<br>| Generic | Request a Demo, View Interactive Demo, Let&#x27;s Talk, Take Product Tour, Request Call, Read the eBook, Download the Book |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>9. Meta Standards</summary>
+      <div class="markdown"><p><li>**Title tag:** primary keyword near the front, under 60 characters.</li><br><li>**Meta description:** 150–160 characters. Include the primary keyword, Altify&#x27;s name, and at least one clear business outcome.</li></ul><p>**Formula:**<br>&gt; Altify is a [PRIMARY KEYWORD] that helps [persona/team] [main action] in Salesforce, improving [outcome] and [outcome].</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>10. Internal Linking Rules</summary>
+      <div class="markdown"><p><li>Target 2–3 internal links per 500 words.</li><br><li>Place the primary focus link as high in the content as possible.</li><br><li>Links must be contextually relevant — do not force them.</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>11. Editorial QA Checklist</summary>
+      <div class="markdown"><p>Run before finalizing any Altify page.</p><ul><li>[ ] H1 includes the primary keyword</li><br><li>[ ] Primary keyword appears the required number of times</li><br><li>[ ] Secondary keywords inserted naturally</li><br><li>[ ] Page speaks to one clear persona</li><br><li>[ ] Pain points are specific to that persona</li><br><li>[ ] Solution section maps clearly to the pains</li><br><li>[ ] Headings not copied directly from guidelines</li><br><li>[ ] Altify speaks in first-person plural where appropriate</li><br><li>[ ] Claims grounded in business outcomes</li><br><li>[ ] Salesforce-native positioning is clear</li><br><li>[ ] FAQs add new value instead of repeating the page</li><br><li>[ ] Meta title and meta description within character limits</li><br><li>[ ] &quot;Tool&quot; not used — replaced with solution, platform, engine, or system</li><br><li>[ ] Em dashes limited to one per page</li><br><li>[ ] &quot;AI-powered&quot; not repeated more than once per page</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>12. Pre-Submission Checklist</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Voice &amp; Tone</summary>
+      <div class="markdown"><p><li>[ ] Reads like a senior revenue strategist, not a vendor</li><br><li>[ ] No generic AI buzzwords</li><br><li>[ ] No fluffy language without grounded outcome</li><br><li>[ ] Salesforce framed as the operating environment, not the problem</li><br><li>[ ] First-person plural used consistently when Altify is the speaker</li><br><li>[ ] Guideline sentences not copied verbatim</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Terminology</summary>
+      <div class="markdown"><p><li>[ ] &quot;Tool&quot; replaced throughout with solution, platform, engine, or system</li><br><li>[ ] Preferred terms used: Salesforce-native, Relationship Mapping, Revenue Team, Strategic Account Planning, Revenue Execution, Customer-centric selling</li><br><li>[ ] Primary positioning phrase (Account Planning AI Cloud) used where appropriate</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Keyword Compliance</summary>
+      <div class="markdown"><p><li>[ ] Primary keyword in H1</li><br><li>[ ] Primary keyword count meets requirement (5x for persona pages)</li><br><li>[ ] Secondary keyword appears required number of times</li><br><li>[ ] Keywords inserted naturally without disrupting voice</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Page Structure</summary>
+      <div class="markdown"><p><li>[ ] All five landing page sections present and in correct order</li><br><li>[ ] Each section serves its stated purpose</li><br><li>[ ] CTAs match the persona and page type</li><br><li>[ ] FAQ answers add value not covered in the body</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Internal Links</summary>
+      <div class="markdown"><p><li>[ ] 2–3 internal links per 500 words</li><br><li>[ ] Primary focus link placed as high as possible</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Meta</summary>
+      <div class="markdown"><p><li>[ ] Title tag under 60 characters with primary keyword near the front</li><br><li>[ ] Meta description 150–160 characters with primary keyword and at least two outcomes</li><br><li>[ ] Formula followed: Altify is a [KEYWORD] that helps [persona] [action], improving [outcome] and [outcome]</li></p></div>
+    </details>
+    </details>
+        </section>
+        <section class="panel">
+          <h2>Local Source Files Read</h2>
+          <ul><li><code>clients/altify/STYLE-SYSTEM.md</code> — Altify — Style System</li>
+<li><code>clients/altify/campaigns/01-may-content-optimization/README.md</code> — 01 — May Content Optimization</li>
+<li><code>clients/altify/campaigns/01-may-content-optimization/brief.md</code> — Campaign Brief — Altify May 2026 Content Optimization</li>
+<li><code>clients/altify/campaigns/01-may-content-optimization/campaign-urls.md</code> — Campaign URLs — Altify May 2026 Content Optimization</li>
+<li><code>clients/altify/campaigns/02-june-2026-content-optimization/README.md</code> — 02 — June 2026 Content Optimization</li>
+<li><code>clients/altify/campaigns/02-june-2026-content-optimization/campaign-urls.md</code> — Campaign URLs — Altify June 2026 Content Optimization</li>
+<li><code>clients/altify/campaigns/02-june-2026-content-optimization/research/live-baseline/account-management-blog.md</code> — Live baseline — Account Management blog</li>
+<li><code>clients/altify/campaigns/02-june-2026-content-optimization/research/live-baseline/account-planning-glossary.md</code> — Account Planning Glossary</li>
+<li><code>clients/altify/campaigns/02-june-2026-content-optimization/research/live-baseline/bant-glossary.md</code> — Bant Glossary</li>
+<li><code>clients/altify/campaigns/02-june-2026-content-optimization/research/live-baseline/buying-intent-glossary.md</code> — LIVE BASELINE — captured 2026-07-13, do not edit</li>
+<li><code>clients/altify/campaigns/02-june-2026-content-optimization/research/live-baseline/icp-glossary.md</code> — Icp Glossary</li>
+<li><code>clients/altify/campaigns/02-june-2026-content-optimization/research/live-baseline/maxai-deal-management.md</code> — Live baseline — altify.com/maxai/</li>
+<li><code>clients/altify/campaigns/02-june-2026-content-optimization/research/live-baseline/sales-analytics-glossary.md</code> — Live baseline — What is Sales Analytics? (altify.com glossary)</li>
+<li><code>clients/altify/campaigns/02-june-2026-content-optimization/research/live-baseline/sales-coaching-glossary.md</code> — Sales Coaching Glossary</li>
+<li><code>clients/altify/client-intelligence/README.md</code> — Altify Client Intelligence</li>
+<li><code>clients/altify/client-intelligence/STYLE-GUIDE.md</code> — Altify — Style System</li>
+<li><code>clients/altify/client-intelligence/offerings.md</code> — Altify Offerings</li>
+<li><code>clients/altify/client-intelligence/source-files.md</code> — Altify Source Files</li>
+<li><code>clients/altify/deliverables/README.md</code> — Altify Deliverables</li>
+<li><code>clients/altify/deliverables/drafts/01-may-content-optimization/01-account-planning-challenges.md</code> — Strategic Account Planning in 2026: The Biggest Challenges and How to Address Them</li>
+<li><code>clients/altify/deliverables/drafts/01-may-content-optimization/02-maxai-guided-selling.md</code> — AI-powered Account Planning and Deal Management</li>
+<li><code>clients/altify/deliverables/drafts/01-may-content-optimization/03-relationship-mapping.md</code> — Relationship Mapping for Enterprise B2B Sales in 2026: Frameworks that Drive Win Rates</li>
+<li><code>clients/altify/deliverables/drafts/01-may-content-optimization/04-strategic-account-planning.md</code> — What Strategic Account Planning Looks Like in Enterprise Sales Teams</li>
+<li><code>clients/altify/deliverables/drafts/01-may-content-optimization/05-revenue-execution-salesforce.md</code> — Revenue Execution in Salesforce: Enterprise Guide</li>
+<li><code>clients/altify/deliverables/drafts/02-june-2026-content-optimization/account-management-blog-v1.md</code> — How Effective Account Management Helps You Defend and Grow Revenue</li>
+<li><code>clients/altify/deliverables/drafts/02-june-2026-content-optimization/account-planning-glossary-v1.md</code> — Account Planning Glossary V1</li>
+<li><code>clients/altify/deliverables/drafts/02-june-2026-content-optimization/bant-glossary-v1.md</code> — Bant Glossary V1</li>
+<li><code>clients/altify/deliverables/drafts/02-june-2026-content-optimization/buying-intent-glossary-v1.md</code> — Buying Intent Glossary V1</li>
+<li><code>clients/altify/deliverables/drafts/02-june-2026-content-optimization/icp-glossary-v1.md</code> — What Is an Ideal Customer Profile (ICP)?</li>
+<li><code>clients/altify/deliverables/drafts/02-june-2026-content-optimization/maxai-deal-management-v1.md</code> — Deal Management Software Built Inside Salesforce</li>
+<li><code>clients/altify/deliverables/drafts/02-june-2026-content-optimization/maxai-deal-management-v2.md</code> — Hero</li>
+<li><code>clients/altify/deliverables/drafts/02-june-2026-content-optimization/sales-analytics-glossary-v1.md</code> — What is Sales Analytics?</li>
+<li><code>clients/altify/deliverables/drafts/02-june-2026-content-optimization/sales-coaching-glossary-v1.md</code> — Sales Coaching Glossary V1</li>
+<li><code>clients/altify/raw/knowledge/service-taxonomy.md</code> — Altify Service Taxonomy</li>
+<li><code>clients/altify/raw/research/client-overview.md</code> — Altify</li>
+<li><code>clients/altify/raw/research/content-directory-brief.md</code> — Altify Content Directory Brief</li>
+<li><code>clients/altify/raw/research/content-directory-readme.md</code> — Altify Content Directory</li></ul>
+        </section>
+      </main>
+    </section>
+    </body>
+</html>

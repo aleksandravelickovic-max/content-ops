@@ -1,0 +1,45 @@
+{
+  "client": "us-storage-units",
+  "display_name": "US Storage Units",
+  "generated_at": "2026-07-13T23:04:45.144231+00:00",
+  "website_urls": [
+    "https://usstorageunits.com/"
+  ],
+  "status": "partial",
+  "sitemaps": [],
+  "sitemap_errors": [
+    "https://usstorageunits.com/sitemap.xml: HTTP 403",
+    "https://usstorageunits.com/sitemap_index.xml: HTTP 403",
+    "https://usstorageunits.com/wp-sitemap.xml: HTTP 403",
+    "https://usstorageunits.com/sitemap-pages.xml: HTTP 403",
+    "https://usstorageunits.com/sitemap_products_1.xml: HTTP 403",
+    "https://usstorageunits.com/sitemap_collections_1.xml: HTTP 403"
+  ],
+  "url_count": 1,
+  "page_type_counts": {
+    "home": 1
+  },
+  "sample_pages": [
+    {
+      "url": "https://usstorageunits.com/",
+      "requested_url": "https://usstorageunits.com/",
+      "status_code": 403,
+      "content_type": "text/html; charset=UTF-8",
+      "page_type": "home",
+      "title": "Just a moment...",
+      "meta_description": "",
+      "headings": [],
+      "links_seen": 0,
+      "elapsed_ms": 90
+    }
+  ],
+  "offering_pages": [],
+  "top_terms": [
+    "just",
+    "moment"
+  ],
+  "product_or_service_urls": [],
+  "blockers": [
+    "No usable sitemap found for https://usstorageunits.com/; sampled homepage only."
+  ]
+}

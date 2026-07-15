@@ -1,0 +1,191 @@
+{
+  "client": "anne-therese",
+  "display_name": "Anne Therese",
+  "generated_at": "2026-07-14T15:59:27.876562+00:00",
+  "offerings": [
+    {
+      "name": "Hydrafacial",
+      "description": "Cleansing, exfoliation, extraction, and hydration facial treatment for skin refresh and maintenance.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/anne-therese/raw/knowledge/service-taxonomy.md",
+        "website sitemap sample"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Treatments",
+        "https://www.annetherese.com/treatment/hydrafacial"
+      ],
+      "score": 10
+    },
+    {
+      "name": "Advanced skincare services",
+      "description": "Skin treatments beyond basic facials, including device-based and clinical-grade options.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/anne-therese/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Treatments"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Botox injections",
+      "description": "Neuromodulator treatment for expression lines and wrinkle softening.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/anne-therese/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Treatments"
+      ],
+      "score": 9
+    },
+    {
+      "name": "CoolSculpting",
+      "description": "Non-surgical body contouring treatment for reducing targeted fat areas through controlled cooling.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/anne-therese/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Treatments"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Facials",
+      "description": "Professional facial treatments selected for skin type, concerns, and treatment goals.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/anne-therese/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Treatments"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Laser-based skin treatments",
+      "description": "Laser and light services for tone, texture, discoloration, hair reduction, and skin refresh.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/anne-therese/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Treatments"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Clear + Brilliant",
+      "description": "Refresh and rejuvenate your skin with gentle laser resurfacing that improves tone, texture, and radiance while preventing early signs of aging",
+      "sources": [
+        "clients/anne-therese/raw/knowledge/service-taxonomy.md",
+        "website offering page"
+      ],
+      "sections": [
+        "Treatments",
+        "https://www.annetherese.com/treatment/clear-brilliant"
+      ],
+      "score": 7
+    },
+    {
+      "name": "Dermal Filler",
+      "description": "Smooth wrinkles & restore volume. Get dermal filler at Anne Therese Aesthetic Medicine in Gahanna, OH, Lewis Center, OH, Cape Coral, FL, and Bonita Springs, FL.",
+      "sources": [
+        "clients/anne-therese/raw/knowledge/service-taxonomy.md",
+        "website offering page"
+      ],
+      "sections": [
+        "Treatments",
+        "https://www.annetherese.com/treatment/dermal-filler"
+      ],
+      "score": 7
+    },
+    {
+      "name": "IPL/BBL Photofacial",
+      "description": "Reduce sun damage, redness, and discoloration with intense pulsed light technology for a clearer, more even complexion",
+      "sources": [
+        "clients/anne-therese/raw/knowledge/service-taxonomy.md",
+        "website offering page"
+      ],
+      "sections": [
+        "Treatments",
+        "https://www.annetherese.com/treatment/ipl-photofacial"
+      ],
+      "score": 7
+    },
+    {
+      "name": "Laser Hair Reduction",
+      "description": "Achieve smooth, hair-free skin with a long-term solution that eliminates unwanted hair and reduces future growth",
+      "sources": [
+        "clients/anne-therese/raw/knowledge/service-taxonomy.md",
+        "website offering page"
+      ],
+      "sections": [
+        "Treatments",
+        "https://www.annetherese.com/treatment/laser-hair-removal"
+      ],
+      "score": 7
+    },
+    {
+      "name": "Medical Grade Skincare",
+      "description": "Transform your skin with high-quality, clinically tested ingredients that deliver deeper penetration, faster results, and long-term improvements",
+      "sources": [
+        "clients/anne-therese/raw/knowledge/service-taxonomy.md",
+        "website offering page"
+      ],
+      "sections": [
+        "Treatments",
+        "https://www.annetherese.com/treatment/medical-grade-skincare"
+      ],
+      "score": 7
+    },
+    {
+      "name": "Microneedling",
+      "description": "Boost collagen production and improve skin texture with tiny controlled micro-injuries that stimulate natural healing",
+      "sources": [
+        "clients/anne-therese/raw/knowledge/service-taxonomy.md",
+        "website offering page"
+      ],
+      "sections": [
+        "Treatments",
+        "https://www.annetherese.com/treatment/microneedling"
+      ],
+      "score": 7
+    },
+    {
+      "name": "PRX Derm Perfexion",
+      "description": "PRX Derm Perfexion is a no-peel skin rejuvenation treatment that stimulates collagen and improves tone, texture, and radiance without downtime.",
+      "sources": [
+        "clients/anne-therese/raw/knowledge/service-taxonomy.md",
+        "website offering page"
+      ],
+      "sections": [
+        "Treatments",
+        "https://www.annetherese.com/treatment/prx-derm-perfexion"
+      ],
+      "score": 7
+    },
+    {
+      "name": "Spotless Peel",
+      "description": "Erase sun damage and smooth skin texture with a dual-action treatment that combines BBL and Erbium laser for brighter, more even-toned skin in one powerful session.",
+      "sources": [
+        "clients/anne-therese/raw/knowledge/service-taxonomy.md",
+        "website offering page"
+      ],
+      "sections": [
+        "Treatments",
+        "https://www.annetherese.com/treatment/spotless-peel"
+      ],
+      "score": 7
+    }
+  ]
+}

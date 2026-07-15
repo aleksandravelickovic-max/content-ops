@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pekas Smith Context</title>
+  <style>
+    :root {
+      --bg:#f4f7f5; --panel:#ffffff; --ink:#09110f; --muted:#63716c; --line:#dce5df;
+      --black:#050907; --graph:#14d878; --graph-dark:#079d55; --soft:#eaf8f0; --soft-ink:#19392a;
+      --accent:#087a47; --red:#b5362d; --shadow:0 18px 46px rgba(5,9,7,.08);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:
+      linear-gradient(180deg, #ffffff 0, var(--bg) 360px); color:var(--ink); line-height:1.45; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .topnav { min-height:64px; padding:14px max(32px, calc((100vw - 1380px) / 2 + 32px)); background:var(--black); border-bottom:1px solid rgba(255,255,255,.08); position:sticky; top:0; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { color:#fff; display:inline-flex; align-items:center; gap:10px; font-weight:800; letter-spacing:0; }
+    .brand:hover { text-decoration:none; }
+    .brand span { width:32px; height:32px; border-radius:8px; background:var(--graph); color:var(--black); display:inline-grid; place-items:center; font-size:13px; font-weight:900; }
+    .nav-meta, .nav-link { color:#b8c6c0; font-size:13px; font-weight:700; }
+    .hero { margin:0; padding:42px max(32px, calc((100vw - 1380px) / 2 + 32px)) 38px; background:var(--black); color:#fff; border-bottom:1px solid rgba(255,255,255,.08); }
+    .index-hero, .client-hero { display:flex; justify-content:space-between; gap:28px; align-items:flex-start; }
+    .hero h1 { margin:0 0 12px; font-size:clamp(32px, 5vw, 62px); line-height:.98; letter-spacing:0; max-width:900px; }
+    .hero p { margin:0; color:#c7d5cf; max-width:840px; font-size:17px; }
+    .hero-copy { max-width:940px; }
+    .kicker { color:var(--graph); font-size:12px; text-transform:uppercase; letter-spacing:.08em; font-weight:900; }
+    .report-meta { display:flex; flex-wrap:wrap; gap:10px; padding:14px 32px; background:#fff; border-bottom:1px solid var(--line); color:var(--muted); font-size:13px; max-width:1380px; margin:0 auto; }
+    .report-meta span { background:var(--soft); color:var(--soft-ink); border-radius:999px; padding:6px 10px; font-weight:700; }
+    .grid.cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(290px, 1fr)); gap:16px; padding:24px 32px 42px; max-width:1380px; margin:0 auto; }
+    .card, .panel, .context-card { background:var(--panel); border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow); }
+    .client-card { display:block; padding:20px; color:inherit; min-height:184px; transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease; }
+    .client-card:hover { text-decoration:none; transform:translateY(-2px); border-color:rgba(20,216,120,.55); box-shadow:0 24px 58px rgba(5,9,7,.12); }
+    .card-topline { display:flex; justify-content:space-between; gap:10px; align-items:center; }
+    .client-card h2 { margin:14px 0 8px; font-size:23px; line-height:1.1; }
+    .client-card p { margin:0; color:var(--muted); }
+    .metrics { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+    .metrics span, .evidence, .status-pill { background:var(--soft); border:1px solid rgba(20,216,120,.22); border-radius:999px; padding:5px 9px; font-size:12px; color:var(--soft-ink); font-weight:800; }
+    .topic-chips { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 18px; }
+    .topic-chips span { background:#f6fbf8; border:1px solid var(--line); border-radius:999px; color:#183a2a; padding:7px 10px; font-size:13px; font-weight:750; }
+    .layout { display:block; padding:22px 32px 46px; max-width:1380px; margin:0 auto; }
+    main { min-width:0; }
+    .context-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; margin-bottom:20px; }
+    .context-card { padding:18px; min-height:220px; }
+    .context-card ul { margin-bottom:0; }
+    .context-note { color:var(--muted); font-size:13px; margin:4px 0 12px; }
+    .aside-label { color:var(--graph-dark); font-size:11px; text-transform:uppercase; font-weight:900; letter-spacing:.08em; margin-bottom:5px; }
+    .panel h2 { margin-top:0; }
+    .panel { padding:22px; margin-bottom:20px; }
+    .panel h2 { font-size:26px; letter-spacing:0; }
+    .offerings { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:13px; margin-top:16px; }
+    .offering, .sample { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .offering { position:relative; overflow:hidden; }
+    .offering-marker { position:absolute; inset:0 auto 0 0; width:4px; background:var(--graph); }
+    .offering h3, .sample h4 { margin:0 0 6px; }
+    .offering p { margin:0 0 10px; }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .stat-stack { display:grid; grid-template-columns:repeat(3, minmax(100px, 1fr)); gap:8px; min-width:340px; }
+    .stat-stack div { border:1px solid rgba(255,255,255,.15); border-radius:8px; padding:14px; background:rgba(255,255,255,.06); }
+    .stat-stack strong { display:block; font-size:26px; color:#fff; }
+    .stat-stack span, .muted { color:var(--muted); font-size:13px; }
+    .hero .stat-stack span { color:#b8c6c0; }
+    ul { padding-left:20px; }
+    li { margin:4px 0; }
+    code { background:var(--soft); color:var(--soft-ink); padding:2px 4px; border-radius:4px; }
+    details { margin:10px 0; }
+    summary { cursor:pointer; font-weight:700; }
+    .style-section { border-top:1px solid var(--line); padding-top:10px; }
+    .markdown { color:#2d2f35; }
+    @media (max-width: 980px) {
+      .layout, .split, .client-hero, .index-hero { grid-template-columns:1fr; display:block; }
+      .context-grid { grid-template-columns:1fr; }
+      .stat-stack { min-width:0; margin-top:16px; }
+      .hero, .grid.cards, .layout, .topnav, .report-meta { padding-left:16px; padding-right:16px; }
+      .hero h1 { font-size:36px; }
+      .stat-stack { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+    <nav class="topnav">
+      <a class="brand" href="index.html"><span>LG</span>LinkGraph</a>
+      <a class="nav-link" href="index.html">All clients</a>
+    </nav>
+    <section class="hero client-hero">
+      <div class="hero-copy">
+        <div class="kicker">pekas-smith</div>
+        <h1>Pekas Smith</h1>
+        <p>4 extracted offerings, 200 sitemap URLs, and 8 local source documents for client-specific writing context.</p>
+      </div>
+      <div class="stat-stack">
+        <div><strong>ok</strong><span>crawl status</span></div>
+        <div><strong>200</strong><span>URLs found</span></div>
+        <div><strong>0</strong><span>product/service URLs</span></div>
+      </div>
+    </section>
+    <section class="layout">
+      <main>
+        <section class="context-grid">
+    <article class="context-card">
+      <div class="aside-label">Quick Facts</div>
+      <p class="context-note">Company, audience, and proof points.</p>
+      <ul><li>Website: https://disabilitylawyerarizona.com/</li><li>Audience: Arizona residents who are unable to work due to a disabling medical condition. Common situations: initial SSDI/SSI applications, denied claims, hearing preparation, appeals. Many clients are in difficult financial and medical circumstances — content must reflect that.</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Voice</div>
+      <p class="context-note">How this client should sound.</p>
+      <ul><li>Goal: Not this</li><li>Explain the process: &quot;Simply file an application&quot;</li><li>Address denials: &quot;Don&#x27;t worry about a denial&quot;</li><li>Describe the firm: &quot;We fight for you&quot;</li><li>Frame outcomes: &quot;We&#x27;ll get you approved&quot;</li><li>Register: Professional with empathy. Informative, respectful, and reassuring.</li><li>For steps and actionable guidance: imperative voice</li><li>For introductory or explanatory sentences: natural sentence flow</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Avoid / Compliance</div>
+      <p class="context-note">Claims, terms, and wording to avoid.</p>
+      <ul><li>Term: Severity</li><li>administrative law judge (lowercase): Critical</li><li>&quot;we&#x27;ll get you approved&quot;: Critical</li><li>&quot;guaranteed approval&quot;: Critical</li><li>&quot;easy&quot; (describing the process): Critical</li><li>&quot;fight for you&quot;: Warning</li><li>&quot;simple application&quot;: Warning</li><li>Informal abbreviations for SSA (e.g., &quot;Social Security&quot;) when referring to the agency: Warning</li><li>Do not invent approval statistics or success rates.</li><li>Do not promise outcomes or imply that any particular case will succeed.</li><li>Do not misrepresent the SSA&#x27;s criteria. Eligibility requires both a qualifying medical condition and an inability to perform substantial gainful activity (SGA).</li><li>SSI and SSDI are different programs with different eligibility criteria — do not conflate them.</li><li>The firm represents claimants in Arizona. Do not imply national representation without confirmation.</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Terminology</div>
+      <p class="context-note">Client-specific naming and required language.</p>
+      <p class="muted">No clean lines extracted yet.</p>
+    </article>
+    </section>
+        <section class="panel">
+          <h2>Offerings, Services, Goods</h2>
+          <p class="muted">Writer-facing catalog from the client style system, approved source files, and usable product/service pages. Raw crawl evidence is separated below.</p>
+          <div class="offerings">
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Administrative Law Judge hearings</h3>
+      <p>Representation for Social Security disability hearings before an Administrative Law Judge.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/pekas-smith/raw/knowledge/service-taxonomy.md · Sections: 8. Service Reference, Social Security Disability Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Appeals Council reviews</h3>
+      <p>Legal support for Appeals Council review after an unfavorable hearing decision.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/pekas-smith/raw/knowledge/service-taxonomy.md · Sections: 8. Service Reference, Social Security Disability Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Initial SSDI and SSI applications</h3>
+      <p>Legal help preparing and filing initial Social Security Disability Insurance and Supplemental Security Income claims.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/pekas-smith/raw/knowledge/service-taxonomy.md · Sections: 8. Service Reference, Social Security Disability Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Reconsideration appeals</h3>
+      <p>Legal help after an initial disability claim denial, including the reconsideration stage.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/pekas-smith/raw/knowledge/service-taxonomy.md · Sections: 8. Service Reference, Social Security Disability Services</div>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Website Intelligence</h2>
+          <div class="split">
+            <div>
+              <h3>Website URLs</h3><ul><li><a href="https://disabilitylawyerarizona.com/">https://disabilitylawyerarizona.com/</a></li></ul>
+              <h3>Sitemaps</h3><ul><li><a href="https://disabilitylawyerarizona.com/sitemap_index.xml">https://disabilitylawyerarizona.com/sitemap_index.xml</a></li><li><a href="https://disabilitylawyerarizona.com/post-sitemap.xml">https://disabilitylawyerarizona.com/post-sitemap.xml</a></li><li><a href="https://disabilitylawyerarizona.com/page-sitemap.xml">https://disabilitylawyerarizona.com/page-sitemap.xml</a></li></ul>
+            </div>
+            <div>
+              <h3>Semantic / Topical Terms</h3><div class="topic-chips"><span>Administrative Law Judge hearings</span><span>Appeals Council reviews</span><span>Initial SSDI and SSI applications</span><span>Reconsideration Appeals</span></div>
+              <h3>Blockers</h3><p class="muted">None</p>
+            </div>
+          </div>
+          <h3>Product / Service URLs</h3><p class="muted">No product/service URLs classified from sitemap paths.</p>
+          <h3>Sampled Pages</h3><div class="sample-pages">
+    <article class="sample">
+      <h4>Arizona Social Security Disability Attorneys | Pekas Smith</h4>
+      <a href="https://disabilitylawyerarizona.com/">https://disabilitylawyerarizona.com/</a>
+      <p>Arizona disability lawyers at Pekas Smith offer expert SSDI and SSI assistance. Contact us today for a free consultation.</p>
+      <ul><li>Arizona Social Security Disability Lawyers</li><li>Dedicated to Social Security Disability Law in Arizona Focused Exclusively On Social Security Disability Benefits Law in Arizona</li><li>We Work Hard To Secure Your Life</li><li>“Amazing lawyers, amazing staff and amazing results!</li><li>WE CAN HELP YOU TOO!</li><li>We’ve Secured Millions of Dollars in Disability Benefits for Our Clients</li><li>Arizona Supplemental Security Income (SSI)</li><li>Arizona Disabled Widow(er)s Insurance Benefits (DWIB)</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>SSDI FAQs: Pekas Smith Answers Your Disability Questions</h4>
+      <a href="https://disabilitylawyerarizona.com/faqs/">https://disabilitylawyerarizona.com/faqs/</a>
+      <p>Arizona disability law FAQs answered by Pekas Smith. Learn about your Social Security Disability claim and get a free consultation.</p>
+      <ul><li>FAQ Social Security Disability in AZ: Frequently Asked Questions</li><li>Top 10 Social Security Disability Questions</li><li>1. How do I know if my condition qualifies for disability?</li><li>2. Does my disability have to be permanent?</li><li>3. Does my claim have to be denied before an attorney will take my case?</li><li>4. Do I have to provide medical records to prove my claim?</li><li>5. Do I need a statement from my doctor saying that I am disabled?</li><li>6. Do you continue representation at the federal court level?</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Choose Pekas Smith: Trusted Arizona SSD &amp; ERISA Lawyers</h4>
+      <a href="https://disabilitylawyerarizona.com/why-us/">https://disabilitylawyerarizona.com/why-us/</a>
+      <p>Pekas Smith: Arizona disability attorneys with years of experience. Get expert help with your disability claim and a free consultation today.</p>
+      <ul><li>Why Choose Our Experienced Arizona Disability Attorneys?</li><li>Exclusive Focus on Social Security Disability Law</li><li>Experience</li><li>Local Advantage</li><li>Commitment</li><li>Compassion</li><li>Convenience</li><li>Free Case Evaluation</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Pekas Smith: Sitemap for Social Security Disability Services</h4>
+      <a href="https://disabilitylawyerarizona.com/sitemap/">https://disabilitylawyerarizona.com/sitemap/</a>
+      <p>Explore comprehensive resources on Social Security Disability in Arizona, including SSDI benefits, with expert guidance for your claims.</p>
+      <ul><li>Sitemap of Our Social Security Disability Services and Resources</li><li>Explore Our Social Security Disability Service Pages</li><li>Posts by category</li><li>Attorneys</li><li>Videos</li><li>Locations</li><li>Popups</li><li>Popup Themes</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Contact Arizona Disability Attorneys at Pekas Smith Today</h4>
+      <a href="https://disabilitylawyerarizona.com/contact-us/">https://disabilitylawyerarizona.com/contact-us/</a>
+      <p>Get the Social Security Disability benefits you deserve! Contact our Arizona Disability Attorneys for a free, confidential consultation today.</p>
+      <ul><li>Don&#x27;t Wait Contact Us Today</li><li>Arizona Disability Attorneys</li><li>Applying for or Denied Benefits from Social Security or a Disability Insurance Company?</li><li>Free Case Evaluation</li><li>Social Security Disability</li><li>Social Security Disability Videos: Denials, Costs &amp; Myths</li><li>MYTH vs. FACT</li><li>Myth</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Pekas Smith Disclaimer: Key Legal Information &amp; Policies</h4>
+      <a href="https://disabilitylawyerarizona.com/disclaimer/">https://disabilitylawyerarizona.com/disclaimer/</a>
+      <p>Understand our legal disclaimer, including liability limits and service use conditions. Contact us for clarification or a free case evaluation!</p>
+      <ul><li>Comprehensive Disclaimer: Important Legal Information for Users</li><li>Interpretation and Definitions</li><li>Interpreting Defined Terms in This Disclaimer</li><li>Definitions</li><li>Comprehensive Disclaimer: Important Legal Information for Users</li><li>External Links Disclaimer</li><li>Errors and Omissions Disclaimer</li><li>Fair Use Disclaimer</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Abogados de Discapacidad en Phoenix - Pekas Smith</h4>
+      <a href="https://disabilitylawyerarizona.com/en-espanol/">https://disabilitylawyerarizona.com/en-espanol/</a>
+      <p>Get expert legal help with Social Security Disability in Phoenix. Contact Pekas Smith for a free consultation today!</p>
+      <ul><li>Abogados de Seguro Social en Phoenix</li><li>No intente ganar su caso por sí solo</li><li>Beneficios de Discapacidad de la Seguridad Social</li><li>Free Case Evaluation</li><li>Social Security Disability</li><li>Video Resources</li><li>Valuable Video Resources for Social Security Disability Assistance</li><li>Myth</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Pekas Smith: Meet Our Arizona SSD Attorneys</h4>
+      <a href="https://disabilitylawyerarizona.com/meet-the-team/">https://disabilitylawyerarizona.com/meet-the-team/</a>
+      <p>Pekas Smith: Arizona disability attorneys with years of experience. Get help with your SSDI or SSI claim. Contact us today.</p>
+      <ul><li>Arizona Social Security Disability Attorneys</li><li>Meet The Social Security Disability Team</li><li>Jeremy D. Pekas: Compassionate Advocate for Social Security Disability</li><li>Our Hard Work and Commitment to Securing Your Disability Benefits</li><li>WHAT CLIENTS SAY ABOUT ME</li><li>EDUCATION</li><li>ADMISSIONS</li><li>ASSOCIATIONS</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Privacy Policy | Pekas Smith: Your Data Protection Explained</h4>
+      <a href="https://disabilitylawyerarizona.com/privacy-policy/">https://disabilitylawyerarizona.com/privacy-policy/</a>
+      <p>Discover our Privacy Policy to learn how we securely collect, use, and protect your information. Stay informed and confident with us.</p>
+      <ul><li>Comprehensive Privacy Policy for Disability Lawyer Arizona</li><li>PERSONAL IDENTIFICATION INFORMATION</li><li>NON-PERSONAL IDENTIFICATION INFORMATION</li><li>WEB BROWSER COOKIES</li><li>HOW WE USE COLLECTED INFORMATION</li><li>HOW WE PROTECT YOUR INFORMATION</li><li>SHARING YOUR PERSONAL INFORMATION</li><li>THIRD PARTY WEBSITES</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>SSA GRID Rules Explained: Navigating Eligibility | Pekas Smith</h4>
+      <a href="https://disabilitylawyerarizona.com/ssa-grid-rules/">https://disabilitylawyerarizona.com/ssa-grid-rules/</a>
+      <p>Pekas Smith explains SSA GRID rules for disability. Learn how these rules impact your eligibility for Social Security benefits. Contact us for help.</p>
+      <ul><li>GRID Rules and Disability</li><li>What Are the SSA GRID Rules?</li><li>SSA GRID Rules Regulations and Charts</li><li>Social Security Disability GRID Charts</li><li>Table No. 1 – GRID for Sedentary Work</li><li>Table No. 2 – GRID for Light Work</li><li>Table No. 3 – GRID for Medium Work</li><li>Why isn’t there a GRID table for heavy-duty work?</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Pekas Smith Reviews: Trusted Arizona Disability Attorneys</h4>
+      <a href="https://disabilitylawyerarizona.com/why-us/reviews/">https://disabilitylawyerarizona.com/why-us/reviews/</a>
+      <p>Pekas Smith: Arizona Disability Attorneys. Read client reviews and learn how we help with disability claims in Phoenix. Get in touch!</p>
+      <ul><li>Arizona Lawyer Reviews</li><li>What Clients Say About Us</li><li>Free Case Evaluation</li><li>Social Security Disability</li><li>Video Guides to Social Security Disability FAQs</li><li>MYTH vs. FACT</li><li>Myth</li><li>Fact</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>How the SSA Defines Sedentary Work | Pekas Smith</h4>
+      <a href="https://disabilitylawyerarizona.com/ssa-sedentary-work/">https://disabilitylawyerarizona.com/ssa-sedentary-work/</a>
+      <p>Sedentary work and SSDI: Learn how Pekas Smith, Arizona Disability Attorneys, can help you with your claim. Get expert guidance now.</p>
+      <ul><li>How Does the SSA Define Sedentary Work?</li><li>How Does the SSA Define Sedentary Work?</li><li>SSDI Work Classifications</li><li>Does sedentary work for SSDI mean no standing or lifting?</li><li>Examples of sedentary jobs for SSDI</li><li>How Does Sedentary Work Impact SSDI Approval?</li><li>How common is a finding that a person can’t do sedentary work?</li><li>Can You Get SSDI If You Can Do Sedentary Work?</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Tucson SSDI Lawyers: Get Help Now | Pekas Smith</h4>
+      <a href="https://disabilitylawyerarizona.com/ssdi-tucson-lawyer/">https://disabilitylawyerarizona.com/ssdi-tucson-lawyer/</a>
+      <p>Tucson SSDI help: Pekas Smith Attorneys guide you through applications and appeals, ensuring you get the benefits you deserve. Contact us now.</p>
+      <ul><li>Tucson SSDI Lawyer: Secure Disability Benefits with Pekas Smith</li><li>Understanding SSDI and SSI Benefits</li><li>Additional Benefits: DAC and DWIB Programs</li><li>Common Cases We Handle</li><li>Comprehensive Legal Support</li><li>Why Choose Pekas Smith in Tucson?</li><li>Contact Our Tucson Office</li><li>Free Consultation with an SSDI Lawyer in Tucson, AZ</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>SSI Eligibility in Arizona: Get Help Now - Pekas Smith</h4>
+      <a href="https://disabilitylawyerarizona.com/do-i-qualify-for-ssi/">https://disabilitylawyerarizona.com/do-i-qualify-for-ssi/</a>
+      <p>Determine your SSI eligibility in Arizona with Pekas Smith. Our disability lawyers can assist with your claim. Contact us now.</p>
+      <ul><li>Do I Qualify for SSI?</li><li>An Overview of the SSI Financial Eligibility Requirements</li><li>An Overview of the SSI Medical Eligibility Requirements</li><li>You Do Not Have to Figure Out Eligibility Alone</li><li>Contact Our Arizona Supplemental Security Income Attorney Today</li><li>Free Case Evaluation</li><li>Social Security Disability</li><li>Video Resources</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>SSDI Reconsideration: Pekas Smith&#x27;s Arizona Appeal Guide</h4>
+      <a href="https://disabilitylawyerarizona.com/ssdi-reconsideration/">https://disabilitylawyerarizona.com/ssdi-reconsideration/</a>
+      <p>Denied SSDI? Pekas Smith, Arizona Disability Attorneys, guides you through the reconsideration process. Appeal your denial and get the benefits you need.</p>
+      <ul><li>What Is the SSDI Reconsideration Process for Disability Claims?</li><li>Understanding the Disability Claims Reconsideration Process</li><li>What Is SSDI Reconsideration?</li><li>What is disability reconsideration?</li><li>Who can ask for disability reconsideration?</li><li>How do you request reconsideration of a disability claim?</li><li>Where do you submit your Social Security request for reconsideration?</li><li>Why Can Social Security Reconsideration Lead To a Different Decision?</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Determining Your Disability Onset Date: A Guide | Pekas Smith</h4>
+      <a href="https://disabilitylawyerarizona.com/disability-onset-date/">https://disabilitylawyerarizona.com/disability-onset-date/</a>
+      <p>Determine your disability onset date with Pekas Smith. Learn its importance for your Social Security Disability claim. Get a free consultation.</p>
+      <ul><li>How is Your Disability Onset Date Determined?</li><li>What Does “Date of Onset” Mean?</li><li>The Importance of Establishing the Disability Onset Date</li><li>1. Eligibility Criteria</li><li>2. Back Pay</li><li>3. Continuing Eligibility</li><li>Which Factors Influence the Onset Date?</li><li>The Role of Medical Records in Establishing the Disability Onset Date</li></ul>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Full Style System</h2>
+          <details open><summary>Show style-system sections</summary>
+    <details class="style-section">
+      <summary>Pekas Smith — Style System</summary>
+      <div class="markdown"><p>Generated: 2026-05-29<br>Sources: raw/knowledge/overview.md<br>Base rules: universal-rules/UNIVERSAL-RULES.md</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>1. Brand &amp; Audience</summary>
+      <div class="markdown"><p>Pekas Smith is an Arizona law firm focused exclusively on Social Security Disability cases — Social Security Disability Insurance (SSDI) and Supplemental Security Income (SSI). The firm represents individuals who cannot work due to medical conditions and need help navigating the federal disability benefits system.</p><p>Website: https://disabilitylawyerarizona.com/</p><p>**Audience:** Arizona residents who are unable to work due to a disabling medical condition. Common situations: initial SSDI/SSI applications, denied claims, hearing preparation, appeals. Many clients are in difficult financial and medical circumstances — content must reflect that.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2. Voice &amp; Tone</summary>
+      <div class="markdown"><p>**Register:** Professional with empathy. Informative, respectful, and reassuring.</p><p>Content must feel approachable to someone under significant stress — not academic, not condescending, not sales-driven. The disability benefits process is complex; good content simplifies it without being patronizing.</p><p>| Goal | Not this | Use this |<br>|---|---|---|<br>| Explain the process | &quot;Simply file an application&quot; | &quot;The SSA requires detailed medical evidence...&quot; |<br>| Address denials | &quot;Don&#x27;t worry about a denial&quot; | &quot;A denial does not end the process — most claimants can request reconsideration or a hearing&quot; |<br>| Describe the firm | &quot;We fight for you&quot; | &quot;Pekas Smith represents claimants at every stage of the disability process&quot; |<br>| Frame outcomes | &quot;We&#x27;ll get you approved&quot; | &quot;Pekas Smith helps clients prepare the strongest possible case&quot; |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3. Terminology</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.1 Required terms</summary>
+      <div class="markdown"><p>These terms must be used accurately and consistently. The client is very particular about terminology.</p><ul><li>**Social Security Disability Insurance (SSDI)** — define at first use; use SSDI after</li><br><li>**Supplemental Security Income (SSI)** — define at first use; use SSI after</li><br><li>**Social Security Administration (SSA)** — define at first use; use SSA after</li><br><li>**Administrative Law Judge** — always capitalized (critical — see §3.2)</li><br><li>**disability benefits** — preferred over &quot;disability payments&quot; or &quot;disability checks&quot;</li><br><li>**disability hearing** — preferred for the ALJ hearing stage</li><br><li>**appeals process** — for the reconsideration and hearing stages collectively</li><br><li>**claimant** — preferred term for the individual seeking benefits</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.2 Strict avoidance list</summary>
+      <div class="markdown"><p>| Term | Severity | Reason |<br>|---|---|---|<br>| administrative law judge (lowercase) | Critical | Always capitalized: Administrative Law Judge |<br>| &quot;we&#x27;ll get you approved&quot; | Critical | Cannot promise outcomes in legal representation |<br>| &quot;guaranteed approval&quot; | Critical | Cannot guarantee legal outcomes |<br>| &quot;easy&quot; (describing the process) | Critical | The process is not easy — this undermines trust |<br>| &quot;fight for you&quot; | Warning | Aggressive framing — use &quot;represent&quot; or &quot;advocate for&quot; |<br>| &quot;simple application&quot; | Warning | Misleading — the process is complex |<br>| Informal abbreviations for SSA (e.g., &quot;Social Security&quot;) when referring to the agency | Warning | Use SSA or full name — &quot;Social Security&quot; alone is ambiguous |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4. Accuracy &amp; Technical Standards</summary>
+      <div class="markdown"><p>**SSA process stages** (must be represented accurately):<br>1. Initial application<br>2. Reconsideration (first appeal)<br>3. ALJ hearing (Administrative Law Judge hearing)<br>4. Appeals Council review<br>5. Federal court (rare)</p><ul><li>Do not invent approval statistics or success rates.</li><br><li>Do not promise outcomes or imply that any particular case will succeed.</li><br><li>Do not misrepresent the SSA&#x27;s criteria. Eligibility requires both a qualifying medical condition and an inability to perform substantial gainful activity (SGA).</li><br><li>SSI and SSDI are different programs with different eligibility criteria — do not conflate them.</li><br><li>The firm represents claimants in Arizona. Do not imply national representation without confirmation.</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5. Writing Rules (Algorithmic Authorship)</summary>
+      <div class="markdown"><p>These rules are derived from the client&#x27;s content authorship guidelines. They override universal formatting defaults where they conflict.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.1 Paragraph structure</summary>
+      <div class="markdown"><p><li>The first sentence of every paragraph must contain a direct answer to the question the paragraph addresses.</li><br><li>Bold the first sentence of every paragraph.</li><br><li>Paragraphs: 2–5 lines. One main idea per paragraph. No exceptions.</li><br><li>Do not use dashes — under any circumstances. Not em dashes, not hyphens as dashes. Rewrite the sentence.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.2 Section structure</summary>
+      <div class="markdown"><p><li>Each H2 section must begin with a short introductory paragraph that:</li><br>  - Naturally includes the primary keyword or a close variation<br>  - Provides a clear overview of what the section will cover based on the H3 subsections<br>  - Does not repeat the full content of the H3s — introduce, don&#x27;t summarize<br><li>H3 subsections: ensure a short bridge between the H2 and the first H3</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.3 Lists</summary>
+      <div class="markdown"><p><li>Numbered lists for: steps, processes, sequences</li><br><li>Bullet points for: types, features, attributes</li><br><li>Keep list grammar consistent within each list</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.4 Voice and imperatives</summary>
+      <div class="markdown"><p><li>For steps and actionable guidance: imperative voice</li><br><li>For introductory or explanatory sentences: natural sentence flow</li><br><li>Active voice preferred throughout. Passive voice only when the subject is unknown or irrelevant.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.5 AEO / entity optimization</summary>
+      <div class="markdown"><p><li>Use entity-based definitions when relevant (not in every paragraph)</li><br><li>Format: [Entity] is [clear definition + key attributes + why it matters]</li><br><li>Repeat the full entity name at least twice before using pronouns</li><br><li>Define all abbreviations at first mention</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.6 Question-based headings</summary>
+      <div class="markdown"><p><li>Answer immediately (Yes/No when applicable), then expand</li><br><li>The answer to the heading question must be in the first sentence of the section</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6. Page Structure</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Blog posts / optimization content</summary>
+      <div class="markdown"><p><li>Introduction: main keyword in first or second sentence; concise answer to the title question; scope + value; 100–150 words</li><br><li>H2 headings required; H3 only when necessary</li><br><li>No section over 300 words</li><br><li>No heading skipping (H1 → H2 → H3, not H1 → H3)</li><br><li>Capitalize H2 and H3 headings per AP style</li><br><li>1 table per article where appropriate</li><br><li>2–3 lists per article</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>7. SEO Standards</summary>
+      <div class="markdown"><p><li>Primary keyword in first or second sentence of the introduction.</li><br><li>Title tags: 55–60 characters, include primary keyword.</li><br><li>Meta descriptions: 130–150 characters, include primary keyword, state a benefit, highlight angle, use question words (how, why, what, is/are, should).</li><br><li>Provide 3 options for: meta title, meta description, H1. Deliver these before writing the introduction.</li><br><li>Featured snippet optimization: direct answers, clear structure.</li><br><li>Entity grounding: repeat the full entity name at least twice before using pronouns.</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>8. Service Reference</summary>
+      <div class="markdown"><p>Pekas Smith handles:<br><li>Initial SSDI and SSI applications</li><br><li>Reconsideration appeals</li><br><li>Administrative Law Judge hearings</li><br><li>Appeals Council reviews</li></ul><p>The firm operates in Arizona. Do not reference other states without confirmation.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>9. Pre-Submission Checklist</summary>
+      <div class="markdown"><p><li>[ ] &quot;Administrative Law Judge&quot; capitalized every time — never lowercase</li><br><li>[ ] SSDI and SSI defined at first use; SSA defined at first use</li><br><li>[ ] No dashes anywhere in the piece — not em dashes, not hyphen-dashes</li><br><li>[ ] First sentence of every paragraph is bolded and contains a direct answer</li><br><li>[ ] Paragraphs are 2–5 lines, one idea each</li><br><li>[ ] No guaranteed outcomes or success rates</li><br><li>[ ] SSI and SSDI not conflated</li><br><li>[ ] H2 intro paragraphs include primary keyword naturally</li><br><li>[ ] Lists: numbered for processes, bulleted for types/features</li><br><li>[ ] Tone is respectful and reassuring — not sales-driven</li></p></div>
+    </details>
+    </details>
+        </section>
+        <section class="panel">
+          <h2>Local Source Files Read</h2>
+          <ul><li><code>clients/pekas-smith/STYLE-SYSTEM.md</code> — Pekas Smith — Style System</li>
+<li><code>clients/pekas-smith/client-intelligence/README.md</code> — Pekas Smith Client Intelligence</li>
+<li><code>clients/pekas-smith/client-intelligence/STYLE-GUIDE.md</code> — Pekas Smith — Style System</li>
+<li><code>clients/pekas-smith/client-intelligence/offerings.md</code> — Pekas Smith Offerings</li>
+<li><code>clients/pekas-smith/client-intelligence/source-files.md</code> — Pekas Smith Source Files</li>
+<li><code>clients/pekas-smith/deliverables/README.md</code> — Pekas Smith Deliverables</li>
+<li><code>clients/pekas-smith/raw/knowledge/overview.md</code> — Pekas Smith — Client Overview</li>
+<li><code>clients/pekas-smith/raw/knowledge/service-taxonomy.md</code> — Pekas Smith Service Taxonomy</li></ul>
+        </section>
+      </main>
+    </section>
+    </body>
+</html>

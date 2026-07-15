@@ -1,0 +1,153 @@
+{
+  "client": "us-storage-units",
+  "display_name": "US Storage Units",
+  "generated_at": "2026-07-14T15:59:27.931053+00:00",
+  "offerings": [
+    {
+      "name": "24-hour access",
+      "description": "Storage facilities or units with any-hour access where available.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/us-storage-units/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Storage Types"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Boat storage",
+      "description": "Size varies by facility; outdoor/covered/indoor configurations; /boat-storage",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/us-storage-units/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Storage Types"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Business storage",
+      "description": "Inventory, equipment; some facilities have loading docks; /business-storage",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/us-storage-units/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Storage Types"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Car/vehicle storage",
+      "description": "Storage for cars and broader vehicle needs, with covered, enclosed, or outdoor options depending on facility.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/us-storage-units/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Storage Types"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Portable storage",
+      "description": "Portable units delivered, loaded on site, and picked up for storage or moves.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/us-storage-units/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Storage Types"
+      ],
+      "score": 9
+    },
+    {
+      "name": "RV storage",
+      "description": "Storage for recreational vehicles, with configuration verified by facility.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/us-storage-units/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Storage Types"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Standard self-storage",
+      "description": "Sizes 5×5 to 10×30; ceiling 8–9 ft; lockers 3×4 ft (3–4 ft ceiling); /{state}/storage-units-{city}",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/us-storage-units/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Storage Types"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Climate-Controlled Storage",
+      "description": "Indoor temperature or humidity-regulated storage for sensitive belongings.",
+      "sources": [
+        "clients/us-storage-units/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Storage Types"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Drive-Up Storage",
+      "description": "Ground-level units with direct vehicle access and garage-style doors.",
+      "sources": [
+        "clients/us-storage-units/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Storage Types"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Climate-controlled",
+      "description": "Indoor; temp/humidity regulated; often multi-floor with elevator; /climate-controlled-storage",
+      "sources": [
+        "STYLE-SYSTEM.md"
+      ],
+      "sections": [
+        "8. Service Reference"
+      ],
+      "score": 3
+    },
+    {
+      "name": "Drive-up",
+      "description": "Ground-level; direct vehicle access; garage-style; /drive-up-storage",
+      "sources": [
+        "STYLE-SYSTEM.md"
+      ],
+      "sections": [
+        "8. Service Reference"
+      ],
+      "score": 3
+    },
+    {
+      "name": "Storage type",
+      "description": "Key specs; URL slug",
+      "sources": [
+        "STYLE-SYSTEM.md"
+      ],
+      "sections": [
+        "8. Service Reference"
+      ],
+      "score": 3
+    }
+  ]
+}

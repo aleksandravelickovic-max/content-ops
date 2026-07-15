@@ -1,0 +1,436 @@
+{
+  "client": "a-plus-landscaping",
+  "display_name": "A Plus Landscaping",
+  "generated_at": "2026-07-14T15:59:27.859794+00:00",
+  "offerings": [
+    {
+      "name": "Concrete Overlays",
+      "description": "Overlay systems that resurface or upgrade existing concrete areas.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Hardscaping"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Custom Outdoor Living Design & Build",
+      "description": "Design and construction for custom outdoor living spaces in South Central PA, with a focus on hardscaping, landscaping, craftsmanship, work ethic, and integrity.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Positioning"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Custom Pools",
+      "description": "Pool design and construction shaped around the property and the larger outdoor living plan.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Pools & Waterscapes"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Decks",
+      "description": "Custom deck construction for raised or ground level outdoor living.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Decks & Structures"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Decks & Structures",
+      "description": "Built outdoor structures that define shade, gathering space, transitions, and covered areas.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Decks & Structures"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Firepits/Fireplaces",
+      "description": "Fire features for gathering areas, including built in fireplaces and firepits.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Outdoor Features"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Gazebos",
+      "description": "Freestanding covered structures for a defined seating or focal area.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Decks & Structures"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Grills & Appliances",
+      "description": "Outdoor grills and appliances used in kitchen or entertainment builds.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Outdoor Features"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Hardscape Financing",
+      "description": "Financing option through HFS Financial for landscaping and outdoor living projects, including longer term payment options for larger outdoor projects.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Positioning"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Hardscape Lighting",
+      "description": "Lighting built into or around patios, walls, steps, pillars, and other masonry features.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Landscaping & Lighting"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Hardscaping",
+      "description": "Structural outdoor construction for patios, driveways, retaining walls, steps, pillars, permeable pavers, stone decks, and concrete overlays.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Hardscaping"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Landscape Lighting",
+      "description": "Outdoor lighting for plantings, paths, gathering spaces, and the overall property.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Landscaping & Lighting"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Landscape Maintenance Packages",
+      "description": "Ongoing maintenance packages for completed landscapes.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Landscaping & Lighting"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Landscaping",
+      "description": "Landscape installation that supports the overall outdoor design.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Landscaping & Lighting"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Landscaping & Lighting",
+      "description": "Planting, tree, lighting, and maintenance work that completes the hardscape and outdoor living plan.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Landscaping & Lighting"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Louvered Pergolas",
+      "description": "Adjustable pergola systems that control shade and weather exposure.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Decks & Structures"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Outdoor Features",
+      "description": "Add ons that make patios and backyard spaces more usable for cooking, gathering, and relaxing.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Outdoor Features"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Outdoor Kitchens",
+      "description": "Built outdoor cooking areas designed around the patio or larger outdoor living plan.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Outdoor Features"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Outdoor Living Design",
+      "description": "Planning and design for custom outdoor spaces, from the initial property walk through the construction plan.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Outdoor Living Design"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Patio Furniture",
+      "description": "Furniture selections or products that complete outdoor seating and dining areas.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Outdoor Features"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Patios",
+      "description": "Custom patio design and installation for usable outdoor living areas.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Hardscaping"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Paver Driveways",
+      "description": "Paver driveway installation for residential entries and vehicle surfaces.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Hardscaping"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Pavilions",
+      "description": "Roofed outdoor structures for covered seating, dining, or entertainment areas.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Decks & Structures"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Pergolas",
+      "description": "Open shade structures used to define seating, dining, or transition areas.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Decks & Structures"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Permeable Pavers",
+      "description": "Paver systems designed to let water drain through the surface instead of running across it.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Hardscaping"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Pizza Ovens",
+      "description": "Outdoor pizza oven features for cooking and entertaining.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Outdoor Features"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Planting",
+      "description": "Plant selection and installation for beds, borders, and finished outdoor spaces.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Landscaping & Lighting"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Ponds",
+      "description": "Built pond features used as landscape focal points.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Pools & Waterscapes"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Pools & Waterscapes",
+      "description": "Water centered outdoor features that can be part of a larger backyard design.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Pools & Waterscapes"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Porches",
+      "description": "Covered entry or living spaces attached to the home.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Decks & Structures"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Retaining Walls",
+      "description": "Wall systems that support grade changes, manage soil, and make patios or other outdoor features possible.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Hardscaping"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Snow",
+      "description": "Seasonal snow services listed in A Plus Landscaping website navigation.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Snow"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Spas",
+      "description": "Spa features integrated into a pool area or outdoor living design.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Pools & Waterscapes"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Steps & Pillars",
+      "description": "Stone, block, or paver features that create transitions, entries, and built accents within a hardscape.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Hardscaping"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Stone Decks",
+      "description": "Stone or paver deck surfaces for outdoor living areas that need a masonry finish.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Hardscaping"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Streams",
+      "description": "Constructed water features that add movement through the landscape.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Pools & Waterscapes"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Trees",
+      "description": "Tree selection and installation as part of landscape design.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Landscaping & Lighting"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Water Falls",
+      "description": "Waterfall features that add movement, sound, and visual interest to a landscape.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Pools & Waterscapes"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Water Feature",
+      "description": "Decorative or functional water elements for outdoor living spaces.",
+      "sources": [
+        "clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Pools & Waterscapes"
+      ],
+      "score": 6
+    }
+  ]
+}

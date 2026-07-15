@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arizona IOP Context</title>
+  <style>
+    :root {
+      --bg:#f4f7f5; --panel:#ffffff; --ink:#09110f; --muted:#63716c; --line:#dce5df;
+      --black:#050907; --graph:#14d878; --graph-dark:#079d55; --soft:#eaf8f0; --soft-ink:#19392a;
+      --accent:#087a47; --red:#b5362d; --shadow:0 18px 46px rgba(5,9,7,.08);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:
+      linear-gradient(180deg, #ffffff 0, var(--bg) 360px); color:var(--ink); line-height:1.45; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .topnav { min-height:64px; padding:14px max(32px, calc((100vw - 1380px) / 2 + 32px)); background:var(--black); border-bottom:1px solid rgba(255,255,255,.08); position:sticky; top:0; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { color:#fff; display:inline-flex; align-items:center; gap:10px; font-weight:800; letter-spacing:0; }
+    .brand:hover { text-decoration:none; }
+    .brand span { width:32px; height:32px; border-radius:8px; background:var(--graph); color:var(--black); display:inline-grid; place-items:center; font-size:13px; font-weight:900; }
+    .nav-meta, .nav-link { color:#b8c6c0; font-size:13px; font-weight:700; }
+    .hero { margin:0; padding:42px max(32px, calc((100vw - 1380px) / 2 + 32px)) 38px; background:var(--black); color:#fff; border-bottom:1px solid rgba(255,255,255,.08); }
+    .index-hero, .client-hero { display:flex; justify-content:space-between; gap:28px; align-items:flex-start; }
+    .hero h1 { margin:0 0 12px; font-size:clamp(32px, 5vw, 62px); line-height:.98; letter-spacing:0; max-width:900px; }
+    .hero p { margin:0; color:#c7d5cf; max-width:840px; font-size:17px; }
+    .hero-copy { max-width:940px; }
+    .kicker { color:var(--graph); font-size:12px; text-transform:uppercase; letter-spacing:.08em; font-weight:900; }
+    .report-meta { display:flex; flex-wrap:wrap; gap:10px; padding:14px 32px; background:#fff; border-bottom:1px solid var(--line); color:var(--muted); font-size:13px; max-width:1380px; margin:0 auto; }
+    .report-meta span { background:var(--soft); color:var(--soft-ink); border-radius:999px; padding:6px 10px; font-weight:700; }
+    .grid.cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(290px, 1fr)); gap:16px; padding:24px 32px 42px; max-width:1380px; margin:0 auto; }
+    .card, .panel, .context-card { background:var(--panel); border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow); }
+    .client-card { display:block; padding:20px; color:inherit; min-height:184px; transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease; }
+    .client-card:hover { text-decoration:none; transform:translateY(-2px); border-color:rgba(20,216,120,.55); box-shadow:0 24px 58px rgba(5,9,7,.12); }
+    .card-topline { display:flex; justify-content:space-between; gap:10px; align-items:center; }
+    .client-card h2 { margin:14px 0 8px; font-size:23px; line-height:1.1; }
+    .client-card p { margin:0; color:var(--muted); }
+    .metrics { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+    .metrics span, .evidence, .status-pill { background:var(--soft); border:1px solid rgba(20,216,120,.22); border-radius:999px; padding:5px 9px; font-size:12px; color:var(--soft-ink); font-weight:800; }
+    .topic-chips { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 18px; }
+    .topic-chips span { background:#f6fbf8; border:1px solid var(--line); border-radius:999px; color:#183a2a; padding:7px 10px; font-size:13px; font-weight:750; }
+    .layout { display:block; padding:22px 32px 46px; max-width:1380px; margin:0 auto; }
+    main { min-width:0; }
+    .context-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; margin-bottom:20px; }
+    .context-card { padding:18px; min-height:220px; }
+    .context-card ul { margin-bottom:0; }
+    .context-note { color:var(--muted); font-size:13px; margin:4px 0 12px; }
+    .aside-label { color:var(--graph-dark); font-size:11px; text-transform:uppercase; font-weight:900; letter-spacing:.08em; margin-bottom:5px; }
+    .panel h2 { margin-top:0; }
+    .panel { padding:22px; margin-bottom:20px; }
+    .panel h2 { font-size:26px; letter-spacing:0; }
+    .offerings { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:13px; margin-top:16px; }
+    .offering, .sample { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .offering { position:relative; overflow:hidden; }
+    .offering-marker { position:absolute; inset:0 auto 0 0; width:4px; background:var(--graph); }
+    .offering h3, .sample h4 { margin:0 0 6px; }
+    .offering p { margin:0 0 10px; }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .stat-stack { display:grid; grid-template-columns:repeat(3, minmax(100px, 1fr)); gap:8px; min-width:340px; }
+    .stat-stack div { border:1px solid rgba(255,255,255,.15); border-radius:8px; padding:14px; background:rgba(255,255,255,.06); }
+    .stat-stack strong { display:block; font-size:26px; color:#fff; }
+    .stat-stack span, .muted { color:var(--muted); font-size:13px; }
+    .hero .stat-stack span { color:#b8c6c0; }
+    ul { padding-left:20px; }
+    li { margin:4px 0; }
+    code { background:var(--soft); color:var(--soft-ink); padding:2px 4px; border-radius:4px; }
+    details { margin:10px 0; }
+    summary { cursor:pointer; font-weight:700; }
+    .style-section { border-top:1px solid var(--line); padding-top:10px; }
+    .markdown { color:#2d2f35; }
+    @media (max-width: 980px) {
+      .layout, .split, .client-hero, .index-hero { grid-template-columns:1fr; display:block; }
+      .context-grid { grid-template-columns:1fr; }
+      .stat-stack { min-width:0; margin-top:16px; }
+      .hero, .grid.cards, .layout, .topnav, .report-meta { padding-left:16px; padding-right:16px; }
+      .hero h1 { font-size:36px; }
+      .stat-stack { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+    <nav class="topnav">
+      <a class="brand" href="index.html"><span>LG</span>LinkGraph</a>
+      <a class="nav-link" href="index.html">All clients</a>
+    </nav>
+    <section class="hero client-hero">
+      <div class="hero-copy">
+        <div class="kicker">the-hope-house/arizonaiop</div>
+        <h1>Arizona IOP</h1>
+        <p>11 extracted offerings, 579 sitemap URLs, and 9 local source documents for client-specific writing context.</p>
+      </div>
+      <div class="stat-stack">
+        <div><strong>ok</strong><span>crawl status</span></div>
+        <div><strong>579</strong><span>URLs found</span></div>
+        <div><strong>2</strong><span>product/service URLs</span></div>
+      </div>
+    </section>
+    <section class="layout">
+      <main>
+        <section class="context-grid">
+    <article class="context-card">
+      <div class="aside-label">Quick Facts</div>
+      <p class="context-note">Company, audience, and proof points.</p>
+      <ul><li>Arizona IOP is an Intensive Outpatient Program facility in Scottsdale, Arizona. It serves adults seeking structured addiction and mental health treatment while maintaining their daily lives — job, family, and housing.</li><li>A structured outpatient treatment program for addiction and co-occurring mental health conditions</li><li>A clinical facility offering multiple levels of care below residential, including IOP, PHP, and standard outpatient</li><li>One of the few centers nationwide providing simultaneous treatment for addiction and mental health (confirmed site claim)</li><li>An equivalent to residential treatment or medical detox — IOP is for people who do not need 24-hour medical supervision</li><li>An emergency crisis stabilization facility</li><li>A detox facility</li><li>Primary audience: Adults seeking addiction treatment or mental health support who need structured care but can maintain daily responsibilities. Also: family members researching options for a loved one.</li><li>Secondary audience: Professionals and executives who need treatment that does not require leaving work or family.</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Voice</div>
+      <p class="context-note">How this client should sound.</p>
+      <ul><li>Goal: Not this</li><li>Acknowledge difficulty: &quot;Recovery is a journey&quot; (filler)</li><li>Describe treatment: &quot;Holistic care for your whole self&quot;</li><li>Prompt action: &quot;Don&#x27;t wait to get help&quot;</li><li>Frame outcomes: &quot;We&#x27;ll get you clean&quot;</li><li>Reference fear: &quot;There&#x27;s nothing to be afraid of&quot;</li><li>Register: Compassionate, supportive, professional, empowering, accessible.</li><li>&quot;Something has changed.&quot;</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Avoid / Compliance</div>
+      <p class="context-note">Claims, terms, and wording to avoid.</p>
+      <ul><li>&quot;guarantee&quot; / &quot;guaranteed&quot; / &quot;guarantee recovery&quot;: Cannot guarantee clinical outcomes</li><li>&quot;battle&quot; or &quot;fight&quot; (as addiction metaphors): Use &quot;address,&quot; &quot;work through,&quot; &quot;confront,&quot; or &quot;heal&quot;</li><li>Any invented staff names: Only confirmed credential classes are usable</li><li>IOP as residential equivalent: IOP is not residential; never position it as equivalent</li><li>Invented insurance coverage: Only confirmed insurers may be listed (see §7)</li><li>utilize: Anti-slop ban</li><li>leverage (as puff): Anti-slop ban</li><li>robust (as puff): Anti-slop ban</li><li>seamless: Anti-slop ban</li><li>comprehensive (as vague puff): Anti-slop ban</li><li>cutting-edge: Anti-slop ban</li><li>holistic (as vague puff): Anti-slop ban</li><li>synergy: Anti-slop ban</li><li>transformative: Anti-slop ban</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Terminology</div>
+      <p class="context-note">Client-specific naming and required language.</p>
+      <p class="muted">No clean lines extracted yet.</p>
+    </article>
+    </section>
+        <section class="panel">
+          <h2>Offerings, Services, Goods</h2>
+          <p class="muted">Writer-facing catalog from the client style system, approved source files, and usable product/service pages. Raw crawl evidence is separated below.</p>
+          <div class="offerings">
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Addiction Treatment</h3>
+      <p>Clinical treatment for substance use concerns delivered in an outpatient setting.</p>
+      <div class="evidence">Sources: clients/the-hope-house/arizonaiop/raw/knowledge/service-taxonomy.md · Sections: Programs and Care Levels</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Dual Diagnosis Treatment</h3>
+      <p>Simultaneous treatment for addiction and co-occurring mental health conditions.</p>
+      <div class="evidence">Sources: clients/the-hope-house/arizonaiop/raw/knowledge/service-taxonomy.md · Sections: Programs and Care Levels</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Intensive Outpatient Program</h3>
+      <p>Structured outpatient addiction and mental health treatment for clients who do not need 24-hour medical supervision.</p>
+      <div class="evidence">Sources: clients/the-hope-house/arizonaiop/raw/knowledge/service-taxonomy.md · Sections: Programs and Care Levels</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Masters Level Licensed Therapists</h3>
+      <p>Confirmed credential class for clinical staff references.</p>
+      <div class="evidence">Sources: clients/the-hope-house/arizonaiop/raw/knowledge/service-taxonomy.md · Sections: Differentiators</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Medication-Assisted Treatment</h3>
+      <p>Medication-supported treatment where clinically appropriate. Spell out before MAT.</p>
+      <div class="evidence">Sources: clients/the-hope-house/arizonaiop/raw/knowledge/service-taxonomy.md · Sections: Programs and Care Levels</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Mental Health Treatment</h3>
+      <p>Treatment support for co-occurring mental health needs within the confirmed outpatient model.</p>
+      <div class="evidence">Sources: clients/the-hope-house/arizonaiop/raw/knowledge/service-taxonomy.md · Sections: Programs and Care Levels</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Neurofeedback Room</h3>
+      <p>Industry-leading neurofeedback room, with no extra technology claims beyond confirmed source language.</p>
+      <div class="evidence">Sources: clients/the-hope-house/arizonaiop/raw/knowledge/service-taxonomy.md · Sections: Differentiators</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Partial Hospitalization Program</h3>
+      <p>Higher-structure outpatient level of care, spelled out on first use before using PHP.</p>
+      <div class="evidence">Sources: clients/the-hope-house/arizonaiop/raw/knowledge/service-taxonomy.md · Sections: Programs and Care Levels</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Same-Day Placement</h3>
+      <p>Confirmed differentiator for clients who need faster admission support.</p>
+      <div class="evidence">Sources: clients/the-hope-house/arizonaiop/raw/knowledge/service-taxonomy.md · Sections: Programs and Care Levels</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Small Group Therapy</h3>
+      <p>Groups of 12 to 15 clients, compared with the stated Arizona average of 29.</p>
+      <div class="evidence">Sources: clients/the-hope-house/arizonaiop/raw/knowledge/service-taxonomy.md · Sections: Differentiators</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Standard Outpatient Treatment</h3>
+      <p>Lower-intensity outpatient care for clients maintaining daily responsibilities.</p>
+      <div class="evidence">Sources: clients/the-hope-house/arizonaiop/raw/knowledge/service-taxonomy.md · Sections: Programs and Care Levels</div>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Website Intelligence</h2>
+          <div class="split">
+            <div>
+              <h3>Website URLs</h3><ul><li><a href="https://arizonaiop.com/">https://arizonaiop.com/</a></li></ul>
+              <h3>Sitemaps</h3><ul><li><a href="https://arizonaiop.com/sitemap_index.xml">https://arizonaiop.com/sitemap_index.xml</a></li><li><a href="https://arizonaiop.com/sitemap.xml">https://arizonaiop.com/sitemap.xml</a></li></ul>
+            </div>
+            <div>
+              <h3>Semantic / Topical Terms</h3><div class="topic-chips"><span>Addiction Treatment</span><span>Dual Diagnosis Treatment</span><span>Intensive Outpatient Program</span><span>Masters Level Licensed Therapists</span><span>Medication-Assisted Treatment</span><span>Mental Health Treatment</span><span>Neurofeedback Room</span><span>Partial Hospitalization Program</span><span>Same-Day Placement</span><span>Small Group Therapy</span><span>Standard Outpatient Treatment</span><span>Mental Health</span><span>Who Need</span><span>Addiction Mental Health</span><span>Adults Seeking</span><span>Addiction Mental</span></div>
+              <h3>Blockers</h3><p class="muted">None</p>
+            </div>
+          </div>
+          <h3>Product / Service URLs</h3><ul><li><a href="https://arizonaiop.com/topiramate-addiction/treatment/">https://arizonaiop.com/topiramate-addiction/treatment/</a></li><li><a href="https://arizonaiop.com/drug-addiction-risks/treatment/">https://arizonaiop.com/drug-addiction-risks/treatment/</a></li></ul>
+          <h3>Sampled Pages</h3><div class="sample-pages">
+    <article class="sample">
+      <h4>Intensive Outpatient Program in Scottsdale | Cafe Recovery</h4>
+      <a href="https://arizonaiop.com/">https://arizonaiop.com/</a>
+      <p>Scottsdale IOP: Compassionate outpatient addiction treatment for younger adults. Personalized care &amp; community support. Contact us.</p>
+      <ul><li>Arizona Outpatient Rehab | Call 480-418-1570</li><li>Find Recovery Through Outpatient Care</li><li>Every Stay at Arizona Outpatient Rehab Includes</li><li>Keep Your Cell Phone Throughout Treatment</li><li>Unlimited use of sauna and cold plunge</li><li>Sober Living Partners with Single Room options</li><li>Masters Level Licensed Therapists</li><li>Unlimited use of movie theater</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Exploring Drug Addiction Treatment Options for Recovery | Arizona IOP</h4>
+      <a href="https://arizonaiop.com/drug-addiction-risks/treatment/">https://arizonaiop.com/drug-addiction-risks/treatment/</a>
+      <p>Learn about drug addiction treatment options and how they support recovery for those facing substance use challenges.</p>
+      <ul><li>Exploring Drug Addiction Treatment Options for Recovery</li><li>Questions Answered in This Article:</li><li>Our Addiction Treatment Centers</li><li>Discover a drug-free future. Connect with us today.</li><li>Understanding Drug Addiction Treatment</li><li>Discover a drug-free future. Connect with us today.</li><li>Levels and Types of Substance Abuse Treatment</li><li>Inpatient Rehab</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Topiramate Addiction Treatment: How To Overcome Abuse | Arizona IOP</h4>
+      <a href="https://arizonaiop.com/topiramate-addiction/treatment/">https://arizonaiop.com/topiramate-addiction/treatment/</a>
+      <p>Explore topiramate addiction treatment options and get the support you need to safely overcome dependence and reclaim your life.</p>
+      <ul><li>Topiramate Addiction Treatment: How to Overcome Abuse</li><li>Questions Answered in This Article:</li><li>Our Topiramate Addiction Treatment Centers</li><li>Begin your journey to recovery. Contact us today for topiramate abuse treatment.</li><li>Topiramate Treatment Explained</li><li>What is Topiramate Rehab?</li><li>How Long is Topiramate Rehab?</li><li>Take control of your health. Reach out now for topiramate addiction support.</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Locations | Luxury Rehab in Scottsdale, Arizona</h4>
+      <a href="https://arizonaiop.com/locations/">https://arizonaiop.com/locations/</a>
+      <p>End your struggle with addiction at Arizona IOP. Check our Locations page for wide range of addiction treatment in Scottsdale towards a better life.</p>
+      <ul><li>Page Not Found</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Intensive Outpatient Programs in Arizona | Cafe Recovery</h4>
+      <a href="https://arizonaiop.com/locations/arizona/">https://arizonaiop.com/locations/arizona/</a>
+      <p>Explore Arizona outpatient addiction treatment with Cafe Recovery&#x27;s expert care and flexible programs. Begin your journey toward lasting recovery today.</p>
+      <ul><li>Arizona IOP Outpatient Rehab for Addiction, Anxiety &amp; Depression</li><li>Cafe Recovery by The Hope House offers clinical guidance and personalized support to help clients safely manage mental health &amp; addiction recovery symptoms while staying active in their daily routines.</li><li>Our Arizona Treatment Centers</li><li>Scottsdale Rehab</li><li>HART Rehab</li><li>Scottsdale Detox</li><li>Outpatient Rehab</li><li>Outpatient treatment isn’t a quick fix. It takes commitment. But if you&#x27;re ready to do the work, it can transform your life. – John Lee</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>HART Rehab: Holistic Addiction Treatment in Scottsdale | Cafe Recovery</h4>
+      <a href="https://arizonaiop.com/locations/arizona/hart-rehab/">https://arizonaiop.com/locations/arizona/hart-rehab/</a>
+      <p>Hart Rehab in Scottsdale offers holistic addiction treatment and detox programs. Start your recovery journey with expert care. Call 480-418-1570.</p>
+      <ul><li>HART Rehab Holistic Addiction Recovery Treatment</li><li>HART Rehab</li><li>HART Rehab’s Accreditations</li><li>Take a Tour to Our Holistic Rehab Center</li><li>HART Rehab Named Best Suboxone Treatment Center in Scottsdale</li><li>Most Accepted Insurance</li><li>Holistic Rehab Treatment Options</li><li>Innovative Therapies</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Tucson Rehab Centers for Drug &amp; Alcohol Abuse | Arizona IOP</h4>
+      <a href="https://arizonaiop.com/locations/arizona/tucson-rehab/">https://arizonaiop.com/locations/arizona/tucson-rehab/</a>
+      <p>Transform your life with Tucson rehab centers. Our dedicated team offers personalized support for a healthier, addiction-free you.</p>
+      <ul><li>Tucson Rehab Centers for Alcohol &amp; Drug Abuse Begin Your Path to Healing Now</li><li>Scottsdale Detox offers an exclusive residential rehabilitation program near Tucson, Arizona, providing personalized support for individuals dealing with substance abuse. This program focus on holistic healing, addressing both mental and physical well-being.</li><li>Our Tucson Rehab Centers</li><li>Scottsdale Detox</li><li>Substance Addiction Tucson Rehab Centers</li><li>Detox</li><li>Inpatient Rehab</li><li>Outpatient Treatment</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Phoenix Detox: Comfortable &amp; Safe Addiction Treatment</h4>
+      <a href="https://arizonaiop.com/locations/arizona/phoenix-detox/">https://arizonaiop.com/locations/arizona/phoenix-detox/</a>
+      <p>Experience Phoenix detox with personalized programs for lasting recovery. Start your journey to hope and healing today.</p>
+      <ul><li>Phoenix Detox Drug and Alcohol Addiction Treatment</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Outpatient Addiction Treatment in Scottsdale, AZ | Cafe Recovery</h4>
+      <a href="https://arizonaiop.com/locations/arizona/outpatient-rehab/">https://arizonaiop.com/locations/arizona/outpatient-rehab/</a>
+      <p>Scottsdale outpatient rehab at Cafe Recovery offers a supportive path to lasting recovery. Explore our IOP, PHP, and individual counseling options. Contact us.</p>
+      <ul><li>Outpatient Drug Rehab For Addiction Treatment</li><li>Arizona IOP</li><li>Outpatient Treatment at Arizona IOP</li><li>Accreditations of The Hope House</li><li>The Hope House Named Best Suboxone Treatment Center in Scottsdale</li><li>Our Insurance Partners</li><li>Comfort and Care at Our Outpatient Rehab</li><li>Our Scottsdale Outpatient Rehab can help those who have:</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Scottsdale Detox Services: Expert Addiction Care | Cafe Recovery</h4>
+      <a href="https://arizonaiop.com/locations/arizona/scottsdale-detox/">https://arizonaiop.com/locations/arizona/scottsdale-detox/</a>
+      <p>Scottsdale Detox: Expert addiction care in Scottsdale, AZ. Begin your recovery journey with personalized detox programs from Cafe Recovery. Call us today.</p>
+      <ul><li>Scottsdale Detox for Drug and Alcohol Addiction</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Scottsdale Rehab: Intensive Outpatient Treatment | Cafe Recovery</h4>
+      <a href="https://arizonaiop.com/locations/arizona/scottsdale-rehab/">https://arizonaiop.com/locations/arizona/scottsdale-rehab/</a>
+      <p>Scottsdale rehab: Intensive outpatient treatment with personalized, evidence-based care. Contact Cafe Recovery for your recovery journey.</p>
+      <ul><li>Luxury Scottsdale Rehab Fight Drug and Alcohol Addiction</li><li>The Hope House – Scottsdale</li><li>Accreditations of The Hope House</li><li>Take a Tour to Our Scottsdale Rehab Center</li><li>The Hope House Named Best Suboxone Treatment Center in Scottsdale</li><li>Our Insurance Partners</li><li>Scottsdale Rehab Treatment Alternatives</li><li>Alternative Therapy</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Detox | Rehabilitation Centers | Scottsdale, AZ</h4>
+      <a href="https://arizonaiop.com/category/detox/">https://arizonaiop.com/category/detox/</a>
+      <p>Unlock the path to recovery with Arizona IOP. Explore our Detox category for addiction treatment in Scottsdale. Start your healing journey now!</p>
+      <ul><li>Detox</li><li>The 5 Benefits of Inpatient Drug Detox</li><li>Binge Drinking: The Beginning of a Problem</li><li>Recent Posts</li><li>Categories</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>PAWSS | Rehabilitation Centers | Scottsdale, AZ</h4>
+      <a href="https://arizonaiop.com/category/pawss/">https://arizonaiop.com/category/pawss/</a>
+      <p>Unlock the path to recovery with Arizona IOP. Explore our PAWSS category for addiction treatment in Scottsdale. Start your healing journey now!</p>
+      <ul><li>PAWSS</li><li>PAWSS Score</li><li>Alcohol Withdrawal Syndrome</li><li>Recent Posts</li><li>Categories</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Alcohol Abuse | Rehabilitation Centers | Scottsdale, AZ</h4>
+      <a href="https://arizonaiop.com/category/alcohol-abuse/">https://arizonaiop.com/category/alcohol-abuse/</a>
+      <p>Unlock the path to recovery with Arizona IOP. Explore our Alcohol Abuse category for addiction treatment in Scottsdale. Start your healing journey now!</p>
+      <ul><li>Alcohol Abuse</li><li>Alcohol Counseling Scottsdale for Everyday Life</li><li>Finding the Right AA Sponsor for Lasting Recovery</li><li>End Stage Alcoholism and the Warning Signs</li><li>Transfer Addiction: When Recovery Shifts Elsewhere</li><li>Sobriety Fatigue: Why Recovery Can Feel So Exhausting</li><li>Alcohol Belly: How Drinking Leads to Belly Fat</li><li>What Is California Sober? A Modern Take on Recovery</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Athlete Rehab | Rehabilitation Centers | Scottsdale, AZ</h4>
+      <a href="https://arizonaiop.com/category/athlete-rehab/">https://arizonaiop.com/category/athlete-rehab/</a>
+      <p>Unlock the path to recovery with Arizona IOP. Explore our Athlete Rehab category for addiction treatment in Scottsdale. Start your healing journey now!</p>
+      <ul><li>Athlete Rehab</li><li>Alcohol Rehab for Football Players: Recovery &amp; Support</li><li>Drug Rehab for Football Players: Overcoming Addiction Safely</li><li>Drug Rehab for Basketball Players: Recovery Support</li><li>Specialized Alcohol Rehab for Basketball Players</li><li>Drug Rehab for Tennis Players: Focused Recovery for Athletes</li><li>Alcohol Rehab for Tennis Players: Exploring Recovery Paths</li><li>Luxury Golf Rehab: Elite Addiction Treatment for Executives</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Press Release | Rehabilitation Centers | Scottsdale, AZ</h4>
+      <a href="https://arizonaiop.com/category/press-release/">https://arizonaiop.com/category/press-release/</a>
+      <p>Unlock the path to recovery with Arizona IOP. Explore our Press Release category for addiction treatment in Scottsdale. Start your healing journey now!</p>
+      <ul><li>Press Release</li><li>Only AZ Rehab Certified Through COVID-19 Safety Program</li><li>COVID-19 Protocols</li><li>5 Year Partnership with ASU Nursing Students</li><li>Recent Posts</li><li>Categories</li></ul>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Full Style System</h2>
+          <details open><summary>Show style-system sections</summary>
+    <details class="style-section">
+      <summary>Arizona IOP — Style System</summary>
+      <div class="markdown"><p>Generated: 2026-06-08<br>Sources: raw/knowledge/overview.md<br>Base rules: universal-rules/UNIVERSAL-RULES.md<br>Parent entity: The Hope House (group)</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>1. Brand &amp; Audience</summary>
+      <div class="markdown"><p>Arizona IOP is an Intensive Outpatient Program facility in Scottsdale, Arizona. It serves adults seeking structured addiction and mental health treatment while maintaining their daily lives — job, family, and housing.</p><p>Website: https://arizonaiop.com/</p><p>**What Arizona IOP is:**<br><li>A structured outpatient treatment program for addiction and co-occurring mental health conditions</li><br><li>A clinical facility offering multiple levels of care below residential, including IOP, PHP, and standard outpatient</li><br><li>One of the few centers nationwide providing simultaneous treatment for addiction and mental health (confirmed site claim)</li></ul><p>**What Arizona IOP is NOT — never position as:**<br><li>An equivalent to residential treatment or medical detox — IOP is for people who do not need 24-hour medical supervision</li><br><li>An emergency crisis stabilization facility</li><br><li>A detox facility</li></ul><p>**Primary audience:** Adults seeking addiction treatment or mental health support who need structured care but can maintain daily responsibilities. Also: family members researching options for a loved one.</p><p>**Secondary audience:** Professionals and executives who need treatment that does not require leaving work or family.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2. Voice &amp; Tone</summary>
+      <div class="markdown"><p>**Register:** Compassionate, supportive, professional, empowering, accessible.</p><p>Content should feel like it is speaking to someone who is afraid, uncertain, or reaching out for the first time. The tone never condescends, never minimizes, and never dramatizes. It is medically grounded without being cold. It is encouraging without making promises.</p><p>| Goal | Not this | Use this |<br>|---|---|---|<br>| Acknowledge difficulty | &quot;Recovery is a journey&quot; (filler) | &quot;Something has changed. You may not be ready to name it yet.&quot; |<br>| Describe treatment | &quot;Holistic care for your whole self&quot; | &quot;Structured group therapy with 12 to 15 clients — a fraction of the Arizona average of 29&quot; |<br>| Prompt action | &quot;Don&#x27;t wait to get help&quot; | &quot;Same-day placement is available. You don&#x27;t have to decide alone.&quot; |<br>| Frame outcomes | &quot;We&#x27;ll get you clean&quot; | &quot;Arizona IOP gives you the structure, clinical support, and tools to work through addiction&quot; |<br>| Reference fear | &quot;There&#x27;s nothing to be afraid of&quot; | &quot;You can keep your phone, your job, and your home while you get care&quot; |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.1 Blog voice</summary>
+      <div class="markdown"><p>Blog posts use a question-to-answer heading structure. Headings name the concern, the body answers it directly. Use short punchy statements for emphasis; longer explanatory sentences for medical context.</p><p>Contact prompts appear naturally after sections addressing fear or uncertainty — not as a separate sales block.</p><p>Humanizing phrases (confirmed as on-brand from site and blog):<br><li>&quot;Something has changed.&quot;</li><br><li>&quot;It&#x27;s rarely one isolated issue.&quot;</li><br><li>&quot;You don&#x27;t have to decide alone.&quot;</li><br><li>&quot;Confront Your Anxiety, Depression, or Addiction Today.&quot;</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.2 Tone in practice</summary>
+      <div class="markdown"><p>Do this:<br><li>&quot;Intensive Outpatient Program (IOP) at Arizona IOP is structured around your schedule — not the other way around.&quot;</li><br><li>&quot;Groups stay small. Arizona IOP runs 12 to 15 clients per group; the Arizona industry average is 29.&quot;</li><br><li>&quot;Masters Level Licensed Therapists work with each client across more than 20 therapeutic modalities.&quot;</li></ul><p>Not this:<br><li>&quot;Our revolutionary holistic program will transform your life.&quot; — multiple banned terms; outcome guarantee implied</li><br><li>&quot;We guarantee our program works.&quot; — outcome guarantee, banned</li><br><li>&quot;Our dedicated team of counselors is ready to help you battle addiction.&quot; — &quot;battle&quot; is banned; team framing without credential specificity</li><br><li>&quot;Dr. [Name] leads your treatment.&quot; — no specific staff names are confirmed; do not invent</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.3 Sentence and paragraph rules</summary>
+      <div class="markdown"><p><li>Paragraphs: 2 to 4 sentences maximum. One idea per sentence.</li><br><li>First sentence of every section directly answers the heading.</li><br><li>No em dashes. Restructure or use a period.</li><br><li>Lead with the client concern or clinical fact; follow with the mechanism or outcome.</li><br><li>Do not start sections or paragraphs with a hyperlink.</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3. Terminology</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.1 Abbreviation expansion rules — critical</summary>
+      <div class="markdown"><p>Every abbreviation must be spelled out on first use in every piece. No exceptions.</p><p>| Abbreviation | First-use form | Subsequent use |<br>|---|---|---|<br>| IOP | Intensive Outpatient Program (IOP) | IOP |<br>| PHP | Partial Hospitalization Program (PHP) | PHP |<br>| MAT | Medication-Assisted Treatment (MAT) | MAT |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.2 Required terminology</summary>
+      <div class="markdown"><p><li>&quot;Masters Level Licensed Therapists&quot; — the confirmed credential class. Do not invent individual names or credentials beyond this.</li><br><li>&quot;Board-certified detox medical staff&quot; — confirmed credential for detox-related staff.</li><br><li>&quot;Same-day placement&quot; — confirmed differentiator. Acceptable to reference.</li><br><li>&quot;Industry-leading neurofeedback room&quot; — confirmed claim, use in this exact framing. Do not add specifics about the technology beyond what is confirmed.</li><br><li>&quot;12 to 15 clients per group&quot; — confirmed. Pair with &quot;Arizona average of 29&quot; when using for differentiation.</li><br><li>&quot;Suboxone&quot; — confirmed brand name reference (site uses it). Acceptable.</li><br><li>&quot;Joint Commission Gold Seal of Approval&quot; — confirmed accreditation. Use accurately.</li><br><li>&quot;AZ SafeClean Certified&quot; — confirmed certification.</li><br><li>&quot;Best Suboxone Treatment Center in Arizona&quot; — confirmed award reference. Acceptable.</li><br><li>&quot;The Best Award 2023&quot; — confirmed award.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.3 Strict avoidance list</summary>
+      <div class="markdown"><p>| Term | Reason |<br>|---|---|<br>| &quot;guarantee&quot; / &quot;guaranteed&quot; / &quot;guarantee recovery&quot; | Cannot guarantee clinical outcomes |<br>| &quot;battle&quot; or &quot;fight&quot; (as addiction metaphors) | Use &quot;address,&quot; &quot;work through,&quot; &quot;confront,&quot; or &quot;heal&quot; |<br>| Any invented staff names | Only confirmed credential classes are usable |<br>| IOP as residential equivalent | IOP is not residential; never position it as equivalent |<br>| Invented insurance coverage | Only confirmed insurers may be listed (see §7) |<br>| utilize | Anti-slop ban |<br>| leverage (as puff) | Anti-slop ban |<br>| robust (as puff) | Anti-slop ban |<br>| seamless | Anti-slop ban |<br>| comprehensive (as vague puff) | Anti-slop ban |<br>| cutting-edge | Anti-slop ban |<br>| holistic (as vague puff) | Anti-slop ban |<br>| synergy | Anti-slop ban |<br>| transformative | Anti-slop ban |<br>| innovative | Anti-slop ban |<br>| game-changing | Anti-slop ban |<br>| empower (as vague puff) | Anti-slop ban; describe the actual mechanism instead |<br>| revolutionary | Anti-slop ban |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4. Clinical Accuracy Standards</summary>
+      <div class="markdown"><p><li>Do not minimize the difficulty or risk of addiction or withdrawal.</li><br><li>Results vary. Do not present outcomes as guaranteed or typical.</li><br><li>All clinical claims must trace to confirmed site content only. Do not invent session formats, schedules, or session counts.</li><br><li>Never invent therapeutic modalities beyond &quot;over 20 therapeutic modalities&quot; — the site confirms the count, not the specific names.</li><br><li>&quot;One of the few centers nationwide to provide simultaneous treatment for both addiction and mental health&quot; — this is a confirmed claim and may be used in this framing.</li><br><li>IOP is explicitly for clients who do not need 24-hour medical supervision. Never imply otherwise.</li><br><li>Detox is a distinct level of care. Arizona IOP is not a detox facility.</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5. Levels of Care — Reference</summary>
+      <div class="markdown"><p>Use this table for accuracy when writing about programs. Do not invent program names or clinical details.</p><p>| Program | Key points |<br>|---|---|<br>| Intensive Outpatient Program (IOP) | Primary service. Structured treatment while clients maintain daily life (job, family, housing). Clients keep cell phones. |<br>| Partial Hospitalization Program (PHP) | More intensive than IOP; less intensive than residential. |<br>| Standard Outpatient Program | Less intensive follow-up level of care. |<br>| Executive Treatment Program | For professionals maintaining work obligations during treatment. |<br>| Dual Diagnosis Program | Concurrent addiction and mental health treatment. |<br>| Luxury Rehab Program | Evidence-based care with premium amenities. |<br>| Golf Rehab Program | Treatment combined with golf. |</p><p>When discussing levels of care, do not imply IOP replaces PHP, residential, or detox for clients who need those levels.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6. Conditions and Substances — Reference</summary>
+      <div class="markdown"><p>**Substances treated:** Alcohol, opioids, fentanyl, heroin, cocaine, meth, marijuana, ecstasy, Adderall.</p><p>**Mental health conditions treated:** Anxiety, depression, co-occurring conditions, trauma.</p><p>Use these terms accurately. Do not add conditions or substances not confirmed here.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>7. Insurance</summary>
+      <div class="markdown"><p>**Accepted insurers (confirmed):** Cigna, GEHA, Blue Cross Blue Shield, Aetna, UnitedHealthcare, UMR.</p><p>**General framing:** &quot;Most employer-provided insurance plans accepted&quot; is a confirmed framing.</p><p>Do not list any insurer not on the confirmed list. Do not claim any specific coverage amount or approval rate.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>8. Key Differentiators</summary>
+      <div class="markdown"><p>Use these when building content around what distinguishes Arizona IOP from other facilities.</p><p>| Differentiator | Confirmed fact | How to use |<br>|---|---|---|<br>| Small group size | 12 to 15 clients per group; Arizona average is 29 | Pair together for maximum specificity |<br>| Maintain daily life | Clients keep cell phones; maintain job, family, and housing | Leads naturally after describing IOP structure |<br>| Same-day placement | Confirmed; 24/7 accessibility | Use in CTAs and accessibility-focused content |<br>| Dual diagnosis | One of few nationwide with simultaneous treatment | Use in this confirmed framing |<br>| Neurofeedback | &quot;Industry-leading neurofeedback room&quot; — confirmed | Use exact framing; no additional tech specifics |<br>| Accreditations | Joint Commission Gold Seal; AZ SafeClean Certified | Use to establish clinical credibility |<br>| MAT | Medication-Assisted Treatment (MAT) is confirmed | Spell out on first use |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>9. What Not to Reference (Group Entities)</summary>
+      <div class="markdown"><p>Arizona IOP is part of a group. Do not reference sister entities by name in content unless step-down or step-up care is the explicit topic:</p><ul><li>Do not mention: The Hope House, Scottsdale Detox, Scottsdale TMS</li><br><li>If step-up or step-down care is relevant: use &quot;our residential program&quot; or &quot;a higher level of care&quot; — not the entity name</li><br><li>This applies to blog content, service pages, and any external-facing copy</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>10. Page Structure</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>10.1 Blog posts</summary>
+      <div class="markdown"><p>Target length: 800 to 1,500 words.</p><p>Structure:<br>1. Meta title (55 to 60 characters): primary keyword near front; include &quot;Arizona IOP&quot; where natural<br>2. Meta description (140 to 160 characters): primary keyword, core outcome or differentiator, brand or location<br>3. 3 primary keywords defined<br>4. H1: direct, keyword-forward; addresses the reader&#x27;s concern without clickbait<br>5. Short intro (2 to 3 sentences): acknowledge the concern; state what the piece covers; no filler<br>6. H2 sections: each a discrete concern or question; first sentence directly answers the heading<br>7. H3 for subsections; no H4 unless reference content<br>8. Contact prompt: placed naturally after a section addressing fear or uncertainty<br>9. Closing CTA: specific action step (call, verify insurance, schedule assessment)</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>10.2 Service pages</summary>
+      <div class="markdown"><p>Structure:<br>1. H1: primary keyword; outcome-grounded framing<br>2. Problem paragraph (2 to 4 sentences): what the client is dealing with<br>3. How Arizona IOP addresses it (2 to 4 sentences): mechanism, not just claims<br>4. Key features or differentiators (3 to 5 bullets or a table)<br>5. Program details (levels of care, group size, clinical credentials)<br>6. Accreditations and trust signals where relevant<br>7. CTA: specific next step (call, verify insurance, schedule assessment)</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>11. SEO Keywords by Topic</summary>
+      <div class="markdown"><p>| Content topic | Example keywords |<br>|---|---|<br>| IOP | &quot;intensive outpatient program Scottsdale,&quot; &quot;IOP Arizona,&quot; &quot;outpatient rehab Scottsdale&quot; |<br>| Substance-specific | &quot;alcohol treatment Scottsdale,&quot; &quot;opioid treatment Arizona,&quot; &quot;fentanyl treatment program&quot; |<br>| Mental health | &quot;dual diagnosis treatment Arizona,&quot; &quot;anxiety and addiction treatment Scottsdale&quot; |<br>| Differentiators | &quot;small group rehab Arizona,&quot; &quot;same day rehab admission Scottsdale&quot; |<br>| Insurance | &quot;Cigna rehab coverage Arizona,&quot; &quot;Blue Cross Blue Shield addiction treatment&quot; |<br>| Executives | &quot;executive rehab program Arizona,&quot; &quot;treatment for professionals Scottsdale&quot; |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>12. Pre-Publish Checklist</summary>
+      <div class="markdown"><p>| Check | Requirement |<br>|---|---|<br>| IOP / PHP / MAT | Spelled out on first use in every piece |<br>| No outcome guarantees | Zero guarantee language anywhere |<br>| No invented staff | Only &quot;Masters Level Licensed Therapists&quot; and &quot;board-certified detox medical staff&quot; as confirmed classes |<br>| IOP not overclaimed | Never positioned as equivalent to residential or detox |<br>| Insurance list | Only confirmed insurers listed |<br>| Anti-slop | No banned puff terms from §3.3 |<br>| Addiction metaphors | No &quot;battle&quot; or &quot;fight&quot; — use &quot;address,&quot; &quot;work through,&quot; &quot;confront,&quot; &quot;heal&quot; |<br>| Group entities | No sister entity names unless step-down/step-up is the topic |<br>| Clinical claims | Traced to confirmed site content; no invented session formats or counts |<br>| Contact block | Phone, address, and CTA present in closing section |<br>| Em dashes | Zero em dashes anywhere in the piece |<br>| Meta fields | Title (55 to 60 chars), description (140 to 160 chars), 3 keywords defined |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>13. Key Facts at a Glance</summary>
+      <div class="markdown"><p>| Detail | Value |<br>|---|---|<br>| Website | arizonaiop.com |<br>| Phone | (480) 418-1570 |<br>| Address | 7287 E Earll Drive, Building D, Scottsdale, AZ 85251 |<br>| Email | contact@arizonaiop.com |<br>| Primary program | Intensive Outpatient Program (IOP) |<br>| Group size | 12 to 15 clients per group |<br>| Arizona average | 29 clients per group |<br>| Accreditations | Joint Commission Gold Seal of Approval; AZ SafeClean Certified |<br>| Awards | The Best Award 2023; Best Suboxone Treatment Center in Arizona |<br>| Insurance | Cigna, GEHA, Blue Cross Blue Shield, Aetna, UnitedHealthcare, UMR |<br>| Therapeutic modalities | 20+ (count confirmed; specific modalities not confirmed) |<br>| Neurofeedback | Industry-leading neurofeedback room (confirmed claim) |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>14. Operator Notes</summary>
+      <div class="markdown"><p>*Section for team-specific additions. Use `### {Operator} — {scope}` headings. Promote a note to the main numbered sections once it has been reinforced across two or more pieces.*</p></div>
+    </details>
+    </details>
+        </section>
+        <section class="panel">
+          <h2>Local Source Files Read</h2>
+          <ul><li><code>clients/the-hope-house/arizonaiop/STYLE-SYSTEM.md</code> — Arizona IOP — Style System</li>
+<li><code>clients/the-hope-house/arizonaiop/client-intelligence/README.md</code> — Arizona IOP Client Intelligence</li>
+<li><code>clients/the-hope-house/arizonaiop/client-intelligence/STYLE-GUIDE.md</code> — Arizona IOP — Style System</li>
+<li><code>clients/the-hope-house/arizonaiop/client-intelligence/offerings.md</code> — Arizona IOP Offerings</li>
+<li><code>clients/the-hope-house/arizonaiop/client-intelligence/source-files.md</code> — Arizona IOP Source Files</li>
+<li><code>clients/the-hope-house/arizonaiop/contact-block.md</code> — Contact block — Arizona IOP</li>
+<li><code>clients/the-hope-house/arizonaiop/deliverables/README.md</code> — Arizona IOP Deliverables</li>
+<li><code>clients/the-hope-house/arizonaiop/raw/knowledge/overview.md</code> — Arizona IOP — Client Overview</li>
+<li><code>clients/the-hope-house/arizonaiop/raw/knowledge/service-taxonomy.md</code> — Arizona IOP Service Taxonomy</li></ul>
+        </section>
+      </main>
+    </section>
+    </body>
+</html>

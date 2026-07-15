@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scottsdale TMS Therapy Context</title>
+  <style>
+    :root {
+      --bg:#f4f7f5; --panel:#ffffff; --ink:#09110f; --muted:#63716c; --line:#dce5df;
+      --black:#050907; --graph:#14d878; --graph-dark:#079d55; --soft:#eaf8f0; --soft-ink:#19392a;
+      --accent:#087a47; --red:#b5362d; --shadow:0 18px 46px rgba(5,9,7,.08);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:
+      linear-gradient(180deg, #ffffff 0, var(--bg) 360px); color:var(--ink); line-height:1.45; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .topnav { min-height:64px; padding:14px max(32px, calc((100vw - 1380px) / 2 + 32px)); background:var(--black); border-bottom:1px solid rgba(255,255,255,.08); position:sticky; top:0; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { color:#fff; display:inline-flex; align-items:center; gap:10px; font-weight:800; letter-spacing:0; }
+    .brand:hover { text-decoration:none; }
+    .brand span { width:32px; height:32px; border-radius:8px; background:var(--graph); color:var(--black); display:inline-grid; place-items:center; font-size:13px; font-weight:900; }
+    .nav-meta, .nav-link { color:#b8c6c0; font-size:13px; font-weight:700; }
+    .hero { margin:0; padding:42px max(32px, calc((100vw - 1380px) / 2 + 32px)) 38px; background:var(--black); color:#fff; border-bottom:1px solid rgba(255,255,255,.08); }
+    .index-hero, .client-hero { display:flex; justify-content:space-between; gap:28px; align-items:flex-start; }
+    .hero h1 { margin:0 0 12px; font-size:clamp(32px, 5vw, 62px); line-height:.98; letter-spacing:0; max-width:900px; }
+    .hero p { margin:0; color:#c7d5cf; max-width:840px; font-size:17px; }
+    .hero-copy { max-width:940px; }
+    .kicker { color:var(--graph); font-size:12px; text-transform:uppercase; letter-spacing:.08em; font-weight:900; }
+    .report-meta { display:flex; flex-wrap:wrap; gap:10px; padding:14px 32px; background:#fff; border-bottom:1px solid var(--line); color:var(--muted); font-size:13px; max-width:1380px; margin:0 auto; }
+    .report-meta span { background:var(--soft); color:var(--soft-ink); border-radius:999px; padding:6px 10px; font-weight:700; }
+    .grid.cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(290px, 1fr)); gap:16px; padding:24px 32px 42px; max-width:1380px; margin:0 auto; }
+    .card, .panel, .context-card { background:var(--panel); border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow); }
+    .client-card { display:block; padding:20px; color:inherit; min-height:184px; transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease; }
+    .client-card:hover { text-decoration:none; transform:translateY(-2px); border-color:rgba(20,216,120,.55); box-shadow:0 24px 58px rgba(5,9,7,.12); }
+    .card-topline { display:flex; justify-content:space-between; gap:10px; align-items:center; }
+    .client-card h2 { margin:14px 0 8px; font-size:23px; line-height:1.1; }
+    .client-card p { margin:0; color:var(--muted); }
+    .metrics { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+    .metrics span, .evidence, .status-pill { background:var(--soft); border:1px solid rgba(20,216,120,.22); border-radius:999px; padding:5px 9px; font-size:12px; color:var(--soft-ink); font-weight:800; }
+    .topic-chips { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 18px; }
+    .topic-chips span { background:#f6fbf8; border:1px solid var(--line); border-radius:999px; color:#183a2a; padding:7px 10px; font-size:13px; font-weight:750; }
+    .layout { display:block; padding:22px 32px 46px; max-width:1380px; margin:0 auto; }
+    main { min-width:0; }
+    .context-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; margin-bottom:20px; }
+    .context-card { padding:18px; min-height:220px; }
+    .context-card ul { margin-bottom:0; }
+    .context-note { color:var(--muted); font-size:13px; margin:4px 0 12px; }
+    .aside-label { color:var(--graph-dark); font-size:11px; text-transform:uppercase; font-weight:900; letter-spacing:.08em; margin-bottom:5px; }
+    .panel h2 { margin-top:0; }
+    .panel { padding:22px; margin-bottom:20px; }
+    .panel h2 { font-size:26px; letter-spacing:0; }
+    .offerings { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:13px; margin-top:16px; }
+    .offering, .sample { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .offering { position:relative; overflow:hidden; }
+    .offering-marker { position:absolute; inset:0 auto 0 0; width:4px; background:var(--graph); }
+    .offering h3, .sample h4 { margin:0 0 6px; }
+    .offering p { margin:0 0 10px; }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .stat-stack { display:grid; grid-template-columns:repeat(3, minmax(100px, 1fr)); gap:8px; min-width:340px; }
+    .stat-stack div { border:1px solid rgba(255,255,255,.15); border-radius:8px; padding:14px; background:rgba(255,255,255,.06); }
+    .stat-stack strong { display:block; font-size:26px; color:#fff; }
+    .stat-stack span, .muted { color:var(--muted); font-size:13px; }
+    .hero .stat-stack span { color:#b8c6c0; }
+    ul { padding-left:20px; }
+    li { margin:4px 0; }
+    code { background:var(--soft); color:var(--soft-ink); padding:2px 4px; border-radius:4px; }
+    details { margin:10px 0; }
+    summary { cursor:pointer; font-weight:700; }
+    .style-section { border-top:1px solid var(--line); padding-top:10px; }
+    .markdown { color:#2d2f35; }
+    @media (max-width: 980px) {
+      .layout, .split, .client-hero, .index-hero { grid-template-columns:1fr; display:block; }
+      .context-grid { grid-template-columns:1fr; }
+      .stat-stack { min-width:0; margin-top:16px; }
+      .hero, .grid.cards, .layout, .topnav, .report-meta { padding-left:16px; padding-right:16px; }
+      .hero h1 { font-size:36px; }
+      .stat-stack { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+    <nav class="topnav">
+      <a class="brand" href="index.html"><span>LG</span>LinkGraph</a>
+      <a class="nav-link" href="index.html">All clients</a>
+    </nav>
+    <section class="hero client-hero">
+      <div class="hero-copy">
+        <div class="kicker">the-hope-house/scottsdaletmstherapy</div>
+        <h1>Scottsdale TMS Therapy</h1>
+        <p>4 extracted offerings, 383 sitemap URLs, and 9 local source documents for client-specific writing context.</p>
+      </div>
+      <div class="stat-stack">
+        <div><strong>ok</strong><span>crawl status</span></div>
+        <div><strong>383</strong><span>URLs found</span></div>
+        <div><strong>0</strong><span>product/service URLs</span></div>
+      </div>
+    </section>
+    <section class="layout">
+      <main>
+        <section class="context-grid">
+    <article class="context-card">
+      <div class="aside-label">Quick Facts</div>
+      <p class="context-note">Company, audience, and proof points.</p>
+      <ul><li>Website: https://scottsdaletmstherapy.com</li><li>A specialist mental health clinic focused on TMS, Spravato, and psychiatric care</li><li>A provider of evidence-based, non-invasive treatment options for depression, anxiety, and OCD</li><li>A REMS-certified Spravato treatment center</li><li>An in-clinic, medically supervised treatment facility</li><li>A detox or substance use treatment facility</li><li>A crisis center or emergency psychiatric service</li><li>An outpatient program or IOP (do not reference sister entities)</li><li>A general-purpose mental health platform or telehealth service</li><li>Geographic focus: Scottsdale, AZ; greater Phoenix metro area.</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Voice</div>
+      <p class="context-note">How this client should sound.</p>
+      <ul><li>Evidence-based: Anchor claims to how TMS or Spravato works mechanistically. Describe outcomes with appropriate qualification.</li><li>Encouraging: Acknowledge the difficulty of treatment-resistant depression; affirm that other options exist.</li><li>Realistic: Do not overstate results. &quot;Significantly reduces depressive symptoms in many patients&quot; — not &quot;eliminates&quot; or &quot;cures.&quot;</li><li>Clinical: Use correct medical terminology; no infantilizing or oversimplifying.</li><li>Approachable: Avoid unnecessary jargon when writing for patients; explain mechanisms plainly.</li><li>Tagline: &quot;Scottsdale&#x27;s Premier Center for TMS &amp; Spravato Treatment&quot;</li><li>&quot;Clear, collaborative, and centered on you&quot;</li><li>&quot;Compassion, respect, and transparency&quot;</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Avoid / Compliance</div>
+      <p class="context-note">Claims, terms, and wording to avoid.</p>
+      <p class="muted">No clean lines extracted yet.</p>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Terminology</div>
+      <p class="context-note">Client-specific naming and required language.</p>
+      <p class="muted">No clean lines extracted yet.</p>
+    </article>
+    </section>
+        <section class="panel">
+          <h2>Offerings, Services, Goods</h2>
+          <p class="muted">Writer-facing catalog from the client style system, approved source files, and usable product/service pages. Raw crawl evidence is separated below.</p>
+          <div class="offerings">
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Psychiatric Medication Management</h3>
+      <p>Evaluation, personalized treatment plan, ongoing monitoring, adjustments; integrates therapy, nutrition, exercise, mindfulness</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/the-hope-house/scottsdaletmstherapy/raw/knowledge/service-taxonomy.md · Sections: 4. Services Reference, Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Spravato</h3>
+      <p>FDA-approved; nasal spray; in-clinic only; REMS-certified; 1–2 sessions/week; rapid-acting</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/the-hope-house/scottsdaletmstherapy/raw/knowledge/service-taxonomy.md · Sections: 4. Services Reference, Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Therapy Services</h3>
+      <p>Counseling services delivered by master-level licensed counselors.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/the-hope-house/scottsdaletmstherapy/raw/knowledge/service-taxonomy.md · Sections: 4. Services Reference, Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>TMS Therapy</h3>
+      <p>FDA-cleared; non-invasive; no anesthesia; 20–40 min/session; 5 days/week; 4–6 weeks; 30–36 sessions total</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/the-hope-house/scottsdaletmstherapy/raw/knowledge/service-taxonomy.md · Sections: 4. Services Reference, Services</div>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Website Intelligence</h2>
+          <div class="split">
+            <div>
+              <h3>Website URLs</h3><ul><li><a href="https://scottsdaletmstherapy.com/">https://scottsdaletmstherapy.com/</a></li></ul>
+              <h3>Sitemaps</h3><ul><li><a href="https://scottsdaletmstherapy.com/sitemap_index.xml">https://scottsdaletmstherapy.com/sitemap_index.xml</a></li><li><a href="https://scottsdaletmstherapy.com/sitemap.xml">https://scottsdaletmstherapy.com/sitemap.xml</a></li></ul>
+            </div>
+            <div>
+              <h3>Semantic / Topical Terms</h3><div class="topic-chips"><span>Psychiatric Medication Management</span><span>Therapy Services</span><span>TMS Therapy</span><span>TMS Spravato</span><span>Mental Health</span><span>Spravato Treatment</span><span>Treatment Facility</span></div>
+              <h3>Blockers</h3><p class="muted">None</p>
+            </div>
+          </div>
+          <h3>Product / Service URLs</h3><p class="muted">No product/service URLs classified from sitemap paths.</p>
+          <h3>Sampled Pages</h3><div class="sample-pages">
+    <article class="sample">
+      <h4>TMS Therapy: Understanding Treatment Options | Scottsdale TMS Therapy</h4>
+      <a href="https://scottsdaletmstherapy.com/category/tms-therapy/">https://scottsdaletmstherapy.com/category/tms-therapy/</a>
+      <p>Scottsdale TMS Therapy: Learn about Transcranial Magnetic Stimulation for depression &amp; anxiety. Discover treatment benefits and patient success stories.</p>
+      <ul><li>Category: TMS Therapy</li><li>TMS for OCD Reviews: Patient Stories &amp; The Science</li><li>TMS Treatment for GAD in Scottsdale: A Guide</li><li>5 Medication Management Tips for Mental Health Patients</li><li>TMS Therapy Follow Up: How to Maintain Your Results</li><li>What Is Medication Management for Mental Health?</li><li>TMS Therapy Side Effects: Your Complete Guide</li><li>TMS for OCD Side Effects: Your Questions Answered</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Our Philosophy: Healing &amp; Hope in Mental Health Treatment | Scottsdale TMS Therapy</h4>
+      <a href="https://scottsdaletmstherapy.com/category/our-philosophy/">https://scottsdaletmstherapy.com/category/our-philosophy/</a>
+      <p>Scottsdale TMS Therapy&#x27;s philosophy: Discover compassionate, FDA-cleared treatments for depression and anxiety. Explore our approach to transformative healing.</p>
+      <ul><li>Category: Our Philosophy</li><li>Mental Health Medication Management Scottsdale: A Guide</li><li>Common Mental Health Tablets Names Explained</li><li>Side Effects of Mental Health Medication: A Balanced Look</li><li>Long-Term Side Effects of Psychiatric Drugs: What to Know</li><li>Holistic Depression Treatment Scottsdale: How It Works</li><li>Anxiety Medication Management Phoenix: A Simple Guide</li><li>Bipolar Medication Management Phoenix: What to Expect</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Treatment-Resistant Insomnia: TMS Therapy in Scottsdale, AZ | Scottsdale TMS Therapy</h4>
+      <a href="https://scottsdaletmstherapy.com/treatment-resistant-insomnia/">https://scottsdaletmstherapy.com/treatment-resistant-insomnia/</a>
+      <p>Scottsdale TMS Therapy: Treatment-resistant insomnia solutions with TMS. Find restful sleep with our advanced, non-invasive therapies.</p>
+      <ul><li>Treatment Resistant Insomnia: Options When Sleep Fails</li><li>Explore advanced sleep treatment options</li><li>Talk with a TMS specialist today</li><li>What Treatment Resistant Insomnia Actually Means</li><li>Why Standard Insomnia Treatments Sometimes Stop Helping</li><li>Learn why insomnia becomes treatment resistant</li><li>Discover brain-based sleep solutions</li><li>Behavioral Therapy and Its Limits</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Treatment-Resistant Depression: Symptoms &amp; Treatments in Scottsdale, AZ | Scottsdale TMS Therapy</h4>
+      <a href="https://scottsdaletmstherapy.com/treatment-resistant-depression/">https://scottsdaletmstherapy.com/treatment-resistant-depression/</a>
+      <p>Scottsdale TMS Therapy offers treatment-resistant depression solutions: TMS, Spravato, &amp; therapy in Scottsdale, AZ. Contact us for healing.</p>
+      <ul><li>Treatment-Resistant Depression: Symptoms and Treatment Options</li><li>Questions Answered in This Article:</li><li>Our Treatment Centers</li><li>Scottsdale Rehab</li><li>Hart Rehab</li><li>Scottsdale Detox</li><li>You don’t have to face it alone.</li><li>Support is always available.</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Treatment-Resistant Depression Specialist in Scottsdale, AZ | Scottsdale TMS Therapy</h4>
+      <a href="https://scottsdaletmstherapy.com/treatment-resistant-depression-scottsdale/">https://scottsdaletmstherapy.com/treatment-resistant-depression-scottsdale/</a>
+      <p>Scottsdale TMS Therapy: Expert treatment-resistant depression care. Discover FDA-cleared TMS &amp; personalized plans with licensed clinicians. Contact us.</p>
+      <ul><li>Choosing a Treatment Resistant Depression Specialist Scottsdale</li><li>Key Takeaways</li><li>What Is Treatment-Resistant Depression?</li><li>What “Treatment-Resistant” Really Means</li><li>Signs It’s Time to Seek Specialized Care</li><li>Getting a Diagnosis: What to Expect</li><li>Clearing Up Common Myths About TRD</li><li>How to Choose a TRD Specialist in Scottsdale</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Treatment-Resistant Depression Psychiatrist: Expert Care &amp; Advanced Options | Scottsdale TMS Therapy</h4>
+      <a href="https://scottsdaletmstherapy.com/treatment-resistant-depression-psychiatrist/">https://scottsdaletmstherapy.com/treatment-resistant-depression-psychiatrist/</a>
+      <p>Scottsdale TRD psychiatrist: Advanced TMS &amp; Spravato care for treatment-resistant depression. Contact Scottsdale TMS Therapy today.</p>
+      <ul><li>What a Treatment Resistant Depression Psychiatrist Does</li><li>Key Takeaways</li><li>What Is Treatment-Resistant Depression?</li><li>How It Differs from Major Depression</li><li>How Is TRD Diagnosed?</li><li>How Can a Psychiatrist Help with TRD?</li><li>Providing a Comprehensive Diagnosis</li><li>Managing Your Medication Plan</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Non-Invasive Depression Treatment Arizona</h4>
+      <a href="https://scottsdaletmstherapy.com/">https://scottsdaletmstherapy.com/</a>
+      <p>Scottsdale TMS Therapy: FDA-cleared TMS &amp; Spravato for depression, anxiety. Personalized care. Book consultation.</p>
+      <ul><li>Scottsdale&#x27;s Premier Center for TMS &amp; Spravato Treatment</li><li>TMS Therapy</li><li>Spravato</li><li>Med Management</li><li>5-Star Rating</li><li>FDA-Cleared</li><li>Licensed Medical &amp; Clinical</li><li>Excellent Success Rate</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>What Is rTMS Therapy? | Scottsdale TMS Therapy</h4>
+      <a href="https://scottsdaletmstherapy.com/rtms/">https://scottsdaletmstherapy.com/rtms/</a>
+      <p>Scottsdale TMS Therapy: Explore non-invasive rTMS for depression &amp; anxiety. FDA-cleared treatment. Contact us to learn more and start healing.</p>
+      <ul><li>Repetitive Transcranial Magnetic Stimulation (rTMS)</li><li>Repetitive Transcranial Magnetic Stimulation (rTMS)</li><li>Questions Answered in This Article:</li><li>Our Treatment Centers</li><li>Scottsdale Rehab</li><li>Hart Rehab</li><li>Scottsdale Detox</li><li>Take the first step towards healing with rTMS.</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Special Offers for TMS &amp; Mental Health Treatment in Scottsdale, AZ | Scottsdale TMS Therapy</h4>
+      <a href="https://scottsdaletmstherapy.com/offer/">https://scottsdaletmstherapy.com/offer/</a>
+      <p>Scottsdale TMS Therapy: FDA-cleared TMS &amp; Spravato for depression/anxiety. Personalized care in a serene spa setting. Contact us for a consultation.</p>
+      <ul><li>Offer</li><li>Request a Consultation</li><li>What is TMS Therapy?</li><li>Benefits of TMS Therapy</li><li>How Scottsdale TMS Therapy Works</li><li>Request a Consultation for TMS Therapy</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Contact Us | Scottsdale TMS Therapy</h4>
+      <a href="https://scottsdaletmstherapy.com/contact/">https://scottsdaletmstherapy.com/contact/</a>
+      <p>Contact Scottsdale TMS Therapy for personalized depression and anxiety treatment in Scottsdale, AZ. Book your consultation today with our licensed clinicians.</p>
+      <ul><li>Contact Us</li><li>Speak with a TMS Specialist Today</li><li>Get Started Today</li><li>Speak with a TMS Specialist Today</li><li>Get Started Today</li><li>Need Help with a Specific Question?</li><li>Referral Requests</li><li>Media &amp; PR</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Gallery: Facility Tour &amp; Environment | Scottsdale TMS Therapy</h4>
+      <a href="https://scottsdaletmstherapy.com/gallery/">https://scottsdaletmstherapy.com/gallery/</a>
+      <p>Explore Scottsdale TMS Therapy&#x27;s serene facility through our gallery. See our calming spa-inspired environment designed for your healing. Contact us today.</p>
+      <ul><li>Scottsdale TMS Clinic Images</li><li>Request a Consultation</li><li>Our Treatment Environment</li><li>Understanding TMS Therapy</li><li>Patient Testimonials</li><li>Emergency Support Resources</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>What is the TMS Dip? Understanding Symptoms &amp; Coping Strategies | Scottsdale TMS Therapy</h4>
+      <a href="https://scottsdaletmstherapy.com/tms-dip/">https://scottsdaletmstherapy.com/tms-dip/</a>
+      <p>Understand the TMS dip: symptoms, duration, and coping strategies for transcranial magnetic stimulation treatment.</p>
+      <ul><li>What is TMS Dip in TMS Therapy?</li><li>Questions Answered in This Article:</li><li>Our Alcohol Addiction Treatment Programs</li><li>Scottsdale Rehab</li><li>Hart Rehab</li><li>Scottsdale Detox</li><li>Don’t let depression hold the remote to your life.</li><li>Take back control with TMS Therapy.</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Deep TMS Therapy for Depression &amp; Anxiety in Scottsdale, AZ | Scottsdale TMS Therapy</h4>
+      <a href="https://scottsdaletmstherapy.com/deep-tms/">https://scottsdaletmstherapy.com/deep-tms/</a>
+      <p>Scottsdale TMS Therapy offers Deep TMS therapy in Scottsdale, AZ. Explore this FDA-cleared, non-invasive treatment for depression and anxiety. Contact us today.</p>
+      <ul><li>Deep TMS: How Does Deep TMS Work?</li><li>Deep TMS</li><li>Questions Answered in This Article:</li><li>Our Treatment Centers</li><li>Scottsdale Rehab</li><li>Hart Rehab</li><li>Scottsdale Detox</li><li>Improve your quality of life with TMS.</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Depression &amp; Anxiety Treatment in Scottsdale, AZ | Scottsdale TMS Therapy</h4>
+      <a href="https://scottsdaletmstherapy.com/home-old/">https://scottsdaletmstherapy.com/home-old/</a>
+      <p>Scottsdale TMS Therapy: Advanced depression &amp; anxiety treatment with TMS, Spravato, &amp; medication management. Licensed care. Contact us.</p>
+      <ul><li>Scottsdale&#x27;s Premier Center for Mental Health Treatment</li><li>5-Star Rating</li><li>FDA Approved</li><li>Masters-Level Therapists</li><li>68% Success Rate</li><li>About Our Team</li><li>TMS Therapy for Depression</li><li>Non-Invasive &amp; Safe</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Spravato Treatment for Depression in Scottsdale, AZ | Scottsdale TMS Therapy</h4>
+      <a href="https://scottsdaletmstherapy.com/offer/sp/">https://scottsdaletmstherapy.com/offer/sp/</a>
+      <p>Scottsdale TMS Therapy offers FDA-approved Spravato for treatment-resistant depression in Scottsdale, AZ. Get rapid relief. Contact us.</p>
+      <ul><li>Rapid Relief From Depression With FDA- Approved Depression Treatment</li><li>5-Star Rated</li><li>Fast-Acting</li><li>Board-Certified</li><li>Insurance</li><li>REMS Certified</li><li>FDA Approved</li><li>Board-Certified Psychiatrists</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Spravato Treatment for Depression in Scottsdale, AZ | Scottsdale TMS Therapy</h4>
+      <a href="https://scottsdaletmstherapy.com/spravato/">https://scottsdaletmstherapy.com/spravato/</a>
+      <p>Scottsdale TMS Therapy offers Spravato for treatment-resistant depression in Scottsdale, AZ. Get rapid relief with FDA-cleared esketamine nasal spray. Contact</p>
+      <ul><li>Rapid Relief From Depression With Spravato</li><li>5-Star Rated</li><li>Fast-Acting</li><li>Board-Certified</li><li>Insurance</li><li>REMS Certified</li><li>FDA-approved</li><li>Board-Certified Psychiatrists</li></ul>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Full Style System</h2>
+          <details open><summary>Show style-system sections</summary>
+    <details class="style-section">
+      <summary>Scottsdale TMS Therapy — Style System</summary>
+      <div class="markdown"><p>Generated: 2026-06-08<br>Sources: raw/knowledge/overview.md<br>Base rules: universal-rules/UNIVERSAL-RULES.md</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>1. Brand &amp; Audience</summary>
+      <div class="markdown"><p>Scottsdale TMS Therapy is a TMS and psychiatric treatment clinic in Scottsdale, Arizona. The clinic offers FDA-cleared TMS therapy, FDA-approved Spravato (esketamine), psychiatric medication management, and therapy services. It operates as a standalone mental health clinic under Scottsdale TMS LLC.</p><p>Website: https://scottsdaletmstherapy.com</p><p>**What Scottsdale TMS Therapy is:**<br><li>A specialist mental health clinic focused on TMS, Spravato, and psychiatric care</li><br><li>A provider of evidence-based, non-invasive treatment options for depression, anxiety, and OCD</li><br><li>A REMS-certified Spravato treatment center</li><br><li>An in-clinic, medically supervised treatment facility</li></ul><p>**What Scottsdale TMS Therapy is NOT — never position as:**<br><li>A detox or substance use treatment facility</li><br><li>A crisis center or emergency psychiatric service</li><br><li>An outpatient program or IOP (do not reference sister entities)</li><br><li>A general-purpose mental health platform or telehealth service</li></ul><p>**Target audience:**</p><p>| Segment | Content angle |<br>|---|---|<br>| Adults with treatment-resistant depression | Clinical precision; explain what TMS is, how it works, what to expect; realistic framing |<br>| Adults with depression, anxiety, OCD who haven&#x27;t tried TMS | Education-first; dispel misconceptions; safety profile; non-invasive nature |<br>| Patients already on medication seeking alternatives or additions | &quot;Drug-free alternative&quot; framing for TMS; TMS + medication coexistence |<br>| Family members or caregivers | Accessible explanation; what the process looks like; how to support the patient |<br>| Referring clinicians | Clinical accuracy; evidence base; procedure protocols; REMS compliance for Spravato |</p><p>**Geographic focus:** Scottsdale, AZ; greater Phoenix metro area.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2. Brand Voice &amp; Tone</summary>
+      <div class="markdown"><p>**Tagline:** &quot;Scottsdale&#x27;s Premier Center for TMS &amp; Spravato Treatment&quot;</p><p>Voice: professional, evidence-based, and encouraging while remaining realistic about treatment outcomes. Clinical authority is paired with approachability. The clinic describes its approach as &quot;compassionate, collaborative, and empowering.&quot;</p><p>Confirmed brand phrases (cleared for use):<br><li>&quot;Clear, collaborative, and centered on you&quot;</li><br><li>&quot;Compassion, respect, and transparency&quot;</li><br><li>&quot;Comprehensive care with in-house licensed providers&quot;</li><br><li>&quot;Minimal side effects&quot;</li><br><li>&quot;Drug-free alternative options&quot; (used when positioning TMS as a non-pharmaceutical treatment path)</li></ul><p>| Attribute | Rule |<br>|---|---|<br>| Evidence-based | Anchor claims to how TMS or Spravato works mechanistically. Describe outcomes with appropriate qualification. |<br>| Encouraging | Acknowledge the difficulty of treatment-resistant depression; affirm that other options exist. |<br>| Realistic | Do not overstate results. &quot;Significantly reduces depressive symptoms in many patients&quot; — not &quot;eliminates&quot; or &quot;cures.&quot; |<br>| Clinical | Use correct medical terminology; no infantilizing or oversimplifying. |<br>| Approachable | Avoid unnecessary jargon when writing for patients; explain mechanisms plainly. |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.1 Voice in practice</summary>
+      <div class="markdown"><p>Do this:<br><li>&quot;TMS uses magnetic pulses to stimulate nerve cells in the prefrontal cortex, a region of the brain that is underactive in people with depression.&quot;</li><br><li>&quot;For patients who have not responded to antidepressants, TMS provides a non-pharmaceutical option with a strong safety profile.&quot;</li><br><li>&quot;Dr. Michael Vines, our board-certified medical director, oversees treatment planning and ensures each protocol is tailored to the individual patient.&quot;</li></ul><p>Not this:<br><li>&quot;TMS is a game-changing, revolutionary treatment that will transform your mental health.&quot; — banned language; implied guarantee</li><br><li>&quot;Our cutting-edge, holistic approach offers seamless psychiatric care.&quot; — anti-slop list violations</li><br><li>&quot;TMS cures depression for most patients.&quot; — outcome guarantee; unconfirmed</li><br><li>&quot;FDA-approved TMS therapy&quot; — regulatory error (TMS is cleared, not approved)</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.2 Sentence and paragraph rules</summary>
+      <div class="markdown"><p><li>Paragraphs: 2–4 lines maximum. One idea per sentence.</li><br><li>First sentence of every section directly answers the heading.</li><br><li>Lead with the mechanism or clinical outcome; follow with the process details.</li><br><li>Do not use em dashes. Restructure or use a period.</li><br><li>Do not start sections or paragraphs with a hyperlink.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.3 Anti-slop banned list</summary>
+      <div class="markdown"><p>The following terms are banned at warning level in all content:</p><p>utilize, leverage, robust, seamless, comprehensive (as puff), cutting-edge, holistic (as puff), synergy, transformative, innovative, game-changing, revolutionary</p><p>When any of these appears in a draft, replace with a specific mechanism, capability, or outcome.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3. Regulatory Language — Critical Rules</summary>
+      <div class="markdown"><p>These rules are compliance-critical. A violation in this section is a pipeline failure.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.1 TMS: &quot;FDA-cleared&quot; only</summary>
+      <div class="markdown"><p>TMS is **FDA-cleared** — not &quot;FDA-approved.&quot; These are distinct regulatory designations. &quot;Cleared&quot; applies to medical devices via 510(k) pathway; &quot;approved&quot; applies to drugs via NDA/BLA pathway. Using &quot;FDA-approved&quot; for TMS is a factual regulatory error.</p><p>| Correct | Never write |<br>|---|---|<br>| &quot;FDA-cleared TMS therapy&quot; | &quot;FDA-approved TMS therapy&quot; |<br>| &quot;FDA-cleared for depression, OCD, and anxiety&quot; | &quot;FDA-approved for depression&quot; (re: TMS) |</p><p>Spravato (esketamine) is **FDA-approved** — use that term specifically for Spravato.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.2 No outcome guarantees</summary>
+      <div class="markdown"><p>Never guarantee treatment outcomes. No form of guarantee language is acceptable.</p><p>| Acceptable | Never write |<br>|---|---|<br>| &quot;Significantly reduces depressive symptoms in many patients&quot; | &quot;Cures depression&quot; |<br>| &quot;Many patients experience meaningful reduction in symptoms&quot; | &quot;Eliminates depression&quot; |<br>| &quot;TMS may reduce anxiety symptoms&quot; | &quot;Resolves anxiety&quot; |<br>| &quot;Results vary by individual&quot; | &quot;Guaranteed results&quot; |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.3 No invented success rates</summary>
+      <div class="markdown"><p>No specific success rate, response rate, or remission percentage has been confirmed from the site. Do not state any numeric figure. The approved qualifier for outcomes is: &quot;significantly reduces depressive symptoms in many patients&quot; or equivalent qualified language.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.4 &quot;Treatment-resistant depression&quot; — clinical term</summary>
+      <div class="markdown"><p>&quot;Treatment-resistant depression&quot; is an established clinical term meaning the patient has not responded to at least one (and commonly two or more) adequate antidepressant trials. Use it only in the correct clinical context. Do not apply it loosely to all patients seeking help with depression.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.5 Spravato: REMS and in-clinic administration</summary>
+      <div class="markdown"><p>Every piece of content discussing Spravato must note:<br>1. Spravato is FDA-approved (correct term for Spravato)<br>2. The clinic is REMS-certified for Spravato<br>3. Spravato is administered in-clinic under medical supervision — not self-administered at home</p><p>The REMS program (Risk Evaluation and Mitigation Strategy) is an FDA requirement for Spravato. It mandates in-clinic-only administration and patient monitoring. This is not optional — it must be noted whenever Spravato is discussed substantively.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.6 &quot;Drug-free alternative&quot; — scope</summary>
+      <div class="markdown"><p>&quot;Drug-free alternative&quot; or &quot;non-pharmaceutical option&quot; refers to the TMS procedure itself being non-medication-based. It does not mean TMS replaces all medications for all patients. Some patients use TMS alongside ongoing psychiatric medications. Do not imply TMS requires discontinuing medication.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.7 Crisis situations</summary>
+      <div class="markdown"><p>The 988 Suicide and Crisis Lifeline is referenced on the clinic&#x27;s site. TMS and Spravato are not emergency or crisis interventions. Every blog post and mental health content piece must include a reference to 988 for crisis situations. Do not imply that contacting the clinic is appropriate for acute psychiatric crises.</p><p>Required crisis note: &quot;If you are in crisis, call or text 988.&quot;</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.8 Staff credentials — exact usage</summary>
+      <div class="markdown"><p>Use credentials exactly as confirmed. Do not add, change, or omit designations.</p><p>| Staff member | Confirmed credentials | Use exactly |<br>|---|---|---|<br>| Dr. Michael Vines | Medical Director; MD; board-certified psychiatry; 25+ years experience | &quot;Dr. Michael Vines, MD, board-certified psychiatrist with 25+ years of experience&quot; |<br>| Alyssa Gentile | Medical Provider; PMHNP-BC, MSN | &quot;Alyssa Gentile, PMHNP-BC, MSN&quot; |<br>| Sarah Ann Nguyen | Director of Compliance; Clinical Therapist; MS, LPC | &quot;Sarah Ann Nguyen, MS, LPC&quot; |</p><p>The site also references unnamed licensed psychiatrists, psychiatric nurse practitioners, licensed therapists, and TMS technicians. These may be acknowledged generically. Do not invent names or titles.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.9 No cross-promotion with sister entities</summary>
+      <div class="markdown"><p>Scottsdale TMS Therapy is a standalone mental health clinic. Do not reference The Hope House, Arizona IOP, Scottsdale Detox, or any affiliated entity. Content must treat this clinic as a fully independent practice.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.10 TMS side effects — seizure risk required</summary>
+      <div class="markdown"><p>When listing TMS side effects in educational content, the full confirmed side effect list must include seizure risk. Omitting seizure risk from a side effects list is a compliance failure.</p><p>Confirmed side effects:<br><li>Scalp discomfort</li><br><li>Headaches</li><br><li>Lightheadedness</li><br><li>Muscle twitching</li><br><li>Seizures (rare; higher risk in patients with seizure or epilepsy history)</li></ul><p>Seizure risk is rare but must not be omitted. It may be noted as &quot;rare&quot; — but it must appear.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.11 Cost range — required qualifiers</summary>
+      <div class="markdown"><p>The confirmed cost range is $2,000–$12,000. When this figure is referenced:<br><li>Always note &quot;per full course&quot; (not per session)</li><br><li>Always note that insurance coverage varies</li><br><li>Note that major insurers increasingly recognize TMS benefits</li></ul><p>Approved phrasing: &quot;A full course of TMS therapy typically ranges from $2,000 to $12,000. Insurance coverage varies — many major insurers now recognize TMS as a covered benefit.&quot;</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4. Services Reference</summary>
+      <div class="markdown"><p>| Service | Key facts |<br>|---|---|<br>| TMS Therapy | FDA-cleared; non-invasive; no anesthesia; 20–40 min/session; 5 days/week; 4–6 weeks; 30–36 sessions total |<br>| Spravato (esketamine) | FDA-approved; nasal spray; in-clinic only; REMS-certified; 1–2 sessions/week; rapid-acting |<br>| Psychiatric Medication Management | Evaluation, personalized treatment plan, ongoing monitoring, adjustments; integrates therapy, nutrition, exercise, mindfulness |<br>| Therapy Services | Master&#x27;s-level licensed counselors |</p><p>**Conditions treated:** Major Depressive Disorder, Treatment-Resistant Depression, Anxiety Disorders, OCD, Generalized Anxiety Disorder, Late-Life Depression.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5. Unique Value Propositions</summary>
+      <div class="markdown"><p>| UVP | What it means |<br>|---|---|<br>| Specialist focus | Dedicated TMS and Spravato center; not a general psychiatry practice |<br>| Medical director oversight | Dr. Vines, MD, board-certified psychiatrist with 25+ years of experience, leads clinical care |<br>| REMS-certified Spravato | Meets FDA&#x27;s stringent in-clinic safety requirements for esketamine administration |<br>| Non-invasive option | TMS requires no anesthesia, no medication, no surgery — an evidence-based alternative path |<br>| Integrated psychiatric care | In-house licensed providers span TMS, medication management, and therapy — coordinated under one clinic |<br>| 5-star patient reviews | Documented patient satisfaction on file |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6. Page Templates</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6.1 Blog posts</summary>
+      <div class="markdown"><p>Target length: 800–1,500 words.</p><p>Structure:<br>1. Meta title (55–60 characters): primary keyword near front<br>2. Meta description (140–160 characters): primary keyword, outcome, clinic name<br>3. 3 primary keywords defined<br>4. H1: direct, keyword-forward; answers the patient&#x27;s question<br>5. Short intro (2–3 sentences): state the problem and what the piece covers<br>6. H2 sections: each covering a distinct clinical question; first sentence answers the heading<br>7. H3 for subsections<br>8. Closing CTA: include phone number (480) 841-9279, consultation invitation, and the 988 crisis note<br>9. Regulatory check required before publishing (see §3)</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6.2 Service pages</summary>
+      <div class="markdown"><p>Structure:<br>1. H1: primary keyword; outcome-forward framing; never a guarantee<br>2. What it is (2–4 sentences): mechanism-first explanation<br>3. Who it is for (2–4 sentences): clinical indication; avoid applying &quot;treatment-resistant&quot; loosely<br>4. What to expect (process, protocol details)<br>5. Safety profile (side effects — seizure risk must appear when TMS side effects are listed)<br>6. Trust signals (Dr. Vines credentials; REMS certification where applicable)<br>7. CTA: phone, consultation link, 988 crisis note</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>7. SEO Standards</summary>
+      <div class="markdown"><p><li>Primary keyword in the first sentence of body content.</li><br><li>Title tags: under 60 characters, primary keyword near the front.</li><br><li>Meta descriptions: 140–160 characters, primary keyword, at least one clinical outcome or use case.</li><br><li>Local terms: &quot;Scottsdale,&quot; &quot;Scottsdale AZ,&quot; &quot;Phoenix area&quot; as supporting terms.</li><br><li>Entity terms to prioritize: &quot;TMS therapy Scottsdale,&quot; &quot;Spravato Scottsdale,&quot; &quot;TMS for depression,&quot; &quot;treatment-resistant depression treatment,&quot; &quot;transcranial magnetic stimulation&quot;</li><br><li>Do not keyword-stuff treatment names — use them where they fit naturally.</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>8. Trust Signals</summary>
+      <div class="markdown"><p>Use these in content where establishing clinical authority is relevant. Do not manufacture additional signals.</p><p>| Trust signal | Usage |<br>|---|---|<br>| &quot;FDA-cleared TMS therapy&quot; | Establish regulatory standing for TMS — never &quot;FDA-approved&quot; for TMS |<br>| &quot;FDA-approved Spravato&quot; | Correct term for Spravato |<br>| &quot;REMS-certified program&quot; | Required when discussing Spravato |<br>| &quot;Dr. Michael Vines, MD, board-certified psychiatrist with 25+ years of experience&quot; | Medical director authority signal |<br>| &quot;5-star patient reviews&quot; | Social proof; do not fabricate specific review quotes |<br>| &quot;Scottsdale&#x27;s Premier Center for TMS &amp; Spravato Treatment&quot; | Tagline; approved for use in brand-level content |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>9. Pre-Publish Checklist</summary>
+      <div class="markdown"><p>| Check | Requirement |<br>|---|---|<br>| FDA terminology | TMS: &quot;FDA-cleared&quot; only. Spravato: &quot;FDA-approved.&quot; Never swap. |<br>| Outcome language | No guarantees, cures, or percentage claims. &quot;Significantly reduces in many patients.&quot; |<br>| Success rates | None stated — no numeric figures |<br>| Treatment-resistant | Used only for patients with confirmed prior treatment failure |<br>| Spravato content | REMS certification and in-clinic-only administration noted |<br>| TMS side effects | Full list including seizure risk (noted as rare) — never omitted |<br>| Cost range | &quot;$2,000–$12,000 per full course. Insurance coverage varies.&quot; |<br>| Staff credentials | Exact credentials only — no additions or substitutions |<br>| Crisis note | 988 referenced in closing CTA |<br>| Sister entities | No mention of The Hope House, Arizona IOP, Scottsdale Detox |<br>| Anti-slop | No terms from the banned list in §2.3 |<br>| Em dashes | Zero em dashes in the piece |<br>| Meta fields | Title (55–60 chars), description (140–160 chars), 3 keywords defined |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>10. Key Facts at a Glance</summary>
+      <div class="markdown"><p>| Detail | Value |<br>|---|---|<br>| Entity | Scottsdale TMS LLC |<br>| Website | scottsdaletmstherapy.com |<br>| Phone | (480) 841-9279 |<br>| Address | 7287 E Earll Drive, Suite 1, Scottsdale, AZ 85251 |<br>| Email | contact@scottsdaletmstherapy.com |<br>| Hours | 8:00 AM – 8:00 PM |<br>| Medical Director | Dr. Michael Vines, MD — board-certified psychiatry, 25+ years experience |<br>| TMS regulatory status | FDA-cleared (depression, OCD, anxiety) |<br>| Spravato regulatory status | FDA-approved |<br>| Spravato certification | REMS-certified program |<br>| TMS cost range | $2,000–$12,000 per full course (insurance varies) |<br>| TMS session length | 20–40 minutes |<br>| TMS frequency | 5 days/week, 4–6 weeks, 30–36 sessions total |<br>| Crisis line | 988 (call or text) |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>11. Approved Content Examples</summary>
+      <div class="markdown"><p>Published content lives in `_approved/`. No approved pieces added at onboarding. Add to this directory as the team signs off pieces.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>12. Operator Notes</summary>
+      <div class="markdown"><p>*Section for team-specific additions. Use `### {Operator} — {scope}` headings. Promote a note to the main numbered sections once it has been reinforced across two or more pieces.*</p></div>
+    </details>
+    </details>
+        </section>
+        <section class="panel">
+          <h2>Local Source Files Read</h2>
+          <ul><li><code>clients/the-hope-house/scottsdaletmstherapy/STYLE-SYSTEM.md</code> — Scottsdale TMS Therapy — Style System</li>
+<li><code>clients/the-hope-house/scottsdaletmstherapy/client-intelligence/README.md</code> — Scottsdale TMS Therapy Client Intelligence</li>
+<li><code>clients/the-hope-house/scottsdaletmstherapy/client-intelligence/STYLE-GUIDE.md</code> — Scottsdale TMS Therapy — Style System</li>
+<li><code>clients/the-hope-house/scottsdaletmstherapy/client-intelligence/offerings.md</code> — Scottsdale TMS Therapy Offerings</li>
+<li><code>clients/the-hope-house/scottsdaletmstherapy/client-intelligence/source-files.md</code> — Scottsdale TMS Therapy Source Files</li>
+<li><code>clients/the-hope-house/scottsdaletmstherapy/contact-block.md</code> — Contact block — Scottsdale TMS Therapy</li>
+<li><code>clients/the-hope-house/scottsdaletmstherapy/deliverables/README.md</code> — Scottsdale TMS Therapy Deliverables</li>
+<li><code>clients/the-hope-house/scottsdaletmstherapy/raw/knowledge/overview.md</code> — Scottsdale TMS Therapy — Client Overview</li>
+<li><code>clients/the-hope-house/scottsdaletmstherapy/raw/knowledge/service-taxonomy.md</code> — Scottsdale TMS Therapy Service Taxonomy</li></ul>
+        </section>
+      </main>
+    </section>
+    </body>
+</html>

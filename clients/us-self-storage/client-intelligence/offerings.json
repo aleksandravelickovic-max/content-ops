@@ -1,0 +1,111 @@
+{
+  "client": "us-self-storage",
+  "display_name": "US Self Storage",
+  "generated_at": "2026-07-14T15:59:27.929146+00:00",
+  "offerings": [
+    {
+      "name": "Boat storage",
+      "description": "Storage options for boats and related trailers.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/us-self-storage/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Storage types (confirmed)",
+        "Storage Types"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Car storage",
+      "description": "Storage options for cars depending on facility availability.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/us-self-storage/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Storage types (confirmed)",
+        "Storage Types"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Climate-controlled storage",
+      "description": "Storage units with temperature or humidity control where available.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/us-self-storage/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Storage types (confirmed)",
+        "Storage Types"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Drive-up access units",
+      "description": "Ground-level storage units with direct vehicle access.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/us-self-storage/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Storage types (confirmed)",
+        "Storage Types"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Month-to-month rentals",
+      "description": "Flexible rental terms for storage users who do not need long contracts.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/us-self-storage/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Storage types (confirmed)",
+        "Storage Types"
+      ],
+      "score": 9
+    },
+    {
+      "name": "RV storage",
+      "description": "Storage options for recreational vehicles.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/us-self-storage/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Storage types (confirmed)",
+        "Storage Types"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Standard self-storage",
+      "description": "General storage units for personal or business storage needs.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/us-self-storage/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Storage types (confirmed)",
+        "Storage Types"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Vehicle Storage",
+      "description": "Broader category covering cars, RVs, boats, and similar vehicles.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/us-self-storage/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Storage types (confirmed)",
+        "Storage Types"
+      ],
+      "score": 9
+    }
+  ]
+}

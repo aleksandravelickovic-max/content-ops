@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find Self Storage Context</title>
+  <style>
+    :root {
+      --bg:#f4f7f5; --panel:#ffffff; --ink:#09110f; --muted:#63716c; --line:#dce5df;
+      --black:#050907; --graph:#14d878; --graph-dark:#079d55; --soft:#eaf8f0; --soft-ink:#19392a;
+      --accent:#087a47; --red:#b5362d; --shadow:0 18px 46px rgba(5,9,7,.08);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:
+      linear-gradient(180deg, #ffffff 0, var(--bg) 360px); color:var(--ink); line-height:1.45; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .topnav { min-height:64px; padding:14px max(32px, calc((100vw - 1380px) / 2 + 32px)); background:var(--black); border-bottom:1px solid rgba(255,255,255,.08); position:sticky; top:0; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { color:#fff; display:inline-flex; align-items:center; gap:10px; font-weight:800; letter-spacing:0; }
+    .brand:hover { text-decoration:none; }
+    .brand span { width:32px; height:32px; border-radius:8px; background:var(--graph); color:var(--black); display:inline-grid; place-items:center; font-size:13px; font-weight:900; }
+    .nav-meta, .nav-link { color:#b8c6c0; font-size:13px; font-weight:700; }
+    .hero { margin:0; padding:42px max(32px, calc((100vw - 1380px) / 2 + 32px)) 38px; background:var(--black); color:#fff; border-bottom:1px solid rgba(255,255,255,.08); }
+    .index-hero, .client-hero { display:flex; justify-content:space-between; gap:28px; align-items:flex-start; }
+    .hero h1 { margin:0 0 12px; font-size:clamp(32px, 5vw, 62px); line-height:.98; letter-spacing:0; max-width:900px; }
+    .hero p { margin:0; color:#c7d5cf; max-width:840px; font-size:17px; }
+    .hero-copy { max-width:940px; }
+    .kicker { color:var(--graph); font-size:12px; text-transform:uppercase; letter-spacing:.08em; font-weight:900; }
+    .report-meta { display:flex; flex-wrap:wrap; gap:10px; padding:14px 32px; background:#fff; border-bottom:1px solid var(--line); color:var(--muted); font-size:13px; max-width:1380px; margin:0 auto; }
+    .report-meta span { background:var(--soft); color:var(--soft-ink); border-radius:999px; padding:6px 10px; font-weight:700; }
+    .grid.cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(290px, 1fr)); gap:16px; padding:24px 32px 42px; max-width:1380px; margin:0 auto; }
+    .card, .panel, .context-card { background:var(--panel); border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow); }
+    .client-card { display:block; padding:20px; color:inherit; min-height:184px; transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease; }
+    .client-card:hover { text-decoration:none; transform:translateY(-2px); border-color:rgba(20,216,120,.55); box-shadow:0 24px 58px rgba(5,9,7,.12); }
+    .card-topline { display:flex; justify-content:space-between; gap:10px; align-items:center; }
+    .client-card h2 { margin:14px 0 8px; font-size:23px; line-height:1.1; }
+    .client-card p { margin:0; color:var(--muted); }
+    .metrics { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+    .metrics span, .evidence, .status-pill { background:var(--soft); border:1px solid rgba(20,216,120,.22); border-radius:999px; padding:5px 9px; font-size:12px; color:var(--soft-ink); font-weight:800; }
+    .topic-chips { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 18px; }
+    .topic-chips span { background:#f6fbf8; border:1px solid var(--line); border-radius:999px; color:#183a2a; padding:7px 10px; font-size:13px; font-weight:750; }
+    .layout { display:block; padding:22px 32px 46px; max-width:1380px; margin:0 auto; }
+    main { min-width:0; }
+    .context-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; margin-bottom:20px; }
+    .context-card { padding:18px; min-height:220px; }
+    .context-card ul { margin-bottom:0; }
+    .context-note { color:var(--muted); font-size:13px; margin:4px 0 12px; }
+    .aside-label { color:var(--graph-dark); font-size:11px; text-transform:uppercase; font-weight:900; letter-spacing:.08em; margin-bottom:5px; }
+    .panel h2 { margin-top:0; }
+    .panel { padding:22px; margin-bottom:20px; }
+    .panel h2 { font-size:26px; letter-spacing:0; }
+    .offerings { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:13px; margin-top:16px; }
+    .offering, .sample { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .offering { position:relative; overflow:hidden; }
+    .offering-marker { position:absolute; inset:0 auto 0 0; width:4px; background:var(--graph); }
+    .offering h3, .sample h4 { margin:0 0 6px; }
+    .offering p { margin:0 0 10px; }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .stat-stack { display:grid; grid-template-columns:repeat(3, minmax(100px, 1fr)); gap:8px; min-width:340px; }
+    .stat-stack div { border:1px solid rgba(255,255,255,.15); border-radius:8px; padding:14px; background:rgba(255,255,255,.06); }
+    .stat-stack strong { display:block; font-size:26px; color:#fff; }
+    .stat-stack span, .muted { color:var(--muted); font-size:13px; }
+    .hero .stat-stack span { color:#b8c6c0; }
+    ul { padding-left:20px; }
+    li { margin:4px 0; }
+    code { background:var(--soft); color:var(--soft-ink); padding:2px 4px; border-radius:4px; }
+    details { margin:10px 0; }
+    summary { cursor:pointer; font-weight:700; }
+    .style-section { border-top:1px solid var(--line); padding-top:10px; }
+    .markdown { color:#2d2f35; }
+    @media (max-width: 980px) {
+      .layout, .split, .client-hero, .index-hero { grid-template-columns:1fr; display:block; }
+      .context-grid { grid-template-columns:1fr; }
+      .stat-stack { min-width:0; margin-top:16px; }
+      .hero, .grid.cards, .layout, .topnav, .report-meta { padding-left:16px; padding-right:16px; }
+      .hero h1 { font-size:36px; }
+      .stat-stack { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+    <nav class="topnav">
+      <a class="brand" href="index.html"><span>LG</span>LinkGraph</a>
+      <a class="nav-link" href="index.html">All clients</a>
+    </nav>
+    <section class="hero client-hero">
+      <div class="hero-copy">
+        <div class="kicker">find-self-storage</div>
+        <h1>Find Self Storage</h1>
+        <p>13 extracted offerings, 1200 sitemap URLs, and 14 local source documents for client-specific writing context.</p>
+      </div>
+      <div class="stat-stack">
+        <div><strong>ok</strong><span>crawl status</span></div>
+        <div><strong>1200</strong><span>URLs found</span></div>
+        <div><strong>0</strong><span>product/service URLs</span></div>
+      </div>
+    </section>
+    <section class="layout">
+      <main>
+        <section class="context-grid">
+    <article class="context-card">
+      <div class="aside-label">Quick Facts</div>
+      <p class="context-note">Company, audience, and proof points.</p>
+      <ul><li>FindSelfStorage.com is a self-storage comparison marketplace and editorial resource. It aggregates 10,000+ storage facilities nationwide. Users search, compare, and reserve storage units online — no credit card required, no booking fee.</li><li>Critical platform fact: FindSelfStorage.com is a marketplace aggregator. It does not own, operate, or manage any storage facility. Every piece of content must maintain this distinction. See §4 for enforcement rules.</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Voice</div>
+      <p class="context-note">How this client should sound.</p>
+      <ul><li>Goal: Not this</li><li>Open a blog post: &quot;When it comes to packing a storage unit, efficiency and safety cannot be overstated.&quot;</li><li>Reference the platform: &quot;Our climate-controlled units keep your items safe&quot;</li><li>Describe pricing: &quot;Enjoy the lowest prices on storage&quot;</li><li>Reference facility count: &quot;Thousands of storage facilities&quot;</li><li>Describe reservation: &quot;Book now&quot;</li><li>Reference the site: &quot;FindSelfStorage.com owns and operates...&quot;</li><li>Client-stated register: Friendly, clear, and trustworthy. Focused on making storage simple, affordable, and stress-free. Practical and helpful language.</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Avoid / Compliance</div>
+      <p class="context-note">Claims, terms, and wording to avoid.</p>
+      <ul><li>Current site copy is NOT the voice model. The existing website copy is functional but stiff, keyword-stuffed, and impersonal. New content should be warmer and more direct while staying practical. See §4 for the accuracy constraints that must hold regardless of register.</li><li>Kill: Replace with</li><li>delve: explore, examine, look at</li><li>moreover: (delete — start the next sentence)</li><li>furthermore: (delete)</li><li>albeit: though, even though</li><li>indeed: (delete)</li><li>utilize: use</li><li>leverage (verb): use</li><li>facilitate: help, enable</li><li>robust: strong, reliable, solid</li><li>seamless: smooth, easy</li><li>comprehensive: full, complete, thorough</li><li>cutting-edge: modern, new, latest</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Terminology</div>
+      <p class="context-note">Client-specific naming and required language.</p>
+      <p class="muted">No clean lines extracted yet.</p>
+    </article>
+    </section>
+        <section class="panel">
+          <h2>Offerings, Services, Goods</h2>
+          <p class="muted">Writer-facing catalog from the client style system, approved source files, and usable product/service pages. Raw crawl evidence is separated below.</p>
+          <div class="offerings">
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>24-hour access storage</h3>
+      <p>Storage facilities or units that allow access outside standard office hours, when available.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/find-self-storage/raw/knowledge/service-taxonomy.md · Sections: Self storage types (confirmed on-site), Storage Types</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Boat storage</h3>
+      <p>Storage for boats and marine trailers, with facility-specific access and space limits.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/find-self-storage/raw/knowledge/service-taxonomy.md · Sections: Vehicle storage types (confirmed on-site), Storage Types</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Business storage</h3>
+      <p>Storage for business inventory, equipment, documents, or supplies.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/find-self-storage/raw/knowledge/service-taxonomy.md · Sections: Self storage types (confirmed on-site), Storage Types</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Car storage</h3>
+      <p>Vehicle storage for cars, with indoor, covered, or outdoor options depending on facility.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/find-self-storage/raw/knowledge/service-taxonomy.md · Sections: Vehicle storage types (confirmed on-site), Storage Types</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Climate-controlled storage</h3>
+      <p>Storage units with temperature or humidity control where facility features support it.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/find-self-storage/raw/knowledge/service-taxonomy.md · Sections: Self storage types (confirmed on-site), Storage Types</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Drive-up storage</h3>
+      <p>Ground-level units with direct vehicle access for loading and unloading.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/find-self-storage/raw/knowledge/service-taxonomy.md · Sections: Self storage types (confirmed on-site), Storage Types</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Motorcycle storage</h3>
+      <p>Storage options for motorcycles and small recreational vehicles.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/find-self-storage/raw/knowledge/service-taxonomy.md · Sections: Vehicle storage types (confirmed on-site), Storage Types</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>RV storage</h3>
+      <p>Storage for recreational vehicles, with size and coverage options depending on facility.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/find-self-storage/raw/knowledge/service-taxonomy.md · Sections: Vehicle storage types (confirmed on-site), Storage Types</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Student storage</h3>
+      <p>Short-term or seasonal storage for students between housing terms.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/find-self-storage/raw/knowledge/service-taxonomy.md · Sections: Self storage types (confirmed on-site), Storage Types</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Trailer storage</h3>
+      <p>Storage for utility trailers, travel trailers, and other towable vehicles.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/find-self-storage/raw/knowledge/service-taxonomy.md · Sections: Vehicle storage types (confirmed on-site), Storage Types</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Vehicle Storage</h3>
+      <p>Storage category for cars, RVs, boats, motorcycles, trailers, and similar vehicles.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/find-self-storage/raw/knowledge/service-taxonomy.md · Sections: Vehicle storage types (confirmed on-site), Storage Types</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Wine storage</h3>
+      <p>Specialized storage for wine where climate and facility features support it.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/find-self-storage/raw/knowledge/service-taxonomy.md · Sections: Self storage types (confirmed on-site), Storage Types</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Standard Self Storage</h3>
+      <p>General storage units for household, personal, or business belongings.</p>
+      <div class="evidence">Sources: clients/find-self-storage/raw/knowledge/service-taxonomy.md · Sections: Storage Types</div>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Website Intelligence</h2>
+          <div class="split">
+            <div>
+              <h3>Website URLs</h3><ul><li><a href="https://findselfstorage.com/">https://findselfstorage.com/</a></li></ul>
+              <h3>Sitemaps</h3><ul><li><a href="https://findselfstorage.com/sitemap.xml">https://findselfstorage.com/sitemap.xml</a></li><li><a href="https://findselfstorage.com/sitemaps/self-storage.xml">https://findselfstorage.com/sitemaps/self-storage.xml</a></li></ul>
+            </div>
+            <div>
+              <h3>Semantic / Topical Terms</h3><div class="topic-chips"><span>Boat Storage</span><span>Business Storage</span><span>Car Storage</span><span>Climate-Controlled Storage</span><span>Drive-Up Storage</span><span>Motorcycle Storage</span><span>RV storage</span><span>Student Storage</span><span>Trailer Storage</span><span>Vehicle Storage</span><span>Wine Storage</span><span>Standard Self Storage</span><span>Storage Facilities</span></div>
+              <h3>Blockers</h3><p class="muted">None</p>
+            </div>
+          </div>
+          <h3>Product / Service URLs</h3><p class="muted">No product/service URLs classified from sitemap paths.</p>
+          <h3>Sampled Pages</h3><div class="sample-pages">
+    <article class="sample">
+      <h4>Self Storage Units Near You | Compare Storage Prices and Reserve</h4>
+      <a href="https://findselfstorage.com/">https://findselfstorage.com/</a>
+      <p>Find storage units near you. Compare prices, check availability, and reserve online. Search by city, ZIP code, neighborhood, or university area to find the best storage deals near you.</p>
+      <ul><li>Find Storage Units Near You</li><li>Storage Units Available Near You</li><li>Compare Storage Units Near You</li><li>Storage Units Available Near You</li><li>Best Value Storage Unit</li><li>Lowest Price Storage Unit</li><li>Most Popular Storage Unit</li><li>Climate Controlled Storage Unit</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Self Storage in Arab, Alabama | Compare Prices &amp; Reserve Online</h4>
+      <a href="https://findselfstorage.com/self-storage-arab-alabama">https://findselfstorage.com/self-storage-arab-alabama</a>
+      <p>Compare self storage in Arab, Alabama. View today&#x27;s prices, available storage units, climate-controlled storage, drive-up units, vehicle storage, and reserve online from nearby Dallas storage facilities.</p>
+      <ul><li>Self Storage in Arab, Alabama</li><li>Storage Units Available Now in Arab</li><li>Compare storage units in Arab, check prices, and reserve in minutes. Find the best deals on units near you.</li><li>Storage Units Available Now in Arab</li><li>Storage Units Available Now in Arab</li><li>Arab Storage Availability</li><li>Explore Arab Storage Units by Price, Size &amp; Features</li><li>Why Search Multiple Arab Storage Facilities?</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Self Storage in Boaz, Alabama | Compare Prices &amp; Reserve Online</h4>
+      <a href="https://findselfstorage.com/self-storage-boaz-alabama">https://findselfstorage.com/self-storage-boaz-alabama</a>
+      <p>Compare self storage in Boaz, Alabama. View today&#x27;s prices, available storage units, climate-controlled storage, drive-up units, vehicle storage, and reserve online from nearby Dallas storage facilities.</p>
+      <ul><li>Self Storage in Boaz, Alabama</li><li>Storage Units Available Now in Boaz</li><li>Compare storage units in Boaz, check prices, and reserve in minutes. Find the best deals on units near you.</li><li>Storage Units Available Now in Boaz</li><li>Storage Units Available Now in Boaz</li><li>Boaz Storage Availability</li><li>Explore Boaz Storage Units by Price, Size &amp; Features</li><li>Why Search Multiple Boaz Storage Facilities?</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Self Storage in Clay, Alabama | Compare Prices &amp; Reserve Online</h4>
+      <a href="https://findselfstorage.com/self-storage-clay-alabama">https://findselfstorage.com/self-storage-clay-alabama</a>
+      <p>Compare self storage in Clay, Alabama. View today&#x27;s prices, available storage units, climate-controlled storage, drive-up units, vehicle storage, and reserve online from nearby Dallas storage facilities.</p>
+      <ul><li>Self Storage in Clay, Alabama</li><li>Storage Units Available Now in Clay</li><li>Compare storage units in Clay, check prices, and reserve in minutes. Find the best deals on units near you.</li><li>Storage Units Available Now in Clay</li><li>Storage Units Available Now in Clay</li><li>Clay Storage Availability</li><li>Explore Clay Storage Units by Price, Size &amp; Features</li><li>Why Search Multiple Clay Storage Facilities?</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Self Storage in Holt, Alabama | Compare Prices &amp; Reserve Online</h4>
+      <a href="https://findselfstorage.com/self-storage-holt-alabama">https://findselfstorage.com/self-storage-holt-alabama</a>
+      <p>Compare self storage in Holt, Alabama. View today&#x27;s prices, available storage units, climate-controlled storage, drive-up units, vehicle storage, and reserve online from nearby Dallas storage facilities.</p>
+      <ul><li>Self Storage in Holt, Alabama</li><li>Storage Units Available Now in Holt</li><li>Compare storage units in Holt, check prices, and reserve in minutes. Find the best deals on units near you.</li><li>Storage Units Available Now in Holt</li><li>Storage Units Available Now in Holt</li><li>Holt Storage Availability</li><li>Explore Holt Storage Units by Price, Size &amp; Features</li><li>Why Search Multiple Holt Storage Facilities?</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Self Storage in Kent, Alabama | Compare Prices &amp; Reserve Online</h4>
+      <a href="https://findselfstorage.com/self-storage-kent-alabama">https://findselfstorage.com/self-storage-kent-alabama</a>
+      <p>Compare self storage in Kent, Alabama. View today&#x27;s prices, available storage units, climate-controlled storage, drive-up units, vehicle storage, and reserve online from nearby Dallas storage facilities.</p>
+      <ul><li>Self Storage in Kent, Alabama</li><li>Storage Units Available Now in Kent</li><li>Compare storage units in Kent, check prices, and reserve in minutes. Find the best deals on units near you.</li><li>Storage Units Available Now in Kent</li><li>Storage Units Available Now in Kent</li><li>Kent Storage Availability</li><li>Explore Kent Storage Units by Price, Size &amp; Features</li><li>Why Search Multiple Kent Storage Facilities?</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Self Storage in Mesa, Arizona | Compare Prices &amp; Reserve Online</h4>
+      <a href="https://findselfstorage.com/self-storage-mesa-arizona">https://findselfstorage.com/self-storage-mesa-arizona</a>
+      <p>Compare self storage in Mesa, Arizona. View today&#x27;s prices, available storage units, climate-controlled storage, drive-up units, vehicle storage, and reserve online from nearby Dallas storage facilities.</p>
+      <ul><li>Self Storage in Mesa, Arizona</li><li>Storage Units Available Now in Mesa</li><li>Compare storage units in Mesa, check prices, and reserve in minutes. Find the best deals on units near you.</li><li>Storage Units Available Now in Mesa</li><li>Storage Units Available Now in Mesa</li><li>Mesa Storage Availability</li><li>Explore Mesa Storage Units by Price, Size &amp; Features</li><li>Why Search Multiple Mesa Storage Facilities?</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Self Storage in Page, Arizona | Compare Prices &amp; Reserve Online</h4>
+      <a href="https://findselfstorage.com/self-storage-page-arizona">https://findselfstorage.com/self-storage-page-arizona</a>
+      <p>Compare self storage in Page, Arizona. View today&#x27;s prices, available storage units, climate-controlled storage, drive-up units, vehicle storage, and reserve online from nearby Dallas storage facilities.</p>
+      <ul><li>Self Storage in Page, Arizona</li><li>Storage Units Available Now in Page</li><li>Compare storage units in Page, check prices, and reserve in minutes. Find the best deals on units near you.</li><li>Storage Units Available Now in Page</li><li>Storage Units Available Now in Page</li><li>Page Storage Availability</li><li>Explore Page Storage Units by Price, Size &amp; Features</li><li>Why Search Multiple Page Storage Facilities?</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Self Storage in Saks, Alabama | Compare Prices &amp; Reserve Online</h4>
+      <a href="https://findselfstorage.com/self-storage-saks-alabama">https://findselfstorage.com/self-storage-saks-alabama</a>
+      <p>Compare self storage in Saks, Alabama. View today&#x27;s prices, available storage units, climate-controlled storage, drive-up units, vehicle storage, and reserve online from nearby Dallas storage facilities.</p>
+      <ul><li>Self Storage in Saks, Alabama</li><li>Storage Units Available Now in Saks</li><li>Compare storage units in Saks, check prices, and reserve in minutes. Find the best deals on units near you.</li><li>Storage Units Available Now in Saks</li><li>Storage Units Available Now in Saks</li><li>Saks Storage Availability</li><li>Explore Saks Storage Units by Price, Size &amp; Features</li><li>Why Search Multiple Saks Storage Facilities?</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Self Storage in Troy, Alabama | Compare Prices &amp; Reserve Online</h4>
+      <a href="https://findselfstorage.com/self-storage-troy-alabama">https://findselfstorage.com/self-storage-troy-alabama</a>
+      <p>Compare self storage in Troy, Alabama. View today&#x27;s prices, available storage units, climate-controlled storage, drive-up units, vehicle storage, and reserve online from nearby Dallas storage facilities.</p>
+      <ul><li>Self Storage in Troy, Alabama</li><li>Storage Units Available Now in Troy</li><li>Compare storage units in Troy, check prices, and reserve in minutes. Find the best deals on units near you.</li><li>Storage Units Available Now in Troy</li><li>Storage Units Available Now in Troy</li><li>Troy Storage Availability</li><li>Explore Troy Storage Units by Price, Size &amp; Features</li><li>Why Search Multiple Troy Storage Facilities?</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Self Storage in Vail, Arizona | Compare Prices &amp; Reserve Online</h4>
+      <a href="https://findselfstorage.com/self-storage-vail-arizona">https://findselfstorage.com/self-storage-vail-arizona</a>
+      <p>Compare self storage in Vail, Arizona. View today&#x27;s prices, available storage units, climate-controlled storage, drive-up units, vehicle storage, and reserve online from nearby Dallas storage facilities.</p>
+      <ul><li>Self Storage in Vail, Arizona</li><li>Storage Units Available Now in Vail</li><li>Compare storage units in Vail, check prices, and reserve in minutes. Find the best deals on units near you.</li><li>Storage Units Available Now in Vail</li><li>Storage Units Available Now in Vail</li><li>Vail Storage Availability</li><li>Explore Vail Storage Units by Price, Size &amp; Features</li><li>Why Search Multiple Vail Storage Facilities?</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Self Storage in Yuma, Arizona | Compare Prices &amp; Reserve Online</h4>
+      <a href="https://findselfstorage.com/self-storage-yuma-arizona">https://findselfstorage.com/self-storage-yuma-arizona</a>
+      <p>Compare self storage in Yuma, Arizona. View today&#x27;s prices, available storage units, climate-controlled storage, drive-up units, vehicle storage, and reserve online from nearby Dallas storage facilities.</p>
+      <ul><li>Self Storage in Yuma, Arizona</li><li>Storage Units Available Now in Yuma</li><li>Compare storage units in Yuma, check prices, and reserve in minutes. Find the best deals on units near you.</li><li>Storage Units Available Now in Yuma</li><li>Storage Units Available Now in Yuma</li><li>Yuma Storage Availability</li><li>Explore Yuma Storage Units by Price, Size &amp; Features</li><li>Why Search Multiple Yuma Storage Facilities?</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Self Storage in Alton, Alabama | Compare Prices &amp; Reserve Online</h4>
+      <a href="https://findselfstorage.com/self-storage-alton-alabama">https://findselfstorage.com/self-storage-alton-alabama</a>
+      <p>Compare self storage in Alton, Alabama. View today&#x27;s prices, available storage units, climate-controlled storage, drive-up units, vehicle storage, and reserve online from nearby Dallas storage facilities.</p>
+      <ul><li>Self Storage in Alton, Alabama</li><li>Storage Units Available Now in Alton</li><li>Compare storage units in Alton, check prices, and reserve in minutes. Find the best deals on units near you.</li><li>Storage Units Available Now in Alton</li><li>Storage Units Available Now in Alton</li><li>Alton Storage Availability</li><li>Explore Alton Storage Units by Price, Size &amp; Features</li><li>Why Search Multiple Alton Storage Facilities?</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Self Storage in Amado, Arizona | Compare Prices &amp; Reserve Online</h4>
+      <a href="https://findselfstorage.com/self-storage-amado-arizona">https://findselfstorage.com/self-storage-amado-arizona</a>
+      <p>Compare self storage in Amado, Arizona. View today&#x27;s prices, available storage units, climate-controlled storage, drive-up units, vehicle storage, and reserve online from nearby Dallas storage facilities.</p>
+      <ul><li>Self Storage in Amado, Arizona</li><li>Storage Units Available Now in Amado</li><li>Compare storage units in Amado, check prices, and reserve in minutes. Find the best deals on units near you.</li><li>Storage Units Available Now in Amado</li><li>Storage Units Available Now in Amado</li><li>Amado Storage Availability</li><li>Explore Amado Storage Units by Price, Size &amp; Features</li><li>Why Search Multiple Amado Storage Facilities?</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Self Storage in Brent, Alabama | Compare Prices &amp; Reserve Online</h4>
+      <a href="https://findselfstorage.com/self-storage-brent-alabama">https://findselfstorage.com/self-storage-brent-alabama</a>
+      <p>Compare self storage in Brent, Alabama. View today&#x27;s prices, available storage units, climate-controlled storage, drive-up units, vehicle storage, and reserve online from nearby Dallas storage facilities.</p>
+      <ul><li>Self Storage in Brent, Alabama</li><li>Storage Units Available Now in Brent</li><li>Compare storage units in Brent, check prices, and reserve in minutes. Find the best deals on units near you.</li><li>Storage Units Available Now in Brent</li><li>Storage Units Available Now in Brent</li><li>Brent Storage Availability</li><li>Explore Brent Storage Units by Price, Size &amp; Features</li><li>Why Search Multiple Brent Storage Facilities?</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Self Storage in Coden, Alabama | Compare Prices &amp; Reserve Online</h4>
+      <a href="https://findselfstorage.com/self-storage-coden-alabama">https://findselfstorage.com/self-storage-coden-alabama</a>
+      <p>Compare self storage in Coden, Alabama. View today&#x27;s prices, available storage units, climate-controlled storage, drive-up units, vehicle storage, and reserve online from nearby Dallas storage facilities.</p>
+      <ul><li>Self Storage in Coden, Alabama</li><li>Storage Units Available Now in Coden</li><li>Compare storage units in Coden, check prices, and reserve in minutes. Find the best deals on units near you.</li><li>Storage Units Available Now in Coden</li><li>Storage Units Available Now in Coden</li><li>Coden Storage Availability</li><li>Explore Coden Storage Units by Price, Size &amp; Features</li><li>Why Search Multiple Coden Storage Facilities?</li></ul>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Full Style System</h2>
+          <details open><summary>Show style-system sections</summary>
+    <details class="style-section">
+      <summary>Find Self Storage — Style System</summary>
+      <div class="markdown"><p>Generated: 2026-06-17<br>Sources: raw/research/website-scan-2026-06-17.md, client brief (June 2026)<br>Base rules: universal-rules/UNIVERSAL-RULES.md</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>1. Brand &amp; Audience</summary>
+      <div class="markdown"><p>FindSelfStorage.com is a self-storage comparison marketplace and editorial resource. It aggregates 10,000+ storage facilities nationwide. Users search, compare, and reserve storage units online — no credit card required, no booking fee.</p><p>**Critical platform fact:** FindSelfStorage.com is a marketplace aggregator. It does not own, operate, or manage any storage facility. Every piece of content must maintain this distinction. See §4 for enforcement rules.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Primary audience</summary>
+      <div class="markdown"><p>FindSelfStorage.com serves a single consumer audience. There is no B2B content tier (unlike sister marketplace platforms). Identify the specific consumer situation before writing.</p><p>**Audience segments:**<br><li>Individuals and families needing extra space (seasonal overflow, life transitions)</li><br><li>Renters and homeowners between moves or during renovations</li><br><li>College students seeking short-term or summer storage</li><br><li>Retirees downsizing</li><br><li>Small business owners storing inventory, equipment, or records</li><br><li>RV, boat, motorcycle, and vehicle owners who need off-property storage</li><br><li>People facing HOA or municipal restrictions on residential vehicle parking</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Mission framing (client-stated)</summary>
+      <div class="markdown"><p>Simplify the storage rental process by offering transparent pricing, flexible options, and convenient online booking — helping customers save time and money while finding the right storage space near them.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2. Voice &amp; Tone</summary>
+      <div class="markdown"><p>**Client-stated register:** Friendly, clear, and trustworthy. Focused on making storage simple, affordable, and stress-free. Practical and helpful language.</p><p>**What this means in practice:** Write as a knowledgeable, reassuring guide — not a salesperson. Lead with what the reader needs to do or know. Keep language concrete and direct. Avoid urgency tactics, hype, and filler.</p><p>**Current site copy is NOT the voice model.** The existing website copy is functional but stiff, keyword-stuffed, and impersonal. New content should be warmer and more direct while staying practical. See §4 for the accuracy constraints that must hold regardless of register.</p><p>| Goal | Not this | Use this |<br>|---|---|---|<br>| Open a blog post | &quot;When it comes to packing a storage unit, efficiency and safety cannot be overstated.&quot; | Name the reader&#x27;s actual situation and what they&#x27;re trying to accomplish |<br>| Reference the platform | &quot;Our climate-controlled units keep your items safe&quot; | &quot;Climate-controlled facilities in the FindSelfStorage.com network maintain consistent temperature and humidity&quot; |<br>| Describe pricing | &quot;Enjoy the lowest prices on storage&quot; | &quot;Compare current pricing across facilities and find the best rate for your area&quot; |<br>| Reference facility count | &quot;Thousands of storage facilities&quot; | &quot;10,000+ storage facilities nationwide&quot; |<br>| Describe reservation | &quot;Book now&quot; | &quot;Reserve online for free — no credit card required&quot; |<br>| Reference the site | &quot;FindSelfStorage.com owns and operates...&quot; | &quot;FindSelfStorage.com is a marketplace where you can search, compare, and reserve storage units near you&quot; |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3. Terminology</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.1 Required terms</summary>
+      <div class="markdown"><p><li>**FindSelfStorage.com** — full brand name on first reference in a piece; &quot;Find Self Storage&quot; acceptable after first use</li><br><li>**marketplace** or **comparison marketplace** — the correct description of the platform function</li><br><li>**storage facilities** or **facilities in the network** — correct framing; never &quot;our facilities&quot;</li><br><li>**storage units** (generic) — correct; never &quot;our storage units&quot;</li><br><li>**reserve online** or **free online reservation** — the confirmed CTA action; no booking fee, no credit card required</li><br><li>**10,000+ storage facilities** — confirmed network size claim; use this exact figure</li><br><li>**climate-controlled storage** — correct term; not &quot;temperature-controlled&quot; unless quoting a source</li><br><li>**drive-up access** — preferred over &quot;drive-up units&quot; when describing the access feature</li><br><li>**month-to-month rental** — the implied lease model for self-storage; do not add long-term commitment language unless confirmed</li><br><li>**search, compare, and reserve** — the correct 3-step action sequence; match this order</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.2 Strict avoidance list (Anti-Slop Rules)</summary>
+      <div class="markdown"><p>These words are banned. Replace as indicated.</p><p>| Kill | Replace with |<br>|---|---|<br>| delve | explore, examine, look at |<br>| moreover | (delete — start the next sentence) |<br>| furthermore | (delete) |<br>| albeit | though, even though |<br>| indeed | (delete) |<br>| utilize | use |<br>| leverage (verb) | use |<br>| facilitate | help, enable |<br>| robust | strong, reliable, solid |<br>| seamless | smooth, easy |<br>| comprehensive | full, complete, thorough |<br>| cutting-edge | modern, new, latest |<br>| holistic | complete, full, whole |<br>| synergy | (delete and rewrite the sentence) |<br>| innovative | (describe what&#x27;s actually new) |<br>| transformative | (describe the actual change) |<br>| empower | (say what capability it gives) |<br>| realm | area, field, space |<br>| landscape (metaphorical) | situation, environment, field |<br>| multifaceted | complex, varied |<br>| nuanced | (usually delete — show the nuance instead) |<br>| underscore | show, highlight, reveal |<br>| testament | proof, evidence, sign |<br>| myriad | many, countless |<br>| plethora | many, a lot of |<br>| illuminate | show, reveal, clarify |<br>| foster | build, encourage, grow |<br>| cultivate | build, develop |<br>| bolster | strengthen, support |<br>| pivotal | important, key, critical |<br>| embark | start, begin |<br>| navigate (metaphorical) | handle, manage, deal with |<br>| actionable | practical, useful |<br>| ecosystem | system, community, market |<br>| craft (verb) | write, build, make, design |<br>| curate | choose, pick, collect, organize |<br>| streamline | simplify, speed up, cut steps from |<br>| elevate | improve, raise, strengthen |<br>| harness | use, apply, put to work |<br>| unlock | enable, open up, create |<br>| tailor | adjust, fit, customize |<br>| journey | process, experience, path |<br>| compelling | strong, persuasive, interesting |<br>| powerful | strong, effective, useful |<br>| crucial | important (or delete — is it really?) |<br>| significant | large, meaningful, real (be specific) |<br>| ensure/ensuring | make sure, confirm, check |<br>| optimal | best, ideal |<br>| enables | lets, allows |<br>| key (adj. — &quot;key insights&quot;) | main, important, central |<br>| stands out | (describe what&#x27;s different instead) |<br>| deep dive | close look, analysis, review |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.3 Banned phrases (throat-clearing, hedges, closers)</summary>
+      <div class="markdown"><p>Delete entirely:</p><ul><li>&quot;It&#x27;s important to note that...&quot; / &quot;It&#x27;s worth mentioning that...&quot;</li><br><li>&quot;In today&#x27;s [X] landscape...&quot;</li><br><li>&quot;Let&#x27;s dive/delve into...&quot;</li><br><li>&quot;In this article, we will...&quot;</li><br><li>&quot;When it comes to...&quot;</li><br><li>&quot;In terms of...&quot;</li><br><li>&quot;In conclusion...&quot; / &quot;To sum up...&quot; / &quot;To wrap up...&quot;</li><br><li>&quot;Due to the fact that&quot; → because</li><br><li>&quot;In order to&quot; → to</li><br><li>&quot;Has the ability to&quot; → can</li><br><li>&quot;Moving forward&quot; / &quot;Going forward&quot;</li><br><li>&quot;Imagine a world where...&quot; / &quot;Picture this:&quot; / &quot;Have you ever wondered...&quot;</li><br><li>&quot;Here are X things you need to know about Y&quot;</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.4 Banned structures</summary>
+      <div class="markdown"><p>**Ownership-implying constructions:** Any sentence structured as &quot;our [storage noun]&quot; is banned. This includes &quot;our facilities,&quot; &quot;our units,&quot; &quot;our storage options,&quot; &quot;our climate-controlled storage,&quot; &quot;our drive-up units.&quot; The platform does not own any storage — it is a marketplace. See §4.1 for the full enforcement rule.</p><p>**The &quot;Not just X — it&#x27;s Y&quot; pattern:** Never frame something as more than it is by negating a lesser version.<br><li>Bad: &quot;FindSelfStorage.com isn&#x27;t just a search tool — it&#x27;s your complete storage resource.&quot;</li><br><li>Good: State what it is and what it does.</li></ul><p>**Rule of three:** AI defaults to grouping in threes. Vary it — use one, two, or four. Match the number to what you actually have to say.</p><p>**Synonym stacking:** Do not list near-synonyms as padding.<br><li>Bad: &quot;a full, complete, and thorough comparison of available facilities&quot;</li><br><li>Good: &quot;a side-by-side comparison of available facilities&quot; (or describe the specific attributes compared)</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.5 Tone and rhythm tells</summary>
+      <div class="markdown"><p><li>**Uniform sentence length:** Mix short and long. Let some run. Cut others hard.</li><br><li>**Participial phrases:** &quot;Leveraging its nationwide network, the platform...&quot; is an AI fingerprint. Restructure or state the result directly.</li><br><li>**&quot;Ensuring&quot; clauses:** &quot;...ensuring you find the best price.&quot; Trailing clauses are filler. If the claim matters, give it its own sentence.</li><br><li>**&quot;Paramount&quot; and &quot;cannot be overstated&quot;:** Lifted from current site copy — do not repeat. These are filler intensifiers dressed as urgency.</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4. Accuracy &amp; Technical Standards</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.1 Marketplace ownership rule (critical)</summary>
+      <div class="markdown"><p>FindSelfStorage.com is a marketplace aggregator. It does not own, operate, or manage any storage facility. Writers who blur this line create false advertising exposure.</p><p>**Prohibited constructions — do not use:**<br><li>&quot;our storage facilities&quot; / &quot;our facilities&quot;</li><br><li>&quot;our storage units&quot; / &quot;our units&quot;</li><br><li>&quot;our climate-controlled storage&quot;</li><br><li>&quot;our drive-up units&quot;</li><br><li>&quot;FindSelfStorage.com&#x27;s facilities&quot;</li><br><li>Any sentence implying the platform stores belongings or operates physical locations</li></ul><p>**Correct framing:**<br><li>&quot;facilities in the network&quot;</li><br><li>&quot;storage facilities available through FindSelfStorage.com&quot;</li><br><li>&quot;facilities listed on the platform&quot;</li><br><li>&quot;storage units available in your area&quot; (when combined with search context)</li><br><li>&quot;find climate-controlled facilities near [city]&quot;</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.2 Pricing accuracy</summary>
+      <div class="markdown"><p>The price ranges published on FindSelfStorage.com category pages ($30–$300+/month depending on type) are editorial estimates — not live data from facility listings. No sourcing methodology is stated on-site.</p><p>Rules:<br><li>Do not state specific prices or present ranges as guaranteed figures.</li><br><li>Always pair pricing references with the correct caveat: pricing varies by facility, location, unit size, and availability.</li><br><li>Do not imply FindSelfStorage.com sets or controls pricing — facilities set their own prices.</li><br><li>Correct framing: &quot;Compare current pricing from facilities in your area&quot; or &quot;monthly pricing varies by facility, location, and unit size.&quot;</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.3 Availability accuracy</summary>
+      <div class="markdown"><p><li>Do not assert that specific units are currently available.</li><br><li>Correct framing: &quot;check real-time availability&quot; or &quot;see current availability at facilities near you.&quot;</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.4 Network size claim</summary>
+      <div class="markdown"><p><li>**10,000+** storage facilities — the confirmed site claim; use this exact figure</li><br><li>Do not inflate to &quot;tens of thousands&quot; or a higher number</li><br><li>Do not state a specific unit count — no confirmed figure exists</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5. Blog Post Rules</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.1 Opening hook pattern (first 3–5 sentences must)</summary>
+      <div class="markdown"><p>1. Identify the specific situation or problem the reader is in<br>2. Make the reader feel understood — not lectured<br>3. Transition to what this piece will help them do or decide</p><p>Do not open with: a definition of self-storage, a generic statement about storage being stressful, a rhetorical question, or an industry fact.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.2 Structure</summary>
+      <div class="markdown"><p><li>Up to 8 H2 sections</li><br><li>H3 only when necessary; include a short bridge sentence between the H2 and first H3 when used</li><br><li>No H4</li><br><li>Capitalize headings per AP style</li><br><li>No section over 300 words</li><br><li>At least one table or structured comparison where the topic supports it (unit size comparisons, storage type decision matrix, RV storage option breakdown, etc.)</li><br><li>2–3 lists per article</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.3 CTA requirements</summary>
+      <div class="markdown"><p>Every blog post ends with a CTA directing the reader to search and reserve on FindSelfStorage.com.</p><ul><li>Direct the reader to search by city or ZIP code</li><br><li>Mention the free online reservation (no credit card, no obligation)</li><br><li>Mention the ability to compare pricing and availability</li><br><li>Tone: helpful and practical — not a hard sell</li><br><li>Do not end with a generic &quot;contact us&quot; or open-ended &quot;learn more&quot;</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6. Page Structure</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6.1 Storage type / category landing pages</summary>
+      <div class="markdown"><p>These pages target a specific storage type (climate-controlled, drive-up, business, boat, RV, etc.). They are functional, not editorial.</p><p>Structure:<br>1. H1: primary keyword (e.g., &quot;Climate-Controlled Storage Units&quot;)<br>2. Short intro: what this storage type is and who needs it — 2–3 sentences max<br>3. Use cases for this storage type (who benefits, what they store)<br>4. What to look for when choosing this type<br>5. Unit size guidance relevant to this type (link to or embed a brief size table)<br>6. Inline FAQ — embed relevant FAQ questions on the page<br>7. CTA: search/compare/reserve — free online reservation</p><p>Rules:<br><li>Do not invent specific facility names, addresses, pricing, or availability</li><br><li>Do not make claims about the number of facilities offering a specific type unless confirmed</li><br><li>Do not use &quot;our facilities&quot; (see §4.1)</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6.2 Blog posts</summary>
+      <div class="markdown"><p>See §5 for full rules. Summary:<br><li>Up to 8 H2 sections; no H4</li><br><li>Opening hook: situation → reader feels understood → transition</li><br><li>300 words per section max</li><br><li>End with a platform CTA (search, compare, reserve)</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6.3 City/state/location landing pages</summary>
+      <div class="markdown"><p>Structure:<br>1. H1: primary keyword (e.g., &quot;Self Storage in [City], [State]&quot;)<br>2. Short intro: what the user can do here (search, compare, reserve) — 2–3 sentences max<br>3. Overview of storage options typically available in this area<br>4. Why comparing on FindSelfStorage.com is useful (platform value props)<br>5. Unit size guide section or brief size table<br>6. CTA: search/compare/reserve — free online reservation</p><p>Rules:<br><li>Lead with the location keyword in the H1 and first sentence</li><br><li>Do not invent specific facility names, addresses, pricing, or availability for that city</li><br><li>Do not claim how many facilities are in a specific city unless confirmed</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>7. SEO Standards</summary>
+      <div class="markdown"><p>**Before writing any piece:** Run a real SERP analysis. Do not simulate it.</p><p>Steps:<br>1. Search the primary keyword (language: English, location: United States)<br>2. Analyze top 5 ranking pages: search intent, LSI terms, content format, subtopics, micro-queries, content gaps<br>3. Identify gaps that deserve full sections vs. brief paragraphs<br>4. Present findings before proceeding to the outline</p><p>**Meta deliverables (provide before writing the introduction):**<br><li>3 meta title options: 55–60 characters, include primary keyword, drive clicks</li><br><li>3 meta description options: 130–150 characters, include primary keyword, state a benefit or utility, highlight a platform advantage (compare, free reservation, 10,000+ facilities)</li><br><li>3 H1 title options: SEO-oriented, CTR-driven</li></ul><p>**Outline requirements:**<br><li>Build only after SERP analysis</li><br><li>Cover critical topics from competitor pages; expand beyond their depth where the content supports it</li><br><li>Mark where coverage matches competitors vs. where it adds new value</li><br><li>Include 2–3 micro-queries under each H2 (internal structure — not visible in output)</li><br><li>Each paragraph answers one micro-query</li><br><li>1 table per article where the topic supports comparison or structured data</li><br><li>2–3 lists per article</li></ul><p>**Keyword placement:**<br><li>Primary keyword in the first sentence</li><br><li>Use location keywords naturally in city/state page content — do not force them into every paragraph</li><br><li>Use semantic variants in blog posts; avoid repeating the exact keyword phrase in every heading</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>8. Service Reference</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Self storage types (confirmed on-site)</summary>
+      <div class="markdown"><p><li>Climate-controlled storage</li><br><li>24-hour access storage</li><br><li>Drive-up storage</li><br><li>Business storage</li><br><li>Student storage</li><br><li>Wine storage</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Vehicle storage types (confirmed on-site)</summary>
+      <div class="markdown"><p><li>Vehicle storage (general)</li><br><li>Car storage</li><br><li>Boat storage</li><br><li>RV storage</li><br><li>Motorcycle storage</li><br><li>Trailer storage</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>RV storage subtypes</summary>
+      <div class="markdown"><p>| Type | Description |<br>|---|---|<br>| Fully enclosed | Individual spaces with walls and doors — highest protection |<br>| Covered / open-sided | Roof only, open sides — mid-range protection |<br>| Open / uncovered | Surface lot — lowest cost, no weather protection |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Boat storage subtypes</summary>
+      <div class="markdown"><p>| Type | Description |<br>|---|---|<br>| Indoor / enclosed | Full building protection — best for long-term |<br>| Outdoor covered | Roof protection, open sides |<br>| Outdoor uncovered | Open lot — least expensive |<br>| Dry stack | Vertical steel racks (4–5 boats per column) — space-efficient, indoor |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Unit size reference (editorial estimates — pricing varies)</summary>
+      <div class="markdown"><p>| Size | Category | Typical use |<br>|---|---|---|<br>| 5x5 | Mini/Small | Boxes, seasonal items, closet overflow |<br>| 5x10 | Medium-small | Small room contents, small furniture, boxes |<br>| 10x10 | Medium | Studio or 1-bedroom apartment contents |<br>| 10x15 | Medium-large | 1–2 bedroom home contents |<br>| 10x20 | Large | 2–3 bedroom home contents |<br>| 10x30 | Extra large | Vehicles, large household contents, commercial inventory |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Editorial content categories</summary>
+      <div class="markdown"><p><li>Storage tips and packing guides</li><br><li>Unit size selection guidance</li><br><li>Climate-controlled storage explainers</li><br><li>Vehicle storage guides (RV, boat, car, motorcycle)</li><br><li>Seasonal storage (holiday items, sports equipment)</li><br><li>Business storage use cases</li><br><li>Moving and relocation adjacent content</li></ul><p>Do not invent specific product names, partner facilities, operator relationships, or pricing. If content requires claims not confirmed in raw/ files or this style system, flag the gap to the CSM.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>9. Pre-Submission Checklist</summary>
+      <div class="markdown"><p>**Marketplace framing:**<br><li>[ ] No &quot;our facilities&quot; / &quot;our storage units&quot; / &quot;our climate-controlled units&quot; anywhere in the piece</li><br><li>[ ] Platform described as a marketplace or comparison platform — not as a storage operator</li><br><li>[ ] No invented pricing, availability, or facility-specific details</li><br><li>[ ] Pricing references paired with the caveat that pricing varies by facility, location, and unit size</li></ul><p>**Voice &amp; Slop:**<br><li>[ ] No banned words from §3.2 anywhere in the piece</li><br><li>[ ] No banned phrases from §3.3</li><br><li>[ ] No &quot;Not just X — it&#x27;s Y&quot; patterns</li><br><li>[ ] No synonym stacking</li><br><li>[ ] Sentence length varied — not uniform</li><br><li>[ ] No participial-phrase AI fingerprints</li><br><li>[ ] No &quot;paramount&quot; / &quot;cannot be overstated&quot; lifted from current site copy</li></ul><p>**Accuracy:**<br><li>[ ] Network size figure: 10,000+ storage facilities — not inflated</li><br><li>[ ] Unit sizes and storage types match confirmed list in §8 — nothing invented</li></ul><p>**Blog post:**<br><li>[ ] Opening hook: specific situation → reader feels understood → transition to the piece</li><br><li>[ ] CTA at end: directs to search/compare/reserve on FindSelfStorage.com; mentions free online reservation, no credit card required</li><br><li>[ ] At least 1 table or comparison structure where topic supports it</li><br><li>[ ] 2–3 lists in the piece</li></ul><p>**SEO:**<br><li>[ ] Real SERP analysis run (not simulated)</li><br><li>[ ] Meta titles, descriptions, H1 options delivered before writing began</li><br><li>[ ] Primary keyword in first sentence</li></p></div>
+    </details>
+    </details>
+        </section>
+        <section class="panel">
+          <h2>Local Source Files Read</h2>
+          <ul><li><code>clients/find-self-storage/STYLE-SYSTEM.md</code> — Find Self Storage — Style System</li>
+<li><code>clients/find-self-storage/campaigns/01-june-2026-optimization/audit-report.md</code> — Find Self Storage — Content Optimization Audit</li>
+<li><code>clients/find-self-storage/client-intelligence/README.md</code> — Find Self Storage Client Intelligence</li>
+<li><code>clients/find-self-storage/client-intelligence/STYLE-GUIDE.md</code> — Find Self Storage — Style System</li>
+<li><code>clients/find-self-storage/client-intelligence/offerings.md</code> — Find Self Storage Offerings</li>
+<li><code>clients/find-self-storage/client-intelligence/source-files.md</code> — Find Self Storage Source Files</li>
+<li><code>clients/find-self-storage/deliverables/README.md</code> — Find Self Storage Deliverables</li>
+<li><code>clients/find-self-storage/deliverables/drafts/01-june-2026-optimization/boat-storage-units.md</code> — Boat Storage Units: Find Indoor, Covered &amp; Outdoor Boat Storage Near You</li>
+<li><code>clients/find-self-storage/deliverables/drafts/01-june-2026-optimization/car-storage-units.md</code> — Car Storage Units: Find Indoor, Covered &amp; Outdoor Car Storage Near You</li>
+<li><code>clients/find-self-storage/deliverables/drafts/01-june-2026-optimization/motorcycle-storage-units.md</code> — Motorcycle Storage Units: Find Indoor &amp; Covered Motorcycle Storage Near You</li>
+<li><code>clients/find-self-storage/deliverables/drafts/01-june-2026-optimization/rv-storage-units.md</code> — RV Storage Units: Find Covered, Enclosed &amp; Outdoor Motorhome Storage Near You</li>
+<li><code>clients/find-self-storage/deliverables/drafts/01-june-2026-optimization/wine-storage-units.md</code> — Wine Storage Units: Find Climate Controlled Wine Storage Near You</li>
+<li><code>clients/find-self-storage/raw/knowledge/service-taxonomy.md</code> — Find Self Storage Service Taxonomy</li>
+<li><code>clients/find-self-storage/raw/research/website-scan-2026-06-17.md</code> — FindSelfStorage.com — Website Research Scan</li></ul>
+        </section>
+      </main>
+    </section>
+    </body>
+</html>

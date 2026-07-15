@@ -1,0 +1,128 @@
+{
+  "client": "makana-charters",
+  "display_name": "Makana Charters",
+  "generated_at": "2026-07-14T15:59:27.902548+00:00",
+  "offerings": [
+    {
+      "name": "Amelia K",
+      "description": "36-passenger boat departing Port Allen.",
+      "sources": [
+        "clients/makana-charters/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Fleet"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Leialoha",
+      "description": "18-passenger boat departing Kikiaola.",
+      "sources": [
+        "clients/makana-charters/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Fleet"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Makana",
+      "description": "12-passenger boat departing Kikiaola and suited for smaller private charters.",
+      "sources": [
+        "clients/makana-charters/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Fleet"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Na Pali Coast Boat Tours",
+      "description": "Standard Kauai boat tours along the Na Pali Coast with snorkeling, lunch, cultural narration, and sea cave viewing when conditions allow.",
+      "sources": [
+        "clients/makana-charters/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Tours and Charters"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Na Pali Kai III",
+      "description": "32-passenger boat departing Kikiaola with a 360-degree walk-around deck.",
+      "sources": [
+        "clients/makana-charters/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Fleet"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Na Pali Sea Cave Tours",
+      "description": "Boat tours that may visit sea caves such as Pirates Cave, Rainbow Falls, and Honopu Archway when conditions allow.",
+      "sources": [
+        "clients/makana-charters/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Tours and Charters"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Na Pali Snorkeling Tours",
+      "description": "Tours with snorkel gear, flotation devices, and snorkel stops selected by ocean conditions.",
+      "sources": [
+        "clients/makana-charters/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Tours and Charters"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Private Charters",
+      "description": "Private boat experiences for groups that want a customized pace, boat, and itinerary within safety and ocean-condition limits.",
+      "sources": [
+        "clients/makana-charters/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Tours and Charters"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Seiko 1",
+      "description": "16-passenger power catamaran departing Kikiaola.",
+      "sources": [
+        "clients/makana-charters/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Fleet"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Seiko 2",
+      "description": "16-passenger power catamaran departing Kikiaola.",
+      "sources": [
+        "clients/makana-charters/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Fleet"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Wildlife Viewing",
+      "description": "Tour experience category for dolphins, Hawaiian green sea turtles, reef fish, and other wildlife commonly seen on route.",
+      "sources": [
+        "clients/makana-charters/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Tours and Charters"
+      ],
+      "score": 6
+    }
+  ]
+}

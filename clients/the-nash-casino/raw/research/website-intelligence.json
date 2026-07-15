@@ -1,0 +1,236 @@
+{
+  "client": "the-nash-casino",
+  "display_name": "The Nash Casino",
+  "generated_at": "2026-07-13T23:04:20.289157+00:00",
+  "website_urls": [
+    "https://thenashcasino.com/",
+    "https://nhproblemgambling.org/"
+  ],
+  "status": "ok",
+  "sitemaps": [
+    "https://www.nhproblemgambling.org/sitemap.xml",
+    "https://www.nhproblemgambling.org/pages-sitemap.xml"
+  ],
+  "sitemap_errors": [
+    "https://thenashcasino.com/sitemap.xml: HTTP 404",
+    "https://thenashcasino.com/sitemap_index.xml: HTTP 404",
+    "https://thenashcasino.com/wp-sitemap.xml: HTTP 404",
+    "https://thenashcasino.com/sitemap-pages.xml: HTTP 404",
+    "https://thenashcasino.com/sitemap_products_1.xml: HTTP 404",
+    "https://thenashcasino.com/sitemap_collections_1.xml: HTTP 404"
+  ],
+  "url_count": 8,
+  "page_type_counts": {
+    "content": 1,
+    "home": 2,
+    "page": 5
+  },
+  "sample_pages": [
+    {
+      "url": "https://thenashcasino.com/",
+      "requested_url": "https://thenashcasino.com/",
+      "status_code": 200,
+      "content_type": "text/html; charset=utf-8",
+      "page_type": "home",
+      "title": "The Nash Casino in Nashua, New Hampshire | The Nash",
+      "meta_description": "Discover the exciting gambling destination that is The Nash Casino in New Hampshire. Check out our sportsbook, casino games, and more right here in Nashua.",
+      "headings": [
+        "New Hampshire's Largest Entertainment Destination",
+        "WELCOME TO THE NASH CASINO",
+        "Possibilities.",
+        "WIN SOME CASH AT THE NASH",
+        "LET THE GOOD TIMES FLOW",
+        "TAKE A SWING",
+        "YOUR FRONT ROW SEAT TO EVERY GAME",
+        "CLUB NASH"
+      ],
+      "links_seen": 19,
+      "elapsed_ms": 419
+    },
+    {
+      "url": "https://www.nhproblemgambling.org/",
+      "requested_url": "https://nhproblemgambling.org/",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "page_type": "home",
+      "title": "Home | NHCPG",
+      "meta_description": "",
+      "headings": [
+        "NH Council on Problem Gambling",
+        "Our Mission",
+        "Call Our Helpline",
+        "We provide a free, confidential 24/7 Helpline to support those affected by problem gambling and/or a concerned loved one. We're here for you, give us a call!",
+        "Support Our Mission"
+      ],
+      "links_seen": 8,
+      "elapsed_ms": 748
+    },
+    {
+      "url": "https://www.nhproblemgambling.org/",
+      "requested_url": "https://www.nhproblemgambling.org/",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "page_type": "home",
+      "title": "Home | NHCPG",
+      "meta_description": "",
+      "headings": [
+        "NH Council on Problem Gambling",
+        "Our Mission",
+        "Call Our Helpline",
+        "We provide a free, confidential 24/7 Helpline to support those affected by problem gambling and/or a concerned loved one. We're here for you, give us a call!",
+        "Support Our Mission"
+      ],
+      "links_seen": 8,
+      "elapsed_ms": 552
+    },
+    {
+      "url": "https://www.nhproblemgambling.org/get-help",
+      "requested_url": "https://www.nhproblemgambling.org/get-help",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "page_type": "page",
+      "title": "Get Help | NHCPG",
+      "meta_description": "",
+      "headings": [
+        "Get Help",
+        "The losses associated with problem gambling are greater than financial. The impact of the cycle of addiction demands smart and effective solutions. We at the New Hampshire Council on Problem Gambling understand the problem and can help.",
+        "Call Our Helpline",
+        "We provide a free, confidential 24/7 Helpline to support those affected by problem gambling and/or a concerned loved one. We're here for you, give us a call!",
+        "Free Self-Help Tools",
+        "Local Gambler's Anonymous Meeting Days/Times/Locations",
+        "Other Options for Help",
+        "For More Resources, Click Here"
+      ],
+      "links_seen": 21,
+      "elapsed_ms": 548
+    },
+    {
+      "url": "https://www.nhproblemgambling.org/resources",
+      "requested_url": "https://www.nhproblemgambling.org/resources",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "page_type": "content",
+      "title": "Resources | NHCPG",
+      "meta_description": "",
+      "headings": [
+        "Resources",
+        "Gambler's Anonymous",
+        "Your First Step to Change: Gambling",
+        "Brief Biosocial Gambling Screen",
+        "NH Council on Problem Gambling Brochure",
+        "Suicide Prevention",
+        "Gambling Treatment Facilities",
+        "Gambler's Anonymous Meetings in New Hampshire",
+        "Substance Abuse",
+        "Gambler's Anonymous 20 Questions",
+        "Domestic Violence",
+        "Families and Children"
+      ],
+      "links_seen": 48,
+      "elapsed_ms": 548
+    },
+    {
+      "url": "https://www.nhproblemgambling.org/what-we-do",
+      "requested_url": "https://www.nhproblemgambling.org/what-we-do",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "page_type": "page",
+      "title": "What We Do | NHCPG",
+      "meta_description": "",
+      "headings": [
+        "What We Provide",
+        "The Council provides information, education, advocacy, and prevention services.",
+        "Invite Us to Speak",
+        "We are happy to come Speak/Present at your workplace/school...Please Email us to coordinate!",
+        "How We Can Help",
+        "The Council offers intervention services, treatment referrals, and research collaboration to help those afflicted by problem gambling and their loved ones.",
+        "Call Our Helpline",
+        "We provide a free, confidential 24/7 Helpline to support those affected by problem gambling and/or a concerned loved one. We're here for you, give us a call!"
+      ],
+      "links_seen": 8,
+      "elapsed_ms": 547
+    },
+    {
+      "url": "https://www.nhproblemgambling.org/who-we-are",
+      "requested_url": "https://www.nhproblemgambling.org/who-we-are",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "page_type": "page",
+      "title": "Who We Are | NHCPG",
+      "meta_description": "",
+      "headings": [
+        "Who We Are",
+        "Angela Bergen, PhD",
+        "Bryan Provencher",
+        "Ed Talbot",
+        "Board of Directors",
+        "Get in Touch"
+      ],
+      "links_seen": 8,
+      "elapsed_ms": 575
+    },
+    {
+      "url": "https://www.nhproblemgambling.org/book-online",
+      "requested_url": "https://www.nhproblemgambling.org/book-online",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "page_type": "page",
+      "title": "Training Registration | NHCPG",
+      "meta_description": "",
+      "headings": [],
+      "links_seen": 6,
+      "elapsed_ms": 584
+    },
+    {
+      "url": "https://www.nhproblemgambling.org/success-stories",
+      "requested_url": "https://www.nhproblemgambling.org/success-stories",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "page_type": "page",
+      "title": "Success Stories | NHCPG",
+      "meta_description": "",
+      "headings": [
+        "Recovery Stories"
+      ],
+      "links_seen": 8,
+      "elapsed_ms": 606
+    }
+  ],
+  "offering_pages": [],
+  "top_terms": [
+    "gambling",
+    "problem",
+    "nhcpg",
+    "call",
+    "helpline",
+    "nash",
+    "here",
+    "council",
+    "support",
+    "for",
+    "hampshire",
+    "provide",
+    "free",
+    "those",
+    "loved",
+    "casino",
+    "mission",
+    "confidential",
+    "affected",
+    "concerned",
+    "one",
+    "you",
+    "give",
+    "gambler",
+    "anonymous",
+    "resources",
+    "nashua",
+    "destination",
+    "times",
+    "prevention"
+  ],
+  "product_or_service_urls": [],
+  "blockers": [
+    "No usable sitemap found for https://thenashcasino.com/; sampled homepage only."
+  ]
+}

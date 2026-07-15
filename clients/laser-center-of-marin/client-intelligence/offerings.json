@@ -1,0 +1,66 @@
+{
+  "client": "laser-center-of-marin",
+  "display_name": "Laser Center of Marin",
+  "generated_at": "2026-07-14T15:59:27.894265+00:00",
+  "offerings": [
+    {
+      "name": "Injectable treatments",
+      "description": "Botox, Juvederm, Restylane, Dysport, and related injectable treatments when confirmed on the page.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/laser-center-of-marin/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Services"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Non-invasive cosmetic procedures",
+      "description": "Non-surgical aesthetic procedures for skin, facial, and cosmetic concerns.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/laser-center-of-marin/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Services"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Laser Treatments",
+      "description": "Advanced laser services for skin concerns, with device details verified before writing.",
+      "sources": [
+        "clients/laser-center-of-marin/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Services"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Skin Rejuvenation",
+      "description": "Treatment category for improving tone, texture, pigment, and visible aging concerns.",
+      "sources": [
+        "clients/laser-center-of-marin/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Services"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Laser treatments (advanced laser technology",
+      "description": "specific devices to be confirmed)",
+      "sources": [
+        "STYLE-SYSTEM.md"
+      ],
+      "sections": [
+        "8. Service Reference"
+      ],
+      "score": 3
+    }
+  ]
+}

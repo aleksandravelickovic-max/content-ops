@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scottsdale Detox Context</title>
+  <style>
+    :root {
+      --bg:#f4f7f5; --panel:#ffffff; --ink:#09110f; --muted:#63716c; --line:#dce5df;
+      --black:#050907; --graph:#14d878; --graph-dark:#079d55; --soft:#eaf8f0; --soft-ink:#19392a;
+      --accent:#087a47; --red:#b5362d; --shadow:0 18px 46px rgba(5,9,7,.08);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:
+      linear-gradient(180deg, #ffffff 0, var(--bg) 360px); color:var(--ink); line-height:1.45; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .topnav { min-height:64px; padding:14px max(32px, calc((100vw - 1380px) / 2 + 32px)); background:var(--black); border-bottom:1px solid rgba(255,255,255,.08); position:sticky; top:0; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { color:#fff; display:inline-flex; align-items:center; gap:10px; font-weight:800; letter-spacing:0; }
+    .brand:hover { text-decoration:none; }
+    .brand span { width:32px; height:32px; border-radius:8px; background:var(--graph); color:var(--black); display:inline-grid; place-items:center; font-size:13px; font-weight:900; }
+    .nav-meta, .nav-link { color:#b8c6c0; font-size:13px; font-weight:700; }
+    .hero { margin:0; padding:42px max(32px, calc((100vw - 1380px) / 2 + 32px)) 38px; background:var(--black); color:#fff; border-bottom:1px solid rgba(255,255,255,.08); }
+    .index-hero, .client-hero { display:flex; justify-content:space-between; gap:28px; align-items:flex-start; }
+    .hero h1 { margin:0 0 12px; font-size:clamp(32px, 5vw, 62px); line-height:.98; letter-spacing:0; max-width:900px; }
+    .hero p { margin:0; color:#c7d5cf; max-width:840px; font-size:17px; }
+    .hero-copy { max-width:940px; }
+    .kicker { color:var(--graph); font-size:12px; text-transform:uppercase; letter-spacing:.08em; font-weight:900; }
+    .report-meta { display:flex; flex-wrap:wrap; gap:10px; padding:14px 32px; background:#fff; border-bottom:1px solid var(--line); color:var(--muted); font-size:13px; max-width:1380px; margin:0 auto; }
+    .report-meta span { background:var(--soft); color:var(--soft-ink); border-radius:999px; padding:6px 10px; font-weight:700; }
+    .grid.cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(290px, 1fr)); gap:16px; padding:24px 32px 42px; max-width:1380px; margin:0 auto; }
+    .card, .panel, .context-card { background:var(--panel); border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow); }
+    .client-card { display:block; padding:20px; color:inherit; min-height:184px; transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease; }
+    .client-card:hover { text-decoration:none; transform:translateY(-2px); border-color:rgba(20,216,120,.55); box-shadow:0 24px 58px rgba(5,9,7,.12); }
+    .card-topline { display:flex; justify-content:space-between; gap:10px; align-items:center; }
+    .client-card h2 { margin:14px 0 8px; font-size:23px; line-height:1.1; }
+    .client-card p { margin:0; color:var(--muted); }
+    .metrics { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+    .metrics span, .evidence, .status-pill { background:var(--soft); border:1px solid rgba(20,216,120,.22); border-radius:999px; padding:5px 9px; font-size:12px; color:var(--soft-ink); font-weight:800; }
+    .topic-chips { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 18px; }
+    .topic-chips span { background:#f6fbf8; border:1px solid var(--line); border-radius:999px; color:#183a2a; padding:7px 10px; font-size:13px; font-weight:750; }
+    .layout { display:block; padding:22px 32px 46px; max-width:1380px; margin:0 auto; }
+    main { min-width:0; }
+    .context-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; margin-bottom:20px; }
+    .context-card { padding:18px; min-height:220px; }
+    .context-card ul { margin-bottom:0; }
+    .context-note { color:var(--muted); font-size:13px; margin:4px 0 12px; }
+    .aside-label { color:var(--graph-dark); font-size:11px; text-transform:uppercase; font-weight:900; letter-spacing:.08em; margin-bottom:5px; }
+    .panel h2 { margin-top:0; }
+    .panel { padding:22px; margin-bottom:20px; }
+    .panel h2 { font-size:26px; letter-spacing:0; }
+    .offerings { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:13px; margin-top:16px; }
+    .offering, .sample { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .offering { position:relative; overflow:hidden; }
+    .offering-marker { position:absolute; inset:0 auto 0 0; width:4px; background:var(--graph); }
+    .offering h3, .sample h4 { margin:0 0 6px; }
+    .offering p { margin:0 0 10px; }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .stat-stack { display:grid; grid-template-columns:repeat(3, minmax(100px, 1fr)); gap:8px; min-width:340px; }
+    .stat-stack div { border:1px solid rgba(255,255,255,.15); border-radius:8px; padding:14px; background:rgba(255,255,255,.06); }
+    .stat-stack strong { display:block; font-size:26px; color:#fff; }
+    .stat-stack span, .muted { color:var(--muted); font-size:13px; }
+    .hero .stat-stack span { color:#b8c6c0; }
+    ul { padding-left:20px; }
+    li { margin:4px 0; }
+    code { background:var(--soft); color:var(--soft-ink); padding:2px 4px; border-radius:4px; }
+    details { margin:10px 0; }
+    summary { cursor:pointer; font-weight:700; }
+    .style-section { border-top:1px solid var(--line); padding-top:10px; }
+    .markdown { color:#2d2f35; }
+    @media (max-width: 980px) {
+      .layout, .split, .client-hero, .index-hero { grid-template-columns:1fr; display:block; }
+      .context-grid { grid-template-columns:1fr; }
+      .stat-stack { min-width:0; margin-top:16px; }
+      .hero, .grid.cards, .layout, .topnav, .report-meta { padding-left:16px; padding-right:16px; }
+      .hero h1 { font-size:36px; }
+      .stat-stack { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+    <nav class="topnav">
+      <a class="brand" href="index.html"><span>LG</span>LinkGraph</a>
+      <a class="nav-link" href="index.html">All clients</a>
+    </nav>
+    <section class="hero client-hero">
+      <div class="hero-copy">
+        <div class="kicker">the-hope-house/scottsdaleazdetox</div>
+        <h1>Scottsdale Detox</h1>
+        <p>12 extracted offerings, 929 sitemap URLs, and 9 local source documents for client-specific writing context.</p>
+      </div>
+      <div class="stat-stack">
+        <div><strong>ok</strong><span>crawl status</span></div>
+        <div><strong>929</strong><span>URLs found</span></div>
+        <div><strong>0</strong><span>product/service URLs</span></div>
+      </div>
+    </section>
+    <section class="layout">
+      <main>
+        <section class="context-grid">
+    <article class="context-card">
+      <div class="aside-label">Quick Facts</div>
+      <p class="context-note">Company, audience, and proof points.</p>
+      <ul><li>A medical detox facility providing 24/7 medically supervised withdrawal management</li><li>The first step in recovery — not a full treatment program</li><li>A low-census, high-privacy environment (10 clients maximum)</li><li>A Joint Commission accredited, LegitScript certified detox center</li><li>A residential rehab or full treatment program</li><li>A detox center that completes recovery (detox is step one)</li><li>A general addiction treatment center — it is specifically a medical detox facility</li><li>Joint Commission Gold Seal of Approval</li><li>AZ SafeClean Certified</li><li>LegitScript Certified Detox Center</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Voice</div>
+      <p class="context-note">How this client should sound.</p>
+      <ul><li>Calm: Do not alarm; do not sensationalize withdrawal symptoms. Describe accurately and clearly.</li><li>Clinically grounded: Ground every protocol and timeline claim in confirmed site data. Never invent.</li><li>Compassionate: Acknowledge the difficulty of withdrawal without minimizing it or overdramatizing it.</li><li>Direct: State what the facility offers, who it is for, and what to do next. No throat-clearing.</li><li>Reassuring: Emphasize safety, supervision, and individualized care as the core value proposition.</li><li>&quot;Medical detox at Scottsdale Detox is supervised by physicians and nurse practitioners around the clock.&quot; — specific, accurate, reassuring</li><li>&quot;Alcohol withdrawal can become life-threatening without medical supervision — 24/7 monitoring allows the team to respond immediately if symptoms escalate.&quot; — honest about risk, positions supervision as the solution</li><li>&quot;Detox is the first step toward recovery, not the finish line. The clinical team helps clients stabilize so they can engage the work that follows.&quot; — frames detox correctly as step one</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Avoid / Compliance</div>
+      <p class="context-note">Claims, terms, and wording to avoid.</p>
+      <p class="muted">No clean lines extracted yet.</p>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Terminology</div>
+      <p class="context-note">Client-specific naming and required language.</p>
+      <p class="muted">No clean lines extracted yet.</p>
+    </article>
+    </section>
+        <section class="panel">
+          <h2>Offerings, Services, Goods</h2>
+          <p class="muted">Writer-facing catalog from the client style system, approved source files, and usable product/service pages. Raw crawl evidence is separated below.</p>
+          <div class="offerings">
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>24/7 Medical Staff</h3>
+      <p>Round-the-clock medical staff support during detox.</p>
+      <div class="evidence">Sources: clients/the-hope-house/scottsdaleazdetox/raw/knowledge/service-taxonomy.md · Sections: Facility Differentiators</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Alcohol Detox</h3>
+      <p>Supervised detox program for alcohol withdrawal needs.</p>
+      <div class="evidence">Sources: clients/the-hope-house/scottsdaleazdetox/raw/knowledge/service-taxonomy.md · Sections: Detox Programs</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Benzodiazepine Detox</h3>
+      <p>Supervised detox program for benzodiazepine withdrawal needs.</p>
+      <div class="evidence">Sources: clients/the-hope-house/scottsdaleazdetox/raw/knowledge/service-taxonomy.md · Sections: Detox Programs</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Fentanyl Detox</h3>
+      <p>Supervised detox program for fentanyl withdrawal needs.</p>
+      <div class="evidence">Sources: clients/the-hope-house/scottsdaleazdetox/raw/knowledge/service-taxonomy.md · Sections: Detox Programs</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Insurance Verification</h3>
+      <p>Admissions support for checking insurance options before treatment.</p>
+      <div class="evidence">Sources: clients/the-hope-house/scottsdaleazdetox/raw/knowledge/service-taxonomy.md · Sections: Facility Differentiators</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Medical Detox</h3>
+      <p>Medically supervised detox with 24/7 staff support and individualized planning.</p>
+      <div class="evidence">Sources: clients/the-hope-house/scottsdaleazdetox/raw/knowledge/service-taxonomy.md · Sections: Detox Programs</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Medication-Assisted Treatment</h3>
+      <p>Medication support where clinically appropriate. Spell out before MAT.</p>
+      <div class="evidence">Sources: clients/the-hope-house/scottsdaleazdetox/raw/knowledge/service-taxonomy.md · Sections: Facility Differentiators</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Methadone Detox</h3>
+      <p>Supervised detox program for methadone withdrawal needs.</p>
+      <div class="evidence">Sources: clients/the-hope-house/scottsdaleazdetox/raw/knowledge/service-taxonomy.md · Sections: Detox Programs</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Opioid / Heroin Detox</h3>
+      <p>Supervised detox program for opioid and heroin withdrawal needs.</p>
+      <div class="evidence">Sources: clients/the-hope-house/scottsdaleazdetox/raw/knowledge/service-taxonomy.md · Sections: Detox Programs</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Polysubstance Addiction Treatment</h3>
+      <p>Treatment support for clients dealing with more than one substance.</p>
+      <div class="evidence">Sources: clients/the-hope-house/scottsdaleazdetox/raw/knowledge/service-taxonomy.md · Sections: Detox Programs</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Prescription Drug Misuse Treatment</h3>
+      <p>Treatment support for prescription drug misuse, limited to confirmed program language.</p>
+      <div class="evidence">Sources: clients/the-hope-house/scottsdaleazdetox/raw/knowledge/service-taxonomy.md · Sections: Detox Programs</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Private Rooms</h3>
+      <p>Private-room detox setting for comfort and privacy.</p>
+      <div class="evidence">Sources: clients/the-hope-house/scottsdaleazdetox/raw/knowledge/service-taxonomy.md · Sections: Facility Differentiators</div>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Website Intelligence</h2>
+          <div class="split">
+            <div>
+              <h3>Website URLs</h3><ul><li><a href="https://scottsdaleazdetox.com/">https://scottsdaleazdetox.com/</a></li></ul>
+              <h3>Sitemaps</h3><ul><li><a href="https://scottsdaleazdetox.com/sitemap_index.xml">https://scottsdaleazdetox.com/sitemap_index.xml</a></li><li><a href="https://scottsdaleazdetox.com/sitemap.xml">https://scottsdaleazdetox.com/sitemap.xml</a></li></ul>
+            </div>
+            <div>
+              <h3>Semantic / Topical Terms</h3><div class="topic-chips"><span>Alcohol Detox</span><span>Benzodiazepine Detox</span><span>Fentanyl Detox</span><span>Insurance Verification</span><span>Medical Detox</span><span>Medication-Assisted Treatment</span><span>Methadone Detox</span><span>Opioid / Heroin Detox</span><span>Polysubstance Addiction Treatment</span><span>Prescription Drug Misuse Treatment</span><span>Private Rooms</span><span>Detox Center</span><span>Medical Detox Facility</span><span>Full Treatment Program</span><span>Detox Facility</span><span>First Step</span><span>Full Treatment</span><span>Treatment Program</span><span>Certified Detox Center</span><span>Joint Commission</span><span>Certified Detox</span></div>
+              <h3>Blockers</h3><p class="muted">None</p>
+            </div>
+          </div>
+          <h3>Product / Service URLs</h3><p class="muted">No product/service URLs classified from sitemap paths.</p>
+          <h3>Sampled Pages</h3><div class="sample-pages">
+    <article class="sample">
+      <h4>Medical Detox Scottsdale | Scottsdale Detox</h4>
+      <a href="https://scottsdaleazdetox.com/">https://scottsdaleazdetox.com/</a>
+      <p>Personalized detox for alcohol, opioids &amp; more at Scottsdale Detox. Safe, comfortable recovery with 24/7 care. Start your journey.</p>
+      <ul><li>Scottsdale Detox Drug &amp; Alcohol Rehab | Call 480-646-7660</li><li>Where Healing Begins</li><li>Medical Detox Designed for Safety, Privacy, and Real Recovery</li><li>Every Stay at Scottsdale Detox Rehab Includes</li><li>Continued Access to Cell Phones</li><li>Laptop Use to Continue Work</li><li>Private Rooms for Comfort</li><li>Expert 24/7 Medical Staff</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Luxury Rehab in Scottsdale, Arizona: Find Your Location</h4>
+      <a href="https://scottsdaleazdetox.com/locations/">https://scottsdaleazdetox.com/locations/</a>
+      <p>Overcome addiction with expert care at Scottsdale Detox. Discover comprehensive treatment options for a brighter, healthier future today!</p>
+      <ul><li>404 Error: Page Not Found - Let&#x27;s Get You Back on Track!</li><li>SUBSCRIBE &amp; STAY INFORMED</li><li>Contact Information</li><li>Detox Programs</li><li>About Scottsdale Detox</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Arizona Medical Detox Centers | Scottsdale Detox</h4>
+      <a href="https://scottsdaleazdetox.com/locations/arizona/">https://scottsdaleazdetox.com/locations/arizona/</a>
+      <p>Recover at Scottsdale Detox&#x27;s private Arizona facilities with specialized staff, comfortable accommodations, and proven addiction treatment methods.</p>
+      <ul><li>Arizona Detox Centers Drug and Alcohol Addiction Treatment</li><li>Scottsdale Detox is a place where certified doctors and nurses work to assist patients dealing with withdrawal symptoms during treatment.</li><li>Our Arizona Detox Centers</li><li>Scottsdale Detox</li><li>Scottsdale Rehab</li><li>HART Rehab</li><li>Expert Care at Scottsdale Detox</li><li>Arizona Detox</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Medical Detox Arizona | HART Rehab</h4>
+      <a href="https://scottsdaleazdetox.com/locations/arizona/hart-rehab/">https://scottsdaleazdetox.com/locations/arizona/hart-rehab/</a>
+      <p>Discover holistic healing at HART Rehab - advanced therapies, comprehensive care, and specialized opioid treatment in Scottsdale. Call now.</p>
+      <ul><li>HART Rehab Holistic Addiction Recovery Treatment</li><li>HART Rehab</li><li>HART Rehab’s Accreditations</li><li>Take a Tour to Our Holistic Rehab Center</li><li>HART Rehab Named Best Suboxone Treatment Center in Scottsdale</li><li>Most Accepted Insurance</li><li>Holistic Rehab Treatment Options</li><li>Innovative Therapies</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Tucson Drug &amp; Alcohol Rehab | Scottsdale Detox Support</h4>
+      <a href="https://scottsdaleazdetox.com/locations/arizona/tucson-rehab/">https://scottsdaleazdetox.com/locations/arizona/tucson-rehab/</a>
+      <p>Discover Tucson rehab centers offering personalized support for addiction recovery. Call now to start your healing journey!</p>
+      <ul><li>Tucson Alcohol &amp; Drug Rehab Centers: Start Your Healing Journey Today</li><li>Scottsdale Detox offers an exclusive residential rehabilitation program near Tucson, Arizona, providing personalized support for individuals dealing with substance abuse. This program focus on holistic healing, addressing both mental and physical well-being.</li><li>Our Tucson Rehab Centers</li><li>Scottsdale Detox</li><li>Substance Addiction Tucson Rehab Centers</li><li>Detox</li><li>Inpatient Rehab</li><li>Outpatient Treatment</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Phoenix Detox: Safe Addiction Treatment with Comfort &amp; Care</h4>
+      <a href="https://scottsdaleazdetox.com/locations/arizona/phoenix-detox/">https://scottsdaleazdetox.com/locations/arizona/phoenix-detox/</a>
+      <p>Experience premier Phoenix detox treatment with personalized care. Call now to start your journey towards lasting recovery and healing!</p>
+      <ul><li>Phoenix Detox Drug and Alcohol Addiction Treatment</li><li>Every Stay at Scottsdale Detox Includes</li><li>Ongoing Cell Phone Accessibility</li><li>Utilization of Laptops for Work Continuation</li><li>Exclusive Private Room for Comfort</li><li>Round-the-Clock Medical Personnel</li><li>Unrestricted Use of Furnished Patios</li><li>Scottsdale Detox Named Best Scottsdale Treatment Center in Scottsdale</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Outpatient Rehab for Drug Addiction Treatment</h4>
+      <a href="https://scottsdaleazdetox.com/locations/arizona/outpatient-rehab/">https://scottsdaleazdetox.com/locations/arizona/outpatient-rehab/</a>
+      <p>Discover how outpatient rehab offers flexible, effective treatment while you maintain daily life and responsibilities.</p>
+      <ul><li>Scottsdale Detox for Drug and Alcohol Addiction</li><li>The Hope House – Scottsdale</li><li>Outpatient Treatment at The Hope House</li><li>Accreditations of The Hope House</li><li>The Hope House Named Best Suboxone Treatment Center in Scottsdale</li><li>Our Insurance Partners</li><li>Luxurious Amenities at Scottsdale Rehab</li><li>Our Scottsdale Outpatient Rehab can help those who have:</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Scottsdale Detox Center: Medically Supervised Withdrawal</h4>
+      <a href="https://scottsdaleazdetox.com/locations/arizona/scottsdale-detox/">https://scottsdaleazdetox.com/locations/arizona/scottsdale-detox/</a>
+      <p>Recover from addiction at Scottsdale Detox&#x27;s top-rated treatment center with 24/7 care, private rooms, and flexible programs. Call now for help.</p>
+      <ul><li>Scottsdale Detox Center for Drug and Alcohol Addiction</li><li>Scottsdale Detox</li><li>Every Stay at Scottsdale Detox Includes</li><li>Continued Access to Cell Phones</li><li>Laptop Use to Continue Work</li><li>Private Rooms for Comfort</li><li>Expert 24/7 Medical Staff</li><li>Unlimited Access to Furnished Patio</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Scottsdale Rehab: Drug &amp; Alcohol Treatment | Scottsdale Detox</h4>
+      <a href="https://scottsdaleazdetox.com/locations/arizona/scottsdale-rehab/">https://scottsdaleazdetox.com/locations/arizona/scottsdale-rehab/</a>
+      <p>Discover holistic addiction treatment at The Hope House - our Scottsdale rehab offers EMDR, family therapy, and more to support your recovery. Call now.</p>
+      <ul><li>Luxury Scottsdale Rehab Fight Drug and Alcohol Addiction</li><li>The Hope House – Scottsdale</li><li>Accreditations of The Hope House</li><li>Take a Tour to Our Scottsdale Rehab Center</li><li>The Hope House Named Best Suboxone Treatment Center in Scottsdale</li><li>Our Insurance Partners</li><li>Scottsdale Rehab Treatment Alternatives</li><li>Alternative Therapy</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>BCBS Detox Programs in Scottsdale, AZ | Scottsdale Detox</h4>
+      <a href="https://scottsdaleazdetox.com/category/bcbs/">https://scottsdaleazdetox.com/category/bcbs/</a>
+      <p>Scottsdale Detox: BCBS-covered detox in AZ. Medically supervised withdrawal for safe, effective treatment. Start your recovery today.</p>
+      <ul><li>BCBS</li><li>Detox Covered by BCBS Scottsdale: Safe and Effective Care</li><li>Understand BCBS detox benefits</li><li>Covered detox services</li><li>Coverage details and limits</li><li>Explore detox levels</li><li>Inpatient medical detox</li><li>Partial hospitalization and intensive outpatient</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>GEHA Insurance Detox Services in Scottsdale, AZ | Scottsdale Detox</h4>
+      <a href="https://scottsdaleazdetox.com/category/geha/">https://scottsdaleazdetox.com/category/geha/</a>
+      <p>Scottsdale Detox: GEHA insurance detox services in AZ. Explore safe, medically supervised withdrawal management for addiction recovery. Contact us for coverage.</p>
+      <ul><li>GEHA</li><li>Experience Safe Detox with GEHA Insurance in Scottsdale</li><li>Understand GEHA coverage</li><li>Covered detox services</li><li>Therapy and aftercare</li><li>Cost factors and limits</li><li>Explore Scottsdale detox options</li><li>Inpatient medical detox</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Weed | Rehabilitation Centers | Scottsdale, AZ</h4>
+      <a href="https://scottsdaleazdetox.com/category/weed/">https://scottsdaleazdetox.com/category/weed/</a>
+      <p>Unlock the path to recovery with Scottsdale Detox. Explore our Weed category for addiction treatment in Scottsdale. Start your healing journey now!</p>
+      <ul><li>Weed</li><li>Top Benefits of Quitting Weed for Your Health</li><li>What Are the Top Benefits of Quitting Weed?</li><li>1. Improved Mental Health After Quitting Weed</li><li>2. Better Sleep Patterns</li><li>3. Enhanced Cognitive Function</li><li>4. Improved Cardiovascular and Respiratory Health</li><li>5. Physical Benefits of Quitting Marijuana</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Detox | Rehabilitation Centers | Scottsdale, AZ</h4>
+      <a href="https://scottsdaleazdetox.com/category/detox/">https://scottsdaleazdetox.com/category/detox/</a>
+      <p>Unlock the path to recovery with Scottsdale Detox. Explore our Detox category for addiction treatment in Scottsdale. Start your healing journey now!</p>
+      <ul><li>Detox</li><li>Detox That Takes Cobra Insurance in Scottsdale: Your Path to Recovery</li><li>Explore Cobra insurance benefits</li><li>Coverage specifics</li><li>Cost considerations</li><li>Evaluate Scottsdale Detox facility</li><li>Luxury environment</li><li>Expert medical team</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>PAWSS | Rehabilitation Centers | Scottsdale, AZ</h4>
+      <a href="https://scottsdaleazdetox.com/category/pawss/">https://scottsdaleazdetox.com/category/pawss/</a>
+      <p>Unlock the path to recovery with Scottsdale Detox. Explore our PAWSS category for addiction treatment in Scottsdale. Start your healing journey now!</p>
+      <ul><li>PAWSS</li><li>PAWSS Score</li><li>Severe Alcohol Withdrawal</li><li>Recent Posts</li><li>Categories</li><li>SUBSCRIBE &amp; STAY INFORMED</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Tricare | Rehabilitation Centers | Scottsdale, AZ</h4>
+      <a href="https://scottsdaleazdetox.com/category/tricare/">https://scottsdaleazdetox.com/category/tricare/</a>
+      <p>Unlock the path to recovery with Scottsdale Detox. Explore our Tricare category for addiction treatment in Scottsdale. Start your healing journey now!</p>
+      <ul><li>Tricare</li><li>Detox with Tricare Scottsdale for Safe Withdrawal</li><li>Review Tricare detox benefits</li><li>Choose Scottsdale treatment centers</li><li>Secure same-day admission</li><li>Manage withdrawal with medical support</li><li>Quick recap and next step</li><li>References</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>GHB Detox | Rehabilitation Centers | Scottsdale, AZ</h4>
+      <a href="https://scottsdaleazdetox.com/category/ghb-detox/">https://scottsdaleazdetox.com/category/ghb-detox/</a>
+      <p>Unlock the path to recovery with Scottsdale Detox. Explore our GHB Detox category for addiction treatment in Scottsdale. Start your healing journey now!</p>
+      <ul><li>GHB Detox</li><li>GHB Street Names</li><li>How Long Does GHB Stay in Your System?</li><li>Recent Posts</li><li>Categories</li><li>SUBSCRIBE &amp; STAY INFORMED</li></ul>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Full Style System</h2>
+          <details open><summary>Show style-system sections</summary>
+    <details class="style-section">
+      <summary>Scottsdale Detox — Style System</summary>
+      <div class="markdown"><p>Generated: 2026-06-08<br>Sources: raw/knowledge/overview.md, research data brief<br>Base rules: universal-rules/UNIVERSAL-RULES.md<br>Parent group: The Hope House</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>1. Brand &amp; Facility Overview</summary>
+      <div class="markdown"><p>Scottsdale Detox is a licensed medical detox facility in Scottsdale, AZ, operating under The Hope House group of companies. Founded in 2013, it was the first entity in the group — The Hope House residential program followed in 2017. The facility accepts only 10 clients at a time, a founding philosophy carried forward from the group&#x27;s earliest days.</p><p>Website: https://scottsdaleazdetox.com</p><p>**What Scottsdale Detox is:**<br><li>A medical detox facility providing 24/7 medically supervised withdrawal management</li><br><li>The first step in recovery — not a full treatment program</li><br><li>A low-census, high-privacy environment (10 clients maximum)</li><br><li>A Joint Commission accredited, LegitScript certified detox center</li></ul><p>**What Scottsdale Detox is NOT — never position as:**<br><li>A residential rehab or full treatment program</li><br><li>A detox center that completes recovery (detox is step one)</li><br><li>A general addiction treatment center — it is specifically a medical detox facility</li></ul><p>**Key accreditations and trust signals (confirmed):**<br><li>Joint Commission Gold Seal of Approval</li><br><li>AZ SafeClean Certified</li><br><li>LegitScript Certified Detox Center</li><br><li>&quot;The Best Award 2023&quot;</li><br><li>Named &quot;Best Suboxone Treatment Center in Scottsdale&quot;</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2. Brand Voice &amp; Tone</summary>
+      <div class="markdown"><p>Voice: calm, clinically grounded, compassionate, direct. Scottsdale Detox speaks to people in acute need and their families. Content must balance medical precision with human acknowledgment of how difficult withdrawal is.</p><p>| Attribute | Rule |<br>|---|---|<br>| Calm | Do not alarm; do not sensationalize withdrawal symptoms. Describe accurately and clearly. |<br>| Clinically grounded | Ground every protocol and timeline claim in confirmed site data. Never invent. |<br>| Compassionate | Acknowledge the difficulty of withdrawal without minimizing it or overdramatizing it. |<br>| Direct | State what the facility offers, who it is for, and what to do next. No throat-clearing. |<br>| Reassuring | Emphasize safety, supervision, and individualized care as the core value proposition. |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.1 Taglines</summary>
+      <div class="markdown"><p>**&quot;Where Healing Begins&quot;** — use in brand-level and introductory contexts. Sets a welcoming, hopeful tone without making outcome promises.</p><p>**&quot;Medical Detox Designed for Safety, Privacy, and Real Recovery&quot;** — use when emphasizing clinical and privacy differentiators. More specific than the primary tagline.</p><p>Do not force either tagline into clinical or procedural copy. Use where the framing is appropriate.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.2 Voice in practice</summary>
+      <div class="markdown"><p>Do this:<br><li>&quot;Medical detox at Scottsdale Detox is supervised by physicians and nurse practitioners around the clock.&quot; — specific, accurate, reassuring</li><br><li>&quot;Alcohol withdrawal can become life-threatening without medical supervision — 24/7 monitoring allows the team to respond immediately if symptoms escalate.&quot; — honest about risk, positions supervision as the solution</li><br><li>&quot;Detox is the first step toward recovery, not the finish line. The clinical team helps clients stabilize so they can engage the work that follows.&quot; — frames detox correctly as step one</li><br><li>&quot;Each client works through an individualized treatment plan tailored to their substance use history, medical background, and specific withdrawal patterns.&quot; — patient-centered, accurate</li></ul><p>Not this:<br><li>&quot;Our seamless detox process will have you feeling better in no time.&quot; — minimizes difficulty, uses banned language</li><br><li>&quot;We guarantee a comfortable, symptom-free withdrawal.&quot; — prohibited outcome guarantee</li><br><li>&quot;Detox at Scottsdale Detox is the comprehensive solution for addiction.&quot; — misframes detox as full treatment</li><br><li>&quot;Our cutting-edge, holistic programs...&quot; — anti-slop list; &quot;holistic individualized treatment&quot; is the one approved compound phrase</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.3 Sentence and paragraph rules</summary>
+      <div class="markdown"><p><li>Paragraphs: 2-4 lines maximum. One idea per sentence.</li><br><li>First sentence of every section directly answers the heading or states the topic.</li><br><li>No em dashes. Restructure or use a period.</li><br><li>Lead with the patient need or clinical reality; follow with how the facility addresses it.</li><br><li>Do not start sections or paragraphs with a hyperlink.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.4 Detox-first framing (required)</summary>
+      <div class="markdown"><p>Detox is the first step, not the full treatment. Every content piece that describes the detox process must include a clear framing — explicit or implicit — that positions medical detox as the beginning of recovery, not the end. Failure to frame this correctly sets a false expectation for patients and their families.</p><p>Approved framing patterns:<br><li>&quot;Medical detox is the first step toward recovery.&quot;</li><br><li>&quot;Stabilizing through medical detox creates the foundation for the treatment that follows.&quot;</li><br><li>&quot;After detox, clients work with the clinical team to identify next steps in their recovery, including residential rehab programs or outpatient programs.&quot;</li></ul><p>When referencing step-down care, use &quot;residential rehab programs&quot; or &quot;outpatient programs&quot; generically. Do not name other companies in The Hope House group by name.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.5 Addiction metaphor rules</summary>
+      <div class="markdown"><p>Do not use &quot;battle&quot; or &quot;fight&quot; as metaphors for addiction. These frames imply failure if recovery is not linear.</p><p>Use instead: address, work through, confront, stabilize, navigate, manage.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.6 Banned language</summary>
+      <div class="markdown"><p>| Category | Banned |<br>|---|---|<br>| Outcome guarantees | guarantee, guaranteed, symptom-free withdrawal, pain-free detox, comfortable withdrawal (as a promise) |<br>| Minimizing language | quick detox, easy withdrawal, in no time, fast recovery |<br>| Addiction metaphors | battle addiction, fight addiction, fight withdrawal |<br>| Anti-slop | utilize, leverage, robust, seamless, comprehensive (as puff), cutting-edge, holistic (as a standalone puff word — &quot;holistic individualized treatment&quot; is the one approved exception), synergy, transformative, innovative, game-changing, revolutionary |<br>| Generic superlatives | world-class, best-in-class, industry-leading, next-generation |<br>| AI filler | in the world of, as we know, delve into, dive into, furthermore, in conclusion, it&#x27;s worth noting |<br>| Filler intensifiers | truly, really, simply, of course, literally, incredibly |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3. Clinical Accuracy Rules</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.1 Named clinical staff — cite exactly</summary>
+      <div class="markdown"><p>| Name | Credential string |<br>|---|---|<br>| Dr. Michael Vines | MD |<br>| Alex Spritzer | FNP, CARN-AP, PMHNP |<br>| Natalie Foster | LPC-S, MS |</p><p>Do not invent credentials, alter credential order, or reference unnamed staff as if named.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.2 MAT medications (confirmed list)</summary>
+      <div class="markdown"><p>Medication-Assisted Treatment at Scottsdale Detox uses: buprenorphine, methadone, naltrexone, and benzodiazepines (for alcohol withdrawal management, tapered per protocol).</p><p>Do not name any medication outside this confirmed list. Do not invent dosing specifics or protocols.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.3 Withdrawal timelines — confirmed data only</summary>
+      <div class="markdown"><p>All timelines below are confirmed from site content. Do not compress, alter, or extend them. Do not invent additional phases.</p><p>**Alcohol detox timeline (confirmed):**</p><p>| Phase | Timeframe | Symptoms |<br>|---|---|---|<br>| Early | 6-12 hours | Restlessness, anxiety |<br>| Early-mid | 12-24 hours | Elevated heart rate, tremors |<br>| Mid | 24-48 hours | Hallucinations, confusion, fever |<br>| Peak | 48-72 hours | Intense shaking, mood changes |<br>| Improving | 3-5 days | Improvement, fatigue |<br>| Post-acute | 5+ days | Psychological cravings remain |</p><p>Alcohol detox overall span: approximately 1-2 weeks with medication adjustments throughout. Benzodiazepines used in early stages, tapered over 4-7 days, continued through day 14.</p><p>**Opioid detox timeline (confirmed):**</p><p>| Phase | Timeframe | Symptoms |<br>|---|---|---|<br>| Early | 6-12 hours | Anxiety, muscle aches |<br>| Peak | 1-3 days | Peak symptom intensity |<br>| Late | 3-5 days | Symptom reduction |<br>| Post-acute | Weeks to months | Mood and craving fluctuations |</p><p>MAT (buprenorphine, methadone, naltrexone) reduces cravings and withdrawal symptoms throughout opioid detox.</p><p>**Benzo detox (confirmed):**</p><p>Benzo detox uses a gradual dose reduction approach — approximately 25% per week. The process may extend 25+ weeks. Careful tapering with potential medication substitution is the confirmed protocol.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.4 Success rate statistic — restricted use</summary>
+      <div class="markdown"><p>One success rate reference appears on the site: &quot;success rates of withdrawal after 12 months ranged from 24% to 51%.&quot;</p><p>This statistic applies specifically to benzodiazepine withdrawal at the 12-month mark.</p><p>Rules for use:<br><li>Only use in educational context (explaining benzo detox complexity, not as a brand achievement claim)</li><br><li>Always include the full qualifier: &quot;after 12 months&quot;</li><br><li>Never present as a standalone success claim</li><br><li>Never apply to alcohol, opioid, or general detox</li></ul><p>Compliant example: &quot;Research cited at Scottsdale Detox indicates that success rates for benzodiazepine withdrawal after 12 months ranged from 24% to 51%, reflecting the complexity of benzo dependence and the importance of professional supervision.&quot;</p><p>Non-compliant example: &quot;Scottsdale Detox has a 24-51% success rate.&quot; — prohibited.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.5 Medical risk language (required)</summary>
+      <div class="markdown"><p>Alcohol and benzodiazepine withdrawal can be life-threatening. Content about these substances must include language that:<br>1. Notes unsupervised withdrawal is dangerous<br>2. Positions medical supervision as a safety measure, not just a comfort measure</p><p>Do not present detox as safe to attempt at home. Do not present withdrawal as mild or easily managed without medical oversight.</p><p>Do not minimize how difficult withdrawal is. Do not present detox as universally successful or easy.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4. Key Differentiators — Use These, Frame These Correctly</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.1 Private rooms and bathrooms</summary>
+      <div class="markdown"><p>All clients have private bedrooms and private bathrooms. This is confirmed and described on site as rare in Arizona. Use it — it is a genuine differentiator.</p><p>How to use it:<br><li>&quot;All rooms at Scottsdale Detox are private, with private en-suite bathrooms — an arrangement described on the facility&#x27;s site as uncommon among Arizona detox centers.&quot;</li><br><li>&quot;Private rooms and bathrooms for every client.&quot;</li></ul><p>How not to use it:<br><li>Do not imply private rooms are standard at other Arizona facilities.</li><br><li>Do not use &quot;luxury&quot; or &quot;spa-like&quot; to frame the amenity.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.2 Low census (10 clients maximum)</summary>
+      <div class="markdown"><p>The 10-client maximum is a founding philosophy, not just a capacity limit. Frame it as enabling individualized attention and privacy, not as an exclusive barrier.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.3 Executive amenities</summary>
+      <div class="markdown"><p>Confirmed amenities: continued cell phone access, laptop use for work, in-room DIRECTV, 24/7 on-site café, furnished patio access, two executive suites for professionals.</p><p>Use when writing content for professionals or executives. Do not imply these amenities are universal to all detox centers.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.4 &quot;Holistic individualized treatment&quot;</summary>
+      <div class="markdown"><p>This is a confirmed phrase from the site. It is acceptable to use. Do not use &quot;holistic&quot; as a standalone modifier in other contexts.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5. Insurance and Verification</summary>
+      <div class="markdown"><p>**Confirmed insurance plans:** Cigna, GEHA, Blue Cross Blue Shield, Aetna, Beacon.</p><p>Also confirmed: most employer-provided plans are accepted; same-day placement is available; free insurance verification is available.</p><p>Do not claim coverage for any plan not on the confirmed list. Do not invent insurance partnerships.</p><p>When writing about insurance, the approved CTA is: &quot;Verify Insurance&quot; or &quot;Verify Your Insurance&quot; — do not promise specific coverage outcomes.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6. Programs and Substances Treated</summary>
+      <div class="markdown"><p>**Confirmed detox programs:**<br><li>Alcohol detox</li><br><li>Opioid / heroin detox</li><br><li>Fentanyl detox</li><br><li>Benzodiazepine (benzo) detox</li><br><li>Methadone detox</li><br><li>Prescription drug misuse treatment</li><br><li>Polysubstance addiction treatment</li></ul><p>Do not reference programs or substances not on this confirmed list.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>7. Page Templates</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>7.1 Service / program pages (detox type pages)</summary>
+      <div class="markdown"><p>Structure:<br>1. H1: primary keyword; patient-need-forward framing<br>2. What this detox type involves (2-4 sentences: clinical reality, why supervision matters)<br>3. What to expect: timeline section using confirmed data from §3.3 only<br>4. How Scottsdale Detox approaches it (individualized plan, 24/7 supervision, MAT where applicable)<br>5. Differentiators relevant to this substance (private rooms, low census, named staff where appropriate)<br>6. Insurance / next steps CTA<br>7. Contact block (required on every page)</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>7.2 Blog / educational content</summary>
+      <div class="markdown"><p>Target length: 800-1,500 words.</p><p>Structure:<br>1. Meta title (55-60 characters): primary keyword near front<br>2. Meta description (140-160 characters): primary keyword, patient outcome framing, facility name<br>3. 3 primary keywords defined<br>4. H1: direct, keyword-forward; answers the reader&#x27;s question without clickbait<br>5. Short intro (2-3 sentences): state the clinical reality and what the piece covers; no filler<br>6. H2 sections: each covering a discrete clinical question or phase; first sentence directly answers the heading<br>7. Closing CTA: specific, action-based; link to the relevant detox program page or verification page</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>7.3 Required on every page or piece</summary>
+      <div class="markdown"><p><li>Contact block (see contact-block.md)</li><br><li>Detox-first framing (§2.4) — at least once per piece</li><br><li>No outcome guarantees (§2.6)</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>8. SEO Keywords by Topic</summary>
+      <div class="markdown"><p>| Content topic | Example keywords |<br>|---|---|<br>| Alcohol detox | &quot;alcohol detox Scottsdale,&quot; &quot;alcohol withdrawal treatment AZ,&quot; &quot;medically supervised alcohol detox&quot; |<br>| Opioid detox | &quot;opioid detox Scottsdale,&quot; &quot;heroin detox Arizona,&quot; &quot;fentanyl detox center&quot; |<br>| Benzo detox | &quot;benzo detox Scottsdale,&quot; &quot;benzodiazepine withdrawal treatment,&quot; &quot;prescription drug detox AZ&quot; |<br>| Medical detox general | &quot;medical detox Scottsdale,&quot; &quot;detox center Scottsdale AZ,&quot; &quot;scottsdaleazdetox&quot; |<br>| MAT | &quot;suboxone treatment Scottsdale,&quot; &quot;medication-assisted detox,&quot; &quot;buprenorphine detox AZ&quot; |<br>| Insurance | &quot;insurance accepted detox center,&quot; &quot;Cigna detox coverage,&quot; &quot;detox insurance verification&quot; |</p><p>**Keyword usage rules:**<br><li>&quot;Medical detox&quot; is the preferred term in headings and page titles</li><br><li>&quot;Withdrawal management&quot; is the clinical term — acceptable in educational/clinical body copy</li><br><li>Do not keyword stuff</li><br><li>Prioritize search intent match over keyword density</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>9. Internal Linking Rules</summary>
+      <div class="markdown"><p>**Placement — what is forbidden:**<br><li>Do not add an internal link to the first word of a sentence</li><br><li>Do not add an internal link to the first sentence of a paragraph</li><br><li>Do not add an internal link to the first line of a paragraph</li><br><li>Build context around the linked concept before placing the link</li></ul><p>**Anchor text:**<br><li>Use descriptive anchor text that matches the topic of the target page</li><br><li>Never use &quot;learn more,&quot; &quot;click here,&quot; or similar generic anchors</li></ul><p>**Target URLs:** Pull from raw/knowledge/ or verify against scottsdaleazdetox.com. Do not invent internal URLs.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>10. Pre-Publish Checklist</summary>
+      <div class="markdown"><p>| Check | Requirement |<br>|---|---|<br>| Detox-first framing | At least one clear framing of detox as first step, not full treatment |<br>| No outcome guarantees | Zero guarantee language anywhere in the piece |<br>| Timeline accuracy | Any withdrawal timeline matches §3.3 exactly — no compression or invention |<br>| Staff credentials | Named staff match §3.1 exactly |<br>| MAT medications | Only confirmed medications named (§3.2) |<br>| Benzo stat usage | If the 24-51% stat appears, it includes &quot;after 12 months&quot; and is in educational context only |<br>| Anti-slop check | Zero banned terms from §2.6 |<br>| Medical risk language | Alcohol and benzo content includes unsupervised withdrawal risk notice |<br>| Insurance | Only confirmed plans listed (§5) |<br>| Contact block | Present on every page/piece |<br>| Em dashes | Zero em dashes anywhere |<br>| Meta fields | Title (55-60 chars), description (140-160 chars), 3 keywords defined |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>11. Key Facts at a Glance</summary>
+      <div class="markdown"><p>| Detail | Value |<br>|---|---|<br>| Founded | 2013 (first entity in The Hope House group) |<br>| Address | 7283 E Earll Dr., Building B, Scottsdale, AZ 85251 |<br>| Phone | (480) 646-7660 |<br>| Email | contact@scottsdaleazdetox.com |<br>| Website | scottsdaleazdetox.com |<br>| Capacity | 10 clients maximum |<br>| Accreditation | Joint Commission Gold Seal of Approval |<br>| Certification | LegitScript Certified Detox Center, AZ SafeClean Certified |<br>| Insurance | Cigna, GEHA, Blue Cross Blue Shield, Aetna, Beacon; most employer plans |<br>| MAT medications | Buprenorphine, methadone, naltrexone, benzodiazepines (alcohol withdrawal) |<br>| Supervision | 24/7 medical supervision |<br>| Named staff | Dr. Michael Vines (MD); Alex Spritzer (FNP, CARN-AP, PMHNP); Natalie Foster (LPC-S, MS) |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>12. Approved Content Examples</summary>
+      <div class="markdown"><p>Published content lives in `_approved/`. No approved pieces added at onboarding — add to this directory as pieces are signed off.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>13. Operator Notes</summary>
+      <div class="markdown"><p>*Section for team-specific additions. Use `### {Operator} — {scope}` headings. Promote a note to the main numbered sections once it has been reinforced across two or more pieces.*</p></div>
+    </details>
+    </details>
+        </section>
+        <section class="panel">
+          <h2>Local Source Files Read</h2>
+          <ul><li><code>clients/the-hope-house/scottsdaleazdetox/STYLE-SYSTEM.md</code> — Scottsdale Detox — Style System</li>
+<li><code>clients/the-hope-house/scottsdaleazdetox/client-intelligence/README.md</code> — Scottsdale Detox Client Intelligence</li>
+<li><code>clients/the-hope-house/scottsdaleazdetox/client-intelligence/STYLE-GUIDE.md</code> — Scottsdale Detox — Style System</li>
+<li><code>clients/the-hope-house/scottsdaleazdetox/client-intelligence/offerings.md</code> — Scottsdale Detox Offerings</li>
+<li><code>clients/the-hope-house/scottsdaleazdetox/client-intelligence/source-files.md</code> — Scottsdale Detox Source Files</li>
+<li><code>clients/the-hope-house/scottsdaleazdetox/contact-block.md</code> — Contact block — Scottsdale Detox</li>
+<li><code>clients/the-hope-house/scottsdaleazdetox/deliverables/README.md</code> — Scottsdale Detox Deliverables</li>
+<li><code>clients/the-hope-house/scottsdaleazdetox/raw/knowledge/overview.md</code> — Scottsdale Detox — Facility Knowledge Overview</li>
+<li><code>clients/the-hope-house/scottsdaleazdetox/raw/knowledge/service-taxonomy.md</code> — Scottsdale Detox Service Taxonomy</li></ul>
+        </section>
+      </main>
+    </section>
+    </body>
+</html>

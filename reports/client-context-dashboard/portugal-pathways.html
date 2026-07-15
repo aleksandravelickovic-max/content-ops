@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portugal Pathways Context</title>
+  <style>
+    :root {
+      --bg:#f4f7f5; --panel:#ffffff; --ink:#09110f; --muted:#63716c; --line:#dce5df;
+      --black:#050907; --graph:#14d878; --graph-dark:#079d55; --soft:#eaf8f0; --soft-ink:#19392a;
+      --accent:#087a47; --red:#b5362d; --shadow:0 18px 46px rgba(5,9,7,.08);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:
+      linear-gradient(180deg, #ffffff 0, var(--bg) 360px); color:var(--ink); line-height:1.45; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .topnav { min-height:64px; padding:14px max(32px, calc((100vw - 1380px) / 2 + 32px)); background:var(--black); border-bottom:1px solid rgba(255,255,255,.08); position:sticky; top:0; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { color:#fff; display:inline-flex; align-items:center; gap:10px; font-weight:800; letter-spacing:0; }
+    .brand:hover { text-decoration:none; }
+    .brand span { width:32px; height:32px; border-radius:8px; background:var(--graph); color:var(--black); display:inline-grid; place-items:center; font-size:13px; font-weight:900; }
+    .nav-meta, .nav-link { color:#b8c6c0; font-size:13px; font-weight:700; }
+    .hero { margin:0; padding:42px max(32px, calc((100vw - 1380px) / 2 + 32px)) 38px; background:var(--black); color:#fff; border-bottom:1px solid rgba(255,255,255,.08); }
+    .index-hero, .client-hero { display:flex; justify-content:space-between; gap:28px; align-items:flex-start; }
+    .hero h1 { margin:0 0 12px; font-size:clamp(32px, 5vw, 62px); line-height:.98; letter-spacing:0; max-width:900px; }
+    .hero p { margin:0; color:#c7d5cf; max-width:840px; font-size:17px; }
+    .hero-copy { max-width:940px; }
+    .kicker { color:var(--graph); font-size:12px; text-transform:uppercase; letter-spacing:.08em; font-weight:900; }
+    .report-meta { display:flex; flex-wrap:wrap; gap:10px; padding:14px 32px; background:#fff; border-bottom:1px solid var(--line); color:var(--muted); font-size:13px; max-width:1380px; margin:0 auto; }
+    .report-meta span { background:var(--soft); color:var(--soft-ink); border-radius:999px; padding:6px 10px; font-weight:700; }
+    .grid.cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(290px, 1fr)); gap:16px; padding:24px 32px 42px; max-width:1380px; margin:0 auto; }
+    .card, .panel, .context-card { background:var(--panel); border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow); }
+    .client-card { display:block; padding:20px; color:inherit; min-height:184px; transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease; }
+    .client-card:hover { text-decoration:none; transform:translateY(-2px); border-color:rgba(20,216,120,.55); box-shadow:0 24px 58px rgba(5,9,7,.12); }
+    .card-topline { display:flex; justify-content:space-between; gap:10px; align-items:center; }
+    .client-card h2 { margin:14px 0 8px; font-size:23px; line-height:1.1; }
+    .client-card p { margin:0; color:var(--muted); }
+    .metrics { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+    .metrics span, .evidence, .status-pill { background:var(--soft); border:1px solid rgba(20,216,120,.22); border-radius:999px; padding:5px 9px; font-size:12px; color:var(--soft-ink); font-weight:800; }
+    .topic-chips { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 18px; }
+    .topic-chips span { background:#f6fbf8; border:1px solid var(--line); border-radius:999px; color:#183a2a; padding:7px 10px; font-size:13px; font-weight:750; }
+    .layout { display:block; padding:22px 32px 46px; max-width:1380px; margin:0 auto; }
+    main { min-width:0; }
+    .context-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; margin-bottom:20px; }
+    .context-card { padding:18px; min-height:220px; }
+    .context-card ul { margin-bottom:0; }
+    .context-note { color:var(--muted); font-size:13px; margin:4px 0 12px; }
+    .aside-label { color:var(--graph-dark); font-size:11px; text-transform:uppercase; font-weight:900; letter-spacing:.08em; margin-bottom:5px; }
+    .panel h2 { margin-top:0; }
+    .panel { padding:22px; margin-bottom:20px; }
+    .panel h2 { font-size:26px; letter-spacing:0; }
+    .offerings { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:13px; margin-top:16px; }
+    .offering, .sample { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .offering { position:relative; overflow:hidden; }
+    .offering-marker { position:absolute; inset:0 auto 0 0; width:4px; background:var(--graph); }
+    .offering h3, .sample h4 { margin:0 0 6px; }
+    .offering p { margin:0 0 10px; }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .stat-stack { display:grid; grid-template-columns:repeat(3, minmax(100px, 1fr)); gap:8px; min-width:340px; }
+    .stat-stack div { border:1px solid rgba(255,255,255,.15); border-radius:8px; padding:14px; background:rgba(255,255,255,.06); }
+    .stat-stack strong { display:block; font-size:26px; color:#fff; }
+    .stat-stack span, .muted { color:var(--muted); font-size:13px; }
+    .hero .stat-stack span { color:#b8c6c0; }
+    ul { padding-left:20px; }
+    li { margin:4px 0; }
+    code { background:var(--soft); color:var(--soft-ink); padding:2px 4px; border-radius:4px; }
+    details { margin:10px 0; }
+    summary { cursor:pointer; font-weight:700; }
+    .style-section { border-top:1px solid var(--line); padding-top:10px; }
+    .markdown { color:#2d2f35; }
+    @media (max-width: 980px) {
+      .layout, .split, .client-hero, .index-hero { grid-template-columns:1fr; display:block; }
+      .context-grid { grid-template-columns:1fr; }
+      .stat-stack { min-width:0; margin-top:16px; }
+      .hero, .grid.cards, .layout, .topnav, .report-meta { padding-left:16px; padding-right:16px; }
+      .hero h1 { font-size:36px; }
+      .stat-stack { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+    <nav class="topnav">
+      <a class="brand" href="index.html"><span>LG</span>LinkGraph</a>
+      <a class="nav-link" href="index.html">All clients</a>
+    </nav>
+    <section class="hero client-hero">
+      <div class="hero-copy">
+        <div class="kicker">portugal-pathways</div>
+        <h1>Portugal Pathways</h1>
+        <p>10 extracted offerings, 711 sitemap URLs, and 16 local source documents for client-specific writing context.</p>
+      </div>
+      <div class="stat-stack">
+        <div><strong>ok</strong><span>crawl status</span></div>
+        <div><strong>711</strong><span>URLs found</span></div>
+        <div><strong>16</strong><span>product/service URLs</span></div>
+      </div>
+    </section>
+    <section class="layout">
+      <main>
+        <section class="context-grid">
+    <article class="context-card">
+      <div class="aside-label">Quick Facts</div>
+      <p class="context-note">Company, audience, and proof points.</p>
+      <ul><li>Firm description rule: Always use &quot;integrated information, introductions and advisory platform.&quot; Never describe Portugal Pathways as &quot;independent&quot; — commission and referral arrangements exist with professional partners, and &quot;independent&quot; creates a compliance and accuracy risk.</li><li>Website: https://www.portugalpathways.io/</li><li>All content must be written in British English. This is non-negotiable. (Recognised not recognized. Organised not organized. Emphasise not emphasize. Licence/practise as nouns vs. verbs. Metre not meter. Etc.)</li><li>Investors researching residency-by-investment (primarily Golden Visa via CMVM-regulated funds)</li><li>Entrepreneurs considering the D2 Entrepreneur Visa</li><li>Professionals and retirees evaluating the D7 (passive income) or D8 (digital nomad) pathways</li><li>International buyers seeking off-market and off-plan luxury property in Portugal</li><li>These are sophisticated readers making significant financial and life decisions. Content should inform, not persuade. It should treat them as capable of assessing information without being sold to.</li><li>Segments 1–3 are the highest-priority prospecting targets. See raw/knowledge/personas.md for detailed profiles, geo-markets, and content approach per segment.</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Voice</div>
+      <p class="context-note">How this client should sound.</p>
+      <ul><li>Professional: Credible tone appropriate for legal and financial topics — not warm, not cold, not promotional</li><li>Client-centred: Focus on the client&#x27;s goals and decision-making process</li><li>Balanced: Present information without promotional claims; acknowledge complexity and uncertainty</li><li>Measured: Avoid certainty around outcomes, approvals, or financial returns</li><li>&quot;Access to luxury new developments in Lisbon is increasingly defined by timing.&quot; — factual, direct</li><li>&quot;New supply in central Lisbon is structurally limited, with construction in historic districts tightly restricted by planning rules.&quot; — explains why supply is constrained; no spin</li><li>&quot;Returns are market-driven and not guaranteed.&quot; — states the limitation plainly</li><li>&quot;Portugal Pathways provides a comparison framework and professional introductions rather than regulated advice.&quot; — precise about what the firm does and does not do</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Avoid / Compliance</div>
+      <p class="context-note">Claims, terms, and wording to avoid.</p>
+      <ul><li>&quot;Access to luxury new developments in Lisbon is increasingly defined by timing.&quot; — factual, direct</li><li>&quot;New supply in central Lisbon is structurally limited, with construction in historic districts tightly restricted by planning rules.&quot; — explains why supply is constrained; no spin</li><li>&quot;Returns are market-driven and not guaranteed.&quot; — states the limitation plainly</li><li>&quot;Portugal Pathways provides a comparison framework and professional introductions rather than regulated advice.&quot; — precise about what the firm does and does not do</li><li>&quot;Portugal is the most attractive destination for HNWI investors&quot; — superlative, promotional</li><li>&quot;The Golden Visa is your gateway to EU residency&quot; — implies a guarantee</li><li>&quot;Maximise your tax efficiency before NHR ends&quot; — implies regulated tax advice</li><li>&quot;World-class record of delivering success&quot; — vague, promotional (this appears on the website but should not appear in content)</li><li>Term: Severity</li><li>&quot;best funds&quot;: Critical</li><li>&quot;most attractive&quot; (for investment products): Critical</li><li>&quot;gateway to EU residency&quot;: Critical</li><li>&quot;guaranteed residency&quot;: Critical</li><li>&quot;guaranteed&quot; (for any outcome): Critical</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Terminology</div>
+      <p class="context-note">Client-specific naming and required language.</p>
+      <p class="muted">No clean lines extracted yet.</p>
+    </article>
+    </section>
+        <section class="panel">
+          <h2>Offerings, Services, Goods</h2>
+          <p class="muted">Writer-facing catalog from the client style system, approved source files, and usable product/service pages. Raw crawl evidence is separated below.</p>
+          <div class="offerings">
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Foreign Currency Exchange</h3>
+      <p>Portugal Pathways supports clients to make sure they get the best possible rate in foreign currency exchange (FX) with our expert partners.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/portugal-pathways/raw/knowledge/service-taxonomy.md, website sitemap sample · Sections: 8. Service Reference, Services, https://www.portugalpathways.io/solutions/foreign-currency-exchange</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Cross-Border Financial Coordination</h3>
+      <p>Coordination through licensed partners for cross-border financial planning needs.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/portugal-pathways/raw/knowledge/service-taxonomy.md · Sections: 8. Service Reference, Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Healthcare, banking, and relocation logistics</h3>
+      <p>Practical relocation support for healthcare access, banking, and move logistics.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/portugal-pathways/raw/knowledge/service-taxonomy.md · Sections: 8. Service Reference, Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>IFICI tax incentive application introductions</h3>
+      <p>Introductions and coordination around Portugal IFICI tax incentive applications.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/portugal-pathways/raw/knowledge/service-taxonomy.md · Sections: 8. Service Reference, Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Post-NHR Long-Term Planning</h3>
+      <p>Planning support and introductions for clients adjusting after the NHR regime.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/portugal-pathways/raw/knowledge/service-taxonomy.md · Sections: 8. Service Reference, Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Residency Pathways</h3>
+      <p>Guidance and partner introductions for Golden Visa, D7, D2, D8, IFICI, and NHR 2.0 related pathways.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/portugal-pathways/raw/knowledge/service-taxonomy.md · Sections: 8. Service Reference, Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Luxury New Homes Access</h3>
+      <p>Access to off-market, off-plan, and new-build luxury home opportunities.</p>
+      <div class="evidence">Sources: clients/portugal-pathways/raw/knowledge/service-taxonomy.md · Sections: Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>1–2 paragraphs framing the investment/relocation case</h3>
+      <p>1–2 paragraphs framing the investment/relocation case is listed under Location pages (from approved examples) in the Portugal Pathways client context. Check the source links before adding specific claims.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md · Sections: Location pages (from approved examples)</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Off-market, off-plan, and new-build luxury new homes access</h3>
+      <p>Off-market, off-plan, and new-build luxury new homes access is listed under 8. Service Reference in the Portugal Pathways client context. Check the source links before adding specific claims.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md · Sections: 8. Service Reference</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Optional stats block where verified data is available</h3>
+      <p>Optional stats block where verified data is available is listed under Location pages (from approved examples) in the Portugal Pathways client context. Check the source links before adding specific claims.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md · Sections: Location pages (from approved examples)</div>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Website Intelligence</h2>
+          <div class="split">
+            <div>
+              <h3>Website URLs</h3><ul><li><a href="https://www.portugalpathways.io/">https://www.portugalpathways.io/</a></li><li><a href="https://portugalpathways.io/">https://portugalpathways.io/</a></li></ul>
+              <h3>Sitemaps</h3><ul><li><a href="https://www.portugalpathways.io/sitemap.xml">https://www.portugalpathways.io/sitemap.xml</a></li></ul>
+            </div>
+            <div>
+              <h3>Semantic / Topical Terms</h3><div class="topic-chips"><span>Foreign Currency Exchange</span><span>Cross-Border Financial Coordination</span><span>Healthcare, Banking, And Relocation Logistics</span><span>IFICI tax incentive application introductions</span><span>Post-NHR Long-Term Planning</span><span>Residency Pathways</span><span>Luxury New Homes Access</span><span>Off-Market, Off-Plan, And New-Build Luxury New Homes Access</span><span>Optional Stats Block Where Verified Data Is Available</span><span>Portugal Pathways</span></div>
+              <h3>Blockers</h3><p class="muted">None</p>
+            </div>
+          </div>
+          <h3>Product / Service URLs</h3><ul><li><a href="https://www.portugalpathways.io/solutions/golden-visa-investment-fund-index">https://www.portugalpathways.io/solutions/golden-visa-investment-fund-index</a></li><li><a href="https://www.portugalpathways.io/solutions/golden-visa-solutions">https://www.portugalpathways.io/solutions/golden-visa-solutions</a></li><li><a href="https://www.portugalpathways.io/solutions/d7-visa">https://www.portugalpathways.io/solutions/d7-visa</a></li><li><a href="https://www.portugalpathways.io/solutions/d8-digital-nomad-visa">https://www.portugalpathways.io/solutions/d8-digital-nomad-visa</a></li><li><a href="https://www.portugalpathways.io/solutions/buy-side-solutions">https://www.portugalpathways.io/solutions/buy-side-solutions</a></li><li><a href="https://www.portugalpathways.io/solutions/mortgage-solutions">https://www.portugalpathways.io/solutions/mortgage-solutions</a></li><li><a href="https://www.portugalpathways.io/solutions/tax-and-financial-planning">https://www.portugalpathways.io/solutions/tax-and-financial-planning</a></li><li><a href="https://www.portugalpathways.io/solutions/ifici-nhr-2-0-tax-regime">https://www.portugalpathways.io/solutions/ifici-nhr-2-0-tax-regime</a></li><li><a href="https://www.portugalpathways.io/solutions/end-of-nhr-status">https://www.portugalpathways.io/solutions/end-of-nhr-status</a></li><li><a href="https://www.portugalpathways.io/solutions/business-setup-solutions">https://www.portugalpathways.io/solutions/business-setup-solutions</a></li><li><a href="https://www.portugalpathways.io/solutions/investment-strategies">https://www.portugalpathways.io/solutions/investment-strategies</a></li><li><a href="https://www.portugalpathways.io/solutions/concierge-services">https://www.portugalpathways.io/solutions/concierge-services</a></li><li><a href="https://www.portugalpathways.io/solutions/private-healthcare-insurance">https://www.portugalpathways.io/solutions/private-healthcare-insurance</a></li><li><a href="https://www.portugalpathways.io/solutions/luxury-new-homes">https://www.portugalpathways.io/solutions/luxury-new-homes</a></li><li><a href="https://www.portugalpathways.io/solutions/d2-entrepreneur-visa">https://www.portugalpathways.io/solutions/d2-entrepreneur-visa</a></li><li><a href="https://www.portugalpathways.io/solutions/foreign-currency-exchange">https://www.portugalpathways.io/solutions/foreign-currency-exchange</a></li></ul>
+          <h3>Sampled Pages</h3><div class="sample-pages">
+    <article class="sample">
+      <h4>Golden Visa | IFICI Tax | Luxury New Homes | Portugal Pathways</h4>
+      <a href="https://www.portugalpathways.io/">https://www.portugalpathways.io/</a>
+      <p>Supporting families navigate Portugal&#x27;s Golden Visa, IFICI tax regime, cross-border tax planning, &amp; luxury new homes market.</p>
+      <ul><li>Portugal, thoughtfully navigated</li><li>Explore our private wealth solutions, including Golden Visa residency-by-investment, cross-border tax, asset management, and off-market, off-plan luxury new homes opportunities.</li><li>Strategic solutions for residency, tax, wealth and luxury new homes</li><li>Guidance shaped by experience and an international perspective</li><li>Portugal offers choice, opportunity, safety, security, lifestyle, and a strong sense of community.</li><li>Discover Portugal&#x27;s Golden Visa, luxury new homes, and the latest expert guidance</li><li>Optimise your wealth, investments, and tax for the future</li><li>Exclusive P Club events, a private community, and luxury lifestyle solutions</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Portugal D7 Residency | Passive Income Visa | Portugal Pathways</h4>
+      <a href="https://www.portugalpathways.io/solutions/d7-visa">https://www.portugalpathways.io/solutions/d7-visa</a>
+      <p>Portugal D7 Visa: Explore Portugal&#x27;s residency pathway for qualifying applicants &amp; understand key eligibility requirements.</p>
+      <ul><li>D7 visa</li><li>Secure your Residency in Portugal</li><li>Discover the Advantages of Living in Portugal</li><li>Entrust your Visa Journey to our Experienced Team</li><li>Our Guidance is Shaped by Experience and an International Perspective</li><li>Maximise Your Wealth, Tax Status, Property, and Life in Portugal</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Luxury New Homes solutions page</h4>
+      <a href="https://www.portugalpathways.io/solutions/luxury-new-homes">https://www.portugalpathways.io/solutions/luxury-new-homes</a>
+      <p>Portugal&#x27;s most exclusive luxury new homes, off-plan and off-market</p>
+      <ul><li>LUXURY NEW HOMES</li><li>Portugal&#x27;s most exclusive luxury new homes, off-plan and off-market</li><li>Exclusive New Homes Opportunities</li><li>Portugal is many places… find yours</li><li>Our Process: The Buyer&#x27;s Mandate</li><li>Portugal forecast to outperform European property markets</li><li>Explore off-market and off-plan luxury new homes opportunities</li><li>Latest articles</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Navigating Early before the End of NHR Status | Portugal Pathways</h4>
+      <a href="https://www.portugalpathways.io/solutions/end-of-nhr-status">https://www.portugalpathways.io/solutions/end-of-nhr-status</a>
+      <p>Between years 1-7 of your 10-year NHR tax status is the key point to review investment structures &amp; income arrangements to mitigate progressive tax.</p>
+      <ul><li>End of NHR Status</li><li>Plan Early Before the End of Your NHR Tax Status</li><li>The NHR programme is not permanent. While many existing NHR tax residents benefit from its provisions, fewer fully assess how their position may change once the 10-year period concludes.</li><li>Only 29% of NHR Tax Holders Have Taken Steps to Reduce Future Tax Burdens.*</li><li>Seek Expert Support for the End of NHR</li><li>Leave the Complexities to Us</li><li>Plan Your Tax Strategy Early</li><li>Take a Long Term View</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Property Buy-Side Guidance and Support in Portugal | Portugal Pathways</h4>
+      <a href="https://www.portugalpathways.io/solutions/buy-side-solutions">https://www.portugalpathways.io/solutions/buy-side-solutions</a>
+      <p>Support for buyers navigating Portugal&#x27;s luxury new homes market with private access, &amp; buy-side support to off-plan &amp; off-market opportunities.</p>
+      <ul><li>Buy-side Solutions</li><li>Access Portugal&#x27;s Luxury Real Estate Market</li><li>At Portugal Pathways, we specialise in turning your high-end real estate research into reality. Our dedicated team and partners provide a seamless, personalised experience, ensuring that every step of your journey is treated with care and attention by expert professionals.</li><li>Investing in Luxury Property in Portugal</li><li>Expert Guidance Every Step of the Way</li><li>Our Solutions</li><li>Identifying Ideal Locations</li><li>Partnering with Experts</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Concierge Services</h4>
+      <a href="https://www.portugalpathways.io/solutions/concierge-services">https://www.portugalpathways.io/solutions/concierge-services</a>
+      <p>Discover Portugal Pathways&#x27; tailored concierge solutions to support your life and investment in Portugal</p>
+      <ul><li>Concierge Services</li><li>Luxury Concierge Solutions for Life and Investment in Portugal</li><li>From location scouting for luxury new homes and investments to removals, pet care, health‑care insurance planning, utilities, international schooling, wellness retreats, language tuition, luxury travel, company setup, and a full range of concierge solutions.</li><li>Supporting Life and Investment in Portugal</li><li>Property Location Scouting</li><li>Insurance &amp; Healthcare</li><li>FX Solutions</li><li>Family Wealth and Tax Planning</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Mortgage solutions</h4>
+      <a href="https://www.portugalpathways.io/solutions/mortgage-solutions">https://www.portugalpathways.io/solutions/mortgage-solutions</a>
+      <p>Access tailored mortgage solutions in Portugal with Portugal Pathways. Expert support for people buying real estate in Portugal.</p>
+      <ul><li>mortgage Solutions</li><li>Compare the Entire Market and find the Best Mortgage Offer</li><li>Secure the most competitive mortgage rates in Portugal with our easy comparison of top deals, all in one convenient location.</li><li>The whole mortgage market in front of you in just a few clicks</li><li>Our Mortgage Solutions</li><li>Detailed comparisons</li><li>Personalised proposals</li><li>End-to-end support</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Portugal D2 Entrepreneur Visa | Portugal Pathways</h4>
+      <a href="https://www.portugalpathways.io/solutions/d2-entrepreneur-visa">https://www.portugalpathways.io/solutions/d2-entrepreneur-visa</a>
+      <p>D2 Entrepreneur Visa: Learn about Portugal&#x27;s entrepreneur residency pathway, eligibility requirements, &amp; application considerations.</p>
+      <ul><li>D2 Entrepreneur Visa</li><li>Secure EU Residency With Portugal’s Visa for Entrepreneurs</li><li>Secure EU Residency With Portugal’s Visa for Entrepreneurs</li><li>Unlock EU residency and visa-free travel as an entrepreneur or freelancer.</li><li>What is Portugal’s D2 Entrepreneur Visa?</li><li>Who is Eligible for Portugal’s D2 Entrepreneur Visa?</li><li>What Is the Application Process for Portugal’s D2 Visa in 2026?</li><li>Guidance Shaped by Experience and an International Perspective</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>D8 Digital Nomad Visa</h4>
+      <a href="https://www.portugalpathways.io/solutions/d8-digital-nomad-visa">https://www.portugalpathways.io/solutions/d8-digital-nomad-visa</a>
+      <p>Access Portugal&#x27;s digital nomad visa (D8 visa) with Portugal Pathways. Unlock new opportunities as a remote worker or freelancer in Portugal</p>
+      <ul><li>D8 Digital Nomad Visa</li><li>Experience the Freedom of the Digital Nomad Lifestyle</li><li>Experience the freedom of a digital nomad lifestyle with Portugal&#x27;s Digital Nomad visa (D8 Visa), offering exciting opportunities and convenience for remote workers and freelancers.</li><li>Enjoy an Ideal Work-life Balance</li><li>Portugal&#x27;s D8 Visa at a Glance</li><li>Discover the Advantages of Living in Portugal</li><li>Entrust your Visa Journey to our Experienced Team</li><li>Maximise your Wealth, Tax Status, and Life in Portugal</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Portugal Golden Visa Solutions | Portugal Pathways</h4>
+      <a href="https://www.portugalpathways.io/solutions/golden-visa-solutions">https://www.portugalpathways.io/solutions/golden-visa-solutions</a>
+      <p>Portugal Golden Visa: Explore Portugal&#x27;s residency-by-investment programme, qualifying routes, &amp; application considerations with Portugal Pathways.</p>
+      <ul><li>Golden Visa Solutions</li><li>Secure Residency-by-Investment Through Portugal’s Golden Visa</li><li>Portugal’s Golden Visa offers a path to Portuguese residency for non-EU citizens, designed for families seeking long-term EU access, mobility, and optionality through regulated investment, maintainable with a minimum stay of just 7 days per year.</li><li>Why Families Continue to Choose Portugal’s Golden Visa</li><li>Named Economy of the Year by the Economist Magazine</li><li>Invest a minimum of €500k into an alternative investment fund approved for the Golden Visa</li><li>Which Golden Visa Investment Route Is Right for You?</li><li>Invest in Portugal’s Future</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Investment Strategies for Portugal | Portugal Pathways</h4>
+      <a href="https://www.portugalpathways.io/solutions/investment-strategies">https://www.portugalpathways.io/solutions/investment-strategies</a>
+      <p>Portugal Pathways provides access to investment-related information, specialist introductions, &amp; long-term planning resources in Portugal.</p>
+      <ul><li>Investment Strategies</li><li>Invest in Portugal with Confidence</li><li>As an international family in Portugal, it&#x27;s vital to have the right investments to optimise your personal tax and financial position. With over €112 billion under management across our firm and partners, our team focus on investing for sustainable returns and help you grow your wealth.</li><li>Expert Support in Managing Your Wealth</li><li>Optimising Residency with Your Strategic Investments</li><li>Outstanding Record for Success</li><li>Experience with Affluent Expats</li><li>Over €112 Billion Under Management Across Our Firms and Partners</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Business Setup in Portugal | Portugal Pathways</h4>
+      <a href="https://www.portugalpathways.io/solutions/business-setup-solutions">https://www.portugalpathways.io/solutions/business-setup-solutions</a>
+      <p>Portugal Pathways provides guidance on business setup in Portugal, including company formation, banking introductions, &amp; operational support.</p>
+      <ul><li>Business Setup Solutions</li><li>Simplifying Business Management and Formation in Portugal</li><li>Comprehensive support with company formation, online banking, corporate governance, and accounting with professional partners.</li><li>Comprehensive Support for New Businesses in Portugal</li><li>Everything You Need to Run a Business in Portugal</li><li>Company Formation</li><li>Advanced Fintech for Business Management</li><li>Physical &amp; Virtual Debit Cards</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>IFICI (NHR 2.0) Tax Regime</h4>
+      <a href="https://www.portugalpathways.io/solutions/ifici-nhr-2-0-tax-regime">https://www.portugalpathways.io/solutions/ifici-nhr-2-0-tax-regime</a>
+      <p>Learn how IFICI (NHR 2.0) works in Portugal: 20% eligible income tax, foreign income exemptions, eligibility routes, and 2026 application steps</p>
+      <ul><li>IFICI (NHR 2.0) Tax Regime</li><li>Explore Portugal’s IFICI Tax Regime</li><li>Portugal’s Tax Incentive for Scientific Research and Innovation (IFICI), also known as the NHR 2.0 tax regime, provides a 20% flat income tax rate on certain Portuguese-source employment and self-employment income for up to 10 years .</li><li>Entrepreneurs, Professionals, and Value Creators Enjoy:</li><li>Optimise your Wealth</li><li>Flat Tax Rates</li><li>Global Tax Benefits</li><li>Long-Term Incentives</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Foreign Currency Exchange</h4>
+      <a href="https://www.portugalpathways.io/solutions/foreign-currency-exchange">https://www.portugalpathways.io/solutions/foreign-currency-exchange</a>
+      <p>Portugal Pathways supports clients to make sure they get the best possible rate in foreign currency exchange (FX) with our expert partners.</p>
+      <ul><li>Foreign Currency Exchange</li><li>Make transparent international payments that cost less</li><li>Transparent payments that costs less</li><li>Maximise your wealth, tax status, property and life in Portugal</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Tax &amp; Estate Planning in Portugal | Portugal Pathways</h4>
+      <a href="https://www.portugalpathways.io/solutions/tax-and-financial-planning">https://www.portugalpathways.io/solutions/tax-and-financial-planning</a>
+      <p>Our cross-border tax planning expertise supports international people who need clarity, structure, and long-term efficiency.</p>
+      <ul><li>Tax and estate Management</li><li>Cross-Border Tax &amp; Estate Planning for Portugal</li><li>We build and design solutions for international individuals, investors, and families who need clarity and structure.</li><li>Optimising Cross-Border Tax Exposure</li><li>Personalised Approach to Your Assets and Income</li><li>Finding the Right Solutions</li><li>How it Works</li><li>Discovery Call</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Private Healthcare in Portugal | Portugal Pathways</h4>
+      <a href="https://www.portugalpathways.io/solutions/private-healthcare-insurance">https://www.portugalpathways.io/solutions/private-healthcare-insurance</a>
+      <p>Explore private healthcare insurance options in Portugal &amp; compare coverage solutions with guidance from Portugal Pathways.</p>
+      <ul><li>Private Healthcare Insurance</li><li>Protect Your Health in Portugal and Abroad</li><li>Finding the right private healthcare insurance in Portugal and abroad made simple and affordable. Delivering peace of mind for you and your family through the most comprehensive cover and value for money solution available. New arrivals often need private health insurance as a legal requirement of residency, and to ensure seamless access to medical care.</li><li>Health Coverage for Your Life in Portugal and Internationally</li><li>Expert Support Navigating Portugal&#x27;s Private Healthcare Solutions</li><li>Ongoing Support</li><li>Hassle-free</li><li>Support for public &amp; private care</li></ul>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Full Style System</h2>
+          <details open><summary>Show style-system sections</summary>
+    <details class="style-section">
+      <summary>Portugal Pathways — Style System</summary>
+      <div class="markdown"><p>Generated: 2026-05-29<br>Updated: 2026-06-23 — brand guidelines + persona doc added (founder, competitors, 3F framework, audience avatars, hard creative rules, Asian audience rules); four compliance guides applied (Golden Visa, Luxury New Homes, NHR End-of-Term, IFICI)<br>Sources: raw/knowledge/overview.md, raw/knowledge/website-faq.md, raw/knowledge/personas.md, _approved/location-pages/ (4 pieces, April 2026)<br>Base rules: universal-rules/UNIVERSAL-RULES.md</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>1. Brand &amp; Audience</summary>
+      <div class="markdown"><p>Portugal Pathways is an **integrated information, introductions and advisory platform** supporting high-net-worth individuals with residency and relocation planning in Portugal. The firm coordinates access to legal, tax, financial, and real estate professionals — it does not provide regulated advice directly.</p><p>**Firm description rule:** Always use &quot;integrated information, introductions and advisory platform.&quot; Never describe Portugal Pathways as &quot;independent&quot; — commission and referral arrangements exist with professional partners, and &quot;independent&quot; creates a compliance and accuracy risk.</p><p>Website: https://www.portugalpathways.io/</p><p>**All content must be written in British English.** This is non-negotiable. (Recognised not recognized. Organised not organized. Emphasise not emphasize. Licence/practise as nouns vs. verbs. Metre not meter. Etc.)</p><p>**Audience:** High-net-worth individuals and internationally mobile professionals. Typical profiles:<br><li>Investors researching residency-by-investment (primarily Golden Visa via CMVM-regulated funds)</li><br><li>Entrepreneurs considering the D2 Entrepreneur Visa</li><br><li>Professionals and retirees evaluating the D7 (passive income) or D8 (digital nomad) pathways</li><br><li>International buyers seeking off-market and off-plan luxury property in Portugal</li></ul><p>These are sophisticated readers making significant financial and life decisions. Content should inform, not persuade. It should treat them as capable of assessing information without being sold to.</p><p>**Six audience segments (full profiles in `raw/knowledge/personas.md`):**</p><p>| Priority | Avatar | Core Driver |<br>|---|---|---|<br>| 1 | The Plan B Risk Exiter (Mike, 58, Toronto) | Geopolitical protection, family safety |<br>| 2 | The Asset Diversifier (Tony Wang, 52, Hong Kong) | Portfolio protection, jurisdictional optionality |<br>| 3 | The Family Legacy Planner (Sofia, 47, USA) | Children&#x27;s future, education mobility |<br>| 4 | The Lifestyle Progressor (Kate, 52, Surrey) | Lifestyle elevation, intelligent options |<br>| 5 | The Global Operator (Farz, 41, Dubai) | Mobility leverage, operational freedom |<br>| 6 | The Retirement Planner (James, 61, London) | Comfort, healthcare, simplicity |</p><p>Segments 1–3 are the highest-priority prospecting targets. See `raw/knowledge/personas.md` for detailed profiles, geo-markets, and content approach per segment.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2. Voice &amp; Tone</summary>
+      <div class="markdown"><p>| Attribute | Rule |<br>|---|---|<br>| Professional | Credible tone appropriate for legal and financial topics — not warm, not cold, not promotional |<br>| Client-centred | Focus on the client&#x27;s goals and decision-making process |<br>| Balanced | Present information without promotional claims; acknowledge complexity and uncertainty |<br>| Measured | Avoid certainty around outcomes, approvals, or financial returns |</p><p>**What the voice sounds like in practice (from approved location pages):**</p><ul><li>&quot;Access to luxury new developments in Lisbon is increasingly defined by timing.&quot; — factual, direct</li><br><li>&quot;New supply in central Lisbon is structurally limited, with construction in historic districts tightly restricted by planning rules.&quot; — explains *why* supply is constrained; no spin</li><br><li>&quot;Returns are market-driven and not guaranteed.&quot; — states the limitation plainly</li><br><li>&quot;Portugal Pathways provides a comparison framework and professional introductions rather than regulated advice.&quot; — precise about what the firm does and does not do</li></ul><p>**Not this:**<br><li>&quot;Portugal is the most attractive destination for HNWI investors&quot; — superlative, promotional</li><br><li>&quot;The Golden Visa is your gateway to EU residency&quot; — implies a guarantee</li><br><li>&quot;Maximise your tax efficiency before NHR ends&quot; — implies regulated tax advice</li><br><li>&quot;World-class record of delivering success&quot; — vague, promotional (this appears on the website but should not appear in content)</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.1 Golden Visa Framing</summary>
+      <div class="markdown"><p>**Frame the Golden Visa as a mobility tool, not an emigration decision.**</p><p>Most clients are not trying to move country. They want freedom of movement without visa friction, tax disruption, or residency constraints. Almost none are motivated by financial upside from the investment itself. Lead with structural and logistical advantages.</p><ul><li>**Use:** &quot;residency optionality&quot;, &quot;mobility tool&quot;, &quot;approximately seven days per year&quot;, &quot;low physical-presence structure&quot;, &quot;flexibility without disrupting your base&quot;</li><br><li>**Avoid:** emigration framing, investment upside framing, implied guarantee of outcome</li></ul><p>The **approximately 7 days/year physical presence** requirement is a named conversion trigger. Use it explicitly for globally mobile audiences. Present this as &quot;approximately&quot; or &quot;on average approximately&quot; — the figure is derived from regulation and is subject to change; never state it as a fixed entitlement or write &quot;minimum seven days&quot; as though it is a contractual floor.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.2 The 3F Messaging Framework</summary>
+      <div class="markdown"><p>The primary content lead across all segments:</p><p>1. **Freedom** — ability to move, live, and operate without restriction<br>2. **Flexibility** — optionality without committing to a dramatic life change<br>3. **Futureproofed** — structural resilience against political, economic, or regulatory change</p><p>Lead with &quot;streamlining&quot; and &quot;friction removal.&quot; Lifestyle is a secondary and supportive narrative — it validates decisions already made on structural grounds. Never lead with lifestyle in top-of-funnel content.</p><p>**Universal buying triggers (all segments):** Predictability. Continuity. Control.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.3 Hard Creative Rules (Client-Mandated)</summary>
+      <div class="markdown"><p>These apply to all content, scripts, ads, and landing pages without exception:</p><p>| Rule | Detail |<br>|---|---|<br>| No urgency | Never &quot;act fast&quot;, &quot;limited time&quot;, &quot;don&#x27;t miss out&quot; |<br>| No aspiration-first | Never &quot;luxury lifestyle upgrade&quot;, &quot;best returns&quot; |<br>| No persuasion | Content must feel editorial and intelligent — never sales-driven |<br>| No promises | No implied outcomes, approvals, or financial returns |<br>| Editorial standard | Aim for peer-to-peer intelligence — &quot;tell me something I don&#x27;t know&quot; |</p><p>Self-check before publishing: Does this sound intelligent? Sophisticated? Human? Credible? Authoritative? If not, revise.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3. Terminology</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.1 Required terms and spellings (British English)</summary>
+      <div class="markdown"><p>**Residency programmes:**<br><li>**Golden Visa** — residency-by-investment programme. Current qualifying routes include: (1) subscription of at least €500,000 in a CMVM-regulated investment fund; (2) certain business creation and capital investment routes; (3) cultural or artistic production donations from €250,000 (reduced thresholds apply in low-density areas). Direct residential property purchase is not a qualifying route since end of 2023. Do not imply property qualifies. When listing routes, present the fund route first as it is the most common. Never describe the investment as the benefit — lead with the residency rights and optionality it unlocks.</li><br><li>**D7 Visa** — passive income / retirement visa; requires genuine physical presence (6 consecutive months or 8 months across a year)</li><br><li>**D2 Visa** (Entrepreneur Visa) — for non-EU nationals starting or investing in a business in Portugal; requires genuine residence</li><br><li>**D8 Visa** (Digital Nomad Visa) — for remote workers; requires genuine physical presence (6 consecutive months or 8 months across a year)</li><br><li>**IFICI** (NHR 2.0; full name: Incentivo Fiscal à Investigação Científica e Inovação) — the current incentivised tax regime; 20% flat income tax rate; 10-year period. Narrower than NHR: eligible professions are specifically defined and broadly limited to R&amp;D, highly qualified technical roles, and senior-level business roles in qualifying sectors. Self-employed and passive income earners who qualified under NHR may not qualify under IFICI. Pension income is not covered at favourable rates. Always characterise IFICI as narrower and more targeted than its predecessor. Application deadline is 15 January of the year following the year in which Portuguese tax residency begins — this is strict and widely missed.</li><br><li>**NHR** (Non-Habitual Residency) — closed to new entrants 31 December 2023. Existing holders continue their individual 10-year period. Never imply NHR can be renewed or that it is available to new applicants. Do not describe NHR as expiring globally — it expires for individuals when their 10-year period ends, not as a system on a single date.</li></ul><p>**Portuguese institutions and regulators:**<br><li>**AIMA** — the Portuguese immigration authority (do not say &quot;SEF&quot; — AIMA replaced SEF)</li><br><li>**CMVM** — Portuguese financial regulator (fund governance)</li><br><li>**SNS** (Serviço Nacional de Saúde) — the public health system</li></ul><p>**Property terms:**<br><li>**CPCV** (Contrato-Promessa de Compra e Venda) — promissory contract; define at first use</li><br><li>**Escritura** — completion deed</li><br><li>**NIF** — Portuguese tax identification number</li><br><li>**IMT** — Property Transfer Tax</li><br><li>**AIMI** — additional annual property tax on high-value assets</li><br><li>**off-plan** — hyphenated</li><br><li>**off-market** — hyphenated</li><br><li>**Golden Triangle** — the Algarve&#x27;s prime resort area (Quinta do Lago, Vale do Lobo, Vilamoura)</li></ul><p>**Preferred phrasing:**<br><li>&quot;luxury new homes&quot; — the primary term for Portugal Pathways&#x27; own property service; encompasses new-build, off-plan, and off-market. Do not use &quot;property&quot; or &quot;real estate&quot; when describing PP&#x27;s own services. &quot;Luxury new developments&quot; is acceptable for location page H1s and meta titles.</li><br><li>&quot;new-build&quot; — for completed homes sold new</li><br><li>&quot;off-plan&quot; — for homes purchased before completion (hyphenated)</li><br><li>&quot;off-market&quot; — for homes not publicly advertised (hyphenated)</li><br><li>&quot;residency-by-investment programme&quot; — for the Golden Visa</li><br><li>&quot;planning controls&quot; and &quot;heritage protections&quot; — for explaining supply constraints</li><br><li>&quot;structurally constrained&quot; / &quot;structurally limited&quot; — for scarcity framing</li><br><li>&quot;introductions and advisory support&quot; / &quot;co-ordination and introductions layer&quot; — for how Portugal Pathways delivers services; never &quot;independent advice&quot;</li><br><li>&quot;appropriately qualified regulated professionals&quot; — for the licensed practitioners PP introduces clients to</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.2 Strict avoidance list</summary>
+      <div class="markdown"><p>| Term | Severity | Reason |<br>|---|---|---|<br>| &quot;best funds&quot; | Critical | Financial promotion risk — never describe investment funds as &quot;best&quot; |<br>| &quot;most attractive&quot; (for investment products) | Critical | Promotional and unsubstantiated |<br>| &quot;gateway to EU residency&quot; | Critical | Implies guaranteed outcome |<br>| &quot;guaranteed residency&quot; | Critical | Residency approval is discretionary |<br>| &quot;guaranteed&quot; (for any outcome) | Critical | Approvals and returns are not guaranteed |<br>| &quot;tax optimisation&quot; | Critical | Implies regulated tax advice |<br>| &quot;wealth structuring&quot; | Critical | Implies regulated financial advice |<br>| &quot;financial efficiency&quot; | Critical | Implies regulated advice |<br>| &quot;supports thousands of expats&quot; | Critical | Unverifiable scale claim |<br>| &quot;best&quot; (superlative for any service or location) | Critical | Unsubstantiated; rejected by regulators |<br>| &quot;world-class&quot; | Warning | Vague promotional language |<br>| &quot;unique&quot; | Warning | Overused; vague |<br>| &quot;seamless&quot; | Warning | Vague |<br>| &quot;bespoke&quot; | Warning | Overused in luxury copy |<br>| capital appreciation claims without risk caveat | Critical | Performance implication — balance required |<br>| &quot;act fast&quot; / &quot;limited time&quot; / &quot;don&#x27;t miss out&quot; | Critical | Urgency language — rejected by this audience; compliance risk |<br>| &quot;luxury lifestyle upgrade&quot; | Critical | Aspiration-first framing — lifestyle must follow structural logic, never lead |<br>| &quot;best returns&quot; | Critical | Performance claim — implies regulated advice and is unsubstantiated |<br>| &quot;opportunities&quot; (for Asset Diversifier segment) | Warning | This segment is not looking for upside — capital resilience framing is correct |<br>| &quot;independent&quot; (to describe Portugal Pathways) | Critical | PP has commercial relationships with professional partners; &quot;independent&quot; creates compliance and accuracy risk |<br>| &quot;tax haven&quot; (to describe Portugal) | Critical | Factually inaccurate and damaging to credibility; Portugal is a well-regulated EU member state |<br>| &quot;35% of luxury off-market/off-plan opportunities are not listed&quot; | Critical | Unverifiable claim; explicitly in the Luxury New Homes compliance guide AVOID list |<br>| &quot;minimum seven days&quot; (for Golden Visa presence) | Warning | Presents a regulatory figure as a contractual floor; use &quot;approximately seven days&quot; |<br>| &quot;citizenship in 5 years&quot; | Critical | Portugal Nationality Law was revised in 2026; naturalisation timelines now vary by nationality and individual circumstances — do not state a fixed timeline |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4. Accuracy &amp; Technical Standards</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.1 Regulatory accuracy</summary>
+      <div class="markdown"><p><li>**Golden Visa:** Current qualifying routes — see §3.1. Direct property purchase is not a qualifying route since end of 2023. Do not imply property qualifies. Do not bundle property and Golden Visa in the same logical chain — they are entirely separate matters.</li><br><li>**Golden Visa physical presence:** &quot;On average approximately seven days per year&quot; — broadly around fourteen days across the initial two-year residence period. This low-presence structure is specific to the Golden Visa. It is not a general feature of Portuguese residency. Never attribute the 7-day figure to Portugal broadly or to any D visa. Present it as approximate and subject to legislative change, not as a fixed contractual entitlement.</li><br><li>**Tax residency vs. immigration residency:** Holding a Portuguese Golden Visa does not automatically make an individual a Portuguese tax resident. Tax residency is determined separately, according to Portuguese tax law and individual circumstances. This distinction must be stated clearly wherever Golden Visa and tax planning are discussed in proximity. It is one of the highest-risk conflation points.</li><br><li>**D7 / D8 / D2 physical presence:** These visas require genuine residence in Portugal — typically six consecutive months, or eight months across a year. They are suited to substantive relocation, not low-presence optionality. The approximately 7-day annual presence figure does not apply to these routes.</li><br><li>**Property and residency:** Property ownership in Portugal does not confer residency or any low-presence benefit. The real estate route was withdrawn at end of 2023. Never imply otherwise.</li><br><li>**Schengen access:** A Portuguese residency permit provides visa-free travel within the Schengen Area for short stays. Always qualify: &quot;generally up to 90 days in any 180-day period under current rules.&quot; Never state Schengen access as unlimited or unconditional.</li><br><li>**Residency approval:** Always discretionary, subject to AIMA review, policy changes, and applicant suitability. Never imply automatic approval.</li><br><li>**NHR:** Closed to new entrants 31 December 2023. Existing holders continue their individual 10-year term. Do not present NHR as available to new applicants. Reference IFICI for the current incentivised tax regime. Do not imply NHR is universally expiring on a fixed future date — it is expiring for specific individuals when their own 10-year period ends.</li><br><li>**Portugal Nationality Law (2026):** The naturalisation timeline was extended and now differs by nationality and individual circumstances. Do not write &quot;citizenship in 5 years&quot; or any fixed period — this is outdated and inaccurate.</li><br><li>**AIMA vs SEF:** AIMA is the current immigration authority. SEF was dissolved. Use AIMA.</li><br><li>**D2 timeline:** Company formation 1–2 days (simple cases); D2 visa processing typically 2–4 months.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.2 Portugal Pathways scope</summary>
+      <div class="markdown"><p>Portugal Pathways does not provide:<br><li>Regulated investment advice</li><br><li>Regulated tax advice</li><br><li>Regulated legal advice</li></ul><p>Content must make this clear when topics approach these areas. Use phrasings like:<br><li>&quot;Portugal Pathways provides introductions to licensed professionals rather than regulated advice.&quot;</li><br><li>&quot;Suitability, risk assessment, and specific product recommendations require authorised professionals.&quot;</li><br><li>&quot;Cross-border tax and investment considerations typically require specialist guidance.&quot;</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.3 Property and financial claims</summary>
+      <div class="markdown"><p><li>Capital appreciation: always note returns are market-driven and not guaranteed.</li><br><li>Cost of living comparisons: only cite verified figures, attributed to Portugal Pathways research or a named source (e.g., PMI Report).</li><br><li>Off-market access claims: **Do not use the &quot;35%&quot; figure** (&quot;35% of luxury off-market and off-plan opportunities are not listed&quot;) — this is explicitly in the Luxury New Homes compliance guide AVOID list (unverifiable). Instead, use: &quot;many off-plan and off-market luxury new homes are not widely advertised on mainstream portals&quot; or &quot;not openly marketed.&quot; The &quot;more than 250 developers, architects, builders and designers&quot; figure is verified — use it accurately; do not inflate.</li><br><li>Portugal&#x27;s listing landscape: Portugal does not operate a nationwide multiple listing service. This is factual and approved framing for explaining off-market access.</li><br><li>Payment structures: &quot;typically&quot; or &quot;common frameworks include&quot; — not presented as universal.</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5. Specificity Rules</summary>
+      <div class="markdown"><p>**Location content must include:**<br><li>Named districts and neighbourhoods (not just &quot;central Lisbon&quot;)</li><br><li>Specific distances and travel times (format: &quot;approximately X minutes&#x27; drive&quot;)</li><br><li>Named schools, hospitals, and cultural venues where relevant</li><br><li>Factual descriptions of what defines the area (planning framework, heritage protections, geography)</li></ul><p>**Do not describe locations with generic lifestyle superlatives.** Instead, describe what is factually true about the place and let the reader draw the conclusion.</p><ul><li>Bad: &quot;Lisbon is one of Europe&#x27;s most vibrant cities with an unrivalled lifestyle offer.&quot;</li><br><li>Good: &quot;Lisbon&#x27;s food scene ranges from neighbourhood tascas to Time Out Market Lisboa, where some of Portugal&#x27;s leading chefs present regional produce in a single riverside location.&quot;</li></ul><p>**Supply constraint framing (from approved examples):**<br>When explaining why prime property is scarce:<br><li>&quot;New supply in [area] is structurally limited, with construction tightly restricted by planning rules.&quot;</li><br><li>&quot;Heritage protections, geography, and planning controls limit where new homes can be delivered.&quot;</li><br><li>&quot;New homes enter the market through redevelopment or replacement within established plots — not through new construction phases.&quot;</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6. Page Structure</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Location pages (from approved examples)</summary>
+      <div class="markdown"><p>1. **H1:** &quot;Explore Luxury New Developments in [Location]&quot;<br>2. **Subheading:** short descriptor of the region or area type (e.g., &quot;The Golden Triangle&quot;, &quot;Northern Portugal&quot;, &quot;City Metropolitan&quot;)<br>3. **Intro block:** 2–4 paragraphs — establish the location, named districts, character, and what defines the new development market<br>4. **CTA buttons** (mid-page): &quot;Arrange a private consultation&quot; + &quot;Contact us&quot;<br>5. **H2: &quot;Why Are International Buyers/Investors Choosing [Location]?&quot;**<br>   - 1–2 paragraphs framing the investment/relocation case<br>   - Bullet list: &quot;What this means for international buyers&quot; — 3 points<br>   - Optional stats block where verified data is available<br>6. **H2 sections:** 3–5 contextual sections answering specific questions (cultural, amenities, lifestyle, cost of living, international community)<br>7. **FAQ section** (optional): Q&amp;A format, question-based headings<br>8. **CTA form block:** &quot;Arrange a Private Consultation&quot;</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>General content</summary>
+      <div class="markdown"><p>No templates established for other content types yet. Derive from approved examples and brief.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>7. SEO Standards</summary>
+      <div class="markdown"><p>**Meta title format for location pages:**<br>`Luxury New Developments in [Location] | Portugal Pathways`<br>(Target 55–60 characters)</p><p>**Meta description format:**<br>`Explore luxury new developments in [Location] and access [off-plan/off-market/market] opportunities. Portugal Pathways supports [international buyers/investors/relocating families].`<br>(Target 140–160 characters)</p><p>**Primary keywords (location pages):**<br><li>&quot;luxury new homes [location]&quot; / &quot;luxury new developments [location]&quot; — primary (both are valid; &quot;luxury new homes&quot; is the preferred service vocabulary per §3.1)</li><br><li>&quot;[location] property investment&quot; — secondary</li><br><li>&quot;buy property in [location] as a foreigner&quot; / &quot;relocating to [location]&quot; / &quot;[location] real estate investment&quot; — supporting</li></ul><p>**Keyword naturalness:** British spelling applies to keyword use. If a target keyword uses American English and it conflicts with British spelling, the written content should use British spelling and the meta fields can match the keyword exactly.</p><p>**First sentence:** include primary keyword.</p><p>**Keyword avoidance:** Do not target holiday-focused or short-stay travel search terms. The audience is making long-term residency and investment decisions.</p><p>**Indirect keyword architecture — five layers beyond &quot;Portugal Golden Visa&quot;:**<br>1. **Tax &amp; Structuring** — UK inheritance tax mitigation abroad; EU tax residency options; cross-border wealth structuring; EU tax-efficient jurisdictions<br>2. **Mobility &amp; Freedom** — Schengen stay limits explained; multiple residency strategy; living between countries legally<br>3. **Wealth Behaviour** — Second citizenship vs residency; portfolio diversification Europe; holding property through fund structures; offshore diversification EU<br>4. **Family Strategy** — Best EU countries for international schools; EU education access for non-Europeans; global mobility planning for families<br>5. **Regulatory &amp; Market Timing** — NHR replacement 2026; IFICI explained; UK IHT changes 2026; EU residency programme changes</p><p>These layers allow content to engage prospects at the Discover stage — before competitors intercept them at bottom-of-funnel Golden Visa searches.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>8. Service Reference</summary>
+      <div class="markdown"><p>Core advisory areas:<br><li>Residency pathways (Golden Visa, D7, D2, D8, IFICI/NHR 2.0)</li><br><li>Off-market, off-plan, and new-build luxury new homes access</li><br><li>Cross-border financial coordination (via licensed partners)</li><br><li>Healthcare, banking, and relocation logistics</li><br><li>Foreign currency exchange (FCA-regulated partners)</li><br><li>IFICI tax incentive application introductions</li><br><li>Post-NHR long-term planning (introductions)</li></ul><p>Portugal Pathways does not directly provide: investment advice, tax advice, legal advice, mortgage products, fund recommendations.</p><p>**Founder / Chairman:** Paul Stannard. Press release quotes are attributed to him by name.</p><p>**PR Contact:** Oakie Britcher — oakie.britcher@portugalpathways.io (email may be included in press releases; phone not provided)</p><p>**Verified scale claim (compliant):** &quot;Portugal Pathways has supported hundreds of Golden Visa residency-by-investment applications.&quot; Do not inflate to &quot;thousands.&quot;</p><p>**Standard disclaimer text (for press releases and regulated-topic content):**<br>&gt; *Portugal Pathways provides general information and introductions and does not offer regulated investment, tax, legal or immigration advice. Residency approval is discretionary and subject to AIMA review and applicable Portuguese law. Tax residency is determined separately from immigration residency according to Portuguese tax law and individual circumstances. The value of luxury new homes and qualifying investments may rise or fall; past performance is not a reliable indicator of future results. Where investment routes for the Golden Visa are referenced, investments are offered by independent, regulated fund managers; capital is at risk. Qualifying routes, investment thresholds and physical presence requirements are subject to Portuguese legislation and may change.*</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>9. Audience-Specific Writing Rules</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Asian and Middle Eastern Audiences</summary>
+      <div class="markdown"><p>Asian and Middle Eastern prospects have distinct constraints that require a different content approach. Do not treat them as a geo-targeted variant of western campaigns.</p><p>Key differences:<br><li>Many cannot or do not want second passports — **renewable residency is the priority**, not citizenship</li><br><li>Education-led pathways are highly valued</li><br><li>Messaging should lead with **compliance, compatibility, and renewable structure**</li><br><li>These audiences prioritise residency flexibility over complete relocation</li></ul><p>Content for this audience must be developed with a distinct copy logic. Do not apply western campaign language or lifestyle framing here.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>LGBTQ+ Audience Signal</summary>
+      <div class="markdown"><p>Portugal&#x27;s social stability, safety record, and inclusivity are named conversion triggers for LGBTQ+ prospects. Secondary messaging should include subtle signals around inclusivity, gender safety, racial safety, and European social climate. Resonates strongly across HNWI segments broadly and the &quot;pink pound&quot; specifically.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Family as a Cross-Segment Driver</summary>
+      <div class="markdown"><p>Family protection and children&#x27;s future mobility are dominant emotional drivers across **all** HNW segments — even asset-focused or operationally-minded audiences. Content touching on education access, children&#x27;s safety, and family continuity has broad relevance beyond the Family Legacy Planner segment.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>10. Pre-Submission Checklist</summary>
+      <div class="markdown"><p>**British English:**<br><li>[ ] All spellings are British English (recognised, organised, emphasise, licence/practise, etc.)</li><br><li>[ ] No American English spellings</li></ul><p>**Compliance:**<br><li>[ ] No &quot;best funds&quot;, &quot;most attractive&quot; or similar language for investment products</li><br><li>[ ] No implied guarantee of residency approval</li><br><li>[ ] No &quot;guaranteed&quot; for any outcome, approval, or return</li><br><li>[ ] No &quot;tax optimisation&quot;, &quot;wealth structuring&quot;, or &quot;financial efficiency&quot; without a disclaimer</li><br><li>[ ] No unverifiable scale claims (&quot;thousands of expats&quot; etc.)</li><br><li>[ ] Capital appreciation framed as market-driven, not guaranteed</li><br><li>[ ] Portugal Pathways positioned as providing introductions / advisory support — not regulated advice</li><br><li>[ ] No urgency language (&quot;act fast&quot;, &quot;limited time&quot;, &quot;don&#x27;t miss out&quot;)</li><br><li>[ ] No aspiration-first framing (&quot;luxury lifestyle upgrade&quot;, &quot;best returns&quot;)</li><br><li>[ ] Scale claims use &quot;hundreds of&quot; not &quot;thousands of&quot;</li></ul><p>**Accuracy:**<br><li>[ ] Golden Visa: qualifying routes listed correctly (fund €500k+, business/capital investment, cultural donation €250k+); property not qualifying since end of 2023</li><br><li>[ ] Golden Visa 7-day presence: presented as &quot;approximately&quot; — not &quot;minimum&quot;; not attributed to Portugal generally or to D visas</li><br><li>[ ] Tax residency ≠ immigration residency distinction stated wherever GV and tax are discussed in proximity</li><br><li>[ ] Property and Golden Visa not placed in the same logical chain</li><br><li>[ ] D7/D8/D2 described as requiring genuine residence (6 consecutive months or 8 months/year) — not low-presence</li><br><li>[ ] Schengen access qualified: &quot;up to 90 days in any 180-day period under current rules&quot;</li><br><li>[ ] No &quot;35%&quot; off-market claim; no &quot;citizenship in 5 years&quot;</li><br><li>[ ] AIMA used (not SEF)</li><br><li>[ ] NHR described as closed to new entrants (December 2023); IFICI referenced for current regime</li><br><li>[ ] Specific figures attributed to a source (PMI Report, Portugal Pathways research, etc.)</li><br><li>[ ] Portugal Pathways described as &quot;integrated information, introductions and advisory platform&quot; — not &quot;independent&quot;</li></ul><p>**Voice:**<br><li>[ ] Tone is measured and professional — not promotional or enthusiastic</li><br><li>[ ] No superlatives (&quot;best&quot;, &quot;most attractive&quot;, &quot;world-class&quot;)</li><br><li>[ ] Location content uses named districts, distances, specific venues — not generic lifestyle claims</li><br><li>[ ] Golden Visa framed as a mobility tool, not an emigration decision</li><br><li>[ ] Lifestyle content supports structural logic — does not lead it</li><br><li>[ ] Content passes the editorial self-check: intelligent, sophisticated, human, credible, authoritative</li></ul><p>**Format:**<br><li>[ ] Location page follows approved structure: H1 → subheading → intro → CTA → Why section → contextual H2s → FAQ → CTA</li></p></div>
+    </details>
+    </details>
+        </section>
+        <section class="panel">
+          <h2>Local Source Files Read</h2>
+          <ul><li><code>clients/portugal-pathways/STYLE-SYSTEM.md</code> — Portugal Pathways — Style System</li>
+<li><code>clients/portugal-pathways/_approved/location-pages/lisbon.md</code> — Approved Example — Lisbon Location Page</li>
+<li><code>clients/portugal-pathways/_approved/location-pages/porto.md</code> — Approved Example — Porto Location Page</li>
+<li><code>clients/portugal-pathways/_approved/location-pages/vale-do-lobo.md</code> — Approved Example — Vale do Lobo Location Page</li>
+<li><code>clients/portugal-pathways/_approved/location-pages/vilamoura.md</code> — Approved Example — Vilamoura Location Page</li>
+<li><code>clients/portugal-pathways/client-intelligence/README.md</code> — Portugal Pathways Client Intelligence</li>
+<li><code>clients/portugal-pathways/client-intelligence/STYLE-GUIDE.md</code> — Portugal Pathways — Style System</li>
+<li><code>clients/portugal-pathways/client-intelligence/offerings.md</code> — Portugal Pathways Offerings</li>
+<li><code>clients/portugal-pathways/client-intelligence/source-files.md</code> — Portugal Pathways Source Files</li>
+<li><code>clients/portugal-pathways/deliverables/README.md</code> — Portugal Pathways Deliverables</li>
+<li><code>clients/portugal-pathways/deliverables/drafts/01-june-2026-pr/press-release-v2.md</code> — Press Release — Portugal Pathways — June 2026</li>
+<li><code>clients/portugal-pathways/deliverables/drafts/01-june-2026-pr/press-release-v3.md</code> — Press Release — Portugal Pathways — June 2026</li>
+<li><code>clients/portugal-pathways/raw/knowledge/overview.md</code> — Portugal Pathways — Client Overview</li>
+<li><code>clients/portugal-pathways/raw/knowledge/personas.md</code> — Portugal Pathways — Audience Personas</li>
+<li><code>clients/portugal-pathways/raw/knowledge/service-taxonomy.md</code> — Portugal Pathways Service Taxonomy</li>
+<li><code>clients/portugal-pathways/raw/knowledge/website-faq.md</code> — Portugal Pathways — Website FAQ &amp; Knowledge Base</li></ul>
+        </section>
+      </main>
+    </section>
+    </body>
+</html>

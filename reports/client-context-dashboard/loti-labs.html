@@ -1,0 +1,778 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loti Labs Context</title>
+  <style>
+    :root {
+      --bg:#f4f7f5; --panel:#ffffff; --ink:#09110f; --muted:#63716c; --line:#dce5df;
+      --black:#050907; --graph:#14d878; --graph-dark:#079d55; --soft:#eaf8f0; --soft-ink:#19392a;
+      --accent:#087a47; --red:#b5362d; --shadow:0 18px 46px rgba(5,9,7,.08);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:
+      linear-gradient(180deg, #ffffff 0, var(--bg) 360px); color:var(--ink); line-height:1.45; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .topnav { min-height:64px; padding:14px max(32px, calc((100vw - 1380px) / 2 + 32px)); background:var(--black); border-bottom:1px solid rgba(255,255,255,.08); position:sticky; top:0; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { color:#fff; display:inline-flex; align-items:center; gap:10px; font-weight:800; letter-spacing:0; }
+    .brand:hover { text-decoration:none; }
+    .brand span { width:32px; height:32px; border-radius:8px; background:var(--graph); color:var(--black); display:inline-grid; place-items:center; font-size:13px; font-weight:900; }
+    .nav-meta, .nav-link { color:#b8c6c0; font-size:13px; font-weight:700; }
+    .hero { margin:0; padding:42px max(32px, calc((100vw - 1380px) / 2 + 32px)) 38px; background:var(--black); color:#fff; border-bottom:1px solid rgba(255,255,255,.08); }
+    .index-hero, .client-hero { display:flex; justify-content:space-between; gap:28px; align-items:flex-start; }
+    .hero h1 { margin:0 0 12px; font-size:clamp(32px, 5vw, 62px); line-height:.98; letter-spacing:0; max-width:900px; }
+    .hero p { margin:0; color:#c7d5cf; max-width:840px; font-size:17px; }
+    .hero-copy { max-width:940px; }
+    .kicker { color:var(--graph); font-size:12px; text-transform:uppercase; letter-spacing:.08em; font-weight:900; }
+    .report-meta { display:flex; flex-wrap:wrap; gap:10px; padding:14px 32px; background:#fff; border-bottom:1px solid var(--line); color:var(--muted); font-size:13px; max-width:1380px; margin:0 auto; }
+    .report-meta span { background:var(--soft); color:var(--soft-ink); border-radius:999px; padding:6px 10px; font-weight:700; }
+    .grid.cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(290px, 1fr)); gap:16px; padding:24px 32px 42px; max-width:1380px; margin:0 auto; }
+    .card, .panel, .context-card { background:var(--panel); border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow); }
+    .client-card { display:block; padding:20px; color:inherit; min-height:184px; transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease; }
+    .client-card:hover { text-decoration:none; transform:translateY(-2px); border-color:rgba(20,216,120,.55); box-shadow:0 24px 58px rgba(5,9,7,.12); }
+    .card-topline { display:flex; justify-content:space-between; gap:10px; align-items:center; }
+    .client-card h2 { margin:14px 0 8px; font-size:23px; line-height:1.1; }
+    .client-card p { margin:0; color:var(--muted); }
+    .metrics { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+    .metrics span, .evidence, .status-pill { background:var(--soft); border:1px solid rgba(20,216,120,.22); border-radius:999px; padding:5px 9px; font-size:12px; color:var(--soft-ink); font-weight:800; }
+    .topic-chips { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 18px; }
+    .topic-chips span { background:#f6fbf8; border:1px solid var(--line); border-radius:999px; color:#183a2a; padding:7px 10px; font-size:13px; font-weight:750; }
+    .layout { display:block; padding:22px 32px 46px; max-width:1380px; margin:0 auto; }
+    main { min-width:0; }
+    .context-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; margin-bottom:20px; }
+    .context-card { padding:18px; min-height:220px; }
+    .context-card ul { margin-bottom:0; }
+    .context-note { color:var(--muted); font-size:13px; margin:4px 0 12px; }
+    .aside-label { color:var(--graph-dark); font-size:11px; text-transform:uppercase; font-weight:900; letter-spacing:.08em; margin-bottom:5px; }
+    .panel h2 { margin-top:0; }
+    .panel { padding:22px; margin-bottom:20px; }
+    .panel h2 { font-size:26px; letter-spacing:0; }
+    .offerings { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:13px; margin-top:16px; }
+    .offering, .sample { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .offering { position:relative; overflow:hidden; }
+    .offering-marker { position:absolute; inset:0 auto 0 0; width:4px; background:var(--graph); }
+    .offering h3, .sample h4 { margin:0 0 6px; }
+    .offering p { margin:0 0 10px; }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .stat-stack { display:grid; grid-template-columns:repeat(3, minmax(100px, 1fr)); gap:8px; min-width:340px; }
+    .stat-stack div { border:1px solid rgba(255,255,255,.15); border-radius:8px; padding:14px; background:rgba(255,255,255,.06); }
+    .stat-stack strong { display:block; font-size:26px; color:#fff; }
+    .stat-stack span, .muted { color:var(--muted); font-size:13px; }
+    .hero .stat-stack span { color:#b8c6c0; }
+    ul { padding-left:20px; }
+    li { margin:4px 0; }
+    code { background:var(--soft); color:var(--soft-ink); padding:2px 4px; border-radius:4px; }
+    details { margin:10px 0; }
+    summary { cursor:pointer; font-weight:700; }
+    .style-section { border-top:1px solid var(--line); padding-top:10px; }
+    .markdown { color:#2d2f35; }
+    @media (max-width: 980px) {
+      .layout, .split, .client-hero, .index-hero { grid-template-columns:1fr; display:block; }
+      .context-grid { grid-template-columns:1fr; }
+      .stat-stack { min-width:0; margin-top:16px; }
+      .hero, .grid.cards, .layout, .topnav, .report-meta { padding-left:16px; padding-right:16px; }
+      .hero h1 { font-size:36px; }
+      .stat-stack { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+    <nav class="topnav">
+      <a class="brand" href="index.html"><span>LG</span>LinkGraph</a>
+      <a class="nav-link" href="index.html">All clients</a>
+    </nav>
+    <section class="hero client-hero">
+      <div class="hero-copy">
+        <div class="kicker">loti-labs</div>
+        <h1>Loti Labs</h1>
+        <p>38 extracted offerings, 506 sitemap URLs, and 17 local source documents for client-specific writing context.</p>
+      </div>
+      <div class="stat-stack">
+        <div><strong>ok</strong><span>crawl status</span></div>
+        <div><strong>506</strong><span>URLs found</span></div>
+        <div><strong>80</strong><span>product/service URLs</span></div>
+      </div>
+    </section>
+    <section class="layout">
+      <main>
+        <section class="context-grid">
+    <article class="context-card">
+      <div class="aside-label">Quick Facts</div>
+      <p class="context-note">Company, audience, and proof points.</p>
+      <ul><li>Websites: https://lotilabs.com/ and https://wholesalepeptide.com/ (wholesale — separate)</li><li>ClickUp: see raw/knowledge/overview.md for project links</li><li>2. Skincare / cosmetic peptide buyers — sourcing compounds (copper peptides, Matrixyl, Argireline) for cosmetic and topical research applications. More accessible tone; comparison-driven content performs well.</li><li>These audiences read differently. Research peptide readers want mechanisms, molecular specs, and sourcing transparency. Skincare readers want guidance and comparison. Adjust framing per page — do not blend both voices into a single piece.</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Voice</div>
+      <p class="context-note">How this client should sound.</p>
+      <ul><li>Authoritative without academic: Confident in the science, plain in the language. Explain technical terms at first use.</li><li>Precise, not promotional: Specific numbers (1 PM EST, 1–2 hour response, 30ml, 99.91%) beat vague superlatives.</li><li>Boutique and personal: Small team. The service commitment is a genuine differentiator — name it specifically.</li><li>Compliant by default: Research-only positioning is not a disclaimer. It is built into how every compound is described.</li><li>Researcher-to-researcher: Treat the reader as a qualified professional. Do not condescend or pad with marketing fluff.</li><li>&quot;Every batch is tested by an independent third-party lab in Orlando, FL. COAs are available on the product page.&quot; — specific, verifiable, trust-building</li><li>&quot;Liquid tadalafil is studied for vascular and PDE-5 research applications.&quot; — research-only framing, accurate</li><li>&quot;Orders placed before 1 PM EST (M–F) ship the same day.&quot; — concrete, believable</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Avoid / Compliance</div>
+      <p class="context-note">Claims, terms, and wording to avoid.</p>
+      <p class="muted">No clean lines extracted yet.</p>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Terminology</div>
+      <p class="context-note">Client-specific naming and required language.</p>
+      <ul><li>Compound: Avoid</li><li>BPC-157: &quot;Helps heal injuries and reduce inflammation.&quot;</li><li>MK-677: &quot;Boosts growth hormone for muscle gain.&quot;</li><li>Copper peptides: &quot;Reduces wrinkles and firms skin.&quot;</li><li>Tadalafil: &quot;Treats erectile dysfunction.&quot;</li><li>Sermorelin: &quot;Anti-aging hormone therapy.&quot;</li></ul>
+    </article>
+    </section>
+        <section class="panel">
+          <h2>Offerings, Services, Goods</h2>
+          <p class="muted">Writer-facing catalog from the client style system, approved source files, and usable product/service pages. Raw crawl evidence is separated below.</p>
+          <div class="offerings">
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>5-Amino-1MQ 10mg Peptide</h3>
+      <p>5-Amino-1MQ 10mg is a small molecule quinolinium salt classified as a nicotinamide N-methyltransferase (NNMT) inhibitor. This compound has a molecular weight of 159.21 g/mol and a molecular formula of C10H11N2+. Supplied as a 10mg lyophilized powder with ≥98% purity verified by HPLC and mass spectrometry. For in-vit...</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md, website offering page · Sections: Product Categories and Product Pages, https://lotilabs.com/product/5-amino-1mq-10mg/</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>5-Amino-1MQ Capsules</h3>
+      <p>5-Amino-1MQ 50mg capsules (CAS 4965-12-2, C₁₀H₁₁N₂⁺, MW 159.21 g/mol) contain a small-molecule inhibitor of nicotinamide N-methyltransferase (NNMT), an enzyme implicated in NAD⁺ salvage pathway regulation and cellular energy metabolism. 30 capsules per unit. Capsules are for laboratory, research, analytical, and mea...</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md, website offering page · Sections: Product Categories and Product Pages, https://lotilabs.com/product/5-amino-1mq-capsules/</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>BAM15 Capsules 10mg</h3>
+      <p>BAM15 10mg capsules (CAS 1642568-48-2, MW 438.89 g/mol) contain a selective mitochondrial protonophore that uncouples oxidative phosphorylation without depolarizing plasma membrane potential — distinguishing it from classical uncouplers such as FCCP and DNP in cellular energy metabolism studies. 30 capsules per unit...</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md, website offering page · Sections: Product Categories and Product Pages, https://lotilabs.com/product/bam15-capsules-10mg-capsule-30-capsules/</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>BPC-157 Capsules 500mcg</h3>
+      <p>BPC-157 500mcg capsules (CAS 137525-51-0) contain a synthetic 15-amino acid peptide (Body Protection Compound, C₆₂H₈₉N₁₅O₁₇, MW ~1,419 g/mol) originally isolated from a sequence in human gastric juice and studied for its interaction with nitric oxide and growth factor signaling pathways. 30 capsules per unit. Capsul...</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md, website offering page · Sections: Product Categories and Product Pages, https://lotilabs.com/product/bpc-157-capsules/</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Cagrilintide 5mg</h3>
+      <p>Cagrilintide 5mg is a long-acting synthetic analog of the human amylin hormone, engineered with fatty acid acylation for extended duration of action. It has a molecular weight of approximately 4,409.01 g/mol and is classified as an acylated amylin receptor agonist. Supplied as a 5mg lyophilized powder with ≥98% puri...</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md, website offering page · Sections: Product Categories and Product Pages, https://lotilabs.com/product/cagrilintide-5mg/</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>CJC-1295 No DAC 5mg + Ipamorelin 5mg Blend</h3>
+      <p>CJC-1295 / Ipamorelin Blend is a lyophilized peptide combination containing 5mg of CJC-1295 without DAC (also known as Mod GRF 1-29), a synthetic 29-amino acid growth hormone releasing hormone analog, and 5mg of Ipamorelin, a synthetic 5-amino acid selective growth hormone secretagogue. Combined molecular weight app...</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md, website offering page · Sections: Product Categories and Product Pages, https://lotilabs.com/product/cjc-1295-no-dac-5mg-ipamorelin-5mg-blend/</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Epitalon Capsules 3mg</h3>
+      <p>Epitalon 3mg capsules (Ala-Glu-Asp-Gly, CAS 307297-39-8, C₁₄H₂₂N₄O₉, MW 390.35 g/mol) contain a synthetic tetrapeptide bioregulator investigated for its role in telomerase activation and pineal gland-mediated melatonin regulation in cellular aging models. 30 capsules per unit. Capsules are for laboratory, research...</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md, website offering page · Sections: Product Categories and Product Pages, https://lotilabs.com/product/epitalon-capsules/</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>GHK-Cu Capsules 2mg</h3>
+      <p>GHK-Cu 2mg capsules (CAS 49557-75-7) contain a synthetic copper(II)-tripeptide complex (glycyl-L-histidyl-L-lysine·Cu²⁺, C₁₈H₂₉N₇O₆Cu, MW 502.02 g/mol) investigated for its role in matrix metalloproteinase regulation and copper-dependent enzymatic pathways. 30 capsules per unit. Capsules are for laboratory, research...</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md, website offering page · Sections: Product Categories and Product Pages, https://lotilabs.com/product/ghk-cu-capsules/</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>GW0742 Capsules 10mg</h3>
+      <p>GW0742 10mg capsules (CAS 317318-84-6, C₂₁H₁₇F₄NO₃S₂, MW 471.49 g/mol) contain a highly selective PPARδ agonist featuring a fluorinated thiazole scaffold that enhances receptor binding affinity over related PPAR subtypes α and γ in fatty acid oxidation and inflammation pathway research. 30 capsules per unit. Capsule...</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md, website offering page · Sections: Product Categories and Product Pages, https://lotilabs.com/product/gw0742-capsules/</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Kisspeptin-10 5mg</h3>
+      <p>Kisspeptin-10 5mg is a synthetic 10-amino acid decapeptide representing the C-terminal bioactive fragment of the full-length kisspeptin protein, and the natural endogenous ligand for the GPR54 (KISS1R) receptor involved in hypothalamic GnRH signaling. It has a molecular weight of 1318.45 g/mol. Supplied as a 5mg lyo...</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md, website offering page · Sections: Product Categories and Product Pages, https://lotilabs.com/product/kisspeptin-10-5mg/</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>KPV Capsules 500mcg</h3>
+      <p>KPV 500mcg capsules (Lys-Pro-Val, MW 342.43 g/mol) contain a C-terminal tripeptide fragment of α-melanocyte-stimulating hormone (α-MSH), studied for its interaction with melanocortin receptors and NF-κB pathway modulation in immune cell assays. 30 capsules per unit. Capsules are for laboratory, research, analytical...</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md, website offering page · Sections: Product Categories and Product Pages, https://lotilabs.com/product/kpv-capsules/</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>LGD-4033 Capsules 10mg</h3>
+      <p>LGD-4033 10mg capsules (Ligandrol, CAS 1165910-22-4, C₁₄H₁₂F₆N₂O, MW 338.25 g/mol) contain a non-steroidal SARM featuring a pyrrolidine core with bis-trifluoromethyl substitution that confers high androgen receptor binding selectivity in musculoskeletal and bone mineralization research. 30 capsules per unit. Capsule...</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md, website offering page · Sections: Product Categories and Product Pages, https://lotilabs.com/product/lgd-4033-capsules/</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>MK 2866 Capsules for Research</h3>
+      <p>MK-2866 12.5mg capsules (Enobosarm/Ostarine, CAS 841205-47-8, C₁₉H₁₄F₃N₃O₃, MW 389.33 g/mol) contain a non-steroidal SARM with an aryl-propionamide scaffold exhibiting tissue-selective androgen receptor modulation studied in preclinical musculoskeletal research. 30 capsules per unit. Capsules are for laboratory, res...</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md, website offering page · Sections: Product Categories and Product Pages, https://lotilabs.com/product/mk-2866-capsules/</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>MK-677 Capsules 10mg</h3>
+      <p>MK-677 10mg capsules (Ibutamoren Mesylate, CAS 159634-47-6, C₂₇H₃₆N₄O₅S, MW 528.7 g/mol) contain a non-peptide growth hormone secretagogue that mimics ghrelin signaling at the GHS-R1a receptor, studied for its effects on GH and IGF-1 pulsatility in preclinical settings. 30 capsules per unit. Capsules are for laborat...</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md, website offering page · Sections: Product Categories and Product Pages, https://lotilabs.com/product/mk-677-capsules/</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Pinealon 10mg</h3>
+      <p>Pinealon 10mg is a synthetic tripeptide bioregulator with the amino acid sequence Glu-Asp-Arg, originally isolated and characterized from pineal gland tissue extracts. It has a molecular weight of 418.4 g/mol and belongs to the class of Khavinson peptide bioregulators. Supplied as a 10mg lyophilized powder with ≥98%...</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md, website offering page · Sections: Product Categories and Product Pages, https://lotilabs.com/product/pinealon-10mg/</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>RAD-140 Capsules 10mg</h3>
+      <p>RAD-140 10mg capsules (Testolone, CAS 1182367-47-0, MW 393.8 g/mol) contain a non-steroidal selective androgen receptor modulator built on a 1,3,4-oxadiazole core, exhibiting tissue-selective anabolic activity with high AR binding affinity in preclinical models. 30 capsules per unit. Capsules are for laboratory, res...</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md, website offering page · Sections: Product Categories and Product Pages, https://lotilabs.com/product/rad-140-capsules/</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>SLU-PP-332 Capsules 250mcg</h3>
+      <p>SLU-PP-332 250mcg capsules provide a micro-dose format of the ERRα/β/γ pan-agonist (CAS 303760-60-3, MW 290.3 g/mol) suited for fine-resolution dose-response profiling in metabolic and mitochondrial function assays. 30 capsules per unit. Capsules are for laboratory, research, analytical, and measurement purposes onl...</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md, website offering page · Sections: Product Categories and Product Pages, https://lotilabs.com/product/slu-pp-332-capsules/</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>SLU-PP-332 Capsules 50mg</h3>
+      <p>SLU-PP-332 50mg capsules (CAS 303760-60-3) contain a synthetic benzamide-scaffold pan-agonist targeting estrogen-related receptors ERRα, ERRβ, and ERRγ, originally developed at Saint Louis University School of Medicine. Molecular formula C₁₈H₁₄N₂O₂, MW 290.3 g/mol. 30 capsules per unit. Capsules are for laboratory...</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md, website offering page · Sections: Product Categories and Product Pages, https://lotilabs.com/product/slu-pp-332-capsules-50mg-capsule-30-capsules-3/</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Tesamorelin 10mg</h3>
+      <p>Tesamorelin 10mg is a synthetic 44-amino acid analog of human growth hormone releasing hormone (GHRH), modified with a trans-3-hexenoic acid group at the N-terminus for enhanced stability and receptor affinity. It has a molecular weight of 5135.58 g/mol and a molecular formula of C221H366N72O67S. Supplied as a 10mg...</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md, website offering page · Sections: Product Categories and Product Pages, https://lotilabs.com/product/tesamorelin-10mg/</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Tesamorelin 10mg / Ipamorelin 2mg (blend)</h3>
+      <p>The CJC-1295 (no DAC) / Ipamorelin 5mg blend offers an alternative pairing with ipamorelin. For research, MK-677 is available as a separate compound. The full.</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md, website offering page · Sections: Product Categories and Product Pages, https://lotilabs.com/product/tesamorelin-10mg-ipamorelin-2mg-blend/</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Thymosin Alpha 1 10mg</h3>
+      <p>Thymosin Alpha-1 10mg is a synthetic 28-amino acid peptide originally isolated from thymic tissue (thymosin fraction 5), with an acetylated N-terminus. It has a molecular weight of 3108 g/mol and a molecular formula of C129H213N35O44. Supplied as a 10mg lyophilized powder with ≥98% purity. For in-vitro research use...</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md, website offering page · Sections: Product Categories and Product Pages, https://lotilabs.com/product/thymosin-alpha-1-10mg/</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Anastrozole 1mg/ml at Loti Labs</h3>
+      <p>Anastrozole 1mg/ml is a synthetic non-steroidal aromatase inhibitor (AI) belonging to the triazole chemical class, designed to selectively inhibit the cytochrome P450 enzyme aromatase (CYP19A1). It has a.</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md · Sections: Product Categories and Product Pages</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Antimicrobial Peptides</h3>
+      <p>Peptide category studied for antibacterial and antiviral research contexts.</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md · Sections: Product Categories and Product Pages</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Capsules</h3>
+      <p>Pre-measured capsules for laboratory research use only.</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md · Sections: Product Categories and Product Pages</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Clomiphene 40mg/ml</h3>
+      <p>Clomiphene Citrate 40mg/ml is a synthetic selective estrogen receptor modulator (SERM) of the triphenylethylene class, comprising a mixture of the trans-isomer (enclomiphene) and cis-isomer (zuclomiphene). It.</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md · Sections: Product Categories and Product Pages</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Collagen Peptides</h3>
+      <p>Peptide category studied for skin elasticity, joint mobility, and connective tissue research.</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md · Sections: Product Categories and Product Pages</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Custom Synthetics</h3>
+      <p>Lab-engineered peptides designed for targeted research outcomes.</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md · Sections: Product Categories and Product Pages</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Growth Factor Peptides</h3>
+      <p>Peptide category studied in cellular growth, tissue repair, and regeneration research.</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md · Sections: Product Categories and Product Pages</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Liquids</h3>
+      <p>Pre-formulated research liquids, including SARMs and other research compounds where confirmed.</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md · Sections: Product Categories and Product Pages</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Peptides</h3>
+      <p>Lyophilized research peptides that require researcher reconstitution before use.</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md · Sections: Product Categories and Product Pages</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Retatrutide 30mg Vial (Reta)</h3>
+      <p>This product is intended as a research chemical only. This designation allows the use of this chemical strictly for in-vitro laboratory testing and experimentation. Human or veterinary use is strictly.</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md · Sections: Product Categories and Product Pages</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Selank 10mg</h3>
+      <p>Selank 10mg is a synthetic 7-amino acid heptapeptide developed as a structural analog of the endogenous immunomodulatory peptide tuftsin (Thr-Lys-Pro-Arg), extended with a stabilizing Pro-Gly-Pro C-terminal.</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md · Sections: Product Categories and Product Pages</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Semaglutide 5mg at Loti Labs</h3>
+      <p>Semaglutide 5mg is a synthetic 31-amino acid glucagon-like peptide-1 (GLP-1) receptor agonist, modified with C-18 fatty diacid acylation via a linker to Lys26 for extended half-life through albumin binding. It.</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md · Sections: Product Categories and Product Pages</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Semax 5mg at Wholesale Prices</h3>
+      <p>Semax 5mg is a synthetic 7-amino acid heptapeptide derived from the ACTH(4-7) fragment (Met-Glu-His-Phe) of adrenocorticotropic hormone, extended with a stabilizing Pro-Gly-Pro C-terminal sequence. It has a.</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md · Sections: Product Categories and Product Pages</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>SR9009 Capsules for Research Use</h3>
+      <p>SR9009 10mg capsules (Stenabolic, CAS 1379686-30-2, C₂₀H₂₄ClN₃O₄S, MW 437.94 g/mol) contain a synthetic Rev-ErbA agonist originally developed at the Scripps Research Institute for circadian rhythm regulation.</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md · Sections: Product Categories and Product Pages</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>TB-500 5mg</h3>
+      <p>TB-500 5mg is a 43-residue actin-sequestering peptide derived from the central active domain of thymosin beta-4 (Tβ4), a highly conserved 4.9 kDa intracellular protein (CAS 77591-33-4). Molecular formula.</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md · Sections: Product Categories and Product Pages</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Tirzepatide 10mg at Loti Labs</h3>
+      <p>Tirzepatide 10mg is a synthetic 39-amino acid dual glucose-dependent insulinotropic polypeptide (GIP) and glucagon-like peptide-1 (GLP-1) receptor agonist, modified with a C20 fatty diacid moiety linked to.</p>
+      <div class="evidence">Sources: clients/loti-labs/raw/knowledge/service-taxonomy.md · Sections: Product Categories and Product Pages</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Product Structure</h3>
+      <p>Product Structure is listed under 6. Product Structure in the Loti Labs client context. Check the source links before adding specific claims.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md · Sections: 6. Product Structure</div>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Website Intelligence</h2>
+          <div class="split">
+            <div>
+              <h3>Website URLs</h3><ul><li><a href="https://lotilabs.com/">https://lotilabs.com/</a></li><li><a href="https://wholesalepeptide.com/">https://wholesalepeptide.com/</a></li></ul>
+              <h3>Sitemaps</h3><ul><li><a href="https://lotilabs.com/sitemap_index.xml">https://lotilabs.com/sitemap_index.xml</a></li><li><a href="https://lotilabs.com/page-sitemap.xml">https://lotilabs.com/page-sitemap.xml</a></li><li><a href="https://lotilabs.com/product-sitemap.xml">https://lotilabs.com/product-sitemap.xml</a></li><li><a href="https://lotilabs.com/epkb_post_type_1-sitemap.xml">https://lotilabs.com/epkb_post_type_1-sitemap.xml</a></li><li><a href="https://lotilabs.com/local-sitemap.xml">https://lotilabs.com/local-sitemap.xml</a></li><li><a href="https://wholesalepeptide.com/sitemap_index.xml">https://wholesalepeptide.com/sitemap_index.xml</a></li><li><a href="https://wholesalepeptide.com/sitemap.xml">https://wholesalepeptide.com/sitemap.xml</a></li></ul>
+            </div>
+            <div>
+              <h3>Semantic / Topical Terms</h3><div class="topic-chips"><span>Antimicrobial Peptides</span><span>Collagen Peptides</span><span>Custom Synthetics</span><span>Growth Factor Peptides</span><span>Product Structure</span><span>Copper Peptides</span><span>Research Applications</span><span>Readers Want</span></div>
+              <h3>Blockers</h3><p class="muted">None</p>
+            </div>
+          </div>
+          <h3>Product / Service URLs</h3><ul><li><a href="https://lotilabs.com/product/retatrutide-30mg/">https://lotilabs.com/product/retatrutide-30mg/</a></li><li><a href="https://lotilabs.com/product/5-amino-1mq-capsules/">https://lotilabs.com/product/5-amino-1mq-capsules/</a></li><li><a href="https://lotilabs.com/product/slu-pp-332-capsules/">https://lotilabs.com/product/slu-pp-332-capsules/</a></li><li><a href="https://lotilabs.com/product/travel-pouch-carrying-case/">https://lotilabs.com/product/travel-pouch-carrying-case/</a></li><li><a href="https://lotilabs.com/product/nad-500mg/">https://lotilabs.com/product/nad-500mg/</a></li><li><a href="https://lotilabs.com/product/anastrozole/">https://lotilabs.com/product/anastrozole/</a></li><li><a href="https://lotilabs.com/product/lgd-4033-capsules/">https://lotilabs.com/product/lgd-4033-capsules/</a></li><li><a href="https://lotilabs.com/product/mk-2866-capsules/">https://lotilabs.com/product/mk-2866-capsules/</a></li><li><a href="https://lotilabs.com/product/dsip-2mg/">https://lotilabs.com/product/dsip-2mg/</a></li><li><a href="https://lotilabs.com/product/sr9009-capsules/">https://lotilabs.com/product/sr9009-capsules/</a></li><li><a href="https://lotilabs.com/product/bam15-capsules-10mg-capsule-30-capsules/">https://lotilabs.com/product/bam15-capsules-10mg-capsule-30-capsules/</a></li><li><a href="https://lotilabs.com/product/tesamorelin-10mg/">https://lotilabs.com/product/tesamorelin-10mg/</a></li><li><a href="https://lotilabs.com/product/mk-677-capsules/">https://lotilabs.com/product/mk-677-capsules/</a></li><li><a href="https://lotilabs.com/product/pinealon-10mg/">https://lotilabs.com/product/pinealon-10mg/</a></li><li><a href="https://lotilabs.com/product/rad-140-capsules/">https://lotilabs.com/product/rad-140-capsules/</a></li><li><a href="https://lotilabs.com/product/tesamorelin-10mg-ipamorelin-2mg-blend/">https://lotilabs.com/product/tesamorelin-10mg-ipamorelin-2mg-blend/</a></li><li><a href="https://lotilabs.com/product/bpc-157-capsules/">https://lotilabs.com/product/bpc-157-capsules/</a></li><li><a href="https://lotilabs.com/product/epitalon-capsules/">https://lotilabs.com/product/epitalon-capsules/</a></li><li><a href="https://lotilabs.com/product/kpv-capsules/">https://lotilabs.com/product/kpv-capsules/</a></li><li><a href="https://lotilabs.com/product/ll-37-5mg/">https://lotilabs.com/product/ll-37-5mg/</a></li><li><a href="https://lotilabs.com/product/oxytocin/">https://lotilabs.com/product/oxytocin/</a></li><li><a href="https://lotilabs.com/product/ghk-cu-capsules/">https://lotilabs.com/product/ghk-cu-capsules/</a></li><li><a href="https://lotilabs.com/product/slu-pp-332-capsules-50mg-capsule-30-capsules-3/">https://lotilabs.com/product/slu-pp-332-capsules-50mg-capsule-30-capsules-3/</a></li><li><a href="https://lotilabs.com/product/tirzepatide-10mg/">https://lotilabs.com/product/tirzepatide-10mg/</a></li><li><a href="https://lotilabs.com/product/thymosin-alpha-1-10mg/">https://lotilabs.com/product/thymosin-alpha-1-10mg/</a></li><li><a href="https://lotilabs.com/product/kpv-5mg/">https://lotilabs.com/product/kpv-5mg/</a></li><li><a href="https://lotilabs.com/product/gw0742-capsules/">https://lotilabs.com/product/gw0742-capsules/</a></li><li><a href="https://lotilabs.com/product/5-amino-1mq-10mg/">https://lotilabs.com/product/5-amino-1mq-10mg/</a></li><li><a href="https://lotilabs.com/product/thymosin-beta-4-tb-500/">https://lotilabs.com/product/thymosin-beta-4-tb-500/</a></li><li><a href="https://lotilabs.com/product/cagrilintide-5mg/">https://lotilabs.com/product/cagrilintide-5mg/</a></li><li><a href="https://lotilabs.com/product/semaglutide-5mg/">https://lotilabs.com/product/semaglutide-5mg/</a></li><li><a href="https://lotilabs.com/product/clomiphene/">https://lotilabs.com/product/clomiphene/</a></li><li><a href="https://lotilabs.com/product/rad-140/">https://lotilabs.com/product/rad-140/</a></li><li><a href="https://lotilabs.com/product/lgd-4033/">https://lotilabs.com/product/lgd-4033/</a></li><li><a href="https://lotilabs.com/product/cjc-1295-no-dac-5mg-ipamorelin-5mg-blend/">https://lotilabs.com/product/cjc-1295-no-dac-5mg-ipamorelin-5mg-blend/</a></li><li><a href="https://lotilabs.com/product/kisspeptin-10-5mg/">https://lotilabs.com/product/kisspeptin-10-5mg/</a></li><li><a href="https://lotilabs.com/product/semax-5mg/">https://lotilabs.com/product/semax-5mg/</a></li><li><a href="https://lotilabs.com/product/selank-10mg/">https://lotilabs.com/product/selank-10mg/</a></li><li><a href="https://lotilabs.com/product/bpc-157/">https://lotilabs.com/product/bpc-157/</a></li><li><a href="https://lotilabs.com/product/igf-1-lr3/">https://lotilabs.com/product/igf-1-lr3/</a></li><li><a href="https://lotilabs.com/product/pt-141-bremelanotide/">https://lotilabs.com/product/pt-141-bremelanotide/</a></li><li><a href="https://lotilabs.com/product/ghk-cu-50mg/">https://lotilabs.com/product/ghk-cu-50mg/</a></li><li><a href="https://lotilabs.com/product/retatrutide-20mg/">https://lotilabs.com/product/retatrutide-20mg/</a></li><li><a href="https://lotilabs.com/product/epitalon/">https://lotilabs.com/product/epitalon/</a></li><li><a href="https://lotilabs.com/product/clenbuterol/">https://lotilabs.com/product/clenbuterol/</a></li><li><a href="https://lotilabs.com/product/exemestane/">https://lotilabs.com/product/exemestane/</a></li><li><a href="https://lotilabs.com/product/fragment-176-191/">https://lotilabs.com/product/fragment-176-191/</a></li><li><a href="https://lotilabs.com/product/ghrp-2/">https://lotilabs.com/product/ghrp-2/</a></li><li><a href="https://lotilabs.com/product/ghrp-6/">https://lotilabs.com/product/ghrp-6/</a></li><li><a href="https://lotilabs.com/product/gw-501516/">https://lotilabs.com/product/gw-501516/</a></li><li><a href="https://lotilabs.com/product/ketotifen-fumarate/">https://lotilabs.com/product/ketotifen-fumarate/</a></li><li><a href="https://lotilabs.com/product/letrozole/">https://lotilabs.com/product/letrozole/</a></li><li><a href="https://lotilabs.com/product/mk-677/">https://lotilabs.com/product/mk-677/</a></li><li><a href="https://lotilabs.com/product/pramipexole/">https://lotilabs.com/product/pramipexole/</a></li><li><a href="https://lotilabs.com/product/sildenafil/">https://lotilabs.com/product/sildenafil/</a></li><li><a href="https://lotilabs.com/product/t3-liothyronine-sodium/">https://lotilabs.com/product/t3-liothyronine-sodium/</a></li><li><a href="https://lotilabs.com/product/tamoxifen-citrate/">https://lotilabs.com/product/tamoxifen-citrate/</a></li><li><a href="https://lotilabs.com/product/mk-2866/">https://lotilabs.com/product/mk-2866/</a></li><li><a href="https://lotilabs.com/product/tadalafil-30mg/">https://lotilabs.com/product/tadalafil-30mg/</a></li><li><a href="https://lotilabs.com/product/yk-11/">https://lotilabs.com/product/yk-11/</a></li><li><a href="https://lotilabs.com/product/t4-levothyroxine-400mcg-per-ml/">https://lotilabs.com/product/t4-levothyroxine-400mcg-per-ml/</a></li><li><a href="https://lotilabs.com/product/dutasteride-0-5mg-per-ml/">https://lotilabs.com/product/dutasteride-0-5mg-per-ml/</a></li><li><a href="https://lotilabs.com/product/1-ml-dropper/">https://lotilabs.com/product/1-ml-dropper/</a></li><li><a href="https://lotilabs.com/product/cjc1295-w-dac/">https://lotilabs.com/product/cjc1295-w-dac/</a></li><li><a href="https://lotilabs.com/product/ipamorelin/">https://lotilabs.com/product/ipamorelin/</a></li><li><a href="https://lotilabs.com/product/melanotan-2/">https://lotilabs.com/product/melanotan-2/</a></li><li><a href="https://lotilabs.com/product/cjc-1295-without-dac/">https://lotilabs.com/product/cjc-1295-without-dac/</a></li><li><a href="https://lotilabs.com/product/sermorelin/">https://lotilabs.com/product/sermorelin/</a></li><li><a href="https://lotilabs.com/product/mgf-mechano-growth-factor-2mg/">https://lotilabs.com/product/mgf-mechano-growth-factor-2mg/</a></li><li><a href="https://lotilabs.com/product/gnrh-triptorelin-100mcg/">https://lotilabs.com/product/gnrh-triptorelin-100mcg/</a></li><li><a href="https://lotilabs.com/product/tesamorelin-2mg/">https://lotilabs.com/product/tesamorelin-2mg/</a></li><li><a href="https://lotilabs.com/product/hexarelin-peptide-2mg/">https://lotilabs.com/product/hexarelin-peptide-2mg/</a></li><li><a href="https://lotilabs.com/product/bacteriostatic-water-30ml/">https://lotilabs.com/product/bacteriostatic-water-30ml/</a></li><li><a href="https://lotilabs.com/product/glutathione/">https://lotilabs.com/product/glutathione/</a></li><li><a href="https://lotilabs.com/product/mots-c-10mg/">https://lotilabs.com/product/mots-c-10mg/</a></li><li><a href="https://lotilabs.com/product/retatrutide-5mg/">https://lotilabs.com/product/retatrutide-5mg/</a></li><li><a href="https://lotilabs.com/product/tirzepatide-5mg/">https://lotilabs.com/product/tirzepatide-5mg/</a></li><li><a href="https://lotilabs.com/product/thymosin-beta-4-tb-500-2mg/">https://lotilabs.com/product/thymosin-beta-4-tb-500-2mg/</a></li><li><a href="https://lotilabs.com/product/snap-8-10mg/">https://lotilabs.com/product/snap-8-10mg/</a></li><li><a href="https://lotilabs.com/product/glutathione-1500mg/">https://lotilabs.com/product/glutathione-1500mg/</a></li></ul>
+          <h3>Sampled Pages</h3><div class="sample-pages">
+    <article class="sample">
+      <h4>Loti Labs: Research Peptides &amp; Liquids Made in USA</h4>
+      <a href="https://lotilabs.com/">https://lotilabs.com/</a>
+      <p>Loti Labs offers premium research liquids and peptide products for scientific use. Buy research liquids online with confidence &amp; purity. USA made. Same day shipping and 3rd-party testing.</p>
+      <ul><li>Premium Peptides. Lab-Tested. Ships Same Day.</li><li>High-Purity Liquids.</li><li>USA Manufactured and Tested Peptides</li><li>Peptides</li><li>Liquids</li><li>Capsules</li><li>Loti Labs Value Promise</li><li>USA Manufactured Peptides</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Buy Quality YK-11 Liquid 10mg/ml - Loti Labs</h4>
+      <a href="https://lotilabs.com/product/yk-11/">https://lotilabs.com/product/yk-11/</a>
+      <p>YK-11 10mg/ml is a synthetic steroidal selective androgen receptor modulator (SARM) with myostatin-inhibiting properties, structurally based on the 5α-dihydrotestosterone scaffold. It has a molecular weight of 382.54 g/mol and a molecular formula of C25H34O6. Supplied as a 30ml liquid solution at 10mg/ml concentration. For in-vitro research use only.</p>
+      <ul><li>YK-11 10mg/ml (30ml)</li><li>Buy More, Save More!</li><li>Additional information</li><li>Buy YK-11 Liquid at Loti Labs: Research Compound for Scientific Studies</li><li>Molecular Structure of YK-11</li><li>Storage and Safety</li><li>Packaging Specifications</li><li>Storage Protocols</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Buy GHRP-2 5mg - Premium Quality at Loti Labs</h4>
+      <a href="https://lotilabs.com/product/ghrp-2/">https://lotilabs.com/product/ghrp-2/</a>
+      <p>GHRP-2 5mg (Growth Hormone Releasing Peptide-2, also known as Pralmorelin) is a synthetic 6-amino acid hexapeptide classified as a ghrelin receptor (GHS-R1a) agonist and growth hormone secretagogue. It has a molecular weight of 817.9 g/mol and a molecular formula of C45H55N9O6. Supplied as a 5mg lyophilized powder with ≥98% purity. For in-vitro research use only</p>
+      <ul><li>GHRP-2 5mg</li><li>Buy More, Save More!</li><li>Additional information</li><li>Buy GHRP-2 at Loti Labs: Research Peptides for Science</li><li>Molecular Structure of GHRP-2</li><li>Storage and Handling Guidelines</li><li>Storage Recommendations</li><li>Handling Protocols</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Buy GHRP-6 5mg - Premium Peptides at Loti Labs</h4>
+      <a href="https://lotilabs.com/product/ghrp-6/">https://lotilabs.com/product/ghrp-6/</a>
+      <p>GHRP-6 5mg (Growth Hormone Releasing Peptide-6) is a synthetic 6-amino acid hexapeptide classified as a growth hormone secretagogue and ghrelin receptor agonist. It has a molecular weight of 873 g/mol and a molecular formula of C46H56N12O6. Supplied as a 5mg lyophilized powder with ≥98% purity. For in-vitro research use only.</p>
+      <ul><li>GHRP-6 5mg</li><li>Buy More, Save More!</li><li>Additional information</li><li>Buy GHRP 6 at Loti Labs</li><li>Molecular Structure of GHRP 6</li><li>Storage and Safety</li><li>Reconstitution and Handling</li><li>Why Buy from Loti Labs</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Buy MK-677 Ibutamoren 25mg/ml - Loti Labs Deals</h4>
+      <a href="https://lotilabs.com/product/mk-677/">https://lotilabs.com/product/mk-677/</a>
+      <p>MK-677 25mg/ml (Ibutamoren) is a synthetic non-peptide spiropiperidine compound classified as an orally active growth hormone secretagogue and ghrelin receptor (GHS-R1a) agonist. It has a molecular weight of 528.7 g/mol and a molecular formula of C27H36N4O5S. Supplied as a 30ml liquid solution at 25mg/ml concentration. For in-vitro research use only.</p>
+      <ul><li>MK-677 25mg/ml (30ml)</li><li>Buy More, Save More!</li><li>Additional information</li><li>Buy MK-677 Liquid for Laboratory Research</li><li>Molecular Structure of MK-677</li><li>Storage and Safety Considerations</li><li>Why Buy from Loti Labs</li><li>Research Use Only</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>BPC-157 | Body Protection Compound Research Peptide | Loti Labs</h4>
+      <a href="https://lotilabs.com/product/bpc-157/">https://lotilabs.com/product/bpc-157/</a>
+      <p>BPC-157 5mg (Body Protection Compound-157) is a synthetic 15-amino acid pentadecapeptide derived from a partial sequence of the human gastric juice protective protein. It has a molecular weight of 1419.4 g/mol and a molecular formula of C62H89N15O18. Supplied as a 5mg lyophilized powder with ≥98% purity verified by HPLC. For in-vitro research use only.</p>
+      <ul><li>BPC-157 5mg</li><li>Buy More, Save More!</li><li>Additional information</li><li>Buy BPC-157 at Loti Labs: Peptide for Laboratory Studies</li><li>Molecular Structure of BPC-157</li><li>Storage and Safety Considerations</li><li>Storage Requirements</li><li>Laboratory Protocols</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>KPV 5mg | Anti-Inflammatory Research Peptide | Loti Labs</h4>
+      <a href="https://lotilabs.com/product/kpv-5mg/">https://lotilabs.com/product/kpv-5mg/</a>
+      <p>KPV 5mg is a synthetic tripeptide with the amino acid sequence Lys-Pro-Val, derived from the C-terminal fragment (residues 11–13) of alpha-melanocyte stimulating hormone (α-MSH). It has a molecular weight of 344.45 g/mol and is classified as an α-MSH-derived bioactive fragment. Supplied as a 5mg lyophilized powder with ≥98% purity. For in-vitro research use only.</p>
+      <ul><li>KPV 5mg</li><li>Buy More, Save More!</li><li>Additional information</li><li>Buy KPV Peptide Capsules at Loti Labs</li><li>Molecular Structure of KPV Peptide</li><li>Storage and Safety</li><li>Why Buy from Loti Labs</li><li>Products from Loti Labs are for Research Use Only</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Buy MK-2866 Liquid 33mg/ml - Quality and Discounts</h4>
+      <a href="https://lotilabs.com/product/mk-2866/">https://lotilabs.com/product/mk-2866/</a>
+      <p>MK-2866 33mg/ml (Ostarine) is a synthetic non-steroidal selective androgen receptor modulator (SARM) of the arylpropionamide class. It has a molecular weight of 389.33 g/mol and a molecular formula of C19H14F3N3O3. Supplied as a 30ml liquid solution at 33mg/ml concentration. For in-vitro research use only.</p>
+      <ul><li>MK-2866 33mg/ml (30ml)</li><li>Buy More, Save More!</li><li>Additional information</li><li>Buy MK-2866 at Loti Labs: Research Compound for Laboratory Use</li><li>Molecular Structure of MK-2866</li><li>Storage and Safety Protocols</li><li>Storage Requirements* Temperature: -20°C for long-term storage</li><li>Why Buy from Loti Labs</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Buy Liquid RAD-140 10mg/ml at Loti Labs Today!</h4>
+      <a href="https://lotilabs.com/product/rad-140/">https://lotilabs.com/product/rad-140/</a>
+      <p>RAD-140 10mg/ml (Testolone) is a synthetic non-steroidal selective androgen receptor modulator (SARM) classified as a dicyanobenzimidazole derivative. It has a molecular weight of 393.8 g/mol and a molecular formula of C20H16ClN5O2. Supplied as a 30ml liquid solution at 10mg/ml concentration. For in-vitro research use only.</p>
+      <ul><li>RAD-140 10mg/ml (30ml)</li><li>Buy More, Save More!</li><li>Additional information</li><li>Buy RAD 140 at Loti Labs</li><li>Molecular Structure of RAD 140</li><li>Storage and Safety</li><li>Why Buy from Loti Labs</li><li>Products from Loti Labs are for Research Use Only</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Buy DSIP 2mg - Clinical Grade Purity at Loti Labs</h4>
+      <a href="https://lotilabs.com/product/dsip-2mg/">https://lotilabs.com/product/dsip-2mg/</a>
+      <p>DSIP 2mg (Delta Sleep Inducing Peptide) is a naturally occurring 9-amino acid neuropeptide with the sequence Trp-Ala-Gly-Gly-Asp-Ala-Ser-Gly-Glu, first isolated from cerebral venous blood during slow-wave sleep studies in 1977. It has a molecular weight of 850 g/mol and a molecular formula of C43H58N10O14. Supplied as a 2mg lyophilized powder with ≥98% purity. For in-vitro research use only.</p>
+      <ul><li>DSIP (Delta Sleep Inducing Peptide) 2mg</li><li>Buy More, Save More!</li><li>Additional information</li><li>Buy DSIP Delta Sleep Inducing Peptide at Loti Labs</li><li>Molecular Structure of DSIP</li><li>Storage and Handling</li><li>Why Buy DSIP from Loti Labs</li><li>Benefits:</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Epitalon | Telomere &amp; Longevity Research Peptide | Loti Labs</h4>
+      <a href="https://lotilabs.com/product/epitalon/">https://lotilabs.com/product/epitalon/</a>
+      <p>Epitalon 10mg (also known as Epithalon) is a synthetic tetrapeptide with the amino acid sequence Ala-Glu-Asp-Gly, based on the naturally occurring peptide epithalamin derived from the pineal gland. It has a molecular weight of 390.35 g/mol and a molecular formula of C₁₄H₂₂N₄O₉. Supplied as a 10mg lyophilized powder with ≥98% purity. For in-vitro research use only.</p>
+      <ul><li>Epitalon 10mg</li><li>Buy More, Save More!</li><li>Additional information</li><li>Buy Epitalon | Technical Specifications</li><li>Molecular Structure of Epitalon</li><li>Storage and Safety Protocols</li><li>Storage Requirements</li><li>Reconstitution Guidelines</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Buy LGD-4033 10mg/ml - Quality and Discounts at Loti Labs</h4>
+      <a href="https://lotilabs.com/product/lgd-4033/">https://lotilabs.com/product/lgd-4033/</a>
+      <p>LGD-4033 10mg/ml (Ligandrol) is a synthetic non-steroidal selective androgen receptor modulator (SARM) of the pyrrolidinyl-benzonitrile class. It has a molecular weight of 338.258 g/mol and a molecular formula of C14H12F6N2O. Supplied as a 30ml liquid solution at 10mg/ml concentration. For in-vitro research use only.</p>
+      <ul><li>LGD-4033 10mg/ml (30ml)</li><li>Buy More, Save More!</li><li>Additional information</li><li>Buy LGD4033 Liquid at Loti Labs</li><li>Molecular Structure of LGD-4033</li><li>Storage and Safety</li><li>Why Buy from Loti Labs</li><li>Loti Labs products are for Research Use Only</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Buy Oxytocin 2mg - Premium Peptides at Loti Labs</h4>
+      <a href="https://lotilabs.com/product/oxytocin/">https://lotilabs.com/product/oxytocin/</a>
+      <p>Oxytocin 2mg is a synthetic 9-amino acid cyclic disulfide-bridged neuropeptide, structurally identical to the endogenous hormone produced in the hypothalamic paraventricular and supraoptic nuclei. It has a molecular weight of 1007.2 g/mol and a molecular formula of C43H66N12O12S2. Supplied as a 2mg lyophilized powder with ≥98% purity. For in-vitro research use only.</p>
+      <ul><li>Oxytocin 2mg</li><li>Buy More, Save More!</li><li>Additional information</li><li>Buy Oxytocin at Loti Labs: Premium Research Peptides for Scientific Studies</li><li>Molecular Structure of Oxytocin</li><li>Storage and Safety</li><li>Temperature Requirements</li><li>Laboratory Safety Guidelines</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Buy GW-501516 Cardarine 10mg/ml - Loti Labs Deals</h4>
+      <a href="https://lotilabs.com/product/gw-501516/">https://lotilabs.com/product/gw-501516/</a>
+      <p>GW-501516 10mg/ml (Cardarine) is a synthetic small molecule classified as a selective peroxisome proliferator-activated receptor delta (PPARδ) agonist. It has a molecular weight of 453.498 g/mol and a molecular formula of C21H18F3NO3S2. Supplied as a 30ml liquid solution at 10mg/ml concentration. For in-vitro research use only.</p>
+      <ul><li>GW-501516 10mg/ml (30ml)</li><li>Buy More, Save More!</li><li>Additional information</li><li>Buy GW501516 Research Chemical: For Lab Use</li><li>Molecular Structure of GW501516</li><li>Storage and Safety</li><li>Storage Requirements</li><li>Safety Considerations</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>IGF-1 LR3 | Long-Acting IGF-1 Research Peptide | Loti Labs</h4>
+      <a href="https://lotilabs.com/product/igf-1-lr3/">https://lotilabs.com/product/igf-1-lr3/</a>
+      <p>IGF-1 LR3 1mg is a synthetic 83-amino acid analog of insulin-like growth factor 1, modified with an arginine-to-glutamic acid substitution at position 3 and a 13-amino acid N-terminal extension peptide for enhanced stability. It has a molecular weight of 9117.60 g/mol and a molecular formula of C423H684N122O128S7. Supplied as a 1mg lyophilized powder with ≥98% purity. For in-vitro research use only.</p>
+      <ul><li>IGF-1 LR3 1mg</li><li>Buy More, Save More!</li><li>Additional information</li><li>Buy IGF-1 LR3 at Loti Labs: Premium Research Peptides for Scientific Investigation</li><li>Molecular Structure of IGF-1 LR3</li><li>Storage and Safety Protocols</li><li>Why Choose Loti Labs</li><li>Research Use Only</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Buy Letrozole 2.5mg/ml Liquid at Loti Labs Today</h4>
+      <a href="https://lotilabs.com/product/letrozole/">https://lotilabs.com/product/letrozole/</a>
+      <p>Letrozole 2.5mg/ml is a synthetic third-generation non-steroidal aromatase inhibitor belonging to the triazole class. It has a molecular weight of 285.3 g/mol and a molecular formula of C17H11N5. Supplied as a 30ml liquid solution at 2.5mg/ml concentration. For in-vitro research use only.</p>
+      <ul><li>Letrozole 2.5mg/ml (30ml)</li><li>Buy More, Save More!</li><li>Additional information</li><li>Buy Letrozole at Loti Labs: Research Compounds</li><li>Molecular Structure of Letrozole</li><li>Storage and Safety Considerations</li><li>Research Use Only Disclaimer</li><li>Shipping of Loti Labs</li></ul>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Full Style System</h2>
+          <details open><summary>Show style-system sections</summary>
+    <details class="style-section">
+      <summary>Loti Labs — Style System</summary>
+      <div class="markdown"><p>Generated: 2026-06-02<br>Sources: raw/knowledge/overview.md, raw/knowledge/writers-brief.md, _approved/product/ (2 pieces, April 2026), _approved/collection/ (5 pieces, April 2026)<br>Base rules: universal-rules/UNIVERSAL-RULES.md</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>1. Brand &amp; Audience</summary>
+      <div class="markdown"><p>Loti Labs is a US-based supplier of research peptides, research liquids, and pre-measured research capsules. The company positions itself as a boutique, quality-first alternative to commodity peptide retailers — small team, transparent third-party testing, premium products, and personal customer service. A companion B2B wholesale site operates at wholesalepeptide.com and is treated as a separate brand; content on lotilabs.com should not conflate or heavily cross-promote it.</p><p>Websites: https://lotilabs.com/ and https://wholesalepeptide.com/ (wholesale — separate)<br>CSM: Alex Belanger<br>Care level: High Touch / High Value<br>ClickUp: see raw/knowledge/overview.md for project links</p><p>**Two distinct audiences:**</p><p>1. **Research peptide buyers** — sourcing compounds (BPC-157, MK-677, sermorelin, IGF-1 LR3, tadalafil, clenbuterol, anastrozole, epitalon, liothyronine, letrozole) for laboratory research. Scientific, technical, values precision and sourcing transparency.<br>2. **Skincare / cosmetic peptide buyers** — sourcing compounds (copper peptides, Matrixyl, Argireline) for cosmetic and topical research applications. More accessible tone; comparison-driven content performs well.</p><p>These audiences read differently. Research peptide readers want mechanisms, molecular specs, and sourcing transparency. Skincare readers want guidance and comparison. Adjust framing per page — do not blend both voices into a single piece.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2. Voice &amp; Tone</summary>
+      <div class="markdown"><p>Voice: professional, scientific, warm. Think researcher-to-researcher — not salesperson-to-prospect. The brand is explicitly not a &quot;massive operation.&quot; Copy can sound human and boutique, especially in About, FAQ, and customer service contexts.</p><p>| Attribute | Rule |<br>|---|---|<br>| Authoritative without academic | Confident in the science, plain in the language. Explain technical terms at first use. |<br>| Precise, not promotional | Specific numbers (1 PM EST, 1–2 hour response, 30ml, 99.91%) beat vague superlatives. |<br>| Boutique and personal | Small team. The service commitment is a genuine differentiator — name it specifically. |<br>| Compliant by default | Research-only positioning is not a disclaimer. It is built into how every compound is described. |<br>| Researcher-to-researcher | Treat the reader as a qualified professional. Do not condescend or pad with marketing fluff. |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.1 Voice in practice</summary>
+      <div class="markdown"><p>Do this:<br><li>&quot;Every batch is tested by an independent third-party lab in Orlando, FL. COAs are available on the product page.&quot; — specific, verifiable, trust-building</li><br><li>&quot;Liquid tadalafil is studied for vascular and PDE-5 research applications.&quot; — research-only framing, accurate</li><br><li>&quot;Orders placed before 1 PM EST (M–F) ship the same day.&quot; — concrete, believable</li><br><li>&quot;The founders bring 9+ years of prior experience in research supply.&quot; — defensible tenure language</li></ul><p>Not this:<br><li>&quot;Trust the experts at Loti Labs for unmatched quality you can count on!&quot; — generic superlative</li><br><li>&quot;Liquid tadalafil helps with ED and improves circulation.&quot; — therapeutic claim, non-compliant</li><br><li>&quot;With 14+ years of proven expertise, Loti Labs has been the trusted leader…&quot; — tenure inconsistency, propagates unresolved issue</li><br><li>&quot;Lightning-fast shipping you can rely on.&quot; — filler; the 1 PM EST cutoff is the claim</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.2 Sentence and paragraph rules</summary>
+      <div class="markdown"><p><li>Every paragraph answers one specific question (explicit or implied by the heading).</li><br><li>The first sentence of any paragraph must be a direct answer or direct statement — no throat-clearing.</li><br><li>Paragraphs: 2–5 lines. One main idea.</li><br><li>Do not use dashes — never, under any circumstances, in any form (em dash, en dash, hyphen-as-separator). Use a period or restructure the sentence.</li><br><li>Use active voice. Passive only where the subject is unknown or irrelevant.</li><br><li>Each H2 section begins with a short introductory paragraph that includes the primary keyword (or close variation) and previews what the section covers. Do not repeat the H3 content verbatim in the intro.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.3 Banned language</summary>
+      <div class="markdown"><p>| Category | Banned |<br>|---|---|<br>| Generic superlatives | unmatched quality, lightning-fast, trusted leader, industry-leading, world-class, best-in-class, cutting-edge |<br>| AI filler | the unsung heroes of, in the world of, as research shows, at the forefront of, a cornerstone of |<br>| Vague quality claims | high quality, premium quality, top-tier, superior, state-of-the-art (unless naming a specific facility attribute) |<br>| Therapeutic framing | helps with, treats, improves, reduces, boosts, supports (as a health claim), enhances (as a health claim) |<br>| Promotional padding | truly, simply, really, incredible, exciting, game-changing, revolutionary |<br>| Tenure speculation | 14+ years, a decade of expertise, decade-old company, over a decade (see §11 for the unresolved tenure issue) |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3. Terminology</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.1 Required terms and framing</summary>
+      <div class="markdown"><p>**For research compounds — always frame as studied for, not claimed to do:**</p><p>| Compound | Avoid | Use |<br>|---|---|---|<br>| BPC-157 | &quot;Helps heal injuries and reduce inflammation.&quot; | &quot;Studied in research models for tissue repair and gastrointestinal healing pathways.&quot; |<br>| MK-677 | &quot;Boosts growth hormone for muscle gain.&quot; | &quot;Investigated in research for its activity on growth hormone secretagogue receptors.&quot; |<br>| Copper peptides | &quot;Reduces wrinkles and firms skin.&quot; | &quot;Studied in cosmetic research for roles in collagen synthesis and skin matrix support.&quot; |<br>| Tadalafil | &quot;Treats erectile dysfunction.&quot; | &quot;Studied in PDE-5 inhibition research and vascular models.&quot; |<br>| Sermorelin | &quot;Anti-aging hormone therapy.&quot; | &quot;Investigated in research for growth hormone-releasing hormone (GHRH) analog activity.&quot; |</p><p>**Compliance language:**<br><li>First mention on any page: &quot;for laboratory research use only&quot; (full phrase)</li><br><li>Second or later mention in the same piece: &quot;RUO only&quot; is acceptable shorthand</li><br><li>Always include full compliance disclaimer (see §4) on every product page and category page</li></ul><p>**Chemical specification format:**<br>When describing a compound, anchor to: chemical class or family, CAS number, molecular weight, chemical formula, available form at Loti Labs, and what it is studied for in research contexts. Do not define compounds by their effects on humans.</p><p>**Abbreviations — define at first use:**<br><li>COA (Certificate of Analysis)</li><br><li>GMP (Good Manufacturing Practice) — see §11 for unresolved status</li><br><li>RUO (Research Use Only)</li><br><li>HPLC (High-Performance Liquid Chromatography)</li><br><li>PDE5 (phosphodiesterase type 5)</li><br><li>IGF-1 (insulin-like growth factor 1)</li><br><li>GHRH (growth hormone-releasing hormone)</li><br><li>GHS-R1a (growth hormone secretagogue receptor 1a)</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.2 Formatting rules for lists</summary>
+      <div class="markdown"><p>Use numbered lists for: steps, processes, sequences.<br>Use bullet points for: types, features, attributes, compound specifications.<br>Keep list grammar consistent within each list.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4. Compliance</summary>
+      <div class="markdown"><p>This is the highest-priority section. Compliance rules override all other rules. Every piece of content for Loti Labs must be built around these constraints — they are not disclaimers to add at the end, they are the frame for how every compound is described.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.1 What Loti Labs is and is not</summary>
+      <div class="markdown"><p>Loti Labs is a chemical supplier. It is not a compounding pharmacy or chemical compounding facility as defined under 503A of the Federal Food, Drug, and Cosmetic Act. It is not an outsourcing facility as defined under 503B of the Federal Food, Drug, and Cosmetic Act. All products are sold for research, laboratory, or analytical purposes only and are not for human consumption.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.2 Required compliance disclaimer</summary>
+      <div class="markdown"><p>Every product page and category page must include the following language, prominently placed — not buried in a footer-only treatment. Paraphrase freely, but all elements must be present:</p><p>&gt; All products sold by Loti Labs are strictly for laboratory research use only. They are not intended for human consumption, veterinary use, or any purpose outside of a controlled research setting. Statements on this site have not been evaluated by the US Food and Drug Administration. Products are not intended to diagnose, treat, cure, or prevent any disease. Loti Labs is a chemical supplier and is not a compounding pharmacy or outsourcing facility under sections 503A or 503B of the Federal Food, Drug, and Cosmetic Act.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.3 What writers must never do</summary>
+      <div class="markdown"><p><li>Make therapeutic, medical, or human-benefit claims about any product (&quot;helps with weight loss,&quot; &quot;improves recovery,&quot; &quot;reduces wrinkles&quot;).</li><br><li>Provide reconstitution, dosing, administration, or research methodology guidance. Loti Labs&#x27; position is that buyers are qualified researchers with their own training.</li><br><li>Compare products to FDA-approved drugs in a way that implies equivalent therapeutic effect.</li><br><li>Frame products as supplements, nutraceuticals, or cosmetics for personal use.</li><br><li>Use before/after imagery or testimonials describing physical effects on the body.</li><br><li>State a specific company founding year. (See §11 — unresolved.)</li><br><li>Assert GMP compliance without confirmation. (See §11 — unresolved.)</li><br><li>Assert 99%+ purity as a universal blanket claim across all products. State per-batch purity with a COA link, or use &quot;typically high-purity — see COA for batch-specific results.&quot;</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.4 Priority order when rules conflict</summary>
+      <div class="markdown"><p>1. Compliance (research-use-only, no therapeutic claims, required disclaimers)<br>2. Clarity and usefulness<br>3. Accuracy and alignment with verified information<br>4. Structure and formatting<br>5. AEO / entity optimization</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5. Brand Differentiators</summary>
+      <div class="markdown"><p>These are the verified, defensible claims that distinguish Loti Labs from commodity competitors. Anchor copy to these specifics. Never replace them with generic quality language.</p><p>| Differentiator | Copy-ready detail |<br>|---|---|<br>| Third-party tested, every batch | Independent laboratory in Orlando, Florida. COAs publicly accessible on product pages and the Reports page. Batches that fail testing are not sold. |<br>| USA-manufactured | Manufactured at vetted US partner labs. Additional QC at the Orlando testing facility before products are approved for sale. |<br>| Same-day shipping | Orders placed before 1 PM EST, Monday–Friday, ship the same day from the US facility. |<br>| Boutique service | Email monitored 18 hours a day. Typical response: 1–2 hours. SLA: 12 hours. Phone support M–F 10 AM–2 PM EST at 877-Loti-Lab (877-568-4522). |<br>| Money-back guarantee | Unused, unopened products: full refund or replacement within 30 days, no questions asked. |<br>| Founder experience | 9+ years of prior industry experience in research supply. (Frame as founder experience — do not imply company age until founding year confirmed.) |<br>| Dual-niche coverage | One of the few suppliers credibly serving both research peptide and skincare/cosmetic peptide audiences. |<br>| HPLC and Mass Spec verification | Research liquids are verified by HPLC and Mass Spec analysis in addition to standard batch testing. |</p><p>**Where these signals belong on the page:**</p><p>| Page area | Trust signals to include |<br>|---|---|<br>| Above the fold | 1 PM EST same-day shipping, third-party tested, USA-manufactured |<br>| Product specs block | CAS number, molecular weight, chemical formula, purity (with COA link), form, concentration |<br>| Mid-page &quot;Why Loti Labs&quot; section | Orlando lab testing, money-back guarantee, founder experience, boutique service model |<br>| Footer | Full compliance disclaimer, contact info, links to Reports and Satisfaction Guarantee pages |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6. Product Structure</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6.1 Top-level categories</summary>
+      <div class="markdown"><p>| Category | URL | Description | Storage |<br>|---|---|---|---|<br>| Peptides | /peptides/ | Lyophilized (freeze-dried). Require reconstitution by the researcher. | Room temp: up to 4 weeks. Refrigerated: 1–2 years before reconstitution. Reconstituted: use within 2–4 weeks. |<br>| Liquids | /research-liquids/ | Pre-formulated research liquids. SARMs (e.g., MK-677, GW501516) are solutions. Most others are suspensions — shake before use. | 12–18 months at room temperature, away from sunlight. |<br>| Capsules | /capsules/ | Pre-measured peptide and SARM capsules. Sealed against environmental damage. No preparation required. | Sealed; follow product-specific guidance. |</p><p>Important: &quot;pre-mixed, stable formulations&quot; is accurate for liquids and capsules only. Lyophilized peptides require reconstitution — never describe them as pre-mixed.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6.2 Peptide sub-categories (content pillars)</summary>
+      <div class="markdown"><p><li>**Collagen peptides** — studied for skin elasticity, joint mobility, and connective tissue research. Primary tie to the skincare cluster.</li><br><li>**Antimicrobial peptides** — studied for antibacterial and antiviral research, often in topical contexts. Underexploited by competitors; strong topical authority opportunity.</li><br><li>**Growth factor peptides** — studied in cellular growth, tissue repair, and regeneration research. Maps to BPC-157, IGF-1 LR3, sermorelin.</li><br><li>**Custom synthetics** — lab-engineered peptides designed for targeted research outcomes.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6.3 Priority product pages</summary>
+      <div class="markdown"><p>Priority 1 (highest commercial value):</p><p>| Page | Primary keyword | Volume |<br>|---|---|---|<br>| Homepage | research peptides | High |<br>| /catalog/ | peptides for sale | High |<br>| /tadalafil-liquid/ | liquid tadalafil | 8K–14K/mo |<br>| /mk-677/ | MK-677 for sale | 9K–18K/mo |<br>| /clenbuterol/ | clenbuterol for sale | High |<br>| /anastrozole/ | liquid anastrozole | High |<br>| /bpc-157/ | BPC-157 peptide | 9K–18K/mo |</p><p>Priority 2 (growth phase, months 2–4): /peptide-serums/, /research-peptides/, /epitalon/, /sermorelin/, /igf-1-lr3/</p><p>Priority 3 (authority phase, months 4–6): /liothyronine-t3/, /letrozole/, /blog/</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>7. Page Templates</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>7.1 Product page</summary>
+      <div class="markdown"><p>Structure in this order:<br>1. H1 with primary keyword in natural phrasing (e.g., &quot;BPC-157 Peptide for Research Use&quot;)<br>2. Opening paragraph (40–80 words): what the compound is, what it is studied for, research-use-only statement<br>3. Specs block: CAS number, molecular weight, chemical formula, purity statement with COA link, form, concentration<br>4. &quot;Why buy from Loti Labs&quot; — 3–5 specifics, not generic (Orlando lab, US-manufactured, same-day shipping, money-back guarantee)<br>5. &quot;What [compound] is studied for&quot; — research-context framing only; no therapeutic claims<br>6. Storage and handling notes<br>7. FAQ block (3–6 product-specific questions)<br>8. Required compliance disclaimer (prominent, not footer-only)<br>9. Related products / cross-links to category page and 2–3 related products</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>7.2 Category page</summary>
+      <div class="markdown"><p>Each category page (Peptides, Liquids, Capsules) must have its own copy. No duplicated value-prop blocks across categories.</p><p>Structure:<br>1. H1 with primary category keyword<br>2. Opening paragraph (60–120 words): what the category is, who it is for, what makes Loti Labs&#x27; offering in this category distinct<br>3. Category-specific value props (3 items, different framing per category):<br>   - Peptides: lyophilized stability, batch-verified purity, COAs on every product page<br>   - Liquids: HPLC and Mass Spec verification, pre-formulated convenience, suspension handling note<br>   - Capsules: pre-measured precision, sealed for stability, no preparation required<br>4. Sub-category navigation (for Peptides: collagen, antimicrobial, growth factor, custom synthetics)<br>5. Featured products<br>6. Trust signals: COA link, US-manufactured, Orlando testing, money-back guarantee<br>7. Educational footer content (200–400 words) addressing common research-context questions. This carries most of the SEO weight — make it specific.<br>8. Required compliance disclaimer</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>7.3 Blog article</summary>
+      <div class="markdown"><p>Target length: 1,500–2,500 words.</p><p>Structure:<br>1. H1 with primary keyword. Title signals framing (comparison, guide, deep dive).<br>2. Intro (80–150 words): what the reader will learn; acknowledge research-only context where relevant<br>3. H2 sections mapping to common sub-questions. Comparison articles: include a comparison table early.<br>4. At least one factual data point per major section (molecular weights, mechanism summaries, sourcing standards)<br>5. Internal links to relevant product and category pages — at least 3–5 per article<br>6. Conclusion (80–120 words): key takeaways without human-use claims<br>7. Author byline with credentials<br>8. FAQ block (3–5 questions) — captures long-tail queries, improves LLM citation surface area</p><p>**Blog clusters:**</p><p>Cluster A — Skincare / Beauty (~36,400 combined monthly volume): What Are Peptides in Skincare?, Peptides vs. Retinol, Best Peptide Serum 2026 Guide, Copper Peptides: Deep Dive, Collagen vs. Peptides for Skin, Peptide Skincare Beginner&#x27;s Guide</p><p>Cluster B — Research peptides (~33,800 combined monthly volume): BPC-157: Research Overview 2026, What Are Research Peptides?, Matrixyl vs. Argireline Peptides, How to Source Research-Grade Peptides, MK-677 vs. Sermorelin: Comparison, Research Peptide Purity Standards</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>8. AEO and Entity Optimization</summary>
+      <div class="markdown"><p>Use entity-based definitions when relevant — not in every paragraph.</p><p>Entity format: [Entity] is [clear definition + key attributes + why it matters]</p><p>Repeat the full entity name at least twice before using pronouns. Define abbreviations at first mention (see §3.1).</p><p>For question-based headings: answer immediately (Yes/No when applicable), then expand.</p><p>For compound definitions, anchor to:<br><li>Chemical class or family</li><br><li>CAS number, molecular weight, chemical formula</li><br><li>What the compound is studied for in research contexts</li><br><li>Form available at Loti Labs (lyophilized peptide, research liquid, capsule)</li></ul><p>Do not define compounds by their effects on humans or comparison to FDA-approved drugs as treatments.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>9. Numbers to Know</summary>
+      <div class="markdown"><p>| Detail | Value |<br>|---|---|<br>| Shipping cutoff | 1 PM EST, Monday–Friday |<br>| Email response time | Typically 1–2 hours; 12-hour SLA |<br>| Email monitoring | 18 hours/day |<br>| Phone hours | M–F, 10 AM–2 PM EST at 877-Loti-Lab (877-568-4522) |<br>| Email | service@lotilabs.com |<br>| Address | 1204 S Broad St #336, Brooksville, FL 34601 |<br>| Returns window | 30 days, unused and unopened |<br>| Lyophilized peptide stability | Up to 4 weeks at room temp; 1–2 years refrigerated; 2–4 weeks post-reconstitution |<br>| Liquid product shelf life | 12–18 months at room temp, away from sunlight |<br>| Testing location | Independent third-party laboratory in Orlando, FL |<br>| Wholesale site | wholesalepeptide.com (separate brand — do not conflate) |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>10. Brief Creation Workflow</summary>
+      <div class="markdown"><p>To create a content brief for Loti Labs, follow the workflow in `brief-creation/brief-creation.md`. The data schema is in `brief-creation/data-schema.json`. The Python script to fill briefs automatically is `brief-creation/fill_brief.py`.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>11. Unresolved Issues — Flag Before Publishing</summary>
+      <div class="markdown"><p>These are inconsistencies or unconfirmed claims in existing site copy. Do not propagate them. Resolve with the project lead before publishing any content that touches them.</p><p>| Issue | Status | Recommended handling |<br>|---|---|---|<br>| Company tenure | Existing copy states &quot;14+ years,&quot; &quot;9 years,&quot; &quot;over a decade,&quot; and &quot;A Decade of Purity &amp; Performance&quot; inconsistently. Actual founding year not confirmed. | Frame as founder experience only: &quot;founders with 9+ years of prior experience in research supply.&quot; Do not assert company age. |<br>| GMP-compliant manufacturing | Appears in homepage copy. GMP is a regulated, auditable standard — unclear if this is a formal certification or description of internal practice. | Do not use &quot;GMP-compliant&quot; until confirmed by project lead. Use &quot;controlled manufacturing conditions&quot; instead. |<br>| 99%+ purity as universal claim | Stated across product categories as a blanket claim. Not all COAs may support this for every product. | State per-batch purity with a COA link. Use &quot;see COA for batch-specific results&quot; rather than a universal percentage. Where verified (e.g., MK-677 at 99.91%), state the specific figure with the source. |<br>| Free shipping | Appears on the Capsules page. Not consistently stated elsewhere. | Do not claim free shipping universally. Verify current threshold ($99?) and apply only where confirmed. |<br>| &quot;Pre-mixed, stable formulations&quot; | Appears on the Peptides category page in existing copy. Lyophilized peptides require reconstitution — this claim is false for that category. | Use only for Liquids and Capsules. Remove from any Peptides page copy. |<br>| Duplicated value-prop blocks | &quot;Unmatched Purity / Research-Ready / Fast, Secure Shipping&quot; appears identically on Peptides, Liquids, and Capsules pages. | Each category page must have its own value proposition wording. Facts can be shared; framing must be unique per category. |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>12. Approved Content Examples</summary>
+      <div class="markdown"><p>Published, approved content pieces live in `_approved/`. Reference these for voice, structure, and how compliance is handled in practice.</p><p>**Product pages** (`_approved/product/`):<br><li>`tadalafil-30mg.md` — liquid product page; strong example of molecular spec block, PDE isoform selectivity table, and research framing without therapeutic claims</li><br><li>`mk-677-25mg.md` — liquid product page; example of mechanism of action section and RUO treatment in a SARM context</li></ul><p>**Category pages** (`_approved/collection/`):<br><li>`homepage.md` — full homepage optimization; shows hero copy, manufacturing process structure, FAQ treatment</li><br><li>`catalog.md` — shop/catalog page; shows tiered category navigation and FAQ handling</li><br><li>`peptides.md` — Peptides category page; reference for lyophilized peptide framing and storage rules</li><br><li>`research-liquids.md` — Liquids category page; reference for HPLC/Mass Spec verification framing and suspension handling note</li><br><li>`capsules.md` — Capsules category page; reference for pre-measured format framing</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>13. Operator Notes</summary>
+      <div class="markdown"><p>*Section for team-specific additions per the content team&#x27;s working convention. Use `### {Operator} — {scope}` headings. Promote a note to the main numbered sections once it has been reinforced across two or more pieces.*</p></div>
+    </details>
+    </details>
+        </section>
+        <section class="panel">
+          <h2>Local Source Files Read</h2>
+          <ul><li><code>clients/loti-labs/STYLE-SYSTEM.md</code> — Loti Labs — Style System</li>
+<li><code>clients/loti-labs/_approved/collection/capsules.md</code> — Research Peptide Capsules for Sale, Independently Tested in the USA</li>
+<li><code>clients/loti-labs/_approved/collection/catalog.md</code> — Scientifically Verified Peptides for Sale. Lab-Purity You Can Trust.</li>
+<li><code>clients/loti-labs/_approved/collection/homepage.md</code> — Premium Research Peptides. Independently Tested. Ships Same Day.</li>
+<li><code>clients/loti-labs/_approved/collection/peptides.md</code> — High-Purity Peptides for Sale, Independently Tested in the USA</li>
+<li><code>clients/loti-labs/_approved/collection/research-liquids.md</code> — High-Purity Research Liquids, Backed by Independent Testing</li>
+<li><code>clients/loti-labs/_approved/product/mk-677-25mg.md</code> — MK-677 25mg/ml (30ml)</li>
+<li><code>clients/loti-labs/_approved/product/tadalafil-30mg.md</code> — Tadalafil 30mg/ml (30ml)</li>
+<li><code>clients/loti-labs/brief-creation/brief-creation.md</code> — Loti Labs — Content Brief Guidelines</li>
+<li><code>clients/loti-labs/client-intelligence/README.md</code> — Loti Labs Client Intelligence</li>
+<li><code>clients/loti-labs/client-intelligence/STYLE-GUIDE.md</code> — Loti Labs — Style System</li>
+<li><code>clients/loti-labs/client-intelligence/offerings.md</code> — Loti Labs Offerings</li>
+<li><code>clients/loti-labs/client-intelligence/source-files.md</code> — Loti Labs Source Files</li>
+<li><code>clients/loti-labs/deliverables/README.md</code> — Loti Labs Deliverables</li>
+<li><code>clients/loti-labs/raw/knowledge/overview.md</code> — Loti Labs | Wholesale Peptide — Client Overview</li>
+<li><code>clients/loti-labs/raw/knowledge/service-taxonomy.md</code> — Loti Labs Service Taxonomy</li>
+<li><code>clients/loti-labs/raw/knowledge/writers-brief.md</code> — Writers Brief</li></ul>
+        </section>
+      </main>
+    </section>
+    </body>
+</html>

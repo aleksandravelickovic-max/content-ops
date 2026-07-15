@@ -1,0 +1,59 @@
+{
+  "client": "the-hope-house/scottsdaletmstherapy",
+  "display_name": "Scottsdale TMS Therapy",
+  "generated_at": "2026-07-14T15:59:27.916818+00:00",
+  "offerings": [
+    {
+      "name": "Psychiatric Medication Management",
+      "description": "Evaluation, personalized treatment plan, ongoing monitoring, adjustments; integrates therapy, nutrition, exercise, mindfulness",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/the-hope-house/scottsdaletmstherapy/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "4. Services Reference",
+        "Services"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Spravato",
+      "description": "FDA-approved; nasal spray; in-clinic only; REMS-certified; 1–2 sessions/week; rapid-acting",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/the-hope-house/scottsdaletmstherapy/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "4. Services Reference",
+        "Services"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Therapy Services",
+      "description": "Counseling services delivered by master-level licensed counselors.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/the-hope-house/scottsdaletmstherapy/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "4. Services Reference",
+        "Services"
+      ],
+      "score": 9
+    },
+    {
+      "name": "TMS Therapy",
+      "description": "FDA-cleared; non-invasive; no anesthesia; 20–40 min/session; 5 days/week; 4–6 weeks; 30–36 sessions total",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/the-hope-house/scottsdaletmstherapy/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "4. Services Reference",
+        "Services"
+      ],
+      "score": 9
+    }
+  ]
+}

@@ -1,0 +1,739 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A Plus Landscaping Context</title>
+  <style>
+    :root {
+      --bg:#f4f7f5; --panel:#ffffff; --ink:#09110f; --muted:#63716c; --line:#dce5df;
+      --black:#050907; --graph:#14d878; --graph-dark:#079d55; --soft:#eaf8f0; --soft-ink:#19392a;
+      --accent:#087a47; --red:#b5362d; --shadow:0 18px 46px rgba(5,9,7,.08);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:
+      linear-gradient(180deg, #ffffff 0, var(--bg) 360px); color:var(--ink); line-height:1.45; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .topnav { min-height:64px; padding:14px max(32px, calc((100vw - 1380px) / 2 + 32px)); background:var(--black); border-bottom:1px solid rgba(255,255,255,.08); position:sticky; top:0; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { color:#fff; display:inline-flex; align-items:center; gap:10px; font-weight:800; letter-spacing:0; }
+    .brand:hover { text-decoration:none; }
+    .brand span { width:32px; height:32px; border-radius:8px; background:var(--graph); color:var(--black); display:inline-grid; place-items:center; font-size:13px; font-weight:900; }
+    .nav-meta, .nav-link { color:#b8c6c0; font-size:13px; font-weight:700; }
+    .hero { margin:0; padding:42px max(32px, calc((100vw - 1380px) / 2 + 32px)) 38px; background:var(--black); color:#fff; border-bottom:1px solid rgba(255,255,255,.08); }
+    .index-hero, .client-hero { display:flex; justify-content:space-between; gap:28px; align-items:flex-start; }
+    .hero h1 { margin:0 0 12px; font-size:clamp(32px, 5vw, 62px); line-height:.98; letter-spacing:0; max-width:900px; }
+    .hero p { margin:0; color:#c7d5cf; max-width:840px; font-size:17px; }
+    .hero-copy { max-width:940px; }
+    .kicker { color:var(--graph); font-size:12px; text-transform:uppercase; letter-spacing:.08em; font-weight:900; }
+    .report-meta { display:flex; flex-wrap:wrap; gap:10px; padding:14px 32px; background:#fff; border-bottom:1px solid var(--line); color:var(--muted); font-size:13px; max-width:1380px; margin:0 auto; }
+    .report-meta span { background:var(--soft); color:var(--soft-ink); border-radius:999px; padding:6px 10px; font-weight:700; }
+    .grid.cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(290px, 1fr)); gap:16px; padding:24px 32px 42px; max-width:1380px; margin:0 auto; }
+    .card, .panel, .context-card { background:var(--panel); border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow); }
+    .client-card { display:block; padding:20px; color:inherit; min-height:184px; transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease; }
+    .client-card:hover { text-decoration:none; transform:translateY(-2px); border-color:rgba(20,216,120,.55); box-shadow:0 24px 58px rgba(5,9,7,.12); }
+    .card-topline { display:flex; justify-content:space-between; gap:10px; align-items:center; }
+    .client-card h2 { margin:14px 0 8px; font-size:23px; line-height:1.1; }
+    .client-card p { margin:0; color:var(--muted); }
+    .metrics { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+    .metrics span, .evidence, .status-pill { background:var(--soft); border:1px solid rgba(20,216,120,.22); border-radius:999px; padding:5px 9px; font-size:12px; color:var(--soft-ink); font-weight:800; }
+    .topic-chips { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 18px; }
+    .topic-chips span { background:#f6fbf8; border:1px solid var(--line); border-radius:999px; color:#183a2a; padding:7px 10px; font-size:13px; font-weight:750; }
+    .layout { display:block; padding:22px 32px 46px; max-width:1380px; margin:0 auto; }
+    main { min-width:0; }
+    .context-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; margin-bottom:20px; }
+    .context-card { padding:18px; min-height:220px; }
+    .context-card ul { margin-bottom:0; }
+    .context-note { color:var(--muted); font-size:13px; margin:4px 0 12px; }
+    .aside-label { color:var(--graph-dark); font-size:11px; text-transform:uppercase; font-weight:900; letter-spacing:.08em; margin-bottom:5px; }
+    .panel h2 { margin-top:0; }
+    .panel { padding:22px; margin-bottom:20px; }
+    .panel h2 { font-size:26px; letter-spacing:0; }
+    .offerings { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:13px; margin-top:16px; }
+    .offering, .sample { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .offering { position:relative; overflow:hidden; }
+    .offering-marker { position:absolute; inset:0 auto 0 0; width:4px; background:var(--graph); }
+    .offering h3, .sample h4 { margin:0 0 6px; }
+    .offering p { margin:0 0 10px; }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .stat-stack { display:grid; grid-template-columns:repeat(3, minmax(100px, 1fr)); gap:8px; min-width:340px; }
+    .stat-stack div { border:1px solid rgba(255,255,255,.15); border-radius:8px; padding:14px; background:rgba(255,255,255,.06); }
+    .stat-stack strong { display:block; font-size:26px; color:#fff; }
+    .stat-stack span, .muted { color:var(--muted); font-size:13px; }
+    .hero .stat-stack span { color:#b8c6c0; }
+    ul { padding-left:20px; }
+    li { margin:4px 0; }
+    code { background:var(--soft); color:var(--soft-ink); padding:2px 4px; border-radius:4px; }
+    details { margin:10px 0; }
+    summary { cursor:pointer; font-weight:700; }
+    .style-section { border-top:1px solid var(--line); padding-top:10px; }
+    .markdown { color:#2d2f35; }
+    @media (max-width: 980px) {
+      .layout, .split, .client-hero, .index-hero { grid-template-columns:1fr; display:block; }
+      .context-grid { grid-template-columns:1fr; }
+      .stat-stack { min-width:0; margin-top:16px; }
+      .hero, .grid.cards, .layout, .topnav, .report-meta { padding-left:16px; padding-right:16px; }
+      .hero h1 { font-size:36px; }
+      .stat-stack { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+    <nav class="topnav">
+      <a class="brand" href="index.html"><span>LG</span>LinkGraph</a>
+      <a class="nav-link" href="index.html">All clients</a>
+    </nav>
+    <section class="hero client-hero">
+      <div class="hero-copy">
+        <div class="kicker">a-plus-landscaping</div>
+        <h1>A Plus Landscaping</h1>
+        <p>39 extracted offerings, 214 sitemap URLs, and 12 local source documents for client-specific writing context.</p>
+      </div>
+      <div class="stat-stack">
+        <div><strong>ok</strong><span>crawl status</span></div>
+        <div><strong>214</strong><span>URLs found</span></div>
+        <div><strong>2</strong><span>product/service URLs</span></div>
+      </div>
+    </section>
+    <section class="layout">
+      <main>
+        <section class="context-grid">
+    <article class="context-card">
+      <div class="aside-label">Quick Facts</div>
+      <p class="context-note">Company, audience, and proof points.</p>
+      <ul><li>A Plus is a design-build company in the outdoor living category. It is not a lawn care company, not a maintenance service. Every project moves through design, then construction, by the same team.</li><li>Primary audience: Homeowners across Central Pennsylvania planning a significant backyard project. Not renters, not commercial, not lowest-price seekers. These are buyers who value craftsmanship and reliability, who are typically comparing multiple contractors before choosing one.</li><li>Geographic service area: Lancaster, Harrisburg, Hershey, Mechanicsburg, Middletown, Reading, and surrounding Central PA communities.</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Voice</div>
+      <p class="context-note">How this client should sound.</p>
+      <ul><li>Narrative: Open sections with a scene or human moment before stating company capabilities</li><li>Place-specific: Reference the town&#x27;s character, soil conditions, local winters, community feel — not just the service</li><li>Warm: Speak to the reader as a homeowner who has thought carefully about their property</li><li>Direct: Once the scene is set, be clear and efficient about what A Plus does and how</li><li>First-person plural: &quot;We build,&quot; &quot;we serve,&quot; &quot;we design&quot; — A Plus speaks as a team</li><li>Second person: &quot;Your backyard,&quot; &quot;what you want,&quot; &quot;where you live&quot;</li><li>&quot;Mechanicsburg is the kind of place where people put down roots and mean it.&quot; — place-specific, warm, not generic</li><li>&quot;There&#x27;s a version of a Tuesday evening that has nothing to do with errands or screens or anywhere to be.&quot; — human moment first</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Avoid / Compliance</div>
+      <p class="context-note">Claims, terms, and wording to avoid.</p>
+      <p class="muted">No clean lines extracted yet.</p>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Terminology</div>
+      <p class="context-note">Client-specific naming and required language.</p>
+      <p class="muted">No clean lines extracted yet.</p>
+    </article>
+    </section>
+        <section class="panel">
+          <h2>Offerings, Services, Goods</h2>
+          <p class="muted">Writer-facing catalog from the client style system, approved source files, and usable product/service pages. Raw crawl evidence is separated below.</p>
+          <div class="offerings">
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Concrete Overlays</h3>
+      <p>Overlay systems that resurface or upgrade existing concrete areas.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Hardscaping</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Custom Outdoor Living Design &amp; Build</h3>
+      <p>Design and construction for custom outdoor living spaces in South Central PA, with a focus on hardscaping, landscaping, craftsmanship, work ethic, and integrity.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Positioning</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Custom Pools</h3>
+      <p>Pool design and construction shaped around the property and the larger outdoor living plan.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Pools &amp; Waterscapes</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Decks</h3>
+      <p>Custom deck construction for raised or ground level outdoor living.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Decks &amp; Structures</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Decks &amp; Structures</h3>
+      <p>Built outdoor structures that define shade, gathering space, transitions, and covered areas.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Decks &amp; Structures</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Firepits/Fireplaces</h3>
+      <p>Fire features for gathering areas, including built in fireplaces and firepits.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Outdoor Features</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Gazebos</h3>
+      <p>Freestanding covered structures for a defined seating or focal area.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Decks &amp; Structures</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Grills &amp; Appliances</h3>
+      <p>Outdoor grills and appliances used in kitchen or entertainment builds.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Outdoor Features</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Hardscape Financing</h3>
+      <p>Financing option through HFS Financial for landscaping and outdoor living projects, including longer term payment options for larger outdoor projects.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Positioning</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Hardscape Lighting</h3>
+      <p>Lighting built into or around patios, walls, steps, pillars, and other masonry features.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Landscaping &amp; Lighting</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Hardscaping</h3>
+      <p>Structural outdoor construction for patios, driveways, retaining walls, steps, pillars, permeable pavers, stone decks, and concrete overlays.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Hardscaping</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Landscape Lighting</h3>
+      <p>Outdoor lighting for plantings, paths, gathering spaces, and the overall property.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Landscaping &amp; Lighting</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Landscape Maintenance Packages</h3>
+      <p>Ongoing maintenance packages for completed landscapes.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Landscaping &amp; Lighting</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Landscaping</h3>
+      <p>Landscape installation that supports the overall outdoor design.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Landscaping &amp; Lighting</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Landscaping &amp; Lighting</h3>
+      <p>Planting, tree, lighting, and maintenance work that completes the hardscape and outdoor living plan.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Landscaping &amp; Lighting</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Louvered Pergolas</h3>
+      <p>Adjustable pergola systems that control shade and weather exposure.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Decks &amp; Structures</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Outdoor Features</h3>
+      <p>Add ons that make patios and backyard spaces more usable for cooking, gathering, and relaxing.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Outdoor Features</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Outdoor Kitchens</h3>
+      <p>Built outdoor cooking areas designed around the patio or larger outdoor living plan.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Outdoor Features</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Outdoor Living Design</h3>
+      <p>Planning and design for custom outdoor spaces, from the initial property walk through the construction plan.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Outdoor Living Design</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Patio Furniture</h3>
+      <p>Furniture selections or products that complete outdoor seating and dining areas.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Outdoor Features</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Patios</h3>
+      <p>Custom patio design and installation for usable outdoor living areas.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Hardscaping</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Paver Driveways</h3>
+      <p>Paver driveway installation for residential entries and vehicle surfaces.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Hardscaping</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Pavilions</h3>
+      <p>Roofed outdoor structures for covered seating, dining, or entertainment areas.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Decks &amp; Structures</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Pergolas</h3>
+      <p>Open shade structures used to define seating, dining, or transition areas.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Decks &amp; Structures</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Permeable Pavers</h3>
+      <p>Paver systems designed to let water drain through the surface instead of running across it.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Hardscaping</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Pizza Ovens</h3>
+      <p>Outdoor pizza oven features for cooking and entertaining.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Outdoor Features</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Planting</h3>
+      <p>Plant selection and installation for beds, borders, and finished outdoor spaces.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Landscaping &amp; Lighting</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Ponds</h3>
+      <p>Built pond features used as landscape focal points.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Pools &amp; Waterscapes</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Pools &amp; Waterscapes</h3>
+      <p>Water centered outdoor features that can be part of a larger backyard design.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Pools &amp; Waterscapes</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Porches</h3>
+      <p>Covered entry or living spaces attached to the home.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Decks &amp; Structures</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Retaining Walls</h3>
+      <p>Wall systems that support grade changes, manage soil, and make patios or other outdoor features possible.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Hardscaping</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Snow</h3>
+      <p>Seasonal snow services listed in A Plus Landscaping website navigation.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Snow</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Spas</h3>
+      <p>Spa features integrated into a pool area or outdoor living design.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Pools &amp; Waterscapes</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Steps &amp; Pillars</h3>
+      <p>Stone, block, or paver features that create transitions, entries, and built accents within a hardscape.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Hardscaping</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Stone Decks</h3>
+      <p>Stone or paver deck surfaces for outdoor living areas that need a masonry finish.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Hardscaping</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Streams</h3>
+      <p>Constructed water features that add movement through the landscape.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Pools &amp; Waterscapes</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Trees</h3>
+      <p>Tree selection and installation as part of landscape design.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Landscaping &amp; Lighting</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Water Falls</h3>
+      <p>Waterfall features that add movement, sound, and visual interest to a landscape.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Pools &amp; Waterscapes</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Water Feature</h3>
+      <p>Decorative or functional water elements for outdoor living spaces.</p>
+      <div class="evidence">Sources: clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md · Sections: Pools &amp; Waterscapes</div>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Website Intelligence</h2>
+          <div class="split">
+            <div>
+              <h3>Website URLs</h3><ul><li><a href="https://apluslandscaping.com/">https://apluslandscaping.com/</a></li></ul>
+              <h3>Sitemaps</h3><ul><li><a href="https://apluslandscaping.com/sitemap_index.xml">https://apluslandscaping.com/sitemap_index.xml</a></li><li><a href="https://apluslandscaping.com/sitemap.xml">https://apluslandscaping.com/sitemap.xml</a></li></ul>
+            </div>
+            <div>
+              <h3>Semantic / Topical Terms</h3><div class="topic-chips"><span>Concrete Overlays</span><span>Custom Outdoor Living Design &amp; Build</span><span>Custom Pools</span><span>Decks &amp; Structures</span><span>Grills &amp; Appliances</span><span>Hardscape Financing</span><span>Hardscape Lighting</span><span>Landscape Lighting</span><span>Landscape Maintenance Packages</span><span>Landscaping &amp; Lighting</span><span>Louvered Pergolas</span><span>Outdoor Features</span><span>Outdoor Kitchens</span><span>Outdoor Living Design</span><span>Patio Furniture</span><span>Paver Driveways</span><span>Permeable Pavers</span><span>Pizza Ovens</span><span>Pools &amp; Waterscapes</span><span>Retaining Walls</span><span>Steps &amp; Pillars</span><span>Stone Decks</span><span>Water Falls</span><span>Water Feature</span><span>Human Moment</span></div>
+              <h3>Blockers</h3><p class="muted">None</p>
+            </div>
+          </div>
+          <h3>Product / Service URLs</h3><ul><li><a href="https://apluslandscaping.com/shop/">https://apluslandscaping.com/shop/</a></li><li><a href="https://apluslandscaping.com/products/">https://apluslandscaping.com/products/</a></li></ul>
+          <h3>Sampled Pages</h3><div class="sample-pages">
+    <article class="sample">
+      <h4>A Plus Landscaping&#x27;s Top Products for Outdoor Living Spaces</h4>
+      <a href="https://apluslandscaping.com/products/">https://apluslandscaping.com/products/</a>
+      <p>Discover A Plus Landscaping&#x27;s top products for outdoor living. Get inspired and request a quote to transform your space today!</p>
+      <ul><li>Contact</li><li>Company</li><li>Resources</li><li>Services</li><li>Areas We Serve</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Discover A Plus Landscaping&#x27;s Top Outdoor Living Solutions</h4>
+      <a href="https://apluslandscaping.com/shop/">https://apluslandscaping.com/shop/</a>
+      <p>Shop A Plus Landscaping for outdoor living solutions! Browse our products and services, from hardscaping to maintenance. Get a quote now.</p>
+      <ul><li>Contact</li><li>Company</li><li>Resources</li><li>Services</li><li>Areas We Serve</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Our Services: Custom Outdoor Living Spaces Near Reading, PA | A Plus Landscaping</h4>
+      <a href="https://apluslandscaping.com/services-2/">https://apluslandscaping.com/services-2/</a>
+      <p>A Plus Landscaping offers top-quality landscaping services, creating beautiful outdoor living spaces in the Philadelphia area. Contact us now!</p>
+      <ul><li>Web development</li><li>Mobile apps</li><li>Online marketing</li><li>We are open for new projects. Let&#x27;s bring your creative ideas to life together!</li><li>Contact</li><li>Company</li><li>Resources</li><li>Services</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Landscaping Services in Reading, PA | A Plus Landscaping</h4>
+      <a href="https://apluslandscaping.com/services-3/">https://apluslandscaping.com/services-3/</a>
+      <p>A Plus Landscaping designs and builds stunning outdoor living spaces. Explore our landscaping services, from patios to maintenance, and request a quote now.</p>
+      <ul><li>We are open for new projects. Let&#x27;s bring your creative ideas to life together!</li><li>Call us at: (717) 335-1690 or fill out the form</li><li>Free Quote</li><li>SMS Text Opt-in Consent</li><li>Contact</li><li>Company</li><li>Resources</li><li>Services</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Lighting Solutions for Your Dream Space | A Plus Landscaping</h4>
+      <a href="https://apluslandscaping.com/category/lighting/">https://apluslandscaping.com/category/lighting/</a>
+      <p>A Plus Landscaping offers lighting solutions to enhance your outdoor space. Explore our landscape lighting options and create your dream design.</p>
+      <ul><li>Category: Lighting</li><li>Reasons You Should Add Exterior Accent Lighting to Your Home</li><li>Benefits to Investing in Exterior Lighting</li><li>Contact</li><li>Company</li><li>Resources</li><li>Services</li><li>Areas We Serve</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>A Plus Landscaping&#x27;s Expert Hardscaping Services</h4>
+      <a href="https://apluslandscaping.com/category/hardscaping/">https://apluslandscaping.com/category/hardscaping/</a>
+      <p>Explore A Plus Landscaping&#x27;s expert hardscaping services. We create beautiful patios, driveways, and retaining walls. Get a free quote!</p>
+      <ul><li>Category: Hardscaping</li><li>Benefits of Planning Your Outdoor Living Space in the Winter</li><li>4 Things to Look for in a Hardscape Contractor</li><li>Why are 3D Drawings Important for Landscape Design?</li><li>How to Winterize Your Backyard Hardscaping</li><li>Structure; a perfect touch for your Outdoor Living Space</li><li>Benefits to Investing in Exterior Lighting</li><li>5 Landscaping and Hardscaping Projects to Inspire You</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>News &amp; Updates: Landscaping Insights and Project Spotlights | A Plus Landscaping</h4>
+      <a href="https://apluslandscaping.com/category/news-updates/">https://apluslandscaping.com/category/news-updates/</a>
+      <p>Explore the latest landscaping news and trends from A Plus Landscaping. Get inspired for your outdoor living space today!</p>
+      <ul><li>Category: News &amp; Updates</li><li>What Is a Rain Garden &amp; Why Build One in Your Yard?</li><li>The Benefits of Adding an Outdoor Pavilion to Your Yard</li><li>A Quick Guide to Proper Deck Maintenance</li><li>How Important Is Retaining Wall Drainage for Your Property?</li><li>5 Benefits of Working With a Landscape Design Company</li><li>3 Benefits of Adding Retaining Walls to Your Yard</li><li>Driveway Materials: Pavers vs. Asphalt vs. Concrete</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Hardscaping - A Plus Landscaping</h4>
+      <a href="https://apluslandscaping.com/categories/hardscaping/">https://apluslandscaping.com/categories/hardscaping/</a>
+      <p></p>
+      <ul><li>Categories: Hardscaping</li><li>Contact</li><li>Company</li><li>Resources</li><li>Services</li><li>Areas We Serve</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Planning Tips for Your Outdoor Space | A Plus Landscaping</h4>
+      <a href="https://apluslandscaping.com/category/planning-tips/">https://apluslandscaping.com/category/planning-tips/</a>
+      <p>Landscaping Planning Tips: A Plus Landscaping provides expert landscaping planning tips to help you create your dream outdoor space.</p>
+      <ul><li>Category: Planning Tips</li><li>Benefits of Planning Your Outdoor Living Space in the Winter</li><li>Do You Need a Permit To Install a Pergola?</li><li>6 Tips for Choosing the Best Location for a New Deck</li><li>Ways To Start Preparing Your Lawn for Spring</li><li>3 Hardscaping Projects That Can Boost the Value of Your Home</li><li>Tips for Creating an Outdoor Living Space With Kids in Mind</li><li>Things To Consider Before Having a Pergola Installed</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>A Plus Landscaping 2026: Expert Landscaping Services</h4>
+      <a href="https://apluslandscaping.com/category/uncategorized/">https://apluslandscaping.com/category/uncategorized/</a>
+      <p>A Plus Landscaping: Expert landscaping services for your dream outdoor living space. Get inspired and request a quote now!</p>
+      <ul><li>Category: Uncategorized</li><li>Contact</li><li>Company</li><li>Resources</li><li>Services</li><li>Areas We Serve</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Retaining Wall - A Plus Landscaping</h4>
+      <a href="https://apluslandscaping.com/categories/retaining-wall/">https://apluslandscaping.com/categories/retaining-wall/</a>
+      <p></p>
+      <ul><li>Categories: Retaining Wall</li><li>Contact</li><li>Company</li><li>Resources</li><li>Services</li><li>Areas We Serve</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Why Choose A Plus Landscaping: Expert Outdoor Living</h4>
+      <a href="https://apluslandscaping.com/category/why-choose-a-plus/">https://apluslandscaping.com/category/why-choose-a-plus/</a>
+      <p>A Plus Landscaping: Expert outdoor living design. Choose us for quality, custom landscaping, and customer satisfaction.</p>
+      <ul><li>Category: Why Choose A plus</li><li>Questions to Ask When Looking for a Snow Removal Contractor</li><li>We are your source for a backyard makeover</li><li>Contact</li><li>Company</li><li>Resources</li><li>Services</li><li>Areas We Serve</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Decks &amp; Structures - A Plus Landscaping</h4>
+      <a href="https://apluslandscaping.com/categories/decks-structures/">https://apluslandscaping.com/categories/decks-structures/</a>
+      <p></p>
+      <ul><li>Categories: Decks &amp; Structures</li><li>Contact</li><li>Company</li><li>Resources</li><li>Services</li><li>Areas We Serve</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Outdoor Features - A Plus Landscaping</h4>
+      <a href="https://apluslandscaping.com/categories/outdoor-features/">https://apluslandscaping.com/categories/outdoor-features/</a>
+      <p></p>
+      <ul><li>Categories: Outdoor Features</li><li>Contact</li><li>Company</li><li>Resources</li><li>Services</li><li>Areas We Serve</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Pools &amp; Waterscapes - A Plus Landscaping</h4>
+      <a href="https://apluslandscaping.com/categories/pools-waterscapes/">https://apluslandscaping.com/categories/pools-waterscapes/</a>
+      <p></p>
+      <ul><li>Categories: Pools &amp; Waterscapes</li><li>Contact</li><li>Company</li><li>Resources</li><li>Services</li><li>Areas We Serve</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Landscaping &amp; Lighting - A Plus Landscaping</h4>
+      <a href="https://apluslandscaping.com/categories/landscaping-lighting/">https://apluslandscaping.com/categories/landscaping-lighting/</a>
+      <p></p>
+      <ul><li>Categories: Landscaping &amp; Lighting</li><li>Contact</li><li>Company</li><li>Resources</li><li>Services</li><li>Areas We Serve</li></ul>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Full Style System</h2>
+          <details open><summary>Show style-system sections</summary>
+    <details class="style-section">
+      <summary>A Plus Landscaping — Style System</summary>
+      <div class="markdown"><p>Generated: 2026-06-03<br>Sources: raw/knowledge/client-overview.md, raw/knowledge/content-agent-brief.md, _approved/location-pages/ (2 pieces, Mar–Apr 2026), _approved/service-pages/ (1 piece, Mar 2026)<br>Base rules: universal-rules/UNIVERSAL-RULES.md<br>CSM: Arianna Trabanino</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>1. Brand &amp; Audience</summary>
+      <div class="markdown"><p>A Plus Landscaping is a family-owned outdoor living design-build company founded in 2006 by Marcus Waldner, based in Reinholds, Pennsylvania. The company designs and builds custom outdoor environments for homeowners across Central Pennsylvania.</p><p>Website: https://apluslandscaping.com/<br>Phone: (717) 335-1690</p><p>A Plus is a design-build company in the outdoor living category. It is not a lawn care company, not a maintenance service. Every project moves through design, then construction, by the same team.</p><p>**What A Plus builds:**</p><p>| Category | Services |<br>|---|---|<br>| Hardscaping | Paver patios, retaining walls, walkways, steps, pillars, permeable pavers, stone decks, concrete overlays, paver driveways |<br>| Water features | Custom pools, spas, swim spas, waterfalls, streams, ponds |<br>| Structures | Decks, pergolas, pavilions, gazebos, porches, arbors, louvered pergolas |<br>| Outdoor living | Outdoor kitchens, fire pits, fireplaces, pizza ovens, built-in grills, outdoor furniture |<br>| Landscape | Planting, trees, landscape lighting, hardscape lighting, lawn care |</p><p>**Primary audience:** Homeowners across Central Pennsylvania planning a significant backyard project. Not renters, not commercial, not lowest-price seekers. These are buyers who value craftsmanship and reliability, who are typically comparing multiple contractors before choosing one.</p><p>**Geographic service area:** Lancaster, Harrisburg, Hershey, Mechanicsburg, Middletown, Reading, and surrounding Central PA communities.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2. Voice &amp; Tone</summary>
+      <div class="markdown"><p>Voice: warm, experienced, unhurried, place-specific. A Plus speaks like someone who has worked in these towns for twenty years and knows the terrain, the winters, and what homeowners in Central PA actually want from their outdoor space.</p><p>Content should feel human and practical, not promotional. Never corporate. Never generic.</p><p>| Attribute | Rule |<br>|---|---|<br>| Narrative | Open sections with a scene or human moment before stating company capabilities |<br>| Place-specific | Reference the town&#x27;s character, soil conditions, local winters, community feel — not just the service |<br>| Warm | Speak to the reader as a homeowner who has thought carefully about their property |<br>| Direct | Once the scene is set, be clear and efficient about what A Plus does and how |<br>| First-person plural | &quot;We build,&quot; &quot;we serve,&quot; &quot;we design&quot; — A Plus speaks as a team |<br>| Second person | &quot;Your backyard,&quot; &quot;what you want,&quot; &quot;where you live&quot; |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.1 Voice in practice</summary>
+      <div class="markdown"><p>Do this:<br><li>&quot;Mechanicsburg is the kind of place where people put down roots and mean it.&quot; — place-specific, warm, not generic</li><br><li>&quot;There&#x27;s a version of a Tuesday evening that has nothing to do with errands or screens or anywhere to be.&quot; — human moment first</li><br><li>&quot;A retaining wall is often the first project. The one that makes the patio possible.&quot; — specific mechanism, no filler</li><br><li>&quot;We&#x27;ve spent nearly twenty years working in communities like Hershey.&quot; — experience stated concretely</li></ul><p>Not this:<br><li>&quot;A Plus Landscaping is committed to providing exceptional outdoor living solutions.&quot; — AI filler, corporate</li><br><li>&quot;Our world-class team of experts delivers innovative landscaping services.&quot; — generic superlatives</li><br><li>&quot;Transform your outdoor space into a stunning oasis.&quot; — promotional cliche</li><br><li>&quot;We take pride in our craftsmanship and attention to detail.&quot; — vague authority claim</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.2 Sentence and paragraph rules</summary>
+      <div class="markdown"><p><li>Paragraphs: 2–5 lines. One main idea per paragraph.</li><br><li>**No dashes. Never use a dash — em or en — under any circumstances.** Restructure or use a period.</li><br><li>No colons in running text (colons in tables and lists are fine).</li><br><li>First sentence of every section directly answers the heading or opens with the relevant scene.</li><br><li>H2 sections must open with a short introductory paragraph that naturally includes the primary keyword and provides a clear overview of what follows. This intro guides the reader without repeating every H3 in miniature.</li><br><li>Short factual intro after the H1 before the first H2. No &quot;in this article we will explore.&quot;</li><br><li>No unclear pronouns. Name the subject.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.3 FAQ sections</summary>
+      <div class="markdown"><p><li>Every page ends with a FAQ block (H2: Frequently Asked Questions About...).</li><br><li>Each question is an H3.</li><br><li>For yes/no questions: answer &quot;Yes&quot; or &quot;No&quot; first, then expand. One to three sentences max per answer.</li><br><li>FAQ questions should match real search queries related to the page topic and service area.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.4 Banned language</summary>
+      <div class="markdown"><p>| Category | Banned |<br>|---|---|<br>| Dashes | All dashes (em dash, en dash) — never, under any circumstances |<br>| Generic superlatives | world-class, unmatched, premier, state-of-the-art, exceptional (when vague), stunning, beautiful, gorgeous, amazing |<br>| Promotional clichés | transform your outdoor space, oasis, dream backyard, unlock your potential, take your yard to the next level |<br>| Corporate tone | committed to providing, leveraging, synergy, solutions-oriented, best-in-class |<br>| AI filler | in the world of, as we know, it&#x27;s worth noting, delve into, dive into, furthermore, in conclusion, it&#x27;s worth noting |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3. Content Rules by Page Type</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.1 Location landing pages</summary>
+      <div class="markdown"><p>Purpose: Serve homeowners searching for landscaping in a specific Central PA city. These are the main SEO pages.</p><p>Structure:<br>1. Meta title (55–60 characters): &quot;Landscaping [Service] in [City], PA | A Plus Landscaping&quot;<br>2. Meta description (140–160 characters): primary service, city, brand name, key differentiator<br>3. H1: &quot;[Service type] in [City], PA&quot;<br>4. Short narrative intro paragraph before H2s — no filler, place-specific<br>5. H2 — Services section: what A Plus builds (can use a bullet list)<br>6. H2 — Why choose section: differentiators, process, 20 years, certified installers<br>7. H2 — CTA paragraph: phone number + contact link<br>8. H2 — FAQ (minimum 4 questions)</p><p>**Tone note:** Lead every location page with a paragraph that names the town&#x27;s character. What kind of place is it? Why do people choose it? Then connect the outdoor space to that identity. Reference local geography (terrain, grade, neighboring towns, county) where accurate.</p><p>**Warranty rule:** Do not mention the limited lifetime warranty on location pages. Mention it only on the patio service page.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.2 Service pages</summary>
+      <div class="markdown"><p>Purpose: Target buyers researching a specific service (retaining walls, patios, outdoor kitchens, etc.).</p><p>Structure:<br>1. Meta title (55–60 characters): &quot;[Service] in Central PA | A Plus Landscaping&quot;<br>2. Meta description (140–160 characters): service, geography, key differentiator<br>3. H1: &quot;[Service] in Central PA&quot; or &quot;[Service] Installation in Central PA&quot;<br>4. Short intro paragraph — lead with the problem the service solves, then A Plus credentials<br>5. H2 — What we build: types and materials within the service category<br>6. H2 — How we work: the A Plus process (site visit, Design Professional, 3D renderings, certified installers)<br>7. H2 — Why A Plus: specific differentiators relevant to this service<br>8. CTA: phone + contact link<br>9. H2 — FAQ (minimum 4 questions)</p><p>**Warranty rule:** Mention the limited lifetime warranty only on the patio service page, nowhere else.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.3 Blog posts</summary>
+      <div class="markdown"><p>Target length: 700–1,200 words. Not yet an active content type — add approved examples as they are published.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4. The A Plus Process</summary>
+      <div class="markdown"><p>Reference this in &quot;How we work&quot; sections on service and location pages. Do not invent steps.</p><p>1. Customer reaches out by phone at (717) 335-1690 or via the contact form<br>2. A Design Professional calls back within one to two business days<br>3. Design Professional visits the property and walks it with the homeowner<br>4. Custom design is developed around what the homeowner actually wants<br>5. For larger projects: full 3D renderings produced before any work begins<br>6. Construction by certified installers<br>7. Financing available through HFS Financial</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5. Brand Differentiators</summary>
+      <div class="markdown"><p>State these concretely when relevant. Do not inflate into superlatives.</p><p>| Differentiator | How to say it |<br>|---|---|<br>| Founded 2006 | &quot;building outdoor spaces in Central PA since 2006&quot; / &quot;nearly twenty years&quot; |<br>| Family-owned | &quot;family-owned,&quot; &quot;founder Marcus Waldner&quot; |<br>| Certified installers | &quot;every project is built by certified installers&quot; |<br>| 3D renderings | &quot;full 3D renderings before anyone breaks ground&quot; (larger projects) |<br>| Financing | &quot;financing available through HFS Financial&quot; |<br>| Design-build | &quot;one contractor, start to finish&quot; / &quot;from design through construction&quot; |<br>| Limited lifetime warranty | See §3 — patio page only |<br>| Local knowledge | &quot;nearly twenty years working in communities like [city]&quot; / &quot;we know this terrain&quot; |</p><p>**Never say:** &quot;nearly 20 years&quot; — write it as &quot;nearly twenty years&quot; (spell out the number).</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6. Warranty Rule</summary>
+      <div class="markdown"><p>**Limited lifetime warranty — patio page only.**</p><p>Mention the limited lifetime warranty only on the patio service page (apluslandscaping.com/patios/). Do not reference it on location pages, retaining wall pages, pool pages, or any other service page.</p><p>When mentioned on the patio page: &quot;A Plus Landscaping stands behind every patio we build with a limited lifetime warranty.&quot;</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>7. Internal Linking Rules</summary>
+      <div class="markdown"><p>**Placement:**<br><li>Do not add an internal link to the first word of a sentence</li><br><li>Do not add an internal link to the first sentence of a paragraph</li><br><li>Do not add an internal link to the first line of a paragraph</li><br><li>Build context first, then link</li></ul><p>**Anchor text:**<br><li>Use the service or page name as anchor text</li><br><li>Never use &quot;learn more,&quot; &quot;click here,&quot; or similar generic anchors</li></ul><p>**Internal link reference:**</p><p>| Page | URL |<br>|---|---|<br>| Homepage | apluslandscaping.com |<br>| Outdoor living | apluslandscaping.com/outdoor-living/ |<br>| Patios | apluslandscaping.com/patios/ |<br>| Retaining walls | apluslandscaping.com/retaining-walls/ |<br>| Custom pools | apluslandscaping.com/custom-pools/ |<br>| Outdoor kitchens | apluslandscaping.com/outdoor-kitchens/ |<br>| Decks | apluslandscaping.com/decks/ |<br>| Planting | apluslandscaping.com/planting/ |<br>| Landscaping | apluslandscaping.com/landscaping/ |<br>| Contact | apluslandscaping.com/contact/ |<br>| Harrisburg | apluslandscaping.com/harrisburg/ |<br>| Hershey | apluslandscaping.com/hershey/ |<br>| Lancaster | apluslandscaping.com/lancaster/ |<br>| Mechanicsburg | apluslandscaping.com/mechanicsburg/ |</p><p>Add new location and service URLs to this table as they are confirmed from the live site.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>8. SEO Keywords by Content Type</summary>
+      <div class="markdown"><p>| Content type | Example keywords |<br>|---|---|<br>| Location pages | &quot;landscaping [city] PA,&quot; &quot;landscape design [city] PA,&quot; &quot;landscaping company [city] PA&quot; |<br>| Patios | &quot;patio installation central PA,&quot; &quot;paver patio [city] PA&quot; |<br>| Retaining walls | &quot;retaining wall installation central PA,&quot; &quot;retaining wall contractor [city]&quot; |<br>| Pools | &quot;custom pool installation central PA,&quot; &quot;inground pool [city] PA&quot; |<br>| Outdoor kitchens | &quot;outdoor kitchen installation central PA,&quot; &quot;outdoor kitchen [city] PA&quot; |<br>| Decks/structures | &quot;deck builder central PA,&quot; &quot;pergola installation [city] PA&quot; |<br>| General | &quot;outdoor living central PA,&quot; &quot;design-build landscaping PA&quot; |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>9. Numbers and Style</summary>
+      <div class="markdown"><p><li>Spell out numbers used as part of a narrative: &quot;nearly twenty years&quot; not &quot;nearly 20 years&quot;</li><br><li>Use numerals for specific measurements, quantities, and addresses: &quot;three-level patio,&quot; &quot;$1,200,&quot; &quot;37 steps&quot;</li><br><li>Phone number format: (717) 335-1690</li><br><li>Year founded: 2006</li><br><li>Response time: &quot;one to two business days&quot; (spell out)</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>10. Research and Factuality</summary>
+      <div class="markdown"><p><li>Do not invent specific project examples, testimonials, or named clients</li><br><li>Do not claim certifications, awards, or memberships not confirmed in raw/knowledge/</li><br><li>Do not state the warranty on any page except the patio page</li><br><li>Service area: Central Pennsylvania — reference specific counties and towns only when confirmed from raw/knowledge/ or existing approved content</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>11. Pre-Publish Checklist</summary>
+      <div class="markdown"><p>| Check | Requirement |<br>|---|---|<br>| No dashes | Zero dashes (em or en) anywhere in the piece |<br>| Warranty rule | Warranty only mentioned on patio page |<br>| Voice | Warm, narrative, place-specific — not corporate or promotional |<br>| H2 intro | Each H2 opens with a paragraph including the primary keyword |<br>| FAQ section | Minimum 4 questions; yes/no answered first |<br>| Phone number | (717) 335-1690 included where CTA is present |<br>| Contact link | apluslandscaping.com/contact/ in CTA |<br>| Internal links | None in first line of paragraph; descriptive anchors only |<br>| No invented facts | No stats, testimonials, or project examples not in raw/knowledge/ |<br>| Location accuracy | County and neighboring towns verified before stating |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>12. Key Facts at a Glance</summary>
+      <div class="markdown"><p>| Detail | Value |<br>|---|---|<br>| Founded | 2006 |<br>| Founder | Marcus Waldner |<br>| Headquarters | Reinholds, PA |<br>| Service area | Central Pennsylvania |<br>| Phone | (717) 335-1690 |<br>| Website | apluslandscaping.com |<br>| Financing | HFS Financial |<br>| Installers | Certified installers on every project |<br>| 3D renderings | Available for larger projects |<br>| Warranty | Limited lifetime warranty (patio page only) |<br>| CSM | Arianna Trabanino |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>13. Approved Content Examples</summary>
+      <div class="markdown"><p><li>`_approved/location-pages/mechanicsburg-apr-2026.md` — location landing page; example of place-specific narrative openings, service bullet structure, FAQ format</li><br><li>`_approved/location-pages/hershey-mar-2026.md` — location landing page; example of terrain-specific voice, retaining wall reference, cross-link to nearby cities</li><br><li>`_approved/service-pages/retaining-walls-mar-2026.md` — service page; example of problem-first structure, material types section, how-we-work section</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>14. Operator Notes</summary>
+      <div class="markdown"><p>*Section for team-specific additions. Use `### {Operator} — {scope}` headings. Promote a note to the main numbered sections once it has been reinforced across two or more pieces.*</p></div>
+    </details>
+    </details>
+        </section>
+        <section class="panel">
+          <h2>Local Source Files Read</h2>
+          <ul><li><code>clients/a-plus-landscaping/STYLE-SYSTEM.md</code> — A Plus Landscaping — Style System</li>
+<li><code>clients/a-plus-landscaping/_approved/location-pages/hershey-mar-2026.md</code> — Landscaping Company in Hershey, PA</li>
+<li><code>clients/a-plus-landscaping/_approved/location-pages/mechanicsburg-apr-2026.md</code> — Landscape Design in Mechanicsburg, PA</li>
+<li><code>clients/a-plus-landscaping/_approved/service-pages/retaining-walls-mar-2026.md</code> — Retaining Wall Installation in Central PA</li>
+<li><code>clients/a-plus-landscaping/client-intelligence/README.md</code> — A Plus Landscaping Client Intelligence</li>
+<li><code>clients/a-plus-landscaping/client-intelligence/STYLE-GUIDE.md</code> — A Plus Landscaping — Style System</li>
+<li><code>clients/a-plus-landscaping/client-intelligence/offerings.md</code> — A Plus Landscaping Offerings</li>
+<li><code>clients/a-plus-landscaping/client-intelligence/source-files.md</code> — A Plus Landscaping Source Files</li>
+<li><code>clients/a-plus-landscaping/deliverables/README.md</code> — A Plus Landscaping Deliverables</li>
+<li><code>clients/a-plus-landscaping/raw/knowledge/client-overview.md</code> — A Plus Landscaping — Client Overview</li>
+<li><code>clients/a-plus-landscaping/raw/knowledge/content-agent-brief.md</code> — A Plus Landscaping — Content Agent Brief</li>
+<li><code>clients/a-plus-landscaping/raw/knowledge/service-taxonomy.md</code> — A Plus Landscaping Service Taxonomy</li></ul>
+        </section>
+      </main>
+    </section>
+    </body>
+</html>

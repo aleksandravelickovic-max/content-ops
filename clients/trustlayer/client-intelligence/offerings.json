@@ -1,0 +1,150 @@
+{
+  "client": "trustlayer",
+  "display_name": "TrustLayer",
+  "generated_at": "2026-07-14T15:59:27.926657+00:00",
+  "offerings": [
+    {
+      "name": "AI Gap Detection",
+      "description": "Automated review that flags missing or non-compliant coverage.",
+      "sources": [
+        "clients/trustlayer/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Platform Features"
+      ],
+      "score": 6
+    },
+    {
+      "name": "API and Integrations",
+      "description": "Connections into existing workflows through API and integration support.",
+      "sources": [
+        "clients/trustlayer/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Platform Features"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Automated COI Collection",
+      "description": "Vendors submit certificates of insurance directly without a vendor sign-in requirement.",
+      "sources": [
+        "clients/trustlayer/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Platform Features"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Automated Renewal Reminders",
+      "description": "Vendor reminders before compliance documents expire.",
+      "sources": [
+        "clients/trustlayer/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Platform Features"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Construction",
+      "description": "COI and compliance tracking for construction vendor and subcontractor workflows.",
+      "sources": [
+        "clients/trustlayer/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Industries Served"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Insurance",
+      "description": "Document collection and risk workflows for insurance-related teams.",
+      "sources": [
+        "clients/trustlayer/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Industries Served"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Logistics",
+      "description": "Vendor and compliance document workflows for logistics operations.",
+      "sources": [
+        "clients/trustlayer/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Industries Served"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Multi-Document Support",
+      "description": "Document support for COIs, W-9s, business licenses, and contracts.",
+      "sources": [
+        "clients/trustlayer/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Platform Features"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Property Management",
+      "description": "Compliance document tracking for property vendors and service providers.",
+      "sources": [
+        "clients/trustlayer/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Industries Served"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Real-Time Compliance Monitoring Dashboard",
+      "description": "Dashboard for current vendor compliance status across documents.",
+      "sources": [
+        "clients/trustlayer/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Platform Features"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Retail and Distribution",
+      "description": "Compliance document workflows for suppliers, vendors, and distributed operations.",
+      "sources": [
+        "clients/trustlayer/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Industries Served"
+      ],
+      "score": 6
+    },
+    {
+      "name": "TrustScore",
+      "description": "Proprietary risk scoring metric used in the TrustLayer platform.",
+      "sources": [
+        "clients/trustlayer/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Platform Features"
+      ],
+      "score": 6
+    },
+    {
+      "name": "W-9 Form Collection",
+      "description": "Automated W-9 collection, validation, and data extraction.",
+      "sources": [
+        "clients/trustlayer/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Platform Features"
+      ],
+      "score": 6
+    }
+  ]
+}

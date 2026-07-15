@@ -1,0 +1,502 @@
+{
+  "client": "searchatlas",
+  "display_name": "Search Atlas",
+  "generated_at": "2026-07-13T21:15:16.540401+00:00",
+  "offerings": [
+    {
+      "name": "Search Atlas",
+      "description": "Search Atlas is the agentic AI marketing platform that runs your SEO, ads, content, and site health on its own, then fixes what breaks before you wake up.",
+      "sources": [
+        "website sitemap sample"
+      ],
+      "sections": [
+        "https://searchatlas.com/"
+      ],
+      "score": 6
+    },
+    {
+      "name": "AI Content Templates",
+      "description": "AI Content Templates is a modular AI generation feature that produces optimized marketing copy across multiple channels (SEO, email, social, ads) using structured prompt engineering and semantic intent modeling.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/ai-content-templates.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Atlas Brain",
+      "description": "Atlas Brain is the conversational AI SEO agent inside Search Atlas. It reports and executes full SEO strategies from a single conversational interface, rather than stopping at recommendations.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/atlas-brain.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Atlas Coworker",
+      "description": "Atlas Coworker is Search Atlas's workspace integration layer. It brings Atlas Agent capabilities into the messaging and project management tools where marketing teams already work: Slack, Microsoft Teams, and ClickUp.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/atlas-coworker.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Backlink Gap Analysis",
+      "description": "Backlink Gap Analysis (also called Link Gap Analysis Tool) is an AI competitive link intelligence system that identifies domains linking to competitors but not to the target site. Compares up to 6 domains.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/backlink-gap-analysis.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Backlink Profile Comparison",
+      "description": "Backlink Profile Comparison Tool is a competitive SEO analytics system that compares backlink metrics across 2 to 6 domains and quantifies link equity distribution.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/backlink-profile-comparison.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Backlink Research",
+      "description": "Backlink Research is a link intelligence dashboard that evaluates the authority, quality, and trajectory of a domain's backlink profile.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/backlink-research.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Bulk URL Analyzer",
+      "description": "Bulk URL Analyzer (Free DA Checker) is a Search Atlas feature that measures Domain Authority and Page Authority across multiple domains in one operation.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/bulk-url-analyzer.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Content Genius",
+      "description": "Content Genius is an AI-based content editor that engineers SEO copy through semantic, structural, and intent modeling. Applies NLP, entity recognition, and contextual clustering.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/content-genius.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Content Pruning Tool",
+      "description": "Content Pruning Tool is an AI-powered content evaluation engine that identifies low-quality, thin, outdated, or underperforming pages across a domain.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/content-pruning.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Content Rewriting",
+      "description": "Content Rewriting (Content Rewriter Quick Tool) is an AI-based linguistic transformation feature in Search Atlas that reconstructs existing text through controlled tone, syntactic variation, and semantic accuracy.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/content-rewriting.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Content Velocity",
+      "description": "Content Velocity is an AI-powered publication analysis engine that tracks publishing patterns, sitemap output, and competitive velocity.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/content-velocity.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Crawl Monitoring",
+      "description": "Crawl Monitoring is an AI-powered crawler intelligence engine that tracks real-time bot activity across a site.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/crawl-monitoring.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Domain Power",
+      "description": "Domain Power is a proprietary 100-point logarithmic authority metric developed in Search Atlas. Measures true organic visibility and competitive strength by integrating organic traffic, keyword performance, and ranking distribution across the top 100 SERPs.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/domain-power.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "GBP Galactic",
+      "description": "GBP Galactic (Google Business Profile Galactic) is an AI local SEO automation system inside Search Atlas that manages, optimizes, and scales Google Business Profiles across multiple locations.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/gbp-galactic.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "GSC Performance",
+      "description": "GSC Performance Tool is an integrated analytics environment inside Search Atlas that visualizes keyword rankings, traffic fluctuations, and page performance through synchronized Google Search Console (GSC) and Google Analytics 4 (GA4) data.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/gsc-performance.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Keyword Gap Tool",
+      "description": "Keyword Gap Tool is a competitive analysis feature that uncovers keywords competitors rank for but the target domain does not capture. Compares up to 6 domains side by side.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/keyword-gap-tool.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Keyword Magic Tool",
+      "description": "Keyword Magic Tool is an AI keyword expansion engine in Search Atlas that accelerates keyword discovery through semantic analysis.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/keyword-magic-tool.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Keyword Rank Tracker",
+      "description": "Keyword Rank Tracker (KRT) is a ranking intelligence module in Search Atlas that measures keyword visibility, device segmentation, and geographic performance for tracked domains and pages.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/keyword-rank-tracker.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Keyword Research Tool",
+      "description": "Keyword Research in Search Atlas is an AI-augmented SEO and PPC keyword intelligence system that analyzes keyword performance, intent, and competition.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/keyword-research.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Link Building Outreach and Digital PR Tool",
+      "description": "Link Building Outreach and Digital PR Tool is an outreach automation system inside Search Atlas that centralizes email sequencing, follow-up scheduling, response tracking, link prospecting, and media pitching. Replaces disjointed workflows across CRMs, spreadsheets, and inboxes.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/link-building-outreach.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "LLM Visibility Tool",
+      "description": "LLM Visibility Tool is an AI-powered brand visibility engine in Search Atlas that identifies brand mentions, tracks sentiment shifts, and uncovers visibility gaps across ChatGPT, Claude, Gemini, and Perplexity.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/llm-visibility.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Local Citation Builder",
+      "description": "Local Citation Builder is a local SEO feature that automates the distribution and optimization of business data across verified citation networks. Enforces NAP (Name, Address, Phone) accuracy.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/local-citation-builder.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Local SEO Heatmaps",
+      "description": "Local SEO Heatmaps visualize the organic visibility of a business across geographic areas by tracking Google Map Pack rankings for specific keywords and service regions.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/local-heatmaps.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Meta Generator",
+      "description": "Meta Generator is an AI metadata generation tool that constructs optimized meta titles, descriptions, and tags through semantic weighting, keyword intent modeling, and entity correlation.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/meta-generator.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "On-page Audit Tool",
+      "description": "Onpage Audit Tool is an AI-powered on-page optimization engine that evaluates authority, content quality, technical signals, and user experience.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/on-page-audit.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "OTTO SEO",
+      "description": "OTTO SEO is an AI autopilot SEO agent that deploys live page modifications through a single JavaScript pixel across any CMS. Modifies structure, metadata, schema, content, and internal links in real time.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/otto-seo.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Portfolio Summary",
+      "description": "Portfolio Summary is an AI-powered multi-account performance engine that generates unified scoring across connected accounts.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/portfolio-summary.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Press Release Distribution Software",
+      "description": "Press Release Distribution is an AI-powered press release engine that automates drafting, optimization, and syndication of announcements.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/press-release-distribution.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "QUEST",
+      "description": "QUEST is an AI-powered LLM visibility engine in Search Atlas that identifies which documents LLMs reference, reveals influence pathways, and uncovers visibility gaps.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/quest.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Report Builder",
+      "description": "Report Builder is an AI-augmented reporting engine that consolidates SEO, content, LLM visibility, and analytics data into unified dashboards and client-ready reports.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/report-builder.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Schema Markup Generator",
+      "description": "Schema Markup Generator creates structured data in JSON-LD format (JavaScript Object Notation for Linked Data) for pages including blogs, products, and business listings.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/schema-markup-generator.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "SCHOLAR",
+      "description": "SCHOLAR (Semantic Content Heuristics for Objective Language Assessment and Review) is a proprietary semantic evaluation system inside Search Atlas that measures factual precision, linguistic clarity, and information value in SEO content.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/scholar.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Search Atlas Platform",
+      "description": "Search Atlas is an AI-powered digital marketing platform that centralizes SEO, GEO (Generative Engine Optimization), AEO (Answer Engine Optimization), and LLM Visibility functions in one system. Powered by OTTO, its proprietary execution engine.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/search-atlas-platform.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "SEO White-Label Software",
+      "description": "SEO White-Label Software is a fully customizable reporting and platform branding system that lets agencies, consultants, and enterprises deliver client-facing SEO services under their own brand identity.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/seo-white-label-software.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Site Auditor",
+      "description": "Site Auditor is a technical SEO crawler that performs full-domain analysis to identify, classify, and quantify on-page and structural issues across web properties.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/site-auditor.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Site Explorer",
+      "description": "Site Explorer is an enterprise-level SEO intelligence platform inside Search Atlas that performs domain-level, subdomain-level, and URL-level analysis across organic, paid, and backlink datasets.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/site-explorer.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Smart Ads",
+      "description": "Smart Ads is an AI PPC automation system that builds, optimizes, and manages Google Ads campaigns inside the Search Atlas dashboard. Powered by Atlas Brain, Smart Ads translates goals into campaign actions, reallocates budget to what converts, and deploys optimizations directly inside live campaigns. Previously named O",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/smart-ads.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Topical Dominance",
+      "description": "Topical Dominance is a Site Explorer feature inside Search Atlas that measures authority and visibility of a domain across defined topic clusters.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/topical-dominance.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Topical Map Generator",
+      "description": "Topical Map Generator is a semantic clustering tool in Search Atlas that builds topic-based SEO roadmaps using entity relationships, keyword hierarchies, and long-tail search intent analysis.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/topical-map-generator.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Universal Email Alerts",
+      "description": "Universal Email Alerts deliver real-time automated notifications that track performance changes, technical issues, and ranking movements across all connected projects in Search Atlas.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/universal-email-alerts.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "URL Indexer",
+      "description": "URL Indexer is an AI-assisted indexing accelerator that speeds up search engine discovery through rapid submission workflows.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/url-indexer.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Website Studio",
+      "description": "Website Studio is an AI Landing Page Builder inside Search Atlas that generates complete, conversion-ready landing pages from a single prompt. Pages are created, structured, and published with SEO-ready architecture, conversion sections, tracking, form capture, and CDN delivery in place.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/website-studio.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "WILDFIRE",
+      "description": "WILDFIRE (Websites Inter-Linking Directly Fostering Influence, Reputation, and Engagement) is an automated backlink exchange network developed by Search Atlas. Generates inbound links through verified topical relationships and real-time authority validation.",
+      "sources": [
+        "clients/searchatlas/raw/knowledge/products/wildfire.md"
+      ],
+      "sections": [
+        "raw product knowledge"
+      ],
+      "score": 5
+    },
+    {
+      "name": "Search Atlas Features: The AI That Runs Your Marketing",
+      "description": "Search Atlas runs SEO, AEO, Google and Meta Ads, content, and local on its own, and fixes what breaks. See every capability and compare plans.",
+      "sources": [
+        "website sitemap sample"
+      ],
+      "sections": [
+        "https://searchatlas.com/features/"
+      ],
+      "score": 3
+    }
+  ]
+}

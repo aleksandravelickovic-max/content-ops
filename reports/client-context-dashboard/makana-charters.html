@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Makana Charters Context</title>
+  <style>
+    :root {
+      --bg:#f4f7f5; --panel:#ffffff; --ink:#09110f; --muted:#63716c; --line:#dce5df;
+      --black:#050907; --graph:#14d878; --graph-dark:#079d55; --soft:#eaf8f0; --soft-ink:#19392a;
+      --accent:#087a47; --red:#b5362d; --shadow:0 18px 46px rgba(5,9,7,.08);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:
+      linear-gradient(180deg, #ffffff 0, var(--bg) 360px); color:var(--ink); line-height:1.45; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .topnav { min-height:64px; padding:14px max(32px, calc((100vw - 1380px) / 2 + 32px)); background:var(--black); border-bottom:1px solid rgba(255,255,255,.08); position:sticky; top:0; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { color:#fff; display:inline-flex; align-items:center; gap:10px; font-weight:800; letter-spacing:0; }
+    .brand:hover { text-decoration:none; }
+    .brand span { width:32px; height:32px; border-radius:8px; background:var(--graph); color:var(--black); display:inline-grid; place-items:center; font-size:13px; font-weight:900; }
+    .nav-meta, .nav-link { color:#b8c6c0; font-size:13px; font-weight:700; }
+    .hero { margin:0; padding:42px max(32px, calc((100vw - 1380px) / 2 + 32px)) 38px; background:var(--black); color:#fff; border-bottom:1px solid rgba(255,255,255,.08); }
+    .index-hero, .client-hero { display:flex; justify-content:space-between; gap:28px; align-items:flex-start; }
+    .hero h1 { margin:0 0 12px; font-size:clamp(32px, 5vw, 62px); line-height:.98; letter-spacing:0; max-width:900px; }
+    .hero p { margin:0; color:#c7d5cf; max-width:840px; font-size:17px; }
+    .hero-copy { max-width:940px; }
+    .kicker { color:var(--graph); font-size:12px; text-transform:uppercase; letter-spacing:.08em; font-weight:900; }
+    .report-meta { display:flex; flex-wrap:wrap; gap:10px; padding:14px 32px; background:#fff; border-bottom:1px solid var(--line); color:var(--muted); font-size:13px; max-width:1380px; margin:0 auto; }
+    .report-meta span { background:var(--soft); color:var(--soft-ink); border-radius:999px; padding:6px 10px; font-weight:700; }
+    .grid.cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(290px, 1fr)); gap:16px; padding:24px 32px 42px; max-width:1380px; margin:0 auto; }
+    .card, .panel, .context-card { background:var(--panel); border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow); }
+    .client-card { display:block; padding:20px; color:inherit; min-height:184px; transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease; }
+    .client-card:hover { text-decoration:none; transform:translateY(-2px); border-color:rgba(20,216,120,.55); box-shadow:0 24px 58px rgba(5,9,7,.12); }
+    .card-topline { display:flex; justify-content:space-between; gap:10px; align-items:center; }
+    .client-card h2 { margin:14px 0 8px; font-size:23px; line-height:1.1; }
+    .client-card p { margin:0; color:var(--muted); }
+    .metrics { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+    .metrics span, .evidence, .status-pill { background:var(--soft); border:1px solid rgba(20,216,120,.22); border-radius:999px; padding:5px 9px; font-size:12px; color:var(--soft-ink); font-weight:800; }
+    .topic-chips { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 18px; }
+    .topic-chips span { background:#f6fbf8; border:1px solid var(--line); border-radius:999px; color:#183a2a; padding:7px 10px; font-size:13px; font-weight:750; }
+    .layout { display:block; padding:22px 32px 46px; max-width:1380px; margin:0 auto; }
+    main { min-width:0; }
+    .context-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; margin-bottom:20px; }
+    .context-card { padding:18px; min-height:220px; }
+    .context-card ul { margin-bottom:0; }
+    .context-note { color:var(--muted); font-size:13px; margin:4px 0 12px; }
+    .aside-label { color:var(--graph-dark); font-size:11px; text-transform:uppercase; font-weight:900; letter-spacing:.08em; margin-bottom:5px; }
+    .panel h2 { margin-top:0; }
+    .panel { padding:22px; margin-bottom:20px; }
+    .panel h2 { font-size:26px; letter-spacing:0; }
+    .offerings { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:13px; margin-top:16px; }
+    .offering, .sample { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .offering { position:relative; overflow:hidden; }
+    .offering-marker { position:absolute; inset:0 auto 0 0; width:4px; background:var(--graph); }
+    .offering h3, .sample h4 { margin:0 0 6px; }
+    .offering p { margin:0 0 10px; }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .stat-stack { display:grid; grid-template-columns:repeat(3, minmax(100px, 1fr)); gap:8px; min-width:340px; }
+    .stat-stack div { border:1px solid rgba(255,255,255,.15); border-radius:8px; padding:14px; background:rgba(255,255,255,.06); }
+    .stat-stack strong { display:block; font-size:26px; color:#fff; }
+    .stat-stack span, .muted { color:var(--muted); font-size:13px; }
+    .hero .stat-stack span { color:#b8c6c0; }
+    ul { padding-left:20px; }
+    li { margin:4px 0; }
+    code { background:var(--soft); color:var(--soft-ink); padding:2px 4px; border-radius:4px; }
+    details { margin:10px 0; }
+    summary { cursor:pointer; font-weight:700; }
+    .style-section { border-top:1px solid var(--line); padding-top:10px; }
+    .markdown { color:#2d2f35; }
+    @media (max-width: 980px) {
+      .layout, .split, .client-hero, .index-hero { grid-template-columns:1fr; display:block; }
+      .context-grid { grid-template-columns:1fr; }
+      .stat-stack { min-width:0; margin-top:16px; }
+      .hero, .grid.cards, .layout, .topnav, .report-meta { padding-left:16px; padding-right:16px; }
+      .hero h1 { font-size:36px; }
+      .stat-stack { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+    <nav class="topnav">
+      <a class="brand" href="index.html"><span>LG</span>LinkGraph</a>
+      <a class="nav-link" href="index.html">All clients</a>
+    </nav>
+    <section class="hero client-hero">
+      <div class="hero-copy">
+        <div class="kicker">makana-charters</div>
+        <h1>Makana Charters</h1>
+        <p>11 extracted offerings, 345 sitemap URLs, and 18 local source documents for client-specific writing context.</p>
+      </div>
+      <div class="stat-stack">
+        <div><strong>ok</strong><span>crawl status</span></div>
+        <div><strong>345</strong><span>URLs found</span></div>
+        <div><strong>0</strong><span>product/service URLs</span></div>
+      </div>
+    </section>
+    <section class="layout">
+      <main>
+        <section class="context-grid">
+    <article class="context-card">
+      <div class="aside-label">Quick Facts</div>
+      <p class="context-note">Company, audience, and proof points.</p>
+      <ul><li>Address: 4516 Alawai Road, Waimea, HI 96796</li><li>Departure: Kikiaola Small Boat Harbor, Kekaha, HI</li><li>Primary audience: Tourists visiting Kauai — primarily from West Coast states (CA, OR, WA) — planning once-in-a-trip activities. These are experience-seekers who value authenticity and cultural connection over lowest price. They are comparing multiple operators and deciding where to put a significant portion of their Kauai activity budget.</li><li>Secondary audience: Return visitors, group trip planners, photographers, families with children 4+.</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Voice</div>
+      <p class="context-note">How this client should sound.</p>
+      <ul><li>Heritage-first: Ground the tour in the 200-year family legacy before listing amenities</li><li>Place-specific: Name the actual coastline features: Kalalau Valley, Honopu Archway, Pirates Cave, Polihale</li><li>Culturally respectful: Hawaiian terms are used accurately and with context, never decoratively</li><li>Conversational: &quot;Our backyard&quot; framing — the crew lives here, not just works here</li><li>Warm but not gushing: Pride in the place, not promotional superlatives about it</li><li>First-person plural: &quot;We depart from,&quot; &quot;our captains,&quot; &quot;we built this boat for the Na Pali Coast&quot;</li><li>Second person: &quot;Your tour,&quot; &quot;what you&#x27;ll see,&quot; &quot;when you&#x27;re on the water&quot;</li><li>&quot;Makana means Gift. Our family has been giving this gift — the Na Pali Coast, its sea caves, its waters — for over 200 years.&quot; — grounds the brand name in meaning</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Avoid / Compliance</div>
+      <p class="context-note">Claims, terms, and wording to avoid.</p>
+      <ul><li>Banned term: Use instead</li><li>&quot;Boat trip&quot;: &quot;Na Pali Coast tour,&quot; &quot;catamaran tour&quot;</li><li>&quot;Cruise&quot; (unless specifically sunset cruise): &quot;tour,&quot; &quot;charter&quot;</li><li>&quot;Vessel&quot; (formal/corporate): &quot;boat,&quot; &quot;catamaran&quot;</li><li>&quot;Excursion&quot;: &quot;tour,&quot; &quot;Na Pali Coast trip&quot;</li><li>&quot;Passengers&quot; in cultural contexts: &quot;guests&quot;</li><li>&quot;Guaranteed to see&quot; (wildlife): &quot;commonly spotted,&quot; &quot;it&#x27;s rare we don&#x27;t see them&quot;</li><li>&quot;Best tour on Kauai&quot; (unsupported): State the specific differentiators instead</li><li>&quot;Paradise&quot;: Name the actual place instead</li><li>All pricing cited must match the fleet table in raw/knowledge/client-overview.md. Do not guess or estimate pricing.</li><li>Age minimums vary by boat: 4+ for Na Pali Kai III and Amelia K; 9+ for Makana, Seiko 1/2, Leialoha.</li><li>Wildlife sightings are never guaranteed. Use qualified language: &quot;commonly seen,&quot; &quot;guides know the tides and habitats,&quot; &quot;it&#x27;s rare that we don&#x27;t see dolphins.&quot;</li><li>Sea caves are entered &quot;as long as ocean conditions allow.&quot; Do not promise cave access.</li><li>Pregnancy policy: summer months only (June, July, August); up to 22 weeks gestation; doctor&#x27;s note required, submitted by the doctor directly to Makana Charters. Do not simplify or omit any of these conditions.</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Terminology</div>
+      <p class="context-note">Client-specific naming and required language.</p>
+      <ul><li>Term: Usage rule</li><li>Na Pali Coast: Two words; capitalize both; &quot;Na Pali&quot; not &quot;NaPali&quot; in body copy (NaPali acceptable in URLs/hashtags)</li><li>Makana: Introduce meaning on first use in a new piece: &quot;Makana — the Hawaiian word for gift&quot;</li><li>Kikiaola Harbor: Full name on first use; may shorten to &quot;Kikiaola&quot; after</li><li>Catamaran: Use when describing the boats; not &quot;vessel&quot; (too formal), not &quot;yacht&quot;</li><li>Private charter: &quot;private charter&quot; not &quot;private tour&quot; when referencing the exclusive-booking product</li><li>Snorkel gear: &quot;snorkel gear&quot; not &quot;snorkeling equipment&quot;</li><li>Deli lunch: &quot;deli-style lunch&quot; or &quot;deli lunch&quot; — not &quot;catered meal,&quot; not &quot;gourmet lunch&quot;</li><li>Honu: Acceptable Hawaiian term for Hawaiian green sea turtle; define on first use if audience is general</li><li>Aloha: Use in cultural/narrative context only; do not use as a marketing shorthand (&quot;the Aloha experience&quot;)</li></ul>
+    </article>
+    </section>
+        <section class="panel">
+          <h2>Offerings, Services, Goods</h2>
+          <p class="muted">Writer-facing catalog from the client style system, approved source files, and usable product/service pages. Raw crawl evidence is separated below.</p>
+          <div class="offerings">
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Amelia K</h3>
+      <p>36-passenger boat departing Port Allen.</p>
+      <div class="evidence">Sources: clients/makana-charters/raw/knowledge/service-taxonomy.md · Sections: Fleet</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Leialoha</h3>
+      <p>18-passenger boat departing Kikiaola.</p>
+      <div class="evidence">Sources: clients/makana-charters/raw/knowledge/service-taxonomy.md · Sections: Fleet</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Makana</h3>
+      <p>12-passenger boat departing Kikiaola and suited for smaller private charters.</p>
+      <div class="evidence">Sources: clients/makana-charters/raw/knowledge/service-taxonomy.md · Sections: Fleet</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Na Pali Coast Boat Tours</h3>
+      <p>Standard Kauai boat tours along the Na Pali Coast with snorkeling, lunch, cultural narration, and sea cave viewing when conditions allow.</p>
+      <div class="evidence">Sources: clients/makana-charters/raw/knowledge/service-taxonomy.md · Sections: Tours and Charters</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Na Pali Kai III</h3>
+      <p>32-passenger boat departing Kikiaola with a 360-degree walk-around deck.</p>
+      <div class="evidence">Sources: clients/makana-charters/raw/knowledge/service-taxonomy.md · Sections: Fleet</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Na Pali Sea Cave Tours</h3>
+      <p>Boat tours that may visit sea caves such as Pirates Cave, Rainbow Falls, and Honopu Archway when conditions allow.</p>
+      <div class="evidence">Sources: clients/makana-charters/raw/knowledge/service-taxonomy.md · Sections: Tours and Charters</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Na Pali Snorkeling Tours</h3>
+      <p>Tours with snorkel gear, flotation devices, and snorkel stops selected by ocean conditions.</p>
+      <div class="evidence">Sources: clients/makana-charters/raw/knowledge/service-taxonomy.md · Sections: Tours and Charters</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Private Charters</h3>
+      <p>Private boat experiences for groups that want a customized pace, boat, and itinerary within safety and ocean-condition limits.</p>
+      <div class="evidence">Sources: clients/makana-charters/raw/knowledge/service-taxonomy.md · Sections: Tours and Charters</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Seiko 1</h3>
+      <p>16-passenger power catamaran departing Kikiaola.</p>
+      <div class="evidence">Sources: clients/makana-charters/raw/knowledge/service-taxonomy.md · Sections: Fleet</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Seiko 2</h3>
+      <p>16-passenger power catamaran departing Kikiaola.</p>
+      <div class="evidence">Sources: clients/makana-charters/raw/knowledge/service-taxonomy.md · Sections: Fleet</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Wildlife Viewing</h3>
+      <p>Tour experience category for dolphins, Hawaiian green sea turtles, reef fish, and other wildlife commonly seen on route.</p>
+      <div class="evidence">Sources: clients/makana-charters/raw/knowledge/service-taxonomy.md · Sections: Tours and Charters</div>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Website Intelligence</h2>
+          <div class="split">
+            <div>
+              <h3>Website URLs</h3><ul><li><a href="https://makanacharters.com/">https://makanacharters.com/</a></li></ul>
+              <h3>Sitemaps</h3><ul><li><a href="https://makanacharters.com/sitemap_index.xml">https://makanacharters.com/sitemap_index.xml</a></li><li><a href="https://makanacharters.com/sitemap.xml">https://makanacharters.com/sitemap.xml</a></li></ul>
+            </div>
+            <div>
+              <h3>Semantic / Topical Terms</h3><div class="topic-chips"><span>Amelia K</span><span>Na Pali Coast Boat Tours</span><span>Na Pali Kai III</span><span>Na Pali Sea Cave Tours</span><span>Na Pali Snorkeling Tours</span><span>Private Charters</span><span>Wildlife Viewing</span><span>Na Pali Coast</span><span>Kikiaola Harbor</span><span>Private Charter</span><span>Snorkel Gear</span><span>Deli Lunch</span><span>Pali Coast</span></div>
+              <h3>Blockers</h3><p class="muted">None</p>
+            </div>
+          </div>
+          <h3>Product / Service URLs</h3><p class="muted">No product/service URLs classified from sitemap paths.</p>
+          <h3>Sampled Pages</h3><div class="sample-pages">
+    <article class="sample">
+      <h4>Makana Charters | Na Pali Coast Boat Tours in Kauai</h4>
+      <a href="https://makanacharters.com/">https://makanacharters.com/</a>
+      <p>Makana Charters: 5-hour Na Pali Coast catamaran tours with amenities &amp; cultural insights. Book your small-group adventure today!</p>
+      <ul><li>Na Pali Coast Boat Tours with Kauai&#x27;s Cultural Captains</li><li>Na Pali Coast Boat Tours with Over 10,000 5-Star Reviews</li><li>Choose Your Na Pali Coast Boat Tour</li><li>Na Pali Kai III</li><li>Seiko 1 &amp; 2</li><li>Leialoha</li><li>Makana</li><li>Amelia K</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>charters Archives - Makana Charters Na Pali Boat Tours</h4>
+      <a href="https://makanacharters.com/tag/charters/">https://makanacharters.com/tag/charters/</a>
+      <p></p>
+      <ul><li>All Blog Posts</li><li>Private Charters For Wedding Groups | Na Pali Coast, Kauai</li><li>Your Na Pali Coast Adventure Awaits!</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Makana - Makana Charters Na Pali Boat Tours</h4>
+      <a href="https://makanacharters.com/tour/makana/">https://makanacharters.com/tour/makana/</a>
+      <p>With just 12 guests aboard, the Makana is the most intimate way to see the Na Pali Coast. This 32&#x27; custom-built catamaran was designed for room to spread out</p>
+      <ul><li>Makana</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Amelia K - Makana Charters Na Pali Boat Tours</h4>
+      <a href="https://makanacharters.com/tour/amelia-k/">https://makanacharters.com/tour/amelia-k/</a>
+      <p>At 47&#x27; and seating up to 36, the Amelia K is our largest and most luxurious catamaran — plush seating throughout and a smooth, stable ride that makes for the</p>
+      <ul><li>Amelia K</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Leialoha - Makana Charters Na Pali Boat Tours</h4>
+      <a href="https://makanacharters.com/tour/leialoha/">https://makanacharters.com/tour/leialoha/</a>
+      <p>Leialoha is the newest boat in our fleet — a 36&#x27; power catamaran that seats up to 18 on a regular small-group departure, so a slightly larger family or friend</p>
+      <ul><li>Leialoha</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Makana Charters Events Archive: Na Pali Coast &amp; Kauai Happenings</h4>
+      <a href="https://makanacharters.com/category/events/">https://makanacharters.com/category/events/</a>
+      <p>Explore Makana Charters&#x27; events archive for Na Pali Coast happenings and Kauai articles. Discover local insights and stunning coastal photography. Learn more.</p>
+      <ul><li>Events</li><li>5 Beautiful Wedding Destinations in Kauai</li><li>What does “Aloha” Mean? | The Local’s Guide to Kauai</li><li>The Art and History of the Hawaiian Hula</li><li>Hanapepe Art Night | Top Things to Do on Kauai</li><li>Why are there Chickens Everywhere in Kauai?</li><li>Your Na Pali Coast Adventure Awaits!</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Seiko 1 &amp; 2 - Makana Charters Na Pali Boat Tours</h4>
+      <a href="https://makanacharters.com/tour/seioko-1-2/">https://makanacharters.com/tour/seioko-1-2/</a>
+      <p>The Seiko is a 34&#x27; power catamaran built for a small-group Na Pali Coast tour. Coast Guard certified for 20, we hold each trip to 16 so there&#x27;s always room to</p>
+      <ul><li>Seiko 1 &amp; 2</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Na Pali Coast Wildlife Viewing | Makana Charters</h4>
+      <a href="https://makanacharters.com/category/wildlife/">https://makanacharters.com/category/wildlife/</a>
+      <p>Explore Na Pali Coast wildlife with Makana Charters. Discover sea turtles, marine life, and tour tips. Learn more about Kauai&#x27;s natural beauty.</p>
+      <ul><li>Wildlife</li><li>The Honu (Sea Turtle) and Its Importance to Hawaii</li><li>Tips for a Great Na Pali Coast Boat Tour</li><li>Your Na Pali Coast Adventure Awaits!</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Adventure Archives - Makana Charters Na Pali Boat Tours</h4>
+      <a href="https://makanacharters.com/category/adventure/">https://makanacharters.com/category/adventure/</a>
+      <p>Welcome to the &quot;Adventure&quot; archives of the Makana Charters blog. Here you&#x27;ll find interesting articles and awesome pictures of the Na Pali coastline from Makana Charters and Tours.</p>
+      <ul><li>Adventure</li><li>The Honu (Sea Turtle) and Its Importance to Hawaii</li><li>Honopu Ridge Trail: The Most Scenic Napali Coast Hike In Kokee State Park</li><li>Opaekaa Falls – One of Kauai’s Most Easily Accessible Waterfalls</li><li>Luau Kalamaku: What You Need to Know</li><li>5 Best Easy Hikes in Kauai</li><li>5 Must-See Jurassic Park Locations in Kauai</li><li>Kalalea Mountain – The World Famous King Kong Peak</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>West Side Kauai Archives: Na Pali Coast &amp; Local Insights | Makana Charters</h4>
+      <a href="https://makanacharters.com/category/west-side/">https://makanacharters.com/category/west-side/</a>
+      <p>Explore Kauai&#x27;s West Side archives: Na Pali Coast insights, local attractions &amp; Waimea Canyon from Makana Charters. Discover Hawaiian experiences.</p>
+      <ul><li>West Side</li><li>The 7+ Best Easy-to-View Waterfalls in Kauai (With Map)</li><li>Why Kauai’s Na Pali Coast Should Be #1 On Your Hawaii Bucket List</li><li>The Best Kauai Snorkel Spots</li><li>Hanapepe Art Night | Top Things to Do on Kauai</li><li>Awa Awaapuhi Trail – A World Class Kauai Hike From Mountains to Sea</li><li>Napali Coast Hike: Hanakapia’i Beach and Falls</li><li>Exploring Koke’e State Park &amp; Waimea Canyon – The Ultimate Guide</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Kauai Restaurants Guide: Dining &amp; Food Experiences | Makana Charters</h4>
+      <a href="https://makanacharters.com/category/restaurants/">https://makanacharters.com/category/restaurants/</a>
+      <p>Explore Kauai&#x27;s dining scene with Makana Charters&#x27; restaurant guide. Discover local eateries, bars, and food experiences. Learn more.</p>
+      <ul><li>Restaurants</li><li>Nightlife in Kauai: The 7 Best Bars You Must Visit in Kauai</li><li>Top 8 Breakfast and Brunch Spots in Kauai</li><li>A Wine Guide to Kauai: 5 Best Wine Bars in Kauai</li><li>Where to Find the Best Tropical Cocktails in Kauai</li><li>6 Best Hawaiian Sweets and Where to Find Them in Kauai</li><li>Must-Try Hawaiian Fish and Where to Find Them in Kauai</li><li>Monchong – One of Kauai’s Favorite Seafood (Recipes Included)</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>South Shore Kauai Blog Archives | Makana Charters</h4>
+      <a href="https://makanacharters.com/category/south-shore/">https://makanacharters.com/category/south-shore/</a>
+      <p>Makana Charters South Shore blog archives: Discover articles and photos of Kauai&#x27;s Na Pali coastline. Learn about local attractions and plan your adventure.</p>
+      <ul><li>South Shore</li><li>Top 6 Family-Friendly Beaches on Kauai</li><li>Nightlife in Kauai: The 7 Best Bars You Must Visit in Kauai</li><li>Nawiliwili Harbor – The Gateway of Kauai</li><li>5 Must-See Jurassic Park Locations in Kauai</li><li>Makauwahi Cave Reserve, Kauai: What to Know Before You Go</li><li>Popular Filming Locations in Kauai</li><li>The Town of Puhi: What to See and Do</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Na Pali Kai III - Makana Charters Na Pali Boat Tours</h4>
+      <a href="https://makanacharters.com/tour/na-pali-kai-iii/">https://makanacharters.com/tour/na-pali-kai-iii/</a>
+      <p>Na Pali Kai III is the boat for photographers and families. Its 360° walk-around deck — the only one in our fleet — lets you move freely for unobstructed</p>
+      <ul><li>Na Pali Kai III</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Things to Do on Kauai: Na Pali Coast Adventures | Makana Charters</h4>
+      <a href="https://makanacharters.com/category/things-to-do/">https://makanacharters.com/category/things-to-do/</a>
+      <p>Makana Charters Blog: Explore Kauai&#x27;s best things to do, from Na Pali Coast adventures to local insights. Plan your island trip.</p>
+      <ul><li>Things To Do: Makana Charters Blog</li><li>Snorkeling for Beginners: What to Bring, What to Remember</li><li>5 Beautiful Wedding Destinations in Kauai</li><li>Camping in Kauai: Quick Guide and Top Spots</li><li>Hawaiian Sea Turtles: Where to Spot Them in Kauai</li><li>4 Things You Must Do in the Enchanting Town of Hanapepe</li><li>The 7+ Best Easy-to-View Waterfalls in Kauai (With Map)</li><li>9 Kauai Whale Watching Tips for an Unforgettable Vacation</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Na Pali Coast Archives: Kauai Tour Information | Makana Charters</h4>
+      <a href="https://makanacharters.com/category/na-pali-coast/">https://makanacharters.com/category/na-pali-coast/</a>
+      <p>Na Pali Coast Archives: Explore Makana Charters&#x27; blog for Kauai coastline tours, wildlife, and Hawaiian experiences. Plan your adventure!</p>
+      <ul><li>Na Pali Coast</li><li>The Honu (Sea Turtle) and Its Importance to Hawaii</li><li>7 Reasons to Choose Makana Charters for Your Na Pali Coast Cruise</li><li>What is a Catamaran? | Makana Charters NaPali Coast Cruises | Kauai, Hawaii</li><li>Open Ceiling Cave: The Treasure of Kauai’s Na Pali Coast</li><li>The Ultimate Guide to Napali Coast Whale Watching Tours in Kauai</li><li>Top 5 Kauai Experiences That Will Make Your Trip</li><li>Kauai’s Hawaiian Monk Seals: Everything You Need to Know</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Eastside Places Archives - Makana Charters Na Pali Boat Tours</h4>
+      <a href="https://makanacharters.com/category/eastside-places/">https://makanacharters.com/category/eastside-places/</a>
+      <p>Welcome to the &quot;Eastside Places&quot; archives of the Makana Charters blog. Here you&#x27;ll find interesting articles and awesome pictures of the Na Pali coastline from Makana Charters and Tours.</p>
+      <ul><li>Eastside Places</li><li>Top 6 Family-Friendly Beaches on Kauai</li><li>Top 8 Breakfast and Brunch Spots in Kauai</li><li>Honopu Ridge Trail: The Most Scenic Napali Coast Hike In Kokee State Park</li><li>Opaekaa Falls – One of Kauai’s Most Easily Accessible Waterfalls</li><li>Nawiliwili Harbor – The Gateway of Kauai</li><li>5 Must-See Jurassic Park Locations in Kauai</li><li>Kalalea Mountain – The World Famous King Kong Peak</li></ul>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Full Style System</h2>
+          <details open><summary>Show style-system sections</summary>
+    <details class="style-section">
+      <summary>Makana Charters — Style System</summary>
+      <div class="markdown"><p>Generated: 2026-06-26<br>Sources: raw/knowledge/client-overview.md, raw/research/website-scrape-jun-2026.md, onboarding questionnaire (June 9, 2026)<br>Base rules: universal-rules/UNIVERSAL-RULES.md<br>CSM: Wendy Alinor</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>1. Brand &amp; Audience</summary>
+      <div class="markdown"><p>Makana Charters is a Native Hawaiian family-owned boat tour operator on Kauai, Hawaii. The business continues the legacy of Liko Kauai Cruises — a family enterprise with documented roots stretching over 200 years to the same waters they navigate today. &quot;Makana&quot; means Gift in Hawaiian; the name reflects the inheritance of place, history, and purpose passed down through generations.</p><p>Website: https://makanacharters.com/<br>Phone: (808) 338-9980<br>Booking phone: 808-201-2495<br>Email: info@makanacharters.com<br>Address: 4516 Alawai Road, Waimea, HI 96796<br>Departure: Kikiaola Small Boat Harbor, Kekaha, HI<br>Hours: 7AM–9PM<br>Primary contact: Cain Robinson</p><p>**What Makana offers:**</p><p>| Category | Details |<br>|---|---|<br>| Standard Na Pali Coast Tours | 4.5–5 hour shared catamaran tours; sea caves, snorkeling, cultural narration, deli lunch |<br>| Private Na Pali Coast Charters | Exclusive boat rental; same experience, no shared-boat strangers |<br>| Sunset Cruises | Afternoon/evening departure; golden-hour views of the coast |</p><p>**Primary audience:** Tourists visiting Kauai — primarily from West Coast states (CA, OR, WA) — planning once-in-a-trip activities. These are experience-seekers who value authenticity and cultural connection over lowest price. They are comparing multiple operators and deciding where to put a significant portion of their Kauai activity budget.</p><p>**Secondary audience:** Return visitors, group trip planners, photographers, families with children 4+.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2. Voice &amp; Tone</summary>
+      <div class="markdown"><p>Voice: warm, grounded, heritage-proud, ocean-literate. Makana Charters speaks like a family that has spent 200 years on these waters — not like a tour company that rents boats and hires seasonal staff.</p><p>Content should feel like a conversation with someone who has lived this coast their whole life and wants to share it. Never corporate. Never generic resort-marketing. Never a checklist of amenities.</p><p>| Attribute | Rule |<br>|---|---|<br>| Heritage-first | Ground the tour in the 200-year family legacy before listing amenities |<br>| Place-specific | Name the actual coastline features: Kalalau Valley, Honopu Archway, Pirates Cave, Polihale |<br>| Culturally respectful | Hawaiian terms are used accurately and with context, never decoratively |<br>| Conversational | &quot;Our backyard&quot; framing — the crew lives here, not just works here |<br>| Warm but not gushing | Pride in the place, not promotional superlatives about it |<br>| First-person plural | &quot;We depart from,&quot; &quot;our captains,&quot; &quot;we built this boat for the Na Pali Coast&quot; |<br>| Second person | &quot;Your tour,&quot; &quot;what you&#x27;ll see,&quot; &quot;when you&#x27;re on the water&quot; |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.1 Voice in practice</summary>
+      <div class="markdown"><p>Do this:<br><li>&quot;Makana means Gift. Our family has been giving this gift — the Na Pali Coast, its sea caves, its waters — for over 200 years.&quot; — grounds the brand name in meaning</li><br><li>&quot;We leave from Kikiaola Harbor because it&#x27;s the closest point to the coast. Less time in transit, more time on the cliffs.&quot; — specific, functional, earned confidence</li><br><li>&quot;Every captain on our boats grew up on Kauai. When they&#x27;re not on the water with you, they&#x27;re on the water on their own time.&quot; — shows authenticity through behavior, not claims</li><br><li>&quot;The Honopu Archway is where you&#x27;ll understand why film crews kept coming back.&quot; — place-specific, lets the fact speak</li></ul><p>Not this:<br><li>&quot;Experience the breathtaking beauty of the Na Pali Coast with Makana Charters!&quot; — promotional filler</li><br><li>&quot;Our world-class crew delivers exceptional service on every tour.&quot; — vague superlatives</li><br><li>&quot;Unlock an unforgettable adventure on Hawaii&#x27;s most stunning coastline.&quot; — AI cliché</li><br><li>&quot;We are passionate about sharing the spirit of Aloha.&quot; — hollow; show it, don&#x27;t state it</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.2 Sentence and paragraph rules</summary>
+      <div class="markdown"><p><li>Paragraphs: 2–4 lines. One main idea per paragraph.</li><br><li>First sentence of every section directly answers the heading or states the central fact.</li><br><li>H2 sections open with a short paragraph that naturally includes the primary keyword.</li><br><li>Short factual intro after the H1 before the first H2. No &quot;in this article.&quot;</li><br><li>No unclear pronouns. Name the boat, the location, the person.</li><br><li>Use specific place names, boat names, and sea cave names — not generic terms like &quot;the area&quot; or &quot;various spots.&quot;</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.3 FAQ sections</summary>
+      <div class="markdown"><p><li>Every service page ends with a FAQ block (H2: Frequently Asked Questions About...).</li><br><li>Each question is an H3.</li><br><li>For yes/no questions: answer &quot;Yes&quot; or &quot;No&quot; first, then expand. Two to three sentences max.</li><br><li>Match FAQ questions to real search queries tourists type before booking a Na Pali Coast tour.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.4 Banned language</summary>
+      <div class="markdown"><p>| Category | Banned |<br>|---|---|<br>| Generic superlatives | world-class, breathtaking (as filler), stunning, amazing, incredible, unforgettable (as a standalone claim), once-in-a-lifetime (without context) |<br>| Promotional clichés | unlock, elevate, transform your experience, immersive adventure, paradise awaits |<br>| Corporate/tour-industry filler | industry-leading, best-in-class, premier tour operator, state-of-the-art vessels |<br>| AI tells | delve into, dive into (non-literal), furthermore, in conclusion, it&#x27;s worth noting, as we know, in today&#x27;s world |<br>| Wildlife guarantees | &quot;you will see dolphins,&quot; &quot;guaranteed sightings&quot; — always use &quot;commonly seen,&quot; &quot;it&#x27;s rare we don&#x27;t see them,&quot; or similar qualified language |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3. Terminology</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.1 Required terms and spellings</summary>
+      <div class="markdown"><p>| Term | Usage rule |<br>|---|---|<br>| Na Pali Coast | Two words; capitalize both; &quot;Na Pali&quot; not &quot;NaPali&quot; in body copy (NaPali acceptable in URLs/hashtags) |<br>| Makana | Introduce meaning on first use in a new piece: &quot;Makana — the Hawaiian word for gift&quot; |<br>| Kikiaola Harbor | Full name on first use; may shorten to &quot;Kikiaola&quot; after |<br>| Catamaran | Use when describing the boats; not &quot;vessel&quot; (too formal), not &quot;yacht&quot; |<br>| Private charter | &quot;private charter&quot; not &quot;private tour&quot; when referencing the exclusive-booking product |<br>| Snorkel gear | &quot;snorkel gear&quot; not &quot;snorkeling equipment&quot; |<br>| Deli lunch | &quot;deli-style lunch&quot; or &quot;deli lunch&quot; — not &quot;catered meal,&quot; not &quot;gourmet lunch&quot; |<br>| Honu | Acceptable Hawaiian term for Hawaiian green sea turtle; define on first use if audience is general |<br>| Aloha | Use in cultural/narrative context only; do not use as a marketing shorthand (&quot;the Aloha experience&quot;) |<br>| Ohana | Acceptable when discussing the family heritage; do not overuse as a brand buzzword |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.2 Strict avoidance list</summary>
+      <div class="markdown"><p>| Banned term | Use instead |<br>|---|---|<br>| &quot;Boat trip&quot; | &quot;Na Pali Coast tour,&quot; &quot;catamaran tour&quot; |<br>| &quot;Cruise&quot; (unless specifically sunset cruise) | &quot;tour,&quot; &quot;charter&quot; |<br>| &quot;Vessel&quot; (formal/corporate) | &quot;boat,&quot; &quot;catamaran&quot; |<br>| &quot;Excursion&quot; | &quot;tour,&quot; &quot;Na Pali Coast trip&quot; |<br>| &quot;Passengers&quot; in cultural contexts | &quot;guests&quot; |<br>| &quot;Guaranteed to see&quot; (wildlife) | &quot;commonly spotted,&quot; &quot;it&#x27;s rare we don&#x27;t see them&quot; |<br>| &quot;Best tour on Kauai&quot; (unsupported) | State the specific differentiators instead |<br>| &quot;Paradise&quot; | Name the actual place instead |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4. Accuracy &amp; Technical Standards</summary>
+      <div class="markdown"><p><li>All pricing cited must match the fleet table in raw/knowledge/client-overview.md. Do not guess or estimate pricing.</li><br><li>Age minimums vary by boat: 4+ for Na Pali Kai III and Amelia K; 9+ for Makana, Seiko 1/2, Leialoha.</li><br><li>Wildlife sightings are never guaranteed. Use qualified language: &quot;commonly seen,&quot; &quot;guides know the tides and habitats,&quot; &quot;it&#x27;s rare that we don&#x27;t see dolphins.&quot;</li><br><li>Sea caves are entered &quot;as long as ocean conditions allow.&quot; Do not promise cave access.</li><br><li>Pregnancy policy: summer months only (June, July, August); up to 22 weeks gestation; doctor&#x27;s note required, submitted by the doctor directly to Makana Charters. Do not simplify or omit any of these conditions.</li><br><li>Weather cancellation policy: reschedule, credit, or full refund — confirm current terms before publishing.</li><br><li>Alcohol policy: guests may bring their own but may consume it only after snorkeling. Not served on board.</li><br><li>Handicap accessibility: Makana boat is not accessible; Na Pali Kai III is the recommended alternative for guests who can be lifted aboard.</li><br><li>Departure point matters: Kikiaola Harbor (primary, most boats); Port Allen (Amelia K only). Do not conflate the two.</li><br><li>Do not invent captain names beyond those confirmed: Mike, Rob, Darrel, Chris, Dave, Phil.</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5. Content Rules by Page Type</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.1 Tour pages (standard + private charter)</summary>
+      <div class="markdown"><p>Purpose: Convert visitors who have landed on a tour-specific page and are comparing operators.</p><p>Structure:<br>1. Meta title (55–60 characters): &quot;[Tour Name] | Makana Charters — Kauai&quot;<br>2. Meta description (140–160 characters): primary tour keyword + key differentiator + call to book<br>3. H1: Primary tour name (e.g., &quot;Na Pali Coast Catamaran Tour&quot;)<br>4. Short intro paragraph: name the coast, mention the family heritage briefly, state what this tour covers<br>5. H2 — What you&#x27;ll see: route highlights, sea caves by name, wildlife commonly seen<br>6. H2 — What&#x27;s included: gear, lunch, cultural narration — be specific<br>7. H2 — Boats: which boats serve this tour, capacity, who each is suited for<br>8. H2 — How to book: departure point, pricing, age minimums, CTA<br>9. H2 — FAQ (minimum 4 questions)</p><p>**Departure note:** Always specify Kikiaola Harbor as the departure point on tour pages. Mention proximity advantage explicitly at least once: closer to the coast than Port Allen competitors.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.2 Private charter pages</summary>
+      <div class="markdown"><p>Purpose: Convert groups and families who want an exclusive experience.</p><p>Structure:<br>1. H1: &quot;Private Na Pali Coast Charter&quot;<br>2. Lead with the personalization angle: your group, your pace, your boat<br>3. H2 — Boats available for private charters: Makana (up to 12); Na Pali Kai III (call for 12+)<br>4. H2 — What&#x27;s customizable vs. fixed<br>5. H2 — Pricing and booking guidance<br>6. H2 — FAQ (minimum 3 questions)</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.3 Destination/information pages</summary>
+      <div class="markdown"><p>Purpose: Rank for informational queries about the Na Pali Coast and Kauai to capture early-funnel visitors.</p><p>Structure:<br>1. Answer the core question directly in the first paragraph<br>2. Use place names, geography, and historical context authentically<br>3. Work in Makana&#x27;s heritage context where relevant — not forced<br>4. CTA at end: book the tour, learn more</p><p>**Examples:** &quot;What is the Na Pali Coast?&quot;, &quot;Best time to visit Na Pali Coast&quot;, &quot;Na Pali Coast sea caves&quot;, &quot;Things to do in Kauai&quot;</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.4 Blog posts</summary>
+      <div class="markdown"><p>Target length: 800–1,400 words. Lead with a specific place or moment, not a generic intro. Reference actual place names, boat names, and crew knowledge throughout.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6. Brand Differentiators</summary>
+      <div class="markdown"><p>State these concretely. Do not inflate into superlatives.</p><p>| Differentiator | How to say it |<br>|---|---|<br>| 200-year family legacy | &quot;Our family has been sailing these waters for over 200 years&quot; / &quot;documented history going back to the 1800s&quot; |<br>| Native Hawaiian ownership | &quot;Native Hawaiian-owned&quot; — state it as a fact, not a marketing angle |<br>| Closest departure point | &quot;We depart from Kikiaola Harbor — the closest point to the Na Pali Coast. That means up to an hour more on the coast compared to boats leaving from Port Allen.&quot; |<br>| Smaller groups | &quot;Our tours carry 12 to 32 guests — smaller than most operators on the island&quot; |<br>| Sea cave access | &quot;Our catamarans are built to enter the sea caves safely. Most larger boats can&#x27;t.&quot; |<br>| Crew roots | &quot;Every captain has lived on Kauai for years — most their entire life. When they&#x27;re not on the water with guests, they&#x27;re on it on their own time.&quot; |<br>| Cultural narration | &quot;You&#x27;ll hear the Hawaiian history of the coast from people whose family is part of that history.&quot; |<br>| 10,000+ five-star reviews | Use as social proof; do not lead with it |<br>| Fast power catamarans | &quot;New, fast power catamarans built specifically for the Na Pali Coast&quot; |</p><p>**Never say:** &quot;the best tour on Kauai&quot; without substantiation. State what makes it different; let the reader conclude.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>7. Tour &amp; Fleet Reference</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Boats</summary>
+      <div class="markdown"><p>| Boat | Max Capacity | Age Min | Adult | Child | Departure | Notes |<br>|---|---|---|---|---|---|---|<br>| Na Pali Kai III | 32 | 4+ | $199 | $169 | Kikiaola | 360-degree walk-around deck; good for photographers |<br>| Amelia K | 36 | 4+ | $199 | $169 | Port Allen | Only boat leaving from Port Allen |<br>| Seiko 1 | 16 | 9+ | $219 | $189 | Kikiaola | Power catamaran |<br>| Seiko 2 | 16 | 9+ | $219 | $189 | Kikiaola | Power catamaran |<br>| Makana | 12 | 9+ | $219 | $189 | Kikiaola | Ideal for private charters; smallest boat |<br>| Leialoha | 18 | 9+ | $219 | $189 | Kikiaola | |</p><p>Verify all pricing with the client before publishing. Prices are confirmed as of June 2026.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Standard tour inclusions (all boats)</summary>
+      <div class="markdown"><p><li>Snorkel gear + flotation devices</li><br><li>Deli-style lunch: turkey, ham, roast beef, or vegetarian; fruits, snacks</li><br><li>Soft drinks + local juices</li><br><li>Onboard restroom (smaller on Makana)</li><br><li>Freshwater showers on larger boats</li><br><li>Cultural narration from Native Hawaiian crew</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Tour route (standard)</summary>
+      <div class="markdown"><p>Kikiaola Harbor → Polihale shoreline → Kalalau Valley waterfalls → Na Pali sea caves → snorkel stop (approx. 1 hour) → return</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Sea caves (by name)</summary>
+      <div class="markdown"><p><li>Pirates Cave (Hawaiian name: Waiahuakua)</li><br><li>Rainbow Falls</li><br><li>Honopu Archway — filming location for King Kong, Six Days Seven Nights, James Bond, Pirates of the Caribbean</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Wildlife commonly seen</summary>
+      <div class="markdown"><p><li>Spinner dolphins</li><br><li>Pacific Bottlenose dolphins</li><br><li>Hawaiian green sea turtles (honu)</li><br><li>Diverse reef fish species, coral reefs</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Snorkel locations</summary>
+      <div class="markdown"><p>Makole, Ke&#x27;e Beach (Tunnels), Nualolo Kai, Kekaha, Kaumakani — location varies by ocean conditions.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>8. SEO Standards &amp; Focus Keywords</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Primary keywords (client-identified)</summary>
+      <div class="markdown"><p><li>Na Pali Coast boat tours</li><br><li>Na Pali Coast tours</li><br><li>Na Pali Coast catamaran tours</li><br><li>Kauai boat tours</li><br><li>Na Pali Coast snorkeling tours</li><br><li>Na Pali Coast sunset cruises</li><br><li>Private Na Pali Coast tours</li><br><li>Na Pali Coast sea cave tours</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Supporting keyword clusters</summary>
+      <div class="markdown"><p>| Cluster | Keywords |<br>|---|---|<br>| Departure advantage | &quot;Kekaha Na Pali Coast tour,&quot; &quot;closest Na Pali boat tour,&quot; &quot;Kikiaola Harbor tour&quot; |<br>| Heritage/cultural | &quot;Native Hawaiian boat tour Kauai,&quot; &quot;Na Pali Coast history tour&quot; |<br>| Private/small group | &quot;private Na Pali Coast charter,&quot; &quot;small group Kauai boat tour&quot; |<br>| Sea caves | &quot;Na Pali Coast sea caves tour,&quot; &quot;Honopu Arch boat tour,&quot; &quot;Pirates Cave Na Pali&quot; |<br>| Wildlife | &quot;Na Pali Coast dolphin tour,&quot; &quot;Kauai snorkeling tour&quot; |<br>| Informational | &quot;Na Pali Coast what to expect,&quot; &quot;best time for Na Pali Coast tour,&quot; &quot;Na Pali Coast boat vs helicopter&quot; |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>SEO notes</summary>
+      <div class="markdown"><p><li>Primary keyword near the front of the title tag; under 60 characters.</li><br><li>Meta descriptions: 140–160 characters; primary keyword + one specific differentiator.</li><br><li>Primary keyword in the first sentence of body content.</li><br><li>The site is in post-migration SEO recovery — prioritize exact-match keyword placement and strong internal linking.</li><br><li>AEO focus: structure content so FAQ answers can be extracted verbatim by search engines and AI tools.</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>9. Internal Linking Rules</summary>
+      <div class="markdown"><p>**Placement:**<br><li>Do not add an internal link to the first sentence of a paragraph</li><br><li>Do not add an internal link to the first line of a paragraph</li><br><li>Build context first, then link</li></ul><p>**Anchor text:**<br><li>Use the tour name, destination name, or page topic as anchor text</li><br><li>Never use &quot;click here,&quot; &quot;learn more,&quot; or &quot;find out more&quot;</li></ul><p>**Internal link reference (confirm all URLs from live site):**</p><p>| Page | URL |<br>|---|---|<br>| Homepage | makanacharters.com |<br>| Na Pali Coast tours | makanacharters.com/napali-coast-tours/ |<br>| Private charters | makanacharters.com (confirm URL) |<br>| About | makanacharters.com/about/ |<br>| FAQ | makanacharters.com (confirm URL) |<br>| Contact | makanacharters.com/contact/ |<br>| Blog | makanacharters.com/blog/ (confirm) |</p><p>Confirm and expand this table from the live site before publishing pages with internal links.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>10. Hawaiian Language Rules</summary>
+      <div class="markdown"><p><li>Never use Hawaiian terms as decorative filler. Use them when the term is more precise or culturally specific than the English equivalent.</li><br><li>On first use in a page, define terms that a mainland US tourist would not know: &quot;honu (Hawaiian green sea turtle),&quot; &quot;Makana — the Hawaiian word for gift.&quot;</li><br><li>Do not manufacture Hawaiian phrases or attempt translation. Use only terms confirmed from the website or client materials.</li><br><li>Treat place names as proper nouns: capitalize and spell consistently (Kalalau, Polihale, Nualolo Kai, Waimea, Kekaha, Kikiaola).</li><br><li>&quot;Na Pali&quot; = &quot;the cliffs&quot; — acceptable to note in context but do not turn it into a tagline.</li></ul><p>**Confirmed Hawaiian terms for use:**</p><p>| Term | Meaning | Usage |<br>|---|---|---|<br>| Makana | Gift | Brand name + meaning in brand context |<br>| Na Pali | The cliffs | Coast name — use consistently |<br>| Aloha | Love, peace, spirit of welcome | Cultural/narrative; not as a marketing shortcut |<br>| Ohana | Family | When discussing heritage; not overused |<br>| Honu | Hawaiian green sea turtle | Wildlife reference; define on first use |<br>| Mana | Spiritual power | Use sparingly; reserve for heritage/place context |<br>| Hale Pili | Grass house | Their office/departure reference |<br>| Leialoha | Beloved child | Boat name only |<br>| Waiahuakua | Pirates Cave proper name | Sea cave content |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>11. Numbers and Style</summary>
+      <div class="markdown"><p><li>Spell out numbers in narrative: &quot;over two hundred years&quot; or &quot;more than 200 years&quot; — both acceptable</li><br><li>Use numerals for capacity, pricing, duration, age: &quot;32 passengers,&quot; &quot;$199,&quot; &quot;4.5 hours,&quot; &quot;4 years old&quot;</li><br><li>Phone: (808) 338-9980</li><br><li>Booking phone: 808-201-2495</li><br><li>Duration: &quot;4.5 to 5 hours&quot; (not &quot;4.5–5 hours&quot; in running prose; use the dash form in tables only)</li><br><li>Snorkel time: &quot;about one hour&quot; (not &quot;1 hr&quot;)</li><br><li>Prices confirmed as of June 2026 — verify before publishing</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>12. Research and Factuality</summary>
+      <div class="markdown"><p><li>Do not invent specific guest testimonials, quotes, or named reviews</li><br><li>Do not claim certifications, awards, or affiliations not confirmed in raw/knowledge/</li><br><li>Do not guarantee wildlife sightings</li><br><li>Do not guarantee sea cave access — always qualify: &quot;as long as ocean conditions allow&quot;</li><br><li>Do not expand or alter the pregnancy policy — publish it verbatim or reference callers to (808) 338-9980</li><br><li>Captain names confirmed: Mike, Rob, Darrel, Chris, Dave, Phil — do not add or remove</li><br><li>The 200-year heritage claim is client-documented and confirmed; use it</li><br><li>The 10,000+ five-star review figure is from the website as of June 2026 — verify before using as a specific number in new content</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>13. Pre-Publish Checklist</summary>
+      <div class="markdown"><p>| Check | Requirement |<br>|---|---|<br>| Heritage mention | Family legacy or Native Hawaiian ownership stated at least once per page |<br>| Departure point | Kikiaola Harbor named on all tour pages; proximity advantage stated at least once |<br>| Wildlife language | Qualified (&quot;commonly seen,&quot; &quot;it&#x27;s rare we don&#x27;t see them&quot;) — never guaranteed |<br>| Sea cave language | Qualified (&quot;as long as ocean conditions allow&quot;) |<br>| Age minimums | Correct by boat (4+ for Na Pali Kai III / Amelia K; 9+ for others) |<br>| Pricing | Matches fleet table; verified current |<br>| Boat name spelling | Na Pali Kai III (not &quot;Na Pali Kai 3&quot; in body copy; numeral acceptable in casual/FAQ contexts) |<br>| Na Pali spelling | Two words, capitalized, no hyphen — &quot;Na Pali&quot; not &quot;NaPali&quot; in body copy |<br>| Hawaiian terms | Defined on first use for general audience |<br>| Phone number | (808) 338-9980 present on pages with a CTA |<br>| FAQ section | Minimum 4 questions; yes/no answered first |<br>| No invented facts | No testimonials, awards, or stats not in raw/knowledge/ |<br>| Internal links | None in first line of paragraph; descriptive anchors only |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>14. Key Facts at a Glance</summary>
+      <div class="markdown"><p>| Detail | Value |<br>|---|---|<br>| Business name | Makana Charters |<br>| Legacy name | Liko Kauai Cruises |<br>| &quot;Makana&quot; means | Gift (Hawaiian) |<br>| Ownership | Native Hawaiian family-owned |<br>| Heritage | 200+ years documented family history on Na Pali Coast |<br>| Address | 4516 Alawai Road, Waimea, HI 96796 |<br>| Departure harbor | Kikiaola Small Boat Harbor, Kekaha, HI |<br>| Phone | (808) 338-9980 |<br>| Booking phone | 808-201-2495 |<br>| Email | info@makanacharters.com |<br>| Hours | 7AM–9PM |<br>| Reviews | 10,000+ five-star reviews (Google + TripAdvisor) |<br>| Competitors | Kauai Sea Tours, Capt Andy&#x27;s, Blue Dolphin, HoloHolo Charters |<br>| Instagram | @napali.coast |<br>| Facebook | Makana Charters tour the NaPali Coast |<br>| Primary contact | Cain Robinson |<br>| Primary SEO challenge | Post-migration keyword recovery + AEO/AI Search positioning |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>15. Operator Notes</summary>
+      <div class="markdown"><p>*Section for team-specific additions. Use `### {Operator} — {scope}` headings. Promote a note to the main numbered sections once it has been reinforced across two or more pieces.*</p></div>
+    </details>
+    </details>
+        </section>
+        <section class="panel">
+          <h2>Local Source Files Read</h2>
+          <ul><li><code>clients/makana-charters/STYLE-SYSTEM.md</code> — Makana Charters — Style System</li>
+<li><code>clients/makana-charters/client-intelligence/README.md</code> — Makana Charters Client Intelligence</li>
+<li><code>clients/makana-charters/client-intelligence/STYLE-GUIDE.md</code> — Makana Charters — Style System</li>
+<li><code>clients/makana-charters/client-intelligence/offerings.md</code> — Makana Charters Offerings</li>
+<li><code>clients/makana-charters/client-intelligence/source-files.md</code> — Makana Charters Source Files</li>
+<li><code>clients/makana-charters/deliverables/README.md</code> — Makana Charters Deliverables</li>
+<li><code>clients/makana-charters/deliverables/drafts/01-june-2026-landing-blogs/blog-01-na-pali-snorkeling-guide-v1.md</code> — Snorkeling the Na Pali Coast: What to Expect Before You Go</li>
+<li><code>clients/makana-charters/deliverables/drafts/01-june-2026-landing-blogs/blog-02-what-to-pack-v1.md</code> — What to Pack for a Na Pali Coast Snorkel Tour</li>
+<li><code>clients/makana-charters/deliverables/drafts/01-june-2026-landing-blogs/blog-03-private-catamaran-groups-v1.md</code> — Private Catamaran Charter on Kauai: What to Know Before Booking for a Group</li>
+<li><code>clients/makana-charters/deliverables/drafts/01-june-2026-landing-blogs/blog-04-sunset-cruise-guide-v1.md</code> — Kauai Sunset Cruise: What the Na Pali Coast Looks Like at Golden Hour</li>
+<li><code>clients/makana-charters/deliverables/drafts/01-june-2026-landing-blogs/blog-05-na-pali-sea-caves-v1.md</code> — The Na Pali Coast Sea Caves: What They Are and How to See Them by Boat</li>
+<li><code>clients/makana-charters/deliverables/drafts/01-june-2026-landing-blogs/blog-06-summer-booking-guide-v1.md</code> — How Far in Advance Should You Book a Na Pali Coast Tour in Summer?</li>
+<li><code>clients/makana-charters/deliverables/drafts/01-june-2026-landing-blogs/lp-01-na-pali-coast-boat-tour-v1.md</code> — Na Pali Coast Boat Tour: Why Makana Charters Stands Apart</li>
+<li><code>clients/makana-charters/deliverables/drafts/01-june-2026-landing-blogs/lp-02-kauai-snorkeling-tours-v1.md</code> — Kauai Snorkeling Tours: What to Look For in an Operator</li>
+<li><code>clients/makana-charters/deliverables/drafts/01-june-2026-landing-blogs/lp-03-kauai-sunset-cruise-v1.md</code> — Kauai Sunset Cruise on the Na Pali Coast: What to Expect with Makana Charters</li>
+<li><code>clients/makana-charters/raw/knowledge/client-overview.md</code> — Makana Charters — Client Overview</li>
+<li><code>clients/makana-charters/raw/knowledge/service-taxonomy.md</code> — Makana Charters Service Taxonomy</li>
+<li><code>clients/makana-charters/raw/research/website-scrape-jun-2026.md</code> — Makana Charters — Website Scrape</li></ul>
+        </section>
+      </main>
+    </section>
+    </body>
+</html>

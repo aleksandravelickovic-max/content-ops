@@ -1,0 +1,111 @@
+{
+  "client": "axiom-hrs",
+  "display_name": "Axiom HRS",
+  "generated_at": "2026-07-14T15:59:27.879181+00:00",
+  "offerings": [
+    {
+      "name": "Benefits enrollment and administration",
+      "description": "Benefits setup, enrollment, employee changes, and plan administration support.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/axiom-hrs/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Services"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Compliance Support",
+      "description": "Support for tax, labor law, policy, and employment compliance workflows.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/axiom-hrs/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Services"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Employee lifecycle management",
+      "description": "HR support from onboarding through changes, reviews, documentation, and offboarding.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/axiom-hrs/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Services"
+      ],
+      "score": 9
+    },
+    {
+      "name": "HR outsourcing and hands-on support",
+      "description": "External HR support for employers that need operational help without building a full internal HR team.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/axiom-hrs/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Services"
+      ],
+      "score": 9
+    },
+    {
+      "name": "HR Technology",
+      "description": "UKG-powered HR technology for employee data, workflows, reporting, and workforce administration.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/axiom-hrs/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Services"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Learning management",
+      "description": "Training and learning administration for employee development and compliance needs.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/axiom-hrs/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Services"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Payroll processing",
+      "description": "Payroll administration support for wage calculation, deductions, tax handling, and recurring payroll workflows.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/axiom-hrs/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Services"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Time and labor management",
+      "description": "Time tracking, attendance, scheduling, and labor management support.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/axiom-hrs/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Services"
+      ],
+      "score": 9
+    }
+  ]
+}

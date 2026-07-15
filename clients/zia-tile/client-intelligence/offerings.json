@@ -1,0 +1,267 @@
+{
+  "client": "zia-tile",
+  "display_name": "Zia Tile",
+  "generated_at": "2026-07-14T15:59:28.005722+00:00",
+  "offerings": [
+    {
+      "name": "Zellige",
+      "description": "Morocco -- 800+ years; Surface texture, sheen, chips/pits/crazing as characteristics. 200+ tiles, mesh-backed mosaics. Not suitable for freeze/thaw outdoors.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/zia-tile/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "4.1 Freeze/Thaw -- material-specific rules",
+        "4.11 Variation Language by Material",
+        "11. Product Collections",
+        "Collections"
+      ],
+      "score": 15
+    },
+    {
+      "name": "Cement tile",
+      "description": "Vietnam -- 19th-c European; Mineral pigments, cement, hydraulic press, never fired. Matte. 68 colors. Suitable for exterior in non-freeze/thaw only.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/zia-tile/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "4.1 Freeze/Thaw -- material-specific rules",
+        "11. Product Collections",
+        "Collections"
+      ],
+      "score": 12
+    },
+    {
+      "name": "Cotto",
+      "description": "San Miguel de Allende, MX; Unglazed, earthy, high-fired. Six colorways. Suitable for any climate including freeze/thaw. Not for pools/spas.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/zia-tile/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "4.11 Variation Language by Material",
+        "11. Product Collections",
+        "Collections"
+      ],
+      "score": 12
+    },
+    {
+      "name": "Cotto Allende",
+      "description": "San Miguel de Allende, MX; Same clay as Cotto, hand-glazed. Eighteen colorways. Suitable for pools/spas. Not suitable for outdoor freeze/thaw.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/zia-tile/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "4.1 Freeze/Thaw -- material-specific rules",
+        "11. Product Collections",
+        "Collections"
+      ],
+      "score": 12
+    },
+    {
+      "name": "Marble",
+      "description": "Italy + Spain; Carrara, Nero Marquina, Grigio Carnico, Rosso Alicante, Giallo Reale, Verdi Alpi. Honed or polished. Can be used outdoors in appropriate climates.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/zia-tile/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "4.1 Freeze/Thaw -- material-specific rules",
+        "11. Product Collections",
+        "Collections"
+      ],
+      "score": 12
+    },
+    {
+      "name": "Cantera Stone",
+      "description": "Mexico; Volcanic stone, 7 earthy colorways. Visible aggregate + mineral inclusions. Indoor + outdoor.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/zia-tile/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "11. Product Collections",
+        "Collections"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Ceramics",
+      "description": "Central Japan (Nagoya); Molded + glazed, high-temp. \"Field Trip: Japan\" sub-line is extruded + die-cut. Matte / satin / glossy.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/zia-tile/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "11. Product Collections",
+        "Collections"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Custom / Special Orders",
+      "description": "Cement 10-12 wks, Cotto 11-15 wks, Zellige 13-17 wks. Cannot be cancelled once placed.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/zia-tile/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "11.1 Services",
+        "Services"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Glass Mosaics",
+      "description": "Northern Spain; 98% recycled glass, renewable energy production. Hand-placed on 12x12 grids. 7 patterns.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/zia-tile/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "11. Product Collections",
+        "Collections"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Limestone",
+      "description": "Fez, Morocco + Bordeaux, France; Quarried solid blocks. Honed or bush-hammered. Natural patina over time.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/zia-tile/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "11. Product Collections",
+        "Collections"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Roman Mosaics",
+      "description": "Italian stone heritage; Same premium stone as Solid Marble; intricate ancient-Rome-inspired mosaic patterns.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/zia-tile/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "11. Product Collections",
+        "Collections"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Sample Ordering",
+      "description": "$3 per sample; first 5 free for trade. Up to 10 per client (max 4 per unique tile). Ships within 2 business days from LA. FedEx or UPS ground.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/zia-tile/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "11.1 Services",
+        "Services"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Terra Forms",
+      "description": "Specialty; Sculptural / dimensional tile. Texture + relief beyond flat-tile installations.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/zia-tile/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "11. Product Collections",
+        "Collections"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Terrazzo",
+      "description": "Venetian-inspired tile made with steel molds, crushed marble or stone, hydraulic press, grinding, and polishing.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/zia-tile/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "11. Product Collections",
+        "Collections"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Trade Program",
+      "description": "Program for designers, architects, contractors, and installers with trade pricing, rep support, samples, previews, tracking, and order help.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/zia-tile/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "11.1 Services",
+        "Services"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Warehouse Pickup",
+      "description": "Free for full orders, LA warehouse. Appointment required. Team contacts customer when ready.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/zia-tile/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "11.1 Services",
+        "Services"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Worldwide Shipping",
+      "description": "LTL curbside pallet shipping, with custom quotes for Alaska, Hawaii, Canada, and international orders.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/zia-tile/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "11.1 Services",
+        "Services"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Field Trip Japan",
+      "description": "Extruded and die-cut Japanese ceramic sub-line.",
+      "sources": [
+        "clients/zia-tile/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Collections"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Unglazed Natural Zellige",
+      "description": "Unglazed Moroccan zellige colorway for earthy, matte installations.",
+      "sources": [
+        "clients/zia-tile/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Collections"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Unglazed Cotto",
+      "description": "Suitable for exterior use in any climate, including freeze/thaw regions. This is a selling point.",
+      "sources": [
+        "STYLE-SYSTEM.md"
+      ],
+      "sections": [
+        "4.1 Freeze/Thaw -- material-specific rules"
+      ],
+      "score": 3
+    }
+  ]
+}

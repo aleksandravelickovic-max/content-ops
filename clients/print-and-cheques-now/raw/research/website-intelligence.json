@@ -1,0 +1,51 @@
+{
+  "client": "print-and-cheques-now",
+  "display_name": "Print & Cheques Now",
+  "generated_at": "2026-07-13T23:02:08.787132+00:00",
+  "website_urls": [
+    "https://chequesnow.ca/"
+  ],
+  "status": "partial",
+  "sitemaps": [],
+  "sitemap_errors": [
+    "https://chequesnow.ca/sitemap.xml: HTTP 403",
+    "https://chequesnow.ca/sitemap_index.xml: HTTP 403",
+    "https://chequesnow.ca/wp-sitemap.xml: HTTP 403",
+    "https://chequesnow.ca/sitemap-pages.xml: HTTP 403",
+    "https://chequesnow.ca/sitemap_products_1.xml: HTTP 403",
+    "https://chequesnow.ca/sitemap_collections_1.xml: HTTP 403"
+  ],
+  "url_count": 1,
+  "page_type_counts": {
+    "home": 1
+  },
+  "sample_pages": [
+    {
+      "url": "https://chequesnow.ca/",
+      "requested_url": "https://chequesnow.ca/",
+      "status_code": 403,
+      "content_type": "text/html",
+      "page_type": "home",
+      "title": "GoDaddy Security - Access Denied",
+      "meta_description": "",
+      "headings": [
+        "Access Denied - GoDaddy Website Firewall"
+      ],
+      "links_seen": 3,
+      "elapsed_ms": 151
+    }
+  ],
+  "offering_pages": [],
+  "top_terms": [
+    "godaddy",
+    "access",
+    "denied",
+    "security",
+    "website",
+    "firewall"
+  ],
+  "product_or_service_urls": [],
+  "blockers": [
+    "No usable sitemap found for https://chequesnow.ca/; sampled homepage only."
+  ]
+}

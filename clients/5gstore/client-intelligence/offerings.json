@@ -1,0 +1,85 @@
+{
+  "client": "5gstore",
+  "display_name": "5Gstore",
+  "generated_at": "2026-07-14T15:59:27.839773+00:00",
+  "offerings": [
+    {
+      "name": "Antennas",
+      "description": "External cellular and networking antennas for routers, modems, hotspots, and booster setups.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/5gstore/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Key product categories",
+        "Product Categories"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Enterprise Routers",
+      "description": "Peplink and related business routers for cellular, WAN, failover, and multi-location networking.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/5gstore/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Key product categories",
+        "Product Categories"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Hardware Accessories",
+      "description": "Cables, splitters, mounts, adapters, and device-specific networking accessories.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/5gstore/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Key product categories",
+        "Product Categories"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Mobile Hotspots",
+      "description": "Portable 4G and 5G hotspot devices for mobile broadband use cases.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/5gstore/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Key product categories",
+        "Product Categories"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Signal Boosters",
+      "description": "Cellular signal booster hardware. Writers must describe mechanism and conditions, not guaranteed signal outcomes.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/5gstore/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Key product categories",
+        "Product Categories"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Software Licenses / Cloud Services",
+      "description": "Peplink SpeedFusion Connect and related licenses or cloud services, with firmware and license limits verified before writing.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/5gstore/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Key product categories",
+        "Product Categories"
+      ],
+      "score": 9
+    }
+  ]
+}

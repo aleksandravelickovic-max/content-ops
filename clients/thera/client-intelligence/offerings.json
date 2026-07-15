@@ -1,0 +1,143 @@
+{
+  "client": "thera",
+  "display_name": "Thera",
+  "generated_at": "2026-07-14T15:59:27.924351+00:00",
+  "offerings": [
+    {
+      "name": "Lymphedema",
+      "description": "Therapy support for lymphedema management and related swelling concerns.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/thera/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Conditions and Services"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Pain affecting daily movement",
+      "description": "Therapy support for pain that limits daily movement.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/thera/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Conditions and Services"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Limited Shoulder and Arm Mobility",
+      "description": "Support for shoulder and arm mobility limitations after breast surgery.",
+      "sources": [
+        "clients/thera/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Conditions and Services"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Lymphatic Complications",
+      "description": "Treatment support for lymphatic complications after cosmetic or medical procedures.",
+      "sources": [
+        "clients/thera/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Conditions and Services"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Post-Mastectomy Recovery",
+      "description": "Therapy support after mastectomy, lumpectomy, or reconstruction.",
+      "sources": [
+        "clients/thera/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Conditions and Services"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Post-Surgical Swelling",
+      "description": "Treatment support for swelling and restricted movement after surgery.",
+      "sources": [
+        "clients/thera/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Conditions and Services"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Scar Tissue Restrictions",
+      "description": "Therapy for scar tissue and soft tissue restrictions affecting movement or comfort.",
+      "sources": [
+        "clients/thera/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Conditions and Services"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Limited shoulder and arm mobility after breast surgery",
+      "description": "Limited shoulder and arm mobility after breast surgery is listed under 8. Service Reference in the Thera client context. Check the source links before adding specific claims.",
+      "sources": [
+        "STYLE-SYSTEM.md"
+      ],
+      "sections": [
+        "8. Service Reference"
+      ],
+      "score": 3
+    },
+    {
+      "name": "Lymphatic complications from cosmetic or medical procedures",
+      "description": "Lymphatic complications from cosmetic or medical procedures is listed under 8. Service Reference in the Thera client context. Check the source links before adding specific claims.",
+      "sources": [
+        "STYLE-SYSTEM.md"
+      ],
+      "sections": [
+        "8. Service Reference"
+      ],
+      "score": 3
+    },
+    {
+      "name": "Post-mastectomy, post-lumpectomy, post-reconstruction recovery",
+      "description": "Post-mastectomy, post-lumpectomy, post-reconstruction recovery is listed under 8. Service Reference in the Thera client context. Check the source links before adding specific claims.",
+      "sources": [
+        "STYLE-SYSTEM.md"
+      ],
+      "sections": [
+        "8. Service Reference"
+      ],
+      "score": 3
+    },
+    {
+      "name": "Post-surgical swelling and restricted movement",
+      "description": "Post-surgical swelling and restricted movement is listed under 8. Service Reference in the Thera client context. Check the source links before adding specific claims.",
+      "sources": [
+        "STYLE-SYSTEM.md"
+      ],
+      "sections": [
+        "8. Service Reference"
+      ],
+      "score": 3
+    },
+    {
+      "name": "Scar tissue and soft tissue restrictions",
+      "description": "Scar tissue and soft tissue restrictions is listed under 8. Service Reference in the Thera client context. Check the source links before adding specific claims.",
+      "sources": [
+        "STYLE-SYSTEM.md"
+      ],
+      "sections": [
+        "8. Service Reference"
+      ],
+      "score": 3
+    }
+  ]
+}

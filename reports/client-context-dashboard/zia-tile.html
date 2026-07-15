@@ -1,0 +1,1315 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zia Tile Context</title>
+  <style>
+    :root {
+      --bg:#f4f7f5; --panel:#ffffff; --ink:#09110f; --muted:#63716c; --line:#dce5df;
+      --black:#050907; --graph:#14d878; --graph-dark:#079d55; --soft:#eaf8f0; --soft-ink:#19392a;
+      --accent:#087a47; --red:#b5362d; --shadow:0 18px 46px rgba(5,9,7,.08);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:
+      linear-gradient(180deg, #ffffff 0, var(--bg) 360px); color:var(--ink); line-height:1.45; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .topnav { min-height:64px; padding:14px max(32px, calc((100vw - 1380px) / 2 + 32px)); background:var(--black); border-bottom:1px solid rgba(255,255,255,.08); position:sticky; top:0; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { color:#fff; display:inline-flex; align-items:center; gap:10px; font-weight:800; letter-spacing:0; }
+    .brand:hover { text-decoration:none; }
+    .brand span { width:32px; height:32px; border-radius:8px; background:var(--graph); color:var(--black); display:inline-grid; place-items:center; font-size:13px; font-weight:900; }
+    .nav-meta, .nav-link { color:#b8c6c0; font-size:13px; font-weight:700; }
+    .hero { margin:0; padding:42px max(32px, calc((100vw - 1380px) / 2 + 32px)) 38px; background:var(--black); color:#fff; border-bottom:1px solid rgba(255,255,255,.08); }
+    .index-hero, .client-hero { display:flex; justify-content:space-between; gap:28px; align-items:flex-start; }
+    .hero h1 { margin:0 0 12px; font-size:clamp(32px, 5vw, 62px); line-height:.98; letter-spacing:0; max-width:900px; }
+    .hero p { margin:0; color:#c7d5cf; max-width:840px; font-size:17px; }
+    .hero-copy { max-width:940px; }
+    .kicker { color:var(--graph); font-size:12px; text-transform:uppercase; letter-spacing:.08em; font-weight:900; }
+    .report-meta { display:flex; flex-wrap:wrap; gap:10px; padding:14px 32px; background:#fff; border-bottom:1px solid var(--line); color:var(--muted); font-size:13px; max-width:1380px; margin:0 auto; }
+    .report-meta span { background:var(--soft); color:var(--soft-ink); border-radius:999px; padding:6px 10px; font-weight:700; }
+    .grid.cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(290px, 1fr)); gap:16px; padding:24px 32px 42px; max-width:1380px; margin:0 auto; }
+    .card, .panel, .context-card { background:var(--panel); border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow); }
+    .client-card { display:block; padding:20px; color:inherit; min-height:184px; transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease; }
+    .client-card:hover { text-decoration:none; transform:translateY(-2px); border-color:rgba(20,216,120,.55); box-shadow:0 24px 58px rgba(5,9,7,.12); }
+    .card-topline { display:flex; justify-content:space-between; gap:10px; align-items:center; }
+    .client-card h2 { margin:14px 0 8px; font-size:23px; line-height:1.1; }
+    .client-card p { margin:0; color:var(--muted); }
+    .metrics { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+    .metrics span, .evidence, .status-pill { background:var(--soft); border:1px solid rgba(20,216,120,.22); border-radius:999px; padding:5px 9px; font-size:12px; color:var(--soft-ink); font-weight:800; }
+    .topic-chips { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 18px; }
+    .topic-chips span { background:#f6fbf8; border:1px solid var(--line); border-radius:999px; color:#183a2a; padding:7px 10px; font-size:13px; font-weight:750; }
+    .layout { display:block; padding:22px 32px 46px; max-width:1380px; margin:0 auto; }
+    main { min-width:0; }
+    .context-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; margin-bottom:20px; }
+    .context-card { padding:18px; min-height:220px; }
+    .context-card ul { margin-bottom:0; }
+    .context-note { color:var(--muted); font-size:13px; margin:4px 0 12px; }
+    .aside-label { color:var(--graph-dark); font-size:11px; text-transform:uppercase; font-weight:900; letter-spacing:.08em; margin-bottom:5px; }
+    .panel h2 { margin-top:0; }
+    .panel { padding:22px; margin-bottom:20px; }
+    .panel h2 { font-size:26px; letter-spacing:0; }
+    .offerings { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:13px; margin-top:16px; }
+    .offering, .sample { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .offering { position:relative; overflow:hidden; }
+    .offering-marker { position:absolute; inset:0 auto 0 0; width:4px; background:var(--graph); }
+    .offering h3, .sample h4 { margin:0 0 6px; }
+    .offering p { margin:0 0 10px; }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .stat-stack { display:grid; grid-template-columns:repeat(3, minmax(100px, 1fr)); gap:8px; min-width:340px; }
+    .stat-stack div { border:1px solid rgba(255,255,255,.15); border-radius:8px; padding:14px; background:rgba(255,255,255,.06); }
+    .stat-stack strong { display:block; font-size:26px; color:#fff; }
+    .stat-stack span, .muted { color:var(--muted); font-size:13px; }
+    .hero .stat-stack span { color:#b8c6c0; }
+    ul { padding-left:20px; }
+    li { margin:4px 0; }
+    code { background:var(--soft); color:var(--soft-ink); padding:2px 4px; border-radius:4px; }
+    details { margin:10px 0; }
+    summary { cursor:pointer; font-weight:700; }
+    .style-section { border-top:1px solid var(--line); padding-top:10px; }
+    .markdown { color:#2d2f35; }
+    @media (max-width: 980px) {
+      .layout, .split, .client-hero, .index-hero { grid-template-columns:1fr; display:block; }
+      .context-grid { grid-template-columns:1fr; }
+      .stat-stack { min-width:0; margin-top:16px; }
+      .hero, .grid.cards, .layout, .topnav, .report-meta { padding-left:16px; padding-right:16px; }
+      .hero h1 { font-size:36px; }
+      .stat-stack { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+    <nav class="topnav">
+      <a class="brand" href="index.html"><span>LG</span>LinkGraph</a>
+      <a class="nav-link" href="index.html">All clients</a>
+    </nav>
+    <section class="hero client-hero">
+      <div class="hero-copy">
+        <div class="kicker">zia-tile</div>
+        <h1>Zia Tile</h1>
+        <p>20 extracted offerings, 1200 sitemap URLs, and 410 local source documents for client-specific writing context.</p>
+      </div>
+      <div class="stat-stack">
+        <div><strong>ok</strong><span>crawl status</span></div>
+        <div><strong>1200</strong><span>URLs found</span></div>
+        <div><strong>80</strong><span>product/service URLs</span></div>
+      </div>
+    </section>
+    <section class="layout">
+      <main>
+        <section class="context-grid">
+    <article class="context-card">
+      <div class="aside-label">Quick Facts</div>
+      <p class="context-note">Company, audience, and proof points.</p>
+      <ul><li>Company: LA-based retailer of handmade artisanal tile and stone. Ships worldwide. Collections span Morocco, Vietnam, Japan, Mexico, Italy, Spain, and France.</li><li>Tagline: &quot;A Modern Home for an Ancient Art&quot;</li><li>Trade audience (55-60% revenue): Architects, designers, contractors, installers managing $20k-$80k+ projects. Need technical precision and no hand-holding.</li><li>Consumer audience (40-45%): Affluent first-time buyers, ages 30-60. Need clear guidance and confidence-building detail.</li><li>Brand pillars: Authoritative, Artisanal, Approachable, Inspirational. Authority through specificity, never through adjectives. Show quality; never claim it.</li><li>Warmth is a brand quality, not a banned one. Zia is warm, artisanal, and aspirational. The voice should feel that way. Warmth is earned through sensory specificity, craft, place, and the feeling a material creates — never through vague lifestyle phrases or empty adjectives. See §2.8.</li><li>Two-audience test: All copy must respect the expertise of a senior design professional while remaining clear and useful to a first-time buyer.</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Voice</div>
+      <p class="context-note">How this client should sound.</p>
+      <ul><li>Litmus test: Does this read like an expert talking, or a marketer selling? Second litmus: Does it feel like anyone cares about this tile, or has the warmth been edited out until only neutral facts remain? Both failures are equally bad.</li><li>Rule: Do this</li><li>Register: Warm, aspirational, and confident — polished without being stiff or corporate; aspiration grounded in specific craft and sensory detail</li><li>Authority: Earned through specificity and accurate technical detail. Adjectives allowed when they carry design meaning and are backed by detail (see §2.7).</li><li>Atmosphere: Created by precise nouns and active verbs</li><li>Sentence length: Short to medium. One idea per sentence, but use transition words to connect related sentences. Vary sentence openings. Active voice.</li><li>Filler words: Remove: &quot;truly,&quot; &quot;really,&quot; &quot;simply,&quot; &quot;of course,&quot; &quot;unique&quot;</li><li>Fragments: Never -- complete sentences only throughout body copy</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Avoid / Compliance</div>
+      <p class="context-note">Claims, terms, and wording to avoid.</p>
+      <ul><li>Avoid: Use instead</li><li>Luxury: Show quality through craft narrative and specific detail</li><li>Sophisticated: Describe the design, process, or result specifically</li><li>Charming: Describe what makes the tile appealing with a specific detail</li><li>Defects: Chips, pits, and crazing (zellige only)</li><li>Unique look (without context): Name the specific variation: color, sheen, thickness</li><li>Slightly different: Describe the actual range: color, shape, thickness</li><li>Shower surround: Shower walls and floors / shower wall</li><li>Trim pieces: Mitered edges / Schluter strips</li><li>Grout spacing: Grout joints</li><li>Works as: Name the specific application</li><li>Truly / really / simply / of course: Remove entirely</li><li>Printed: Remove entirely</li><li>Module: Set</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Terminology</div>
+      <p class="context-note">Client-specific naming and required language.</p>
+      <ul><li>Term: How and why to use it</li><li>Inherent / innate variation: Frame variation as a defining characteristic of the material. Never frame as inconsistency or a quality issue.</li><li>Dynamic glazes: Use specifically for zellige -- the way color and sheen shift with light. Do not borrow for other materials.</li><li>Chips, pits, and crazing: Always list as a trio for zellige surface characteristics. These are features, not defects. Do not apply to Cotto (unglazed -- no crazing).</li><li>Perfectly imperfect: Core narrative -- use in context, not as standalone claim</li><li>Each (not &quot;every&quot;): Use &quot;each&quot; when referring to individual tiles. More considered and specific.</li><li>Our [Product] / Zia&#x27;s [Product]: Always anchor the product name. &quot;Our Casablanca&quot; or &quot;Zia&#x27;s Casablanca&quot; -- never the color name alone as a sentence subject.</li><li>Mitered edges: Correct edge finishing term. Use alongside Schluter strips. Never &quot;trim pieces.&quot;</li><li>Schluter strips: Specific, installation-literate term for metal edge profiles.</li><li>Shower tile / shower wall: Correct installation terminology. Never &quot;shower surround.&quot;</li></ul>
+    </article>
+    </section>
+        <section class="panel">
+          <h2>Offerings, Services, Goods</h2>
+          <p class="muted">Writer-facing catalog from the client style system, approved source files, and usable product/service pages. Raw crawl evidence is separated below.</p>
+          <div class="offerings">
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Zellige</h3>
+      <p>Morocco -- 800+ years; Surface texture, sheen, chips/pits/crazing as characteristics. 200+ tiles, mesh-backed mosaics. Not suitable for freeze/thaw outdoors.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/zia-tile/raw/knowledge/service-taxonomy.md · Sections: 4.1 Freeze/Thaw -- material-specific rules, 4.11 Variation Language by Material, 11. Product Collections</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Cement tile</h3>
+      <p>Vietnam -- 19th-c European; Mineral pigments, cement, hydraulic press, never fired. Matte. 68 colors. Suitable for exterior in non-freeze/thaw only.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/zia-tile/raw/knowledge/service-taxonomy.md · Sections: 4.1 Freeze/Thaw -- material-specific rules, 11. Product Collections, Collections</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Cotto</h3>
+      <p>San Miguel de Allende, MX; Unglazed, earthy, high-fired. Six colorways. Suitable for any climate including freeze/thaw. Not for pools/spas.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/zia-tile/raw/knowledge/service-taxonomy.md · Sections: 4.11 Variation Language by Material, 11. Product Collections, Collections</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Cotto Allende</h3>
+      <p>San Miguel de Allende, MX; Same clay as Cotto, hand-glazed. Eighteen colorways. Suitable for pools/spas. Not suitable for outdoor freeze/thaw.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/zia-tile/raw/knowledge/service-taxonomy.md · Sections: 4.1 Freeze/Thaw -- material-specific rules, 11. Product Collections, Collections</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Marble</h3>
+      <p>Italy + Spain; Carrara, Nero Marquina, Grigio Carnico, Rosso Alicante, Giallo Reale, Verdi Alpi. Honed or polished. Can be used outdoors in appropriate climates.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/zia-tile/raw/knowledge/service-taxonomy.md · Sections: 4.1 Freeze/Thaw -- material-specific rules, 11. Product Collections, Collections</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Cantera Stone</h3>
+      <p>Mexico; Volcanic stone, 7 earthy colorways. Visible aggregate + mineral inclusions. Indoor + outdoor.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/zia-tile/raw/knowledge/service-taxonomy.md · Sections: 11. Product Collections, Collections</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Ceramics</h3>
+      <p>Central Japan (Nagoya); Molded + glazed, high-temp. &quot;Field Trip: Japan&quot; sub-line is extruded + die-cut. Matte / satin / glossy.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/zia-tile/raw/knowledge/service-taxonomy.md · Sections: 11. Product Collections, Collections</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Custom / Special Orders</h3>
+      <p>Cement 10-12 wks, Cotto 11-15 wks, Zellige 13-17 wks. Cannot be cancelled once placed.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/zia-tile/raw/knowledge/service-taxonomy.md · Sections: 11.1 Services, Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Glass Mosaics</h3>
+      <p>Northern Spain; 98% recycled glass, renewable energy production. Hand-placed on 12x12 grids. 7 patterns.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/zia-tile/raw/knowledge/service-taxonomy.md · Sections: 11. Product Collections, Collections</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Limestone</h3>
+      <p>Fez, Morocco + Bordeaux, France; Quarried solid blocks. Honed or bush-hammered. Natural patina over time.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/zia-tile/raw/knowledge/service-taxonomy.md · Sections: 11. Product Collections, Collections</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Roman Mosaics</h3>
+      <p>Italian stone heritage; Same premium stone as Solid Marble; intricate ancient-Rome-inspired mosaic patterns.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/zia-tile/raw/knowledge/service-taxonomy.md · Sections: 11. Product Collections, Collections</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Sample Ordering</h3>
+      <p>$3 per sample; first 5 free for trade. Up to 10 per client (max 4 per unique tile). Ships within 2 business days from LA. FedEx or UPS ground.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/zia-tile/raw/knowledge/service-taxonomy.md · Sections: 11.1 Services, Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Terra Forms</h3>
+      <p>Specialty; Sculptural / dimensional tile. Texture + relief beyond flat-tile installations.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/zia-tile/raw/knowledge/service-taxonomy.md · Sections: 11. Product Collections, Collections</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Terrazzo</h3>
+      <p>Venetian-inspired tile made with steel molds, crushed marble or stone, hydraulic press, grinding, and polishing.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/zia-tile/raw/knowledge/service-taxonomy.md · Sections: 11. Product Collections, Collections</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Trade Program</h3>
+      <p>Program for designers, architects, contractors, and installers with trade pricing, rep support, samples, previews, tracking, and order help.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/zia-tile/raw/knowledge/service-taxonomy.md · Sections: 11.1 Services, Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Warehouse Pickup</h3>
+      <p>Free for full orders, LA warehouse. Appointment required. Team contacts customer when ready.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/zia-tile/raw/knowledge/service-taxonomy.md · Sections: 11.1 Services, Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Worldwide Shipping</h3>
+      <p>LTL curbside pallet shipping, with custom quotes for Alaska, Hawaii, Canada, and international orders.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/zia-tile/raw/knowledge/service-taxonomy.md · Sections: 11.1 Services, Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Field Trip Japan</h3>
+      <p>Extruded and die-cut Japanese ceramic sub-line.</p>
+      <div class="evidence">Sources: clients/zia-tile/raw/knowledge/service-taxonomy.md · Sections: Collections</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Unglazed Natural Zellige</h3>
+      <p>Unglazed Moroccan zellige colorway for earthy, matte installations.</p>
+      <div class="evidence">Sources: clients/zia-tile/raw/knowledge/service-taxonomy.md · Sections: Collections</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Unglazed Cotto</h3>
+      <p>Suitable for exterior use in any climate, including freeze/thaw regions. This is a selling point.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md · Sections: 4.1 Freeze/Thaw -- material-specific rules</div>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Website Intelligence</h2>
+          <div class="split">
+            <div>
+              <h3>Website URLs</h3><ul><li><a href="https://www.ziatile.com/">https://www.ziatile.com/</a></li></ul>
+              <h3>Sitemaps</h3><ul><li><a href="https://ziatile.com/sitemap.xml">https://ziatile.com/sitemap.xml</a></li><li><a href="https://ziatile.com/sitemap_agentic_discovery.xml">https://ziatile.com/sitemap_agentic_discovery.xml</a></li><li><a href="https://ziatile.com/sitemap_products_1.xml">https://ziatile.com/sitemap_products_1.xml</a></li><li><a href="https://ziatile.com/sitemap_pages_1.xml">https://ziatile.com/sitemap_pages_1.xml</a></li></ul>
+            </div>
+            <div>
+              <h3>Semantic / Topical Terms</h3><div class="topic-chips"><span>Zellige</span><span>Cement Tile</span><span>Cotto Allende</span><span>Marble</span><span>Cantera Stone</span><span>Ceramics</span><span>Custom / Special Orders</span><span>Glass Mosaics</span><span>Limestone</span><span>Roman Mosaics</span><span>Sample Ordering</span><span>Terra Forms</span><span>Terrazzo</span><span>Trade Program</span><span>Warehouse Pickup</span><span>Worldwide Shipping</span><span>Field Trip Japan</span><span>Unglazed Natural Zellige</span><span>Unglazed Cotto</span><span>Inherent / Innate Variation</span><span>Dynamic Glazes</span><span>Chips, Pits, And Crazing</span><span>Perfectly Imperfect</span><span>Each (Not &quot;Every&quot;)</span><span>Our [Product] / Zia&#x27;s [Product]</span><span>Mitered Edges</span><span>Schluter Strips</span><span>Shower Tile / Shower Wall</span></div>
+              <h3>Blockers</h3><p class="muted">None</p>
+            </div>
+          </div>
+          <h3>Product / Service URLs</h3><ul><li><a href="https://ziatile.com/products/pomelo-terracotta-cement-tile">https://ziatile.com/products/pomelo-terracotta-cement-tile</a></li><li><a href="https://ziatile.com/products/white-cement-tile-cement-tile">https://ziatile.com/products/white-cement-tile-cement-tile</a></li><li><a href="https://ziatile.com/products/terra-cotta-cement-tile">https://ziatile.com/products/terra-cotta-cement-tile</a></li><li><a href="https://ziatile.com/products/slate-cement-tile">https://ziatile.com/products/slate-cement-tile</a></li><li><a href="https://ziatile.com/products/saguaro-cement-tile">https://ziatile.com/products/saguaro-cement-tile</a></li><li><a href="https://ziatile.com/products/olivine">https://ziatile.com/products/olivine</a></li><li><a href="https://ziatile.com/products/ocean-cement-tile">https://ziatile.com/products/ocean-cement-tile</a></li><li><a href="https://ziatile.com/products/midnight-cement-tile">https://ziatile.com/products/midnight-cement-tile</a></li><li><a href="https://ziatile.com/products/ginger-cement-tile">https://ziatile.com/products/ginger-cement-tile</a></li><li><a href="https://ziatile.com/products/everglade-cement-tile">https://ziatile.com/products/everglade-cement-tile</a></li><li><a href="https://ziatile.com/products/coral-red-cement-tile">https://ziatile.com/products/coral-red-cement-tile</a></li><li><a href="https://ziatile.com/products/clay-cement-tile">https://ziatile.com/products/clay-cement-tile</a></li><li><a href="https://ziatile.com/products/cadmium-cement-tile">https://ziatile.com/products/cadmium-cement-tile</a></li><li><a href="https://ziatile.com/products/black-cement-tile">https://ziatile.com/products/black-cement-tile</a></li><li><a href="https://ziatile.com/products/atomic-red-cement-tile">https://ziatile.com/products/atomic-red-cement-tile</a></li><li><a href="https://ziatile.com/products/taupe-cement-tile">https://ziatile.com/products/taupe-cement-tile</a></li><li><a href="https://ziatile.com/products/salvia-cement-tile">https://ziatile.com/products/salvia-cement-tile</a></li><li><a href="https://ziatile.com/products/emerald-cement-tile">https://ziatile.com/products/emerald-cement-tile</a></li><li><a href="https://ziatile.com/products/zinc-zellige-tile">https://ziatile.com/products/zinc-zellige-tile</a></li><li><a href="https://ziatile.com/products/tulum-zellige-tile">https://ziatile.com/products/tulum-zellige-tile</a></li><li><a href="https://ziatile.com/products/unglazed-natural-zellige-tile">https://ziatile.com/products/unglazed-natural-zellige-tile</a></li><li><a href="https://ziatile.com/products/tidepool-zellige-tile">https://ziatile.com/products/tidepool-zellige-tile</a></li><li><a href="https://ziatile.com/products/terra-rosa-zellige-tile">https://ziatile.com/products/terra-rosa-zellige-tile</a></li><li><a href="https://ziatile.com/products/slate-grey-zellige-tile">https://ziatile.com/products/slate-grey-zellige-tile</a></li><li><a href="https://ziatile.com/products/sky-light-zellige-tile">https://ziatile.com/products/sky-light-zellige-tile</a></li><li><a href="https://ziatile.com/products/rouge-zellige-tile">https://ziatile.com/products/rouge-zellige-tile</a></li><li><a href="https://ziatile.com/products/pietro-pink-zellige-tile">https://ziatile.com/products/pietro-pink-zellige-tile</a></li><li><a href="https://ziatile.com/products/racing-green-zellige-tile">https://ziatile.com/products/racing-green-zellige-tile</a></li><li><a href="https://ziatile.com/products/purple-iris-zellige-tile">https://ziatile.com/products/purple-iris-zellige-tile</a></li><li><a href="https://ziatile.com/products/pure-white-zellige-tile">https://ziatile.com/products/pure-white-zellige-tile</a></li><li><a href="https://ziatile.com/products/prairie-green-zellige-tile">https://ziatile.com/products/prairie-green-zellige-tile</a></li><li><a href="https://ziatile.com/products/plum-zellige-tile">https://ziatile.com/products/plum-zellige-tile</a></li><li><a href="https://ziatile.com/products/moroccan-blue-zellige-tile">https://ziatile.com/products/moroccan-blue-zellige-tile</a></li><li><a href="https://ziatile.com/products/superior-blue-zellige-tile">https://ziatile.com/products/superior-blue-zellige-tile</a></li><li><a href="https://ziatile.com/products/night-blue-zellige-tile">https://ziatile.com/products/night-blue-zellige-tile</a></li><li><a href="https://ziatile.com/products/maya-blue-zellige-tile">https://ziatile.com/products/maya-blue-zellige-tile</a></li><li><a href="https://ziatile.com/products/jade-zellige-tile">https://ziatile.com/products/jade-zellige-tile</a></li><li><a href="https://ziatile.com/products/graphite-grey-zellige-tile">https://ziatile.com/products/graphite-grey-zellige-tile</a></li><li><a href="https://ziatile.com/products/glazed-earth-zellige-tile">https://ziatile.com/products/glazed-earth-zellige-tile</a></li><li><a href="https://ziatile.com/products/glacier-blue-zellige-tile">https://ziatile.com/products/glacier-blue-zellige-tile</a></li><li><a href="https://ziatile.com/products/desert-bloom-zellige-tile">https://ziatile.com/products/desert-bloom-zellige-tile</a></li><li><a href="https://ziatile.com/products/portuguese-blue-zellige-tile">https://ziatile.com/products/portuguese-blue-zellige-tile</a></li><li><a href="https://ziatile.com/products/cayenne-zellige-tile">https://ziatile.com/products/cayenne-zellige-tile</a></li><li><a href="https://ziatile.com/products/casablanca-white-zellige-tile">https://ziatile.com/products/casablanca-white-zellige-tile</a></li><li><a href="https://ziatile.com/products/carbon-black-zellige-tile">https://ziatile.com/products/carbon-black-zellige-tile</a></li><li><a href="https://ziatile.com/products/cadmium-zellige-tile">https://ziatile.com/products/cadmium-zellige-tile</a></li><li><a href="https://ziatile.com/products/burnt-sugar-zellige-tile">https://ziatile.com/products/burnt-sugar-zellige-tile</a></li><li><a href="https://ziatile.com/products/brownstone-zellige-tile">https://ziatile.com/products/brownstone-zellige-tile</a></li><li><a href="https://ziatile.com/products/avocado-zellige-tile">https://ziatile.com/products/avocado-zellige-tile</a></li><li><a href="https://ziatile.com/products/amber-zellige-tile">https://ziatile.com/products/amber-zellige-tile</a></li><li><a href="https://ziatile.com/products/aegean-zellige-tile">https://ziatile.com/products/aegean-zellige-tile</a></li><li><a href="https://ziatile.com/products/zinc-hex-zellige-tile">https://ziatile.com/products/zinc-hex-zellige-tile</a></li><li><a href="https://ziatile.com/products/unglazed-natural-trapezoid-zellige-tile">https://ziatile.com/products/unglazed-natural-trapezoid-zellige-tile</a></li><li><a href="https://ziatile.com/products/tulum-hex-zellige-tile">https://ziatile.com/products/tulum-hex-zellige-tile</a></li><li><a href="https://ziatile.com/products/tidepool-hex-zellige-tile">https://ziatile.com/products/tidepool-hex-zellige-tile</a></li><li><a href="https://ziatile.com/products/terra-rosa-hex-zellige">https://ziatile.com/products/terra-rosa-hex-zellige</a></li><li><a href="https://ziatile.com/products/slate-grey-hex-zellige-tile">https://ziatile.com/products/slate-grey-hex-zellige-tile</a></li><li><a href="https://ziatile.com/products/skylight-hex-zellige-tile">https://ziatile.com/products/skylight-hex-zellige-tile</a></li><li><a href="https://ziatile.com/products/rouge-hex-zellige-tile">https://ziatile.com/products/rouge-hex-zellige-tile</a></li><li><a href="https://ziatile.com/products/pietro-pink-hex-zellige-tile">https://ziatile.com/products/pietro-pink-hex-zellige-tile</a></li><li><a href="https://ziatile.com/products/racing-green-hex-zellige-tile">https://ziatile.com/products/racing-green-hex-zellige-tile</a></li><li><a href="https://ziatile.com/products/purple-iris-hex-zellige">https://ziatile.com/products/purple-iris-hex-zellige</a></li><li><a href="https://ziatile.com/products/pure-white-hex-zellige-tile">https://ziatile.com/products/pure-white-hex-zellige-tile</a></li><li><a href="https://ziatile.com/products/prairie-green-hex-zellige-tile">https://ziatile.com/products/prairie-green-hex-zellige-tile</a></li><li><a href="https://ziatile.com/products/portuguese-blue-hex-zellige-tile">https://ziatile.com/products/portuguese-blue-hex-zellige-tile</a></li><li><a href="https://ziatile.com/products/plum-hex-zellige-tile">https://ziatile.com/products/plum-hex-zellige-tile</a></li><li><a href="https://ziatile.com/products/nanas-lipstick-hex-zellige-tile">https://ziatile.com/products/nanas-lipstick-hex-zellige-tile</a></li><li><a href="https://ziatile.com/products/moroccan-blue-hex-zellige-tile">https://ziatile.com/products/moroccan-blue-hex-zellige-tile</a></li><li><a href="https://ziatile.com/products/superior-blue-hex-zellige-tile">https://ziatile.com/products/superior-blue-hex-zellige-tile</a></li><li><a href="https://ziatile.com/products/night-blue-hex-zellige-tile">https://ziatile.com/products/night-blue-hex-zellige-tile</a></li><li><a href="https://ziatile.com/products/maya-blue-hex-zellige">https://ziatile.com/products/maya-blue-hex-zellige</a></li><li><a href="https://ziatile.com/products/jade-hex-zellige">https://ziatile.com/products/jade-hex-zellige</a></li><li><a href="https://ziatile.com/products/graphite-grey-hex-zellige-tile">https://ziatile.com/products/graphite-grey-hex-zellige-tile</a></li><li><a href="https://ziatile.com/products/glazed-earth-hex-zellige-tile">https://ziatile.com/products/glazed-earth-hex-zellige-tile</a></li><li><a href="https://ziatile.com/products/glacier-blue-hex-zellige-tile">https://ziatile.com/products/glacier-blue-hex-zellige-tile</a></li><li><a href="https://ziatile.com/products/desert-bloom-hex-zellige-tile">https://ziatile.com/products/desert-bloom-hex-zellige-tile</a></li><li><a href="https://ziatile.com/products/cayenne-hex-zellige">https://ziatile.com/products/cayenne-hex-zellige</a></li><li><a href="https://ziatile.com/products/unglazed-natural-2x6-zellige-tile">https://ziatile.com/products/unglazed-natural-2x6-zellige-tile</a></li><li><a href="https://ziatile.com/products/racing-green-2x6-zellige-tile">https://ziatile.com/products/racing-green-2x6-zellige-tile</a></li><li><a href="https://ziatile.com/products/moroccan-blue-2x6-zellige-tile">https://ziatile.com/products/moroccan-blue-2x6-zellige-tile</a></li></ul>
+          <h3>Sampled Pages</h3><div class="sample-pages">
+    <article class="sample">
+      <h4>Zia Tile | Handmade Artisanal Tile and Stone from Around the World</h4>
+      <a href="https://ziatile.com/">https://ziatile.com/</a>
+      <p>The world’s finest handmade cement tiles and Moroccan zellige, plus Cotto, Ceramics, and Limestone. We ship worldwide from Los Angeles.</p>
+      <ul><li>All Tiles</li><li>All Tiles</li><li>Installation Guides</li><li>Installation Guides</li><li>Cart</li><li>Log in</li><li>Add to Project</li><li>Delete product</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Olivine 8x8 Square Cement Tile – Zia Tile</h4>
+      <a href="https://ziatile.com/products/olivine">https://ziatile.com/products/olivine</a>
+      <p>Handmade Olympic blue 8x8 square cement tile captures the coolness of a pool, with a matte finish. Look for subtle variation in each order. All tile ships worldwide.</p>
+      <ul><li>All Tiles</li><li>All Tiles</li><li>Installation Guides</li><li>Installation Guides</li><li>Cart</li><li>Log in</li><li>Add to Project</li><li>Delete product</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Leaf 8x8, Sample – Zia Tile</h4>
+      <a href="https://ziatile.com/products/leaf-sample">https://ziatile.com/products/leaf-sample</a>
+      <p>Zia Tile</p>
+      <ul><li>All Tiles</li><li>All Tiles</li><li>Installation Guides</li><li>Installation Guides</li><li>Cart</li><li>Log in</li><li>Add to Project</li><li>Delete product</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Nile 8x8, Sample – Zia Tile</h4>
+      <a href="https://ziatile.com/products/nile-sample">https://ziatile.com/products/nile-sample</a>
+      <p>Zia Tile</p>
+      <ul><li>All Tiles</li><li>All Tiles</li><li>Installation Guides</li><li>Installation Guides</li><li>Cart</li><li>Log in</li><li>Add to Project</li><li>Delete product</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Blonde 2x8, Sample – Zia Tile</h4>
+      <a href="https://ziatile.com/products/blonde-sample">https://ziatile.com/products/blonde-sample</a>
+      <p>Zia Tile</p>
+      <ul><li>All Tiles</li><li>All Tiles</li><li>Installation Guides</li><li>Installation Guides</li><li>Cart</li><li>Log in</li><li>Add to Project</li><li>Delete product</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Canyon 8x8, Sample – Zia Tile</h4>
+      <a href="https://ziatile.com/products/canyon-sample">https://ziatile.com/products/canyon-sample</a>
+      <p>Zia Tile</p>
+      <ul><li>All Tiles</li><li>All Tiles</li><li>Installation Guides</li><li>Installation Guides</li><li>Cart</li><li>Log in</li><li>Add to Project</li><li>Delete product</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Mojave 8x8, Sample – Zia Tile</h4>
+      <a href="https://ziatile.com/products/mojave-sample">https://ziatile.com/products/mojave-sample</a>
+      <p>Zia Tile</p>
+      <ul><li>All Tiles</li><li>All Tiles</li><li>Installation Guides</li><li>Installation Guides</li><li>Cart</li><li>Log in</li><li>Add to Project</li><li>Delete product</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Amber 2x6 Bejmat Zellige – Zia Tile</h4>
+      <a href="https://ziatile.com/products/amber-2x6-tile">https://ziatile.com/products/amber-2x6-tile</a>
+      <p>As sweet as honey and chic as anything, our Amber 2x6 rectangle zellige is a neutral turned up a notch. Samples available; we ship globally.</p>
+      <ul><li>All Tiles</li><li>All Tiles</li><li>Installation Guides</li><li>Installation Guides</li><li>Cart</li><li>Log in</li><li>Add to Project</li><li>Delete product</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Brixton 8x8, Sample – Zia Tile</h4>
+      <a href="https://ziatile.com/products/brixton-sample">https://ziatile.com/products/brixton-sample</a>
+      <p>Zia Tile</p>
+      <ul><li>All Tiles</li><li>All Tiles</li><li>Installation Guides</li><li>Installation Guides</li><li>Cart</li><li>Log in</li><li>Add to Project</li><li>Delete product</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Cadmium 8x8, Sample – Zia Tile</h4>
+      <a href="https://ziatile.com/products/cadmium-sample">https://ziatile.com/products/cadmium-sample</a>
+      <p>Zia Tile</p>
+      <ul><li>All Tiles</li><li>All Tiles</li><li>Installation Guides</li><li>Installation Guides</li><li>Cart</li><li>Log in</li><li>Add to Project</li><li>Delete product</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Emerald 8x8, Sample – Zia Tile</h4>
+      <a href="https://ziatile.com/products/emerald-sample">https://ziatile.com/products/emerald-sample</a>
+      <p>Zia Tile</p>
+      <ul><li>All Tiles</li><li>All Tiles</li><li>Installation Guides</li><li>Installation Guides</li><li>Cart</li><li>Log in</li><li>Add to Project</li><li>Delete product</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Go West! 8x8, Sample – Zia Tile</h4>
+      <a href="https://ziatile.com/products/go-west-sample">https://ziatile.com/products/go-west-sample</a>
+      <p>Zia Tile</p>
+      <ul><li>All Tiles</li><li>All Tiles</li><li>Installation Guides</li><li>Installation Guides</li><li>Cart</li><li>Log in</li><li>Add to Project</li><li>Delete product</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Olivine 8x8, Sample – Zia Tile</h4>
+      <a href="https://ziatile.com/products/olivine-sample">https://ziatile.com/products/olivine-sample</a>
+      <p>Zia Tile</p>
+      <ul><li>All Tiles</li><li>All Tiles</li><li>Installation Guides</li><li>Installation Guides</li><li>Cart</li><li>Log in</li><li>Add to Project</li><li>Delete product</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Bone 2x8, Sample – Zia Tile</h4>
+      <a href="https://ziatile.com/products/bone-2x8-sample">https://ziatile.com/products/bone-2x8-sample</a>
+      <p>Zia Tile</p>
+      <ul><li>All Tiles</li><li>All Tiles</li><li>Installation Guides</li><li>Installation Guides</li><li>Cart</li><li>Log in</li><li>Add to Project</li><li>Delete product</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Bone 4x4, Sample – Zia Tile</h4>
+      <a href="https://ziatile.com/products/bone-4x4-sample">https://ziatile.com/products/bone-4x4-sample</a>
+      <p>Zia Tile</p>
+      <ul><li>All Tiles</li><li>All Tiles</li><li>Installation Guides</li><li>Installation Guides</li><li>Cart</li><li>Log in</li><li>Add to Project</li><li>Delete product</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Clay 2x8, Sample – Zia Tile</h4>
+      <a href="https://ziatile.com/products/clay-2x8-sample">https://ziatile.com/products/clay-2x8-sample</a>
+      <p>Zia Tile</p>
+      <ul><li>All Tiles</li><li>All Tiles</li><li>Installation Guides</li><li>Installation Guides</li><li>Cart</li><li>Log in</li><li>Add to Project</li><li>Delete product</li></ul>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Full Style System</h2>
+          <details open><summary>Show style-system sections</summary>
+    <details class="style-section">
+      <summary>Zia Tile — Style System</summary>
+      <div class="markdown"><p>Generated: 2026-05-12<br>Base rules: universal-rules/UNIVERSAL-RULES.md<br>Sources: raw/research/style-guide-v2.md, raw/research/editorial-voice-research-2026-05-04.md, raw/research/website-research-2026-05-04.md, raw/research/website-research.md, raw/research/installation-guides-research.md, raw/research/clickup-channel-recap.md, reference-site/style-guide-v3.html, reference-site/jamie-feedback.html, reference-site/editorial-voice.html</p><p>Canonical source of truth for all Zia Tile content. Where prior sources conflict, **Jamie Greenspan&#x27;s tracked edits and direct comments take precedence**. This document supersedes all earlier style guides and the reference-site HTML files; raw materials live in `raw/`.</p><p>**Updated 2026-06-18:** Brittany Bronson&#x27;s editorial review of the style guide applied — tiered adjective policy (§2.7), warm/aspirational tone allowed (§2.1, §2.5), sentence-structure and transition rules, blog-opening search-intent exception (§6.1), and H3 minimum length (§6.3). Two items left open pending Jamie&#x27;s confirmation, marked **[Open — confirm with Jamie]** below.</p><p>**Updated 2026-06-24:** Voice warmed further to fix over-corrected, cold spec copy — §1 and §2 opening name warmth as a brand quality, §2.1/§2.5 rows make warmth the target (with both spec-sheet flatness and hollow puffery as failure modes), and new §2.8 (&quot;Warmth without fluff&quot;) gives the source-of-warmth guidance that complements §2.7&#x27;s adjective policy. §12 gains positive warmth checks. Merged with Brittany&#x27;s review — the two passes reinforce each other.</p><p>**Updated 2026-06-24 (SEO structure):** Restores the SEO-structural floor that the editorial passes left unstated, after Brittany flagged long, uniform paragraphs and missing first-paragraph keywords in the new drafts. The voice work stays; these rules sit beside it as co-requirements, not a trade-off. New keyword-placement rule in §6.1, paragraph-rhythm rule in §6.3, new §10.4 (&quot;Body structure and keyword placement&quot;), and two §12 SEO checks. Editorial voice and SEO structure are both required — neither overrides the other.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>1. Brand &amp; Audience</summary>
+      <div class="markdown"><p><li>**Company:** LA-based retailer of handmade artisanal tile and stone. Ships worldwide. Collections span Morocco, Vietnam, Japan, Mexico, Italy, Spain, and France.</li><br><li>**Tagline:** &quot;A Modern Home for an Ancient Art&quot;</li><br><li>**Trade audience (55-60% revenue):** Architects, designers, contractors, installers managing $20k-$80k+ projects. Need technical precision and no hand-holding.</li><br><li>**Consumer audience (40-45%):** Affluent first-time buyers, ages 30-60. Need clear guidance and confidence-building detail.</li><br><li>**Brand pillars:** Authoritative, Artisanal, Approachable, Inspirational. Authority through specificity, never through adjectives. Show quality; never claim it.</li><br><li>**Warmth is a brand quality, not a banned one.** Zia is warm, artisanal, and aspirational. The voice should feel that way. Warmth is earned through sensory specificity, craft, place, and the feeling a material creates — never through vague lifestyle phrases or empty adjectives. See §2.8.</li><br><li>**Two-audience test:** All copy must respect the expertise of a senior design professional while remaining clear and useful to a first-time buyer.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>1.1 The editorial benchmark</summary>
+      <div class="markdown"><p>&gt; Jamie&#x27;s benchmark: copy should read closer to Architectural Digest than an AI content dump. A useful test: paste a paragraph into ChatGPT, prompt it to rewrite as Architectural Digest editorial. That should be closer than what was submitted. That is the floor, not the ceiling.</p><p>Architectural Digest is **one directional reference**, not a strict template to copy. Jamie described Zia&#x27;s tone as **warm and aspirational** — the rules should prompt that warmth, not flatten it into clinical spec copy. Use AD/Wallpaper* for register and specificity; keep the warmth and aspiration that are part of Zia&#x27;s own voice.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2. Voice &amp; Tone</summary>
+      <div class="markdown"><p>Voice: trusted senior design editor -- authoritative, warm, precise. The bar is Architectural Digest and Wallpaper*, not generic SaaS SEO. Warm does not mean soft or sentimental, and precise does not mean cold. The register should feel like an expert who genuinely loves the material, not a spec sheet and not a brochure.</p><p>**Litmus test:** Does this read like an expert talking, or a marketer selling? **Second litmus:** Does it feel like anyone cares about this tile, or has the warmth been edited out until only neutral facts remain? Both failures are equally bad.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.1 Core voice rules</summary>
+      <div class="markdown"><p>| Rule | Do this | Not this |<br>|---|---|---|<br>| Register | Warm, aspirational, and confident — polished without being stiff or corporate; aspiration grounded in specific craft and sensory detail | Cool, neutral, or spec-sheet flat on one side; hollow lifestyle/luxury-brand puffery with no specific detail on the other |<br>| Authority | Earned through specificity and accurate technical detail. Adjectives allowed when they carry design meaning and are backed by detail (see §2.7). | Claimed through cliché adjectives: &quot;stunning,&quot; &quot;beautiful,&quot; &quot;exquisite&quot; |<br>| Atmosphere | Created by precise nouns and active verbs | Created by stacking descriptors before a noun |<br>| Sentence length | Short to medium. One idea per sentence, but use transition words to connect related sentences. Vary sentence openings. Active voice. | Long, clause-heavy constructions that bury the point |<br>| Filler words | Remove: &quot;truly,&quot; &quot;really,&quot; &quot;simply,&quot; &quot;of course,&quot; &quot;unique&quot; | Allow filler to soften or pad sentences |<br>| Fragments | Never -- complete sentences only throughout body copy | Standalone fragments for rhythm or stylistic effect |<br>| Emotional register | Warm, aspirational appreciation of craft; let the specific detail carry the feeling | Cold neutrality that strips all feeling on one side; sentimental or romantic overlay on top of practical information (with no specific detail) on the other |<br>| Prepositions | Restructure sentences to avoid ending on a preposition | &quot;the place it came from&quot; -- rewrite as &quot;from which it came&quot; |<br>| Person | No second person (you/your) anywhere in the piece | Addressing the reader directly |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.2 The core tension -- shown in practice</summary>
+      <div class="markdown"><p>Jamie&#x27;s most consistent correction was removing aspirational or vague language and replacing it with plain, declarative statements grounded in specific facts.</p><p>| Category | Avoid | Use |<br>|---|---|---|<br>| Generic opener | &quot;where families have been pressing clay into molds and firing it the same way for generations&quot; | &quot;which is hand-pressed into molds, sun-dried, and high-fired using traditional techniques&quot; |<br>| Vague closer | &quot;is one of those materials that looks better the longer it is in place&quot; | &quot;ages beautifully&quot; |<br>| Filler atmospheric | &quot;add to the room rather than date it&quot; | &quot;enhances the room&quot; |<br>| Visible aging | &quot;benefit from the visible aging of clay surfaces&quot; | &quot;benefit from the lived-in character of aging clay surfaces&quot; |<br>| Authenticity | &quot;build atmosphere and authenticity over time&quot; | &quot;build atmosphere and character&quot; |<br>| Vague framing | &quot;reads as handmade rather than printed&quot; | &quot;reads as handmade&quot; (remove &quot;rather than printed&quot; -- Jamie flagged &quot;printed&quot; as meaningless) |<br>| Sub-line framing | &quot;glazed sub-line&quot; | &quot;glazed terra cotta tile&quot; |<br>| Runs to | &quot;The collection runs to 18 colorways&quot; | &quot;The collection features eighteen colorways&quot; |<br>| Format framing | &quot;Cotto&#x27;s format range&quot; | &quot;The range of Cotto shapes and sizes&quot; |<br>| Colonial | &quot;colonial courtyard&quot; | &quot;Spanish courtyard&quot; |<br>| Module | &quot;four-tile module&quot; | &quot;four-tile set&quot; |<br>| Adjective order | &quot;a deep, traditional warm red&quot; | &quot;traditional, deep warm red&quot; |<br>| Patina framing | &quot;which is part of how the material ages&quot; | &quot;bringing beauty to the material&#x27;s aging process&quot; |<br>| Aging closer | &quot;Expect tonal deepening over time. This is the material doing what it is supposed to do.&quot; | &quot;Expect the tone to deepen over time -- that patina is the point.&quot; |<br>| Light exposure patina | &quot;Foot traffic and light exposure deepen the tone rather than diminish it&quot; | &quot;Use and time deepen the tone -- the installation is a starting point, not a forever state&quot; (no light-exposure claim) |<br>| Colorway description | &quot;Adobe: soft tan, warm, and light.&quot; | &quot;Adobe sits in the muted middle and pairs with plaster and wood without competing.&quot; |</p><p>Physical properties (soft, warm, light) are not color descriptions — they are specs. A color description says how the tone reads in a room and against other materials. Jamie: &quot;hate the word choice — think design, please.&quot;</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.3 The purposeful test</summary>
+      <div class="markdown"><p>Every sentence must deliver information or atmosphere -- not both at once, and never neither. Before submitting, apply this test to each sentence: if you removed it, would the reader miss anything? If no, cut it.</p><p>Cut:<br><li>Clauses that restate what was just said in different words</li><br><li>Phrases that describe what the customer already knows</li><br><li>Adjectives that could apply to any product in the category</li><br><li>Qualifications that add no useful information</li></ul><p>This applies at the article level. Meta-sentences that announce what the piece will do (&quot;Understanding the differences between zellige, cement, and ceramic options makes for a well-informed choice&quot;) deliver nothing — Jamie: &quot;no.&quot; Open on the first piece of useful information, not a sentence about why the article exists.</p><p>The same failure appears inside sections as report-style labels: &quot;The practical summary: Cotto is the unglazed core line…&quot; — Jamie: &quot;strange word choice.&quot; Transition through content, not through labeling it.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.4 Sentence formula (design-forward signature)</summary>
+      <div class="markdown"><p>**[Specific actor] + [verb of making/placement] + [named material with origin] + [physical/spatial detail].**</p><p>&gt; &quot;Hand-chiseled in Fez, each zellige tile carries a chamfered edge that catches light unevenly across a wall.&quot;</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.5 Editorial voice benchmarks</summary>
+      <div class="markdown"><p>These patterns, drawn from Architectural Digest, Wallpaper*, Remodelista, and Domino, define the register Zia content should occupy. Treat these as reference models for register and specificity, not strict templates — Zia&#x27;s own voice is warmer and more aspirational than a literal AD rewrite.</p><p>**Leads:** Anchor on person + place, or a single specific material detail. Never open with a generic category claim.</p><p>**Sentence rhythm:** Medium-length, one to two clauses. Long enough to carry a specific detail, short enough to scan. Subordinate clauses only when they earn their weight with a second specific. **Vary sentence openings** — do not start consecutive sentences with the same subject + verb pattern, and use transition words to connect related sentences. Editorial prose varies its structure; mechanical repetition of &quot;subject + verb&quot; reads as AI-generated.</p><p>**Vocabulary palette (use naturally, never force):** clad, wrapped, stacked, fluted, sculpted, carved, layered, muted, drippy, chalky, matte, glossy, hand-molded, hand-cut, hand-glazed, irregular, undulating, cascading, monolithic.</p><p>**Specificity standard:** Name the maker, the origin city, the material by type, the dimensions. Place geographically. Date historically. Quote the designer or homeowner, not the brand.</p><p>**Closers:** End on the maker&#x27;s intent, the homeowner&#x27;s words, or a practical aside. Never a CTA or generic takeaway.</p><p>**What these publications do NOT do:**<br><li>No &quot;transform your space.&quot; Not a single instance.</li><br><li>No rule-of-three openers (&quot;Bold, beautiful, and timeless...&quot;).</li><br><li>No generic intensifiers (stunning, luxurious, powerful, robust).</li><br><li>No undefined &quot;luxury&quot; or &quot;elevate.&quot;</li><br><li>No &quot;in conclusion / to wrap up&quot; closers.</li><br><li>No category headers like &quot;Why X is great for your home.&quot;</li><br><li>No SEO-style headings (&quot;10 Reasons to Love Zellige Tile&quot;).</li><br><li>No marketing hedges (&quot;Some say...,&quot; &quot;experts agree...&quot;).</li><br><li>No em-dash rhetorical pivots (&quot;it&#x27;s not just tile -- it&#x27;s a statement&quot;).</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.6 Positive framing — lead with what the material gives</summary>
+      <div class="markdown"><p>Frame material attributes in terms of what the tile brings to the room, not what it protects against, endures, or suffers from.</p><p>| Avoid | Use |<br>|---|---|<br>| &quot;protects against moisture, heat, and cooking splatters&quot; | &quot;suited to kitchen conditions including heat and moisture&quot; |<br>| chips, pits, and crazing framed as things the tile &quot;overcomes&quot; | chips, pits, and crazing framed as intentional characteristics |</p><p>&gt; Jamie: &quot;not ideal to skew negative.&quot; (Blog #3, kitchen backsplash)</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.7 Adjective policy (tiered)</summary>
+      <div class="markdown"><p>Adjectives are not banned outright. The brand voice is warm and aspirational, and design writing sometimes needs an adjective to name a quality a noun or verb can&#x27;t carry alone. The rule is about *which* adjectives and *whether they earn their place* — not blanket avoidance.</p><p>**The test:** Does the adjective do work a precise noun or verb can&#x27;t, and is it backed by a specific detail? If yes, keep it. If it&#x27;s doing the work alone — claiming quality instead of showing it — cut it.</p><p>**Tier 1 — hard-banned (never use, no exceptions):**<br>Cliché and exaggerative adjectives that claim quality without earning it: *beautiful, stunning, gorgeous, exquisite, luxurious, sophisticated, charming.* These show up in §3.2 and `COMPLIANCE.yml` as exact-match bans.</p><p>**Tier 2 — allowed when backed by specific detail:**<br>Design-register and neutral evaluative adjectives that establish design hierarchy or describe how something reads in a room — e.g. *muted, matte, fluted, contemporary* (as a design style), *understated, considered, well-suited.* Use them to support a specific detail, not to replace one. &quot;A great choice&quot; is acceptable as a neutral evaluation; don&#x27;t stack it with more adjectives.</p><p>**Adjective order:** Follow Jamie&#x27;s convention — &quot;traditional, deep warm red,&quot; not &quot;a deep, traditional warm red.&quot;</p><p>&gt; **[Open — confirm with Jamie]** Brittany flagged that Zia&#x27;s own live content uses &quot;charm&quot;/&quot;charming&quot; frequently, and questioned whether &quot;sophisticated&quot; and &quot;charming&quot; should stay fully banned. Per Jamie&#x27;s tracked edits these remain Tier 1 banned for now. Revisit at the next Jamie review before relaxing — do not un-ban without his sign-off.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.8 Warmth without fluff — how to be aspirational</summary>
+      <div class="markdown"><p>Zia is warm and aspirational. Earlier drafts lost that warmth because the anti-fluff edits over-corrected into flat, neutral spec copy. The target is not less feeling — it is feeling that is earned rather than asserted. Jamie&#x27;s &quot;plainer than aspirational&quot; note bans vague lifestyle phrases, not warmth itself. This section is the warmth companion to the §2.7 adjective policy: §2.7 governs *which words* earn their place; this section governs *where warmth comes from*.</p><p>**Where warmth comes from (use these):**<br><li>**Sensory and material detail.** Warmth lives in how a surface reads — chalky, drippy, sun-bleached, the way a glaze catches light unevenly. Name what the eye and hand register.</li><br><li>**Place and origin.** San Miguel de Allende, the courtyards where Cotto sun-dries, Fez. A real place carries more feeling than any adjective.</li><br><li>**The feeling a material creates in a room.** Jamie&#x27;s own rule: lead with the material, the place, or the feeling. The feeling is allowed — anchor it to something specific.</li><br><li>**Quoted emotion.** Let a designer or homeowner deliver the aspirational line in their own words; the brand reports it plainly.</li><br><li>**Craft appreciation.** Write like someone who admires how the tile is made, not someone neutral to it.</li></ul><p>**What still counts as fluff (do not bring these back):**<br><li>Vague lifestyle openers (&quot;where families have pressed clay for generations&quot;).</li><br><li>Empty adjectives standing in for detail (stunning, charming, exquisite, luxurious).</li><br><li>Sentimental or romantic overlay on top of practical information.</li><br><li>Rule-of-three intensifiers and &quot;transform your space&quot; register.</li></ul><p>**The test:** A warm sentence and a fluffy sentence both feel good to read. The difference is that the warm one leaves the reader knowing something specific about the tile, and the fluffy one does not. If you removed the warmth and a real fact remains, it was earned. If nothing remains, it was fluff.</p><p>| Cold (over-corrected) | Warm and earned | Fluff (still banned) |<br>|---|---|---|<br>| &quot;Cotto is an unglazed terra cotta tile fired in San Miguel de Allende.&quot; | &quot;Fired in the open courtyards of San Miguel de Allende, Cotto carries the chalky, sun-bleached warmth of the clay it is pressed from.&quot; | &quot;Cotto brings timeless beauty and effortless charm to any space.&quot; |<br>| &quot;The glaze produces color variation across the surface.&quot; | &quot;The glaze pools and breaks across each tile, so the color shifts as the light moves through the room.&quot; | &quot;These stunning glazes create a truly breathtaking effect.&quot; |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3. Terminology</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.1 Required terms</summary>
+      <div class="markdown"><p>| Term | How and why to use it |<br>|---|---|<br>| Inherent / innate variation | Frame variation as a defining characteristic of the material. Never frame as inconsistency or a quality issue. |<br>| Dynamic glazes | Use specifically for zellige -- the way color and sheen shift with light. Do not borrow for other materials. |<br>| Chips, pits, and crazing | Always list as a trio for zellige surface characteristics. These are features, not defects. Do not apply to Cotto (unglazed -- no crazing). |<br>| Perfectly imperfect | Core narrative -- use in context, not as standalone claim |<br>| Each (not &quot;every&quot;) | Use &quot;each&quot; when referring to individual tiles. More considered and specific. |<br>| Our [Product] / Zia&#x27;s [Product] | Always anchor the product name. &quot;Our Casablanca&quot; or &quot;Zia&#x27;s Casablanca&quot; -- never the color name alone as a sentence subject. |<br>| Mitered edges | Correct edge finishing term. Use alongside Schluter strips. Never &quot;trim pieces.&quot; |<br>| Schluter strips | Specific, installation-literate term for metal edge profiles. |<br>| Shower tile / shower wall | Correct installation terminology. Never &quot;shower surround.&quot; |<br>| Grout joints | Correct installation terminology. Never &quot;grout spacing.&quot; |<br>| 15-20% overage | Standard recommendation. Always add the 25% option where a more uniform look is discussed. |<br>| Drywall flush | Bring drywall flush with the finished tile surface. Required in Installation sections. |<br>| Cotto | Always capitalized. Zia&#x27;s proprietary collection name, not a generic material term. |<br>| Cotto Allende | Always capitalized. The glazed line. Distinct application rules from unglazed Cotto. Do not call it a &quot;sub-line&quot; -- use &quot;glazed terra cotta tile&quot; or &quot;glazed line.&quot; |<br>| Terra cotta (lowercase) | The general material category. Use when referring to the material broadly, not the Zia collection. |<br>| Unexpected tones | Jamie&#x27;s preferred framing for the contemporary Cotto colorways (Blanco, Madera, Oscura). Not &quot;bold&quot; or &quot;contemporary&quot; **for these colorways specifically**. &quot;Contemporary&quot; is fine as a design-style term in other contexts — the restriction is scoped to Cotto colorway framing only. |<br>| Classic range | Jamie&#x27;s preferred framing for the three traditional Cotto colorways. Not &quot;traditional range&quot; when &quot;traditional&quot; has already appeared nearby. |<br>| Open and mix | Correct instruction for preparing Cotto before installation. Not &quot;blend.&quot; |<br>| Curation and cuts | Correct overage rationale for Cotto. Not &quot;natural variation inherent to handmade tile.&quot; |<br>| Lived-in character | Preferred framing for aging clay surfaces in commercial contexts. |<br>| Bringing beauty to the material&#x27;s aging process | Approved patina framing for product romance copy. |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.2 Strict avoidance list</summary>
+      <div class="markdown"><p>| Avoid | Use instead | Reason |<br>|---|---|---|<br>| Luxury | Show quality through craft narrative and specific detail | Show it, don&#x27;t say it |<br>| Sophisticated | Describe the design, process, or result specifically | Show it, don&#x27;t say it. Tier 1 banned (§2.7) — **[Open — confirm with Jamie]** |<br>| Charming | Describe what makes the tile appealing with a specific detail | Too precious for this brand. Tier 1 banned (§2.7); Brittany flagged Zia&#x27;s content uses it — **[Open — confirm with Jamie]** |<br>| Defects | Chips, pits, and crazing (zellige only) | Characteristics of handmade tile, not manufacturing errors |<br>| Unique look (without context) | Name the specific variation: color, sheen, thickness | Vague -- &quot;unique&quot; without a noun is meaningless |<br>| Slightly different | Describe the actual range: color, shape, thickness | Understates a celebrated product quality |<br>| Shower surround | Shower walls and floors / shower wall | Incorrect industry terminology |<br>| Trim pieces | Mitered edges / Schluter strips | Incorrect industry terminology |<br>| Grout spacing | Grout joints | Incorrect industry terminology |<br>| Works as | Name the specific application | Too vague for a design-literate audience |<br>| Truly / really / simply / of course | Remove entirely | Filler -- weakens rather than strengthens |<br>| Printed | Remove entirely | Jamie flagged as meaningless in handmade tile context |<br>| Module | Set | Jamie&#x27;s direct substitution -- &quot;four-tile set,&quot; not &quot;four-tile module&quot; |<br>| Runs to (number) | Features (number written out) | Jamie&#x27;s direct substitution -- &quot;features eighteen&quot; not &quot;runs to 18&quot; |<br>| Sub-line | Glazed terra cotta tile / glazed line | Jamie&#x27;s direct substitution for Cotto Allende descriptions |<br>| Colonial courtyard | Spanish courtyard | Jamie&#x27;s direct substitution |<br>| Straightforward (for care/maintenance) | Simple, consistent, requires care | Banned from all Cotto content -- appeared four versions in a row |<br>| Bestselling / best seller | Omit or mention without ranking | Jamie removed &quot;currently the bestselling Cotto colorway&quot; from multiple pieces |<br>| Irregularly (for shapes) | Remove the parenthetical | Jamie removed &quot;(irregular)&quot; from the Oaxaca shape description |<br>| Second person (you/your) | Rewrite in third person or as general guidance | Consistent flag across all reviewed docs |<br>| Sentence-ending prepositions | Restructure the sentence | Direct rule from Jamie |<br>| &quot;Today&quot; as a sentence closer | Remove | Removed from the origin FAQ closing sentence |<br>| Special order / lead-time callouts | Omit or minimize | Zia prefers not to draw attention to special order status |<br>| Cheap / affordable / discount | Omit or reframe | Business exclusion |<br>| Free shipping | Omit | Business exclusion |<br>| Peel-and-stick | Omit | Not a Zia category |<br>| Returns | Omit | Business exclusion |<br>| Withstands (for freeze/thaw) | &quot;Is not suitable for freeze/thaw climates&quot; | Factual error for zellige and Cotto Allende |<br>| Sources (as in &quot;Zia sources the collection&quot;) | Produces / makes in partnership with | Jamie flagged repeatedly: Zia does not merely source -- the relationship is a production partnership |<br>| Products (for tiles, collections, or materials) | Tiles / collections / materials | Jamie flagged repeatedly in customer-facing copy |<br>| Laid (installation) | Set | Correct installation verb per Jamie |<br>| Built (for how a material ages or performs) | Crafted / develops | &quot;Built to age&quot; was flagged as poor word choice |<br>| Use (for patina and aging) | Wear | &quot;Deepens with wear,&quot; not &quot;deepens with use&quot; |<br>| Recessive (as a design descriptor) | Describe the actual design quality -- what does the tile do in the space? | Jamie: vague hedge that does not describe anything |<br>| Muted (as a stand-alone design descriptor) | Describe the design register specifically -- &quot;sits quieter,&quot; &quot;recedes&quot; | Jamie: needs the specific behavior in the room |<br>| The correct choice | A great choice (or omit) | Jamie: never frame Zia&#x27;s tile as the only or &quot;correct&quot; answer |<br>| Most often specified / most popular / most specified | Name a specific use context without ranking | Jamie: &quot;we never allude to best-sellers&quot; |<br>| Normal (for variation framing) | Inherent / characteristic of | &quot;Inherent variation,&quot; never &quot;slight variation is normal&quot; |<br>| Dynamic glazes (for any non-zellige material) | Material-specific framing | Zellige-only terminology -- applying to ceramics, Cotto, Cotto Allende is a category error |<br>| Specific grout color names in recommendations (buff, warm grey, bright white) | Describe the approach: color-matching vs. contrasting | Jamie: describe the visual outcome, not the swatch |<br>| &quot;The practical summary:&quot; / &quot;In summary:&quot; / &quot;Practical summary:&quot; as section labels | Direct editorial transition through content | Report-style labels are a structural tell that the writer ran out of connective tissue |<br>| &quot;Understanding the differences between...&quot; opener | Lead with the first piece of useful information | Meta-setup sentences announcing what the article will do are filler |<br>| Negative framing for tile attributes (&quot;protects against,&quot; &quot;endures,&quot; &quot;withstands,&quot; &quot;overcomes&quot;) | Lead with what the material gives the room | §2.10 -- stay positive; tile attributes are gifts to the space, not defenses against threats |<br>| Physical-property colorway descriptions (&quot;soft tan, warm, and light&quot;) | Describe how the tone reads in a room and against other materials | Specs are not color descriptions; &quot;Adobe sits in the muted middle and pairs with plaster&quot; |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4. Accuracy &amp; Technical Standards</summary>
+      <div class="markdown"><p>**Non-negotiable:** if a capability claim isn&#x27;t verifiable against the product spec or Installation Guide, do not write it. Limitations must be stated explicitly and affirmatively.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.1 Freeze/Thaw -- material-specific rules</summary>
+      <div class="markdown"><p>These are hard rules that differ by material. Do not apply one material&#x27;s rules to another.</p><p>| Material | Outdoor / Freeze-Thaw Rule |<br>|---|---|<br>| Zellige (glazed) | NOT suitable for outdoor installation in freeze/thaw climates. State this plainly and affirmatively. |<br>| Unglazed Cotto | Suitable for exterior use in any climate, including freeze/thaw regions. This is a selling point. |<br>| Cotto Allende (glazed) | NOT suitable for outdoor use in freeze/thaw climates. Same rule as glazed zellige. |<br>| Marble | Can be used outdoors in appropriate climates. Do not state that it cannot. |<br>| Cement tile | Suitable for exterior use in non-freeze/thaw climates only. |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.2 Pool and Spa -- Cotto vs. Cotto Allende</summary>
+      <div class="markdown"><p>This distinction must be applied consistently everywhere pools or spas are mentioned.</p><ul><li>**Unglazed Cotto:** NOT suitable for pools or spas (full submersion). Suitable for outdoor floors, patios, and courtyards in any climate.</li><br><li>**Cotto Allende (glazed):** Approved for pools and spas. NOT suitable for outdoor use in freeze/thaw climates.</li></ul><p>&gt; Exact language from Jamie&#x27;s edit: &quot;Glazed Cotto Allende is ideal for wet spaces, including pools.&quot; Use this framing when comparing both products in the same section.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.3 Sealing Requirements</summary>
+      <div class="markdown"><p>Cotto and Cotto Allende have different sealing requirements. They must never be combined into a single mixed instruction set.</p><p>**Cotto (unglazed):**<br><li>Seal before grouting with 511 Porous Plus.</li><br><li>After grouting, apply Fila Matte Wax for interior; second coat of 511 Porous Plus for exterior.</li></ul><p>**Cotto Allende (glazed):**<br><li>Only requires post-grout sealing with 511 Porous Plus in areas exposed to continuous moisture.</li></ul><p>**General sealing rules:**<br><li>Sealing applies in all installations, including dry spaces.</li><br><li>Sealing guidance must appear **inline within the specific usage bullet** (shower, pool, spa) -- not only in a section-end catch-all.</li><br><li>Section-end &quot;Sealing Required&quot; line is a backup, not a substitute.</li><br><li>Direct readers to the Installation Guide for sealer selection. Never name a specific product in customer-facing pages (sealer names above are for internal reference only).</li><br><li>**Dry spaces also require sealing.** Use this exact wording: *&quot;Always seal [tile name] according to our installation instructions, whether in dry spaces or in areas exposed to moisture, such as pools, spas, and showers.&quot;*</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.4 Slip Resistance</summary>
+      <div class="markdown"><p>When recommending tile for wet floor applications, always provide a minimum grout joint specification.</p><ul><li>Cotto DCOF: **0.98** -- well above the 0.42 threshold for level interior floors.</li><br><li>For wet commercial floors: grout joints should measure at least **1/8&quot;**, plus anti-slip treatment after installation.</li><br><li>Slip resistance language belongs under the shower/wet area section, not under general interior floor bullets.</li><br><li>Never just &quot;consult your installer.&quot;</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.5 Installation Section -- required elements</summary>
+      <div class="markdown"><p>Every Installation and Finishing section must include all four:<br>1. **PPE + Prop 65 warning** -- protective face/eye coverings when working with zellige, thin set, sealants, grout. Link to ziatile.com/proposition-65-warnings.<br>2. **Edge / finishing options** -- drywall flush + mitered edges + Schluter strips. Never &quot;trim pieces.&quot;<br>3. **Sealing for all installations** -- sealing required per Installation Guide; specifically pools, spas, showers. Include dry spaces.<br>4. **Contact info** -- info@ziatile.com and 310-844-1170 for installer questions.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.6 Contact Line -- required on every piece</summary>
+      <div class="markdown"><p>Jamie noted she keeps having to add the contact line herself on every piece. It must be included without being asked.</p><ul><li>Email: **info@ziatile.com**</li><br><li>Phone: **310-844-1170**</li><br><li>Both must appear together in the closing section and in FAQ answers where relevant -- especially the quantity/overage FAQ and the installation FAQ.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.7 Usage Chart Standards</summary>
+      <div class="markdown"><p><li>Usage bullets are **standardized at the category level** (e.g. Glazed Zellige). Do **not** write usage bullets from scratch per SKU.</li><br><li>Substitute only SKU-specific details: format dimensions, orientation, finish-specific notes.</li><br><li>Structure, wording, and bullet order must be identical across all SKUs in the same category.</li><br><li>Approved category templates are maintained by Alex. Request before starting a new category.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.8 Content Placement Accuracy</summary>
+      <div class="markdown"><p>Each usage bullet must contain only information **relevant to that specific use case**. Misplaced content is a factual error.</p><ul><li>Shower / wet-area slip resistance -&gt; **Shower Walls + Floors** only.</li><br><li>Interior Floors -- High Traffic -&gt; kitchens, entryways, primary bathrooms used as **dry floors only**.</li><br><li>If unsure, flag for Alex; do not guess.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.9 Unglazed Zellige</summary>
+      <div class="markdown"><p>Unglazed zellige is a **separate category** from glazed zellige. Different language for sealing, surface variation, finish-specific characteristics. Do **not** apply glazed zellige usage template or sealing copy to unglazed pages. Request category-specific guidance from Alex first.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.10 Unverified Technical Claims</summary>
+      <div class="markdown"><p><li>Kiln type: do not specify wood-fired, gas-fired, or any specific kiln method without written confirmation from Zia&#x27;s team.</li><br><li>Light exposure and patina: do not claim that UV or light exposure deepens Cotto&#x27;s tone. Patina framing should reference use and time only.</li><br><li>Any climate or application claim (indoor/outdoor, freeze/thaw, wet areas) must be cross-referenced against the PDP usage chart before submission.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.11 Variation Language by Material</summary>
+      <div class="markdown"><p><li>**Cotto (unglazed):** tone, shape, edge profile, thickness. No crazing.</li><br><li>**Zellige (glazed):** chips, pits, and crazing -- always as a trio.</li><br><li>Never apply zellige surface language to an unglazed tile page.</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5. Cotto Product Knowledge</summary>
+      <div class="markdown"><p>This section is the authoritative reference for all Cotto and Cotto Allende content. Review it before writing or editing any Cotto blog post, collection page, or product page. If anything here conflicts with the live site, flag it to Alex before writing.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.1 What Cotto is</summary>
+      <div class="markdown"><p>Cotto is Zia&#x27;s terra cotta line. Terra cotta is the broader material category. Cotto is not a subcategory or superior variant of terra cotta -- it is simply Zia&#x27;s name for their terracotta collection. Establish this relationship early in any piece: &quot;Cotto is Zia&#x27;s terra cotta line&quot; or &quot;Zia&#x27;s Cotto is terra cotta.&quot;</p><p>Cotto begins with natural Mexican clay from San Miguel de Allende, hand-pressed into molds, sun-dried in open courtyards for one to two weeks, and high-fired in traditional kilns. It is unglazed. The surface develops a natural patina with use and time.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.2 Colorways</summary>
+      <div class="markdown"><p>Cotto comes in two groups -- three classic hues and three unexpected tones. Do not call them &quot;traditional&quot; and &quot;contemporary&quot; in the same section where &quot;traditional&quot; has already appeared -- use &quot;classic range&quot; and &quot;unexpected tones&quot; per Jamie&#x27;s edits.</p><p>| Colorway | Description | Notes |<br>|---|---|---|<br>| Adobe | The lightest, a soft sun-bleached tone | Classic range |<br>| Fired Earth | Mid-range classic warm terra cotta. Wood ash applied during firing produces distinct textured coloration. | Classic range -- note: &quot;distinct textured&quot; not &quot;distinctive&quot; |<br>| Red Clay | The traditional, deepest red, closest to the raw material itself | Classic range -- note: Jamie added &quot;traditional&quot; before &quot;deepest&quot; |<br>| Blanco | A whitewashed finish that brightens and softens the body&#x27;s natural tone | Unexpected tone -- note: Jamie added &quot;brightens and&quot; |<br>| Madera | A deep cocoa, one of the few dark brown terra cotta tiles produced anywhere | Unexpected tone -- remove &quot;bestselling&quot; per Jamie&#x27;s edit |<br>| Oscura | A matte black terra cotta, rare in unglazed clay | Unexpected tone |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.3 Shapes and formats</summary>
+      <div class="markdown"><p>| Shape | Size | Notes |<br>|---|---|---|<br>| Square | 4x4, 8x8, 13x13 | Standard |<br>| Rectangle | 2x6, 6.5x13 | Standard |<br>| Hexagon | 8x9 | Standard |<br>| Stars &amp; Cross | 6x6 | Eight-pointed star paired with a cross; Moorish pattern found in courtyards from Granada to Puebla |<br>| Alcazar | 6x6 | Geometric interlocking with curved and straight edges; named for the Spanish-Moorish fortress. Offered in two sizes -- Alcazar and Big Alcazar can be combined in one bullet |<br>| Big Alcazar | 13x13 | Upward arrowhead with two angled lower corners; tiles lock into a geometric star |<br>| Oaxaca | 7.5x13 | Hourglass shape paired with rounded octagons; named for the Mexican state. Remove &quot;(irregular)&quot; per Jamie&#x27;s edit |<br>| Durango | 10x10.5 | Four-tile set (not &quot;module&quot;) that builds an abstract geometric pattern. Do not reference special order status or lead time. |<br>| Tornillo | 3.25x13 | Long narrow parallelograms in staggered layout; tornillo is Spanish for &quot;screw&quot; (with quotation marks around &quot;screw&quot;) |<br>| Toltec | 8x13 | Trapezoid recalling a yin and yang; named for the pre-Aztec civilization at Tula. Note: Jamie corrected size from 6.5x13 to 8x13 |<br>| Zocalo | 6.5x13 | Asymmetrical puzzle design; two pieces form a unified rectangle |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.4 Cotto Allende</summary>
+      <div class="markdown"><p>Cotto Allende is Zia&#x27;s glazed terra cotta tile line -- not a &quot;sub-line.&quot; It begins with the same clay foundation as Cotto, hand-hewn and high-fired, then hand-glazed. The name references both its origin near San Miguel de Allende and the Spanish word for &quot;beyond&quot; -- because the glazes introduce color and texture beyond the spectrum of natural clay.</p><ul><li>Eighteen colorways (write out &quot;eighteen,&quot; not &quot;18&quot;) with names referencing Mexican geography and flora: Sayulita, Cacao, Creosote, Peyote, Arroyo, Condesa, Pedregal, and others.</li><br><li>Four shapes: 4x4 square, 4x8 rectangle, triangle, and the 1.5x8 mini bar (narrowest format, useful for linear or stack-bond layouts).</li><br><li>Finishes range from matte to glossy with speckling that varies by colorway and subtle crazing and color shifts.</li><br><li>Approved for pools and spas. Not suitable for outdoor use in freeze/thaw climates.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.5 Saltillo -- how to frame it</summary>
+      <div class="markdown"><p>Saltillo is a related clay tile from Saltillo, Coahuila, in northern Mexico -- a different region and a different process from Cotto. Zia does not sell Saltillo.</p><p>&gt; Jamie&#x27;s direct comment: &quot;My concern is that Saltillo is positioned as a fine tile that we do not sell. Shouldn&#x27;t we steer this a bit more generic/mass/negative, in order to comment on why we don&#x27;t sell it? Why would we want someone to leave our site and go elsewhere for a tile we do not produce?&quot;</p><ul><li>Do not position Saltillo as a quality tile that Zia simply doesn&#x27;t carry. The comparison must subtly favor Cotto.</li><br><li>Frame Saltillo&#x27;s characteristics as distinctions that explain why Cotto performs differently -- lighter body, more porous, warmer mineral variation.</li><br><li>If there is no editorial reason to include Saltillo in a piece, consider removing it entirely. Confirm with Alex before including any Saltillo reference.</li><br><li>Never reference products or tile types that Zia does not sell without a clear strategic reason. Confirm with Alex first.</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6. Blog Post Standards</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6.1 Opening paragraphs</summary>
+      <div class="markdown"><p>The opening paragraph sets the tone for the entire piece. Do not open with a production description or a process sequence. Lead with the material, the place, or the feeling.</p><p>&gt; Jamie&#x27;s approved Blog Post 4 opener: &quot;Our Cotto begins with natural Mexican clay from San Miguel de Allende, which is hand-pressed into molds, sun-dried, and high-fired using traditional techniques. The result is a terra cotta defined by tonal variation, surface character, and the inherent details that give handmade tile its appeal. Over time, the unglazed surface develops a natural patina that reflects the material&#x27;s connection to place, process, and age.&quot;</p><ul><li>Lead with what the material is, where it comes from, and what makes it distinctive before describing how it is made.</li><br><li>Do not open with &quot;families pressing clay into molds&quot; or similar process-first framing. Jamie flagged this as generic and present in every terra cotta brand&#x27;s copy.</li><br><li>The standard: fix the entry point, keep what works.</li></ul><p>**Exception — match the search intent, not just the material.** Material-first openings apply when the topic is a material. When the search term and SEO-set title center on a **pattern** or **color** (e.g. &quot;herringbone patterns,&quot; &quot;sage green tiles&quot;), the opening must lead with that pattern or color and tie directly to the search intent and the title the SEO team set — not to the material. Search intent comes first; force-fitting a material-first lead onto a pattern or color topic misses what the reader searched for. For these pattern/color/style topics this is the default, not an edge case.</p><p>**Keyword placement — the warm lead and the keyword are not in conflict.** The primary keyword (exact match, taken from the SEO-set title) must appear in the **first paragraph of body copy, ideally the first sentence** — on every piece, not only pattern/color topics. This holds alongside the editorial-lead rules above and in §2.5: open warm, on person + place or a specific detail, *and* name the term the reader searched for in that same opening. A warm, aspirational lead that omits the keyword is a miss; so is a keyword stuffed into a flat, clinical sentence. Write one sentence that does both. See §10.4 for the full body-structure rule.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6.2 Introducing the collection early</summary>
+      <div class="markdown"><p>Blog posts should introduce Zia&#x27;s specific collection -- and name it -- in the opening or first body section. Do not make the reader wait several sections to understand what Zia&#x27;s specific collection looks like.</p><p>&gt; Jamie&#x27;s addition (placed inside &quot;What Is Cotto Tile?&quot;, not a separate colorways section near the end): &quot;Zia&#x27;s Cotto line was born from our three traditional tones: Adobe, Fired Earth, and Red Clay, while our newer whitewashed Blanco, deep brown Madera, and matte black Oscura round out the earthy palette.&quot;</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6.3 Structure and redundancy</summary>
+      <div class="markdown"><p><li>Each H2/H3 section should approach the material from a different angle: history, performance, application, care, design context. Do not repeat the same information in different words.</li><br><li>**An H3 needs at least 3 sentences to justify it.** One-sentence or one-line H3s do not happen in editorial writing — either develop the section or fold it into a neighboring one. The same minimum applies to H2 sections.</li><br><li>**Vary paragraph length; keep paragraphs scannable.** Most paragraphs run 2–4 sentences, and their lengths should differ across a section — a run of long, equal-length blocks reads as machine-generated and buries the point. The transition-word and sentence-variation rules (§2.1, §2.5) connect sentences *within* a paragraph; they are not a license to fuse everything into uniform blocks. The 3-sentence section minimum can be met with two short paragraphs, not one long one. Scannability is part of the editorial standard, not opposed to it.</li><br><li>Do a word audit before submitting. If the same noun or descriptor appears more than twice in a section, find a variation.</li><br><li>Every blog post needs a proper concluding paragraph. Do not end abruptly.</li><br><li>Each section header should introduce a new dimension, not restate the intro.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6.4 Person and voice consistency</summary>
+      <div class="markdown"><p>Choose first person (&quot;our Cotto&quot;) or third person (&quot;Zia&#x27;s Cotto&quot;) and hold it for the entire piece. Do not switch within the same paragraph or between sections. This has been flagged in every review session.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6.5 Patina and aging language</summary>
+      <div class="markdown"><p>Patina is a feature, not a warning. Frame it as something desirable and intentional. Reference use and time as the drivers of patina -- do not reference light exposure specifically unless confirmed by Zia&#x27;s team.</p><p>| Category | Avoid | Use |<br>|---|---|---|<br>| Patina framing | &quot;Foot traffic and light exposure deepen the tone rather than diminish it&quot; | &quot;Use and time deepen the tone -- the installation is a starting point, not a forever state&quot; |<br>| Aging closer | &quot;Expect tonal deepening over time. This is the material doing what it is supposed to do.&quot; | &quot;Expect the tone to deepen over time -- that patina is the point.&quot; |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6.6 Applications sections</summary>
+      <div class="markdown"><p>Each application section should reference specific Zia shapes or formats in context. Generic application descriptions that don&#x27;t mention actual product names are a recurring gap.</p><ul><li>**Interior floors:** name the formats that suit the space -- 13x13 squares, Big Alcazar for open layouts; Stars &amp; Cross and 6x6 Alcazar for compact rooms.</li><br><li>**Exterior:** specify that unglazed Cotto performs in any climate including freeze/thaw. Note that Cotto Allende is the right choice for pools and wet spaces.</li><br><li>**Bathrooms:** require proper sealing. Remove language that positions Cotto Allende as the lower-maintenance alternative -- Jamie deleted this from the blog post.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6.7 Design-ideas blog pattern (multi-material topics)</summary>
+      <div class="markdown"><p>For pattern, format, or room-idea topics that span more than one material (e.g. &quot;checkerboard tile,&quot; &quot;kitchen backsplash ideas&quot;), follow this skeleton. The golden reference is `campaigns/04-may-batch/drafts/checkerboard-tile-design-ideas-v5.md` — the approved blend of the team&#x27;s v1 (structure) and v2 (warmth). Brittany signed off on this rule set on 2026-06-29.</p><p>**Section order:**<br>1. **Opening** — lead with the design decision the topic poses (the §6.1 search-intent rule), tie to the search term and the room context, name Zia&#x27;s relevant materials/collections in the first or second paragraph.<br>2. **What Is [topic]?** — short definition section. One rule of the pattern, then how its character is governed (tone relationship, surface behavior).<br>3. **[Topic] at Zia** — one H3 per material path (e.g. Roman Mosaic, Zellige, Cotto). Each H3 covers: what it is, the verified colorways/formats, and its suitability (freeze/thaw, pool/spa, exterior, sealing) stated affirmatively.<br>4. **Application sections** — by room (Kitchen, Bathroom), with H3s by surface (Floors, Backsplashes, Shower Walls). Name specific Zia formats and colorways in context.<br>5. **Design-decision sections** — e.g. Color and Contrast, Grout. Give the reader the trade-off, not a rule.<br>6. **[Topic] at Zia** — recap that ties the materials back together, then the contact line (info@ziatile.com + 310-844-1170).<br>7. **FAQ** — exactly the questions a buyer searches: size/scale, &quot;can it go in a shower / wet use,&quot; product-difference, and overage/how-much. Each answer is one direct-answer paragraph.</p><p>**Prose discipline (the v2 lesson):** paragraphs 1-4 lines; short-to-medium sentences; almost no semicolons; vary sentence openings (§2.5). Warm and aspirational, grounded in a specific detail (§2.1, §2.7).</p><p>**Material accuracy (non-negotiable):** every suitability claim (freeze/thaw, pool/spa, exterior, sealing) must match the material&#x27;s config in `materials/{material}.md`. Roman Mosaics ≠ Marble. Only use **verified** colorway names — zellige colorways are gated `verify`; do not invent combinations (this is what made the team&#x27;s v3/v4 fail).</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>7. Collection Page Standards</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>7.1 Opening copy</summary>
+      <div class="markdown"><p>Opening copy should establish what the material is, where it comes from, and what makes it distinctive in Zia&#x27;s voice. It should not read like a product spec. Avoid filler closers like &quot;well-suited for any climate, with sealing before and after grouting&quot; -- Jamie deleted this from the Cotto collection page opening.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>7.2 Repetition across the page</summary>
+      <div class="markdown"><p><li>&quot;Charming unglazed pieces add an earthy aesthetic&quot; appeared twice on the same page. Cut the second instance.</li><br><li>&quot;Traditional&quot; appeared twice in consecutive sentences in the colorways section. When &quot;traditional&quot; has been used once in the same passage, switch to &quot;classic range&quot; per Jamie&#x27;s edit.</li><br><li>Run a word frequency check before submitting any collection page. Repeated adjectives and descriptors are a consistent flag.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>7.3 FAQ standards</summary>
+      <div class="markdown"><p><li>Sealing FAQ must separate Cotto and Cotto Allende instructions. Do not combine them into a mixed bullet list.</li><br><li>Do not reference Cotto Allende as &quot;a sub-category in this collection&quot; -- Jamie removed this framing. Write it as its own line.</li><br><li>FAQ answers should match the language and structure of Zia&#x27;s actual installation guides. Do not paraphrase from memory.</li><br><li>All climate and application claims must be cross-referenced against the PDP usage charts.</li><br><li>Contact CTA must appear in the FAQ where relevant -- especially in the quantity/overage FAQ and the installation FAQ.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>7.4 Capitalization</summary>
+      <div class="markdown"><p><li>Match capitalization exactly to the live site at ziatile.com. Cotto, Cotto Allende, Adobe, Fired Earth, Red Clay, Blanco, Madera, Oscura are all capitalized.</li><br><li>&quot;terra cotta&quot; is lowercase as a general material term.</li><br><li>Verify every collection and product name before submitting.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>7.5 Filler and weak phrases to remove</summary>
+      <div class="markdown"><p><li>&quot;To something truly special&quot; -- remove. The sentence before it is strong on its own.</li><br><li>&quot;These charming unglazed pieces add an earthy aesthetic&quot; -- remove or replace with specific descriptive language.</li><br><li>&quot;The local clay and traditional process introduce history in each unique piece&quot; -- meaningless. Cut or replace with something concrete.</li><br><li>&quot;Today&quot; as a sentence closer -- Jamie removed &quot;today&quot; from the origin FAQ closing sentence.</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>8. Product Page Standards</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>8.1 Romance copy (opening description)</summary>
+      <div class="markdown"><p>The product romance paragraph should be tight, specific, and lead with what makes this particular colorway or format distinctive.</p><p>| Category | Avoid | Use |<br>|---|---|---|<br>| Adjective order | &quot;a deep, traditional warm red&quot; | &quot;traditional, deep warm red&quot; |<br>| Process description | &quot;with hand-pressed mold marks, edge variation, and tonal shifts that read as the signature of unglazed clay&quot; | Remove -- too process-heavy for a romance paragraph. Let the patina line carry it. |<br>| Patina framing | &quot;which is part of how the material ages&quot; | &quot;bringing beauty to the material&#x27;s aging process&quot; |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>8.2 Variation FAQ</summary>
+      <div class="markdown"><p>The variation FAQ must use material-appropriate language.</p><ul><li>**Cotto (unglazed):** reference tone, shape, edge profile, and thickness. No crazing.</li><br><li>**Zellige (glazed):** reference chips, pits, and crazing as a trio.</li><br><li>Never apply zellige surface language to an unglazed tile page.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>8.3 Cotto vs. Cotto Allende FAQ</summary>
+      <div class="markdown"><p>The distinction must include the pool/spa rule. Jamie&#x27;s corrected version:</p><p>&gt; &quot;Cotto tiles are suited for exterior floors in any climate, but not for applications where they are fully submerged in water, like pools or spas. Glazed Cotto Allende tile is approved for pools and spas, but should not be installed outdoors in freeze/thaw climates.&quot;</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>8.4 Overage FAQ</summary>
+      <div class="markdown"><p>Do not write separate rationale sentences for standard overage and specialty overage. Be direct.</p><p>| Category | Avoid | Use |<br>|---|---|---|<br>| Overage rationale | &quot;to account for cuts and the natural variation inherent to handmade tile&quot; | &quot;to account for curation and cuts&quot; |<br>| Specialty overage | &quot;Installations that aim for a more curated appearance may require up to 25% overage, allowing for greater flexibility during the dry layout process.&quot; | &quot;For projects that incorporate specialty formats, plan for 20 to 25% across the full order as edge cuts can affect the number of pieces needed.&quot; |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>8.5 Required page sections, in order</summary>
+      <div class="markdown"><p>Each product page must contain all nine sections in this order:</p><p>1. **Product Details** -- variation framing (chips/pits/crazing for zellige; tone/shape/edge/thickness for Cotto); 15-20% overage + 25% uniform option<br>2. **About** -- craft heritage; artisan sourcing; specific historical context; spectrum of colors for residential + commercial<br>3. **Inherent Variation** -- three bullets: (a) color/tone with specifics, (b) uniqueness/charm, (c) full variation list (color, shape, thickness, chips, pits, crazing for zellige; color, shape, edge, thickness for Cotto)<br>4. **Preparation and Curation** -- mix boxes; lay out before installation; disperse variation evenly; 15-20% + 25%<br>5. **Installation and Finishing** -- PPE/Prop 65; drywall flush + mitered edges + Schluter strips; sealing per 4.3; contact email and phone<br>6. **Tile Usage** -- Residential + Commercial sub-sections; accurate freeze/thaw per material; inline sealing for showers/pools/spas; 1/8&quot; slip-resistance spec; correct placement per 4.8<br>7. **How It&#x27;s Made** -- material-appropriate production narrative (zellige: raw clay from local hillsides, soaking + filtering, hand-pressing, Moroccan sun drying, hand-shaping, glaze hand-dipping, earthen kiln, uneven heat = variation; Cotto: natural Mexican clay, hand-pressed, sun-dried, high-fired)<br>8. **Order &amp; Shipping** -- sample (2 business days, up to 10, first 5 free); full (LTL curbside, US/Canada); pickup (appointment required); contact email and phone<br>9. **FAQ** -- minimum 6 questions: thickness variation, shower floor installation, crazing (zellige only) or patina (Cotto), cleaning, characteristic features, color mixing across collection</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>9. Specificity Rules</summary>
+      <div class="markdown"><p>| Topic | Specific guidance |<br>|---|---|<br>| Overage | 15-20% standard + 20-25% for specialty shapes or uniform look -- both, with context |<br>| Grout joints | Minimum 1/8&quot; for wet commercial floors |<br>| Finishing edges | Mitered edges + Schluter strips + drywall flush -- all three |<br>| Warehouse pickup | Confirmed appointment required |<br>| Sealing context | Name environments: pools, spas, showers, and also dry spaces |<br>| Historical claims | Anchor in specifics (&quot;in mosaics featuring decorative geometric and floral shapes&quot;) |<br>| Chips/pits dispersal | Tell customer to disperse evenly across installation |<br>| Contact CTA | Include email and phone on every piece without being asked |<br>| Patina drivers | Use and time only -- no light exposure claims |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>10. SEO</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>10.1 Key terms (Zellige)</summary>
+      <div class="markdown"><p>Handcrafted Moroccan art form, Traditional zellige / zellige aesthetic, Decorative geometric and floral shapes, Schluter strips, Residential and commercial projects, Slip resistance / anti-slip treatment, Crazing, Structural integrity</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>10.2 Key terms (Cotto)</summary>
+      <div class="markdown"><p>Terracotta (one word) and terra cotta (two words) -- both forms should be considered per Jamie&#x27;s note. Cotto tile, Saltillo vs Cotto (keyword can stay but copy must steer toward Zia&#x27;s product).</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>10.3 Meta</summary>
+      <div class="markdown"><p><li>**Title format:** `[Product Name] [Format] | Zia Tile` -- 50-60 chars. Example: `Casablanca White Zellige Tile 4x4 | Zia Tile`</li><br><li>**Description:** 140-160 chars; include primary keyword + format + &gt;=2 use cases. Example: `Shop Zia&#x27;s Casablanca 4x4 zellige. These handcrafted Moroccan clay tiles offer innate variation and dynamic glazes for kitchens, showers, floors, and fireplace walls.`</li><br><li>Primary keyword in first sentence of description; never force secondary keywords.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>10.4 Body structure and keyword placement</summary>
+      <div class="markdown"><p>The editorial voice and SEO structure are **co-requirements**. A piece is not done if it reads beautifully but drops the structure that makes it findable, and it is not done if it ranks-on-paper but reads like a spec sheet. Both, every time. These rules hold alongside the voice rules in §2 and the blog rules in §6 — where it looks like a tension, write the sentence that satisfies both.</p><ul><li>**Primary keyword in the first paragraph.** The exact-match primary keyword (from the SEO-set title) appears in the first paragraph of body copy, ideally the first sentence — on blog posts, collection pages, and product pages alike. The warm, specific lead (§2.5, §6.1) carries the keyword; it does not replace it.</li><br><li>**Keyword in at least one heading.** The primary keyword or its close variant appears in at least one H2/H3 where it fits naturally. Do not force it into every header.</li><br><li>**Paragraph rhythm.** Paragraphs run 2–4 sentences and vary in length across the piece (see §6.3). Uniform long blocks are an SEO and readability failure, not an editorial choice.</li><br><li>**Direct answer early in each section.** Each H2/H3 opens by addressing its own topic before widening into design context — the section&#x27;s subject in its first sentence. This satisfies both the editorial &quot;new dimension per header&quot; rule (§6.3) and extraction-based search.</li><br><li>**No trade-off framing.** If a draft sacrifices keyword placement or scannable structure &quot;for the voice,&quot; it has misread this guide. The voice work in §2 was never meant to remove SEO structure; restore both.</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>11. Product Collections</summary>
+      <div class="markdown"><p>| Collection | Origin &amp; method | Key characteristics |<br>|---|---|---|<br>| Zellige (Moroccan) | Morocco -- 800+ years | Surface texture, sheen, chips/pits/crazing as characteristics. 200+ tiles, mesh-backed mosaics. Not suitable for freeze/thaw outdoors. |<br>| Cement Tile | Vietnam -- 19th-c European | Mineral pigments, cement, hydraulic press, **never fired**. Matte. 68 colors. Suitable for exterior in non-freeze/thaw only. |<br>| Cotto (Terra Cotta) | San Miguel de Allende, MX | Unglazed, earthy, high-fired. Six colorways. Suitable for any climate including freeze/thaw. Not for pools/spas. |<br>| Cotto Allende (Glazed) | San Miguel de Allende, MX | Same clay as Cotto, hand-glazed. Eighteen colorways. Suitable for pools/spas. Not suitable for outdoor freeze/thaw. |<br>| Ceramics | Central Japan (Nagoya) | Molded + glazed, high-temp. &quot;Field Trip: Japan&quot; sub-line is extruded + die-cut. Matte / satin / glossy. |<br>| Terrazzo | Venetian-inspired | Steel molds, crushed marble/stone, hydraulic press, ground + polished. 12x12. |<br>| Limestone | Fez, Morocco + Bordeaux, France | Quarried solid blocks. Honed or bush-hammered. Natural patina over time. |<br>| Cantera Stone | Mexico | Volcanic stone, 7 earthy colorways. Visible aggregate + mineral inclusions. Indoor + outdoor. |<br>| Marble (Solid) | Italy + Spain | Carrara, Nero Marquina, Grigio Carnico, Rosso Alicante, Giallo Reale, Verdi Alpi. Honed or polished. Can be used outdoors in appropriate climates. |<br>| Roman Mosaics | Italian stone heritage | Same premium stone as Solid Marble; intricate ancient-Rome-inspired mosaic patterns. |<br>| Glass Mosaics | Northern Spain | 98% recycled glass, renewable energy production. Hand-placed on 12x12 grids. 7 patterns. |<br>| Terra Forms | Specialty | Sculptural / dimensional tile. Texture + relief beyond flat-tile installations. |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>11.1 Services</summary>
+      <div class="markdown"><p>| Service | Details |<br>|---|---|<br>| Trade Program | Designers, architects, contractors, installers. Trade pricing, dedicated rep, complimentary samples, previews, tracking, install support. |<br>| Sample Ordering | $3 per sample; first 5 free for trade. Up to 10 per client (max 4 per unique tile). Ships within 2 business days from LA. FedEx or UPS ground. |<br>| Custom / Special Orders | Cement 10-12 wks, Cotto 11-15 wks, Zellige 13-17 wks. Cannot be cancelled once placed. |<br>| Worldwide Shipping | LTL, curbside pallet. US + Canada standard. AK/HI/Canada/international = custom quote. |<br>| Warehouse Pickup | Free for full orders, LA warehouse. Appointment required. Team contacts customer when ready. |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>11.2 Standardized shipping copy -- verbatim</summary>
+      <div class="markdown"><p><li>**Full order carrier:** *&quot;...via a third party LTL carrier service. Pallets will be delivered curbside.&quot;*</li><br><li>**Full order dispatch note** (under Full Orders, not Sample Orders): *&quot;We will ship the entire order together once all tiles are in stock.&quot;*</li><br><li>**Warehouse pickup hours:** *&quot;Monday through Friday from 8am-3pm&quot;* -- confirm current hours with Alex before publishing.</li><br><li>**International / AK / HI:** *&quot;...should email our team at info@ziatile.com for a custom shipping quote.&quot;*</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>12. Pre-Submission Checklist</summary>
+      <div class="markdown"><p>Answer yes to every item before submitting for Aleksandra&#x27;s review. If any item cannot be confirmed, the draft is not ready.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Voice &amp; Tone</summary>
+      <div class="markdown"><p><li>[ ] Reads warm — like an expert who loves the material — not cold, neutral, or spec-sheet flat (§2.8)</li><br><li>[ ] Warmth is earned through sensory detail, place, feeling, or quoted emotion — not empty adjectives</li><br><li>[ ] Every sentence reads like an expert, not a marketer</li><br><li>[ ] Filler removed (truly, really, simply, of course, unqualified &quot;unique,&quot; charming)</li><br><li>[ ] No fragments</li><br><li>[ ] Atmospheric / historical language anchored in specifics</li><br><li>[ ] Credible to senior designer; clear to first-time buyer</li><br><li>[ ] No sentence ends with a preposition</li><br><li>[ ] No second person (you/your) anywhere in the piece</li><br><li>[ ] No negative framing (&quot;protects against X&quot;) — reframe as what the material suits or brings</li><br><li>[ ] Colorway descriptions use design language (how the tone reads in a room), not physical specs (soft, warm, light)</li><br><li>[ ] No meta sentences announcing what the piece will do; no report-style section labels (&quot;The practical summary:&quot;, etc.)</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Terminology</summary>
+      <div class="markdown"><p><li>[ ] &quot;Each&quot; not &quot;every&quot; for individual tiles</li><br><li>[ ] Product anchored (&quot;Our [X]&quot; / &quot;Zia&#x27;s [X]&quot;)</li><br><li>[ ] Chips/pits/crazing framed as characteristics, listed as trio (zellige only)</li><br><li>[ ] Grout joints / shower wall / mitered edges / Schluter strips used correctly</li><br><li>[ ] Avoidance list clear (no luxury, sophisticated, charming, defects, slightly different, works as)</li><br><li>[ ] No prohibited business terms (discounts, free shipping, returns, peel-and-stick)</li><br><li>[ ] &quot;Cotto&quot; always capitalized; &quot;terra cotta&quot; lowercase as general material term</li><br><li>[ ] &quot;Module&quot; replaced with &quot;set&quot; everywhere</li><br><li>[ ] &quot;Printed&quot; removed if it appeared</li><br><li>[ ] &quot;Straightforward&quot; removed from all care and maintenance sections</li><br><li>[ ] &quot;Bestselling&quot; removed</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Technical Accuracy</summary>
+      <div class="markdown"><p><li>[ ] Capability claims verified against product spec / Installation Guide</li><br><li>[ ] Freeze/thaw rules correct per material (Cotto: any climate. Cotto Allende: not freeze/thaw. Zellige: not freeze/thaw. Cement: non-freeze/thaw only. Marble: can be used outdoors.)</li><br><li>[ ] Pool/spa distinction clear: unglazed Cotto not approved; Cotto Allende approved</li><br><li>[ ] Cotto and Cotto Allende sealing instructions written separately, not combined</li><br><li>[ ] Slip resistance guidance specific, including 1/8&quot; minimum grout joint for wet commercial floors</li><br><li>[ ] Installation section: PPE + Prop 65 + drywall flush + mitered edges + Schluter strips + sealing for all installations + contact info (email + phone)</li><br><li>[ ] Usage chart uses approved category-level template</li><br><li>[ ] Each usage bullet placed in correct category (no shower content under high-traffic floors)</li><br><li>[ ] Unglazed zellige pages use category-specific guidance (not glazed template)</li><br><li>[ ] Cotto variation language correct -- tone, shape, edge, thickness -- with no chips/pits/crazing (that&#x27;s zellige only)</li><br><li>[ ] No unverified kiln type specified</li><br><li>[ ] Patina language references use and time only, not light exposure specifically</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Product Knowledge</summary>
+      <div class="markdown"><p><li>[ ] Checked the live collection page on ziatile.com for product specifics before writing</li><br><li>[ ] All colorways, shapes, and formats referenced are accurate to the live catalog</li><br><li>[ ] No products, sizes, or finishes referenced that Zia does not carry</li><br><li>[ ] Saltillo, if included, is framed to favor Cotto -- confirmed with Alex</li><br><li>[ ] Special order status not referenced unless confirmed with Alex</li><br><li>[ ] Bestselling / best seller language removed</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Blog Posts</summary>
+      <div class="markdown"><p><li>[ ] Opening paragraph leads with the material, the place, or the feeling -- not the production process</li><br><li>[ ] Zia&#x27;s specific collection and colorways introduced early in the piece</li><br><li>[ ] First/third person consistent throughout -- no switching</li><br><li>[ ] Each section approaches the material from a different angle</li><br><li>[ ] Piece has a proper concluding paragraph</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Collection Pages</summary>
+      <div class="markdown"><p><li>[ ] No repeated phrases across the page (especially in the opening copy and FAQ)</li><br><li>[ ] &quot;Traditional&quot; not used twice in the same passage -- switched to &quot;classic range&quot; on second use</li><br><li>[ ] Filler closers removed from opening copy</li><br><li>[ ] Contact CTA included with both email and phone</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Product Pages</summary>
+      <div class="markdown"><p><li>[ ] All nine required sections present and in the correct order</li><br><li>[ ] Usage chart uses the approved category-level template, not written from scratch</li><br><li>[ ] Every usage bullet placed in the correct category (shower guidance under showers, not under dry-floor bullets)</li><br><li>[ ] FAQ includes at least six questions covering required topics</li><br><li>[ ] Prop 65 warning present in the Installation section with the correct link</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>SEO</summary>
+      <div class="markdown"><p><li>[ ] Primary keyword (exact match) appears in the first paragraph of body copy — not only in the meta (§6.1, §10.4)</li><br><li>[ ] Primary keyword or close variant appears in at least one H2/H3 where natural (§10.4)</li><br><li>[ ] Paragraphs run 2–4 sentences and vary in length — no run of uniform long blocks (§6.3, §10.4)</li><br><li>[ ] SEO-critical phrases highlighted in the draft for client review</li><br><li>[ ] Keywords appear naturally and do not disrupt brand voice</li><br><li>[ ] Meta description includes primary keyword + &gt;=2 use cases</li><br><li>[ ] Meta title formatted correctly: `[Product Name] [Format] | Zia Tile`</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>13. Team Working Notes</summary>
+      <div class="markdown"><p>This section is the shared scratch space for per-operator rules that came out of real production work but are not yet promoted into the main style sections above. The rule is: **edit in place, attribute by name, scope by content type.** No branches, no separate files — additions land here in the same commit as the draft they came from, so future runs of the pipeline pick them up automatically.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Convention</summary>
+      <div class="markdown"><p><li>Add a `### {Operator} — {scope}` subsection. Scope = `blog` / `product` / `collection` / `all`.</li><br><li>Lead with the rule, then a one-line **Why:** (the editorial source — Jamie comment, Aleksandra rejection, Emanuel run finding).</li><br><li>Use bullet points. Keep each note actionable for an agent reading the file in-session.</li><br><li>When a note has been reinforced across two or more pieces, **promote it** into the relevant numbered section (§3 terminology, §4 accuracy, §6/§7/§8 type-specific) and remove the note here. Do not let this section grow indefinitely.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Why this exists</summary>
+      <div class="markdown"><p>`STYLE-SYSTEM.md` is loaded into every pipeline run (per `CLAUDE.md` hard gate 2). Operator-specific notes have to live here, or the agent never sees them. Forking to a per-user file or working on a branch defeats the single-source-of-truth model and creates merge conflicts. The 2026-05-27 sync agreed: write here with attribution, promote when it&#x27;s load-bearing.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Notes</summary>
+      <div class="markdown"><p>(Add notes below this line. Latest at the bottom.)</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Andresa — blog</summary>
+      <div class="markdown"><p>_(reserved — Andresa will populate during blog-pipeline canary runs.)_</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>Emanuel — product</summary>
+      <div class="markdown"><p>_(reserved — Emanuel adds product/SKU-specific findings here as the May Zia delivery wraps.)_</p></div>
+    </details>
+    </details>
+        </section>
+        <section class="panel">
+          <h2>Local Source Files Read</h2>
+          <ul><li><code>clients/zia-tile/STYLE-SYSTEM.md</code> — Zia Tile — Style System</li>
+<li><code>clients/zia-tile/_approved/README.md</code> — approved/ — Living reference library</li>
+<li><code>clients/zia-tile/campaigns/01-product-collection-pages/README.md</code> — 01 — Product &amp; Collection Pages</li>
+<li><code>clients/zia-tile/campaigns/01-product-collection-pages/audit-report.md</code> — Zia Tile Product Page Templates — v2.0 Audit Report</li>
+<li><code>clients/zia-tile/campaigns/01-product-collection-pages/brief.md</code> — Zia Tile — 16 Template Rewrite Prep</li>
+<li><code>clients/zia-tile/campaigns/01-product-collection-pages/campaign-urls.md</code> — Zia Tile — Campaign Sheet URLs</li>
+<li><code>clients/zia-tile/campaigns/02-collection-page-optimizations/research/nlp-terms.md</code> — Zia Tile — Semantic / NLP Term Sets (Verified)</li>
+<li><code>clients/zia-tile/campaigns/02-march-april-updates/README.md</code> — 02 — March/April Updates</li>
+<li><code>clients/zia-tile/campaigns/02-march-april-updates/brief.md</code> — Campaign 02 — March/April Updates</li>
+<li><code>clients/zia-tile/campaigns/02-march-april-updates/research/REWRITE-PLAN.md</code> — March/April Rewrite Plan — Zia Tile Campaign 02</li>
+<li><code>clients/zia-tile/campaigns/02-march-april-updates/research/audit-report-gaps.md</code> — Stream C — audit-report.md Gaps on the 16 Templates</li>
+<li><code>clients/zia-tile/campaigns/02-march-april-updates/research/v3-promotion-worklist.md</code> — Stream A — v3 Promotion Worklist</li>
+<li><code>clients/zia-tile/campaigns/03-may-2026-blogs/README.md</code> — 03 — May 2026 Blogs</li>
+<li><code>clients/zia-tile/campaigns/04-may-batch/README.md</code> — 04 — May Batch</li>
+<li><code>clients/zia-tile/campaigns/05-june-2026-blogs/README.md</code> — Campaign 05 — June 2026 Blogs</li>
+<li><code>clients/zia-tile/campaigns/05-june-2026-blogs/batches/production-log.md</code> — Production Log</li>
+<li><code>clients/zia-tile/campaigns/05-june-2026-blogs/briefs/cement-tile-commercial-spaces-brief.md</code> — Brief — Cement Tile for Commercial Spaces</li>
+<li><code>clients/zia-tile/campaigns/05-june-2026-blogs/briefs/fireplace-tile-zellige-and-cement-brief.md</code> — Brief — Fireplace Tile: Zellige and Cement for Feature Walls</li>
+<li><code>clients/zia-tile/campaigns/05-june-2026-blogs/briefs/glass-mosaic-tile-design-brief.md</code> — Brief — Glass Mosaic Tile: Pool, Bathroom &amp; Backsplash Design</li>
+<li><code>clients/zia-tile/campaigns/05-june-2026-blogs/briefs/limestone-tile-honed-vs-brushed-brief.md</code> — Brief — Limestone Tile: Honed vs Brushed + Care Guide</li>
+<li><code>clients/zia-tile/campaigns/05-june-2026-blogs/briefs/mosaic-tile-guide-brief.md</code> — Brief: Mosaic Tile: What It Is and How Designers Use It</li>
+<li><code>clients/zia-tile/campaigns/05-june-2026-blogs/briefs/outdoor-tile-patios-pool-decks-gardens-brief.md</code> — Brief: Outdoor Tile for Patios, Pool Decks and Gardens</li>
+<li><code>clients/zia-tile/campaigns/05-june-2026-blogs/briefs/tile-grout-guide-brief.md</code> — Brief — Tile Grout Guide: Choosing Grout for Zellige &amp; Cement</li>
+<li><code>clients/zia-tile/campaigns/05-june-2026-blogs/briefs/zellige-color-guide-brief.md</code> — Brief: The Zellige Color Guide</li>
+<li><code>clients/zia-tile/campaigns/05-june-2026-blogs/qa/cement-tile-commercial-spaces-qa.md</code> — QA Report — cement-tile-commercial-spaces-v1.md</li>
+<li><code>clients/zia-tile/campaigns/05-june-2026-blogs/qa/fireplace-tile-zellige-and-cement-qa.md</code> — QA Report — fireplace-tile-zellige-and-cement (v1 → final)</li>
+<li><code>clients/zia-tile/campaigns/05-june-2026-blogs/qa/glass-mosaic-tile-design-qa.md</code> — QA Report — glass-mosaic-tile-design</li>
+<li><code>clients/zia-tile/campaigns/05-june-2026-blogs/qa/limestone-tile-honed-vs-brushed-qa.md</code> — QA Report — limestone-tile-honed-vs-brushed (v1 → final)</li>
+<li><code>clients/zia-tile/campaigns/05-june-2026-blogs/qa/mosaic-tile-guide-qa.md</code> — QA report — mosaic-tile-guide (v1 → final)</li>
+<li><code>clients/zia-tile/campaigns/05-june-2026-blogs/qa/outdoor-tile-patios-pool-decks-gardens-qa.md</code> — QA report: outdoor-tile-patios-pool-decks-gardens</li>
+<li><code>clients/zia-tile/campaigns/05-june-2026-blogs/qa/post-editorial-batch-qa-2026-07-02.md</code> — Post-Editorial Batch QA: June 2026 Zia Blogs</li>
+<li><code>clients/zia-tile/campaigns/05-june-2026-blogs/qa/tile-grout-guide-qa.md</code> — QA — tile-grout-guide (v1 → final)</li>
+<li><code>clients/zia-tile/campaigns/05-june-2026-blogs/qa/zellige-color-guide-qa.md</code> — QA Report: zellige-color-guide</li>
+<li><code>clients/zia-tile/client-intelligence/README.md</code> — Zia Tile Client Intelligence</li>
+<li><code>clients/zia-tile/client-intelligence/STYLE-GUIDE.md</code> — Zia Tile — Style System</li>
+<li><code>clients/zia-tile/client-intelligence/offerings.md</code> — Zia Tile Offerings</li>
+<li><code>clients/zia-tile/client-intelligence/source-files.md</code> — Zia Tile Source Files</li>
+<li><code>clients/zia-tile/contact-block.md</code> — Contact block — Zia Tile</li>
+<li><code>clients/zia-tile/deliverables/README.md</code> — Zia Tile Deliverables</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/01-zellige.md</code> — Zellige PDP (\ Product Name)</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/02-zellige-mosaic.md</code> — Zellige Mosaic (\ Product Name)</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/03-unglazed-natural-zellige.md</code> — Unglazed Natural Zellige (\ Product Name)</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/04-unglazed-natural-zellige-mosaic.md</code> — Unglazed Natural Zellige Mosaic (\ Product Name)</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/05-ceramics-matte.md</code> — Ceramics PDP (\ Product Name)</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/06-field-trip-japan.md</code> — Ceramics PDP (\ Product Name)</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/07-cotto.md</code> — Cotto PDP (\ Product Name)</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/08-cotto-allende.md</code> — Cotto Allende PDP (\ Product Name)</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/09-glass-mosaics.md</code> — Glass Mosaic PDP (\ Product Name)</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/10-terrazzo.md</code> — Terrazzo PDP (\ Product Name)</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/11-marble-solids.md</code> — Marbe Solids PDP (\ Product Name)</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/12-marble-patterns.md</code> — Marble Patterns PDP (\ Product Name)</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/13-cantera.md</code> — Cantera PDP (\ Product Name)</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/14-limestone.md</code> — Limestone PDP (\ Product Name)</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/15-cement.md</code> — Cement PDP (\ Product Name)</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/16-roman-mosaics.md</code> — Marble Patterns PDP (\ Product Name)</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/blog-04-cotto.md</code> — Introducing Cotto: History, Applications, and Care</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/2x6-rectangle-oscura.md</code> — 2x6 Rectangle \+ Oscura</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/8x9-hex-red-clay.md</code> — 8x9 Hex \+ Red Clay</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/alcazar-madera.md</code> — Alcazar \+ Madera</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/apollo-12x12.md</code> — Apollo 12x12</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/atomic-4x4.md</code> — Atomic 4x4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/basilica-honed-4x12.md</code> — Basilica 4x12 + Honed</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/bone-2x8.md</code> — Bone 2x8</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/bone-hex.md</code> — Bone Hex</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/brighton-hyannis.md</code> — Brighton Hyannis</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/brownstone-4x4.md</code> — Brownstone 4x4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/buckeye-flat.md</code> — Buckeye + Flat</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/canvas-white.md</code> — Canvas White</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/constellation-bone-white-24x24.md</code> — Constellation Bone White 24x24</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/desert-grey-2x8.md</code> — Desert Grey 2x8</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/etna-carrara-verde-alpi.md</code> — Etna in Carrara \+ Verde Alpi</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/feather-flat.md</code> — Feather + Flat</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/frogtown-flat.md</code> — Frogtown + Flat</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/gambit-8.md</code> — Gambit 8</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/glazed-earth-trapezoid.md</code> — Glazed Earth Trapezoid</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/graphite-grey-2x6.md</code> — Graphite Grey 2x6</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/grigio-carnico-12x24.md</code> — Grigio Carnico 12x24</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/iconic-blue-4x4.md</code> — Iconic Blue 4x4 + Matte</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/jade-2x6.md</code> — Jade 2x6</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/montana.md</code> — Montana</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/moonrock-12x12.md</code> — Moon Rock 12x12</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/morning-light-furrowed.md</code> — Morning Light + Furrowed</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/nouveau-alluvian.md</code> — Nouveau Alluvian</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/oslo-white.md</code> — Oslo White</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/pacific-blue-2x8.md</code> — Pacific Blue 2x8 + Satin</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/peyote-4x4.md</code> — Peyote 4x4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/ponderosa-2x8.md</code> — Ponderosa 2x8 + Glossy</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/prismatic-1.md</code> — Prismatic 1</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/rubric-4.md</code> — Rubric 4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/rust-2x8.md</code> — Rust 2x8</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/sedona-12x12.md</code> — Sedona 12x12</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/slate-cement-tile.md</code> — Slate</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/square-madera-8x8.md</code> — Madera 8x8</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/superior-blue-4x4.md</code> — Superior Blue 4x4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/terra-rosa-4x4.md</code> — Terra Rosa 4x4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/unglazed-natural-4x4.md</code> — Unglazed Natural 4x4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/valverde-4x4.md</code> — Valverde 4x4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/volcan-12x12.md</code> — Volcan 12x12</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/volcan-12x24.md</code> — Volcan 12x24</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/May/volcan-24x24.md</code> — Volcan 24x24</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/absinthe-2x6-bejmat-zellige.md</code> — Absinthe 2x6</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/absinthe-4x4.md</code> — Absinthe 4x4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/absinthe-trapezoid.md</code> — Absinthe Trapezoid</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/aegean-4x4.md</code> — Aegean 4x4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/amber-4x4.md</code> — Amber 4x4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/basilica-honed-6x6.md</code> — Basilica 6x6 + Honed</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3/8x9-hex-fired-earth.md</code> — 8x9 Hex Fired Earth</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3/carrara-6x6.md</code> — Carrara 6x6</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3/cotto-zocalo-red-clay.md</code> — Zocalo + Red Clay</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3/durango-fired-earth.md</code> — Durango + Fired Earth</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3/glacier-blue-4x4-zellige.md</code> — Glacier Blue 4x4 Zellige</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3/maya-blue-4x4-zellige.md</code> — Maya Blue 4x4 Zellige</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3/monument-honed-12x12.md</code> — Monument 12x12 + Honed</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3/moroccan-blue-4x4-zellige.md</code> — Moroccan Blue 4x4 Zellige</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3/nero-marquina-12x24.md</code> — Nero Marquina 12x24</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3/night-blue-4x4-zellige.md</code> — Night Blue 4x4 Zellige</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3/pietro-pink-4x4-zellige.md</code> — Pietro Pink 4x4 Zellige</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3/portuguese-blue-4x4-zellige.md</code> — Portuguese Blue 4x4 Zellige</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3/prairie-green-hex-zellige.md</code> — Prairie Green Hex Zellige</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3/racing-green-2x2-zellige.md</code> — Racing Green 2x2 Zellige</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3/red-rocks-12x12.md</code> — Red Rocks 12x12</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3/salt-bush-12x12.md</code> — Salt Bush 12x12</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3/sierra-12x12.md</code> — Sierra 12x12</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3/slate-grey-2x6-zellige.md</code> — Slate Grey 2x6 Zellige</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3/slate-grey-4x4-zellige.md</code> — Slate Grey 4x4 Zellige</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3/square-fired-earth-4x4.md</code> — Square Fired Earth 4x4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3/square-red-clay-4x4.md</code> — Square Red Clay 4x4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3/stars-cross-blanco.md</code> — Stars &amp; Cross Blanco</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3/zinc-hex-zellige.md</code> — Zinc Hex Zellige</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3/zocalo-fired-earth.md</code> — Zocalo + Fired Earth</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3-review/alabaster-white-4x4.md</code> — Alabaster White 4x4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3-review/alpha-white-2x4.md</code> — Alpha White 2x4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3-review/alpha-white-2x8.md</code> — Alpha White 2x8</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3-review/alpha-white-4x4.md</code> — Alpha White 4x4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3-review/black-8x8.md</code> — Black 8x8</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3-review/high-line-hyannis-4x8.md</code> — High Line Hyannis 4x8</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3-review/iconic-blue-2x8.md</code> — Iconic Blue 2x8</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3-review/nile-2x8.md</code> — Nile 2x8</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3-review/nova-black-8x8.md</code> — Nova Black 8x8</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3-review/pink-dahlia-4x4.md</code> — Pink Dahlia 4x4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3-review/ponderosa-4x4.md</code> — Ponderosa 4x4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3-review/sage-2x8.md</code> — Sage 2x8</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3-review/sage-4x4.md</code> — Sage 4x4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3-review/sage-8x8.md</code> — Sage 8x8</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3-review/sepia-4x4.md</code> — Sepia 4x4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3-review/taupe-8x8.md</code> — Taupe 8x8</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3-review/terracotta-2x8.md</code> — Terracotta 2x8</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3-review/toast-flat.md</code> — Toast Flat</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3-review/toast-furrowed.md</code> — Toast Furrowed</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3-review/white-2x8.md</code> — White 2x8</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3-review/white-4x4.md</code> — White 4x4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3-review/white-cement-8x8.md</code> — White Cement 8x8</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/batch3-review/white-stars-cross.md</code> — White Stars &amp; Cross</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/buff-honed-12x12.md</code> — Buff 12x12 + Honed</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/buff-honed-12x24.md</code> — Buff 12x24 + Honed</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/buff-honed-4x12.md</code> — Buff 4x12 + Honed</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/buff-honed-6x6.md</code> — Buff 6x6 + Honed</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/bungalow-12x12.md</code> — Bungalow 12x12</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/burnt-sugar-2x2.md</code> — Burnt Sugar 2x2</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/burnt-sugar-4x4.md</code> — Burnt Sugar 4x4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/casablanca-white-2x2.md</code> — Casablanca White 2x2</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/casablanca-white-2x6.md</code> — Casablanca White 2x6</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/casablanca-white-4x4.md</code> — Casablanca White 4x4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/casablanca-white-trapezoid.md</code> — Casablanca White Trapezoid</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/condesa-4x4.md</code> — Condesa 4x4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/desert-bloom-4x4.md</code> — Desert Bloom 4x4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/durango-madera.md</code> — Durango + Madera</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/gambit-1.md</code> — Gambit 1</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/gambit-7.md</code> — Gambit 7</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/glazed-earth-2x2.md</code> — Glazed Earth 2x2</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/glazed-earth-2x6.md</code> — Glazed Earth 2x6</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/glazed-earth-4x4.md</code> — Glazed Earth 4x4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/graphite-grey-4x4.md</code> — Graphite Grey 4x4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/kelp-forest-2x8.md</code> — Kelp Forest 2x8 + Glossy</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/lattice-4.md</code> — Lattice 4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/linen-2x8.md</code> — Linen 2x8 + Matte</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/linen-4x4.md</code> — Linen 4x4 + Matte</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/molasses-2x8.md</code> — Molasses 2x8 + Glossy</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/molasses-4x4.md</code> — Molasses 4x4 + Glossy</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/monument-honed-6x6.md</code> — Monument 6x6 + Honed</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/neutra-12x12.md</code> — Neutra 12x12</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/pure-white-2x2.md</code> — Pure White 2x2</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/pure-white-2x6.md</code> — Pure White 2x6</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/pure-white-4x4.md</code> — Pure White 4x4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/pure-white-trapezoid.md</code> — Pure White Trapezoid</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/racing-green-2x6.md</code> — Racing Green 2x6</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/racing-green-4x4.md</code> — Racing Green 4x4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/rouge-4x4.md</code> — Rouge 4x4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/sequoia-4x4.md</code> — Sequoia 4x4 + Satin</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/skylight-4x4.md</code> — Skylight 4x4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/stars-cross-red-clay-6x6.md</code> — Stars &amp; Cross + Red Clay</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/tidepool-2x6.md</code> — Tidepool 2x6</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/tidepool-4x4.md</code> — Tidepool 4x4</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/tidepool-trapezoid.md</code> — Tidepool Trapezoid</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/unglazed-natural-2x6.md</code> — Unglazed Natural 2x6</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/product-pages/volcan-4x12.md</code> — Volcan 4x12</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/v3/09-glass-mosaics.md</code> — Product Name</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/v3/10-terrazzo.md</code> — Product Name</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/v3/11-marble-solids.md</code> — Product Name</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/v3/12-marble-patterns.md</code> — Product Name</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/v3/13-cantera.md</code> — Product Name</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/v3/14-limestone.md</code> — Product Name</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/v3/15-cement.md</code> — Product Name</li>
+<li><code>clients/zia-tile/deliverables/drafts/01-product-collection-pages/v3/16-roman-mosaics.md</code> — Product Name</li>
+<li><code>clients/zia-tile/deliverables/drafts/02-march-april-updates/CHANGES.md</code> — Edit Pass — March/April Zia Drafts (2026-05-13)</li>
+<li><code>clients/zia-tile/deliverables/drafts/02-march-april-updates/blog-4-cotto.md</code> — Introducing Cotto: History, Applications, and Care</li>
+<li><code>clients/zia-tile/deliverables/drafts/02-march-april-updates/collection-cotto.md</code> — Cotto</li>
+<li><code>clients/zia-tile/deliverables/drafts/02-march-april-updates/product-red-clay-8x8.md</code> — Red Clay 8x8 Square</li>
+<li><code>clients/zia-tile/deliverables/drafts/03-may-2026-blogs/blog-1-cement-tile-patina-corrected.md</code> — Cement Tile Patina: How European Floors Age Into Character</li>
+<li><code>clients/zia-tile/deliverables/drafts/03-may-2026-blogs/blog-10-zellige-vs-other-tiles-corrected.md</code> — When to Choose Zellige vs. Other Tiles: A Material Selection Guide</li>
+<li><code>clients/zia-tile/deliverables/drafts/03-may-2026-blogs/blog-11-kitchen-tile-corrected.md</code> — Kitchen Tile: Surface, Format, and Pattern</li>
+<li><code>clients/zia-tile/deliverables/drafts/03-may-2026-blogs/blog-12-cement-tile-guide-corrected.md</code> — Encaustic Cement Tile: Handmade, Mineral-Pigmented, and Never Fired</li>
+<li><code>clients/zia-tile/deliverables/drafts/03-may-2026-blogs/blog-13-roman-mosaic-corrected.md</code> — Roman Mosaic Tile: History and Design Guide</li>
+<li><code>clients/zia-tile/deliverables/drafts/03-may-2026-blogs/blog-14-marble-tile-guide-corrected.md</code> — Every Type of Marble Tile Worth Knowing</li>
+<li><code>clients/zia-tile/deliverables/drafts/03-may-2026-blogs/blog-2-best-tiles-for-showers-corrected.md</code> — Blog 2 Best Tiles For Showers Corrected</li>
+<li><code>clients/zia-tile/deliverables/drafts/03-may-2026-blogs/blog-3-kitchen-backsplash-corrected.md</code> — Kitchen Backsplash Design Ideas: Patterns, Layouts, and Color Combinations</li>
+<li><code>clients/zia-tile/deliverables/drafts/03-may-2026-blogs/blog-4-bathroom-tile-ideas-corrected.md</code> — Bathroom Tile Ideas: From Classic to Contemporary</li>
+<li><code>clients/zia-tile/deliverables/drafts/03-may-2026-blogs/blog-5-shower-wall-tile-corrected.md</code> — Shower Wall Tile: How to Use Zellige in Wet Environments</li>
+<li><code>clients/zia-tile/deliverables/drafts/03-may-2026-blogs/blog-6-zellige-tile-bathroom-corrected.md</code> — Zellige Tile for the Bathroom</li>
+<li><code>clients/zia-tile/deliverables/drafts/03-may-2026-blogs/blog-7-tile-for-small-bathrooms-corrected.md</code> — Tile for Small Bathrooms, Specified</li>
+<li><code>clients/zia-tile/deliverables/drafts/03-may-2026-blogs/blog-8-cement-tile-patterns-corrected.md</code> — How to Design With Cement Tile Patterns</li>
+<li><code>clients/zia-tile/deliverables/drafts/03-may-2026-blogs/blog-9-terracotta-tile-kitchens-corrected.md</code> — Terracotta Tile for Kitchens: Design Ideas</li>
+<li><code>clients/zia-tile/deliverables/drafts/04-may-batch/bathroom-tile-ideas.md</code> — Bathroom Tile Ideas | Zia Tile</li>
+<li><code>clients/zia-tile/deliverables/drafts/04-may-batch/checkerboard-tile-design-ideas-v5.md</code> — Checkerboard Tile Design Ideas for Kitchens and Bathrooms</li>
+<li><code>clients/zia-tile/deliverables/drafts/04-may-batch/kitchen-backsplash-design-ideas.md</code> — Kitchen Backsplash Design Ideas</li>
+<li><code>clients/zia-tile/deliverables/drafts/05-june-2026-blogs/cement-tile-commercial-spaces-v1.md</code> — Commercial Cement Tile: A Guide for Restaurants, Hotels, and Retail</li>
+<li><code>clients/zia-tile/deliverables/drafts/05-june-2026-blogs/fireplace-tile-zellige-and-cement-v1.md</code> — Fireplace Tile: Zellige and Cement for Feature Walls</li>
+<li><code>clients/zia-tile/deliverables/drafts/05-june-2026-blogs/glass-mosaic-tile-design-v1.md</code> — Glass Mosaic Tile: Pool, Bathroom, and Backsplash Design</li>
+<li><code>clients/zia-tile/deliverables/drafts/05-june-2026-blogs/limestone-tile-honed-vs-brushed-v1.md</code> — Limestone Tile: Honed vs. Brushed Finishes and Care</li>
+<li><code>clients/zia-tile/deliverables/drafts/05-june-2026-blogs/mosaic-tile-guide-v1.md</code> — Mosaic Tile: What It Is and How Designers Use It</li>
+<li><code>clients/zia-tile/deliverables/drafts/05-june-2026-blogs/outdoor-tile-patios-pool-decks-gardens-v1.md</code> — Outdoor Tile for Patios, Pool Decks and Gardens</li>
+<li><code>clients/zia-tile/deliverables/drafts/05-june-2026-blogs/tile-grout-guide-v1.md</code> — Tile Grout Guide: Choosing Grout for Zellige and Cement Tile</li>
+<li><code>clients/zia-tile/deliverables/drafts/05-june-2026-blogs/zellige-color-guide-v1.md</code> — The Zellige Color Guide: How Zellige Colors Read in a Room</li>
+<li><code>clients/zia-tile/deliverables/final/05-june-2026-blogs/cement-tile-commercial-spaces.md</code> — Commercial Cement Tile: A Guide for Restaurants, Hotels, and Retail</li>
+<li><code>clients/zia-tile/deliverables/final/05-june-2026-blogs/fireplace-tile-zellige-and-cement.md</code> — Fireplace Tile: Zellige and Cement for Feature Walls</li>
+<li><code>clients/zia-tile/deliverables/final/05-june-2026-blogs/glass-mosaic-tile-design.md</code> — Glass Mosaic Tile: Pool, Bathroom, and Backsplash Design</li>
+<li><code>clients/zia-tile/deliverables/final/05-june-2026-blogs/limestone-tile-honed-vs-brushed.md</code> — Limestone Tile: Honed vs. Brushed Finishes and Care</li>
+<li><code>clients/zia-tile/deliverables/final/05-june-2026-blogs/mosaic-tile-guide.md</code> — Mosaic Tile: What It Is and How Designers Use It</li>
+<li><code>clients/zia-tile/deliverables/final/05-june-2026-blogs/outdoor-tile-patios-pool-decks-gardens.md</code> — Outdoor Tile for Patios, Pool Decks and Gardens</li>
+<li><code>clients/zia-tile/deliverables/final/05-june-2026-blogs/tile-grout-guide.md</code> — Tile Grout Guide: Choosing Grout for Zellige and Cement Tile</li>
+<li><code>clients/zia-tile/deliverables/final/05-june-2026-blogs/zellige-color-guide.md</code> — The Zellige Color Guide: How Zellige Colors Read in a Room</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/cantera.md</code> — &quot;Cantera - Core Collection Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/cement.md</code> — &quot;Cement - Core Collection Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/ceramics.md</code> — &quot;Ceramics&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/color-black.md</code> — &quot;Color Black - Core Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/color-blue.md</code> — &quot;Color Blue - Core Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/color-brown.md</code> — &quot;Color Brown - Core Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/color-green.md</code> — &quot;Color Green - Core Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/color-grey.md</code> — &quot;Color Grey&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/color-orange.md</code> — &quot;Color Orange - Core Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/color-pattern.md</code> — &quot;Color Pattern - Core Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/color-pink.md</code> — &quot;Color Pink - Core Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/color-purple.md</code> — &quot;Color Purple - Core Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/color-red.md</code> — &quot;Color Red - Core Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/color-tan.md</code> — &quot;Color Tan - Core Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/color-white.md</code> — &quot;Color White - Core Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/color-yellow.md</code> — &quot;Color Yellow&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/cotto-allende.md</code> — &quot;Cotto Allende - Core Collection Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/cotto.md</code> — &quot;Cotto - Core Collection Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/field-trip-japan.md</code> — &quot;Field Trip Japan - Core Collection Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/glass-mosaics.md</code> — &quot;Glass Mosaics - Core Collection Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/homepage.md</code> — &quot;Homepage - Core Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/limestone.md</code> — &quot;Limestone&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/marble.md</code> — &quot;Marble&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/roman-mosaics.md</code> — &quot;Roman Mosaics - Core Collection Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/shape-hexagon.md</code> — &quot;Shape Hexagon - Core Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/shape-large-format.md</code> — &quot;Shape Large Format&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/shape-rectangle.md</code> — &quot;Shape Rectangle - Core Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/shape-special-shape.md</code> — &quot;Shape Special Shape&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/shape-square.md</code> — &quot;Shape Square - Core Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/shape-subway.md</code> — &quot;Shape Subway - Core Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/space-bathroom.md</code> — &quot;Space Bathroom - Core Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/space-kitchen.md</code> — &quot;Space Kitchen - Core Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/space-outdoor.md</code> — &quot;Space Outdoor - Core Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/space-shower.md</code> — &quot;Space Shower - Core Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/terrazzo.md</code> — &quot;Terrazzo&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/trade-program.md</code> — &quot;Trade Program - Core Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/collection-pages/zellige.md</code> — &quot;Zellige&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/2x6-rectangle-oscura.md</code> — &quot;2x6 Rectangle Oscura - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/8x9-hex-red-clay.md</code> — &quot;8x9 Hex Red Clay - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/absinthe-2x6-bejmat-zellige.md</code> — &quot;Absinthe 2x6 Bejmat Zellige&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/absinthe-trapezoid.md</code> — &quot;Absinthe Trapezoid - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/aegean-4x4.md</code> — &quot;Aegean 4x4 - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/amber-4x4.md</code> — &quot;Amber 4x4 - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/basilica-12x24-honed.md</code> — &quot;Basilica 12x24 Honed - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/basilica-6x6-honed.md</code> — &quot;Basilica 6x6 Honed - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/bungalow-12x12-terrazzo.md</code> — &quot;Bungalow 12x12 Terrazzo&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/burnt-sugar-2x2.md</code> — &quot;Burnt Sugar 2x2&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/burnt-sugar-2x6.md</code> — &quot;Burnt Sugar 2x6 - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/burnt-sugar-4x4.md</code> — &quot;Burnt Sugar 4x4&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/burnt-sugar-glazed-earth-checkerboard.md</code> — &quot;Burnt Sugar Glazed Earth Checkerboard - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/cacao-4x4.md</code> — &quot;Cacao 4x4 - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/carbon-black-4x4.md</code> — &quot;Carbon Black 4x4 - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/carrara-12x12.md</code> — &quot;Carrara 12x12 - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/casablanca-2x2-zellige.md</code> — &quot;Casablanca 2x2 Zellige - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/casablanca-2x6-zellige.md</code> — &quot;Casablanca 2x6 Zellige - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/casablanca-4x4-zellige.md</code> — &quot;Casablanca 4x4 Zellige - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/casablanca-trapezoid-1x4-zellige.md</code> — &quot;Casablanca Trapezoid 1x4 Zellige - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/ceramics-eucalyptus-2x8.md</code> — &quot;Ceramics Eucalyptus 2x8&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/ceramics-linen-2x8.md</code> — &quot;Ceramics Linen 2x8&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/condesa-4x4-square.md</code> — &quot;Condesa 4x4 Square - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/desert-bloom-2x6.md</code> — &quot;Desert Bloom 2x6 Bejmat Zellige&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/desert-bloom-4x4-zellige.md</code> — &quot;Desert Bloom 4x4 Zellige - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/durango-madera.md</code> — &quot;Durango Madera&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/ethereal-blue-2x8.md</code> — &quot;Ethereal Blue 2x8 - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/french-cobblestone.md</code> — &quot;French Cobblestone - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/gambit-1.md</code> — &quot;Gambit 1 - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/gambit-7.md</code> — &quot;Gambit 7 - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/glazed-earth-2x2.md</code> — &quot;Glazed Earth 2x2 - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/graphite-grey-4x4.md</code> — &quot;Graphite Grey 4x4 - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/jade-4x4-square.md</code> — &quot;Jade 4x4 Square Zellige&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/kelp-forest-2x8.md</code> — &quot;Kelp Forest 2x8 - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/kelp-forest-4x4.md</code> — &quot;Kelp Forest 4x4 - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/lattice-4-zellige-mosaic.md</code> — &quot;Lattice 4 Pure White + Casablanca Zellige Mosaic&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/limestone-buff-honed-12x12.md</code> — &quot;Limestone Buff Honed 12x12&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/limestone-buff-honed-12x24.md</code> — &quot;Limestone Buff Honed 12x24 - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/limestone-buff-honed-4x12.md</code> — &quot;Limestone Buff Honed 4x12 - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/limestone-buff-honed-6x6.md</code> — &quot;Limestone Buff Honed 6x6 - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/linen-4x4.md</code> — &quot;Linen 4x4&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/molasses-2x8.md</code> — &quot;Molasses 2x8 - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/molasses-4x4.md</code> — &quot;Molasses 4x4 - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/monument-4x12-honed.md</code> — &quot;Monument 4x12 Honed - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/monument-6x6-honed.md</code> — &quot;Monument 6x6 Honed - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/moonlight-2x8.md</code> — &quot;Moonlight 2x8 - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/nagano-2x8.md</code> — &quot;Nagano 2x8 - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/neutra-12x12.md</code> — &quot;Neutra 12x12 - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/neutra-24x24.md</code> — &quot;Neutra 24x24 - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/piedra-4x4-square.md</code> — &quot;Piedra 4x4 Square&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/pomelo-bone-8x8.md</code> — &quot;Pomelo Bone 8x8 - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/puebla-4x4.md</code> — &quot;Puebla 4x4 Square Cotto Allende&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/pure-white-2x2.md</code> — &quot;Pure White 2x2 - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/pure-white-2x6.md</code> — &quot;Pure White 2x6 - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/pure-white-4x4-zellige.md</code> — &quot;Pure White 4x4 Zellige - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/pure-white-trapezoid-zellige.md</code> — &quot;Pure White Trapezoid Zellige&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/racing-green-2x6-zellige.md</code> — &quot;Racing Green 2x6 Bejmat Zellige&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/red-clay-8x8-square.md</code> — &quot;Red Clay 8x8 Square - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/rouge-4x4.md</code> — &quot;Rouge 4x4 Square Zellige&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/sequoia-2x8.md</code> — &quot;Sequoia 2x8 - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/sequoia-4x4.md</code> — &quot;Sequoia 4x4 - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/skylight-4x4.md</code> — &quot;Skylight 4x4 Square Zellige&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/stars-cross-red-clay.md</code> — &quot;Stars Cross Red Clay - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/tidepool-2x6.md</code> — &quot;Tidepool 2x6 Bejmat Zellige&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/tidepool-4x4-zellige.md</code> — &quot;Tidepool 4x4 Zellige&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/tidepool-trapezoid.md</code> — &quot;Tidepool Trapezoid - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/toltec-red-clay.md</code> — &quot;Toltec + Red Clay Terra Cotta&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/unglazed-natural-2x6.md</code> — &quot;Unglazed Natural 2x6&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/volcan-4x12.md</code> — &quot;Volcan 4x12 - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/zellige-absinthe-4x4.md</code> — &quot;Zellige Absinthe 4x4&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/zellige-glazed-earth-2x6.md</code> — &quot;Zellige Glazed Earth 2x6&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/zellige-glazed-earth-4x4.md</code> — &quot;Zellige Glazed Earth 4x4 - Product Page&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/product-pages/zellige-racing-green-4x4.md</code> — &quot;Racing Green 4x4 Square Zellige&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/runs/collection-cotto-allende/RUN-SUMMARY.md</code> — Run summary: collection-cotto-allende</li>
+<li><code>clients/zia-tile/deliverables/review/01-product-collection-pages/runs/collection-cotto-allende/draft.md</code> — Cotto Allende</li>
+<li><code>clients/zia-tile/deliverables/review/02-march-april-updates/blog-01-terra-cotta-v2.md</code> — &quot;Terra Cotta Floor Tile: A Material That Earns Its Age&quot;</li>
+<li><code>clients/zia-tile/deliverables/review/04-may-batch/runs/bathroom-tile-ideas/BLOCKED.md</code> — BLOCKED: bathroom-tile-ideas</li>
+<li><code>clients/zia-tile/deliverables/review/04-may-batch/runs/bathroom-tile-ideas/RUN-SUMMARY.md</code> — Run summary: bathroom-tile-ideas</li>
+<li><code>clients/zia-tile/deliverables/review/04-may-batch/runs/bathroom-tile-ideas/brief.md</code> — Brief: Bathroom Tile Ideas</li>
+<li><code>clients/zia-tile/deliverables/review/04-may-batch/runs/bathroom-tile-ideas/draft-v1.md</code> — Bathroom Tile Ideas | Zia Tile</li>
+<li><code>clients/zia-tile/installation-guides/cantera.md</code> — Cantera Installation Guide</li>
+<li><code>clients/zia-tile/installation-guides/cement.md</code> — Cement Tile Installation Guide</li>
+<li><code>clients/zia-tile/installation-guides/ceramics.md</code> — Ceramics Installation Guide</li>
+<li><code>clients/zia-tile/installation-guides/cotto-allende.md</code> — Cotto Allende Installation Guide</li>
+<li><code>clients/zia-tile/installation-guides/cotto.md</code> — Cotto Installation Guide</li>
+<li><code>clients/zia-tile/installation-guides/field-trip-japan.md</code> — Field Trip: Japan Installation Guide</li>
+<li><code>clients/zia-tile/installation-guides/glass-mosaics.md</code> — Glass Mosaics Installation Guide</li>
+<li><code>clients/zia-tile/installation-guides/limestone.md</code> — Limestone Installation Guide</li>
+<li><code>clients/zia-tile/installation-guides/marble.md</code> — Marble Installation Guide</li>
+<li><code>clients/zia-tile/installation-guides/roman-mosaics.md</code> — Roman Mosaics Installation Guide</li>
+<li><code>clients/zia-tile/installation-guides/terrazzo.md</code> — Terrazzo Installation Guide</li>
+<li><code>clients/zia-tile/installation-guides/zellige-mosaics.md</code> — zellige Mosaics Installation Guide</li>
+<li><code>clients/zia-tile/installation-guides/zellige.md</code> — zellige Installation Guide</li>
+<li><code>clients/zia-tile/materials/_SCHEMA.md</code> — Material configs — schema</li>
+<li><code>clients/zia-tile/materials/cantera.md</code> — Cantera Stone — material rules</li>
+<li><code>clients/zia-tile/materials/cement.md</code> — Cement Tile — material rules</li>
+<li><code>clients/zia-tile/materials/ceramics.md</code> — Ceramics — material rules</li>
+<li><code>clients/zia-tile/materials/colorway-reference.md</code> — Zia Tile — Colorway Reference</li>
+<li><code>clients/zia-tile/materials/cotto-allende.md</code> — Cotto Allende — material rules</li>
+<li><code>clients/zia-tile/materials/cotto.md</code> — Cotto — material rules</li>
+<li><code>clients/zia-tile/materials/glass-mosaics.md</code> — Glass Mosaics — material rules</li>
+<li><code>clients/zia-tile/materials/limestone.md</code> — Limestone — material rules</li>
+<li><code>clients/zia-tile/materials/marble.md</code> — Marble (Solid) — material rules</li>
+<li><code>clients/zia-tile/materials/roman-mosaics.md</code> — Roman Mosaics — material rules</li>
+<li><code>clients/zia-tile/materials/terrazzo.md</code> — Terrazzo — material rules</li>
+<li><code>clients/zia-tile/materials/unglazed-zellige.md</code> — Unglazed Natural Zellige — material rules</li>
+<li><code>clients/zia-tile/materials/zellige.md</code> — Zellige (glazed) — material rules</li>
+<li><code>clients/zia-tile/page-templates/blog.md</code> — Blog post template — Zia Tile</li>
+<li><code>clients/zia-tile/page-templates/collection.md</code> — Collection page template — Zia Tile</li>
+<li><code>clients/zia-tile/page-templates/product.md</code> — Product page template (SKU) — Zia Tile</li>
+<li><code>clients/zia-tile/pages/installation-guides-hub.md</code> — Installation Guides Hub — Revised Page Copy</li>
+<li><code>clients/zia-tile/raw/knowledge/colorway-temperature-reference.md</code> — Zia Tile — Colorway Temperature Reference</li>
+<li><code>clients/zia-tile/raw/knowledge/service-taxonomy.md</code> — Zia Tile Service Taxonomy</li>
+<li><code>clients/zia-tile/raw/knowledge/zia-content-rules-and-error-log.md</code> — Zia Tile — Content Rules &amp; Error Log</li>
+<li><code>clients/zia-tile/raw/research/clickup-channel-recap.md</code> — Zia Tile — ClickUp Channel Recap (Internal)</li>
+<li><code>clients/zia-tile/raw/research/editorial-voice-research-2026-05-04.md</code> — Zia Tile Voice Research — 2026-05-04</li>
+<li><code>clients/zia-tile/raw/research/installation-guides-research.md</code> — Zia Tile Installation Guides — Consolidated Research (April 2026)</li>
+<li><code>clients/zia-tile/raw/research/materials-reference.md</code> — How to use this document</li>
+<li><code>clients/zia-tile/raw/research/style-guide-v2.md</code> — Zia Tile Editorial Style Guide v2.0 (April 2026)</li>
+<li><code>clients/zia-tile/raw/research/website-research-2026-05-04.md</code> — Zia Tile Website Research — 2026-05-04</li>
+<li><code>clients/zia-tile/raw/research/website-research.md</code> — Zia Tile Website Research (May 2026)</li>
+<li><code>clients/zia-tile/raw/transcripts/2026-03-11-linkgraph-zia-tile-kickoff.md</code> — LinkGraph // Zia Tile – Kickoff!</li>
+<li><code>clients/zia-tile/raw/transcripts/2026-03-27-zia-tile-content-discussion-linkgraph.md</code> — Zia Tile Content Discussion – LinkGraph</li>
+<li><code>clients/zia-tile/raw/transcripts/2026-03-30-zia-tile-seo-strategy-review.md</code> — Zia Tile SEO Strategy Review</li>
+<li><code>clients/zia-tile/raw/transcripts/2026-04-08-zia-tile-linkgraph-link-building-review.md</code> — Zia Tile / LinkGraph – Link Building Review</li>
+<li><code>clients/zia-tile/raw/transcripts/2026-04-15-product-pages-custom-code-walkthrough-zia-tile-linkgraph.md</code> — Product Pages Custom Code Walkthrough – Zia Tile/LinkGraph</li>
+<li><code>clients/zia-tile/raw/transcripts/2026-04-30-zia-tile-linkgraph-content-connect.md</code> — Zia Tile / LinkGraph Content Connect</li>
+<li><code>clients/zia-tile/raw/transcripts/2026-05-04-zia-tile-blog-posts-connect.md</code> — Zia Tile Blog Posts Connect</li>
+<li><code>clients/zia-tile/raw/transcripts/2026-05-08-afternoon-zia-tile-pdp-and-collection-page-structural-updates-connect.md</code> — Zia Tile: PDP and Collection Page Structural Updates Connect</li>
+<li><code>clients/zia-tile/raw/transcripts/2026-05-08-morning-zia-content-review.md</code> — Zia Content Review</li>
+<li><code>clients/zia-tile/reference-site/README.md</code> — Zia Tile Knowledge — Static Site Export</li>
+<li><code>clients/zia-tile/semantic-terms/herringbone-tile-pattern.md</code> — Protected Terms — Herringbone Tile Pattern</li></ul>
+        </section>
+      </main>
+    </section>
+    </body>
+</html>

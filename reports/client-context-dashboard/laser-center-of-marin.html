@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laser Center of Marin Context</title>
+  <style>
+    :root {
+      --bg:#f4f7f5; --panel:#ffffff; --ink:#09110f; --muted:#63716c; --line:#dce5df;
+      --black:#050907; --graph:#14d878; --graph-dark:#079d55; --soft:#eaf8f0; --soft-ink:#19392a;
+      --accent:#087a47; --red:#b5362d; --shadow:0 18px 46px rgba(5,9,7,.08);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:
+      linear-gradient(180deg, #ffffff 0, var(--bg) 360px); color:var(--ink); line-height:1.45; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .topnav { min-height:64px; padding:14px max(32px, calc((100vw - 1380px) / 2 + 32px)); background:var(--black); border-bottom:1px solid rgba(255,255,255,.08); position:sticky; top:0; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { color:#fff; display:inline-flex; align-items:center; gap:10px; font-weight:800; letter-spacing:0; }
+    .brand:hover { text-decoration:none; }
+    .brand span { width:32px; height:32px; border-radius:8px; background:var(--graph); color:var(--black); display:inline-grid; place-items:center; font-size:13px; font-weight:900; }
+    .nav-meta, .nav-link { color:#b8c6c0; font-size:13px; font-weight:700; }
+    .hero { margin:0; padding:42px max(32px, calc((100vw - 1380px) / 2 + 32px)) 38px; background:var(--black); color:#fff; border-bottom:1px solid rgba(255,255,255,.08); }
+    .index-hero, .client-hero { display:flex; justify-content:space-between; gap:28px; align-items:flex-start; }
+    .hero h1 { margin:0 0 12px; font-size:clamp(32px, 5vw, 62px); line-height:.98; letter-spacing:0; max-width:900px; }
+    .hero p { margin:0; color:#c7d5cf; max-width:840px; font-size:17px; }
+    .hero-copy { max-width:940px; }
+    .kicker { color:var(--graph); font-size:12px; text-transform:uppercase; letter-spacing:.08em; font-weight:900; }
+    .report-meta { display:flex; flex-wrap:wrap; gap:10px; padding:14px 32px; background:#fff; border-bottom:1px solid var(--line); color:var(--muted); font-size:13px; max-width:1380px; margin:0 auto; }
+    .report-meta span { background:var(--soft); color:var(--soft-ink); border-radius:999px; padding:6px 10px; font-weight:700; }
+    .grid.cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(290px, 1fr)); gap:16px; padding:24px 32px 42px; max-width:1380px; margin:0 auto; }
+    .card, .panel, .context-card { background:var(--panel); border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow); }
+    .client-card { display:block; padding:20px; color:inherit; min-height:184px; transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease; }
+    .client-card:hover { text-decoration:none; transform:translateY(-2px); border-color:rgba(20,216,120,.55); box-shadow:0 24px 58px rgba(5,9,7,.12); }
+    .card-topline { display:flex; justify-content:space-between; gap:10px; align-items:center; }
+    .client-card h2 { margin:14px 0 8px; font-size:23px; line-height:1.1; }
+    .client-card p { margin:0; color:var(--muted); }
+    .metrics { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+    .metrics span, .evidence, .status-pill { background:var(--soft); border:1px solid rgba(20,216,120,.22); border-radius:999px; padding:5px 9px; font-size:12px; color:var(--soft-ink); font-weight:800; }
+    .topic-chips { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 18px; }
+    .topic-chips span { background:#f6fbf8; border:1px solid var(--line); border-radius:999px; color:#183a2a; padding:7px 10px; font-size:13px; font-weight:750; }
+    .layout { display:block; padding:22px 32px 46px; max-width:1380px; margin:0 auto; }
+    main { min-width:0; }
+    .context-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; margin-bottom:20px; }
+    .context-card { padding:18px; min-height:220px; }
+    .context-card ul { margin-bottom:0; }
+    .context-note { color:var(--muted); font-size:13px; margin:4px 0 12px; }
+    .aside-label { color:var(--graph-dark); font-size:11px; text-transform:uppercase; font-weight:900; letter-spacing:.08em; margin-bottom:5px; }
+    .panel h2 { margin-top:0; }
+    .panel { padding:22px; margin-bottom:20px; }
+    .panel h2 { font-size:26px; letter-spacing:0; }
+    .offerings { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:13px; margin-top:16px; }
+    .offering, .sample { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .offering { position:relative; overflow:hidden; }
+    .offering-marker { position:absolute; inset:0 auto 0 0; width:4px; background:var(--graph); }
+    .offering h3, .sample h4 { margin:0 0 6px; }
+    .offering p { margin:0 0 10px; }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .stat-stack { display:grid; grid-template-columns:repeat(3, minmax(100px, 1fr)); gap:8px; min-width:340px; }
+    .stat-stack div { border:1px solid rgba(255,255,255,.15); border-radius:8px; padding:14px; background:rgba(255,255,255,.06); }
+    .stat-stack strong { display:block; font-size:26px; color:#fff; }
+    .stat-stack span, .muted { color:var(--muted); font-size:13px; }
+    .hero .stat-stack span { color:#b8c6c0; }
+    ul { padding-left:20px; }
+    li { margin:4px 0; }
+    code { background:var(--soft); color:var(--soft-ink); padding:2px 4px; border-radius:4px; }
+    details { margin:10px 0; }
+    summary { cursor:pointer; font-weight:700; }
+    .style-section { border-top:1px solid var(--line); padding-top:10px; }
+    .markdown { color:#2d2f35; }
+    @media (max-width: 980px) {
+      .layout, .split, .client-hero, .index-hero { grid-template-columns:1fr; display:block; }
+      .context-grid { grid-template-columns:1fr; }
+      .stat-stack { min-width:0; margin-top:16px; }
+      .hero, .grid.cards, .layout, .topnav, .report-meta { padding-left:16px; padding-right:16px; }
+      .hero h1 { font-size:36px; }
+      .stat-stack { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+    <nav class="topnav">
+      <a class="brand" href="index.html"><span>LG</span>LinkGraph</a>
+      <a class="nav-link" href="index.html">All clients</a>
+    </nav>
+    <section class="hero client-hero">
+      <div class="hero-copy">
+        <div class="kicker">laser-center-of-marin</div>
+        <h1>Laser Center of Marin</h1>
+        <p>5 extracted offerings, 155 sitemap URLs, and 8 local source documents for client-specific writing context.</p>
+      </div>
+      <div class="stat-stack">
+        <div><strong>ok</strong><span>crawl status</span></div>
+        <div><strong>155</strong><span>URLs found</span></div>
+        <div><strong>24</strong><span>product/service URLs</span></div>
+      </div>
+    </section>
+    <section class="layout">
+      <main>
+        <section class="context-grid">
+    <article class="context-card">
+      <div class="aside-label">Quick Facts</div>
+      <p class="context-note">Company, audience, and proof points.</p>
+      <ul><li>Laser Center of Marin is a physician-supervised aesthetic clinic in Marin County, California. In operation since 2003. Locally owned and operated. One of the largest laser centers in the Bay Area.</li><li>Allergan Black Diamond provider (Botox, Juvederm)</li><li>Galderma Platinum provider (Restylane)</li><li>Services: laser treatments, injectables, non-invasive cosmetic procedures. All performed under physician supervision.</li><li>Audience: Patients seeking medically supervised aesthetic treatments in Marin County and the Bay Area. Typically professionals, individuals interested in laser and injectable treatments, patients who prioritize physician oversight and clinical experience.</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Voice</div>
+      <p class="context-note">How this client should sound.</p>
+      <ul><li>Goal: Not this</li><li>Communicate results: &quot;Transform your appearance&quot;</li><li>Reference expertise: &quot;The best in Marin&quot;</li><li>Describe treatments: &quot;Revolutionary laser technology&quot;</li><li>Frame outcomes: &quot;Guaranteed results&quot;</li><li>Register: Professional, welcoming, reassuring.</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Avoid / Compliance</div>
+      <p class="context-note">Claims, terms, and wording to avoid.</p>
+      <ul><li>&quot;guaranteed results&quot;: Cannot guarantee cosmetic outcomes</li><li>&quot;guarantee&quot;: Same — any form is off-limits</li><li>&quot;transform your appearance&quot;: Exaggerated claim</li><li>&quot;look years younger&quot;: Outcome promise — not medically responsible</li><li>&quot;eliminate&quot; (for a condition): Treatments improve or reduce, not eliminate</li><li>&quot;revolutionary&quot;: Vague promotional language</li><li>&quot;best clinic in Marin&quot;: Unsupported superlative</li><li>&quot;luxury spa&quot;: Misframes the practice as a spa</li><li>&quot;affordable&quot; / &quot;affordable prices&quot;: Premium positioning — no price framing</li><li>&quot;dramatic results&quot;: Exaggerated — implies more than medically responsible</li><li>Do not promise specific outcomes for any treatment.</li><li>Do not present any procedure as universally effective or risk-free.</li><li>Do not make comparative claims against competitor clinics.</li><li>Allergan Black Diamond and Galderma Platinum designations are earned — use them accurately. Black Diamond is an Allergan designation; Platinum is Galderma. Do not conflate.</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Terminology</div>
+      <p class="context-note">Client-specific naming and required language.</p>
+      <p class="muted">No clean lines extracted yet.</p>
+    </article>
+    </section>
+        <section class="panel">
+          <h2>Offerings, Services, Goods</h2>
+          <p class="muted">Writer-facing catalog from the client style system, approved source files, and usable product/service pages. Raw crawl evidence is separated below.</p>
+          <div class="offerings">
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Injectable treatments</h3>
+      <p>Botox, Juvederm, Restylane, Dysport, and related injectable treatments when confirmed on the page.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/laser-center-of-marin/raw/knowledge/service-taxonomy.md · Sections: 8. Service Reference, Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Non-invasive cosmetic procedures</h3>
+      <p>Non-surgical aesthetic procedures for skin, facial, and cosmetic concerns.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/laser-center-of-marin/raw/knowledge/service-taxonomy.md · Sections: 8. Service Reference, Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Laser Treatments</h3>
+      <p>Advanced laser services for skin concerns, with device details verified before writing.</p>
+      <div class="evidence">Sources: clients/laser-center-of-marin/raw/knowledge/service-taxonomy.md · Sections: Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Skin Rejuvenation</h3>
+      <p>Treatment category for improving tone, texture, pigment, and visible aging concerns.</p>
+      <div class="evidence">Sources: clients/laser-center-of-marin/raw/knowledge/service-taxonomy.md · Sections: Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Laser treatments (advanced laser technology</h3>
+      <p>specific devices to be confirmed)</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md · Sections: 8. Service Reference</div>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Website Intelligence</h2>
+          <div class="split">
+            <div>
+              <h3>Website URLs</h3><ul><li><a href="https://www.marinlaser.com/">https://www.marinlaser.com/</a></li></ul>
+              <h3>Sitemaps</h3><ul><li><a href="https://www.marinlaser.com/sitemap.xml">https://www.marinlaser.com/sitemap.xml</a></li></ul>
+            </div>
+            <div>
+              <h3>Semantic / Topical Terms</h3><div class="topic-chips"><span>Injectable Treatments</span><span>Non-Invasive Cosmetic Procedures</span><span>Laser Treatments</span><span>Skin Rejuvenation</span><span>Laser Treatments (Advanced Laser Technology</span><span>Marin County</span><span>Bay Area</span></div>
+              <h3>Blockers</h3><p class="muted">None</p>
+            </div>
+          </div>
+          <h3>Product / Service URLs</h3><ul><li><a href="https://www.marinlaser.com/treatments">https://www.marinlaser.com/treatments</a></li><li><a href="https://www.marinlaser.com/treatment/botox">https://www.marinlaser.com/treatment/botox</a></li><li><a href="https://www.marinlaser.com/treatment/brow-lamination">https://www.marinlaser.com/treatment/brow-lamination</a></li><li><a href="https://www.marinlaser.com/treatment/clear-brilliant">https://www.marinlaser.com/treatment/clear-brilliant</a></li><li><a href="https://www.marinlaser.com/treatment/dermal-filler">https://www.marinlaser.com/treatment/dermal-filler</a></li><li><a href="https://www.marinlaser.com/treatment/dermal-peel">https://www.marinlaser.com/treatment/dermal-peel</a></li><li><a href="https://www.marinlaser.com/treatment/dermaplaning">https://www.marinlaser.com/treatment/dermaplaning</a></li><li><a href="https://www.marinlaser.com/treatment/diamondglow">https://www.marinlaser.com/treatment/diamondglow</a></li><li><a href="https://www.marinlaser.com/treatment/dysport">https://www.marinlaser.com/treatment/dysport</a></li><li><a href="https://www.marinlaser.com/treatment/emsculpt">https://www.marinlaser.com/treatment/emsculpt</a></li><li><a href="https://www.marinlaser.com/treatment/fraxel">https://www.marinlaser.com/treatment/fraxel</a></li><li><a href="https://www.marinlaser.com/treatment/genesis">https://www.marinlaser.com/treatment/genesis</a></li><li><a href="https://www.marinlaser.com/treatment/ipl">https://www.marinlaser.com/treatment/ipl</a></li><li><a href="https://www.marinlaser.com/treatment/laser-hair">https://www.marinlaser.com/treatment/laser-hair</a></li><li><a href="https://www.marinlaser.com/treatment/lash-lift-tint">https://www.marinlaser.com/treatment/lash-lift-tint</a></li><li><a href="https://www.marinlaser.com/treatment/lip-filler">https://www.marinlaser.com/treatment/lip-filler</a></li><li><a href="https://www.marinlaser.com/treatment/lip-flip">https://www.marinlaser.com/treatment/lip-flip</a></li><li><a href="https://www.marinlaser.com/treatment/medical-facial">https://www.marinlaser.com/treatment/medical-facial</a></li><li><a href="https://www.marinlaser.com/treatment/medical-grade-skincare">https://www.marinlaser.com/treatment/medical-grade-skincare</a></li><li><a href="https://www.marinlaser.com/treatment/micropen">https://www.marinlaser.com/treatment/micropen</a></li><li><a href="https://www.marinlaser.com/treatment/rf">https://www.marinlaser.com/treatment/rf</a></li><li><a href="https://www.marinlaser.com/treatment/scultpra">https://www.marinlaser.com/treatment/scultpra</a></li><li><a href="https://www.marinlaser.com/treatment/trusculpt">https://www.marinlaser.com/treatment/trusculpt</a></li><li><a href="https://www.marinlaser.com/treatment/ultherapy">https://www.marinlaser.com/treatment/ultherapy</a></li></ul>
+          <h3>Sampled Pages</h3><div class="sample-pages">
+    <article class="sample">
+      <h4>Laser Center of Marin | Premier Med Spa in Corte Madera</h4>
+      <a href="https://www.marinlaser.com/">https://www.marinlaser.com/</a>
+      <p>Experience Marin’s original full-service med spa. Located in Corte Madera, Laser Center of Marin offers advanced laser treatments, injectables, and skincare services to help you look and feel your best.</p>
+      <ul><li>Marin County&#x27;s Premier Aesthetic Medicine Center</li><li>get started</li><li>MARIN COUNTY’S Flagship MED SPA</li><li>recent Results</li><li>Featured treatments</li><li>get started</li><li>Reviews</li><li>Laser Center Providers</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>All Treatments | Laser Center of Marin</h4>
+      <a href="https://www.marinlaser.com/treatments">https://www.marinlaser.com/treatments</a>
+      <p>Explore all med spa treatments at Laser Center of Marin in Corte Madera. From laser therapy and Botox to facials and skin rejuvenation, we have you covered.</p>
+      <ul><li>Complete Treatment Options at Marin Laser</li><li>Featured</li><li>PROVIDER</li><li>get started</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Scarlet RF Microneedling | Skin Tightening</h4>
+      <a href="https://www.marinlaser.com/treatment/rf">https://www.marinlaser.com/treatment/rf</a>
+      <p>Tighten, lift, and smooth your skin with Scarlet RF microneedling. Combines radiofrequency and collagen stimulation for powerful results in Corte Madera.</p>
+      <ul><li>Scarlet</li><li>Tighten, smooth, and glow—no filter needed</li><li>get started</li><li>recent Results</li><li>Why Choose</li><li>Scarlet</li><li>at Laser Center of Marin?</li><li>get started</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>IPL Photofacial in Corte Madera, CA | Laser Center of Marin</h4>
+      <a href="https://www.marinlaser.com/treatment/ipl">https://www.marinlaser.com/treatment/ipl</a>
+      <p>Reduce the appearance of sun damage and hyperpigmentation with an IPL photofacial in Corte Madera, CA. We provide skin treatments here at Laser Center of Marin.</p>
+      <ul><li>IPL Photofacial</li><li>Goodbye, sun damage. Hello, clear skin.</li><li>get started</li><li>recent Results</li><li>Why Choose</li><li>IPL Photofacial</li><li>at Laser Center of Marin?</li><li>get started</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Best Botox in Corte Madera, CA | Laser Center of Marin</h4>
+      <a href="https://www.marinlaser.com/treatment/botox">https://www.marinlaser.com/treatment/botox</a>
+      <p>Smooth frown lines and crow’s feet with treatment for Botox in Corte Madera, CA. At Laser Center of Marin, we provide safe treatment with natural results.</p>
+      <ul><li>Botox</li><li>Age Gracefully With a Dose of Smooth Skin.</li><li>get started</li><li>recent Results</li><li>Why Choose</li><li>Botox</li><li>at Laser Center of Marin?</li><li>get started</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Fraxel Laser | Advanced Skin Resurfacing</h4>
+      <a href="https://www.marinlaser.com/treatment/fraxel">https://www.marinlaser.com/treatment/fraxel</a>
+      <p>Improve texture, tone, and sun damage with Fraxel laser treatment. Advanced skin rejuvenation available at Laser Center of Marin.</p>
+      <ul><li>Fraxel</li><li>Refresh your skin from the inside out—with the laser that does it all</li><li>get started</li><li>recent Results</li><li>Why Choose</li><li>Fraxel</li><li>at Laser Center of Marin?</li><li>get started</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Dysport Injections | Laser Center of Marin- Corte Madera, CA</h4>
+      <a href="https://www.marinlaser.com/treatment/dysport">https://www.marinlaser.com/treatment/dysport</a>
+      <p>Relax targeted muscles to smooth wrinkles and frown lines with Dysport injections at Laser Center of Marin. Get results that look natural and not overdone.</p>
+      <ul><li>Dysport</li><li>Smooth Expression Lines Without Losing Expression.</li><li>get started</li><li>recent Results</li><li>Why Choose</li><li>Dysport</li><li>at Laser Center of Marin?</li><li>get started</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Laser Genesis | Smooth Skin &amp; Redness Reduction</h4>
+      <a href="https://www.marinlaser.com/treatment/genesis">https://www.marinlaser.com/treatment/genesis</a>
+      <p>Stimulate collagen, reduce redness, and improve skin tone with Laser Genesis at Laser Center of Marin. Gentle, no-downtime treatment in Corte Madera.</p>
+      <ul><li>Genesis</li><li>Calm redness, smooth texture, and boost glow—with zero downtime</li><li>get started</li><li>recent Results</li><li>Why Choose</li><li>Genesis</li><li>at Laser Center of Marin?</li><li>get started</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Emsculpt | Build Muscle &amp; Burn Fat</h4>
+      <a href="https://www.marinlaser.com/treatment/emsculpt">https://www.marinlaser.com/treatment/emsculpt</a>
+      <p>Strengthen and tone with Emsculpt — the non-invasive body sculpting treatment. Available at Laser Center of Marin in Corte Madera.</p>
+      <ul><li>emsculpt</li><li>Stronger muscles. Leaner shape. Zero sweat.</li><li>get started</li><li>recent Results</li><li>Why Choose</li><li>emsculpt</li><li>at Laser Center of Marin?</li><li>get started</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Lip Flip Treatment | Laser Center of Marin- Corte Madera, CA</h4>
+      <a href="https://www.marinlaser.com/treatment/lip-flip">https://www.marinlaser.com/treatment/lip-flip</a>
+      <p>The Laser Center of Marin has served the local Marin community for decades. Treat volume loss and asymmetry with lip flip treatment at Laser Center of Marin.</p>
+      <ul><li>Lip Flip</li><li>A subtle boost for a softer, fuller smile</li><li>get started</li><li>recent Results</li><li>Why Choose</li><li>Lip Flip</li><li>at Laser Center of Marin?</li><li>get started</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Microneedling | Skin Rejuvenation</h4>
+      <a href="https://www.marinlaser.com/treatment/micropen">https://www.marinlaser.com/treatment/micropen</a>
+      <p>Boost collagen, minimize pores, and refine texture with MicroPen microneedling. A gentle skin-renewing treatment available in Corte Madera.</p>
+      <ul><li>Micropen</li><li>Smoother skin, naturally restored</li><li>get started</li><li>recent Results</li><li>Why Choose</li><li>Micropen</li><li>at Laser Center of Marin?</li><li>get started</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Sculptra in Corte Madera, CA | Laser Center of Marin</h4>
+      <a href="https://www.marinlaser.com/treatment/scultpra">https://www.marinlaser.com/treatment/scultpra</a>
+      <p>Laser Center of Marin provides the collagen-stimulating injectable, Sculptra. Soften folds and wrinkles with treatments using Sculptra in Corte Madera, CA.</p>
+      <ul><li>Sculptra</li><li>Rebuild Your Glow From Within. Get Long-Lasting, Natural Volume.</li><li>get started</li><li>recent Results</li><li>Why Choose</li><li>Sculptra</li><li>at Laser Center of Marin?</li><li>get started</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>truSculpt Body Contouring | Fat Reduction</h4>
+      <a href="https://www.marinlaser.com/treatment/trusculpt">https://www.marinlaser.com/treatment/trusculpt</a>
+      <p>Reduce stubborn fat and sculpt your shape with truSculpt. A comfortable, non-invasive body contouring solution available in Corte Madera.</p>
+      <ul><li>truSculpt</li><li>Target the trouble spots. No surgery, no sweat.</li><li>get started</li><li>recent Results</li><li>Why Choose</li><li>truSculpt</li><li>at Laser Center of Marin?</li><li>get started</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Ultherapy in Corte Madera, CA | Laser Center of Marin</h4>
+      <a href="https://www.marinlaser.com/treatment/ultherapy">https://www.marinlaser.com/treatment/ultherapy</a>
+      <p>Lift and tighten skin naturally with Ultherapy in Corte Madera, CA. This non-invasive ultrasound treatment targets the deep layers of skin for lasting results.</p>
+      <ul><li>Ultherapy</li><li>Lift, Tighten, and Firm Without Surgery</li><li>get started</li><li>recent Results</li><li>Why Choose</li><li>Ultherapy</li><li>at Laser Center of Marin?</li><li>get started</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Laser Hair Removal | Permanent Solution</h4>
+      <a href="https://www.marinlaser.com/treatment/laser-hair">https://www.marinlaser.com/treatment/laser-hair</a>
+      <p>Say goodbye to shaving. Get long-lasting hair reduction with laser hair removal at Laser Center of Marin in Corte Madera.</p>
+      <ul><li>Laser Hair Removal</li><li>Smooth skin, zero hassle</li><li>get started</li><li>recent Results</li><li>Why Choose</li><li>Laser Hair Removal</li><li>at Laser Center of Marin?</li><li>get started</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Lip Filler | Natural Enhancement Treatment</h4>
+      <a href="https://www.marinlaser.com/treatment/lip-filler">https://www.marinlaser.com/treatment/lip-filler</a>
+      <p>Add soft, natural volume to your lips with expert lip filler treatment in Corte Madera. Trusted results at Laser Center of Marin.</p>
+      <ul><li>Lip Filler</li><li>The shape you want. The confidence you deserve.</li><li>get started</li><li>recent Results</li><li>Why Choose</li><li>Lip Filler</li><li>at Laser Center of Marin?</li><li>get started</li></ul>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Full Style System</h2>
+          <details open><summary>Show style-system sections</summary>
+    <details class="style-section">
+      <summary>Laser Center of Marin — Style System</summary>
+      <div class="markdown"><p>Generated: 2026-05-29<br>Sources: raw/knowledge/overview.md<br>Base rules: universal-rules/UNIVERSAL-RULES.md</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>1. Brand &amp; Audience</summary>
+      <div class="markdown"><p>Laser Center of Marin is a physician-supervised aesthetic clinic in Marin County, California. In operation since 2003. Locally owned and operated. One of the largest laser centers in the Bay Area.</p><p>Provider designations:<br><li>Allergan Black Diamond provider (Botox, Juvederm)</li><br><li>Galderma Platinum provider (Restylane)</li></ul><p>Services: laser treatments, injectables, non-invasive cosmetic procedures. All performed under physician supervision.</p><p>**Audience:** Patients seeking medically supervised aesthetic treatments in Marin County and the Bay Area. Typically professionals, individuals interested in laser and injectable treatments, patients who prioritize physician oversight and clinical experience.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2. Voice &amp; Tone</summary>
+      <div class="markdown"><p>**Register:** Professional, welcoming, reassuring.</p><p>Content must feel trustworthy and medically grounded. It should not feel promotional, spa-adjacent, or sales-driven. This is a medical practice — write to the standard of a clinical setting, not a lifestyle brand.</p><p>| Goal | Not this | Use this |<br>|---|---|---|<br>| Communicate results | &quot;Transform your appearance&quot; | &quot;Improve the appearance of [specific concern]&quot; |<br>| Reference expertise | &quot;The best in Marin&quot; | &quot;Allergan Black Diamond and Galderma Platinum provider&quot; |<br>| Describe treatments | &quot;Revolutionary laser technology&quot; | &quot;[Specific device/treatment] for [specific concern]&quot; |<br>| Frame outcomes | &quot;Guaranteed results&quot; | &quot;Results vary based on individual skin type and treatment plan&quot; |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3. Terminology</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.1 Required terms</summary>
+      <div class="markdown"><p><li>**Physician-supervised** (not &quot;doctor-run&quot; or &quot;medically overseen&quot;)</li><br><li>**Allergan Black Diamond provider** — use when referencing injectable expertise</li><br><li>**Galderma Platinum provider** — use when referencing Restylane expertise</li><br><li>Reference injectable brands by name when relevant: Botox, Juvederm, Restylane, Dysport</li><br><li>**Personalized treatment plan** or **tailored treatment plan** (not &quot;custom plan&quot;)</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.2 Strict avoidance list</summary>
+      <div class="markdown"><p>| Term | Reason |<br>|---|---|<br>| &quot;guaranteed results&quot; | Cannot guarantee cosmetic outcomes |<br>| &quot;guarantee&quot; | Same — any form is off-limits |<br>| &quot;transform your appearance&quot; | Exaggerated claim |<br>| &quot;look years younger&quot; | Outcome promise — not medically responsible |<br>| &quot;eliminate&quot; (for a condition) | Treatments improve or reduce, not eliminate |<br>| &quot;revolutionary&quot; | Vague promotional language |<br>| &quot;best clinic in Marin&quot; | Unsupported superlative |<br>| &quot;luxury spa&quot; | Misframes the practice as a spa |<br>| &quot;affordable&quot; / &quot;affordable prices&quot; | Premium positioning — no price framing |<br>| &quot;dramatic results&quot; | Exaggerated — implies more than medically responsible |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4. Accuracy &amp; Technical Standards</summary>
+      <div class="markdown"><p><li>Do not promise specific outcomes for any treatment.</li><br><li>Do not present any procedure as universally effective or risk-free.</li><br><li>Do not make comparative claims against competitor clinics.</li><br><li>Allergan Black Diamond and Galderma Platinum designations are earned — use them accurately. Black Diamond is an Allergan designation; Platinum is Galderma. Do not conflate.</li><br><li>When referencing specific treatments (Botox, laser types), reference them by their correct names. Do not invent technical specifications.</li><br><li>&quot;Physician-supervised&quot; means a physician oversees the practice and protocols — not necessarily that a physician performs every treatment. Do not overclaim the level of direct physician involvement without confirmation.</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5. Specificity Rules</summary>
+      <div class="markdown"><p><li>Prefer specific claims over general ones. &quot;Serves Marin County since 2003&quot; is better than &quot;a long-standing local clinic.&quot;</li><br><li>Use provider designation names (Black Diamond, Platinum) when establishing authority.</li><br><li>Reference specific treatments rather than vague categories. &quot;IPL photofacial&quot; or &quot;Fraxel resurfacing&quot; is more credible than &quot;advanced laser treatments.&quot;</li><br><li>Attribute patient outcomes to individual factors: skin type, treatment history, compliance with post-care instructions.</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6. Page Structure</summary>
+      <div class="markdown"><p>No approved templates established yet. Follow universal rules for page and section structure.</p><p>When a new campaign establishes approved structure, document it in `campaigns/{campaign}/brief.md` and promote to a `page-templates/` file once confirmed by client.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>7. SEO Standards</summary>
+      <div class="markdown"><p><li>Primary keyword in first sentence.</li><br><li>Title tags: under 60 characters, primary keyword near the front.</li><br><li>Meta descriptions: 140–160 characters, include primary keyword, at least one outcome or use case.</li><br><li>Do not keyword-stuff treatment names — use them where natural.</li><br><li>Target local intent where relevant: &quot;Marin County,&quot; &quot;Bay Area,&quot; &quot;San Francisco&quot; as supporting terms.</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>8. Service Reference</summary>
+      <div class="markdown"><p>Treatments offered (from client brief):<br><li>Laser treatments (advanced laser technology — specific devices to be confirmed)</li><br><li>Injectable treatments: Botox, Juvederm, Restylane, Dysport</li><br><li>Non-invasive cosmetic procedures</li></ul><p>Do not invent specific device models or treatment protocols without source confirmation. If a campaign requires specific device references, get confirmation from `raw/` or the CSM.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>9. Pre-Submission Checklist</summary>
+      <div class="markdown"><p><li>[ ] No guaranteed outcome claims anywhere in the piece</li><br><li>[ ] No exaggerated transformation language (&quot;transform,&quot; &quot;dramatic,&quot; &quot;look years younger&quot;)</li><br><li>[ ] Physician supervision mentioned where clinically relevant</li><br><li>[ ] Provider designations (Black Diamond, Platinum) used accurately — not mixed up</li><br><li>[ ] Tone is professional and reassuring — not promotional or spa-like</li><br><li>[ ] No comparative claims against other clinics</li><br><li>[ ] All specific treatment claims sourced from raw/ or client brief</li><br><li>[ ] Local terms (Marin County, Bay Area) used accurately</li></p></div>
+    </details>
+    </details>
+        </section>
+        <section class="panel">
+          <h2>Local Source Files Read</h2>
+          <ul><li><code>clients/laser-center-of-marin/STYLE-SYSTEM.md</code> — Laser Center of Marin — Style System</li>
+<li><code>clients/laser-center-of-marin/client-intelligence/README.md</code> — Laser Center of Marin Client Intelligence</li>
+<li><code>clients/laser-center-of-marin/client-intelligence/STYLE-GUIDE.md</code> — Laser Center of Marin — Style System</li>
+<li><code>clients/laser-center-of-marin/client-intelligence/offerings.md</code> — Laser Center of Marin Offerings</li>
+<li><code>clients/laser-center-of-marin/client-intelligence/source-files.md</code> — Laser Center of Marin Source Files</li>
+<li><code>clients/laser-center-of-marin/deliverables/README.md</code> — Laser Center of Marin Deliverables</li>
+<li><code>clients/laser-center-of-marin/raw/knowledge/overview.md</code> — Laser Center of Marin — Client Overview</li>
+<li><code>clients/laser-center-of-marin/raw/knowledge/service-taxonomy.md</code> — Laser Center of Marin Service Taxonomy</li></ul>
+        </section>
+      </main>
+    </section>
+    </body>
+</html>

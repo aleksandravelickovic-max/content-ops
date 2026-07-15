@@ -1,0 +1,59 @@
+{
+  "client": "pekas-smith",
+  "display_name": "Pekas Smith",
+  "generated_at": "2026-07-14T15:59:27.904755+00:00",
+  "offerings": [
+    {
+      "name": "Administrative Law Judge hearings",
+      "description": "Representation for Social Security disability hearings before an Administrative Law Judge.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/pekas-smith/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Social Security Disability Services"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Appeals Council reviews",
+      "description": "Legal support for Appeals Council review after an unfavorable hearing decision.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/pekas-smith/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Social Security Disability Services"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Initial SSDI and SSI applications",
+      "description": "Legal help preparing and filing initial Social Security Disability Insurance and Supplemental Security Income claims.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/pekas-smith/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Social Security Disability Services"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Reconsideration appeals",
+      "description": "Legal help after an initial disability claim denial, including the reconsideration stage.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/pekas-smith/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "8. Service Reference",
+        "Social Security Disability Services"
+      ],
+      "score": 9
+    }
+  ]
+}

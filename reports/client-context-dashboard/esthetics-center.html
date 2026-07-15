@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Esthetics Center Context</title>
+  <style>
+    :root {
+      --bg:#f4f7f5; --panel:#ffffff; --ink:#09110f; --muted:#63716c; --line:#dce5df;
+      --black:#050907; --graph:#14d878; --graph-dark:#079d55; --soft:#eaf8f0; --soft-ink:#19392a;
+      --accent:#087a47; --red:#b5362d; --shadow:0 18px 46px rgba(5,9,7,.08);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:
+      linear-gradient(180deg, #ffffff 0, var(--bg) 360px); color:var(--ink); line-height:1.45; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .topnav { min-height:64px; padding:14px max(32px, calc((100vw - 1380px) / 2 + 32px)); background:var(--black); border-bottom:1px solid rgba(255,255,255,.08); position:sticky; top:0; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { color:#fff; display:inline-flex; align-items:center; gap:10px; font-weight:800; letter-spacing:0; }
+    .brand:hover { text-decoration:none; }
+    .brand span { width:32px; height:32px; border-radius:8px; background:var(--graph); color:var(--black); display:inline-grid; place-items:center; font-size:13px; font-weight:900; }
+    .nav-meta, .nav-link { color:#b8c6c0; font-size:13px; font-weight:700; }
+    .hero { margin:0; padding:42px max(32px, calc((100vw - 1380px) / 2 + 32px)) 38px; background:var(--black); color:#fff; border-bottom:1px solid rgba(255,255,255,.08); }
+    .index-hero, .client-hero { display:flex; justify-content:space-between; gap:28px; align-items:flex-start; }
+    .hero h1 { margin:0 0 12px; font-size:clamp(32px, 5vw, 62px); line-height:.98; letter-spacing:0; max-width:900px; }
+    .hero p { margin:0; color:#c7d5cf; max-width:840px; font-size:17px; }
+    .hero-copy { max-width:940px; }
+    .kicker { color:var(--graph); font-size:12px; text-transform:uppercase; letter-spacing:.08em; font-weight:900; }
+    .report-meta { display:flex; flex-wrap:wrap; gap:10px; padding:14px 32px; background:#fff; border-bottom:1px solid var(--line); color:var(--muted); font-size:13px; max-width:1380px; margin:0 auto; }
+    .report-meta span { background:var(--soft); color:var(--soft-ink); border-radius:999px; padding:6px 10px; font-weight:700; }
+    .grid.cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(290px, 1fr)); gap:16px; padding:24px 32px 42px; max-width:1380px; margin:0 auto; }
+    .card, .panel, .context-card { background:var(--panel); border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow); }
+    .client-card { display:block; padding:20px; color:inherit; min-height:184px; transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease; }
+    .client-card:hover { text-decoration:none; transform:translateY(-2px); border-color:rgba(20,216,120,.55); box-shadow:0 24px 58px rgba(5,9,7,.12); }
+    .card-topline { display:flex; justify-content:space-between; gap:10px; align-items:center; }
+    .client-card h2 { margin:14px 0 8px; font-size:23px; line-height:1.1; }
+    .client-card p { margin:0; color:var(--muted); }
+    .metrics { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+    .metrics span, .evidence, .status-pill { background:var(--soft); border:1px solid rgba(20,216,120,.22); border-radius:999px; padding:5px 9px; font-size:12px; color:var(--soft-ink); font-weight:800; }
+    .topic-chips { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 18px; }
+    .topic-chips span { background:#f6fbf8; border:1px solid var(--line); border-radius:999px; color:#183a2a; padding:7px 10px; font-size:13px; font-weight:750; }
+    .layout { display:block; padding:22px 32px 46px; max-width:1380px; margin:0 auto; }
+    main { min-width:0; }
+    .context-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; margin-bottom:20px; }
+    .context-card { padding:18px; min-height:220px; }
+    .context-card ul { margin-bottom:0; }
+    .context-note { color:var(--muted); font-size:13px; margin:4px 0 12px; }
+    .aside-label { color:var(--graph-dark); font-size:11px; text-transform:uppercase; font-weight:900; letter-spacing:.08em; margin-bottom:5px; }
+    .panel h2 { margin-top:0; }
+    .panel { padding:22px; margin-bottom:20px; }
+    .panel h2 { font-size:26px; letter-spacing:0; }
+    .offerings { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:13px; margin-top:16px; }
+    .offering, .sample { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .offering { position:relative; overflow:hidden; }
+    .offering-marker { position:absolute; inset:0 auto 0 0; width:4px; background:var(--graph); }
+    .offering h3, .sample h4 { margin:0 0 6px; }
+    .offering p { margin:0 0 10px; }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .stat-stack { display:grid; grid-template-columns:repeat(3, minmax(100px, 1fr)); gap:8px; min-width:340px; }
+    .stat-stack div { border:1px solid rgba(255,255,255,.15); border-radius:8px; padding:14px; background:rgba(255,255,255,.06); }
+    .stat-stack strong { display:block; font-size:26px; color:#fff; }
+    .stat-stack span, .muted { color:var(--muted); font-size:13px; }
+    .hero .stat-stack span { color:#b8c6c0; }
+    ul { padding-left:20px; }
+    li { margin:4px 0; }
+    code { background:var(--soft); color:var(--soft-ink); padding:2px 4px; border-radius:4px; }
+    details { margin:10px 0; }
+    summary { cursor:pointer; font-weight:700; }
+    .style-section { border-top:1px solid var(--line); padding-top:10px; }
+    .markdown { color:#2d2f35; }
+    @media (max-width: 980px) {
+      .layout, .split, .client-hero, .index-hero { grid-template-columns:1fr; display:block; }
+      .context-grid { grid-template-columns:1fr; }
+      .stat-stack { min-width:0; margin-top:16px; }
+      .hero, .grid.cards, .layout, .topnav, .report-meta { padding-left:16px; padding-right:16px; }
+      .hero h1 { font-size:36px; }
+      .stat-stack { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+    <nav class="topnav">
+      <a class="brand" href="index.html"><span>LG</span>LinkGraph</a>
+      <a class="nav-link" href="index.html">All clients</a>
+    </nav>
+    <section class="hero client-hero">
+      <div class="hero-copy">
+        <div class="kicker">esthetics-center</div>
+        <h1>Esthetics Center</h1>
+        <p>7 extracted offerings, 419 sitemap URLs, and 30 local source documents for client-specific writing context.</p>
+      </div>
+      <div class="stat-stack">
+        <div><strong>ok</strong><span>crawl status</span></div>
+        <div><strong>419</strong><span>URLs found</span></div>
+        <div><strong>48</strong><span>product/service URLs</span></div>
+      </div>
+    </section>
+    <section class="layout">
+      <main>
+        <section class="context-grid">
+    <article class="context-card">
+      <div class="aside-label">Quick Facts</div>
+      <p class="context-note">Company, audience, and proof points.</p>
+      <ul><li>Esthetics Center is a medical aesthetics practice combining plastic surgery and medical spa services. Locations in Sacramento, Rocklin, and El Dorado Hills (Northern California).</li><li>Double board-certified in facial plastic and reconstructive surgery and otolaryngology (head and neck surgery)</li><li>25+ years of experience</li><li>12,000+ patients treated</li><li>Fellow of the American Academy of Cosmetic Surgery</li><li>Supporting team: cosmetic nurse injectors, physician assistants, aesthetic nurse practitioners.</li><li>Audience: Adults in the Sacramento region and surrounding Northern California communities. Includes patients considering cosmetic surgery, patients seeking non-surgical facial treatments, individuals interested in skin rejuvenation and anti-aging, and clients seeking medically supervised aesthetic care. Most are focused on confidence and natural-looking results.</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Voice</div>
+      <p class="context-note">How this client should sound.</p>
+      <ul><li>Goal: Not this</li><li>Open a blog post: &quot;Have you ever wondered about...&quot;</li><li>Reference Dr. Rice: &quot;Our skilled doctor&quot;</li><li>Describe outcomes: &quot;Dramatic results guaranteed&quot;</li><li>Describe services: &quot;Cutting-edge procedures&quot;</li><li>Register: A blend of clinical credibility and aspirational aesthetics. Professional and elevated without being promotional or sales-driven. Conversational in blog posts; more refined on landing pages.</li><li>Blog tone: Conversational + educational + reassuring. Friendly and enthusiastic but still professional. Use &quot;you&quot; and &quot;we&quot; consistently. Normalize patient concerns. Reassure safety and results. Ask questions to create dialogue. Write as spoken — short, direct sentences alongside fuller explanations.</li><li>Landing page tone: Professional, medically credible, refined. Not a soft sell — a clear explanation of what the practice does and why patients trust it.</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Avoid / Compliance</div>
+      <p class="context-note">Claims, terms, and wording to avoid.</p>
+      <ul><li>Kill: Replace with</li><li>delve: explore, examine, look at</li><li>moreover: (delete — start the next sentence)</li><li>furthermore: (delete)</li><li>albeit: though, even though</li><li>indeed: (delete)</li><li>utilize: use</li><li>leverage (verb): use</li><li>facilitate: help, enable</li><li>robust: strong, reliable, solid</li><li>seamless: smooth, easy</li><li>comprehensive: full, complete, thorough</li><li>cutting-edge: modern, new, latest</li><li>holistic: complete, full, whole</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Terminology</div>
+      <p class="context-note">Client-specific naming and required language.</p>
+      <p class="muted">No clean lines extracted yet.</p>
+    </article>
+    </section>
+        <section class="panel">
+          <h2>Offerings, Services, Goods</h2>
+          <p class="muted">Writer-facing catalog from the client style system, approved source files, and usable product/service pages. Raw crawl evidence is separated below.</p>
+          <div class="offerings">
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Facial plastic surgery</h3>
+      <p>Surgical facial aesthetics services performed by qualified clinical providers.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/esthetics-center/raw/knowledge/service-taxonomy.md · Sections: 8. Service Reference, Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Injectable Treatments</h3>
+      <p>Botox, filler, and related injectable treatments for wrinkle softening, facial balancing, and volume restoration.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/esthetics-center/raw/knowledge/service-taxonomy.md · Sections: 8. Service Reference, Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Medical spa services</h3>
+      <p>Non-surgical aesthetic services delivered in a medical spa setting.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/esthetics-center/raw/knowledge/service-taxonomy.md · Sections: 8. Service Reference, Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Professional skincare treatments</h3>
+      <p>Clinical skincare treatments for texture, tone, maintenance, and skin quality.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/esthetics-center/raw/knowledge/service-taxonomy.md · Sections: 8. Service Reference, Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Skin rejuvenation procedures</h3>
+      <p>Procedures focused on improving skin texture, tone, collagen response, and visible aging concerns.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md, clients/esthetics-center/raw/knowledge/service-taxonomy.md · Sections: 8. Service Reference, Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Laser and Energy-Based Treatments</h3>
+      <p>Device-based treatments for resurfacing, pigmentation, redness, hair reduction, or skin quality, where confirmed per page.</p>
+      <div class="evidence">Sources: clients/esthetics-center/raw/knowledge/service-taxonomy.md · Sections: Services</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Lead physician: Dr. Reginald Rice (credentials listed in §1).</h3>
+      <p>Lead physician: Dr. Reginald Rice (credentials listed in §1). is listed under 8. Service Reference in the Esthetics Center client context. Check the source links before adding specific claims.</p>
+      <div class="evidence">Sources: STYLE-SYSTEM.md · Sections: 8. Service Reference</div>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Website Intelligence</h2>
+          <div class="split">
+            <div>
+              <h3>Website URLs</h3><ul><li><a href="https://www.estheticscenter.com/">https://www.estheticscenter.com/</a></li></ul>
+              <h3>Sitemaps</h3><ul><li><a href="https://www.estheticscenter.com/sitemap.xml">https://www.estheticscenter.com/sitemap.xml</a></li></ul>
+            </div>
+            <div>
+              <h3>Semantic / Topical Terms</h3><div class="topic-chips"><span>Facial Plastic Surgery</span><span>Injectable Treatments</span><span>Medical Spa Services</span><span>Professional Skincare Treatments</span><span>Skin Rejuvenation Procedures</span><span>Laser and Energy-Based Treatments</span><span>Northern California</span><span>Cosmetic Surgery</span></div>
+              <h3>Blockers</h3><p class="muted">None</p>
+            </div>
+          </div>
+          <h3>Product / Service URLs</h3><ul><li><a href="https://www.estheticscenter.com/solutions">https://www.estheticscenter.com/solutions</a></li><li><a href="https://www.estheticscenter.com/treatment/biostimulators">https://www.estheticscenter.com/treatment/biostimulators</a></li><li><a href="https://www.estheticscenter.com/treatment/botox">https://www.estheticscenter.com/treatment/botox</a></li><li><a href="https://www.estheticscenter.com/treatment/browlift">https://www.estheticscenter.com/treatment/browlift</a></li><li><a href="https://www.estheticscenter.com/treatment/buccal-fat-removal">https://www.estheticscenter.com/treatment/buccal-fat-removal</a></li><li><a href="https://www.estheticscenter.com/treatment/c02-laser-skin-resurfacing">https://www.estheticscenter.com/treatment/c02-laser-skin-resurfacing</a></li><li><a href="https://www.estheticscenter.com/treatment/cheek-augmentation">https://www.estheticscenter.com/treatment/cheek-augmentation</a></li><li><a href="https://www.estheticscenter.com/treatment/cheek-filler">https://www.estheticscenter.com/treatment/cheek-filler</a></li><li><a href="https://www.estheticscenter.com/treatment/chin-augmentation">https://www.estheticscenter.com/treatment/chin-augmentation</a></li><li><a href="https://www.estheticscenter.com/treatment/coolsculpting">https://www.estheticscenter.com/treatment/coolsculpting</a></li><li><a href="https://www.estheticscenter.com/treatment/cooltone">https://www.estheticscenter.com/treatment/cooltone</a></li><li><a href="https://www.estheticscenter.com/treatment/diamondglow">https://www.estheticscenter.com/treatment/diamondglow</a></li><li><a href="https://www.estheticscenter.com/treatment/dimpleplasty">https://www.estheticscenter.com/treatment/dimpleplasty</a></li><li><a href="https://www.estheticscenter.com/treatment/ear-pinning">https://www.estheticscenter.com/treatment/ear-pinning</a></li><li><a href="https://www.estheticscenter.com/treatment/ear-pinning-lobe-reduction">https://www.estheticscenter.com/treatment/ear-pinning-lobe-reduction</a></li><li><a href="https://www.estheticscenter.com/treatment/ec-peels">https://www.estheticscenter.com/treatment/ec-peels</a></li><li><a href="https://www.estheticscenter.com/treatment/eyelid-lift">https://www.estheticscenter.com/treatment/eyelid-lift</a></li><li><a href="https://www.estheticscenter.com/treatment/facelift">https://www.estheticscenter.com/treatment/facelift</a></li><li><a href="https://www.estheticscenter.com/treatment/facial-fat-transfer">https://www.estheticscenter.com/treatment/facial-fat-transfer</a></li><li><a href="https://www.estheticscenter.com/treatment/frax-laser-skin-resurfacing">https://www.estheticscenter.com/treatment/frax-laser-skin-resurfacing</a></li><li><a href="https://www.estheticscenter.com/treatment/hydrafacial">https://www.estheticscenter.com/treatment/hydrafacial</a></li><li><a href="https://www.estheticscenter.com/treatment/ipl-laser-treatment">https://www.estheticscenter.com/treatment/ipl-laser-treatment</a></li><li><a href="https://www.estheticscenter.com/treatment/iv-therapy">https://www.estheticscenter.com/treatment/iv-therapy</a></li><li><a href="https://www.estheticscenter.com/treatment/kybella">https://www.estheticscenter.com/treatment/kybella</a></li><li><a href="https://www.estheticscenter.com/treatment/laser-hair-removal">https://www.estheticscenter.com/treatment/laser-hair-removal</a></li><li><a href="https://www.estheticscenter.com/treatment/lip-filler">https://www.estheticscenter.com/treatment/lip-filler</a></li><li><a href="https://www.estheticscenter.com/treatment/lip-flip">https://www.estheticscenter.com/treatment/lip-flip</a></li><li><a href="https://www.estheticscenter.com/treatment/lip-lift">https://www.estheticscenter.com/treatment/lip-lift</a></li><li><a href="https://www.estheticscenter.com/treatment/lowerface-filler">https://www.estheticscenter.com/treatment/lowerface-filler</a></li><li><a href="https://www.estheticscenter.com/treatment/lymphatic-drainage-massage">https://www.estheticscenter.com/treatment/lymphatic-drainage-massage</a></li><li><a href="https://www.estheticscenter.com/treatment/male-chest-reduction">https://www.estheticscenter.com/treatment/male-chest-reduction</a></li><li><a href="https://www.estheticscenter.com/treatment/microblading">https://www.estheticscenter.com/treatment/microblading</a></li><li><a href="https://www.estheticscenter.com/treatment/microcurrent-firming-facial">https://www.estheticscenter.com/treatment/microcurrent-firming-facial</a></li><li><a href="https://www.estheticscenter.com/treatment/microneedling">https://www.estheticscenter.com/treatment/microneedling</a></li><li><a href="https://www.estheticscenter.com/treatment/necklift">https://www.estheticscenter.com/treatment/necklift</a></li><li><a href="https://www.estheticscenter.com/treatment/oxygen-facial">https://www.estheticscenter.com/treatment/oxygen-facial</a></li><li><a href="https://www.estheticscenter.com/treatment/pico">https://www.estheticscenter.com/treatment/pico</a></li><li><a href="https://www.estheticscenter.com/treatment/potenza">https://www.estheticscenter.com/treatment/potenza</a></li><li><a href="https://www.estheticscenter.com/treatment/profound-rf-microneedling">https://www.estheticscenter.com/treatment/profound-rf-microneedling</a></li><li><a href="https://www.estheticscenter.com/treatment/rhinoplasty">https://www.estheticscenter.com/treatment/rhinoplasty</a></li><li><a href="https://www.estheticscenter.com/treatment/scar-revision">https://www.estheticscenter.com/treatment/scar-revision</a></li><li><a href="https://www.estheticscenter.com/treatment/sculptra">https://www.estheticscenter.com/treatment/sculptra</a></li><li><a href="https://www.estheticscenter.com/treatment/tattoo-removal">https://www.estheticscenter.com/treatment/tattoo-removal</a></li><li><a href="https://www.estheticscenter.com/treatment/tec-ultimate-facial">https://www.estheticscenter.com/treatment/tec-ultimate-facial</a></li><li><a href="https://www.estheticscenter.com/treatment/thermiva">https://www.estheticscenter.com/treatment/thermiva</a></li><li><a href="https://www.estheticscenter.com/treatment/treatment-null-cs">https://www.estheticscenter.com/treatment/treatment-null-cs</a></li><li><a href="https://www.estheticscenter.com/treatment/upperface-filler">https://www.estheticscenter.com/treatment/upperface-filler</a></li><li><a href="https://www.estheticscenter.com/treatment/wrinkle-relaxers">https://www.estheticscenter.com/treatment/wrinkle-relaxers</a></li></ul>
+          <h3>Sampled Pages</h3><div class="sample-pages">
+    <article class="sample">
+      <h4>Facial Plastic Surgery Sacramento | Med Spa El Dorado Hills - Esthetics Center</h4>
+      <a href="https://www.estheticscenter.com/">https://www.estheticscenter.com/</a>
+      <p>Take years off your appearance. World-class facial plastic surgeon Dr. Reginald Rice has performed thousands of facelifts, eyelid tucks, rhinoplasties, &amp; more in the Sacramento, CA area.</p>
+      <ul><li>LIVE CONFIDENTLY</li><li>What&#x27;s Holding you back?</li><li>WHAT PART OF YOUR FACE?</li><li>WHAT PART OF YOUR BODY?</li><li>FEEL COMPLETELY CONFIDENT ABOUT HOW YOU LOOK</li><li>BEFORE &amp; AFTERS</li><li>WHY ESTHETICS CENTER?</li><li>RATING</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Solutions</h4>
+      <a href="https://www.estheticscenter.com/solutions">https://www.estheticscenter.com/solutions</a>
+      <p></p>
+      <ul><li>Search treatments</li><li>by CONCERN</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Pico Laser Skin Resurfacing | Esthetics Center</h4>
+      <a href="https://www.estheticscenter.com/treatment/pico">https://www.estheticscenter.com/treatment/pico</a>
+      <p>Pico laser resurfacing in Sacramento diminishes acne scars, sun spots, and fine lines. Minimal downtime at Esthetics Center.</p>
+      <ul><li>Pico Laser Resurfacing</li><li>Pico Laser Resurfacing</li><li>WHAT YOU CAN TREAT WITH ‍</li><li>Pico Laser Resurfacing</li><li>:</li><li>Pico Laser Resurfacing</li><li>RESULTS:</li><li>What is</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>BOTOX for Wrinkles &amp; Fine Lines | Esthetics Center</h4>
+      <a href="https://www.estheticscenter.com/treatment/botox">https://www.estheticscenter.com/treatment/botox</a>
+      <p>BOTOX injections in Sacramento, Rocklin and El Dorado Hills smooth forehead lines, crow&#x27;s feet and frown lines with precision dosing at Esthetics Center.</p>
+      <ul><li>Botox: Erase Wrinkles &amp; Reveal Smoother, Younger Skin</li><li>BOTOX</li><li>WHAT YOU CAN TREAT WITH ‍</li><li>BOTOX</li><li>:</li><li>BOTOX</li><li>RESULTS:</li><li>What is</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Kybella Double Chin Reduction | Esthetics Center</h4>
+      <a href="https://www.estheticscenter.com/treatment/kybella">https://www.estheticscenter.com/treatment/kybella</a>
+      <p>Kybella in Sacramento and El Dorado Hills eliminates double chin fat without surgery. Non-invasive treatment at Esthetics Center.</p>
+      <ul><li>Kybella</li><li>Kybella</li><li>WHAT YOU CAN TREAT WITH ‍</li><li>Kybella</li><li>:</li><li>Kybella</li><li>RESULTS:</li><li>What is</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>RF Microneedling Potenza | Esthetics Center</h4>
+      <a href="https://www.estheticscenter.com/treatment/potenza">https://www.estheticscenter.com/treatment/potenza</a>
+      <p>Potenza RF microneedling in Sacramento rejuvenates skin, shrinks pores, and evens tone. Advanced skin treatment at Esthetics Center.</p>
+      <ul><li>RF Microneedling</li><li>RF Microneedling</li><li>WHAT YOU CAN TREAT WITH ‍</li><li>RF Microneedling</li><li>:</li><li>RF Microneedling</li><li>RESULTS:</li><li>What is</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Brow Lift Forehead Surgery | Esthetics Center</h4>
+      <a href="https://www.estheticscenter.com/treatment/browlift">https://www.estheticscenter.com/treatment/browlift</a>
+      <p>Brow lift surgery in Sacramento and Rocklin rejuvenates your upper face and smooths forehead wrinkles at Esthetics Center.</p>
+      <ul><li>Brow Lift</li><li>Brow Lift</li><li>WHAT YOU CAN TREAT WITH ‍</li><li>A</li><li>Brow Lift</li><li>:</li><li>Brow Lift</li><li>RESULTS:</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>EmSculpt Muscle &amp; Fat Treatment | Esthetics Center</h4>
+      <a href="https://www.estheticscenter.com/treatment/cooltone">https://www.estheticscenter.com/treatment/cooltone</a>
+      <p>EmSculpt in Sacramento builds muscle and burns fat with electromagnetic energy. No downtime body contouring at Esthetics Center.</p>
+      <ul><li>EmSculpt</li><li>EmSculpt</li><li>WHAT YOU CAN TREAT WITH ‍</li><li>EmSculpt</li><li>:</li><li>EmSculpt</li><li>RESULTS:</li><li>What is</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Chemical Peels &amp; EC Peels | Esthetics Center</h4>
+      <a href="https://www.estheticscenter.com/treatment/ec-peels">https://www.estheticscenter.com/treatment/ec-peels</a>
+      <p>Chemical peels in Sacramento, Rocklin, and El Dorado Hills exfoliate and rejuvenate. Custom EC Peels at Esthetics Center.</p>
+      <ul><li>EC Peels</li><li>EC Peels</li><li>WHAT YOU CAN TREAT WITH ‍</li><li>EC Peels</li><li>:</li><li>EC Peels</li><li>RESULTS:</li><li>What is</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Facelift Surgery Results | Esthetics Center</h4>
+      <a href="https://www.estheticscenter.com/treatment/facelift">https://www.estheticscenter.com/treatment/facelift</a>
+      <p>Facelift surgery in Sacramento and Rocklin for a rested, youthful appearance. Dramatic wrinkle and sagging reduction at Esthetics Center.</p>
+      <ul><li>Face Lift</li><li>Face Lift</li><li>WHAT YOU CAN TREAT WITH ‍</li><li>A</li><li>Face Lift</li><li>:</li><li>Face Lift</li><li>RESULTS:</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Lip Flip for Subtle Enhancement | Esthetics Center</h4>
+      <a href="https://www.estheticscenter.com/treatment/lip-flip">https://www.estheticscenter.com/treatment/lip-flip</a>
+      <p>Lip flip treatment for subtle lip enhancement and a beautiful smile. Quick, affordable results at Esthetics Center in Sacramento.</p>
+      <ul><li>Lip Flip: Enhance Your Smile with Subtle Definition</li><li>Lip Flip</li><li>WHAT YOU CAN TREAT WITH ‍</li><li>A</li><li>Lip Flip</li><li>:</li><li>Lip Flip</li><li>RESULTS:</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Lip Lift Surgery | Esthetics Center</h4>
+      <a href="https://www.estheticscenter.com/treatment/lip-lift">https://www.estheticscenter.com/treatment/lip-lift</a>
+      <p>Lip lift surgery in Sacramento permanently enhances your upper lip and Cupid&#x27;s bow. Define your pout at Esthetics Center.</p>
+      <ul><li>Lip Lift</li><li>Lip Lift</li><li>WHAT YOU CAN TREAT WITH ‍</li><li>A</li><li>Lip Lift</li><li>:</li><li>Lip Lift</li><li>RESULTS:</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Neck Lift Surgical Rejuvenation | Esthetics Center</h4>
+      <a href="https://www.estheticscenter.com/treatment/necklift">https://www.estheticscenter.com/treatment/necklift</a>
+      <p>Neck lift surgery in Sacramento tightens sagging skin and defines your jawline. Youthful profile restoration at Esthetics Center.</p>
+      <ul><li>Neck Lift</li><li>Neck Lift</li><li>WHAT YOU CAN TREAT WITH ‍</li><li>A</li><li>Neck Lift</li><li>:</li><li>Neck Lift</li><li>RESULTS:</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Sculptra Collagen Stimulator | Esthetics Center</h4>
+      <a href="https://www.estheticscenter.com/treatment/sculptra">https://www.estheticscenter.com/treatment/sculptra</a>
+      <p>Sculptra stimulates your body&#x27;s own collagen for gradual, natural-looking volume restoration. Long-lasting results at Esthetics Center.</p>
+      <ul><li>Sculptra</li><li>Sculptra</li><li>WHAT YOU CAN TREAT WITH ‍</li><li>Sculptra</li><li>:</li><li>Sculptra</li><li>RESULTS:</li><li>What is</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Laser Spider Vein Treatment | Esthetics Center</h4>
+      <a href="https://www.estheticscenter.com/treatment/thermiva">https://www.estheticscenter.com/treatment/thermiva</a>
+      <p>Laser spider vein treatment removes broken capillaries and spider veins with quick, non-invasive sessions at Esthetics Center.</p>
+      <ul><li>Laser for Spider Veins</li><li>WHAT YOU CAN TREAT WITH ‍</li><li>Laser for Spider Veins</li><li>:</li><li>Laser for Spider Veins</li><li>RESULTS:</li><li>What is</li><li>Laser for Spider Veins</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>IV Therapy Vitamin Infusion | Esthetics Center</h4>
+      <a href="https://www.estheticscenter.com/treatment/iv-therapy">https://www.estheticscenter.com/treatment/iv-therapy</a>
+      <p>IV therapy in Fair Oaks delivers vitamins and nutrients directly into your bloodstream for fast hydration and recovery at Esthetics Center.</p>
+      <ul><li>IV Therapy</li><li>IV Therapy</li><li>WHAT YOU CAN TREAT WITH ‍</li><li>IV Therapy</li><li>:</li><li>IV Therapy</li><li>RESULTS:</li><li>What is</li></ul>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Full Style System</h2>
+          <details open><summary>Show style-system sections</summary>
+    <details class="style-section">
+      <summary>Esthetics Center — Style System</summary>
+      <div class="markdown"><p>Generated: 2026-05-29<br>Sources: raw/knowledge/overview.md, client AI agent system prompt (May 2026)<br>Base rules: universal-rules/UNIVERSAL-RULES.md</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>1. Brand &amp; Audience</summary>
+      <div class="markdown"><p>Esthetics Center is a medical aesthetics practice combining plastic surgery and medical spa services. Locations in Sacramento, Rocklin, and El Dorado Hills (Northern California).</p><p>Led by Dr. Reginald Rice:<br><li>Double board-certified in facial plastic and reconstructive surgery and otolaryngology (head and neck surgery)</li><br><li>25+ years of experience</li><br><li>12,000+ patients treated</li><br><li>Fellow of the American Academy of Cosmetic Surgery</li></ul><p>Supporting team: cosmetic nurse injectors, physician assistants, aesthetic nurse practitioners.</p><p>**Audience:** Adults in the Sacramento region and surrounding Northern California communities. Includes patients considering cosmetic surgery, patients seeking non-surgical facial treatments, individuals interested in skin rejuvenation and anti-aging, and clients seeking medically supervised aesthetic care. Most are focused on confidence and natural-looking results.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2. Voice &amp; Tone</summary>
+      <div class="markdown"><p>**Register:** A blend of clinical credibility and aspirational aesthetics. Professional and elevated without being promotional or sales-driven. Conversational in blog posts; more refined on landing pages.</p><p>**Blog tone:** Conversational + educational + reassuring. Friendly and enthusiastic but still professional. Use &quot;you&quot; and &quot;we&quot; consistently. Normalize patient concerns. Reassure safety and results. Ask questions to create dialogue. Write as spoken — short, direct sentences alongside fuller explanations.</p><p>**Landing page tone:** Professional, medically credible, refined. Not a soft sell — a clear explanation of what the practice does and why patients trust it.</p><p>| Goal | Not this | Use this |<br>|---|---|---|<br>| Open a blog post | &quot;Have you ever wondered about...&quot; | Call out the specific concern; make the reader feel seen |<br>| Reference Dr. Rice | &quot;Our skilled doctor&quot; | &quot;Dr. Reginald Rice, double board-certified in facial plastic and reconstructive surgery&quot; |<br>| Describe outcomes | &quot;Dramatic results guaranteed&quot; | &quot;Natural-looking improvements aligned with your goals&quot; |<br>| Describe services | &quot;Cutting-edge procedures&quot; | &quot;[Specific procedure] for [specific concern], performed by licensed professionals&quot; |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3. Terminology</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.1 Required terms</summary>
+      <div class="markdown"><p><li>**Dr. Reginald Rice** — full name on first reference in a piece; &quot;Dr. Rice&quot; after</li><br><li>**Double board-certified** — the specific credential phrase; do not use &quot;board-certified&quot; alone</li><br><li>**Facial plastic and reconstructive surgeon** — his primary board</li><br><li>**Otolaryngology (head and neck surgery)** — his second board; define at first use if mentioned</li><br><li>**Fellow of the American Academy of Cosmetic Surgery** — include in trust signals when appropriate</li><br><li>**Medically supervised** — for the care environment</li><br><li>**Non-surgical** — preferred over &quot;non-invasive&quot; for injectable and energy-based treatments</li><br><li>**Licensed professionals** — for the broader team; specify role when relevant (nurse injector, PA, etc.)</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.2 Strict avoidance list (Anti-Slop Rules)</summary>
+      <div class="markdown"><p>These are banned words. Replace as indicated.</p><p>| Kill | Replace with |<br>|---|---|<br>| delve | explore, examine, look at |<br>| moreover | (delete — start the next sentence) |<br>| furthermore | (delete) |<br>| albeit | though, even though |<br>| indeed | (delete) |<br>| utilize | use |<br>| leverage (verb) | use |<br>| facilitate | help, enable |<br>| robust | strong, reliable, solid |<br>| seamless | smooth, easy |<br>| comprehensive | full, complete, thorough |<br>| cutting-edge | modern, new, latest |<br>| holistic | complete, full, whole |<br>| synergy | (delete and rewrite the sentence) |<br>| paradigm | model, approach, framework |<br>| innovative | (describe what&#x27;s actually new) |<br>| transformative | (describe the actual change) |<br>| empower | (say what capability it gives) |<br>| realm | area, field, space |<br>| tapestry | (delete entirely) |<br>| landscape (metaphorical) | situation, environment, field |<br>| multifaceted | complex, varied |<br>| nuanced | (usually delete — show the nuance instead) |<br>| underscore | show, highlight, reveal |<br>| testament | proof, evidence, sign |<br>| myriad | many, countless |<br>| plethora | many, a lot of |<br>| illuminate | show, reveal, clarify |<br>| foster | build, encourage, grow |<br>| cultivate | build, develop |<br>| spearhead | lead, start, drive |<br>| bolster | strengthen, support |<br>| pivotal | important, key, critical |<br>| embark | start, begin |<br>| navigate (metaphorical) | handle, manage, deal with |<br>| stakeholder | (name the actual group) |<br>| bandwidth | time, capacity |<br>| actionable | practical, useful |<br>| ecosystem | system, community, market |<br>| craft (verb) | write, build, make, design |<br>| curate | choose, pick, collect, organize |<br>| resonate | connect, land, work, matter |<br>| streamline | simplify, speed up, cut steps from |<br>| elevate | improve, raise, strengthen |<br>| harness | use, apply, put to work |<br>| unlock | enable, open up, create |<br>| tailor | adjust, fit, customize |<br>| journey | process, experience, path |<br>| compelling | strong, persuasive, interesting |<br>| powerful | strong, effective, useful |<br>| impactful | effective, significant (or rewrite) |<br>| crucial | important (or delete — is it really?) |<br>| significant | large, meaningful, real (be specific) |<br>| ensure/ensuring | make sure, confirm, check |<br>| optimal | best, ideal |<br>| drives (as in &quot;drives results&quot;) | produces, causes, leads to |<br>| enables | lets, allows |<br>| aligned/aligns with | matches, fits, supports |<br>| key (adj. — &quot;key insights&quot;) | main, important, central |<br>| space (as in &quot;the aesthetics space&quot;) | field, industry, market |<br>| stands out | (describe what&#x27;s different instead) |<br>| double down | commit to, increase, focus on |<br>| deep dive | close look, analysis, review |<br>| circle back | return to, revisit, follow up |<br>| unpack | explain, break down, examine |<br>| shed light on | show, explain, reveal |<br>| pave the way | make possible, lead to, open up |<br>| set the stage | prepare, create conditions for |<br>| raise the bar | improve standards, do better |<br>| move the needle | make a difference, change results |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.3 Banned phrases (throat-clearing, hedges, closers)</summary>
+      <div class="markdown"><p>Delete entirely:<br><li>&quot;It&#x27;s important to note that...&quot; / &quot;It&#x27;s worth mentioning that...&quot;</li><br><li>&quot;In today&#x27;s [X] landscape...&quot;</li><br><li>&quot;Let&#x27;s dive/delve into...&quot;</li><br><li>&quot;In this article, we will...&quot;</li><br><li>&quot;To be fair...&quot; / &quot;To be honest...&quot;</li><br><li>&quot;At the end of the day...&quot;</li><br><li>&quot;When it comes to...&quot;</li><br><li>&quot;In terms of...&quot;</li><br><li>&quot;In conclusion...&quot; / &quot;To sum up...&quot; / &quot;To wrap up...&quot;</li><br><li>&quot;Feel free to reach out&quot; / &quot;Don&#x27;t hesitate to...&quot;</li><br><li>&quot;Moving forward&quot; / &quot;Going forward&quot;</li><br><li>&quot;Due to the fact that&quot; → because</li><br><li>&quot;In order to&quot; → to</li><br><li>&quot;Has the ability to&quot; → can</li><br><li>&quot;With that in mind...&quot; / &quot;Building on this foundation...&quot; / &quot;That being said...&quot;</li><br><li>&quot;Imagine a world where...&quot; / &quot;Picture this:&quot; / &quot;Have you ever wondered...&quot;</li><br><li>&quot;Here are X things you need to know about Y&quot;</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.4 Banned structures</summary>
+      <div class="markdown"><p>**The &quot;Not just X — it&#x27;s Y&quot; pattern:** Never frame something as more than it is by negating a lesser version.<br><li>Bad: &quot;This isn&#x27;t just a medspa — it&#x27;s a complete aesthetic experience.&quot;</li><br><li>Good: Say what it actually is.</li></ul><p>**Rule of three:** AI defaults to grouping in threes. Vary it — use one, two, or four. Match the number to what you actually have to say.</p><p>**Synonym stacking:** Do not list near-synonyms as padding.<br><li>Bad: &quot;a comprehensive, sophisticated, and robust team&quot;</li><br><li>Good: &quot;a skilled team&quot; (or describe what makes them skilled)</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.5 Tone and rhythm tells</summary>
+      <div class="markdown"><p><li>**Uniform sentence length:** Mix short and long. Let some run. Cut others hard.</li><br><li>**Participial phrases:** &quot;Leveraging advanced techniques, the team...&quot; is an AI fingerprint. Restructure: &quot;The team used better techniques&quot; or just state the result.</li><br><li>**&quot;Ensuring&quot; clauses:** &quot;...ensuring accuracy and safety.&quot; These trailing clauses are usually filler. If the claim is important, give it its own sentence with evidence.</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4. Accuracy &amp; Technical Standards</summary>
+      <div class="markdown"><p><li>Do not promise specific cosmetic outcomes.</li><br><li>Do not present any procedure as universally effective or risk-free.</li><br><li>Dr. Rice&#x27;s credentials are specific — use the exact titles (double board-certified, otolaryngology, facial plastic and reconstructive surgery, AACS Fellow). Do not round down or simplify credentials.</li><br><li>12,000+ patients and 25+ years of experience are stated trust signals — use them accurately and only when they add context.</li><br><li>Three locations: Sacramento, Rocklin, El Dorado Hills. Do not imply other locations exist.</li><br><li>Treatment must be sourced from `raw/` or confirmed by the CSM. Do not invent specific device models, protocols, or session details.</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5. Blog Post Rules</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.1 Opening hook pattern (first 3–5 lines must)</summary>
+      <div class="markdown"><p>1. Call out a specific pain point<br>2. Make the reader feel seen<br>3. Transition into the solution</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.2 Dr. Rice trust signals — placement required</summary>
+      <div class="markdown"><p>In every blog post, include Dr. Rice trust signals exactly 3 times:<br><li>In the 2nd or 3rd H2 section</li><br><li>In the 5th or 6th H2 section</li><br><li>In the closing CTA</li></ul><p>Trust signal content: double board-certified, facial plastic and reconstructive surgery, otolaryngology, 25+ years experience, 12,000+ patients, Fellow of the AACS.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.3 Structure</summary>
+      <div class="markdown"><p><li>Up to 8 H2 sections</li><br><li>H3 only when necessary; if used, include a short bridge between the H2 and first H3</li><br><li>No H4</li><br><li>Capitalize headings per AP style</li><br><li>No section over 300 words</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.4 CTA (every article)</summary>
+      <div class="markdown"><p>Every blog post ends with a soft CTA:<br><li>Offer: free consultation / personalized plan</li><br><li>Phone: (916) 941-9400</li><br><li>Contact: https://www.estheticscenter.com/contact</li><br><li>Tone: helpful, not pushy — focused on guidance</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6. Page Structure</summary>
+      <div class="markdown"><p>No approved landing page templates established yet. Follow universal rules.</p><p>For blog posts: see §5.3 above.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>7. SEO Standards</summary>
+      <div class="markdown"><p>**Before writing any piece:** Run a real SERP analysis. Do not simulate it. Steps:<br>1. Access the internet and search the primary keyword (language: English, location: United States)<br>2. Analyze top 5 ranking pages for: search intent, LSI terms, content format patterns, subtopics, micro-queries, content gaps<br>3. Identify which gaps deserve full sections vs. paragraphs<br>4. Present findings before proceeding</p><p>**Meta deliverables (provide before writing the introduction):**<br><li>3 meta title options: 55–60 characters, include primary keyword, stimulate curiosity</li><br><li>3 meta description options: 130–150 characters, include primary keyword, CTR-driven, state a benefit, highlight a unique angle</li><br><li>3 H1 title options: SEO-oriented, CTR-driven</li></ul><p>**Outline requirements:**<br><li>Build only after SERP analysis</li><br><li>Cover all critical competitor topics; expand beyond their depth</li><br><li>Mark where content matches competitor coverage vs. where it expands</li><br><li>Include 2–3 micro-queries under each H2 (internal structure only — not visible in output)</li><br><li>Each paragraph answers one micro-query</li><br><li>1 table per article where appropriate; 2–3 lists per article</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>8. Service Reference</summary>
+      <div class="markdown"><p>Services offered (from client brief):<br><li>Facial plastic surgery</li><br><li>Injectable treatments (Botox, fillers)</li><br><li>Skin rejuvenation procedures</li><br><li>Professional skincare treatments</li><br><li>Medical spa services</li></ul><p>Lead physician: Dr. Reginald Rice (credentials listed in §1).</p><p>Do not invent specific procedure names, device models, pricing, or recovery timelines without confirmation from `raw/` or the CSM.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>9. Pre-Submission Checklist</summary>
+      <div class="markdown"><p>**Voice &amp; Slop:**<br><li>[ ] No banned words from §3.2 anywhere in the piece</li><br><li>[ ] No banned phrases from §3.3</li><br><li>[ ] No &quot;Not just X — it&#x27;s Y&quot; patterns</li><br><li>[ ] No synonym stacking</li><br><li>[ ] Sentence length varied — not uniform</li></ul><p>**Medical accuracy:**<br><li>[ ] No guaranteed outcome claims</li><br><li>[ ] Dr. Rice credentials exact: double board-certified, facial plastic and reconstructive surgery, otolaryngology</li><br><li>[ ] Correct number of trust signal placements in blog posts (2nd/3rd H2, 5th/6th H2, CTA)</li></ul><p>**Blog post:**<br><li>[ ] Opening hook: pain point → reader feels seen → transition to solution</li><br><li>[ ] CTA at end: free consultation, (916) 941-9400, estheticscenter.com/contact</li></ul><p>**SEO:**<br><li>[ ] Real SERP analysis run (not simulated)</li><br><li>[ ] Meta titles, descriptions, H1 options delivered before writing started</li><br><li>[ ] Primary keyword in first sentence</li></p></div>
+    </details>
+    </details>
+        </section>
+        <section class="panel">
+          <h2>Local Source Files Read</h2>
+          <ul><li><code>clients/esthetics-center/STYLE-SYSTEM.md</code> — Esthetics Center — Style System</li>
+<li><code>clients/esthetics-center/campaigns/01-blog-content/README.md</code> — 01 — Blog Content</li>
+<li><code>clients/esthetics-center/campaigns/01-blog-content/briefs/01-botox-aftercare.md</code> — Brief: Botox Aftercare Mistakes That Can Ruin Your Results</li>
+<li><code>clients/esthetics-center/campaigns/01-blog-content/briefs/02-laser-vs-waxing.md</code> — Brief: Laser vs. Waxing: Cost Comparison and Benefits</li>
+<li><code>clients/esthetics-center/campaigns/01-blog-content/briefs/03-jawline-filler.md</code> — Brief: Jawline Contouring with Filler: Creating Definition and Balance</li>
+<li><code>clients/esthetics-center/campaigns/01-blog-content/briefs/04-non-surgical-body-contouring.md</code> — Brief: Am I a Good Candidate for Non-Surgical Body Sculpting?</li>
+<li><code>clients/esthetics-center/campaigns/01-blog-content/briefs/05-rhinoplasty-recovery.md</code> — Brief: Rhinoplasty Recovery: What to Expect Day by Day</li>
+<li><code>clients/esthetics-center/campaigns/01-blog-content/briefs/06-botox-consultation.md</code> — Brief: Botox Consultation Guide: What to Ask Your Provider</li>
+<li><code>clients/esthetics-center/campaigns/01-blog-content/briefs/07-laser-hair-removal-skin-tones.md</code> — Brief: Laser Hair Removal on Different Skin Tones: Technology &amp; Safety</li>
+<li><code>clients/esthetics-center/campaigns/01-blog-content/briefs/08-filler-swelling-timeline.md</code> — Brief: Filler Swelling Timeline: What&#x27;s Normal Week by Week</li>
+<li><code>clients/esthetics-center/campaigns/01-blog-content/briefs/09-coolsculpting-fat.md</code> — Brief: What Happens to Fat Cells After CoolSculpting?</li>
+<li><code>clients/esthetics-center/campaigns/01-blog-content/briefs/10-brow-lift.md</code> — Brief: Brow Lift: Minimally Invasive Forehead Rejuvenation</li>
+<li><code>clients/esthetics-center/client-intelligence/README.md</code> — Esthetics Center Client Intelligence</li>
+<li><code>clients/esthetics-center/client-intelligence/STYLE-GUIDE.md</code> — Esthetics Center — Style System</li>
+<li><code>clients/esthetics-center/client-intelligence/offerings.md</code> — Esthetics Center Offerings</li>
+<li><code>clients/esthetics-center/client-intelligence/source-files.md</code> — Esthetics Center Source Files</li>
+<li><code>clients/esthetics-center/contact-block.md</code> — Contact block — Esthetics Center</li>
+<li><code>clients/esthetics-center/deliverables/README.md</code> — Esthetics Center Deliverables</li>
+<li><code>clients/esthetics-center/deliverables/drafts/01-blog-content/01-botox-aftercare.md</code> — Botox Aftercare Mistakes That Can Ruin Your Results</li>
+<li><code>clients/esthetics-center/deliverables/drafts/01-blog-content/02-laser-vs-waxing.md</code> — Laser vs. Waxing: Cost Comparison and Benefits</li>
+<li><code>clients/esthetics-center/deliverables/drafts/01-blog-content/03-jawline-filler.md</code> — Jawline Contouring with Filler: Creating Definition and Balance</li>
+<li><code>clients/esthetics-center/deliverables/drafts/01-blog-content/04-non-surgical-body-contouring.md</code> — Am I a Good Candidate for Non-Surgical Body Sculpting?</li>
+<li><code>clients/esthetics-center/deliverables/drafts/01-blog-content/05-rhinoplasty-recovery.md</code> — Rhinoplasty Recovery: What to Expect Day by Day</li>
+<li><code>clients/esthetics-center/deliverables/drafts/01-blog-content/06-botox-consultation.md</code> — Botox Consultation Guide: What to Ask Your Provider</li>
+<li><code>clients/esthetics-center/deliverables/drafts/01-blog-content/07-laser-hair-removal-skin-tones.md</code> — Laser Hair Removal on Different Skin Tones: Technology and Safety Explained</li>
+<li><code>clients/esthetics-center/deliverables/drafts/01-blog-content/08-filler-swelling-timeline.md</code> — Filler Swelling Timeline: What&#x27;s Normal Week by Week</li>
+<li><code>clients/esthetics-center/deliverables/drafts/01-blog-content/09-coolsculpting-fat.md</code> — What Happens to Fat Cells After CoolSculpting?</li>
+<li><code>clients/esthetics-center/deliverables/drafts/01-blog-content/10-brow-lift.md</code> — Brow Lift: Minimally Invasive Forehead Rejuvenation</li>
+<li><code>clients/esthetics-center/raw/knowledge/overview.md</code> — Esthetics Center — Client Overview</li>
+<li><code>clients/esthetics-center/raw/knowledge/service-taxonomy.md</code> — Esthetics Center Service Taxonomy</li></ul>
+        </section>
+      </main>
+    </section>
+    </body>
+</html>

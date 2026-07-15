@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Nash Casino Context</title>
+  <style>
+    :root {
+      --bg:#f4f7f5; --panel:#ffffff; --ink:#09110f; --muted:#63716c; --line:#dce5df;
+      --black:#050907; --graph:#14d878; --graph-dark:#079d55; --soft:#eaf8f0; --soft-ink:#19392a;
+      --accent:#087a47; --red:#b5362d; --shadow:0 18px 46px rgba(5,9,7,.08);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:
+      linear-gradient(180deg, #ffffff 0, var(--bg) 360px); color:var(--ink); line-height:1.45; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .topnav { min-height:64px; padding:14px max(32px, calc((100vw - 1380px) / 2 + 32px)); background:var(--black); border-bottom:1px solid rgba(255,255,255,.08); position:sticky; top:0; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { color:#fff; display:inline-flex; align-items:center; gap:10px; font-weight:800; letter-spacing:0; }
+    .brand:hover { text-decoration:none; }
+    .brand span { width:32px; height:32px; border-radius:8px; background:var(--graph); color:var(--black); display:inline-grid; place-items:center; font-size:13px; font-weight:900; }
+    .nav-meta, .nav-link { color:#b8c6c0; font-size:13px; font-weight:700; }
+    .hero { margin:0; padding:42px max(32px, calc((100vw - 1380px) / 2 + 32px)) 38px; background:var(--black); color:#fff; border-bottom:1px solid rgba(255,255,255,.08); }
+    .index-hero, .client-hero { display:flex; justify-content:space-between; gap:28px; align-items:flex-start; }
+    .hero h1 { margin:0 0 12px; font-size:clamp(32px, 5vw, 62px); line-height:.98; letter-spacing:0; max-width:900px; }
+    .hero p { margin:0; color:#c7d5cf; max-width:840px; font-size:17px; }
+    .hero-copy { max-width:940px; }
+    .kicker { color:var(--graph); font-size:12px; text-transform:uppercase; letter-spacing:.08em; font-weight:900; }
+    .report-meta { display:flex; flex-wrap:wrap; gap:10px; padding:14px 32px; background:#fff; border-bottom:1px solid var(--line); color:var(--muted); font-size:13px; max-width:1380px; margin:0 auto; }
+    .report-meta span { background:var(--soft); color:var(--soft-ink); border-radius:999px; padding:6px 10px; font-weight:700; }
+    .grid.cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(290px, 1fr)); gap:16px; padding:24px 32px 42px; max-width:1380px; margin:0 auto; }
+    .card, .panel, .context-card { background:var(--panel); border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow); }
+    .client-card { display:block; padding:20px; color:inherit; min-height:184px; transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease; }
+    .client-card:hover { text-decoration:none; transform:translateY(-2px); border-color:rgba(20,216,120,.55); box-shadow:0 24px 58px rgba(5,9,7,.12); }
+    .card-topline { display:flex; justify-content:space-between; gap:10px; align-items:center; }
+    .client-card h2 { margin:14px 0 8px; font-size:23px; line-height:1.1; }
+    .client-card p { margin:0; color:var(--muted); }
+    .metrics { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+    .metrics span, .evidence, .status-pill { background:var(--soft); border:1px solid rgba(20,216,120,.22); border-radius:999px; padding:5px 9px; font-size:12px; color:var(--soft-ink); font-weight:800; }
+    .topic-chips { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 18px; }
+    .topic-chips span { background:#f6fbf8; border:1px solid var(--line); border-radius:999px; color:#183a2a; padding:7px 10px; font-size:13px; font-weight:750; }
+    .layout { display:block; padding:22px 32px 46px; max-width:1380px; margin:0 auto; }
+    main { min-width:0; }
+    .context-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; margin-bottom:20px; }
+    .context-card { padding:18px; min-height:220px; }
+    .context-card ul { margin-bottom:0; }
+    .context-note { color:var(--muted); font-size:13px; margin:4px 0 12px; }
+    .aside-label { color:var(--graph-dark); font-size:11px; text-transform:uppercase; font-weight:900; letter-spacing:.08em; margin-bottom:5px; }
+    .panel h2 { margin-top:0; }
+    .panel { padding:22px; margin-bottom:20px; }
+    .panel h2 { font-size:26px; letter-spacing:0; }
+    .offerings { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:13px; margin-top:16px; }
+    .offering, .sample { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .offering { position:relative; overflow:hidden; }
+    .offering-marker { position:absolute; inset:0 auto 0 0; width:4px; background:var(--graph); }
+    .offering h3, .sample h4 { margin:0 0 6px; }
+    .offering p { margin:0 0 10px; }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .stat-stack { display:grid; grid-template-columns:repeat(3, minmax(100px, 1fr)); gap:8px; min-width:340px; }
+    .stat-stack div { border:1px solid rgba(255,255,255,.15); border-radius:8px; padding:14px; background:rgba(255,255,255,.06); }
+    .stat-stack strong { display:block; font-size:26px; color:#fff; }
+    .stat-stack span, .muted { color:var(--muted); font-size:13px; }
+    .hero .stat-stack span { color:#b8c6c0; }
+    ul { padding-left:20px; }
+    li { margin:4px 0; }
+    code { background:var(--soft); color:var(--soft-ink); padding:2px 4px; border-radius:4px; }
+    details { margin:10px 0; }
+    summary { cursor:pointer; font-weight:700; }
+    .style-section { border-top:1px solid var(--line); padding-top:10px; }
+    .markdown { color:#2d2f35; }
+    @media (max-width: 980px) {
+      .layout, .split, .client-hero, .index-hero { grid-template-columns:1fr; display:block; }
+      .context-grid { grid-template-columns:1fr; }
+      .stat-stack { min-width:0; margin-top:16px; }
+      .hero, .grid.cards, .layout, .topnav, .report-meta { padding-left:16px; padding-right:16px; }
+      .hero h1 { font-size:36px; }
+      .stat-stack { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+    <nav class="topnav">
+      <a class="brand" href="index.html"><span>LG</span>LinkGraph</a>
+      <a class="nav-link" href="index.html">All clients</a>
+    </nav>
+    <section class="hero client-hero">
+      <div class="hero-copy">
+        <div class="kicker">the-nash-casino</div>
+        <h1>The Nash Casino</h1>
+        <p>11 extracted offerings, 8 sitemap URLs, and 10 local source documents for client-specific writing context.</p>
+      </div>
+      <div class="stat-stack">
+        <div><strong>ok</strong><span>crawl status</span></div>
+        <div><strong>8</strong><span>URLs found</span></div>
+        <div><strong>0</strong><span>product/service URLs</span></div>
+      </div>
+    </section>
+    <section class="layout">
+      <main>
+        <section class="context-grid">
+    <article class="context-card">
+      <div class="aside-label">Quick Facts</div>
+      <p class="context-note">Company, audience, and proof points.</p>
+      <ul><li>The Nash is positioned as a local entertainment destination — not merely a casino. All messaging leads with experience, atmosphere, and community. Gambling outcomes and winning are never the primary draw.</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Voice</div>
+      <p class="context-note">How this client should sound.</p>
+      <ul><li>Confident: State facts clearly. Avoid hedging language (&quot;might,&quot; &quot;could&quot;).</li><li>Energetic: Active verbs. Punchy, forward-moving sentences.</li><li>Inviting: Write in second person (&quot;you&quot;). Bring the reader into the experience.</li><li>Social &amp; fun: Highlight shared experiences, group activities, live energy.</li><li>Approachable: Explain games and concepts in plain, friendly language. No jargon without explanation.</li><li>Community-proud: Reference Nashua, Southern NH, and local giving naturally — not as an afterthought.</li><li>&quot;The energy around a craps table is electric.&quot; — immediate, sensory, specific</li><li>&quot;Whether you&#x27;re learning how to play live craps or looking to master live craps strategy, understanding proven betting approaches can transform your experience from confusion into calculated confidence.&quot; — second person, forward-moving</li></ul>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Avoid / Compliance</div>
+      <p class="context-note">Claims, terms, and wording to avoid.</p>
+      <p class="muted">No clean lines extracted yet.</p>
+    </article>
+    
+
+    <article class="context-card">
+      <div class="aside-label">Terminology</div>
+      <p class="context-note">Client-specific naming and required language.</p>
+      <ul><li>Topic: Preferred language</li><li>Machine games: &quot;gaming machines,&quot; &quot;HHR machines,&quot; or specific title names</li><li>The venue: &quot;The Nash Casino,&quot; &quot;The Nash,&quot; &quot;casino floor&quot;</li><li>Location: &quot;Pheasant Lane Mall in Nashua, NH&quot; or &quot;Nashua, New Hampshire&quot;</li><li>The sportsbook: &quot;DraftKings Sportsbook&quot; or &quot;two-story DraftKings Sportsbook&quot;</li><li>Rewards program: &quot;Club Nash&quot; or &quot;Club Nash rewards program&quot;</li><li>First-time players: &quot;beginners,&quot; &quot;first-time visitors,&quot; &quot;new players&quot;</li><li>State: &quot;New Hampshire&quot; on first use, &quot;NH&quot; acceptable after</li></ul>
+    </article>
+    </section>
+        <section class="panel">
+          <h2>Offerings, Services, Goods</h2>
+          <p class="muted">Writer-facing catalog from the client style system, approved source files, and usable product/service pages. Raw crawl evidence is separated below.</p>
+          <div class="offerings">
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Club Nash Rewards</h3>
+      <p>Rewards program with Silver, Gold, and Platinum tiers, Free Play, dining credits, and merchandise redemptions.</p>
+      <div class="evidence">Sources: clients/the-nash-casino/raw/knowledge/service-taxonomy.md · Sections: Dining and Rewards</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>DraftKings Sportsbook</h3>
+      <p>Two-story sportsbook for American and international sports betting, viewing, food, and drinks.</p>
+      <div class="evidence">Sources: clients/the-nash-casino/raw/knowledge/service-taxonomy.md · Sections: Gaming</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Electric Pheasant</h3>
+      <p>Cocktail lounge with drinks and live music.</p>
+      <div class="evidence">Sources: clients/the-nash-casino/raw/knowledge/service-taxonomy.md · Sections: Dining and Rewards</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Historical Horse Racing Machines</h3>
+      <p>1,000+ HHR gaming machines. Do not call them traditional slot machines.</p>
+      <div class="evidence">Sources: clients/the-nash-casino/raw/knowledge/service-taxonomy.md · Sections: Gaming</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Lucky Lantern</h3>
+      <p>Asian broths and noodle dishes.</p>
+      <div class="evidence">Sources: clients/the-nash-casino/raw/knowledge/service-taxonomy.md · Sections: Dining and Rewards</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Poker Room</h3>
+      <p>19-table poker room for experienced players and beginners.</p>
+      <div class="evidence">Sources: clients/the-nash-casino/raw/knowledge/service-taxonomy.md · Sections: Gaming</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Proper Chophouse</h3>
+      <p>Upscale dining venue with fine cuts and cocktails.</p>
+      <div class="evidence">Sources: clients/the-nash-casino/raw/knowledge/service-taxonomy.md · Sections: Dining and Rewards</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Stadium Social</h3>
+      <p>Sports bar tied to live game viewing and the Sportsbook.</p>
+      <div class="evidence">Sources: clients/the-nash-casino/raw/knowledge/service-taxonomy.md · Sections: Dining and Rewards</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Table Games</h3>
+      <p>37 table games including Blackjack, SP21, Roulette, Baccarat, Jackpot Holdem, Open Face Pai Gow, Trifecta, Live Craps, Crapless Craps, and Midi Baccarat.</p>
+      <div class="evidence">Sources: clients/the-nash-casino/raw/knowledge/service-taxonomy.md · Sections: Gaming</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Topgolf Swing Suite</h3>
+      <p>Private lounge-style golf simulator and game space for groups and private events.</p>
+      <div class="evidence">Sources: clients/the-nash-casino/raw/knowledge/service-taxonomy.md · Sections: Gaming</div>
+    </article>
+    
+
+    <article class="offering">
+      <div class="offering-marker"></div>
+      <h3>Woodlands Cafe</h3>
+      <p>Comfort food venue with locally inspired flavors.</p>
+      <div class="evidence">Sources: clients/the-nash-casino/raw/knowledge/service-taxonomy.md · Sections: Dining and Rewards</div>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Website Intelligence</h2>
+          <div class="split">
+            <div>
+              <h3>Website URLs</h3><ul><li><a href="https://thenashcasino.com/">https://thenashcasino.com/</a></li><li><a href="https://nhproblemgambling.org/">https://nhproblemgambling.org/</a></li></ul>
+              <h3>Sitemaps</h3><ul><li><a href="https://www.nhproblemgambling.org/sitemap.xml">https://www.nhproblemgambling.org/sitemap.xml</a></li><li><a href="https://www.nhproblemgambling.org/pages-sitemap.xml">https://www.nhproblemgambling.org/pages-sitemap.xml</a></li></ul>
+            </div>
+            <div>
+              <h3>Semantic / Topical Terms</h3><div class="topic-chips"><span>Club Nash Rewards</span><span>DraftKings Sportsbook</span><span>Electric Pheasant</span><span>Historical Horse Racing Machines</span><span>Lucky Lantern</span><span>Poker Room</span><span>Proper Chophouse</span><span>Stadium Social</span><span>Table Games</span><span>Topgolf Swing Suite</span><span>Woodlands Cafe</span><span>Machine Games</span><span>The Venue</span><span>The Sportsbook</span><span>Rewards Program</span><span>First-Time Players</span><span>Second Person</span><span>Live Craps</span><span>Nash Casino</span><span>Club Nash</span></div>
+              <h3>Blockers</h3><ul><li>No usable sitemap found for https://thenashcasino.com/; sampled homepage only.</li></ul>
+            </div>
+          </div>
+          <h3>Product / Service URLs</h3><p class="muted">No product/service URLs classified from sitemap paths.</p>
+          <h3>Sampled Pages</h3><div class="sample-pages">
+    <article class="sample">
+      <h4>The Nash Casino in Nashua, New Hampshire | The Nash</h4>
+      <a href="https://thenashcasino.com/">https://thenashcasino.com/</a>
+      <p>Discover the exciting gambling destination that is The Nash Casino in New Hampshire. Check out our sportsbook, casino games, and more right here in Nashua.</p>
+      <ul><li>New Hampshire&#x27;s Largest Entertainment Destination</li><li>WELCOME TO THE NASH CASINO</li><li>Possibilities.</li><li>WIN SOME CASH AT THE NASH</li><li>LET THE GOOD TIMES FLOW</li><li>TAKE A SWING</li><li>YOUR FRONT ROW SEAT TO EVERY GAME</li><li>CLUB NASH</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Home | NHCPG</h4>
+      <a href="https://www.nhproblemgambling.org/">https://www.nhproblemgambling.org/</a>
+      <p></p>
+      <ul><li>NH Council on Problem Gambling</li><li>Our Mission</li><li>Call Our Helpline</li><li>We provide a free, confidential 24/7 Helpline to support those affected by problem gambling and/or a concerned loved one. We&#x27;re here for you, give us a call!</li><li>Support Our Mission</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Home | NHCPG</h4>
+      <a href="https://www.nhproblemgambling.org/">https://www.nhproblemgambling.org/</a>
+      <p></p>
+      <ul><li>NH Council on Problem Gambling</li><li>Our Mission</li><li>Call Our Helpline</li><li>We provide a free, confidential 24/7 Helpline to support those affected by problem gambling and/or a concerned loved one. We&#x27;re here for you, give us a call!</li><li>Support Our Mission</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Get Help | NHCPG</h4>
+      <a href="https://www.nhproblemgambling.org/get-help">https://www.nhproblemgambling.org/get-help</a>
+      <p></p>
+      <ul><li>Get Help</li><li>The losses associated with problem gambling are greater than financial. The impact of the cycle of addiction demands smart and effective solutions. We at the New Hampshire Council on Problem Gambling understand the problem and can help.</li><li>Call Our Helpline</li><li>We provide a free, confidential 24/7 Helpline to support those affected by problem gambling and/or a concerned loved one. We&#x27;re here for you, give us a call!</li><li>Free Self-Help Tools</li><li>Local Gambler&#x27;s Anonymous Meeting Days/Times/Locations</li><li>Other Options for Help</li><li>For More Resources, Click Here</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Resources | NHCPG</h4>
+      <a href="https://www.nhproblemgambling.org/resources">https://www.nhproblemgambling.org/resources</a>
+      <p></p>
+      <ul><li>Resources</li><li>Gambler&#x27;s Anonymous</li><li>Your First Step to Change: Gambling</li><li>Brief Biosocial Gambling Screen</li><li>NH Council on Problem Gambling Brochure</li><li>Suicide Prevention</li><li>Gambling Treatment Facilities</li><li>Gambler&#x27;s Anonymous Meetings in New Hampshire</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>What We Do | NHCPG</h4>
+      <a href="https://www.nhproblemgambling.org/what-we-do">https://www.nhproblemgambling.org/what-we-do</a>
+      <p></p>
+      <ul><li>What We Provide</li><li>The Council provides information, education, advocacy, and prevention services.</li><li>Invite Us to Speak</li><li>We are happy to come Speak/Present at your workplace/school...Please Email us to coordinate!</li><li>How We Can Help</li><li>The Council offers intervention services, treatment referrals, and research collaboration to help those afflicted by problem gambling and their loved ones.</li><li>Call Our Helpline</li><li>We provide a free, confidential 24/7 Helpline to support those affected by problem gambling and/or a concerned loved one. We&#x27;re here for you, give us a call!</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Who We Are | NHCPG</h4>
+      <a href="https://www.nhproblemgambling.org/who-we-are">https://www.nhproblemgambling.org/who-we-are</a>
+      <p></p>
+      <ul><li>Who We Are</li><li>Angela Bergen, PhD</li><li>Bryan Provencher</li><li>Ed Talbot</li><li>Board of Directors</li><li>Get in Touch</li></ul>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Training Registration | NHCPG</h4>
+      <a href="https://www.nhproblemgambling.org/book-online">https://www.nhproblemgambling.org/book-online</a>
+      <p></p>
+      <p class="muted">No headings captured.</p>
+    </article>
+    
+
+    <article class="sample">
+      <h4>Success Stories | NHCPG</h4>
+      <a href="https://www.nhproblemgambling.org/success-stories">https://www.nhproblemgambling.org/success-stories</a>
+      <p></p>
+      <ul><li>Recovery Stories</li></ul>
+    </article>
+    </div>
+        </section>
+        <section class="panel">
+          <h2>Full Style System</h2>
+          <details open><summary>Show style-system sections</summary>
+    <details class="style-section">
+      <summary>The Nash Casino — Style System</summary>
+      <div class="markdown"><p>Generated: 2026-06-03<br>Sources: raw/knowledge/knowledge-document.md, _approved/blog/ (2 pieces, Jan–Feb 2026)<br>Base rules: universal-rules/UNIVERSAL-RULES.md<br>Agency: McGuinness Media</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>1. Brand &amp; Audience</summary>
+      <div class="markdown"><p>The Nash Casino is New Hampshire&#x27;s largest charitable gaming destination, located inside Pheasant Lane Mall in Nashua, NH. It operates as a charitable gaming venue under New Hampshire state law, combining casino-style gaming, sports betting, dining, and live entertainment under one roof.</p><p>Website: https://thenashcasino.com/<br>CSM: Alex Belanger<br>Age requirement: 21+ to enter and play<br>Tagline: &quot;Let the Good Times Flow&quot;</p><p>The Nash is positioned as a local entertainment destination — not merely a casino. All messaging leads with experience, atmosphere, and community. Gambling outcomes and winning are never the primary draw.</p><p>**Audiences:**</p><p>| Segment | Content angle |<br>|---|---|<br>| Local residents | Fun night out; convenience and variety; dining, entertainment, and atmosphere |<br>| Gaming enthusiasts | Table games, gaming machines, poker; strategy content and game explanations |<br>| Sports fans | DraftKings Sportsbook; two-story setting, live viewing, betting options |<br>| Tourists &amp; visitors | Destination experience; Pheasant Lane Mall location; Nashua and Southern NH |<br>| First-time casino visitors | Approachable tone; beginner tips; friendly descriptions; reassurance |<br>| Groups &amp; event planners | Private events, Topgolf Swing Suite, group dining; full-venue experience |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2. Voice &amp; Tone</summary>
+      <div class="markdown"><p>Voice: confident, energetic, local, inviting. Content should read like it was written by a knowledgeable local who knows the venue well — not an AI, not a corporate copywriter. The Nash speaks to guests like friends.</p><p>| Attribute | Rule |<br>|---|---|<br>| Confident | State facts clearly. Avoid hedging language (&quot;might,&quot; &quot;could&quot;). |<br>| Energetic | Active verbs. Punchy, forward-moving sentences. |<br>| Inviting | Write in second person (&quot;you&quot;). Bring the reader into the experience. |<br>| Social &amp; fun | Highlight shared experiences, group activities, live energy. |<br>| Approachable | Explain games and concepts in plain, friendly language. No jargon without explanation. |<br>| Community-proud | Reference Nashua, Southern NH, and local giving naturally — not as an afterthought. |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.1 Voice in practice</summary>
+      <div class="markdown"><p>Do this:<br><li>&quot;The energy around a craps table is electric.&quot; — immediate, sensory, specific</li><br><li>&quot;Whether you&#x27;re learning how to play live craps or looking to master live craps strategy, understanding proven betting approaches can transform your experience from confusion into calculated confidence.&quot; — second person, forward-moving</li><br><li>&quot;From day one, The Nash Casino has embraced its role as a community partner.&quot; — confident, declarative</li></ul><p>Not this:<br><li>&quot;Win big at The Nash&quot; — implies financial outcome; non-compliant</li><br><li>&quot;Experience the thrill of our world-class gaming floor&quot; — generic superlative, corporate</li><br><li>&quot;The Nash Casino is committed to providing an exceptional entertainment experience for all guests&quot; — AI filler, no meaning</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.2 Sentence and paragraph rules</summary>
+      <div class="markdown"><p><li>Paragraphs: 1–4 lines maximum. One idea per sentence.</li><br><li>First sentence of every section directly answers the heading — no throat-clearing.</li><br><li>No em dashes — never, under any circumstances. Use a period or restructure.</li><br><li>No colons in running text (colons in tables and lists are fine).</li><br><li>Do not use constructions like &quot;it&#x27;s not about X, it&#x27;s about Y.&quot;</li><br><li>Do not begin a paragraph or section with a hyperlink.</li><br><li>Do not use unclear pronouns — name the subject.</li><br><li>Short factual introduction after the H1. No filler. No &quot;In this article we will explore...&quot;</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>2.3 Banned language</summary>
+      <div class="markdown"><p>| Category | Banned |<br>|---|---|<br>| Slots terminology | slots, slot machines, play the slots, slot floor, slot titles (see §3 — critical rule) |<br>| Win/outcome language | win big, guaranteed strategy, beat the house, make money playing, best way to win |<br>| Generic superlatives | world-class, unmatched, premier, best-in-class, state-of-the-art, exceptional (when vague) |<br>| AI filler | in the world of, as we know, it&#x27;s worth noting, delve into, dive into, the fact that, furthermore, in conclusion |<br>| Aggressive sales hooks | Don&#x27;t miss out, Limited time, Act now, Book today before it&#x27;s too late |<br>| Corporate tone | committed to providing, leveraging, synergy, stakeholder, value proposition |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3. Terminology — Critical Rules</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.1 Slots — NEVER use</summary>
+      <div class="markdown"><p>**Never use the words &quot;slots&quot; or &quot;slot machines&quot; in any content for The Nash.** The machines operate on Historical Horse Racing (HHR) technology — not traditional random number generators. The terminology distinction is required under New Hampshire charitable gaming regulations.</p><p>| Never use | Always use instead |<br>|---|---|<br>| slots | gaming machines |<br>| slot machines | gaming machines |<br>| play the slots | play the gaming machines |<br>| slot floor | gaming floor |<br>| slot titles | gaming machine titles |</p><p>**What are HHR machines?** Historical Horse Racing machines draw outcomes from a database of past horse races using an algorithm. Unlike traditional slot machines (which use a random number generator), HHR machines blend horse racing data with modern gaming mechanics. This distinction is what allows charitable gaming in New Hampshire. Writers may briefly explain this when relevant — it is a genuine differentiator.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>3.2 Approved terminology reference</summary>
+      <div class="markdown"><p>| Topic | Preferred language |<br>|---|---|<br>| Machine games | &quot;gaming machines,&quot; &quot;HHR machines,&quot; or specific title names |<br>| The venue | &quot;The Nash Casino,&quot; &quot;The Nash,&quot; &quot;casino floor&quot; |<br>| Location | &quot;Pheasant Lane Mall in Nashua, NH&quot; or &quot;Nashua, New Hampshire&quot; |<br>| The sportsbook | &quot;DraftKings Sportsbook&quot; or &quot;two-story DraftKings Sportsbook&quot; |<br>| Rewards program | &quot;Club Nash&quot; or &quot;Club Nash rewards program&quot; |<br>| First-time players | &quot;beginners,&quot; &quot;first-time visitors,&quot; &quot;new players&quot; |<br>| State | &quot;New Hampshire&quot; on first use, &quot;NH&quot; acceptable after |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4. Responsible Gaming — Compliance Rules</summary>
+      <div class="markdown"><p>All content must comply with gaming marketing regulations. These are legal and ethical requirements, not optional style choices.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.1 Mandatory rules</summary>
+      <div class="markdown"><p><li>Never use language that suggests guaranteed winnings or implies a strategy will produce consistent profits.</li><br><li>Never frame gaming as a financial strategy or income source.</li><br><li>Always frame gaming as entertainment.</li><br><li>Include responsible gaming messaging in longer-form content, strategy pieces, and any content that discusses betting outcomes.</li><br><li>Avoid aggressive gambling hooks, misleading claims, or urgency-based language.</li></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.2 Required responsible gaming message</summary>
+      <div class="markdown"><p>Include this message (or a close paraphrase with all elements present) wherever responsible gaming language is required:</p><p>&gt; **GAMING PROBLEM?** If you are struggling with problem gambling, contact the NH Council on Problem Gambling: Info@NHProblemGambling.org | NHProblemGambling.org | **24/7 Free Confidential Helpline: 603-724-1605 | 1-800-GAMBLER (426-2537)**</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.3 Language swap reference</summary>
+      <div class="markdown"><p>| Never use | Use instead |<br>|---|---|<br>| Win big at The Nash | Experience the excitement at The Nash |<br>| Guaranteed strategy for craps success | Strategies that may improve your craps experience |<br>| Make money playing blackjack | Enjoy blackjack at one of our 37 table games |<br>| Beat the house with these tips | Play smarter with these helpful tips |<br>| The best way to win at The Nash | The best way to enjoy your visit to The Nash |</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>4.4 Priority order when rules conflict</summary>
+      <div class="markdown"><p>1. Legal and terminology compliance (no &quot;slots,&quot; no guaranteed-win language, responsible gaming)<br>2. Voice and banned language rules<br>3. SEO structure and internal linking<br>4. Everything else</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5. Gaming Offerings</summary>
+      <div class="markdown"><p></p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.1 Gaming machines</summary>
+      <div class="markdown"><p>1,000+ gaming machines. All are Historical Horse Racing (HHR) machines — not traditional slot machines.</p><p>Featured titles include: House of the Dragon, Kong Skull Island, I&#x27;ll Get You My Pretty, Monopoly Express, Invaders Attack From The Planet Moolah, Timber Jack, Mystery of the Lamp, Cash Express Luxury Line, Lucky Link, Money Link, Rocket Link (Freedom and Liberty), Lion Link, Bao Zhu Zhao (Celebration &amp; Festival), Dancing Drums, Lucky Combo, Huff N&#x27; More Puff, Coin Kingdom, Rakin&#x27; Bacon, Ultimate Fire Link, Buffalo themes, Video Poker, and more.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.2 Table games</summary>
+      <div class="markdown"><p>37 table games total. Standard games: Blackjack, SP21, Roulette, Baccarat, Jackpot Hold&#x27;em, Open Face Pai Gow, Trifecta. Recent additions: Live Craps, Crapless Craps, Midi Baccarat (Macau-style). Electronic table game variants also available.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.3 Poker room</summary>
+      <div class="markdown"><p>19 poker tables. Welcoming to both experienced players and beginners observing before joining.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.4 DraftKings Sportsbook</summary>
+      <div class="markdown"><p>Two-story DraftKings Sportsbook. Place bets on American and international sporting events. Features elevated bar bites, local craft brews, and a full live-viewing experience. Guests can spectate, bet, and socialize.</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>5.5 Topgolf Swing Suite</summary>
+      <div class="markdown"><p>Private lounge-style space with immersive golf games and challenges. Food and drinks available. Popular for groups and private events.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>6. Dining &amp; Entertainment</summary>
+      <div class="markdown"><p>Five food and drink venues:</p><p>| Venue | Description |<br>|---|---|<br>| Proper Chophouse | Upscale dining; fine cuts and expertly crafted cocktails; reservations available |<br>| Woodlands Cafe | Comfort food; welcoming setting; locally-inspired flavors |<br>| Lucky Lantern | Traditional Asian broths and noodle dishes |<br>| Electric Pheasant | Cocktail lounge with drinks and live music; main entertainment hub |<br>| Stadium Social | Sports bar atmosphere; live game viewing; pairs with the Sportsbook |</p><p>**Regular events:**<br><li>Live music at Electric Pheasant — local and touring acts</li><br><li>Trivia Tuesdays — every Tuesday, 7:30–9:00 PM in the cocktail lounge; $5 Bud Light draft special</li><br><li>Promotions, giveaways, and cash events — ongoing; check thenashcasino.com/entertainment</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>7. Club Nash Rewards</summary>
+      <div class="markdown"><p>| Feature | Detail |<br>|---|---|<br>| Tiers | Silver, Gold, Platinum |<br>| Sign-up bonus | New members can win up to $1,000 in Free Play (on-property sign-up) |<br>| HHR machines | 1 Tier Point per $5 played |<br>| Electronic table games | 1 Tier Point per $20 played |<br>| Video poker | 1 Tier Point per $10 played |<br>| Table games | Points vary by game type, average bet, and time played |<br>| Redemption | Free Play, dining credits, merchandise |<br>| New member draw | Chance to win $5,000 in Free Play via participation form (on-property) |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>8. Charitable Gaming &amp; Community Impact</summary>
+      <div class="markdown"><p>Community giving is a core identity pillar — not a side note. Weave it into relevant content as proof of The Nash&#x27;s local investment.</p><p>**Key impact stats:**</p><p>| Milestone | Detail |<br>|---|---|<br>| $1.5 million | Donated to 8 nonprofits in first month of operations (unprecedented in NH gaming history) |<br>| $15.4 million | Generated for NH nonprofits in first 10 months of operations |<br>| $1.2 million+ | Contributed to NH Education Trust Fund in June (and again in July) |<br>| 10% | Of games of chance revenue directed to the NH Education Trust Fund |<br>| 16.5% | Of HHR revenue directed to the NH Education Trust Fund |</p><p>**Charity focus areas:** Youth programs and education (Boys &amp; Girls Club of Souhegan Valley ~$169,000), food insecurity and housing (Hudson Community Food Pantry, Harbor Homes), veterans and first responders (American Legion, VFW posts, Operation Care for Troops), arts and culture (Nashua Community Music School, Nashua International Sculpture Foundation), statewide education (NH Education Trust Fund).</p><p>**How charitable gaming works in NH:** Under NH law, charitable gaming allows eligible nonprofits to offer &quot;Games of Chance.&quot; All participating charities must be licensed by the NH Lottery Commission&#x27;s Investigation and Compliance Division, registered as IRS tax-exempt, in good standing with the NH Charitable Trust, and registered with the NH Secretary of State for at least one year.</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>9. Blog Page Template</summary>
+      <div class="markdown"><p>Target length: 800–1,500 words.</p><p>Structure:<br>1. Meta title (55–60 characters): primary keyword near the front; include &quot;The Nash Casino&quot; or location<br>2. Meta description (120–150 characters): primary keyword, brand name, location<br>3. 3 primary keywords defined<br>4. H1: SEO- and CTR-optimized; primary keyword at the beginning; written to spark curiosity<br>5. Short factual introduction (no filler, no &quot;in this article we will...&quot;)<br>6. H2 sections — each heading written as a search-optimized question where possible; first sentence directly answers the heading<br>7. H3 where needed for subsections; H4 only for deeper clarification<br>8. TL;DR Q&amp;A block at the end<br>9. Responsible gaming note where content discusses strategy or betting outcomes<br>10. 4–5 internal links (see §10 for placement rules)</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>10. Internal Linking Rules</summary>
+      <div class="markdown"><p>**Placement — what is forbidden:**<br><li>Do not add an internal link to the first word of a sentence</li><br><li>Do not add an internal link to the first sentence of a paragraph</li><br><li>Do not add an internal link to the first line of a paragraph</li><br><li>Do not add an internal link before establishing context and explaining the connection between source and target page</li></ul><p>**Anchor text:**<br><li>Use descriptive anchor text that matches the main entity in the relevant heading</li><br><li>Never use &quot;learn more,&quot; &quot;click here,&quot; or similar generic anchors</li><br><li>Add 1 internal link per heading area maximum (unless links appear in an HTML list, which counts as one)</li></ul><p>**Context rule:** Build context around the linked concept first. Explain what it is, why it matters, and how it connects — then link. A reader should understand the relevance before clicking.</p><p>**Internal link reference:**</p><p>| Page | URL |<br>|---|---|<br>| Homepage | thenashcasino.com |<br>| Gaming | thenashcasino.com/gaming |<br>| Gaming Machines | thenashcasino.com/gaming-machines |<br>| Table Games | thenashcasino.com/table-games |<br>| Sportsbook | thenashcasino.com/sportsbook |<br>| Food &amp; Drink | thenashcasino.com/food-drink |<br>| Entertainment | thenashcasino.com/entertainment |<br>| Club Nash / Players Club | thenashcasino.com/gaming/players-club |<br>| Groups &amp; Events | thenashcasino.com/groups-events |<br>| Topgolf Swing Suite | thenashcasino.com/groups-events/events/top-golf |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>11. SEO Keywords by Topic</summary>
+      <div class="markdown"><p>| Content topic | Example keywords |<br>|---|---|<br>| Casino gaming / general | &quot;gaming in New Hampshire,&quot; &quot;Nashua casino,&quot; &quot;The Nash Casino&quot; |<br>| Gaming machines | &quot;gaming machines Nashua,&quot; &quot;HHR machines NH&quot; |<br>| Table games | &quot;table games Nashua,&quot; &quot;live craps NH,&quot; &quot;blackjack Nashua&quot; |<br>| Sportsbook | &quot;DraftKings Sportsbook Nashua,&quot; &quot;sports betting New Hampshire&quot; |<br>| Dining | &quot;restaurants Nashua NH,&quot; &quot;casino dining Nashua&quot; |<br>| Events / entertainment | &quot;entertainment Nashua NH,&quot; &quot;live music Nashua casino&quot; |<br>| Community / charitable | &quot;charitable gaming NH,&quot; &quot;community events Nashua&quot; |<br>| Beginner guides | &quot;first time at a casino,&quot; &quot;casino tips for beginners&quot; |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>12. Pre-Publish Checklist</summary>
+      <div class="markdown"><p>| Check | Requirement |<br>|---|---|<br>| Terminology | No use of &quot;slots&quot; or &quot;slot machines&quot; anywhere |<br>| Brand voice | Confident, energetic, inviting — not aggressive or salesy |<br>| Responsible gaming | No language guaranteeing wins; gaming framed as entertainment |<br>| Responsible gaming message | Included where appropriate (strategy or outcome content) |<br>| SEO structure | Meta title, meta description, and 3 keywords present |<br>| Internal links | 4–5 internal links; none in first sentence or first line of paragraph |<br>| Audience fit | Speaks to local visitors and/or gaming enthusiasts |<br>| Charitable angle | Community/giving mentioned where relevant |<br>| Age requirement | &quot;21+&quot; referenced in onboarding or access content |<br>| Location accuracy | &quot;Pheasant Lane Mall, Nashua, New Hampshire&quot; used correctly |<br>| Em dashes | Zero em dashes anywhere in the piece |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>13. Key Facts at a Glance</summary>
+      <div class="markdown"><p>| Detail | Value |<br>|---|---|<br>| Location | Pheasant Lane Mall, Nashua, NH |<br>| Age requirement | 21+ to enter and play |<br>| Gaming machines | 1,000+ |<br>| Table games | 37 |<br>| Poker tables | 19 |<br>| Sportsbook | Two-story DraftKings Sportsbook |<br>| Dining venues | 5 (Proper Chophouse, Woodlands Cafe, Lucky Lantern, Electric Pheasant, Stadium Social) |<br>| Rewards program | Club Nash (Silver, Gold, Platinum) |<br>| Charitable donations (10 months) | $15.4 million to NH nonprofits |<br>| Problem gambling hotline | 603-724-1605 / 1-800-GAMBLER (426-2537) |<br>| Problem gambling email | Info@NHProblemGambling.org |<br>| Problem gambling website | NHProblemGambling.org |</p><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>14. Approved Content Examples</summary>
+      <div class="markdown"><p>Published blog posts live in `_approved/blog/`. Reference these for voice, structure, internal linking placement, and how responsible gaming messaging is handled in practice.</p><ul><li>`jan-2026-community-events.md` — community/charitable angle; example of how giving stats are presented; local partnership framing</li><br><li>`feb-2026-craps-strategies.md` — strategy content; example of how to handle outcome language compliantly; step-by-step structure within H2 sections; responsible gaming note in closing</li></ul><p>---</p></div>
+    </details>
+    
+
+    <details class="style-section">
+      <summary>15. Operator Notes</summary>
+      <div class="markdown"><p>*Section for team-specific additions. Use `### {Operator} — {scope}` headings. Promote a note to the main numbered sections once it has been reinforced across two or more pieces.*</p></div>
+    </details>
+    </details>
+        </section>
+        <section class="panel">
+          <h2>Local Source Files Read</h2>
+          <ul><li><code>clients/the-nash-casino/STYLE-SYSTEM.md</code> — The Nash Casino — Style System</li>
+<li><code>clients/the-nash-casino/_approved/blog/feb-2026-craps-strategies.md</code> — Roll with Confidence: Winning Strategies for Live Craps at The Nash</li>
+<li><code>clients/the-nash-casino/_approved/blog/jan-2026-community-events.md</code> — How The Nash Supports the Local Community</li>
+<li><code>clients/the-nash-casino/client-intelligence/README.md</code> — The Nash Casino Client Intelligence</li>
+<li><code>clients/the-nash-casino/client-intelligence/STYLE-GUIDE.md</code> — The Nash Casino — Style System</li>
+<li><code>clients/the-nash-casino/client-intelligence/offerings.md</code> — The Nash Casino Offerings</li>
+<li><code>clients/the-nash-casino/client-intelligence/source-files.md</code> — The Nash Casino Source Files</li>
+<li><code>clients/the-nash-casino/deliverables/README.md</code> — The Nash Casino Deliverables</li>
+<li><code>clients/the-nash-casino/raw/knowledge/knowledge-document.md</code> — Knowledge Document</li>
+<li><code>clients/the-nash-casino/raw/knowledge/service-taxonomy.md</code> — The Nash Casino Service Taxonomy</li></ul>
+        </section>
+      </main>
+    </section>
+    </body>
+</html>
