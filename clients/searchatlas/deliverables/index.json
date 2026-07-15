@@ -1,0 +1,538 @@
+{
+  "client": "searchatlas",
+  "display_name": "Search Atlas",
+  "generated_at": "2026-07-13T21:15:16.540401+00:00",
+  "existing_campaign_deliverables": [
+    {
+      "path": "clients/searchatlas/deliverables/drafts/01-blog-content/ai-cmo-for-marketing-agencies-v1.md",
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "type": "md",
+      "name": "ai-cmo-for-marketing-agencies-v1.md",
+      "size": 9399,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/drafts/01-blog-content/ai-cmo-for-marketing-agencies-v2.md",
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "type": "md",
+      "name": "ai-cmo-for-marketing-agencies-v2.md",
+      "size": 12176,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/drafts/01-blog-content/ai-cmo-for-startups-and-lean-teams-v1.md",
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "type": "md",
+      "name": "ai-cmo-for-startups-and-lean-teams-v1.md",
+      "size": 10112,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/drafts/01-blog-content/ai-cmo-for-startups-v2.md",
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "type": "md",
+      "name": "ai-cmo-for-startups-v2.md",
+      "size": 17958,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/drafts/01-blog-content/ai-cmo-kpis-v1.md",
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "type": "md",
+      "name": "ai-cmo-kpis-v1.md",
+      "size": 15870,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/drafts/01-blog-content/ai-cmo-vs-fractional-cmo-v1.md",
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "type": "md",
+      "name": "ai-cmo-vs-fractional-cmo-v1.md",
+      "size": 10368,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/drafts/01-blog-content/ai-cmo-vs-fractional-cmo-v2.md",
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "type": "md",
+      "name": "ai-cmo-vs-fractional-cmo-v2.md",
+      "size": 13145,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/drafts/01-blog-content/ai-cmo-vs-marketing-agency-v1.md",
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "type": "md",
+      "name": "ai-cmo-vs-marketing-agency-v1.md",
+      "size": 9988,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/drafts/01-blog-content/ai-cmo-vs-marketing-agency-v2.md",
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "type": "md",
+      "name": "ai-cmo-vs-marketing-agency-v2.md",
+      "size": 10542,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/drafts/01-blog-content/ai-marketing-automation-mistakes-v1.md",
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "type": "md",
+      "name": "ai-marketing-automation-mistakes-v1.md",
+      "size": 9656,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/drafts/01-blog-content/ai-marketing-automation-mistakes-v2.md",
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "type": "md",
+      "name": "ai-marketing-automation-mistakes-v2.md",
+      "size": 11455,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/drafts/01-blog-content/ai-recommendations-vs-execution-sample.md",
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "type": "md",
+      "name": "ai-recommendations-vs-execution-sample.md",
+      "size": 7398,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/drafts/01-blog-content/best-ai-cmo-tools-execution-depth-comparison-v1.md",
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "type": "md",
+      "name": "best-ai-cmo-tools-execution-depth-comparison-v1.md",
+      "size": 11308,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/drafts/01-blog-content/best-ai-cmo-tools-v2.md",
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "type": "md",
+      "name": "best-ai-cmo-tools-v2.md",
+      "size": 12927,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/drafts/01-blog-content/google-june-2026-spam-update-v1.md",
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "type": "md",
+      "name": "google-june-2026-spam-update-v1.md",
+      "size": 4694,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/drafts/01-blog-content/how-to-build-an-ai-marketing-stack-v1.md",
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "type": "md",
+      "name": "how-to-build-an-ai-marketing-stack-v1.md",
+      "size": 10042,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/drafts/01-blog-content/how-to-build-an-ai-marketing-stack-v2.md",
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "type": "md",
+      "name": "how-to-build-an-ai-marketing-stack-v2.md",
+      "size": 16511,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/drafts/01-blog-content/how-to-measure-ai-marketing-performance-v1.md",
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "type": "md",
+      "name": "how-to-measure-ai-marketing-performance-v1.md",
+      "size": 10765,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/drafts/01-blog-content/how-to-measure-ai-marketing-performance-v2.md",
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "type": "md",
+      "name": "how-to-measure-ai-marketing-performance-v2.md",
+      "size": 12848,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/drafts/01-blog-content/what-is-google-ai-mode.md",
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "type": "md",
+      "name": "what-is-google-ai-mode.md",
+      "size": 39328,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/drafts/01-blog-content/what-is-multiplayer-marketing-v1.md",
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "type": "md",
+      "name": "what-is-multiplayer-marketing-v1.md",
+      "size": 14509,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/drafts/03-ai-search-discoverability/do-authority-metrics-predict-ai-citations-v1.md",
+      "campaign": "03-ai-search-discoverability",
+      "stage": "drafts",
+      "type": "md",
+      "name": "do-authority-metrics-predict-ai-citations-v1.md",
+      "size": 9782,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/drafts/03-ai-search-discoverability/do-authority-metrics-predict-ai-citations-v2.md",
+      "campaign": "03-ai-search-discoverability",
+      "stage": "drafts",
+      "type": "md",
+      "name": "do-authority-metrics-predict-ai-citations-v2.md",
+      "size": 11393,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/drafts/05-homepage-repositioning/atlas-agent-v1.md",
+      "campaign": "05-homepage-repositioning",
+      "stage": "drafts",
+      "type": "md",
+      "name": "atlas-agent-v1.md",
+      "size": 9832,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/drafts/05-homepage-repositioning/homepage-copy-v1.md",
+      "campaign": "05-homepage-repositioning",
+      "stage": "drafts",
+      "type": "md",
+      "name": "homepage-copy-v1.md",
+      "size": 9815,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/final/01-blog-content/ai-cmo-for-marketing-agencies.md",
+      "campaign": "01-blog-content",
+      "stage": "final",
+      "type": "md",
+      "name": "ai-cmo-for-marketing-agencies.md",
+      "size": 14486,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/final/01-blog-content/ai-cmo-for-startups-and-lean-teams.md",
+      "campaign": "01-blog-content",
+      "stage": "final",
+      "type": "md",
+      "name": "ai-cmo-for-startups-and-lean-teams.md",
+      "size": 10112,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/final/01-blog-content/ai-cmo-for-startups.md",
+      "campaign": "01-blog-content",
+      "stage": "final",
+      "type": "md",
+      "name": "ai-cmo-for-startups.md",
+      "size": 17958,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/final/01-blog-content/ai-cmo-kpis.md",
+      "campaign": "01-blog-content",
+      "stage": "final",
+      "type": "md",
+      "name": "ai-cmo-kpis.md",
+      "size": 15870,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/final/01-blog-content/ai-cmo-vs-fractional-cmo.md",
+      "campaign": "01-blog-content",
+      "stage": "final",
+      "type": "md",
+      "name": "ai-cmo-vs-fractional-cmo.md",
+      "size": 15627,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/final/01-blog-content/ai-cmo-vs-marketing-agency.md",
+      "campaign": "01-blog-content",
+      "stage": "final",
+      "type": "md",
+      "name": "ai-cmo-vs-marketing-agency.md",
+      "size": 12832,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/final/01-blog-content/ai-marketing-automation-mistakes.md",
+      "campaign": "01-blog-content",
+      "stage": "final",
+      "type": "md",
+      "name": "ai-marketing-automation-mistakes.md",
+      "size": 14426,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/final/01-blog-content/best-ai-cmo-tools-execution-depth-comparison.md",
+      "campaign": "01-blog-content",
+      "stage": "final",
+      "type": "md",
+      "name": "best-ai-cmo-tools-execution-depth-comparison.md",
+      "size": 11308,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/final/01-blog-content/best-ai-cmo-tools.md",
+      "campaign": "01-blog-content",
+      "stage": "final",
+      "type": "md",
+      "name": "best-ai-cmo-tools.md",
+      "size": 15618,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/final/01-blog-content/how-to-build-an-ai-marketing-stack.md",
+      "campaign": "01-blog-content",
+      "stage": "final",
+      "type": "md",
+      "name": "how-to-build-an-ai-marketing-stack.md",
+      "size": 20612,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/final/01-blog-content/how-to-measure-ai-marketing-performance.md",
+      "campaign": "01-blog-content",
+      "stage": "final",
+      "type": "md",
+      "name": "how-to-measure-ai-marketing-performance.md",
+      "size": 15370,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/final/03-ai-search-discoverability/do-authority-metrics-predict-ai-citations.md",
+      "campaign": "03-ai-search-discoverability",
+      "stage": "final",
+      "type": "md",
+      "name": "do-authority-metrics-predict-ai-citations.md",
+      "size": 9674,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/html/01-blog-content/ai-cmo-for-marketing-agencies.html",
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "type": "html",
+      "name": "ai-cmo-for-marketing-agencies.html",
+      "size": 16399,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/html/01-blog-content/ai-cmo-for-startups-and-lean-teams.html",
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "type": "html",
+      "name": "ai-cmo-for-startups-and-lean-teams.html",
+      "size": 12109,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/html/01-blog-content/ai-cmo-for-startups.html",
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "type": "html",
+      "name": "ai-cmo-for-startups.html",
+      "size": 20964,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/html/01-blog-content/ai-cmo-kpis.html",
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "type": "html",
+      "name": "ai-cmo-kpis.html",
+      "size": 18174,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/html/01-blog-content/ai-cmo-vs-fractional-cmo.html",
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "type": "html",
+      "name": "ai-cmo-vs-fractional-cmo.html",
+      "size": 17609,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/html/01-blog-content/ai-cmo-vs-marketing-agency.html",
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "type": "html",
+      "name": "ai-cmo-vs-marketing-agency.html",
+      "size": 14719,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/html/01-blog-content/ai-marketing-automation-mistakes.html",
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "type": "html",
+      "name": "ai-marketing-automation-mistakes.html",
+      "size": 16256,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/html/01-blog-content/ai-recommendations-vs-execution-sample.html",
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "type": "html",
+      "name": "ai-recommendations-vs-execution-sample.html",
+      "size": 8354,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/html/01-blog-content/best-ai-cmo-tools-execution-depth-comparison.html",
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "type": "html",
+      "name": "best-ai-cmo-tools-execution-depth-comparison.html",
+      "size": 13680,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/html/01-blog-content/best-ai-cmo-tools.html",
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "type": "html",
+      "name": "best-ai-cmo-tools.html",
+      "size": 18188,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/html/01-blog-content/how-to-build-an-ai-marketing-stack.html",
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "type": "html",
+      "name": "how-to-build-an-ai-marketing-stack.html",
+      "size": 24414,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/html/01-blog-content/how-to-measure-ai-marketing-performance.html",
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "type": "html",
+      "name": "how-to-measure-ai-marketing-performance.html",
+      "size": 17285,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/html/01-blog-content/what-is-multiplayer-marketing-v1.html",
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "type": "html",
+      "name": "what-is-multiplayer-marketing-v1.html",
+      "size": 16343,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/html/02-ai-cmo-coworker/coworker-landing-v1.html",
+      "campaign": "02-ai-cmo-coworker",
+      "stage": "html",
+      "type": "html",
+      "name": "coworker-landing-v1.html",
+      "size": 55343,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/html/02-ai-cmo-coworker/coworker-landing-v2.html",
+      "campaign": "02-ai-cmo-coworker",
+      "stage": "html",
+      "type": "html",
+      "name": "coworker-landing-v2.html",
+      "size": 33142,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/html/02-ai-cmo-coworker/coworker-landing.html",
+      "campaign": "02-ai-cmo-coworker",
+      "stage": "html",
+      "type": "html",
+      "name": "coworker-landing.html",
+      "size": 35410,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/html/03-ai-search-discoverability/do-authority-metrics-predict-ai-citations.html",
+      "campaign": "03-ai-search-discoverability",
+      "stage": "html",
+      "type": "html",
+      "name": "do-authority-metrics-predict-ai-citations.html",
+      "size": 11684,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/html/04-contributor-outreach/byline-topic-menu.html",
+      "campaign": "04-contributor-outreach",
+      "stage": "html",
+      "type": "html",
+      "name": "byline-topic-menu.html",
+      "size": 18350,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/html/05-homepage-repositioning/atlas-agent-before-after.html",
+      "campaign": "05-homepage-repositioning",
+      "stage": "html",
+      "type": "html",
+      "name": "atlas-agent-before-after.html",
+      "size": 13992,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/html/05-homepage-repositioning/atlas-agent-mockup.html",
+      "campaign": "05-homepage-repositioning",
+      "stage": "html",
+      "type": "html",
+      "name": "atlas-agent-mockup.html",
+      "size": 17033,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/html/05-homepage-repositioning/atlas-agent-v1.html",
+      "campaign": "05-homepage-repositioning",
+      "stage": "html",
+      "type": "html",
+      "name": "atlas-agent-v1.html",
+      "size": 10721,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/searchatlas/deliverables/html/05-homepage-repositioning/preview.html",
+      "campaign": "05-homepage-repositioning",
+      "stage": "html",
+      "type": "html",
+      "name": "preview.html",
+      "size": 27259,
+      "source": "canonical"
+    }
+  ]
+}

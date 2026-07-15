@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contributor Byline Hand-Off — Search Atlas</title>
+<style>
+  :root {
+    --ink: #1a1d24;
+    --muted: #5b6472;
+    --line: #e3e7ee;
+    --accent: #2f6df0;
+    --accent-soft: #eef3fe;
+    --warn-bg: #fff8e6;
+    --warn-line: #f0d98a;
+    --bg: #f6f8fb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 48px 24px 80px; }
+  header.doc {
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 20px;
+    margin-bottom: 8px;
+  }
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 0 0 6px;
+  }
+  h1 { font-size: 30px; line-height: 1.2; margin: 0 0 10px; }
+  .lede { color: var(--muted); margin: 0; font-size: 16px; }
+  h2 {
+    font-size: 21px;
+    margin: 44px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--line);
+  }
+  .callout {
+    background: var(--warn-bg);
+    border: 1px solid var(--warn-line);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 16px 0;
+  }
+  .callout h2 { border: 0; margin: 0 0 10px; padding: 0; font-size: 17px; }
+  .callout ul { margin: 0; padding-left: 20px; }
+  .callout li { margin: 6px 0; }
+  .callout strong { color: #8a6d00; }
+  .tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; margin: 16px 0; }
+  table { border-collapse: collapse; width: 100%; font-size: 14.5px; min-width: 640px; background: #fff; }
+  th, td { text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { background: var(--accent-soft); color: var(--ink); font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: .03em; }
+  tr:last-child td { border-bottom: 0; }
+  td code, p code { background: #eef1f6; border-radius: 4px; padding: 1px 6px; font-size: 12.5px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .pill { display: inline-block; background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: 12px; border-radius: 20px; padding: 2px 10px; }
+  .tier { margin: 22px 0 8px; font-weight: 700; font-size: 15px; }
+  .maplist { list-style: none; padding: 0; margin: 0; }
+  .maplist li { padding: 9px 0; border-bottom: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 10px; }
+  .maplist li:last-child { border-bottom: 0; }
+  .pub { font-weight: 600; min-width: 230px; }
+  .topics { color: var(--muted); }
+  .open { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 16px 22px; margin-top: 16px; }
+  pre.prompt { background: #1a1d24; color: #e6e9ef; border-radius: 10px; padding: 18px 20px; overflow-x: auto; font: 13px/1.55 ui-monospace, SFMono-Regular, Menlo, monospace; white-space: pre; margin: 12px 0 6px; }
+  pre.prompt .slot { color: #ffd87a; }
+  .prompt-label { font-weight: 700; font-size: 15px; margin: 26px 0 4px; }
+  .prompt-note { color: var(--muted); font-size: 14px; margin: 0 0 8px; }
+  footer { margin-top: 50px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); padding-top: 16px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="doc">
+  <p class="eyebrow">Digital PR · Contributor Outreach</p>
+  <h1>Contributor Byline Hand-Off — Search Atlas</h1>
+  <p class="lede">Source material and topic menu for vendor-neutral expert bylines across the 25 email-reachable martech publications. Use it to write the per-pub pitches.</p>
+</header>
+
+<div class="callout">
+  <h2>Byline guardrails — read first</h2>
+  <ul>
+    <li><strong>No Search Atlas promotion.</strong> No product names, no "we built," no CTAs. These are expert articles, not ads. Premium editors reject vendor copy on sight.</li>
+    <li><strong>Lead with original data.</strong> Every topic is anchored to a real Search Atlas study (sample size + finding). The data is the credibility — it's what earns the byline.</li>
+    <li><strong>Author = a Search Atlas analyst/expert</strong>, attributed as a practitioner. The brand may appear in the bio line only, never in the body.</li>
+    <li><strong>One study per article.</strong> Each piece makes one data-backed argument.</li>
+  </ul>
+</div>
+
+<h2>Source material — the studies these articles draw from</h2>
+<p>All published at <a href="https://searchatlas.com/research/">searchatlas.com/research</a>. Full text in the repo.</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Study</th><th>Sample</th><th>Headline finding</th><th>File</th></tr></thead>
+  <tbody>
+    <tr><td>LLM visibility / domain power</td><td>21,767 domains</td><td>DA/DR do <strong>not</strong> predict whether LLMs cite you; LLM citation is relevance-driven</td><td><code>proof/domain-power-llm-visibility-study.md</code></td></tr>
+    <tr><td>GPT vs Google search</td><td>18,377 query pairs</td><td>ChatGPT/Gemini/Perplexity pull from measurably different sources than Google SERPs</td><td><code>proof/gpt-vs-search-study.md</code></td></tr>
+    <tr><td>Links to lift</td><td>350,159 backlinks / 13,002 pages</td><td>Strategic placement drove +275% impressions, +150% ranking keywords, +14% clicks</td><td><code>proof/domain-power-study.md</code></td></tr>
+    <tr><td>Automated technical SEO</td><td>39,876 sites</td><td>Schema fixes +150.5% impressions; heading fixes +114.3%; median +146 long-term impressions/site</td><td><code>proof/otto-seo-fixes-study.md</code></td></tr>
+    <tr><td>Local ranking dynamics</td><td>7,718 businesses / 676 sectors</td><td>Distance-to-searcher dominates local ranking variance; weight differs sharply by sector</td><td><code>proof/gbp-galactic-study.md</code></td></tr>
+    <tr><td>Ad automation</td><td>tens of thousands of campaigns</td><td>Automated ads hit 6.8% CTR vs 5.9% manual; −9% CPC</td><td><code>proof/smart-ads-study.md</code></td></tr>
+    <tr><td>Crawl frequency / topical signals</td><td>LLM visibility dataset</td><td>Crawl frequency + topical signals drive LLM citation; entity weighting matters</td><td><code>proof/scholar-study.md</code></td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2>Topic menu — vendor-neutral, data-anchored</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>#</th><th>Working title</th><th>Anchored study</th><th>Angle</th></tr></thead>
+  <tbody>
+    <tr><td><span class="pill">T1</span></td><td>Why domain authority doesn't predict whether AI cites you</td><td>LLM visibility</td><td>21,767 domains show DA/DR are weak signals for LLM citation — relevance wins</td></tr>
+    <tr><td><span class="pill">T2</span></td><td>What 18,000 queries reveal about AI search vs Google</td><td>GPT vs Google</td><td>AI engines and Google surface different sources; one SEO strategy won't cover both</td></tr>
+    <tr><td><span class="pill">T3</span></td><td>What link placement actually moves (and what it doesn't)</td><td>Links to lift</td><td>350K backlinks measured: where placement helped impressions vs where it didn't</td></tr>
+    <tr><td><span class="pill">T4</span></td><td>The technical SEO fixes that actually move impressions</td><td>Automated technical SEO</td><td>Across 39,876 sites, which fixes paid off most — ranked by measured lift</td></tr>
+    <tr><td><span class="pill">T5</span></td><td>What really drives local pack rankings, by sector</td><td>Local ranking dynamics</td><td>Distance dominates, but the weight swings by industry — data across 676 sectors</td></tr>
+    <tr><td><span class="pill">T6</span></td><td>Does ad automation beat manual campaign management?</td><td>Ad automation</td><td>CTR and CPC data comparing automated vs manual paid search</td></tr>
+    <tr><td><span class="pill">T7</span></td><td>How to get your content crawled and cited by LLMs</td><td>Crawl frequency</td><td>Crawl cadence + topical signals that correlate with LLM citation</td></tr>
+    <tr><td><span class="pill">T8</span></td><td>GEO/AEO: structuring content so AI engines cite it</td><td>T1+T2+T7 synthesis</td><td>Practitioner guide to answer-engine optimization, grounded in the citation data</td></tr>
+    <tr><td><span class="pill">T9</span></td><td>How to measure your brand's visibility inside AI answers</td><td>LLM visibility</td><td>A measurement framework for tracking presence in ChatGPT/Gemini/Perplexity answers</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2>Pub → topic mapping</h2>
+<p class="topics">Named pubs from the message. Apply the same logic to the remaining pubs in <code>searchatlas_martech_contacts.csv</code> — match the topic to the pub's audience.</p>
+
+<p class="tier">Verified-high tier</p>
+<ul class="maplist">
+  <li><span class="pub">MarketingProfs</span><span class="topics">T3, T8</span></li>
+  <li><span class="pub">CMSWire</span><span class="topics">T4, T8</span></li>
+  <li><span class="pub">Search Engine Land</span><span class="topics">T1, T2, T4, T5 — most flexible, pick the freshest</span></li>
+  <li><span class="pub">MarTech.org</span><span class="topics">T1, T6, T7</span></li>
+  <li><span class="pub">G2</span><span class="topics">T1, T9</span></li>
+  <li><span class="pub">CustomerThink</span><span class="topics">T9, T8</span></li>
+</ul>
+
+<p class="tier">Medium-confidence tier</p>
+<ul class="maplist">
+  <li><span class="pub">Search Engine Journal</span><span class="topics">T1, T2, T3, T5</span></li>
+  <li><span class="pub">Adweek</span><span class="topics">T6 — paid/brand angle</span></li>
+  <li><span class="pub">Marketing Dive</span><span class="topics">T6, T2</span></li>
+  <li><span class="pub">Content Marketing Institute</span><span class="topics">T8, T9</span></li>
+  <li><span class="pub">B2B Marketing</span><span class="topics">T8, T9</span></li>
+  <li><span class="pub">Marketing AI Institute</span><span class="topics">T1, T2, T7</span></li>
+  <li><span class="pub">ClickZ</span><span class="topics">T2, T6</span></li>
+  <li><span class="pub">Unite.AI</span><span class="topics">T1, T2, T7</span></li>
+</ul>
+
+<p class="tier">Form-only — separate manual-submit batch, not in the mail-merge</p>
+<ul class="maplist">
+  <li><span class="pub">jeffbullas.com · socialmediatoday.com · unboundb2b.com</span><span class="topics">T8 / T9 general practitioner angles</span></li>
+</ul>
+
+<h2>Prompts</h2>
+<p class="prompt-note">Two prompts — one drafts the article, one drafts the editor pitch. Paste into any LLM, fill the <span style="color:#b8860b;font-weight:700;">[BRACKETED]</span> slots. Both enforce the vendor-neutral rule: no product names or CTAs in the body; the brand appears once, in the bio line only.</p>
+
+<p class="prompt-label">Prompt 1 — Draft the byline article</p>
+<pre class="prompt">ROLE
+You are an experienced SEO/marketing practitioner writing a guest article for
+<span class="slot">[PUBLICATION]</span>. You are not a vendor and not a copywriter. You are the person who ran
+the analysis and is now explaining what it means to peers. The piece must read as
+independent expert analysis that a skeptical editor would publish on merit.
+
+NON-NEGOTIABLE CONSTRAINTS (violating any one means the draft is rejected)
+1. Vendor-neutral. Do not name, describe, link, or allude to any product, platform,
+   tool, or vendor anywhere in the body — including the company you work for. No CTAs,
+   no "tools like ours," no feature mentions. The brand appears ONCE, in the bio line.
+2. No fabrication. Use only the numbers in ANCHOR DATA. Do not invent statistics,
+   studies, dates, quotes, company names, or examples. If the argument needs a figure
+   you don't have, write [VERIFY: what's needed] inline — do not guess.
+3. One dataset, one argument. Build the whole piece from the single study provided.
+4. Useful over long. If a sentence doesn't add information the reader can act on, cut it.
+
+INPUTS
+- Topic: <span class="slot">[TOPIC TITLE from the menu]</span>
+- Anchor data (the spine — cite these numbers, build the argument from them):
+  <span class="slot">[PASTE the study's sample size + key findings + one-line method from the topic menu]</span>
+- Source to reference: the published study at searchatlas.com/research. Attribute to the
+  work ("in an analysis I ran of X domains…"), not the product.
+
+PUBLICATION FIT
+- Audience: <span class="slot">[who reads this pub]</span>
+- Their angle: <span class="slot">[what this pub cares about / how they'd frame it]</span>
+- Length: <span class="slot">[from contributor guidelines — default 1,000–1,400 words]</span>
+- Register: editorial, specific, peer-to-peer. Not breezy, not academic.
+
+STRUCTURE (extraction-first — these topics are about how machines read content, so the
+article should itself be cleanly structured for it)
+- H1 that states the claim, not a teaser.
+- Intro: 2–3 sentences. First sentence delivers the single most useful finding. State
+  what the reader will be able to do. No throat-clearing.
+- 3–6 H2 sections, each answering one discrete question. Mirror the H2 wording in its
+  first sentence so the answer is extractable.
+- H3s only where a section genuinely splits.
+- One section that turns the data into action: a method, checklist, or decision rule.
+- Optional short "What the data doesn't show" caveat — signals honest expertise.
+- Close on an implication, not a summary. No "in conclusion."
+
+EVIDENCE RULES
+- Lead each claim with the number, then the interpretation.
+- Use exact figures and dates from ANCHOR DATA. Round only when it aids reading, and say so.
+- Distinguish finding (what the data shows) from inference (what you conclude).
+- No "studies show" / "experts agree." You ARE the source — say what you found.
+
+VOICE & STYLE
+- Plain, direct, concrete. One idea per sentence. Paragraphs 1–4 lines.
+- Active voice where clearer. Explicit subjects — no floating "this" or "it."
+- Define any term on first use. Vary sentence length. Break the rule-of-three rhythm
+  (the "X, Y, and Z" cadence is an AI tell).
+
+  BANNED words: powerful, robust, innovative, cutting-edge, seamless, unlock, elevate,
+  transform, game-changing, leverage, optimize, ensure, crucial, vital, realm, landscape,
+  navigate, delve, dive in, tapestry, testament, beacon, stands as, plays a vital role,
+  it's worth noting, in today's world, ever-evolving, fast-paced, when it comes to, truly,
+  really, simply, of course, literally, incredibly, industry-leading, best-in-class,
+  world-class, next-generation.
+  BANNED constructions: "It's not about X, it's about Y." "More than just…"
+  "Whether you're A or B…" Rhetorical questions as section openers. Em-dash-stuffed
+  dramatic asides. Metaphors in place of explanation.
+
+OPENING — get this right or the editor stops reading:
+  WEAK:   "In the ever-changing world of AI search, marketers face new challenges in
+           understanding how their content gets discovered."
+  STRONG: "Domain authority barely predicts whether an AI engine will cite you. Across
+           21,767 domains, DA and DR correlated weakly with citation — topical relevance
+           did the work. Here's what to track instead."
+
+SELF-CHECK (run before output; fix anything that fails)
+- Did any product/vendor/CTA slip into the body? Remove it.
+- Is every number traceable to ANCHOR DATA? Unsupported figure → [VERIFY].
+- Does the first sentence deliver the finding? Any banned word present?
+- Does the action section give something the reader can actually do?
+- Is the rule-of-three broken up? Are subjects explicit throughout?
+
+OUTPUT
+H1, intro, body with H2/H3, then a separate "Author bio" line:
+<span class="slot">[ONE sentence — author name, role, "at Search Atlas." The ONLY brand mention.]</span>
+Then list any [VERIFY] flags at the bottom under "Needs verification."</pre>
+
+<p class="prompt-label">Prompt 2 — Draft the editor pitch email</p>
+<pre class="prompt">ROLE
+You are pitching a guest contribution to the editor of <span class="slot">[PUBLICATION]</span>. You are an
+individual expert offering original, exclusive analysis — not a vendor running outreach.
+Editors at premium martech pubs reject generic pitches in seconds. This must earn a yes
+on the strength of the data alone.
+
+WHAT I'M OFFERING
+- Angle: <span class="slot">[TOPIC TITLE]</span>
+- The hook (original data): <span class="slot">[one line — e.g. "a 21,767-domain analysis of what predicts LLM citations"]</span>
+- Why it fits <span class="slot">[PUBLICATION]</span> now: <span class="slot">[one line tying the angle to their audience or a recent piece]</span>
+- Deliverable: exclusive, <span class="slot">[word count]</span>, vendor-neutral, <span class="slot">[delivery timeline]</span>
+
+RULES
+- Subject line: specific, data-led, under 60 characters. The number should be in it.
+  GOOD: "Pitch: what 21,767 domains say about AI citations"
+  BAD:  "Guest post inquiry" / "Contribution opportunity"
+- Body: 5–7 sentences, scannable, no preamble. Open with the data hook and why their
+  readers want it. State the deliverable. One clear ask.
+- The ask: "Would this fit <span class="slot">[PUBLICATION]</span>? I can send a full outline or the draft."
+- No attachments, no links in a first email, no product mention anywhere.
+- Tone: peer-to-peer, confident, brief. No flattery, no AI filler (same banned list as Prompt 1).
+- Honor the pub's stated submission rules.
+
+CONTRIBUTOR RULES FROM THE PUB (follow exactly):
+<span class="slot">[paste submission rules / required format from the contacts CSV]</span>
+
+OUTPUT
+Subject line, email body, then a signature block (brand permitted in the signature only).</pre>
+
+<div class="open">
+  <h2 style="border:0;margin:0 0 10px;padding:0;font-size:17px;">What's still open</h2>
+  <ul style="margin:0;padding-left:20px;">
+    <li>Map the remaining email-reachable pubs (full list in the CSV) to the topics above.</li>
+    <li>Verify the 13 medium-confidence emails before sending (<code>dpr_verify_contacts</code>).</li>
+    <li>Confirm author/bio attribution allowed per pub (CSV submission-rules column).</li>
+  </ul>
+</div>
+
+<footer>
+  Search Atlas · Contributor Outreach campaign · vendor-neutral bylines · one study per article.
+</footer>
+
+</div>
+</body>
+</html>

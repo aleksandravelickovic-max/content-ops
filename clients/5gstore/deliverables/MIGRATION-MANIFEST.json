@@ -1,0 +1,49 @@
+{
+  "client": "5gstore",
+  "generated_at": "2026-07-13T20:58:38.997581+00:00",
+  "move_count": 7,
+  "moves": [
+    {
+      "campaign": "01-may-content-optimization",
+      "stage": "html",
+      "from": "clients/5gstore/campaigns/01-may-content-optimization/html/index.html",
+      "to": "clients/5gstore/deliverables/html/01-may-content-optimization/index.html"
+    },
+    {
+      "campaign": "01-may-content-optimization",
+      "stage": "html",
+      "from": "clients/5gstore/campaigns/01-may-content-optimization/html/revised/01-dome-pro-duo.html",
+      "to": "clients/5gstore/deliverables/html/01-may-content-optimization/revised/01-dome-pro-duo.html"
+    },
+    {
+      "campaign": "01-may-content-optimization",
+      "stage": "html",
+      "from": "clients/5gstore/campaigns/01-may-content-optimization/html/revised/02-peplink-switch.html",
+      "to": "clients/5gstore/deliverables/html/01-may-content-optimization/revised/02-peplink-switch.html"
+    },
+    {
+      "campaign": "01-may-content-optimization",
+      "stage": "html",
+      "from": "clients/5gstore/campaigns/01-may-content-optimization/html/revised/03-fusionhub-pro.html",
+      "to": "clients/5gstore/deliverables/html/01-may-content-optimization/revised/03-fusionhub-pro.html"
+    },
+    {
+      "campaign": "01-may-content-optimization",
+      "stage": "html",
+      "from": "clients/5gstore/campaigns/01-may-content-optimization/html/revised/04-vwan-license.html",
+      "to": "clients/5gstore/deliverables/html/01-may-content-optimization/revised/04-vwan-license.html"
+    },
+    {
+      "campaign": "01-may-content-optimization",
+      "stage": "html",
+      "from": "clients/5gstore/campaigns/01-may-content-optimization/html/revised/05-inseego-fg2000e.html",
+      "to": "clients/5gstore/deliverables/html/01-may-content-optimization/revised/05-inseego-fg2000e.html"
+    },
+    {
+      "campaign": "01-may-content-optimization",
+      "stage": "html",
+      "from": "clients/5gstore/campaigns/01-may-content-optimization/html/revised/06-gpio-cable.html",
+      "to": "clients/5gstore/deliverables/html/01-may-content-optimization/revised/06-gpio-cable.html"
+    }
+  ]
+}

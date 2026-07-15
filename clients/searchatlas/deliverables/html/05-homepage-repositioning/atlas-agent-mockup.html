@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atlas Agent — Search Atlas (page mockup)</title>
+<meta name="source-md" content="clients/searchatlas/campaigns/05-homepage-repositioning/drafts/atlas-agent-v1.md">
+<style>
+  :root{
+    --bg:#0b0b12; --bg2:#111120; --panel:#16162a; --panel2:#1c1c34;
+    --ink:#f4f3fb; --muted:#a6a3c2; --line:#2a2a44;
+    --p1:#7c5cfc; --p2:#a78bfa; --grad:linear-gradient(120deg,#7c5cfc,#b06bf5 60%,#ff8a5b);
+    --good:#34d399;
+    --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --max:1120px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  .mock-banner{background:#241a0a;color:#f5c97a;font-size:12px;text-align:center;padding:6px 12px;border-bottom:1px solid #3a2c12;letter-spacing:.02em}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:50;background:rgba(11,11,18,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .bar{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .logo{display:flex;align-items:center;gap:9px;font-weight:800;letter-spacing:-.02em;font-size:17px}
+  .logo .dot{width:22px;height:22px;border-radius:7px;background:var(--grad)}
+  .navlinks{display:flex;gap:26px;font-size:14px;color:var(--muted)}
+  .navlinks a:hover{color:var(--ink)}
+  .btn{display:inline-block;font-weight:700;font-size:14px;border-radius:10px;padding:10px 18px;border:1px solid transparent;cursor:pointer}
+  .btn.primary{background:var(--grad);color:#fff;box-shadow:0 6px 22px rgba(124,92,252,.35)}
+  .btn.ghost{border-color:var(--line);color:var(--ink)}
+  @media(max-width:760px){ .navlinks{display:none} }
+
+  /* hero */
+  .hero{position:relative;overflow:hidden;padding:84px 0 64px;background:radial-gradient(900px 500px at 75% -10%,rgba(124,92,252,.28),transparent 60%),radial-gradient(700px 400px at 10% 10%,rgba(255,138,91,.10),transparent 55%)}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--p2);border:1px solid var(--line);background:rgba(124,92,252,.08);padding:6px 12px;border-radius:999px}
+  .hero h1{font-size:clamp(34px,5.4vw,58px);line-height:1.04;letter-spacing:-.025em;margin:22px 0 18px;max-width:16ch;font-weight:800}
+  .hero .lead{font-size:clamp(16px,1.8vw,19px);color:var(--muted);max-width:54ch;margin:0 0 14px}
+  .hero .micro{font-size:14px;color:#8b88aa;max-width:52ch;margin:0 0 26px}
+  .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .hegrid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+  @media(max-width:900px){ .hegrid{grid-template-columns:1fr;gap:32px} }
+
+  /* chat visual */
+  .chat{background:linear-gradient(180deg,var(--panel),#13132550);border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:0 30px 70px rgba(0,0,0,.5)}
+  .chat .top{display:flex;align-items:center;gap:7px;padding:4px 6px 12px;border-bottom:1px solid var(--line);margin-bottom:12px}
+  .chat .top i{width:11px;height:11px;border-radius:50%;display:inline-block;background:#3a3a55}
+  .chat .top .ttl{margin-left:8px;font-size:12px;color:var(--muted)}
+  .msg{display:flex;gap:10px;margin:12px 2px}
+  .av{flex:none;width:28px;height:28px;border-radius:8px;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center}
+  .av.you{background:#27273f;color:#cfcce8}
+  .av.ai{background:var(--grad);color:#fff}
+  .bub{font-size:14px;padding:10px 13px;border-radius:12px;max-width:90%}
+  .bub.you{background:#21213a;color:#e7e6f4}
+  .bub.ai{background:#171730;border:1px solid var(--line)}
+  .bub.ai b{color:var(--p2)}
+  .ai-steps{margin:8px 0 0;padding-left:0;list-style:none;font-size:13px;color:var(--muted)}
+  .ai-steps li{margin:4px 0;display:flex;gap:8px;align-items:flex-start}
+  .ai-steps li::before{content:"✓";color:var(--good);font-weight:800}
+  .pending{color:#8b88aa}
+  .pending::before{content:"⧗" !important;color:#e0a94a !important}
+
+  /* sections */
+  section{padding:64px 0;border-top:1px solid var(--line)}
+  .stag{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--p2);margin:0 0 12px}
+  h2{font-size:clamp(24px,3vw,34px);line-height:1.15;letter-spacing:-.02em;margin:0 0 16px;font-weight:800;max-width:24ch}
+  .lede{font-size:17px;color:var(--muted);max-width:62ch;margin:0 0 8px}
+  p.body{font-size:16px;color:#cdcbe2;max-width:62ch}
+
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+  @media(max-width:760px){ .two{grid-template-columns:1fr} }
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px}
+  .card h3{margin:0 0 6px;font-size:18px}
+  .card p{margin:0;color:var(--muted);font-size:15px}
+  .card .tag{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--p2)}
+
+  /* playbooks */
+  .pbgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+  @media(max-width:860px){ .pbgrid{grid-template-columns:1fr 1fr} }
+  @media(max-width:560px){ .pbgrid{grid-template-columns:1fr} }
+  .pb{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;transition:border-color .15s,transform .15s}
+  .pb:hover{border-color:var(--p1);transform:translateY(-2px)}
+  .pb .cat{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#c9bdff;background:rgba(124,92,252,.14);border:1px solid var(--line);padding:2px 8px;border-radius:6px;margin-bottom:10px}
+  .pb h4{margin:0 0 6px;font-size:15.5px}
+  .pb p{margin:0;color:var(--muted);font-size:13.5px}
+  .pbnote{margin-top:16px;font-size:13px;color:#8b88aa}
+
+  /* channels */
+  .chlist{display:grid;grid-template-columns:1fr 1fr;gap:0 36px;margin-top:24px;max-width:880px}
+  @media(max-width:680px){ .chlist{grid-template-columns:1fr} }
+  .ch{display:flex;gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .ch .k{flex:none;width:148px;font-weight:700}
+  .ch .v{color:var(--muted);font-size:15px}
+
+  /* difference band */
+  .band{background:linear-gradient(120deg,rgba(124,92,252,.12),rgba(255,138,91,.06));border:1px solid var(--line);border-radius:20px;padding:36px}
+
+  /* faq */
+  .faq{max-width:780px;margin-top:18px}
+  details{border-bottom:1px solid var(--line);padding:16px 2px}
+  summary{cursor:pointer;font-weight:700;font-size:16px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--p2);font-weight:800}
+  details[open] summary::after{content:"–"}
+  details p{color:var(--muted);font-size:15px;margin:12px 0 0}
+
+  /* cta */
+  .ctaband{text-align:center;background:radial-gradient(700px 320px at 50% 0%,rgba(124,92,252,.28),transparent 60%)}
+  .ctaband h2{margin:0 auto 14px}
+  .price{color:var(--muted);font-size:15px;margin:0 0 22px}
+
+  footer{border-top:1px solid var(--line);padding:32px 0;color:#7d7a98;font-size:13px}
+  .quotebar{display:flex;gap:14px;align-items:flex-start;margin-top:30px;max-width:760px}
+  .quotebar .q{font-size:18px;line-height:1.5;color:#e7e6f4}
+  .quotebar .src{color:var(--muted);font-size:13px;margin-top:8px}
+</style>
+</head>
+<body>
+<div class="mock-banner">Visual mockup · new copy in the Search Atlas rebrand style · not the live page CSS</div>
+
+<nav>
+  <div class="wrap bar">
+    <div class="logo"><span class="dot"></span> Search Atlas</div>
+    <div class="navlinks">
+      <a href="#">Features</a><a href="#">OTTO SEO</a><a href="#">Why Us</a><a href="#">Case Studies</a><a href="#">Pricing</a>
+    </div>
+    <a class="btn primary" href="#cta">Start free trial</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap hegrid">
+    <div>
+      <span class="eyebrow">● Atlas Agent · in Search Atlas</span>
+      <h1>Say what you need. Atlas Agent does the work.</h1>
+      <p class="lead">Atlas Agent is the conversational AI SEO agent inside Search Atlas. Tell it a goal in plain language and it runs the work across SEO, content, local, paid ads, digital PR, and AI search visibility, then reports back on what moved.</p>
+      <p class="micro">No dashboards to learn and no menus to dig through. You describe the outcome, and the agent handles the steps.</p>
+      <div class="cta">
+        <a class="btn primary" href="#cta">Start a 7-day free trial</a>
+        <a class="btn ghost" href="#how">See it run</a>
+      </div>
+    </div>
+    <div class="chat" aria-hidden="true">
+      <div class="top"><i></i><i></i><i></i><span class="ttl">Atlas Agent</span></div>
+      <div class="msg"><div class="av you">You</div><div class="bub you">Launch a Google Ads campaign for our spring promo.</div></div>
+      <div class="msg"><div class="av ai">A</div><div class="bub ai">
+        On it. Here's what I ran:
+        <ul class="ai-steps">
+          <li>Built 3 conversion-focused campaigns</li>
+          <li>Structured every product and service</li>
+          <li>Wrote and grouped the ad copy</li>
+          <li class="pending pending">Queued for your sign-off (Advanced mode)</li>
+        </ul>
+      </div></div>
+    </div>
+  </div>
+  <div class="wrap quotebar">
+    <div>
+      <div class="q">“If you want an all-in-one solution for your clients and projects, you need to use Search Atlas. They're on the cutting edge, they're doing everything right.”</div>
+      <div class="src">— verified customer (pending clearance)</div>
+    </div>
+  </div>
+</header>
+
+<!-- FROM REQUEST TO FINISHED WORK -->
+<section id="how">
+  <div class="wrap">
+    <p class="stag">What it does</p>
+    <h2>From a request to finished work</h2>
+    <p class="body">Atlas Agent turns a request into finished work. It reads your site and your data, sizes up your competitors, then runs the actual steps: audits, on-page and technical fixes, content, local listings, paid campaigns, and AI-visibility checks. Campaigns launch, optimizations ship, and content publishes without you moving between products.</p>
+    <p class="body" style="margin-top:14px">It carries context from one request to the next, so a goal you set on Monday still shapes what it does on Thursday. That continuity is what keeps growth moving across search engines and AI answers.</p>
+  </div>
+</section>
+
+<!-- MODES -->
+<section>
+  <div class="wrap">
+    <p class="stag">How you put it to work</p>
+    <h2>Set the goal once. Pick how hands-on you want to be.</h2>
+    <p class="lede">You work with Atlas Agent the way you'd brief a teammate: tell it what you want in plain language. Two modes cover how much oversight you want.</p>
+    <div class="two">
+      <div class="card"><span class="tag">Fast mode</span><h3>Quick outcomes, minimal setup</h3><p>Good for routine work you want off your plate. Tell it the goal and it goes.</p></div>
+      <div class="card"><span class="tag">Advanced mode</span><h3>Sign off before it ships</h3><p>The agent pauses for your approval on high-impact changes before anything goes live, so nothing ships unseen.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PLAYBOOKS -->
+<section>
+  <div class="wrap">
+    <p class="stag">Playbooks</p>
+    <h2>Pick a playbook, and it runs the whole sequence</h2>
+    <p class="lede">Atlas Agent comes with a library of ready-made workflows for the jobs you run over and over. You launch one, the agent follows the proven sequence end to end, then tells you what it did. Some run on a schedule.</p>
+    <div class="pbgrid">
+      <div class="pb"><span class="cat">OTTO</span><h4>Fix Critical On-Page SEO Issues</h4><p>Rewrites titles, meta descriptions, and headings on your highest-value pages.</p></div>
+      <div class="pb"><span class="cat">Authority</span><h4>Generate a Complete Backlink Strategy</h4><p>Reads your site and competitors, then builds a plan with link types, pacing, and budget.</p></div>
+      <div class="pb"><span class="cat">Smart Ads</span><h4>Launch Core Google Ads Campaign</h4><p>Builds conversion-ready campaigns for a business, every product and service structured in.</p></div>
+      <div class="pb"><span class="cat">AI Vis</span><h4>Expand AI Search Topics &amp; Questions</h4><p>Finds the questions people ask ChatGPT, Gemini, and Perplexity, so you can track your brand.</p></div>
+      <div class="pb"><span class="cat">Local</span><h4>Generate Local Landing Pages</h4><p>Plans and builds location pages for the cities you have demand in, skips the ones you cover.</p></div>
+      <div class="pb"><span class="cat">Atlas</span><h4>+ 42 more in the library</h4><p>Grouped by channel: SEO, authority, content, local, ads, AI visibility, and site builds. Build your own, too.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFFERENCE -->
+<section>
+  <div class="wrap">
+    <div class="band">
+      <p class="stag">The difference</p>
+      <h2>Most AI SEO agents stop at advice. This one ships the work.</h2>
+      <p class="body">Most AI SEO platforms are recommendation engines. They generate advice or draft text and leave the execution to you, which means the to-do list still lands on a person. Atlas Agent performs the tasks directly from the conversation and applies the changes to your site, content, authority, and visibility.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CHANNELS -->
+<section>
+  <div class="wrap">
+    <p class="stag">What it runs</p>
+    <h2>Every channel, from one conversation</h2>
+    <p class="lede">One agent covers the work that usually takes a stack of separate logins.</p>
+    <div class="chlist">
+      <div class="ch"><div class="k">SEO</div><div class="v">Technical and on-page fixes plus site health, through OTTO.</div></div>
+      <div class="ch"><div class="k">Content</div><div class="v">Drafts and publishes content through Content Genius.</div></div>
+      <div class="ch"><div class="k">Local</div><div class="v">Google Business Profile updates and citations through GBP Galactic.</div></div>
+      <div class="ch"><div class="k">Paid ads</div><div class="v">Google and Meta campaign builds through Smart Ads.</div></div>
+      <div class="ch"><div class="k">AI search</div><div class="v">Tracks and acts on where your brand shows up in AI answers, through LLM Visibility.</div></div>
+      <div class="ch"><div class="k">Reporting</div><div class="v">Client-ready performance summaries on demand.</div></div>
+    </div>
+    <p class="pbnote">It runs inside Search Atlas today. When you want it where your team already works, the Search Atlas Coworker brings the same agent into Slack, Teams, and ClickUp.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="wrap">
+    <p class="stag">FAQ</p>
+    <h2>Frequently asked questions</h2>
+    <div class="faq">
+      <details open><summary>What is Atlas Agent?</summary><p>Atlas Agent is the conversational AI SEO agent inside Search Atlas. It runs your marketing work from a single conversation, so you don't switch between products to get something done.</p></details>
+      <details><summary>What is an AI SEO agent?</summary><p>An AI SEO agent is software that plans and runs SEO work for you instead of stopping at a report. Atlas Agent goes further than search alone: it turns plain-language requests into real actions across SEO, content, authority, paid ads, local, and AI search visibility, all from one place.</p></details>
+      <details><summary>How is Atlas Agent different from other AI tools?</summary><p>Most AI tools stop at insights or hand you a draft to finish. Atlas Agent does the work directly and applies the changes to your site, content, authority, and visibility.</p></details>
+      <details><summary>Do I need technical skills to use it?</summary><p>No. Atlas Agent works in plain language. You describe the outcome you want, and it runs the workflows and ships the changes. No code, no complex setup.</p></details>
+      <details><summary>What is Vibe SEO?</summary><p>Vibe SEO means running SEO through plain-language requests to an AI instead of doing each step by hand. Atlas Agent is built for it: you describe the goal, and it turns the request into finished work.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta" class="ctaband">
+  <div class="wrap">
+    <h2>Put Atlas Agent on your marketing tonight</h2>
+    <p class="price">Start a 7-day free trial with full access. Plans run from $99/month.</p>
+    <a class="btn primary" href="#">Start free trial</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Search Atlas · Atlas Agent page mockup · copy from <code>drafts/atlas-agent-v1.md</code>. Styling approximates the rebrand UI; final design owned by web/design. Sign-off pending on testimonial, the Fast/Advanced autonomy split, and scheduled playbooks.</div>
+</footer>
+</body>
+</html>

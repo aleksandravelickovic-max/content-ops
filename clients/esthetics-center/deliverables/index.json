@@ -1,0 +1,187 @@
+{
+  "client": "esthetics-center",
+  "display_name": "Esthetics Center",
+  "generated_at": "2026-07-14T15:59:27.887809+00:00",
+  "existing_campaign_deliverables": [
+    {
+      "path": "clients/esthetics-center/deliverables/drafts/01-blog-content/01-botox-aftercare.md",
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "type": "md",
+      "name": "01-botox-aftercare.md",
+      "size": 11109,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/esthetics-center/deliverables/drafts/01-blog-content/02-laser-vs-waxing.md",
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "type": "md",
+      "name": "02-laser-vs-waxing.md",
+      "size": 10194,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/esthetics-center/deliverables/drafts/01-blog-content/03-jawline-filler.md",
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "type": "md",
+      "name": "03-jawline-filler.md",
+      "size": 11590,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/esthetics-center/deliverables/drafts/01-blog-content/04-non-surgical-body-contouring.md",
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "type": "md",
+      "name": "04-non-surgical-body-contouring.md",
+      "size": 12898,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/esthetics-center/deliverables/drafts/01-blog-content/05-rhinoplasty-recovery.md",
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "type": "md",
+      "name": "05-rhinoplasty-recovery.md",
+      "size": 12120,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/esthetics-center/deliverables/drafts/01-blog-content/06-botox-consultation.md",
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "type": "md",
+      "name": "06-botox-consultation.md",
+      "size": 11342,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/esthetics-center/deliverables/drafts/01-blog-content/07-laser-hair-removal-skin-tones.md",
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "type": "md",
+      "name": "07-laser-hair-removal-skin-tones.md",
+      "size": 12622,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/esthetics-center/deliverables/drafts/01-blog-content/08-filler-swelling-timeline.md",
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "type": "md",
+      "name": "08-filler-swelling-timeline.md",
+      "size": 12393,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/esthetics-center/deliverables/drafts/01-blog-content/09-coolsculpting-fat.md",
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "type": "md",
+      "name": "09-coolsculpting-fat.md",
+      "size": 12446,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/esthetics-center/deliverables/drafts/01-blog-content/10-brow-lift.md",
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "type": "md",
+      "name": "10-brow-lift.md",
+      "size": 12244,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/esthetics-center/deliverables/html/01-blog-content/01-botox-aftercare.html",
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "type": "html",
+      "name": "01-botox-aftercare.html",
+      "size": 20732,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/esthetics-center/deliverables/html/01-blog-content/02-laser-vs-waxing.html",
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "type": "html",
+      "name": "02-laser-vs-waxing.html",
+      "size": 19830,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/esthetics-center/deliverables/html/01-blog-content/03-jawline-filler.html",
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "type": "html",
+      "name": "03-jawline-filler.html",
+      "size": 21285,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/esthetics-center/deliverables/html/01-blog-content/04-non-surgical-body-contouring.html",
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "type": "html",
+      "name": "04-non-surgical-body-contouring.html",
+      "size": 22807,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/esthetics-center/deliverables/html/01-blog-content/05-rhinoplasty-recovery.html",
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "type": "html",
+      "name": "05-rhinoplasty-recovery.html",
+      "size": 21621,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/esthetics-center/deliverables/html/01-blog-content/06-botox-consultation.html",
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "type": "html",
+      "name": "06-botox-consultation.html",
+      "size": 21177,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/esthetics-center/deliverables/html/01-blog-content/07-laser-hair-removal-skin-tones.html",
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "type": "html",
+      "name": "07-laser-hair-removal-skin-tones.html",
+      "size": 22339,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/esthetics-center/deliverables/html/01-blog-content/08-filler-swelling-timeline.html",
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "type": "html",
+      "name": "08-filler-swelling-timeline.html",
+      "size": 22316,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/esthetics-center/deliverables/html/01-blog-content/09-coolsculpting-fat.html",
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "type": "html",
+      "name": "09-coolsculpting-fat.html",
+      "size": 22030,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/esthetics-center/deliverables/html/01-blog-content/10-brow-lift.html",
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "type": "html",
+      "name": "10-brow-lift.html",
+      "size": 21915,
+      "source": "canonical"
+    }
+  ]
+}

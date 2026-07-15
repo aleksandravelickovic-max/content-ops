@@ -1,0 +1,52 @@
+{
+  "client": "find-self-storage",
+  "display_name": "Find Self Storage",
+  "generated_at": "2026-07-14T15:59:27.891025+00:00",
+  "existing_campaign_deliverables": [
+    {
+      "path": "clients/find-self-storage/deliverables/drafts/01-june-2026-optimization/boat-storage-units.md",
+      "campaign": "01-june-2026-optimization",
+      "stage": "drafts",
+      "type": "md",
+      "name": "boat-storage-units.md",
+      "size": 15193,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/find-self-storage/deliverables/drafts/01-june-2026-optimization/car-storage-units.md",
+      "campaign": "01-june-2026-optimization",
+      "stage": "drafts",
+      "type": "md",
+      "name": "car-storage-units.md",
+      "size": 13419,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/find-self-storage/deliverables/drafts/01-june-2026-optimization/motorcycle-storage-units.md",
+      "campaign": "01-june-2026-optimization",
+      "stage": "drafts",
+      "type": "md",
+      "name": "motorcycle-storage-units.md",
+      "size": 12177,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/find-self-storage/deliverables/drafts/01-june-2026-optimization/rv-storage-units.md",
+      "campaign": "01-june-2026-optimization",
+      "stage": "drafts",
+      "type": "md",
+      "name": "rv-storage-units.md",
+      "size": 15529,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/find-self-storage/deliverables/drafts/01-june-2026-optimization/wine-storage-units.md",
+      "campaign": "01-june-2026-optimization",
+      "stage": "drafts",
+      "type": "md",
+      "name": "wine-storage-units.md",
+      "size": 12804,
+      "source": "canonical"
+    }
+  ]
+}

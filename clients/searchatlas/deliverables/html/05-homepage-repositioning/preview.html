@@ -1,0 +1,387 @@
+<style>
+:root{
+  --bg:#000000;
+  --nav:rgba(22,13,44,0.92);
+  --card:#0C0C11;
+  --teal:#17E9B4;
+  --teal-ink:#05231A;
+  --purple:#9785F2;
+  --ink:#FFFFFF;
+  --muted:#A6A9B4;
+  --muted-2:#787B86;
+  --line:rgba(255,255,255,0.10);
+}
+*{box-sizing:border-box;}
+.pg{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5;}
+.pg a{color:inherit;text-decoration:none;}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+.center{text-align:center;}
+.btn-teal{display:inline-block;background:var(--teal);color:var(--teal-ink);font-size:15px;font-weight:700;padding:13px 26px;border-radius:999px;cursor:pointer;border:none;}
+.btn-ghost{display:inline-block;border:1px solid rgba(255,255,255,0.35);color:#fff;font-size:15px;font-weight:600;padding:12px 24px;border-radius:999px;cursor:pointer;background:transparent;}
+.btn-dark{display:inline-block;background:#23232b;color:#fff;font-size:15px;font-weight:600;padding:13px 26px;border-radius:999px;cursor:pointer;border:none;}
+h1,h2{text-wrap:balance;letter-spacing:-0.025em;font-weight:700;margin:0;}
+.kicker{font-size:18px;font-weight:600;}
+.kicker .p{color:var(--purple);}
+.muted{color:var(--muted);}
+
+/* announce */
+.announce{background:var(--teal);color:#04130E;text-align:center;font-size:14px;font-weight:600;padding:9px 24px;}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:var(--nav);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0;}
+.brand{font-weight:800;font-style:italic;letter-spacing:0.18em;font-size:18px;}
+.brand .sl{color:var(--purple);}
+.nav-links{display:flex;gap:24px;align-items:center;}
+.nav-links a{font-size:14px;color:#D8D9DF;}
+.nav-links .car:after{content:" ⌄";color:var(--muted-2);}
+.nav-right{display:flex;align-items:center;gap:12px;}
+.login{border:1px solid rgba(255,255,255,0.35);border-radius:999px;padding:8px 20px;font-size:14px;}
+
+/* hero */
+.hero{padding:72px 0 36px;text-align:center;}
+.hero h1{font-size:clamp(40px,7.4vw,86px);line-height:1.02;max-width:1000px;margin:0 auto 26px;}
+.hero .sub{font-size:18px;color:var(--muted);max-width:660px;margin:0 auto 18px;line-height:1.5;}
+.hero .kicker{margin-bottom:34px;}
+.chatbox{position:relative;max-width:880px;margin:0 auto;background:#08080b;border-radius:18px;padding:26px 28px;text-align:left;min-height:150px;display:flex;flex-direction:column;justify-content:space-between;}
+.chatbox:before{content:"";position:absolute;inset:-2px;border-radius:20px;background:linear-gradient(90deg,#ff7b7b,#ffd166,#4dd4f7,#a55eea,#ff7b7b);filter:blur(9px);opacity:0.55;z-index:0;}
+.chatbox .inner{position:relative;z-index:1;}
+.chatbox .line{display:flex;align-items:center;gap:10px;font-size:18px;}
+.chatbox .star{color:var(--purple);}
+.chatbox .hint .g{color:#7E7AE0;}
+.chatbox .send{position:absolute;right:0;bottom:0;width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#8B7BF0,#5BC9F5);display:flex;align-items:center;justify-content:center;z-index:1;color:#fff;}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:22px auto 0;max-width:880px;}
+.chips span{font-size:13px;color:#C9CAD2;border:1px solid var(--line);border-radius:999px;padding:8px 16px;background:rgba(255,255,255,0.02);}
+
+/* logo grid */
+.logos{padding:56px 0 24px;}
+.logos .row{display:flex;flex-wrap:wrap;justify-content:center;gap:26px 50px;opacity:0.72;}
+.logos .row span{font-size:18px;font-weight:700;color:#E7E8EE;}
+
+/* section */
+.sec{padding:80px 0;}
+.sec-head{text-align:center;max-width:840px;margin:0 auto 48px;}
+.sec-head h2{font-size:clamp(34px,5.2vw,62px);line-height:1.04;}
+.sec-head p{font-size:18px;color:var(--muted);margin:18px auto 0;max-width:700px;}
+.sec-head p .p{color:var(--purple);font-weight:600;}
+
+/* runs-itself */
+.runs{display:grid;grid-template-columns:0.85fr 1.15fr;gap:48px;align-items:center;}
+.runs h2{font-size:clamp(32px,4.4vw,52px);line-height:1.05;margin-bottom:20px;}
+.runs .lead{font-size:16px;color:var(--muted);margin:0 0 8px;}
+.runs p{font-size:16px;color:#C9CAD2;line-height:1.55;margin:0 0 22px;}
+.runs p .p{color:var(--purple);font-weight:600;}
+.runs .link{color:var(--teal);font-weight:600;}
+.shot{position:relative;background:linear-gradient(160deg,#15151c,#0a0a0e);border:1px solid var(--line);border-radius:16px;height:340px;display:flex;align-items:center;justify-content:center;}
+.shot .ev{position:absolute;top:18px;left:0;right:0;text-align:center;color:#E7E8EE;font-weight:700;font-size:20px;}
+.shot .play{width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,0.14);display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;}
+.shot .cap{position:absolute;bottom:14px;left:0;right:0;text-align:center;font-size:12px;color:var(--muted-2);}
+
+/* featured testimonial */
+.feat{text-align:center;}
+.feat .q{font-size:clamp(26px,3.6vw,44px);line-height:1.32;font-weight:600;max-width:1000px;margin:0 auto 26px;}
+.feat .q .p{color:var(--purple);}
+.feat .who{font-size:14px;color:var(--muted);}
+.feat .who b{color:#fff;}
+.feat .avatars{display:flex;gap:10px;justify-content:center;margin-top:26px;}
+.feat .avatars span{width:48px;height:48px;border-radius:50%;background:#2a2a33;border:2px solid #3a3a45;}
+.feat .avatars span.on{border-color:#fff;transform:scale(1.06);}
+
+/* case studies */
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.ccard{border-radius:20px;padding:32px 28px;text-align:center;border:1px solid rgba(255,255,255,0.08);min-height:380px;display:flex;flex-direction:column;}
+.ccard.a{background:linear-gradient(165deg,#2D52E0,#5A33B8 70%,#160f2c);}
+.ccard.b{background:linear-gradient(165deg,#6A2BC9,#4a1f9e 70%,#150d28);}
+.ccard.c{background:linear-gradient(165deg,#2D52E0,#5A33B8 70%,#160f2c);}
+.ccard .tag{align-self:center;font-size:11px;letter-spacing:0.08em;color:#E7E8EE;background:rgba(255,255,255,0.14);border-radius:999px;padding:5px 14px;margin-bottom:18px;}
+.ccard .stat{font-size:64px;font-weight:700;color:#fff;letter-spacing:-0.03em;font-variant-numeric:tabular-nums;}
+.ccard .sl{font-size:14px;color:rgba(255,255,255,0.72);margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,0.18);}
+.ccard p{font-size:15px;color:rgba(255,255,255,0.9);line-height:1.5;margin:0 0 24px;flex:1;}
+.ccard .rm{align-self:center;border:1px solid rgba(255,255,255,0.4);border-radius:999px;padding:9px 22px;font-size:14px;}
+
+/* cost */
+.cost h2{font-size:clamp(34px,5vw,58px);line-height:1.06;}
+.cost .csub{font-size:18px;color:var(--muted);max-width:700px;margin:16px auto 40px;}
+.ctable{width:100%;border-collapse:collapse;font-size:15px;}
+.ctable th{text-align:left;padding:14px 16px;font-size:13px;color:#fff;font-weight:700;border-bottom:1px solid var(--line);}
+.ctable td{padding:15px 16px;border-bottom:1px solid rgba(255,255,255,0.06);color:#C9CAD2;}
+.ctable tr:nth-child(even) td{background:rgba(255,255,255,0.02);}
+.ctable td.num{text-align:right;font-variant-numeric:tabular-nums;}
+.ctable td.chk{text-align:right;color:var(--teal);}
+.ctable tr.total td{font-size:17px;font-weight:700;color:#fff;border-bottom:none;}
+.ctable tr.total .sa{color:var(--teal);}
+
+/* feature cards */
+.fgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.fcard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;}
+.fcard .ill{height:130px;border-radius:12px;background:linear-gradient(165deg,#3a2270,#1a1030);border:1px solid rgba(255,255,255,0.06);margin-bottom:18px;display:flex;align-items:center;justify-content:center;color:var(--muted-2);font-size:12px;}
+.fcard h3{font-size:18px;font-weight:600;margin:0 0 8px;}
+.fcard p{font-size:14px;color:var(--muted);line-height:1.5;margin:0;}
+
+/* product cards */
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.pcard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;min-height:300px;}
+.pcard h3{font-size:22px;font-weight:600;margin:0 0 10px;}
+.pcard p{font-size:15px;color:var(--muted);line-height:1.5;margin:0 0 18px;}
+.pcard .mock{height:120px;border-radius:10px;background:linear-gradient(160deg,#15151d,#0a0a0e);border:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;color:var(--muted-2);font-size:12px;}
+
+/* pricing */
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.tier{border:1px solid var(--line);border-radius:20px;padding:30px;background:var(--card);display:flex;flex-direction:column;}
+.tier.pop{background:linear-gradient(170deg,#2A1A5E,#120c28);border:1px solid #5A3FB0;}
+.tier .name{font-size:24px;font-weight:600;}
+.tier .who{font-size:14px;color:var(--muted);margin:8px 0 20px;min-height:42px;}
+.tier .priceline{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:22px;}
+.tier .price{font-size:44px;font-weight:700;font-variant-numeric:tabular-nums;}
+.tier .per{font-size:14px;color:var(--muted);}
+.tier .free{font-size:13px;color:var(--teal);background:rgba(23,233,180,0.12);padding:4px 10px;border-radius:999px;}
+.tier ul{list-style:none;padding:0;margin:0 0 26px;flex:1;}
+.tier li{font-size:14px;color:#C9CAD2;padding:7px 0 7px 24px;position:relative;}
+.tier li:before{content:"✓";position:absolute;left:0;color:var(--purple);}
+.tier .cta{text-align:center;}
+
+/* faq */
+.faq{max-width:780px;margin:0 auto;}
+.qitem{padding:18px 0;border-bottom:1px solid var(--line);}
+.qitem:first-child{border-top:1px solid var(--line);}
+.qitem .q{font-size:17px;font-weight:600;margin-bottom:7px;}
+.qitem .a{font-size:15px;color:var(--muted);line-height:1.6;margin:0;}
+
+/* close */
+.close{text-align:center;padding:100px 0;}
+.close h2{font-size:clamp(34px,5vw,58px);margin-bottom:16px;}
+.close p{font-size:18px;color:var(--muted);margin:0 0 28px;}
+
+.foot{padding:40px 0 64px;text-align:center;color:var(--muted-2);font-size:13px;border-top:1px solid var(--line);}
+
+/* preview control */
+.pvc{position:fixed;right:18px;bottom:18px;z-index:80;background:rgba(16,16,22,0.94);border:1px solid var(--line);border-radius:14px;padding:12px 14px;backdrop-filter:blur(8px);max-width:230px;}
+.pvc .t{font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted-2);margin-bottom:8px;}
+.pvc .vbtns{display:flex;flex-wrap:wrap;gap:6px;}
+.pvc button{font-size:12px;padding:6px 10px;border-radius:8px;border:1px solid var(--line);background:transparent;color:#C9CAD2;cursor:pointer;}
+.pvc button.on{background:var(--teal);color:var(--teal-ink);border-color:var(--teal);font-weight:700;}
+.pvc .vn{font-size:11px;color:var(--muted-2);margin-top:8px;line-height:1.4;}
+
+@media(max-width:900px){
+  .runs,.cgrid,.fgrid,.pgrid,.prices{grid-template-columns:1fr;}
+  .nav-links{display:none;}
+}
+</style>
+
+<div class="pg">
+
+  <div class="announce">Search Atlas runs your marketing across every channel and fixes what breaks while you sleep ↗</div>
+
+  <nav class="nav"><div class="wrap"><div class="nav-in">
+    <a class="brand">SEARCH<span class="sl">/</span>ATLAS</a>
+    <div class="nav-links"><a class="car">Features</a><a class="car">✦ OTTO SEO</a><a class="car">Why Us</a><a>Pricing</a><a>White Label</a><a>Demos</a><a class="car">Enterprise</a></div>
+    <div class="nav-right"><a class="login">Login</a><a class="btn-teal" style="padding:9px 20px;">Get Started</a></div>
+  </div></div></nav>
+
+  <!-- HERO -->
+  <div class="wrap">
+    <section class="hero">
+      <h1 id="hero-h1">The growth engine that runs your marketing while you sleep</h1>
+      <p class="sub" id="hero-h2">Search Atlas runs your SEO, AEO, Google Ads, Meta Ads, content, and site health on its own, and when something breaks overnight it fixes it before you wake up.</p>
+      <p class="kicker">Hand Search Atlas a goal and <span class="p">it goes to work.</span></p>
+      <div class="chatbox"><div class="inner">
+        <div class="line"><span class="star">✦</span><span class="hint">Atlas Agent is already working — <span class="g">ask it anything, it handles the rest.</span></span></div>
+        <div class="send">↑</div>
+      </div></div>
+      <div class="chips"><span>Competitor analysis</span><span>Full SEO strategy</span><span>SEO reporting</span><span>Generate a topical map</span><span>Identify and fix technical issues</span></div>
+    </section>
+  </div>
+
+  <!-- LOGOS -->
+  <div class="wrap">
+    <section class="logos">
+      <div class="row"><span>Autotrader</span><span>VENDASTA</span><span>cart.com</span><span>P&amp;G</span><span>Shutterfly</span><span>RW&amp;CO.</span><span>charlie health</span><span>EOS</span><span>Hyundai</span><span>SERENA &amp; LILY</span></div>
+    </section>
+  </div>
+
+  <!-- RUNS ITSELF -->
+  <div class="wrap">
+    <section class="sec">
+      <div class="runs">
+        <div>
+          <h2>Marketing That Runs Itself Starts Here</h2>
+          <p class="lead">Insights don't wait for you to act on them.</p>
+          <p>Search Atlas catches the ranking slip, the broken page, the ad set bleeding spend, and <span class="p">repairs each one before it costs you traffic.</span> You read about it after, not during.</p>
+          <a class="link">Learn More →</a>
+        </div>
+        <div class="shot"><div class="ev">Everything SEO.</div><div class="play">▶</div><div class="cap">Product dashboard / demo video</div></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- FEATURED TESTIMONIAL -->
+  <div class="wrap">
+    <section class="sec" style="padding-top:0;">
+      <div class="feat">
+        <div class="q">"If you're serious about staying ahead in SEO, Search Atlas is where you need to be. <span class="p">It's the most innovative, forward-thinking platform I've used.</span> It combines everything you need to rank with tools you didn't even know you needed."</div>
+        <div class="who"><b>Josh Nelson</b> &nbsp; CEO &amp; Founder at Plumbing &amp; HVAC SEO</div>
+        <div class="avatars"><span></span><span></span><span></span><span class="on"></span><span></span></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- CASE STUDIES -->
+  <div class="wrap">
+    <section class="sec" style="padding-top:0;">
+      <div class="sec-head"><h2>What Happens When AI Takes Over the Work</h2><p>Real businesses, real performance improvements, <span class="p">delivered in weeks.</span></p></div>
+      <div class="cgrid">
+        <div class="ccard a"><span class="tag">CASE STUDY</span><div class="stat">97% ↗</div><div class="sl">Pins improved</div><p>This Chiropractic Center went from the bottom to the top in 3 weeks with Search Atlas.</p><a class="rm">Read More</a></div>
+        <div class="ccard b"><span class="tag">CASE STUDY</span><div class="stat">390X ↗</div><div class="sl">Organic Traffic Growth</div><p>This Restaurant Equipment Supplier went from the bottom to the top in 4 weeks with Search Atlas.</p><a class="rm">Read More</a></div>
+        <div class="ccard c"><span class="tag">CASE STUDY</span><div class="stat">96% ↗</div><div class="sl">More keywords ranking</div><p>This Personal Injury Lawyer dominated local search in Portland's competitive market.</p><a class="rm">Read More</a></div>
+      </div>
+      <div class="center" style="margin-top:36px;"><a class="btn-teal">See All Case Studies</a></div>
+    </section>
+  </div>
+
+  <!-- COST -->
+  <div class="wrap">
+    <section class="sec cost center" style="padding-top:0;">
+      <h2>$8,000 in Tool Costs.<br>$99 for the Entire System.</h2>
+      <p class="csub">One subscription covers SEO, AEO, site health, ads, social, and reporting — the same work you're paying eight separate vendors to leave half-finished.</p>
+      <div style="overflow-x:auto;text-align:left;">
+        <table class="ctable">
+          <thead><tr><th>Replaces</th><th>Feature</th><th style="text-align:right;">Other Tools</th><th style="text-align:right;">Search Atlas</th></tr></thead>
+          <tbody>
+            <tr><td class="muted">Ahrefs · Semrush · Moz</td><td>SEO Platforms</td><td class="num">$449</td><td class="chk">✓</td></tr>
+            <tr><td class="muted">AgencyAnalytics · Databox</td><td>Agency Reporting Tools</td><td class="num">$579</td><td class="chk">✓</td></tr>
+            <tr><td class="muted">AirOps · Koala · Human Writer</td><td>AI Content + 1-Click Publishing</td><td class="num">$205</td><td class="chk">✓</td></tr>
+            <tr><td class="muted">AccuRanker · Nightwatch</td><td>GSC Realtime Daily Rank Tracking</td><td class="num">$764</td><td class="chk">✓</td></tr>
+            <tr><td class="muted">BrightEdge · Conductor</td><td>Enterprise SEO Platforms</td><td class="num">$1,500</td><td class="chk">✓</td></tr>
+            <tr><td class="muted">Cision · Muck Rack · Pitchbox</td><td>Digital PR / Link Outreach</td><td class="num">$675</td><td class="chk">✓</td></tr>
+            <tr class="total"><td colspan="2">Everything, every channel</td><td class="num">$8,000/mo</td><td class="num sa">$99/mo</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="muted" style="font-size:12px;margin-top:14px;">Condensed — the live page lists all 18 replaced categories.</p>
+    </section>
+  </div>
+
+  <!-- FEATURE CARDS -->
+  <div class="wrap">
+    <section class="sec">
+      <div class="sec-head"><h2>Everything Your Agency Needs to Win</h2><p>Run every client, campaign, and channel from one login. White-label dashboards, automatic reporting, and client tracking are built in, so your roster grows faster than your team does.</p></div>
+      <div class="fgrid">
+        <div class="fcard"><div class="ill">account map</div><h3>It Runs the Work</h3><p>Optimization, content, and campaign changes ship continuously across every account, on their own.</p></div>
+        <div class="fcard"><div class="ill">connected stack</div><h3>Full Marketing Stack, Unified</h3><p>SEO, AI search, paid ads, content, and site health run together in one system.</p></div>
+        <div class="fcard"><div class="ill">workflow</div><h3>Built for Real Agency Workflows</h3><p>Requests, approvals, and deliverables move across clients without switching apps.</p></div>
+        <div class="fcard"><div class="ill">live metrics</div><h3>Visibility Across Every Account</h3><p>Track performance and outcomes across clients and campaigns as they happen.</p></div>
+        <div class="fcard"><div class="ill">brand reports</div><h3>White-Label Everything</h3><p>Dashboards, reports, and results ship under your brand.</p></div>
+        <div class="fcard"><div class="ill">growth</div><h3>Grow Without the Headcount</h3><p>Add clients and output without adding operational drag.</p></div>
+        <div class="fcard"><div class="ill">live sessions</div><h3>Weekly Live Sessions</h3><p>Stay current on what the platform shipped and what's new.</p></div>
+        <div class="fcard"><div class="ill">authority</div><h3>Authority Growth Built In</h3><p>Outreach, digital PR, and link building run as part of the loop.</p></div>
+      </div>
+      <div class="center" style="margin-top:40px;"><a class="btn-teal">Start Winning Now</a></div>
+    </section>
+  </div>
+
+  <!-- PRODUCT CARDS -->
+  <div class="wrap">
+    <section class="sec" style="padding-top:0;">
+      <div class="sec-head"><h2>Your Entire Digital Marketing Stack.<br>Every Feature You Need.</h2><p>One coworker, the skills of a whole marketing team.</p></div>
+      <div class="center" style="margin-bottom:44px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;"><a class="btn-teal">Start Free Trial</a><a class="btn-dark">Learn More</a></div>
+      <div class="pgrid">
+        <div class="pcard"><h3>Atlas Agent</h3><p>The AI CMO of the operation. Set the goal and Atlas Agent turns strategy into work that ships across every channel.</p><div class="mock">conversions: 120 → 480</div></div>
+        <div class="pcard"><h3>OTTO SEO</h3><p>Technical fixes and on-page improvements, applied straight from live search data — no ticket queue.</p><div class="mock">deploy change</div></div>
+        <div class="pcard"><h3>Smart Ads</h3><p>Builds the campaigns, then moves budget, bids, and targeting as performance shifts.</p><div class="mock">conversions: 120 → 480</div></div>
+        <div class="pcard"><h3>GBP Galactic</h3><p>Keeps every Google Business Profile current across all your locations.</p><div class="mock">local profiles</div></div>
+        <div class="pcard"><h3>Website Studio</h3><p>Generates and publishes pages with SEO and conversion structure already built in.</p><div class="mock">landing pages created</div></div>
+        <div class="pcard"><h3>LLM Visibility</h3><p>Tracks where you surface in AI answers, and wins back the citations you lose.</p><div class="mock">used in ChatGPT · Google AI</div></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PRICING -->
+  <div class="wrap">
+    <section class="sec">
+      <div class="sec-head"><h2>Choose The Plan<br>You Would Like to Try</h2><p><span class="p">From your first campaign to a full client roster,</span> every plan works around the clock and starts at less than a day of agency time.</p></div>
+      <div class="prices">
+        <div class="tier">
+          <div class="name">Starter</div>
+          <div class="who">Perfect for solo marketers, freelancers, and 1-person agency teams.</div>
+          <div class="priceline"><span class="price">$99</span><span class="per">per month</span><span class="free">Free for 7 days</span></div>
+          <ul><li>Atlas Agent: AI-powered SEO</li><li>5 Site Explorer projects</li><li>5 Site Auditor projects</li><li>Website Studio</li></ul>
+          <a class="btn-dark cta">Start Free Trial</a>
+        </div>
+        <div class="tier pop">
+          <div class="name">Growth</div>
+          <div class="who">Perfect for scaling agencies and mid-sized businesses with multiple sites.</div>
+          <div class="priceline"><span class="price">$199</span><span class="per">per month</span><span class="free">Free for 7 days</span></div>
+          <ul><li>Everything from Starter, plus:</li><li>LLM Visibility tracking</li><li>Smart Ads automation</li><li>2 AI SEO projects</li><li>100 content plans</li></ul>
+          <a class="btn-teal cta">Start Free Trial</a>
+        </div>
+        <div class="tier">
+          <div class="name">Pro</div>
+          <div class="who">Perfect for high-volume agencies and large SEO teams ready to scale fast.</div>
+          <div class="priceline"><span class="price">$399</span><span class="per">per month</span><span class="free">Free for 7 days</span></div>
+          <ul><li>Everything from Growth, plus:</li><li>All LLM models</li><li>Enhanced authority building</li><li>White Label capabilities</li><li>4 AI SEO projects · 200 content plans</li></ul>
+          <a class="btn-dark cta">Start Free Trial</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- FAQ -->
+  <div class="wrap">
+    <section class="sec" style="padding-top:0;">
+      <div class="sec-head"><h2>Frequently Asked Questions</h2><p class="muted">The most common questions about Search Atlas. Can't find yours? Chat to our team.</p></div>
+      <div class="faq">
+        <div class="qitem"><div class="q">What is Search Atlas?</div><p class="a">An agentic AI marketing platform that runs your SEO, AEO, Google Ads, Meta Ads, content, and site health in one place, and does the work for you instead of handing you another to-do list.</p></div>
+        <div class="qitem"><div class="q">Does Search Atlas make changes on its own?</div><p class="a">Yes, that's the point. Search Atlas deploys fixes and optimizations automatically across your channels. If you'd rather sign off first, switch on approval mode and nothing ships until you say so.</p></div>
+        <div class="qitem"><div class="q">How fast will I see results?</div><p class="a">Search Atlas starts working the moment it's installed. Most sites see movement within a few days, and many within the first few weeks.</p></div>
+        <div class="qitem"><div class="q">Does Search Atlas really live in Slack, Teams, and ClickUp?</div><p class="a">Yes. The Search Atlas Coworker posts updates and answers your questions right inside the tools your team already uses, so there's no extra dashboard to keep checking.</p></div>
+        <div class="qitem"><div class="q">Do I need developer or technical skills?</div><p class="a">No. Search Atlas handles the implementation and the technical work itself, so you don't need a developer to act on anything.</p></div>
+        <div class="qitem"><div class="q">Can my agency white-label it?</div><p class="a">Yes. Deliver the dashboards, reports, and results under your own brand.</p></div>
+        <div class="qitem"><div class="q">Is there a free trial?</div><p class="a">Yes, a 7-day free trial with the full platform, so you can watch it work before you commit.</p></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- CLOSE -->
+  <div class="wrap">
+    <section class="close">
+      <h2>Hire the marketing coworker that never sleeps.</h2>
+      <p>Start free, and your Search Atlas Coworker is working within minutes.</p>
+      <a class="btn-teal">Start for Free</a>
+    </section>
+  </div>
+
+  <div class="wrap"><div class="foot">Preview — new positioning copy in the current homepage design. Layout unchanged; words only.</div></div>
+
+</div>
+
+<!-- preview control -->
+<div class="pvc">
+  <div class="t">Hero variant (test)</div>
+  <div class="vbtns"><button class="on" data-v="0">V1</button><button data-v="1">V2</button><button data-v="2">V3</button><button data-v="3">V4</button></div>
+  <div class="vn" id="vn">V1 · While you sleep</div>
+</div>
+
+<script>
+(function(){
+  var V=[
+    {n:"V1 · While you sleep",h1:"The growth engine that runs your marketing while you sleep",
+     h2:"Search Atlas runs your SEO, AEO, Google Ads, Meta Ads, content, and site health on its own, and when something breaks overnight it fixes it before you wake up."},
+    {n:"V2 · The coworker",h1:"Hire the marketing coworker that never sleeps",
+     h2:"It runs every channel for you, ships the work, and posts what it did in Slack before your first coffee. No dashboard to babysit."},
+    {n:"V3 · Does the work",h1:"Your marketing runs itself now",
+     h2:"Search Atlas does the work across SEO, ads, content, and site health, then tells you what changed. You set the direction; it runs the engine."},
+    {n:"V4 · Self-healing",h1:"It fixes what breaks before you notice",
+     h2:"Search Atlas watches every channel around the clock, catches the ranking drop, the broken page, the leaking ad set, and repairs them on its own."}
+  ];
+  var h1=document.getElementById('hero-h1'),h2=document.getElementById('hero-h2'),vn=document.getElementById('vn');
+  document.querySelectorAll('.pvc button').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.querySelectorAll('.pvc button').forEach(function(x){x.classList.remove('on');});
+      b.classList.add('on');
+      var i=+b.getAttribute('data-v');
+      h1.textContent=V[i].h1; h2.textContent=V[i].h2; vn.textContent=V[i].n;
+      window.scrollTo({top:0,behavior:'smooth'});
+    });
+  });
+})();
+</script>

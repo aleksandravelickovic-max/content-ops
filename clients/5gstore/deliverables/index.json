@@ -1,0 +1,70 @@
+{
+  "client": "5gstore",
+  "display_name": "5Gstore",
+  "generated_at": "2026-07-14T15:59:27.839773+00:00",
+  "existing_campaign_deliverables": [
+    {
+      "path": "clients/5gstore/deliverables/html/01-may-content-optimization/index.html",
+      "campaign": "01-may-content-optimization",
+      "stage": "html",
+      "type": "html",
+      "name": "index.html",
+      "size": 6421,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/5gstore/deliverables/html/01-may-content-optimization/revised/01-dome-pro-duo.html",
+      "campaign": "01-may-content-optimization",
+      "stage": "html",
+      "type": "html",
+      "name": "01-dome-pro-duo.html",
+      "size": 16913,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/5gstore/deliverables/html/01-may-content-optimization/revised/02-peplink-switch.html",
+      "campaign": "01-may-content-optimization",
+      "stage": "html",
+      "type": "html",
+      "name": "02-peplink-switch.html",
+      "size": 14561,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/5gstore/deliverables/html/01-may-content-optimization/revised/03-fusionhub-pro.html",
+      "campaign": "01-may-content-optimization",
+      "stage": "html",
+      "type": "html",
+      "name": "03-fusionhub-pro.html",
+      "size": 14217,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/5gstore/deliverables/html/01-may-content-optimization/revised/04-vwan-license.html",
+      "campaign": "01-may-content-optimization",
+      "stage": "html",
+      "type": "html",
+      "name": "04-vwan-license.html",
+      "size": 12484,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/5gstore/deliverables/html/01-may-content-optimization/revised/05-inseego-fg2000e.html",
+      "campaign": "01-may-content-optimization",
+      "stage": "html",
+      "type": "html",
+      "name": "05-inseego-fg2000e.html",
+      "size": 16331,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/5gstore/deliverables/html/01-may-content-optimization/revised/06-gpio-cable.html",
+      "campaign": "01-may-content-optimization",
+      "stage": "html",
+      "type": "html",
+      "name": "06-gpio-cable.html",
+      "size": 13041,
+      "source": "canonical"
+    }
+  ]
+}

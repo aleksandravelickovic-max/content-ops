@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Op1 · MaxAI Page (v2 — Webflow component-mapped) — Altify Draft Review</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f0f2f7; color: #1a1a2e; line-height: 1.7; }
+.topbar { background: #1B3A6B; color: #fff; padding: 14px 24px; display: flex; align-items: center; gap: 14px; position: sticky; top: 0; z-index: 10; }
+.topbar a { color: #cfe0ff; text-decoration: none; font-size: 13px; }
+.badge { background: #FF6B35; color: #fff; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; padding: 4px 10px; border-radius: 3px; text-transform: uppercase; }
+.topbar .kw { font-size: 12px; color: #b9c9ec; margin-left: auto; }
+.container { max-width: 780px; margin: 0 auto; padding: 40px 24px 80px; background: #fff; }
+.wrap { background: #f0f2f7; min-height: 100vh; }
+h1 { font-size: 30px; font-weight: 800; color: #1B3A6B; margin-bottom: 6px; }
+h2 { font-size: 22px; font-weight: 700; color: #1B3A6B; margin: 32px 0 12px; border-bottom: 2px solid #e8ecf4; padding-bottom: 6px; }
+h3 { font-size: 17px; font-weight: 700; color: #1B3A6B; margin: 24px 0 8px; }
+h4 { font-size: 14px; font-weight: 700; color: #4F6AF0; margin: 18px 0 6px; }
+p { margin-bottom: 14px; font-size: 15px; color: #333; }
+ul, ol { margin: 0 0 14px 22px; font-size: 15px; }
+li { margin-bottom: 6px; }
+a { color: #4F6AF0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+strong { color: #1a1a2e; }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 13px; }
+th, td { border: 1px solid #e0e4ef; padding: 8px 10px; text-align: left; }
+th { background: #f8f9fc; color: #1B3A6B; }
+blockquote { border-left: 3px solid #FF6B35; padding-left: 14px; color: #666; margin: 14px 0; }
+code { background: #f0f2f7; padding: 1px 5px; border-radius: 3px; font-size: 13px; }
+hr { border: none; border-top: 1px solid #e0e4ef; margin: 24px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="topbar">
+  <a href="index.html">&larr; All drafts</a>
+  <span class="badge">Draft v1</span>
+  <span class="kw">Target keyword: deal management software &middot; Live: <a href="https://altify.com/maxai/" target="_blank" rel="noopener">https://altify.com/maxai/</a></span>
+</div>
+<div class="container">
+<!--
+v2 — restructured to match the LIVE WEBFLOW COMPONENT SHAPE, not freeform markdown.
+v1 (maxai-deal-management-v1.md) proposed 5 free-flowing sections including a visible FAQ.
+This version keeps v1's retargeting (deal management software / deal management / AI platforms to
+prioritize deals and accounts) and its "why this matters" narrative, but fits the copy into the
+four component types actually observed on the live page:
+  1. Hero
+  2. 3-icon pain row (short caption each) + one richtext intro paragraph above it
+  3. 4-stat row (short caption each, unchanged in shape) + one richtext intro paragraph above it
+  4. 7-item feature repeater (H3 + 1 sentence + 3 bullets each) — kept at 7 slots, not condensed to 4
+No visible FAQ is drafted here — see "FAQ — flagged, not drafted" at the bottom.
+
+WEBFLOW DEPENDENCY — apply manually, not deployable via OTTO:
+RECOMMENDED TITLE TAG (53 characters): Deal Management Software for Salesforce Teams | MaxAI
+RECOMMENDED H1: Deal Management Software Built Inside Salesforce
+RECOMMENDED META DESCRIPTION (155 characters): Altify is a deal management software that helps revenue teams prioritize deals and accounts inside Salesforce, improving win rates and forecast accuracy.
+CURRENT LIVE VALUES (four different strings across title/og/twitter/schema — standardize on one): see research/live-baseline/maxai-deal-management.md
+-->
+
+<h1>Hero</h1>
+<h2>Deal Management Software Built Inside Salesforce</h2>
+<p>MaxAI is Altify's deal management software for Salesforce. It ranks deals and accounts using signals already in Salesforce, including stakeholder coverage, deal stage, and buying-group engagement, so reps know which deal needs their attention first.</p>
+<p><strong>[Request a Demo]</strong></p>
+<hr />
+<h1>3-icon pain row</h1>
+<p><strong>Richtext intro (above the icons — this is where the narrative goes; the icon captions themselves stay short):</strong></p>
+<p>Deal management breaks down when reps don't know which deal to work on next. Data piles up in Salesforce, but it doesn't rank itself, which pushes revenue teams back onto spreadsheets, gut feel, and whichever opportunity is making the most noise that week. MaxAI ranks that data from inside Salesforce, where reps already work.</p>
+<p><strong>Icon 1 — short caption (was "Guide Sellers"):</strong>
+Prioritize by Signal
+<em>Rank deals by buying-group engagement and deal stage.</em></p>
+<p><strong>Icon 2 — short caption (was "Eliminate Problem"):</strong>
+Catch Risk Early
+<em>Flag a stalled deal weeks before it shows up as "stalled" in a pipeline report.</em></p>
+<p><strong>Icon 3 — short caption (was "Boost Adoption"):</strong>
+Keep Data Current
+<em>Auto-update relationship maps as buying committees and org charts change.</em></p>
+<hr />
+<h1>4-stat row</h1>
+<p><strong>Richtext intro (above the stats — same move: the stats stay as bare captions, the connecting story lives here):</strong></p>
+<p>None of this is a data problem. Reps already log deals, contacts, and activity in Salesforce every day. The gap is that nobody turns that data into a ranked list of what actually needs attention.</p>
+<p><strong>Stat captions (unchanged facts, only lightly tightened for consistency — no new stats invented):</strong>
+- 59% of buyers say sellers don't understand their goals.
+- Sellers spend only 30% of their time actually selling.
+- 94% of sales leaders want sellers to extract more value from the customer data already in Salesforce.
+- 70% of CRM investments fall short on ROI when seller adoption stalls.</p>
+<hr />
+<h1>7-item feature repeater (kept at 7 slots to match the live component — not condensed)</h1>
+<h3>1. Identify and auto-populate key players</h3>
+<p>A missing stakeholder is one of the clearest early risk signals a deal review can catch, but only if the map stays current. When a new contact shows up in an email thread or a meeting invite, MaxAI adds them to the account automatically, so the map reflects who's actually involved instead of who was involved at kickoff.
+- Fills in contact information automatically as it's discovered.
+- Frees up the time reps would spend rebuilding org charts by hand.
+- Keeps the buying group visible well past the initial kickoff.</p>
+<h3>2. Uncover critical buying insights</h3>
+<p>The same account data that flags a missing stakeholder also points to what that account cares about: the goals, pressures, and initiatives actually driving the deal. A rep doesn't have to go digging for it between calls.
+- Handles the account research legwork before the rep needs to ask for it.
+- Surfaces relationships and data points a rep would otherwise miss.
+- Gives reps a way to check the accuracy of what surfaces before they act on it.</p>
+<h3>3. Turn signals into deal execution</h3>
+<p>Knowing a deal is at risk isn't the same as knowing what to do about it, and that's usually where the trail goes cold. MaxAI closes that gap with a plain-language summary: what's at risk, and the next action to take.
+- Spotlights risk in a clear, plain-language summary.
+- Delivers real-time coaching on missing stakeholders and overdue reviews.
+- Points reps toward the deals that need their time this week.</p>
+<h3>4. Feed the account strategy, not just the deal</h3>
+<p>A deal doesn't exist in isolation from the account it sits in. MaxAI pulls the same signals up a level, summarizing a company's mission and strategic priorities so a rep can see whether a deal fits where the account is actually headed, not just whether it's likely to close this quarter.
+- Summarizes the company's mission and strategic priorities.
+- Populates account details automatically, so they're ready before the next QBR.
+- Connects account-level context back to which deals get worked first.</p>
+<h3>5. Simplify competitive research</h3>
+<p>Competitive threats are a risk signal like any other; a deal with an unaddressed competitor should rank differently than one without. MaxAI identifies which competitors are actually relevant to a given opportunity, so that risk shows up in the same priority list instead of a separate spreadsheet.
+- Identifies the competitors relevant to a given opportunity.
+- Cuts the manual research time reps would spend hunting for this themselves.
+- Feeds directly into the same risk and priority signals reps already see.</p>
+<h3>6. Make Salesforce the place sellers want to work</h3>
+<p>Five capabilities, one effect: none of them add work for the rep. Between auto-populated contacts, surfaced insights, deal summaries, account context, and competitive research, Salesforce starts giving reps something back every time they log in, which is the actual fix for the adoption problem most Salesforce rollouts run into.
+- Surfaces the next best action inside the opportunity record itself.
+- Embeds qualification, stakeholder mapping, and close planning into the existing workflow.
+- Gives managers real-time pipeline visibility without chasing status updates.</p>
+<h3>7. Coach sellers in the flow of work</h3>
+<p>The same signals driving prioritization are what a coach would flag in a deal review anyway, so MaxAI surfaces them as they happen instead of waiting for the next one. A missing stakeholder or an incomplete qualification step shows up as a prompt inside the opportunity record, not a line item in next week's pipeline meeting.
+- Triggers coaching prompts from live deal signals as they change.
+- Reinforces Altify's Strategic Account Planning methodology inside the account plan and Relationship Map.
+- Gives managers the same visibility into deal signals reps see, so deal reviews focus on the deal itself.</p>
+<hr />
+<h1>FAQ — flagged, not drafted</h1>
+<p>The live page has no visible FAQ; there is a hidden FAQPage JSON-LD schema (~30 auto-generated Q&amp;As from OTTO) that is not rendered in the body copy. Several of its answers reference things not evidenced anywhere on the page or in <code>raw/</code> ("live webinars," "numerous clients... significant sales growth"). Recommend one of two paths, not a silent content decision:
+1. Have a Webflow dev add a visible FAQ component, then draft 5–6 grounded questions against it (I can do this once the component exists).
+2. Leave FAQ out of visible copy entirely and have someone audit/replace the hidden OTTO schema separately, since it currently carries unverified claims regardless of what happens with this page.</p>
+</div>
+</div>
+</body>
+</html>

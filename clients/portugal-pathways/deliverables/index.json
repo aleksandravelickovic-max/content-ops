@@ -1,0 +1,25 @@
+{
+  "client": "portugal-pathways",
+  "display_name": "Portugal Pathways",
+  "generated_at": "2026-07-14T15:59:27.908159+00:00",
+  "existing_campaign_deliverables": [
+    {
+      "path": "clients/portugal-pathways/deliverables/drafts/01-june-2026-pr/press-release-v2.md",
+      "campaign": "01-june-2026-pr",
+      "stage": "drafts",
+      "type": "md",
+      "name": "press-release-v2.md",
+      "size": 7754,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/portugal-pathways/deliverables/drafts/01-june-2026-pr/press-release-v3.md",
+      "campaign": "01-june-2026-pr",
+      "stage": "drafts",
+      "type": "md",
+      "name": "press-release-v3.md",
+      "size": 10208,
+      "source": "canonical"
+    }
+  ]
+}

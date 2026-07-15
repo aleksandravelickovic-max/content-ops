@@ -1,0 +1,127 @@
+{
+  "client": "esthetics-center",
+  "generated_at": "2026-07-13T20:58:38.997581+00:00",
+  "move_count": 20,
+  "moves": [
+    {
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "from": "clients/esthetics-center/campaigns/01-blog-content/drafts/01-botox-aftercare.md",
+      "to": "clients/esthetics-center/deliverables/drafts/01-blog-content/01-botox-aftercare.md"
+    },
+    {
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "from": "clients/esthetics-center/campaigns/01-blog-content/drafts/02-laser-vs-waxing.md",
+      "to": "clients/esthetics-center/deliverables/drafts/01-blog-content/02-laser-vs-waxing.md"
+    },
+    {
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "from": "clients/esthetics-center/campaigns/01-blog-content/drafts/03-jawline-filler.md",
+      "to": "clients/esthetics-center/deliverables/drafts/01-blog-content/03-jawline-filler.md"
+    },
+    {
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "from": "clients/esthetics-center/campaigns/01-blog-content/drafts/04-non-surgical-body-contouring.md",
+      "to": "clients/esthetics-center/deliverables/drafts/01-blog-content/04-non-surgical-body-contouring.md"
+    },
+    {
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "from": "clients/esthetics-center/campaigns/01-blog-content/drafts/05-rhinoplasty-recovery.md",
+      "to": "clients/esthetics-center/deliverables/drafts/01-blog-content/05-rhinoplasty-recovery.md"
+    },
+    {
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "from": "clients/esthetics-center/campaigns/01-blog-content/drafts/06-botox-consultation.md",
+      "to": "clients/esthetics-center/deliverables/drafts/01-blog-content/06-botox-consultation.md"
+    },
+    {
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "from": "clients/esthetics-center/campaigns/01-blog-content/drafts/07-laser-hair-removal-skin-tones.md",
+      "to": "clients/esthetics-center/deliverables/drafts/01-blog-content/07-laser-hair-removal-skin-tones.md"
+    },
+    {
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "from": "clients/esthetics-center/campaigns/01-blog-content/drafts/08-filler-swelling-timeline.md",
+      "to": "clients/esthetics-center/deliverables/drafts/01-blog-content/08-filler-swelling-timeline.md"
+    },
+    {
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "from": "clients/esthetics-center/campaigns/01-blog-content/drafts/09-coolsculpting-fat.md",
+      "to": "clients/esthetics-center/deliverables/drafts/01-blog-content/09-coolsculpting-fat.md"
+    },
+    {
+      "campaign": "01-blog-content",
+      "stage": "drafts",
+      "from": "clients/esthetics-center/campaigns/01-blog-content/drafts/10-brow-lift.md",
+      "to": "clients/esthetics-center/deliverables/drafts/01-blog-content/10-brow-lift.md"
+    },
+    {
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "from": "clients/esthetics-center/campaigns/01-blog-content/html/01-botox-aftercare.html",
+      "to": "clients/esthetics-center/deliverables/html/01-blog-content/01-botox-aftercare.html"
+    },
+    {
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "from": "clients/esthetics-center/campaigns/01-blog-content/html/02-laser-vs-waxing.html",
+      "to": "clients/esthetics-center/deliverables/html/01-blog-content/02-laser-vs-waxing.html"
+    },
+    {
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "from": "clients/esthetics-center/campaigns/01-blog-content/html/03-jawline-filler.html",
+      "to": "clients/esthetics-center/deliverables/html/01-blog-content/03-jawline-filler.html"
+    },
+    {
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "from": "clients/esthetics-center/campaigns/01-blog-content/html/04-non-surgical-body-contouring.html",
+      "to": "clients/esthetics-center/deliverables/html/01-blog-content/04-non-surgical-body-contouring.html"
+    },
+    {
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "from": "clients/esthetics-center/campaigns/01-blog-content/html/05-rhinoplasty-recovery.html",
+      "to": "clients/esthetics-center/deliverables/html/01-blog-content/05-rhinoplasty-recovery.html"
+    },
+    {
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "from": "clients/esthetics-center/campaigns/01-blog-content/html/06-botox-consultation.html",
+      "to": "clients/esthetics-center/deliverables/html/01-blog-content/06-botox-consultation.html"
+    },
+    {
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "from": "clients/esthetics-center/campaigns/01-blog-content/html/07-laser-hair-removal-skin-tones.html",
+      "to": "clients/esthetics-center/deliverables/html/01-blog-content/07-laser-hair-removal-skin-tones.html"
+    },
+    {
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "from": "clients/esthetics-center/campaigns/01-blog-content/html/08-filler-swelling-timeline.html",
+      "to": "clients/esthetics-center/deliverables/html/01-blog-content/08-filler-swelling-timeline.html"
+    },
+    {
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "from": "clients/esthetics-center/campaigns/01-blog-content/html/09-coolsculpting-fat.html",
+      "to": "clients/esthetics-center/deliverables/html/01-blog-content/09-coolsculpting-fat.html"
+    },
+    {
+      "campaign": "01-blog-content",
+      "stage": "html",
+      "from": "clients/esthetics-center/campaigns/01-blog-content/html/10-brow-lift.html",
+      "to": "clients/esthetics-center/deliverables/html/01-blog-content/10-brow-lift.html"
+    }
+  ]
+}

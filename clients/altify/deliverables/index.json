@@ -1,0 +1,277 @@
+{
+  "client": "altify",
+  "display_name": "Altify",
+  "generated_at": "2026-07-14T15:59:27.873507+00:00",
+  "existing_campaign_deliverables": [
+    {
+      "path": "clients/altify/deliverables/drafts/01-may-content-optimization/01-account-planning-challenges.md",
+      "campaign": "01-may-content-optimization",
+      "stage": "drafts",
+      "type": "md",
+      "name": "01-account-planning-challenges.md",
+      "size": 27929,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/altify/deliverables/drafts/01-may-content-optimization/02-maxai-guided-selling.md",
+      "campaign": "01-may-content-optimization",
+      "stage": "drafts",
+      "type": "md",
+      "name": "02-maxai-guided-selling.md",
+      "size": 4436,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/altify/deliverables/drafts/01-may-content-optimization/03-relationship-mapping.md",
+      "campaign": "01-may-content-optimization",
+      "stage": "drafts",
+      "type": "md",
+      "name": "03-relationship-mapping.md",
+      "size": 27692,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/altify/deliverables/drafts/01-may-content-optimization/04-strategic-account-planning.md",
+      "campaign": "01-may-content-optimization",
+      "stage": "drafts",
+      "type": "md",
+      "name": "04-strategic-account-planning.md",
+      "size": 18462,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/altify/deliverables/drafts/01-may-content-optimization/05-revenue-execution-salesforce.md",
+      "campaign": "01-may-content-optimization",
+      "stage": "drafts",
+      "type": "md",
+      "name": "05-revenue-execution-salesforce.md",
+      "size": 22291,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/altify/deliverables/drafts/02-june-2026-content-optimization/account-management-blog-v1.md",
+      "campaign": "02-june-2026-content-optimization",
+      "stage": "drafts",
+      "type": "md",
+      "name": "account-management-blog-v1.md",
+      "size": 22281,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/altify/deliverables/drafts/02-june-2026-content-optimization/account-planning-glossary-v1.md",
+      "campaign": "02-june-2026-content-optimization",
+      "stage": "drafts",
+      "type": "md",
+      "name": "account-planning-glossary-v1.md",
+      "size": 30698,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/altify/deliverables/drafts/02-june-2026-content-optimization/bant-glossary-v1.md",
+      "campaign": "02-june-2026-content-optimization",
+      "stage": "drafts",
+      "type": "md",
+      "name": "bant-glossary-v1.md",
+      "size": 15518,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/altify/deliverables/drafts/02-june-2026-content-optimization/buying-intent-glossary-v1.md",
+      "campaign": "02-june-2026-content-optimization",
+      "stage": "drafts",
+      "type": "md",
+      "name": "buying-intent-glossary-v1.md",
+      "size": 22206,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/altify/deliverables/drafts/02-june-2026-content-optimization/icp-glossary-v1.md",
+      "campaign": "02-june-2026-content-optimization",
+      "stage": "drafts",
+      "type": "md",
+      "name": "icp-glossary-v1.md",
+      "size": 11850,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/altify/deliverables/drafts/02-june-2026-content-optimization/maxai-deal-management-v1.md",
+      "campaign": "02-june-2026-content-optimization",
+      "stage": "drafts",
+      "type": "md",
+      "name": "maxai-deal-management-v1.md",
+      "size": 7818,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/altify/deliverables/drafts/02-june-2026-content-optimization/maxai-deal-management-v2.md",
+      "campaign": "02-june-2026-content-optimization",
+      "stage": "drafts",
+      "type": "md",
+      "name": "maxai-deal-management-v2.md",
+      "size": 8078,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/altify/deliverables/drafts/02-june-2026-content-optimization/sales-analytics-glossary-v1.md",
+      "campaign": "02-june-2026-content-optimization",
+      "stage": "drafts",
+      "type": "md",
+      "name": "sales-analytics-glossary-v1.md",
+      "size": 20180,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/altify/deliverables/drafts/02-june-2026-content-optimization/sales-coaching-glossary-v1.md",
+      "campaign": "02-june-2026-content-optimization",
+      "stage": "drafts",
+      "type": "md",
+      "name": "sales-coaching-glossary-v1.md",
+      "size": 17892,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/altify/deliverables/html/01-may-content-optimization/index.html",
+      "campaign": "01-may-content-optimization",
+      "stage": "html",
+      "type": "html",
+      "name": "index.html",
+      "size": 5635,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/altify/deliverables/html/01-may-content-optimization/revised/01-account-planning-challenges.html",
+      "campaign": "01-may-content-optimization",
+      "stage": "html",
+      "type": "html",
+      "name": "01-account-planning-challenges.html",
+      "size": 33748,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/altify/deliverables/html/01-may-content-optimization/revised/02-maxai-guided-selling.html",
+      "campaign": "01-may-content-optimization",
+      "stage": "html",
+      "type": "html",
+      "name": "02-maxai-guided-selling.html",
+      "size": 9406,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/altify/deliverables/html/01-may-content-optimization/revised/03-relationship-mapping.html",
+      "campaign": "01-may-content-optimization",
+      "stage": "html",
+      "type": "html",
+      "name": "03-relationship-mapping.html",
+      "size": 33735,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/altify/deliverables/html/01-may-content-optimization/revised/04-strategic-account-planning.html",
+      "campaign": "01-may-content-optimization",
+      "stage": "html",
+      "type": "html",
+      "name": "04-strategic-account-planning.html",
+      "size": 24205,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/altify/deliverables/html/01-may-content-optimization/revised/05-revenue-execution-salesforce.html",
+      "campaign": "01-may-content-optimization",
+      "stage": "html",
+      "type": "html",
+      "name": "05-revenue-execution-salesforce.html",
+      "size": 27935,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/altify/deliverables/html/02-june-2026-content-optimization/account-management-blog-v1.html",
+      "campaign": "02-june-2026-content-optimization",
+      "stage": "html",
+      "type": "html",
+      "name": "account-management-blog-v1.html",
+      "size": 25969,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/altify/deliverables/html/02-june-2026-content-optimization/account-planning-glossary-v1.html",
+      "campaign": "02-june-2026-content-optimization",
+      "stage": "html",
+      "type": "html",
+      "name": "account-planning-glossary-v1.html",
+      "size": 34431,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/altify/deliverables/html/02-june-2026-content-optimization/bant-glossary-v1.html",
+      "campaign": "02-june-2026-content-optimization",
+      "stage": "html",
+      "type": "html",
+      "name": "bant-glossary-v1.html",
+      "size": 19195,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/altify/deliverables/html/02-june-2026-content-optimization/buying-intent-glossary-v1.html",
+      "campaign": "02-june-2026-content-optimization",
+      "stage": "html",
+      "type": "html",
+      "name": "buying-intent-glossary-v1.html",
+      "size": 25917,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/altify/deliverables/html/02-june-2026-content-optimization/icp-glossary-v1.html",
+      "campaign": "02-june-2026-content-optimization",
+      "stage": "html",
+      "type": "html",
+      "name": "icp-glossary-v1.html",
+      "size": 14995,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/altify/deliverables/html/02-june-2026-content-optimization/index.html",
+      "campaign": "02-june-2026-content-optimization",
+      "stage": "html",
+      "type": "html",
+      "name": "index.html",
+      "size": 4306,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/altify/deliverables/html/02-june-2026-content-optimization/maxai-deal-management-v1.html",
+      "campaign": "02-june-2026-content-optimization",
+      "stage": "html",
+      "type": "html",
+      "name": "maxai-deal-management-v1.html",
+      "size": 10585,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/altify/deliverables/html/02-june-2026-content-optimization/maxai-deal-management-v2.html",
+      "campaign": "02-june-2026-content-optimization",
+      "stage": "html",
+      "type": "html",
+      "name": "maxai-deal-management-v2.html",
+      "size": 10889,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/altify/deliverables/html/02-june-2026-content-optimization/sales-analytics-glossary-v1.html",
+      "campaign": "02-june-2026-content-optimization",
+      "stage": "html",
+      "type": "html",
+      "name": "sales-analytics-glossary-v1.html",
+      "size": 23660,
+      "source": "canonical"
+    },
+    {
+      "path": "clients/altify/deliverables/html/02-june-2026-content-optimization/sales-coaching-glossary-v1.html",
+      "campaign": "02-june-2026-content-optimization",
+      "stage": "html",
+      "type": "html",
+      "name": "sales-coaching-glossary-v1.html",
+      "size": 21180,
+      "source": "canonical"
+    }
+  ]
+}

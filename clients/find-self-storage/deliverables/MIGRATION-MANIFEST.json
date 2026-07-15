@@ -1,0 +1,37 @@
+{
+  "client": "find-self-storage",
+  "generated_at": "2026-07-13T20:58:38.997581+00:00",
+  "move_count": 5,
+  "moves": [
+    {
+      "campaign": "01-june-2026-optimization",
+      "stage": "drafts",
+      "from": "clients/find-self-storage/campaigns/01-june-2026-optimization/drafts/boat-storage-units.md",
+      "to": "clients/find-self-storage/deliverables/drafts/01-june-2026-optimization/boat-storage-units.md"
+    },
+    {
+      "campaign": "01-june-2026-optimization",
+      "stage": "drafts",
+      "from": "clients/find-self-storage/campaigns/01-june-2026-optimization/drafts/car-storage-units.md",
+      "to": "clients/find-self-storage/deliverables/drafts/01-june-2026-optimization/car-storage-units.md"
+    },
+    {
+      "campaign": "01-june-2026-optimization",
+      "stage": "drafts",
+      "from": "clients/find-self-storage/campaigns/01-june-2026-optimization/drafts/motorcycle-storage-units.md",
+      "to": "clients/find-self-storage/deliverables/drafts/01-june-2026-optimization/motorcycle-storage-units.md"
+    },
+    {
+      "campaign": "01-june-2026-optimization",
+      "stage": "drafts",
+      "from": "clients/find-self-storage/campaigns/01-june-2026-optimization/drafts/rv-storage-units.md",
+      "to": "clients/find-self-storage/deliverables/drafts/01-june-2026-optimization/rv-storage-units.md"
+    },
+    {
+      "campaign": "01-june-2026-optimization",
+      "stage": "drafts",
+      "from": "clients/find-self-storage/campaigns/01-june-2026-optimization/drafts/wine-storage-units.md",
+      "to": "clients/find-self-storage/deliverables/drafts/01-june-2026-optimization/wine-storage-units.md"
+    }
+  ]
+}

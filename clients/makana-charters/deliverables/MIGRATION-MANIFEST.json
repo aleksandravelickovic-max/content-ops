@@ -1,0 +1,61 @@
+{
+  "client": "makana-charters",
+  "generated_at": "2026-07-13T20:58:38.997581+00:00",
+  "move_count": 9,
+  "moves": [
+    {
+      "campaign": "01-june-2026-landing-blogs",
+      "stage": "drafts",
+      "from": "clients/makana-charters/campaigns/01-june-2026-landing-blogs/drafts/blog-01-na-pali-snorkeling-guide-v1.md",
+      "to": "clients/makana-charters/deliverables/drafts/01-june-2026-landing-blogs/blog-01-na-pali-snorkeling-guide-v1.md"
+    },
+    {
+      "campaign": "01-june-2026-landing-blogs",
+      "stage": "drafts",
+      "from": "clients/makana-charters/campaigns/01-june-2026-landing-blogs/drafts/blog-02-what-to-pack-v1.md",
+      "to": "clients/makana-charters/deliverables/drafts/01-june-2026-landing-blogs/blog-02-what-to-pack-v1.md"
+    },
+    {
+      "campaign": "01-june-2026-landing-blogs",
+      "stage": "drafts",
+      "from": "clients/makana-charters/campaigns/01-june-2026-landing-blogs/drafts/blog-03-private-catamaran-groups-v1.md",
+      "to": "clients/makana-charters/deliverables/drafts/01-june-2026-landing-blogs/blog-03-private-catamaran-groups-v1.md"
+    },
+    {
+      "campaign": "01-june-2026-landing-blogs",
+      "stage": "drafts",
+      "from": "clients/makana-charters/campaigns/01-june-2026-landing-blogs/drafts/blog-04-sunset-cruise-guide-v1.md",
+      "to": "clients/makana-charters/deliverables/drafts/01-june-2026-landing-blogs/blog-04-sunset-cruise-guide-v1.md"
+    },
+    {
+      "campaign": "01-june-2026-landing-blogs",
+      "stage": "drafts",
+      "from": "clients/makana-charters/campaigns/01-june-2026-landing-blogs/drafts/blog-05-na-pali-sea-caves-v1.md",
+      "to": "clients/makana-charters/deliverables/drafts/01-june-2026-landing-blogs/blog-05-na-pali-sea-caves-v1.md"
+    },
+    {
+      "campaign": "01-june-2026-landing-blogs",
+      "stage": "drafts",
+      "from": "clients/makana-charters/campaigns/01-june-2026-landing-blogs/drafts/blog-06-summer-booking-guide-v1.md",
+      "to": "clients/makana-charters/deliverables/drafts/01-june-2026-landing-blogs/blog-06-summer-booking-guide-v1.md"
+    },
+    {
+      "campaign": "01-june-2026-landing-blogs",
+      "stage": "drafts",
+      "from": "clients/makana-charters/campaigns/01-june-2026-landing-blogs/drafts/lp-01-na-pali-coast-boat-tour-v1.md",
+      "to": "clients/makana-charters/deliverables/drafts/01-june-2026-landing-blogs/lp-01-na-pali-coast-boat-tour-v1.md"
+    },
+    {
+      "campaign": "01-june-2026-landing-blogs",
+      "stage": "drafts",
+      "from": "clients/makana-charters/campaigns/01-june-2026-landing-blogs/drafts/lp-02-kauai-snorkeling-tours-v1.md",
+      "to": "clients/makana-charters/deliverables/drafts/01-june-2026-landing-blogs/lp-02-kauai-snorkeling-tours-v1.md"
+    },
+    {
+      "campaign": "01-june-2026-landing-blogs",
+      "stage": "drafts",
+      "from": "clients/makana-charters/campaigns/01-june-2026-landing-blogs/drafts/lp-03-kauai-sunset-cruise-v1.md",
+      "to": "clients/makana-charters/deliverables/drafts/01-june-2026-landing-blogs/lp-03-kauai-sunset-cruise-v1.md"
+    }
+  ]
+}
