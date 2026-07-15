@@ -1,0 +1,158 @@
+{
+  "client": "deer-solutions",
+  "display_name": "Deer Solution -",
+  "generated_at": "2026-07-14T15:59:27.882388+00:00",
+  "offerings": [
+    {
+      "name": "Customized Deer Control Protection Plan",
+      "description": "Property-specific plan built around the customer's landscape and deer damage problem.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/deer-solutions/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Core Offerings",
+        "Deer Control Services"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Deer Control Repellent Service",
+      "description": "Professional service that applies deer repellent to help protect plants and shrubs from deer damage.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/deer-solutions/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Core Offerings",
+        "Deer Control Services"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Franchise Opportunity",
+      "description": "Separate business ownership path linked from the main site. Do not mix this with homeowner service pages unless the brief is franchise-focused.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/deer-solutions/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Core Offerings",
+        "Business / Franchise Context"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Free At-Home Consultation and Estimate",
+      "description": "Initial visit where a Certified Deer Damage Expert evaluates the property and creates a customized deer control protection plan.",
+      "sources": [
+        "STYLE-SYSTEM.md",
+        "clients/deer-solutions/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Core Offerings",
+        "Deer Control Services"
+      ],
+      "score": 9
+    },
+    {
+      "name": "Certified Deer Damage Expert Visit",
+      "description": "Service consultation performed by a trained deer control professional who evaluates the landscape and deer damage concern.",
+      "sources": [
+        "clients/deer-solutions/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Deer Control Services"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Clear-Drying, Low-Odor Application",
+      "description": "Website positioning that the repellent dries clear and does not have foul odors.",
+      "sources": [
+        "clients/deer-solutions/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Repellent Positioning"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Family, Pet, and Environment-Friendly Framing",
+      "description": "Website positioning for the repellent. Keep this wording tied to the source; do not add unsupported safety claims.",
+      "sources": [
+        "clients/deer-solutions/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Repellent Positioning"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Independently Owned Local Branches",
+      "description": "Deer Solution locations are independently owned and operated.",
+      "sources": [
+        "clients/deer-solutions/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Business / Franchise Context"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Plant and Shrub Protection",
+      "description": "Core customer outcome category focused on protecting flowers, shrubs, and landscaping from deer browsing.",
+      "sources": [
+        "clients/deer-solutions/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Repellent Positioning"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Professional Repellent Application",
+      "description": "Ongoing application service using Deer Solution's proprietary deer repellent.",
+      "sources": [
+        "clients/deer-solutions/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Deer Control Services"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Proprietary Deer Repellent",
+      "description": "Deer repellent described by the company as all-natural and designed to deter deer by taste and smell.",
+      "sources": [
+        "clients/deer-solutions/raw/knowledge/service-taxonomy.md"
+      ],
+      "sections": [
+        "Repellent Positioning"
+      ],
+      "score": 6
+    },
+    {
+      "name": "Deer Solution - Style System",
+      "description": "Source: https://www.deersolution.com/ reviewed on 2026-07-14.",
+      "sources": [
+        "STYLE-SYSTEM.md"
+      ],
+      "sections": [
+        "Deer Solution - Style System"
+      ],
+      "score": 4
+    },
+    {
+      "name": "Professional Application Service",
+      "description": "Deer repellent service performed by trained and licensed deer control professionals.",
+      "sources": [
+        "STYLE-SYSTEM.md"
+      ],
+      "sections": [
+        "Core Offerings"
+      ],
+      "score": 3
+    }
+  ]
+}
