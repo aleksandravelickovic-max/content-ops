@@ -1,0 +1,773 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>LinkGraph GEO, AEO, and SEO Opportunity Report - 2026-07-14</title>
+<style>
+:root {
+  --sidebar: 296px;
+  --paper: #fdfcf9;
+  --sidebar-bg: #f7f3ea;
+  --soft: #f3eee2;
+  --line: #e6dfcf;
+  --rule: #c9b88a;
+  --ink: #171923;
+  --muted: #676252;
+  --accent: #1d2960;
+  --accent-soft: #e8eaf2;
+  --green: #1f6f4a;
+  --green-bg: #eaf3ec;
+  --red: #a8442a;
+  --red-bg: #f7e9e0;
+  --amber: #9a620d;
+  --amber-bg: #fbefd3;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.58;
+}
+a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(29,41,96,.25); }
+a:hover { border-bottom-color: currentColor; }
+.shell { display: grid; grid-template-columns: var(--sidebar) minmax(0, 1fr); min-height: 100vh; }
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--line);
+  padding: 24px 0;
+}
+.side-head { padding: 0 24px 18px; border-bottom: 1px solid var(--line); }
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.side-title {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 20px;
+  line-height: 1.2;
+}
+.side-meta {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+.nav { padding: 14px 0; }
+.nav-group {
+  padding: 12px 24px 4px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.nav a {
+  display: block;
+  min-height: 36px;
+  padding: 8px 24px 8px 28px;
+  color: var(--ink);
+  border: 0;
+  border-left: 3px solid transparent;
+  font-size: 14px;
+}
+.nav a:hover { background: var(--soft); color: var(--accent); }
+.nav a.active {
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-left-color: var(--accent);
+  font-weight: 700;
+}
+.content {
+  max-width: 980px;
+  padding: 44px 58px 80px;
+}
+.hero {
+  padding-bottom: 30px;
+  margin-bottom: 42px;
+  border-bottom: 1px solid var(--line);
+}
+.hero h1 {
+  max-width: 760px;
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(40px, 7vw, 72px);
+  line-height: .96;
+  letter-spacing: 0;
+}
+.rule {
+  width: 88px;
+  height: 3px;
+  margin: 26px 0 18px;
+  background: var(--rule);
+}
+.subtitle {
+  max-width: 760px;
+  margin: 0;
+  color: #31323a;
+  font-family: var(--serif);
+  font-size: 22px;
+  line-height: 1.35;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 26px;
+}
+.metric {
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 14px;
+  border-radius: 8px;
+}
+.metric strong {
+  display: block;
+  font-size: 26px;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+.metric span {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 12px;
+}
+section {
+  margin: 0 0 58px;
+  scroll-margin-top: 28px;
+}
+section h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 34px;
+  line-height: 1.08;
+}
+section h2:after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 2px;
+  margin: 14px 0 20px;
+  background: var(--rule);
+}
+h3 {
+  margin: 30px 0 10px;
+  font-size: 18px;
+  line-height: 1.25;
+}
+p, li { max-width: 74ch; }
+p { margin: 0 0 14px; }
+ul, ol { padding-left: 22px; }
+li { margin: 6px 0; }
+.lead {
+  font-size: 19px;
+  line-height: 1.48;
+  color: #282a33;
+}
+.callout {
+  margin: 22px 0;
+  padding: 18px 20px;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 8px 8px 0;
+}
+.callout.good { border-left-color: var(--green); background: var(--green-bg); }
+.callout.warn { border-left-color: var(--red); background: var(--red-bg); }
+.callout.amber { border-left-color: var(--amber); background: var(--amber-bg); }
+.callout strong {
+  display: block;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: 12px;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 22px 0;
+}
+.card {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 8px;
+  padding: 18px;
+}
+.card h3 { margin-top: 0; }
+.pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.pill.red { background: var(--red-bg); color: var(--red); }
+.pill.green { background: var(--green-bg); color: var(--green); }
+.pill.amber { background: var(--amber-bg); color: var(--amber); }
+table {
+  width: 100%;
+  margin: 20px 0 28px;
+  border-collapse: collapse;
+  border: 1px solid var(--line);
+  background: #fff;
+  font-size: 14px;
+}
+th, td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  text-align: left;
+}
+th {
+  background: #f7f3ea;
+  color: #333126;
+  font-size: 12px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.score {
+  display: grid;
+  grid-template-columns: 180px 1fr 48px;
+  gap: 10px;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 14px;
+}
+.bar {
+  height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #e9e1d3;
+}
+.bar span { display: block; height: 100%; background: var(--accent); }
+.small { color: var(--muted); font-size: 13px; }
+.roadmap {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+.roadmap .card { min-height: 100%; }
+.footer {
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 13px;
+}
+@media (max-width: 900px) {
+  .shell { grid-template-columns: 1fr; }
+  .sidebar { position: static; height: auto; }
+  .content { padding: 30px 22px 60px; }
+  .meta-grid, .grid-2, .roadmap { grid-template-columns: 1fr; }
+  .score { grid-template-columns: 1fr; }
+}
+@media print {
+  .shell { display: block; }
+  .sidebar { display: none; }
+  .content { max-width: none; padding: 0; }
+  section { break-before: page; }
+  a { color: inherit; border: 0; }
+  body { background: #fff; }
+}
+</style>
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar" aria-label="Report navigation">
+    <div class="side-head">
+      <p class="eyebrow">LinkGraph Strategy</p>
+      <h1 class="side-title">GEO, AEO, and SEO Opportunity Report</h1>
+      <p class="side-meta">Report date: 2026-07-14<br>Data source: Search Atlas</p>
+    </div>
+    <nav class="nav">
+      <div class="nav-group">Executive Read</div>
+      <a href="#summary">Summary</a>
+      <a href="#position">Positioning Diagnosis</a>
+      <a href="#search-atlas-edge">Search Atlas Edge</a>
+      <div class="nav-group">Evidence</div>
+      <a href="#serp">SEO SERP Evidence</a>
+      <a href="#llm">AEO and LLM Evidence</a>
+      <a href="#gaps">Keyword Gaps</a>
+      <div class="nav-group">Strategy</div>
+      <a href="#clusters">Content Clusters</a>
+      <a href="#entity">Entity and Citation Plan</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#measurement">Measurement</a>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <header class="hero">
+      <p class="eyebrow">Internal Growth Strategy</p>
+      <h1>LinkGraph GEO, AEO, and SEO Opportunity Report</h1>
+      <div class="rule"></div>
+      <p class="subtitle">How LinkGraph.com can move from partial visibility to a defensible enterprise search presence across Google, AI answers, and citation-driven discovery.</p>
+      <div class="meta-grid" aria-label="Top report facts">
+        <div class="metric"><strong>0/10</strong><span>Top 3 organic placements across sampled enterprise-relevant terms</span></div>
+        <div class="metric"><strong>1</strong><span>Clear prompt-level AEO win: Gemini mentioned LinkGraph at position 3 for enterprise link building</span></div>
+        <div class="metric"><strong>1.091%</strong><span>Observed Search Atlas LLM share of voice in a broader 30-day competitor dataset</span></div>
+        <div class="metric"><strong>3</strong><span>Strategic pillars: enterprise SEO, AEO/GEO, authority acquisition</span></div>
+      </div>
+    </header>
+
+    <section id="summary">
+      <h2>Summary</h2>
+      <p class="lead">LinkGraph is visible enough to be found by AI systems, but not yet defined strongly enough to be recommended as a leading enterprise SEO, AEO, or GEO provider.</p>
+      <p>The strongest current association is link building. That is valuable because authority acquisition is central to SEO and AI citation visibility, but it is too narrow for the enterprise buyer. The opportunity is to connect LinkGraph's authority-building strength to a broader category claim: enterprise SEO for brands that need to win in Google, AI answers, and citation-led search.</p>
+      <div class="callout warn">
+        <strong>Main risk</strong>
+        LinkGraph can be included as one option in AI answers without becoming the named authority. That creates weak recall: the brand appears occasionally, but competitors shape the category narrative.
+      </div>
+      <div class="callout good">
+        <strong>Main advantage</strong>
+        LinkGraph has direct access to Search Atlas, which means the team can run the exact workflow that most competitors can only describe: SERP analysis, keyword gaps, LLM visibility, prompt testing, topic monitoring, and iteration from one operating system.
+      </div>
+    </section>
+
+    <section id="position">
+      <h2>Positioning Diagnosis</h2>
+      <p>The market is not missing another generic SEO agency page. The market is missing a credible bridge between enterprise SEO execution and the new answer-engine layer.</p>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Current machine association</h3>
+          <p><span class="pill amber">Partial</span></p>
+          <p>LinkGraph appears most naturally in link building and authority conversations. In the prompt test, the cleanest mention was for enterprise link building services.</p>
+        </div>
+        <div class="card">
+          <h3>Needed machine association</h3>
+          <p><span class="pill green">Target</span></p>
+          <p>LinkGraph should be understood as an enterprise SEO and AI visibility partner that combines technical SEO, content systems, link acquisition, digital PR, and Search Atlas intelligence.</p>
+        </div>
+      </div>
+      <h3>The category claim to build around</h3>
+      <p><strong>LinkGraph helps enterprise brands grow search visibility across Google, AI answers, and citation-driven discovery by combining technical SEO, content authority, digital PR, and Search Atlas intelligence.</strong></p>
+      <p>This claim is broader than link building, but it does not abandon the existing strength. It uses authority acquisition as the wedge into GEO and AEO.</p>
+    </section>
+
+    <section id="search-atlas-edge">
+      <h2>The Search Atlas Edge</h2>
+      <p>Direct Search Atlas usage should become part of the LinkGraph pitch and the internal production workflow. It is not just a research platform. It is the way LinkGraph can continuously monitor where Google, AI platforms, and competitors are moving.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Search Atlas capability</th>
+            <th>How LinkGraph should use it</th>
+            <th>Report evidence</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>SERP overview</td>
+            <td>Identify the true page types winning for enterprise SEO, technical SEO, link building, white label SEO, and digital PR terms.</td>
+            <td>Top 3 SERP pulls showed WebFX, BrightEdge, Coalition, Thrive, Onely, SEOReseller, Loganix, and Page One Power patterns.</td>
+          </tr>
+          <tr>
+            <td>LLM visibility</td>
+            <td>Track whether LinkGraph is named, ranked, and cited in AI-generated recommendations, not just organic blue links.</td>
+            <td>Search Atlas showed LinkGraph present but behind stronger entities in share-of-voice style views.</td>
+          </tr>
+          <tr>
+            <td>Prompt simulator</td>
+            <td>Test buyer prompts weekly across ChatGPT, Gemini, Perplexity, and Google AI Mode style surfaces.</td>
+            <td>Prompt test showed one strong Gemini mention for enterprise link building, but weak presence for enterprise SEO, technical SEO, AI SEO, and white label SEO prompts.</td>
+          </tr>
+          <tr>
+            <td>Keyword gap analysis</td>
+            <td>Find missing topic demand across AI SEO, technical SEO, enterprise SEO, managed SEO, and B2B SEO variants.</td>
+            <td>Gap terms included ai seo agency, ai seo services, technical seo agency, best enterprise seo agency, and seo agency for b2b.</td>
+          </tr>
+          <tr>
+            <td>Ongoing monitoring</td>
+            <td>Use the same prompt set and keyword set as an operating dashboard after publishing new pages and earning third-party mentions.</td>
+            <td>The current baseline gives LinkGraph a measurable before-state.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="callout">
+        <strong>Messaging implication</strong>
+        LinkGraph should not say it understands GEO and AEO only in theory. It should say it measures AI visibility directly, identifies missing entity associations, and builds the technical, content, and citation assets that cause brands to be named.
+      </div>
+    </section>
+
+    <section id="serp">
+      <h2>SEO SERP Evidence</h2>
+      <p>The top organic results show that each term cluster has a different page type requirement. LinkGraph should not use one generic SEO services template for all of them.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Term</th>
+            <th>Top 3 organic results</th>
+            <th>What this means</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>enterprise seo services</td>
+            <td>WebFX, SEO Brand, Reboot Online</td>
+            <td>Dedicated enterprise service pages and best-agency listicles are both active competitors.</td>
+          </tr>
+          <tr>
+            <td>enterprise seo agency</td>
+            <td>BrightEdge, WebFX, Coalition Technologies</td>
+            <td>Platform-style enterprise SEO education and agency service pages both rank.</td>
+          </tr>
+          <tr>
+            <td>seo agency</td>
+            <td>Semrush Agencies, Thrive, Coalition Technologies</td>
+            <td>Broad head term is directory and local-intent heavy. It is not the best first wedge.</td>
+          </tr>
+          <tr>
+            <td>seo services</td>
+            <td>GoDaddy, Fiverr, Logical Position</td>
+            <td>Marketplace and SMB intent dominates. Enterprise positioning will be diluted here.</td>
+          </tr>
+          <tr>
+            <td>link building services</td>
+            <td>Loganix, Reddit, Page One Power</td>
+            <td>LinkGraph's current brand association should be reinforced with stronger proof and third-party validation.</td>
+          </tr>
+          <tr>
+            <td>technical seo services</td>
+            <td>Milestone Internet, TechnicalSEO.com, Onely</td>
+            <td>Technical credibility requires detailed diagnostic pages, not broad agency copy.</td>
+          </tr>
+          <tr>
+            <td>technical seo agency</td>
+            <td>Thrive, Onely, Clutch</td>
+            <td>Service pages and directories shape buyer discovery. LinkGraph needs both owned pages and list inclusion.</td>
+          </tr>
+          <tr>
+            <td>white label seo services</td>
+            <td>SEOReseller, Reddit, The HOTH</td>
+            <td>White-label intent is distinct from enterprise brand SEO. If LinkGraph wants this category, it needs a dedicated asset.</td>
+          </tr>
+          <tr>
+            <td>seo outsourcing services</td>
+            <td>SEO Outsourcing Services, O8 Agency, NinjaPromo</td>
+            <td>Outsourcing terms skew tactical and cost-sensitive. Useful for a reseller/agency funnel, not the primary enterprise story.</td>
+          </tr>
+          <tr>
+            <td>digital pr services</td>
+            <td>Resolve, Ranko Media, Percepture</td>
+            <td>Digital PR should be tied to AI citation visibility and authority building, not treated as a detached PR service.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="llm">
+      <h2>AEO and LLM Evidence</h2>
+      <p>The prompt simulator tested five buyer-style prompts across ChatGPT, Gemini, and Perplexity. LinkGraph was present, but not consistently recommended.</p>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Where LinkGraph showed up</h3>
+          <p>Gemini mentioned LinkGraph at position 3 for: <strong>What are the best link building services for enterprise SEO teams?</strong></p>
+          <p>This confirms that link building remains the clearest entity association.</p>
+        </div>
+        <div class="card">
+          <h3>Where LinkGraph was weak</h3>
+          <p>LinkGraph was mostly absent for enterprise SEO agency, technical SEO for large websites, AI search optimization, AEO, GEO, and white-label SEO prompts.</p>
+          <p>This is the core AEO opportunity.</p>
+        </div>
+      </div>
+      <h3>Common citation sources in the prompt test</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Domain</th>
+            <th class="num">Citation count</th>
+            <th>Implication</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>webfx.com</td><td class="num">7</td><td>Strong owned service-page and educational footprint.</td></tr>
+          <tr><td>semrush.com</td><td class="num">7</td><td>High authority source and directory layer influence AI answers.</td></tr>
+          <tr><td>ignitevisibility.com</td><td class="num">6</td><td>Agency entity has enough third-party and owned-page support to be reused.</td></tr>
+          <tr><td>siegemedia.com</td><td class="num">5</td><td>Listicle and authority-content strategy influences both SEO and AI answers.</td></tr>
+          <tr><td>searchengineland.com</td><td class="num">4</td><td>Editorial industry sources matter for AEO credibility.</td></tr>
+        </tbody>
+      </table>
+      <div class="callout amber">
+        <strong>AEO implication</strong>
+        AI answers are not only reading LinkGraph.com. They are triangulating from listicles, directories, editorial sources, competitor pages, and high-authority industry publications. The plan has to include off-site entity reinforcement.
+      </div>
+    </section>
+
+    <section id="gaps">
+      <h2>Keyword Gaps</h2>
+      <p>The Search Atlas keyword gap job surfaced demand in the exact places LinkGraph needs stronger category ownership. Competitor-detail fields returned empty, so this table should be treated as opportunity direction, not exhaustive ranking proof.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Opportunity cluster</th>
+            <th>Representative terms</th>
+            <th>Content response</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>AI SEO</td>
+            <td>ai seo agency, ai seo services, ai seo companies, ai driven seo services, ai seo specialist</td>
+            <td>Create a serious AI SEO service cluster that explains measurement, entity gaps, citation strategy, and Search Atlas workflow.</td>
+          </tr>
+          <tr>
+            <td>AI search optimization</td>
+            <td>ai search optimization agency</td>
+            <td>Create a dedicated page for AI search optimization with prompt visibility, source inclusion, and answer monitoring.</td>
+          </tr>
+          <tr>
+            <td>Enterprise SEO</td>
+            <td>best enterprise seo agency, top enterprise seo company, global seo services</td>
+            <td>Build enterprise SEO pages that cover large-site complexity, cross-market execution, reporting, and technical SEO governance.</td>
+          </tr>
+          <tr>
+            <td>Technical SEO</td>
+            <td>technical seo agency, technical seo agencies, technical seo companies, technical seo services company, technical seo firm</td>
+            <td>Build technical diagnostic pages around indexation, crawl budget, site migrations, JavaScript SEO, Core Web Vitals, and log analysis.</td>
+          </tr>
+          <tr>
+            <td>B2B and managed SEO</td>
+            <td>seo agency for b2b, fully managed seo services, seo full service, complete seo service</td>
+            <td>Clarify what LinkGraph manages end to end and which buyer types it serves best.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="clusters">
+      <h2>Content Clusters</h2>
+      <p>LinkGraph needs owned assets that make the right entity associations explicit and easy for both Google and LLMs to extract.</p>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Cluster 1: Enterprise SEO</h3>
+          <ul>
+            <li>Enterprise SEO Services</li>
+            <li>Enterprise SEO Agency</li>
+            <li>B2B SEO Agency</li>
+            <li>Global SEO Services</li>
+            <li>SEO for Large Websites</li>
+            <li>Enterprise SEO Audit</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Cluster 2: AI Search, AEO, and GEO</h3>
+          <ul>
+            <li>AI SEO Services</li>
+            <li>AI SEO Agency</li>
+            <li>Answer Engine Optimization Services</li>
+            <li>Generative Engine Optimization Services</li>
+            <li>AI Search Optimization Agency</li>
+            <li>LLM Visibility Optimization</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Cluster 3: Technical SEO</h3>
+          <ul>
+            <li>Technical SEO Services</li>
+            <li>Technical SEO Agency</li>
+            <li>JavaScript SEO Services</li>
+            <li>Site Migration SEO Services</li>
+            <li>Crawl Budget Optimization</li>
+            <li>Indexation Audit</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Cluster 4: Authority and Digital PR</h3>
+          <ul>
+            <li>Enterprise Link Building Services</li>
+            <li>Digital PR Services</li>
+            <li>Authority Building for AI Search</li>
+            <li>Link Building for B2B SaaS</li>
+            <li>Editorial Link Acquisition</li>
+            <li>Brand Mentions and Citation Strategy</li>
+          </ul>
+        </div>
+      </div>
+      <h3>Required page mechanics</h3>
+      <ul>
+        <li>Answer the core query in the first paragraph.</li>
+        <li>Use definition blocks that LLMs can reuse.</li>
+        <li>Include process sections with named deliverables.</li>
+        <li>Add comparison tables where buyer evaluation is likely.</li>
+        <li>Use FAQ schema on pages with obvious buyer questions.</li>
+        <li>Add Organization, Service, Breadcrumb, and sameAs schema where appropriate.</li>
+        <li>Include proof blocks: screenshots, anonymized audit examples, case study summaries, and metrics only where verified.</li>
+      </ul>
+    </section>
+
+    <section id="entity">
+      <h2>Entity and Citation Plan</h2>
+      <p>GEO and AEO require more than publishing pages. LinkGraph needs entity reinforcement across sources AI systems already trust.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Workstream</th>
+            <th>Action</th>
+            <th>Why it matters</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Third-party lists</td>
+            <td>Earn inclusion in best enterprise SEO agencies, best technical SEO agencies, best AI SEO agencies, best AEO agencies, and best link building services lists.</td>
+            <td>LLMs repeatedly use list pages and directories as recommendation sources.</td>
+          </tr>
+          <tr>
+            <td>Industry publications</td>
+            <td>Pitch original data from Search Atlas on AI citation patterns, enterprise SEO volatility, and prompt visibility.</td>
+            <td>Editorial citations help AI systems connect LinkGraph with the topic, not only its own website.</td>
+          </tr>
+          <tr>
+            <td>Comparison pages</td>
+            <td>Create LinkGraph vs WebFX, LinkGraph vs Coalition, LinkGraph vs Page One Power, LinkGraph vs SEOReseller, and LinkGraph vs Onely pages where fair and factual.</td>
+            <td>Comparison pages capture evaluation intent and clarify the category difference.</td>
+          </tr>
+          <tr>
+            <td>Entity consistency</td>
+            <td>Standardize descriptions across LinkGraph profiles, agency directories, social profiles, author bios, and partner pages.</td>
+            <td>AI systems need repeated, consistent associations to resolve the brand cleanly.</td>
+          </tr>
+          <tr>
+            <td>Proof library</td>
+            <td>Build reusable case studies, service deliverable examples, audit screenshots, and AI visibility baselines.</td>
+            <td>Proof turns claims into citeable assets.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="roadmap">
+      <h2>Roadmap</h2>
+      <p>The roadmap should move in three waves: establish the owned foundation, reinforce the entity off-site, then monitor and iterate with Search Atlas.</p>
+      <div class="roadmap">
+        <div class="card">
+          <h3>0-30 days</h3>
+          <ul>
+            <li>Publish or rebuild Enterprise SEO Services.</li>
+            <li>Publish AI SEO / AEO / GEO service hub.</li>
+            <li>Publish Technical SEO Services.</li>
+            <li>Add service and organization schema.</li>
+            <li>Finalize weekly prompt tracking set in Search Atlas.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>30-60 days</h3>
+          <ul>
+            <li>Publish 8-12 support pages across enterprise, AI search, and technical SEO clusters.</li>
+            <li>Start third-party list inclusion outreach.</li>
+            <li>Publish one original Search Atlas-backed AI visibility study.</li>
+            <li>Create first comparison pages.</li>
+            <li>Build reusable proof blocks for service pages.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>60-90 days</h3>
+          <ul>
+            <li>Expand into B2B SaaS, ecommerce, marketplace, and multi-location pages if services are confirmed.</li>
+            <li>Refresh pages based on Search Atlas rank and LLM mention movement.</li>
+            <li>Publish case studies and audit examples.</li>
+            <li>Run quarterly entity consistency audit.</li>
+            <li>Report GEO/AEO share of voice alongside organic rankings.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="measurement">
+      <h2>Measurement</h2>
+      <p>The scorecard should combine classic SEO metrics with answer-engine visibility. Ranking alone will miss the new discovery layer.</p>
+      <div class="score"><span>Top 3 organic rankings</span><span class="bar"><span style="width: 0%"></span></span><span>0/10</span></div>
+      <div class="score"><span>Prompt mention coverage</span><span class="bar"><span style="width: 20%"></span></span><span>1/5</span></div>
+      <div class="score"><span>Current LLM share of voice</span><span class="bar"><span style="width: 11%"></span></span><span>1.091%</span></div>
+      <div class="score"><span>Entity association strength</span><span class="bar"><span style="width: 35%"></span></span><span>Link building led</span></div>
+      <h3>Weekly Search Atlas scorecard</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Target movement</th>
+            <th>Tool path</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Target keyword rankings</td>
+            <td>Move priority service pages into top 10, then top 3.</td>
+            <td>Rank tracking and SERP overview</td>
+          </tr>
+          <tr>
+            <td>LLM mention rate</td>
+            <td>Increase mentions across enterprise SEO, technical SEO, AI SEO, AEO, and GEO prompts.</td>
+            <td>Prompt simulator</td>
+          </tr>
+          <tr>
+            <td>LLM position rank</td>
+            <td>Move from occasional mention to top 3 recommendation.</td>
+            <td>Prompt simulator response analysis</td>
+          </tr>
+          <tr>
+            <td>Share of voice</td>
+            <td>Move above direct service competitors in AI visibility views.</td>
+            <td>LLM visibility competitor data</td>
+          </tr>
+          <tr>
+            <td>Citation source count</td>
+            <td>Increase references from high-authority owned and third-party pages.</td>
+            <td>Prompt simulator citations and SERP source tracking</td>
+          </tr>
+          <tr>
+            <td>Third-party list inclusion</td>
+            <td>Secure placements in lists that AI systems already cite.</td>
+            <td>Manual tracker plus SERP monitoring</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="callout good">
+        <strong>Bottom line</strong>
+        The fastest path is not to chase every SEO agency keyword. Build the enterprise SEO, AI search, technical SEO, and authority-acquisition entity graph first, then use Search Atlas to prove where visibility moves.
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Report date: 2026-07-14. Data sources: Search Atlas SERP overview project 4738849, Search Atlas LLM visibility checks for linkgraph.com, Search Atlas prompt simulator analysis bbe52a3e-b6f9-4a3d-815f-c07e2cefa9b6, and Search Atlas keyword gap analysis 35102. This report uses competitor observations and prompt-output patterns as strategy inputs, not as claims about guaranteed future performance.</p>
+    </footer>
+  </main>
+</div>
+<script>
+const links = [...document.querySelectorAll('.nav a')];
+const sections = links.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+const observer = new IntersectionObserver(entries => {
+  const visible = entries.filter(entry => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+  if (!visible) return;
+  links.forEach(link => {
+    const active = link.getAttribute('href') === '#' + visible.target.id;
+    link.classList.toggle('active', active);
+  });
+}, { rootMargin: '-18% 0px -68% 0px', threshold: [0.01, 0.15, 0.4] });
+sections.forEach(section => observer.observe(section));
+</script>
+</body>
+</html>
