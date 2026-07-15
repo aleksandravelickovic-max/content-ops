@@ -1,0 +1,2409 @@
+{
+  "summary": {
+    "generated_at": "2026-07-14T16:19:17.832939+00:00",
+    "client_count": 25,
+    "ready_count": 1,
+    "partial_count": 24,
+    "not_ready_count": 0,
+    "blocked_count": 0,
+    "campaign_count": 17,
+    "run_count": 2,
+    "monthly_deliverable_count": 0,
+    "monthly_registry_count": 0,
+    "website_intel_count": 25,
+    "urgent_automation_count": 7,
+    "missing_owner_count": 2
+  },
+  "clients": [
+    {
+      "slug": "5gstore",
+      "display_name": "5Gstore",
+      "path": "clients/5gstore",
+      "status": "briefing",
+      "inferred_status": "briefing",
+      "priority": "soon",
+      "automation_priority": 2,
+      "active_monthly_volume": "5 pages/month",
+      "brand_voice": "Knowledgeable technical specialist who guides buyers through complex equipment decisions without condescending or oversimplifying.",
+      "risk_flags": "Company name must always be written exactly as 5Gstore. Never 5GStore or 5G Store.",
+      "owner_label": "CSM/POC: Arianna Trabanino / Editor: Aleksandra Velickovic / Writer: Unassigned writer",
+      "writer": "",
+      "editor": "Aleksandra Velickovic",
+      "csm": "Arianna Trabanino",
+      "next_action": "",
+      "blocker": "",
+      "review_url": "",
+      "delivery_url": "",
+      "notes": "Specialized 4G/5G networking equipment retailer.",
+      "readiness_score": 56,
+      "readiness_status": "partial",
+      "missing_required": [],
+      "missing_recommended": [
+        "Compliance rules",
+        "Delivery config",
+        "Approved examples",
+        "Page templates"
+      ],
+      "campaigns": [
+        {
+          "slug": "01-may-content-optimization",
+          "path": "clients/5gstore/campaigns/01-may-content-optimization",
+          "title": "01 — May Content Optimization",
+          "has_readme": true,
+          "draft_count": 0,
+          "final_count": 0,
+          "html_count": 0
+        }
+      ],
+      "runs": [],
+      "monthly_deliverables": [],
+      "blockers": [],
+      "service_taxonomy": {
+        "count": 6,
+        "items": [
+          {
+            "name": "Enterprise Routers",
+            "description": "Peplink and related business routers for cellular, WAN, failover, and multi-location networking."
+          },
+          {
+            "name": "Mobile Hotspots",
+            "description": "Portable 4G and 5G hotspot devices for mobile broadband use cases."
+          },
+          {
+            "name": "Signal Boosters",
+            "description": "Cellular signal booster hardware. Writers must describe mechanism and conditions, not guaranteed signal outcomes."
+          },
+          {
+            "name": "Antennas",
+            "description": "External cellular and networking antennas for routers, modems, hotspots, and booster setups."
+          },
+          {
+            "name": "Hardware Accessories",
+            "description": "Cables, splitters, mounts, adapters, and device-specific networking accessories."
+          },
+          {
+            "name": "Software Licenses / Cloud Services",
+            "description": "Peplink SpeedFusion Connect and related licenses or cloud services, with firmware and license limits verified before writing."
+          }
+        ]
+      },
+      "website_intelligence": {
+        "status": "ok",
+        "website_urls": [
+          "https://5gstore.com/"
+        ],
+        "sitemap_count": 1,
+        "url_count": 1200,
+        "product_or_service_count": 80,
+        "top_terms": [
+          "airlink",
+          "latest",
+          "for",
+          "support",
+          "year",
+          "click",
+          "here",
+          "submit",
+          "question",
+          "posts",
+          "youtube",
+          "videos"
+        ],
+        "blockers": []
+      }
+    },
+    {
+      "slug": "a-plus-landscaping",
+      "display_name": "A Plus Landscaping",
+      "path": "clients/a-plus-landscaping",
+      "status": "briefing",
+      "inferred_status": "briefing",
+      "priority": "later",
+      "automation_priority": 3,
+      "active_monthly_volume": "3 optimizations/month",
+      "brand_voice": "Experienced, warm, and straightforward: a family-owned builder who lets the work speak, never corporate or over-polished.",
+      "risk_flags": "A Plus is a design-build outdoor living company, not lawn care. Warranty applies only to paver patio projects.",
+      "owner_label": "CSM/POC: Arianna Trabanino / Editor: Aleksandra Velickovic / Writer: Unassigned writer",
+      "writer": "",
+      "editor": "Aleksandra Velickovic",
+      "csm": "Arianna Trabanino",
+      "next_action": "",
+      "blocker": "",
+      "review_url": "",
+      "delivery_url": "",
+      "notes": "Family-owned outdoor living design-build in Central PA. No dashes ever.",
+      "readiness_score": 67,
+      "readiness_status": "partial",
+      "missing_required": [],
+      "missing_recommended": [
+        "Compliance rules",
+        "Delivery config",
+        "Page templates"
+      ],
+      "campaigns": [
+        {
+          "slug": "01-retaining-walls-pr",
+          "path": "clients/a-plus-landscaping/campaigns/01-retaining-walls-pr",
+          "title": "01-retaining-walls-pr",
+          "has_readme": false,
+          "draft_count": 0,
+          "final_count": 0,
+          "html_count": 0
+        },
+        {
+          "slug": "02-page-optimization-jun2026",
+          "path": "clients/a-plus-landscaping/campaigns/02-page-optimization-jun2026",
+          "title": "02-page-optimization-jun2026",
+          "has_readme": false,
+          "draft_count": 0,
+          "final_count": 0,
+          "html_count": 0
+        }
+      ],
+      "runs": [],
+      "monthly_deliverables": [],
+      "blockers": [],
+      "service_taxonomy": {
+        "count": 39,
+        "items": [
+          {
+            "name": "Custom Outdoor Living Design & Build",
+            "description": "Design and construction for custom outdoor living spaces in South Central PA, with a focus on hardscaping, landscaping, craftsmanship, work ethic, and integrity."
+          },
+          {
+            "name": "Hardscape Financing",
+            "description": "Financing option through HFS Financial for landscaping and outdoor living projects, including longer term payment options for larger outdoor projects."
+          },
+          {
+            "name": "Outdoor Living Design",
+            "description": "Planning and design for custom outdoor spaces, from the initial property walk through the construction plan."
+          },
+          {
+            "name": "Hardscaping",
+            "description": "Structural outdoor construction for patios, driveways, retaining walls, steps, pillars, permeable pavers, stone decks, and concrete overlays."
+          },
+          {
+            "name": "Patios",
+            "description": "Custom patio design and installation for usable outdoor living areas."
+          },
+          {
+            "name": "Paver Driveways",
+            "description": "Paver driveway installation for residential entries and vehicle surfaces."
+          },
+          {
+            "name": "Retaining Walls",
+            "description": "Wall systems that support grade changes, manage soil, and make patios or other outdoor features possible."
+          }
+        ]
+      },
+      "website_intelligence": {
+        "status": "ok",
+        "website_urls": [
+          "https://apluslandscaping.com/"
+        ],
+        "sitemap_count": 2,
+        "url_count": 214,
+        "product_or_service_count": 2,
+        "top_terms": [
+          "landscaping",
+          "plus",
+          "outdoor",
+          "for",
+          "living",
+          "resources",
+          "areas",
+          "serve",
+          "space",
+          "hardscaping",
+          "lighting",
+          "benefits"
+        ],
+        "blockers": []
+      }
+    },
+    {
+      "slug": "altify",
+      "display_name": "Altify",
+      "path": "clients/altify",
+      "status": "briefing",
+      "inferred_status": "briefing",
+      "priority": "urgent",
+      "automation_priority": 1,
+      "active_monthly_volume": "6 blog posts/month",
+      "brand_voice": "Authoritative enterprise sales strategist: confident, educational, results-focused, written for revenue leaders.",
+      "risk_flags": "High Touch / High Value. Strict terminology adherence required. Avoid generic sales tips or casual seller framing.",
+      "owner_label": "CSM/POC: Chanakya Thakkar / Editor: Aleksandra Velickovic / Writer: Unassigned writer",
+      "writer": "",
+      "editor": "Aleksandra Velickovic",
+      "csm": "Chanakya Thakkar",
+      "next_action": "Confirm compliance and terminology rules are captured in the client brief before automation.",
+      "blocker": "",
+      "review_url": "",
+      "delivery_url": "",
+      "notes": "Enterprise account planning AI platform.",
+      "readiness_score": 56,
+      "readiness_status": "partial",
+      "missing_required": [],
+      "missing_recommended": [
+        "Compliance rules",
+        "Delivery config",
+        "Approved examples",
+        "Page templates"
+      ],
+      "campaigns": [
+        {
+          "slug": "01-may-content-optimization",
+          "path": "clients/altify/campaigns/01-may-content-optimization",
+          "title": "01 — May Content Optimization",
+          "has_readme": true,
+          "draft_count": 0,
+          "final_count": 0,
+          "html_count": 0
+        },
+        {
+          "slug": "01-mcp-v015-pr",
+          "path": "clients/altify/campaigns/01-mcp-v015-pr",
+          "title": "01-mcp-v015-pr",
+          "has_readme": false,
+          "draft_count": 0,
+          "final_count": 0,
+          "html_count": 0
+        },
+        {
+          "slug": "02-june-2026-content-optimization",
+          "path": "clients/altify/campaigns/02-june-2026-content-optimization",
+          "title": "02 — June 2026 Content Optimization",
+          "has_readme": true,
+          "draft_count": 0,
+          "final_count": 0,
+          "html_count": 0
+        }
+      ],
+      "runs": [],
+      "monthly_deliverables": [],
+      "blockers": [],
+      "service_taxonomy": {
+        "count": 19,
+        "items": [
+          {
+            "name": "Altify Insights",
+            "description": "Salesforce-native insight mapping for buyer priorities, stakeholder motivation, and relationship context inside complex B2B deals."
+          },
+          {
+            "name": "Altify Sales Process",
+            "description": "Sales process management that aligns seller activity to the customer buying cycle inside Salesforce."
+          },
+          {
+            "name": "Altify Opportunities",
+            "description": "Opportunity management for complex deals, deal risk, stakeholder coverage, and disciplined execution."
+          },
+          {
+            "name": "Altify Accounts",
+            "description": "Account planning for strategic accounts, relationship visibility, whitespace analysis, account objectives, and expansion planning inside Salesforce."
+          },
+          {
+            "name": "Revenue Enablement Services",
+            "description": "Consulting and enablement support for methodology adoption, sales process development, coaching, KPI measurement, analytics, and Salesforce execution."
+          },
+          {
+            "name": "MaxAI",
+            "description": "Salesforce-native AI for account planning and deal management. It surfaces buying insights, maps relationships, flags deal risk, and guides sellers through next actions."
+          },
+          {
+            "name": "Account Planning AI Cloud",
+            "description": "Altify's platform category for account planning, opportunity execution, relationship intelligence, methodology, AI workflows, and enablement services."
+          }
+        ]
+      },
+      "website_intelligence": {
+        "status": "ok",
+        "website_urls": [
+          "https://altify.com/"
+        ],
+        "sitemap_count": 7,
+        "url_count": 372,
+        "product_or_service_count": 0,
+        "top_terms": [
+          "sales",
+          "altify",
+          "execution",
+          "how",
+          "account",
+          "planning",
+          "gap",
+          "insights",
+          "revenue",
+          "articles",
+          "strategies",
+          "strategy"
+        ],
+        "blockers": []
+      }
+    },
+    {
+      "slug": "anne-therese",
+      "display_name": "Anne Therese Aesthetic Medicine",
+      "path": "clients/anne-therese",
+      "status": "ready",
+      "inferred_status": "ready",
+      "priority": "urgent",
+      "automation_priority": 1,
+      "active_monthly_volume": "12 blog posts/month",
+      "brand_voice": "Credible and approachable with a premium aesthetic focus: medical professionalism meets aesthetic sophistication, never promotional or aggressive.",
+      "risk_flags": "High Touch / High Value. Non-surgical medical aesthetics across three locations in two states. Qualify results and outcome language carefully.",
+      "owner_label": "CSM/POC: Wendy Alinor / Editor: Aleksandra Velickovic / Writer: Unassigned writer",
+      "writer": "",
+      "editor": "Aleksandra Velickovic",
+      "csm": "Wendy Alinor",
+      "next_action": "Confirm compliance and terminology rules are captured in the client brief before automation.",
+      "blocker": "",
+      "review_url": "",
+      "delivery_url": "",
+      "notes": "Medical aesthetics practice with OH and FL locations.",
+      "readiness_score": 56,
+      "readiness_status": "partial",
+      "missing_required": [],
+      "missing_recommended": [
+        "Delivery config",
+        "Approved examples",
+        "Page templates",
+        "Legacy campaign folder"
+      ],
+      "campaigns": [],
+      "runs": [],
+      "monthly_deliverables": [],
+      "blockers": [],
+      "service_taxonomy": {
+        "count": 14,
+        "items": [
+          {
+            "name": "Botox Injections",
+            "description": "Neuromodulator treatment for expression lines and wrinkle softening."
+          },
+          {
+            "name": "Dermal Filler",
+            "description": "Injectable filler treatment for volume restoration, facial balancing, and wrinkle smoothing."
+          },
+          {
+            "name": "Hydrafacial",
+            "description": "Cleansing, exfoliation, extraction, and hydration facial treatment for skin refresh and maintenance."
+          },
+          {
+            "name": "Facials",
+            "description": "Professional facial treatments selected for skin type, concerns, and treatment goals."
+          },
+          {
+            "name": "CoolSculpting",
+            "description": "Non-surgical body contouring treatment for reducing targeted fat areas through controlled cooling."
+          },
+          {
+            "name": "Clear + Brilliant",
+            "description": "Gentle laser resurfacing treatment for tone, texture, radiance, and early aging concerns."
+          },
+          {
+            "name": "IPL/BBL Photofacial",
+            "description": "Light-based treatment for sun damage, redness, discoloration, and uneven tone."
+          }
+        ]
+      },
+      "website_intelligence": {
+        "status": "ok",
+        "website_urls": [
+          "https://www.annetherese.com/"
+        ],
+        "sitemap_count": 1,
+        "url_count": 169,
+        "product_or_service_count": 25,
+        "top_terms": [
+          "results",
+          "cape",
+          "coral",
+          "say",
+          "expect",
+          "benefits",
+          "ohio",
+          "florida",
+          "columbus",
+          "skin",
+          "laser",
+          "lip"
+        ],
+        "blockers": []
+      }
+    },
+    {
+      "slug": "the-hope-house/arizonaiop",
+      "display_name": "Arizona IOP",
+      "path": "clients/the-hope-house/arizonaiop",
+      "status": "ready",
+      "inferred_status": "ready",
+      "priority": "standard",
+      "automation_priority": "",
+      "active_monthly_volume": "",
+      "brand_voice": "",
+      "risk_flags": "",
+      "owner_label": "CSM/POC: Wendy Alinor / Editor: Aleksandra Velickovic / Writer: Unassigned writer",
+      "writer": "",
+      "editor": "Aleksandra Velickovic",
+      "csm": "Wendy Alinor",
+      "next_action": "",
+      "blocker": "",
+      "review_url": "",
+      "delivery_url": "",
+      "notes": "Intensive outpatient program in Scottsdale. IOP/PHP/MAT spelled out on first use.",
+      "readiness_score": 56,
+      "readiness_status": "partial",
+      "missing_required": [],
+      "missing_recommended": [
+        "Delivery config",
+        "Approved examples",
+        "Page templates",
+        "Legacy campaign folder"
+      ],
+      "campaigns": [],
+      "runs": [],
+      "monthly_deliverables": [],
+      "blockers": [],
+      "service_taxonomy": {
+        "count": 11,
+        "items": [
+          {
+            "name": "Intensive Outpatient Program",
+            "description": "Structured outpatient addiction and mental health treatment for clients who do not need 24-hour medical supervision."
+          },
+          {
+            "name": "Partial Hospitalization Program",
+            "description": "Higher-structure outpatient level of care, spelled out on first use before using PHP."
+          },
+          {
+            "name": "Standard Outpatient Treatment",
+            "description": "Lower-intensity outpatient care for clients maintaining daily responsibilities."
+          },
+          {
+            "name": "Addiction Treatment",
+            "description": "Clinical treatment for substance use concerns delivered in an outpatient setting."
+          },
+          {
+            "name": "Mental Health Treatment",
+            "description": "Treatment support for co-occurring mental health needs within the confirmed outpatient model."
+          },
+          {
+            "name": "Dual Diagnosis Treatment",
+            "description": "Simultaneous treatment for addiction and co-occurring mental health conditions."
+          },
+          {
+            "name": "Medication-Assisted Treatment",
+            "description": "Medication-supported treatment where clinically appropriate. Spell out before MAT."
+          }
+        ]
+      },
+      "website_intelligence": {
+        "status": "ok",
+        "website_urls": [
+          "https://arizonaiop.com/"
+        ],
+        "sitemap_count": 2,
+        "url_count": 579,
+        "product_or_service_count": 2,
+        "top_terms": [
+          "rehab",
+          "treatment",
+          "recovery",
+          "addiction",
+          "scottsdale",
+          "for",
+          "arizona",
+          "outpatient",
+          "drug",
+          "detox",
+          "alcohol",
+          "iop"
+        ],
+        "blockers": []
+      }
+    },
+    {
+      "slug": "axiom-hrs",
+      "display_name": "Axiom HRS",
+      "path": "clients/axiom-hrs",
+      "status": "ready",
+      "inferred_status": "ready",
+      "priority": "soon",
+      "automation_priority": 2,
+      "active_monthly_volume": "3 optimizations, 1 pillar page, 2 blog posts/month",
+      "brand_voice": "Knowledgeable and people-focused: expertise delivered with warmth, never cold or overly technical.",
+      "risk_flags": "Axiom is a rip-and-replace solution, not a connector. Enforce this at brief level before QA.",
+      "owner_label": "CSM/POC: Alex Bélanger / Editor: Aleksandra Velickovic / Writer: Unassigned writer",
+      "writer": "",
+      "editor": "Aleksandra Velickovic",
+      "csm": "Alex Bélanger",
+      "next_action": "",
+      "blocker": "",
+      "review_url": "",
+      "delivery_url": "",
+      "notes": "HCM/payroll platform and UKG partner.",
+      "readiness_score": 56,
+      "readiness_status": "partial",
+      "missing_required": [],
+      "missing_recommended": [
+        "Delivery config",
+        "Approved examples",
+        "Page templates",
+        "Legacy campaign folder"
+      ],
+      "campaigns": [],
+      "runs": [],
+      "monthly_deliverables": [],
+      "blockers": [],
+      "service_taxonomy": {
+        "count": 8,
+        "items": [
+          {
+            "name": "Payroll Processing",
+            "description": "Payroll administration support for wage calculation, deductions, tax handling, and recurring payroll workflows."
+          },
+          {
+            "name": "Benefits Enrollment and Administration",
+            "description": "Benefits setup, enrollment, employee changes, and plan administration support."
+          },
+          {
+            "name": "HR Outsourcing and Hands-On Support",
+            "description": "External HR support for employers that need operational help without building a full internal HR team."
+          },
+          {
+            "name": "HR Technology",
+            "description": "UKG-powered HR technology for employee data, workflows, reporting, and workforce administration."
+          },
+          {
+            "name": "Time and Labor Management",
+            "description": "Time tracking, attendance, scheduling, and labor management support."
+          },
+          {
+            "name": "Compliance Support",
+            "description": "Support for tax, labor law, policy, and employment compliance workflows."
+          },
+          {
+            "name": "Employee Lifecycle Management",
+            "description": "HR support from onboarding through changes, reviews, documentation, and offboarding."
+          }
+        ]
+      },
+      "website_intelligence": {
+        "status": "ok",
+        "website_urls": [
+          "https://axiomhrs.com/"
+        ],
+        "sitemap_count": 1,
+        "url_count": 370,
+        "product_or_service_count": 19,
+        "top_terms": [
+          "software",
+          "axiom",
+          "payroll",
+          "hrs",
+          "for",
+          "management",
+          "partner",
+          "you",
+          "ready",
+          "outsourcing",
+          "benefits",
+          "tax"
+        ],
+        "blockers": []
+      }
+    },
+    {
+      "slug": "deer-solutions",
+      "display_name": "Deer Solutions",
+      "path": "clients/deer-solutions",
+      "status": "ready",
+      "inferred_status": "ready",
+      "priority": "soon",
+      "automation_priority": 2,
+      "active_monthly_volume": "Monthly volume to confirm",
+      "brand_voice": "Practical, reassuring, and homeowner-focused: understands the frustration of deer damage and explains professional repellent service clearly.",
+      "risk_flags": "Do not imply guaranteed total elimination of deer or universal results. Deer Solution specializes in deer control and deer repellent service only; do not expand into general pest control, landscaping, or lawn care.",
+      "owner_label": "CSM/POC: Unassigned CSM / Editor: Aleksandra Velickovic / Writer: Unassigned writer",
+      "writer": "",
+      "editor": "Aleksandra Velickovic",
+      "csm": "",
+      "next_action": "Confirm Deer Solution CSM, monthly volume, service areas, and any franchise/location-specific rules.",
+      "blocker": "",
+      "review_url": "",
+      "delivery_url": "",
+      "notes": "Deer control repellent service company. Protects plants and shrubs from deer damage.",
+      "readiness_score": 44,
+      "readiness_status": "partial",
+      "missing_required": [],
+      "missing_recommended": [
+        "Compliance rules",
+        "Delivery config",
+        "Approved examples",
+        "Page templates",
+        "Legacy campaign folder"
+      ],
+      "campaigns": [],
+      "runs": [],
+      "monthly_deliverables": [],
+      "blockers": [],
+      "service_taxonomy": {
+        "count": 11,
+        "items": [
+          {
+            "name": "Deer Control Repellent Service",
+            "description": "Professional service that applies deer repellent to help protect plants and shrubs from deer damage."
+          },
+          {
+            "name": "Free At-Home Consultation and Estimate",
+            "description": "Initial appointment where the property is reviewed and the homeowner receives a deer control estimate."
+          },
+          {
+            "name": "Customized Deer Control Protection Plan",
+            "description": "Property-specific plan created with input from the homeowner after the consultation."
+          },
+          {
+            "name": "Certified Deer Damage Expert Visit",
+            "description": "Service consultation performed by a trained deer control professional who evaluates the landscape and deer damage concern."
+          },
+          {
+            "name": "Professional Repellent Application",
+            "description": "Ongoing application service using Deer Solution's proprietary deer repellent."
+          },
+          {
+            "name": "Proprietary Deer Repellent",
+            "description": "Deer repellent described by the company as all-natural and designed to deter deer by taste and smell."
+          },
+          {
+            "name": "Plant and Shrub Protection",
+            "description": "Core customer outcome category focused on protecting flowers, shrubs, and landscaping from deer browsing."
+          }
+        ]
+      },
+      "website_intelligence": {
+        "status": "ok",
+        "website_urls": [
+          "https://www.deersolution.com/"
+        ],
+        "sitemap_count": 2,
+        "url_count": 614,
+        "product_or_service_count": 0,
+        "top_terms": [
+          "deer",
+          "repellent",
+          "damage",
+          "you",
+          "freedom",
+          "plant",
+          "difference",
+          "plan",
+          "serving",
+          "receive",
+          "property",
+          "analysis"
+        ],
+        "blockers": []
+      }
+    },
+    {
+      "slug": "esthetics-center",
+      "display_name": "Esthetics Center",
+      "path": "clients/esthetics-center",
+      "status": "briefing",
+      "inferred_status": "briefing",
+      "priority": "urgent",
+      "automation_priority": 1,
+      "active_monthly_volume": "Approx. 12 blog posts/month",
+      "brand_voice": "A trusted specialist who explains complex procedures clearly and honestly: clinical without being cold, confident without being arrogant.",
+      "risk_flags": "High Touch / High Value. Regulated medical aesthetics and plastic surgery space. Clinical credibility stakes are high.",
+      "owner_label": "CSM/POC: Wendy Alinor / Editor: Aleksandra Velickovic / Writer: Unassigned writer",
+      "writer": "",
+      "editor": "Aleksandra Velickovic",
+      "csm": "Wendy Alinor",
+      "next_action": "Confirm compliance and terminology rules are captured in the client brief before automation.",
+      "blocker": "",
+      "review_url": "",
+      "delivery_url": "",
+      "notes": "Medical aesthetics and plastic surgery in Northern California.",
+      "readiness_score": 67,
+      "readiness_status": "partial",
+      "missing_required": [],
+      "missing_recommended": [
+        "Delivery config",
+        "Approved examples",
+        "Page templates"
+      ],
+      "campaigns": [
+        {
+          "slug": "01-blog-content",
+          "path": "clients/esthetics-center/campaigns/01-blog-content",
+          "title": "01 — Blog Content",
+          "has_readme": true,
+          "draft_count": 0,
+          "final_count": 0,
+          "html_count": 0
+        }
+      ],
+      "runs": [],
+      "monthly_deliverables": [],
+      "blockers": [],
+      "service_taxonomy": {
+        "count": 6,
+        "items": [
+          {
+            "name": "Facial Plastic Surgery",
+            "description": "Surgical facial aesthetics services performed by qualified clinical providers."
+          },
+          {
+            "name": "Injectable Treatments",
+            "description": "Botox, filler, and related injectable treatments for wrinkle softening, facial balancing, and volume restoration."
+          },
+          {
+            "name": "Medical Spa Services",
+            "description": "Non-surgical aesthetic services delivered in a medical spa setting."
+          },
+          {
+            "name": "Professional Skincare Treatments",
+            "description": "Clinical skincare treatments for texture, tone, maintenance, and skin quality."
+          },
+          {
+            "name": "Skin Rejuvenation Procedures",
+            "description": "Procedures focused on improving skin texture, tone, collagen response, and visible aging concerns."
+          },
+          {
+            "name": "Laser and Energy-Based Treatments",
+            "description": "Device-based treatments for resurfacing, pigmentation, redness, hair reduction, or skin quality, where confirmed per page."
+          }
+        ]
+      },
+      "website_intelligence": {
+        "status": "ok",
+        "website_urls": [
+          "https://www.estheticscenter.com/"
+        ],
+        "sitemap_count": 1,
+        "url_count": 419,
+        "product_or_service_count": 48,
+        "top_terms": [
+          "esthetics",
+          "results",
+          "you",
+          "treat",
+          "sacramento",
+          "laser",
+          "lift",
+          "facial",
+          "lip",
+          "for",
+          "filler",
+          "resurfacing"
+        ],
+        "blockers": []
+      }
+    },
+    {
+      "slug": "find-self-storage",
+      "display_name": "Find Self Storage",
+      "path": "clients/find-self-storage",
+      "status": "briefing",
+      "inferred_status": "briefing",
+      "priority": "standard",
+      "automation_priority": "",
+      "active_monthly_volume": "",
+      "brand_voice": "",
+      "risk_flags": "",
+      "owner_label": "CSM/POC: Unassigned CSM / Editor: Aleksandra Velickovic / Writer: Unassigned writer",
+      "writer": "",
+      "editor": "Aleksandra Velickovic",
+      "csm": "",
+      "next_action": "",
+      "blocker": "",
+      "review_url": "",
+      "delivery_url": "",
+      "notes": "Self-storage comparison marketplace.",
+      "readiness_score": 56,
+      "readiness_status": "partial",
+      "missing_required": [],
+      "missing_recommended": [
+        "Compliance rules",
+        "Delivery config",
+        "Approved examples",
+        "Page templates"
+      ],
+      "campaigns": [
+        {
+          "slug": "01-june-2026-optimization",
+          "path": "clients/find-self-storage/campaigns/01-june-2026-optimization",
+          "title": "01-june-2026-optimization",
+          "has_readme": false,
+          "draft_count": 0,
+          "final_count": 0,
+          "html_count": 0
+        }
+      ],
+      "runs": [],
+      "monthly_deliverables": [],
+      "blockers": [],
+      "service_taxonomy": {
+        "count": 13,
+        "items": [
+          {
+            "name": "Standard Self Storage",
+            "description": "General storage units for household, personal, or business belongings."
+          },
+          {
+            "name": "Climate-Controlled Storage",
+            "description": "Storage units with temperature or humidity control where facility features support it."
+          },
+          {
+            "name": "Drive-Up Storage",
+            "description": "Ground-level units with direct vehicle access for loading and unloading."
+          },
+          {
+            "name": "24-Hour Access Storage",
+            "description": "Storage facilities or units that allow access outside standard office hours, when available."
+          },
+          {
+            "name": "Business Storage",
+            "description": "Storage for business inventory, equipment, documents, or supplies."
+          },
+          {
+            "name": "Student Storage",
+            "description": "Short-term or seasonal storage for students between housing terms."
+          },
+          {
+            "name": "Vehicle Storage",
+            "description": "Storage category for cars, RVs, boats, motorcycles, trailers, and similar vehicles."
+          }
+        ]
+      },
+      "website_intelligence": {
+        "status": "ok",
+        "website_urls": [
+          "https://findselfstorage.com/"
+        ],
+        "sitemap_count": 2,
+        "url_count": 1200,
+        "product_or_service_count": 0,
+        "top_terms": [
+          "storage",
+          "units",
+          "prices",
+          "unit",
+          "compare",
+          "reserve",
+          "self",
+          "now",
+          "alabama",
+          "online",
+          "facilities",
+          "features"
+        ],
+        "blockers": []
+      }
+    },
+    {
+      "slug": "laser-center-of-marin",
+      "display_name": "Laser Center of Marin",
+      "path": "clients/laser-center-of-marin",
+      "status": "ready",
+      "inferred_status": "ready",
+      "priority": "urgent",
+      "automation_priority": 1,
+      "active_monthly_volume": "Approx. 12 blog posts/month",
+      "brand_voice": "A knowledgeable, trusted practitioner speaking directly to a patient: warm, confident, medically grounded, never promotional.",
+      "risk_flags": "High Touch / High Value. Regulated medical aesthetics space. Avoid guaranteed results and unsupported medical assertions.",
+      "owner_label": "CSM/POC: Wendy Alinor / Editor: Aleksandra Velickovic / Writer: Unassigned writer",
+      "writer": "",
+      "editor": "Aleksandra Velickovic",
+      "csm": "Wendy Alinor",
+      "next_action": "Confirm compliance and terminology rules are captured in the client brief before automation.",
+      "blocker": "",
+      "review_url": "",
+      "delivery_url": "",
+      "notes": "Physician-supervised aesthetic clinic in Marin County.",
+      "readiness_score": 56,
+      "readiness_status": "partial",
+      "missing_required": [],
+      "missing_recommended": [
+        "Delivery config",
+        "Approved examples",
+        "Page templates",
+        "Legacy campaign folder"
+      ],
+      "campaigns": [],
+      "runs": [],
+      "monthly_deliverables": [],
+      "blockers": [],
+      "service_taxonomy": {
+        "count": 4,
+        "items": [
+          {
+            "name": "Injectable Treatments",
+            "description": "Botox, Juvederm, Restylane, Dysport, and related injectable treatments when confirmed on the page."
+          },
+          {
+            "name": "Laser Treatments",
+            "description": "Advanced laser services for skin concerns, with device details verified before writing."
+          },
+          {
+            "name": "Non-Invasive Cosmetic Procedures",
+            "description": "Non-surgical aesthetic procedures for skin, facial, and cosmetic concerns."
+          },
+          {
+            "name": "Skin Rejuvenation",
+            "description": "Treatment category for improving tone, texture, pigment, and visible aging concerns."
+          }
+        ]
+      },
+      "website_intelligence": {
+        "status": "ok",
+        "website_urls": [
+          "https://www.marinlaser.com/"
+        ],
+        "sitemap_count": 1,
+        "url_count": 155,
+        "product_or_service_count": 24,
+        "top_terms": [
+          "started",
+          "laser",
+          "marin",
+          "results",
+          "corte",
+          "madera",
+          "skin",
+          "recent",
+          "reviews",
+          "why",
+          "choose",
+          "how"
+        ],
+        "blockers": []
+      }
+    },
+    {
+      "slug": "liveops",
+      "display_name": "Liveops",
+      "path": "clients/liveops",
+      "status": "ready",
+      "inferred_status": "ready",
+      "priority": "soon",
+      "automation_priority": 2,
+      "active_monthly_volume": "4 to 5 pages/month",
+      "brand_voice": "Empathetic, expert, and enterprise-ready: confident without being cold, human without being casual.",
+      "risk_flags": "Strict legal compliance around how agents are described. Terminology rules are non-negotiable before CSM review.",
+      "owner_label": "CSM/POC: Chanakya Thakkar / Editor: Aleksandra Velickovic / Writer: Unassigned writer",
+      "writer": "",
+      "editor": "Aleksandra Velickovic",
+      "csm": "Chanakya Thakkar",
+      "next_action": "",
+      "blocker": "",
+      "review_url": "",
+      "delivery_url": "",
+      "notes": "Cloud-based remote agent network for enterprise CX. Never hire/employee/trained.",
+      "readiness_score": 67,
+      "readiness_status": "partial",
+      "missing_required": [],
+      "missing_recommended": [
+        "Compliance rules",
+        "Delivery config",
+        "Page templates"
+      ],
+      "campaigns": [],
+      "runs": [],
+      "monthly_deliverables": [],
+      "blockers": [],
+      "service_taxonomy": {
+        "count": 14,
+        "items": [
+          {
+            "name": "Customer Service Outsourcing",
+            "description": "Flexible customer support services delivered through the Liveops network and platform."
+          },
+          {
+            "name": "Customer Service",
+            "description": "Customer support across voice, chat, email, text, and other supported channels."
+          },
+          {
+            "name": "Sales and Lead Generation",
+            "description": "Support for sales conversations, lead follow-up, and revenue-related customer interactions."
+          },
+          {
+            "name": "Technical Support",
+            "description": "Customer technical support services for brands that need scalable help capacity."
+          },
+          {
+            "name": "Back Office Support",
+            "description": "Operational support work that helps customer programs handle volume and administrative tasks."
+          },
+          {
+            "name": "LiveNexus by Liveops",
+            "description": "AI service offering for assessing, integrating, and calibrating AI in customer experience operations."
+          },
+          {
+            "name": "Onshore Call Center Services in the US",
+            "description": "US-based customer support capacity using the Liveops remote network model."
+          }
+        ]
+      },
+      "website_intelligence": {
+        "status": "ok",
+        "website_urls": [
+          "https://liveops.com/"
+        ],
+        "sitemap_count": 2,
+        "url_count": 778,
+        "product_or_service_count": 22,
+        "top_terms": [
+          "outsourcing",
+          "liveops",
+          "customer",
+          "support",
+          "call",
+          "for",
+          "talent",
+          "agent",
+          "results",
+          "learning",
+          "agents",
+          "scale"
+        ],
+        "blockers": []
+      }
+    },
+    {
+      "slug": "loti-labs",
+      "display_name": "Loti Labs / Wholesale Peptide",
+      "path": "clients/loti-labs",
+      "status": "ready",
+      "inferred_status": "ready",
+      "priority": "urgent",
+      "automation_priority": 1,
+      "active_monthly_volume": "15 optimizations/month",
+      "brand_voice": "Scientific precision with boutique researcher-to-researcher warmth: authoritative, trustworthy, never promotional or therapeutic.",
+      "risk_flags": "Regulated grey area. Research context only. No human use, therapeutic benefit, or dosing guidance.",
+      "owner_label": "CSM/POC: Alex Bélanger / Editor: Aleksandra Velickovic / Writer: Unassigned writer",
+      "writer": "",
+      "editor": "Aleksandra Velickovic",
+      "csm": "Alex Bélanger",
+      "next_action": "Confirm compliance and terminology rules are captured in the client brief before automation.",
+      "blocker": "",
+      "review_url": "",
+      "delivery_url": "",
+      "notes": "Research peptide, liquid, and capsule supplier. RUO compliance required.",
+      "readiness_score": 56,
+      "readiness_status": "partial",
+      "missing_required": [],
+      "missing_recommended": [
+        "Compliance rules",
+        "Delivery config",
+        "Page templates",
+        "Legacy campaign folder"
+      ],
+      "campaigns": [],
+      "runs": [],
+      "monthly_deliverables": [],
+      "blockers": [],
+      "service_taxonomy": {
+        "count": 37,
+        "items": [
+          {
+            "name": "Peptides",
+            "description": "Lyophilized research peptides that require researcher reconstitution before use."
+          },
+          {
+            "name": "Liquids",
+            "description": "Pre-formulated research liquids, including SARMs and other research compounds where confirmed."
+          },
+          {
+            "name": "Capsules",
+            "description": "Pre-measured capsules for laboratory research use only."
+          },
+          {
+            "name": "Collagen Peptides",
+            "description": "Peptide category studied for skin elasticity, joint mobility, and connective tissue research."
+          },
+          {
+            "name": "Antimicrobial Peptides",
+            "description": "Peptide category studied for antibacterial and antiviral research contexts."
+          },
+          {
+            "name": "Growth Factor Peptides",
+            "description": "Peptide category studied in cellular growth, tissue repair, and regeneration research."
+          },
+          {
+            "name": "Custom Synthetics",
+            "description": "Lab-engineered peptides designed for targeted research outcomes."
+          }
+        ]
+      },
+      "website_intelligence": {
+        "status": "ok",
+        "website_urls": [
+          "https://lotilabs.com/",
+          "https://wholesalepeptide.com/"
+        ],
+        "sitemap_count": 7,
+        "url_count": 506,
+        "product_or_service_count": 80,
+        "top_terms": [
+          "loti",
+          "labs",
+          "buy",
+          "research",
+          "for",
+          "capsules",
+          "molecular",
+          "only",
+          "storage",
+          "save",
+          "additional",
+          "information"
+        ],
+        "blockers": []
+      }
+    },
+    {
+      "slug": "makana-charters",
+      "display_name": "Makana Charters",
+      "path": "clients/makana-charters",
+      "status": "briefing",
+      "inferred_status": "briefing",
+      "priority": "soon",
+      "automation_priority": 2,
+      "active_monthly_volume": "Monthly volume to confirm",
+      "brand_voice": "Warm, grounded, heritage-proud, and ocean-literate: written like a Native Hawaiian family that knows these waters, never like a generic tour operator.",
+      "risk_flags": "Cultural and place-based accuracy matter. Keep boat details, age limits, pregnancy policy, accessibility, sea cave entry, snorkeling, and weather/safety conditions precise.",
+      "owner_label": "CSM/POC: Wendy Alinor / Editor: Aleksandra Velickovic / Writer: Unassigned writer",
+      "writer": "",
+      "editor": "Aleksandra Velickovic",
+      "csm": "Wendy Alinor",
+      "next_action": "Confirm monthly volume and current production cadence for Makana.",
+      "blocker": "",
+      "review_url": "",
+      "delivery_url": "",
+      "notes": "Native Hawaiian-owned Na Pali Coast boat tour operator offering small-group and private catamaran tours from Kauai.",
+      "readiness_score": 56,
+      "readiness_status": "partial",
+      "missing_required": [],
+      "missing_recommended": [
+        "Compliance rules",
+        "Delivery config",
+        "Approved examples",
+        "Page templates"
+      ],
+      "campaigns": [
+        {
+          "slug": "01-june-2026-landing-blogs",
+          "path": "clients/makana-charters/campaigns/01-june-2026-landing-blogs",
+          "title": "01-june-2026-landing-blogs",
+          "has_readme": false,
+          "draft_count": 0,
+          "final_count": 0,
+          "html_count": 0
+        }
+      ],
+      "runs": [],
+      "monthly_deliverables": [],
+      "blockers": [],
+      "service_taxonomy": {
+        "count": 11,
+        "items": [
+          {
+            "name": "Na Pali Coast Boat Tours",
+            "description": "Standard Kauai boat tours along the Na Pali Coast with snorkeling, lunch, cultural narration, and sea cave viewing when conditions allow."
+          },
+          {
+            "name": "Private Charters",
+            "description": "Private boat experiences for groups that want a customized pace, boat, and itinerary within safety and ocean-condition limits."
+          },
+          {
+            "name": "Na Pali Snorkeling Tours",
+            "description": "Tours with snorkel gear, flotation devices, and snorkel stops selected by ocean conditions."
+          },
+          {
+            "name": "Na Pali Sea Cave Tours",
+            "description": "Boat tours that may visit sea caves such as Pirates Cave, Rainbow Falls, and Honopu Archway when conditions allow."
+          },
+          {
+            "name": "Wildlife Viewing",
+            "description": "Tour experience category for dolphins, Hawaiian green sea turtles, reef fish, and other wildlife commonly seen on route."
+          },
+          {
+            "name": "Na Pali Kai III",
+            "description": "32-passenger boat departing Kikiaola with a 360-degree walk-around deck."
+          },
+          {
+            "name": "Amelia K",
+            "description": "36-passenger boat departing Port Allen."
+          }
+        ]
+      },
+      "website_intelligence": {
+        "status": "ok",
+        "website_urls": [
+          "https://makanacharters.com/"
+        ],
+        "sitemap_count": 2,
+        "url_count": 345,
+        "product_or_service_count": 0,
+        "top_terms": [
+          "kauai",
+          "pali",
+          "coast",
+          "makana",
+          "charters",
+          "boat",
+          "tours",
+          "for",
+          "things",
+          "you",
+          "archives",
+          "adventure"
+        ],
+        "blockers": []
+      }
+    },
+    {
+      "slug": "pekas-smith",
+      "display_name": "Pekas Smith",
+      "path": "clients/pekas-smith",
+      "status": "ready",
+      "inferred_status": "ready",
+      "priority": "soon",
+      "automation_priority": 2,
+      "active_monthly_volume": "5 optimizations/month",
+      "brand_voice": "Professional and empathetic: informative and reassuring for people navigating medical and financial stress in a federal system.",
+      "risk_flags": "High Touch legal content. Federal program names, capitalization, and procedural language must be accurate and consistent.",
+      "owner_label": "CSM/POC: Arianna Trabanino / Editor: Aleksandra Velickovic / Writer: Unassigned writer",
+      "writer": "",
+      "editor": "Aleksandra Velickovic",
+      "csm": "Arianna Trabanino",
+      "next_action": "",
+      "blocker": "",
+      "review_url": "",
+      "delivery_url": "",
+      "notes": "Arizona Social Security Disability law firm.",
+      "readiness_score": 56,
+      "readiness_status": "partial",
+      "missing_required": [],
+      "missing_recommended": [
+        "Delivery config",
+        "Approved examples",
+        "Page templates",
+        "Legacy campaign folder"
+      ],
+      "campaigns": [],
+      "runs": [],
+      "monthly_deliverables": [],
+      "blockers": [],
+      "service_taxonomy": {
+        "count": 4,
+        "items": [
+          {
+            "name": "Initial SSDI and SSI Applications",
+            "description": "Legal help preparing and filing initial Social Security Disability Insurance and Supplemental Security Income claims."
+          },
+          {
+            "name": "Reconsideration Appeals",
+            "description": "Legal help after an initial disability claim denial, including the reconsideration stage."
+          },
+          {
+            "name": "Administrative Law Judge Hearings",
+            "description": "Representation for Social Security disability hearings before an Administrative Law Judge."
+          },
+          {
+            "name": "Appeals Council Reviews",
+            "description": "Legal support for Appeals Council review after an unfavorable hearing decision."
+          }
+        ]
+      },
+      "website_intelligence": {
+        "status": "ok",
+        "website_urls": [
+          "https://disabilitylawyerarizona.com/"
+        ],
+        "sitemap_count": 3,
+        "url_count": 200,
+        "product_or_service_count": 0,
+        "top_terms": [
+          "disability",
+          "social",
+          "security",
+          "for",
+          "arizona",
+          "pekas",
+          "smith",
+          "benefits",
+          "ssdi",
+          "work",
+          "how",
+          "free"
+        ],
+        "blockers": []
+      }
+    },
+    {
+      "slug": "portugal-pathways",
+      "display_name": "Portugal Pathways",
+      "path": "clients/portugal-pathways",
+      "status": "briefing",
+      "inferred_status": "briefing",
+      "priority": "soon",
+      "automation_priority": 2,
+      "active_monthly_volume": "5 page optimizations/month",
+      "brand_voice": "Measured, credible advisory voice that informs without promoting and attributes regulated advice to licensed professionals.",
+      "risk_flags": "Compliance risk defines this client. Avoid fund marketing, tax advice, investment recommendations, and implied residency guarantees.",
+      "owner_label": "CSM/POC: Arianna Trabanino / Editor: Aleksandra Velickovic / Writer: Unassigned writer",
+      "writer": "",
+      "editor": "Aleksandra Velickovic",
+      "csm": "Arianna Trabanino",
+      "next_action": "",
+      "blocker": "",
+      "review_url": "",
+      "delivery_url": "",
+      "notes": "HNW relocation and residency advisory. British English and financial promotion compliance.",
+      "readiness_score": 78,
+      "readiness_status": "partial",
+      "missing_required": [],
+      "missing_recommended": [
+        "Delivery config",
+        "Page templates"
+      ],
+      "campaigns": [
+        {
+          "slug": "01-june-2026-pr",
+          "path": "clients/portugal-pathways/campaigns/01-june-2026-pr",
+          "title": "01-june-2026-pr",
+          "has_readme": false,
+          "draft_count": 0,
+          "final_count": 0,
+          "html_count": 0
+        }
+      ],
+      "runs": [],
+      "monthly_deliverables": [],
+      "blockers": [],
+      "service_taxonomy": {
+        "count": 7,
+        "items": [
+          {
+            "name": "Residency Pathways",
+            "description": "Guidance and partner introductions for Golden Visa, D7, D2, D8, IFICI, and NHR 2.0 related pathways."
+          },
+          {
+            "name": "IFICI Tax Incentive Application Introductions",
+            "description": "Introductions and coordination around Portugal IFICI tax incentive applications."
+          },
+          {
+            "name": "Post-NHR Long-Term Planning",
+            "description": "Planning support and introductions for clients adjusting after the NHR regime."
+          },
+          {
+            "name": "Luxury New Homes Access",
+            "description": "Access to off-market, off-plan, and new-build luxury home opportunities."
+          },
+          {
+            "name": "Cross-Border Financial Coordination",
+            "description": "Coordination through licensed partners for cross-border financial planning needs."
+          },
+          {
+            "name": "Foreign Currency Exchange",
+            "description": "FX support through partners for international buyers and relocation clients."
+          },
+          {
+            "name": "Healthcare, Banking, and Relocation Logistics",
+            "description": "Practical relocation support for healthcare access, banking, and move logistics."
+          }
+        ]
+      },
+      "website_intelligence": {
+        "status": "ok",
+        "website_urls": [
+          "https://www.portugalpathways.io/",
+          "https://portugalpathways.io/"
+        ],
+        "sitemap_count": 1,
+        "url_count": 711,
+        "product_or_service_count": 16,
+        "top_terms": [
+          "portugal",
+          "visa",
+          "tax",
+          "for",
+          "golden",
+          "pathways",
+          "luxury",
+          "support",
+          "investment",
+          "homes",
+          "nhr",
+          "wealth"
+        ],
+        "blockers": []
+      }
+    },
+    {
+      "slug": "print-and-cheques-now",
+      "display_name": "Print & Cheques Now",
+      "path": "clients/print-and-cheques-now",
+      "status": "ready",
+      "inferred_status": "ready",
+      "priority": "standard",
+      "automation_priority": "",
+      "active_monthly_volume": "",
+      "brand_voice": "",
+      "risk_flags": "",
+      "owner_label": "CSM/POC: Arianna Trabanino / Editor: Aleksandra Velickovic / Writer: Unassigned writer",
+      "writer": "",
+      "editor": "Aleksandra Velickovic",
+      "csm": "Arianna Trabanino",
+      "next_action": "",
+      "blocker": "",
+      "review_url": "",
+      "delivery_url": "",
+      "notes": "Canadian cheque printing specialist. Dual cheque/check spelling required.",
+      "readiness_score": 56,
+      "readiness_status": "partial",
+      "missing_required": [],
+      "missing_recommended": [
+        "Delivery config",
+        "Approved examples",
+        "Page templates",
+        "Legacy campaign folder"
+      ],
+      "campaigns": [],
+      "runs": [],
+      "monthly_deliverables": [],
+      "blockers": [],
+      "service_taxonomy": {
+        "count": 11,
+        "items": [
+          {
+            "name": "Personal Cheques",
+            "description": "Personal cheque products with pricing claims verified against current site data."
+          },
+          {
+            "name": "Manual Business Cheques",
+            "description": "Manual business cheque products for business payment workflows."
+          },
+          {
+            "name": "Laser / Computer Cheques",
+            "description": "Computer-compatible cheque products for accounting and business systems."
+          },
+          {
+            "name": "Deposit Books",
+            "description": "Deposit book supplies for business banking workflows."
+          },
+          {
+            "name": "Endorsement Stamps",
+            "description": "Stamp products for cheque endorsement and office payment handling."
+          },
+          {
+            "name": "Cheque Binders",
+            "description": "Supply item for organizing cheque products."
+          },
+          {
+            "name": "Same-Day Printing",
+            "description": "Printing service available for qualifying orders placed by 2 PM EST, Monday through Friday."
+          }
+        ]
+      },
+      "website_intelligence": {
+        "status": "partial",
+        "website_urls": [
+          "https://chequesnow.ca/"
+        ],
+        "sitemap_count": 0,
+        "url_count": 1,
+        "product_or_service_count": 0,
+        "top_terms": [
+          "godaddy",
+          "access",
+          "denied",
+          "security",
+          "website",
+          "firewall"
+        ],
+        "blockers": [
+          "No usable sitemap found for https://chequesnow.ca/; sampled homepage only."
+        ]
+      }
+    },
+    {
+      "slug": "the-hope-house/scottsdaleazdetox",
+      "display_name": "Scottsdale Detox",
+      "path": "clients/the-hope-house/scottsdaleazdetox",
+      "status": "ready",
+      "inferred_status": "ready",
+      "priority": "standard",
+      "automation_priority": "",
+      "active_monthly_volume": "",
+      "brand_voice": "",
+      "risk_flags": "",
+      "owner_label": "CSM/POC: Wendy Alinor / Editor: Aleksandra Velickovic / Writer: Unassigned writer",
+      "writer": "",
+      "editor": "Aleksandra Velickovic",
+      "csm": "Wendy Alinor",
+      "next_action": "",
+      "blocker": "",
+      "review_url": "",
+      "delivery_url": "",
+      "notes": "Medical detox in Scottsdale. Alcohol/benzo withdrawal risks must not be minimized.",
+      "readiness_score": 56,
+      "readiness_status": "partial",
+      "missing_required": [],
+      "missing_recommended": [
+        "Delivery config",
+        "Approved examples",
+        "Page templates",
+        "Legacy campaign folder"
+      ],
+      "campaigns": [],
+      "runs": [],
+      "monthly_deliverables": [],
+      "blockers": [],
+      "service_taxonomy": {
+        "count": 12,
+        "items": [
+          {
+            "name": "Medical Detox",
+            "description": "Medically supervised detox with 24/7 staff support and individualized planning."
+          },
+          {
+            "name": "Alcohol Detox",
+            "description": "Supervised detox program for alcohol withdrawal needs."
+          },
+          {
+            "name": "Opioid / Heroin Detox",
+            "description": "Supervised detox program for opioid and heroin withdrawal needs."
+          },
+          {
+            "name": "Fentanyl Detox",
+            "description": "Supervised detox program for fentanyl withdrawal needs."
+          },
+          {
+            "name": "Benzodiazepine Detox",
+            "description": "Supervised detox program for benzodiazepine withdrawal needs."
+          },
+          {
+            "name": "Methadone Detox",
+            "description": "Supervised detox program for methadone withdrawal needs."
+          },
+          {
+            "name": "Prescription Drug Misuse Treatment",
+            "description": "Treatment support for prescription drug misuse, limited to confirmed program language."
+          }
+        ]
+      },
+      "website_intelligence": {
+        "status": "ok",
+        "website_urls": [
+          "https://scottsdaleazdetox.com/"
+        ],
+        "sitemap_count": 2,
+        "url_count": 929,
+        "product_or_service_count": 0,
+        "top_terms": [
+          "detox",
+          "scottsdale",
+          "treatment",
+          "rehab",
+          "for",
+          "addiction",
+          "recovery",
+          "medical",
+          "drug",
+          "centers",
+          "alcohol",
+          "healing"
+        ],
+        "blockers": []
+      }
+    },
+    {
+      "slug": "the-hope-house/scottsdaletmstherapy",
+      "display_name": "Scottsdale TMS Therapy",
+      "path": "clients/the-hope-house/scottsdaletmstherapy",
+      "status": "ready",
+      "inferred_status": "ready",
+      "priority": "standard",
+      "automation_priority": "",
+      "active_monthly_volume": "",
+      "brand_voice": "",
+      "risk_flags": "",
+      "owner_label": "CSM/POC: Wendy Alinor / Editor: Aleksandra Velickovic / Writer: Unassigned writer",
+      "writer": "",
+      "editor": "Aleksandra Velickovic",
+      "csm": "Wendy Alinor",
+      "next_action": "",
+      "blocker": "",
+      "review_url": "",
+      "delivery_url": "",
+      "notes": "TMS, Spravato, and psychiatric care. TMS is FDA-cleared; Spravato is FDA-approved.",
+      "readiness_score": 56,
+      "readiness_status": "partial",
+      "missing_required": [],
+      "missing_recommended": [
+        "Delivery config",
+        "Approved examples",
+        "Page templates",
+        "Legacy campaign folder"
+      ],
+      "campaigns": [],
+      "runs": [],
+      "monthly_deliverables": [],
+      "blockers": [],
+      "service_taxonomy": {
+        "count": 4,
+        "items": [
+          {
+            "name": "TMS Therapy",
+            "description": "FDA-cleared, non-invasive treatment delivered in repeated sessions without anesthesia."
+          },
+          {
+            "name": "Spravato",
+            "description": "In-clinic esketamine treatment in a REMS-certified setting."
+          },
+          {
+            "name": "Psychiatric Medication Management",
+            "description": "Medication evaluation, treatment planning, monitoring, and adjustment support."
+          },
+          {
+            "name": "Therapy Services",
+            "description": "Counseling services delivered by master-level licensed counselors."
+          }
+        ]
+      },
+      "website_intelligence": {
+        "status": "ok",
+        "website_urls": [
+          "https://scottsdaletmstherapy.com/"
+        ],
+        "sitemap_count": 2,
+        "url_count": 383,
+        "product_or_service_count": 0,
+        "top_terms": [
+          "tms",
+          "scottsdale",
+          "therapy",
+          "treatment",
+          "depression",
+          "for",
+          "treatment-resistant",
+          "spravato",
+          "anxiety",
+          "how",
+          "medication",
+          "mental"
+        ],
+        "blockers": []
+      }
+    },
+    {
+      "slug": "the-hope-house/thehopehouse",
+      "display_name": "The Hope House",
+      "path": "clients/the-hope-house/thehopehouse",
+      "status": "ready",
+      "inferred_status": "ready",
+      "priority": "standard",
+      "automation_priority": "",
+      "active_monthly_volume": "",
+      "brand_voice": "",
+      "risk_flags": "",
+      "owner_label": "CSM/POC: Wendy Alinor / Editor: Aleksandra Velickovic / Writer: Unassigned writer",
+      "writer": "",
+      "editor": "Aleksandra Velickovic",
+      "csm": "Wendy Alinor",
+      "next_action": "",
+      "blocker": "",
+      "review_url": "",
+      "delivery_url": "",
+      "notes": "Luxury residential addiction rehab in Scottsdale. Never guarantee outcomes.",
+      "readiness_score": 56,
+      "readiness_status": "partial",
+      "missing_required": [],
+      "missing_recommended": [
+        "Delivery config",
+        "Approved examples",
+        "Page templates",
+        "Legacy campaign folder"
+      ],
+      "campaigns": [],
+      "runs": [],
+      "monthly_deliverables": [],
+      "blockers": [],
+      "service_taxonomy": {
+        "count": 15,
+        "items": [
+          {
+            "name": "Executive Treatment Program",
+            "description": "Treatment program for clients maintaining professional obligations, with private rooms, electronics access, and modified schedules."
+          },
+          {
+            "name": "Dual Diagnosis Program",
+            "description": "Treatment for addiction and co-occurring mental health conditions, with assessment on arrival."
+          },
+          {
+            "name": "Luxury Rehab Program",
+            "description": "Individualized evidence-based care in an upscale treatment setting with privacy as a confirmed feature."
+          },
+          {
+            "name": "Executive Golf Rehab",
+            "description": "Treatment program that combines recovery programming with golf."
+          },
+          {
+            "name": "Luxury Spa Rehab",
+            "description": "Spa-focused recovery program within The Hope House offering set."
+          },
+          {
+            "name": "Alcohol Treatment",
+            "description": "Treatment content category for alcohol use concerns."
+          },
+          {
+            "name": "Opioid Treatment",
+            "description": "Treatment content category for opioid use concerns."
+          }
+        ]
+      },
+      "website_intelligence": {
+        "status": "ok",
+        "website_urls": [
+          "https://thehopehouse.com/"
+        ],
+        "sitemap_count": 2,
+        "url_count": 851,
+        "product_or_service_count": 2,
+        "top_terms": [
+          "rehab",
+          "treatment",
+          "for",
+          "drug",
+          "hope",
+          "house",
+          "alcohol",
+          "addiction",
+          "scottsdale",
+          "centers",
+          "recovery",
+          "abuse"
+        ],
+        "blockers": []
+      }
+    },
+    {
+      "slug": "the-nash-casino",
+      "display_name": "The Nash Casino",
+      "path": "clients/the-nash-casino",
+      "status": "ready",
+      "inferred_status": "ready",
+      "priority": "soon",
+      "automation_priority": 2,
+      "active_monthly_volume": "To be confirmed with Alex",
+      "brand_voice": "Confident, energetic, and local: written like a knowledgeable regular who knows the venue, never like a generic casino copywriter.",
+      "risk_flags": "Regulated gaming content. Never use slots or slot machines. Frame gaming as entertainment and include responsible gaming language where appropriate.",
+      "owner_label": "CSM/POC: Alex Bélanger / Editor: Aleksandra Velickovic / Writer: Unassigned writer",
+      "writer": "",
+      "editor": "Aleksandra Velickovic",
+      "csm": "Alex Bélanger",
+      "next_action": "",
+      "blocker": "",
+      "review_url": "",
+      "delivery_url": "",
+      "notes": "NH charitable gaming venue. Never use slots.",
+      "readiness_score": 56,
+      "readiness_status": "partial",
+      "missing_required": [],
+      "missing_recommended": [
+        "Compliance rules",
+        "Delivery config",
+        "Page templates",
+        "Legacy campaign folder"
+      ],
+      "campaigns": [],
+      "runs": [],
+      "monthly_deliverables": [],
+      "blockers": [],
+      "service_taxonomy": {
+        "count": 11,
+        "items": [
+          {
+            "name": "Historical Horse Racing Machines",
+            "description": "1,000+ HHR gaming machines. Do not call them traditional slot machines."
+          },
+          {
+            "name": "Table Games",
+            "description": "37 table games including Blackjack, SP21, Roulette, Baccarat, Jackpot Holdem, Open Face Pai Gow, Trifecta, Live Craps, Crapless Craps, and Midi Baccarat."
+          },
+          {
+            "name": "Poker Room",
+            "description": "19-table poker room for experienced players and beginners."
+          },
+          {
+            "name": "DraftKings Sportsbook",
+            "description": "Two-story sportsbook for American and international sports betting, viewing, food, and drinks."
+          },
+          {
+            "name": "Topgolf Swing Suite",
+            "description": "Private lounge-style golf simulator and game space for groups and private events."
+          },
+          {
+            "name": "Proper Chophouse",
+            "description": "Upscale dining venue with fine cuts and cocktails."
+          },
+          {
+            "name": "Woodlands Cafe",
+            "description": "Comfort food venue with locally inspired flavors."
+          }
+        ]
+      },
+      "website_intelligence": {
+        "status": "ok",
+        "website_urls": [
+          "https://thenashcasino.com/",
+          "https://nhproblemgambling.org/"
+        ],
+        "sitemap_count": 2,
+        "url_count": 8,
+        "product_or_service_count": 0,
+        "top_terms": [
+          "gambling",
+          "problem",
+          "nhcpg",
+          "call",
+          "helpline",
+          "nash",
+          "here",
+          "council",
+          "support",
+          "for",
+          "hampshire",
+          "provide"
+        ],
+        "blockers": [
+          "No usable sitemap found for https://thenashcasino.com/; sampled homepage only."
+        ]
+      }
+    },
+    {
+      "slug": "thera",
+      "display_name": "Thera Physical and Occupational Therapy",
+      "path": "clients/thera",
+      "status": "ready",
+      "inferred_status": "ready",
+      "priority": "urgent",
+      "automation_priority": 1,
+      "active_monthly_volume": "12 blog posts/month",
+      "brand_voice": "Empathetic and expert, supportive without being clinical, written for patients navigating sensitive recovery experiences.",
+      "risk_flags": "VIP client relationship. Patient audience includes breast cancer, surgery, and lymphatic complications. Tone errors and clinical inaccuracies carry emotional and reputational risk.",
+      "owner_label": "CSM/POC: Wendy Alinor / Editor: Aleksandra Velickovic / Writer: Unassigned writer",
+      "writer": "",
+      "editor": "Aleksandra Velickovic",
+      "csm": "Wendy Alinor",
+      "next_action": "Confirm compliance and terminology rules are captured in the client brief before automation.",
+      "blocker": "",
+      "review_url": "",
+      "delivery_url": "",
+      "notes": "VIP specialized rehabilitation clinic in Midtown Manhattan.",
+      "readiness_score": 56,
+      "readiness_status": "partial",
+      "missing_required": [],
+      "missing_recommended": [
+        "Delivery config",
+        "Approved examples",
+        "Page templates",
+        "Legacy campaign folder"
+      ],
+      "campaigns": [],
+      "runs": [],
+      "monthly_deliverables": [],
+      "blockers": [],
+      "service_taxonomy": {
+        "count": 7,
+        "items": [
+          {
+            "name": "Lymphedema",
+            "description": "Therapy support for lymphedema management and related swelling concerns."
+          },
+          {
+            "name": "Post-Mastectomy Recovery",
+            "description": "Therapy support after mastectomy, lumpectomy, or reconstruction."
+          },
+          {
+            "name": "Post-Surgical Swelling",
+            "description": "Treatment support for swelling and restricted movement after surgery."
+          },
+          {
+            "name": "Scar Tissue Restrictions",
+            "description": "Therapy for scar tissue and soft tissue restrictions affecting movement or comfort."
+          },
+          {
+            "name": "Limited Shoulder and Arm Mobility",
+            "description": "Support for shoulder and arm mobility limitations after breast surgery."
+          },
+          {
+            "name": "Lymphatic Complications",
+            "description": "Treatment support for lymphatic complications after cosmetic or medical procedures."
+          },
+          {
+            "name": "Pain Affecting Daily Movement",
+            "description": "Therapy support for pain that limits daily movement."
+          }
+        ]
+      },
+      "website_intelligence": {
+        "status": "ok",
+        "website_urls": [
+          "https://www.thera-rehab.com/"
+        ],
+        "sitemap_count": 1,
+        "url_count": 260,
+        "product_or_service_count": 1,
+        "top_terms": [
+          "thera",
+          "therapy",
+          "nyc",
+          "lymphedema",
+          "for",
+          "physical",
+          "rehabilitation",
+          "occupational",
+          "recovery",
+          "lymphatic",
+          "breast",
+          "manhattan"
+        ],
+        "blockers": []
+      }
+    },
+    {
+      "slug": "trustlayer",
+      "display_name": "TrustLayer",
+      "path": "clients/trustlayer",
+      "status": "ready",
+      "inferred_status": "ready",
+      "priority": "standard",
+      "automation_priority": "",
+      "active_monthly_volume": "",
+      "brand_voice": "",
+      "risk_flags": "",
+      "owner_label": "CSM/POC: Wendy Alinor / Editor: Aleksandra Velickovic / Writer: Unassigned writer",
+      "writer": "",
+      "editor": "Aleksandra Velickovic",
+      "csm": "Wendy Alinor",
+      "next_action": "",
+      "blocker": "",
+      "review_url": "",
+      "delivery_url": "",
+      "notes": "AI-powered COI collection and third-party compliance platform. Never insurance software.",
+      "readiness_score": 56,
+      "readiness_status": "partial",
+      "missing_required": [],
+      "missing_recommended": [
+        "Delivery config",
+        "Approved examples",
+        "Page templates",
+        "Legacy campaign folder"
+      ],
+      "campaigns": [],
+      "runs": [],
+      "monthly_deliverables": [],
+      "blockers": [],
+      "service_taxonomy": {
+        "count": 13,
+        "items": [
+          {
+            "name": "Automated COI Collection",
+            "description": "Vendors submit certificates of insurance directly without a vendor sign-in requirement."
+          },
+          {
+            "name": "AI Gap Detection",
+            "description": "Automated review that flags missing or non-compliant coverage."
+          },
+          {
+            "name": "Multi-Document Support",
+            "description": "Document support for COIs, W-9s, business licenses, and contracts."
+          },
+          {
+            "name": "Automated Renewal Reminders",
+            "description": "Vendor reminders before compliance documents expire."
+          },
+          {
+            "name": "Real-Time Compliance Monitoring Dashboard",
+            "description": "Dashboard for current vendor compliance status across documents."
+          },
+          {
+            "name": "API and Integrations",
+            "description": "Connections into existing workflows through API and integration support."
+          },
+          {
+            "name": "TrustScore",
+            "description": "Proprietary risk scoring metric used in the TrustLayer platform."
+          }
+        ]
+      },
+      "website_intelligence": {
+        "status": "ok",
+        "website_urls": [
+          "https://trustlayer.io/"
+        ],
+        "sitemap_count": 1,
+        "url_count": 496,
+        "product_or_service_count": 0,
+        "top_terms": [
+          "trustlayer",
+          "risk",
+          "coi",
+          "management",
+          "compliance",
+          "platform",
+          "form",
+          "acord",
+          "want",
+          "crunch",
+          "seconds",
+          "tracking"
+        ],
+        "blockers": []
+      }
+    },
+    {
+      "slug": "us-self-storage",
+      "display_name": "US Self Storage",
+      "path": "clients/us-self-storage",
+      "status": "briefing",
+      "inferred_status": "briefing",
+      "priority": "soon",
+      "automation_priority": 2,
+      "active_monthly_volume": "5 pages/month across U.S. Storage Units / U.S. Self-Storage",
+      "brand_voice": "Straightforward and practical: a helpful guide that makes finding and reserving storage simple, never salesy or overcomplicated.",
+      "risk_flags": "",
+      "owner_label": "CSM/POC: Arianna Trabanino / Editor: Aleksandra Velickovic / Writer: Unassigned writer",
+      "writer": "",
+      "editor": "Aleksandra Velickovic",
+      "csm": "Arianna Trabanino",
+      "next_action": "",
+      "blocker": "",
+      "review_url": "",
+      "delivery_url": "",
+      "notes": "Self-storage comparison marketplace and editorial hub.",
+      "readiness_score": 67,
+      "readiness_status": "partial",
+      "missing_required": [],
+      "missing_recommended": [
+        "Delivery config",
+        "Approved examples",
+        "Page templates"
+      ],
+      "campaigns": [
+        {
+          "slug": "01-june-2026-listicles",
+          "path": "clients/us-self-storage/campaigns/01-june-2026-listicles",
+          "title": "01-june-2026-listicles",
+          "has_readme": false,
+          "draft_count": 0,
+          "final_count": 0,
+          "html_count": 0
+        }
+      ],
+      "runs": [],
+      "monthly_deliverables": [],
+      "blockers": [],
+      "service_taxonomy": {
+        "count": 8,
+        "items": [
+          {
+            "name": "Standard Self-Storage",
+            "description": "General storage units for personal or business storage needs."
+          },
+          {
+            "name": "Climate-Controlled Storage",
+            "description": "Storage units with temperature or humidity control where available."
+          },
+          {
+            "name": "Drive-Up Access Units",
+            "description": "Ground-level storage units with direct vehicle access."
+          },
+          {
+            "name": "Month-to-Month Rentals",
+            "description": "Flexible rental terms for storage users who do not need long contracts."
+          },
+          {
+            "name": "Vehicle Storage",
+            "description": "Broader category covering cars, RVs, boats, and similar vehicles."
+          },
+          {
+            "name": "Car Storage",
+            "description": "Storage options for cars depending on facility availability."
+          },
+          {
+            "name": "RV Storage",
+            "description": "Storage options for recreational vehicles."
+          }
+        ]
+      },
+      "website_intelligence": {
+        "status": "partial",
+        "website_urls": [
+          "https://usselfstorage.com/"
+        ],
+        "sitemap_count": 0,
+        "url_count": 1,
+        "product_or_service_count": 0,
+        "top_terms": [
+          "just",
+          "moment"
+        ],
+        "blockers": [
+          "No usable sitemap found for https://usselfstorage.com/; sampled homepage only."
+        ]
+      }
+    },
+    {
+      "slug": "us-storage-units",
+      "display_name": "US Storage Units",
+      "path": "clients/us-storage-units",
+      "status": "ready",
+      "inferred_status": "ready",
+      "priority": "soon",
+      "automation_priority": 2,
+      "active_monthly_volume": "5 pages/month across U.S. Storage Units / U.S. Self-Storage",
+      "brand_voice": "Straightforward and practical: a helpful guide that makes finding and reserving storage simple, never salesy or overcomplicated.",
+      "risk_flags": "",
+      "owner_label": "CSM/POC: Arianna Trabanino / Editor: Aleksandra Velickovic / Writer: Unassigned writer",
+      "writer": "",
+      "editor": "Aleksandra Velickovic",
+      "csm": "Arianna Trabanino",
+      "next_action": "",
+      "blocker": "",
+      "review_url": "",
+      "delivery_url": "",
+      "notes": "Self-storage comparison and reservation marketplace.",
+      "readiness_score": 56,
+      "readiness_status": "partial",
+      "missing_required": [],
+      "missing_recommended": [
+        "Delivery config",
+        "Approved examples",
+        "Page templates",
+        "Legacy campaign folder"
+      ],
+      "campaigns": [],
+      "runs": [],
+      "monthly_deliverables": [],
+      "blockers": [],
+      "service_taxonomy": {
+        "count": 9,
+        "items": [
+          {
+            "name": "Standard Self-Storage",
+            "description": "Storage units from small lockers through larger units, with size details verified per page."
+          },
+          {
+            "name": "Climate-Controlled Storage",
+            "description": "Indoor temperature or humidity-regulated storage for sensitive belongings."
+          },
+          {
+            "name": "Drive-Up Storage",
+            "description": "Ground-level units with direct vehicle access and garage-style doors."
+          },
+          {
+            "name": "24-Hour Access",
+            "description": "Storage facilities or units with any-hour access where available."
+          },
+          {
+            "name": "Business Storage",
+            "description": "Storage for inventory, equipment, records, and business supplies."
+          },
+          {
+            "name": "Car / Vehicle Storage",
+            "description": "Storage for cars and broader vehicle needs, with covered, enclosed, or outdoor options depending on facility."
+          },
+          {
+            "name": "RV Storage",
+            "description": "Storage for recreational vehicles, with configuration verified by facility."
+          }
+        ]
+      },
+      "website_intelligence": {
+        "status": "partial",
+        "website_urls": [
+          "https://usstorageunits.com/"
+        ],
+        "sitemap_count": 0,
+        "url_count": 1,
+        "product_or_service_count": 0,
+        "top_terms": [
+          "just",
+          "moment"
+        ],
+        "blockers": [
+          "No usable sitemap found for https://usstorageunits.com/; sampled homepage only."
+        ]
+      }
+    },
+    {
+      "slug": "zia-tile",
+      "display_name": "Zia Tile",
+      "path": "clients/zia-tile",
+      "status": "drafting",
+      "inferred_status": "drafting",
+      "priority": "urgent",
+      "automation_priority": 1,
+      "active_monthly_volume": "Approx. 10+ blog posts, 30+ product pages, 15+ core pages/month",
+      "brand_voice": "A knowledgeable design editor writing for Architectural Digest: warm, authoritative, specific, rooted in craft, history, and material authenticity.",
+      "risk_flags": "Highest-priority, highest-value client. Jamie Greenspan and team are final authority. Verify every product detail against ziatile.com and materials reference guide before anything reaches Jamie.",
+      "owner_label": "CSM/POC: Alex Bélanger / Editor: Aleksandra Velickovic / Writer: Unassigned writer",
+      "writer": "",
+      "editor": "Aleksandra Velickovic",
+      "csm": "Alex Bélanger",
+      "next_action": "Confirm compliance and terminology rules are captured in the client brief before automation.",
+      "blocker": "",
+      "review_url": "",
+      "delivery_url": "",
+      "notes": "Premium artisanal tile retailer.",
+      "readiness_score": 100,
+      "readiness_status": "ready",
+      "missing_required": [],
+      "missing_recommended": [],
+      "campaigns": [
+        {
+          "slug": "01-product-collection-pages",
+          "path": "clients/zia-tile/campaigns/01-product-collection-pages",
+          "title": "01 — Product & Collection Pages",
+          "has_readme": true,
+          "draft_count": 0,
+          "final_count": 0,
+          "html_count": 0
+        },
+        {
+          "slug": "02-collection-page-optimizations",
+          "path": "clients/zia-tile/campaigns/02-collection-page-optimizations",
+          "title": "02-collection-page-optimizations",
+          "has_readme": false,
+          "draft_count": 0,
+          "final_count": 0,
+          "html_count": 0
+        },
+        {
+          "slug": "02-march-april-updates",
+          "path": "clients/zia-tile/campaigns/02-march-april-updates",
+          "title": "02 — March/April Updates",
+          "has_readme": true,
+          "draft_count": 0,
+          "final_count": 0,
+          "html_count": 0
+        },
+        {
+          "slug": "03-may-2026-blogs",
+          "path": "clients/zia-tile/campaigns/03-may-2026-blogs",
+          "title": "03 — May 2026 Blogs",
+          "has_readme": true,
+          "draft_count": 0,
+          "final_count": 0,
+          "html_count": 0
+        },
+        {
+          "slug": "04-may-batch",
+          "path": "clients/zia-tile/campaigns/04-may-batch",
+          "title": "04 — May Batch",
+          "has_readme": true,
+          "draft_count": 0,
+          "final_count": 0,
+          "html_count": 0
+        },
+        {
+          "slug": "05-june-2026-blogs",
+          "path": "clients/zia-tile/campaigns/05-june-2026-blogs",
+          "title": "Campaign 05 — June 2026 Blogs",
+          "has_readme": true,
+          "draft_count": 0,
+          "final_count": 0,
+          "html_count": 0
+        }
+      ],
+      "runs": [
+        {
+          "slug": "collection-cotto-allende",
+          "campaign": "01-product-collection-pages",
+          "path": "clients/zia-tile/campaigns/01-product-collection-pages/runs/collection-cotto-allende",
+          "status": "drafting",
+          "blocked": false,
+          "summary": "",
+          "html_count": 0,
+          "md_count": 0
+        },
+        {
+          "slug": "bathroom-tile-ideas",
+          "campaign": "04-may-batch",
+          "path": "clients/zia-tile/campaigns/04-may-batch/runs/bathroom-tile-ideas",
+          "status": "drafting",
+          "blocked": false,
+          "summary": "",
+          "html_count": 0,
+          "md_count": 0
+        }
+      ],
+      "monthly_deliverables": [],
+      "blockers": [],
+      "service_taxonomy": {
+        "count": 19,
+        "items": [
+          {
+            "name": "Zellige",
+            "description": "Handmade Moroccan glazed tile with surface variation, chips, pits, crazing, sheen, and tonal range as expected characteristics."
+          },
+          {
+            "name": "Unglazed Natural Zellige",
+            "description": "Unglazed Moroccan zellige colorway for earthy, matte installations."
+          },
+          {
+            "name": "Cement Tile",
+            "description": "Pigmented cement tile made with mineral pigments and hydraulic press methods. Matte, unfired, and pattern-driven."
+          },
+          {
+            "name": "Cotto",
+            "description": "Unglazed San Miguel de Allende clay tile with earthy variation and exterior suitability, including freeze/thaw regions."
+          },
+          {
+            "name": "Cotto Allende",
+            "description": "Hand-glazed tile made with the same clay body as Cotto, with pool and spa suitability where confirmed."
+          },
+          {
+            "name": "Ceramics",
+            "description": "Japanese molded and glazed ceramic tile, including matte, satin, glossy, flat, and textured options."
+          },
+          {
+            "name": "Field Trip Japan",
+            "description": "Extruded and die-cut Japanese ceramic sub-line."
+          }
+        ]
+      },
+      "website_intelligence": {
+        "status": "ok",
+        "website_urls": [
+          "https://www.ziatile.com/"
+        ],
+        "sitemap_count": 4,
+        "url_count": 1200,
+        "product_or_service_count": 80,
+        "top_terms": [
+          "tiles",
+          "tile",
+          "all",
+          "installation",
+          "guides",
+          "square",
+          "cement",
+          "zia",
+          "zellige",
+          "project",
+          "add",
+          "cart"
+        ],
+        "blockers": []
+      }
+    }
+  ],
+  "editable_registry": "dashboard/delivery-registry.json"
+}

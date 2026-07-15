@@ -1,0 +1,2280 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LinkGraph Delivery Dashboard</title>
+  <style>
+    :root {
+      --bg: #f4f6fa;
+      --ink: #162033;
+      --muted: #617087;
+      --line: #dce3ee;
+      --panel: #ffffff;
+      --navy: #12385d;
+      --blue: #2458c2;
+      --orange: #f47a2a;
+      --green: #257350;
+      --yellow: #9a6a00;
+      --red: #b2463d;
+      --chip: #edf1f7;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.45;
+    }
+    .shell {
+      width: min(1440px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+    header {
+      padding: 22px 0 18px;
+      background: #ffffff;
+      border-bottom: 1px solid var(--line);
+    }
+    .topline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--navy);
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+    .mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+      line-height: 1;
+      border-bottom: 4px solid var(--orange);
+    }
+    h1 {
+      margin: 18px 0 6px;
+      font-size: clamp(30px, 4vw, 52px);
+      line-height: 1.04;
+      letter-spacing: 0;
+      color: var(--ink);
+    }
+    .subhead {
+      margin: 0;
+      color: var(--muted);
+      max-width: 860px;
+      font-size: 16px;
+    }
+    .header-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13px;
+    }
+    .button.secondary {
+      background: #eef3fb;
+      color: var(--navy);
+      border: 1px solid var(--line);
+    }
+    .button:hover { text-decoration: none; }
+    main {
+      padding: 24px 0 44px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(360px, .95fr);
+      gap: 16px;
+      align-items: stretch;
+    }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 10px 28px rgba(18, 56, 93, .06);
+    }
+    .workflow {
+      padding: 18px;
+    }
+    .section-kicker {
+      margin: 0 0 6px;
+      color: var(--orange);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+    h2 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.16;
+      letter-spacing: 0;
+    }
+    .lede {
+      margin: 8px 0 0;
+      color: var(--muted);
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .stat {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .stat strong {
+      display: block;
+      font-size: 28px;
+      line-height: 1;
+      color: var(--navy);
+    }
+    .stat span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .command-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .command {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      background: #fbfcff;
+    }
+    .command-number {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      background: var(--navy);
+      color: #fff;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .command h3 {
+      margin: 0 0 6px;
+      font-size: 16px;
+      letter-spacing: 0;
+    }
+    .command p {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    code {
+      display: inline-block;
+      max-width: 100%;
+      padding: 2px 5px;
+      border-radius: 5px;
+      background: #edf1f7;
+      color: #263449;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12px;
+      white-space: normal;
+    }
+    .empty-state {
+      margin-top: 16px;
+      padding: 16px;
+      border: 1px dashed #f0a269;
+      border-radius: 8px;
+      background: #fff7f0;
+    }
+    .empty-state strong {
+      display: block;
+      margin-bottom: 4px;
+      color: #7c421c;
+    }
+    .section-header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin: 28px 0 12px;
+    }
+    .section-header p {
+      margin: 6px 0 0;
+      color: var(--muted);
+      max-width: 780px;
+    }
+    .client-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .client-card {
+      padding: 16px;
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .card-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .client-name {
+      font-weight: 800;
+      font-size: 18px;
+      color: var(--ink);
+    }
+    .path {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+    }
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: var(--chip);
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .chip.good { color: var(--green); background: #e5f3ec; }
+    .chip.warn { color: var(--yellow); background: #fff3cf; }
+    .chip.danger { color: var(--red); background: #fae5e2; }
+    .chip.neutral { color: var(--blue); background: #e7eefc; }
+    .label {
+      margin: 0 0 4px;
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+    .value {
+      margin: 0;
+      color: var(--ink);
+      font-size: 14px;
+    }
+    .small { color: var(--muted); font-size: 12px; }
+    .metric-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: auto;
+    }
+    .metric {
+      padding: 9px;
+      border-radius: 8px;
+      background: #f4f7fb;
+      border: 1px solid #e6edf6;
+    }
+    .metric strong {
+      display: block;
+      color: var(--navy);
+      font-size: 18px;
+      line-height: 1;
+    }
+    .risk-block {
+      padding: 10px;
+      border-radius: 8px;
+      background: #fff7f0;
+      border: 1px solid #f0cfb5;
+    }
+    .link-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .text-link {
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .text-link:hover { text-decoration: underline; }
+    .ops-table {
+      overflow: hidden;
+    }
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+    }
+    th, td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+      font-size: 13px;
+    }
+    th {
+      background: #eef3fb;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      color: #3d4047;
+    }
+    tr:last-child td { border-bottom: 0; }
+    .missing { margin: 6px 0 0; padding-left: 18px; }
+    .missing li { margin: 2px 0; }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .footer-note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .footer-note code { margin: 0 2px; }
+    @media (max-width: 900px) {
+      .shell { width: min(100% - 28px, 1440px); }
+      .topline, .section-header { align-items: flex-start; flex-direction: column; }
+      .hero-grid, .command-grid, .client-grid { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      table, thead, tbody, th, td, tr { display: block; }
+      thead { display: none; }
+      tr { border-bottom: 1px solid var(--line); }
+      td { border-bottom: 0; padding: 8px 12px; }
+      td::before {
+        content: attr(data-label);
+        display: block;
+        color: var(--muted);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: .04em;
+        margin-bottom: 2px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="shell">
+      <div class="topline">
+        <div class="brand"><span class="mark">L</span><span>LinkGraph Content Ops</span></div>
+        <div class="header-actions">
+          <a class="button secondary" href="client-context-dashboard/index.html">Client Context</a>
+          <a class="button" href="weekly-intake-template.csv">Intake CSV</a>
+        </div>
+      </div>
+      <h1>Delivery Command Center</h1>
+      <p class="subhead">A working surface for weekly topic intake, client context, monthly production, review, and Google Drive handoff. Generated from client folders, monthly registries, website intelligence, and <code>dashboard/delivery-registry.json</code>.</p>
+    </div>
+  </header>
+  <main class="shell">
+    <section class="hero-grid">
+      <div class="panel workflow">
+        <p class="section-kicker">Weekly production flow</p>
+        <h2>Move topics from intake to finished client folders without losing context.</h2>
+        <p class="lede">Every client should have a context pack, a monthly deliverables registry, and a Drive-ready export. The dashboard should show what exists, what is waiting, and where the next action belongs.</p>
+        <div class="command-grid">
+          
+          <div class="command">
+            <div class="command-number">1</div>
+            <h3>Import weekly intake</h3>
+            <p>Drop the week&apos;s topics and keywords into the intake CSV, then create client/month deliverable registries.</p>
+            <code>python3 scripts/import-weekly-intake.py content-production/weekly-intake/YYYY-MM-DD/topics.csv</code>
+          </div>
+          
+          <div class="command">
+            <div class="command-number">2</div>
+            <h3>Produce in context</h3>
+            <p>Use each client page for voice, offerings, topical terms, source rules, and no-slop writing constraints before drafting.</p>
+            <code>reports/client-context-dashboard/index.html</code>
+          </div>
+          
+          <div class="command">
+            <div class="command-number">3</div>
+            <h3>Export to Drive</h3>
+            <p>Package the month into a Google Drive-ready folder with client subfolders, manifests, and status summaries.</p>
+            <code>python3 scripts/build-google-drive-export.py --month YYYY-MM</code>
+          </div>
+        </div>
+        
+        <div class="empty-state">
+          <strong>No weekly intake has been imported yet.</strong>
+          Add the week&apos;s topics and keywords to <code>content-production/weekly-intake/YYYY-MM-DD/topics.csv</code>, then run the import command above. That creates each client&apos;s monthly registry and deliverable placeholders.
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>25</strong><span>client accounts tracked</span></div>
+        <div class="stat"><strong>7</strong><span>urgent automation clients</span></div>
+        <div class="stat"><strong>2</strong><span>missing CSM / POC</span></div>
+        <div class="stat"><strong>25</strong><span>website intelligence packs</span></div>
+        <div class="stat"><strong>0</strong><span>monthly deliverables queued</span></div>
+        <div class="stat"><strong>0</strong><span>clients needing attention</span></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <div>
+          <p class="section-kicker">Client workspaces</p>
+          <h2>Context, queue, and handoff state by client</h2>
+          <p>Use these cards as the starting point for production. The client context link is where writers should check style, services, products, topical map, and compliance constraints before drafting.</p>
+        </div>
+      </div>
+      <div class="client-grid">
+        
+        <article class="panel client-card">
+          <div class="card-head">
+            <div>
+              <div class="client-name">Zia Tile</div>
+              <div class="path">zia-tile</div>
+            </div>
+            <span class="chip neutral">drafting</span>
+          </div>
+          <div class="chips">
+            <span class="chip neutral">P1 automation</span>
+            <span class="chip good">100% context</span>
+            <span class="chip neutral">ok crawl</span>
+          </div>
+          <div>
+            <p class="label">Owners</p>
+            <p class="value small">CSM / POC: Alex Bélanger<br>Editor: Aleksandra Velickovic<br>Writer: Unassigned</p>
+          </div>
+          <div>
+            <p class="label">Monthly volume</p>
+            <p class="value small">Approx. 10+ blog posts, 30+ product pages, 15+ core pages/month</p>
+          </div>
+          <div>
+            <p class="label">Brand voice</p>
+            <p class="value small">A knowledgeable design editor writing for Architectural Digest: warm, authoritative, specific, rooted in craft, history, and material authenticity.</p>
+          </div>
+          <div class="risk-block"><p class="label">Flag</p><p class="value small">Highest-priority, highest-value client. Jamie Greenspan and team are final authority. Verify every product detail against ziatile.com and materials reference guide before anything reaches Jamie.</p></div>
+          <div>
+            <p class="label">Next action</p>
+            <p class="value">Confirm compliance and terminology rules are captured in the client brief before automation.</p>
+          </div>
+          <div>
+            <p class="label">Offering context</p>
+            <p class="value small">Zellige, Unglazed Natural Zellige, Cement Tile, Cotto, Cotto Allende, Ceramics</p>
+          </div>
+          <div>
+            <p class="label">Registry note</p>
+            <p class="value small">Premium artisanal tile retailer.</p>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><strong>0</strong><span class="small">deliverables</span></div>
+            <div class="metric"><strong>19</strong><span class="small">offerings</span></div>
+            <div class="metric"><strong>2</strong><span class="small">runs</span></div>
+          </div>
+          <div class="link-row">
+            <a class="text-link" href="client-context-dashboard/zia-tile.html">Client context</a>
+            <a class="text-link" href="https://www.ziatile.com/">Website</a>
+            <span class="small">No monthly queue · Import weekly intake</span>
+          </div>
+        </article>
+
+        <article class="panel client-card">
+          <div class="card-head">
+            <div>
+              <div class="client-name">Esthetics Center</div>
+              <div class="path">esthetics-center</div>
+            </div>
+            <span class="chip neutral">briefing</span>
+          </div>
+          <div class="chips">
+            <span class="chip neutral">P1 automation</span>
+            <span class="chip warn">67% context</span>
+            <span class="chip neutral">ok crawl</span>
+          </div>
+          <div>
+            <p class="label">Owners</p>
+            <p class="value small">CSM / POC: Wendy Alinor<br>Editor: Aleksandra Velickovic<br>Writer: Unassigned</p>
+          </div>
+          <div>
+            <p class="label">Monthly volume</p>
+            <p class="value small">Approx. 12 blog posts/month</p>
+          </div>
+          <div>
+            <p class="label">Brand voice</p>
+            <p class="value small">A trusted specialist who explains complex procedures clearly and honestly: clinical without being cold, confident without being arrogant.</p>
+          </div>
+          <div class="risk-block"><p class="label">Flag</p><p class="value small">High Touch / High Value. Regulated medical aesthetics and plastic surgery space. Clinical credibility stakes are high.</p></div>
+          <div>
+            <p class="label">Next action</p>
+            <p class="value">Confirm compliance and terminology rules are captured in the client brief before automation.</p>
+          </div>
+          <div>
+            <p class="label">Offering context</p>
+            <p class="value small">Facial Plastic Surgery, Injectable Treatments, Medical Spa Services, Professional Skincare Treatments, Skin Rejuvenation Procedures, Laser and Energy-Based Treatments</p>
+          </div>
+          <div>
+            <p class="label">Registry note</p>
+            <p class="value small">Medical aesthetics and plastic surgery in Northern California.</p>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><strong>0</strong><span class="small">deliverables</span></div>
+            <div class="metric"><strong>6</strong><span class="small">offerings</span></div>
+            <div class="metric"><strong>0</strong><span class="small">runs</span></div>
+          </div>
+          <div class="link-row">
+            <a class="text-link" href="client-context-dashboard/esthetics-center.html">Client context</a>
+            <a class="text-link" href="https://www.estheticscenter.com/">Website</a>
+            <span class="small">No monthly queue · Import weekly intake</span>
+          </div>
+        </article>
+
+        <article class="panel client-card">
+          <div class="card-head">
+            <div>
+              <div class="client-name">Altify</div>
+              <div class="path">altify</div>
+            </div>
+            <span class="chip neutral">briefing</span>
+          </div>
+          <div class="chips">
+            <span class="chip neutral">P1 automation</span>
+            <span class="chip warn">56% context</span>
+            <span class="chip neutral">ok crawl</span>
+          </div>
+          <div>
+            <p class="label">Owners</p>
+            <p class="value small">CSM / POC: Chanakya Thakkar<br>Editor: Aleksandra Velickovic<br>Writer: Unassigned</p>
+          </div>
+          <div>
+            <p class="label">Monthly volume</p>
+            <p class="value small">6 blog posts/month</p>
+          </div>
+          <div>
+            <p class="label">Brand voice</p>
+            <p class="value small">Authoritative enterprise sales strategist: confident, educational, results-focused, written for revenue leaders.</p>
+          </div>
+          <div class="risk-block"><p class="label">Flag</p><p class="value small">High Touch / High Value. Strict terminology adherence required. Avoid generic sales tips or casual seller framing.</p></div>
+          <div>
+            <p class="label">Next action</p>
+            <p class="value">Confirm compliance and terminology rules are captured in the client brief before automation.</p>
+          </div>
+          <div>
+            <p class="label">Offering context</p>
+            <p class="value small">Altify Insights, Altify Sales Process, Altify Opportunities, Altify Accounts, Revenue Enablement Services, MaxAI</p>
+          </div>
+          <div>
+            <p class="label">Registry note</p>
+            <p class="value small">Enterprise account planning AI platform.</p>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><strong>0</strong><span class="small">deliverables</span></div>
+            <div class="metric"><strong>19</strong><span class="small">offerings</span></div>
+            <div class="metric"><strong>0</strong><span class="small">runs</span></div>
+          </div>
+          <div class="link-row">
+            <a class="text-link" href="client-context-dashboard/altify.html">Client context</a>
+            <a class="text-link" href="https://altify.com/">Website</a>
+            <span class="small">No monthly queue · Import weekly intake</span>
+          </div>
+        </article>
+
+        <article class="panel client-card">
+          <div class="card-head">
+            <div>
+              <div class="client-name">Anne Therese Aesthetic Medicine</div>
+              <div class="path">anne-therese</div>
+            </div>
+            <span class="chip good">ready</span>
+          </div>
+          <div class="chips">
+            <span class="chip neutral">P1 automation</span>
+            <span class="chip warn">56% context</span>
+            <span class="chip neutral">ok crawl</span>
+          </div>
+          <div>
+            <p class="label">Owners</p>
+            <p class="value small">CSM / POC: Wendy Alinor<br>Editor: Aleksandra Velickovic<br>Writer: Unassigned</p>
+          </div>
+          <div>
+            <p class="label">Monthly volume</p>
+            <p class="value small">12 blog posts/month</p>
+          </div>
+          <div>
+            <p class="label">Brand voice</p>
+            <p class="value small">Credible and approachable with a premium aesthetic focus: medical professionalism meets aesthetic sophistication, never promotional or aggressive.</p>
+          </div>
+          <div class="risk-block"><p class="label">Flag</p><p class="value small">High Touch / High Value. Non-surgical medical aesthetics across three locations in two states. Qualify results and outcome language carefully.</p></div>
+          <div>
+            <p class="label">Next action</p>
+            <p class="value">Confirm compliance and terminology rules are captured in the client brief before automation.</p>
+          </div>
+          <div>
+            <p class="label">Offering context</p>
+            <p class="value small">Botox Injections, Dermal Filler, Hydrafacial, Facials, CoolSculpting, Clear + Brilliant</p>
+          </div>
+          <div>
+            <p class="label">Registry note</p>
+            <p class="value small">Medical aesthetics practice with OH and FL locations.</p>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><strong>0</strong><span class="small">deliverables</span></div>
+            <div class="metric"><strong>14</strong><span class="small">offerings</span></div>
+            <div class="metric"><strong>0</strong><span class="small">runs</span></div>
+          </div>
+          <div class="link-row">
+            <a class="text-link" href="client-context-dashboard/anne-therese.html">Client context</a>
+            <a class="text-link" href="https://www.annetherese.com/">Website</a>
+            <span class="small">No monthly queue · Import weekly intake</span>
+          </div>
+        </article>
+
+        <article class="panel client-card">
+          <div class="card-head">
+            <div>
+              <div class="client-name">Laser Center of Marin</div>
+              <div class="path">laser-center-of-marin</div>
+            </div>
+            <span class="chip good">ready</span>
+          </div>
+          <div class="chips">
+            <span class="chip neutral">P1 automation</span>
+            <span class="chip warn">56% context</span>
+            <span class="chip neutral">ok crawl</span>
+          </div>
+          <div>
+            <p class="label">Owners</p>
+            <p class="value small">CSM / POC: Wendy Alinor<br>Editor: Aleksandra Velickovic<br>Writer: Unassigned</p>
+          </div>
+          <div>
+            <p class="label">Monthly volume</p>
+            <p class="value small">Approx. 12 blog posts/month</p>
+          </div>
+          <div>
+            <p class="label">Brand voice</p>
+            <p class="value small">A knowledgeable, trusted practitioner speaking directly to a patient: warm, confident, medically grounded, never promotional.</p>
+          </div>
+          <div class="risk-block"><p class="label">Flag</p><p class="value small">High Touch / High Value. Regulated medical aesthetics space. Avoid guaranteed results and unsupported medical assertions.</p></div>
+          <div>
+            <p class="label">Next action</p>
+            <p class="value">Confirm compliance and terminology rules are captured in the client brief before automation.</p>
+          </div>
+          <div>
+            <p class="label">Offering context</p>
+            <p class="value small">Injectable Treatments, Laser Treatments, Non-Invasive Cosmetic Procedures, Skin Rejuvenation</p>
+          </div>
+          <div>
+            <p class="label">Registry note</p>
+            <p class="value small">Physician-supervised aesthetic clinic in Marin County.</p>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><strong>0</strong><span class="small">deliverables</span></div>
+            <div class="metric"><strong>4</strong><span class="small">offerings</span></div>
+            <div class="metric"><strong>0</strong><span class="small">runs</span></div>
+          </div>
+          <div class="link-row">
+            <a class="text-link" href="client-context-dashboard/laser-center-of-marin.html">Client context</a>
+            <a class="text-link" href="https://www.marinlaser.com/">Website</a>
+            <span class="small">No monthly queue · Import weekly intake</span>
+          </div>
+        </article>
+
+        <article class="panel client-card">
+          <div class="card-head">
+            <div>
+              <div class="client-name">Loti Labs / Wholesale Peptide</div>
+              <div class="path">loti-labs</div>
+            </div>
+            <span class="chip good">ready</span>
+          </div>
+          <div class="chips">
+            <span class="chip neutral">P1 automation</span>
+            <span class="chip warn">56% context</span>
+            <span class="chip neutral">ok crawl</span>
+          </div>
+          <div>
+            <p class="label">Owners</p>
+            <p class="value small">CSM / POC: Alex Bélanger<br>Editor: Aleksandra Velickovic<br>Writer: Unassigned</p>
+          </div>
+          <div>
+            <p class="label">Monthly volume</p>
+            <p class="value small">15 optimizations/month</p>
+          </div>
+          <div>
+            <p class="label">Brand voice</p>
+            <p class="value small">Scientific precision with boutique researcher-to-researcher warmth: authoritative, trustworthy, never promotional or therapeutic.</p>
+          </div>
+          <div class="risk-block"><p class="label">Flag</p><p class="value small">Regulated grey area. Research context only. No human use, therapeutic benefit, or dosing guidance.</p></div>
+          <div>
+            <p class="label">Next action</p>
+            <p class="value">Confirm compliance and terminology rules are captured in the client brief before automation.</p>
+          </div>
+          <div>
+            <p class="label">Offering context</p>
+            <p class="value small">Peptides, Liquids, Capsules, Collagen Peptides, Antimicrobial Peptides, Growth Factor Peptides</p>
+          </div>
+          <div>
+            <p class="label">Registry note</p>
+            <p class="value small">Research peptide, liquid, and capsule supplier. RUO compliance required.</p>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><strong>0</strong><span class="small">deliverables</span></div>
+            <div class="metric"><strong>37</strong><span class="small">offerings</span></div>
+            <div class="metric"><strong>0</strong><span class="small">runs</span></div>
+          </div>
+          <div class="link-row">
+            <a class="text-link" href="client-context-dashboard/loti-labs.html">Client context</a>
+            <a class="text-link" href="https://lotilabs.com/">Website</a>
+            <span class="small">No monthly queue · Import weekly intake</span>
+          </div>
+        </article>
+
+        <article class="panel client-card">
+          <div class="card-head">
+            <div>
+              <div class="client-name">Thera Physical and Occupational Therapy</div>
+              <div class="path">thera</div>
+            </div>
+            <span class="chip good">ready</span>
+          </div>
+          <div class="chips">
+            <span class="chip neutral">P1 automation</span>
+            <span class="chip warn">56% context</span>
+            <span class="chip neutral">ok crawl</span>
+          </div>
+          <div>
+            <p class="label">Owners</p>
+            <p class="value small">CSM / POC: Wendy Alinor<br>Editor: Aleksandra Velickovic<br>Writer: Unassigned</p>
+          </div>
+          <div>
+            <p class="label">Monthly volume</p>
+            <p class="value small">12 blog posts/month</p>
+          </div>
+          <div>
+            <p class="label">Brand voice</p>
+            <p class="value small">Empathetic and expert, supportive without being clinical, written for patients navigating sensitive recovery experiences.</p>
+          </div>
+          <div class="risk-block"><p class="label">Flag</p><p class="value small">VIP client relationship. Patient audience includes breast cancer, surgery, and lymphatic complications. Tone errors and clinical inaccuracies carry emotional and reputational risk.</p></div>
+          <div>
+            <p class="label">Next action</p>
+            <p class="value">Confirm compliance and terminology rules are captured in the client brief before automation.</p>
+          </div>
+          <div>
+            <p class="label">Offering context</p>
+            <p class="value small">Lymphedema, Post-Mastectomy Recovery, Post-Surgical Swelling, Scar Tissue Restrictions, Limited Shoulder and Arm Mobility, Lymphatic Complications</p>
+          </div>
+          <div>
+            <p class="label">Registry note</p>
+            <p class="value small">VIP specialized rehabilitation clinic in Midtown Manhattan.</p>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><strong>0</strong><span class="small">deliverables</span></div>
+            <div class="metric"><strong>7</strong><span class="small">offerings</span></div>
+            <div class="metric"><strong>0</strong><span class="small">runs</span></div>
+          </div>
+          <div class="link-row">
+            <a class="text-link" href="client-context-dashboard/thera.html">Client context</a>
+            <a class="text-link" href="https://www.thera-rehab.com/">Website</a>
+            <span class="small">No monthly queue · Import weekly intake</span>
+          </div>
+        </article>
+
+        <article class="panel client-card">
+          <div class="card-head">
+            <div>
+              <div class="client-name">Portugal Pathways</div>
+              <div class="path">portugal-pathways</div>
+            </div>
+            <span class="chip neutral">briefing</span>
+          </div>
+          <div class="chips">
+            <span class="chip neutral">P2 automation</span>
+            <span class="chip warn">78% context</span>
+            <span class="chip neutral">ok crawl</span>
+          </div>
+          <div>
+            <p class="label">Owners</p>
+            <p class="value small">CSM / POC: Arianna Trabanino<br>Editor: Aleksandra Velickovic<br>Writer: Unassigned</p>
+          </div>
+          <div>
+            <p class="label">Monthly volume</p>
+            <p class="value small">5 page optimizations/month</p>
+          </div>
+          <div>
+            <p class="label">Brand voice</p>
+            <p class="value small">Measured, credible advisory voice that informs without promoting and attributes regulated advice to licensed professionals.</p>
+          </div>
+          <div class="risk-block"><p class="label">Flag</p><p class="value small">Compliance risk defines this client. Avoid fund marketing, tax advice, investment recommendations, and implied residency guarantees.</p></div>
+          <div>
+            <p class="label">Next action</p>
+            <p class="value">Import weekly topics to create this client&#x27;s monthly queue.</p>
+          </div>
+          <div>
+            <p class="label">Offering context</p>
+            <p class="value small">Residency Pathways, IFICI Tax Incentive Application Introductions, Post-NHR Long-Term Planning, Luxury New Homes Access, Cross-Border Financial Coordination, Foreign Currency Exchange</p>
+          </div>
+          <div>
+            <p class="label">Registry note</p>
+            <p class="value small">HNW relocation and residency advisory. British English and financial promotion compliance.</p>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><strong>0</strong><span class="small">deliverables</span></div>
+            <div class="metric"><strong>7</strong><span class="small">offerings</span></div>
+            <div class="metric"><strong>0</strong><span class="small">runs</span></div>
+          </div>
+          <div class="link-row">
+            <a class="text-link" href="client-context-dashboard/portugal-pathways.html">Client context</a>
+            <a class="text-link" href="https://www.portugalpathways.io/">Website</a>
+            <span class="small">No monthly queue · Import weekly intake</span>
+          </div>
+        </article>
+
+        <article class="panel client-card">
+          <div class="card-head">
+            <div>
+              <div class="client-name">US Self Storage</div>
+              <div class="path">us-self-storage</div>
+            </div>
+            <span class="chip neutral">briefing</span>
+          </div>
+          <div class="chips">
+            <span class="chip neutral">P2 automation</span>
+            <span class="chip warn">67% context</span>
+            <span class="chip warn">partial crawl</span>
+          </div>
+          <div>
+            <p class="label">Owners</p>
+            <p class="value small">CSM / POC: Arianna Trabanino<br>Editor: Aleksandra Velickovic<br>Writer: Unassigned</p>
+          </div>
+          <div>
+            <p class="label">Monthly volume</p>
+            <p class="value small">5 pages/month across U.S. Storage Units / U.S. Self-Storage</p>
+          </div>
+          <div>
+            <p class="label">Brand voice</p>
+            <p class="value small">Straightforward and practical: a helpful guide that makes finding and reserving storage simple, never salesy or overcomplicated.</p>
+          </div>
+          
+          <div>
+            <p class="label">Next action</p>
+            <p class="value">Import weekly topics to create this client&#x27;s monthly queue.</p>
+          </div>
+          <div>
+            <p class="label">Offering context</p>
+            <p class="value small">Standard Self-Storage, Climate-Controlled Storage, Drive-Up Access Units, Month-to-Month Rentals, Vehicle Storage, Car Storage</p>
+          </div>
+          <div>
+            <p class="label">Registry note</p>
+            <p class="value small">Self-storage comparison marketplace and editorial hub.</p>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><strong>0</strong><span class="small">deliverables</span></div>
+            <div class="metric"><strong>8</strong><span class="small">offerings</span></div>
+            <div class="metric"><strong>0</strong><span class="small">runs</span></div>
+          </div>
+          <div class="link-row">
+            <a class="text-link" href="client-context-dashboard/us-self-storage.html">Client context</a>
+            <a class="text-link" href="https://usselfstorage.com/">Website</a>
+            <span class="small">No monthly queue · Import weekly intake</span>
+          </div>
+        </article>
+
+        <article class="panel client-card">
+          <div class="card-head">
+            <div>
+              <div class="client-name">5Gstore</div>
+              <div class="path">5gstore</div>
+            </div>
+            <span class="chip neutral">briefing</span>
+          </div>
+          <div class="chips">
+            <span class="chip neutral">P2 automation</span>
+            <span class="chip warn">56% context</span>
+            <span class="chip neutral">ok crawl</span>
+          </div>
+          <div>
+            <p class="label">Owners</p>
+            <p class="value small">CSM / POC: Arianna Trabanino<br>Editor: Aleksandra Velickovic<br>Writer: Unassigned</p>
+          </div>
+          <div>
+            <p class="label">Monthly volume</p>
+            <p class="value small">5 pages/month</p>
+          </div>
+          <div>
+            <p class="label">Brand voice</p>
+            <p class="value small">Knowledgeable technical specialist who guides buyers through complex equipment decisions without condescending or oversimplifying.</p>
+          </div>
+          <div class="risk-block"><p class="label">Flag</p><p class="value small">Company name must always be written exactly as 5Gstore. Never 5GStore or 5G Store.</p></div>
+          <div>
+            <p class="label">Next action</p>
+            <p class="value">Import weekly topics to create this client&#x27;s monthly queue.</p>
+          </div>
+          <div>
+            <p class="label">Offering context</p>
+            <p class="value small">Enterprise Routers, Mobile Hotspots, Signal Boosters, Antennas, Hardware Accessories, Software Licenses / Cloud Services</p>
+          </div>
+          <div>
+            <p class="label">Registry note</p>
+            <p class="value small">Specialized 4G/5G networking equipment retailer.</p>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><strong>0</strong><span class="small">deliverables</span></div>
+            <div class="metric"><strong>6</strong><span class="small">offerings</span></div>
+            <div class="metric"><strong>0</strong><span class="small">runs</span></div>
+          </div>
+          <div class="link-row">
+            <a class="text-link" href="client-context-dashboard/5gstore.html">Client context</a>
+            <a class="text-link" href="https://5gstore.com/">Website</a>
+            <span class="small">No monthly queue · Import weekly intake</span>
+          </div>
+        </article>
+
+        <article class="panel client-card">
+          <div class="card-head">
+            <div>
+              <div class="client-name">Makana Charters</div>
+              <div class="path">makana-charters</div>
+            </div>
+            <span class="chip neutral">briefing</span>
+          </div>
+          <div class="chips">
+            <span class="chip neutral">P2 automation</span>
+            <span class="chip warn">56% context</span>
+            <span class="chip neutral">ok crawl</span>
+          </div>
+          <div>
+            <p class="label">Owners</p>
+            <p class="value small">CSM / POC: Wendy Alinor<br>Editor: Aleksandra Velickovic<br>Writer: Unassigned</p>
+          </div>
+          <div>
+            <p class="label">Monthly volume</p>
+            <p class="value small">Monthly volume to confirm</p>
+          </div>
+          <div>
+            <p class="label">Brand voice</p>
+            <p class="value small">Warm, grounded, heritage-proud, and ocean-literate: written like a Native Hawaiian family that knows these waters, never like a generic tour operator.</p>
+          </div>
+          <div class="risk-block"><p class="label">Flag</p><p class="value small">Cultural and place-based accuracy matter. Keep boat details, age limits, pregnancy policy, accessibility, sea cave entry, snorkeling, and weather/safety conditions precise.</p></div>
+          <div>
+            <p class="label">Next action</p>
+            <p class="value">Confirm monthly volume and current production cadence for Makana.</p>
+          </div>
+          <div>
+            <p class="label">Offering context</p>
+            <p class="value small">Na Pali Coast Boat Tours, Private Charters, Na Pali Snorkeling Tours, Na Pali Sea Cave Tours, Wildlife Viewing, Na Pali Kai III</p>
+          </div>
+          <div>
+            <p class="label">Registry note</p>
+            <p class="value small">Native Hawaiian-owned Na Pali Coast boat tour operator offering small-group and private catamaran tours from Kauai.</p>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><strong>0</strong><span class="small">deliverables</span></div>
+            <div class="metric"><strong>11</strong><span class="small">offerings</span></div>
+            <div class="metric"><strong>0</strong><span class="small">runs</span></div>
+          </div>
+          <div class="link-row">
+            <a class="text-link" href="client-context-dashboard/makana-charters.html">Client context</a>
+            <a class="text-link" href="https://makanacharters.com/">Website</a>
+            <span class="small">No monthly queue · Import weekly intake</span>
+          </div>
+        </article>
+
+        <article class="panel client-card">
+          <div class="card-head">
+            <div>
+              <div class="client-name">Liveops</div>
+              <div class="path">liveops</div>
+            </div>
+            <span class="chip good">ready</span>
+          </div>
+          <div class="chips">
+            <span class="chip neutral">P2 automation</span>
+            <span class="chip warn">67% context</span>
+            <span class="chip neutral">ok crawl</span>
+          </div>
+          <div>
+            <p class="label">Owners</p>
+            <p class="value small">CSM / POC: Chanakya Thakkar<br>Editor: Aleksandra Velickovic<br>Writer: Unassigned</p>
+          </div>
+          <div>
+            <p class="label">Monthly volume</p>
+            <p class="value small">4 to 5 pages/month</p>
+          </div>
+          <div>
+            <p class="label">Brand voice</p>
+            <p class="value small">Empathetic, expert, and enterprise-ready: confident without being cold, human without being casual.</p>
+          </div>
+          <div class="risk-block"><p class="label">Flag</p><p class="value small">Strict legal compliance around how agents are described. Terminology rules are non-negotiable before CSM review.</p></div>
+          <div>
+            <p class="label">Next action</p>
+            <p class="value">Import weekly topics to create this client&#x27;s monthly queue.</p>
+          </div>
+          <div>
+            <p class="label">Offering context</p>
+            <p class="value small">Customer Service Outsourcing, Customer Service, Sales and Lead Generation, Technical Support, Back Office Support, LiveNexus by Liveops</p>
+          </div>
+          <div>
+            <p class="label">Registry note</p>
+            <p class="value small">Cloud-based remote agent network for enterprise CX. Never hire/employee/trained.</p>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><strong>0</strong><span class="small">deliverables</span></div>
+            <div class="metric"><strong>14</strong><span class="small">offerings</span></div>
+            <div class="metric"><strong>0</strong><span class="small">runs</span></div>
+          </div>
+          <div class="link-row">
+            <a class="text-link" href="client-context-dashboard/liveops.html">Client context</a>
+            <a class="text-link" href="https://liveops.com/">Website</a>
+            <span class="small">No monthly queue · Import weekly intake</span>
+          </div>
+        </article>
+
+        <article class="panel client-card">
+          <div class="card-head">
+            <div>
+              <div class="client-name">Axiom HRS</div>
+              <div class="path">axiom-hrs</div>
+            </div>
+            <span class="chip good">ready</span>
+          </div>
+          <div class="chips">
+            <span class="chip neutral">P2 automation</span>
+            <span class="chip warn">56% context</span>
+            <span class="chip neutral">ok crawl</span>
+          </div>
+          <div>
+            <p class="label">Owners</p>
+            <p class="value small">CSM / POC: Alex Bélanger<br>Editor: Aleksandra Velickovic<br>Writer: Unassigned</p>
+          </div>
+          <div>
+            <p class="label">Monthly volume</p>
+            <p class="value small">3 optimizations, 1 pillar page, 2 blog posts/month</p>
+          </div>
+          <div>
+            <p class="label">Brand voice</p>
+            <p class="value small">Knowledgeable and people-focused: expertise delivered with warmth, never cold or overly technical.</p>
+          </div>
+          <div class="risk-block"><p class="label">Flag</p><p class="value small">Axiom is a rip-and-replace solution, not a connector. Enforce this at brief level before QA.</p></div>
+          <div>
+            <p class="label">Next action</p>
+            <p class="value">Import weekly topics to create this client&#x27;s monthly queue.</p>
+          </div>
+          <div>
+            <p class="label">Offering context</p>
+            <p class="value small">Payroll Processing, Benefits Enrollment and Administration, HR Outsourcing and Hands-On Support, HR Technology, Time and Labor Management, Compliance Support</p>
+          </div>
+          <div>
+            <p class="label">Registry note</p>
+            <p class="value small">HCM/payroll platform and UKG partner.</p>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><strong>0</strong><span class="small">deliverables</span></div>
+            <div class="metric"><strong>8</strong><span class="small">offerings</span></div>
+            <div class="metric"><strong>0</strong><span class="small">runs</span></div>
+          </div>
+          <div class="link-row">
+            <a class="text-link" href="client-context-dashboard/axiom-hrs.html">Client context</a>
+            <a class="text-link" href="https://axiomhrs.com/">Website</a>
+            <span class="small">No monthly queue · Import weekly intake</span>
+          </div>
+        </article>
+
+        <article class="panel client-card">
+          <div class="card-head">
+            <div>
+              <div class="client-name">Pekas Smith</div>
+              <div class="path">pekas-smith</div>
+            </div>
+            <span class="chip good">ready</span>
+          </div>
+          <div class="chips">
+            <span class="chip neutral">P2 automation</span>
+            <span class="chip warn">56% context</span>
+            <span class="chip neutral">ok crawl</span>
+          </div>
+          <div>
+            <p class="label">Owners</p>
+            <p class="value small">CSM / POC: Arianna Trabanino<br>Editor: Aleksandra Velickovic<br>Writer: Unassigned</p>
+          </div>
+          <div>
+            <p class="label">Monthly volume</p>
+            <p class="value small">5 optimizations/month</p>
+          </div>
+          <div>
+            <p class="label">Brand voice</p>
+            <p class="value small">Professional and empathetic: informative and reassuring for people navigating medical and financial stress in a federal system.</p>
+          </div>
+          <div class="risk-block"><p class="label">Flag</p><p class="value small">High Touch legal content. Federal program names, capitalization, and procedural language must be accurate and consistent.</p></div>
+          <div>
+            <p class="label">Next action</p>
+            <p class="value">Import weekly topics to create this client&#x27;s monthly queue.</p>
+          </div>
+          <div>
+            <p class="label">Offering context</p>
+            <p class="value small">Initial SSDI and SSI Applications, Reconsideration Appeals, Administrative Law Judge Hearings, Appeals Council Reviews</p>
+          </div>
+          <div>
+            <p class="label">Registry note</p>
+            <p class="value small">Arizona Social Security Disability law firm.</p>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><strong>0</strong><span class="small">deliverables</span></div>
+            <div class="metric"><strong>4</strong><span class="small">offerings</span></div>
+            <div class="metric"><strong>0</strong><span class="small">runs</span></div>
+          </div>
+          <div class="link-row">
+            <a class="text-link" href="client-context-dashboard/pekas-smith.html">Client context</a>
+            <a class="text-link" href="https://disabilitylawyerarizona.com/">Website</a>
+            <span class="small">No monthly queue · Import weekly intake</span>
+          </div>
+        </article>
+
+        <article class="panel client-card">
+          <div class="card-head">
+            <div>
+              <div class="client-name">The Nash Casino</div>
+              <div class="path">the-nash-casino</div>
+            </div>
+            <span class="chip good">ready</span>
+          </div>
+          <div class="chips">
+            <span class="chip neutral">P2 automation</span>
+            <span class="chip warn">56% context</span>
+            <span class="chip neutral">ok crawl</span>
+          </div>
+          <div>
+            <p class="label">Owners</p>
+            <p class="value small">CSM / POC: Alex Bélanger<br>Editor: Aleksandra Velickovic<br>Writer: Unassigned</p>
+          </div>
+          <div>
+            <p class="label">Monthly volume</p>
+            <p class="value small">To be confirmed with Alex</p>
+          </div>
+          <div>
+            <p class="label">Brand voice</p>
+            <p class="value small">Confident, energetic, and local: written like a knowledgeable regular who knows the venue, never like a generic casino copywriter.</p>
+          </div>
+          <div class="risk-block"><p class="label">Flag</p><p class="value small">Regulated gaming content. Never use slots or slot machines. Frame gaming as entertainment and include responsible gaming language where appropriate.</p></div>
+          <div>
+            <p class="label">Next action</p>
+            <p class="value">Import weekly topics to create this client&#x27;s monthly queue.</p>
+          </div>
+          <div>
+            <p class="label">Offering context</p>
+            <p class="value small">Historical Horse Racing Machines, Table Games, Poker Room, DraftKings Sportsbook, Topgolf Swing Suite, Proper Chophouse</p>
+          </div>
+          <div>
+            <p class="label">Registry note</p>
+            <p class="value small">NH charitable gaming venue. Never use slots.</p>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><strong>0</strong><span class="small">deliverables</span></div>
+            <div class="metric"><strong>11</strong><span class="small">offerings</span></div>
+            <div class="metric"><strong>0</strong><span class="small">runs</span></div>
+          </div>
+          <div class="link-row">
+            <a class="text-link" href="client-context-dashboard/the-nash-casino.html">Client context</a>
+            <a class="text-link" href="https://thenashcasino.com/">Website</a>
+            <span class="small">No monthly queue · Import weekly intake</span>
+          </div>
+        </article>
+
+        <article class="panel client-card">
+          <div class="card-head">
+            <div>
+              <div class="client-name">US Storage Units</div>
+              <div class="path">us-storage-units</div>
+            </div>
+            <span class="chip good">ready</span>
+          </div>
+          <div class="chips">
+            <span class="chip neutral">P2 automation</span>
+            <span class="chip warn">56% context</span>
+            <span class="chip warn">partial crawl</span>
+          </div>
+          <div>
+            <p class="label">Owners</p>
+            <p class="value small">CSM / POC: Arianna Trabanino<br>Editor: Aleksandra Velickovic<br>Writer: Unassigned</p>
+          </div>
+          <div>
+            <p class="label">Monthly volume</p>
+            <p class="value small">5 pages/month across U.S. Storage Units / U.S. Self-Storage</p>
+          </div>
+          <div>
+            <p class="label">Brand voice</p>
+            <p class="value small">Straightforward and practical: a helpful guide that makes finding and reserving storage simple, never salesy or overcomplicated.</p>
+          </div>
+          
+          <div>
+            <p class="label">Next action</p>
+            <p class="value">Import weekly topics to create this client&#x27;s monthly queue.</p>
+          </div>
+          <div>
+            <p class="label">Offering context</p>
+            <p class="value small">Standard Self-Storage, Climate-Controlled Storage, Drive-Up Storage, 24-Hour Access, Business Storage, Car / Vehicle Storage</p>
+          </div>
+          <div>
+            <p class="label">Registry note</p>
+            <p class="value small">Self-storage comparison and reservation marketplace.</p>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><strong>0</strong><span class="small">deliverables</span></div>
+            <div class="metric"><strong>9</strong><span class="small">offerings</span></div>
+            <div class="metric"><strong>0</strong><span class="small">runs</span></div>
+          </div>
+          <div class="link-row">
+            <a class="text-link" href="client-context-dashboard/us-storage-units.html">Client context</a>
+            <a class="text-link" href="https://usstorageunits.com/">Website</a>
+            <span class="small">No monthly queue · Import weekly intake</span>
+          </div>
+        </article>
+
+        <article class="panel client-card">
+          <div class="card-head">
+            <div>
+              <div class="client-name">Deer Solutions</div>
+              <div class="path">deer-solutions</div>
+            </div>
+            <span class="chip good">ready</span>
+          </div>
+          <div class="chips">
+            <span class="chip neutral">P2 automation</span>
+            <span class="chip warn">44% context</span>
+            <span class="chip neutral">ok crawl</span>
+          </div>
+          <div>
+            <p class="label">Owners</p>
+            <p class="value small">CSM / POC: Missing<br>Editor: Aleksandra Velickovic<br>Writer: Unassigned</p>
+          </div>
+          <div>
+            <p class="label">Monthly volume</p>
+            <p class="value small">Monthly volume to confirm</p>
+          </div>
+          <div>
+            <p class="label">Brand voice</p>
+            <p class="value small">Practical, reassuring, and homeowner-focused: understands the frustration of deer damage and explains professional repellent service clearly.</p>
+          </div>
+          <div class="risk-block"><p class="label">Flag</p><p class="value small">Do not imply guaranteed total elimination of deer or universal results. Deer Solution specializes in deer control and deer repellent service only; do not expand into general pest control, landscaping, or lawn care.</p></div>
+          <div>
+            <p class="label">Next action</p>
+            <p class="value">Confirm Deer Solution CSM, monthly volume, service areas, and any franchise/location-specific rules.</p>
+          </div>
+          <div>
+            <p class="label">Offering context</p>
+            <p class="value small">Deer Control Repellent Service, Free At-Home Consultation and Estimate, Customized Deer Control Protection Plan, Certified Deer Damage Expert Visit, Professional Repellent Application, Proprietary Deer Repellent</p>
+          </div>
+          <div>
+            <p class="label">Registry note</p>
+            <p class="value small">Deer control repellent service company. Protects plants and shrubs from deer damage.</p>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><strong>0</strong><span class="small">deliverables</span></div>
+            <div class="metric"><strong>11</strong><span class="small">offerings</span></div>
+            <div class="metric"><strong>0</strong><span class="small">runs</span></div>
+          </div>
+          <div class="link-row">
+            <a class="text-link" href="client-context-dashboard/deer-solutions.html">Client context</a>
+            <a class="text-link" href="https://www.deersolution.com/">Website</a>
+            <span class="small">No monthly queue · Import weekly intake</span>
+          </div>
+        </article>
+
+        <article class="panel client-card">
+          <div class="card-head">
+            <div>
+              <div class="client-name">A Plus Landscaping</div>
+              <div class="path">a-plus-landscaping</div>
+            </div>
+            <span class="chip neutral">briefing</span>
+          </div>
+          <div class="chips">
+            <span class="chip neutral">P3 automation</span>
+            <span class="chip warn">67% context</span>
+            <span class="chip neutral">ok crawl</span>
+          </div>
+          <div>
+            <p class="label">Owners</p>
+            <p class="value small">CSM / POC: Arianna Trabanino<br>Editor: Aleksandra Velickovic<br>Writer: Unassigned</p>
+          </div>
+          <div>
+            <p class="label">Monthly volume</p>
+            <p class="value small">3 optimizations/month</p>
+          </div>
+          <div>
+            <p class="label">Brand voice</p>
+            <p class="value small">Experienced, warm, and straightforward: a family-owned builder who lets the work speak, never corporate or over-polished.</p>
+          </div>
+          <div class="risk-block"><p class="label">Flag</p><p class="value small">A Plus is a design-build outdoor living company, not lawn care. Warranty applies only to paver patio projects.</p></div>
+          <div>
+            <p class="label">Next action</p>
+            <p class="value">Import weekly topics to create this client&#x27;s monthly queue.</p>
+          </div>
+          <div>
+            <p class="label">Offering context</p>
+            <p class="value small">Custom Outdoor Living Design &amp; Build, Hardscape Financing, Outdoor Living Design, Hardscaping, Patios, Paver Driveways</p>
+          </div>
+          <div>
+            <p class="label">Registry note</p>
+            <p class="value small">Family-owned outdoor living design-build in Central PA. No dashes ever.</p>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><strong>0</strong><span class="small">deliverables</span></div>
+            <div class="metric"><strong>39</strong><span class="small">offerings</span></div>
+            <div class="metric"><strong>0</strong><span class="small">runs</span></div>
+          </div>
+          <div class="link-row">
+            <a class="text-link" href="client-context-dashboard/a-plus-landscaping.html">Client context</a>
+            <a class="text-link" href="https://apluslandscaping.com/">Website</a>
+            <span class="small">No monthly queue · Import weekly intake</span>
+          </div>
+        </article>
+
+        <article class="panel client-card">
+          <div class="card-head">
+            <div>
+              <div class="client-name">Find Self Storage</div>
+              <div class="path">find-self-storage</div>
+            </div>
+            <span class="chip neutral">briefing</span>
+          </div>
+          <div class="chips">
+            <span class="chip neutral">Priority unset</span>
+            <span class="chip warn">56% context</span>
+            <span class="chip neutral">ok crawl</span>
+          </div>
+          <div>
+            <p class="label">Owners</p>
+            <p class="value small">CSM / POC: Missing<br>Editor: Aleksandra Velickovic<br>Writer: Unassigned</p>
+          </div>
+          <div>
+            <p class="label">Monthly volume</p>
+            <p class="value small">Monthly volume not set.</p>
+          </div>
+          <div>
+            <p class="label">Brand voice</p>
+            <p class="value small">Brand voice not set.</p>
+          </div>
+          
+          <div>
+            <p class="label">Next action</p>
+            <p class="value">Import weekly topics to create this client&#x27;s monthly queue.</p>
+          </div>
+          <div>
+            <p class="label">Offering context</p>
+            <p class="value small">Standard Self Storage, Climate-Controlled Storage, Drive-Up Storage, 24-Hour Access Storage, Business Storage, Student Storage</p>
+          </div>
+          <div>
+            <p class="label">Registry note</p>
+            <p class="value small">Self-storage comparison marketplace.</p>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><strong>0</strong><span class="small">deliverables</span></div>
+            <div class="metric"><strong>13</strong><span class="small">offerings</span></div>
+            <div class="metric"><strong>0</strong><span class="small">runs</span></div>
+          </div>
+          <div class="link-row">
+            <a class="text-link" href="client-context-dashboard/find-self-storage.html">Client context</a>
+            <a class="text-link" href="https://findselfstorage.com/">Website</a>
+            <span class="small">No monthly queue · Import weekly intake</span>
+          </div>
+        </article>
+
+        <article class="panel client-card">
+          <div class="card-head">
+            <div>
+              <div class="client-name">Arizona IOP</div>
+              <div class="path">the-hope-house/arizonaiop</div>
+            </div>
+            <span class="chip good">ready</span>
+          </div>
+          <div class="chips">
+            <span class="chip neutral">Priority unset</span>
+            <span class="chip warn">56% context</span>
+            <span class="chip neutral">ok crawl</span>
+          </div>
+          <div>
+            <p class="label">Owners</p>
+            <p class="value small">CSM / POC: Wendy Alinor<br>Editor: Aleksandra Velickovic<br>Writer: Unassigned</p>
+          </div>
+          <div>
+            <p class="label">Monthly volume</p>
+            <p class="value small">Monthly volume not set.</p>
+          </div>
+          <div>
+            <p class="label">Brand voice</p>
+            <p class="value small">Brand voice not set.</p>
+          </div>
+          
+          <div>
+            <p class="label">Next action</p>
+            <p class="value">Import weekly topics to create this client&#x27;s monthly queue.</p>
+          </div>
+          <div>
+            <p class="label">Offering context</p>
+            <p class="value small">Intensive Outpatient Program, Partial Hospitalization Program, Standard Outpatient Treatment, Addiction Treatment, Mental Health Treatment, Dual Diagnosis Treatment</p>
+          </div>
+          <div>
+            <p class="label">Registry note</p>
+            <p class="value small">Intensive outpatient program in Scottsdale. IOP/PHP/MAT spelled out on first use.</p>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><strong>0</strong><span class="small">deliverables</span></div>
+            <div class="metric"><strong>11</strong><span class="small">offerings</span></div>
+            <div class="metric"><strong>0</strong><span class="small">runs</span></div>
+          </div>
+          <div class="link-row">
+            <a class="text-link" href="client-context-dashboard/the-hope-house__arizonaiop.html">Client context</a>
+            <a class="text-link" href="https://arizonaiop.com/">Website</a>
+            <span class="small">No monthly queue · Import weekly intake</span>
+          </div>
+        </article>
+
+        <article class="panel client-card">
+          <div class="card-head">
+            <div>
+              <div class="client-name">Print &amp; Cheques Now</div>
+              <div class="path">print-and-cheques-now</div>
+            </div>
+            <span class="chip good">ready</span>
+          </div>
+          <div class="chips">
+            <span class="chip neutral">Priority unset</span>
+            <span class="chip warn">56% context</span>
+            <span class="chip warn">partial crawl</span>
+          </div>
+          <div>
+            <p class="label">Owners</p>
+            <p class="value small">CSM / POC: Arianna Trabanino<br>Editor: Aleksandra Velickovic<br>Writer: Unassigned</p>
+          </div>
+          <div>
+            <p class="label">Monthly volume</p>
+            <p class="value small">Monthly volume not set.</p>
+          </div>
+          <div>
+            <p class="label">Brand voice</p>
+            <p class="value small">Brand voice not set.</p>
+          </div>
+          
+          <div>
+            <p class="label">Next action</p>
+            <p class="value">Import weekly topics to create this client&#x27;s monthly queue.</p>
+          </div>
+          <div>
+            <p class="label">Offering context</p>
+            <p class="value small">Personal Cheques, Manual Business Cheques, Laser / Computer Cheques, Deposit Books, Endorsement Stamps, Cheque Binders</p>
+          </div>
+          <div>
+            <p class="label">Registry note</p>
+            <p class="value small">Canadian cheque printing specialist. Dual cheque/check spelling required.</p>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><strong>0</strong><span class="small">deliverables</span></div>
+            <div class="metric"><strong>11</strong><span class="small">offerings</span></div>
+            <div class="metric"><strong>0</strong><span class="small">runs</span></div>
+          </div>
+          <div class="link-row">
+            <a class="text-link" href="client-context-dashboard/print-and-cheques-now.html">Client context</a>
+            <a class="text-link" href="https://chequesnow.ca/">Website</a>
+            <span class="small">No monthly queue · Import weekly intake</span>
+          </div>
+        </article>
+
+        <article class="panel client-card">
+          <div class="card-head">
+            <div>
+              <div class="client-name">Scottsdale Detox</div>
+              <div class="path">the-hope-house/scottsdaleazdetox</div>
+            </div>
+            <span class="chip good">ready</span>
+          </div>
+          <div class="chips">
+            <span class="chip neutral">Priority unset</span>
+            <span class="chip warn">56% context</span>
+            <span class="chip neutral">ok crawl</span>
+          </div>
+          <div>
+            <p class="label">Owners</p>
+            <p class="value small">CSM / POC: Wendy Alinor<br>Editor: Aleksandra Velickovic<br>Writer: Unassigned</p>
+          </div>
+          <div>
+            <p class="label">Monthly volume</p>
+            <p class="value small">Monthly volume not set.</p>
+          </div>
+          <div>
+            <p class="label">Brand voice</p>
+            <p class="value small">Brand voice not set.</p>
+          </div>
+          
+          <div>
+            <p class="label">Next action</p>
+            <p class="value">Import weekly topics to create this client&#x27;s monthly queue.</p>
+          </div>
+          <div>
+            <p class="label">Offering context</p>
+            <p class="value small">Medical Detox, Alcohol Detox, Opioid / Heroin Detox, Fentanyl Detox, Benzodiazepine Detox, Methadone Detox</p>
+          </div>
+          <div>
+            <p class="label">Registry note</p>
+            <p class="value small">Medical detox in Scottsdale. Alcohol/benzo withdrawal risks must not be minimized.</p>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><strong>0</strong><span class="small">deliverables</span></div>
+            <div class="metric"><strong>12</strong><span class="small">offerings</span></div>
+            <div class="metric"><strong>0</strong><span class="small">runs</span></div>
+          </div>
+          <div class="link-row">
+            <a class="text-link" href="client-context-dashboard/the-hope-house__scottsdaleazdetox.html">Client context</a>
+            <a class="text-link" href="https://scottsdaleazdetox.com/">Website</a>
+            <span class="small">No monthly queue · Import weekly intake</span>
+          </div>
+        </article>
+
+        <article class="panel client-card">
+          <div class="card-head">
+            <div>
+              <div class="client-name">Scottsdale TMS Therapy</div>
+              <div class="path">the-hope-house/scottsdaletmstherapy</div>
+            </div>
+            <span class="chip good">ready</span>
+          </div>
+          <div class="chips">
+            <span class="chip neutral">Priority unset</span>
+            <span class="chip warn">56% context</span>
+            <span class="chip neutral">ok crawl</span>
+          </div>
+          <div>
+            <p class="label">Owners</p>
+            <p class="value small">CSM / POC: Wendy Alinor<br>Editor: Aleksandra Velickovic<br>Writer: Unassigned</p>
+          </div>
+          <div>
+            <p class="label">Monthly volume</p>
+            <p class="value small">Monthly volume not set.</p>
+          </div>
+          <div>
+            <p class="label">Brand voice</p>
+            <p class="value small">Brand voice not set.</p>
+          </div>
+          
+          <div>
+            <p class="label">Next action</p>
+            <p class="value">Import weekly topics to create this client&#x27;s monthly queue.</p>
+          </div>
+          <div>
+            <p class="label">Offering context</p>
+            <p class="value small">TMS Therapy, Spravato, Psychiatric Medication Management, Therapy Services</p>
+          </div>
+          <div>
+            <p class="label">Registry note</p>
+            <p class="value small">TMS, Spravato, and psychiatric care. TMS is FDA-cleared; Spravato is FDA-approved.</p>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><strong>0</strong><span class="small">deliverables</span></div>
+            <div class="metric"><strong>4</strong><span class="small">offerings</span></div>
+            <div class="metric"><strong>0</strong><span class="small">runs</span></div>
+          </div>
+          <div class="link-row">
+            <a class="text-link" href="client-context-dashboard/the-hope-house__scottsdaletmstherapy.html">Client context</a>
+            <a class="text-link" href="https://scottsdaletmstherapy.com/">Website</a>
+            <span class="small">No monthly queue · Import weekly intake</span>
+          </div>
+        </article>
+
+        <article class="panel client-card">
+          <div class="card-head">
+            <div>
+              <div class="client-name">The Hope House</div>
+              <div class="path">the-hope-house/thehopehouse</div>
+            </div>
+            <span class="chip good">ready</span>
+          </div>
+          <div class="chips">
+            <span class="chip neutral">Priority unset</span>
+            <span class="chip warn">56% context</span>
+            <span class="chip neutral">ok crawl</span>
+          </div>
+          <div>
+            <p class="label">Owners</p>
+            <p class="value small">CSM / POC: Wendy Alinor<br>Editor: Aleksandra Velickovic<br>Writer: Unassigned</p>
+          </div>
+          <div>
+            <p class="label">Monthly volume</p>
+            <p class="value small">Monthly volume not set.</p>
+          </div>
+          <div>
+            <p class="label">Brand voice</p>
+            <p class="value small">Brand voice not set.</p>
+          </div>
+          
+          <div>
+            <p class="label">Next action</p>
+            <p class="value">Import weekly topics to create this client&#x27;s monthly queue.</p>
+          </div>
+          <div>
+            <p class="label">Offering context</p>
+            <p class="value small">Executive Treatment Program, Dual Diagnosis Program, Luxury Rehab Program, Executive Golf Rehab, Luxury Spa Rehab, Alcohol Treatment</p>
+          </div>
+          <div>
+            <p class="label">Registry note</p>
+            <p class="value small">Luxury residential addiction rehab in Scottsdale. Never guarantee outcomes.</p>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><strong>0</strong><span class="small">deliverables</span></div>
+            <div class="metric"><strong>15</strong><span class="small">offerings</span></div>
+            <div class="metric"><strong>0</strong><span class="small">runs</span></div>
+          </div>
+          <div class="link-row">
+            <a class="text-link" href="client-context-dashboard/the-hope-house__thehopehouse.html">Client context</a>
+            <a class="text-link" href="https://thehopehouse.com/">Website</a>
+            <span class="small">No monthly queue · Import weekly intake</span>
+          </div>
+        </article>
+
+        <article class="panel client-card">
+          <div class="card-head">
+            <div>
+              <div class="client-name">TrustLayer</div>
+              <div class="path">trustlayer</div>
+            </div>
+            <span class="chip good">ready</span>
+          </div>
+          <div class="chips">
+            <span class="chip neutral">Priority unset</span>
+            <span class="chip warn">56% context</span>
+            <span class="chip neutral">ok crawl</span>
+          </div>
+          <div>
+            <p class="label">Owners</p>
+            <p class="value small">CSM / POC: Wendy Alinor<br>Editor: Aleksandra Velickovic<br>Writer: Unassigned</p>
+          </div>
+          <div>
+            <p class="label">Monthly volume</p>
+            <p class="value small">Monthly volume not set.</p>
+          </div>
+          <div>
+            <p class="label">Brand voice</p>
+            <p class="value small">Brand voice not set.</p>
+          </div>
+          
+          <div>
+            <p class="label">Next action</p>
+            <p class="value">Import weekly topics to create this client&#x27;s monthly queue.</p>
+          </div>
+          <div>
+            <p class="label">Offering context</p>
+            <p class="value small">Automated COI Collection, AI Gap Detection, Multi-Document Support, Automated Renewal Reminders, Real-Time Compliance Monitoring Dashboard, API and Integrations</p>
+          </div>
+          <div>
+            <p class="label">Registry note</p>
+            <p class="value small">AI-powered COI collection and third-party compliance platform. Never insurance software.</p>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><strong>0</strong><span class="small">deliverables</span></div>
+            <div class="metric"><strong>13</strong><span class="small">offerings</span></div>
+            <div class="metric"><strong>0</strong><span class="small">runs</span></div>
+          </div>
+          <div class="link-row">
+            <a class="text-link" href="client-context-dashboard/trustlayer.html">Client context</a>
+            <a class="text-link" href="https://trustlayer.io/">Website</a>
+            <span class="small">No monthly queue · Import weekly intake</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <div>
+          <p class="section-kicker">Operations table</p>
+          <h2>Scan view</h2>
+          <p>Compact status view for owners, setup gaps, website crawl state, and next actions. Edit the registry instead of editing this generated HTML.</p>
+        </div>
+      </div>
+      <div class="panel ops-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Client</th>
+              <th>Automation</th>
+              <th>Status</th>
+              <th>Context Pack</th>
+              <th>Website Intel</th>
+              <th>Owners</th>
+              <th>Monthly Work</th>
+              <th>Next Action</th>
+              <th>Context</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td data-label="Client">
+            <div class="client-name">Zia Tile</div>
+            <div class="path">zia-tile</div>
+            <div class="small">Premium artisanal tile retailer.</div>
+          </td>
+          <td data-label="Automation">P1 automation<br><span class="small">Approx. 10+ blog posts, 30+ product pages, 15+ core pages/month</span><br><span class="small">A knowledgeable design editor writing for Architectural Digest: warm, authoritative, specific, rooted in craft, history, and material authenticity.</span><br><span class="small">Flag: Highest-priority, highest-value client. Jamie Greenspan and team are final authority. Verify every product detail against ziatile.com and materials reference guide before anything reaches Jamie.</span></td>
+          <td data-label="Status"><span class="chip neutral">drafting</span></td>
+          <td data-label="Readiness">
+            <span class="chip good">100% ready</span>
+            
+          </td>
+          <td data-label="Website Intel">
+            <span class="chip neutral">ok</span><br>
+            <a href="https://www.ziatile.com/">https://www.ziatile.com/</a><br><span class="small">4 sitemaps, 1200 URLs, 80 product/service URLs</span>
+          </td>
+          <td data-label="Owners">CSM/POC: Alex Bélanger / Editor: Aleksandra Velickovic / Writer: Unassigned writer</td>
+          <td data-label="Monthly Work">0 monthly deliverables<br><span class="small">No monthly queue; Import weekly intake</span><br><span class="small">6 legacy campaigns, 2 runs</span></td>
+          <td data-label="Next action">Confirm compliance and terminology rules are captured in the client brief before automation.</td>
+          <td data-label="Context"><a class="text-link" href="client-context-dashboard/zia-tile.html">Client context</a><br><span class="small">clients/zia-tile</span></td>
+        </tr>
+
+        <tr>
+          <td data-label="Client">
+            <div class="client-name">Esthetics Center</div>
+            <div class="path">esthetics-center</div>
+            <div class="small">Medical aesthetics and plastic surgery in Northern California.</div>
+          </td>
+          <td data-label="Automation">P1 automation<br><span class="small">Approx. 12 blog posts/month</span><br><span class="small">A trusted specialist who explains complex procedures clearly and honestly: clinical without being cold, confident without being arrogant.</span><br><span class="small">Flag: High Touch / High Value. Regulated medical aesthetics and plastic surgery space. Clinical credibility stakes are high.</span></td>
+          <td data-label="Status"><span class="chip neutral">briefing</span></td>
+          <td data-label="Readiness">
+            <span class="chip warn">67% partial</span>
+            <ul class="missing"><li>Delivery config</li><li>Approved examples</li><li>Page templates</li></ul>
+          </td>
+          <td data-label="Website Intel">
+            <span class="chip neutral">ok</span><br>
+            <a href="https://www.estheticscenter.com/">https://www.estheticscenter.com/</a><br><span class="small">1 sitemaps, 419 URLs, 48 product/service URLs</span>
+          </td>
+          <td data-label="Owners">CSM/POC: Wendy Alinor / Editor: Aleksandra Velickovic / Writer: Unassigned writer</td>
+          <td data-label="Monthly Work">0 monthly deliverables<br><span class="small">No monthly queue; Import weekly intake</span><br><span class="small">1 legacy campaigns, 0 runs</span></td>
+          <td data-label="Next action">Confirm compliance and terminology rules are captured in the client brief before automation.</td>
+          <td data-label="Context"><a class="text-link" href="client-context-dashboard/esthetics-center.html">Client context</a><br><span class="small">clients/esthetics-center</span></td>
+        </tr>
+
+        <tr>
+          <td data-label="Client">
+            <div class="client-name">Altify</div>
+            <div class="path">altify</div>
+            <div class="small">Enterprise account planning AI platform.</div>
+          </td>
+          <td data-label="Automation">P1 automation<br><span class="small">6 blog posts/month</span><br><span class="small">Authoritative enterprise sales strategist: confident, educational, results-focused, written for revenue leaders.</span><br><span class="small">Flag: High Touch / High Value. Strict terminology adherence required. Avoid generic sales tips or casual seller framing.</span></td>
+          <td data-label="Status"><span class="chip neutral">briefing</span></td>
+          <td data-label="Readiness">
+            <span class="chip warn">56% partial</span>
+            <ul class="missing"><li>Compliance rules</li><li>Delivery config</li><li>Approved examples</li><li>Page templates</li></ul>
+          </td>
+          <td data-label="Website Intel">
+            <span class="chip neutral">ok</span><br>
+            <a href="https://altify.com/">https://altify.com/</a><br><span class="small">7 sitemaps, 372 URLs, 0 product/service URLs</span>
+          </td>
+          <td data-label="Owners">CSM/POC: Chanakya Thakkar / Editor: Aleksandra Velickovic / Writer: Unassigned writer</td>
+          <td data-label="Monthly Work">0 monthly deliverables<br><span class="small">No monthly queue; Import weekly intake</span><br><span class="small">3 legacy campaigns, 0 runs</span></td>
+          <td data-label="Next action">Confirm compliance and terminology rules are captured in the client brief before automation.</td>
+          <td data-label="Context"><a class="text-link" href="client-context-dashboard/altify.html">Client context</a><br><span class="small">clients/altify</span></td>
+        </tr>
+
+        <tr>
+          <td data-label="Client">
+            <div class="client-name">Anne Therese Aesthetic Medicine</div>
+            <div class="path">anne-therese</div>
+            <div class="small">Medical aesthetics practice with OH and FL locations.</div>
+          </td>
+          <td data-label="Automation">P1 automation<br><span class="small">12 blog posts/month</span><br><span class="small">Credible and approachable with a premium aesthetic focus: medical professionalism meets aesthetic sophistication, never promotional or aggressive.</span><br><span class="small">Flag: High Touch / High Value. Non-surgical medical aesthetics across three locations in two states. Qualify results and outcome language carefully.</span></td>
+          <td data-label="Status"><span class="chip good">ready</span></td>
+          <td data-label="Readiness">
+            <span class="chip warn">56% partial</span>
+            <ul class="missing"><li>Delivery config</li><li>Approved examples</li><li>Page templates</li><li>Legacy campaign folder</li></ul>
+          </td>
+          <td data-label="Website Intel">
+            <span class="chip neutral">ok</span><br>
+            <a href="https://www.annetherese.com/">https://www.annetherese.com/</a><br><span class="small">1 sitemaps, 169 URLs, 25 product/service URLs</span>
+          </td>
+          <td data-label="Owners">CSM/POC: Wendy Alinor / Editor: Aleksandra Velickovic / Writer: Unassigned writer</td>
+          <td data-label="Monthly Work">0 monthly deliverables<br><span class="small">No monthly queue; Import weekly intake</span><br><span class="small">0 legacy campaigns, 0 runs</span></td>
+          <td data-label="Next action">Confirm compliance and terminology rules are captured in the client brief before automation.</td>
+          <td data-label="Context"><a class="text-link" href="client-context-dashboard/anne-therese.html">Client context</a><br><span class="small">clients/anne-therese</span></td>
+        </tr>
+
+        <tr>
+          <td data-label="Client">
+            <div class="client-name">Laser Center of Marin</div>
+            <div class="path">laser-center-of-marin</div>
+            <div class="small">Physician-supervised aesthetic clinic in Marin County.</div>
+          </td>
+          <td data-label="Automation">P1 automation<br><span class="small">Approx. 12 blog posts/month</span><br><span class="small">A knowledgeable, trusted practitioner speaking directly to a patient: warm, confident, medically grounded, never promotional.</span><br><span class="small">Flag: High Touch / High Value. Regulated medical aesthetics space. Avoid guaranteed results and unsupported medical assertions.</span></td>
+          <td data-label="Status"><span class="chip good">ready</span></td>
+          <td data-label="Readiness">
+            <span class="chip warn">56% partial</span>
+            <ul class="missing"><li>Delivery config</li><li>Approved examples</li><li>Page templates</li><li>Legacy campaign folder</li></ul>
+          </td>
+          <td data-label="Website Intel">
+            <span class="chip neutral">ok</span><br>
+            <a href="https://www.marinlaser.com/">https://www.marinlaser.com/</a><br><span class="small">1 sitemaps, 155 URLs, 24 product/service URLs</span>
+          </td>
+          <td data-label="Owners">CSM/POC: Wendy Alinor / Editor: Aleksandra Velickovic / Writer: Unassigned writer</td>
+          <td data-label="Monthly Work">0 monthly deliverables<br><span class="small">No monthly queue; Import weekly intake</span><br><span class="small">0 legacy campaigns, 0 runs</span></td>
+          <td data-label="Next action">Confirm compliance and terminology rules are captured in the client brief before automation.</td>
+          <td data-label="Context"><a class="text-link" href="client-context-dashboard/laser-center-of-marin.html">Client context</a><br><span class="small">clients/laser-center-of-marin</span></td>
+        </tr>
+
+        <tr>
+          <td data-label="Client">
+            <div class="client-name">Loti Labs / Wholesale Peptide</div>
+            <div class="path">loti-labs</div>
+            <div class="small">Research peptide, liquid, and capsule supplier. RUO compliance required.</div>
+          </td>
+          <td data-label="Automation">P1 automation<br><span class="small">15 optimizations/month</span><br><span class="small">Scientific precision with boutique researcher-to-researcher warmth: authoritative, trustworthy, never promotional or therapeutic.</span><br><span class="small">Flag: Regulated grey area. Research context only. No human use, therapeutic benefit, or dosing guidance.</span></td>
+          <td data-label="Status"><span class="chip good">ready</span></td>
+          <td data-label="Readiness">
+            <span class="chip warn">56% partial</span>
+            <ul class="missing"><li>Compliance rules</li><li>Delivery config</li><li>Page templates</li><li>Legacy campaign folder</li></ul>
+          </td>
+          <td data-label="Website Intel">
+            <span class="chip neutral">ok</span><br>
+            <a href="https://lotilabs.com/">https://lotilabs.com/</a><br><a href="https://wholesalepeptide.com/">https://wholesalepeptide.com/</a><br><span class="small">7 sitemaps, 506 URLs, 80 product/service URLs</span>
+          </td>
+          <td data-label="Owners">CSM/POC: Alex Bélanger / Editor: Aleksandra Velickovic / Writer: Unassigned writer</td>
+          <td data-label="Monthly Work">0 monthly deliverables<br><span class="small">No monthly queue; Import weekly intake</span><br><span class="small">0 legacy campaigns, 0 runs</span></td>
+          <td data-label="Next action">Confirm compliance and terminology rules are captured in the client brief before automation.</td>
+          <td data-label="Context"><a class="text-link" href="client-context-dashboard/loti-labs.html">Client context</a><br><span class="small">clients/loti-labs</span></td>
+        </tr>
+
+        <tr>
+          <td data-label="Client">
+            <div class="client-name">Thera Physical and Occupational Therapy</div>
+            <div class="path">thera</div>
+            <div class="small">VIP specialized rehabilitation clinic in Midtown Manhattan.</div>
+          </td>
+          <td data-label="Automation">P1 automation<br><span class="small">12 blog posts/month</span><br><span class="small">Empathetic and expert, supportive without being clinical, written for patients navigating sensitive recovery experiences.</span><br><span class="small">Flag: VIP client relationship. Patient audience includes breast cancer, surgery, and lymphatic complications. Tone errors and clinical inaccuracies carry emotional and reputational risk.</span></td>
+          <td data-label="Status"><span class="chip good">ready</span></td>
+          <td data-label="Readiness">
+            <span class="chip warn">56% partial</span>
+            <ul class="missing"><li>Delivery config</li><li>Approved examples</li><li>Page templates</li><li>Legacy campaign folder</li></ul>
+          </td>
+          <td data-label="Website Intel">
+            <span class="chip neutral">ok</span><br>
+            <a href="https://www.thera-rehab.com/">https://www.thera-rehab.com/</a><br><span class="small">1 sitemaps, 260 URLs, 1 product/service URLs</span>
+          </td>
+          <td data-label="Owners">CSM/POC: Wendy Alinor / Editor: Aleksandra Velickovic / Writer: Unassigned writer</td>
+          <td data-label="Monthly Work">0 monthly deliverables<br><span class="small">No monthly queue; Import weekly intake</span><br><span class="small">0 legacy campaigns, 0 runs</span></td>
+          <td data-label="Next action">Confirm compliance and terminology rules are captured in the client brief before automation.</td>
+          <td data-label="Context"><a class="text-link" href="client-context-dashboard/thera.html">Client context</a><br><span class="small">clients/thera</span></td>
+        </tr>
+
+        <tr>
+          <td data-label="Client">
+            <div class="client-name">Portugal Pathways</div>
+            <div class="path">portugal-pathways</div>
+            <div class="small">HNW relocation and residency advisory. British English and financial promotion compliance.</div>
+          </td>
+          <td data-label="Automation">P2 automation<br><span class="small">5 page optimizations/month</span><br><span class="small">Measured, credible advisory voice that informs without promoting and attributes regulated advice to licensed professionals.</span><br><span class="small">Flag: Compliance risk defines this client. Avoid fund marketing, tax advice, investment recommendations, and implied residency guarantees.</span></td>
+          <td data-label="Status"><span class="chip neutral">briefing</span></td>
+          <td data-label="Readiness">
+            <span class="chip warn">78% partial</span>
+            <ul class="missing"><li>Delivery config</li><li>Page templates</li></ul>
+          </td>
+          <td data-label="Website Intel">
+            <span class="chip neutral">ok</span><br>
+            <a href="https://www.portugalpathways.io/">https://www.portugalpathways.io/</a><br><a href="https://portugalpathways.io/">https://portugalpathways.io/</a><br><span class="small">1 sitemaps, 711 URLs, 16 product/service URLs</span>
+          </td>
+          <td data-label="Owners">CSM/POC: Arianna Trabanino / Editor: Aleksandra Velickovic / Writer: Unassigned writer</td>
+          <td data-label="Monthly Work">0 monthly deliverables<br><span class="small">No monthly queue; Import weekly intake</span><br><span class="small">1 legacy campaigns, 0 runs</span></td>
+          <td data-label="Next action">Import weekly topics to create this client&#x27;s monthly queue.</td>
+          <td data-label="Context"><a class="text-link" href="client-context-dashboard/portugal-pathways.html">Client context</a><br><span class="small">clients/portugal-pathways</span></td>
+        </tr>
+
+        <tr>
+          <td data-label="Client">
+            <div class="client-name">US Self Storage</div>
+            <div class="path">us-self-storage</div>
+            <div class="small">Self-storage comparison marketplace and editorial hub.</div>
+          </td>
+          <td data-label="Automation">P2 automation<br><span class="small">5 pages/month across U.S. Storage Units / U.S. Self-Storage</span><br><span class="small">Straightforward and practical: a helpful guide that makes finding and reserving storage simple, never salesy or overcomplicated.</span></td>
+          <td data-label="Status"><span class="chip neutral">briefing</span></td>
+          <td data-label="Readiness">
+            <span class="chip warn">67% partial</span>
+            <ul class="missing"><li>Delivery config</li><li>Approved examples</li><li>Page templates</li></ul>
+          </td>
+          <td data-label="Website Intel">
+            <span class="chip warn">partial</span><br>
+            <a href="https://usselfstorage.com/">https://usselfstorage.com/</a><br><span class="small">0 sitemaps, 1 URLs, 0 product/service URLs</span><br><span class="small">Blocker: No usable sitemap found for https://usselfstorage.com/; sampled homepage only.</span>
+          </td>
+          <td data-label="Owners">CSM/POC: Arianna Trabanino / Editor: Aleksandra Velickovic / Writer: Unassigned writer</td>
+          <td data-label="Monthly Work">0 monthly deliverables<br><span class="small">No monthly queue; Import weekly intake</span><br><span class="small">1 legacy campaigns, 0 runs</span></td>
+          <td data-label="Next action">Import weekly topics to create this client&#x27;s monthly queue.</td>
+          <td data-label="Context"><a class="text-link" href="client-context-dashboard/us-self-storage.html">Client context</a><br><span class="small">clients/us-self-storage</span></td>
+        </tr>
+
+        <tr>
+          <td data-label="Client">
+            <div class="client-name">5Gstore</div>
+            <div class="path">5gstore</div>
+            <div class="small">Specialized 4G/5G networking equipment retailer.</div>
+          </td>
+          <td data-label="Automation">P2 automation<br><span class="small">5 pages/month</span><br><span class="small">Knowledgeable technical specialist who guides buyers through complex equipment decisions without condescending or oversimplifying.</span><br><span class="small">Flag: Company name must always be written exactly as 5Gstore. Never 5GStore or 5G Store.</span></td>
+          <td data-label="Status"><span class="chip neutral">briefing</span></td>
+          <td data-label="Readiness">
+            <span class="chip warn">56% partial</span>
+            <ul class="missing"><li>Compliance rules</li><li>Delivery config</li><li>Approved examples</li><li>Page templates</li></ul>
+          </td>
+          <td data-label="Website Intel">
+            <span class="chip neutral">ok</span><br>
+            <a href="https://5gstore.com/">https://5gstore.com/</a><br><span class="small">1 sitemaps, 1200 URLs, 80 product/service URLs</span>
+          </td>
+          <td data-label="Owners">CSM/POC: Arianna Trabanino / Editor: Aleksandra Velickovic / Writer: Unassigned writer</td>
+          <td data-label="Monthly Work">0 monthly deliverables<br><span class="small">No monthly queue; Import weekly intake</span><br><span class="small">1 legacy campaigns, 0 runs</span></td>
+          <td data-label="Next action">Import weekly topics to create this client&#x27;s monthly queue.</td>
+          <td data-label="Context"><a class="text-link" href="client-context-dashboard/5gstore.html">Client context</a><br><span class="small">clients/5gstore</span></td>
+        </tr>
+
+        <tr>
+          <td data-label="Client">
+            <div class="client-name">Makana Charters</div>
+            <div class="path">makana-charters</div>
+            <div class="small">Native Hawaiian-owned Na Pali Coast boat tour operator offering small-group and private catamaran tours from Kauai.</div>
+          </td>
+          <td data-label="Automation">P2 automation<br><span class="small">Monthly volume to confirm</span><br><span class="small">Warm, grounded, heritage-proud, and ocean-literate: written like a Native Hawaiian family that knows these waters, never like a generic tour operator.</span><br><span class="small">Flag: Cultural and place-based accuracy matter. Keep boat details, age limits, pregnancy policy, accessibility, sea cave entry, snorkeling, and weather/safety conditions precise.</span></td>
+          <td data-label="Status"><span class="chip neutral">briefing</span></td>
+          <td data-label="Readiness">
+            <span class="chip warn">56% partial</span>
+            <ul class="missing"><li>Compliance rules</li><li>Delivery config</li><li>Approved examples</li><li>Page templates</li></ul>
+          </td>
+          <td data-label="Website Intel">
+            <span class="chip neutral">ok</span><br>
+            <a href="https://makanacharters.com/">https://makanacharters.com/</a><br><span class="small">2 sitemaps, 345 URLs, 0 product/service URLs</span>
+          </td>
+          <td data-label="Owners">CSM/POC: Wendy Alinor / Editor: Aleksandra Velickovic / Writer: Unassigned writer</td>
+          <td data-label="Monthly Work">0 monthly deliverables<br><span class="small">No monthly queue; Import weekly intake</span><br><span class="small">1 legacy campaigns, 0 runs</span></td>
+          <td data-label="Next action">Confirm monthly volume and current production cadence for Makana.</td>
+          <td data-label="Context"><a class="text-link" href="client-context-dashboard/makana-charters.html">Client context</a><br><span class="small">clients/makana-charters</span></td>
+        </tr>
+
+        <tr>
+          <td data-label="Client">
+            <div class="client-name">Liveops</div>
+            <div class="path">liveops</div>
+            <div class="small">Cloud-based remote agent network for enterprise CX. Never hire/employee/trained.</div>
+          </td>
+          <td data-label="Automation">P2 automation<br><span class="small">4 to 5 pages/month</span><br><span class="small">Empathetic, expert, and enterprise-ready: confident without being cold, human without being casual.</span><br><span class="small">Flag: Strict legal compliance around how agents are described. Terminology rules are non-negotiable before CSM review.</span></td>
+          <td data-label="Status"><span class="chip good">ready</span></td>
+          <td data-label="Readiness">
+            <span class="chip warn">67% partial</span>
+            <ul class="missing"><li>Compliance rules</li><li>Delivery config</li><li>Page templates</li></ul>
+          </td>
+          <td data-label="Website Intel">
+            <span class="chip neutral">ok</span><br>
+            <a href="https://liveops.com/">https://liveops.com/</a><br><span class="small">2 sitemaps, 778 URLs, 22 product/service URLs</span>
+          </td>
+          <td data-label="Owners">CSM/POC: Chanakya Thakkar / Editor: Aleksandra Velickovic / Writer: Unassigned writer</td>
+          <td data-label="Monthly Work">0 monthly deliverables<br><span class="small">No monthly queue; Import weekly intake</span><br><span class="small">0 legacy campaigns, 0 runs</span></td>
+          <td data-label="Next action">Import weekly topics to create this client&#x27;s monthly queue.</td>
+          <td data-label="Context"><a class="text-link" href="client-context-dashboard/liveops.html">Client context</a><br><span class="small">clients/liveops</span></td>
+        </tr>
+
+        <tr>
+          <td data-label="Client">
+            <div class="client-name">Axiom HRS</div>
+            <div class="path">axiom-hrs</div>
+            <div class="small">HCM/payroll platform and UKG partner.</div>
+          </td>
+          <td data-label="Automation">P2 automation<br><span class="small">3 optimizations, 1 pillar page, 2 blog posts/month</span><br><span class="small">Knowledgeable and people-focused: expertise delivered with warmth, never cold or overly technical.</span><br><span class="small">Flag: Axiom is a rip-and-replace solution, not a connector. Enforce this at brief level before QA.</span></td>
+          <td data-label="Status"><span class="chip good">ready</span></td>
+          <td data-label="Readiness">
+            <span class="chip warn">56% partial</span>
+            <ul class="missing"><li>Delivery config</li><li>Approved examples</li><li>Page templates</li><li>Legacy campaign folder</li></ul>
+          </td>
+          <td data-label="Website Intel">
+            <span class="chip neutral">ok</span><br>
+            <a href="https://axiomhrs.com/">https://axiomhrs.com/</a><br><span class="small">1 sitemaps, 370 URLs, 19 product/service URLs</span>
+          </td>
+          <td data-label="Owners">CSM/POC: Alex Bélanger / Editor: Aleksandra Velickovic / Writer: Unassigned writer</td>
+          <td data-label="Monthly Work">0 monthly deliverables<br><span class="small">No monthly queue; Import weekly intake</span><br><span class="small">0 legacy campaigns, 0 runs</span></td>
+          <td data-label="Next action">Import weekly topics to create this client&#x27;s monthly queue.</td>
+          <td data-label="Context"><a class="text-link" href="client-context-dashboard/axiom-hrs.html">Client context</a><br><span class="small">clients/axiom-hrs</span></td>
+        </tr>
+
+        <tr>
+          <td data-label="Client">
+            <div class="client-name">Pekas Smith</div>
+            <div class="path">pekas-smith</div>
+            <div class="small">Arizona Social Security Disability law firm.</div>
+          </td>
+          <td data-label="Automation">P2 automation<br><span class="small">5 optimizations/month</span><br><span class="small">Professional and empathetic: informative and reassuring for people navigating medical and financial stress in a federal system.</span><br><span class="small">Flag: High Touch legal content. Federal program names, capitalization, and procedural language must be accurate and consistent.</span></td>
+          <td data-label="Status"><span class="chip good">ready</span></td>
+          <td data-label="Readiness">
+            <span class="chip warn">56% partial</span>
+            <ul class="missing"><li>Delivery config</li><li>Approved examples</li><li>Page templates</li><li>Legacy campaign folder</li></ul>
+          </td>
+          <td data-label="Website Intel">
+            <span class="chip neutral">ok</span><br>
+            <a href="https://disabilitylawyerarizona.com/">https://disabilitylawyerarizona.com/</a><br><span class="small">3 sitemaps, 200 URLs, 0 product/service URLs</span>
+          </td>
+          <td data-label="Owners">CSM/POC: Arianna Trabanino / Editor: Aleksandra Velickovic / Writer: Unassigned writer</td>
+          <td data-label="Monthly Work">0 monthly deliverables<br><span class="small">No monthly queue; Import weekly intake</span><br><span class="small">0 legacy campaigns, 0 runs</span></td>
+          <td data-label="Next action">Import weekly topics to create this client&#x27;s monthly queue.</td>
+          <td data-label="Context"><a class="text-link" href="client-context-dashboard/pekas-smith.html">Client context</a><br><span class="small">clients/pekas-smith</span></td>
+        </tr>
+
+        <tr>
+          <td data-label="Client">
+            <div class="client-name">The Nash Casino</div>
+            <div class="path">the-nash-casino</div>
+            <div class="small">NH charitable gaming venue. Never use slots.</div>
+          </td>
+          <td data-label="Automation">P2 automation<br><span class="small">To be confirmed with Alex</span><br><span class="small">Confident, energetic, and local: written like a knowledgeable regular who knows the venue, never like a generic casino copywriter.</span><br><span class="small">Flag: Regulated gaming content. Never use slots or slot machines. Frame gaming as entertainment and include responsible gaming language where appropriate.</span></td>
+          <td data-label="Status"><span class="chip good">ready</span></td>
+          <td data-label="Readiness">
+            <span class="chip warn">56% partial</span>
+            <ul class="missing"><li>Compliance rules</li><li>Delivery config</li><li>Page templates</li><li>Legacy campaign folder</li></ul>
+          </td>
+          <td data-label="Website Intel">
+            <span class="chip neutral">ok</span><br>
+            <a href="https://thenashcasino.com/">https://thenashcasino.com/</a><br><a href="https://nhproblemgambling.org/">https://nhproblemgambling.org/</a><br><span class="small">2 sitemaps, 8 URLs, 0 product/service URLs</span><br><span class="small">Blocker: No usable sitemap found for https://thenashcasino.com/; sampled homepage only.</span>
+          </td>
+          <td data-label="Owners">CSM/POC: Alex Bélanger / Editor: Aleksandra Velickovic / Writer: Unassigned writer</td>
+          <td data-label="Monthly Work">0 monthly deliverables<br><span class="small">No monthly queue; Import weekly intake</span><br><span class="small">0 legacy campaigns, 0 runs</span></td>
+          <td data-label="Next action">Import weekly topics to create this client&#x27;s monthly queue.</td>
+          <td data-label="Context"><a class="text-link" href="client-context-dashboard/the-nash-casino.html">Client context</a><br><span class="small">clients/the-nash-casino</span></td>
+        </tr>
+
+        <tr>
+          <td data-label="Client">
+            <div class="client-name">US Storage Units</div>
+            <div class="path">us-storage-units</div>
+            <div class="small">Self-storage comparison and reservation marketplace.</div>
+          </td>
+          <td data-label="Automation">P2 automation<br><span class="small">5 pages/month across U.S. Storage Units / U.S. Self-Storage</span><br><span class="small">Straightforward and practical: a helpful guide that makes finding and reserving storage simple, never salesy or overcomplicated.</span></td>
+          <td data-label="Status"><span class="chip good">ready</span></td>
+          <td data-label="Readiness">
+            <span class="chip warn">56% partial</span>
+            <ul class="missing"><li>Delivery config</li><li>Approved examples</li><li>Page templates</li><li>Legacy campaign folder</li></ul>
+          </td>
+          <td data-label="Website Intel">
+            <span class="chip warn">partial</span><br>
+            <a href="https://usstorageunits.com/">https://usstorageunits.com/</a><br><span class="small">0 sitemaps, 1 URLs, 0 product/service URLs</span><br><span class="small">Blocker: No usable sitemap found for https://usstorageunits.com/; sampled homepage only.</span>
+          </td>
+          <td data-label="Owners">CSM/POC: Arianna Trabanino / Editor: Aleksandra Velickovic / Writer: Unassigned writer</td>
+          <td data-label="Monthly Work">0 monthly deliverables<br><span class="small">No monthly queue; Import weekly intake</span><br><span class="small">0 legacy campaigns, 0 runs</span></td>
+          <td data-label="Next action">Import weekly topics to create this client&#x27;s monthly queue.</td>
+          <td data-label="Context"><a class="text-link" href="client-context-dashboard/us-storage-units.html">Client context</a><br><span class="small">clients/us-storage-units</span></td>
+        </tr>
+
+        <tr>
+          <td data-label="Client">
+            <div class="client-name">Deer Solutions</div>
+            <div class="path">deer-solutions</div>
+            <div class="small">Deer control repellent service company. Protects plants and shrubs from deer damage.</div>
+          </td>
+          <td data-label="Automation">P2 automation<br><span class="small">Monthly volume to confirm</span><br><span class="small">Practical, reassuring, and homeowner-focused: understands the frustration of deer damage and explains professional repellent service clearly.</span><br><span class="small">Flag: Do not imply guaranteed total elimination of deer or universal results. Deer Solution specializes in deer control and deer repellent service only; do not expand into general pest control, landscaping, or lawn care.</span></td>
+          <td data-label="Status"><span class="chip good">ready</span></td>
+          <td data-label="Readiness">
+            <span class="chip warn">44% partial</span>
+            <ul class="missing"><li>Compliance rules</li><li>Delivery config</li><li>Approved examples</li><li>Page templates</li><li>Legacy campaign folder</li></ul>
+          </td>
+          <td data-label="Website Intel">
+            <span class="chip neutral">ok</span><br>
+            <a href="https://www.deersolution.com/">https://www.deersolution.com/</a><br><span class="small">2 sitemaps, 614 URLs, 0 product/service URLs</span>
+          </td>
+          <td data-label="Owners">CSM/POC: Unassigned CSM / Editor: Aleksandra Velickovic / Writer: Unassigned writer</td>
+          <td data-label="Monthly Work">0 monthly deliverables<br><span class="small">No monthly queue; Import weekly intake</span><br><span class="small">0 legacy campaigns, 0 runs</span></td>
+          <td data-label="Next action">Confirm Deer Solution CSM, monthly volume, service areas, and any franchise/location-specific rules.</td>
+          <td data-label="Context"><a class="text-link" href="client-context-dashboard/deer-solutions.html">Client context</a><br><span class="small">clients/deer-solutions</span></td>
+        </tr>
+
+        <tr>
+          <td data-label="Client">
+            <div class="client-name">A Plus Landscaping</div>
+            <div class="path">a-plus-landscaping</div>
+            <div class="small">Family-owned outdoor living design-build in Central PA. No dashes ever.</div>
+          </td>
+          <td data-label="Automation">P3 automation<br><span class="small">3 optimizations/month</span><br><span class="small">Experienced, warm, and straightforward: a family-owned builder who lets the work speak, never corporate or over-polished.</span><br><span class="small">Flag: A Plus is a design-build outdoor living company, not lawn care. Warranty applies only to paver patio projects.</span></td>
+          <td data-label="Status"><span class="chip neutral">briefing</span></td>
+          <td data-label="Readiness">
+            <span class="chip warn">67% partial</span>
+            <ul class="missing"><li>Compliance rules</li><li>Delivery config</li><li>Page templates</li></ul>
+          </td>
+          <td data-label="Website Intel">
+            <span class="chip neutral">ok</span><br>
+            <a href="https://apluslandscaping.com/">https://apluslandscaping.com/</a><br><span class="small">2 sitemaps, 214 URLs, 2 product/service URLs</span>
+          </td>
+          <td data-label="Owners">CSM/POC: Arianna Trabanino / Editor: Aleksandra Velickovic / Writer: Unassigned writer</td>
+          <td data-label="Monthly Work">0 monthly deliverables<br><span class="small">No monthly queue; Import weekly intake</span><br><span class="small">2 legacy campaigns, 0 runs</span></td>
+          <td data-label="Next action">Import weekly topics to create this client&#x27;s monthly queue.</td>
+          <td data-label="Context"><a class="text-link" href="client-context-dashboard/a-plus-landscaping.html">Client context</a><br><span class="small">clients/a-plus-landscaping</span></td>
+        </tr>
+
+        <tr>
+          <td data-label="Client">
+            <div class="client-name">Find Self Storage</div>
+            <div class="path">find-self-storage</div>
+            <div class="small">Self-storage comparison marketplace.</div>
+          </td>
+          <td data-label="Automation">Priority unset<br><span class="small">Volume not set</span><br><span class="small">Voice not set</span></td>
+          <td data-label="Status"><span class="chip neutral">briefing</span></td>
+          <td data-label="Readiness">
+            <span class="chip warn">56% partial</span>
+            <ul class="missing"><li>Compliance rules</li><li>Delivery config</li><li>Approved examples</li><li>Page templates</li></ul>
+          </td>
+          <td data-label="Website Intel">
+            <span class="chip neutral">ok</span><br>
+            <a href="https://findselfstorage.com/">https://findselfstorage.com/</a><br><span class="small">2 sitemaps, 1200 URLs, 0 product/service URLs</span>
+          </td>
+          <td data-label="Owners">CSM/POC: Unassigned CSM / Editor: Aleksandra Velickovic / Writer: Unassigned writer</td>
+          <td data-label="Monthly Work">0 monthly deliverables<br><span class="small">No monthly queue; Import weekly intake</span><br><span class="small">1 legacy campaigns, 0 runs</span></td>
+          <td data-label="Next action">Import weekly topics to create this client&#x27;s monthly queue.</td>
+          <td data-label="Context"><a class="text-link" href="client-context-dashboard/find-self-storage.html">Client context</a><br><span class="small">clients/find-self-storage</span></td>
+        </tr>
+
+        <tr>
+          <td data-label="Client">
+            <div class="client-name">Arizona IOP</div>
+            <div class="path">the-hope-house/arizonaiop</div>
+            <div class="small">Intensive outpatient program in Scottsdale. IOP/PHP/MAT spelled out on first use.</div>
+          </td>
+          <td data-label="Automation">Priority unset<br><span class="small">Volume not set</span><br><span class="small">Voice not set</span></td>
+          <td data-label="Status"><span class="chip good">ready</span></td>
+          <td data-label="Readiness">
+            <span class="chip warn">56% partial</span>
+            <ul class="missing"><li>Delivery config</li><li>Approved examples</li><li>Page templates</li><li>Legacy campaign folder</li></ul>
+          </td>
+          <td data-label="Website Intel">
+            <span class="chip neutral">ok</span><br>
+            <a href="https://arizonaiop.com/">https://arizonaiop.com/</a><br><span class="small">2 sitemaps, 579 URLs, 2 product/service URLs</span>
+          </td>
+          <td data-label="Owners">CSM/POC: Wendy Alinor / Editor: Aleksandra Velickovic / Writer: Unassigned writer</td>
+          <td data-label="Monthly Work">0 monthly deliverables<br><span class="small">No monthly queue; Import weekly intake</span><br><span class="small">0 legacy campaigns, 0 runs</span></td>
+          <td data-label="Next action">Import weekly topics to create this client&#x27;s monthly queue.</td>
+          <td data-label="Context"><a class="text-link" href="client-context-dashboard/the-hope-house__arizonaiop.html">Client context</a><br><span class="small">clients/the-hope-house/arizonaiop</span></td>
+        </tr>
+
+        <tr>
+          <td data-label="Client">
+            <div class="client-name">Print &amp; Cheques Now</div>
+            <div class="path">print-and-cheques-now</div>
+            <div class="small">Canadian cheque printing specialist. Dual cheque/check spelling required.</div>
+          </td>
+          <td data-label="Automation">Priority unset<br><span class="small">Volume not set</span><br><span class="small">Voice not set</span></td>
+          <td data-label="Status"><span class="chip good">ready</span></td>
+          <td data-label="Readiness">
+            <span class="chip warn">56% partial</span>
+            <ul class="missing"><li>Delivery config</li><li>Approved examples</li><li>Page templates</li><li>Legacy campaign folder</li></ul>
+          </td>
+          <td data-label="Website Intel">
+            <span class="chip warn">partial</span><br>
+            <a href="https://chequesnow.ca/">https://chequesnow.ca/</a><br><span class="small">0 sitemaps, 1 URLs, 0 product/service URLs</span><br><span class="small">Blocker: No usable sitemap found for https://chequesnow.ca/; sampled homepage only.</span>
+          </td>
+          <td data-label="Owners">CSM/POC: Arianna Trabanino / Editor: Aleksandra Velickovic / Writer: Unassigned writer</td>
+          <td data-label="Monthly Work">0 monthly deliverables<br><span class="small">No monthly queue; Import weekly intake</span><br><span class="small">0 legacy campaigns, 0 runs</span></td>
+          <td data-label="Next action">Import weekly topics to create this client&#x27;s monthly queue.</td>
+          <td data-label="Context"><a class="text-link" href="client-context-dashboard/print-and-cheques-now.html">Client context</a><br><span class="small">clients/print-and-cheques-now</span></td>
+        </tr>
+
+        <tr>
+          <td data-label="Client">
+            <div class="client-name">Scottsdale Detox</div>
+            <div class="path">the-hope-house/scottsdaleazdetox</div>
+            <div class="small">Medical detox in Scottsdale. Alcohol/benzo withdrawal risks must not be minimized.</div>
+          </td>
+          <td data-label="Automation">Priority unset<br><span class="small">Volume not set</span><br><span class="small">Voice not set</span></td>
+          <td data-label="Status"><span class="chip good">ready</span></td>
+          <td data-label="Readiness">
+            <span class="chip warn">56% partial</span>
+            <ul class="missing"><li>Delivery config</li><li>Approved examples</li><li>Page templates</li><li>Legacy campaign folder</li></ul>
+          </td>
+          <td data-label="Website Intel">
+            <span class="chip neutral">ok</span><br>
+            <a href="https://scottsdaleazdetox.com/">https://scottsdaleazdetox.com/</a><br><span class="small">2 sitemaps, 929 URLs, 0 product/service URLs</span>
+          </td>
+          <td data-label="Owners">CSM/POC: Wendy Alinor / Editor: Aleksandra Velickovic / Writer: Unassigned writer</td>
+          <td data-label="Monthly Work">0 monthly deliverables<br><span class="small">No monthly queue; Import weekly intake</span><br><span class="small">0 legacy campaigns, 0 runs</span></td>
+          <td data-label="Next action">Import weekly topics to create this client&#x27;s monthly queue.</td>
+          <td data-label="Context"><a class="text-link" href="client-context-dashboard/the-hope-house__scottsdaleazdetox.html">Client context</a><br><span class="small">clients/the-hope-house/scottsdaleazdetox</span></td>
+        </tr>
+
+        <tr>
+          <td data-label="Client">
+            <div class="client-name">Scottsdale TMS Therapy</div>
+            <div class="path">the-hope-house/scottsdaletmstherapy</div>
+            <div class="small">TMS, Spravato, and psychiatric care. TMS is FDA-cleared; Spravato is FDA-approved.</div>
+          </td>
+          <td data-label="Automation">Priority unset<br><span class="small">Volume not set</span><br><span class="small">Voice not set</span></td>
+          <td data-label="Status"><span class="chip good">ready</span></td>
+          <td data-label="Readiness">
+            <span class="chip warn">56% partial</span>
+            <ul class="missing"><li>Delivery config</li><li>Approved examples</li><li>Page templates</li><li>Legacy campaign folder</li></ul>
+          </td>
+          <td data-label="Website Intel">
+            <span class="chip neutral">ok</span><br>
+            <a href="https://scottsdaletmstherapy.com/">https://scottsdaletmstherapy.com/</a><br><span class="small">2 sitemaps, 383 URLs, 0 product/service URLs</span>
+          </td>
+          <td data-label="Owners">CSM/POC: Wendy Alinor / Editor: Aleksandra Velickovic / Writer: Unassigned writer</td>
+          <td data-label="Monthly Work">0 monthly deliverables<br><span class="small">No monthly queue; Import weekly intake</span><br><span class="small">0 legacy campaigns, 0 runs</span></td>
+          <td data-label="Next action">Import weekly topics to create this client&#x27;s monthly queue.</td>
+          <td data-label="Context"><a class="text-link" href="client-context-dashboard/the-hope-house__scottsdaletmstherapy.html">Client context</a><br><span class="small">clients/the-hope-house/scottsdaletmstherapy</span></td>
+        </tr>
+
+        <tr>
+          <td data-label="Client">
+            <div class="client-name">The Hope House</div>
+            <div class="path">the-hope-house/thehopehouse</div>
+            <div class="small">Luxury residential addiction rehab in Scottsdale. Never guarantee outcomes.</div>
+          </td>
+          <td data-label="Automation">Priority unset<br><span class="small">Volume not set</span><br><span class="small">Voice not set</span></td>
+          <td data-label="Status"><span class="chip good">ready</span></td>
+          <td data-label="Readiness">
+            <span class="chip warn">56% partial</span>
+            <ul class="missing"><li>Delivery config</li><li>Approved examples</li><li>Page templates</li><li>Legacy campaign folder</li></ul>
+          </td>
+          <td data-label="Website Intel">
+            <span class="chip neutral">ok</span><br>
+            <a href="https://thehopehouse.com/">https://thehopehouse.com/</a><br><span class="small">2 sitemaps, 851 URLs, 2 product/service URLs</span>
+          </td>
+          <td data-label="Owners">CSM/POC: Wendy Alinor / Editor: Aleksandra Velickovic / Writer: Unassigned writer</td>
+          <td data-label="Monthly Work">0 monthly deliverables<br><span class="small">No monthly queue; Import weekly intake</span><br><span class="small">0 legacy campaigns, 0 runs</span></td>
+          <td data-label="Next action">Import weekly topics to create this client&#x27;s monthly queue.</td>
+          <td data-label="Context"><a class="text-link" href="client-context-dashboard/the-hope-house__thehopehouse.html">Client context</a><br><span class="small">clients/the-hope-house/thehopehouse</span></td>
+        </tr>
+
+        <tr>
+          <td data-label="Client">
+            <div class="client-name">TrustLayer</div>
+            <div class="path">trustlayer</div>
+            <div class="small">AI-powered COI collection and third-party compliance platform. Never insurance software.</div>
+          </td>
+          <td data-label="Automation">Priority unset<br><span class="small">Volume not set</span><br><span class="small">Voice not set</span></td>
+          <td data-label="Status"><span class="chip good">ready</span></td>
+          <td data-label="Readiness">
+            <span class="chip warn">56% partial</span>
+            <ul class="missing"><li>Delivery config</li><li>Approved examples</li><li>Page templates</li><li>Legacy campaign folder</li></ul>
+          </td>
+          <td data-label="Website Intel">
+            <span class="chip neutral">ok</span><br>
+            <a href="https://trustlayer.io/">https://trustlayer.io/</a><br><span class="small">1 sitemaps, 496 URLs, 0 product/service URLs</span>
+          </td>
+          <td data-label="Owners">CSM/POC: Wendy Alinor / Editor: Aleksandra Velickovic / Writer: Unassigned writer</td>
+          <td data-label="Monthly Work">0 monthly deliverables<br><span class="small">No monthly queue; Import weekly intake</span><br><span class="small">0 legacy campaigns, 0 runs</span></td>
+          <td data-label="Next action">Import weekly topics to create this client&#x27;s monthly queue.</td>
+          <td data-label="Context"><a class="text-link" href="client-context-dashboard/trustlayer.html">Client context</a><br><span class="small">clients/trustlayer</span></td>
+        </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <p class="footer-note">Last generated 2026-07-14 16:19:17.832939 UTC. Refresh website context with <code>python3 scripts/crawl-client-websites.py</code>, then rebuild with <code>python3 scripts/build-delivery-dashboard.py</code>.</p>
+  </main>
+</body>
+</html>
